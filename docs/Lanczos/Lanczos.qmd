@@ -1,0 +1,9 @@
+---
+title: "변분 역학"
+lang: ko   
+
+number-sections: false
+number-depth: 2
+crossref:
+  chapters: true
+---

@@ -1,0 +1,338 @@
+---
+title: "해석역학의 기본 개념"
+lang: ko  
+number-sections: true
+number-depth : 2
+crossref:
+  chapters: true
+---
+
+## 해석역학의 기본 관점
+
+### 뉴튼 역학
+
+- 동역학 시스템은 입자의 총합이며, 개별적인 입자에 작용하는 힘을 분리시켜, 그 개별적인 입자의 운동을 각각의 입자에 대한 운동방정식으로 기술한다. $\boldsymbol{F}=m\boldsymbol{a}$. 
+
+- 상호작용은 뉴턴의 제 3법칙 (작용-반작용) 으로 기술된다. 
+
+- 뉴튼은 이것만으로 모든 동역학적 문제를 해결할 수 있다고 생각했지만, 실제로는 rigid body 문제에 대해서도 central force 를 가정하지 않으면 문제를 풀 수 없다.
+
+</br>
+
+### 해석 역학
+
+- 상호작용하는 모든 입자를 하나의 시스템으로 간주며, 각각의 입자는 부차적이다. 중요한 것은 work function 이다.
+
+- "auxiliary condition" 이 주어졌을 경우 이 조건을 유지하기 위해 작용하는 개별적이고 구체적인 힘에 대한 분석 없이 문제를 풀 수 있다.
+
+- 무엇보다도 가장 중요한 것은 *Action* 이라는 근본적인 양으로, 모든 입자의 운동을 기술하는 미분방정식을 얻을 수 있다는 것이다. 더구나 Action 이 stationary 해야 한다는 근본적인 원리는 coordinate system 과 독립적이다. 즉 해석역학에서의 운동방정식은 좌표 변환에 대해 불변이다.
+
+</br>
+
+## 일반화된 좌표계 {#sec-generalized_coordinate_system}
+
+$N$ 개의 입자의 좌표를 데카르트 좌표계(Cartesian coordinate system)에서
+
+$$
+\boldsymbol{r}_i = (x_i,\,y_i,\,z_i),\qquad (i=1,\ldots,\,N)
+$$ {#eq-position_rectangular_coordinate}
+
+으로 기술한다고 하자. 각각의 $x_i,\,y_i,\,z_i$ 가 $t$ 에 대한 함수로 주어졌다면 우리는 이 입자들의 운동을 풀었다고 한다. 만약 $x_i,\,y_i,\,z_i$ 가 $q_1,\ldots,\,q_{3N}$ 의 함수이며, 각각의 $q_i$ 가 $t$ 에 대한 함수로 주어졌다면 우리는 역시 운동을 풀었다고 말할 수 있다.
+
+
+
+$N$ 개의 입자에 대해 $m$ 개의 독립적인 운동 조건(kinematical conditions) 가 주어졌다면 자유도(degree of freedom) $n$ 은 
+$$
+n = 3N- m
+$$
+
+이다. 즉 운동이 $n$ 개의 변수 $q_1,\ldots,\,q_n$ 로 기술 될 수 있다. 
+
+$$
+\begin{aligned}
+x_1 & = f_1 (q_1,\ldots,\,q_n), \\
+& \vdots \\
+z_N &= f_{3N}(q_1,\ldots,\,q_n).
+\end{aligned} 
+$$ {#eq-3N_generalized_coordinates}
+
+이 독립적인 $n$ 개의 변수를 **일반화된 좌표 (generalized coordinates)** 라고 한다. 
+
+</br>
+
+
+### $f_i$ 의 조건들
+
+#### 작은 조건
+
+위의 함수들은 finite, single valued, 연속이며 미분가능해야 하고 어떤 $n$ 개 의 함수들의 조합에 대한 Jacobian 이 $0$ 과 달라야 한다. 이 조건은 어떤 특이점(singular point)에 대해서는 충족되지 않아도 되는데, 이 경우 특이점은 고려에서 제외된다. 특이점의 예는 극좌표계에서의 원점이 있다.
+
+#### 큰 조건
+
+$q_1,\ldots,\,q_n$ 의 영역에서  $f_1,\ldots,\,f_{3N}$ 이 충분히 넓은 범위를 가져야 한다.
+
+</br>
+
+## Configuration Space
+
+- $n$ 개의 일반화된 좌표 $q_1,\ldots,\,q_n$ 에 대해 $q_i(t)$ 로 이루어진 점들의 공간을 **configuraiton space** 라고 한다. 즉 자유도 $n$ 개인 시스템은 $n$ 차원 configuraiton space 상에서 나타 낼 수 있다.
+
+$$
+\begin{aligned}
+x_1 & = f_1 (q_1,\ldots,\,q_n), \\
+& \vdots \\
+z_N &= f_{3N}(q_1,\ldots,\,q_n).
+\end{aligned} 
+$$ {#eq-3N_generalized_coordinates2}
+
+
+
+</br>
+
+## Mapping of the space on itself
+
+두 configuration space $q_1,\ldots,\,q_n$ 과 $\overline{q}_1,\ldots,\,\overline{q}
+_n$ 을 생각하자. $\overline{q}_i$ 는 $q_1,\ldots,\,q_n$ 함수여야 하며, 당연히 연속이고 미분가능해야 한다. 또한 Jacobina 이 $0$ 이 아니어야 한다. $\overline{q}_i = f_i (q_1,\ldots,\,q_n)$, $(i=1,\ldots,\,n)$ 이므로 이를 미분하면, 
+
+$$
+d\overline{q}_i = \sum_{j=1}^n\dfrac{\partial f_i}{\partial q_j} dq_i,\qquad i=1,\ldots,\,n
+$$
+
+이된다. 이를 통해 알 수 있는 것은 두 좌표계 사이의 관계가 어떻든, 좌표계의 differentials 는 선형 종속이라는 것이다.
+
+$(q_1,\ldots,\,q_n)$ 에 의한 공간을 $P$, $(\overline{q}_1,\ldots,\,\overline{q}_n)$ 에 의한 공간을 $\overline{P}$ 라 하자. 두 공간 사이에 다음과 같은 변환 $\Phi : X_P \subset P \to \overline{P}$ 를 생각하자. 
+
+</br>
+
+### C-space 매핑의 조건
+
+1. 어떤 $P$ 의 영역 $R_P$ 에 대해 $\Phi(R_P)$ 는 $\overline{P}$ 에서의 영역이며 $\Phi|_{R_P}$ 는 전단사함수이다.
+
+2. $R_P$ 에서의 연속인 부분집합 $X_P$ 에 대해 $\Phi(X_P)$ 도 연속이다.
+
+3. $p\in R_P$ 의 neighborhood $N_p\subset R_P$ 에 대해 $\Phi(N_p)$ 는 $\Phi(p)$ 의 neighborhood 이다.
+
+4. $p\in R_P$ 부근 에서의 infinitesimal straight line $L_P$ 에 대해 $\Phi(L_P)$ 역시 infinitesimal straight line 이다. infinitesimal parallel lines 에 대해 변환된 곡선 역시 infinitesimal parallel lines 이다.
+
+5. Jacobina 이 nonzero 이다.
+   
+6. 위에 대한 역이 성립한다.
+
+</br>
+
+### 운동에너지와 리만기하학
+
+- 해석 역항의 방정식은 사용된 좌표계에 무관한 형태로 기술될 수 있으며, 이로 인해 19세기 수학에서 해석역학과 불변(invarincts) 와 공변(covariants) 의 연결되었으며 마침내 상대성 이론에서 성숙해졌다.
+
+- 상대성 이론의 주요 프로그램은 자연의 법칙을 좌표-독립적으로 수식화 하는 것이다. 이 문제의 해법은 물질이 리만 기하학과 밀접하게 연결되어 있다는 것이다.
+
+- 일반 상대성 이론에 의하면 자연의 실제 기하학은 유클리드 기하학이 아니라 더 일반적인 리만 기하학이며, 리만기하학은 공간과 시간을 통합된 4차원 다양체로 연결시킨다.
+
+- 데카르트의 해석기하학은 공간의 유클리드적인 구조를 가정했으며, 직교 좌표계를 구성하기 위해 합동공리 (congruence postulates) 와 평행선 공리 (parallel postulates) 를 가정했다.
+
+- 리만 기하학은 곡면에서의 기하학에 관한 가우스의 천재적인 연구로부터 발생했다. 리만 기하학은 *line element* 라고 불리는 differential quantity 에 기반한다. 이 양은 좌표와 좌표의 미분값으로 표현되는 두 점 사이의 거리이다.
+
+
+
+- $P = (x,\,y,\,z),\, P' = (x+dx,\, y+dy,\,z+dz)$ 라고 할 때 피타고라스 정리에 의해 line element $\overline{ds}$ 의 제곱은 다음과 같다.
+
+$$
+\overline{ds}^2 = dx^2+dy^2+dz^2
+$$ {#eq-line_element}
+
+::: {.column-margin}
+$\overline{ds}$ 는 $s$ 에 대한 $d$ 가 아니라, 즉 어떤 함수의 미분량이 이니라 다른 미분량의 함수라고 생각해야 한다. 만약 $\overline{ds}$ 가 미분량이라면 경로에 상관없이 그 값이 항상 일정해야 할 것이다.
+:::
+
+- 위의 값은 유클리드 기하학의 가정과 좌표값 $(x,\,y,\,z)$ 의 정의에 의한 자연스러운 결론이다.
+
+- 만약 우리가 유클리드 기하학의 가정을 무시하고 @eq-line_element 를 당연하게 받아들이며 추가로 $x,\,y,\,z$ 를 $(-\infty,\, \infty)$ 의 범위를 갖는 직교좌표계의 좌표라고 한다면 모든 유클리드 기하학의 법칙들을 유도 할 수 있다.
+
+
+- 만약 $\overline{ds}$ 가 다음과 같이 주어졌으며 $x$ 는 $[0,\,\infty)$, $y$ 는 $[0,\,\pi)$, $z$ 는 $[0,\,2\pi)$ 에서 변화한다면 이 line element 에 의해 정해지는 기하학은 구면좌표계가 될 것이다.
+
+$$
+\overline{ds}^2 = dx^2 + x^2dy^2 + x^2 \sin^2 y \, dz^2
+$$
+
+- 이제 세 좌표값을 $x_1,\,x_2,\,x_3$ 라고 하자. *Curvilinear* coordinate 에서는 line element 가 다음과 같은 꼴을 가진다. 여기서 $g_{ij}$ 는 상수가 아니라 $x_1,\,x_2,\,x_3$ 의 함수이다.
+
+$$
+\begin{aligned}
+\overline{ds}^2 & = \sum_{i,\,j=1}^3 g_{ij}\,dx_i dx_j
+\end{aligned}
+$$ {#eq-line_element_in_curvilinear_coordinate}
+
+- 이 때 $g_{ij}=g_{ji}$ 이므로 독립적인 term 은 총 6개이다. 
+
+- $g_{ij}$ 는 텐서라고 불리는 양의 성분이다.
+
+
+#### 불변량, 공변량, 텐서 {#sec-invariants_covariants_tensor}
+
+특정 좌표계에 의존하지 않는 값, 즉 좌표-독립적인 값을 *불변량(invariant)* 이라 한다. 미분형식의 불변량을 *텐서(tensor)* 라고 한다. 1차 텐서를 특별히 *벡터(vector)* 라고 한다. 예를 들어
+
+$$
+\overline{dw} = F_1 dx_1 + \cdots + F_n dx_n
+$$ 
+
+일 때 $\overline{dw}$ 는 벡터이며 $F_1,\ldots,\,F_n$ 을 $\overline{dw}$ 의 성분 이라고 한다. 이 값들은 좌표계에 따라 변하며 따라서 *공변량(covariants)* 라고 한다.
+
+</br>
+
+#### 메트릭 텐서 (metric tensor)
+
+line element 를 정의하는데 사용된 $g_{ij}$ 를 *metric tensor* 라고 한다. 3차원 공간 뿐만 아니라 일반적인 $n$ 차원 공간에서의 기하학을 결정하며 $n$ 차원의 경우 다음과 같다.
+
+$$
+\overline{ds}^2 = \sum_{i,\,j=1}^n g_{ij}\, dx_i\, dx_j
+$$ {#eq-n_dim_line_elements}
+
+이 때 $g_{ij}=g_{ji}$ 이다. 이런 성질을 가진 텐서를 대칭 텐서(symmetric tensor) 라고 한다. 아인슈타인과 민코프스키는 자연의 기하학이 $x,\,y,\,z,\,t$ 를 변수로 갖는 4차 텐서임을 보였다. 역시 $g_{ij}$ 는 일반적으로 상수가 아닌 좌표값의 함수이며, 상수일 때는 rectlinear coordinate 일 때이다.
+
+메트릭 텐서 $g_{ij}$ 는 함수로서 아래의 두가지 성질을 만족해야 한다.
+
+1. 연속 함수이다.
+
+2. 국소적으로 유클리드 기하학을 만족한다. (즉 닮음 공리와 평행선 공리를 만족한다.)
+
+</br>
+
+리만은 *curvature tensor* 라고 불리는 양을 미분했을 때 그 값이 모든 위치에서 $0$ 이 되면 유클리드 기하임을 밝혔다. 아인슈타인과 민코프스키는 특수상대성 이론에서의 4차원 시공간이 유클리드 기하임을 밝혔으며, 이후 아인슈타인은 일반상대성 이론에서의 4차원 시공간이 10 개의 메트릭 텐서에 의해 결정되는 리만 기하임을 밝혔다.
+
+</br>
+
+#### 운동 에너지와 기하학
+
+뉴튼 역학에서는 운동량이 근본적인 값인데 대해 해석역학에서는 운동에너지가 더 근본적인 값이다. 운동에너지 $T$ 의 정의는 다음과 같다.
+
+$$
+T := \dfrac{1}{2} \sum_{i=1}^n m_i {v_i}^2 = \dfrac{1}{2}\sum_{i=1}^n m_i \left(\dfrac{\overline{ds}}{dt}\right)^2
+$$
+
+위에서 보듯이 운동에너지는 line element $\overline{ds}$ 와 명시적으로 관련되며, 따라서 공간의 기하학에 의존한다.
+
+이제 3차원 공간의 line element 를 다음과 같이 정의해 보자.
+
+$$
+\overline{ds}^2  := 2T\, dt^2 = \sum_{i=1}^n m_i{v_i}^2 dt^2 = \sum_{i=1}^n m_i ({dx_i}^2 + {dy_i}^2 + {dz_i}^2)
+$$
+
+그렇다면, 
+
+$$
+T = \dfrac{1}{2}\left(\dfrac{\overline{ds}}{dt}\right)^2
+$$
+
+이며, 이것은 $N$ 개의 입자의 운동에지는 위의 line element 의 정의에 의해 질량 $1$ 인 입자의 $3N$ 차원에서의 운동에너지로 대체 될 수 있다는 의미이다. 
+
+이 때 $3N$ 차원 좌표계는 
+
+$$
+\sqrt{m_i}x_i,\, \sqrt{m_i} y_i,\, \sqrt{m_i}x_i,\qquad i=1,\ldots,\, N
+$$
+
+로 이루어진 직교좌표계이다.
+
+</br>
+
+만약 역학적 제한조건(constraints) 가 주어졌다면 많은 경우 유클리드 기하학에서 벗어나야 한다. 역학적 제한조건을 다루는 두가지 방법이 있다. 
+
+1. 제한조건이 없을 때의 $3N$ 차원 공간에 대해 $m$ 개의 제한조건 $f_i (x_1,\ldots,\,z_N)=0$ 을 $m$ 개의 초평면으로 간주하여 $3N-m$ 차원 부분공간에 대해 생각하는 방법. 이 부분공간은 더 이상 유클리드 공간이 아니며 곡면 리만 공간이다.
+
+2. 처음부터 $3N$ 개의 독립변수를 $m$ 게의 제한조건으로 풀어 $3N-m$ 차원 공간에서 생각하는 방법. 이 때의 line element 는 $\overline{ds}^2 = \sum_{i,\,j=1}^n a_{ij}\, dq_i dq_j$ 꼴로 주어지며 1) $q_i$ 가 curvilinear coordinates 일 뿐만 아니라 2) configuration space 가 원래의 $3N$ 차원 공간의 유클리드 기하학을 유지하지 않으므로, 결과적으로 진짜 리만 기하학이 된다. 
+
+</br>
+
+## Holonomic and non-holonomic mechanical system
+
+역학적 제한조건은 좌표값에만 의존하기도 하지만 infinitesimal form 으로 주어질 수도 있다. 전자를 *holonomic* 이라고 하고 후자를 *non-holonomic* 이라고 한다. 즉 제한조건이
+
+$$
+f(q_1,\ldots,\,q_n)=0
+$$
+ 
+꼴로 주어질 경우 holonomic 이며 이것을 미분할 경우,
+
+$$
+\dfrac{\partial f}{\partial q_1}dq_1 + \cdots +\dfrac{\partial f}{\partial q_n}dq_n=0
+$$
+
+이 된다. 그러나 
+
+$$
+A_1(q_1,\ldots,\,q_n) dq_1 + \cdots + A_n(q_1,\ldots,\,q_n) dq_n = 0
+$$
+
+형식이며 이 값이 integrable 하지 않다면 non-holonomic 이 된다.
+
+
+</br>
+
+## 일함수와 일반화된 힘
+
+해석역학에서 뉴튼역학의 모멘텀을 운동에너지가 대신했듯이, 힘을 일함수가 대신한다.
+
+질랑 $m_i$ 인 입자에 $x_i,\,y_i,\,z_i$ 좌표에서 힘 $\boldsymbol{G}_i = (X_i,\, Y_i,\,Z_i)$ 이 가해진다고 하자. 이 힘은 외부의 장(field) 이나 시스템 내의 다른 입자와의 상호작용에서 발생했을 수도 있지만, 제한조건에 의한 힘은 아니라고 하자. 이 힘에 의한  $\overline{dw}$ 는 다음과 같다.
+
+$$
+\overline{dw}= \sum_{i=1}^N \left(X_i\, dx_i + Y_i \,dy_i + Z_i\, dz_i \right)
+$$
+
+일반화된 좌표계 $(q_1,\ldots,\,q_n)$ 로 변환하면 
+
+$$
+\overline{dw} = F_1 dq_1 + \cdots + F_n dq_n
+$$
+
+이 되며 @sec-invariants_covariants_tensor 에서 보았듯이 $F_1,\ldots,\,F_n$ 은 $\overline{dw}$ 의 component 이다. 
+
+$\overline{dw}$ 가 어떤 단일 함수 $U$ 의 미분일 때 이 $U$ 를 일함수라고 한다. 즉
+
+::: {.column-margin}
+힘이 어떤 함수의 스칼라로 주어질 때 그 힘을 *monogenic* 이라고 한다. 그렇지 않은 경우 *polygenic* 이라고 한다. 
+
+:::
+
+$$
+\overline{dw} = \sum_{i=1}^n \dfrac{\partial U}{\partial q_i},\,dq_i
+$$
+
+일 때 
+
+$$
+U=U(q_1,\ldots,\,q_n)
+$$ {#eq-work_function_1} 
+
+을 일함수 라고 한다. 현재는 일함수라는 용어보다는 $V=-U$ 라고 정해진 포텐셜 에너지라는 용어를 더 많이 사용한다. 이 때 일반화된 힘 $F_i$ 는
+
+$$
+{F}_i = -\dfrac{\partial V}{\partial q_i}
+$$
+
+이다. 이렇게 일함수 혹은 포텐셜 에너지가 일반화된 좌표의 함수라면 다음과 같은 장점을 가진다.
+
+1. 에너지가 보존되는 보존력이다
+
+2. 힘은 포텐셜 에너지의 미분으로 주어진다.
+
+그러나 힘이 굳이 좌표만의 힘수일 필요는 없다. 시간에 명시적으로 의존하는 (즉 시간에 대한 편미분이 $0$ 이 아닌) 함수일 수도 있으며 이 때는 에너지가 보존되지 않는다. 또한 일함수가 좌표, 시간 뿐 아니라 속도까지 포함한 변수의 함수일 수도 있다. 이 경우 다음에 보이겠지만 힘은 다음과 같이 주어진다.
+
+$$
+F_i = \dfrac{\partial U}{\partial q_i} - \dfrac{d}{dt} \dfrac{\partial U}{\partial \dot{q}_i}
+$$
+
+</br>
+
+## Scleronomic and rheonomic systems : 에너지 보존 법칙
+
+역학적 제한 조건이 시간에 명시적으로 의존하지 않을 때 *scleronomic* 이라고 하며 시간에 명시적으로 의존할 때 *rheonomic* 이라 한다. 역학적 제한 조건을 일반화된 좌표를 도입하여 소거했을 경우 운동방정식은 일반화된 좌표와 (일반화된 속도와) 시간의 함수이며, 따라서 역학적 에너지가 보존되지 않는다.
+
+
+
+
+
+
+
+
+
