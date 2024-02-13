@@ -1,6 +1,5 @@
 ---
 title: "변분법"
-lang: ko  
 number-sections: true
 number-depth : 2
 crossref:
