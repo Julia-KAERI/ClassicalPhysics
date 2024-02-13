@@ -7,30 +7,33 @@ crossref:
   
 ---
 
-## Hamilton 의 원리
+## 해밀턴 의 원리
 
-### Configuration space and motion of system
+### Configuration space 와 시스템의 동역학
 
-D'Alembert principle은 시스템의 특정 순간의 상태에서의 virtual displacement를 이용하여 Lagrange's equation을 유도하였다. Lagrange's equation은 전혀 다른 방법, 즉 특정 시간 $t_1$ 과 $t_2$ 사이에서의 시스템의 전체 운동을 고려하고 실제 운동의 virtual variation을 이용하여 유도될 수 있다. 
+달랑베르 원리를 통해시스템의 특정 순간의 상태에서의 virtual displacement를 이용하여 라그랑쥬 방정식을 유도하였다. 라그랑쥬 방정식은 전혀 다른 방법, 즉 특정 시간 $t_1$ 과 $t_2$ 사이에서의 시스템의 전체 운동을 고려하고 실제 운동의 virtual variation을 이용하여 유도될 수 있다. 
 
-특정 시간 $t_1$ 과 $t_2$ 사이의 시스템의 전체 운동 (entire motion of system between time $t_1$ and $t_2$)란 무슨 의미일까? 시스템을 기술하는데 $n$ 개의 generalized coordinates가 필요할 때 이를 $q_1,\ldots,\,q_n$ 라 하자. 이것을 $n$ Cartesian coordinate system으로 나타낸 것을 **configuration space** 라 하며 특정 시간에서의 system은 configuration space에서의 한 point로 기술된다. 시간이 흐르면 각각의 시간에 대한 configuration space에서의  point가 정해지며 $t_1$ 에서 $t_2$ 까지 시간의 변화에 대한 configuration space에서의 points의 집합, 즉 path를 entire motion of system between $t_1$ and $t_2$ 라 한다. 이 때 시간 $t$ 는 변수가 아닌 parameter로 고려되며 하나의 point in configuration space는 하나 이상의 $t$ 값에 해당 할 수 있다.
+특정 시간 $t_1$ 과 $t_2$ 사이의 시스템의 전체 운동 (entire motion of system between time $t_1$ and $t_2$)란 무슨 의미일까? 시스템을 기술하는데 $n$ 개의 일반화된 좌표가 필요할 때 이를 $q_1,\ldots,\,q_n$ 라 하자. 이것을 $\mathbb{R}^n$ 으로 나타낸 것을 **configuration space** 라 하며 특정 시간에서의 입자계는 configuration space에서의 한 점(point)으로 기술된다. 시간이 흐르면 각각의 시간에 대한 configuration space에서의 위치가 정해지며 $t_1$ 에서 $t_2$ 까지 시간의 변화에 대한 configuration space에서의 points의 집합, 즉 path를 $t_1$ 과 $t_2$ 사이의 시스템의 전체 운동이라 한다. 이 때 시간 $t$ 는 변수가 아닌 parameter로 고려되며 configuration space 상의 하나의 점은 하나 이상의 $t$ 값에 해당 할 수 있다.
 
 </br>
 
-### Hamilton's Principle
+### 해밀턴의 원리
 
-::: {.callout-caution appearance="minimal" icon="false"}
+해밀턴의 원리은 force of constraint를 제외한 모든 힘들이 일반화된 스칼라 포텐셜로 부터 얻어질 수 있는 시스템 (이를 **monogenic system** 이라 한다)의 운동을 기술한다. 이 때 일반화된 포텐셜은 포텐셜이 $\{q_i\},\,\{\dot{q}_i\},\, t$ 의 함수인 것을 말한다. Monogenic system의 포텐셜이 위치만의 함수 일 때, 이 시스템은 보존적이다. 
 
-Hamilton's principle은 force of constraint를 제외한 모든 forces가 generalized scalar potential로 부터 얻어질 수 있는 system (**monogenic system**)의 운동을 기술한다. 이 때 generalized potential은 coordinates, velocities와 time의 함수이어야 한다.
-::: 
+::: {.callout-important icon="false"}
 
-Monogenic system의 potential이 position 만의 함수 일 때, 이 system은 conservative 하다. Hamilton's principle에 따르면  시간 $t_1$ 에서 $t_2$ 까지의 system의 운동은 Lagrangian $L=T-V$에 대한 line integral 
+#### 해밀턴의 원리
+
+Monogenic system 에서 시간 $t_1$ 에서 $t_2$ 까지의 system의 운동은 Lagrangian $L=T-V$에 대한 line integral 
 
 $$
 I = \int_{t_1}^{t_2} L\, dt
 $$ {#eq-action}
 
 이 stationary value를 갖도록 하는 path를 따른다. 다시 말하자면  $t_1$ 에서의 위치 $\boldsymbol{x}_1$ 에서 $t_2$ 에서의 위치 $\boldsymbol{x}_2$ 사이의 모든 가능한 경로중 실제 자연법칙에 의해 선택되는 경로는 @eq-action 이 stationary value를 갖도록 하는 경로이다.
+:::
+
 
 \begin{tcolorbox}
 By the term \textit{stationary value} for a line integral we mean that the integral along the given path has the same value to within first-order infinitesimals as that along all neighboring paths.

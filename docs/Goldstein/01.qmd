@@ -607,16 +607,16 @@ $$
 \begin{aligned}
 \dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot{q}_j}\right) &= \sum_i \left(\dfrac{\partial^2 T}{\partial q_i\partial \dot{q}_j}\right) \dot{q}_i  + \left(\dfrac{\partial^2 T}{\partial \dot{q}_i \partial \dot{q}_j}\right) \ddot{q}_i  + \left(\dfrac{\partial^2 T}{\partial t \partial \dot{q}_j}\right), \\
 \dfrac{\partial \dot{T}}{\partial \dot{q}_j} &= \sum_{i} \dfrac{\partial}{\partial \dot{q}_j} \left[ \dfrac{\partial T}{\partial q_i}\dot{q}_i  + \dfrac{\partial T}{\partial \dot{q}_i} \ddot{q}_i  + \dfrac{\partial T}{\partial t}\right] \\
-&= \sum_i\left[\left(\dfrac{\partial^2 T}{\partial q_i \partial \dot{q}_j}\right) \dot{q}_i  + \dfrac{\partial T}{\partial q_i} \delta_{ij}+  \left(\dfrac{\partial^2 T}{\partial \dot{q}_i \partial \dot{q}_j}\right) \ddot{q}_i  + \left(\dfrac{\partial T}{\partial \dot{q}_i}\right)\left(\dfrac{\partial \ddot{q}_i}{\partial \dot{q}_j}\right)  + \left(\dfrac{\partial^2 T}{\partial t \partial \dot{q}_j}\right)\right] \\
-&= \dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot{q}_j}\right) + \dfrac{\partial T}{\partial q_j} +  \sum_i \left(\dfrac{\partial T}{\partial \dot{q}_i}\right)\left(\dfrac{\partial \ddot{q}_i}{\partial \dot{q}_j}\right) 
+&= \sum_i\left[\left(\dfrac{\partial^2 T}{\partial q_i \partial \dot{q}_j}\right) \dot{q}_i  + \dfrac{\partial T}{\partial q_i} \delta_{ij}+  \left(\dfrac{\partial^2 T}{\partial \dot{q}_i \partial \dot{q}_j}\right) \ddot{q}_i  + \left(\dfrac{\partial^2 T}{\partial t \partial \dot{q}_j}\right)\right] \\
+&= \dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot{q}_j}\right) + \dfrac{\partial T}{\partial q_j} 
 \end{aligned}
 $$
 
-이며, 
+이므로, 
 
 $$
-\begin{aligned}
-\dfrac{\partial \ddot{q}_i}{\partial \dot{q}_j} &= \dfrac{\partial}{\partial \dot{q}_j} \left(\dfrac{d \dot{q}_i}{dt}\right)= \dfrac{\partial}{\partial \dot{q}_j} \left[\sum_k  \dfrac{\partial \dot{q}_i}{\partial q_k} \dot{q}_k + \sum_k \dfrac{\partial \dot{q}_i}{\partial \dot{q}_k}\ddot{q}_k + \dfrac{\partial \dot{q}_i}{\partial t} \right] = \delta_{ij} + 
-\end{aligned}
+\dfrac{\partial \dot{T}}{\partial \dot{q}_j} - 2\dfrac{\partial T}{\partial q_j} = \dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot{q}_j}\right) - \dfrac{\partial T}{\partial q_j} = Q_j
 $$
+
+이다.
 :::
