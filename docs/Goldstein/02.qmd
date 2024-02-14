@@ -25,7 +25,7 @@ crossref:
 
 #### 해밀턴의 원리
 
-Monogenic system 에서 시간 $t_1$ 에서 $t_2$ 까지의 system의 운동은 Lagrangian $L=T-V$에 대한 line integral 
+Monogenic system 에서 시간 $t_1$ 에서 $t_2$ 까지의 system의 운동은 Lagrangian $L=T-V$에 대한 선적분
 
 $$
 I = \int_{t_1}^{t_2} L\, dt
@@ -35,9 +35,9 @@ $$ {#eq-action}
 :::
 
 
-\begin{tcolorbox}
-By the term \textit{stationary value} for a line integral we mean that the integral along the given path has the same value to within first-order infinitesimals as that along all neighboring paths.
-\end{tcolorbox}
+::: {.callout-tip appearance="minimal" icon="false"}
+By the term *stationary value* for a line integral we mean that the integral along the given path has the same value to within first-order infinitesimals as that along all neighboring paths.
+:::
 
 $I$ 가 stationary value를 갖는다는 것은 다음이 성립한다는 뜻이다.
 
@@ -45,7 +45,7 @@ $$
 \delta I = \delta \int_{t_1}^{t_2} L(q_1,\ldots,\,q_n,\,\dot{q}_1,\ldots,\,\dot{q}_n,\,t) \, dt=0\;.
 $$
 
-Holonomic constraint condition 에서 Hamilton's principle과 Lagrange's equation은 동치이다. 
+Holonomic constraint condition 에서 해밀턴의 원리와 라그랑쥬 방정식은 동치이다. 
 
 </br>
 
@@ -53,13 +53,13 @@ Holonomic constraint condition 에서 Hamilton's principle과 Lagrange's equatio
 
 ### One dimensional form
 
-$x_1$ 과 $x_2$ 사이의 path $y=y(x)$ 에서 정의된 함수 $f(y,\,\dot{y},\,x)$ 를 생각하자. 그리고 line integral $\displaystyle J=\int_{x_1}^{x_2} f(y,\,\dot{y},\,x)\, dx$ 가 stationary value를 갖도록 하는 path를 찾아야 한다고 하자. Correct path와 neighboring path를 다음 식과 같은 관계로 표현하자.
+$x_1$ 과 $x_2$ 사이의 경로 $y=y(x)$ 에서 정의된 함수 $f(y,\,\dot{y},\,x)$ 를 생각하자. 그리고 선적분 $\displaystyle J=\int_{x_1}^{x_2} f(y,\,\dot{y},\,x)\, dx$ 가 stationary value를 갖도록 하는 경로를 찾아야 한다고 하자. 구하고자 하는 경로와 그 이웃 경로를 다음 식과 같은 관계로 표현하자.
 
 $$
 y(x,\,\alpha) = y(x,\,0) + \alpha \eta(x)\;.
 $$ {#eq-initial_path}
 
-여기서 $\alpha$ 는 infinitesimal deviation을 위한 parameter이며 $\eta(x)$ 는 임의의 경로인데, initial value and final value of $y$ at $x_1$ and $x_2$ 가 정해졌다는 가정 하에서 생각하므로 $\eta(x_1)=\eta(x_2)=0$ 이다. 또한 우리는 $\eta(x)$ 가 well-behaved function 이라고 가정한다. 즉 $\eta(x)$ 는 $[x_1,\,x_2]$ 에서 연속이며 non-singular 하다고 생각한다. 
+여기서 $\alpha$ 는 infinitesimal deviation을 위한 parameter이며 $\eta(x)$ 는 $\eta(x_1)=\eta(x_2)=0$ 를 만족하는 임의의 경로이다. 또한 우리는 $\eta(x)$ 가 well-behaved function 이라고 가정한다. 즉 $\eta(x)$ 는 $[x_1,\,x_2]$ 에서 연속이며 non-singular 하다고 생각한다. 
 
 이제 line integral $J$ 는 $\alpha$ 의 함수로
 
@@ -77,7 +77,7 @@ $$
 
 $$
 \begin{aligned}
-\dfrac{dJ}{d\alpha} & = \int_{x_1}^{x_2} \left\{ \dfrac{\partial f}{\partial y}\dfrac{\partial y}{\partial \alpha} + \dfrac{\partial f}{\partial \dot{y}}\dfrac{\partial \dot{y}}{\partial \alpha} \right\} \, dx = \int_{x_1}^{x_2} \left(\dfrac{ \partial f}{\partial y} - \dfrac{d}{dx} \dfrac{\partial f}{\partial \dot{y}}\right) \dfrac{dy}{d\alpha} dx \;.
+\dfrac{dJ}{d\alpha} & = \int_{x_1}^{x_2} \left[ \dfrac{\partial f}{\partial y}\dfrac{\partial y}{\partial \alpha} + \dfrac{\partial f}{\partial \dot{y}}\dfrac{\partial \dot{y}}{\partial \alpha} \right] \, dx = \int_{x_1}^{x_2} \left[\dfrac{ \partial f}{\partial y} - \dfrac{d}{dx} \dfrac{\partial f}{\partial \dot{y}}\right] \dfrac{dy}{d\alpha} dx \;.
 \end{aligned}
 $$
 
@@ -89,7 +89,7 @@ $$ {#eq-stationary_condition_2}
 
 
 ::: {.callout-caution appearance="minimal" icon="false"}
-*Fundamental lemma of the calculus of variations* 에 의해, 임의의 $C^2$ 함수(2차 미분까지 연속인 함수) $\eta(x)$에 대해 다음을 만족하는 $M(x)$는 $M(x)=0$ in $(x_1,\,x_2)$ 이어야 함이 알려져 있다.
+*Fundamental lemma of the calculus of variations* 에 의해, 임의의 $C^2_{[a,\,b]}$ 함수 $\eta(x)$에 대해 다음을 만족하는 $C^2_{[a,\,b]}$ 함수 $M(x)$는 $M(x)=0$ in $(x_1,\,x_2)$ 이어야 함이 알려져 있다.
 
 $$
 \int_{x_1}^{x_2} M(x) \eta(x) \,dx = 0\;.
@@ -243,11 +243,11 @@ $$
 
 </br>
 
-## Derivation of Lagrange's equations from Hamiltons' Principle
+## 해밀턴의 원리와 라그랑쥬 방정식
 
-### Euler-Lagrange differential equations
+### 오일러-라그랑쥬 미분방정식
 
-Calculus of variations 에서는 $f$ 가 많은 독립변수들 $y_1,\,y_2,\ldots$ 와 그 미분 $\dot{y}_1(x),\,\dot{y}_2 (x),\ldots$ 의 함수 일 때, variations of integral $\displaystyle J=\int_1^2 f dx$ 가 $0$ 이 되도록 하는 $y_i$ 들을 찾는다. 즉
+변분법(Calculus of variations) 은 $f$ 가 많은 독립변수들 $y_1,\,y_2,\ldots$ 와 그 미분 $\dot{y}_1(x),\,\dot{y}_2 (x),\ldots$ 의 함수 일 때, variations of integral $\displaystyle J=\int_1^2 f dx$ 가 $0$ 이 되도록 하는 $y_i$ 들을 찾는다. 즉
 
 $$
 \delta J= \delta \int_1^2 f(y_1(x),\,y_2(x),\ldots,\,\dot{y}_1(x),\,\dot{y}_2 (x),\ldots,\,x)\, dx = 0
@@ -268,32 +268,32 @@ $$
 \dfrac{\partial f}{\partial y_i} - \dfrac{d}{dx}\left( \dfrac{\partial f}{\partial \dot{y}_i}  \right) =0
 $$ {#eq-euler_lagrange}
 
-을 만족해야 한다. 이를 **Euler-Lagrange Differential Equations** 이라 한다. 
+을 만족해야 한다. 이를 **오일러 라그랑쥬 미분방정식 (Euler-Lagrange Differential Equations)** 이라 한다. 
 
 </br>
 
-### Hamilton's principle and Euler-Lagrange equations
+### 해밀턴의 원리와 오일러-라그랑쥬 방정식
 
-Hamilton's principle을 이용하면 $L(q_i,\,\dot{q}_i,\,t)=T(q_i,\,\dot{q}_i,\,t) - V(q_i,\,\dot{q}_i,\,t)$ 에 대해 $\displaystyle I=\int_1^2 L(q_i,\,\dot{q}_i,\,t) dt$ 의 $\delta I=0$ 이 되도록 해야 하므로 Euler-Lagrange equation of motion은 다음과 같다.
+해밀턴의 원리를 이용하면 $L(q_i,\,\dot{q}_i,\,t)=T(q_i,\,\dot{q}_i,\,t) - V(q_i,\,\dot{q}_i,\,t)$ 에 대해 $\displaystyle I=\int_1^2 L(q_i,\,\dot{q}_i,\,t) dt$ 의 $\delta I=0$ 이 되도록 해야 하므로 오일러-라그랑쥬 운동방정식은 다음과 같다.
 
 $$
 \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_i}\right) - \dfrac{\partial L}{\partial q_i} = 0\, ,  \quad\quad i=1,\,2,\ldots,\,n\;.
 $$ {#eq-euler_lagrange_equation_of_motion}
 
-이제 우리는 holonomic constraints 를 갖는 monogenic system에서 Hamilton's principle로부터 Lagrange's equation을 얻었다.
+이제 우리는 holonomic constraints 를 갖는 monogenic system에서 해밀턴의 원리로부터 라그랑쥬 방정식을 얻었다.
 
 
 </br>
 
-## Extension of Hamilton's Principle to Nonholonomic Systems${}^\ast$
+## Nonholonomic Systems${}^\ast$ 으로의 해밀턴의 원리의 확장 
 
-### Nonholonomic constraints system compared with holonomic system
+### Nonholonomic constraints 의 특징
 
 Nonholonomic system을 다룰 때 holonomic system과의 차이점.
 
-- Hamilton's principle을 이용해서든 D'Alembert's principle을 이용해서든 holonomic constraints 조건에서 Lagrange's equation을 얻을 때, holonomic constraints 조건은 맨 마지막에 가서 variations of variables가 independent 함을 가정 할 때 나온다. Holonomic constraints system에서는 당장의 generalized coordinates가 independent 하지 않더라도 $f(q_1,\ldots,\,q_n,\,t)=0$ 꼴의 equation of constraints를 통해 independent generalized coordinate set을 구성 할 수 있는데,  nonholonomic constraints system에서는 일반적으로 이것이 불가능하다. 
+- 해밀턴의 원리를 이용해서든 달랑베르의 원리를 이용해서든 holonomic constraints 조건에서 라그랑쥬 방정식을 얻을 때, holonomic constraints 조건은 맨 마지막에 가서 variations of variables가 independent 함을 가정 할 때 나온다. Holonomic constraints system에서는 당장의 일반화된 좌표들이 independent 하지 않더라도 $f(q_1,\ldots,\,q_n,\,t)=0$ 꼴의 equation of constraints를 통해 독립적인 일반화된 좌표들을 구성 할 수 있는데, nonholonomic constraints system에서는 일반적으로 이것이 불가능하다. 
 
-- Varied path는 $y_i (x,\,\alpha) = y_i (x,\,0)+\alpha \eta_i (x)$ form으로 구성된다. 그리고 $\delta y_i$ 는 virtual displacement from a point on the actual path to some point on the neighboring varied path를 의미한다. Independent generalized coordinate 조건에서는 마지막 최종 변경 후 point만이 중요하지만 coordinates가 independent 하지 않으면 displacement가 constraints 조건을 따르며 변화했는지 여부가 매우 중요하다. 
+- Varied path는 $y_i (x,\,\alpha) = y_i (x,\,0)+\alpha \eta_i (x)$ form으로 구성된다. 그리고 $\delta y_i$ 는 virtual displacement 를 의미한다. Independent generalized coordinate 조건에서는 마지막 최종 변경 후 point만이 중요하지만 coordinates가 independent 하지 않으면 displacement가 constraints 조건을 따르며 변화했는지 여부가 매우 중요하다. 
 
 
 위의 두가지 경우를 고려하면 일반적으로 non-holonomic system을 다루기가 매후 힘들다는 것을 예상 할 수 있다. 그러나 그 가운데 특별한 경우는 어느정도 다룰 수 있는데 그것을 이제 확인해 보자.
