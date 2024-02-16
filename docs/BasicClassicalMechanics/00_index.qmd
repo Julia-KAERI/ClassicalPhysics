@@ -1,0 +1,10 @@
+---
+title: "고전역학의 기본 원리"
+number-sections: true
+number-depth: 2
+crossref:
+  chapters: true
+  
+---
+
+고전역학의 기본원리에 대해 설명한다.

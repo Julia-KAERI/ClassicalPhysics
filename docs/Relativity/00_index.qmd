@@ -1,10 +1,8 @@
 ---
-title: "고전역학"
+title: "상대론"
 number-sections: true
 number-depth: 2
 crossref:
   chapters: true
   
 ---
-
-고전역학에 대해 설명한다

@@ -10,15 +10,19 @@ book:
   
   chapters:
     - index.qmd
+    - part: docs/BasicClassicalMechanics/00_index.qmd
+      chapters:
+      - docs/BasicClassicalMechanics/01_basic_principles.qmd
+      - docs/BasicClassicalMechanics/02_variational_principle.qmd
+    - part: docs/Relativity/00_index.qmd
+      chapters:
+      - docs/Relativity/01_introduction.qmd
     - part: docs/Lanczos/Lanczos.qmd
       chapters:
       - docs/Lanczos/00_01.qmd
       - docs/Lanczos/01_01.qmd
       - docs/Lanczos/02_01.qmd
-    - part: docs/Goldstein/Goldstein.qmd
-      chapters:
-      - docs/Goldstein/01.qmd
-      - docs/Goldstein/02.qmd
+    
 
 bibliography: references.bib
 

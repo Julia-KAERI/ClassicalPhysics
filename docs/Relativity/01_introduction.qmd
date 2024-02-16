@@ -1,0 +1,81 @@
+---
+title: "상대론의 기초"
+number-sections: true
+number-depth: 2
+crossref:
+  chapters: true
+---
+
+## 아인슈타인의 기본 원리
+
+::: {.callout-important icon="false"}
+#### 상대론의 기본 가정
+
+1. 자연의 기본 법칙은 모든 관성좌표계에서 유효하다
+
+2. 빛의 속도는 모든 관성좌표계에서 동일하다.
+
+:::
+
+</br>
+
+
+### 로렌츠 변환
+
+두 좌표계 $\Sigma,\, \Sigma'$ 을 아래의 그림과 같이 생각하자. $\Sigma'$ 은 $\Sigma$ 에 대해 $\boldsymbol{V} = V\hat{\boldsymbol{e}}_1$ 의 일정한 속도로 움직인다. 
+
+```{r, engine = 'tikz'}
+#| label: fig-refrence_frame_in_relativity
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 4
+#| fig-align: center
+#| fig-cap: "두 좌표계"
+
+
+\begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm]
+\draw[thick,->,>=stealth] (xyz cs:x=-1) -- (xyz cs:x=12) node[below] {$x$};
+\draw[thick, ->,>=stealth] (xyz cs:z=1) -- (xyz cs:z=-6) node[right] {$z$};
+\draw[thick, ->,>=stealth] (xyz cs:y=-1) node[below] {$\Sigma$}-- (xyz cs:y=6) node[above] {$y$};
+
+\draw[thick, ->,>=stealth] (xyz cs:x=7, z=0.3) -- (xyz cs:x=14, z=0.3) node[above] {$x'$};
+\draw[thick, ->,>=stealth] (xyz cs:x=8, y=-1, z=0.3) node[below] {$\Sigma'$}-- (xyz cs:x=8, y=6, z=0.3) node[right] {$y'$};
+\draw[thick, ->,>=stealth] (xyz cs:x=8, z=1) -- (xyz cs:x=8, z=-6) node[above] {$z'$};
+
+\draw[thick, ->] (xyz cs:x=0.2, y=4) -- (xyz cs:x=4, y=4) node[above] {$\boldsymbol{V}t$} -- (xyz cs:x=8, y=4);
+\end{tikzpicture}
+```
+
+위의 그림과 같이 두 좌표계에 대해 $\boldsymbol{r} = \boldsymbol{r}' + \boldsymbol{V}t$ 이며 $\boldsymbol{V} = V\hat{\boldsymbol{e}}_1$ 인 시스템을 생각하자. $\boldsymbol{r} = (x, y, z)$, $\boldsymbol{r}'=(x', y', z')$ 이며 각 좌표계의 시간을 $t,\,t'$ 이라고 하자.
+
+뉴튼 역학에서는 $t=t'$ 이며 $x=x'+Vt,\, y=y',\,z=z'$ 을 만족했다. 그러나 이 변환은 무엇보다도 상대론의 기본 가정중에 두번째를 만족하지 않는다. 이제 다른 가정을 해 보자. 일단 $(x, y, z, t)$ 와 $(x', y', z', t')$ 사이의 선형 변환관계를 생각하자. 이렇게 놓는 다는 것은 일단은 갈릴레이 변환을 제외하고는 가장 간단한 변환이기 때문이다. 이것이 좋은 물리인지는 아직 모른다.
+
+$$
+x=\gamma x' + \zeta t',\qquad x' = \gamma' x + \zeta' t ,\qquad y=y',\qquad z=z'
+$$ {#eq-lorentz_eq_1}
+
+여기서 $\gamma,\,\gamma',\,\zeta,\,\zeta'$ 은 좌표, 시간과는 독립적인 파라미터이다. $x'=0$ 일 때 $x=Vt$ 이어야 한다. 따라서 $\zeta' = -\gamma' V$ 이다. 또한 $x=0$ 일 때 $x'=-Vt'$ 이므로 $\zeta = V\gamma$ 이며 이로부터 @eq-lorentz_eq_1 은 다음과 같이 변화한다.
+
+$$
+x=\gamma(x'+Vt'),\qquad x'=\gamma'(x-Vt),\qquad y=y',\qquad z=z'
+$$ {#eq-lorentz_eq_2}
+
+이제 $\Sigma$ 의 원점에 시계 $C$ 이, $\Sigma'$ 의 원점에 시계 $C'$ 가 있다고 하자. $C$ 는 $t$ 를 $C'$ 은 $t'$ 을 측정한다. $t=1$ 일 때 $\mathcal{O}$ 의 $\Sigma'$ 에서의 위치는 $-\gamma' V$ 이어야 한다. $t'=1$ 일 때 $\mathcal{O}'$ 의 $\Sigma$ 에서의 위치는 $\gamma V$ 이어야 한다. 우리는 $\Sigma$ 와 $\Sigma'$ 의 차이는 하나가 다른 하나에 대해 일정한 속도로 움직이는 것 밖에 없다는 것을 안다. 따라서 상대론의 첫번째 기본 가정에 의해 $\gamma = \gamma'$ 이어야 한다는 것을 안다.
+
+자 이제 상대론의 두번째 기본 가정이 등장할 때다. $t=t'=0$ 일 때 $\mathcal{O}$ 와 $\mathcal{O'}$ 이 일치하며, 빛이 $+x$ 방향으로 방출되었다고 하자. 그렇다면 $\Sigma$ 에서의 빛의 위치는 $x=ct$ 이며 $\Sigma'$ 에서의 빛의 위치는 $x'=ct'$ 이어야 한다. 이제 $\gamma=\gamma'$ 과 @eq-lorentz_eq_2 로부터 다음 식을 얻는다. 
+
+$$
+ct = \gamma (c+V)t',\qquad ct' = \gamma (c-V)t
+$$
+
+이 식을 연립하여 계산하면, $\beta = \dfrac{V}{c}$ 에 대해 $\gamma = \dfrac{1}{\sqrt{1-\beta^2}}$ 를 얻으며, 
+
+$$
+x = \gamma (x'+\beta c t'),\qquad y=y',\qquad z=z',\qquad ct = \gamma (ct' + \beta x')
+$$ {#eq-lorentz_eq_3}
+
+을 얻는다. 
+
+
+
