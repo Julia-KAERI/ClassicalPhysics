@@ -19,6 +19,7 @@ crossref:
 
 </br>
 
+## 로렌츠 변환
 
 ### 로렌츠 변환
 
@@ -75,7 +76,24 @@ $$
 x = \gamma (x'+\beta c t'),\qquad y=y',\qquad z=z',\qquad ct = \gamma (ct' + \beta x')
 $$ {#eq-lorentz_eq_3}
 
-을 얻는다. 
+을 얻는다. 이렇게 $\Sigma$ 에서 $\Sigma'$ 좌표계로 변환하는 것을 **로렌츠 변환(Lorentz transformation)** 혹은 **로렌츠 부스트(Lorentz boost)** 라고 한다.
+
+</br>
+
+### 로렌츠 변환에서의 빛의 속도
+
+앞서와 같은 두 관성좌표계 $\Sigma,\, \Sigma'$ 을 생각하자. $t=0$ 에서 $\mathcal{O} = \mathcal{O'}$ 이었다. $\Sigma$ 좌표계에서 $t=0$ 에서 방출된 광자의 위치는 $x^2+y^2+z^2-(ct)^2=0$ 를 만족한다. 이제 로렌츠 변환을 통해 변환시켜보자.
+
+$$
+\begin{aligned}
+0&=x^2+y^2+z^2-(ct)^2 \\
+&= (\gamma(x'+\beta ct'))^2 + (y')^2 + (z')^2-(\gamma (ct'+\beta x'))^2\\
+&= \gamma^2(1-\beta^2)x'^2 + y'^2 + z'^2 -\gamma^2(1-\beta^2)(ct')^2\\
+&= (x')^2 + (y')^2 +(z')^2 - (ct')^2.
+\end{aligned}
+$$
+
+즉 $\boldsymbol{V}$ 와 무관하게 $\Sigma'$ 에서도 빛의 속도는 $c$ 이다. 
 
 
 
