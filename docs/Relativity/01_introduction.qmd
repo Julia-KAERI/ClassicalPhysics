@@ -23,7 +23,7 @@ crossref:
 
 ### 로렌츠 변환
 
-두 좌표계 $\Sigma,\, \Sigma'$ 을 아래의 그림과 같이 생각하자. $\Sigma'$ 은 $\Sigma$ 에 대해 $\boldsymbol{V} = V\hat{\boldsymbol{e}}_1$ 의 일정한 속도로 움직인다. 
+두 좌표계 $\Sigma,\, \Sigma'$ 을 아래의 그림과 같이 생각하자. $\Sigma'$ 은 $\Sigma$ 에 대해 $\boldsymbol{V} = V\hat{\boldsymbol{e}}_1$ 의 일정한 속도로 움직인다. [$\Sigma, \Sigma',\, \mathcal{O},\, \mathcal{O}',\, V$ 는 특별한 설명 없이 앞으로도 계속 이 의미로 사용하겠다.]{.aside}
 
 ```{r, engine = 'tikz'}
 #| label: fig-refrence_frame_in_relativity
@@ -40,9 +40,9 @@ crossref:
 \draw[thick, ->,>=stealth] (xyz cs:z=1) -- (xyz cs:z=-6) node[right] {$z$};
 \draw[thick, ->,>=stealth] (xyz cs:y=-1) node[below] {$\Sigma$}-- (xyz cs:y=6) node[above] {$y$};
 
-\draw[thick, ->,>=stealth] (xyz cs:x=7, z=0.3) -- (xyz cs:x=14, z=0.3) node[above] {$x'$};
-\draw[thick, ->,>=stealth] (xyz cs:x=8, y=-1, z=0.3) node[below] {$\Sigma'$}-- (xyz cs:x=8, y=6, z=0.3) node[right] {$y'$};
-\draw[thick, ->,>=stealth] (xyz cs:x=8, z=1) -- (xyz cs:x=8, z=-6) node[above] {$z'$};
+\draw[thick, ->,>=stealth] (xyz cs:x=7, z=0.3) -- (xyz cs:x=14, z=0.3) node[above] {$x^\prime$};
+\draw[thick, ->,>=stealth] (xyz cs:x=8, y=-1, z=0.3) node[below] {$\Sigma^\prime$}-- (xyz cs:x=8, y=6, z=0.3) node[right] {$y\prime$};
+\draw[thick, ->,>=stealth] (xyz cs:x=8, z=1) -- (xyz cs:x=8, z=-6) node[above] {$z^\prime$};
 
 \draw[thick, ->] (xyz cs:x=0.2, y=4) -- (xyz cs:x=4, y=4) node[above] {$\boldsymbol{V}t$} -- (xyz cs:x=8, y=4);
 \end{tikzpicture}
@@ -87,7 +87,7 @@ $$ {#eq-lorentz_eq_3}
 $$
 \begin{aligned}
 0&=x^2+y^2+z^2-(ct)^2 \\
-&= (\gamma(x'+\beta ct'))^2 + (y')^2 + (z')^2-(\gamma (ct'+\beta x'))^2\\
+&= (\gamma(x'+\beta ct'))^2 + (y')^2 + (z')^2-(\gamma (ct+\beta x'))^2\\
 &= \gamma^2(1-\beta^2)x'^2 + y'^2 + z'^2 -\gamma^2(1-\beta^2)(ct')^2\\
 &= (x')^2 + (y')^2 +(z')^2 - (ct')^2.
 \end{aligned}
@@ -95,5 +95,340 @@ $$
 
 즉 $\boldsymbol{V}$ 와 무관하게 $\Sigma'$ 에서도 빛의 속도는 $c$ 이다. 
 
+</br>
+
+### 세계선과 동시성
+
+이제 로렌츠 변환이 의미하는 바를 이해해보자. 우선 시공간 속을 움직이는 관측자의 경로를 **세계선 (world line)** 이라고 하자. 그리고 상황을 단순하게 하기 위해 3차원을 1차원으로 축약하여 시공간을 $x-t$ 좌표계에서 그리도록 하자. 
+$\Sigma$ 좌표계에 대해 $x$ 축으로 $v$ 의 속도로 움직이는 관측자의 세계선은 아래 그림과 같다.
+
+```{r, engine = 'tikz'}
+#| label: fig-simultaneity_1
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 3
+#| fig-align: center
+#| fig-cap: "세계선"
 
 
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+\draw[blue] (0,0)-- (2, 4) node[above] {$\begin{array}{l} x=vt \\ x^\prime=0 \end{array}$};
+\draw[red, dashed] (0,0)-- (4, 4) node[above] {$x=ct$};
+\end{tikzpicture}
+```
+
+</br>
+
+이제 세계의 좌표계 $\Sigma,\, \Sigma_1,\, \Sigma_2,\, \Sigma_3$ 와 각 좌표계의 원점 $\mathcal{O},\, \mathcal{O}_1,\, \mathcal{O}_2,\, \mathcal{O}_3$ 을 생각하자. $\Sigma_1,\,\Sigma_2,\, \Sigma_3$ 는 $\Sigma$ 에 대해 모두 $V$ 의 속도로 움직이며, $t=0$ 일 때 $\mathcal{O}_1,\,\mathcal{O}_2,\,\mathcal{O}_3$ 의 위치는 각각 $0,\, L,\, 2L$ 이었다고 하자. 이제 $\mathcal{O}_1$ 과 $\mathcal{O}_3$ 에서 각각 $\mathcal{O}_2$ 의 방향으로 빛을 쏘았다고 하자. $\mathcal{O}_2$ 의 입장에서는 당연히 $\mathcal{O}_1$ 과 $\mathcal{O}_3$ 에서 같은 시간에 빛을 쏘아야 두 빛이 동시에 $\mathcal{O}_2$ 에 도착한다. 그렇다면 $\mathcal{O}$ 의 입장에서도 그러할까? 아래 그림을 보자. 아래 그림은 $\Sigma$ 에서의 세계선이다.
+
+
+```{r, engine = 'tikz'}
+#| label: fig-simultaneity_2
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 4
+#| fig-align: center
+#| fig-cap: "Σ 에서의 세계선"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (6, 0) node[right] {$x$};
+\draw[blue] (0,0)-- (2, 4) node[above] {$\mathcal{O}_1$};
+\draw[blue] (1.5, 0) -- (3.5, 4) node[above] {$\mathcal{O}_2$};
+\draw[blue] (3, 0)-- (5, 4) node[above] {$\mathcal{O}_3$};
+\draw[red, dashed] (0,0)-- (2, 2) node[above, rotate=45] {$x=ct$} -- (3, 3);
+\draw[red, dashed] (0,0)-- (-1, 1) node[above, rotate=-45] {$x=-ct$} -- (-1.5, 1.5);
+\draw[red, dashed] (3,3) -- (4, 2);
+\draw[thick, violet, densely dotted] (0, 2) -- (4, 2) ;
+\filldraw[blue] (3, 3) circle(2px) node[right] {$a$};
+\filldraw[blue] (4, 2) circle(2px) node[right] {$b$};
+\node[below] at (1.5, 0) {$L$};
+\node[below] at (3 , 0) {$2L$};
+\node[left] at (0, 2) {$t_\ast$};
+\end{tikzpicture}
+```
+
+그렇다면 $\Sigma$ 에서 보았을 때에 $\mathcal{O}_2$ 에 동시에 빛이 도달하기 위해서는 그림과 같이 $\mathcal{O}_1$ 에서 $t=0$ 에 빛이 방출될 경우 $\mathcal{O}_3$ 에서는 $t_\ast >0$ 에 빛이 방출되어야 한다. 즉 $\Sigma$ 와 $\Sigma_2$ 에서의 동시성은 일치하지 않는다. 
+
+
+</br>
+
+### 시공간 도표
+
+자 이제 점점 재미있는 주제로 들어간다. 앞서 정지 좌표계 $\Sigma$ 에 대해 움직이는 좌표계 $\Sigma'$ 의 원점 $\mathcal{O}'$ 의 위치를 세계선으로 표현했다. 이 세계선의 위치는 로렌츠 변환에서 $x'=0$ 을 $\Sigma$ 좌표계에서의 $t-x$ 공간에서 표한한 것이다. 이제 $t'=0$ 은 $x'$ 축이므로 다음과 같이 표현 할 수 있을 것이다. @eq-lorentz_eq_3 로부터 $t'$ 은 $t= \dfrac{1}{c\beta}x$ 으로 표현되며, $t=\dfrac{\beta}{c}x$ 로 표현됨을 안다. 
+
+```{r, engine = 'tikz'}
+#| label: fig-simultaneity_3
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 3
+#| fig-align: center
+#| fig-cap: "세계선"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
+\draw[red, dashed] (0,0)-- (4, 4) node[above] {$x=ct$};
+\end{tikzpicture}
+```
+
+
+</br>
+
+### 길이 수축
+
+길이 $L$ 인 막대기가 $x$ 축상에 놓여 있다고 하자. 편의상 한 끝점을 $\mathcal{O}$ 에 다른 끝점을 $x=L$ 에 놓을 수 있다. 이제 막대기의 양 끝의 세계선은 $\Sigma$ 좌표계에서 $x=0$ 과 $x=L$ 이다. 이제 움직이는 좌표계 $\Sigma'$ 에서 생각하자.
+
+```{r, engine = 'tikz'}
+#| label: fig-simultaneity_4
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 3
+#| fig-align: center
+#| fig-cap: "세계선"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
+\draw[red, dashed] (0,0)-- (4, 4) node[above] {$x=ct$};
+\draw[] (2, 0.1) -- (2, -0.1) node[below] {$L$};
+\draw[violet, dashed] (2, 0) -- (2, 1) node[above, black] {$L^\prime$};
+\filldraw[blue] (2, 1) circle(1px);
+\end{tikzpicture}
+```
+
+즉 $\Sigma'$ 에서의 길이는 $\overline{\mathcal{O}'L'}$ 이며 이것은 로렌츠 변환에서 $L'=L/\gamma < L$ 로 나타난다. 이를 길이 수축이라고 한다. 
+
+이제 길이 $L$ 인 막대기가 $\Sigma'$ 좌표계에서 $x=0,\, x=L'$ 에 놓여 있다고 하자. 그리고 이 막대기의 양 끝점의 세계선을 그리면 아래 그림과 같다. 
+
+
+```{r, engine = 'tikz'}
+#| label: fig-simultaneity_5
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 3
+#| fig-align: center
+#| fig-cap: "세계선"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
+\draw[red, dashed] (0,0)-- (4, 4) node[right] {$x=ct$};
+\draw[] (1.5, 0.1) -- (1.5, -0.1) node[below] {$L$};
+\draw[violet, dashed] (1.5, 0) -- (3.5, 4) ;
+\filldraw[blue] (2, 1) circle(1px) node[above left, black] {$L^\prime$};
+\end{tikzpicture}
+```
+
+역시 로렌츠 변환을 통해 $L=L'/\gamma < L'$ 이 된다. 즉 길이 수축은 움직이는 물체는 움직이는 방향으로 길이가 짧아진다는 의미이다. 
+
+</br>
+
+### 시간 팽창
+
+
+이제 $t$ 와 $t'$ 사이의 관계 역시 $\mathcal{O}$ 와 $\mathcal{O}^\prime$ 에 대한 로렌츠 변환식으로 부터 얻을 수 있다. 
+ 
+```{r, engine = 'tikz'}
+#| label: fig-simultaneity_6
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 3
+#| fig-align: center
+#| fig-cap: "세계선"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
+\draw[red, dashed] (0,0)-- (4, 4) node[right] {$x=ct$};
+\filldraw[blue] (1.5, 3) circle(1px) node[right, black] {$t^\prime=1$};
+\draw[thick, violet, densely dotted] (1.5, 3) -- (0, 3) node[left, black] {$t$};
+\end{tikzpicture}
+```
+
+$t'=1$ 일 때의 $t=\gamma t' > t'$ 이다. 즉 움직이는 시계는 정지한 시계보다 느리게 간다. 
+
+</br>
+
+### 쌍둥이의 역설
+
+동시에 태어난 두 쌍동이가 한 쌍동이($E$, earth)는 정지해 있을 때, 다른 쌍동이($S$, spaceship)가 우주선을 타고 멀리 갔다가 돌아왔을 때 누가 더 나이를 먹었을까 라는 문제이다. 상황을 간단하게 하기 위해 $t=0$ 일 때 $S$ 가 속도 $\boldsymbol{V}$ 의 등속운동으로 출발해서 어느 지점까지 갔고($P_1$ 경로), 거기에서 다시 $-\boldsymbol{V}$ 의 속력으로 귀환했다고 하자($P_2$ 경로). 경로 $P_1$ 과 경로 $P_2$ 모두 등속운동이며, 우리가 아는 한 $E$ 의 임장에서는 $S$ 가 어려지며, $S$ 의 입장에서는 $E$ 가 어려진다. 이것을 쌍둥이의 역설이라고 한다.  
+
+여기에 틈은 속도를 $\boldsymbol{V}$ 에서 $-\boldsymbol{V}$ 로 바꾸는 순간에 있을 수 밖에 없다. 이 순간을 제외하면 모든 것이 대칭적이기 때문이다. 이제 속도를 바꾸지 않는 $E$ 의 입장에서 보자. $E$ 와 $S$ 가 같은 시간을 가리키도록 안내선을 그어보자.  
+```{r, engine = 'tikz'}
+#| label: fig-twin_paradox_1
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 3
+#| fig-align: center
+#| fig-cap: "세계선"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 7) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+\draw[very thick, blue, ->,>=stealth] (0,0) --(0.75, 1.5) node[right, black] {$P_1$}-- (1.5, 3);
+\draw[very thick, blue, ->,>=stealth] (1.5, 3) --(0.75, 4.5) node[right, black] {$P_2$}-- (0, 6);
+% \draw[red, dashed] (0,0)-- (4, 4) node[right] {$x=ct$};
+\draw[thick, violet, dashed](0, 0.5) -- (0.5, 1);
+\draw[thick, violet, dashed](0, 1) -- (1, 2);
+\draw[thick, violet, dashed](0, 1.5) -- (1.5, 3);
+\draw[thick, violet, dashed](0, 4.5) -- (1.5, 3);
+\draw[thick, violet, dashed](0, 5) -- (1, 4);
+\draw[thick, violet, dashed](0, 5.5) -- (0.5, 5);
+\end{tikzpicture}
+```
+
+그림에서 보다시피 경로를 $P_1$ 에서 $P_2$ 로 옮기는 순간 $\Sigma$ 에서 엄청난 시간 변화가 일어난다. 이것은 실제로 가속운동을 따르는 일반상대성 이론에서 정확히 다룰 수 있지만, 특수상대성 이론만으로도 우주선을 타고 왕복한 $B$ 에서 흐른 시간이 짧다는 것을 알 수 있다.
+
+</br>
+
+## 상대성 역학 
+
+### 4-벡터와 로렌츠 불변량
+
+우리는 상대성이론에서 좌표계마다 시간이 다르며, 로렌츠 변환이 공간적 좌표뿐만 아니라 시간에도 관계된다는 것을 알았다. 이제 우리는 좌표계에서 어떤 사건(event) 를 기술하기 위해 시간과 공간을 동시에 기술하는 물리량을 도입해야 한다.
+
+::: {.callout-note appearance="minimal" icon="false"}
+
+::: {#def-4vector}
+
+#### 시공간의 위치에 대한 4-벡터
+
+정해진 시공간 좌표계상에서 사건을 기술하기 위한 4-벡터를 대문자로 다음과 같이 표기한다.
+$$
+X:= (ct, x, y, z) = (X^0, X^1, X^2, X^3)
+$$
+:::
+:::
+
+
+시간과 공간에서의 미소변화를 각각 $dt,\,dx,\,dy,\,dz$ 라고 했을 때 $X$ 의 미소변화(infinitesimal displacement) $dX$ 는 다음과 같이 쓸 수 있다.
+
+$$
+dX = (cdt,\, dx,\,dy,\,dz) = \begin{bmatrix} cdt & dx & dy &dz \end{bmatrix}^T
+$$
+
+이제 로렌츠 변환은 좌표계 사이의 4-vector 의 변환으로 기술 할 수 있다. 즉 @eq-lorentz_eq_3 은
+
+$$
+X = \begin{bmatrix} ct \\ x \\ y \\ z \end{bmatrix} = \begin{bmatrix} \gamma & \gamma\beta & 0 & 0 \\ \gamma\beta & \gamma & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix} \begin{bmatrix} ct' \\ x' \\ y' \\ z' \end{bmatrix} = \boldsymbol{\Lambda}X'
+$$ {#eq-lorentz_transform_1}
+
+이 때 $\boldsymbol{\Lambda}$ 는 4-vector 공간에서 로렌츠 변환을 나타내는 텐서이다.
+
+이제 메트릭 텐서를 도입한다. 특수상대성 이론에서의 메트릭 텐서 $\boldsymbol{\eta}$ 는 다음과같다.
+
+$$
+\boldsymbol{\eta} = \begin{bmatrix} -1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix}
+$$
+
+이제 메트릭 텐서 $\boldsymbol{\eta}$ 와 미소변위 $d\boldsymbol{r}$ 를 이용하여 $ds^2$ 를 정의한다.
+
+$$
+ds^2 = dX^T \cdot \boldsymbol{\eta} \cdot dX= -c^2dt^2 + dx^2 + dy^2+dz^2.
+$$
+
+$X= \boldsymbol{\Lambda }X'$ 이므로 $dX = \boldsymbol{\Lambda}dX'$  이며, $dX^T = dX'^T \boldsymbol{\Lambda}^T$ 가 된다. 따라서, 
+
+$$
+ds^2 =dX^T \cdot \boldsymbol{\eta} \cdot dX = dX'^T \cdot \boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda} \cdot dX'
+$$
+
+이 때 우리는 $\boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda} = \boldsymbol{\eta}$ 임을 계산 할 수 있다. 따라서, 
+
+$$
+ds^2 = dX'^T \cdot \boldsymbol{\eta} \cdot dX' = -cdt'^2 + x'^2 + y'^2 + z'^2 = ds'^2
+$$
+
+이 된다. 즉 $ds^2$ 는 로렌츠 변환에 대해 불변량이다. 이렇게 로렌츠 변화에 대해 불변인 물리량을 **로렌츠 불변량 (Lorentz invariants)** 라고 한다.
+
+</br>
+
+### 고유 시간 $\tau$
+
+관성 좌표계 $\Sigma$ 와 $\Sigma'$ 을 생각하자. 각각의 원점을 $\mathcal{O},\, \mathcal{O}'$ 이라고 하면 $\Sigma$ 에서의 $\mathcal{O'}$ 의 속도를 $\boldsymbol{V}$ 라고 하자. 그렇다면 $\beta = V/c$ 와 $\gamma = 1/\sqrt{1-\beta^2}\ge 1$ 이 정해진다. $\mathcal{O}'$ 에서 측정한 시간을 $dt'=d\tau$ 라고 하자. $ds^2 = ds'^2$ 로부터
+
+$$
+ds^2 = -c^2t^2 + dx^2 + dy^2 + dz^2 = = -c^2 t^2 + V^2 = ds'^2 = -c^2d\tau^2  
+$$
+
+가 성립하며, 따라서 $dt = \gamma d \tau \ge d\tau$ 이다. 이렇게 어떤 관성좌표계에서 측정한 시간을 그 좌표계의 **고유 시간 (proper time)** 이라고 하며 보통 $\tau$ 로 표기한다. 또한 이렇게 정지해 있는 관측자가 움직이는 시계를 봤을 때 움직이는 시계가 관측자의 시계보다 느리게 가는 것을 **시간 지연 (time dilation)** 이라고 한다. $\gamma=1.1$ 일 경우, 즉 $V \approx 0.42c$ 일 경우, $\mathcal{O}'$ 에서의 시간이 1초 흐를 때 $\mathcal{O}$ 에서의 시간은 $1.1$ 초 흐른다. 
+
+</br>
+
+### 4-벡터 표기법 (아인슈타인 표기법)
+
+4-벡터 표기법 $X= (r^0 = ct,\, r^1=x,\, r^2=y,\, r^3=z)$ 을 다시 생각하자. 일반적으로 3-벡터의 경우 $\|\boldsymbol{r}\|^2 = \sum_i {x_i}^2$  와 같이 인덱스에 $i,\,j,\,k$ 같은 알파벳 문자를 사용한다. 그러나 4-벡터의 경우 $\mu$ 나 $\nu$ 같은 그리스 문자를 관례적으로 사용한다. 그렇다면
+
+$$
+ds^2 = -c^2t^2 + x^2+y^2+z^2=  \sum_{\mu=0}^3 \sum_{\nu = 0}^3 dX^\mu \eta_{\mu \nu}dX^\nu
+$$
+
+와 같이 표현 할 수 있다. 앞으로 첨자가 위에 붙어 있을 때와 아래에 붙어 있을 때의 차이에 대해 설명하겠지만 일단은 잠시 넘어가기로 하자. 일반적으로 우리가 생각하는 벡터는 첨자가 위에 붙은 벡터이며, 첨자가 위에 붙은 벡터에 대해 메트릭 텐서는 위에서 처럼 아래에 두 첨자가 붙고, 로렌츠 변환 텐서는 위와 아래에 하나씩 붙는다. 이렇게 4-벡터와 4-텐서(4 벡터의 변환을 나타내는 텐서)의 곱에 동일한 첨자가 하나는 위에 하나는 아래에 붙을 경우 그것에 대한 $\sum$ 기호를 표기하지 않아도 표기한 것처럼 사용하는 것을 **아인슈타인 표기법 (Einstein summmation convention)** 이라고 한다. 즉,
+
+$$
+ds^2 = dX^\mu \eta_{\mu \nu}dX^\nu
+$$
+
+로 쓸 수 있다. @eq-lorentz_transform_1 을 4-벡터와 4-텐서로 나타내면
+
+$$
+dX^\mu = \Lambda^\mu_\nu dX'^\nu
+$$
+
+이다. 여기서 $\Lambda^\mu_\nu$ 는 $\mu$ 의 행 index, $\nu$ 의 열 인덱스를 나타낸다. 
+
+</br>
+
+### 4-속도 
+
+입자의 4-속도(4-velocity) $U$ 는 입자의 고유 시간 $\tau$ 에 대해 다음과 같이 정의된다.
+
+$$
+U^\mu := \dfrac{dX^\mu}{d\tau},\qquad \mu = 0,\,1,\,2,\,3.
+$$
+
+따라서, 
+
+$$
+U := \left(\gamma c,\, \gamma \dfrac{dx}{dt},\, \gamma \dfrac{dy}{dt},\,\gamma \dfrac{dz}{dt}\right) = \begin{bmatrix}\, \gamma c,\, \gamma \dfrac{dx}{dt},\, \gamma \dfrac{dy}{dt},\,\gamma \dfrac{dz}{dt}\, \end{bmatrix}^T
+$$
+
+이다. 
+
+</br>
+
+::: {#exm-velocity_transformation}
+
+두 관성좌표계 $\Sigma,\, \Sigma'$ 과 각각의 원점 $\mathcal{O},\, \mathcal{O}'$ 에 대해 $\mathcal{O}'$ 의 위치가 $\Sigma$ 에서 $Vt\hat{\boldsymbol{e}}_1$ 라고 하자. 이 때의 로렌츠 변환 텐서 $\boldsymbol{\Lambda}$ 는 $\beta_V = V/c,\, \gamma_V = 1/\sqrt{1-{\beta_V}^2}$ 에 대해 
+$$
+\boldsymbol{\Lambda} =  \begin{bmatrix} \gamma_V & \gamma_V\beta_V & 0 & 0 \\ \gamma_V\beta_V & \gamma_V & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix} 
+$$
+
+이다. 이제 $\Sigma$ 좌표계에서 $\boldsymbol{v}$ 로 움직이는 입자가 있다고 생각하자. $X=\boldsymbol{\Lambda}X'$
+
+
+:::
