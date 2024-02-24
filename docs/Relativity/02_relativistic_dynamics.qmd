@@ -1,0 +1,41 @@
+---
+title: "상대론적인 운동 법칙"
+number-sections: true
+number-depth: 2
+crossref:
+  chapters: true
+---
+
+## 상대론적 동역학의 기본 개념
+
+### 상대론에서의 자유입자의 action
+뉴튼역학에서의 [해밀턴의 원리](../BasicClassicalMechanics/02_variational_principle.qmd#sec-least_action_theorem), 즉 최소작용의 원리에 상응하는 상대론적인 action 은 다음과 같이 정의된다.
+
+$$
+I = -\int_{t_i}^{t_f} mc^2\, d\tau = -\int_{t_i}^{t_f} m c^2\sqrt{1-\dfrac{v^2}{c^2}} \, dt
+$$ {#eq-relativistic_action}
+
+즉 상대론적 라그랑지안은 $-mc^2 \sqrt{1-v^2/c^2}$ 으로 정의된다. 상대론에서 어떤 결과를 얻었을 때 최소한 $v \ll c$ 조건에서 고전역학과 일치하는지를 확인해야 한다. 
+
+$$
+\text{for } v \ll c \qquad L=-mc^2\sqrt{1-\dfrac{v^2}{c^2}} \approx -mc^2 \left( 1 - \dfrac{v^2}{2c^2} \right) = -mc^2 + \dfrac{1}{2}mv^2
+$$
+
+우리는 라그랑지안에 상수를 더하는 것은 물리에 전혀 영향을 끼치지 않는다는 것을 알고 있다. 따라서 위의 식은 우리가 아는 고전역학에서의 자유입자의 라그랑지안과 일치한다.
+
+</br>
+
+## 상대론에서의 운동량
+
+고전역학에서 운동량은 라그랑지안에 대한 속도 변수의 미분으로 정의된다. 즉 $\dot{x} = \dfrac{dx}{dt}$ 에 대해 $p_x = \dfrac{\partial L}{\partial \dot{x}}$ 이다. 상대론에서의 운동량은 역시 라그랑지안에 대한 4벡터의 미분으로 정의된다. 즉, 
+
+$$
+P_\mu := \dfrac{\partial L}{\partial \dot{X} ^\mu}
+$$
+
+이다. 그렇다면, 
+
+$$
+P = (P_0,\, P_1,\, P_2,\, P_3) =  
+$$
+

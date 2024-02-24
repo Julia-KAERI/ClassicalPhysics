@@ -17,11 +17,17 @@ book:
     - part: docs/Relativity/00_index.qmd
       chapters:
       - docs/Relativity/01_introduction.qmd
+      - docs/Relativity/02_relativistic_dynamics.qmd
     - part: docs/Lanczos/Lanczos.qmd
       chapters:
       - docs/Lanczos/00_01.qmd
       - docs/Lanczos/01_01.qmd
       - docs/Lanczos/02_01.qmd
+    - part: docs/images/images.qmd
+      chapters:
+      - docs/images/images_01.qmd
+      - docs/images/images_02.qmd
+      - docs/images/images_test.qmd
     
 
 bibliography: references.bib

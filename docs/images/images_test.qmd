@@ -1,0 +1,54 @@
+---
+title: "그림들-테스트"
+number-sections: true
+number-depth: 2
+crossref:
+  chapters: true
+---
+
+```{r, engine = 'tikz'}
+#| label: fig-refrence_frame_in_relativity
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 4
+#| fig-align: center
+#| fig-cap: "두 좌표계"
+
+
+\begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm]
+\draw[thick,->,>=stealth] (xyz cs:x=-1) -- (xyz cs:x=12) node[below] {$x$};
+\draw[thick, ->,>=stealth] (xyz cs:z=1) -- (xyz cs:z=-6) node[right] {$z$};
+\draw[thick, ->,>=stealth] (xyz cs:y=-1) node[below] {$\Sigma$}-- (xyz cs:y=6) node[above] {$y$};
+
+\draw[thick, ->,>=stealth] (xyz cs:x=7, z=0.3) -- (xyz cs:x=14, z=0.3) node[above] {$x^\prime$};
+\draw[thick, ->,>=stealth] (xyz cs:x=8, y=-1, z=0.3) node[below] {$\Sigma^\prime$}-- (xyz cs:x=8, y=6, z=0.3) node[right] {$y\prime$};
+\draw[thick, ->,>=stealth] (xyz cs:x=8, z=1) -- (xyz cs:x=8, z=-6) node[above] {$z^\prime$};
+
+\draw[thick, ->] (xyz cs:x=0.2, y=4) -- (xyz cs:x=4, y=4) node[above] {$\boldsymbol{V}t$} -- (xyz cs:x=8, y=4);
+\end{tikzpicture}
+```
+
+
+```{r, engine = 'tikz'}
+#| label: fig-mincowsky_
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 4
+#| fig-align: center
+#| fig-cap: "두 좌표계"
+
+
+\begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm]
+\draw[thick,->,>=stealth] (xyz cs:x=-1) -- (xyz cs:x=12) node[below] {$x$};
+\draw[thick, ->,>=stealth] (xyz cs:z=1) -- (xyz cs:z=-6) node[right] {$z$};
+\draw[thick, ->,>=stealth] (xyz cs:y=-1) node[below] {$\Sigma$}-- (xyz cs:y=6) node[above] {$y$};
+
+\draw[thick, ->,>=stealth] (xyz cs:x=7, z=0.3) -- (xyz cs:x=14, z=0.3) node[above] {$x^\prime$};
+\draw[thick, ->,>=stealth] (xyz cs:x=8, y=-1, z=0.3) node[below] {$\Sigma^\prime$}-- (xyz cs:x=8, y=6, z=0.3) node[right] {$y\prime$};
+\draw[thick, ->,>=stealth] (xyz cs:x=8, z=1) -- (xyz cs:x=8, z=-6) node[above] {$z^\prime$};
+
+\draw[thick, ->] (xyz cs:x=0.2, y=4) -- (xyz cs:x=4, y=4) node[above] {$\boldsymbol{V}t$} -- (xyz cs:x=8, y=4);
+\end{tikzpicture}
+```

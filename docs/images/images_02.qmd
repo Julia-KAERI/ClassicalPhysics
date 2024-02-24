@@ -1,0 +1,188 @@
+---
+title: "그림들-상대성이론"
+number-sections: true
+number-depth: 2
+crossref:
+  chapters: true
+---
+
+```{r, engine = 'tikz'}
+#| label: fig-refrence_frame_in_relativity
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 4
+#| fig-align: center
+#| fig-cap: "두 좌표계"
+
+
+\begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm]
+\draw[thick,->,>=stealth] (xyz cs:x=-1) -- (xyz cs:x=12) node[below] {$x$};
+\draw[thick, ->,>=stealth] (xyz cs:z=1) -- (xyz cs:z=-6) node[right] {$z$};
+\draw[thick, ->,>=stealth] (xyz cs:y=-1) node[below] {$\Sigma$}-- (xyz cs:y=6) node[above] {$y$};
+
+\draw[thick, ->,>=stealth] (xyz cs:x=7, z=0.3) -- (xyz cs:x=14, z=0.3) node[above] {$x^\prime$};
+\draw[thick, ->,>=stealth] (xyz cs:x=8, y=-1, z=0.3) node[below] {$\Sigma^\prime$}-- (xyz cs:x=8, y=6, z=0.3) node[right] {$y\prime$};
+\draw[thick, ->,>=stealth] (xyz cs:x=8, z=1) -- (xyz cs:x=8, z=-6) node[above] {$z^\prime$};
+
+\draw[thick, ->] (xyz cs:x=0.2, y=4) -- (xyz cs:x=4, y=4) node[above] {$\boldsymbol{V}t$} -- (xyz cs:x=8, y=4);
+\end{tikzpicture}
+```
+
+```{r, engine = 'tikz'}
+#| label: fig-simultaneity_1
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 3
+#| fig-align: center
+#| fig-cap: "세계선"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+\draw[blue] (0,0)-- (2, 4) node[above] {$\begin{array}{l} x=vt \\ x^\prime=0 \end{array}$};
+\draw[red, dashed] (0,0)-- (4, 4) node[above] {$x=ct$};
+\end{tikzpicture}
+```
+
+
+```{r, engine = 'tikz'}
+#| label: fig-simultaneity_2
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 4
+#| fig-align: center
+#| fig-cap: "Σ 에서의 세계선"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (6, 0) node[right] {$x$};
+\draw[blue] (0,0)-- (2, 4) node[above] {$\mathcal{O}_1$};
+\draw[blue] (1.5, 0) -- (3.5, 4) node[above] {$\mathcal{O}_2$};
+\draw[blue] (3, 0)-- (5, 4) node[above] {$\mathcal{O}_3$};
+\draw[red, dashed] (0,0)-- (2, 2) node[above, rotate=45] {$x=ct$} -- (3, 3);
+\draw[red, dashed] (0,0)-- (-1, 1) node[above, rotate=-45] {$x=-ct$} -- (-1.5, 1.5);
+\draw[red, dashed] (3,3) -- (4, 2);
+\draw[thick, violet, densely dotted] (0, 2) -- (4, 2) ;
+\filldraw[blue] (3, 3) circle(2px) node[right] {$a$};
+\filldraw[blue] (4, 2) circle(2px) node[right] {$b$};
+\node[below] at (1.5, 0) {$L$};
+\node[below] at (3 , 0) {$2L$};
+\node[left] at (0, 2) {$t_\ast$};
+\end{tikzpicture}
+```
+
+```{r, engine = 'tikz'}
+#| label: fig-simultaneity_3
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 3
+#| fig-align: center
+#| fig-cap: "세계선"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
+\draw[red, dashed] (0,0)-- (4, 4) node[above] {$x=ct$};
+\end{tikzpicture}
+```
+
+
+```{r, engine = 'tikz'}
+#| label: fig-simultaneity_4
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 3
+#| fig-align: center
+#| fig-cap: "세계선"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
+\draw[red, dashed] (0,0)-- (4, 4) node[above] {$x=ct$};
+\draw[] (2, 0.1) -- (2, -0.1) node[below] {$L$};
+\draw[violet, dashed] (2, 0) -- (2, 1) node[above, black] {$L^\prime$};
+\filldraw[blue] (2, 1) circle(1px);
+\end{tikzpicture}
+```
+
+
+```{r, engine = 'tikz'}
+#| label: fig-simultaneity_5
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 3
+#| fig-align: center
+#| fig-cap: "세계선"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
+\draw[red, dashed] (0,0)-- (4, 4) node[right] {$x=ct$};
+\draw[] (1.5, 0.1) -- (1.5, -0.1) node[below] {$L$};
+\draw[violet, dashed] (1.5, 0) -- (3.5, 4) ;
+\filldraw[blue] (2, 1) circle(1px) node[above left, black] {$L^\prime$};
+\end{tikzpicture}
+```
+
+```{r, engine = 'tikz'}
+#| label: fig-simultaneity_6
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 3
+#| fig-align: center
+#| fig-cap: "세계선"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
+\draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
+\draw[red, dashed] (0,0)-- (4, 4) node[right] {$x=ct$};
+\filldraw[blue] (1.5, 3) circle(1px) node[right, black] {$t^\prime=1$};
+\draw[thick, violet, densely dotted] (1.5, 3) -- (0, 3) node[left, black] {$t$};
+\end{tikzpicture}
+```
+
+```{r, engine = 'tikz'}
+#| label: fig-twin_paradox_1
+#| code-fold: true
+#| echo: fenced
+#| output: asis
+#| fig-width: 2.5
+#| fig-align: center
+#| fig-cap: "쌍동이의 역설"
+
+
+\begin{tikzpicture}[]
+\draw[thick,->,>=stealth] (0, -1) -- (0, 7) node[above] {$t$};
+\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+\draw[very thick, blue, ->,>=stealth] (0,0) --(0.75, 1.5) node[right, black] {$P_1$}-- (1.5, 3);
+\draw[very thick, blue, ->,>=stealth] (1.5, 3) --(0.75, 4.5) node[right, black] {$P_2$}-- (0, 6);
+% \draw[red, dashed] (0,0)-- (4, 4) node[right] {$x=ct$};
+\draw[thick, violet, dashed](0, 0.5) -- (0.5, 1);
+\draw[thick, violet, dashed](0, 1) -- (1, 2);
+\draw[thick, violet, dashed](0, 1.5) -- (1.5, 3);
+\draw[thick, violet, dashed](0, 4.5) -- (1.5, 3);
+\draw[thick, violet, dashed](0, 5) -- (1, 4);
+\draw[thick, violet, dashed](0, 5.5) -- (0.5, 5);
+\end{tikzpicture}
+```
