@@ -1,5 +1,5 @@
 ---
-title: "상대론의 기초"
+title: "특수 상대론의 기초"
 number-sections: true
 number-depth: 2
 crossref:
@@ -203,13 +203,13 @@ $$
 이제 메트릭 텐서를 도입한다. 특수상대성 이론에서의 메트릭 텐서 $\boldsymbol{\eta}$ 는 다음과같다.
 
 $$
-\boldsymbol{\eta} = \begin{bmatrix} -1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix}
+\boldsymbol{\eta} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1\end{bmatrix}
 $$
 
 이제 메트릭 텐서 $\boldsymbol{\eta}$ 와 미소변위 $d\boldsymbol{r}$ 를 이용하여 $ds^2$ 를 정의한다.
 
 $$
-ds^2 = dX^T \cdot \boldsymbol{\eta} \cdot dX= -c^2dt^2 + dx^2 + dy^2+dz^2.
+ds^2 = dX^T \cdot \boldsymbol{\eta} \cdot dX= c^2dt^2 - dx^2 - dy^2 - dz^2.
 $$
 
 $X= \boldsymbol{\Lambda }X'$ 이므로 $dX = \boldsymbol{\Lambda}dX'$  이며, $dX^T = dX'^T \boldsymbol{\Lambda}^T$ 가 된다. 따라서, 
@@ -221,7 +221,7 @@ $$
 이 때 우리는 $\boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda} = \boldsymbol{\eta}$ 임을 계산 할 수 있다. 따라서, 
 
 $$
-ds^2 = dX'^T \cdot \boldsymbol{\eta} \cdot dX' = -cdt'^2 + x'^2 + y'^2 + z'^2 = ds'^2
+ds^2 = dX'^T \cdot \boldsymbol{\eta} \cdot dX' = cdt'^2 - x'^2 - y'^2 - z'^2 = ds'^2
 $$
 
 이 된다. 즉 $ds^2$ 는 로렌츠 변환에 대해 불변량이다. 이렇게 로렌츠 변화에 대해 불변인 물리량을 **로렌츠 불변량 (Lorentz invariants)** 라고 한다.
@@ -233,13 +233,13 @@ $$
 관성 좌표계 $\Sigma$ 와 $\Sigma'$ 을 생각하자. 각각의 원점을 $\mathcal{O},\, \mathcal{O}'$ 이라고 하면 $\Sigma$ 에서의 $\mathcal{O'}$ 의 속도를 $\boldsymbol{V}$ 라고 하자. 그렇다면 $\beta = V/c$ 와 $\gamma = 1/\sqrt{1-\beta^2}\ge 1$ 이 정해진다. $\mathcal{O}'$ 에서 측정한 시간을 $dt'=d\tau$ 라고 하자. $ds^2 = ds'^2$ 로부터
 
 $$
-ds^2 = -c^2t^2 + dx^2 + dy^2 + dz^2 = = -c^2 t^2 + V^2 = ds'^2 = -c^2d\tau^2  
+ds^2 = c^2t^2 - dx^2 0 dy^2 - dz^2 = c^2 t^2 - V^2 = ds'^2 = c^2d\tau^2  
 $$
 
 가 성립하며, 따라서 $dt = \gamma d \tau \ge d\tau$ 이다. 이렇게 어떤 관성좌표계에서 측정한 시간을 그 좌표계의 **고유 시간 (proper time)** 이라고 하며 보통 $\tau$ 로 표기한다. 우리는 이미 시간 지연 (time dilation) 이라는 것을 안다. $\gamma=1.1$ 일 경우, 즉 $V \approx 0.42c$ 일 경우, $\mathcal{O}'$ 에서의 시간이 1초 흐를 때 $\mathcal{O}$ 에서의 시간은 $1.1$ 초 흐른다. 
 
 
-또하나 알수 있는 것은 $ds^2$ 가 로렌츠 불변량이기 때문에 $d\tau = -\dfrac{1}{c} \sqrt{ds^2}$ 도 당연히 로렌츠 불변량이라는 것이다. $d\tau$ 가 로렌츠 불변량이므로 뒤에 나올 4-속도가 정의가능해진다. $d\tau$ 가 로렌츠 불변량인것은 어떻게 보면 당연한데 어떤 관성좌표계에서 측정하는 시간은 다른 어떤 관성좌표계에서도 간섭 할 수 없다는 의미이기 때문이다. 
+또하나 알수 있는 것은 $ds^2$ 가 로렌츠 불변량이기 때문에 $d\tau = \dfrac{1}{c} \sqrt{ds^2}$ 도 당연히 로렌츠 불변량이라는 것이다. $d\tau$ 가 로렌츠 불변량이므로 뒤에 나올 4-속도가 정의가능해진다. $d\tau$ 가 로렌츠 불변량인것은 어떻게 보면 당연한데 어떤 관성좌표계에서 측정하는 시간은 다른 어떤 관성좌표계에서도 간섭 할 수 없다는 의미이기 때문이다. 
 
 </br>
 
@@ -248,7 +248,7 @@ $$
 4-벡터 표기법 $X= (r^0 = ct,\, r^1=x,\, r^2=y,\, r^3=z)$ 을 다시 생각하자. 일반적으로 3-벡터의 경우 $\|\boldsymbol{r}\|^2 = \sum_i {x_i}^2$  와 같이 인덱스에 $i,\,j,\,k$ 같은 알파벳 문자를 사용한다. 그러나 4-벡터의 경우 $\mu$ 나 $\nu$ 같은 그리스 문자를 관례적으로 사용한다. 그렇다면
 
 $$
-ds^2 = -c^2t^2 + x^2+y^2+z^2=  \sum_{\mu=0}^3 \sum_{\nu = 0}^3 dX^\mu \eta_{\mu \nu}dX^\nu
+ds^2 = c^2t^2 - x^2 - y^2 - z^2=  \sum_{\mu=0}^3 \sum_{\nu = 0}^3 dX^\mu \eta_{\mu \nu}dX^\nu
 $$
 
 와 같이 표현 할 수 있다. 앞으로 첨자가 위에 붙어 있을 때와 아래에 붙어 있을 때의 차이에 대해 설명하겠지만 일단은 잠시 넘어가기로 하자. 일반적으로 우리가 생각하는 벡터는 첨자가 위에 붙은 벡터이며, 첨자가 위에 붙은 벡터에 대해 메트릭 텐서는 위에서 처럼 아래에 두 첨자가 붙고, 로렌츠 변환 텐서는 위와 아래에 하나씩 붙는다. 이렇게 4-벡터와 4-텐서(4 벡터의 변환을 나타내는 텐서)의 곱에 동일한 첨자가 하나는 위에 하나는 아래에 붙을 경우 그것에 대한 $\sum$ 기호를 표기하지 않아도 표기한 것처럼 사용하는 것을 **아인슈타인 표기법 (Einstein summmation convention)** 이라고 한다. 즉,
@@ -324,7 +324,7 @@ $$ {#eq-4vector}
 이다. 4 속도의 4 성분은 서로 독립이 아니며 항상 아래 식을 만족한다.
 
 $$
-U^\mu \eta_{\mu \nu}U^\nu = -\gamma^2c^2 + \gamma^2 v^2 = -c^2.
+U^\mu \eta_{\mu \nu}U^\nu = \gamma^2c^2 - \gamma^2 v^2 = c^2.
 $$
 
 </br>
@@ -339,5 +339,108 @@ $$
 
 </br>
 
+## 상대론적 동역학의 기본 개념
+
+### 상대론에서의 자유입자의 action
+뉴튼역학에서의 [해밀턴의 원리](../BasicClassicalMechanics/02_variational_principle.qmd#sec-least_action_theorem), 즉 최소작용의 원리에 상응하는 상대론적인 action 은 다음과 같이 정의된다.
+
+$$
+I = -\int_{t_i}^{t_f} mc^2\, d\tau = -\int_{t_i}^{t_f} m c^2\sqrt{1-\dfrac{v^2}{c^2}} \, dt
+$$ {#eq-relativistic_action}
+
+즉 상대론적 라그랑지안은 $-mc^2 \sqrt{1-v^2/c^2}$ 으로 정의된다. 상대론에서 어떤 결과를 얻었을 때 최소한 $v \ll c$ 조건에서 고전역학과 일치하는지를 확인해야 한다. 
+
+$$
+\text{for } v \ll c \qquad L=-mc^2\sqrt{1-\dfrac{v^2}{c^2}} \approx -mc^2 \left( 1 - \dfrac{v^2}{2c^2} \right) = -mc^2 + \dfrac{1}{2}mv^2
+$$
+
+우리는 라그랑지안에 상수를 더하는 것은 물리에 전혀 영향을 끼치지 않는다는 것을 알고 있다. 따라서 위의 식은 우리가 아는 고전역학에서의 자유입자의 라그랑지안과 일치한다.
+
+</br>
+
+## 상대론에서의 운동량과 에너지
+
+### 상대론에서의 운동량
+
+
+고전역학에서의 운동량은 $m\boldsymbol{v}$ 로 결정되었다. 상대론에서의 운동량 $P$ 는 4-속도 $U$ 에 대해 $mU=\gamma m \dot{X}$ 로 결정된다. 즉, 
+
+$$
+P = (P^0,\, P^1,\, P^2,\,P^3) = mU = \left(\gamma mc,\, \gamma m \dfrac{dx}{dt},\, \gamma m \dfrac{dy}{dt},, \gamma m \dfrac{dz}{dt}\right)
+$$ {#eq-relativistic_4_momentum}
+
+상대론에서의 운동량도 4-벡터이다. 따라서,
+
+$$
+P^\mu \eta_{\mu, \nu}P^\nu = \gamma^2 m^2(c^2-v^2) = m^2c^2
+$$
+
+
+이 된다. 이것의 의미는 잠시 후에 알아보자.
+
+
+</br>
+
+### 상대론에서의 해밀토니안
+
+우리는 고전역학에서 라그랑지안 $L(p, \dot{p})$ 을 알고 있을 때 운동량 $p_i = \dfrac{\partial L}{\partial \dot{q}_i}$ 에 대해 해밀토니안 $H(p, q)$ 는
+
+$$
+H = \sum_i p_i \dot{q}_i - L
+$$
+
+임을 안다. 이제 자유입자의 라그랑지안의 경우 $L = - \gamma mc^2 = -mc^2 \sqrt{1-\dfrac{v^2}{c^2}}$ 이므로, 
+
+$$
+H = \sum_{i=1}^3 P^\mu (\dot{X}^\mu) -  mc^2\sqrt{1-\dfrac{v^2}{c^2}} = \gamma mc^2 
+$$
+
+이다. 우리는 이제 입자의 에너지 $\mathcal{E}=H$ 에 대해 $P^0 = \mathcal{E}/c$ 임을 안다. 즉 상대론의 4-운동량은 에너지와 운동량을 포함하며, 로렌츠 변환에 의해 보존되는 것은 에너지와 운동량의 조합인 4-운동량이다.
+
+</br>
+
+### 질량이 없는 입자까지 고려하는 경우
+
+질량이 없는 입자, 즉 $m=0$ 인 입자의 경우에는 $\mathcal{E}=0$ 이라는 결론이 나온다. 이는 물리적으로 넌센스이며 이것을 피해야 한다. 우리는 이미 질량이 없는 입자라도 운동량 $\boldsymbol{p}$ 을 가지고 있음을 안다. 그렇다면 $P = (\mathcal{E}/c,\, \boldsymbol{p})$ 로 놓으면 $P_\mu P^\mu = m^2c^2$ 이므로, 
+
+$$
+P_\mu P^\mu = \mathcal{E}^2/c^2 - p^2 = m^2c^2
+$$
+
+로부터
+
+$$
+\mathcal{E} = \sqrt{p^2c^2 + m^2c^4}
+$$ {#eq-relativity_relativistic_energy_for_massless_particle}
+
+
+을 얻는다. 이로부터 질량이 없는 입자의 에너지는 $\mathcal{E} = cp$ 이다. 
+
+</br>
+
+::: {#exm-positroium}
+
+#### 포지트로늄 입자의 쌍소멸
+
+전자와 양전자가 서로 속박되어 있는 입자를 포지트로늄(positronium) 입자라고 한다. 질량은 대략 전자 질량의 두배이며$^\ast$[$^\ast$ 자유 양전자의 질량은 자유 전자의 질량과 같다. 두 입자가 속박되면 속박된 에너지 만큼의 질량 차이가 나므로 속박된 포지트로늄의 질량은 자유 전자 질량의 두배보다 약간 작다]{.aside} 두 입자는 서로 소멸해 2개의 광자를 만들어낸다. 
+
+포지트로늄 입자가 정지해있는 관셩계에서 생각하자. 이 관성계에서는 포지트로늄의 운동량은 $0$ 이며 4-운동량은 
+
+$$
+(mc, 0, 0, 0)
+$$
+
+이제 포지트로늄 입자가 광자 2개로 붕괴하면, 두 광자의 4-운동량의 합은
+
+$$
+(p, p_1, p_2, p_3) + (p, -p_1, -p_2, -p_3) = (2pc)
+$$
+
+가 될 것이다. 그렇다면 $mc= 2p$ 가 되므로 광자 하나의 운동량의 크기는 $p=mc/2$ 가 된다. 
+
+
+
+
+:::
 
 

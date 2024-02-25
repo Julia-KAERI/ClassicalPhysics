@@ -1,0 +1,29 @@
+---
+title: "해밀턴 동역학"
+number-sections: true
+number-depth: 2
+crossref:
+  chapters: true
+---
+
+우리는 라그랑지안이 운동방정식을 세우고 그로부터 역학계를 기술하는데 아주 유용하다는 것을 안다. 이제 소위 해밀토니안(Hamintonian) 을 통해 운동을 기술하는 방법을 소개하고자 한다. 실제의 운동방정식을 세우고 푸는데 해밀토니안 방법이 라그랑지안 방법보다 유리한 경우는 거의 없다. 그러나 해밀토니안 방법은 고전역학 이후에 발전한 통계역학과 양자역학의 이론적 발전에 지대한 영향을 끼쳤으며, 고전역학을 새로운 관점을 보는데도 매우 유용하다.
+
+여기서는 모든 시스템이 holonomic 이며(즉 역학적 제한조건이 좌표에만 의존한다), 힘이 monogenic 이거나 (즉 위치만의 함수인 포텐셜에 의해 힘이 주어진다) 속도에 의존적인 일반화된 포텐셜의 미분으로 힘이 주어지는 경우만을 생각하기로 하자.
+
+</br>
+
+## 르장드르 변환
+
+$f$ 가 $x,\,y$ 의 함수라면
+
+$$
+df = u\, dx+v\, dy,\qquad \text{where } u = \dfrac{\partial f}{\partial x},\, v=\dfrac{\partial f}{\partial y}
+$$
+
+이다. 이때 $g= f-ux$ 로 놓으면, 
+
+$$
+dg = df - x\, du - u \, dx = - x\, du + v\, dy
+$$
+
+이다. 즉 $g=g(u, y)$ 이며 $\dfrac{\partial g}{\partial u} = -x,\, \dfrac{\partial g}{\partial y} = v$ 이다. 

@@ -504,7 +504,7 @@ $$
 \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \boldsymbol{n}\times \boldsymbol{r}_i
 $$
 
-![Rotational Symmetry](../images/classical%20mechanics/rotsym.png){#fig-rotsym width=300}
+![Rotational Symmetry](../images/classical mechanics/fig-rotation_of_vector-1.png){#fig-rotsym width=350}
 
 그렇다면 generalized force $Q_j$ 는
 

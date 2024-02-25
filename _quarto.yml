@@ -14,10 +14,11 @@ book:
       chapters:
       - docs/BasicClassicalMechanics/01_basic_principles.qmd
       - docs/BasicClassicalMechanics/02_variational_principle.qmd
+      - docs/BasicClassicalMechanics/03_hamilton_dynamics.qmd
     - part: docs/Relativity/00_index.qmd
       chapters:
-      - docs/Relativity/01_introduction.qmd
-      - docs/Relativity/02_relativistic_dynamics.qmd
+      - docs/Relativity/01_introduction_to_special_relativity.qmd
+      - docs/Relativity/02_introduction_to_classical_field.qmd
     - part: docs/Lanczos/Lanczos.qmd
       chapters:
       - docs/Lanczos/00_01.qmd
