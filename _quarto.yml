@@ -24,6 +24,9 @@ book:
       - docs/Lanczos/00_01.qmd
       - docs/Lanczos/01_01.qmd
       - docs/Lanczos/02_01.qmd
+    - part: docs/topics/Topics.qmd
+      chapters:
+        - docs/topics/mathematical.qmd
     - part: docs/images/images.qmd
       chapters:
       - docs/images/images_01.qmd

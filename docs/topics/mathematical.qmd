@@ -1,0 +1,56 @@
+---
+title: "수학적 자료"
+number-sections: true
+number-depth: 2
+crossref:
+  chapters: true
+  
+---
+
+## 르장드르 변환 {#sec-legencre_transform}
+
+함수 $f: \mathbb{R}\to \mathbb{R}$ 가 $t\in [0,\,1]$ 에 대해 
+
+$$
+f(tx) + f((1-t)y) \ge tf(x)+ (1-t)f(y)
+$$
+
+일 때 $f$ 를 **convex** 라고 한다. $f\in C^2$ 라면 이것은 $\dfrac{d^2 f}{dx^2} \ge 0$ 과 동치이다. $\dfrac{d^2g}{dx^2} \le 0$ 인 함수를 **conclave** 라고 하며 이 경우 $f=-g$ 는 convex 이다. 만약 $\dfrac{d^2f}{dx^2} > 0$ 라면 이를 **strictly convex** 라고 한다. $f$ 가 strictly convex 이면 $f'(x)$ 는 전단사이며 이는 $f'(x)$ 의 역함수가 존재함을 의미한다. $f:\mathbb{R}^n \to \mathbb{R}$ 이며 $\partial^2_x f >0$ 이면 $x$ 에 대해 strictly convex 라고 한다. 
+
+</br>
+
+### 1변수 함수의 경우
+
+$f:\mathbb{R}\to\mathbb{R}$ 이 $C^2$ 함수라고 하자. $f$ 가 strictly convext 이면 $\dfrac{d^2f}{dx^2} >0$ 이다. $u = f'(x)$ 라 하면 $f'$ 이 전단사이므로 $x$ 를 $u$ 의 함수로 표현 할 수 있다. 즉 $x=x(u)$ 가 된다. 이 때 $g = f-ux$ 로 놓으면, $dg = df-udx - xdu = -xdu$ 이다. 즉, $\dfrac{dg}{du} = x$ 가 되도록 하는 $u$ 에 대한 함수 $g$ 가 자연스럽게 나온다. 이 때 
+
+
+</br>
+
+### 2변수 함수의 경우
+
+$f$ 가 $x,\,y$ 의 함수라고 하자. $df = (\partial_x f) dx + (\partial_y f) dy$ 이며 $u=\partial_x f,\, v = \partial_y f$ 라고 놓으면, 
+
+$$
+df = u\, dx+v\, dy
+$$
+
+가 된다. $f$ 가 $x$ 에 대해 strictly convex 라고 하자. 이때 $g= f-ux$ 로 놓으면, 
+
+$$
+dg = df - x\, du - u \, dx = - x\, du + v\, dy
+$$
+
+이다. 즉 $g=g(u, y)$ 이며 $\dfrac{\partial g}{\partial u} = -x,\, \dfrac{\partial g}{\partial y} = v$ 이다. 
+
+</br>
+
+
+### Lagrangian 의 convexity
+
+[이 포스트](https://physics.stackexchange.com/questions/103997/are-the-hamiltonian-and-lagrangian-always-convex-functions) 를 참고하라.
+
+$$
+L = \sum A_{ij}\dot{q}_i \dot{q}_j + \sum B_j \dot{q}_j + f(\{q_i\})
+$$
+
+일 

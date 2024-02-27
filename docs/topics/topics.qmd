@@ -1,0 +1,10 @@
+---
+title: "별도의 주제들"
+number-sections: true
+number-depth: 2
+crossref:
+  chapters: true
+  
+---
+
+별도의 주제들..

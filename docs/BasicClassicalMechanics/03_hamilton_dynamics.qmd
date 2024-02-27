@@ -12,18 +12,50 @@ crossref:
 
 </br>
 
-## 르장드르 변환
+## Hamiltonian
 
-$f$ 가 $x,\,y$ 의 함수라면
-
-$$
-df = u\, dx+v\, dy,\qquad \text{where } u = \dfrac{\partial f}{\partial x},\, v=\dfrac{\partial f}{\partial y}
-$$
-
-이다. 이때 $g= f-ux$ 로 놓으면, 
+라그랑지안 $L$ 은 일반화된 좌표계 $\{q_i\}$ 에 대해 $\{q_i\}$ 와 $\{\dot{q}_i\}$ 의 함수이다. 이 때 **canonical momentum** $p_i$ 는 다음과 같이 정의된다.
 
 $$
-dg = df - x\, du - u \, dx = - x\, du + v\, dy
+p_i := \dfrac{\partial L}{\partial \dot{q}_i}
 $$
 
-이다. 즉 $g=g(u, y)$ 이며 $\dfrac{\partial g}{\partial u} = -x,\, \dfrac{\partial g}{\partial y} = v$ 이다. 
+라그랑지안 $L$ 은 $\dot{q}_i$ 에 대해 convex 이다. 따라서  $\dot{q}_i$ 에 대해 [르장드르 변환](../topics/mathematical.qmd#sec-legendre_transform) 을 수행 할 수있으며, 이 변환의 결과를 **해밀토니안(Hamiltonian)** 이라고 한다. 즉, 해밀토니안 $H$ 는 다음과 같다.
+
+$$
+H\left(\{q_i\}, \{p_i\}, t\right) = \sum_{i} \dot{q}_i p_i - L(\{q_i\}, \{\dot{q}_i\}, t)
+$$ {#eq-hamiltonian}
+
+해밀토니안은 $\{q_i\},\, \{p_i\},\, t$ 에 대한 함수이므로 그 differrentail 은 다음과 같다.
+
+$$
+dH = \sum_i \left(\dfrac{\partial H}{\partial q_i}\right) dq_i + \sum_i \left(\dfrac{\partial H}{\partial p_i}\right) dp_i + \dfrac{\partial H}{\partial t}\, dt
+$$
+
+또한 @eq-hamiltonian 으로 부터, 
+
+$$
+dH = \sum_i\left(-\dfrac{\partial L}{\partial q_i}\right)dq_i + \sum_i \left(\dot{q}_i\right)\, dp_i + \left(p_i - \sum_i \dfrac{\partial L}{\partial \dot{q}_i}\right) d\dot{q}_i - \dfrac{\partial L}{\partial t}\,dt
+$$
+
+을 얻는다. 여기서 $d\dot{q}_i$ 앞의 항은 $p_i$ 의 정의에 의해 $0$ 이다. 또한 오일러 라그랑쥬 방정식에 의해
+
+$$
+0 = \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_i}\right) - \dfrac{\partial L}{\partial q_i} = \dot{p}_i - \dfrac{\partial L}{\partial q_i}
+$$
+
+이므로, 
+
+$$
+dH = -\sum_i (\dot{p}_i dq_i + \dot{q}_i dp_i )+ \dfrac{\partial H}{\partial t} 
+$$
+
+이며 이로부터
+
+$$
+\dot{q}_i = \dfrac{\partial H}{\partial p_i},\qquad \dot{p}_i =- \dfrac{\partial H}{\partial q_i}, \qquad \dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
+$$ {#eq-canonical_equation_of_hamiltonian}
+
+를 얻는다.  
+
+
