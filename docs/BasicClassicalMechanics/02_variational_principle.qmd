@@ -28,41 +28,39 @@ crossref:
 Monogenic system 에서 시간 $t_1$ 에서 $t_2$ 까지의 시스템의 운동은 Lagrangian $L=T-V$에 대한 선적분 
 
 $$
-I = \int_{t_1}^{t_2} L\, dt
+S := \int_{t_1}^{t_2} L(\{q_i\},\, \{\dot{q}_i\}, t)\, dt
 $$ {#eq-action}
 
 이 stationary value를 갖도록 하는 경로를 따른다. 이 선적분의 값을 **action** 이라고 한다. 다시 말하자면  $t_1$ 에서의 위치 $\boldsymbol{x}_1$ 에서 $t_2$ 에서의 위치 $\boldsymbol{x}_2$ 사이의 모든 가능한 경로중 실제 자연법칙에 의해 선택되는 경로는 @eq-action 이 stationary value를 갖도록 하는 경로이다.
 :::
 
 
-선적분에 stationary value 를 갖는다는 것은 
 
-By the term \textit{stationary value} for a line integral we mean that the integral along the given path has the same value to within first-order infinitesimals as that along all neighboring paths.
-\end{tcolorbox}
-
-$I$ 가 stationary value를 갖는다는 것은 다음이 성립한다는 뜻이다.
+Action $S$ 가 stationary value를 갖는다는 것은 다음이 성립한다는 뜻이다.
 
 $$
-\delta I = \delta \int_{t_1}^{t_2} L(q_1,\ldots,\,q_n,\,\dot{q}_1,\ldots,\,\dot{q}_n,\,t) \, dt=0\;.
+\delta S = \delta \int_{t_1}^{t_2} L(q_1,\ldots,\,q_n,\,\dot{q}_1,\ldots,\,\dot{q}_n,\,t) \, dt=0\;.
 $$
 
-Holonomic constraint condition 에서 Hamilton's principle과 Lagrange's equation은 동치이다. 
+Holonomic constraint condition 에서 해밀턴의 원리와 라그랑쥬 방정식은 동치이다. 즉 해밀턴의 원리로부터 라그라윶 방정식을 유도할 수도 있고, 라그랑쥬 방정식으로부터 해밀턴의 원리를 유도할 수도 있다. 여기서는 해밀턴의 원리로부터 라그량주 방정식을 유도해 보도록 한다.
 
 </br>
 
-## Some techniques of the calculus of variations
+## 변분법 계산
 
-### One dimensional form
+### 1차원의 경우
 
-$x_1$ 과 $x_2$ 사이의 path $y=y(x)$ 에서 정의된 함수 $f(y,\,\dot{y},\,x)$ 를 생각하자. 그리고 line integral $\displaystyle J=\int_{x_1}^{x_2} f(y,\,\dot{y},\,x)\, dx$ 가 stationary value를 갖도록 하는 path를 찾아야 한다고 하자. Correct path와 neighboring path를 다음 식과 같은 관계로 표현하자.
+![1차원 경로](../images/classical%20mechanics/fig-path_1d.png){#fig-1d_path_variational width=250}
+
+$x_1$ 과 $x_2$ 사이의 경로 $y=y(x)$ 에서 정의된 함수 $f(y,\,\dot{y},\,x)$ 를 생각하자. 그리고 선적분 $\displaystyle J=\int_{x_1}^{x_2} f(y,\,\dot{y},\,x)\, dx$ 가 stationary value를 갖도록 하는 경로를 찾아야 한다고 하자. 우리가 찾고자 하는 경로와 그 이웃 경로를 다음 식과 같은 관계로 표현하자. 두 경로는 시작점과 끝점이 같아야 한다. 
 
 $$
 y(x,\,\alpha) = y(x,\,0) + \alpha \eta(x)\;.
 $$ {#eq-initial_path}
 
-여기서 $\alpha$ 는 infinitesimal deviation을 위한 parameter이며 $\eta(x)$ 는 임의의 경로인데, initial value and final value of $y$ at $x_1$ and $x_2$ 가 정해졌다는 가정 하에서 생각하므로 $\eta(x_1)=\eta(x_2)=0$ 이다. 또한 우리는 $\eta(x)$ 가 well-behaved function 이라고 가정한다. 즉 $\eta(x)$ 는 $[x_1,\,x_2]$ 에서 연속이며 non-singular 하다고 생각한다. 
+여기서 $\alpha$ 는 infinitesimal deviation을 위한 parameter이며 $\eta(x)$ 는 임의의 경로인데, 경로의 시작과 끝이 정해졌다는 가정 하에서 생각하므로 $\eta(x_1)=\eta(x_2)=0$ 이다. 또한 우리는 $\eta(x)$ 가 well-behaved function 이라고 가정한다. 즉 $\eta(x)$ 는 $[x_1,\,x_2]$ 에서 연속이며 non-singular 하다고 생각한다. 
 
-이제 line integral $J$ 는 $\alpha$ 의 함수로
+이제 선적분 $J$ 는 $\alpha$ 의 함수로
 
 $$
 J(\alpha) = \int_{x_1}^{x_2} f(y(x,\,\alpha),\,\dot{y}(x,\,\alpha),\,x),\,dx
@@ -78,7 +76,7 @@ $$
 
 $$
 \begin{aligned}
-\dfrac{dJ}{d\alpha} & = \int_{x_1}^{x_2} \left\{ \dfrac{\partial f}{\partial y}\dfrac{\partial y}{\partial \alpha} + \dfrac{\partial f}{\partial \dot{y}}\dfrac{\partial \dot{y}}{\partial \alpha} \right\} \, dx = \int_{x_1}^{x_2} \left(\dfrac{ \partial f}{\partial y} - \dfrac{d}{dx} \dfrac{\partial f}{\partial \dot{y}}\right) \dfrac{dy}{d\alpha} dx \;.
+\dfrac{dJ}{d\alpha} & = \int_{x_1}^{x_2} \left[ \dfrac{\partial f}{\partial y}\dfrac{\partial y}{\partial \alpha} + \dfrac{\partial f}{\partial \dot{y}}\dfrac{\partial \dot{y}}{\partial \alpha} \right] \, dx = \int_{x_1}^{x_2} \left(\dfrac{ \partial f}{\partial y} - \dfrac{d}{dx} \dfrac{\partial f}{\partial \dot{y}}\right) \dfrac{dy}{d\alpha} dx \;.
 \end{aligned}
 $$
 
@@ -132,6 +130,8 @@ $$
 
 #### 2.회전체의 최소부피.
 
+![회전의 최소 부피](../images/classical%20mechanics/minimum_surface_of_revolution.jpg)
+
 $(x_1,\,y_1)$ 과 $(x_2,\,y_2)$ 연결하는 curve를 $x$ 축 주위로 회전시킬 때 그 표면적 $S$ 는 다음과 같이 주어진다.
 
 $$
@@ -144,25 +144,25 @@ $$
 \dfrac{d}{dx}\left( \dfrac{x \dot{y}}{\sqrt{1+{\dot{y}}^2} }\right)=0\;.
 $$
 
-즉,
+즉, 상수 $a$ 에 대해
 
 $$
 \dfrac{x \dot{y}}{\sqrt{1+{\dot{y}}^2} } = a,
 $$
 
-for a constant $a$ 이며 이로부터 $\dot{y}^2 (x^2-a^2) = a^2$ 을 얻는다. 
+이며 이로부터 $\dot{y}^2 (x^2-a^2) = a^2$ 을 얻는다. 
 
 $$
 \dfrac{dy}{dx} = \dfrac{a}{\sqrt{x^2-a^2}}
 $$
 
-이므로
+이므로 상수 $a,\,b$ 에 대해
 
 $$
 x= a \cosh \left(\dfrac{y-b}{a}\right)
 $$
 
-for constants $a$ and $b$. $a$ 와 $b$ 는 $(x_1,\,y_1),\, (x_2,\,y_2)$ 로 부터 얻는다.
+이다. $a$ 와 $b$ 는 $(x_1,\,y_1),\, (x_2,\,y_2)$ 로 부터 얻을 수 있다.
 
 </br>
 
@@ -219,17 +219,17 @@ $$
 
 </br>
 
-## Derivation of Lagrange's equations from Hamiltons' Principle
+## 해밀턴의 원리로부터 라그랑쥬 방정식까지
 
-### Euler-Lagrange differential equations
+### 오일러-라그랑쥬 방정식
 
-Calculus of variations 에서는 $f$ 가 많은 독립변수들 $y_1,\,y_2,\ldots$ 와 그 미분 $\dot{y}_1(x),\,\dot{y}_2 (x),\ldots$ 의 함수 일 때, variations of integral $\displaystyle J=\int_1^2 f dx$ 가 $0$ 이 되도록 하는 $y_i$ 들을 찾는다. 즉
+변분법 에서는 $f$ 가 많은 독립변수들 $y_1,\,y_2,\ldots$ 와 그 미분 $\dot{y}_1(x),\,\dot{y}_2 (x),\ldots$ 의 함수 일 때, $\displaystyle J=\int_1^2 f dx$ 에 대한 $\delta J$ 가 $0$ 이 되도록 하는 $y_i$ 들을 찾는다. 즉
 
 $$
 \delta J= \delta \int_1^2 f(y_1(x),\,y_2(x),\ldots,\,\dot{y}_1(x),\,\dot{y}_2 (x),\ldots,\,x)\, dx = 0
 $$
 
-를 만족하는 $\{y_i(x)\}$를 찾아야 한다. 앞서 보았듯이 $J$ 를 parameter $\alpha$ 의 함수로 표현하기 위해 $\alpha$를 $y_i (x,\,\alpha) = y_i (x,\,0) + \alpha \eta_i(x)$ for $i=1,\,2,\ldots$ 로 도입한다. 여기서  $y_i (x,\,0)$ 은 우리가 구하고자 하는 path 이고, $\eta_i (x)$ 는 각 end points에서 $0$ 을 갖는 독립적인 그리고 임의의 함수이다. 앞서 언급했듯이 fundamental lemma of calculus of variations를 만족하기 위해서는  모든 $\eta_i(x)$ 는 2차 도함수까지 연속이어야 한다. $\delta J$ 는 다음과 같이 계산 할 수 있다. $\delta y_i = \left( \dfrac{\partial y_i}{\partial \alpha} \right)_0 d \alpha$ 임을 고려하면, 
+를 만족하는 $\{y_i(x)\}$를 찾아야 한다. 앞서 보았듯이 $J$ 를 parameter $\alpha$ 의 함수로 표현하기 위해 $\alpha$를 $y_i (x,\,\alpha) = y_i (x,\,0) + \alpha \eta_i(x)$ for $i=1,\,2,\ldots$ 로 도입한다. 여기서  $y_i (x,\,0)$ 은 우리가 구하고자 하는 경로이고, $\eta_i (x)$ 는 각 끝점에서 $0$ 을 갖는 독립적인 그리고 임의의 함수이다. 앞서 언급했듯이 fundamental lemma of calculus of variations를 만족하기 위해서는  모든 $\eta_i(x)$ 는 2차 도함수까지 연속이어야 한다. $\delta J$ 는 다음과 같이 계산 할 수 있다. $\delta y_i = \left( \dfrac{\partial y_i}{\partial \alpha} \right)_0 d \alpha$ 임을 고려하면, 
 
 $$
 \begin{aligned}
@@ -239,58 +239,56 @@ $$
 \end{aligned}
 $$
 
-이다. $\{y_i\}$ 가 independent 이므로 $\{\delta y_i\}$ 도 independent 하다. $\delta J=0$ 이려면 모든 $i=1,\ldots,\,n$ 에 대해 다음을 만족해야 한다.
+이다. $\{y_i\}$ 가 독립이므로 $\{\delta y_i\}$ 도 독립이다. $\delta J=0$ 이려면 모든 $i=1,\ldots,\,n$ 에 대해 다음을 만족해야 한다.
 $$
 \dfrac{\partial f}{\partial y_i} - \dfrac{d}{dx}\left( \dfrac{\partial f}{\partial \dot{y}_i}  \right) =0
 $$ {#eq-euler_lagrange}
 
-을 만족해야 한다. 이를 **Euler-Lagrange Differential Equations** 이라 한다. 
+을 만족해야 한다. 이를 **오일러-라그랑쥬 방정식(Euler-Lagrange differential equation)** 이라 한다. 
 
 </br>
 
-### Hamilton's principle and Euler-Lagrange equations
+### 해밀턴의 원리와 오일러-라그렝쥬 방정식
 
-Hamilton's principle을 이용하면 $L(q_i,\,\dot{q}_i,\,t)=T(q_i,\,\dot{q}_i,\,t) - V(q_i,\,\dot{q}_i,\,t)$ 에 대해 $\displaystyle I=\int_1^2 L(q_i,\,\dot{q}_i,\,t) dt$ 의 $\delta I=0$ 이 되도록 해야 하므로 Euler-Lagrange equation of motion은 다음과 같다.
+해밀턴의 원리를 이용하면 $L(\{q_i\},\,\{\dot{q}_i\},\,t)=T(\{q_i\},\,\{\dot{q}_i\},\,t) - V(
+\{q_i\},\,\{\dot{q}_i\},\,t)$ 에 대해 action $\displaystyle S=\int_1^2 L(q_i,\,\dot{q}_i,\,t) dt$ 에 대한 $\delta S=0$ 이 되도록 해야 하므로 오일러-라그랑쥬 방정식은 다음과 같다.
 
 $$
 \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_i}\right) - \dfrac{\partial L}{\partial q_i} = 0\, ,  \quad\quad i=1,\,2,\ldots,\,n\;.
 $$ {#eq-euler_lagrange_equation_of_motion}
 
-이제 우리는 holonomic constraints 를 갖는 monogenic system에서 Hamilton's principle로부터 Lagrange's equation을 얻었다.
+이제 우리는 holonomic constraints 를 갖는 monogenic system에서 해밀턴의 원리로부터 라그랑쥬 방정식을 얻었다.
 
 
 </br>
 
-## Extension of Hamilton's Principle to Nonholonomic Systems${}^\ast$
+## Nonholonomic Systems${}^\ast$ 과 해밀턴의 원리
 
-### Nonholonomic constraints system compared with holonomic system
+### Nonholonomic constraints system 과 holonomic system
 
 Nonholonomic system을 다룰 때 holonomic system과의 차이점.
 
-- Hamilton's principle을 이용해서든 D'Alembert's principle을 이용해서든 holonomic constraints 조건에서 Lagrange's equation을 얻을 때, holonomic constraints 조건은 맨 마지막에 가서 variations of variables가 independent 함을 가정 할 때 나온다. Holonomic constraints system에서는 당장의 generalized coordinates가 independent 하지 않더라도 $f(q_1,\ldots,\,q_n,\,t)=0$ 꼴의 equation of constraints를 통해 independent generalized coordinate set을 구성 할 수 있는데,  nonholonomic constraints system에서는 일반적으로 이것이 불가능하다. 
+- 해밀턴의 원리를 이용해서든 달랑베르 원리(D'Alembert's principle)을 이용해서든 holonomic constraints 조건에서 라그랑쥬 방정식을 얻을 때, holonomic constraints 조건은 맨 마지막에 가서 변수들의 variation 이 독립적이라는 것을 가정 할 때 나온다. Holonomic constraints system에서는 당장의 일반화된 좌표가 독립적이지 않더라도 $f(q_1,\ldots,\,q_n,\,t)=0$ 꼴의 equation of constraints를 통해 독립적인 일반화된 좌표계를 구성 할 수 있는데, nonholonomic constraints system에서는 일반적으로 이것이 불가능하다. 
 
-- Varied path는 $y_i (x,\,\alpha) = y_i (x,\,0)+\alpha \eta_i (x)$ form으로 구성된다. 그리고 $\delta y_i$ 는 virtual displacement from a point on the actual path to some point on the neighboring varied path를 의미한다. Independent generalized coordinate 조건에서는 마지막 최종 변경 후 point만이 중요하지만 coordinates가 independent 하지 않으면 displacement가 constraints 조건을 따르며 변화했는지 여부가 매우 중요하다. 
+- Varied path는 $y_i (x,\,\alpha) = y_i (x,\,0)+\alpha \eta_i (x)$ 형태로 구성된다. 그리고 $\delta y_i$ 는 실제 경로와 이웃의 가상 경로의 virtual displacement 를 의미한다. 독립적인 일반화된 좌표계 조건에서는 마지막 최종 변경 후 point만이 중요하지만 좌표계가 독립적이지 않으면 displacement가 constraints 조건을 따르며 변화했는지 여부가 매우 중요하다. 
 
 
 위의 두가지 경우를 고려하면 일반적으로 non-holonomic system을 다루기가 매후 힘들다는 것을 예상 할 수 있다. 그러나 그 가운데 특별한 경우는 어느정도 다룰 수 있는데 그것을 이제 확인해 보자.
 
 </br>
 
-### Simple nonholonomic case
+### 간단한 nonholonomic case
 
-Equations of constraints가 아래와 같은 형식일 때만 nonholonomic system에 대한 reasonably straightforward treatment가 가능한 것 처럼 보인다.
+Equations of constraints가 아래와 같은 형식일 때만 nonholonomic system에 대한 타당한 직접적인 처리가 가능한 것 처럼 보인다.
 
 $$
 \sum_k a_{lk}dq_k  + a_{lt}dt = 0\;.
 $$ {#eq-nonholonomic_constraints}
 
-여기서 $l$ 은 이러한 nonholonomic equations of constraints에 대한 index 이다. $m$개의 이러한 equations가 존재한다고 생각하자. 그리고 $a_{lk}$ 와 $a_{lt}$ 는 $q$ 와 time의 함수일 수 있다는 것을 유념하자. 
+여기서 $l$ 은 이러한 nonholonomic equations of constraints에 대한 index 이다. $m$개의 이러한 방정식이 존재한다고 생각하자. 그리고 $a_{lk}$ 와 $a_{lt}$ 는 $q$ 와 time의 함수일 수 있다는 것을 유념하자. 변분경로 혹은 변분경로를 구성하는 변위는 @eq-nonholonomic_constraints 의 제약 조건을 충족해야 한다고 예상된다. 그러나 @eq-nonholonomic_constraints 가 적분 가능(integrable) 하지 않으면 이러한 다양한 경로를 구성할 수 없다는 것이 증명 되었으며, 이 경우 제약 조건은 실제로는 homolomic 이다. 그럼에도 불구하고 정확한 운동 방정식으로 이어지는 변분 원리는 virtual displacement 에 의해 실제 운동으로부터 다양한 경로가 구성될 때 얻을 수 있다.
 
-::: {.callout-caution appearance="minimal" icon="false"}
-It would be expected that the varied paths, or equivalently, the displacements constructing the varied path, should satisfy the constraints of Eq. (\ref{eq:nonholonomic_constraints}). Howerver, it has been proven that no such varied path can be constructed unless Eqs. (\ref{eq:nonholonomic_constraints}) are integrable, in which case the constraints are actually holonomic.
-:::
 
-주어진 equations of constraints로부터 Virtual displacement에 대한 equation of constraints를 아래와 같이 얻을 수 있다. 
+주어진 equations of constraints로부터 Virtual displacement에 대한 equation of constraints를 아래와 같다. 
 
 $$
 \sum_k a_{lk}dq_k = 0\;.
@@ -302,14 +300,7 @@ $$
 \lambda_l \sum\limits_k a_{lk}\delta q_k = 0
 $$ {#eq-lagrange_multiplier}
 
-이다. Hamilton's principle 
-
-$$
-\delta \int_1^2 L \, dt =0
-$$
-
-이 nonholonomic system 에서도 성립함을 가정하자. Hamilton's principle에 의해 다음이 
-성립한다. 
+이다. 해밀턴의 원리 $\delta \int_1^2 L \, dt =0$ 이 nonholonomic system 에서도 성립함을 가정하면 다음이 성립한다. 
 
 $$
 \int_1^2 dt \sum_k \left[ \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k} \right)\right] dq_k = 0
@@ -333,18 +324,18 @@ $$
 \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k}  \right) + \sum_l \lambda_l \, a_{lk} = 0,\quad\quad k = n-m+1,\ldots,\,n\,.
 $$ {#eq-lambda_choice}
 
-이것은 $1$ 부터 $n$ 까지의 variables $\{q_k\}$ 중 마지막 $m$ 개에 대한 equation of motion 이다.  그렇다면 앞의 $n-m$ 개의 $\{q_k\}$ 에 대해 @eq-lagrange_multiplier_2 를 다음과 같이 쓸 수 있다.
+이것은 $1$ 부터 $n$ 까지의 변수 $\{q_k\}$ 중 마지막 $m$ 개에 대한 equation of motion 이다.  그렇다면 앞의 $n-m$ 개의 $\{q_k\}$ 에 대해 @eq-lagrange_multiplier_2 를 다음과 같이 쓸 수 있다.
 
 $$
 \int_1^2 dt \sum_{k=1}^{n-m} \left[ \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt} \left(  \dfrac{\partial L}{\partial \dot{q}_k}\right)  + \sum_l \lambda_l \, a_{lk} \right] \delta q_k = 0\;.
 $$ {#eq-lagrange_multiplier_3}
 
-$q_1,\ldots,\,q_{n-m}$ 은 independent 하므로 @eq-lambda_choice 와 @eq-lagrange_multiplier_3 를 합하면,
+$q_1,\ldots,\,q_{n-m}$ 은 독립적이므로 @eq-lambda_choice 와 @eq-lagrange_multiplier_3 를 합하면 다음과 같다.
 
 $$
-\dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k} \right) - \dfrac{\partial L}{\partial q_k} =\sum_l \lambda_l \, a_{lk},\quad\quad k=1,\ldots,\,m
+\dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k} \right) - \dfrac{\partial L}{\partial q_k} =\sum_l \lambda_l \, a_{lk},\quad\quad k=1,\ldots,\,m.
 $$ {#eq-lagrange_multiplier_4}
-이다. 
+
 
 자, 이제 우리가 모르는 것은 $n$ 개의 $q_k$ 와 $m$ 개의 $\lambda_l$ 이다. @eq-lagrange_multiplier_4 는 $n$ 개의 equations 만을 표현한다. 우리는 여기에 더해 @eq-nonholonomic_constraints 의 1st order differential form,
 
@@ -387,7 +378,7 @@ $$
 
 
 
-@fig-rolling_hoop 와 같이 미끄럼 없이 경사면을 구르는 반지름 $r$ 의 굴렁쇠를 생각하자. Generalized coordinate는 $x,\,\theta$ 이며 equation of rolling constraints는 $r d\theta = dx$ 이다. 이 굴렁쇠의 kinetic energy $T$와 중력에 의한 potential energy $V$는 다음과 같다.
+@fig-rolling_hoop 와 같이 미끄럼 없이 경사면을 구르는 반지름 $r$ 의 굴렁쇠를 생각하자. Generalized coordinate는 $x,\,\theta$ 이며 equation of rolling constraints는 $r d\theta = dx$ 이다. 이 굴렁쇠의 운동에너지 $T$와 중력에 의한 포텐셜 $V$는 다음과 같다.
 
 $$
 \begin{aligned}
@@ -396,13 +387,13 @@ V &= Mg(l-x) \sin \phi\;.
 \end{aligned}
 $$
 
-따라서 Lagrangian $L = T-v$는 아래와 같다.
+따라서 라그랑지안 $L = T-v$는 아래와 같다.
 
 $$
 L= \dfrac{1}{2}M\dot{x}^2 + \dfrac{1}{2}Mr^2 \dot{\theta}^2 -  Mg(l-x) \sin \phi\;.
 $$
 
-Equation of constraints가 하나 뿐이므로 하나의 Lagrange multiplier $\lambda$ 만 생각한다. Equation of constraints 로 부터 $a_\theta = r$, $a_x = -1$ 이므로, 아래와 같은 두개의 Lagrange's equations를 얻는다
+Equation of constraints가 하나 뿐이므로 하나의 Lagrange multiplier $\lambda$ 만 생각한다. Equation of constraints 로 부터 $a_\theta = r$, $a_x = -1$ 이므로, 아래와 같은 두개의 라그랑쥬 방정식을 얻는다
 
 $$
 \begin{aligned}
@@ -422,89 +413,114 @@ $$
 
 </br>
 
-## Conservation Theorems and Symmetry Properties
+## 대칭과 보존
 
-$n$ degree of freedom system은 $n$ 개의 시간에 대한 2차 미분방정식으로 표현되며, $2n$ 개의 적분상수를 필요로 한다. 이들은 대개 초기조건으로부터 얻어지며 보통 $n$ 개의 $q_j$ at time $t$ 와 $n$ 개의 $\dot{q}_j$ at time $t$ 값이다. 그러나 상당수의 경우 (아마도 대부분의 경우) 이것들이 정확하게 풀리지 않는다. 하지만 complete solutions가 얻어질 수 없더라도 중요한 물리를 얻을 수 있는 경우가 있다. 많은 경우 이러한 중요한 물리가 complete solutions 보다 더 중요하다. 여기서는 이러한 것들은 무엇이 있고, 어떻게 확인할 수 있는지를 알아보자. 
+### Phase space 
 
-미분방정식으로 기술되는 물리계에서 그 경로 전체에 대해 어떤 phase space coordinate(coordinates and momentum)와 시간에 대한 함수가 그 값이 일정할 때 이를 **constant of motion** 이라 한다. 어떤 phase space coordinate만의 함수가 전체 경로에 대해 그 값이 일정할 때 **first integral** 이라 한다. 
+우리는 $n$ 개의 일반화된 좌표 $q_1,\ldots,\,q_n$ 으로 구성되는 공간을 *configuration space* 라고 불렀다. 이와 달리 일반화된 좌표 $q_1,\ldots,\,q_n$ 과 그 canonical momentumm $p_1,\ldots,\,p_n$ 으로 구성되는 공간을 **phase space** 라고 한다. 
+
+자유도가 $n$ 개인 시스템은 시간에 대한 2차 미분방정식 $n$ 개로 표현되며, $2n$ 개의 적분상수를 필요로 한다. 이들은 대개 초기조건으로부터 얻어지며 보통 시간 $t=t_0$ 에 대해 각각 $n$ 개의 $q_j(t_0)$ 와 $\dot{q}_j(t_0)$ 값이다. 그러나 상당수의 경우 (아마도 대부분의 경우) 이것들이 정확하게 풀리지 않는다. 하지만 완전한 해가 얻어질 수 없더라도 중요한 물리를 얻을 수 있는 경우가 있다. 많은 경우 이러한 중요한 물리가 얻어진 해보다 더 중요하다. 여기서는 이러한 것들은 무엇이 있고, 어떻게 확인할 수 있는지를 알아보자. 
+
+
+::: {.callout-note appearance="minimal" icon="false"}
+
+::: {#def-first_integral}
+
+#### first integral 과 운동 상수
+
+미분방정식으로 기술되는 물리계에서 그 경로 전체에 대해 어떤 phase space 의 좌표 즉 일반화된 좌표와 운동량, 그리고 시간에 대한 함수가 그 값이 일정할 때 이를 **운동 상수(constant of motion)** 이라 한다. 어떤 phase space coordinate만의 함수가 전체 경로에 대해 그 값이 일정할 때 **first integral** 이라 한다. 
+
+:::
+
+:::
 
 </br>
 
-### Monogenic system이며 potential이 위치에만 의존하는 경우
+### Monogenic system 이며 포텐셜이 위치에만 의존하는 경우
 
-Monogenic system이며 potential이 position에만 의존하면 $\partial L /\partial \dot{q}_j = m\dot{x}_j$ 이며 우리가 아는 momentum이다. 이것을 일반화하여 **canonical momentum**(혹은 **conjugate momentum**) $p_j$ 를 다음과 같이 정의한다.
+::: {.callout-note appearance="minimal" icon="false"}
+
+::: {#def-canonical_momentum}
+
+#### Canonical momentum
+Monogenic system이며 포텐셜이 위치에만 의존하면 $\partial L /\partial \dot{x}_j = m\ddot{x}_j$ 이며 우리가 아는 momentum이다. 이것을 일반화하여 **canonical momentum**(혹은 **conjugate momentum**) $p_j$ 를 다음과 같이 정의한다.
 
 $$
 p_j = \dfrac{\partial L}{\partial \dot{q}_j}
 $$ {#eq-canonical_momentum}
 
-여기서 $q_j$ 는 Cartesian coordinate가 아닌 generalized coordinate이므로 $p_j$ 는 linear momentum dimension이 아닌 다른  dimension을 가질 수 있다. 또한 velocity dependent potential system에서는 소위 mechanical momentum과 다른 값을 가진다. 예를 들어 electromagnetic field에서의 particles의 Lagrangian은 다음과 같이 주어진다.
+:::
+
+:::
+
+여기서 $q_j$ 는 데카르트 좌표계의 좌표가 아닌 일반화된 좌표계의 좌표이므로 $p_j$ 는 linear momentum dimension 이 아닌 다른  dimension을 가질 수 있다. 또한 속도-의존적 포텐셜을 가진 시스템 에서는 소위 mechanical momentum과 다른 값을 가진다. 예를 들어 전자기장 에서의 입자계의 Lagrangian은 다음과 같이 주어진다. (아래의 $q_i$ 는 $i$ 번째 입자의 전하(charge) 이다.)
 
 $$
-L = \sum_i \dfrac{1}{2} m_i {\dot{r}_i}^2 - \sum_i q_i \phi(x_i) + \sum_i \dfrac{q_i}{c} \boldsymbol{A}(x_i) \cdot \dot{\boldsymbol{r}}_i\;.
+L = \sum_i \dfrac{1}{2} m_i {\dot{r}_i}^2 - \sum_i q_i \phi(x_i) + \sum_i {q_i} \boldsymbol{A}(x_i) \cdot \dot{\boldsymbol{r}}_i\;.
 $$
 
 이 때의 generalized momentum $\boldsymbol{p}$ 가 mehcanical momentum과 다름은 쉽게 보일 수 있다.
 
 </br>
 
-### Lagrangian이 어떤 generalized coordinate $q_j$를 포함하지 않는 경우
+### Cyclic coordinate 
 
-$\dfrac{\partial L}{\partial q_j} =0$ 이므로 $\dfrac{\partial L}{\partial \dot{q_j}}=p_j = const$ 이다. 이때의 $p_j$ 를 **cyclic coordinate** 혹은 **ignorable coordinate** 라 한다. 즉 generalized momentum conjugate to cyclic coordinate는 보존된다. 이렇게 보존되는 generalized momentum은 Lagrangian에서 first integral이다.
+일반화된 좌표계에서 표현된 라그랑지안이 어떤 $q_i$ 에 대해 의존성이 없을 경우, 즉 $\dfrac{\partial L}{\partial q_i}=0$ 일 경우 $\dfrac{\partial L}{\partial \dot{q_j}}=p_j = \text{const.}$ 이다. 이때의 $p_j$ 를 **cyclic coordinate** 혹은 **ignorable coordinate** 라 한다. 즉 generalized momentum conjugate to cyclic coordinate $q_j$ 에 대한 canonical momentum $p_j$ 는 보존된다. 이렇게 보존되는 $p_j$ 는 라그랑지안에서 first integral(@def-first_integral) 이다.
 
 </br>
 
-Generalized momentum conservation은 우리가 알고 있는 linear momentum conservation이나 angular momentum conservartion보다 일반적이다. 예를 들어 electromagnetic field에서의 charged particle의 운동에서 보존되는것은 generalized momentum in the electromagnetic field 이다.
+일반화된 운동량 보존은 우리가 알고 있는 선형 운동량 보존이나 각운동량 보존보다 일반적이다. 예를 들어 전자기장에서의 하전 입자의 운동에서 보존되는것은 전자기장에서의 일반화된 운동량이다.
+
+</br>
+
+### 병진 대칭 (Translational Symmetry)
+
+![Translational Symmetry](../images/classical mechanics/fig-translational_symmeetry.png){width=50%}
 
 
-### Translational Symmetry
-
-![Translational Symmetry](../images/classical mechanics/fig-translational_symmeetry-1.png){width=40%}
-
-
-Generalized coordinate $q_j$ 에 대해 $dq_j$ 는 어떤 특정한 방향으로의 translation을 뜻한다고 생각해보자. 예를 들면 Cartesian coordinate 에서의 center of mass of the system. Kinetic energy $T$ 는 origin에 영향을 받지 않으므로, $\partial T/\partial q_j=0$ 일 것이다. 또한 conservative system 이며 potential energy $V$가 velocity의 함수가 아니라고 가정하자. 이 때의 Lagrange equiation은 다음과 같다.
+일반화된 좌표계 $q_j$ 에 대해 $\boldsymbol{r}_i(q_j+dq_j) -\boldsymbol{r}_i (q_j)$ 는 어떤 특정한 방향으로의 병진 이동(translation)을 뜻한다고 생각해보자. 예를 들면 데카르트 좌표계에서의 시스템의 질량중심. 운동에너지 $T$ 는 원점(origin)에 영향을 받지 않으므로, $\partial T/\partial q_j=0$ 일 것이다. 또한 보존계 이며 포텐셜 에너지 $V$가 velocity-indepedent 라고 가정하자. 이 때의 라그랑쥬 방정식은 다음과 같다.
 
 $$
 \dot{p}_j \equiv \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_j} \right) = -\dfrac{\partial V}{\partial q_j} \equiv Q_j \;.
 $$
 
-우리는 이것이 total linear momentum에 대한 운동방정식 임을 안다. $Q_j$ 는 total force의 $q_j$ 의 translation 방향 성분으로 아래와 같이 표현 할 수 있다.
+우리는 이것이 총 선형 운동량에 대한 운동방정식임을 안다. $Q_j$ 는 total force $\boldsymbol{F}$ 의 $q_j$ 의 translation 방향 성분으로 아래와 같이 표현 할 수 있다.(@eq-generalized_force)
 
 $$
 Q_j = \sum_i \boldsymbol{F}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j}\,.
 $$
 
-여기서 $\boldsymbol{n}$ 을 translation 방향으로의 unit vector라 정의하면,
+여기서 $\hat{\boldsymbol{n}}$ 을 병진 방향으로의 단위벡터라 정의하면,
 
 $$
-\frac{\partial \boldsymbol{r}_i}{\partial q_j} = \lim_{dq_j \to 0}\dfrac{\boldsymbol{r}_i (q_j+dq_j) - \boldsymbol{r}_i(q_j)}{dq_j} = \sum_i \hat{e}_i\lim_{dq_j \to 0} \dfrac{ x_i (q_j +dq_j)- x_i (q_j)}{dq_j} = \dfrac{dq_j}{dq_j}\boldsymbol{n}=\boldsymbol{n}  
+\boldsymbol{r}_i (q_j+dq_j) - \boldsymbol{r}_i (q_j) = \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} dq_j = \hat{\boldsymbol{n}}dq_j
 $$
 
-이다. $\boldsymbol{n}$ 은 transliation 방향으로의 unit vector 이므로 개개의 particles의 radial vector $\boldsymbol{r}_i$ 에 independent 함에 유의하자. 따라서,
+이다. $\hat{\boldsymbol{n}}$ 은 병진 방향으로의 단위벡터 이므로 개개의 입자들의 radial vector $\boldsymbol{r}_i$ 에 독립적임에 유의하자. 따라서,
 
 $$
-Q_j = -\dfrac{\partial V}{\partial q_j} = \sum_i \boldsymbol{F}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j}= \boldsymbol{n} \cdot \sum_i \boldsymbol{F}_i =\boldsymbol{n},\cdot \boldsymbol{F}
+Q_j = -\dfrac{\partial V}{\partial q_j} = \sum_i \boldsymbol{F}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j}= \hat{\boldsymbol{n}} \cdot \sum_i \boldsymbol{F}_i = \hat{\boldsymbol{n}},\cdot \boldsymbol{F}
 $$
 
-이다. 이제 conjugate momentum of $q_j$ 를 보면,
+이다. 이제 conjugate momentum of $q_j$ 를 보면, (@eq-dlambert_1 를 이용하였다.)
 
 $$
-p_j = \dfrac{\partial T}{\partial \dot{q}_j} = \dfrac{\partial}{\partial \dot{q}_j}\left( \dfrac{1}{2} \sum_i m_i {\dot{\boldsymbol{r}}_i}^2 \right) = \sum_i m_i \boldsymbol{v}_i \cdot \dfrac{\partial \dot{\boldsymbol{r}}_i}{\partial \dot{q}_j} =\sum_i m_i \boldsymbol{v}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \boldsymbol{n} \cdot \left( \sum_i m_i \boldsymbol{v}_i \right)
+p_j = \dfrac{\partial T}{\partial \dot{q}_j} = \dfrac{\partial}{\partial \dot{q}_j}\left( \dfrac{1}{2} \sum_i m_i {\dot{\boldsymbol{r}}_i}^2 \right) = \sum_i m_i \boldsymbol{v}_i \cdot \dfrac{\partial \dot{\boldsymbol{r}}_i}{\partial \dot{q}_j} =\sum_i m_i \boldsymbol{v}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \hat{\boldsymbol{n}} \cdot \left( \sum_i m_i \boldsymbol{v}_i \right)
 $$
 
-이다. 즉, $p_j$는 total linear momentum of the system의 $j$-th component 이다. 그렇다면 $q_j$가 cyclic인 경우, $Q_j=0$ 이므로 $\dot{p}_j=0$이다. 즉 $p_j=\text{constant}$ 이다.
+이다. 즉, $p_j$ 는 시스템의 총 선형 운동량의 $j$-번째 성분이다. 그렇다면 $q_j$ 가 cyclic인 경우, $Q_j=0$ 이므로 $\dot{p}_j=0$ 이다. 즉 $p_j=\text{const.}$ 이다.
 
 </br>
 
-### Rotational Symmetry
+### 회전 대칭
 
-$dq_j$가 어떤 축에 대한 infinitesimal pure rotation of the vector $\boldsymbol{r}_i$에 상응한다고 하고 $\boldsymbol{n}$을 그 회전축의 unit vector라 하자 ( @fig-rotsym). 그렇다면, $|d\boldsymbol{r}_i| = r_i \sin \theta dq_j$ 이다. 이로부터, $\boldsymbol{r}_i$의 $q_j$에 대한 partial dereivative는 $\boldsymbol{r}_i$와 $\boldsymbol{n}$ 모두와 perpendicualr 할 것이므로, 아래와 같은 꼴을 가질 것임을 알 수 있다.
+$dq_j$가 어떤 축에 대한 infinitesimal pure rotation of the vector $\boldsymbol{r}_i$ 에 상응한다고 하고 $\hat{\boldsymbol{n}}$ 을 그 회전축의 unit vector라 하자 (@fig-rotsym). 그렇다면, $|d\boldsymbol{r}_i| = r_i \sin \theta \, dq_j$ 이다. 이로부터, $\boldsymbol{r}_i$의 $q_j$에 대한 편미분은 $\boldsymbol{r}_i$와 $\boldsymbol{n}$ 모두와 직교할 것이므로, 아래와 같은 꼴을 가질 것임을 알 수 있다.
 
 $$
-\dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \boldsymbol{n}\times \boldsymbol{r}_i
+\dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \hat{\boldsymbol{n}}\times \boldsymbol{r}_i
 $$
 
-![Rotational Symmetry](../images/classical mechanics/fig-rotation_of_vector-1.png){#fig-rotsym width=350}
+![Rotational Symmetry](../images/classical mechanics/fig-rotation_of_vector.png){#fig-rotsym width=350}
 
 그렇다면 generalized force $Q_j$ 는
 
@@ -518,13 +534,13 @@ $$
 p_j = \dfrac{\partial T}{\partial \dot{q}_j} = \sum_i m_i \boldsymbol{v}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \sum_i \boldsymbol{n} \cdot (\boldsymbol{r}_i \times m_i \boldsymbol{v}_i) = \boldsymbol{n}\cdot \sum_i \boldsymbol{L}_i = \boldsymbol{n} \cdot \boldsymbol{L}\;.
 $$
 
-$q_j$ 가 cyclic 일 경우 $Q_j=0$ 이며, 따라서 $\boldsymbol{n} \cdot \boldsymbol{L}=\text{constant}$ 이다. 즉 angular momentum conservation.
+$q_j$ 가 cyclic 일 경우 $Q_j=0$ 이며, 따라서 $\boldsymbol{n} \cdot \boldsymbol{L}=\text{constant}$ 이다. 즉 각운동량 보존.
 
 </br>
 
 ### Time symmetry
 
-Lagrangian $L$ 이 exiplicitly depends on time 이라면, $L$ 의 total time derivative는 다음과 같다.
+Lagrangian $L$ 이 exiplicitly depends on time 이라면, $L$ 의 시간에 대한 미분은 다음과 같다.
 
 $$
 \dfrac{dL}{dt}= \sum_i \dfrac{\partial L}{\partial q_i}\dfrac{dq_i}{dt}+\sum_i \dfrac{\partial L}{\partial \dot{q}_i}\dfrac{d\dot{q}}{dt}+ \dfrac{\partial L}{\partial t}
@@ -536,10 +552,10 @@ $$
 \dfrac{d}{dt}\left( \sum_j \dot{q}_j \dfrac{\partial L}{\partial \dot{q}_j} -L\right) + \dfrac{\partial L}{\partial t}=0
 $$
 
-임을 알 수 있다. 여기서 $h(q,\,\dot{q},\,t) $를 **energy function** 이라 하며 함수의 domain 을 $q,\,p,\,t$ 로 바꾼 $H(q,\,p,\,t)$ 를 **Hamiltonian** 이라 한다. 따라서,
+임을 알 수 있다. 여기서 $h(q,\,\dot{q},\,t)$를 **energy function** 이라 하며 르장드르 변환에 의해 함수의 domain 을 $q,\,p,\,t$ 로 바꾼 $H(q,\,p,\,t)$ 를 **Hamiltonian** 이라 한다. 따라서,
 
 $$
 \dfrac{dh}{dt} = -\dfrac{\partial L}{\partial t}
 $$
 
-이므로 Lagrangian이 explicit time dependence가 없다면, 즉 $\dfrac{\partial L}{\partial t}=0$ 이라면 $h$ 는 보존된다. 
+이므로 Lagrangian이 explicit time dependence가 없다면, 즉 $\dfrac{\partial L}{\partial t}=0$ 이라면 $H$ 는 보존된다. 
