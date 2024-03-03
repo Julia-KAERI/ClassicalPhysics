@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.302">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>고전 역학 - 4&nbsp; 특수 상대론의 기초</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/Relativity/02_introduction_to_classical_field.html" rel="next">
+<link href="../../docs/Relativity/00_index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/Relativity/00_index.html">상대론</a></li><li class="breadcrumb-item"><a href="../../docs/Relativity/01_introduction_to_special_relativity.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">고전 역학</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/BasicClassicalMechanics/00_index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">고전역학의 기본 원리</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/BasicClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/BasicClassicalMechanics/02_variational_principle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/BasicClassicalMechanics/03_hamilton_dynamics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">상대론</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/Lanczos/Lanczos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">변분 역학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/Lanczos/00_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/Lanczos/01_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">해석역학의 기본 개념</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/Lanczos/02_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">변분법</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/topics/Topics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">별도의 주제들</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/topics/mathematical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/images/images.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">그림들</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/images/images_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">그림들</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/images/images_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">그림들-상대성이론</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/images/images_test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">그림들-테스트</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#아인슈타인의-기본-원리" id="toc-아인슈타인의-기본-원리" class="nav-link active" data-scroll-target="#아인슈타인의-기본-원리"><span class="header-section-number">4.1</span> 아인슈타인의 기본 원리</a></li>
+  <li><a href="#로렌츠-변환" id="toc-로렌츠-변환" class="nav-link" data-scroll-target="#로렌츠-변환"><span class="header-section-number">4.2</span> 로렌츠 변환</a>
+  <ul class="collapse">
+  <li><a href="#로렌츠-변환-1" id="toc-로렌츠-변환-1" class="nav-link" data-scroll-target="#로렌츠-변환-1"><span class="header-section-number">4.2.1</span> 로렌츠 변환</a></li>
+  <li><a href="#로렌츠-변환에서의-빛의-속도" id="toc-로렌츠-변환에서의-빛의-속도" class="nav-link" data-scroll-target="#로렌츠-변환에서의-빛의-속도"><span class="header-section-number">4.2.2</span> 로렌츠 변환에서의 빛의 속도</a></li>
+  <li><a href="#세계선과-동시성" id="toc-세계선과-동시성" class="nav-link" data-scroll-target="#세계선과-동시성"><span class="header-section-number">4.2.3</span> 세계선과 동시성</a></li>
+  <li><a href="#시공간-도표" id="toc-시공간-도표" class="nav-link" data-scroll-target="#시공간-도표"><span class="header-section-number">4.2.4</span> 시공간 도표</a></li>
+  <li><a href="#길이-수축" id="toc-길이-수축" class="nav-link" data-scroll-target="#길이-수축"><span class="header-section-number">4.2.5</span> 길이 수축</a></li>
+  <li><a href="#시간-지연" id="toc-시간-지연" class="nav-link" data-scroll-target="#시간-지연"><span class="header-section-number">4.2.6</span> 시간 지연</a></li>
+  <li><a href="#쌍둥이의-역설" id="toc-쌍둥이의-역설" class="nav-link" data-scroll-target="#쌍둥이의-역설"><span class="header-section-number">4.2.7</span> 쌍둥이의 역설</a></li>
+  <li><a href="#민코프스키-광원뿔" id="toc-민코프스키-광원뿔" class="nav-link" data-scroll-target="#민코프스키-광원뿔"><span class="header-section-number">4.2.8</span> 민코프스키 광원뿔</a></li>
+  </ul></li>
+  <li><a href="#상대성-역학" id="toc-상대성-역학" class="nav-link" data-scroll-target="#상대성-역학"><span class="header-section-number">4.3</span> 상대성 역학</a>
+  <ul class="collapse">
+  <li><a href="#벡터와-로렌츠-불변량" id="toc-벡터와-로렌츠-불변량" class="nav-link" data-scroll-target="#벡터와-로렌츠-불변량"><span class="header-section-number">4.3.1</span> 4-벡터와 로렌츠 불변량</a></li>
+  <li><a href="#고유-시간-tau" id="toc-고유-시간-tau" class="nav-link" data-scroll-target="#고유-시간-tau"><span class="header-section-number">4.3.2</span> 고유 시간 <span class="math inline">\(\tau\)</span></a></li>
+  <li><a href="#벡터-표기법-아인슈타인-표기법" id="toc-벡터-표기법-아인슈타인-표기법" class="nav-link" data-scroll-target="#벡터-표기법-아인슈타인-표기법"><span class="header-section-number">4.3.3</span> 4-벡터 표기법 (아인슈타인 표기법)</a></li>
+  <li><a href="#속도의-로렌츠-변화" id="toc-속도의-로렌츠-변화" class="nav-link" data-scroll-target="#속도의-로렌츠-변화"><span class="header-section-number">4.3.4</span> 속도의 로렌츠 변화</a></li>
+  <li><a href="#속도" id="toc-속도" class="nav-link" data-scroll-target="#속도"><span class="header-section-number">4.3.5</span> 4-속도</a></li>
+  </ul></li>
+  <li><a href="#상대론적-동역학의-기본-개념" id="toc-상대론적-동역학의-기본-개념" class="nav-link" data-scroll-target="#상대론적-동역학의-기본-개념"><span class="header-section-number">4.4</span> 상대론적 동역학의 기본 개념</a>
+  <ul class="collapse">
+  <li><a href="#상대론에서의-자유입자의-action" id="toc-상대론에서의-자유입자의-action" class="nav-link" data-scroll-target="#상대론에서의-자유입자의-action"><span class="header-section-number">4.4.1</span> 상대론에서의 자유입자의 action</a></li>
+  </ul></li>
+  <li><a href="#상대론에서의-운동량과-에너지" id="toc-상대론에서의-운동량과-에너지" class="nav-link" data-scroll-target="#상대론에서의-운동량과-에너지"><span class="header-section-number">4.5</span> 상대론에서의 운동량과 에너지</a>
+  <ul class="collapse">
+  <li><a href="#상대론에서의-운동량" id="toc-상대론에서의-운동량" class="nav-link" data-scroll-target="#상대론에서의-운동량"><span class="header-section-number">4.5.1</span> 상대론에서의 운동량</a></li>
+  <li><a href="#상대론에서의-해밀토니안" id="toc-상대론에서의-해밀토니안" class="nav-link" data-scroll-target="#상대론에서의-해밀토니안"><span class="header-section-number">4.5.2</span> 상대론에서의 해밀토니안</a></li>
+  <li><a href="#질량이-없는-입자까지-고려하는-경우" id="toc-질량이-없는-입자까지-고려하는-경우" class="nav-link" data-scroll-target="#질량이-없는-입자까지-고려하는-경우"><span class="header-section-number">4.5.3</span> 질량이 없는 입자까지 고려하는 경우</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="아인슈타인의-기본-원리" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="아인슈타인의-기본-원리"><span class="header-section-number">4.1</span> 아인슈타인의 기본 원리</h2>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+상대론의 기본 가정
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>자연의 기본 법칙은 모든 관성좌표계에서 유효하다</p></li>
+<li><p>빛의 속도는 모든 관성좌표계에서 동일하다.</p></li>
+</ol>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="로렌츠-변환" class="level2 page-columns page-full" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="로렌츠-변환"><span class="header-section-number">4.2</span> 로렌츠 변환</h2>
+<section id="로렌츠-변환-1" class="level3 page-columns page-full" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="로렌츠-변환-1"><span class="header-section-number">4.2.1</span> 로렌츠 변환</h3>
+<div class="page-columns page-full"><p>두 좌표계 <span class="math inline">\(\Sigma,\, \Sigma'\)</span> 을 아래의 그림과 같이 생각하자. <span class="math inline">\(\Sigma'\)</span> 은 <span class="math inline">\(\Sigma\)</span> 에 대해 <span class="math inline">\(\boldsymbol{V} = V\hat{\boldsymbol{e}}_1\)</span> 의 일정한 속도로 움직인다. </p><div class="no-row-height column-margin column-container"><span class=""><span class="math inline">\(\Sigma, \Sigma',\, \mathcal{O},\, \mathcal{O}',\, V\)</span> 는 특별한 설명 없이 앞으로도 계속 이 의미로 사용하겠다.</span></div></div>
+<div id="fig-reference_frames_in_relativity" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/relativity/fig-refrence_frame_in_relativity-1.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">그림&nbsp;4.1: 상대성 이론의 두 좌표계</figcaption><p></p>
+</figure>
+</div>
+<p>위의 그림과 같이 두 좌표계에 대해 <span class="math inline">\(\boldsymbol{r} = \boldsymbol{r}' + \boldsymbol{V}t\)</span> 이며 <span class="math inline">\(\boldsymbol{V} = V\hat{\boldsymbol{e}}_1\)</span> 인 시스템을 생각하자. <span class="math inline">\(\boldsymbol{r} = (x, y, z)\)</span>, <span class="math inline">\(\boldsymbol{r}'=(x', y', z')\)</span> 이며 각 좌표계의 시간을 <span class="math inline">\(t,\,t'\)</span> 이라고 하자.</p>
+<p>뉴튼 역학에서는 <span class="math inline">\(t=t'\)</span> 이며 <span class="math inline">\(x=x'+Vt,\, y=y',\,z=z'\)</span> 을 만족했다. 그러나 이 변환은 무엇보다도 상대론의 기본 가정중에 두번째를 만족하지 않는다. 이제 다른 가정을 해 보자. 일단 <span class="math inline">\((x, y, z, t)\)</span> 와 <span class="math inline">\((x', y', z', t')\)</span> 사이의 선형 변환관계를 생각하자. 이렇게 놓는 다는 것은 일단은 갈릴레이 변환을 제외하고는 가장 간단한 변환이기 때문이다. 이것이 좋은 물리인지는 아직 모른다.</p>
+<p><span id="eq-lorentz_eq_1"><span class="math display">\[
+x=\gamma x' + \zeta t',\qquad x' = \gamma' x + \zeta' t ,\qquad y=y',\qquad z=z'
+\tag{4.1}\]</span></span></p>
+<p>여기서 <span class="math inline">\(\gamma,\,\gamma',\,\zeta,\,\zeta'\)</span> 은 좌표, 시간과는 독립적인 파라미터이다. <span class="math inline">\(x'=0\)</span> 일 때 <span class="math inline">\(x=Vt\)</span> 이어야 한다. 따라서 <span class="math inline">\(\zeta' = -\gamma' V\)</span> 이다. 또한 <span class="math inline">\(x=0\)</span> 일 때 <span class="math inline">\(x'=-Vt'\)</span> 이므로 <span class="math inline">\(\zeta = V\gamma\)</span> 이며 이로부터 <a href="#eq-lorentz_eq_1">식&nbsp;<span>4.1</span></a> 은 다음과 같이 변화한다.</p>
+<p><span id="eq-lorentz_eq_2"><span class="math display">\[
+x=\gamma(x'+Vt'),\qquad x'=\gamma'(x-Vt),\qquad y=y',\qquad z=z'
+\tag{4.2}\]</span></span></p>
+<p>이제 <span class="math inline">\(\Sigma\)</span> 의 원점에 시계 <span class="math inline">\(C\)</span> 이, <span class="math inline">\(\Sigma'\)</span> 의 원점에 시계 <span class="math inline">\(C'\)</span> 가 있다고 하자. <span class="math inline">\(C\)</span> 는 <span class="math inline">\(t\)</span> 를 <span class="math inline">\(C'\)</span> 은 <span class="math inline">\(t'\)</span> 을 측정한다. <span class="math inline">\(t=1\)</span> 일 때 <span class="math inline">\(\mathcal{O}\)</span> 의 <span class="math inline">\(\Sigma'\)</span> 에서의 위치는 <span class="math inline">\(-\gamma' V\)</span> 이어야 한다. <span class="math inline">\(t'=1\)</span> 일 때 <span class="math inline">\(\mathcal{O}'\)</span> 의 <span class="math inline">\(\Sigma\)</span> 에서의 위치는 <span class="math inline">\(\gamma V\)</span> 이어야 한다. 우리는 <span class="math inline">\(\Sigma\)</span> 와 <span class="math inline">\(\Sigma'\)</span> 의 차이는 하나가 다른 하나에 대해 일정한 속도로 움직이는 것 밖에 없다는 것을 안다. 따라서 상대론의 첫번째 기본 가정에 의해 <span class="math inline">\(\gamma = \gamma'\)</span> 이어야 한다는 것을 안다.</p>
+<p>자 이제 상대론의 두번째 기본 가정이 등장할 때다. <span class="math inline">\(t=t'=0\)</span> 일 때 <span class="math inline">\(\mathcal{O}\)</span> 와 <span class="math inline">\(\mathcal{O'}\)</span> 이 일치하며, 빛이 <span class="math inline">\(+x\)</span> 방향으로 방출되었다고 하자. 그렇다면 <span class="math inline">\(\Sigma\)</span> 에서의 빛의 위치는 <span class="math inline">\(x=ct\)</span> 이며 <span class="math inline">\(\Sigma'\)</span> 에서의 빛의 위치는 <span class="math inline">\(x'=ct'\)</span> 이어야 한다. 이제 <span class="math inline">\(\gamma=\gamma'\)</span> 과 <a href="#eq-lorentz_eq_2">식&nbsp;<span>4.2</span></a> 로부터 다음 식을 얻는다.</p>
+<p><span class="math display">\[
+ct = \gamma (c+V)t',\qquad ct' = \gamma (c-V)t
+\]</span></p>
+<p>이 식을 연립하여 계산하면, <span class="math inline">\(\beta = \dfrac{V}{c}\)</span> 에 대해 <span class="math inline">\(\gamma = \dfrac{1}{\sqrt{1-\beta^2}}\)</span> 를 얻으며,</p>
+<p><span id="eq-lorentz_eq_3"><span class="math display">\[
+x = \gamma (x'+\beta c t'),\qquad y=y',\qquad z=z',\qquad ct = \gamma (ct' + \beta x')
+\tag{4.3}\]</span></span></p>
+<p>을 얻는다. 이렇게 <span class="math inline">\(\Sigma\)</span> 에서 <span class="math inline">\(\Sigma'\)</span> 좌표계로 변환하는 것을 <strong>로렌츠 변환(Lorentz transformation)</strong> 혹은 <strong>로렌츠 부스트(Lorentz boost)</strong> 라고 한다.</p>
+<p><br></p>
+</section>
+<section id="로렌츠-변환에서의-빛의-속도" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="로렌츠-변환에서의-빛의-속도"><span class="header-section-number">4.2.2</span> 로렌츠 변환에서의 빛의 속도</h3>
+<p>앞서와 같은 두 관성좌표계 <span class="math inline">\(\Sigma,\, \Sigma'\)</span> 을 생각하자. <span class="math inline">\(t=0\)</span> 에서 <span class="math inline">\(\mathcal{O} = \mathcal{O'}\)</span> 이었다. <span class="math inline">\(\Sigma\)</span> 좌표계에서 <span class="math inline">\(t=0\)</span> 에서 방출된 광자의 위치는 <span class="math inline">\(x^2+y^2+z^2-(ct)^2=0\)</span> 를 만족한다. 이제 로렌츠 변환을 통해 변환시켜보자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+0&amp;=x^2+y^2+z^2-(ct)^2 \\
+&amp;= (\gamma(x'+\beta ct'))^2 + (y')^2 + (z')^2-(\gamma (ct+\beta x'))^2\\
+&amp;= \gamma^2(1-\beta^2)x'^2 + y'^2 + z'^2 -\gamma^2(1-\beta^2)(ct')^2\\
+&amp;= (x')^2 + (y')^2 +(z')^2 - (ct')^2.
+\end{aligned}
+\]</span></p>
+<p>즉 <span class="math inline">\(\boldsymbol{V}\)</span> 와 무관하게 <span class="math inline">\(\Sigma'\)</span> 에서도 빛의 속도는 <span class="math inline">\(c\)</span> 이다.</p>
+<p><br></p>
+</section>
+<section id="세계선과-동시성" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="세계선과-동시성"><span class="header-section-number">4.2.3</span> 세계선과 동시성</h3>
+<p>이제 로렌츠 변환이 의미하는 바를 이해해보자. 우선 시공간 속을 움직이는 관측자의 경로를 <strong>세계선 (world line)</strong> 이라고 하자. 그리고 상황을 단순하게 하기 위해 3차원을 1차원으로 축약하여 시공간을 <span class="math inline">\(x-t\)</span> 좌표계에서 그리도록 하자. <span class="math inline">\(\Sigma\)</span> 좌표계에 대해 <span class="math inline">\(x\)</span> 축으로 <span class="math inline">\(v\)</span> 의 속도로 움직이는 관측자의 세계선은 아래 그림과 같다.</p>
+<div id="fig-world_line_1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/relativity/fig-simultaneity_1-1.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<p></p><figcaption class="figure-caption">그림&nbsp;4.2: 세계선</figcaption><p></p>
+</figure>
+</div>
+<p><br></p>
+<p>이제 세계의 좌표계 <span class="math inline">\(\Sigma,\, \Sigma_1,\, \Sigma_2,\, \Sigma_3\)</span> 와 각 좌표계의 원점 <span class="math inline">\(\mathcal{O},\, \mathcal{O}_1,\, \mathcal{O}_2,\, \mathcal{O}_3\)</span> 을 생각하자. <span class="math inline">\(\Sigma_1,\,\Sigma_2,\, \Sigma_3\)</span> 는 <span class="math inline">\(\Sigma\)</span> 에 대해 모두 <span class="math inline">\(V\)</span> 의 속도로 움직이며, <span class="math inline">\(t=0\)</span> 일 때 <span class="math inline">\(\mathcal{O}_1,\,\mathcal{O}_2,\,\mathcal{O}_3\)</span> 의 위치는 각각 <span class="math inline">\(0,\, L,\, 2L\)</span> 이었다고 하자. 이제 <span class="math inline">\(\mathcal{O}_1\)</span> 과 <span class="math inline">\(\mathcal{O}_3\)</span> 에서 각각 <span class="math inline">\(\mathcal{O}_2\)</span> 의 방향으로 빛을 쏘았다고 하자. <span class="math inline">\(\mathcal{O}_2\)</span> 의 입장에서는 당연히 <span class="math inline">\(\mathcal{O}_1\)</span> 과 <span class="math inline">\(\mathcal{O}_3\)</span> 에서 같은 시간에 빛을 쏘아야 두 빛이 동시에 <span class="math inline">\(\mathcal{O}_2\)</span> 에 도착한다. 그렇다면 <span class="math inline">\(\mathcal{O}\)</span> 의 입장에서도 그러할까? 아래 그림을 보자. 아래 그림은 <span class="math inline">\(\Sigma\)</span> 에서의 세계선이다.</p>
+<div id="fig-world_line_2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/relativity/fig-simultaneity_2-1.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">그림&nbsp;4.3: <span class="math inline">\(\Sigma\)</span> 에서의 세계선</figcaption><p></p>
+</figure>
+</div>
+<p>그렇다면 <span class="math inline">\(\Sigma\)</span> 에서 보았을 때에 <span class="math inline">\(\mathcal{O}_2\)</span> 에 동시에 빛이 도달하기 위해서는 그림과 같이 <span class="math inline">\(\mathcal{O}_1\)</span> 에서 <span class="math inline">\(t=0\)</span> 에 빛이 방출될 경우 <span class="math inline">\(\mathcal{O}_3\)</span> 에서는 <span class="math inline">\(t_\ast &gt;0\)</span> 에 빛이 방출되어야 한다. 즉 <span class="math inline">\(\Sigma\)</span> 와 <span class="math inline">\(\Sigma_2\)</span> 에서의 동시성은 일치하지 않는다.</p>
+<p><br></p>
+</section>
+<section id="시공간-도표" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="시공간-도표"><span class="header-section-number">4.2.4</span> 시공간 도표</h3>
+<p>자 이제 점점 재미있는 주제로 들어간다. 앞서 정지 좌표계 <span class="math inline">\(\Sigma\)</span> 에 대해 움직이는 좌표계 <span class="math inline">\(\Sigma'\)</span> 의 원점 <span class="math inline">\(\mathcal{O}'\)</span> 의 위치를 세계선으로 표현했다. 이 세계선의 위치는 로렌츠 변환에서 <span class="math inline">\(x'=0\)</span> 을 <span class="math inline">\(\Sigma\)</span> 좌표계에서의 <span class="math inline">\(t-x\)</span> 공간에서 표한한 것이다. 이제 <span class="math inline">\(t'=0\)</span> 은 <span class="math inline">\(x'\)</span> 축이므로 다음과 같이 표현 할 수 있을 것이다. <a href="#eq-lorentz_eq_3">식&nbsp;<span>4.3</span></a> 로부터 <span class="math inline">\(t'\)</span> 은 <span class="math inline">\(t= \dfrac{1}{c\beta}x\)</span> 으로 표현되며, <span class="math inline">\(t=\dfrac{\beta}{c}x\)</span> 로 표현됨을 안다.</p>
+<div id="fig-world_line_3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/relativity/fig-simultaneity_3-1.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<p></p><figcaption class="figure-caption">그림&nbsp;4.4: 세계선</figcaption><p></p>
+</figure>
+</div>
+<p><br></p>
+</section>
+<section id="길이-수축" class="level3" data-number="4.2.5">
+<h3 data-number="4.2.5" class="anchored" data-anchor-id="길이-수축"><span class="header-section-number">4.2.5</span> 길이 수축</h3>
+<p>길이 <span class="math inline">\(L\)</span> 인 막대기가 <span class="math inline">\(x\)</span> 축상에 놓여 있다고 하자. 편의상 한 끝점을 <span class="math inline">\(\mathcal{O}\)</span> 에 다른 끝점을 <span class="math inline">\(x=L\)</span> 에 놓을 수 있다. 이제 막대기의 양 끝의 세계선은 <span class="math inline">\(\Sigma\)</span> 좌표계에서 <span class="math inline">\(x=0\)</span> 과 <span class="math inline">\(x=L\)</span> 이다. 이제 움직이는 좌표계 <span class="math inline">\(\Sigma'\)</span> 에서 생각하자.</p>
+<div id="fig-lorentz_contration" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/relativity/fig-simultaneity_4-1.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<p></p><figcaption class="figure-caption">그림&nbsp;4.5: <span class="math inline">\(\Sigma'\)</span> 에서의 길이 수축</figcaption><p></p>
+</figure>
+</div>
+<p>즉 <span class="math inline">\(\Sigma'\)</span> 에서의 길이는 <span class="math inline">\(\overline{\mathcal{O}'L'}\)</span> 이며 이것은 로렌츠 변환에서 <span class="math inline">\(L'=L/\gamma &lt; L\)</span> 로 나타난다. 이를 길이 수축이라고 한다.</p>
+<p>이제 길이 <span class="math inline">\(L\)</span> 인 막대기가 <span class="math inline">\(\Sigma'\)</span> 좌표계에서 <span class="math inline">\(x=0,\, x=L'\)</span> 에 놓여 있다고 하자. 그리고 이 막대기의 양 끝점의 세계선을 그리면 아래 그림과 같다.</p>
+<div id="fig-lorentz_contration" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/relativity/fig-simultaneity_5-1.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">그림&nbsp;4.6: <span class="math inline">\(\Sigma\)</span> 에서의 길이 수축</figcaption><p></p>
+</figure>
+</div>
+<p>역시 로렌츠 변환을 통해 <span class="math inline">\(L=L'/\gamma &lt; L'\)</span> 이 된다. 즉 길이 수축은 움직이는 물체는 움직이는 방향으로 길이가 짧아진다는 의미이다.</p>
+<p><br></p>
+</section>
+<section id="시간-지연" class="level3" data-number="4.2.6">
+<h3 data-number="4.2.6" class="anchored" data-anchor-id="시간-지연"><span class="header-section-number">4.2.6</span> 시간 지연</h3>
+<p>이제 <span class="math inline">\(t\)</span> 와 <span class="math inline">\(t'\)</span> 사이의 관계 역시 <span class="math inline">\(\mathcal{O}\)</span> 와 <span class="math inline">\(\mathcal{O}^\prime\)</span> 에 대한 로렌츠 변환식으로 부터 얻을 수 있다.</p>
+<div id="fig-time_dialition" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/relativity/fig-simultaneity_6-1.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">그림&nbsp;4.7: 시간 팽창</figcaption><p></p>
+</figure>
+</div>
+<p><span class="math inline">\(t'=1\)</span> 일 때의 <span class="math inline">\(t=\gamma t' &gt; t'\)</span> 이다. 즉 움직이는 시계는 정지한 시계보다 느리게 간다. 이것을 <strong>시간 지연 (time dilation)</strong> 이라고 한다.</p>
+<p><br></p>
+</section>
+<section id="쌍둥이의-역설" class="level3" data-number="4.2.7">
+<h3 data-number="4.2.7" class="anchored" data-anchor-id="쌍둥이의-역설"><span class="header-section-number">4.2.7</span> 쌍둥이의 역설</h3>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+쌍둥이의 역설
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>동시에 태어난 쌍동이 가운데 한명(<span class="math inline">\(E\)</span>, earth)은 지구에 정지해 있고, 다른 한명(<span class="math inline">\(S\)</span>, spaceship)은 우주선을 타고 멀리 갔다가 돌아왔을 때 누가 더 나이를 먹었을까 라는 문제이다. 상황을 간단하게 하기 위해 <span class="math inline">\(t=0\)</span> 일 때 <span class="math inline">\(S\)</span> 가 속도 <span class="math inline">\(\boldsymbol{V}\)</span> 의 등속운동으로 출발해서 어느 지점까지 갔고(<span class="math inline">\(P_1\)</span> 경로), 거기에서 다시 <span class="math inline">\(-\boldsymbol{V}\)</span> 의 속력으로 귀환했다고 하자(<span class="math inline">\(P_2\)</span> 경로). 경로 <span class="math inline">\(P_1\)</span> 과 경로 <span class="math inline">\(P_2\)</span> 모두 등속운동이며, 우리가 아는 한 <span class="math inline">\(E\)</span> 의 임장에서는 <span class="math inline">\(S\)</span> 가 어려지며, <span class="math inline">\(S\)</span> 의 입장에서는 <span class="math inline">\(E\)</span> 가 어려진다. 이것을 쌍둥이의 역설이라고 한다.</p>
+</div>
+</div>
+<p>여기에 틈은 속도를 <span class="math inline">\(\boldsymbol{V}\)</span> 에서 <span class="math inline">\(-\boldsymbol{V}\)</span> 로 바꾸는 순간에 있을 수 밖에 없다. 이 순간을 제외하면 모든 것이 대칭적이기 때문이다. 이제 속도를 바꾸지 않는 <span class="math inline">\(E\)</span> 의 입장에서 보자. <span class="math inline">\(E\)</span> 와 <span class="math inline">\(S\)</span> 가 같은 시간을 가리키도록 안내선을 그어보자.</p>
+<div id="fig-twin-paradox" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/relativity/fig-twin_paradox_1-1.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<p></p><figcaption class="figure-caption">그림&nbsp;4.8: 쌍동이의 역설</figcaption><p></p>
+</figure>
+</div>
+<p>그림에서 보다시피 경로를 <span class="math inline">\(P_1\)</span> 에서 <span class="math inline">\(P_2\)</span> 로 옮기는 순간 <span class="math inline">\(\Sigma\)</span> 에서 엄청난 시간 변화가 일어난다. 이것은 실제로 가속운동을 따르는 일반상대성 이론에서 정확히 다룰 수 있지만, 특수상대성 이론만으로도 우주선을 타고 왕복한 <span class="math inline">\(B\)</span> 에서 흐른 시간이 짧다는 것을 알 수 있다.</p>
+<p><br></p>
+</section>
+<section id="민코프스키-광원뿔" class="level3" data-number="4.2.8">
+<h3 data-number="4.2.8" class="anchored" data-anchor-id="민코프스키-광원뿔"><span class="header-section-number">4.2.8</span> 민코프스키 광원뿔</h3>
+<div id="fig-mincowsky_light_cone" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/9/90/World_line2.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">그림&nbsp;4.9: 민코프스키 광원뿔 (출처 : Wikipedia)</figcaption><p></p>
+</figure>
+</div>
+<p>상대성이론에서 시공간이라는 개념을 정립하고 완성한 사람은 <a href="https://en.wikipedia.org/wiki/Hermann_Minkowski">헤르만 민코프스키</a> 이다. 위의 그림에서 future light cone 은 관찰자(observer) 위치에서 빛이 발생되었을 때 빛이 갈 수 있는 시공간상의 가능한 경로이다. past light cone 은 <span class="math inline">\(t=0\)</span> 에 관찰자의 위치에 도달할 수 있있는 빛의 과거의 시공간상의 경로이다. 광속 불변에 의해 이 경로는 시공간상의 원뿔의 표면에 위치할 수 밖에 없다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="상대성-역학" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="상대성-역학"><span class="header-section-number">4.3</span> 상대성 역학</h2>
+<section id="벡터와-로렌츠-불변량" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="벡터와-로렌츠-불변량"><span class="header-section-number">4.3.1</span> 4-벡터와 로렌츠 불변량</h3>
+<p>우리는 상대성이론에서 좌표계마다 시간이 다르며, 로렌츠 변환이 공간적 좌표뿐만 아니라 시간에도 관계된다는 것을 알았다. 즉 시공간상의 변화는 이제 시간과 공간을 함께 고려하여 다루어야 한다. 그리고 시공간의 변화는 로렌츠 변화를 따라 변화해야 한다. 이렇게 로렌츠 변화를 따르는 4차원 벡터를 <strong>4-벡터 (four-vector)</strong>라고 한다. 시간과 공간에 대한 변화로부터 로렌츠 변환이 유도되었기 때문에 시공간에 대한 4-벡터는 당연히 존재해야 한다.</p>
+<p><br></p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-4vector" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 4.1 (시공간의 위치에 대한 4-벡터) </strong></span>시간과 공간에 대한 4-벡터를 대문자로 다음과 같이 표기한다. <span class="math display">\[
+X:= (ct, x, y, z) = (X^0, X^1, X^2, X^3)
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>로렌츠 변환 행렬은 다음과 같이 정의된다.</p>
+<p><span class="math display">\[
+\boldsymbol{\Lambda} = \begin{bmatrix} \gamma &amp; \gamma\beta &amp; 0 &amp; 0 \\ \gamma\beta &amp; \gamma &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1\end{bmatrix}
+\]</span></p>
+<p>우리는 이미 다음을 알고 있다.</p>
+<p><span id="eq-lorentz_transform_1"><span class="math display">\[
+X = \boldsymbol{\Lambda}X'
+\tag{4.4}\]</span></span></p>
+<p>시간과 공간에서의 미소변화를 각각 <span class="math inline">\(dt,\,dx,\,dy,\,dz\)</span> 라고 했을 때 <span class="math inline">\(X\)</span> 의 미소변화(infinitesimal displacement) <span class="math inline">\(dX\)</span> 는 다음과 같이 쓸 수 있다.</p>
+<p><span class="math display">\[
+dX = (cdt,\, dx,\,dy,\,dz) = \begin{bmatrix} cdt &amp; dx &amp; dy &amp;dz \end{bmatrix}^T
+\]</span></p>
+<p>이제 메트릭 텐서를 도입한다. 특수상대성 이론에서의 메트릭 텐서 <span class="math inline">\(\boldsymbol{\eta}\)</span> 는 다음과같다.</p>
+<p><span class="math display">\[
+\boldsymbol{\eta} = \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; -1\end{bmatrix}
+\]</span></p>
+<p>이제 메트릭 텐서 <span class="math inline">\(\boldsymbol{\eta}\)</span> 와 미소변위 <span class="math inline">\(d\boldsymbol{r}\)</span> 를 이용하여 <span class="math inline">\(ds^2\)</span> 를 정의한다.</p>
+<p><span class="math display">\[
+ds^2 = dX^T \cdot \boldsymbol{\eta} \cdot dX= c^2dt^2 - dx^2 - dy^2 - dz^2.
+\]</span></p>
+<p><span class="math inline">\(X= \boldsymbol{\Lambda }X'\)</span> 이므로 <span class="math inline">\(dX = \boldsymbol{\Lambda}dX'\)</span> 이며, <span class="math inline">\(dX^T = dX'^T \boldsymbol{\Lambda}^T\)</span> 가 된다. 따라서,</p>
+<p><span class="math display">\[
+ds^2 =dX^T \cdot \boldsymbol{\eta} \cdot dX = dX'^T \cdot \boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda} \cdot dX'
+\]</span></p>
+<p>이 때 우리는 <span class="math inline">\(\boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda} = \boldsymbol{\eta}\)</span> 임을 계산 할 수 있다. 따라서,</p>
+<p><span class="math display">\[
+ds^2 = dX'^T \cdot \boldsymbol{\eta} \cdot dX' = cdt'^2 - x'^2 - y'^2 - z'^2 = ds'^2
+\]</span></p>
+<p>이 된다. 즉 <span class="math inline">\(ds^2\)</span> 는 로렌츠 변환에 대해 불변량이다. 이렇게 로렌츠 변화에 대해 불변인 물리량을 <strong>로렌츠 불변량 (Lorentz invariants)</strong> 라고 한다.</p>
+<p><br></p>
+</section>
+<section id="고유-시간-tau" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="고유-시간-tau"><span class="header-section-number">4.3.2</span> 고유 시간 <span class="math inline">\(\tau\)</span></h3>
+<p>관성 좌표계 <span class="math inline">\(\Sigma\)</span> 와 <span class="math inline">\(\Sigma'\)</span> 을 생각하자. 각각의 원점을 <span class="math inline">\(\mathcal{O},\, \mathcal{O}'\)</span> 이라고 하면 <span class="math inline">\(\Sigma\)</span> 에서의 <span class="math inline">\(\mathcal{O'}\)</span> 의 속도를 <span class="math inline">\(\boldsymbol{V}\)</span> 라고 하자. 그렇다면 <span class="math inline">\(\beta = V/c\)</span> 와 <span class="math inline">\(\gamma = 1/\sqrt{1-\beta^2}\ge 1\)</span> 이 정해진다. <span class="math inline">\(\mathcal{O}'\)</span> 에서 측정한 시간을 <span class="math inline">\(dt'=d\tau\)</span> 라고 하자. <span class="math inline">\(ds^2 = ds'^2\)</span> 로부터</p>
+<p><span class="math display">\[
+ds^2 = c^2t^2 - dx^2 0 dy^2 - dz^2 = c^2 t^2 - V^2 = ds'^2 = c^2d\tau^2  
+\]</span></p>
+<p>가 성립하며, 따라서 <span class="math inline">\(dt = \gamma d \tau \ge d\tau\)</span> 이다. 이렇게 어떤 관성좌표계에서 측정한 시간을 그 좌표계의 <strong>고유 시간 (proper time)</strong> 이라고 하며 보통 <span class="math inline">\(\tau\)</span> 로 표기한다. 우리는 이미 시간 지연 (time dilation) 이라는 것을 안다. <span class="math inline">\(\gamma=1.1\)</span> 일 경우, 즉 <span class="math inline">\(V \approx 0.42c\)</span> 일 경우, <span class="math inline">\(\mathcal{O}'\)</span> 에서의 시간이 1초 흐를 때 <span class="math inline">\(\mathcal{O}\)</span> 에서의 시간은 <span class="math inline">\(1.1\)</span> 초 흐른다.</p>
+<p>또하나 알수 있는 것은 <span class="math inline">\(ds^2\)</span> 가 로렌츠 불변량이기 때문에 <span class="math inline">\(d\tau = \dfrac{1}{c} \sqrt{ds^2}\)</span> 도 당연히 로렌츠 불변량이라는 것이다. <span class="math inline">\(d\tau\)</span> 가 로렌츠 불변량이므로 뒤에 나올 4-속도가 정의가능해진다. <span class="math inline">\(d\tau\)</span> 가 로렌츠 불변량인것은 어떻게 보면 당연한데 어떤 관성좌표계에서 측정하는 시간은 다른 어떤 관성좌표계에서도 간섭 할 수 없다는 의미이기 때문이다.</p>
+<p><br></p>
+</section>
+<section id="벡터-표기법-아인슈타인-표기법" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="벡터-표기법-아인슈타인-표기법"><span class="header-section-number">4.3.3</span> 4-벡터 표기법 (아인슈타인 표기법)</h3>
+<p>4-벡터 표기법 <span class="math inline">\(X= (r^0 = ct,\, r^1=x,\, r^2=y,\, r^3=z)\)</span> 을 다시 생각하자. 일반적으로 3-벡터의 경우 <span class="math inline">\(\|\boldsymbol{r}\|^2 = \sum_i {x_i}^2\)</span> 와 같이 인덱스에 <span class="math inline">\(i,\,j,\,k\)</span> 같은 알파벳 문자를 사용한다. 그러나 4-벡터의 경우 <span class="math inline">\(\mu\)</span> 나 <span class="math inline">\(\nu\)</span> 같은 그리스 문자를 관례적으로 사용한다. 그렇다면</p>
+<p><span class="math display">\[
+ds^2 = c^2t^2 - x^2 - y^2 - z^2=  \sum_{\mu=0}^3 \sum_{\nu = 0}^3 dX^\mu \eta_{\mu \nu}dX^\nu
+\]</span></p>
+<p>와 같이 표현 할 수 있다. 앞으로 첨자가 위에 붙어 있을 때와 아래에 붙어 있을 때의 차이에 대해 설명하겠지만 일단은 잠시 넘어가기로 하자. 일반적으로 우리가 생각하는 벡터는 첨자가 위에 붙은 벡터이며, 첨자가 위에 붙은 벡터에 대해 메트릭 텐서는 위에서 처럼 아래에 두 첨자가 붙고, 로렌츠 변환 텐서는 위와 아래에 하나씩 붙는다. 이렇게 4-벡터와 4-텐서(4 벡터의 변환을 나타내는 텐서)의 곱에 동일한 첨자가 하나는 위에 하나는 아래에 붙을 경우 그것에 대한 <span class="math inline">\(\sum\)</span> 기호를 표기하지 않아도 표기한 것처럼 사용하는 것을 <strong>아인슈타인 표기법 (Einstein summmation convention)</strong> 이라고 한다. 즉,</p>
+<p><span class="math display">\[
+ds^2 = dX^\mu \eta_{\mu \nu}dX^\nu
+\]</span></p>
+<p>로 쓸 수 있다. <a href="#eq-lorentz_transform_1">식&nbsp;<span>4.4</span></a> 을 4-벡터와 4-텐서로 나타내면</p>
+<p><span class="math display">\[
+dX^\mu = \Lambda^\mu_\nu dX'^\nu
+\]</span></p>
+<p>이다. 여기서 <span class="math inline">\(\Lambda^\mu_\nu\)</span> 는 <span class="math inline">\(\mu\)</span> 의 행 index, <span class="math inline">\(\nu\)</span> 의 열 인덱스를 나타낸다.</p>
+<p><br></p>
+</section>
+<section id="속도의-로렌츠-변화" class="level3" data-number="4.3.4">
+<h3 data-number="4.3.4" class="anchored" data-anchor-id="속도의-로렌츠-변화"><span class="header-section-number">4.3.4</span> 속도의 로렌츠 변화</h3>
+<p><a href="#fig-reference_frames_in_relativity">그림&nbsp;<span>4.1</span></a> 의 <span class="math inline">\(\Sigma,\, \Sigma'\)</span> 좌표계를 생각하자. <span class="math inline">\(\Sigma'\)</span> 이 <span class="math inline">\(\Sigma\)</span> 에 대해 속도 <span class="math inline">\(\boldsymbol{V}=V\hat{\boldsymbol{e}}_1\)</span> 으로 움직일 때 <span class="math inline">\(\Sigma'\)</span> 에서 속도 <span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{e}}_1'\)</span> 으로 움직이는 물체의 속도는 <span class="math inline">\(\Sigma\)</span> 에서 어떻게 측정될 것인가?</p>
+<p>이제 <span class="math inline">\(\Sigma'\)</span> 에 대해 <span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{e}}_1'\)</span> 으로 움직이는 <span class="math inline">\(\Sigma''\)</span> 좌표계를 생각 할 수 있다. <span class="math inline">\(\beta_2 = u/c,\, \gamma_2 = 1/\sqrt{1-{\beta_2}^2}\)</span> 에 대해</p>
+<p><span class="math display">\[
+X'' = \boldsymbol{\Lambda}_2X' = \begin{bmatrix} \gamma_2 &amp; -\gamma_2\beta_2 &amp; 0 &amp; 0 \\ -\gamma_2\beta_2 &amp; \gamma_2 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1\end{bmatrix} X'
+\]</span></p>
+<p>이며 <span class="math inline">\(\beta_1 = V/c,\, \gamma_1 = 1/\sqrt{1-{\beta_1}^2}\)</span> 에 대해</p>
+<p><span class="math display">\[
+X' = \boldsymbol{\Lambda}_1 X  =  \begin{bmatrix} \gamma_1 &amp; -\gamma_1\beta_1 &amp; 0 &amp; 0 \\ -\gamma_1\beta_1 &amp; \gamma_1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1\end{bmatrix} X
+\]</span></p>
+<p>임을 안다. 따라서,</p>
+<p><span class="math display">\[
+X'' = \boldsymbol{\Lambda}_2 \boldsymbol{\Lambda}_1 X = \begin{bmatrix} \gamma_1\gamma_2(1+\beta_1 \beta_2) &amp; -\gamma_1\gamma_2 (\beta_1 + \beta_2) &amp; 0  &amp; 0 \\  -\gamma_1\gamma_2 (\beta_1 + \beta_2) &amp;\gamma_1\gamma_2(1+\beta_1 \beta_2) &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1\end{bmatrix} X
+\]</span></p>
+<p>이다. 이를</p>
+<p><span class="math display">\[
+X'' = \boldsymbol{\Lambda} X  =  \begin{bmatrix} \gamma &amp; -\gamma\beta &amp; 0 &amp; 0 \\ -\gamma\beta &amp; \gamma &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1\end{bmatrix} X
+\]</span></p>
+<p>로 표현하면</p>
+<p><span class="math display">\[
+\beta = \dfrac{(u + V)/c}{1 + (uV)/c^2},\qquad \gamma = \gamma_1 \gamma_2 (1+\beta_1\beta_2) = \dfrac{1}{\sqrt{1-\beta^2}}
+\]</span></p>
+<p>임을 안다. 즉 <span class="math inline">\(\Sigma''\)</span> 의 속도는 <span class="math inline">\(\Sigma\)</span> 에서 봤을 때 <span class="math inline">\(u+v\)</span> 가 아니라 <span class="math inline">\(\dfrac{(u+v)}{1+ (uv)/c^2}\)</span> 임을 알 수 있다.</p>
+<p><br></p>
+</section>
+<section id="속도" class="level3" data-number="4.3.5">
+<h3 data-number="4.3.5" class="anchored" data-anchor-id="속도"><span class="header-section-number">4.3.5</span> 4-속도</h3>
+<p><span class="math inline">\(d\tau\)</span> 가 로렌츠 불변량이라는 것을 떠올리자. 4-벡터 <span class="math inline">\(X^\mu\)</span> 에 대해 <span class="math inline">\(\dfrac{dX^\mu}{d\tau}\)</span> 도 4-벡터이다. 즉 로렌츠 변환으로 변환된다. 이것은 속도와 같은 차원을 갖기 때문에 <strong>4-속도 (4-velocity)</strong> 라고 불리며 보통 <span class="math inline">\(U^\mu\)</span> 로 표기한다. 즉 4-속도는 다음과 같이 정의된다.</p>
+<p><span id="eq-def_4vector"><span class="math display">\[
+U^\mu := \dfrac{dX^\mu}{d\tau},\qquad \mu = 0,\,1,\,2,\,3.
+\tag{4.5}\]</span></span></p>
+<p>따라서,</p>
+<p><span id="eq-4vector"><span class="math display">\[
+U = \left(\gamma c,\, \gamma \dfrac{dx}{dt},\, \gamma \dfrac{dy}{dt},\,\gamma \dfrac{dz}{dt}\right) = \begin{bmatrix}\, \gamma c,\, \gamma \dfrac{dx}{dt},\, \gamma \dfrac{dy}{dt},\,\gamma \dfrac{dz}{dt}\, \end{bmatrix}^T
+\tag{4.6}\]</span></span></p>
+<p>이다. 4 속도의 4 성분은 서로 독립이 아니며 항상 아래 식을 만족한다.</p>
+<p><span class="math display">\[
+U^\mu \eta_{\mu \nu}U^\nu = \gamma^2c^2 - \gamma^2 v^2 = c^2.
+\]</span></p>
+<p><br></p>
+<p>4-속도의 로랜츠 변환을 통해 속도의 로렌츠 변환을 알 수 있다. 즉 <span class="math inline">\(\Sigma\)</span> 좌표계의 4-속도와 <span class="math inline">\(\Sigma'\)</span> 좌표계의 4-속도를 보면, <span class="math inline">\(U^\mu = \Lambda_{\nu}^\mu U^\nu\)</span> 로 부터</p>
+<p><span class="math display">\[
+U = \begin{bmatrix} U^0 \\ U^1 \\ U^2\\ U^3 \end{bmatrix} =  \begin{bmatrix} \gamma_V &amp; \gamma_V\beta_V &amp; 0 &amp; 0 \\ \gamma_V\beta_V &amp; \gamma_V &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1\end{bmatrix} \begin{bmatrix} U'^0 \\ U'^1 \\ U'^2\\ U'^3 \end{bmatrix}
+\]</span></p>
+<p>이다. <span class="math inline">\(\Sigma'\)</span> 좌표계에서 <span class="math inline">\(\boldsymbol{u} = u\hat{\boldsymbol{e}}_1\)</span> 으로 움직이는 입자를 생각하면, <span class="math inline">\(U' = (\gamma_u c,\, \gamma_u u, 0 , 0)\)</span> 이며 <span class="math inline">\(U = (\gamma c,\, \gamma v_x,\, \gamma v_y,\, \gamma b_z)\)</span> 를 구하면 <span class="math inline">\(v_y = v_z=0,\, v_x = \dfrac{u+V}{1+ (uV)/c^2}\)</span> 를 얻는다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="상대론적-동역학의-기본-개념" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="상대론적-동역학의-기본-개념"><span class="header-section-number">4.4</span> 상대론적 동역학의 기본 개념</h2>
+<section id="상대론에서의-자유입자의-action" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="상대론에서의-자유입자의-action"><span class="header-section-number">4.4.1</span> 상대론에서의 자유입자의 action</h3>
+<p>뉴튼역학에서의 <a href="../../docs/BasicClassicalMechanics/02_variational_principle.html#sec-least_action_theorem">해밀턴의 원리</a>, 즉 최소작용의 원리에 상응하는 상대론적인 action 은 다음과 같이 정의된다.</p>
+<p><span id="eq-relativistic_action"><span class="math display">\[
+I = -\int_{t_i}^{t_f} mc^2\, d\tau = -\int_{t_i}^{t_f} m c^2\sqrt{1-\dfrac{v^2}{c^2}} \, dt
+\tag{4.7}\]</span></span></p>
+<p>즉 상대론적 라그랑지안은 <span class="math inline">\(-mc^2 \sqrt{1-v^2/c^2}\)</span> 으로 정의된다. 상대론에서 어떤 결과를 얻었을 때 최소한 <span class="math inline">\(v \ll c\)</span> 조건에서 고전역학과 일치하는지를 확인해야 한다.</p>
+<p><span class="math display">\[
+\text{for } v \ll c \qquad L=-mc^2\sqrt{1-\dfrac{v^2}{c^2}} \approx -mc^2 \left( 1 - \dfrac{v^2}{2c^2} \right) = -mc^2 + \dfrac{1}{2}mv^2
+\]</span></p>
+<p>우리는 라그랑지안에 상수를 더하는 것은 물리에 전혀 영향을 끼치지 않는다는 것을 알고 있다. 따라서 위의 식은 우리가 아는 고전역학에서의 자유입자의 라그랑지안과 일치한다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="상대론에서의-운동량과-에너지" class="level2 page-columns page-full" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="상대론에서의-운동량과-에너지"><span class="header-section-number">4.5</span> 상대론에서의 운동량과 에너지</h2>
+<section id="상대론에서의-운동량" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="상대론에서의-운동량"><span class="header-section-number">4.5.1</span> 상대론에서의 운동량</h3>
+<p>고전역학에서의 운동량은 <span class="math inline">\(m\boldsymbol{v}\)</span> 로 결정되었다. 상대론에서의 운동량 <span class="math inline">\(P\)</span> 는 4-속도 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\(mU=\gamma m \dot{X}\)</span> 로 결정된다. 즉,</p>
+<p><span id="eq-relativistic_4_momentum"><span class="math display">\[
+P = (P^0,\, P^1,\, P^2,\,P^3) = mU = \left(\gamma mc,\, \gamma m \dfrac{dx}{dt},\, \gamma m \dfrac{dy}{dt},, \gamma m \dfrac{dz}{dt}\right)
+\tag{4.8}\]</span></span></p>
+<p>상대론에서의 운동량도 4-벡터이다. 따라서,</p>
+<p><span class="math display">\[
+P^\mu \eta_{\mu, \nu}P^\nu = \gamma^2 m^2(c^2-v^2) = m^2c^2
+\]</span></p>
+<p>이 된다. 이것의 의미는 잠시 후에 알아보자.</p>
+<p><br></p>
+</section>
+<section id="상대론에서의-해밀토니안" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="상대론에서의-해밀토니안"><span class="header-section-number">4.5.2</span> 상대론에서의 해밀토니안</h3>
+<p>우리는 고전역학에서 라그랑지안 <span class="math inline">\(L(p, \dot{p})\)</span> 을 알고 있을 때 운동량 <span class="math inline">\(p_i = \dfrac{\partial L}{\partial \dot{q}_i}\)</span> 에 대해 해밀토니안 <span class="math inline">\(H(p, q)\)</span> 는</p>
+<p><span class="math display">\[
+H = \sum_i p_i \dot{q}_i - L
+\]</span></p>
+<p>임을 안다. 이제 자유입자의 라그랑지안의 경우 <span class="math inline">\(L = - \gamma mc^2 = -mc^2 \sqrt{1-\dfrac{v^2}{c^2}}\)</span> 이므로,</p>
+<p><span class="math display">\[
+H = \sum_{i=1}^3 P^\mu (\dot{X}^\mu) -  mc^2\sqrt{1-\dfrac{v^2}{c^2}} = \gamma mc^2
+\]</span></p>
+<p>이다. 우리는 이제 입자의 에너지 <span class="math inline">\(\mathcal{E}=H\)</span> 에 대해 <span class="math inline">\(P^0 = \mathcal{E}/c\)</span> 임을 안다. 즉 상대론의 4-운동량은 에너지와 운동량을 포함하며, 로렌츠 변환에 의해 보존되는 것은 에너지와 운동량의 조합인 4-운동량이다.</p>
+<p><br></p>
+</section>
+<section id="질량이-없는-입자까지-고려하는-경우" class="level3 page-columns page-full" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="질량이-없는-입자까지-고려하는-경우"><span class="header-section-number">4.5.3</span> 질량이 없는 입자까지 고려하는 경우</h3>
+<p>질량이 없는 입자, 즉 <span class="math inline">\(m=0\)</span> 인 입자의 경우에는 <span class="math inline">\(\mathcal{E}=0\)</span> 이라는 결론이 나온다. 이는 물리적으로 넌센스이며 이것을 피해야 한다. 우리는 이미 질량이 없는 입자라도 운동량 <span class="math inline">\(\boldsymbol{p}\)</span> 을 가지고 있음을 안다. 그렇다면 <span class="math inline">\(P = (\mathcal{E}/c,\, \boldsymbol{p})\)</span> 로 놓으면 <span class="math inline">\(P_\mu P^\mu = m^2c^2\)</span> 이므로,</p>
+<p><span class="math display">\[
+P_\mu P^\mu = \mathcal{E}^2/c^2 - p^2 = m^2c^2
+\]</span></p>
+<p>로부터</p>
+<p><span id="eq-relativity_relativistic_energy_for_massless_particle"><span class="math display">\[
+\mathcal{E} = \sqrt{p^2c^2 + m^2c^4}
+\tag{4.9}\]</span></span></p>
+<p>을 얻는다. 이로부터 질량이 없는 입자의 에너지는 <span class="math inline">\(\mathcal{E} = cp\)</span> 이다.</p>
+<p><br></p>
+<div id="exm-positroium" class="theorem example page-columns page-full">
+<div class="page-columns page-full"><p><span class="theorem-title"><strong>보기 4.1 (포지트로늄 입자의 쌍소멸) </strong></span>전자와 양전자가 서로 속박되어 있는 입자를 포지트로늄(positronium) 입자라고 한다. 질량은 대략 전자 질량의 두배이며<span class="math inline">\(^\ast\)</span> 두 입자는 서로 소멸해 2개의 광자를 만들어낸다.</p><div class="no-row-height column-margin column-container"><span class=""><span class="math inline">\(^\ast\)</span> 자유 양전자의 질량은 자유 전자의 질량과 같다. 두 입자가 속박되면 속박된 에너지 만큼의 질량 차이가 나므로 속박된 포지트로늄의 질량은 자유 전자 질량의 두배보다 약간 작다</span></div></div>
+<p>포지트로늄 입자가 정지해있는 관셩계에서 생각하자. 이 관성계에서는 포지트로늄의 운동량은 <span class="math inline">\(0\)</span> 이며 4-운동량은</p>
+<p><span class="math display">\[
+(mc, 0, 0, 0)
+\]</span></p>
+<p>이제 포지트로늄 입자가 광자 2개로 붕괴하면, 두 광자의 4-운동량의 합은</p>
+<p><span class="math display">\[
+(p, p_1, p_2, p_3) + (p, -p_1, -p_2, -p_3) = (2pc)
+\]</span></p>
+<p>가 될 것이다. 그렇다면 <span class="math inline">\(mc= 2p\)</span> 가 되므로 광자 하나의 운동량의 크기는 <span class="math inline">\(p=mc/2\)</span> 가 된다.</p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../docs/Relativity/00_index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">상대론</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../docs/Relativity/02_introduction_to_classical_field.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
