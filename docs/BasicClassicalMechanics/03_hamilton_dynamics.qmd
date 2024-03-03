@@ -1,7 +1,7 @@
 ---
 title: "해밀턴 동역학"
 number-sections: true
-number-depth: 2
+number-depth: 3
 crossref:
   chapters: true
 ---
@@ -160,3 +160,17 @@ $$
 $$
 
 이다. 
+
+</br>
+
+### Cyclic coordinate 와 보존 정리 {#sec-cyclic_coordinate_hamiltonian}
+
+@sec-cyclic_coordinate_lagrangian 에서 다루었던 cyclic coordinate 를 다시 생각해보자. 라그랑지안과 해밀토니안의 관계 즉 $H = \sum_i \dot{q}_i p_i -L$ 을 생각해보면
+
+$$
+\dfrac{\partial L}{\partial q_i}=0 \iff \dfrac{\partial H}{\partial q_i}=0
+$$
+
+이 성립한다. $\dot{p}_i = - \dfrac{\partial H}{\partial q_i}$ 이므로 $H$ 에 explicit 한 $q_i$ 의존성이 없다면 $p_i$ 는 운동상수이다. 
+
+

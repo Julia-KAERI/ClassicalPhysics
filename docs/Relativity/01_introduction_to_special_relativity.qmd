@@ -1,7 +1,7 @@
 ---
 title: "특수 상대론의 기초"
 number-sections: true
-number-depth: 2
+number-depth: 3
 crossref:
   chapters: true
 ---

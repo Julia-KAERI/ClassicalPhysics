@@ -1,7 +1,7 @@
 ---
 title: "변분 원리와 라그랑쥬 방정식"
 number-sections: true
-number-depth: 2
+number-depth: 3
 crossref:
   chapters: true
   
@@ -463,7 +463,7 @@ $$
 
 </br>
 
-### Cyclic coordinate 
+### Cyclic coordinate {#sec-cyclic_coordinate_lagrangian}
 
 일반화된 좌표계에서 표현된 라그랑지안이 어떤 $q_i$ 에 대해 의존성이 없을 경우, 즉 $\dfrac{\partial L}{\partial q_i}=0$ 일 경우 $\dfrac{\partial L}{\partial \dot{q_j}}=p_j = \text{const.}$ 이다. 이때의 $p_j$ 를 **cyclic coordinate** 혹은 **ignorable coordinate** 라 한다. 즉 generalized momentum conjugate to cyclic coordinate $q_j$ 에 대한 canonical momentum $p_j$ 는 보존된다. 이렇게 보존되는 $p_j$ 는 라그랑지안에서 first integral(@def-first_integral) 이다.
 

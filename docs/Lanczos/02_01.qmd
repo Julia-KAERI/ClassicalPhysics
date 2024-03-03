@@ -1,7 +1,7 @@
 ---
 title: "변분법"
 number-sections: true
-number-depth : 2
+number-depth : 3
 crossref:
   chapters: true
 ---
