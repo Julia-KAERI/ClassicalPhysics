@@ -342,7 +342,7 @@ $$
 ## 상대론적 동역학의 기본 개념
 
 ### 상대론에서의 자유입자의 action
-뉴튼역학에서의 [해밀턴의 원리](../BasicClassicalMechanics/02_variational_principle.qmd#sec-least_action_theorem), 즉 최소작용의 원리에 상응하는 상대론적인 action 은 다음과 같이 정의된다.
+뉴튼역학에서의 [해밀턴의 원리](../ClassicalMechanics/02_variational_principle.qmd#sec-least_action_theorem), 즉 최소작용의 원리에 상응하는 상대론적인 action 은 다음과 같이 정의된다.
 
 $$
 I = -\int_{t_i}^{t_f} mc^2\, d\tau = -\int_{t_i}^{t_f} m c^2\sqrt{1-\dfrac{v^2}{c^2}} \, dt

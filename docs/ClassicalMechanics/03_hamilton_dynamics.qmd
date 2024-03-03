@@ -42,20 +42,24 @@ $$
 을 얻는다. 여기서 $d\dot{q}_i$ 앞의 항은 $p_i$ 의 정의에 의해 $0$ 이다. 또한 오일러 라그랑쥬 방정식에 의해
 
 $$
-0 = \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_i}\right) - \dfrac{\partial L}{\partial q_i} = \dot{p}_i - \dfrac{\partial L}{\partial q_i}
+0 = \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_i}\right) - \dfrac{\partial L}{\partial q_i} = \dot{p}_i - \dfrac{\partial L}{\partial q_i} 
 $$
 
 이므로, 
 
 $$
-dH = -\sum_i (\dot{p}_i dq_i + \dot{q}_i dp_i )+ \dfrac{\partial H}{\partial t} 
+dH = -\sum_i (\dot{p}_i dq_i + \dot{q}_i dp_i ) - \dfrac{\partial L}{\partial t} dt
 $$
 
 이며 이로부터
 
 $$
-\dot{q}_i = \dfrac{\partial H}{\partial p_i},\qquad \dot{p}_i =- \dfrac{\partial H}{\partial q_i}, \qquad \dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
+\dot{q}_i = \dfrac{\partial H}{\partial p_i},\qquad \dot{p}_i =- \dfrac{\partial H}{\partial q_i}, 
 $$ {#eq-canonical_equation_of_hamiltonian}
+
+$$
+\dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
+$$ {#eq-time_dependence_of_hamiltonian} 
 
 를 얻는다. @eq-canonical_equation_of_hamiltonian 을 **해밀턴의 정준 방정식(canonical equations of Haminton)** 이라고 부른다. 우리는 이를 통해 $n$ 개의 2차 미분방정식(라그랑쥬 방정식) 을 $2n$ 개의 1차 미분방정식(해밀턴의 정준 방정식) 으로 바꿨다. 차이는 (이것은 매우 중요하다) 라그랑지안이 일반화된 좌표계에서 $\{q_i\},\, \{\dot{q}_i\},\,t$ 의 함수라면 해밀토니안은 $\{q_i\},\, \{p_i\},\,t$ 의 함수라는 것이다.
 
@@ -172,5 +176,87 @@ $$
 $$
 
 이 성립한다. $\dot{p}_i = - \dfrac{\partial H}{\partial q_i}$ 이므로 $H$ 에 explicit 한 $q_i$ 의존성이 없다면 $p_i$ 는 운동상수이다. 
+
+
+또한 해밀턴 운동방정식 @eq-canonical_equation_of_hamiltonian 과 @eq-time_dependence_of_hamiltonian 으로부터
+$$
+\dfrac{dH}{dt} = \sum_i \left[\dfrac{\partial H}{\partial q_i} \dot{q_i} + \dfrac{\partial H}{\partial p_i} \dot{p}_i\right] + \dfrac{\partial H}{\partial t} = \sum_i \left[-\dot{p}_i \dot{q}_i  + \dot{q}_i \dot{p}_i\right] + \dfrac{\partial H}{\partial t} = \dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
+$$
+
+을 얻는다. 즉 라그랑지안이 명시적으로 시간에 의존적이지 않으면 해밀토니안 값은 운동상수이다. 
+
+</br>
+
+### 변분법으로부터 해밀턴 방정식으로
+
+[해밀턴의 원리](02_variational_principle.qmd#sec-least_action_theorem) 를 상기하자. 라그랑쥬 방정식은 해밀턴의 원리로부터의 자연스러운 결론이다. 이제 해밀턴의 원리로부터 해밀턴의 운동방정식이 자연스럽게 유도됨을 보이고자 한다. $L = \sum_i \dot{q}_i p_i - H(\{q_i\},\, \{p_i\},\,t)$ 이므로 action $S$ 는
+
+$$
+S = \int_{t_1}^{t_2} \left[\sum_i \dot{q}_i p_i - H(\{q_i\},\, \{p_i\},\,t)\right] \, dt
+$$
+
+이다. 여기서 라그랑지안에 대한 $S$ 는 configurations space 에 대한 경로적분이지만 해밀토니안에 대한 $S$ 는 phase space 에 대한 경로적분이 이 되며, 따라서 $[\cdot]$ 안의 함수를 $f$ 라고 임시로 붙이면,$\{q_i\},\, \{\dot{q}_i\},\, \{p_i\}$ 의 함수이며, 해밀턴의 원리는
+
+$$
+\delta S = \delta\int_{t_1}^{t_2} \left[\sum_i \dot{q}_i p_i - H(\{q_i\},\, \{p_i\},\,t)\right] \, dt = \delta \int_{t_1}^{t_2} f(\{q_i\},\, \{\dot{q}_i\},\,\{p_i\}, t)\, dt =0
+$$
+
+이 된다. 그리고 이에 대한 오일러-라그랑쥬 방정식은, 
+
+$$
+\begin{aligned}
+\dfrac{d}{dt}\left(\dfrac{\partial f}{\partial \dot{q}_i}\right) - \dfrac{\partial f}{\partial q_i} &= 0, \qquad  i = 1,\ldots,\,n \\
+\dfrac{d}{dt}\left(\dfrac{\partial f}{\partial \dot{p}_i}\right) - \dfrac{\partial f}{\partial p_i} &= 0, \qquad  i = 1,\ldots,\,n \\
+\end{aligned}
+$$
+
+이다. 첫번째 식으로부터 
+
+$$
+\dot{p}_i = - \dfrac{\partial H}{\partial q_i}
+$$
+
+를 얻을 수 있으며, $f$ 는 명시적인 $\dot{p}_i$ 의존성이 없으므로 두번째 식으로부터
+
+$$
+\dot{q}_i = \dfrac{\partial H}{\partial q_i}
+$$
+
+를 얻는다. 즉 우리는 변분법으로부터 해밀턴의 운동방정식을 얻었다$^\ast$. [$^\ast$ 여기에 몇가지 문제를 제기할 수도 있다. 예를 들어 우리가 오일러-라그랑쥬 방정식을 얻는데 있어 $t=t_1,\,t_2$ 일 때 variational path $\eta(t)$ 가 $\eta(t_1)= \eta(t_2)=0$ 일 것을 요구하였다. 그러나 우리는 phase space 에서 다루었으며, 어디에서도 양 끝점($t_1,\,t_2$) 에서 $\delta p_i=0$ 일 것을 확인 할 수 없지 않을까? 여기에 대한 긴 설명이 Goldestein *Classical mechanics* 2nd ed. 의 8.5 장에 나와있으니 참고하라]{.aside}
+
+
+
+
+</br>
+
+## 정준 변환 (Canonical Transformation)
+
+### 정준 변환의 방정식
+
+많은 경우 해밀토니안으로 역학계의 문제를 푸는 것이 라그랑지안을 이용해 푸는 것보다 많이 쉬워지거나 하지는 않는다. 그렇다면 왜 굳이 해밀토니안을 배우는 것일까? 그것은 고전역학애 내제된 수학적 구조를 보는데 해밀토니안 방법이 훨씬 유용하기 때문이다. 따라서 공학이나 응용분야에서는 굳이 해밀토니안을 깊게 들어가지 않는다. 또한 통계역학이나 양자역학이 발전하는데 해밀토니안이 큰 기여를 했다. 
+
+Configuration space $\{q_i\}$ 에서 새로운 generalized coordinate $\{Q_i\}$ 로의 변환을 살펴보자. 이 때
+
+$$
+Q_i = Q_i (\{q_i\},\,t)
+$$ {#eq-point_transformation}
+
+이다. 즉 $Q_i$ 는 시간에 대해 명시적으로 의존 할 수 있다. @exr-goldestein_1_15 에서 우리는 point transformation 에 의해 라그랑쥬 방정식이 불변이라는 것을 보였다. 이것을 해밀토니안으로 확장해보자. 라그랑지안에 대해 Phase space 에 대해 $\{q_i\}, \{p_i\} \mapsto \{Q_i\}, \{P_i\}$ 인 변환을 살펴보자. 그렇다면, 
+
+$$
+\begin{aligned}
+Q_i = Q_i (\{q_i\},\, \{p_i\},\, t), \\
+P_i = P_i (\{q_i\},\, \{p_i\},\, t),
+\end{aligned}
+$$ {#eq-transformation_in_phase_space}
+
+일 것이다. 우리가 원하는 것은 이 변환에 대해 @eq-canonical_equation_of_hamiltonian 와 같은 해밀턴 운동방정식이 만족되는 것이다. 즉 변환된 해밀토니안을 $\overline{H}$ 라고 하면
+
+$$
+\dot{Q}_i = \dfrac{\partial \overline{H}}{\partial P_i}, \qquad \dot{P}_i = - \dfrac{\partial \overline{H}}{\partial Q_i}
+$$
+
+
+
 
 

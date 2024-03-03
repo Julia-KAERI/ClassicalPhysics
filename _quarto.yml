@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "고전 역학"
+  title: "고전 역학과 전자기학"
   author: "Norah Jones"
   date: "2/11/2024"
   page-navigation: true
@@ -10,11 +10,14 @@ book:
   
   chapters:
     - index.qmd
-    - part: docs/BasicClassicalMechanics/00_index.qmd
+    - part: docs/ClassicalMechanics/00_index.qmd
       chapters:
-      - docs/BasicClassicalMechanics/01_basic_principles.qmd
-      - docs/BasicClassicalMechanics/02_variational_principle.qmd
-      - docs/BasicClassicalMechanics/03_hamilton_dynamics.qmd
+      - docs/ClassicalMechanics/01_basic_principles.qmd
+      - docs/ClassicalMechanics/02_variational_principle.qmd
+      - docs/ClassicalMechanics/03_hamilton_dynamics.qmd
+    - part: docs/Electromagnetism/00_index.qmd
+      chapters:
+      - docs/Electromagnetism/01_Maxwell.qmd
     - part: docs/Relativity/00_index.qmd
       chapters:
       - docs/Relativity/01_introduction_to_special_relativity.qmd
@@ -38,9 +41,17 @@ bibliography: references.bib
 
 format:
   html:
+    title-block-banner: true
+    # # include-in-header: 
+    # #   - html-hacks/load-font-awesome.html
+    # #   - html-hacks/load-xkcd-font.html
+    # resources: web-resources/**
+    # # https://quarto.org/docs/output-formats/html-themes.html#overview
+    # theme: darkly
     theme: cosmo
     fontsize: 0.9em
     toc: true
+  
 
 
 

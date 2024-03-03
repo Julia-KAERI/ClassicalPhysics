@@ -719,3 +719,40 @@ $$
 
 </br>
 
+::: {#exr-goldestein_1_15}
+
+#### Goldstein 1.15
+
+자유도가 $n$ 인 시스템의 independent generalized coordinates $q_1,\ldots,\,q_n$ 를 생각하자. 이 시스템의 라그랑지안이 $L(\{q_i\},\, \{\dot{q}_i\},\,t)$ 로 주어졌다. 우리가 이 시스템의 좌표를 역시 독립적인 $s_1,\ldots,\,s_n$ 으로 변화시키면, 즉
+
+$$
+q_i = q_i (s_1,\ldots,\,s_n,\,t)
+$$
+
+로 변환시키면 (이 변환을 *point transformation* 이라고 한다) $\{s_i\}$ 좌표료 표현된 오일러-라그랑쥬 방정식은
+
+$$
+\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{s}_j}\right) - \dfrac{\partial L}{\partial s_j}=0
+$$
+
+이 됨을 보여라. 
+
+:::
+::: {.solution}
+
+$q_j = q_j (\{s_i\}, t)$ 이므로, 
+
+$$
+\dot{q}_i = \dfrac{dq_i}{dt} = \sum_{j} \dfrac{\partial q_i}{\partial s_j} \dot{s}_j + \dfrac{\partial q_i}{\partial t}
+$$
+
+이다. 따라서 $\dfrac{\partial \dot{s}_j}{\partial \dot{q}_i} = \dfrac{\partial s_j}{\partial q_i}$ 이므로 다음과 같이 보일 수 있다. 
+$$
+\begin{aligned}
+ \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{s}_j}\right) - \dfrac{\partial L}{\partial s_j}
+&= \dfrac{d}{dt} \left[ \sum_i \left(\dfrac{\partial L}{\partial q_i}\dfrac{\partial q_i}{\partial \dot{s}_j} +\dfrac{\partial L}{\partial \dot{q}_i}\dfrac{\partial \dot{q}_i}{\partial \dot{s}_j} \right) \right]  + \sum_i \dfrac{\partial L}{\partial q_i} \dfrac{\partial q_i}{\partial s_j} \\
+&= \sum_i \left[\dfrac{d}{dt} \left(\dfrac{\partial L}{\partial \dot{q}_i} \right) + \dfrac{\partial L}{\partial q_i}\right] \left(\dfrac{\partial q_i}{\partial s_j}\right) \\
+&=0
+\end{aligned}
+$$
+:::
