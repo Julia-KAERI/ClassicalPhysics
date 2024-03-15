@@ -15,6 +15,9 @@ book:
       - docs/ClassicalMechanics/01_basic_principles.qmd
       - docs/ClassicalMechanics/02_variational_principle.qmd
       - docs/ClassicalMechanics/03_hamilton_dynamics.qmd
+      - docs/ClassicalMechanics/one_body_problems.qmd
+      - docs/ClassicalMechanics/two_or_three_bodies_problems.qmd
+      
     - part: docs/Electromagnetism/00_index.qmd
       chapters:
       - docs/Electromagnetism/01_Maxwell.qmd

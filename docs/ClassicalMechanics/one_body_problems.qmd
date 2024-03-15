@@ -1,0 +1,255 @@
+---
+title: "고전역학의 1체 문제"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+
+여기서는 운동방정식으로 다루는 입자의 대상이 하나이거나, 여러개더라도 하나에 대한 운동방정식으로 환원시킬 수 있는 시스템에 대해 다루도록 한다. 뉴턴 방법 운동방정식이나 라그랑지안 운동방정식 가운데 그때 그떼 편한 운동방정식으로 기술한다. 
+
+</br>
+
+## 일차원 운동
+
+라그랑지안이 하나의 일반화된 변수로 기술될 때를 일차원 운동이라고 한다. 예를 들어 라그랑지안이 
+
+$$
+L = \dfrac{1}{2}m\dot{x} - V(x)
+$$
+
+라고 하자. $\partial_t L = 0$ 이므로 에너지가 보존되며, 따라서 
+
+$$
+\dfrac{1}{2}m\dot{x}^2 + V(x) = E = \text{const.}
+$$
+
+이다. 운동에너지 $T=\dfrac{1}{2}m\dot{x}^2 \ge 0$ 이므로 $E-V(x) \ge 0$ 이다. 이로부터, 
+
+$$
+\dfrac{dx}{dt} = \sqrt{\dfrac{2}{m}}\sqrt{E-V(x)}
+$$
+
+를 얻는다. 따라서
+
+$$
+t = \sqrt{\dfrac{m}{2}}\int_0^x \dfrac{dx}{\sqrt{E-V(x)}} + \text{const.}
+$$
+
+이다. 
+
+
+
+</br>
+
+## 1차원 Drag force
+
+예를 들어 유체안을 낮은 속도로 움직이며, 유체에 난류가 없을 때 질량 $m$ 인 입자의 운동을 방해하는 힘이 근사적으로 속도에 비례한다. 즉,
+
+$$
+\boldsymbol{F}= m\boldsymbol{a}= -b\boldsymbol{v}.
+$$
+
+이다. 이 경우 1차원 문제로 볼 수 있으며, $\boldsymbol{a} = \dfrac{d\boldsymbol{v}}{dt}$ 이며, $\boldsymbol{v}$ = v\hat{\boldsymbol{e}}_1$ 이라고 하면, 즉 $x$ 방향이라고 하면
+
+$$
+m\dfrac{dv}{dt} = -bv
+$$
+
+이므로 $v_0 = v(t=0),\, x(t=0)=0$ 인 초기조건에서 
+
+$$
+\begin{aligned}
+v(t) &= v_0 e^{-bt/m}, \\
+x(t) &= \dfrac{bv_0}{m} (1-e^{-bt/m})
+\end{aligned}
+$$
+
+이 된다. 
+
+
+이렇게 $\boldsymbol{v}$ 에 비례하는 drag force 를 **viscouse drag** 이라고 한다. 유체 안을 움직이는 물체의 속도가 커지면 난류가 생기며 이에 따라 drag force 가 $v^2$ 에 비례하게 되는데 이를 **inertial drag** 혹은 **Newtonian drag** 이라고 한다. 
+
+
+예를 들어 중력의 영향으로 낙하는 물체가 inertial drag 을 받는다고 하자. 이 경우의 운동방정식은
+
+$$
+m \dfrac{dv}{dt} = mg-cv^2
+$$
+
+이다. 이 경우 $v= \sqrt{\dfrac{mg}{c}}$ 일 때 물체가 받는 net force 는 $0$ 이 되므로 등속운동을 하게 된다. 즉 이 속도에 도달하기만 하면 등속운동을 하게 된다. 이 속도를 $v_T$ 라고 하자. 즉  $v_T := \sqrt{\dfrac{mg}{c}}$ 이다. 이제 운동방정식을 풀어보자.
+
+$$
+\dfrac{dv}{dt} =  g - \dfrac{c}{m}v^2 = \dfrac{c}{m}(v_T^2-v^2)
+$$
+
+이므로
+
+$$
+\dfrac{1}{2v_T}\left(\dfrac{1}{v_T-v} + \dfrac{1}{v_T+v}\right) \, dv = \dfrac{c}{m}\, dt
+$$
+
+이다. 초기조건을 풀이를 간단하게 하기 위해 $v(t=0) = 0,\, z(t=0) = 0$ 이라고 하자. 
+
+$$
+\ln \left[\dfrac{v_T+v}{v_T-v}\right] = \dfrac{2cv_T}{m}
+$$
+
+이므로, $\alpha := \dfrac{cv_T}{m}$ 이라고 하면
+
+$$
+\begin{aligned}
+v(t) &= v_T \dfrac{e^{\alpha t} - e^{-\alpha t}}{e^{\alpha t} + e^{-\alpha t}} = v_T \tanh (\alpha t),\\
+z(t) &= \dfrac{v_t}{\alpha} \ln (\cosh(\alpha t))
+\end{aligned}
+$$
+
+이다. 
+
+</br>
+
+## 1차원 조화진동자
+
+### 단순조화진동자
+
+1차원 단순조화진동자(simple harmonic osciilator, 이하 SHO)의 경우 운동방정식이 $m\ddot{x} = -kx$ 이 며 그 해는 $\omega_0 :=\sqrt{\dfrac{k}{m}}$ 에 대해 $x(t) = A\cos (\omega_0 t+\phi_0)$ 라는 것을 안다. 이 때 $A$ 와 $\phi_0$ 는 초기조건으로 구해야 한다.
+
+</br>
+
+### Dampled harmonic osciilator
+
+이제 앞서의 viscouse drag 처럼 속도에 비례하는(하지만 방향은 반대힌) 힘이 작용한다고 하자. 앞으로의 계산의 편의를 위해 앞의 경우와는 달리 비례상수를 $2m\beta$ 로 놓는다. 그렇다면 운동방정식은 
+
+$$
+\ddot{x} + 2\beta \dot{x} + \omega_0^2 x = 0
+$$
+
+이 된다. 이렇게 속도에 비례하는 drag force 가 작용하는 조화진동자를 **damped harmonic oscillator**(이하 DHO) 라고 한다. 이 운동방정식은 소위 **2계 제차 미분방정식 (second order homogeneous differrential equation)** 으로 $x_1(t),\, x_2(t)$ 가 이 미분방정식의 해일 경우 임의의 상수 $a,\,b$ 에 대해 $ax_1(t)+bx_2(t)$ 도 해가 된다. 이 방정식의 해를 구하는 방법은 $x(t) = e^{\lambda t}$ 로 놓고 위 의 미분방정식에 대입하면, 
+
+$$
+\lambda^2 + 2\beta \lambda + \omega_0^2 = 0
+$$
+
+을 얻으며, $\lambda$ 에 대한 2차방정식의 해는
+
+$$
+\lambda = -\beta \pm \sqrt{\beta^2-\omega_0^2}
+$$
+
+이다. $\beta^2 > \omega^0$ 보다 클 경우 $\gamma_1 = -\beta - \sqrt{\beta^2-\omega_0^2}$, $\gamma_2 = -\beta + \sqrt{\beta^2-\omega_0^2}$ 라고 하면 
+
+$$
+x(t) = A_1 e^{-\gamma_1 t} + A_2 e^{-\gamma_2 t}
+$$ {#eq-characteristic_solution_of_dho_for_overdampled}
+
+이다. 이 경우를 **overdamped** 라고 한다. 반대로 $\beta^2<\omega^2_0$ 일 경우 $\omega_1 =  \sqrt{\omega_0^2-\beta^2}$ 에 대해 
+
+$$
+x(t) = e^{-\beta t}\text{Re}(A_1 e^{i\omega_1 t} + A_2 e^{-i \omega_1 t}) = A e^{-\beta t} \cos (\omega_1 t + \theta_0)
+$$ {#eq-characteristic_solution_of_dho_for_underdampled}
+
+를 얻는다. 여기서 $\Re{a}$ 는 복소수 $a$ 에 대해 실수부만을 취하는 함수이다. 이런 경우를 **underdamped** 라고 하며, overdampled 와는 달리 oscillation 이 존재한다.
+
+$\beta^2=\omega_0^2$ 인 경우를 **critically dampled** 라고 한다. 이 경우에는 $te^{-\beta t}$ 도 해가 된다. $x(t) = te^{-\beta t}$ 에 대해
+
+$$
+\ddot{x} + 2\beta \dot{x} + \omega_0^2 x = (-2\beta + t\beta^2 +2\beta - 2t\beta^2 + t\beta^2) e^{-\beta t} = 0
+$$ 
+
+이다. 따라서 이 경우의 해는
+
+$$
+x(t) = (A_1+A_2t)e^{-\beta t}
+$${#eq-characteristic_solution_of_dho_for_criticallly_damped}
+
+이다. 세가지 경우 모두 $A_1,\,A_2$ 는 초기조건 의해 정해진다. 
+
+</br>
+
+#### 에너지의 변화
+
+이 경우 에너지의 변화를 보자. 
+
+$$
+\begin{aligned}
+E &=  \dfrac{1}{2}m\dot{x}^2 + \dfrac{1}{2}m\omega_0^2, \\
+\dfrac{dE}{dt} &= \dfrac{1}{2}m\dot{x}^2 + \dfrac{1}{2}m\omega_0^2 = -2m
+\end{aligned}
+$$
+
+
+
+</br>
+
+### 힘이 작용하는 진동자
+
+DHO 에 어떤 시간에 의존하는 힘 $F(t)$ 가 계속 가해진다고 하자. 이 경우 운동방정식은
+
+$$
+m\ddot{x} = -2m\beta \dot{x} -k x + F(t)
+$$ {#eq-ddho_emo0}
+
+가 된다. 흥미로운 경우는 $F(t) = F_0 \cos (\omega t + \phi_0)$ 와 같이 형태 경우이다. $f_0 = \dfrac{F_0}{m}$ 이라고 하면 운동방정식은 
+
+$$
+\ddot{x} + 2\beta \dot{x} + \omega_0^2 x = f_0 \cos (\omega t + \phi_0)
+$$ {#eq-ddho_emo}
+
+가 된다. 이런 미분방정식은 동차(homogeneous) 가 아니므로 비동차(inhomogeneous) 미분방정식이 된다. 비동차 미분방정식의 한 해 $x_p(t)$ 에 동차형태의 미분방정식 $\ddot{x} + 2\beta \dot{x} - \omega_0^2 x =0$ 의 한 해 $x_c(t)$ 의 선형결함 형태 $x_g(t) = ax_c(t) + x_p(t)$ 는 위의 미분 방정식을 만족한다. 이 경우 동차형태의 미분방정식의 해를 **고유해(characteristic solution)** 라고 한다. 우리는 이 미분방정식의 고유해를 이미 알고 있다.
+
+고유해의 경우 $\lim_{t\to\infty} x_c(t) = 0$ 이다. 이런 특성으로 인해 **일시적인 해(transient solution)** 이라고도 한다. 그렇다면 $x_p(t)$ 글 구해보자. $\tilde{f} := f_0 e^{i\phi_0}$ 에 대해 $f_0 = \text{Re}\left(\tilde{f}_0 e^{i\omega t}\right)$ 이다. 이렇게 실수가 아닌 복소수에서의 미분방정식을 생각하는 경우가 편한 경우가 많은데 여기가 그런 경우이다. 복소함수에 대한 미분방정식
+
+$$
+\ddot{\tilde{x}} + 2\beta \dot{\tilde{x}} + \omega_0^2 \tilde {x} = \tilde{f}_0 e^{i\omega t}
+$$ {#eq-ddho_eom_complex}
+
+를 생각하자. $\tilde{x}$ 의 실수부는 @eq-ddho_emo 를 만족한다. $\tilde{x} = \tilde{x}_0 e^{i\omega t}$ 로 놓으면, 
+
+$$
+(-\omega^2 + 2i\beta \omega + \omega_0^2) \tilde{x}_0 e^{i\omega t} =  \tilde{f}_0 e^{i\omega t}
+$$
+
+이므로, 
+
+$$
+\begin{aligned}
+\tilde{x}_0 = \dfrac{\tilde{f}_0}{\omega_0^2 + 2i\beta \omega - \omega^2}& = \dfrac{\tilde{f}_0}{\sqrt{( \omega_0^2-\omega^2) ^2+ 4 \beta^2 \omega^2}} e^{i\theta_0}  \qquad \text{where } \theta_0 := \tan^{-1}\left(-\dfrac{2\beta \omega}{\omega_0^2-\omega^2}\right)
+\end{aligned}
+$$
+
+이다. 그렇다면,
+
+$$
+x_p(t) = \text{Re}(\tilde{x}(t)) = f_0\cos (\omega t + \theta_0 + \phi_0)
+$$ {#eq-particular_solution_of_ddho}
+
+이다. 그렇다면 일반해는 @eq-characteristic_solution_of_dho_for_overdampled, @eq-characteristic_solution_of_dho_for_underdampled, @eq-characteristic_solution_of_dho_for_criticallly_damped 가운데 해당되는 경우와 @eq-particular_solution_of_ddho 의 합으로 표현된다. 앞서 언급했듯이 $t\gg 1$ 이면 일시적인 해는 $0$ 으로 수렴하기 때문에 $x_p(t)$ 가 주도적이 된다. 이를 반영하여 $x_p(t)$ 를 **안정한 해 (steady solution)** 이라고 한다. 
+
+이제 driving force 가 이 조화진동자에 해주는 시간당 일을 생각해보자. 
+$$
+E= \dfrac{1}{2}m\dot{x}^2 + \dfrac{1}{2}m\omega_0^2 {x}^2
+$$
+
+이므로, @eq-ddho_emo0 를 이용하면 
+
+$$
+\dfrac{dE}{dt} =  m \dot{x}\ddot{x} + m\omega_0^2 x\dot{x} = -2m \beta \dot{x}^2 + \dot{x}F(t) 
+$$
+
+이며, $t \gg 0$ 에 대해 $\dot{x}_c(t)\to 0,\,x_c(t) \to 0$ 이므로 $x_p(t)$ 에 대한 것만 생각해도 된다. 
+
+$$
+E
+$$
+
+
+
+
+
+
+
+
+
+
+

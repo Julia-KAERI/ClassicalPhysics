@@ -1,0 +1,47 @@
+---
+title: "고전역학의 다체 문제"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+
+
+## 충돌과 산란
+
+### 자발적 붕괴 (Spontaneous disintegration)
+
+가장 간단한 경우로 질량이 $m$ 인 한 입자가 질량이 각각 $m_1,\,m_2$ 인 두개의 부분으로 붕괴되는 경우를 살펴보자. 이 경우 붕괴된 두 입자가 각각 독립적으로, 즉 상호작용없이 움직인다고 가정한다. 이 시스템을 설명하기 가장 편한 좌표계는 붕괴전 입자가 정지해있도록 하는 좌표계이다. 이를 **정지 좌표계** 라고 하자. 정지 좌표계에서 붕괴 후 입자 각각의 운동량을 $\boldsymbol{p}_1,\, \boldsymbol{p}_2$ 라고 하면 운동량 보존에 의해 $\boldsymbol{p}_1 + \boldsymbol{p}_2= \boldsymbol{0}$ 이 된다. 이제 $p_0 = |\boldsymbol{p}_1| = |\boldsymbol{p}_2|$ 라고 하고, 붕괴 이전의 내부에너지를 $E_i$, 붕괴 이후의 내부에너지를 각각 $E_{1i},\, E_{2i}$ 라고 하면 에너지 보존에 의해 
+
+$$
+E_i = E_{1i} + \dfrac{{p_0}^2}{2m_1} + E_{2i} + \dfrac{{p_0}^2}{2m_2}
+$$ {#eq-energy_conservation_for_spantaneous_disintegration}
+
+가 성립한다. 이 때 붕괴 전후의 내부에너지의 차이
+
+$$
+\Delta E_i = E_i - (E_{1i} + E_{2i})
+$$
+
+를 붕괴에너지(disintegration energy) 라고 한다. **reduced mass** $\mu := \left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right)$ 에 대해 
+
+$$
+\Delta E_i = \dfrac{{p_0}^2}{2}\left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right) = \dfrac{{p_0}^2}{2\mu} > 0 \qquad 
+$$
+
+이다. 
+
+
+입자 $m$ 이 $V$ 로 움직이는 좌표계를 생각하자. 일반적으로 우리가 실험적으로 자발적 붕괴를 관측할 때에 실험자에 대해 입자는 정지해 있는 경우보다 어느 속도로 움직이는 경우가 대부분이다. 따라서 이를 **실험실 좌표계** 라고 하자.
+
+
+
+
+
+
+
+
+
+
+
