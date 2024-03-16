@@ -37,7 +37,13 @@ $$
 t = \sqrt{\dfrac{m}{2}}\int_0^x \dfrac{dx}{\sqrt{E-V(x)}} + \text{const.}
 $$
 
-이다. 
+이다. 포텐셜 에너지 $V(x)$ 가 아래 @fig-1d_potentials 와 같다고 하자. $\dfrac{1}{2}m\dot{x}^2 = E-V(x)\ge 0$ 이어야 하므로 초기조건과 총 에너지 $E$ 에 의해 입자가 움직일 수 있는 구간이 결정된다. 예를 들어 @fig-1d_potentials 에서 $E=E_1$ 일 때 입자는 $[x_1,\,x_2]$ 구간에서 밖에 존재 할 수 없다. 이렇게 $U(x)=E$ 인 $x$ 를 **turning point** 라고 한다. 
+
+![일차원 포텐셜](../images/classical%20mechanics/fig-Potential.png){#fig-1d_potential width=500}
+
+$E=E_3$ 인 경우에는 입자는 $x>x_0$ 인 영역 전체에 존재 할 수 있다. $E=E_1$ 인 경우, 즉 $V(x)$ 의 극소값과 에너지가 같을 경우 입자는 정지해 있게 된다. 흥미로은 경우는 에
+
+
 
 
 
