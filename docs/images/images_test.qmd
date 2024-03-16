@@ -54,10 +54,23 @@ crossref:
 #| fig-width: 6
 #| fig-align: center
 #| fig-cap: "Brachistochrone"
-\begin{tikzpicture}[scale=1.4, rotate=0]
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{tikzpicture}[domain=0.7:4]
+\foreach \x in {0,...,5}
+{
+  \draw[thin] (\x / 5, 0.02) -- (\x /5, -0.02);
+  }
+
+
   \draw [-stealth, thick](-1, 0) -- (6, 0) node [below] {$x$};
   \draw [-stealth, thick] (0, -1) -- (0, 4) node [left] {$V(x)$};
-  \draw [red , thick] plot [smooth, tension=0.6] coordinates { (0.2, 4) (0.7, 1) (1.5, 0.6)  (3, 1.6) (4.5, 1) (5, 0.75) (6, 0.5)};
+  \draw[color=red] plot[id=Veff] function{2 * x *(x * x - 6 * x + 11 )};
   \draw [dashed] (-1, 1) -- (6, 1);
 \end{tikzpicture}
 ```
