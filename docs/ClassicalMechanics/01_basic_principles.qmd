@@ -233,7 +233,7 @@ $$
 
 </br>
 
-### 총 각운동량
+### 총 각운동량 {#sec-total_angular_momentum}
 
 입자계의 총 각운동량 $\boldsymbol{L}$ 은 개별 입자의 각운동량의 합으로 정의된다. 즉
 
