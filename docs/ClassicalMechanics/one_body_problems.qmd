@@ -333,9 +333,240 @@ $$
 \dot{\boldsymbol{r}} = \dot{r}\hat{\boldsymbol{r}} + r\dot{\theta}\hat{\boldsymbol{\theta}}
 $$
 
+이며 따라서, @eq-lagrangian_of_2body_reduced_mass_LAB_frame 은 
+
+$$
+L = \dfrac{1}{2}\mu \dot{r}^2 + \dfrac{1}{2}\mu r^2 \dot{\theta}^2 + V(r)
+$$ {#eq-lagrangian_for_reduced_to_1d}
+
+이다. 여기에 $\theta$ 에 대한 일반화된 운동량 $p_\theta = \mu r^2 \dot{\theta}$ 는 각운동량이며 $\dfrac{\partial L}{\partial \theta}=0$ 이므로 시간에 대한 불변량이다. 변위벡터 $\boldsymbol{r}=r\hat{\boldsymbol{r}}$ 이 $d\theta$ 만큼 변할 때 변위벡터가 쓸어가는 면적은 $\dfrac{1}{2}r^2d\theta$ 이며 이는 $\dfrac{p_\theta}{\mu}dt$ 이므로 일정하다. 즉 $V(r)$ 에 무관하게 중심력에서는 케플러 2법칙이 성립한다. 
+
+![변위 벡터에 의해 쓸려지는 면적](../images/classical%20mechanics/fig-area_swept_by_radius_vector.png){#fig_area_swept_by_radius_vector width=250}
+
 </br>
 
 
+$l = p_\theta$ 로 놓자. 이ㅣ 시스템의 에너지 $E$ 는
 
+$$
+E= \dfrac{1}{2}\mu \dot{r}^2 + \dfrac{l^2}{2\mu r^2} + V(r)
+$$
+
+이며, 
+
+$$
+\dfrac{dr}{dt} = \sqrt{ \dfrac{2}{\mu} \left[E-V(r) - \dfrac{l^2}{2\mu r^2}\right]   }
+$$
+
+이므로, 
+
+$$
+t = \int \left[\dfrac{2}{\mu}  \left(E-V(r) - \dfrac{l^2}{2\mu r^2}\right)\right]^{-1/2}\, dr + \text{const.}
+$$ {#eq-reduced_to_1d_t}
+
+이며, $\dot{\theta}= l/(\mu r^2)$ 이므로
+
+$$
+\theta = \int \dfrac{l}{r^2} \left[2\mu  \left(E-V(r) - \dfrac{l^2}{2\mu r^2}\right)\right]^{-1/2}\, dr + \text{const.}
+$$ {#eq-reduced_to_1d_theta}
+
+이다. 
+
+
+</br>
+
+@eq-lagrangian_for_reduced_to_1d 을 보자. $l = \mu r^2\dot{\theta}$ 에 대해
+
+$$
+L = \dfrac{1}{2}\mu \dot{r}^2 + V_{\textrm{eff}}(r),\qquad {\textrm{where }}V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} + V(r)
+$$
+
+이며 이것은 1차원 포텐셜 $V_{\textrm{eff}}(r)$ 에서의 $r$ 에 대한 1차원 운동을 기술하는 라그랑지안이다. 
+
+$$
+\lim_{r \to 0} \dfrac{l^2}{2\mu r^2} = +\infty,\qquad \lim_{r \to \infty} \dfrac{l^2}{2\mu r^2} = 0
+$$
+
+이며 $\lim_{r \to \infty}V(r) = 0$ 임을 안다. 많은 경우 이에 대한 운동은 @fig-1d_potential 의 닫힌 상태($E_2$ 의 상태) 이며 $r$ 에 대한 최소값($r_{\textrm{min}}$)과 최대값($r_{\textrm{max}}$)이 존재한다. @eq-reduced_to_1d_theta 로부터 $r_{\textrm{min}}$ 에서 $r_{\textrm{max}}$ 까지의 $\theta$ 의 변화 $\Delta \theta$ 를 계산 할 수 있다.
+
+$$
+\Delta \theta = \int_{r_\textrm{min}}^{r_\textrm{max}}  \dfrac{l}{r^2} \left[2\mu  \left(E-V(r) - \dfrac{l^2}{2\mu r^2}\right)\right]^{-1/2}\, dr 
+$$ {#eq-reduced_1d_potential_precession}
+
+이 때 $\Delta \theta$ 가 $2\pi$ 의 유리수배라면 즉 최대공약수가 $1$ 인 두 정수 $n_1,\,n_2$ 에 대해 $\Delta \theta = 2\pi \dfrac{n_1}{n_2}$ 라면 $n_2$ 번의 회전 후에 이 경로는 원래 위치로 돌아와서 반복되지만, 즉 닫힌 경로를 갖지만 무리수배라면 열린 경로를 갖는다. 즉 제자리도 돌아오지 않는다. 열린 경로를 갖는 중심장은 $V(r)\propto \dfrac{1}{r}$ 인 경우와 $\propto r^2$ 인 경우 뿐이다$^1$. [$^1$ L. D. Landau and E. M. Lifshitz, *Mechanics*]{.aside}
+
+![중심장에서의 경로](../images/classical%20mechanics/fig-central_field_orbit.png){#fig-central_field_orbin width=500}
+
+
+</br>
+
+### 케플러 문제
+
+만유인력에 의한 포텐셜은 중력상수 $G$ 와 두 입자의 질량 $m_1,\,m_2$ 에 대해 
+
+$$
+V(r) = - \dfrac{G m_1 m_2}{r}
+$$ {#eq-potentail_gravitation} 
+
+이다. 이렇게 $V(r) \propto - 1/r$ 에 대한 운동을 케플러 문제라고 한다. 편의를 위해 $K=Gm_1m_2>0$ 에 대해 
+
+$$
+V(r) = -\dfrac{K}{r}
+$$
+
+이라 하자. 그렇다면
+
+$$
+V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} - \dfrac{K}{r}
+$$ {#eq-effective_potential_for_kepler_problem}
+
+
+이다. $V'_{\textrm{eff}}(r)=0$ 인 경우는 $r=\dfrac{l^2}{\mu K}$ 이며 이 때 $V_{\textrm{eff}}(r)$ 은 최소값을 갖는다. $V_{\textrm{eff}}(r)$ 은 아래 @fig-effective_potential_for_kepler_problem_1 과 같다.  
+
+![케플러 문제에서의 $V_\textrm{eff}$](../images/classical%20mechanics/fig-effective_potential_for_kepler_problem.png){#fig-effective_potential_for_kepler_problem_1 width=530}
+
+정확한 궤적은 @eq-reduced_to_1d_theta 을 통해 얻을 수 있다. $p = \dfrac{l^2}{\mu K}$ 와 $\varepsilon = \sqrt{1+\dfrac{2El^2}{\mu K^2}}$ 에 대해 아래와 같은 궤적을 얻을 수 있다. 증명은 어렵지 않으며 @exr-proof_of_kepler_orbit 을 보라.
+
+
+$$
+\dfrac{p}{r} = 1+ \varepsilon \cos\theta.
+$$ {#eq-orbit_for_kepler_problem}
+
+
+위의 식은 잘 알려진 이차곡선의 극좌표계 형식이다. 이때의 $\varepsilon$ 을 **이심률 (eccentricity)** 라고 하며 이심률 값에 따라 곡선의 모양이 달라진다. @tbl-eccentricity_and_orbit 는 이심률에 따른 궤도의 모양을 분류하였고, @fig-kepler_orbit 은 $\varepsilon$ 값에 따른 궤도를 보여준다.
+
+
+| $\varepsilon$ | 궤적의 모양 |
+|:--------:|:------:|
+| $\varepsilon = 0$ | 원(circle) |
+| $0 < \varepsilon< 1$ | 타원(ellipse) |
+| $\varepsilon = 1$ | 포물선(parabol) |
+| $\varepsilon > 1$ | 쌍곡석(hyperbola) |
+: 이심률에 따른 궤도 {#tbl-eccentricity_and_orbit} 
+
+
+![$\varepsilon$ 값에 따른 궤도](../images/classical%20mechanics/fig-kepler_orbit.png){#fig-kepler_orbit width=400}
+
+</br>
+
+#### 라플라스-룽게-렌츠 벡터
+
+Kepler 문제에서 운동 상수는 에너지 $E$ 와 각운동량 ($l$) 이 있었다. 그리고 또 하나의 운동 상수가 존재하는데 아래와 같이 정의된 라플라스-룽게-렌츠 벡터(Laplace-Runge-Lentz vector, 이하 LRL-벡터) $\boldsymbol{A}$ 이다.
+
+$$
+\boldsymbol{A} := \boldsymbol{p}\times \boldsymbol{L} - m K\hat{\boldsymbol{r}}.
+$$ {#eq-definition_of_laplace_runge_lentz_vector}
+
+$\dot{\boldsymbol{A}}=0$ 임은 어렵지 않게 보일 수 있다(@exr-proof_of_laplace_runge_lentz). $r=r_{\textrm{min}}$ 일 때 $\boldsymbol{v}\cdot \boldsymbol{r} = \boldsymbol{0}$ 이므로 $(\boldsymbol{p}\times \boldsymbol{L})$ 는 $\boldsymbol{r}$ 과 평행하다. 즉 $\boldsymbol{A}$ 는 $r$ 이 최소가 될 때의 반경 벡터 $\boldsymbol{r}_{\min}$ 에 평행하다. 
+
+
+$\boldsymbol{A}\cdot \boldsymbol{r}$ 을 구해보자.
+
+$$
+\boldsymbol{A}\cdot \boldsymbol{r} = \boldsymbol{r}\cdot (\boldsymbol{p}\times \boldsymbol{L}) - mKr = \boldsymbol{L}\cdot(\boldsymbol{r}\times \boldsymbol{p}) - mKr = l^2 - mKr
+$$
+
+이며 $l^2=\|\boldsymbol{L}\|^2$ 는 운동상수이며 $m>0,\, K>0$ 이므로 $\boldsymbol{A}\cdot \boldsymbol{r} = Ar\cos \theta$ 로 놓으면
+
+$$
+\dfrac{l^2}{mK}\dfrac{1}{r} =\left(1+ \dfrac{A}{mK} \cos \theta\right)
+$$
+
+를 얻는다. 이를 @eq-orbit_for_kepler_problem 와 비교해보라.
+
+
+## 연습문제
+
+
+::: {#exr-proof_of_kepler_orbit}
+
+@eq-reduced_to_1d_theta 로부터 @eq-orbit_for_kepler_problem 를 얻어라.
+
+:::
+
+::: {.proof}
+일반성을 잃지 않고 상수를 $0$ 으로 놓을 수 있다. $V(r) = - \dfrac{K}{r},\, K>0$ 이므로, 
+
+$$
+\theta = \int_{r_0}^r \dfrac{l}{r^2} \left[2\mu  \left(E + \dfrac{K}{r}- \dfrac{l^2}{2\mu r^2}\right)\right]^{-1/2}\, dr
+$$ 
+
+에서 $1/r = s$ 로 치환하면, 
+
+$$
+\begin{aligned}
+\theta & = \int_{s_0}^s  l\left[2\mu E + 2\mu K s - l^2 s\right]^{-1/2}\, ds \\
+&= \int_{s_0}^s \left[\dfrac{2\mu E}{l^2} + \dfrac{\mu^2 K^2}{l^4} - \left(s- \dfrac{\mu K}{l^2}\right)^2\right]^{-1/2}\,ds
+\end{aligned}
+$$
+
+여기서 $p:=\dfrac{l^2}{\mu K}$, $\varepsilon := \sqrt{1+ \dfrac{2El^2}{\mu K^2}}$ 로 정하고 $s$ 를 $t=s-\dfrac{\mu K}{l^2} = s-1/p$ 로 치환하면 
+
+$$
+\begin{aligned}
+\theta &= \int_{t_0}^t \left[ \left(\dfrac{\varepsilon}{p}\right)^2 - t^2\right]^{-1/2}\, dt \\
+&= \cos^{-1}\left(\dfrac{p}{\varepsilon} t\right) + \theta_0
+\end{aligned}
+$$
+
+이다. $\theta_0 = 0$ 으로 놓는다면, 
+
+$$
+\dfrac{\varepsilon}{p} \cos \theta = t =  s- \dfrac{1}{p} = \dfrac{1}{r} - \dfrac{1}{p}
+$$
+
+이므로, 
+
+$$
+\dfrac{p}{r} = 1+\varepsilon \cos \theta
+$$
+
+이다. 
+
+:::
+
+</br>
+
+::: {#exr-proof_of_laplace_runge_lentz}
+
+@eq-definition_of_laplace_runge_lentz_vector 로 정의된 라플라스-룽게-렌츠 벡터가 운동상수임을 보여라.
+
+:::
+
+::: {.proof}
+
+우선 $\dfrac{d}{dt}(\boldsymbol{p}\times \boldsymbol{L})$ 을 계산한다. 우리는 $\dot{\boldsymbol{L}}=\boldsymbol{0}$ 임을 안다. 따라서, 
+$$
+\begin{aligned}
+\dfrac{d}{dt}(\boldsymbol{p}\times \boldsymbol{L}) = \dot{\boldsymbol{p}}\times \boldsymbol{L} = - \dfrac{mK}{r^3} \boldsymbol{r}\times (\boldsymbol{r} \times \boldsymbol{v})
+\end{aligned}
+$$ {#eq-proof_of_lrl_1}
+
+이다. 우리는 벡터 $\boldsymbol{a},\, \boldsymbol{b}$ 에 대해
+
+$$
+\boldsymbol{a} \times (\boldsymbol{a}\times \boldsymbol{b}) = \boldsymbol{a} (\boldsymbol{a} \cdot \boldsymbol{b} )- \boldsymbol{b} \| \boldsymbol{a} \|^2
+$$
+
+임을 안다. 따라서
+
+$$
+\dfrac{d}{dt}(\boldsymbol{p}\times \boldsymbol{L})= - \dfrac{mK}{r^3}\left[\boldsymbol{r}(\boldsymbol{r}\cdot \boldsymbol{v}) - \boldsymbol{v}r^2\right]
+$$
+
+이다. 여기서 $(\boldsymbol{r}\cdot \boldsymbol{v}) = \dfrac{1}{2}\dfrac{dr^2}{dt} = r\dot{r}$ 이며, 
+
+$$
+\dfrac{d\hat{\boldsymbol{r}}}{dt} = \dfrac{d}{dt}\left(\dfrac{\boldsymbol{r}}{r}\right) = -\dfrac{\boldsymbol{r}}{r^2}\dot{r} + \dfrac{\dot{\boldsymbol{r}}}{r} = - \dfrac{1}{r^3} \left[\boldsymbol{r}(\boldsymbol{r}\cdot \boldsymbol{v}) - \boldsymbol{v}r^2\right]
+$$
+
+이므로,
+$$
+\dfrac{d}{dt}(\boldsymbol{p}\times \boldsymbol{L}) = \dfrac{d}{dt}(mK\hat{\boldsymbol{r}})
+$$
+
+이다. 따라서 $\dot{\boldsymbol{A}}=\boldsymbol{0}$ 이다. 
+
+:::
 
 

@@ -17,6 +17,7 @@ book:
       - docs/ClassicalMechanics/03_hamilton_dynamics.qmd
       - docs/ClassicalMechanics/one_body_problems.qmd
       - docs/ClassicalMechanics/two_or_three_bodies_problems.qmd
+      - docs/ClassicalMechanics/A_proofs.qmd
       
     - part: docs/Electromagnetism/00_index.qmd
       chapters:

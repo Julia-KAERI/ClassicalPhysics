@@ -1,0 +1,50 @@
+---
+title: "증명들"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+  
+---
+
+## Classical Mechanics
+
+### 케플러 궤도 {#sec-proof_of_kepler_orbit}
+
+@eq-reduced_to_1d_theta 로부터 @eq-orbit_for_kepler_problem 를 얻는다. 일반성을 잃지 않고 상수를 $0$ 으로 놓을 수 있다. $V(r) = - \dfrac{K}{r},\, K>0$ 이므로, 
+
+$$
+\theta = \int_{r_0}^r \dfrac{l}{r^2} \left[2\mu  \left(E + \dfrac{K}{r}- \dfrac{l^2}{2\mu r^2}\right)\right]^{-1/2}\, dr
+$$ 
+
+에서 $1/r = s$ 로 치환하면, 
+
+$$
+\begin{aligned}
+\theta & = \int_{s_0}^s  l\left[2\mu E + 2\mu K s - l^2 s\right]^{-1/2}\, ds \\
+&= \int_{s_0}^s \left[\dfrac{2\mu E}{l^2} + \dfrac{\mu^2 K^2}{l^4} - \left(s- \dfrac{\mu K}{l^2}\right)^2\right]^{-1/2}\,ds
+\end{aligned}
+$$
+
+여기서 $p:=\dfrac{l^2}{\mu K}$, $\varepsilon := \sqrt{1+ \dfrac{2El^2}{\mu K^2}}$ 로 정하고 $s$ 를 $t=s-\dfrac{\mu K}{l^2} = s-1/p$ 로 치환하면 
+
+$$
+\begin{aligned}
+\theta &= \int_{t_0}^t \left[ \left(\dfrac{\varepsilon}{p}\right)^2 - t^2\right]^{-1/2}\, dt \\
+&= \cos^{-1}\left(\dfrac{p}{\varepsilon} t\right) + \theta_0
+\end{aligned}
+$$
+
+이다. $\theta_0 = 0$ 으로 놓는다면, 
+
+$$
+\dfrac{\varepsilon}{p} \cos \theta = t =  s- \dfrac{1}{p} = \dfrac{1}{r} - \dfrac{1}{p}
+$$
+
+이므로, 
+
+$$
+\dfrac{p}{r} = 1+\varepsilon \cos \theta
+$$
+
+이다. 
