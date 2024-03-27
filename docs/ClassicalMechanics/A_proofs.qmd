@@ -9,42 +9,65 @@ crossref:
 
 ## Classical Mechanics
 
-### 케플러 궤도 {#sec-proof_of_kepler_orbit}
+### Bertrand's theorem {#sec-Bertrand_theorem}
 
-@eq-reduced_to_1d_theta 로부터 @eq-orbit_for_kepler_problem 를 얻는다. 일반성을 잃지 않고 상수를 $0$ 으로 놓을 수 있다. $V(r) = - \dfrac{K}{r},\, K>0$ 이므로, 
+Bertrand's theorem 은 포텐셜이 $V(\boldsymbol{r}) =  K\|\boldsymbol{r}\|^n$ 으로 주어졌을 때 닫힌 경로를 갖는 경우는 $n=-1,\,2$ 인 두가지 경우 뿐이라는 것을 말한다. 여기서는 S.A. Chin, *A truly elementary proof of Bertrand’s theorem*, Am. J. Phys. 83, 320-323 (2015) 논문의 방식을 따라 증명하도록 한다.
+
+$r=\|\boldsymbol{r}\|$, $l = \|\boldsymbol{L}\|$ 이라고 하자. 우리는 이미 다음의 방정식을 알고 있다.
 
 $$
-\theta = \int_{r_0}^r \dfrac{l}{r^2} \left[2\mu  \left(E + \dfrac{K}{r}- \dfrac{l^2}{2\mu r^2}\right)\right]^{-1/2}\, dr
+\begin{aligned}
+\dfrac{dr}{dt} &= \pm \sqrt{\dfrac{2}{m} \left[E-V_\textrm{eff}(r)\right]}, \\
+V_\textrm{eff} &= \dfrac{l^2}{2mr^2} + V(r), \\
+\dfrac{d\theta}{dt} &= \dfrac{l}{mr^2}
+\end{aligned}
+$$
+
+이로부터,
+
+$$
+\dfrac{dr}{d\theta} =  \dfrac{mr^2}{l}\sqrt{\dfrac{2}{m} \left[E-V_\textrm{eff}(r)\right]}
+$$
+
+을 얻는다 $u=1/r$ 이라고 하면, 
+
+$$
+\dfrac{du}{d\theta} = -\dfrac{m}{l} \sqrt{\dfrac{2}{m} \left[E-V_\textrm{eff}(1/u)\right]}
+$$
+
+이다. 양변을 제곱하고 정리하면, 그리고 $m^\ast = \dfrac{l^2}{m}$ 으로 정의하면
+
+$$
+\dfrac{m^\ast}{2} \left(\dfrac{du}{d\theta}\right)^2 + V_\textrm{eff}\left(\dfrac{1}{u}\right) = E
+$$ {#eq-bertrand_1}
+
+이다. 이제 $V_\textrm{eff}$ 를 대체할 $U(u)$ 를 다음과 같이 정의하자.
+
+$$
+U(u) := V_\textrm{eff}\left(\dfrac{1}{u}\right) = \dfrac{l^2}{2mr^2}+ V\left(\dfrac{1}{u}\right) = \dfrac{m^\ast u^2}{2} +V\left(\dfrac{1}{u}\right)
+$$
+
+그렇다면 @eq-bertrand_1 은 다음과 같다.
+
+$$
+\dfrac{m^\ast}{2} \left(\dfrac{du}{d\theta}\right)^2 + \dfrac{m^\ast u^2}{2} + V\left(\dfrac{1}{u}\right)= \dfrac{m^\ast}{2} \left(\dfrac{du}{d\theta}\right)^2 + U(u) = E.
+$$ {#eq-betrand_2}
+
+
+$u=u_0 = \text{const.}$ 인 경우 $U'(u_0)=0$ 이므로, 
+
+$$
+m^\ast u_0 - \dfrac{1}{u_0^2}V'\left(\dfrac{1}{u_0}\right) = 0
+$$
+
+이며 $u(\theta)$ 는 $u_0$ 근처에서 
+
+$$
+u(\theta) = u_0 + \rho(\theta)
 $$ 
 
-에서 $1/r = s$ 로 치환하면, 
+로 기술 할 수 있다. 이를 이용하면 @eq-betrand_2 는
 
 $$
-\begin{aligned}
-\theta & = \int_{s_0}^s  l\left[2\mu E + 2\mu K s - l^2 s\right]^{-1/2}\, ds \\
-&= \int_{s_0}^s \left[\dfrac{2\mu E}{l^2} + \dfrac{\mu^2 K^2}{l^4} - \left(s- \dfrac{\mu K}{l^2}\right)^2\right]^{-1/2}\,ds
-\end{aligned}
+\dfrac{m^\ast}{2} \left(\dfrac{d\rho}{d\theta}\right)^2 + \dfrac{1}{2}U''(u+0)u^2 = E
 $$
-
-여기서 $p:=\dfrac{l^2}{\mu K}$, $\varepsilon := \sqrt{1+ \dfrac{2El^2}{\mu K^2}}$ 로 정하고 $s$ 를 $t=s-\dfrac{\mu K}{l^2} = s-1/p$ 로 치환하면 
-
-$$
-\begin{aligned}
-\theta &= \int_{t_0}^t \left[ \left(\dfrac{\varepsilon}{p}\right)^2 - t^2\right]^{-1/2}\, dt \\
-&= \cos^{-1}\left(\dfrac{p}{\varepsilon} t\right) + \theta_0
-\end{aligned}
-$$
-
-이다. $\theta_0 = 0$ 으로 놓는다면, 
-
-$$
-\dfrac{\varepsilon}{p} \cos \theta = t =  s- \dfrac{1}{p} = \dfrac{1}{r} - \dfrac{1}{p}
-$$
-
-이므로, 
-
-$$
-\dfrac{p}{r} = 1+\varepsilon \cos \theta
-$$
-
-이다. 

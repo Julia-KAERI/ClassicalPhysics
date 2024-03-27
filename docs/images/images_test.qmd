@@ -96,7 +96,7 @@ crossref:
 %\draw[dashed, violet] (0.9, 1.0) node[left, scale=0.6] {$E_3$}-- (6.0, 1.0) ;
 %\draw[dashdotted] (1.3, 1.0) node[above, scale=0.6] {$$} -- (1.3, -0.18) node[below, scale=0.6] {$x_1$};
 %\draw[dashdotted] (1.49, 0.55) -- (1.49, -0.05) node [below, scale=0.6] %{$x_2$};
-\draw[dashed] (0.71, -0.95) -- (0.71, 0.05) node [above, scale=0.6] {$r_\textrm{min}$};
+\draw[dashed] (0.71, -0.95) -- (0.71, 0.05) node [above, scale=0.6] {$r_0$};
 
 %\draw[dotted] (1.94, 0.15) -- (1.94, -0.05) node [below, scale=0.6] {$x_0$};
 

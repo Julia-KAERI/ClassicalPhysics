@@ -421,7 +421,7 @@ V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} - \dfrac{K}{r}
 $$ {#eq-effective_potential_for_kepler_problem}
 
 
-이다. $V'_{\textrm{eff}}(r)=0$ 인 경우는 $r=\dfrac{l^2}{\mu K}$ 이며 이 때 $V_{\textrm{eff}}(r)$ 은 최소값을 갖는다. $V_{\textrm{eff}}(r)$ 은 아래 @fig-effective_potential_for_kepler_problem_1 과 같다.  
+이다. $V'_{\textrm{eff}}(r)=0$ 인 경우는 $r=r_0=\dfrac{l^2}{\mu K}$ 이며 이 때 $V_{\textrm{eff}}(r)$ 은 최소값을 갖는다. $V_{\textrm{eff}}(r)$ 은 아래 @fig-effective_potential_for_kepler_problem_1 과 같다.  
 
 ![케플러 문제에서의 $V_\textrm{eff}$](../images/classical%20mechanics/fig-effective_potential_for_kepler_problem.png){#fig-effective_potential_for_kepler_problem_1 width=530}
 
@@ -451,16 +451,40 @@ $$ {#eq-orbit_for_kepler_problem}
 
 #### 라플라스-룽게-렌츠 벡터
 
-Kepler 문제에서 운동 상수는 에너지 $E$ 와 각운동량 ($l$) 이 있었다. 그리고 또 하나의 운동 상수가 존재하는데 아래와 같이 정의된 라플라스-룽게-렌츠 벡터(Laplace-Runge-Lentz vector, 이하 LRL-벡터) $\boldsymbol{A}$ 이다.
+Kepler 문제에서 운동 상수는 에너지 $E$ 와 각운동량 $\boldsymbol{L}$ 이 있었다. 그리고 또 하나의 운동 상수가 존재하는데 아래와 같이 정의된 라플라스-룽게-렌츠 벡터(Laplace-Runge-Lenz vector, 이하 LRL-벡터) $\boldsymbol{A}$ 이다.
 
 $$
 \boldsymbol{A} := \boldsymbol{p}\times \boldsymbol{L} - m K\hat{\boldsymbol{r}}.
 $$ {#eq-definition_of_laplace_runge_lentz_vector}
 
-$\dot{\boldsymbol{A}}=0$ 임은 어렵지 않게 보일 수 있다(@exr-proof_of_laplace_runge_lentz). $r=r_{\textrm{min}}$ 일 때 $\boldsymbol{v}\cdot \boldsymbol{r} = \boldsymbol{0}$ 이므로 $(\boldsymbol{p}\times \boldsymbol{L})$ 는 $\boldsymbol{r}$ 과 평행하다. 즉 $\boldsymbol{A}$ 는 $r$ 이 최소가 될 때의 반경 벡터 $\boldsymbol{r}_{\min}$ 에 평행하다. 
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#prp-properties_of_RLR_vector}
+
+ $\|\boldsymbol{r}\|=r_{min}$ 일 때의 radius vector를 $\boldsymbol{r}_{min}$ 이라고 하자. LRL 벡터 $\boldsymbol{A}$ 는 다음과 같은 성질을 가진다.
 
 
-$\boldsymbol{A}\cdot \boldsymbol{r}$ 을 구해보자.
+&emsp; ($1$) $\dfrac{d}{dt}{\boldsymbol{A}}=0$
+
+&emsp; ($2$) $\boldsymbol{A}\cdot \boldsymbol{L} = \boldsymbol{0}$.
+
+&emsp; ($3$) $\boldsymbol{A} \parallel \boldsymbol{r}_{min}$ 
+
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+@exr-proof_of_laplace_runge_lenz
+:::
+
+</br>
+
+$\boldsymbol{A}$ 를 이용하면 궤도를 쉽게 구할 수 있다.
 
 $$
 \boldsymbol{A}\cdot \boldsymbol{r} = \boldsymbol{r}\cdot (\boldsymbol{p}\times \boldsymbol{L}) - mKr = \boldsymbol{L}\cdot(\boldsymbol{r}\times \boldsymbol{p}) - mKr = l^2 - mKr
@@ -469,11 +493,22 @@ $$
 이며 $l^2=\|\boldsymbol{L}\|^2$ 는 운동상수이며 $m>0,\, K>0$ 이므로 $\boldsymbol{A}\cdot \boldsymbol{r} = Ar\cos \theta$ 로 놓으면
 
 $$
-\dfrac{l^2}{mK}\dfrac{1}{r} =\left(1+ \dfrac{A}{mK} \cos \theta\right)
+\dfrac{1}{r} =\dfrac{mK}{l^2}\left(1+ \dfrac{A}{mK} \cos \theta\right)
 $$
 
-를 얻는다. 이를 @eq-orbit_for_kepler_problem 와 비교해보라.
+를 얻는다. 이를 @eq-orbit_for_kepler_problem 와 비교해보라. 이로부터 
 
+$$
+\|\boldsymbol{A}\|^2 = mK^2 + 2mEl^2
+$$ {#eq-magnitude_of_RLR_vector}
+
+임을 알 수 있다.
+
+
+우리는 운동상수로 $\boldsymbol{L},\,\boldsymbol{A},\,E$ 가 있다는 것을 알았다. $\boldsymbol{L}$ 과 $\boldsymbol{A}$ 는 3차원 벡터이므로 총 7개의 양이 운동상수이다. 시스템의 자유도가 $3$ 이므로 우리는 6개의 독립적인 초기조건(초기 위치로부터 3개의 값, 초기 속도로부터 3개의 값) 을 통해 운동을 정의 할 수 있다. 시간 변수를 생각하면 독립적인 운동상수는 5 개 이어야 한다. @prp-properties_of_RLR_vector 의 ($2$) 와 @eq-magnitude_of_RLR_vector 가 운동상수에 추가적인 조건을 부여하기 때문에 정확히 5개의 독립적인 운동상수가 있게 된다. 
+ 
+
+</br>
 
 ## 연습문제
 
@@ -485,6 +520,7 @@ $$
 :::
 
 ::: {.proof}
+
 일반성을 잃지 않고 상수를 $0$ 으로 놓을 수 있다. $V(r) = - \dfrac{K}{r},\, K>0$ 이므로, 
 
 $$
@@ -527,29 +563,22 @@ $$
 
 </br>
 
-::: {#exr-proof_of_laplace_runge_lentz}
+::: {#exr-proof_of_laplace_runge_lenz}
 
-@eq-definition_of_laplace_runge_lentz_vector 로 정의된 라플라스-룽게-렌츠 벡터가 운동상수임을 보여라.
+@prp-properties_of_RLR_vector 를 증명하라.
 
 :::
 
 ::: {.proof}
 
-우선 $\dfrac{d}{dt}(\boldsymbol{p}\times \boldsymbol{L})$ 을 계산한다. 우리는 $\dot{\boldsymbol{L}}=\boldsymbol{0}$ 임을 안다. 따라서, 
+($1$) 우선 $\dfrac{d}{dt}(\boldsymbol{p}\times \boldsymbol{L})$ 을 계산한다. 우리는 $\dot{\boldsymbol{L}}=\boldsymbol{0}$ 임을 안다. 따라서, 
 $$
 \begin{aligned}
 \dfrac{d}{dt}(\boldsymbol{p}\times \boldsymbol{L}) = \dot{\boldsymbol{p}}\times \boldsymbol{L} = - \dfrac{mK}{r^3} \boldsymbol{r}\times (\boldsymbol{r} \times \boldsymbol{v})
 \end{aligned}
 $$ {#eq-proof_of_lrl_1}
 
-이다. 우리는 벡터 $\boldsymbol{a},\, \boldsymbol{b}$ 에 대해
-
-$$
-\boldsymbol{a} \times (\boldsymbol{a}\times \boldsymbol{b}) = \boldsymbol{a} (\boldsymbol{a} \cdot \boldsymbol{b} )- \boldsymbol{b} \| \boldsymbol{a} \|^2
-$$
-
-임을 안다. 따라서
-
+이다. 벡터 $\boldsymbol{a},\, \boldsymbol{b}$ 에 대해 $\boldsymbol{a} \times (\boldsymbol{a}\times \boldsymbol{b}) = \boldsymbol{a} (\boldsymbol{a} \cdot \boldsymbol{b} )- \boldsymbol{b} \| \boldsymbol{a} \|^2$ 이므로
 $$
 \dfrac{d}{dt}(\boldsymbol{p}\times \boldsymbol{L})= - \dfrac{mK}{r^3}\left[\boldsymbol{r}(\boldsymbol{r}\cdot \boldsymbol{v}) - \boldsymbol{v}r^2\right]
 $$
@@ -566,7 +595,10 @@ $$
 $$
 
 이다. 따라서 $\dot{\boldsymbol{A}}=\boldsymbol{0}$ 이다. 
+ 
+($2$) trivial
 
+($3$) $\boldsymbol{A}$ 는 constant of motion 이므로 $\boldsymbol{r}=\boldsymbol{r}_{\min}$ 일 때의 값이 항상 유지된다. $\boldsymbol{r}=\boldsymbol{r}_{\textrm{min}}$ 일 때의 속도를 $\boldsymbol{v}_{\boldsymbol{r}_\textrm{min}}$ 이라고 하면 $\boldsymbol{v}_{\boldsymbol{r}_{\textrm{min}}} \cdot \boldsymbol{r}_{\text{min}} = \boldsymbol{0}$ 이므로 이때의 $(\boldsymbol{p}\times \boldsymbol{L})$ 는 $\boldsymbol{r}_{\textrm{min}}$ 과 평행하다. 즉 $\boldsymbol{A}$ 는 $\boldsymbol{r}_{\min}$ 에 평행하다. 
 :::
 
 
