@@ -20,7 +20,7 @@ $$
 \boldsymbol{F}= m\boldsymbol{a}= -b\boldsymbol{v}.
 $$
 
-이다. 이 경우 1차원 문제로 볼 수 있으며, $\boldsymbol{a} = \dfrac{d\boldsymbol{v}}{dt}$ 이며, $\boldsymbol{v}$ = v\hat{\boldsymbol{e}}_1$ 이라고 하면, 즉 $x$ 방향이라고 하면
+이다. 이 경우 1차원 문제로 볼 수 있으며, $\boldsymbol{a} = \dfrac{d\boldsymbol{v}}{dt}$ 이며, $\boldsymbol{v} = v\hat{\boldsymbol{e}}_1$ 이라고 하면, 즉 $x$ 방향이라고 하면
 
 $$
 m\dfrac{dv}{dt} = -bv
@@ -262,7 +262,7 @@ $$
 
 </br>
 
-## 중심력 
+## 중심력 {#sec-central_force}
 
 ### 중심력 (Central force)
 
@@ -387,7 +387,7 @@ $$
 \lim_{r \to 0} \dfrac{l^2}{2\mu r^2} = +\infty,\qquad \lim_{r \to \infty} \dfrac{l^2}{2\mu r^2} = 0
 $$
 
-이며 $\lim_{r \to \infty}V(r) = 0$ 임을 안다. 많은 경우 이에 대한 운동은 @fig-1d_potential 의 닫힌 상태($E_2$ 의 상태) 이며 $r$ 에 대한 최소값($r_{\textrm{min}}$)과 최대값($r_{\textrm{max}}$)이 존재한다. @eq-reduced_to_1d_theta 로부터 $r_{\textrm{min}}$ 에서 $r_{\textrm{max}}$ 까지의 $\theta$ 의 변화 $\Delta \theta$ 를 계산 할 수 있다.
+이며 $\lim_{r \to \infty}V(r) = 0$ 임을 안다. 많은 경우 이에 대한 운동은 @fig-1d_potential 의 닫힌 상태($E_2$ 의 상태) 이며 $r$ 에 대한 최소값($r_{\textrm{min}}$)과 최대값($r_{\textrm{max}}$)이 존재한다. @eq-reduced_to_1d_theta 로부터 $r_{\textrm{min}}$ 에서 $r_{\textrm{max}}$ 까지의 $\theta$ 의 차이를 *aspidal angle* 이라고 한다. $\Delta \theta$ 를 계산 할 수 있다. 
 
 $$
 \Delta \theta = \int_{r_\textrm{min}}^{r_\textrm{max}}  \dfrac{l}{r^2} \left[2\mu  \left(E-V(r) - \dfrac{l^2}{2\mu r^2}\right)\right]^{-1/2}\, dr 

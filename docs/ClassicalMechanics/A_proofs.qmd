@@ -7,19 +7,27 @@ crossref:
   
 ---
 
-## Classical Mechanics
-
-### Bertrand's theorem {#sec-Bertrand_theorem}
+## Bertrand's theorem {#sec-Bertrand_theorem}
 
 Bertrand's theorem 은 포텐셜이 $V(\boldsymbol{r}) =  K\|\boldsymbol{r}\|^n$ 으로 주어졌을 때 닫힌 경로를 갖는 경우는 $n=-1,\,2$ 인 두가지 경우 뿐이라는 것을 말한다. 여기서는 S.A. Chin, *A truly elementary proof of Bertrand’s theorem*, Am. J. Phys. 83, 320-323 (2015) 논문의 방식을 따라 증명하도록 한다.
 
-$r=\|\boldsymbol{r}\|$, $l = \|\boldsymbol{L}\|$ 이라고 하자. 우리는 이미 다음의 방정식을 알고 있다.
+증명은 아래의 세 과정으로 이루어진다.
+
+1. 이 증명에서 사용할 개념과 발전시킬 식의 소개
+2. 거의 원형 궤도
+
+
+</br>
+
+### 소개
+
+많은 부분이 @sec-central_force 로부터 이어진다. $r=\|\boldsymbol{r}\|$, $l = \|\boldsymbol{L}\|$ 이라고 하자. 우리는 이미 다음의 방정식을 알고 있다.
 
 $$
 \begin{aligned}
-\dfrac{dr}{dt} &= \pm \sqrt{\dfrac{2}{m} \left[E-V_\textrm{eff}(r)\right]}, \\
+\dfrac{dr}{dt} &= \sqrt{\dfrac{2}{m} \left[E-V_\textrm{eff}(r)\right]}, \\
 V_\textrm{eff} &= \dfrac{l^2}{2mr^2} + V(r), \\
-\dfrac{d\theta}{dt} &= \dfrac{l}{mr^2}
+\dfrac{d\theta}{dt} &= \dfrac{l}{mr^2}.
 \end{aligned}
 $$
 
@@ -29,7 +37,7 @@ $$
 \dfrac{dr}{d\theta} =  \dfrac{mr^2}{l}\sqrt{\dfrac{2}{m} \left[E-V_\textrm{eff}(r)\right]}
 $$
 
-을 얻는다 $u=1/r$ 이라고 하면, 
+을 얻는다. $u=1/r$ 이라고 하면, 
 
 $$
 \dfrac{du}{d\theta} = -\dfrac{m}{l} \sqrt{\dfrac{2}{m} \left[E-V_\textrm{eff}(1/u)\right]}
@@ -45,7 +53,7 @@ $$ {#eq-bertrand_1}
 
 $$
 U(u) := V_\textrm{eff}\left(\dfrac{1}{u}\right) = \dfrac{l^2}{2mr^2}+ V\left(\dfrac{1}{u}\right) = \dfrac{m^\ast u^2}{2} +V\left(\dfrac{1}{u}\right)
-$$
+$$ {#eq-second_potential}
 
 그렇다면 @eq-bertrand_1 은 다음과 같다.
 
@@ -54,11 +62,15 @@ $$
 $$ {#eq-betrand_2}
 
 
+</br>
+
+### 거의 원형 궤도인 경우 
+
 $u=u_0 = \text{const.}$ 인 경우 $U'(u_0)=0$ 이므로, 
 
 $$
 m^\ast u_0 - \dfrac{1}{u_0^2}V'\left(\dfrac{1}{u_0}\right) = 0
-$$
+$$ {#eq-first_derivative_of_U}
 
 이며 $u(\theta)$ 는 $u_0$ 근처에서 
 
@@ -69,5 +81,107 @@ $$
 로 기술 할 수 있다. 이를 이용하면 @eq-betrand_2 는
 
 $$
-\dfrac{m^\ast}{2} \left(\dfrac{d\rho}{d\theta}\right)^2 + \dfrac{1}{2}U''(u+0)u^2 = E
+\dfrac{m^\ast}{2} \left(\dfrac{d\rho}{d\theta}\right)^2 + \dfrac{1}{2}U''(u_0)u^2 = E-U(u_0) = E_0
 $$
+
+이다. $U''(0) > 0$ 이므로 위 식은 조화진동자 문제이다. 따라서, 
+
+$$
+u(\theta) = u_0 + a \cos (\omega (\theta-\theta_0)),\qquad \textrm{where }\omega = \sqrt{\dfrac{U''(u_0)}{m^\ast}}
+$$ {#eq-u_theta}
+
+
+이다. $\theta_0$ 는 초기조건으로 부터 구해진다. 이제 @eq-second_potential 로부터,
+
+$$
+U''(u_0) = m^\ast + \dfrac{2}{{u_0}^3}V' \left(\dfrac{1}{u_0}\right) + \dfrac{1}{{u_0}^4}V''\left(\dfrac{1}{u_0}\right)
+$$
+
+이다. 이 식과 @eq-first_derivative_of_U 를 사용하면,
+
+$$
+\omega = \sqrt{\dfrac{3V'(r_0) + r_0 V''(r_0)}{V'(r_0)}}
+$$
+
+를 얻는다. @eq-u_theta 에서 일반성을 잃지 않고 $\theta_0=0,\, a>0$ 으로 놓을 수 있다. 그렇다면 $u$ 의 최대값과 최소값은 각각 $u_{\textrm{max}}=u_0+a$ 이며 $u_{\textrm{min}} = u_0 -a$ 이며 $u=u_{\textrm{min}}$ 일 때의 $\theta$ 를 $\theta_m$ 이라고 하면, *aspidal angle* 은 $\theta_m$ 이 되며 다음 값을 갖는다.
+
+$$
+\theta _m = \dfrac{\pi}{\omega}
+$$ {#eq-aspidal_angle}
+
+여기서 알 수 있듯이 aspidal angle 은 에너지($E$) 나 각운동량($\boldsymbol{L}$) 과는 무관하며 포텐셜에만 의존한다. $u(\theta)$ 가 안정적으로 oscillation 하기 위해서는 
+
+$$
+\beta=\dfrac{3V'(r_0) + r_0 V''(r_0)}{V'(r_0)} > 0
+$$
+
+이어야 하며, 이 때, 
+
+$$
+\omega = \dfrac{\pi}{\sqrt{\beta}}
+$$ {#eq-beta_and_omega}
+
+이다. $u=u_0$ 근처에서의 포텐셜에 대해
+
+$$
+\beta(r) :=\dfrac{3V'(r) + r V''(r)}{V'(r)} 
+$$
+
+이라고 하자. $W=V'(r)$ 로 놓으면, 
+
+$$
+\dfrac{1}{W(r)}\dfrac{dW(r)}{dr} = \dfrac{\beta(r) - 3}{r}
+$$
+
+이며 $r\approx r_0$ 에서 $\beta(r_0) = \beta$ 이므로, $W(r)$ 은 어떤 상수 $k$ 에 대해
+
+$$
+W(r) = kr^{\beta-3}
+$$
+
+이며
+
+$$
+V(r) = \left\{\begin{array}{ll}\dfrac{k}{\beta-2}r^{\beta-2} \qquad &\textrm{if } \beta \ne 2 \\ k \ln (r) & \textrm{if } \beta = 2.\end{array}\right.
+$$ {#eq-bertrand_potential_1}
+
+$\theta_m = \pi /\sqrt{\beta}$ 이므로 $\sqrt{\beta}$ 는 유리수여야 한다. 
+
+</br>
+
+### 일반적인 경우
+
+Aspidal angle 이 $E$ 와 무관하기 때문에 우리는 편의적으로 $E$ 를 잡아도 된다. $\beta > 2$ 인 경우는 V.I. Arnold 가 *Mathematical Methods of Classical Mechanics* 에서 제안했던 것처럼 $E\to \infty$ 극한에서 생각하는게 편하다. $u$ 의 최대값을 $u_M$ 이라고 하자. 이 경우 @eq-bertrand_1, @eq-second_potential 로부터 $\dfrac{d u}{d\theta}(u_M)=0$ 이며 $V(r) \propto r^{\beta-2}$ 이므로 $V(1/u_M) \ll E$ 가 된다. 따라서 
+
+$$
+\dfrac{m^\ast}{2}(u_{M})^2 = E
+$$
+
+이다. $u_M = \sqrt{2E/m^\ast}$ 이므로 $x=u/u_M$ 으로 놓으면,
+
+$$
+\begin{aligned}
+&V_\textrm{eff}(u) = \dfrac{m^\ast u^2}{2}+ \dfrac{k}{\beta-2}u^{2-\beta} \\
+\implies &\overline{V}_{\textrm{eff}} (x) = E\left[x^2 + \dfrac{k}{\beta-2}\left(\dfrac{2}{m^\ast}\right)^{(2-\beta)/2} E^{-\beta/2} x^{2-\beta}\right]
+\end{aligned}
+$$
+
+이다. $|x|<1$ 이며 $E\to\infty,\, \beta > 2$ 이므로 $[\cdots ]$ 의 $E^{-\beta/2} \to 0$ 이다. $x \approx 0$ 이 아니라면 이 운동은 단순조화진동자라고 볼 수 있는데 $x\approx 0$ 은 $r \to \infty$ 를 의미하므로 우리는 무시해도 된다. 즉 $E\to \infty$ 가정에서는 모든 $\beta>0$ 운동에 대한 aspidal angle 은 단순조화진동자에 대한 운동으로 생각 할 수 있다. 따라서, 
+
+$$
+\dfrac{m^\ast}{2}\left(\dfrac{du}{d\theta}\right)^2 + \dfrac{m^\ast}{2} u^2 = E
+$$ {#eq-bertrand_3_1}
+
+이며 $u$ 의 각진동수 $\omega = 1$ 이다.$^1$ [$^1$ $\dfrac{mv^2}{2} + \dfrac{kx^2}{2} =E$ 에 대한 각진동수 $\omega = \sqrt{k/m}$ 임을 생각하라.]{.aside} $\theta_m = \pi/\sqrt{\beta}$ 이며 단순조화진동자의 경우 $\beta = 4$ 이므로 $\theta_m = \dfrac{\pi}{2}$ 이다. 
+
+
+
+이제 $\beta = 2$ 인 경우를 생각하자. $\theta_m = \pi/\sqrt{2}$ 이므로 닫힌 궤도 일 수 가 없다.
+
+
+마지막으로 $\beta < 2$ 인 경우를 생각하자. $V_\textrm{eff} = \dfrac{m^\ast u^2}{2} + \dfrac{k}{\beta-2}u^{2-\beta}$ 이며 $\gamma := 2-\beta >0$ 이라고 하면, 
+
+$$
+V_\textrm{eff} (u) = \dfrac{m^\ast u^2}{2} - \dfrac{k}{\gamma}u^\gamma
+$$
+

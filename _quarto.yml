@@ -46,15 +46,18 @@ bibliography: references.bib
 format:
   html:
     title-block-banner: true
-    # # include-in-header: 
-    # #   - html-hacks/load-font-awesome.html
-    # #   - html-hacks/load-xkcd-font.html
+    # include-in-header: 
+    #   - html-hacks/load-font-awesome.html
+    #   - html-hacks/load-xkcd-font.html
     # resources: web-resources/**
-    # # https://quarto.org/docs/output-formats/html-themes.html#overview
+    # https://quarto.org/docs/output-formats/html-themes.html#overview
     # theme: darkly
     theme: cosmo
     fontsize: 0.9em
     toc: true
+    collapse: true
+    css: styles.css
+    number-sections: true
   
 
 
