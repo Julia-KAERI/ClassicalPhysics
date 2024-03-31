@@ -55,7 +55,7 @@ crossref:
 #| fig-width: 6
 #| output: asis
 #| fig-align: center
-#| fig-cap: "두 관성계에서의 자발적 붕괘"
+#| fig-cap: "좌표계와 산란"
 
 \usetikzlibrary {arrows.meta}
 \begin{tikzpicture}[line cap=round, scale = 2]
@@ -144,7 +144,7 @@ crossref:
 #| fig-width: 3
 #| output: asis
 #| fig-align: center
-#| fig-cap: "두 관성계에서의 자발적 붕괘"
+#| fig-cap: "실험실 좌표계에서의 운동량 벡터"
 
 \usetikzlibrary {arrows.meta}
 \usetikzlibrary {calc}
@@ -197,7 +197,7 @@ crossref:
 \node[below, scale=0.8] at (0.5, 0) {$\boldsymbol{p}_1$};
 
 \draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.3,0.0) arc (0:70:0.3);
-\node [scale=0.8] at (0.35, 0.2) {$\chi$};
+\node [scale=0.8] at (0.35, 0.2) {$\Theta$};
 
 \draw [teal, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.7,0.0) arc (180:127:0.3);
 \node [scale=0.8] at (0.63, 0.2) {$\theta_2$};
@@ -226,7 +226,7 @@ crossref:
 \node[below, scale=0.8] at (-0.3, 0) {$\boldsymbol{p}_1$};
 
 \draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.3,0.0) arc (0:70:0.3);
-\node [scale=0.8] at (0.35, 0.2) {$\chi$};
+\node [scale=0.8] at (0.35, 0.2) {$\Theta$};
 
 \draw [teal, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.7,0.0) arc (180:127:0.3);
 \node [scale=0.8] at (0.63, 0.2) {$\theta_2$};
@@ -282,10 +282,10 @@ crossref:
 \node [right, scale=0.8] at (-2, -0.5) {$\rho$};
 
 \draw [blue, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.7,0.0) arc (0:75:0.7);
-\node [scale=0.8] at (0.73, 0.5) {$\chi$};
+\node [scale=0.8] at (0.73, 0.5) {$\Theta$};
 
 \draw [red, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] ($-1.3*(A) - (0.6, 0)$) arc (180:132:0.6);
-\node [scale=0.8] at (0.0, -0.7) {$\phi_0$};
+\node [scale=0.8] at (0.0, -0.7) {$\theta_0$};
 
 \end{tikzpicture}
 ```
@@ -314,3 +314,31 @@ crossref:
 \draw (a) to[bend left] (b);
 \end{tikzpicture}
 ```
+
+
+```{r, engine = 'tikz'}
+#| label: fig-potential_wall_1
+#| code-fold: true
+#| echo: fenced
+#| fig-width: 4
+#| output: asis
+#| fig-align: center
+#| fig-cap: "두 관성계에서의 자발적 붕괘"
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+\begin{tikzpicture}[line cap=round, scale = 2]
+\coordinate (A) at (-0.809, 0.588);
+\draw[fill=none, red, thick](0,0) circle (1);
+\draw[dashed] (-3, 0) -- (0, 0);
+\draw[thick, -{Stealth[length=2mm]}] (-3, 0.588) -- (-2, 0.588);
+\draw[thick, -{Stealth[length=2mm]}] (-2, 0.588) -- (A) -- ($(A) + (-0.309, 0.951)$);
+\draw[dashed] (0, 0) -- ($2*(A)$);
+\draw[{Stealth[length=2mm]}-{Stealth[length=2mm]}] (-1.5, 0) -- (-1.5, 0.588);
+\node[left] at (-1.5, 0.295) {$\rho$};
+\draw [blue, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-0.4,0.0) arc (180:144:0.4);
+\node [scale=1] at (-0.5, 0.15) {$\theta_0$};
+\draw [-{Stealth[length=2mm]}] (0, 0) -- (1, 0);
+\node [above] at (0.5, 0) {$R$};
+\end{tikzpicture}
+```
+</br>

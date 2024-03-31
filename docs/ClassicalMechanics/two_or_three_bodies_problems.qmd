@@ -153,12 +153,12 @@ $$
 
 ![$m_2$ 가 정지해 있을 때의 실험실 좌표계](../images/classical%20mechanics/fig-elastic_scatter_angles.png){#fig-elastic_scattering_angles_ss width=560}
 
-$m_1<m_2$ 일 때는 $AO < mv$ 이며 $m_1>m_2$ 일 때는 $AO > mv$ 이다. $\theta_1,\,\theta_2$ 는 충돌 이후 $m_1$ 과 $m_2$ 의 이동 각도이다. 이제 질량중심좌표계에서의 산란각 $\chi$ 와 $\theta_1,\,\theta_2$ 의 관계는 @fig-elastic_scattering_angles_ss 로 부터 다음과 같음을 쉽게 계산 할 수 있다. 
+$m_1<m_2$ 일 때는 $AO < mv$ 이며 $m_1>m_2$ 일 때는 $AO > mv$ 이다. $\theta_1,\,\theta_2$ 는 충돌 이후 $m_1$ 과 $m_2$ 의 이동 각도이다. 이제 질량중심좌표계에서의 산란각 $\Theta$ 와 $\theta_1,\,\theta_2$ 의 관계는 @fig-elastic_scattering_angles_ss 로 부터 다음과 같음을 쉽게 계산 할 수 있다. 
 
 $$
 \begin{aligned}
-\tan \theta_1 &= \dfrac{|OC| \sin \chi}{|AO| + |OC|\cos \chi} = \dfrac{mv \sin \chi}{\dfrac{m_1^2}{m_1+m_2}v + mv\sin \chi} = \dfrac{m_2 \sin \chi}{m_1 + m_2 \sin \chi}, \\
-\theta_2 &= \dfrac{1}{2}(\pi - \chi).
+\tan \theta_1 &= \dfrac{|OC| \sin \Theta}{|AO| + |OC|\cos \Theta} = \dfrac{mv \sin \Theta}{\dfrac{m_1^2}{m_1+m_2}v + mv\sin \Theta} = \dfrac{m_2 \sin \Theta}{m_1 + m_2 \sin \Theta}, \\
+\theta_2 &= \dfrac{1}{2}(\pi - \Theta).
 \end{aligned}
 $$ {#eq-elastic_scattering_scaterring_angle}
 
@@ -166,17 +166,17 @@ $$ {#eq-elastic_scattering_scaterring_angle}
 
 $$
 \begin{aligned}
-v_1' &= \dfrac{p_1'}{m_1} = \dfrac{\sqrt{|AO|^2 + |OC|^2 - 2|AO||OC| \cos (\pi - \chi)}}{m_1} \\
-&= \dfrac{\sqrt{{m_1}^2 + {m_2}^2 + 2m_1m_2 \cos \chi}}{m_1+m_2}v, \\
-v_2' &= \dfrac{p_2'}{m_2} = \dfrac{\sqrt{|OC|^2+|OB|^2-2|OC||OB|\cos \chi}}{m_2} \\
-&= \dfrac{2m_1v}{m_1+m_2} \sin \left(\frac{1}{2}\chi\right).
+v_1' &= \dfrac{p_1'}{m_1} = \dfrac{\sqrt{|AO|^2 + |OC|^2 - 2|AO||OC| \cos (\pi - \Theta)}}{m_1} \\
+&= \dfrac{\sqrt{{m_1}^2 + {m_2}^2 + 2m_1m_2 \cos \Theta}}{m_1+m_2}v, \\
+v_2' &= \dfrac{p_2'}{m_2} = \dfrac{\sqrt{|OC|^2+|OB|^2-2|OC||OB|\cos \Theta}}{m_2} \\
+&= \dfrac{2m_1v}{m_1+m_2} \sin \left(\frac{1}{2}\Theta\right).
 \end{aligned}
 $$ {#eq-elastic_scattering_velocity_in_lab_frame}
 
 
 </br>
 
-두 입자가 충돌 후 같은 방향 혹은 반대 방향을 향하는 것을 **정면 충돌(head-on collison)** 이라고 한다. 즉 $\chi = \pi$ 가 된다. 정면충돌의 경우 충돌 후의 속도는 @eq-elastic_scattering_velocity_in_lab_frame 으로부터 알 수 있으며,
+두 입자가 충돌 후 같은 방향 혹은 반대 방향을 향하는 것을 **정면 충돌(head-on collison)** 이라고 한다. 즉 $\Theta = \pi$ 가 된다. 정면충돌의 경우 충돌 후의 속도는 @eq-elastic_scattering_velocity_in_lab_frame 으로부터 알 수 있으며,
 
 $$
 \boldsymbol{v}_1' = \dfrac{m_1-m_2}{m_1+m_2}\boldsymbol{v},\qquad \boldsymbol{v}_2' = \dfrac{2m_1}{m_1+m_2}\boldsymbol{v}
@@ -209,10 +209,86 @@ $m_1=m_2$ 인 경우에는 $\boldsymbol{p}'_1 \cdot \boldsymbol{p}'_2 = 0$ 이 �
 원점 $O$ 로부터의 포텐셜 $V(r)$ 의 영향을 받는 질량 $m$ 인 입자의 운동을 생각해보자. 이것은 기본적으로 1체문제이며 @sec-central_force 에서 다루었다. @eq-reduced_to_1d_theta 로 부터
 
 $$
-\phi_0 = \int_{r_{\min}}^\infty \dfrac{l/r^2}{\sqrt{2m(E-V(r)) - l^2/r^2}}\, dr
+\theta_0 = \int_{r_{\min}}^\infty \dfrac{l/r^2}{\sqrt{2m(E-V(r)) - l^2/r^2}}\, dr
+$$ {#eq-rutherford_1}
+
+이며, $r_\min$ 은 적분 분모의 $\sqrt{\cdots}$ 를 $0$ 으로 한다는 것을 기억하자. $V(r\to \infty) = 0$ 이며 따라서 이때의 속도를 $\boldsymbol{v}_0$ 라고 하자. **충격 변수(impact parameter)** $\rho$ 를 
+@fig-rutherford_scattering 와 같이 정의하자. 그렇다면 $m$ 의 에너지 $E$ 와 각운동량 $l=\|\boldsymbol{L}\|$ 은 
+
+$$
+E= \dfrac{1}{2}m{v_{0}}^2,\qquad l = m \rho v_0
 $$
 
-이며, $r_\min$ 은 적분 분모의 $\sqrt{\cdots}$ 를 $0$ 으로 한다는 것을 기억하자. 
+
+이다. 보통 우리가 측정하는 것은 $\theta_0$ 가 아닌 $\Theta$ 이다. $\Theta = |\pi - 2 \theta_0|$ 이므로 @eq-rutherford_1 을 $\Theta$ 와 $\rho$ 에 대패 표현하면, 
+
+$$
+\Theta  = \left|\pi - 2\int_{r_{\min}}^\infty  \dfrac{\rho/r^2}{\sqrt{1-(\rho^2/r^2) - 2V(r)/(m{v_0}^2)}}\, dr\right|
+$$
+
+이다. 
+
+물리학에서 많이 이루어지는 산란 실험은 동일한 초기 속도 $\boldsymbol{v}_0$ 를 갖는 공간적으로 균일한 분포를 가진 다수의 입자를 입사시키며, 이 균일한 입자들이 $\boldsymbol{v}_0$ 와 수직한 방향으로 $A$ 만큼의 면적을 갖고 있다고 하자. $N$ 개의 입자가 입사되었을 때 산란각 $\Theta$ 와 $\Theta + d\Theta$ 사이로 산란되는 입자의 갯수를 $dN(\Theta)$ 이라고 하자. 입사 입자가 우리는 산란단면적 $d\sigma$ 를 다음과 같이 정의 할 수 있다.
+
+$$
+\dfrac{d \sigma}{A} := \dfrac{dN(\Theta)}{N}.
+$$ {#eq-cross_section}
+
+
+$\rho$ 와 $\Theta$ 사이에 전단사 관계가 존재한다고 하자. 그렇다면 우리는 $\rho(\Theta)$ 를 생각 할 수 있다. 문제를 바꾸어 $\rho(\Theta)$ 와 $\rho(\Theta ) + d\rho(\Theta)$ 에 입사되는 빔의 비율을 $d\sigma$ 라고 하면, 
+
+$$
+d \sigma = A \dfrac{2 \pi \rho d\rho}{A} = 2\pi \rho \left|\dfrac{d\rho}{d\Theta}\right|d \Theta
+$$
+
+이다. 고체각 $\Omega= 2\pi \sin \Theta d\Theta$ 를 생각하면, 
+
+$$
+d\sigma = \dfrac{\rho (\Theta)}{\sin \Theta}\left|\dfrac{d\rho}{d\Theta}\right|d\Omega
+$$
+
+이다. 
+
+#### 연습문제
+
+::: {#exr-landau_18_1}
+
+반지름 $R$ 인 완벽한 딱딱한 공을 생각하자(@fig-perfect_rigid_sphere). 즉 포텐셜은 다음과 같다.
+
+$$
+V(r) = \left\{\begin{array}{ll}0 \qquad &\text{if } r>R, \\  +\infty &\text{if } r\le R.\end{array}\right.
+$$
+
+![Perpect regid sphere](../images/classical%20mechanics/fig-potential_wall.png){#fig-perfect_rigid_sphere width=350}
+
+이 때의 유효 산란 단면적을 구하라.
+
+:::
+
+::: {.solution}
+
+$\Theta = |\pi - 2\theta_0|$ 로부터
+$$
+\rho = R \sin \theta_0 = R \sin \left(\dfrac{\pi}{2}-\dfrac{\Theta}{2}\right) = R \cos \left(\dfrac{\Theta}{2}\right)
+$$
+
+이므로, 
+
+$$
+d\sigma = \dfrac{R\cos (\Theta/2)}{\sin \Theta} \dfrac{R}{2}\sin (\Theta/2) d\Omega = \dfrac{R^2}{4}d\Omega
+$$
+
+이다. 이 경우 총 산란단면적은  
+
+$$
+\sigma = \int d\sigma = \pi R^2
+$$
+
+이다. 
+
+:::
+
+
 
 
 
