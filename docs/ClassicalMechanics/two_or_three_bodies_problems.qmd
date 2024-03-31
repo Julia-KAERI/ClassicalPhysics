@@ -12,7 +12,7 @@ crossref:
 
 ### 자발적 붕괴 (Spontaneous disintegration)
 
-가장 간단한 경우로 질량이 $m$ 인 한 입자가 질량이 각각 $m_1,\,m_2$ 인 두개의 부분으로 붕괴되는 경우를 살펴보자. 이 경우 붕괴된 두 입자가 각각 독립적으로, 즉 상호작용없이 움직인다고 가정한다. 이 시스템을 설명하기 가장 편한 좌표계는 붕괴전 입자가 정지해있도록 하는 좌표계이다. 이를 **정지 좌표계** 라고 하자. 정지 좌표계에서 붕괴 후 입자 각각의 운동량을 $\boldsymbol{p}_1,\, \boldsymbol{p}_2$ 라고 하면 운동량 보존에 의해 $\boldsymbol{p}_1 + \boldsymbol{p}_2= \boldsymbol{0}$ 이 된다. 이제 $p_0 = \|\boldsymbol{p}_1\| = \|\boldsymbol{p}_2\|$ 라고 하고, 붕괴 이전의 내부에너지를 $E_i$, 붕괴 이후의 내부에너지를 각각 $E_{1i},\, E_{2i}$ 라고 하면 에너지 보존에 의해 
+가장 간단한 경우로 질량이 $m$ 인 한 입자가 질량이 각각 $m_1,\,m_2$ 인 두개의 부분으로 붕괴되는 경우를 살펴보자. 이 경우 붕괴된 두 입자가 각각 독립적으로, 즉 상호작용없이 움직인다고 가정한다. 이 시스템을 설명하기 가장 편한 좌표계는 붕괴전 입자가 정지해있도록 하는 좌표계이다. 이를 **질량중심 좌표계(center-of-mass reference frame)** 라고 하자. 질량중심 좌표계에서 붕괴 후 입자 각각의 운동량을 $\boldsymbol{p}_1,\, \boldsymbol{p}_2$ 라고 하면 운동량 보존에 의해 $\boldsymbol{p}_1 + \boldsymbol{p}_2= \boldsymbol{0}$ 이 된다. 이제 $p_0 = \|\boldsymbol{p}_1\| = \|\boldsymbol{p}_2\|$ 라고 하고, 붕괴 이전의 내부에너지를 $E_i$, 붕괴 이후의 내부에너지를 각각 $E_{1i},\, E_{2i}$ 라고 하면 에너지 보존에 의해 
 
 $$
 E_i = E_{1i} + \dfrac{{p_0}^2}{2m_1} + E_{2i} + \dfrac{{p_0}^2}{2m_2}
@@ -24,19 +24,195 @@ $$
 \Delta E_i = E_i - (E_{1i} + E_{2i})
 $$
 
-를 붕괴에너지(disintegration energy) 라고 한다. **reduced mass** $\mu := \left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right)$ 에 대해 
+를 붕괴에너지(disintegration energy) 라고 한다. **reduced mass** $m:= \left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right)$ 에 대해 
 
 $$
-\Delta E_i = \dfrac{{p_0}^2}{2}\left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right) = \dfrac{{p_0}^2}{2\mu} > 0 \qquad 
+\Delta E_i = \dfrac{{p_0}^2}{2}\left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right) = \dfrac{{p_0}^2}{2m} > 0 \qquad 
+$$
+
+이다. 잘량중심 좌표계애서의 속도는 각각 $v_{10}=p_0/m_1,\, v_{20}=p_0/m_2$ 이다. 
+
+입자 $m$ 이 $\boldsymbol{V}$ 로 움직이는 좌표계를 생각하자. 일반적으로 우리가 실험적으로 자발적 붕괴를 관측할 때에 실험자에 대해 입자는 정지해 있는 경우보다 어느 속도로 움직이는 경우가 대부분이다. 따라서 이를 **실험실 좌표계(laboratory reference frame)** 라고 하자. 보통 산란 실험은 실험실 좌표계로 나오고 이것을 분석하여 물리적 의미를 따지는 것은 잘량중심 좌표계에서 한다. 즉 실험실 좌표계의 값을 잘량중심 좌표계로 변환하는 것이 중요하다. 
+
+
+
+![실험실 좌표계](../images/classical%20mechanics/fig-reference_system_scattering.png){#fig-reference_system_scattering}
+
+
+$\boldsymbol{v}_{01}$ 이나 $\boldsymbol{v}_{02}$ 가 실험실 좌표계에서 속도가 어떻게 변하는지 살펴 보자. @fig-reference_system_scattering 을 보자. 입자 인덱스 $1,\,2$ 를 떼어 놓으면 실험실 좌표계에서의 속도 $\boldsymbol{v}= \boldsymbol{V} + \boldsymbol{v}_0$ 이다. $\boldsymbol{V}$ 와 $\boldsymbol{v}$ 가 $\theta$ 의 사잇각을 갖는다면 
+
+$$
+v^2 + V^2 - 2 vV\cos \theta = {v_0}^2
+$$ {#eq-scattering_1}
+
+이다. $V > v_0$ 라면 $\theta$ 는 다음과 같이 정해지는 $\theta_\textrm{max}$ 보다 클수 없다. 즉
+
+$$
+\theta \le \theta_{\textrm{max}} = \sin^{-1}(v_0/V)
+$$
+
+질량중심 좌표계와 실험실 좌표계의 각도 $\theta$ 와 $\theta_0$ 의 관계는 다음과 같다.
+
+$$
+\tan \theta = \dfrac{v_0 \sin \theta_0}{v_0 \cos \theta_0 + V}.
+$$ {#eq-angle_transform_from_lab_to_stationary}
+
+
+혹은 우리가 잘량중심 좌표계에서 계산한 것을 실험실 좌표계에서의 값과 직접 맞춰보고 싶을 때도 있다. 이 경우
+
+$$
+\cos \theta_0 = - \dfrac{V}{v_0} \sin^2 \theta \pm \cos \theta \sqrt{1 - \dfrac{V^2}{{v_0}^2} \sin^2 \theta  }
+$$ {#eq-angle_transform_from_stationary_to_lab}
+
+$v_0>V$ 라면, 즉 @fig-reference_system_scattering ($a$) 의 경우라면 $\theta_0$ 와 $\theta$ 가 전단사이다. 그러나 $v_0<V$ 라면, 즉 @fig-reference_system_scattering ($b$) 의 경우라면 그렇지 않으며, 그림에서 보듯이 $\overrightarrow{AB}$ 와 $\overrightarrow{AC}$ 의 두가지 경우가 가능하다.  
+
+
+일반적으로 자발적 붕괴 실험은 하나의 입자의 붕괴가 아니라 다수의 입자의 붕괴를 통계적으로 다룬다. 그리고 자발적 붕괴의 분포는 완전히 임의적이기 때문에 질량중심 좌표계에서의 고체각(solid angle) $d\Omega$ 로 입사되는 붕괴된 입자의 갯수는 $d\Omega$ 에 비례한다. 즉 $N$ 개의 입자가 붕괴되었을때 $d\Omega$ 의 고체각에 입사되는 입자의 갯수 $N_{d\Omega}$ 는
+
+$$
+N_{d\Omega}= N\dfrac{d\Omega}{4\pi}
+$$
+
+이며, 따라서 $\theta_0$ 의 각도를 갖고 붕괴하는 분포는 $\theta_0$ 에 대한 고체각 $d\Omega = 2\pi \sin \theta_0 d\theta_0$ 을 생각하면, 
+
+$$
+N_{\theta_0} = N\dfrac{1}{2}\sin \theta_0 d\theta_0
 $$
 
 이다. 
 
-입자 $m$ 이 $V$ 로 움직이는 좌표계를 생각하자. 일반적으로 우리가 실험적으로 자발적 붕괴를 관측할 때에 실험자에 대해 입자는 정지해 있는 경우보다 어느 속도로 움직이는 경우가 대부분이다. 따라서 이를 **실험실 좌표계** 라고 하자.
+-- to be filled , Landau mechanics --
+
+</br>
+
+### 탄성 충돌
+
+두 입자가 충돌 전 후에 내부 상태에 차이가 없다면 이 충돌을 **탄성 충돌(elastic scattering)** 이라고 한다. 즉 두 입자의 충돌 전의 내부 에너지 $E_{1i},\, E_{2i}$ 와 충돌 후의 내부에너지 $E_{1f},\, E_{2f}$ 에 대해 탄성 충돌 후에는 $E_{1i}=E_{1f}$, $E_{2i}=E_{2f}$ 이다. 두 입자의 충돌은 질량중심 좌표계에서 기술하는 것이 보통 가장 편하다. 
+
+충돌 전의 실험실 좌표계에서의 두 입자의 속도 $\boldsymbol{v}_1,\, \boldsymbol{v}_2$ 를 질량중심 좌표계에서의 두 입자의 속도 $\boldsymbol{v}_{10},\, \boldsymbol{v}_{20}$ 로 변환하면, $\boldsymbol{v} = \boldsymbol{v}_1-\boldsymbol{v}_2$ 에 대해
+
+$$
+\boldsymbol{v}_{10} = \dfrac{m_2\boldsymbol{v}}{m_1+m_2} ,\qquad \boldsymbol{v}_{20} = -\dfrac{m_1\boldsymbol{v}}{m_1+m_2}
+$$
+
+이다. 질량중심 좌표계에서의 충돌 전후의 운동량을 각각 $\boldsymbol{p}_{10},\, \boldsymbol{p}_{20},\, \boldsymbol{p}_{10}',\, \boldsymbol{p}_{20}'$ 이라 하면 두 입자의 선운동량의 합이 $\boldsymbol{0}$ 이다. 즉, 
+
+$$
+\boldsymbol{p}_{10} + \boldsymbol{p}_{20} = \boldsymbol{p}'_{10} + \boldsymbol{p}'_{20} =\boldsymbol{0}
+$$
+
+이다. 또한 탄성충돌이므로 
+
+$$
+\dfrac{{p_{10}}^2}{2m_1} + \dfrac{{p_{20}}^2}{2m_2} = \dfrac{{p'_{10}}^2}{2m_1} + \dfrac{{p'_{20}}^2}{2m_2}
+$$
+
+이며 $p_{10} = p_{20}$, $p'_{10} + p'_{20}$ 이므로
+
+$$
+p_{10}= p_{20} = p'_{10}= p'_{20}
+$$
+
+이다. 즉 탄성충돌은 질량중심 좌표계에서 운동량의 회전을 의미한다. $\hat{\boldsymbol{n}}_0$ 를 $\boldsymbol{v}'_{10}$ 방향의 단위벡터라고 하면,
+
+$$
+\boldsymbol{v}'_{10} = \dfrac{m_2v\hat{\boldsymbol{n}}_0}{m_1+m_2},\qquad \boldsymbol{v}'_{20} = -\dfrac{m_1v\hat{\boldsymbol{n}}_0}{m_1+m_2}
+$$
+
+이다. $\hat{\boldsymbol{n}}_0$ 는 두 입자의 상호작용과, 충돌시 위치에 의해 결정된다. 이제 실험실 좌표계에서 생각하자. 질량중심의 속도 $\boldsymbol{V}= \dfrac{m_1\boldsymbol{v}_1 + m_2\boldsymbol{v}_2}{m_1+m_2}$ 에 대해 실험실 좌표계의 충돌 이후의 속도 $\boldsymbol{v}'_1,\, \boldsymbol{v}'_2$ 는
+
+$$
+\boldsymbol{v}'_1 = \boldsymbol{v}'_{10} + \boldsymbol{V},\qquad \boldsymbol{v}'_2 = \boldsymbol{v}'_{20} + \boldsymbol{V}
+$$
+
+이며 운동량은 환산 질량 $m=\dfrac{m_1m_2}{1/m_1+1/m_2}$ 에 대해 
+
+$$
+\begin{aligned}
+\boldsymbol{p}'_1 &= m_1 \boldsymbol{v}'_1 = m v \hat{\boldsymbol{n}}_0 + \dfrac{m_1(\boldsymbol{p}_1 + \boldsymbol{p_2})}{m_1+m_2}, \\
+\boldsymbol{p}'_2 &= m_2 \boldsymbol{v}'_2 = -m v \hat{\boldsymbol{n}}_0 + \dfrac{m_2(\boldsymbol{p}_1 + \boldsymbol{p_2})}{m_1+m_2}
+\end{aligned}
+$$
+
+이다. 이것을 그림으로 그리면 아래 @fig-elastic_scattering 와 같다. 그림에서 원은 반지름이 $mv$ 이다. 
+
+![탄성 충돌 후 실험실 좌표계에서의 운동량 벡터](../images/classical%20mechanics/fig-elastic_scattering.png){#fig-elastic_scattering width=220}
+
+
+위 그림에서 
+
+$$
+\overrightarrow{OC} = mv,\quad\overrightarrow{AO} = \dfrac{m_1}{m_1+m_2}(\boldsymbol{p}_1+ \boldsymbol{p}_2), \quad \overrightarrow{OB} = \dfrac{m_2}{m_1+m_2}(\boldsymbol{p}_1+ \boldsymbol{p}_2)
+$$ 
+
+임을 알 수 있다. 
 
 
 
+많은 경우 충돌실험은 정지해 있는 한 입자에 대해 다른 입자를 충돌시킨다. 여기서 $m_2$ 입자가 충돌 전에 정지해 있다고 하자. 즉 $\boldsymbol{v}_2=\boldsymbol{0}$ 이며 $\boldsymbol{v}=\boldsymbol{v}_1$ 이다. $\overrightarrow{OB}=mv$ 이며, 따라서 $\overrightarrow{AB}= \boldsymbol{p}_1$ 이 된다 @fig-elastic_scattering_angles_ss 는 $m_2$ 가 정지해 있을 때의 실험실 좌표계에서의 운동량에 관련된 도식이다.
 
+![$m_2$ 가 정지해 있을 때의 실험실 좌표계](../images/classical%20mechanics/fig-elastic_scatter_angles.png){#fig-elastic_scattering_angles_ss width=560}
+
+$m_1<m_2$ 일 때는 $AO < mv$ 이며 $m_1>m_2$ 일 때는 $AO > mv$ 이다. $\theta_1,\,\theta_2$ 는 충돌 이후 $m_1$ 과 $m_2$ 의 이동 각도이다. 이제 질량중심좌표계에서의 산란각 $\chi$ 와 $\theta_1,\,\theta_2$ 의 관계는 @fig-elastic_scattering_angles_ss 로 부터 다음과 같음을 쉽게 계산 할 수 있다. 
+
+$$
+\begin{aligned}
+\tan \theta_1 &= \dfrac{|OC| \sin \chi}{|AO| + |OC|\cos \chi} = \dfrac{mv \sin \chi}{\dfrac{m_1^2}{m_1+m_2}v + mv\sin \chi} = \dfrac{m_2 \sin \chi}{m_1 + m_2 \sin \chi}, \\
+\theta_2 &= \dfrac{1}{2}(\pi - \chi).
+\end{aligned}
+$$ {#eq-elastic_scattering_scaterring_angle}
+
+또한 $v_1',\,v_2'$ 을 계산해보면 다음과 같다.
+
+$$
+\begin{aligned}
+v_1' &= \dfrac{p_1'}{m_1} = \dfrac{\sqrt{|AO|^2 + |OC|^2 - 2|AO||OC| \cos (\pi - \chi)}}{m_1} \\
+&= \dfrac{\sqrt{{m_1}^2 + {m_2}^2 + 2m_1m_2 \cos \chi}}{m_1+m_2}v, \\
+v_2' &= \dfrac{p_2'}{m_2} = \dfrac{\sqrt{|OC|^2+|OB|^2-2|OC||OB|\cos \chi}}{m_2} \\
+&= \dfrac{2m_1v}{m_1+m_2} \sin \left(\frac{1}{2}\chi\right).
+\end{aligned}
+$$ {#eq-elastic_scattering_velocity_in_lab_frame}
+
+
+</br>
+
+두 입자가 충돌 후 같은 방향 혹은 반대 방향을 향하는 것을 **정면 충돌(head-on collison)** 이라고 한다. 즉 $\chi = \pi$ 가 된다. 정면충돌의 경우 충돌 후의 속도는 @eq-elastic_scattering_velocity_in_lab_frame 으로부터 알 수 있으며,
+
+$$
+\boldsymbol{v}_1' = \dfrac{m_1-m_2}{m_1+m_2}\boldsymbol{v},\qquad \boldsymbol{v}_2' = \dfrac{2m_1}{m_1+m_2}\boldsymbol{v}
+$$ {#eq-final_velocity_for_head_on_scattering}
+
+이다. 이 경우 두번째 입자는 가질 수 있는 최대의 운동에너지 $T'_{2,\max}$ 를 갖게 된다. $m_1$ 의 입사 에너지 $E_1= \dfrac{1}{2}m_1v^2$ 에 대해 다음과 같다. 
+
+$$
+E'_{2,\max} = \dfrac{1}{2}m_2 {v'_2}^2 = \dfrac{4m_1m_2}{(m_1 + m_2)^2}\left(\dfrac{1}{2}m_1 v^2\right) = \dfrac{4m_1m_2}{(m_1 + m_2)^2}E_1.
+$$
+
+
+</br>
+
+@fig-elastic_scattering_angles_ss 에서 볼 수 있듯이 $m_1<m_2$ 일 때 $m_1$ 은 어떤 방향이든지 가능하지만 $m_1>m_2$ 일 때는 $m_1$ 의 방향은 $\theta_{\max}$ 이하의 산란각만 가능하다. $\theta_\max$ 는 다음과 같다.
+
+$$
+\sin \theta_\max = \dfrac{|OC|}{|OA|} = \dfrac{m_2}{m_1} .
+$$
+
+
+$m_1=m_2$ 인 경우에는 $\boldsymbol{p}'_1 \cdot \boldsymbol{p}'_2 = 0$ 이 된다. 즉 $A,\,B,\,C$ 가 반경 $mv$ 인 원에 위치한다.
+
+</br>
+
+### 산란
+
+![러더퍼드 산란](../images/classical%20mechanics/fig-rutherford_scattering.png){#fig-rutherford_scattering width=370}
+
+원점 $O$ 로부터의 포텐셜 $V(r)$ 의 영향을 받는 질량 $m$ 인 입자의 운동을 생각해보자. 이것은 기본적으로 1체문제이며 @sec-central_force 에서 다루었다. @eq-reduced_to_1d_theta 로 부터
+
+$$
+\phi_0 = \int_{r_{\min}}^\infty \dfrac{l/r^2}{\sqrt{2m(E-V(r)) - l^2/r^2}}\, dr
+$$
+
+이며, $r_\min$ 은 적분 분모의 $\sqrt{\cdots}$ 를 $0$ 으로 한다는 것을 기억하자. 
 
 
 
