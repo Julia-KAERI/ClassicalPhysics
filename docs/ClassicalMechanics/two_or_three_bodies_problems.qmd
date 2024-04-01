@@ -220,11 +220,17 @@ E= \dfrac{1}{2}m{v_{0}}^2,\qquad l = m \rho v_0
 $$
 
 
-이다. 보통 우리가 측정하는 것은 $\theta_0$ 가 아닌 $\Theta$ 이다. $\Theta = |\pi - 2 \theta_0|$ 이므로 @eq-rutherford_1 을 $\Theta$ 와 $\rho$ 에 대패 표현하면, 
+이다. 
+
+$$
+\theta_0 = \int_{r_{\min}}^\infty  \dfrac{\rho/r^2}{\sqrt{1-(\rho^2/r^2) - 2V(r)/(m{v_0}^2)}}\, dr
+$$ {#eq-rutherford_2}
+
+보통 우리가 측정하는 것은 $\theta_0$ 가 아닌 $\Theta$ 이다. $\Theta = |\pi - 2 \theta_0|$ 이므로 @eq-rutherford_1 을 $\Theta$ 와 $\rho$ 에 대패 표현하면, 
 
 $$
 \Theta  = \left|\pi - 2\int_{r_{\min}}^\infty  \dfrac{\rho/r^2}{\sqrt{1-(\rho^2/r^2) - 2V(r)/(m{v_0}^2)}}\, dr\right|
-$$
+$${#eq-rutherford_3}
 
 이다. 
 
@@ -245,9 +251,21 @@ $$
 
 $$
 d\sigma = \dfrac{\rho (\Theta)}{\sin \Theta}\left|\dfrac{d\rho}{d\Theta}\right|d\Omega
-$$
+$$ {#eq-cross_section_2}
 
 이다. 
+
+</br>
+
+이제 중요한 $V(r) = - \dfrac{K}{r}$ 인 경우를 살펴보자. 이 경우를 러더포드 산란(Rutherford scattering) 이라고 하며 산란단면적은 다음과 같다. (증명은 @exr-rutherford_cross_section)
+
+$$
+d\sigma = \left(\dfrac{K}{2m{v_0}^2}\right)^2\dfrac{d\Omega}{\sin^4(\Theta/2)}.
+$$ {#eq-rutherford_formular}
+
+러더포드 산란단면적은 $K$ 가 양수인지 음수인지, 즉 포텐셜이 서로 끄는지 밀어내는지와 무관하며 그 절대값에만 관련이 있다는 것을 알 수 있다. 
+
+
 
 #### 연습문제
 
@@ -288,9 +306,60 @@ $$
 
 :::
 
+</br>
+
+::: {#exr-rutherford_cross_section}
+
+러더포드 산란단면적 @eq-rutherford_formular 을 증명하라.
+
+::: 
+
+::: {.solution}
+
+@eq-rutherford_2 로부터
+
+$$
+\begin{aligned}
+\theta_0 &= \int_{r_{\min}}^\infty  \dfrac{\rho/r^2}{\sqrt{1-(\rho^2/r^2) - 2K/r(m{v_0}^2)}}\, dr & &; s=1/r \\
+&= \int_{0}^{s_{\max}} \dfrac{ds}{\sqrt{1/\rho^2 + K^2/(m^2{v_0}^4 \rho^4) -[ s + K/(m{v_0}^2\rho^2)]^2}} & &;s_0 =  K/(m{v_0}^2\rho^2)\\
+&= \int_{0}^{s_{\max}} \dfrac{ds}{\sqrt{1/\rho^2 + K^2/(m^2{v_0}^4 \rho^4) -[ s + s_0]^2}} & &;\alpha^2 = \dfrac{1}{\rho^2} + \dfrac{K^2}{m^2{v_0}^4\rho^4},\\
+&= \int_0^{s_{\max}} \dfrac{ds}{\sqrt{\alpha^2 - [s+s_0]^2}} = \cos^{-1}\left(\dfrac{s_0}{\alpha}\right) - \cos^{-1}\left(\dfrac{s_0 + s_{\max}}{\alpha}\right)
+\end{aligned}
+$$
+
+이댜. 여기서 $r=r_{\min}$ 일 때를 $0$ 으로 잡으면 위 식의 마지막 줄의 두번째 $\cos^{-1}$ 항은 $0$ 이 된다. 따라서, 
+
+$$
+\theta_0 = \cos^{-1}\left(\dfrac{K/(m {v_0}^2 \rho^2)}{\sqrt { 1/\rho^2 + K^2/(m^2{v_0}^4 \rho^4)}}\right)
+$$
 
 
+이며, 
 
+$$
+\tan^2 \theta_0 = \dfrac{m^2{v_0}^4\rho^2}{K^2}
+$$
+
+이다. $\Theta = \pi - 2\theta_0$ 임을 이용하면, 
+
+$$
+\cot^2 \left(\dfrac{\Theta}{2}\right) = \dfrac{m^2{v_0}^4\rho^2}{K^2}, \qquad \rho = \left(\dfrac{|K|}{m{v_0}^2}\right)\cot \left(\dfrac{\Theta}{2}\right)
+$$
+
+이다. 
+
+$$
+\dfrac{d\rho}{d\Theta} =  \left(\dfrac{|K|}{m{v_0}^2}\right) \dfrac{1}{2\sin^2 (\Theta/2)}
+$$
+
+@eq-cross_section_2 로부터,
+
+$$
+d\sigma = \left(\dfrac{K}{m{v_0}^2}\right)^2 \dfrac{\cot(\Theta/2)}{2\sin^2(\Theta/2) \sin (\Theta)}d\Omega =  \left(\dfrac{K}{2m{v_0}^2}\right)^2\dfrac{d\Omega}{\sin^4(\Theta/2)}
+$$ 
+
+이다. 
+:::
 
 
 
