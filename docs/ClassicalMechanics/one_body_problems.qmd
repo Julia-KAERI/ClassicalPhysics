@@ -47,7 +47,7 @@ $$
 m \dfrac{dv}{dt} = mg-cv^2
 $$
 
-이다. 이 경우 $v= \sqrt{\dfrac{mg}{c}}$ 일 때 물체가 받는 net force 는 $0$ 이 되므로 등속운동을 하게 된다. 즉 이 속도에 도달하기만 하면 등속운동을 하게 된다. 이 속도를 $v_T$ 라고 하자. 즉  $v_T := \sqrt{\dfrac{mg}{c}}$ 이다. 이제 운동방정식을 풀어보자.
+이다. 이 경우 $v= \sqrt{\dfrac{mg}{c}}$ 일 때 물체가 받는 net force 는 $0$ 이 되므로 등속운동을 하게 된다. 즉 이 속도에 도달하기만 하면 등속운동을 하게 된다. 이 속도를 **종단 속도(terminal velocity)** 라고 하며 $v_T$ 라고 쓰자. 즉  $v_T := \sqrt{\dfrac{mg}{c}}$ 이다. 이제 운동방정식을 풀어보자.
 
 $$
 \dfrac{dv}{dt} =  g - \dfrac{c}{m}v^2 = \dfrac{c}{m}(v_T^2-v^2)
@@ -62,19 +62,126 @@ $$
 이다. 초기조건을 풀이를 간단하게 하기 위해 $v(t=0) = 0,\, z(t=0) = 0$ 이라고 하자. 
 
 $$
-\ln \left[\dfrac{v_T+v}{v_T-v}\right] = \dfrac{2cv_T}{m}
+\ln \left[\dfrac{v_T+v}{v_T-v}\right] = \dfrac{2cv_T}{m} = \dfrac{2g}{v_T}
 $$
 
-이므로, $\alpha := \dfrac{cv_T}{m}$ 이라고 하면
+이. 따라서
 
 $$
 \begin{aligned}
-v(t) &= v_T \dfrac{e^{\alpha t} - e^{-\alpha t}}{e^{\alpha t} + e^{-\alpha t}} = v_T \tanh (\alpha t),\\
-z(t) &= \dfrac{v_t}{\alpha} \ln (\cosh(\alpha t))
+v(t) &= v_T \dfrac{e^{ gt/v_T} - e^{-gt/v_T}}{e^{gt/v_T} + e^{-gt/v_T}} = v_T \tanh \left(\dfrac{gt}{v_T}\right),\\
+z(t) &= \dfrac{{v_T}^2}{g} \ln \left(\cosh \left(\dfrac{gt}{v_T}\right)\right)
 \end{aligned}
 $$
 
 이다. 
+
+</br>
+
+
+### 연습문제
+
+::: {#exr-helliwell_1_9}
+
+질량 $m$ 인 물체에 drag force $F=-kv^n$ 이 가해진다. 물체가 $t=0$ 에서 속도가 $v_0$ 일 때 이후의 속도를 시간에 대한 함수로 구하라.
+:::
+
+::: {.solution}
+
+$m\dfrac{dv}{dt} = -kv^n$ 이므로 $\dfrac{dv}{v^n} = -\dfrac{k}{m}dt$ 이다. $v=1$ 일 경우는 이미 본문에서 알아보았으므로 $v\ne 1$ 경우만 생각한다. 
+
+$$
+\dfrac{v(t)^{-n+1}}{-n+1} - \dfrac{{v_0}^{-n+1}}{-n+1} = - \dfrac{k}{m}t
+$$
+
+이므로
+
+$$
+v(t) = \left[v_0^{-n+1} + (n-1)\dfrac{k}{m}t\right]^{1/(1-n)}
+$$
+
+이다.
+:::
+
+</br>
+
+::: {#exr-helliwell_1_10}
+
+질량 $m$, 반지름 $R$ 인 작은 공이 정지상태에서 점성계수 $\eta$ 인 액체로 떨어졌다. 여기에 작용하는 힘은 중력 $mg$ 와 스토크스 법칙에 의한 선형 drag force $F_{\text{Stokes}} = - 6 \pi \eta R v$ 이다. 공의 속력을 시간의 함수로 구하고, 이 답이 시간이 짧을 때 와 길 때 make sense 함을 보여라.
+
+:::
+
+::: {.solution}
+
+운동방정식은 다음과 같다. 
+$$
+m\dfrac{dv}{dt} = mg - 6 \pi \eta R v.
+$$
+
+이는 $\tau = \dfrac{m}{6 \pi \eta R}$ 으로 놓았을 때,
+
+$$
+\dfrac{dv}{dt} = -\dfrac{1}{\tau}\left(v- \tau g\right)
+$$
+
+이므로 
+
+$$
+\ln \left|\dfrac{v- \tau g}{\tau g}\right| = - \dfrac{t}{\tau}
+$$
+
+이다. $v(0) = 0 < \tau g$ 이므로, 
+
+$$
+v(t) = \tau g ( 1- e^{-t/\tau})
+$$
+
+이다. $|t| \ll 1$ 이면 $v(t) = gt$ 이다. 즉 이 물체는 정지상태에서 시작하기 때문에 $|t| \\ 1$ 인 경우에는 자유낙하와 비슷하게 움직이게 된다. $t\gg tau$ 인 경우 $e^{-t/\tau} \to 0$ 이므로 $\tau g$ 의 등속운동을 하게 된다.
+
+:::
+
+</br>
+
+::: {#exr-helliwell_1_11}
+
+본문에서 우리는 정지 상태에서 중력 $mg$ 와 $v^2$ 에 비례하는 drag force 가 가해지는 물체의 위치는  
+
+$$
+z(t) = \dfrac{{v_T}^2}{g} \ln \left(\cosh \left(\dfrac{gt}{v_T}\right)\right)
+$$
+
+임을 보였다. 여기서 $v_T$ 는 종단속도이다. (a) 높이 $h$ 지점에서 낙하할 때 걸리는 시간은 얼마인자 구하라. (b) 이 결과에 대해 $h$ 가 작을 때와 클 때의 극한을 구하라. 
+
+:::
+
+::: {.solution}
+
+주어진 식으로부터, 
+
+$$
+e^{gh/{v_T}^2}= \cosh (gt/v_T) \implies t = \dfrac{v_T}{g} \cosh^{-1}(e^{gh/{v_T}^2})
+$$
+
+을 얻는다. $\cosh^{-1}(x) = \ln(x + \sqrt{x^2-1})$ 임을 안다. . $0 < h \ll 1$ 이라면 $e^{gh/{v_T}^2} \approx 1 + \dfrac{gt}{{v_T}^2}$ 이며 이로부터
+
+$$
+\cosh ^{-1}(e^{gh/{v_T}^2}) \approx \ln \left(1+ \sqrt{\dfrac{gh}{{v_T}^2}}\right) \approx  \sqrt{\dfrac{gh}{{v_T}^2}}
+$$
+
+을 얻는다. 따라서 $0<h\ll 1$ 에 대해 
+$$
+t \approx \sqrt{gh}
+$$
+
+로 자유낙하의 경우와 같다. $h \gg 1$ 이라면 $\cosh^{-1}(x) \approx \ln (2x)$ 이므로, 
+
+$$
+t \approx  \dfrac{v_T}{g} \ln (2 e^{gh/{v_T}^2}) = \dfrac{v_T}{g}\ln (2) + \dfrac{h}{v_T}
+$$
+
+이다. 
+
+:::
 
 </br>
 
@@ -214,6 +321,38 @@ $$
 
 
 </br>
+
+### 연습문제
+
+::: {#exr-helliwell_1_16}
+
+중성미자(neutrino) 는 전자 중성미자($\nu_e$), 뮤온 중성미자 ($\nu_\mu$), 타우 중성미자 ($\nu_\tau$) 의 세가지 형태가 있다고 여겨진다. 이 형태가 모두 질량이 없다면 다른 형태로의 자발젹 변환이 이루어 질 수 없다. 그러나 두 형태 사이에 질량 차이가 존재한다면 (각각 $\nu_1,\,\nu_2$ 라고 하자) $\nu_1 \to \nu_2$ 변환이 일어날 확률 $P_{12}= S_{12}\sin^2 (L/\lambda)$ 이다. 여기서 $S_{12}$ 는 *mixing strength parameter*, $L$ 은 중성미자의 이동거리, $\lambda$ 는 다음과 같이 결정되는 **고유 길이 (characteristic length)**이다. 
+
+$$
+\lambda = \dfrac{E}{1.27 \Delta (m)^2}.
+$$
+
+이 때 $E$ 는 $\textrm{GeV}$ 단위의 중성미자 에너지, $\Delta (m)^2$ 는 $(\textrm{eV})^2$ 단위로 주어지는 질량의 제곱의 차이로 $\lambda$ 는 $\textrm{km}$ 단위이다. 
+
+중성미자는 우주방사선인 양성자와 대기 분자의 충돌로 생성된다. 슈퍼 카미오칸데(Super Kamokande) 는 도쿄 서부의 지하 광산에 외치한 대규모 검출기로 검출기 상부에서 발생되는 중성미자와 지구 반대쪽에서 발생하여 지구를 통과한 (즉 13,000 $\textrm{km}$ 을 더 움직이는) 전자 중성미자의 갯수가 같다는 것을 관측하였다. 그러나 뮤온 중성미자의 경우 검출기 상부에서 발생하는 갯수가 더 많았는데 이것은 뮤온 중성미자와 타우 중성미자 사이의 oscillation 이 존재한다는 강력한 증거이다. (슈퍼 카미오칸데는 타우 중성미자는 측정하지 못한다.) ($a$) $\nu_\mu$ 와 $\nu_\tau$ 사이의 $\Delta (m)^2 = 0.01\,\textrm{eV}^2$ 라고 하고å $E=5\, \textrm{GeV}$ 라고 하자. $\lambda$ 는 무엇인가? ($b$) 실험 결과를 가장 잘 맞추는 $\Delta(m)^2=0.0022 \,\textrm{eV}^2$ 이다. $E=5\, \textrm{GeV}$ 일 때 $\lambda$ 는 무엇인가? 상부와 하부에서 오는 중성미자의 차이에 대해 대략적으로 추정하라.
+
+:::
+
+::: {.solution}
+
+($a$) $\lambda = 393.701 \, \textrm{km}$.
+
+($b$) $\lambda = 1789.549 \, \textrm{km}$. $L=13000\, \textrm{km}$ 에 대해 $P = S_{12} \sin^2 (L/\lambda) = 0.69 \times S_{12}$.
+
+:::
+
+
+
+
+</br>
+
+
+
 
 ## 일차원 포텐셜에서의 일차원 운동 {#sec-1d_motion_under_potential}
 

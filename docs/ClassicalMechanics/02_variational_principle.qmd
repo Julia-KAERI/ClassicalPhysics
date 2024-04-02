@@ -19,7 +19,7 @@ crossref:
 
 ### 해밀턴의 원리 {#sec-least_action_theorem}
 
-해밀턴의 원리은 force of constraint를 제외한 모든 힘들이 일반화된 스칼라 포텐셜로 부터 얻어질 수 있는 시스템 (이를 **monogenic system** 이라 한다)의 운동을 기술한다. 이 때 일반화된 포텐셜은 포텐셜이 $\{q_i\},\,\{\dot{q}_i\},\, t$ 의 함수인 것을 말한다. Monogenic system의 포텐셜이 위치만의 함수 일 때, 이 시스템은 보존적이다. 
+해밀턴의 원리는 force of constraint를 제외한 모든 힘들이 일반화된 스칼라 포텐셜로 부터 얻어질 수 있는 시스템 (이를 **monogenic system** 이라 한다)의 운동을 기술한다. 이 때 일반화된 포텐셜은 포텐셜이 $\{q_i\},\,\{\dot{q}_i\},\, t$ 의 함수인 것을 말한다. Monogenic system의 포텐셜이 위치만의 함수 일 때, 이 시스템은 보존적이다. 
 
 ::: {.callout-important icon="false"}
 
