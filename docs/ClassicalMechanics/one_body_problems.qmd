@@ -10,7 +10,6 @@ crossref:
 여기서는 운동방정식으로 다루는 입자의 대상이 하나이거나, 여러개더라도 하나에 대한 운동방정식으로 환원시킬 수 있는 시스템에 대해 다루도록 한다. 뉴턴 방법 운동방정식이나 라그랑지안 운동방정식 가운데 그때 그떼 편한 운동방정식으로 기술한다. 
 
 </br>
-</br>
 
 ## 1차원 Drag force {#sec-1d_drag_force}
 
@@ -346,13 +345,7 @@ $$
 
 :::
 
-
-
-
 </br>
-
-
-
 
 ## 일차원 포텐셜에서의 일차원 운동 {#sec-1d_motion_under_potential}
 
@@ -401,6 +394,8 @@ $$
 
 </br>
 
+
+
 ## 중심력 {#sec-central_force}
 
 ### 중심력 (Central force)
@@ -423,6 +418,20 @@ $$
 
 가 된다. 즉 두 입자 사이에 작용하는 힘은 $\boldsymbol{r}$ 방향이다. 중심력의 경우 두 물체의 각운동량의 합은 보존된다는 것을 이미 @sec-total_angular_momentum 에서 보였다. 
 
+중심력으로는 대표적으로 만유인력과 쿨롱 힘이 존재한다. 둘 다 중심장이며 질량 $m_1,\,m_2$ 인 입자가 각각 $\boldsymbol{r}_1,\,\boldsymbol{r}_2$ 위치에 있을 경우의 포텐셜 $V_G(r)$ 는
+
+$$
+V_G (r) = - \dfrac{Gm_1m_2}{r}
+$$ {#eq-gravitational_potential}
+
+
+이다. 이 때 만유인력 상수 $G=6.67384 \times 10^{−11} \textrm{N} \cdot \textrm{m}^2 \cdot \textrm{kg}^{−2}$ 이다. 전하 $e_1,\,e_2$ 가 역시 각각 $\boldsymbol{r}_1,\,\boldsymbol{r}_2$ 위치에 있을 경우의 포텐셜 $V_C(r)$ 는
+
+$$
+V_C (r) = - \dfrac{k_e e_1e_2}{r}
+$$ {#eq-coulomb_force}
+
+이며 $k_{\text{e}}=8.98755 \times 10^{9}\ \mathrm {N{\cdot }m^{2}{\cdot }C^{-2}}$ 이다.
 </br>
 
 ### 이체문제를 일체문제로
@@ -740,6 +749,71 @@ $$
 ($3$) $\boldsymbol{A}$ 는 constant of motion 이므로 $\boldsymbol{r}=\boldsymbol{r}_{\min}$ 일 때의 값이 항상 유지된다. $\boldsymbol{r}=\boldsymbol{r}_{\textrm{min}}$ 일 때의 속도를 $\boldsymbol{v}_{\boldsymbol{r}_\textrm{min}}$ 이라고 하면 $\boldsymbol{v}_{\boldsymbol{r}_{\textrm{min}}} \cdot \boldsymbol{r}_{\text{min}} = \boldsymbol{0}$ 이므로 이때의 $(\boldsymbol{p}\times \boldsymbol{L})$ 는 $\boldsymbol{r}_{\textrm{min}}$ 과 평행하다. 즉 $\boldsymbol{A}$ 는 $\boldsymbol{r}_{\min}$ 에 평행하다. 
 :::
 
+</br>
+
+::: {#exr-helliwell_1_41}
+
+원점으로부터 $R$ 만큼 떨어진 거리의 점질량 $m$ 과 원점을 중심으로 반지름 $a$, 두께 $\Delta a$, 총 질량 $\Delta M$ 인 spherical shell 을 생각하자. 이 shell 은 균일한 밀도 $\rho$ 을 가진다. 
+
+&emsp; ($a$) $\Delta a \ll a$ 일 때 $\Delta M$ 을 다른 값들에 대한 식으로 구하라. 
+
+&emsp; ($b$) $m$ 의 위치에서의 중력 포텐셜 에너지 $V(r)$ 은 다음과 같음을 보여라.
+
+$$
+V(r) = \left\{\begin{array}{ll} - \dfrac{G\Delta M m}{R} \qquad &\text{for } R>a \\ \text{constant}& \text{for }R < a\end{array}\right.
+$$
+
+($c$) spherical shell 이 아니라 sphere 이며 sphecally symmetric 할 때 구 내부의 원점으로부터의 거리 $R$ 인 지점의 중력장은 구의 중심을 향하며 그 크기가 $GM(R)/R^2$ 임을 보여라. 여기서 $M(R)$ 은 반경 $R$ 보다 구에서 반지름 $R$ 인 부분의 질량이다. 즉 $R$ 바깥의 구체의 질량은 중력장에 영향을 끼치지 않는다.
+
+
+:::
+
+::: {.solution}
+
+($a$) $\Delta M = \displaystyle 4 \pi \int_{a}^{a+\Delta a} \rho r^2 dr \approx 4\pi a^2 \Delta a$ 
+
+($b$) 질량 $m$ 이 $R\hat{\boldsymbol{z}}$ 에 위치한다고 보아도 된다. 
+
+$$
+\begin{aligned}
+V(R) &= - \int_{\textrm{shell}}\dfrac{Gm\rho}{\|R\hat{\boldsymbol{z}}-\boldsymbol{r}\|} r^2 \sin\theta dr d\theta d\phi \\
+&= - \int_0^{2\pi} \int_0^\pi\int_{a}^{a+\Delta a}\dfrac{Gm\rho}{\sqrt{R^2 + r^2 - 2Rr \cos \theta}} r^2 \sin\theta dr d\theta d\phi \\
+&= - 2\pi Gm \rho \int_{a}^{a+\Delta a} \left[\dfrac{1}{rR} {\sqrt{R^2 + r^2 - 2Rr \cos \theta}}\right]_{\theta = 0}^{\theta = \pi} r^2 \sin\theta dr d\theta \\
+&= - 2\pi Gm \rho \int_a^{a+\Delta a} \dfrac{r}{R} \left(R+r - |R-r|\right) \,dr
+\end{aligned}
+$$
+
+이다. $R>r$ 인 경우 
+
+$$
+V(R) = - \dfrac{2\pi Gm\rho}{R} \int_a^{a+\Delta a} 2r^2dr =- \dfrac{G \Delta M m }{R}
+$$
+
+이며 $R<r$ 인 경우
+
+$$
+V(R) = - 2\pi G m \rho \int_{a}^{a + \Delta a} 2r\,dr = \text{constant}
+$$
+
+이다. 
+
+($c$) 구(sphere) 를 spherical shell 의 쌓임으로 이해하자. 구 내부의 반경 $R$ 인 지점에서 반경 $R$ 보다 큰 위치에서의 구의 부분에 대한 중력의 기여는 상수이며 따라서 $R$ 에서의 중력에 기여하지 않는다. 이제 반지름이 $0\to R$ 까지 변한다고 할 때, $\Delta M = 4\pi \rho a^2 \Delta a$ 이므로
+
+$$
+V_\textrm{sphere}(R) = - Gm\rho \int_0^R \dfrac{4\pi r^2 dr}R dr  = -\dfrac{4\pi Gm\rho R^2}{3} = - \dfrac{GmM(R)}{R}
+$$
+
+:::
+
+</br>
+
+::: {#exr-helliwell_1_53}
+
+#### 고전적인 빅뱅 우주 모델
+
+균일한 질량 밀도 $\rho(t)$ 를 갖는 거대한 구체의 먼지 분포를 생각하자. 즉 질량 밀도는 공간적으로는 균일하지만 시간에 대해서는 변화한다. 이 구체가 팽창하면 시간에 대해 감소할 것이고 이 구채가 수축하면 시간에 대해 증가한다. $t=0$ 일 때 이 구체는 한 점(여기서 원점으로 삼는다)에 집중되었으며, 밀도는 무한이고, 외부로 향하는 속도 역시 무한이다. 즉 빅뱅이 일어났다. 어떤 시간 $t_0$ 에서 밀도는 $\rho_0$ 이며 원점에서의 거리가 $r_0$ 인 한 특정 먼지의 외부 방향 속력이 $v_0$ 라고 하자. 
+
+:::
 
 
 
