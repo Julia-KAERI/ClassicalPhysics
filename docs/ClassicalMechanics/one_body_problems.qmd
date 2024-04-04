@@ -763,7 +763,7 @@ $$
 V(r) = \left\{\begin{array}{ll} - \dfrac{G\Delta M m}{R} \qquad &\text{for } R>a \\ \text{constant}& \text{for }R < a\end{array}\right.
 $$
 
-($c$) spherical shell 이 아니라 sphere 이며 sphecally symmetric 할 때 구 내부의 원점으로부터의 거리 $R$ 인 지점의 중력장은 구의 중심을 향하며 그 크기가 $GM(R)/R^2$ 임을 보여라. 여기서 $M(R)$ 은 반경 $R$ 보다 구에서 반지름 $R$ 인 부분의 질량이다. 즉 $R$ 바깥의 구체의 질량은 중력장에 영향을 끼치지 않는다.
+($c$) spherical shell 이 아니라 sphere 이며 sphecally symmetric 할 때 구 내부의 원점으로부터의 거리 $R$ 인 지점의 중력은 구의 중심을 향하며 그 크기가 $GmM(R)/R^2$ 임을 보여라. 여기서 $M(R)$ 은 반경 $R$ 보다 구에서 반지름 $R$ 인 부분의 질량이다. 즉 $R$ 바깥의 구체의 질량은 중력장에 영향을 끼치지 않는다.
 
 
 :::
@@ -783,13 +783,12 @@ V(R) &= - \int_{\textrm{shell}}\dfrac{Gm\rho}{\|R\hat{\boldsymbol{z}}-\boldsymbo
 \end{aligned}
 $$
 
-이다. $R>r$ 인 경우 
-
+이다. $R>a$ 인 경우 
 $$
 V(R) = - \dfrac{2\pi Gm\rho}{R} \int_a^{a+\Delta a} 2r^2dr =- \dfrac{G \Delta M m }{R}
 $$
 
-이며 $R<r$ 인 경우
+이며 $R<a$ 인 경우
 
 $$
 V(R) = - 2\pi G m \rho \int_{a}^{a + \Delta a} 2r\,dr = \text{constant}
@@ -797,11 +796,13 @@ $$
 
 이다. 
 
-($c$) 구(sphere) 를 spherical shell 의 쌓임으로 이해하자. 구 내부의 반경 $R$ 인 지점에서 반경 $R$ 보다 큰 위치에서의 구의 부분에 대한 중력의 기여는 상수이며 따라서 $R$ 에서의 중력에 기여하지 않는다. 이제 반지름이 $0\to R$ 까지 변한다고 할 때, $\Delta M = 4\pi \rho a^2 \Delta a$ 이므로
+($c$) Spherical shell 에 의한 중력은 $R>a$ 일 경우 $\boldsymbol{F}_{\text{shell}} (R>a)= -\dfrac{\partial V(R)}{\partial R} \hat{\boldsymbol{r}}=- \dfrac{G\Delta M m}{R^2} \hat{\boldsymbol{r}}$ 이며 $R<a$ 인 경우 는 $V(R)$ 이 상수이므로 $\boldsymbol{F}_{\text{shell}}(R<a) = 0$ 이다. sphere 라면
 
 $$
-V_\textrm{sphere}(R) = - Gm\rho \int_0^R \dfrac{4\pi r^2 dr}R dr  = -\dfrac{4\pi Gm\rho R^2}{3} = - \dfrac{GmM(R)}{R}
+\boldsymbol{F}_\textrm{sphere} = \int d\boldsymbol{F} = - \dfrac{Gm}{R^2}\hat{\boldsymbol{r}}\int_0^R 4\pi a^2 da = - \dfrac{GmM(R)}{R^2}\hat{\boldsymbol{r}}
 $$
+
+이다. 
 
 :::
 
@@ -811,9 +812,180 @@ $$
 
 #### 고전적인 빅뱅 우주 모델
 
-균일한 질량 밀도 $\rho(t)$ 를 갖는 거대한 구체의 먼지 분포를 생각하자. 즉 질량 밀도는 공간적으로는 균일하지만 시간에 대해서는 변화한다. 이 구체가 팽창하면 시간에 대해 감소할 것이고 이 구채가 수축하면 시간에 대해 증가한다. $t=0$ 일 때 이 구체는 한 점(여기서 원점으로 삼는다)에 집중되었으며, 밀도는 무한이고, 외부로 향하는 속도 역시 무한이다. 즉 빅뱅이 일어났다. 어떤 시간 $t_0$ 에서 밀도는 $\rho_0$ 이며 원점에서의 거리가 $r_0$ 인 한 특정 먼지의 외부 방향 속력이 $v_0$ 라고 하자. 
+균일한 질량 밀도 $\rho(t)$ 를 갖는 거대한 구체의 먼지 분포를 생각하자. 즉 질량 밀도는 공간적으로는 균일하지만 시간에 대해서는 변화한다. 이 구체가 팽창하면 시간에 대해 감소할 것이고 이 구채가 수축하면 시간에 대해 증가한다. $t=0$ 일 때 이 구체는 한 점(여기서 원점으로 삼는다)에 집중되었으며, 밀도는 무한이고, 외부로 향하는 속도 역시 무한이다. 즉 빅뱅이 일어났다. 어떤 시간 $t_0$ 에서 밀도는 $\rho_0$ 이며 원점에서의 거리가 $r_0$ 인 한 특정 먼지 입자의 외부 방향 속력이 $v_0$ 라고 하자. 
+
+($a$) @exr-helliwell_1_41 에서 보았듯이 구 대칭인 반지름 $r$ 인 spherical shell 의 경우 중심에서 $r$ 보다 작은 위치의 먼지 입자에는 영항을 끼치지 않는다. 반지름 $r$ 안쪽의 질량을 $M_r$ 이라고 하자. 먼지 입자가 탈출속도를 가질 때 $r(t)$ 를 구하라. 즉 먼지 입자는 모두 바깥족으로 향하며(즉 속도가 $\hat{\boldsymbol{r}}$ 방향이며) $r \to \infty$ 일 때 속도가 $0$ 이 된다.
+
+($b$) Spherical shell 이 아닌 sphere 를 생각하자. 각각의 먼지 입자는 항상 탈출속도보다 작은 속도를 가진다고 하자. 즉 입자의 에너지 
+
+$$
+E=\dfrac{1}{2}m\dot{r}^2 - \dfrac{GM_rm}{r}<0
+$$ {#eq-exr-helliwell_1_53_1}
+
+이다. 이 경우 $t(r)$ 은 아래의 형태로 표현될 수 있음을 보여라.
+
+$$
+t(r) = \sqrt{\dfrac{m}{2|E|}} \int_r \sqrt{\dfrac{r}{\alpha-r}}\, dr.
+$$ {#eq-exr-helliwell_1_53_2}
+
+여기서 $\alpha$ 를 $G,\,M_r,\,m, |E|$ 을 이용하여 구하라.
+
+($c$) $r=\alpha \sin^2(\eta/2) \equiv (\alpha/2)(1-\cos \eta)$ 로 놓고 적분하여 다음과 같음을 보여라.
+
+$$
+t = \left(\dfrac{\alpha^3}{8GM_r}\right)^{1/2} (\eta - \sin \eta).
+$$ {#eq-exr-helliwell_1_53_3}
+
+</br>
+
+고전적인 빅뱅 우주모델에서 음의 에너지를 가질 때 ($c$) 로부터의 $t(r)$ 은 사이클로이드이다. 즉  우주는 빅 뱅(big bang) 에서 시작하여 빅 크런치(big crunch) 로 끝난다. 
+
+</br>
+
+($d$) 이제 먼지 입자의 속도가 항상 탈출속도보다 크다고 가정하자. @eq-exr-helliwell_1_53_1 의 $E>0$ 이다. 이 경우 $t(r)$ 은 아래의 형태로 표현될 수 있음을 보여라.
+
+$$
+t(r) = \sqrt{\dfrac{m}{2E}}\int^r \sqrt{\dfrac{r}{\alpha+r}} .
+$${#eq-exr-helliwell_1_53_4}
+
+또한 $\alpha$ 를 $G,\, M_r,\, m, \, E$ 를 이용하여 표현하라.
+
+($e$) $r=\alpha \sinh^2(\eta/2) = (\alpha/2)(\cosh \eta-1)$ 로 치환하여 적분하라.
+
+($f$) $t(r)$ 을 음의 에너지의 경우와 비교하라
+
+
+:::
+
+::: {.solution}
+
+($a$) 탈출속도를 가지고 있다면 $E= \dfrac{1}{2}m\dot{r}^2 - \dfrac{GmM_r}{r} = 0$ 이며 따라서, $\dfrac{dr}{dt} = \sqrt{\dfrac{2GM_r}{r}}$ 이다. 이로부터, 
+
+$$
+r(t) = \dfrac{2}{3}\left[\sqrt{2GM_r} (t-t_0) + \dfrac{3}{2}{r_0}^{3/2}\right]^{2/3}
+$$
+
+이 때 $v_0 = \sqrt{\dfrac{2GM_r}{r_0}}$ 가 탈출속도이다.
+
+($b$) @eq-exr-helliwell_1_53_1 로부터 
+
+$$
+\dfrac{dr}{dt} = \sqrt{\dfrac{GM_r}{r}-\dfrac{2|E|}{m}} = \sqrt{\dfrac{GM_rm-2|E|r}{mr}} = \sqrt{\dfrac{2|E|}{m}} \sqrt{\dfrac{GM_rm/2|E| - r}{r}}
+$$ 
+
+이다. $\alpha = GM_rm/2|E|$ 에 대해
+
+$$
+dt = \sqrt{\dfrac{m}{2|E|}} \int^r \sqrt{\dfrac{r}{\alpha -r}}\, dr
+$$
+
+이다. 
+
+($c$) @eq-exr-helliwell_1_53_2 의 적분을 $r=\alpha \sin^2(\eta/2) = (\alpha/2)(1-\cos \eta)$ 로 놓고 수행하면,
+
+$$
+\int^r \sqrt{\dfrac{r}{\alpha-r}}\,dr = \int_\eta \alpha \sin^2 \left(\dfrac{\eta}{2}\right)\, d\eta = \dfrac{\alpha}{2} (\eta - \sin \eta) 
+$$
+
+이므로, 
+
+$$
+t = \sqrt{\dfrac{m}{2|E|}} \dfrac{\alpha}{2} (\eta - \sin \eta) = \left(\dfrac{\alpha^3}{8GM_r m}\right)^{1/2}(\eta-\sin \eta)
+$$
+
+이다.
+
+($d$) @eq-exr-helliwell_1_53_1 와 ($b$) 로 부터
+
+$$
+\dfrac{dr}{dt} = \sqrt{\dfrac{2E}{m}} \sqrt{\dfrac{GM_r m/2E + r}{r}} = \sqrt{\dfrac{2E}{m}} \sqrt{\dfrac{\alpha+ r}{r}},\qquad \textrm{where } \alpha = \dfrac{GM_rm}{2E}
+$$
+
+이므로,
+
+$$
+t(r) = \sqrt{\dfrac{m}{2E}}\int^r \sqrt{\dfrac{r}{\alpha+r}}\, dr
+$$
+
+이다.
+
+($e$) $r=\alpha \sinh^2(\eta/2) = (\alpha/2)(\cosh \eta-1)$ 로부터, 
+
+$$
+\int^r \sqrt{\dfrac{r}{\alpha+r}}\, dr = \dfrac{\alpha}{2}\int^r \dfrac{\sinh (\eta/2)}{\cosh(\eta/2)} \sinh(\eta)\, d\eta = \alpha \int \sinh^2(\eta/2)\,d\eta  =  \dfrac{\alpha}{2} (\sinh \eta - \eta)
+$$
+
+
+이다. 
+
+
+($f$) $\eta >0$ 에 대해 $r(\eta) = \dfrac{\alpha}{2}(\cosh \eta -1)$ 과 $t(\eta) = \dfrac{\alpha}{2}(\sinh \eta - \eta)$ 역시 단조증가 함수이다. 둘 다 $\eta \to \infty$ 극한에서 $+\infty$ 로 발산하며 $\lim_{\eta \to \infty}\dfrac{t(\eta)}{r(\eta)} = 1$ 이다. 즉 빅 뱅 이후 우주는 계속 팽창한다.
+
 
 :::
 
 
+</br>
 
+::: {#exr-helliwell_1_54}
+
+프리드만 방정식은 상대론적 빅뱅 우주론에서 중요하다. Scale factor $a(t)$ 는 충분히 멀리 떨어진 두 점 사이의 거리-예를 들면 두 은하 사이의 거리-에 비례한다. 충분히 떨어졌다는 것은 국소적인 임의의 운동을 무시할 수 있다는 의미이다. 만약 $a$ 가 시간에 대해 증가한다면 두 은하 사이의 거리는 팽창하는 우주에 상응하여 증가한다. 문제를 간단하게 하기 위해 압력을 받지 않는 밀도가 $\rho$ 로 균일한 먼지로 가득찬 우주를 생각해보자. $a(t)$ 에 대한 프리드만 방정식은
+
+$$
+\ddot{a} = - \dfrac{4\pi G \rho}{3}a,\qquad \text{and }\qquad {\dot{a}}^2 = \dfrac{8\pi G \rho}{3}a^2 - \dfrac{kc^2}{{R_0}^2}
+$$ {#eq-exr-helliwell_1_54_1}
+
+이다. 여기서 $G$ 는 뉴턴의 만유인력상수, $c$ 는 및의 속도, $R_0$ 는 특정 시간 $t_0$ 에서의 두 먼지 입자 사이의 거리이며, $k$ 는 $-1,\,1,\,0$ 가운데 하나이다. 먼지의 밀도는 $a(t)$ 의 $3$ 승에 반비례한다. 즉 $t=t_0$ 일 때의 밀도를 $\rho_0$ 라고 하면 $\rho = \rho_0 ( a_0 / a)^3$ 이다. 따라서 @eq-exr-helliwell_1_54_1 은
+
+$$
+\ddot{a} = - \dfrac{4\pi G \rho_0 {a_0}^3}{3a^2},\qquad \text{and}\qquad {\dot{a}}^2 = \dfrac{8 \pi G \rho {a_0}^3}{3a} - \dfrac{kc^2}{{R_0}^2}
+$$ {#eq-exr-helliwell_1_54_2}
+
+이다.
+
+($a$) 선택된 두 먼지 입자중 하나의 위치를 원점으로 놓자. 원점에서 다른 먼지 사이의 거리만큼을 반지름으로 갖는 공의 총 질량을 $M$ 이라고 하자. 또한 어떤 시간 $t_0$ 에 $a_0=1$ 이라고 하자. 이 때 방정식은 상수 $M$ 과 $\epsilon$ 에 대해 아래의 꼴이 됨을 보여라.
+
+$$
+\ddot{a} = - \dfrac{(GM/{R_0}^3)}{a^2} ,\qquad \text{and}\qquad \dfrac{1}{2}{{\dot{a}}}^2 - \dfrac{GM/{R_0}^3}{a} = - \dfrac{kc^2}{2{R_0}^2} := \epsilon.
+$$ {#eq-exr-helliwell_1_54_3}
+
+
+($b$) 두번째 방정식은 첫번째 방정식의 적분임을 보여라.
+
+($c$) 질량 $M$ 인 구형의 달의 중력의 영향을 받는 $\hat{\boldsymbol{r}}$ 방향으로 움직이는 입자의 고전적인 $F=ma$ 방정식과 에너지 보존에 대해 비교하라.
+
+($d$) 아인슈타인은 그의 일반상대론적인 방정식으로부터 우주의 정적인(static) 해를 얻기를 바랬다. 이는 그가 이전의 대부분의 사람들과 마찬가지로 우주가 정지해 있다고 믿었기 때문이다. 일반상대론으로부터 얻어진 프리드만 방정식은 우주는 일반적으로 팽창하거나 수축한다는 것을 말한다. 그러나 지구로부터 멀리 떨어진 바위가 거기에 정지해 있지 않는 것처럼 우주는 점차 수축하거나 팽창할 것이다. 따라서 아인슈타인은 우주상수(cosmological constant) $\Lambda$ 를 도입하여 그의 이론을 수정하였으며 이에 따라 압력을 받지 않는 먼지에 대한 프리드만 방정식은 다음과 같게 되었다.
+
+$$
+\ddot{a} = - \dfrac{GM/{R_0}^3}{a^2} + \dfrac{\Lambda}{3}a, \qquad \text{and}\qquad \dfrac{1}{2}\dot{a}^2 - \dfrac{GM/{R_0}^3}{a} - \dfrac{\Lambda}{6}a^2 = \epsilon.
+$$ {#eq-exr-helliwell_1_54_4}
+
+이 방정식이 정적인 해를 갖는다는 것을 보이고 정적인 해에 대한 $\Lambda$ 값을 구하라.
+
+
+($e$) 그러나 ($d$) 에서 구한 정적인 해는 unstable 하므로 아주 조금의 교란만 있었도 바깥 방향으로 가속될 것이다. 따라서 정적인 해는 실질적으로 불가능하다. (아인슈타인은 그의 정적인 해가 unstable 하다는 것을 알아차리지 못했고, 나중에 에드윈 허블이 윌슨산 천문대에서 우주가 실제로 팽창한다는 것을 보여주었을 때 우주상수를 도입한것이 그가 저지른 최고의 실수라고 말했다.) 
+
+($f$) 방정식에서 우주상수가 유지되지만 먼지가 갑자기 사라질 때, 즉 $M=0$ 이 될 경우에 대해 $a(t)$ 를 구하라. 이 해는 **de Sitter model** 이라고 하며, 팽창하는 우주에 대한 *inflationary model* 이다. de Sitter model 에 대한 $\epsilon$ 은 무엇인가?
+
+($g$) $M,\, \Lambda$ 가 모두 양수일 때 $a(t)$ 에 대해 정량적인 스케치를 구하라. $M$ 과 $\Lambda$ 를 포함하는 항중에서 $t$ 가 작을 때 지배하는 항은 무엇인가? $t$ 가 클 때 지배하는 항은 무엇인가?
+
+:::
+
+::: {.solution}
+
+($a$) $M = \dfrac{4\pi \rho_0 {R_0}^3}{3}$ 와 $a_0=1$ 을 @eq-exr-helliwell_1_54_2 에 대입하면 @eq-exr-helliwell_1_54_3 이 나온다.
+
+
+($b$) @eq-exr-helliwell_1_54_3 의 첫번째 식의 양변에 $\dot{a}$ 를 곱하자. 좌변의 $\dfrac{1}{2}\dfrac{d}{dt}\left(\dot{a}^2\right)= \ddot{a}\dot{a}$, $\dfrac{d}{dt}\left(\dfrac{1}{a}\right) = -\dfrac{\dot{a}}{a^2}$ 이므로
+
+$$
+\dfrac{1}{2}{\dot{a}}^2 - \dfrac{GM/{R_0}^2}{a} = \text{const.} = \epsilon.
+$$
+
+이다. 
+
+
+($c$) 고전적인 경우 $\ddot{r} = - \dfrac{GM}{r^2}$ 와 $\dfrac{1}{2}{\dot{r}}^2 - \dfrac{GM}{r} = \dfrac{E}{m}$ 인 에너지 보존법칙을 따른다. 
+
+($d$) 
+:::
