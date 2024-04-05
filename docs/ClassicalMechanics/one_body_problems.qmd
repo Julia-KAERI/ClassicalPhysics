@@ -7,7 +7,7 @@ crossref:
 ---
 
 
-여기서는 운동방정식으로 다루는 입자의 대상이 하나이거나, 여러개더라도 하나에 대한 운동방정식으로 환원시킬 수 있는 시스템에 대해 다루도록 한다. 뉴턴 방법 운동방정식이나 라그랑지안 운동방정식 가운데 그때 그떼 편한 운동방정식으로 기술한다. 
+여기서는 운동방정식으로 다루는 입자의 대상이 하나이거나, 여러개더라도 하나에 대한 운동방정식으로 환원시킬 수 있는 시스템에 대해 다루도록 한다. 뉴턴 방법 운동방정식이나 라그랑지안 운동방정식 가운데 그때 그때 편한 운동방정식으로 기술한다. 
 
 </br>
 
@@ -135,7 +135,7 @@ $$
 v(t) = \tau g ( 1- e^{-t/\tau})
 $$
 
-이다. $|t| \ll 1$ 이면 $v(t) = gt$ 이다. 즉 이 물체는 정지상태에서 시작하기 때문에 $|t| \\ 1$ 인 경우에는 자유낙하와 비슷하게 움직이게 된다. $t\gg tau$ 인 경우 $e^{-t/\tau} \to 0$ 이므로 $\tau g$ 의 등속운동을 하게 된다.
+이다. $|t| \ll 1$ 이면 $v(t) = gt$ 이다. 즉 이 물체는 정지상태에서 시작하기 때문에 $|t| \ll 1$ 인 경우에는 자유낙하와 비슷하게 움직이게 된다. $t\gg \tau$ 인 경우 $e^{-t/\tau} \to 0$ 이므로 $\tau g$ 의 등속운동을 하게 된다.
 
 :::
 
@@ -188,7 +188,7 @@ $$
 
 ### 단순조화진동자
 
-1차원 단순조화진동자(simple harmonic osciilator, 이하 SHO)의 경우 운동방정식이 $m\ddot{x} = -kx$ 이 며 그 해는 $\omega_0 :=\sqrt{\dfrac{k}{m}}$ 에 대해 $x(t) = A\cos (\omega_0 t+\phi_0)$ 라는 것을 안다. 이 때 $A$ 와 $\phi_0$ 는 초기조건으로 구해야 한다.
+1차원 단순조화진동자(simple harmonic osciilator, 이하 SHO)의 경우 운동방정식이 $m\ddot{x} = -kx$ 이 며 그 해는 $\omega_0 :=\sqrt{\dfrac{k}{m}}$ 에 대해 $x(t) = A\cos (\omega_0 t+\phi_0)$ 라는 것을 안다. 이 때 $A$ 와 $\phi_0$ 는 초기조건 $x(t_0),\, v(t_0)$ 에 의해 정해지는 상수이다. 
 
 </br>
 
@@ -224,7 +224,7 @@ $$
 x(t) = e^{-\beta t}\text{Re}(A_1 e^{i\omega_1 t} + A_2 e^{-i \omega_1 t}) = A e^{-\beta t} \cos (\omega_1 t + \theta_0)
 $$ {#eq-characteristic_solution_of_dho_for_underdampled}
 
-를 얻는다. 여기서 $\Re{a}$ 는 복소수 $a$ 에 대해 실수부만을 취하는 함수이다. 이런 경우를 **underdamped** 라고 하며, overdampled 와는 달리 oscillation 이 존재한다.
+를 얻는다.[$\operatorname{Re}(a)$ 는 복소수 $a$ 에 대해 실수부만을 취하는 함수이다.]{.aside} 이런 경우를 **underdamped** 라고 하며, overdampled 와는 달리 oscillation 이 존재한다.
 
 $\beta^2=\omega_0^2$ 인 경우를 **critically dampled** 라고 한다. 이 경우에는 $te^{-\beta t}$ 도 해가 된다. $x(t) = te^{-\beta t}$ 에 대해
 
@@ -242,21 +242,6 @@ $${#eq-characteristic_solution_of_dho_for_criticallly_damped}
 
 </br>
 
-#### 에너지의 변화
-
-이 경우 에너지의 변화를 보자. 
-
-$$
-\begin{aligned}
-E &=  \dfrac{1}{2}m\dot{x}^2 + \dfrac{1}{2}m\omega_0^2, \\
-\dfrac{dE}{dt} &= \dfrac{1}{2}m\dot{x}^2 + \dfrac{1}{2}m\omega_0^2 = -2m
-\end{aligned}
-$$
-
-
-
-</br>
-
 ### 힘이 작용하는 진동자
 
 DHO 에 어떤 시간에 의존하는 힘 $F(t)$ 가 계속 가해진다고 하자. 이 경우 운동방정식은
@@ -271,9 +256,9 @@ $$
 \ddot{x} + 2\beta \dot{x} + \omega_0^2 x = f_0 \cos (\omega t + \phi_0)
 $$ {#eq-ddho_emo}
 
-가 된다. 이런 미분방정식은 동차(homogeneous) 가 아니므로 비동차(inhomogeneous) 미분방정식이 된다. 비동차 미분방정식의 한 해 $x_p(t)$ 에 동차형태의 미분방정식 $\ddot{x} + 2\beta \dot{x} - \omega_0^2 x =0$ 의 한 해 $x_c(t)$ 의 선형결함 형태 $x_g(t) = ax_c(t) + x_p(t)$ 는 위의 미분 방정식을 만족한다. 이 경우 동차형태의 미분방정식의 해를 **고유해(characteristic solution)** 라고 한다. 우리는 이 미분방정식의 고유해를 이미 알고 있다.
+가 된다. 이런 미분방정식은 동차(homogeneous) 가 아니므로 비동차(inhomogeneous) 미분방정식이 된다. 비동차 미분방정식의 한 해 $x_p(t)$ 에 동차형태의 미분방정식 $\ddot{x} + 2\beta \dot{x} - \omega_0^2 x =0$ 의 한 해 $x_c(t)$ 의 선형결합 형태 $x_g(t) = ax_c(t) + x_p(t)$ 는 위의 미분 방정식을 만족한다. 이 경우 동차형태의 미분방정식의 해를 **고유해(characteristic solution)** 라고 한다. 우리는 이 미분방정식의 고유해를 이미 알고 있다.
 
-고유해의 경우 $\lim_{t\to\infty} x_c(t) = 0$ 이다. 이런 특성으로 인해 **일시적인 해(transient solution)** 이라고도 한다. 그렇다면 $x_p(t)$ 글 구해보자. $\tilde{f} := f_0 e^{i\phi_0}$ 에 대해 $f_0 = \text{Re}\left(\tilde{f}_0 e^{i\omega t}\right)$ 이다. 이렇게 실수가 아닌 복소수에서의 미분방정식을 생각하는 경우가 편한 경우가 많은데 여기가 그런 경우이다. 복소함수에 대한 미분방정식
+고유해의 경우 $\lim_{t\to\infty} x_c(t) = 0$ 이다. 이런 특성으로 인해 **일시적인 해(transient solution)** 이라고도 한다. 그렇다면 $x_p(t)$ 를 구해보자. $\tilde{f} := f_0 e^{i\phi_0}$ 에 대해 $f_0 = \text{Re}\left(\tilde{f}_0 e^{i\omega t}\right)$ 이다. 이렇게 실수가 아닌 복소수에서의 미분방정식을 생각하는 경우가 편한 경우가 많은데 여기가 그런 경우이다. 복소함수에 대한 미분방정식
 
 $$
 \ddot{\tilde{x}} + 2\beta \dot{\tilde{x}} + \omega_0^2 \tilde {x} = \tilde{f}_0 e^{i\omega t}
@@ -289,14 +274,14 @@ $$
 
 $$
 \begin{aligned}
-\tilde{x}_0 = \dfrac{\tilde{f}_0}{\omega_0^2 + 2i\beta \omega - \omega^2}& = \dfrac{\tilde{f}_0}{\sqrt{( \omega_0^2-\omega^2) ^2+ 4 \beta^2 \omega^2}} e^{i\theta_0}  \qquad \text{where } \theta_0 := \tan^{-1}\left(-\dfrac{2\beta \omega}{\omega_0^2-\omega^2}\right)
+\tilde{x}_0 = \dfrac{\tilde{f}_0}{\omega_0^2 + 2i\beta \omega - \omega^2}& = \dfrac{\tilde{f}_0}{\sqrt{( \omega_0^2-\omega^2) ^2+ 4 \beta^2 \omega^2}} e^{i\theta_0}, \qquad \text{where } \theta_0 := \tan^{-1}\left(-\dfrac{2\beta \omega}{\omega_0^2-\omega^2}\right)
 \end{aligned}
 $$
 
 이다. 그렇다면,
 
 $$
-x_p(t) = \text{Re}(\tilde{x}(t)) = f_0\cos (\omega t + \theta_0 + \phi_0)
+x_p(t) = \text{Re}(\tilde{x}(t)) = \dfrac{f_0}{\sqrt{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}} \cos (\omega t + \theta_0 + \phi_0)
 $$ {#eq-particular_solution_of_ddho}
 
 이다. 그렇다면 일반해는 @eq-characteristic_solution_of_dho_for_overdampled, @eq-characteristic_solution_of_dho_for_underdampled, @eq-characteristic_solution_of_dho_for_criticallly_damped 가운데 해당되는 경우와 @eq-particular_solution_of_ddho 의 합으로 표현된다. 앞서 언급했듯이 $t\gg 1$ 이면 일시적인 해는 $0$ 으로 수렴하기 때문에 $x_p(t)$ 가 주도적이 된다. 이를 반영하여 $x_p(t)$ 를 **안정한 해 (steady solution)** 이라고 한다. 
@@ -963,7 +948,7 @@ $$ {#eq-exr-helliwell_1_54_4}
 이 방정식이 정적인 해를 갖는다는 것을 보이고 정적인 해에 대한 $\Lambda$ 값을 구하라.
 
 
-($e$) 그러나 ($d$) 에서 구한 정적인 해는 unstable 하므로 아주 조금의 교란만 있었도 바깥 방향으로 가속될 것이다. 따라서 정적인 해는 실질적으로 불가능하다. (아인슈타인은 그의 정적인 해가 unstable 하다는 것을 알아차리지 못했고, 나중에 에드윈 허블이 윌슨산 천문대에서 우주가 실제로 팽창한다는 것을 보여주었을 때 우주상수를 도입한것이 그가 저지른 최고의 실수라고 말했다.) 
+($e$) ($d$) 에서 구한 정적인 해는 unstable 함을 보여라. 따라서 아주 조금의 교란만 있었도 바깥 방향으로 가속될 것이다. 따라서 정적인 해는 실질적으로 불가능하다. (아인슈타인은 그의 정적인 해가 unstable 하다는 것을 알아차리지 못했고, 나중에 에드윈 허블이 윌슨산 천문대에서 우주가 실제로 팽창한다는 것을 보여주었을 때 우주상수를 도입한것이 그가 저지른 최고의 실수라고 말했다.) 
 
 ($f$) 방정식에서 우주상수가 유지되지만 먼지가 갑자기 사라질 때, 즉 $M=0$ 이 될 경우에 대해 $a(t)$ 를 구하라. 이 해는 **de Sitter model** 이라고 하며, 팽창하는 우주에 대한 *inflationary model* 이다. de Sitter model 에 대한 $\epsilon$ 은 무엇인가?
 
@@ -987,5 +972,31 @@ $$
 
 ($c$) 고전적인 경우 $\ddot{r} = - \dfrac{GM}{r^2}$ 와 $\dfrac{1}{2}{\dot{r}}^2 - \dfrac{GM}{r} = \dfrac{E}{m}$ 인 에너지 보존법칙을 따른다. 
 
-($d$) 
+($d$) @eq-exr-helliwell_1_54_4 에서 $V(a) = - \dfrac{GM/{R_0}^3}{a}- \dfrac{\Lambda}{6}a^2$ 라고 하자. $\dfrac{dV}{da} = 0$ 일 때의 $a$ 를 $a_0$ 라고 하면 $a_0 = \left(\dfrac{3GM}{\Lambda {R_0}^3}\right)^{1/3}$ 이며, $\epsilon = - V(a_0)$ 이면 $\dot{a}=0$ 이므로 static 하다. 즉 static solution $a=a_0$ 에 대해
+
+$$
+\Lambda = \dfrac{3GM}{(a_0 R_0)^3}
+$$
+
+이다. 
+
+($e$) $V'(a) =  \dfrac{GM/{R_0}^3}{a^2} - \dfrac{\Lambda}{3}a$, $V''(a) = -\dfrac{2GM/{R_0}^3}{a^3} - \dfrac{\Lambda}{3}$ 이므로 $V''(a_0) = -\Lambda$ 이다. $\Lambda >0$ 이라면 unstable 하다. (($g$) 에 $\Lambda>0$ 이라는 조건이 부여되어 있다.)
+
+
+($f$) @eq-exr-helliwell_1_54_4 의 첫번째 방정식에서 $M=0$ 으로 놓으면 $\ddot{a} = \dfrac{\Lambda}{3}a$ 로 그 해는 상수 $c_1,\,c_2$ 에 대해
+
+$$
+a(t) = c_1 e^{\sqrt{\Lambda/3} t} + c_2 e^{-\sqrt{\Lambda/3}t}
+$$ 
+
+이다. 또한
+
+$$
+\epsilon = \dfrac{1}{2}\dot{a}^2 - \dfrac{\Lambda}{6}a^2 = - \dfrac{2c_1c_2\Lambda}{3}
+$$
+
+이다.
+
+($g$) 음.....
+
 :::

@@ -234,6 +234,9 @@ $${#eq-rutherford_3}
 
 이다. 
 
+![산란 실험](../images/classical%20mechanics/fig-cross_section.png){#fig-scattering_cross_section width=500}
+
+
 물리학에서 많이 이루어지는 산란 실험은 동일한 초기 속도 $\boldsymbol{v}_0$ 를 갖는 공간적으로 균일한 분포를 가진 다수의 입자를 입사시키며, 이 균일한 입자들이 $\boldsymbol{v}_0$ 와 수직한 방향으로 $A$ 만큼의 면적을 갖고 있다고 하자. $N$ 개의 입자가 입사되었을 때 산란각 $\Theta$ 와 $\Theta + d\Theta$ 사이로 산란되는 입자의 갯수를 $dN(\Theta)$ 이라고 하자. 입사 입자가 우리는 산란단면적 $d\sigma$ 를 다음과 같이 정의 할 수 있다.
 
 $$

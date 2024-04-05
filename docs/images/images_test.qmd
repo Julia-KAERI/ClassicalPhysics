@@ -6,343 +6,6 @@ crossref:
   chapters: true
 ---
 
-```{r, engine = 'tikz'}
-#| label: fig-refrence_frame_in_relativity
-#| code-fold: true
-#| echo: fenced
-#| fig-width: 6
-#| output: asis
-#| fig-align: center
-#| fig-cap: "두 좌표계"
-
-\usetikzlibrary {3d} 
-\begin{tikzpicture}[z={(10:10mm)},x={(-45:5mm)}]
-  \def\wave{
-    \draw[fill,thick,fill opacity=.2]
-     (0,0) sin (1,1) cos (2,0) sin (3,-1) cos (4,0)
-           sin (5,1) cos (6,0) sin (7,-1) cos (8,0)
-           sin (9,1) cos (10,0)sin (11,-1)cos (12,0);
-    \foreach \shift in {0,4,8}
-    {
-      \begin{scope}[xshift=\shift cm,thin]
-        \draw (.5,0)  -- (0.5,0 |- 45:1cm);
-        \draw (1,0)   -- (1,1);
-        \draw (1.5,0) -- (1.5,0 |- 45:1cm);
-        \draw (2.5,0) -- (2.5,0 |- -45:1cm);
-        \draw (3,0)   -- (3,-1);
-        \draw (3.5,0) -- (3.5,0 |- -45:1cm);
-      \end{scope}
-    }
-  }
-  \begin{scope}[canvas is zy plane at x=0,fill=blue]
-    \wave
-    \node at (6,-1.5) [transform shape] {magnetic field};
-  \end{scope}
-  \begin{scope}[canvas is zx plane at y=0,fill=red]
-    \draw[help lines] (0,-2) grid (12,2);
-    \wave
-    \node at (6,1.5) [rotate=180,xscale=-1,transform shape] {electric field};
-  \end{scope}
-\end{tikzpicture}
-```
-
-</br>
-
-```{r, engine = 'tikz'}
-#| label: fig-reference_system_scattering
-#| code-fold: true
-#| echo: fenced
-#| fig-width: 6
-#| output: asis
-#| fig-align: center
-#| fig-cap: "좌표계와 산란"
-
-\usetikzlibrary {arrows.meta}
-\begin{tikzpicture}[line cap=round, scale = 2]
-
-\draw[fill=none, blue, thick](0,0) circle (1);
-\draw[dashdotted] (0, 0) -- (1, 0);
-\draw[thick,  -{Stealth[length=2mm]}] (0, 0) -- (0.5, 0.866);
-\node[below right, scale = 0.8] at (0.3, 0.6) {$\boldsymbol{v}_0$};
-\draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.3,0.0) arc (0:60:0.3);
-
-
-
-\node[right, scale=0.8] at (0.3, 0.15) {$\theta_0$};
-
-\draw[thick,  -{Stealth[length=2mm]}] (-0.7, 0)  -- (0, 0);
-\node[below left, scale=0.8] at (-0.7, 0) {$A$};
-
-\node[below, scale=0.8] at (-0.4, 0) {$\boldsymbol{V}$};
-\draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-0.4,0.0) arc (0:35:0.3);
-\node[scale=0.8] at (-0.32 , 0.12) {$\theta$};
-
-
-\draw[thick,  -{Stealth[length=2mm]}] (-0.7, 0)  -- (0.5, 0.866);
-\node[above, scale = 0.8] at (-0.1, 0.433) {$\boldsymbol{v}$};
-
-
-\draw[fill=none, blue, thick](3, 0) circle (1);
-\draw[dashdotted] (3, 0) -- (4, 0);
-
-\draw[thick,  -{Stealth[length=2mm]}] (1.5, 0)  -- (3, 0);
-\node[below left, scale=0.8] at (1.5, 0) {$A$};
-\draw[thick,  -{Stealth[length=2mm]}] (3, 0) -- (3.5, 0.866);
-\node[below right, scale = 0.8] at (3.3, 0.6) {$\boldsymbol{v}_0$};
-\draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (3.3,0.0) arc (0:60:0.3);
-\node[right, scale=0.8] at (3.3, 0.15) {$\theta_0$};
-
-\node[scale=0.8] at(0.0, -1.2) {$(a)\; \|\boldsymbol{V}\|<\|\boldsymbol{v}_0\|$};
-
-\node[below, scale=0.8] at (2.5, 0) {$\boldsymbol{V}$};
-
-\draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (1.8,0.0) arc (0:25:0.3);
-\node[below, scale=0.8] at (1.8, -0.1) {$\theta$};
-\draw [] plot [smooth, tension=1] coordinates { (1.75,-0.1) (1.75, 0.0) (1.80, 0.05)};
-
-\draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (1.9,0.0) arc (0:42:0.4);
-
-\draw [] plot [smooth, tension=1] coordinates { (1.5,0.5) (1.7, 0.3) (1.88, 0.12)};
-\node[above, scale=0.8] at (1.5,0.5) {$\theta_{\textrm{max}}$};
-
-
-\draw[thick,  -{Stealth[length=2mm]}] (1.5, 0) -- (3.5, 0.866);
-\node[above, scale = 0.8] at (3.1, 0.7) {$\boldsymbol{v}$};
-
-
-\draw[dashed] (1.5, 0) -- (2.333, 0.746);
-\draw[dashed, {Stealth[length=1.5mm]}-] (2.333, 0.746) -- (3, 0);
-
-\node[scale=0.8] at(3.0, -1.2) {$(b)\; \|\boldsymbol{V}\|>\|\boldsymbol{v}_0\|$};
-
-\filldraw[black] (3.5, 0.866) circle(0.5px);
-
-\node[above, scale=0.8] at (3.5, 0.866) {$C$};
-\filldraw[black] (2.025, 0.225) circle(0.5px);
-\node[below right, scale = 0.8] at (2.025, 0.225) {$B$};
-
-%\draw[fill=none, ](0,0) circle (0.05);
-%\draw[thick,  -{Stealth[length=2mm]}] (0, 0) -- (-2.5, 4.33);
-%\draw[thick,  -{Stealth[length=2mm]}] (0, 0) -- (0.556, 0);
-%\node[black, left] at (-1.25, 2.17) {$r_{\textrm{max}}$};
-%\node[black, below] at (0.278, 0) {$r_{\textrm{min}}$};
-
-%\draw[thick] (-4.776, -1.094) -- (-5.166, -1.184);
-%\draw[thick] (-3.823, -3.065) -- (-4.135, -3.315);
-
-%\draw [thick, {Stealth[length=2mm]}-{Stealth[length=2mm]}] (-5.069,-1.161) arc (192.9:218.716:5.2);
-%\node[left] at (-4.7, -2.2) {$\Delta \theta$};
-\end{tikzpicture}
-```
-
-</br>
-
-```{r, engine = 'tikz'}
-#| label: fig-elastic_scattering_1
-#| code-fold: true
-#| echo: fenced
-#| fig-width: 3
-#| output: asis
-#| fig-align: center
-#| fig-cap: "실험실 좌표계에서의 운동량 벡터"
-
-\usetikzlibrary {arrows.meta}
-\usetikzlibrary {calc}
-\begin{tikzpicture}[line cap=round, scale = 2]
-
-\coordinate (A) at (-0.7, 0);
-\coordinate (B) at (0.5, 0);
-\coordinate (C) at (0.309, 0.951);
-
-\draw[fill=none, blue, thick](0,0) circle (1);
-\draw[thick,  -{Stealth[length=2mm]}] (0, 0) node [below, scale=0.8] {$O$} -- (C) node [above, scale=0.8] {$C$};
-\draw[thick, red,  -{Stealth[length=2mm]}] (A) node [below, black, scale=0.8] {$A$} -- (C);
-\draw[thick, teal,  -{Stealth[length=2mm]}] (C) -- (B) node [below, black, scale=0.8] {$B$} ;
-\draw[thick, red, dashed,-{Stealth[length=2mm]}] (A) -- (0, 0);
-\draw[thick, teal, dashed,-{Stealth[length=2mm]}] (0, 0) -- (B);
-
-\draw[thick,  -{Stealth[length=2mm]}] (0, 0)  -- ($0.5*(C)$) node[below right, scale=0.8] {$\hat{\boldsymbol{n}}_0$};
-\node[above,scale=0.8] at ($0.5*(A) + 0.5*(C)$ ){$\boldsymbol{p}'_1$};
-\node[ right,scale=0.8] at ($0.5*(B) + 0.5*(C)$ ){$\boldsymbol{p}'_2$};
-%\node [below, scale=0.8] at ($0.5*(A)$) {$\boldsymbol{p}_A$};
-%\node [below, scale=0.8] at ($0.5*(B)$) {$\boldsymbol{p}_B$};
-
-\end{tikzpicture}
-```
-
-</br>
-
-```{r, engine = 'tikz'}
-#| label: fig-elastic_scatter_angles_1
-#| code-fold: true
-#| echo: fenced
-#| fig-width: 6
-#| output: asis
-#| fig-align: center
-#| fig-cap: "두 관성계에서의 자발적 붕괘"
-
-\usetikzlibrary {arrows.meta}
-\usetikzlibrary {calc}
-\begin{tikzpicture}[line cap=round, scale = 2]
-
-\coordinate (A) at (-0.7, 0);
-\coordinate (B) at (1.0, 0);
-\coordinate (C) at (0.309, 0.951);
-
-\draw[fill=none, blue, thick](0,0) circle (1);
-\draw[thick,  -{Stealth[length=2mm]}] (0, 0) node [below, scale=0.8] {$O$} -- (C) node [above, scale=0.8] {$C$};
-\draw[thick, red,  -{Stealth[length=2mm]}] (A) node [below, black, scale=0.8] {$A$} -- (C);
-\draw[thick, teal,  -{Stealth[length=2mm]}] (C) -- (B) node [below, black, scale=0.8] {$B$} ;
-\draw[thick, black,-{Stealth[length=2mm]}] (A) -- (B);
-\node[below, scale=0.8] at (0.5, 0) {$\boldsymbol{p}_1$};
-
-\draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.3,0.0) arc (0:70:0.3);
-\node [scale=0.8] at (0.35, 0.2) {$\Theta$};
-
-\draw [teal, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.7,0.0) arc (180:127:0.3);
-\node [scale=0.8] at (0.63, 0.2) {$\theta_2$};
-
-\draw [red, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-0.4,0.0) arc (0:44:0.3);
-\node [scale=0.8] at (-0.3, 0.15) {$\theta_1$};
-
-\node[above,scale=0.8] at ($0.5*(A) + 0.5*(C)$ ){$\boldsymbol{p}'_1$};
-\node[ right,scale=0.8] at ($0.5*(B) + 0.5*(C)$ ){$\boldsymbol{p}'_2$};
-\node[scale=0.8] at (0.0, -1.2) {$(a)\, m_1<m_2$};
-
-%\node [below, scale=0.8] at ($0.5*(A)$) {$\boldsymbol{p}_A$};
-%\node [below, scale=0.8] at ($0.5*(B)$) {$\boldsymbol{p}_B$};
-
-
-\begin{scope}[shift={(3,0)}]
-\coordinate (A) at (-1.6, 0);
-\coordinate (B) at (1.0, 0);
-\coordinate (C) at (0.309, 0.951);
-
-\draw[fill=none, blue, thick](0,0) circle (1);
-\draw[thick,  -{Stealth[length=2mm]}] (0, 0) node [below, scale=0.8] {$O$} -- (C) node [above, scale=0.8] {$C$};
-\draw[thick, red,  -{Stealth[length=2mm]}] (A) node [below, black, scale=0.8] {$A$} -- (C);
-\draw[thick, teal,  -{Stealth[length=2mm]}] (C) -- (B) node [below, black, scale=0.8] {$B$} ;
-\draw[thick, black,-{Stealth[length=2mm]}] (A) -- (B);
-\node[below, scale=0.8] at (-0.3, 0) {$\boldsymbol{p}_1$};
-
-\draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.3,0.0) arc (0:70:0.3);
-\node [scale=0.8] at (0.35, 0.2) {$\Theta$};
-
-\draw [teal, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.7,0.0) arc (180:127:0.3);
-\node [scale=0.8] at (0.63, 0.2) {$\theta_2$};
-
-\draw [red, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-1.2,0.0) arc (0:35:0.3);
-\node [scale=0.8] at (-1.1, 0.11) {$\theta_1$};
-\draw [thick, red, dashed] (A) -- (-0.625, 0.7806);
-\draw [red, dashed, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-0.9,0.0) arc (0:39:0.7);
-\node [scale=0.8] at (-0.70, 0.15) {$\theta_{\textrm{max}}$};
-
-\node[above,scale=0.8] at ($0.3*(A) + 0.7*(C)$ ){$\boldsymbol{p}'_1$};
-\node[ right,scale=0.8] at ($0.5*(B) + 0.5*(C)$ ){$\boldsymbol{p}'_2$};
-
-\node[scale=0.8] at (0.0, -1.2) {$(b)\, m_1>m_2$};
-\end{scope}
-
-
-\end{tikzpicture}
-```
-
-</br>
-
-```{r, engine = 'tikz'}
-#| label: fig-rutherford_scattering_1
-#| code-fold: true
-#| echo: fenced
-#| fig-width: 4
-#| output: asis
-#| fig-align: center
-#| fig-cap: "두 관성계에서의 자발적 붕괘"
-
-\usetikzlibrary {arrows.meta}
-\usetikzlibrary {calc}
-\begin{tikzpicture}[line cap=round, scale=1]
-\begin{scope}[rotate=-50.2]
-\coordinate (A) at (-1, 0);
-\draw[teal, thick] plot[variable=\t,domain=1:3, samples=100, smooth,thick] ({-\t},{1.2*sqrt( \t^2-1)});
-\draw[teal, thick] plot[variable=\t,domain=1:2, samples=100, smooth,thick] ({-\t},{-1.2*sqrt( \t^2-1)});
-\draw[teal, thick, {Stealth[length=3mm]}-] plot[variable=\t,domain=2:3, samples=100, smooth,thick] ({-\t},{-1.2*sqrt( \t^2-1)});
-\end{scope}
-
-\draw[dashed, thick] (-4.5, 0) -- (2, 0);
-\draw[dashed, thick] (-4.5, -1) -- (2, -1);
-\node [above left, scale=0.8] at (A) {$A$};
-\draw [dashed] ($-1.3*(A)$) -- (A);
-
-\draw [dashed] (0, 0) -- (0.82, 4.47);
-
-\filldraw ($-1.3*(A)$) circle[radius=1pt];
-\node [below, scale=0.8] at ($-1.3*(A)$) {$O$};
-
-\draw[black, {Stealth[length=2mm]}-{Stealth[length=2mm]}] (-2, -1) -- (-2, 0);
-\node [right, scale=0.8] at (-2, -0.5) {$\rho$};
-
-\draw [blue, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.7,0.0) arc (0:75:0.7);
-\node [scale=0.8] at (0.73, 0.5) {$\Theta$};
-
-\draw [red, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] ($-1.3*(A) - (0.6, 0)$) arc (180:132:0.6);
-\node [scale=0.8] at (0.0, -0.7) {$\theta_0$};
-
-\end{tikzpicture}
-```
-</br>
-
-```{r, engine = 'tikz'}
-#| label: fig-solid_angle
-#| code-fold: true
-#| echo: fenced
-#| fig-width: 6
-#| output: asis
-#| fig-align: center
-#| fig-cap: "Solid angle"
-
-\usetikzlibrary {arrows.meta}
-\begin{tikzpicture}[line cap=round, scale = 2]
-\draw (2,0) arc (-0:-180:4 and 2)coordinate[pos=0.75] (a);
-\draw[dotted] (2,0) arc (0:180:4 and 2);
-\draw (2,0) arc (0:180:4);
-\begin{scope}[rotate around={50:(-2,0)}]
-\draw[shade,fill=gray!40] (1.3, 0.5) -- (-2,0) -- (1.3,-0.5);
-\draw[fill=gray!40] (1.3,0) circle(0.2 and 0.5);
-\end{scope}
-\draw[thick,-stealth] (-2,0) -- (a);
-\draw[thick] (-2,0) -- node[pos=0.75,fill,inner sep=2pt,circle,yscale=0.7](b){}(-2,5);
-\draw (a) to[bend left] (b);
-\end{tikzpicture}
-```
-
-
-```{r, engine = 'tikz'}
-#| label: fig-potential_wall_1
-#| code-fold: true
-#| echo: fenced
-#| fig-width: 4
-#| output: asis
-#| fig-align: center
-#| fig-cap: "두 관성계에서의 자발적 붕괘"
-\usetikzlibrary {arrows.meta}
-\usetikzlibrary {calc}
-\begin{tikzpicture}[line cap=round, scale = 2]
-\coordinate (A) at (-0.809, 0.588);
-\draw[fill=none, red, thick](0,0) circle (1);
-\draw[dashed] (-3, 0) -- (0, 0);
-\draw[thick, -{Stealth[length=2mm]}] (-3, 0.588) -- (-2, 0.588);
-\draw[thick, -{Stealth[length=2mm]}] (-2, 0.588) -- (A) -- ($(A) + (-0.309, 0.951)$);
-\draw[dashed] (0, 0) -- ($2*(A)$);
-\draw[{Stealth[length=2mm]}-{Stealth[length=2mm]}] (-1.5, 0) -- (-1.5, 0.588);
-\node[left] at (-1.5, 0.295) {$\rho$};
-\draw [blue, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-0.4,0.0) arc (180:144:0.4);
-\node [scale=1] at (-0.5, 0.15) {$\theta_0$};
-\draw [-{Stealth[length=2mm]}] (0, 0) -- (1, 0);
-\node [above] at (0.5, 0) {$R$};
-\end{tikzpicture}
-```
-</br>
-
 
 ```{r, engine = 'tikz'}
 #| label: fig-cross_section
@@ -367,6 +30,10 @@ crossref:
   \fill[gray!0, opacity = 0.9] (2.0,0) circle (1.5);
 \end{scope}
 
+\def\e{2.2};
+\def\a{0.1};
+\def\s{sqrt(\e*\e-1)};
+
 \draw (0,0) circle (1cm);
 
 \draw [blue, dashed] (0.5275,0.8500) arc (30:-30:1.7);
@@ -382,12 +49,112 @@ crossref:
 \draw [blue, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.580, -0.935) arc (-58:-46.5:1.1);
 \node [scale = 0.7] at (0.72, -0.95) {$d\Theta$};
 
-\begin{scope}[rotate=-63.43]
+\begin{scope}[rotate=116]
 \coordinate (A) at (-1, 0);
-\draw[teal, thick] plot[variable=\t,domain=-100:100, samples=100, smooth,thick] ({cos(\t) * 1/(1.0+2.5 * cos(-\t))},{sin(\t) * 1/(1.0+2.5 * cos(-\t))});
+\draw[teal, thick] plot[variable=\t,domain=-2.2:3, samples=100, smooth,thick] ({\a * (cosh(\t) + \e)}, {\a * sqrt(\e*\e-1)*sinh(\t)});
+
+\draw[red, dashed] (\a * \e, 0) -- ({\a * \e + 0.6},  { 0.6 * sqrt(\e*\e-1) });
+\draw[red, dashed] (\a * \e, 0) -- ({\a * \e + 0.6},  { -0.6 * sqrt(\e*\e-1) });
 \end{scope}
 
-
+\draw [blue, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-1.5, 0) -- (-1.5, 0.23);
+\node [right, scale=0.7] at (-1.5, 0.11) {$\rho$};
 \end{tikzpicture}
 ```
 </br>
+
+```{r, engine = 'tikz'}
+#| label: fig-cross_section_2
+#| code-fold: true
+#| echo: fenced
+#| fig-width: 6
+#| output: asis
+#| fig-align: center
+#| fig-cap: "두 관성계에서의 자발적 붕괘"
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+\begin{tikzpicture}[line cap=round, scale = 2]
+%\begin{scope}
+%  \clip (0,0) circle (1);
+%  \fill[gray!20] (-0.625,0) circle (1.5);
+%  \fill[gray!0] (-0.945,0) circle (1.7);
+%\end{scope}
+
+\draw (0,0) circle (1cm);
+
+\draw[white, fill=gray!20] (0.5300, 0) ellipse (0.2 and 0.848); 
+\draw[white, fill=gray!0] (0.7001, 0) ellipse (0.2 and 0.7133); 
+
+\draw (0,0) circle (1cm);
+\end{tikzpicture}
+```
+
+
+```{r, engine = 'tikz'}
+#| label: fig-cross_section_3
+#| code-fold: true
+#| echo: fenced
+#| fig-width: 6
+#| output: asis
+#| fig-align: center
+#| fig-cap: "두 관성계에서의 자발적 붕괘"
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+\begin{tikzpicture}[line cap=round, scale = 2]
+
+\draw[thick,  -{Stealth[length=2mm]}] (-2, 0) -- (3, 0);
+\draw[thick,  -{Stealth[length=2mm]}] (0, -2) -- (0, 2);
+
+
+\def\e{2.406};
+\def\a{0.1};
+\def\s{sqrt(\e*\e-1)};
+
+\begin{scope}[rotate=0]
+\coordinate (A) at (-1, 0);
+\draw[teal, thick] plot[variable=\t,domain=-2:2, samples=100, smooth,thick] ({\a * (cosh(\t) + \e)}, {\a * sqrt(\e*\e-1)*sinh(\t)});
+
+
+\draw (0,0) circle (1);
+\draw (\a * \e, -2) -- (\a * \e , 2);
+
+\draw[red, dashed] (\a * \e, 0) -- ({\a * \e + 0.4},  { 0.4 * sqrt(\e*\e-1) });
+\draw[red, dashed] (\a * \e, 0) -- ({\a * \e + 0.4},  { -0.4 * sqrt(\e*\e-1) });
+\end{scope}
+
+\begin{scope}[rotate=114.55]
+\coordinate (A) at (-1, 0);
+\draw[teal, thick] plot[variable=\t,domain=-2:2, samples=100, smooth,thick] ({\a * (cosh(\t) + \e)}, {\a * sqrt(\e*\e-1)*sinh(\t)});
+
+\draw[red, dashed] (\a * \e, 0) -- ({\a * \e + 0.4},  { 0.4 * sqrt(\e*\e-1) });
+\draw[red, dashed] (\a * \e, 0) -- ({\a * \e + 0.4},  { -0.4 * sqrt(\e*\e-1) });
+\end{scope}
+\end{tikzpicture}
+```
+
+
+
+```{r, engine = 'tikz'}
+#| label: fig-resonance_1
+#| code-fold: true
+#| echo: fenced
+#| fig-width: 4
+#| output: asis
+#| fig-align: center
+#| fig-cap: "두 관성계에서의 자발적 붕괘"
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+\begin{tikzpicture}[line cap=round, scale = 2]
+
+\draw [thick, -{Stealth[length=2mm]}, scale=0.8] (-0.1, 0) -- (2.5, 0) node [right] {$\omega/\omega_0$};
+\draw [thick, -{Stealth[length=2mm]}, scale=0.8] (0, -0.1) -- (0, 3.5) node [left] {$$};
+
+
+\draw[teal] plot[variable=\t,domain=0:2, samples=100, smooth,thick] ({\t}, {1.0/sqrt((1-\t)^2 + 4*1.0^2)}) node [right, scale=0.8, black] {$\beta/\omega = 1$};
+\draw[teal] plot[variable=\t,domain=0:2, samples=100, smooth,thick] ({\t}, {1.0/sqrt((1-\t)^2 + 4*0.5^2)});
+\draw[teal, thick] plot[variable=\t,domain=0:2, samples=100, smooth,thick] ({\t}, {1.0/sqrt((1-\t)^2 + 4*0.25^2)});
+\draw[teal] plot[variable=\t,domain=0:2, samples=100, smooth,thick] ({\t}, {1.0/sqrt((1-\t)^2 + 4*(1/6)^2)});
+
+\draw[blue, dashed] (1,0) -- (1, 3.5);
+\end{tikzpicture}
+```

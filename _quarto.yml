@@ -36,8 +36,9 @@ book:
         - docs/topics/mathematical.qmd
     - part: docs/images/images.qmd
       chapters:
-      - docs/images/images_01.qmd
-      - docs/images/images_02.qmd
+      - docs/images/images_classical_mechanics_01.qmd
+      - docs/images/images_classical_mechanics_02.qmd
+      - docs/images/images_relativity_01.qmd
       - docs/images/images_test.qmd
     
 
