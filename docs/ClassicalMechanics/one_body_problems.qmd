@@ -188,7 +188,7 @@ $$
 
 ### 단순조화진동자
 
-1차원 단순조화진동자(simple harmonic osciilator, 이하 SHO)의 경우 운동방정식이 $m\ddot{x} = -kx$ 이 며 그 해는 $\omega_0 :=\sqrt{\dfrac{k}{m}}$ 에 대해 $x(t) = A\cos (\omega_0 t+\phi_0)$ 라는 것을 안다. 이 때 $A$ 와 $\phi_0$ 는 초기조건 $x(t_0),\, v(t_0)$ 에 의해 정해지는 상수이다. 
+1차원 단순조화진동자(simple harmonic osciilator, 이하 SHO)의 경우 운동방정식이 $m\ddot{x} = -kx$ 이 며 그 해는 진동자의 **고유 진동수(natural frequency)** $\omega_0 :=\sqrt{\dfrac{k}{m}}$ 에 대해 $x(t) = A\cos (\omega_0 t+\phi_0)$ 라는 것을 안다. $A$ 와 $\phi_0$ 는 초기조건 $x(t_0),\, v(t_0)$ 에 의해 정해지는 상수이다. 
 
 </br>
 
@@ -242,7 +242,7 @@ $${#eq-characteristic_solution_of_dho_for_criticallly_damped}
 
 </br>
 
-### 힘이 작용하는 진동자
+### 강제 조화 진동자 
 
 DHO 에 어떤 시간에 의존하는 힘 $F(t)$ 가 계속 가해진다고 하자. 이 경우 운동방정식은
 
@@ -250,7 +250,7 @@ $$
 m\ddot{x} = -2m\beta \dot{x} -k x + F(t)
 $$ {#eq-ddho_emo0}
 
-가 된다. 흥미로운 경우는 $F(t) = F_0 \cos (\omega t + \phi_0)$ 와 같이 형태 경우이다. $f_0 = \dfrac{F_0}{m}$ 이라고 하면 운동방정식은 
+가 된다. 이렇게 조화진동자에 외부의 힘이 가해지는 것을 **강제 조화 진동자 (forced harmonic oscillator)** 라고 한다. 흥미로운 경우는 $F(t) = F_0 \cos (\omega t + \phi_0)$ 와 같이 형태 경우이다. $f_0 = \dfrac{F_0}{m}$ 이라고 하면 운동방정식은 
 
 $$
 \ddot{x} + 2\beta \dot{x} + \omega_0^2 x = f_0 \cos (\omega t + \phi_0)
@@ -284,7 +284,11 @@ $$
 x_p(t) = \text{Re}(\tilde{x}(t)) = \dfrac{f_0}{\sqrt{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}} \cos (\omega t + \theta_0 + \phi_0)
 $$ {#eq-particular_solution_of_ddho}
 
-이다. 그렇다면 일반해는 @eq-characteristic_solution_of_dho_for_overdampled, @eq-characteristic_solution_of_dho_for_underdampled, @eq-characteristic_solution_of_dho_for_criticallly_damped 가운데 해당되는 경우와 @eq-particular_solution_of_ddho 의 합으로 표현된다. 앞서 언급했듯이 $t\gg 1$ 이면 일시적인 해는 $0$ 으로 수렴하기 때문에 $x_p(t)$ 가 주도적이 된다. 이를 반영하여 $x_p(t)$ 를 **안정한 해 (steady solution)** 이라고 한다. 
+이다. 그렇다면 일반해는 @eq-characteristic_solution_of_dho_for_overdampled, @eq-characteristic_solution_of_dho_for_underdampled, @eq-characteristic_solution_of_dho_for_criticallly_damped 가운데 해당되는 경우와 @eq-particular_solution_of_ddho 의 합으로 표현된다. 앞서 언급했듯이 $t\gg 1$ 이면 일시적인 해는 $0$ 으로 수렴하기 때문에 $x_p(t)$ 가 주도적이 된다. 이를 반영하여 $x_p(t)$ 를 **안정한 해 (steady solution)** 이라고 한다. 흥미로운 것은 외부 힘의 진동수 $\omega$ 와 조화진동자의 고유진동수 $\omega_0$ 가 가까울수록 $x_p(t)$ 의 진폭이 커지며 $\omega = \omega_0$ 라면 진폭이 발산하게된다. 이를 **공명(resonance)** 라고 한다. $x_0 (\omega) =\dfrac{f_0}{\sqrt{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}}$ 라고 할 때 $\omega/\omega_0$ 에 대한 $x_0(\omega)$ 는 @fig-resonance 와 같다. 
+
+![Resonance](../images/classical%20mechanics/fig-resonance.png){#fig-resonance width=340}
+
+</br>
 
 이제 driving force 가 이 조화진동자에 해주는 시간당 일을 생각해보자. 
 $$

@@ -40,7 +40,7 @@ book:
       - docs/images/images_classical_mechanics_02.qmd
       - docs/images/images_relativity_01.qmd
       - docs/images/images_test.qmd
-    
+    - references.qmd
 
 bibliography: references.bib
 

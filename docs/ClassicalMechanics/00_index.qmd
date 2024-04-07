@@ -8,3 +8,21 @@ crossref:
 ---
 
 고전역학의 기본원리에 대해 설명한다.
+
+### 참고문헌
+::: {#refs}
+
+@Helliwell_Sahakian_2020
+
+@Goldstein1980Mechanics
+
+@Landau1976Mechanics
+
+@Symon1971mechanics
+
+@Arnold2013mathematical
+
+@Marion2004classical
+
+
+:::
