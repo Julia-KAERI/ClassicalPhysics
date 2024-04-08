@@ -7,154 +7,60 @@ crossref:
 ---
 
 
+
 ```{r, engine = 'tikz'}
-#| label: fig-cross_section
+#| label: fig-relativity_pole_and_barn_paradox_1
 #| code-fold: true
 #| echo: fenced
 #| fig-width: 6
 #| output: asis
 #| fig-align: center
-#| fig-cap: "두 관성계에서의 자발적 붕괘"
-\usetikzlibrary {arrows.meta}
-\usetikzlibrary {calc}
-\begin{tikzpicture}[line cap=round, scale = 2]
-%\begin{scope}
-%  \clip (0,0) circle (1);
-%  \fill[gray!20] (-0.625,0) circle (1.5);
-%  \fill[gray!0] (-0.945,0) circle (1.7);
-%\end{scope}
-
-\begin{scope}
-  \clip (0,0) circle (1cm);
-  \fill[gray!50] (2.0,0) circle (1.7);
-  \fill[gray!0, opacity = 0.9] (2.0,0) circle (1.5);
-\end{scope}
-
-\def\e{2.2};
-\def\a{0.1};
-\def\s{sqrt(\e*\e-1)};
-
-\draw (0,0) circle (1cm);
-
-\draw [blue, dashed] (0.5275,0.8500) arc (30:-30:1.7);
-\draw [blue, dashed] (0.6875,0.726) arc (27.35:-27.35:1.5);
-
-\draw [thick] (-3, 0) -- (1.2, 0);
-
-\draw [blue] (0, 0) -- ($1.5 *(0.6075, 0.778)$);
-\draw [blue, -{Stealth[length=1.5mm]}] (0.2, 0) arc (0:49.1:0.2);
-\node [scale = 0.7] at (0.28, 0.1) {$\Theta$}; 
-\draw [blue] (0, 0) -- ($1.2*(0.5275, -0.8500)$);
-\draw [blue] (0, 0) -- ($1.2*(0.6875, -0.726)$);
-\draw [blue, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.580, -0.935) arc (-58:-46.5:1.1);
-\node [scale = 0.7] at (0.72, -0.95) {$d\Theta$};
-
-\begin{scope}[rotate=116]
-\coordinate (A) at (-1, 0);
-\draw[teal, thick] plot[variable=\t,domain=-2.2:3, samples=100, smooth,thick] ({\a * (cosh(\t) + \e)}, {\a * sqrt(\e*\e-1)*sinh(\t)});
-
-\draw[red, dashed] (\a * \e, 0) -- ({\a * \e + 0.6},  { 0.6 * sqrt(\e*\e-1) });
-\draw[red, dashed] (\a * \e, 0) -- ({\a * \e + 0.6},  { -0.6 * sqrt(\e*\e-1) });
-\end{scope}
-
-\draw [blue, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-1.5, 0) -- (-1.5, 0.23);
-\node [right, scale=0.7] at (-1.5, 0.11) {$\rho$};
-\end{tikzpicture}
-```
-</br>
-
-```{r, engine = 'tikz'}
-#| label: fig-cross_section_2
-#| code-fold: true
-#| echo: fenced
-#| fig-width: 6
-#| output: asis
-#| fig-align: center
-#| fig-cap: "두 관성계에서의 자발적 붕괘"
-\usetikzlibrary {arrows.meta}
-\usetikzlibrary {calc}
-\begin{tikzpicture}[line cap=round, scale = 2]
-%\begin{scope}
-%  \clip (0,0) circle (1);
-%  \fill[gray!20] (-0.625,0) circle (1.5);
-%  \fill[gray!0] (-0.945,0) circle (1.7);
-%\end{scope}
-
-\draw (0,0) circle (1cm);
-
-\draw[white, fill=gray!20] (0.5300, 0) ellipse (0.2 and 0.848); 
-\draw[white, fill=gray!0] (0.7001, 0) ellipse (0.2 and 0.7133); 
-
-\draw (0,0) circle (1cm);
-\end{tikzpicture}
-```
-
-
-```{r, engine = 'tikz'}
-#| label: fig-cross_section_3
-#| code-fold: true
-#| echo: fenced
-#| fig-width: 6
-#| output: asis
-#| fig-align: center
-#| fig-cap: "두 관성계에서의 자발적 붕괘"
+#| fig-cap: "장대와 헛간의 역설"
 \usetikzlibrary {arrows.meta}
 \usetikzlibrary {calc}
 \begin{tikzpicture}[line cap=round, scale = 2]
 
-\draw[thick,  -{Stealth[length=2mm]}] (-2, 0) -- (3, 0);
-\draw[thick,  -{Stealth[length=2mm]}] (0, -2) -- (0, 2);
+% font scale
+\def\fs{2.0}
+\def\tk{0.05}
+
+\draw [thick, -{Stealth[length=2mm]}] (-2., 0) -- (2.5, 0) node [right, scale=\fs] {$x$};
+\draw [thick, -{Stealth[length=2mm]}] (0, -1) -- (0, 5) node [above, scale=\fs] {$ct$};
+
+\filldraw [blue, opacity=0.2] (-1.0, 0) -- (2, 5) -- (3.0, 5) -- (-0.0, 0) -- cycle;
+\filldraw [red, opacity=0.2] (0, 0) -- (0, 5) -- (1, 5) -- (1, 0) -- cycle;
+\node[scale=\fs] at (0.5, 4.7) {$\textrm{barn}$};
+\node[scale=\fs] at (2.3, 4.7) {$\textrm{pole}$};
+
+\filldraw[teal] (-1.0, \tk) -- (-0.0, \tk) -- (-0.0, -\tk) -- (-1.0, -\tk) --cycle; 
+\filldraw[teal] (0, 1.67 + \tk) -- (1, 1.67 +\tk) -- (1, 1.67-\tk) -- (0, 1.67-\tk) --cycle; 
+
+\draw[thick] (-0.1, 1.67) node[left, scale=\fs] {$t_1$}-- (0.1, 1.67);
+\draw[thick] (-0.1, 3.33) node[left, scale=\fs] {$t_2$}-- (0.1, 3.33);
+\draw[dashed] (0.0, 3.33) -- (1.0, 3.33);
+
+\node[below, scale=\fs] at(0, -1) {$(a)\;\Sigma$};
 
 
-\def\e{2.406};
-\def\a{0.1};
-\def\s{sqrt(\e*\e-1)};
+\begin{scope}[xshift=6cm]
 
-\begin{scope}[rotate=0]
-\coordinate (A) at (-1, 0);
-\draw[teal, thick] plot[variable=\t,domain=-2:2, samples=100, smooth,thick] ({\a * (cosh(\t) + \e)}, {\a * sqrt(\e*\e-1)*sinh(\t)});
+\draw [thick, -{Stealth[length=2mm]}] (-2., 0) -- (3, 0) node [right, scale=\fs] {$x'$};
+\draw [thick, -{Stealth[length=2mm]}] (0, -1) -- (0, 5) node [above, scale=\fs] {$ct'$};
+
+\filldraw [blue, opacity=0.2] (0.0, 0) -- (0, 5) -- (1.25, 5) -- (1.25, 0) -- cycle;
+\filldraw [red, opacity=0.2] (1.25, 0) -- (-1.75, 5) -- (-1.11, 5) -- (1.89, 0) -- cycle;
+\node[scale=\fs] at (-1.3, 4.7) {$\textrm{barn}$};
+\node[scale=\fs] at (0.7, 4.7) {$\textrm{pole}$};
+
+\filldraw[teal] (0, \tk) -- (1.25, \tk) -- (1.25, -\tk) -- (0, -\tk) --cycle; 
+\filldraw[teal] (0, 2.083 + \tk) -- (1.25, 2.083+\tk) -- (1.25, 2.083-\tk) -- (0, 2.083-\tk) --cycle; 
+\filldraw[teal] (0, 1.06 + \tk) -- (1.25, 1.06+\tk) -- (1.25, 1.06-\tk) -- (0, 1.06-\tk) --cycle; 
 
 
-\draw (0,0) circle (1);
-\draw (\a * \e, -2) -- (\a * \e , 2);
+\draw[thick] (-0.1, 1.06) node[left, scale=\fs] {$t_1'$}-- (0.1, 1.06);
+\draw[thick] (-0.1, 2.083) node[left, scale=\fs] {$t_2'$}-- (0.1, 2.083);
 
-\draw[red, dashed] (\a * \e, 0) -- ({\a * \e + 0.4},  { 0.4 * sqrt(\e*\e-1) });
-\draw[red, dashed] (\a * \e, 0) -- ({\a * \e + 0.4},  { -0.4 * sqrt(\e*\e-1) });
+\node[below, scale=\fs] at(0, -1) {$(b)\;\Sigma'$};
 \end{scope}
-
-\begin{scope}[rotate=114.55]
-\coordinate (A) at (-1, 0);
-\draw[teal, thick] plot[variable=\t,domain=-2:2, samples=100, smooth,thick] ({\a * (cosh(\t) + \e)}, {\a * sqrt(\e*\e-1)*sinh(\t)});
-
-\draw[red, dashed] (\a * \e, 0) -- ({\a * \e + 0.4},  { 0.4 * sqrt(\e*\e-1) });
-\draw[red, dashed] (\a * \e, 0) -- ({\a * \e + 0.4},  { -0.4 * sqrt(\e*\e-1) });
-\end{scope}
-\end{tikzpicture}
-```
-
-
-
-```{r, engine = 'tikz'}
-#| label: fig-resonance_1
-#| code-fold: true
-#| echo: fenced
-#| fig-width: 4
-#| output: asis
-#| fig-align: center
-#| fig-cap: "두 관성계에서의 자발적 붕괘"
-\usetikzlibrary {arrows.meta}
-\usetikzlibrary {calc}
-\begin{tikzpicture}[line cap=round, scale = 2]
-
-\draw [thick, -{Stealth[length=2mm]}, scale=0.8] (-0.1, 0) -- (2.5, 0) node [right, scale=0.7] {$\omega/\omega_0$};
-\draw [thick, -{Stealth[length=2mm]}, scale=0.8] (0, -0.1) -- (0, 4) node [left, scale=0.7] {$x_0(\omega)$};
-
-
-\draw[teal] plot[variable=\t,domain=0:2, samples=100, smooth,thick] ({\t}, {1.0/sqrt((1-\t)^2 + 4*1.0^2)}) node [right, scale=0.8, black] {$\beta/\omega = 1$};
-\draw[teal] plot[variable=\t,domain=0:2, samples=100, smooth,thick] ({\t}, {1.0/sqrt((1-\t)^2 + 4*0.5^2)}) node [right, scale=0.8, black] {$\beta/\omega = 1/2$};
-\draw[teal, thick] plot[variable=\t,domain=0:2, samples=100, smooth,thick] ({\t}, {1.0/sqrt((1-\t)^2 + 4*0.25^2)}) node [right, scale=0.8, black] {$\beta/\omega = 1/4$};
-\draw[teal] plot[variable=\t,domain=0:2, samples=100, smooth,thick] ({\t}, {1.0/sqrt((1-\t)^2 + 4*(1/6)^2)}) node [above right, scale=0.8, black] {$\beta/\omega = 1/6$};
-
-\draw[blue, dashed] (1,0) -- (1, 3.3);
 \end{tikzpicture}
 ```
