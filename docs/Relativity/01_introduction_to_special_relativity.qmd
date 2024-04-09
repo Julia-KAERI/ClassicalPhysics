@@ -539,8 +539,6 @@ $$
 
 </br>
 
-## 상대론에서의 운동량과 에너지
-
 ### 상대론에서의 운동량
 
 
@@ -586,7 +584,7 @@ $$ {#eq-relativity_4_momentum_2}
 
 </br>
 
-### 질량이 없는 입자까지 고려하는 경우
+### 질량이 없는 입자까지 고려하는 경우 {#sec-relativity_massless_particle}
 
 질량이 없는 입자, 즉 $m=0$ 인 입자의 경우에는 $\mathcal{E}=0$ 이라는 결론이 나온다. 이는 물리적으로 넌센스이며 이것을 피해야 한다. 우리는 이미 질량이 없는 입자라도 운동량 $\boldsymbol{p}$ 을 가지고 있음을 안다. 그렇다면 $P = (\mathcal{E}/c,\, \boldsymbol{p})$ 로 놓으면 $P_\mu P^\mu = m^2c^2$ 이므로, 
 
@@ -631,7 +629,7 @@ $$
 
 </br>
 
-## 상대론적인 충돌
+### 충돌
 
 
 비 상대론적으로 두 입자를 충돌시킬 때 보존되는 것은 총 질량과 총 운동량이다. 역학적 에너지의 일부가 열에너지로 변환되기 때문에 에너지는 보존되지 않는다. 상대론적으로 충돌을 다룰 때는 당연히 질량은 보존되지 않으며 4-운동량이 보존된다. 
@@ -667,7 +665,7 @@ $$
 이 때 운동량 중심 좌표계 $\Sigma_{CM}$ 에서 보자. 충돌 전의 두 양성자는 서로 반대방향의 운동량과 같은 질량을 갖는다. 이를 각각 $P_0,\, -P_0,\, m_p$ 라고 하자. 4-운동량의 첫번째 성분의 보존으로부터
 $$
 \gamma_0 m_p + \gamma_0 m_p c = \gamma_{1}m_p c + \gamma_{2}m_p c + \gamma_{3}m_p c + \gamma_{4}m_p c
-$$
+$$ {#eq-relativity_threshold_1}
 
 임을 안다. 즉 $\gamma_0 \ge 2$ 이어야 한다. 여기서 위의 반응이 일어나기 위해서는 $\Sigma_{CM}$ 에서 충돌 전 두 양성자의 에너지가 각각 $2m_pc^2$ 보다 커야한다는 것을 알 수 있다. 
 
@@ -678,33 +676,35 @@ $$
 
 $$
 \left(\dfrac{E_{\text{th}}^\text{CM}}{c},\,0,\,0,\,0\right) = \left(\sum_i m_i c,\,0,\,0,\,0\right)
-$$
+$$ {#eq-relativity_threshold_2}
 
 이며 $\Sigma_{\text{Lab}}$ 에서는 산란 전의 4-운동량은
 
 $$
 \left(\dfrac{E+mc^2}{c},\,p_1,\,0,\,0\right) 
-$$
+$$ {#eq-relativity_threshold_3}
 
-이다. 4-운동량 뿐만 아니라 내적 $\eta_{\mu \nu}P^\mu P^\nu$ 도 보존되어야 한다. $\Sigma_{\text{CM}}$ 에서는
+이다. 4-운동량은 충돌 전후에 보존되어야 하며 4-운동량의 스칼라곱 $\eta_{\mu \nu}P^\mu P^\nu$ 은 로렌츠 변환에 대해 불변이다. $\Sigma_{\text{CM}}$ 에서는
 
 $$
 E_{\text{th}}^{\text{CM}}=c^2\sqrt{\left(\sum_i m_i\right)^2}
-$$
+$$ {#eq-relativity_threshold_4}
 
 을 만족해야 하며, $\Sigma_{\text{Lab}}$ 에서는 ${p_1}^2 = E^2/c^2-M^2c^2$ 을 생각하면
 
 $$
 (E+mc^2)^2/c^2 - p_1^2 = 2mE + m^2c^2+ M^2c^2
-$$
+$$ {#eq-relativity_threshold_5}
 
 이며 두 좌표계에서의 내적이 같아야 하므로
 
 $$
-E = \dfrac{c^2 \left[\left(\sum_i m_i\right)^2 - m^2 - M^2\right]c^2}{2m}
-$$
+E = \dfrac{c^2 \left[\left(\displaystyle \sum_i m_i\right)^2 - m^2 - M^2\right]}{2m}
+$$ {#eq-relativity_threshold_6}
 
+이어야 한다.
 
+이제 다시 양성자-양성자 충돌로 부터 세개의 양성자와 하나의 반양성자가 생성되는 경우를 보자. @eq-relativity_threshold_6 에서 $(\sum m_i)^2= 16 {m_p}^2$ 이며 $m=M=m_p$ 이므로 문턱 에너지 $E_{\textrm{th}} = 7m_pc^2$ 이다. 실제로는 더 큰 에너지가 사용된다. 
 
 
 :::
@@ -712,3 +712,166 @@ $$
 </div>
 
 </br>
+
+
+### 콤프턴 산란 {#sec-relativity_compton_scattering}
+
+
+@sec-relativity_massless_particle 에서 알아보았듯이 우리는 질량이 없는 빛 입자(photon) 에 대해 $E=pc$ 의 관계를 사용한다. 우리는 빛의 에너지 $E$ 는 플랑크 상수 $h$ 와 진동수 $\nu$ 에 대해 $E=h\nu$ 이므로 $p = h\nu/c$ 이다. 아인슈타인은 기적의 해인 1905 년도에 빛의 이중성에 관한 논문을 발표했으며 1923년 콤프턴이 $X$ 선을 흑연(grapite)에 산란시키는 실험을 수행하였다. $X$ 선은 흑연 내의 전자와 산란하게 되면 광자와 전자가 모두 산란되며 그것을 도식화하면 아래 @fig-relativity_compton_scattering 과 같다.
+
+![콤프턴 산란](../images/relativity/fig-relativity_compton_scattering.png){#fig-relativity_compton_scattering width=350}
+
+입사되는 광자의 진동수를 $\nu$, 산란 후 광자의 진동수를 $\nu'$ 이라고 하자. 산란된 전자는 $p_e$ 의 운동량을 갖는다. 에너지 보존에 의해 다음 관계가 성립한다.
+
+$$
+h\nu + m_ec^2 = h\nu' + \sqrt{m_e^2c^4+p_e^2c^2}
+$$
+
+또한 산란된 전자의 운동량 = 산란 전 광자의 운동량 - 산란후 광자의 운동량 이므로
+
+$$
+p_e^2 = \left(\dfrac{h\nu}{c}\right)^2 + \left(\dfrac{h\nu'}{c}\right)^2 -2 \left(\dfrac{h^2\nu \nu'}{c^2}\right)\cos \theta
+$$
+
+이다. 위의 두 식으로부터, 그리고 빛의 파장 $\lambda$ 와 진동수 $\nu$ 사이에 $\lambda = c/\nu$ 의 관계가 성립함을 이용하면 다음의 관계식을 얻는다. 
+
+$$
+\lambda' - \lambda = \dfrac{h}{m_ec}(1-\cos \theta).
+$$ {#eq-relativity_compton_scattering}
+
+즉 콤프턴 산란에 의한 파장의 변화와 광자의 산란각 $\theta$ 사이의 관계이다.  
+
+</br>
+
+### 4-힘 {#sec-relativity_4_force}
+
+비상대론적 역학의 $\boldsymbol{F}=\dfrac{d\boldsymbol{p}}{dt}$ 에 상응하는 상대론적인 4-힘을 4-운동량 $P^\mu$ 와 고유시간 $\tau$ 에 대해 다음과 같이 정의한다.
+
+$$
+F^\mu := \dfrac{dP^\mu}{d\tau}.
+$$ {#eq-relativity_definition_of_4_force}
+
+$P^\mu$ 에 대한 로렌츠 변환 $P^{\mu'} = \Lambda_{\mu}^{\mu'} P^\mu$ 를 생각하면
+
+$$
+F^{\mu'} = \dfrac{dP^{\mu'}}{d\tau} = \dfrac{d(\Lambda^{\mu'}_{\mu} P^\mu)}{d\tau} = \Lambda_{\mu}^{\mu'} F^\mu
+$$
+
+임을 안다. 즉 4-힘도 로렌츠 변화를 따른다. 이제 4-힘이 의미하는 바를 생각해보자. $d\tau = (1/\gamma)dt$ 이므로, 4-속도 $U^\mu$ 에 대해 
+
+$$
+(F^0,\,F^1,\,F^2,\,F^3) = \gamma \dfrac{d}{dt}\left(\gamma mc,\, mU^1,\, mU^2,\,mU^3\right)
+$$
+
+이다. 이 식의 의미를 알아보자. 우선 $\boldsymbol{f} = (F^1,\, F^2,\, F^3)$ 라고 하면, 
+
+$$
+\boldsymbol{f} = \gamma \dfrac{d}{dt}(\gamma m\boldsymbol{v}) = \gamma \dfrac{d\boldsymbol{p}}{dt} = \gamma \boldsymbol{F}
+$$
+
+라고 할 수 있다. $E=\gamma mc^2$ 이므로 $F^0  = \dfrac{1}{c}\dfrac{dE}{d\tau}$ 임을 이용하면
+
+$$
+2E \dfrac{dE}{d\tau} = \dfrac{dE^2}{d\tau} = \dfrac{d(m^2c^4 + p^2c^2)}{d\tau} = 2\left(\boldsymbol{p} \cdot \dfrac{d\boldsymbol{p}}{d\tau}\right)c^2
+$$
+
+이다.  $\boldsymbol{p} = \gamma m \boldsymbol{v},\, \boldsymbol{f} = \dfrac{d\boldsymbol{p}}{d\tau}$ 를 이용하면 다음의 결과를 얻는다.
+
+$$
+\dfrac{dE}{d\tau} = \dfrac{1}{\gamma m c^2} (\gamma m \boldsymbol{v} \cdot \boldsymbol{f})c^2 = \boldsymbol{v}\cdot \boldsymbol{f} = \gamma \boldsymbol{v} \cdot \boldsymbol{F}.
+$$
+
+즉
+
+$$
+F^\mu = \dfrac{dP^\mu}{d\tau} = \left(\gamma \dfrac{1}{c} \boldsymbol{v}\cdot \boldsymbol{F},\, \gamma \boldsymbol{F} \right)
+$$ {#eq-relativity-four-force}
+
+
+이다. 
+
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-relativity_uniformly_accelerated_motion}
+
+#### 상대론에서의 등가속 운동
+
+$x$ 축 상을 움직이는 질량 $m$ 입자가 다음과 같은 일정한 4-힘을 받는다고 하자. $t=0$ 일 때 $v(t=0)=0$ 이라고 하자.
+
+$$
+F^\mu = \left(\gamma \dfrac{1}{c} vF,\, \gamma F,\,0,\,0\right).
+$$
+
+즉 $F = \text{constant}$ 이다. 그렇다면,
+
+$$
+\dfrac{dP^1}{d\tau} = \gamma \dfrac{d}{dt} (\gamma mv)= \gamma F
+$$
+
+으로부터
+
+$$
+\dfrac{F}{m} =\dfrac{d(\gamma v)}{dt} 
+$$
+
+을 얻는다. 양변을 $t$ 에 대해 $(0,\,t)$ 구간에서 적분하면 
+
+$$
+\dfrac{Ft}{m} =  \dfrac{v}{\sqrt{1-v^2/c^2}}
+$$
+
+이므로
+
+$$
+\dfrac{v(t)}{c} = \dfrac{Ft/(mc)}{\sqrt{1+\left(Ft/(mc)\right)^2}}
+$$
+
+이다. 이는 @fig-relativity_uniform_acceleration 의 왼쪽 그림과 같으며 항상 $v(t)/c < 1$ 이다.
+
+
+![상대론적 등가속운동과 비상대론적 등가속 운동. 좌 우 그림에서 $\textrm{rel.}$ 은 상대론적 운동을 $\textrm{non-rel.}$ 은 비 상대론적 운동을 나타낸다.](../images/relativity/fig-relativity_uniform_acceleration.png){#fig-relativity_uniform_acceleration width=500}
+
+
+$a:=F/m$ 라고 하면
+
+$$
+v(t) = \dfrac{dx}{dt} = \dfrac{at}{\sqrt{1+(at/c)^2}} = \dfrac{c^2}{a}\dfrac{d}{dt}\left(\sqrt{1+\left(\dfrac{at}{c}\right)^2}\right)
+$$
+
+이므로 $x(t=0)=0$ 으로 놓으면
+
+$$
+x(t) = \dfrac{c^2}{a} \left(\sqrt{1+\left(\dfrac{at}{c}\right)^2} -1\right)
+$$
+
+이다. @fig-relativity_uniform_acceleration 의 오른쪽 그래프가 이를 표현한다. $x \ll 1$ 에서는 뉴튼 역학에서의 일정한 가속도에서의 운동과 거의 같으며 $ct>x$ 인 상대론적인 제한을 지킨다. 
+
+:::
+
+</div>
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-relativity_doffler_effect}
+
+#### 도플러 효과
+
+파동의 원인과 그것의 감지자가 상대적으로 움직일 때 파동의 진동수가 상대적인 운동에 따라 바뀌는 것을 도플러 효과라고 한다. 여기서는 진공중에서의 빛의 도플러 효과만을 다룬다. 이제 고전적인 도플러 효과를 보기로 하자. 우선 파동원 $S$ 가 정지해 있고 관측자 $O$ 가 파동원에 멀어지는 방향으로 속도 $v_O$ 로 이동할 경우,
+
+$$
+e^{i(k(x+v_Ot)-\omega t)} = e^{i(kx - (-kv_O+\omega)t)} = e^{i(kx - \omega't)}
+$$
+
+이다. 즉 관측자 에서 측정된 진동수 $\nu' = \nu - \dfrac{kv}{2\pi} = \nu - \dfrac{v_O}{c}\nu$ 이다. 즉, 
+
+$$
+\dfrac{\nu'}{\nu} = 1- \dfrac{v}{c}
+$$
+
+이다. 이제 파동원이 관측자에 멀어지는쪽으로 속도 $v_S$ 의 속도로 움직인다고 하자. 갈릴레오의 상대성에 의해 파동의 속도 $v
+
+
+:::

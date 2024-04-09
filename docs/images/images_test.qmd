@@ -9,58 +9,127 @@ crossref:
 
 
 ```{r, engine = 'tikz'}
-#| label: fig-relativity_pole_and_barn_paradox_1
+#| label: fig-relativity_compton_scattering_1
 #| code-fold: true
 #| echo: fenced
+#| fig-width: 4
+#| output: asis
+#| fig-align: center
+#| fig-cap: "컴프톤 산란"
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+\begin{tikzpicture}[line cap=round]
+
+\filldraw[] (-4, 0) circle (0.05) node [above] {$\textrm{photon}$};
+\draw[thick, -{Stealth[length=2mm]}] (-4, 0) -- (-2, 0);
+\node[below] at (-3, 0) {$h\nu/c$};
+\draw[dashed] (-2, 0) -- (3, 0);
+
+\shade[ball color=gray!40]   (0,0) circle (0.2) node [yshift=3ex] {$e^-$};
+
+\draw[dashed] (0, 0) -- (1.2, 1);
+\filldraw[] (1.2, 1) circle (0.05) ;
+\draw[thick, -{Stealth[length=2mm]}] (1.2, 1) -- (2.4, 2) node [xshift=-5ex] {$h\nu'/c$}; %'
+\draw[-{Stealth[length=2mm]}] (1, 0) arc (0:39.8:1);
+\node at (1.2, 0.4) {$\theta$};
+\draw[dashed] (0, 0) -- (1.2, -1.3);
+\draw[thick, -{Stealth[length=2mm]}] (1.2, -1.3) -- (1.8, -1.95) node[xshift=-5ex] {$p_e$};
+\shade[ball color=gray!80]   (1.2, -1.3)   circle (0.2);
+
+\end{tikzpicture}
+```
+
+</br>
+
+```{r, engine = 'tikz'}
+#| label: fig-relativity_uniform_acceleration_1
+#| code-fold: true
 #| fig-width: 6
 #| output: asis
 #| fig-align: center
-#| fig-cap: "장대와 헛간의 역설"
+#| fig-cap: "두 관성계에서의 자발적 붕괘"
 \usetikzlibrary {arrows.meta}
 \usetikzlibrary {calc}
 \begin{tikzpicture}[line cap=round, scale = 2]
 
-% font scale
-\def\fs{2.0}
-\def\tk{0.05}
-
-\draw [thick, -{Stealth[length=2mm]}] (-2., 0) -- (2.5, 0) node [right, scale=\fs] {$x$};
-\draw [thick, -{Stealth[length=2mm]}] (0, -1) -- (0, 5) node [above, scale=\fs] {$ct$};
-
-\filldraw [blue, opacity=0.2] (-1.0, 0) -- (2, 5) -- (3.0, 5) -- (-0.0, 0) -- cycle;
-\filldraw [red, opacity=0.2] (0, 0) -- (0, 5) -- (1, 5) -- (1, 0) -- cycle;
-\node[scale=\fs] at (0.5, 4.7) {$\textrm{barn}$};
-\node[scale=\fs] at (2.3, 4.7) {$\textrm{pole}$};
-
-\filldraw[teal] (-1.0, \tk) -- (-0.0, \tk) -- (-0.0, -\tk) -- (-1.0, -\tk) --cycle; 
-\filldraw[teal] (0, 1.67 + \tk) -- (1, 1.67 +\tk) -- (1, 1.67-\tk) -- (0, 1.67-\tk) --cycle; 
-
-\draw[thick] (-0.1, 1.67) node[left, scale=\fs] {$t_1$}-- (0.1, 1.67);
-\draw[thick] (-0.1, 3.33) node[left, scale=\fs] {$t_2$}-- (0.1, 3.33);
-\draw[dashed] (0.0, 3.33) -- (1.0, 3.33);
-
-\node[below, scale=\fs] at(0, -1) {$(a)\;\Sigma$};
+\draw [thick, -{Stealth[length=2mm]}] (-0.1, 0) -- (2, 0) node [right, scale=0.7] {$t$};
+\draw [thick, -{Stealth[length=2mm]}] (0, -0.1) -- (0, 1.5) node [left, scale=0.7] {$v(t)$};
 
 
-\begin{scope}[xshift=6cm]
-
-\draw [thick, -{Stealth[length=2mm]}] (-2., 0) -- (3, 0) node [right, scale=\fs] {$x'$};
-\draw [thick, -{Stealth[length=2mm]}] (0, -1) -- (0, 5) node [above, scale=\fs] {$ct'$};
-
-\filldraw [blue, opacity=0.2] (0.0, 0) -- (0, 5) -- (1.25, 5) -- (1.25, 0) -- cycle;
-\filldraw [red, opacity=0.2] (1.25, 0) -- (-1.75, 5) -- (-1.11, 5) -- (1.89, 0) -- cycle;
-\node[scale=\fs] at (-1.3, 4.7) {$\textrm{barn}$};
-\node[scale=\fs] at (0.7, 4.7) {$\textrm{pole}$};
-
-\filldraw[teal] (0, \tk) -- (1.25, \tk) -- (1.25, -\tk) -- (0, -\tk) --cycle; 
-\filldraw[teal] (0, 2.083 + \tk) -- (1.25, 2.083+\tk) -- (1.25, 2.083-\tk) -- (0, 2.083-\tk) --cycle; 
-\filldraw[teal] (0, 1.06 + \tk) -- (1.25, 1.06+\tk) -- (1.25, 1.06-\tk) -- (0, 1.06-\tk) --cycle; 
+\def\a{2.0};
+\def\b{1.0};
+\draw[dashed] (0, 1) -- (2, 1);
+\draw[very thick, teal] plot[variable=\t,domain=0:2, samples=100, smooth,thick] ({\t}, {\a*\t/sqrt(1+(\a*\t)^2)}) node[below left, scale=0.7, black] {rel.};
+\draw[very thick, dashed, red] (0, 0) -- (0.6, 1.2) node[above, scale=0.7, black] {non-rel.};
+\node [left, scale=0.7] at (0, 1) {$c$}; 
 
 
-\draw[thick] (-0.1, 1.06) node[left, scale=\fs] {$t_1'$}-- (0.1, 1.06);
-\draw[thick] (-0.1, 2.083) node[left, scale=\fs] {$t_2'$}-- (0.1, 2.083);
+\begin{scope}[shift={(2.5,0)}]
+\draw [thick, -{Stealth[length=2mm]}] (-0.1, 0) -- (1.5, 0) node [right, scale=0.7] {$x$};
+\draw [thick, -{Stealth[length=2mm]}] (0, -0.1) -- (0, 1.5) node [left, scale=0.7] {$ct$};
 
-\node[below, scale=\fs] at(0, -1) {$(b)\;\Sigma'$};
+\draw [dashed] (0, 0) -- (1.5, 1.5) node[right, scale=0.7] {$x=ct$};
+
+\draw[very thick, teal] plot[variable=\t,domain=0:1.0, samples=100, smooth,thick] ({\t}, {sqrt((\t+1/\a)^2 -1/(\a^2))}) node [above, scale=0.7, black] {rel.};
+\draw[very thick, dashed, red] plot[variable=\t,domain=0.0:1.5, samples=100, smooth,thick] ({\t}, {sqrt(2*\t/\a)}) node [right, scale=0.7, black] {non-rel.};
+
 \end{scope}
+\end{tikzpicture}
+```
+
+</br>
+
+```{r, engine = 'tikz'}
+#| label: fig-relativity_doffler_effect
+#| code-fold: true
+#| fig-width: 6
+#| output: asis
+#| fig-align: center
+#| fig-cap: "두 관성계에서의 자발적 붕괘"
+
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+\begin{tikzpicture}[line cap=round, scale = 2]
+
+
+
+\draw[fill=none, blue](0,0) circle (0.4);
+\draw[fill=none, blue](0,0) circle (0.60);
+\draw[fill=none, blue](0,0) circle (0.80);
+\draw[fill=none, blue](0,0) circle (1);
+
+\filldraw[] (0, 0) circle (0.05);
+
+\begin{scope}[shift={(3,0)}]
+\coordinate (A) at (-1.6, 0);
+\coordinate (B) at (1.0, 0);
+\coordinate (C) at (0.309, 0.951);
+
+\draw[fill=none, blue, thick](0,0) circle (1);
+\draw[thick,  -{Stealth[length=2mm]}] (0, 0) node [below, scale=0.8] {$O$} -- (C) node [above, scale=0.8] {$C$};
+\draw[thick, red,  -{Stealth[length=2mm]}] (A) node [below, black, scale=0.8] {$A$} -- (C);
+\draw[thick, teal,  -{Stealth[length=2mm]}] (C) -- (B) node [below, black, scale=0.8] {$B$} ;
+\draw[thick, black,-{Stealth[length=2mm]}] (A) -- (B);
+\node[below, scale=0.8] at (-0.3, 0) {$\boldsymbol{p}_1$};
+
+\draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.3,0.0) arc (0:70:0.3);
+\node [scale=0.8] at (0.35, 0.2) {$\Theta$};
+
+\draw [teal, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.7,0.0) arc (180:127:0.3);
+\node [scale=0.8] at (0.63, 0.2) {$\theta_2$};
+
+\draw [red, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-1.2,0.0) arc (0:35:0.3);
+\node [scale=0.8] at (-1.1, 0.11) {$\theta_1$};
+\draw [thick, red, dashed] (A) -- (-0.625, 0.7806);
+\draw [red, dashed, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-0.9,0.0) arc (0:39:0.7);
+\node [scale=0.8] at (-0.70, 0.15) {$\theta_{\textrm{max}}$};
+
+\node[above,scale=0.8] at ($0.3*(A) + 0.7*(C)$ ){$\boldsymbol{p}'_1$};
+\node[ right,scale=0.8] at ($0.5*(B) + 0.5*(C)$ ){$\boldsymbol{p}'_2$};
+
+\node[scale=0.8] at (0.0, -1.2) {$(b)\, m_1>m_2$};
+\end{scope}
+
+
 \end{tikzpicture}
 ```
