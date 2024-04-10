@@ -47,7 +47,7 @@ crossref:
 #| fig-width: 6
 #| output: asis
 #| fig-align: center
-#| fig-cap: "두 관성계에서의 자발적 붕괘"
+#| fig-cap: "상대론적 등가속도 운동"
 \usetikzlibrary {arrows.meta}
 \usetikzlibrary {calc}
 \begin{tikzpicture}[line cap=round, scale = 2]
@@ -80,56 +80,74 @@ crossref:
 </br>
 
 ```{r, engine = 'tikz'}
-#| label: fig-relativity_doffler_effect
+#| label: fig-relativity_doppler_effect_1
 #| code-fold: true
 #| fig-width: 6
 #| output: asis
 #| fig-align: center
-#| fig-cap: "두 관성계에서의 자발적 붕괘"
+#| fig-cap: "도플러 효과"
 
 \usetikzlibrary {arrows.meta}
 \usetikzlibrary {calc}
 \begin{tikzpicture}[line cap=round, scale = 2]
 
 
-
+% 관찰자가 움직일때의 도플러 효과
 \draw[fill=none, blue](0,0) circle (0.4);
 \draw[fill=none, blue](0,0) circle (0.60);
 \draw[fill=none, blue](0,0) circle (0.80);
 \draw[fill=none, blue](0,0) circle (1);
 
-\filldraw[] (0, 0) circle (0.05);
+\filldraw[] (0, 0) circle (0.03) node[below, scale=0.7] {$S$};
+\filldraw[] (1, 0) circle (0.03) node[right, scale=0.7] {$O$};
+\draw[thick, -{Stealth[length=2mm]}] (1, 0) -- (0.7, 0);
+
+\node [below, scale = 0.7] at (0, -1.1) {$(a)$}; 
 
 \begin{scope}[shift={(3,0)}]
-\coordinate (A) at (-1.6, 0);
-\coordinate (B) at (1.0, 0);
-\coordinate (C) at (0.309, 0.951);
+\draw[fill=none, blue](0,0) circle (1);
+\draw[fill=none, blue](0.1,0) circle (0.8);
+\draw[fill=none, blue](0.2,0) circle (0.60);
+\draw[fill=none, blue](0.3,0) circle (0.4);
 
-\draw[fill=none, blue, thick](0,0) circle (1);
-\draw[thick,  -{Stealth[length=2mm]}] (0, 0) node [below, scale=0.8] {$O$} -- (C) node [above, scale=0.8] {$C$};
-\draw[thick, red,  -{Stealth[length=2mm]}] (A) node [below, black, scale=0.8] {$A$} -- (C);
-\draw[thick, teal,  -{Stealth[length=2mm]}] (C) -- (B) node [below, black, scale=0.8] {$B$} ;
-\draw[thick, black,-{Stealth[length=2mm]}] (A) -- (B);
-\node[below, scale=0.8] at (-0.3, 0) {$\boldsymbol{p}_1$};
+\filldraw[] (0, 0) circle (0.03) node[below, scale=0.7] {$S$};
+\filldraw[] (1, 0) circle (0.03) node[right, scale=0.7] {$O$};
+\draw[thick, -{Stealth[length=2mm]}] (0, 0) -- (0.3, 0);
+\node [below, scale = 0.7] at (0, -1.1) {$(b)$}; 
 
-\draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.3,0.0) arc (0:70:0.3);
-\node [scale=0.8] at (0.35, 0.2) {$\Theta$};
-
-\draw [teal, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.7,0.0) arc (180:127:0.3);
-\node [scale=0.8] at (0.63, 0.2) {$\theta_2$};
-
-\draw [red, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-1.2,0.0) arc (0:35:0.3);
-\node [scale=0.8] at (-1.1, 0.11) {$\theta_1$};
-\draw [thick, red, dashed] (A) -- (-0.625, 0.7806);
-\draw [red, dashed, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-0.9,0.0) arc (0:39:0.7);
-\node [scale=0.8] at (-0.70, 0.15) {$\theta_{\textrm{max}}$};
-
-\node[above,scale=0.8] at ($0.3*(A) + 0.7*(C)$ ){$\boldsymbol{p}'_1$};
-\node[ right,scale=0.8] at ($0.5*(B) + 0.5*(C)$ ){$\boldsymbol{p}'_2$};
-
-\node[scale=0.8] at (0.0, -1.2) {$(b)\, m_1>m_2$};
 \end{scope}
 
 
 \end{tikzpicture}
 ```
+
+```{r, engine = 'tikz'}
+#| label: fig-relativity_galactic_jet
+#| code-fold: true
+#| fig-width: 6
+#| output: asis
+#| fig-align: center
+#| fig-cap: "도플러 효과"
+
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+\begin{tikzpicture}[line cap=round, scale = 2]
+
+
+\draw [gray!20, fill=gray!20] (0,0) ellipse (2 and 1);
+\node [black, scale=1] at (0, 0.5) {Galaxy};
+\draw [very thick, blue, -{Stealth[length=2mm]}] (0, 0) -- (-3, -0.5) node[above, scale=1] {$\boldsymbol{v}$};
+\draw [] (0, -3) -- (0, -2.05);
+\draw [] (0, -2) -- (0, -0);
+
+\draw (-0.1,-1.5) .. controls + (0,-0.1) and + (0,0.1) ..  ++ (0.2, 0)    ++ (0,-0.2);
+\draw (-0.1,-1.55) .. controls + (0,-0.1) and + (0,0.1) ..  ++ (0.2, 0)    ++ (0,-0.2);
+
+\draw[-{Stealth[length=2mm]}] (0, -0.3) arc (270:190:0.3);
+\node [] at (-0.3, -0.3) {$\theta$}; 
+\end{tikzpicture}
+```
+
+
+
+
