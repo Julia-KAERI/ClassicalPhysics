@@ -482,7 +482,13 @@ $$
 \beta = \dfrac{(u + V)/c}{1 + (uV)/c^2},\qquad \gamma = \gamma_1 \gamma_2 (1+\beta_1\beta_2) = \dfrac{1}{\sqrt{1-\beta^2}}
 $$ 
 
-임을 안다. 즉 $\Sigma''$ 의 속도는 $\Sigma$ 에서 봤을 때 $u+v$ 가 아니라 $\dfrac{(u+v)}{1+ (uv)/c^2}$ 임을 알 수 있다.
+임을 안다. 즉 $\Sigma''$ 의 $x''$ 방향속도 는 $\Sigma$ 에서 봤을 때 $u+v$ 가 아니라 $\dfrac{(u+v)}{1+ (uv)/c^2}$ 임을 알 수 있다. 또한 $y''$ 방향 속도는
+
+$$
+v_y(\Sigma'') = \dfrac{y''}{t''}= \dfrac{y}{\gamma (t - Vx/c^2)} = \dfrac{v_y(\Sigma)}{\gamma(1+Vu/c^2)}
+$$
+
+이다. 
 
 
 </br>
@@ -914,7 +920,7 @@ $$
 \nu' = \gamma (1-\beta)\nu = \sqrt{\dfrac{1-\beta}{1+\beta}}\nu
 $$
 
-이다. $\beta>0$ 이면 파동원이 관측자에서 멀어질 때 이며 $\nu'  < \nu$ 이므로 빛의 진동수가 작아진다.(**적색 편이(redshift)**). $\beta<0$ 이면 파동원이 관측자에게서 가까워 질 때 이며 $\nu'>\nu$ 이므로 및의 진동수가 커진다.(**청색 편이(redshift)**)
+이다. $\beta>0$ 이면 파동원이 관측자에서 멀어질 때 이며 $\nu'  < \nu$ 이므로 빛의 진동수가 작아진다. 이를 **적색 편이(redshift)** 라 한다. $\beta<0$ 이면 파동원이 관측자에게서 가까워 질 때 이며 $\nu'>\nu$ 이므로 및의 진동수가 커진다. 이를 **청색 편이(blueshift)** 라고 한다. 
 
 :::
 
@@ -925,17 +931,241 @@ $$
 
 ::: {#exr-helliwell_2_12}
 
-멀리 떨어진 은하의 중심에서 우리의 시야에서 90 도 방향으로 물질의 분사 즉 jet 을 관측했다고 하자. 은하의 적색편이로부터 지구에서 은하의 중심까지의 거리를 알고 있기때문에 우리는 분사된 물질이 주어진 시간동안 얼마나 나가는지 계산할 수 있지만 은하의 핵과 분사 사이의 각이 증가하는 것을 관측했다. 이 정보로부터 우리는 jet 의 속도를 알 수 있다. 이 분출된 jet 로부터의 빛이 우리에게 오는데 걸리는 시간은 jet 의 시작점으로부터의 시간과 거의 차이가 나지 않는데 이것은 거리의 차이가 거의 나지 않기 때문이다. Jet 와 우리의 시야가 은하의 중심에 대해 $\theta$ 의 각도를 이룬다고 하자. Jet 의 속력 $v$ 에 대해 우리의 시야 방향 성분 $v_{\parallel} = v\cos \theta$ 이며 시야의 지각 방향 성분 $v_\perp = v \sin \theta$ 이다. Jet 가 우리쪽으로 점점 다가오기 때문에 $\theta$ 는 점점 작아진다.
+멀리 떨어진 은하의 중심에서 우리의 시야에서 90 도 방향으로 물질의 분사 즉 jet 를 관측했다고 하자. 은하의 적색편이로부터 지구에서 은하의 중심까지의 거리를 알고 있기때문에 우리는 분사된 물질이 주어진 시간동안 얼마나 나가는지 계산할 수 있지만 은하의 핵과 분사 사이의 각이 증가하는 것을 관측했다. 이 정보로부터 우리는 jet 의 속도를 알 수 있다. 이 분출된 jet 로부터의 빛이 우리에게 오는데 걸리는 시간은 jet 의 시작점으로부터의 시간과 거의 차이가 나지 않는데 이것은 거리의 차이가 거의 나지 않기 때문이다. Jet 와 우리의 시야가 은하의 중심에 대해 $\theta$ 의 각도를 이룬다고 하자. Jet 의 속력 $v$ 에 대해 우리의 시야 방향 성분 $v_{\parallel} = v\cos \theta$ 이며 시야의 지각 방향 성분 $v_\perp = v \sin \theta$ 이다. Jet 가 우리쪽으로 점점 다가오기 때문에 $\theta$ 는 점점 작아진다.
 
 ($a$) 우리가 지구에서 관측한 jet 의 속도를 $v_\textrm{app}$ 라고 하자. 이 속도가 빛의 속도보다 클 수 있음을 보여라.
 
-($b$) 
+($b$) 주어진 $v$ 에 대해 $v_\textrm{app}$ 를 최대로 하는 $\theta$ 를 구하라.
+
+($c$) $v=0.99c$ 일 때의 $v_{\textrm{app}}$ 의 최대값을 구하라. 
+:::
+
+::: {.solution}
+
+![은하계와 Jet](../images/relativity/fig-relativity_galactic_jet.png){width=400}
+
+지구의 좌표계를 $\Sigma'$, 우리가 관측하는 은하의 좌표계를 $\Sigma$ 라고 하자. $\Sigma$ 좌표계에서 지구 방향에 대해 $\theta$ 의 각도로 $v$ 의 속력으로 jet 가 분출되었다고 하자. $t=0$ 일 때 분출되었고 $t$ 만큼의 시간이 흘렀다면 지구와의 거리는 $vt\sin\theta$ 만큼 줄었을 것이다. 그렇다면 $t=0$ 일 때 의 빛이 지구에 도달하는 시간과 $t$ 만큼 흘렀을 때의 jet 에서의 빛이 지구에 도달하는 시간의 차이 $\Delta t$ 는
+
+$$
+\Delta t = t + \dfrac{L-vt \cos \theta}{c} - \dfrac{L}{c} = t-\dfrac{vt}{c}\cos \theta
+$$ 
+
+이다. Jet 가 $vt\sin \theta$ 만큼 이동했으므로 지구에서 측정한 jet 의 속력 $v_{\textrm{app}}$ 는
+
+$$
+v_{\textrm{app}}= \dfrac{vt \sin \theta}{t(1-(v/c)\cos \theta)} = \dfrac{v\sin \theta}{1-(v/c)\cos \theta}
+$$ {#eq-halliwell_2_12_1}
+
+이다. $v_\textrm{app}>c$ 이려면 
+
+$$
+\dfrac{v\sin \theta}{1-(v/c)\cos \theta} > c \implies v> \dfrac{c}{\sqrt{2} \cos (\theta - \pi/4)}
+$$ {#eq-halliwell_2_12_2}
+
+의 조건이 필요하다. 예를 들어 $\theta = \pi/4$, 이면 $v>c/\sqrt{2} \approx 0.707 c$ 이면 된다.
+
+($b$) @eq-halliwell_2_12_1 로부터 $dv_{\textrm{app}}/d\theta = 0$ 이 되도록 하는 $\theta = \cos^{-1}(v/c)$ 이다. 이 때 $v_{\textrm{app}} = \dfrac{v}{\sqrt{1-(v/c)^2}}$ 이다.
+
+($c$) $v_{\textrm{app}}$ 의 최대값은 $7.02c$.
+
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_15}
+
+속도 변환에 관한 식을 미분함으로서 가속도 변환에 대한 식을 얻을 수 있다. $\Sigma \to \Sigma'$ 좌표계 변환에서의 가속도 $a_x'$ 을 $a_x,\,v_x,\,V$ 로 표현하라.
 
 :::
 
 ::: {.solution}
 
-지구에서 은하 중심까지의 거리를 $L$, 이라고 하고 jet 가 지구에서 봤을 때 $t$ 의 시간 동안 가로로 움직인 거리를 $d$ 라고 하자. $v_\textrm{app}= d/t$, $d=\tau v_\perp$ 이므로 $v_\textrm{app} = \tau v_{\perp}/t = v_\perp/\gamma < v_\perp$ 
+$v'_x = \dfrac{v_x-V}{1-v_xV/c^2}$ 이므로,
 
+$$
+\begin{aligned}
+a'_x &= \dfrac{dv'_x}{dt'} = \dfrac{d}{dt'}\left(\dfrac{v_x-V}{1-v_xV/c^2}\right) = \dfrac{dt}{dt'}\dfrac{d}{dt} \left(\dfrac{v_x-V}{1-v_xV/c^2}\right) \\
+&=\dfrac{dt}{dt'} \dfrac{a_x (1-v_xV/c^2) - (v_x-V)(-V/c^2 a_x)}{(1-v_xV/c^2)^2}\\
+&=\dfrac{dt}{dt'} \dfrac{(1-V^2/c^2)a_x}{(1-v_xV/c^2)^2} = \dfrac{dt}{dt'} \dfrac{a_x}{\gamma^2(1-v_xV/c^2)^2}
+\end{aligned}
+$$
+
+이다. $t' = \gamma \left(t- \dfrac{V}{c^2}x\right)$ 이므로, 
+
+$$
+\dfrac{dt'}{dt} = \gamma \left(1- \dfrac{V}{c^2}v_x\right)
+$$
+
+이다. $\dfrac{dt'}{dt} = \dfrac{1}{dt/dt'}$ 이므로,
+
+$$
+a'_x = \dfrac{a_x}{\gamma^3(1-v_xV/c^2)^3}
+$$
+
+이다. $v'_y = \dfrac{v_y}{\gamma(1-v_xV/c^2)},\, v'_z = \dfrac{v_z}{\gamma(1-v_xV/c^2)},$ 이므로, 
+
+$$
+\begin{aligned}
+a'_y &= \dfrac{dv'_y}{dt'} = \dfrac{dt}{dt'}\dfrac{d}{dt}\left(\dfrac{v_y}{\gamma(1-v_xV/c^2)}\right) \\
+&= \dfrac{dt}{dt'} \dfrac{a_y(1-v_xV/c^2) + a_xv_yV/c^2}{\gamma(1-v_xV/c^2)^2} \\
+&= \dfrac{a_y - (a_yv_x-a_xv_y)V/c^2}{\gamma^2 (1-v_xV/c^2)^3}, \\
+a'_z & = \dfrac{a_z - (a_zv_x-a_xv_z)V/c^2}{\gamma^2 (1-v_xV/c^2)^3}
+\end{aligned}
+$$
+
+임을 알 수 있다. 
+:::
+
+</br>
+
+::: {#exr-helliwell_2_16}
+
+전자가 $0.9c$ 의 속도로 움직인다. 운동량이 2배가 되려면 얼마나 빨리 움직여야 하는가?
+
+:::
+
+::: {.solution}
+
+$$
+\dfrac{m_ev}{\sqrt{1-v^2/c^2}} = \dfrac{2m_e(0.9c)}{\sqrt{1-0.9^2}} \implies v=0.972 c
+$$
+:::
+
+</br>
+
+::: {#ext-helliwell_2_17}
+
+원자핵이 실험실에서 정지 해 있다가 각각 운동량이 $p_\gamma$ 인 두개의 같은 방향에 대한 광자에 순서대로 맞았으며 광자는 원자핵에 흡수되었다. 원자핵의 최종 질량이 $M^\ast$ 일 때 속도를 구하여라.
+
+:::
+
+::: {.solution}
+
+전후의 운동량을 비교해보면, $2p_\gamma = \gamma M^\ast v$ 이므로 $v = \dfrac{2p_\gamma c}{\sqrt{(M^\ast c)^2 + 4{p_\gamma}^2}}$.
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_18}
+
+두 입자가 정면 충돌 후 하나로 뭉쳐 정지했다. 첫번째 입자는 질량 $m$ 에 속도가 $(24/25)c$ 이고 두번째 입자는 질량 $M$ 에 속도 $(5/13)c$ 이었다. $M$ 을 $m$ 으로 표현하라.
+
+:::
+
+::: {.solution}
+
+$v=(24/25)c$, $u=(5/13)c$ 로 표현하면 운동량 보존으로 부터 $\gamma_v mv = \gamma_u M u$ 이어야 한다. 즉,
+
+$$
+M = \dfrac{\gamma_v v}{\gamma_u u}m = \dfrac{\sqrt{1-(5/13)^2}}{\sqrt{1-(24/25)^2}}m = 8.2286 m
+$$
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_19}
+
+우주선 $A$ 가 $(3/5)c$ 로 가면서 먼저 출발하여 같은 방향으로 $(4/5)c$ 로 가고 있는 우주선 $B$ 에 메시지를 보냈다. 메시지는 $A$ 좌표계에서 $100\,\textrm{fs} (1\,\textrm{fs}=10^{-15} \,\textrm{s})$ 간격의 펄스로 이루어졌다. $B$ 가 받은 펄스 간격은 얼마인가?
+
+:::
+
+::: {.solution}
+
+$B$ 에서 봤을 때 $A$ 의 속도 $v=\dfrac{\frac{4c}{5} - \frac{3c}{5}}{1-\frac{4}{5}\frac{3}{5}}= \dfrac{5c}{13}$ 이다. 도플러 효과를 생각하자. 펄스 간격 $T=1/\nu$ 이므로
+
+$$
+T_B= \sqrt{\dfrac{1+5/13}{1-5/13}}T_A = 150\, \textrm{fs}
+$$
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_20}
+
+외계인의 우주선이 지구로 $(3/5)c$ 로 접근하는 것이 관측되었다. 요격 탐사선(intercepting probe) 가 지구에서 $(4/5)c$ 로 우주선을 향해 발사되었다. 둘이 접근함에 따라 탐사선이 외계인을 향해 탐사선의 좌표계에서 펄스 간격이 $12\,\textrm{ps}$ 인 신호를 외계선으로 보냈다. 외계선에서 받은 신호의 펄스 간격은 얼마인가?
+
+:::
+
+::: {.solution}
+
+외계선에서 본 지구 탐사선의 속도 $v=\dfrac{\frac{3c}{5}+\frac{4c}{5}}{1+ \frac{3}{5} \frac{4}{5}}=\dfrac{35c}{37}$ 이므로 도플러 효과를 생각하면
+
+$$
+T_{\textrm{alien}} = \sqrt{\dfrac{1-35/37}{1+35/37}}T_{\textrm{probe}} = 2\,\textrm{ps}
+$$
+:::
+
+</br>
+
+::: {#exr-helliwell_2_21}
+
+지구의 오르간주자가 연주하는 바흐의 Toccata and Fugue in D Minor 를 강력한 라디오 안테나로 송출하고 있다. 지구로부터 $(3/5)c$ 의 속도로 멀어지는 우주선의 여행자가 이 음악을 듣고 있다. 이 여행자가 듣는 조성은?
+
+:::
+
+::: {.solution}
+
+도플러 효과로부터 $\nu_{\textrm{starship}} = \sqrt{\dfrac{1-3/5}{1+3/5}} \nu_{\textrm{earth}}= \dfrac{1}{2}\nu_{\textrm{earth}}$ 이다. 음악의 모든 진동수가 반으로 줄었으므로 역시 D minor 이다.
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_22}
+
+안드로메다 은하(M31)는 우리가 속한 은하군(group of galaxies) 에 속하며 우리의 은하(MW)로부터 250만 광년 떨어져 있다. M31 에서 방출된 빛의 파장을 분광계로 측정했을 때 적색 편이가 $\Delta \lambda/\lambda = -0.001001$ 로 측정되었다. 이 때 $\lambda$ 는 실험실에서 측정한 파장이며 $\Delta \lambda$ 는 파장의 변화로 $\Delta \lambda < 0$ 인 것은 청색 편이를 의미한다. 
+
+($a$) 이 파장의 변화가 도플러 효과 때문이라면 M31 은 얼마의 속도로 우리에게 다가오는가?
+
+($b$) 이 속도가 M31 이 우리 은하계로 다가오는 속도이며, 시간에 따라 변하지 않는다면 얼마 후에 M31 은 우리 은하와 충돌하는가?
+
+실제로는 ($a$) 의 계산속도보다 느린데 태양계 자체가 지구 은하를 중심으로 움직이기 때문이다.
+:::
+
+::: {.solution}
+
+원래 빛의 파장을 $\lambda_0$, 실험실에서 측정한 이동한 파장을 $\lambda$ 라고 하자. 
+
+$(\lambda-\lambda_0)/\lambda = - 0.001001$ 이므로 $\lambda_0/\lambda = 1.001001 = \nu/\nu_0$ 이다. 
+
+$$
+\dfrac{\nu}{\nu_0} = \sqrt{\dfrac{1-\beta}{1+\beta}} = 1.001001
+$$
+
+이므로 $\beta \approx 0.001$ 이며 따라서 대략 25 억년 후에 충돌한다.
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_23}
+
+양성자가 $xy$ 평면에서 $v=(3/5)c$ 로 $x,\,y$ 욱 각각에 $45^\circ$ 각도를 이루며 움직인다. 
+
+($a$) 양성자의 4-속도 $U^\mu$ 를 구하고 $\eta_{\mu\nu}U^\mu U^\nu$ 를 계산하라.
+
+($b$) $+x$ 방향으로 $(4/5)c$ 속도로 움직이는 좌표계에서의 양성자의 4-속도를 구하고 역시 불변제곱량을 구하라.
+:::
+
+::: {.solution}
+
+($a$) $\gamma = \dfrac{5}{4}$ 이므로 $U^\mu = \left(\dfrac{5c}{4},\, \dfrac{3\sqrt{2}c}{8}, \, \dfrac{3\sqrt{2}c}{8}, 0,  \right)$ 이다. 따라서 
+
+$$
+\eta_{\mu\nu}U^\mu U^\nu = \frac{25c^2}{16}-\frac{9c^2}{32} -\frac{9c^2}{32}= c^2.
+$$
+
+
+($b$) $V=\dfrac{4c}{5}$ 에 대해 $\beta = - \dfrac{4}{5},\, \gamma = \dfrac{5}{3}$ 이다. 로렌츠 변환행렬 
+
+$$
+\boldsymbol{\Lambda} = \begin{bmatrix} \gamma & \gamma \beta & 0 & 0 \\ \gamma \beta & \gamma & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix} = \dfrac{1}{3}\begin{bmatrix} 5 & -4 & 0 & 0 \\ -4 & 5 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix}
+$$
+
+에 대해 $U' = \boldsymbol{\Lambda}U$ 를 구하면 $U' = (1.376,\, -0.783,\, 0.530,  \, 0)$ 이며 역시 불변제곱량 $\eta_{\mu\nu}U'^\mu U'\nu = c^2$ 이다. 
 
 :::
