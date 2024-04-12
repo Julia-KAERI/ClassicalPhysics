@@ -1169,3 +1169,83 @@ $$
 에 대해 $U' = \boldsymbol{\Lambda}U$ 를 구하면 $U' = (1.376,\, -0.783,\, 0.530,  \, 0)$ 이며 역시 불변제곱량 $\eta_{\mu\nu}U'^\mu U'\nu = c^2$ 이다. 
 
 :::
+
+</br>
+
+::: {#exr-helliwell_2_24}
+
+파이온 $\pi^+$ 는 자신의 정지좌표계에서 $26\, \textrm{ns}$ 후에 붕괴한다. 입자가속기에서 에너지 $100 \, mc^2$ 의 파이온을 만들었다고 하자. 
+
+($a$) 붕괴 전에 날아가는 거리는 얼마인가?
+
+($b$) 다른 파이온은 그의 질량 에너지와 같은 운동에너지를 가진다. 이것이 거리 $D$ 를 날아가 붕괴하면 그것의 정지좌표계에서 얼마나 오래 살아 남는가?
+
+:::
+
+::: {.solution}
+
+($a$) $\gamma mc^2 = 100 mc^2$ 이므로 $\gamma=100$, $v=\sqrt{0.9999}c$ 이다. 실험실 좌표계에서의 붕괴 시간은 $\gamma \times 26\,\textrm{ns}=2.6\times 10^{-6}\,\textrm{sec}$ 이며 빛의 속도를 $c=3.0\times 10^8\,\textrm{m/s}$ 로 잡으면 거리는 $\sqrt{0.9999}\times c \times (\gamma \times 26\, \textrm{ns})=780\, \textrm{m}$.
+
+($b$) $\gamma=2$ 이므로 $v=(\sqrt{3}/2)c$ 이다. 실험실 좌표계에서의 생존 시간은 $D/v=2D/(\sqrt{3c})$ 이며, 파이온 정지좌표계에서의 시간은 $D/v/\gamma = D/(\sqrt{3}c)$ 이다.
+
+:::
+
+</br>
+
+
+::: {#exr-helliwell_2_25}
+
+총 에너지 $E=12000 \textrm{MeV}$ 인 광자가 질량 $M_0$ 인 정지상태의 핵에 흡수되었고 이후 핵의 질량이 $M$ 이 되고 $(12/13)c$ 의 속도로 움직인다. 이것의 운동량을 $\textrm{MeV}/c$ 단위로 구하고 질량 $M$ 과 $M_0$ 를 $\textrm{MeV}/c^2$ 단위로 구하라.
+
+:::
+
+::: {.solution}
+
+$E=12000\,\textrm{MeV}$ 이므로 광자의 운동량 $p_\gamma = 12000/c \textrm{MeV}/c$ 이다. 흡수 후 입자의 운동량 $p=\gamma Mv= (12/5)Mc$ 이다. 흡수 전후의 4 운동량 보존에 의해
+
+$$
+\left(12000/c + M_0c,\, 12000/c,\,0,\,0\right) = (\sqrt{M^2c^4 + p^2c^2}/c,\, p,\,0,\,0)
+$$
+
+이며 $12000/c = \dfrac{12}{5}Mc$ 이므로 $M=5000 \, \textrm{MeV}/c^2$, $M_0 = 1000\,\textrm{MeV}/c^2$ 이다.
+
+:::
+
+</br>
+
+
+::: {#exr-helliwell_2_27}
+
+운동량 4-벡터와 속도 4-벡터는 time-like 이고, 힘에 대한 4-벡터는 space-like 임을 보여라.
+
+:::
+
+::: {.solution}
+
+속도 4벡터 $U=(\gamma c,\, \gamma v_x,\, \gamma v_y,\, \gamma v_z)$ 에 대해 $\eta_{\mu\nu}U^\mu U^\nu = \gamma^2(c^2-v^2)= c^2>0$ 이므로 time-like 이다. 운동량 4 벡터 $P = mU$ 이므로 $\eta_{\mu\nu}P^\mu P^\nu = m^2c^2>0$ 이므로 역시 time-like 이다.
+
+
+4-힘 벡터 $F=\left(\dfrac{\gamma}{c} \boldsymbol{v}\cdot \boldsymbol{F},\, \gamma \boldsymbol{F}\right)$ 에 대해 
+
+$$
+\eta_{\mu\nu}F^\mu F^\nu = \dfrac{\gamma^2}{c^2}(\boldsymbol{v}\cdot \boldsymbol{F})^2 - \gamma^2 \|\boldsymbol{F}\|^2 \le \gamma^2(\beta^2-1)\|\boldsymbol{F}\|^2 < 0
+$$
+
+이므로 4-힘은 space-like 이다.
+
+:::
+
+
+::: {#exr-helliwell_2_28}
+
+#### 시공간에 대한 푸앙카레 변환
+
+및에 대한 파동방정식은 스칼라 포텐셜 $\phi$ 에 대해 $\nabla^2 \phi - \dfrac{1}{c^2}\partial_t^2\phi =0$ 을 만족한다. 시공간에 대한 linear translation 에 댛
+
+:::
+
+::: {.solution}
+
+
+
+:::
