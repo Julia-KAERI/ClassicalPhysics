@@ -156,6 +156,31 @@ crossref:
 \end{tikzpicture}
 ```
 
+```{r, engine = 'tikz'}
+#| label: fig-yebin_1
+#| code-fold: true
+#| fig-width: 4
+#| output: asis
+#| fig-align: center
+#| fig-cap: "도플러 효과"
+
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+\begin{tikzpicture}[line cap=round, scale = 2]
+
+
+\draw [thick] (0, 0) -- (0, 1) -- (-3, 0) --cycle;
+\draw [] (-0.2, 0) -- (-0.2, 0.2) -- (0, 0.2);
+\node [right] at (0, 0) {$C$};
+\node [right] at (0, 1) {$A$};
+\node [left] at (-3, 0) {$B$};
+
+\end{tikzpicture}
+```
+
+
+
+
 
 
 
