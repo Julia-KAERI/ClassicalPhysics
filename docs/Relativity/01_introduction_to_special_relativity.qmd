@@ -1235,17 +1235,103 @@ $$
 
 :::
 
+</br>
 
 ::: {#exr-helliwell_2_28}
 
 #### 시공간에 대한 푸앙카레 변환
 
-및에 대한 파동방정식은 스칼라 포텐셜 $\phi$ 에 대해 $\nabla^2 \phi - \dfrac{1}{c^2}\partial_t^2\phi =0$ 을 만족한다. 시공간에 대한 linear translation 에 댛
+빛에 대한 파동방정식은 스칼라 포텐셜 $\phi$ 에 대해 
+
+$$
+\square\,\phi :=  \dfrac{1}{c^2}\partial_t^2\phi - \nabla^2 \phi =0
+$$
+
+을 만족한다. 이때 $\square$ 를 **달랑베르 연산자(d'Alembert operator)** 라고 한다. 시공간에 대한 선형 변환에 의해 위의 형태가 변하지 않을 때 이 변환을 **푸앙카레 변환(Poincaré transformations)** 이라고 한다. 푸앙카레 변환에는 (i) 시공간에 대한 4 종류의 translation, (ii) 공간에서의 3 가지 회전, (iii) 3가지의 로렌츠 변환 이 있음을 보여라.
+ 
+:::
+
+::: {.solution}
+
+4-벡터 $X=(ct,\,x,\,y,\,z)$ 에 대한 편미분 연산자 $\partial^\mu$ 와 $\partial_\mu$ 는
+
+$$
+\begin{aligned}
+\partial^\mu &= \left(\dfrac{1}{c}\partial_t,\, -\partial_x,\, -\partial_y,\, -\partial_z\right), \\
+\partial_\mu &= \left(\dfrac{1}{c}\partial_t,\, \partial_x,\, \partial_y,\, \partial_z\right), \\
+\end{aligned}
+$$
+
+을 의미한다. 
+
+($i$) *translation* : $\partial_\mu = \partial_{\mu'}$ 이므로 달랑베르 연산자의 형태가 변하지 않는다.
+
+($ii$) *rotation* : 회전의 정의에 의해 $\partial^{2}_\mu = {\partial}^2_{\mu'}$ 이며 $\partial_t = \partial_{t'}$ 이다. 따라서 달랑베르 연산자의 형태가 변하지 않는다.
+
+($iii$) *Lorentz transformation* 회전에 의해 달랑베르 연산자의 값이 불변이므로 한 좌표축이 다른 한 좌표축에 대해 움직이는 방향을 $x,\,x'$ 으로 잡을 수 있다. 
+
+$$
+x' = \gamma(x + \beta ct),\qquad y'=y,\qquad z'=z,\qquad ct' = \gamma(ct + \beta x)
+$$
+
+이므로, 
+
+$$
+\begin{aligned}
+\square &= \dfrac{1}{c^2}\partial_t^2 - (\partial_x)^2 - (\partial_y)^2 - (\partial_z)^2 \\
+&= \dfrac{1}{c^2}\left(\dfrac{dt'}{dt}\partial_{t'} + \dfrac{dx'}{dt}\partial_{x'}\right)^2 - \left(\dfrac{dt'}{dx}\partial_{t'} + \dfrac{dx'}{dx}\partial_{x'}\right)^2 - (\partial_{y'})^2 - (\partial_{z'})^2  \\
+&= \dfrac{1}{c^2}  \left(\gamma \partial_{t'} + \gamma\beta c \partial_{x'}\right)^2 - \left( \dfrac{\gamma\beta}{c} \partial_t + \gamma \partial_{x'}\right) - (\partial_{y'})^2 - (\partial_{z'})^2  \\
+&= \dfrac{1}{c^2}\partial_{t'}^2 - \partial_{x'}^2 - \partial_{y'}^2 - \partial_{z'}^2 
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_29}
+
+#### 벨의 우주선 역설 
+우리의 관성좌표계에서 거리 $D$ 만큼 앞뒤로 떨어져 정지해있는 두 우주선이 있다. 정지길이 $D$ 인 가벼운 끈이 두우주선을 연결하고 있다고 하자. 두 우주선이 동시에 오른쪽으로 등가속운동을 시작한다고 하자. 이 끈은 여전히 그들을 묶고 있다. 두 우주선은 동시에 출발했고 같은 가속도를 가지고 있으므로 두 우주선의 간격과 줄의 길이는 우리 좌표계에서는 일정하다. 그러나 움직이는 줄은 $\sqrt{1-\beta^2}$ 만큼 로렌츠 수축되어야 하며, 따라서 이 줄은 끊어져야 하는가? 아니면 우리 좌표계에서 줄의 길이는 일정해야하며 이 줄은 끊어지지 않는가? *Hint* : 가속되는 물체의 **고유 길이(proper length)** 는 가속되는 물체와 같이 움직이는 어떤 좌표계에서 그 좌표계가 순간적으로 이 물체에 대해 정지했을 때의 좌표계에서 측정한 길이이다. [이를 [벨의 우주선 역설(Bell's spaceship paradox)](https://en.wikipedia.org/wiki/Bell%27s_spaceship_paradox) 이라고 한다. 이 문제는 E. Dewan 과 M. Beran 에 의해 1959년 제기되었으며 J. S. Bell 에 의해 1987 년 수정되었다. Bell 에 의해 제기되어 유명해져서 벨의 역설이라고 불리운다. 이 위키의 영어 문서를 꼭 읽어보기 바란다.]{.aside} 
 
 :::
 
 ::: {.solution}
 
+앞에 있는 우주선을 $B$, 뒤에 있는 우주선을 $A$ 라고 하자. 정지 좌표계에서 우주선 $A$ 가 속도 $v$ 가 되었을 때, $B$ 의 속도는 역시 $v$ 이며 $A-B$ 사이의 거리가 $D$ 가 된다. 로렌츠 수축만을 생각하면 이 줄에 장력을 받아야 하며, 두 우주선이 가속될수록 장력이 커질 것이기 때문에 이 줄은 언젠가 끊어져야 한다. 이것은 정지해 있는 좌표계에서이며 로켓과 움직이는 좌표계에서는 어떨까? 
 
+
+$t=0$ 일 때 $A$ 의 위치를 $x=0$, $B$ 의 위치를 $x=D$ 라고 하자. $t=0$ 에서 가속되었다고 하자. 시간 $t$ 가 지난 후에도 정지좌표계에서의 $\overline{AB}=D$ 이어야 한다. 이 때 우주선 정지좌표계에 로렌츠 변환을 적용하면
+
+$$
+x'_A = \gamma (x + \beta ct),\, ct'_A =  \gamma( ct + \beta x),\qquad x'_B = \gamma(x+\beta ct + D),\, ct'_B = \gamma (ct + \beta (x+D))
+$$
+
+이다. $x'_B- x'_A = \gamma D > D$ 이므로 우주선 좌표계에서의 길이는 $D$ 보다 크고, 따라서 충분히 가속되었다면 줄은 끊어져야 한다. 
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_30}
+
+($a$) 두 이벤트의 시간 순서가 모든 관성좌표계에서 같을 필요충분조건은 이 두 이벤트가 $c$ 이하의 신호로 묶여 있을 경우임을 보여라.
+
+($b$) $\Sigma$ 관성계에의 $A$ 에서 $B$ 로의 신호가 $v=2c$ 로 전달된다고 하자. $V,\,(|V|<c)$ 로 움직이는 $\Sigma'$ 관성계에서 $B$ 의 신호가 $A$ 의 신호보다 먼저 도착했다고 할 때 $V$ 를 구하라.
+
+:::
+
+::: {.solution}
+
+($a$) $\Sigma$ 좌표계에서 $(t_A,\,x_A),\,(t_B,\,x_B)$ 이벤트가 $t_B>t_A$ 로 발생했다고 하자. 로렌츠 변환에 의해 $\Sigma'$ 좌표계에서는
+
+$$
+t'_B-t'_A = \gamma(t_B-t_A) - \dfrac{\gamma\beta}{c}(x_B-x_A)
+$$
+
+이며, $t'_B-t'_A<0$ 이려면 $\dfrac{x_B-x_A}{t_B-t_A}> \dfrac{c}{\beta} > 1$ 이다. 
+
+
+($b$) ($a$) 의 결과에서 $2c=\dfrac{x_B-x_A}{t_B-t_A} > \dfrac{c}{\beta}$ 이므로 $\beta>\dfrac{1}{2}$. 즉 $V>\dfrac{1}{2}c$.
 
 :::
