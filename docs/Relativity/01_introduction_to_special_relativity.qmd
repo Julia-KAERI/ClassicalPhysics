@@ -859,30 +859,29 @@ $$
 
 </br>
 
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-relativity_doffler_effect}
+### 도플러 효과
 
-#### 도플러 효과
+파동의 원인과 그것의 관측자가 상대적으로 움직일 때 파동의 진동수가 상대적인 운동에 따라 바뀌는 것을 **도플러 효과(Doppler effect)** 라고 한다. 파동의 진행 방향과 수평한 방향으로 움직일 때를 Logitudinal Doppler effect 라고 하고 파동의 진행방향과 수직으로 움직일 때를 transverse Doppler effect 라고 한다. 
 
-![도플러 효과. $(a)$ 관찰자가 움직이는 경우, ($b$) 파동원이 움직이는 경우](../images/relativity/fig-relativity_doppler_effect.png){#fig-relativity_doppler_effect width=600}
+![Longitudinal Doppler effect. $(a)$ 관찰자가 움직이는 경우, ($b$) 파동원이 움직이는 경우](../images/relativity/fig-relativity_doppler_effect.png){#fig-relativity_doppler_effect width=600}
 
-파동의 원인과 그것의 감지자가 상대적으로 움직일 때 파동의 진동수가 상대적인 운동에 따라 바뀌는 것을 **도플러 효과(Doppler effect)** 라고 한다. 여기서는 진공중에서의 빛의 도플러 효과만을 다룬다. 
+
 
 </br>
 
 **고전적인 도플러 효과**
 
-이제 고전적인 도플러 효과를 보기로 하자. 우선 파동원 $S$ 가 정지해 있고 관측자 $O$ 가 파동원에 가까워지는방향으로 속도 $v_O$ 로 이동할 경우 (@fig-relativity_doppler_effect ($a$)),
+우선 Longitudinal Doppler effect 를 보자. 파동의 속도를 $c$ 로 놓자. 이제 고전적인 도플러 효과를 보기로 하자. 우선 파동원 $S$ 가 정지해 있고 관측자 $O$ 가 파동원에 가까워지는방향으로 속도 $v_O$ 로 이동할 경우 (@fig-relativity_doppler_effect ($a$)),
 
 $$
-e^{i(k(x+v_Ot)-\omega t)} = e^{i(kx - (-kv_O+\omega)t)} = e^{i(kx - \omega't)}
+e^{i(k(x-v_Ot)-\omega t)} = e^{i(kx - (kv_O+\omega)t)} = e^{i(kx - \omega't)}
 $$
 
-이다. 즉 관측자 에서 측정된 진동수 $\nu' = \nu - \dfrac{kv}{2\pi} = \nu - \dfrac{v_O}{c}\nu$ 이다. 즉, 
+이다. 즉 관측자 에서 측정된 진동수 $\nu' = \nu + \dfrac{kv}{2\pi} = \nu + \dfrac{v_O}{c}\nu$ 이다. 즉, 
 
 $$
-\dfrac{\nu'}{\nu} = 1- \dfrac{v_O}{c}
+\dfrac{\nu'}{\nu} = 1+ \dfrac{v_O}{c}
 $$
 
 이다. 이제 파동원이 관측자에 가까워지는 쪽으로 속도 $v_S$ 의 속도로 움직인다고 하자(@fig-relativity_doppler_effect ($b$)). 빛의 파장이 $v_s$ 에 따라
@@ -898,6 +897,9 @@ $$
 
 이다. 
 
+Transverse 의 경우를 생각하면 진동수의 변화가 생기지 않음을 쉽게 예상 할 수 있다.
+
+
 </br>
 
 **상대론적 도플러 효과**
@@ -908,7 +910,7 @@ $$
 P^\mu = \left(\dfrac{h\nu}{c},\,\dfrac{h\nu}{c},\,0,\,0\right)
 $$
 
-이다. $\Sigma'$ 을 관측자의 관성계, $\Sigma$ 를 파동원의 관성계라고 하면 로렌츠 변환에 의해 
+이다. $\Sigma'$ 을 관측자의 관성계, $\Sigma$ 를 파동원의 관성계라고 하자. Longitudinal 한 경우 로렌츠 변환에 의해 
 
 $$
  \left(\dfrac{h\nu'}{c},\,\dfrac{h\nu'}{c},\,0,\,0\right) = P^{\mu'} = \Lambda^{\mu'}_{\mu}P^\mu = \left(\gamma \dfrac{h\nu}{c} -  \gamma \beta \dfrac{h\nu}{c},\, \gamma \dfrac{h\nu}{c} -  \gamma \beta \dfrac{h\nu}{c},\,0,\,0\right)
@@ -922,7 +924,14 @@ $$
 
 이다. $\beta>0$ 이면 파동원이 관측자에서 멀어질 때 이며 $\nu'  < \nu$ 이므로 빛의 진동수가 작아진다. 이를 **적색 편이(redshift)** 라 한다. $\beta<0$ 이면 파동원이 관측자에게서 가까워 질 때 이며 $\nu'>\nu$ 이므로 및의 진동수가 커진다. 이를 **청색 편이(blueshift)** 라고 한다. 
 
-:::
+이제 Transverse 한 경우를 생각하자. 빛의 4-운동량을 $P^\mu = \left(\dfrac{h\nu}{c},\,0,\, \dfrac{h\nu}{c},\,0\right)$ 이라고 하면 로렌츠 변환에 의해
+
+$$
+\left(\dfrac{h\nu'}{c},\,p_1,\,p_2,\,0\right) = P^{\mu'} = \Lambda^{\mu'}_{\mu}P^\mu = \left(\gamma \dfrac{h\nu}{c},\, -  \gamma \beta \dfrac{h\nu}{c},\,\dfrac{h\nu}{c},\,0\right)
+$$
+
+이며 $\nu' = \gamma \nu>\nu$ 이다. 고전적인 도플러 효과와는 다르게 Transverse 의 경우에도 청색 편이가 발생한다.  
+
 
 
 </br>
@@ -1335,3 +1344,203 @@ $$
 ($b$) ($a$) 의 결과에서 $2c=\dfrac{x_B-x_A}{t_B-t_A} > \dfrac{c}{\beta}$ 이므로 $\beta>\dfrac{1}{2}$. 즉 $V>\dfrac{1}{2}c$.
 
 :::
+
+</br>
+
+::: {#exr-helliwell_2_32}
+
+식의 표현이 모든 관성계에서 관성계에 대한 표시만을 제외하고 형태가 동일하다면 이 표현을 **로렌츠 공변(Lorentz covariant)** 라고 한다. 예를 들어 $A^\mu \eta_{\mu \nu}B^\nu = K$ 는 4-벡터 $A^\mu,\,B^\nu$ 와 상수 $K$ 에 대해 로렌츠 공변이다. 로렌츠 변환에 대해 
+
+$$
+K=A^\mu \eta_{\mu\nu}B^\nu = A^{\mu'} \Lambda^\mu_{\mu'} \eta_{\mu \nu} B^{\nu'}\Lambda^{\nu}_{\nu'} = A^{\nu'} \eta_{\mu' \nu'}B^{\nu'} 
+$$
+
+임을 안다. 이 값은 또한 **로렌츠 스칼라(Lorentz scalar)** 인데 로렌츠 변환에 대해 불변이기 때문이다. 아래와 같이 주어진 양 중에 어떤 것이 로렌츠 스칼라인가? 여기서 $K$ 는 상수이다. 
+
+($a$) $KA^\mu \eta_{\mu \nu}$, ($b$) $C^\mu = D^\mu (A^\lambda \eta_{\lambda \nu} B^\nu)$, ($c$) $KA^\mu \eta_{\mu \nu} B^\lambda \eta_{\lambda \sigma}D^\nu F^\sigma$.
+
+:::
+
+::: {.solution}
+
+($c$) 만 로렌츠 스칼라이다.
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_33}
+
+로렌츠 스칼라가 아닌 로렌츠 공변식 $C^\lambda = K^\lambda h(A^\mu \eta_{\mu \nu}B^\nu)$ 를 생각하자. $h$ 는 $(\;)$ 안의 양에 대한 함수이다. 여기서 위첨자가 하나인 것은 4-벡터이다. 로렌츠 변환에 대해 $A^\mu \eta_{\mu \nu}B^\nu$ 는 로렌츠 공변이며 로렌츠 스칼라이다. 따라서 $h(A^\mu \eta_{\mu \nu}B^\nu)$ 도 로렌츠 변환에 대해 그 값이 변하지 않는다. 그렇지만 $K^\mu$ 는 4-벡터이며 $K^\mu = \Lambda_{\mu'}^{\mu}K^{\mu'}$ 과 같이 변환된다는 것을 안다. $C^\lambda$ 는 4-벡터처럼 변환하며 관찰자 $O'$ 은 $C^{\lambda'} = K^{\lambda'} h(A^{\mu'} \eta_{\mu' \nu'}B^{\nu'})$ 로 쓸 수 있다. 이런 양은 4-벡터와 같이 변환되므로 **로렌츠 벡터(Lorentz vector)** 라고 한다. ($a$) $K\eta_{\mu \nu}$, ($b$) $C^\lambda = D^\mu A^\lambda \eta_{\mu \nu}B^\nu$, ($c$) $KA^\mu \eta_{\mu \nu} B^\lambda \eta_{\lambda \sigma} D^\nu F^\sigma$ 가운데 로렌츠 벡터는 무엇인가?
+
+:::
+
+::: {.solution}
+
+($b$) 만 로렌츠 벡터이다.
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_34}
+
+로렌츠 공변 개념은 어떤 표현식이 관성계 변환에 대해 어떻게 변할지를 빠르게 결정 할 수 있게 해준다. 상대성 이론은 모든 물리법칙이 서로 다른 관성계에서 같은 형태를 가져야 할 것을 요구한다. 따라서 물리법칙의 표현식은 로렌츠 공변이어야 한다. 개정된 제 2 법칙을 보자.
+
+$$
+f^\mu = \dfrac{dp^\mu}{d\tau}.
+$$
+
+여기서 $f^\mu$ 는 로렌츠 벡터이므로 다른 관성계에서
+
+$$
+f^{\mu'} = \dfrac{dp^{\mu'}}{d\tau}
+$$
+
+이 된다. 예를 들어 constant 4-벡터 $K^\mu$ 에 대해 $f^\mu = K^\mu$ 라고 쓸 수 있다.
+
+($a$) 상대론적인 용수철 법칙 $f^\mu = -(0,\, k\boldsymbol{r})$ ($k=\text{const.}$) 는 로렌츠 공변식인가?
+
+($b$) 수정된 용수철 법칙 $f^\mu = -KX^\mu = -k(ct,\, \boldsymbol{r})$ 은 로렌츠 공변식인가?
+
+($c$) 중력 $\boldsymbol{F} = - (k/r^3)\boldsymbol{r}$ 은 로렌츠 공변식인가?
+:::
+
+::: {.solution}
+
+($a$) No, ($b$) Yes, ($c$) No.
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_35}
+
+가장 일반적인 로렌츠 변환은 다음을 만족하는 $4\times 4$ 행렬 $\boldsymbol{\Lambda}$ 임을 보여라.
+
+$$
+\boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda}= \boldsymbol{\eta} ,\qquad \text{and}\qquad \det (\boldsymbol{\Lambda}) =1.
+$$
+
+로렌츠 변환은 정의에 의해 시공간에서 정의된 선형변환이며 광속을 보존하기 때문에 이 두 조건이 위의 식을 만족하는 필요충분조건임을 보이면 된다. 반사(reflection) 은 두번째 조건에 의해 배제된다.
+
+:::
+
+::: {.solution}
+
+$X=(ct, x, y, z),\, X'=(ct',\,x',\,y',\,z')$ 이라고 하자. $X'=\boldsymbol{\Lambda}X$ 일 때 
+
+$$
+(ct)^2-x^2-y^2-z^2= (c't')^2-(x')^2-(y')^2-(z')^2
+$$
+
+, 즉 $X^T\boldsymbol{\eta}X = (X')^T \boldsymbol{\eta} X'$ 을 만족해야 하므로
+
+$$
+X^T\boldsymbol{\eta}X =(X')^T\boldsymbol{\eta}X' = (\boldsymbol{\Lambda}X)^T \boldsymbol{\eta}(\boldsymbol{\Lambda}X)= X^T \boldsymbol{\Lambda}^T\boldsymbol{\eta}\boldsymbol{\Lambda}X
+$$
+
+이어야 한다. 따라서 $\boldsymbol{\eta} = \boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda}$ 이어야 한다. 로렌츠 변환은 $\boldsymbol{\beta}$ 에 대해 연속이어야 하므로 $\det(\boldsymbol{\Lambda})$ 도 연속이다. $\boldsymbol{\beta}=0$ 일 때 행렬식이 $1$ 이므로 $\det(\boldsymbol{\Lambda})=1$ 이다. 
+
+이제 $\boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda}= \boldsymbol{\eta}$ 임을 가정하면 $X^\mu \eta_{\mu \nu} X^{\mu} = X^{\mu'}\eta_{\mu' \nu'}X^{\nu'}$ 임을 안다. 즉 광속을 보존하는 변환이다.
+
+:::
+
+
+</br>
+
+::: {#exr-helliwell_2_36}
+
+$\pi^0$ 메존은 질랑 $m_\pi=135.0\, \textrm{MeV}/c^2$ 이며 대기권 상부에서 우주에서 입사하는 양성자가 질소 원자 핵과 충돌하여 생성된다. $\pi^0$ 메존의 평균적인 라이프타임은 $8.4 \times 10^{-17}\,\textrm{s}$ 이며 거의 대부분 두개의 광자로 붕괴한다. 어떤 에너지 $E=500 \, \textrm{MeV}$ 인 파이온이 지면을 향해 평균 라이프타임의 세배 만큼 낙하하다가 두개의 광자로 붕괴되었는데 하나는 위쪽으로, 하나는 아래쪽으로 붕괴했다고 하자. ($a$) $\pi^0$ 는 생성 후 붕괴까지 지면으로 얼마나 낙하했는가? ($b$) 지면의 관성계에서 두 광자의 진동수를 구하라.
+
+:::
+
+::: {.solution}
+
+($a$) $500\,\textrm{MeV} = \gamma m_\pi c^2$ 으로부터 $\gamma = 3.7$ 임을 안다. $\pi^0$ 의 속도 $v=0.963 c$ 이며 (파이온 정지좌표계에서) 라이프타임($t_L$) 의 세배 만큼 낙하하다가 붕괴했으므로 지면 관성계에서의 낙하 시간은 
+
+$$
+\gamma \times 3 \times t_L = 9.333 \times 10^{-16}\,\textrm{s}
+$$
+
+이다. 따라서 총 낙하 거리는 $v*9.333 \times 10^{-16}= 2.6964\times 10^{-7}\,\textrm{m}$ 이다. 
+
+($b$) 4-운동량 보존으로부터
+
+$$
+\left(\dfrac{E}{c},\,0,\,0,\,p\right) = \left(\dfrac{h(\nu_1+\nu_2)}{c},\,0,\,0,\,\dfrac{h(-\nu_1+\nu_2)}{c}\right)
+$$
+
+을 얻는다. 여기서 $\nu_1$ 은 위로 향하는 광자의 진동수이고 $\nu_2$ 는 아래로 향하는 광자의 진동수이다. $E=\sqrt{m_\pi^2c^4 + p^2c^2}$ 이므로, $p=481.43\, \textrm{MeV}/c$ 이다. 이로부터 $\nu_1 = 4.514\times 10^{21}\, \textrm{Hz}$, $\nu_2 = 1.187 \times 10^{23}\, \textrm{Hz}$ 임을 계산 할 수 있다. 
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_37}
+
+$\pi^-$ 메존은 질량 $m_\pi = 140.0\, \textrm{MeV}/c^2$ 이며 가속기의 $(p,\,p)$ 충돌로 생성된다. 파이온은 곧바로 뮤온과 뮤온-반중성미자로 붕괴된다.($\pi^- \to \mu^- + \overline{\nu}_\mu$) 반중성미자는 매우 적은 질량을 가지며, 이 계산에서는 무시 할 수 있다. 뮤온의 질량은 $105.7 \, \textrm{MeV}/c^2$ 이다. 원래의 파이온에 대한 정지관성계에서 ($a$) 뮤온의 에너지와 3-운동량을 구하고 ($b$) 반중성미자의 총 에너지와 3-운동량을 구하라.
+
+:::
+
+::: {.solution}
+
+$\pi^-$ 의 운동량은 $0$ 이므로 붕괴 전 후의 4-운동량 보존을 생각하면 다음이 성립한다.
+$$
+\left(m_\pi c,\,0,\,0,\,0\right) = \left(\dfrac{\sqrt{m_\mu^2c^4 + p_\mu^2c^2}}{c} + p_{\overline{\nu}},\, p_\mu + p_{\overline{\nu}},\,0,\,0\right).
+$$
+
+이로부터 $p_\mu + p_{\overline{\nu}}=0$ 이며,
+
+$$
+m_\mu^2c^2 + p_\mu^2 = (m_\pi c - p_\overline{\nu})^2 = m_\pi^2c^2 + p_\mu^2 + 2p_\mu m_\pi c
+$$
+
+이므로, 
+
+$$
+p_\mu = \dfrac{m_\mu^2 c - m_\pi^2 c}{2m_\pi} = 30.1 \,\textrm{MeV}/c,\qquad p_{\overline{\nu}}=-30.1\,\textrm{MeV}/c
+$$
+
+이다.
+
+($a$) $E_{\mu} = \sqrt{m_\mu^2 c^4 + p_\mu^2c^2} = 109.9 \,\textrm{MeV}$, $\boldsymbol{p}_\mu = (30.1\, \textrm{MeV}/c,\,0,\,0)$ 
+
+($b$) $E_{\overline{\nu}}= 30.1\,\textrm{MeV},\, \boldsymbol{p}_{\overline{\nu}} = (-30.1\, \textrm{MeV}/c,\,0,\,0)$ 
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_38}
+
+힉스 입자는 $125 \,\textrm{GeV}/c^2$ 의 질량 에너지를 갖는다. 일단 상성되면 힉스입자는 다양한 집합의 입자로 곧바로 붕괴하는데 60% 정도의 시간동안 $(b\overline{b})$ 쿼크-반쿼크 쌍으로 붕괴한다. $b$ 는 bottom quark 로 쿼크, 반쿼크 모두 $4.2 \, \textrm{GeV}/c^2$ 의 질량 에너지를 가진다. 이 반응은 $H \to b + \overline{b}$ 혹은 $H \to b\overline{b}$ 로 쓴다. 어떤 힉스 입자가 $v=(4/5)c$ 의 속도루 실험실 좌표계에서 움직이다가 $(b\overline{b})$ 로 붕괴되었으며 $b$ 는 앞방향 $\overline{b}$ 는 뒷방향으로 움직였다고 하자. 실험실 관성계에서의 $b$ 와 $\overline{b}$ 의 에너지와 운동량을 계산하라.
+
+:::
+
+::: {.solution}
+
+힉스 정지 좌표계, 즉 운동량 중심 좌표계에서 생각하자. 붕괴 전후의 4 운동량은
+
+$$
+\left(125\,\textrm{GeV}/c,\, 0,\,0,\,0 \right) = \left(\sqrt{m_b^2c^2 + p_b^2} + \sqrt{m_\overline{b}^2c^2 + p_\overline{b}^2},\, p_b+p_{\overline{b}},\,0,\,0\right)
+$$
+
+이므로 $p_b = \sqrt{(62.5)^2-(4.2)^2}\,\textrm{GeV}/c = 62.36\, \textrm{GeV}/c = -p_{\overline{b}}$ 이다. $\beta = 4/5,\, \gamma= 5/3$ 에 대해 로렌츠 변환을 수행하면, $E_b=187.31\, \textrm{GeV}$, $p_b = 187.27\, \textrm{GeV}/c$, $E_\overline{b}=21.02\, \textrm{GeV}$, $p_\overline{b} = -20.6\, \textrm{GeV}/c$.
+
+:::
+
+</br>
+
+::: {#exr-helliwell_2_39}
+
+**타키온(Tachyons)** 은 빛보다 빨리 움직이는 가상의 입자이다. ($a$) 타키온에 허수 질량을 부여한다면, 즉 $m=im_0,\, m_0\in \mathbb{R}$ 라고 하면 타키온의 4-운동량은 실수임을 보여라. ($b$) 4-운동량의 invariant square 는 음수임을 보여라.
+
+:::
+
+::: {.solution}
+*trivial*
+:::
+
+</br>
+
