@@ -82,6 +82,8 @@ $$
 
 ::: {#exr-helliwell_1_9}
 
+#### Helliwell 1.9
+
 질량 $m$ 인 물체에 drag force $F=-kv^n$ 이 가해진다. 물체가 $t=0$ 에서 속도가 $v_0$ 일 때 이후의 속도를 시간에 대한 함수로 구하라.
 :::
 
@@ -105,6 +107,8 @@ $$
 </br>
 
 ::: {#exr-helliwell_1_10}
+
+#### Helliwell 1.10
 
 질량 $m$, 반지름 $R$ 인 작은 공이 정지상태에서 점성계수 $\eta$ 인 액체로 떨어졌다. 여기에 작용하는 힘은 중력 $mg$ 와 스토크스 법칙에 의한 선형 drag force $F_{\text{Stokes}} = - 6 \pi \eta R v$ 이다. 공의 속력을 시간의 함수로 구하고, 이 답이 시간이 짧을 때 와 길 때 make sense 함을 보여라.
 
@@ -142,6 +146,8 @@ $$
 </br>
 
 ::: {#exr-helliwell_1_11}
+
+#### Helliwell 1.11
 
 본문에서 우리는 정지 상태에서 중력 $mg$ 와 $v^2$ 에 비례하는 drag force 가 가해지는 물체의 위치는  
 
@@ -192,7 +198,7 @@ $$
 
 </br>
 
-### Dampled harmonic osciilator
+### 감쇠 조화 진동자(Damped harmonic osciilator)
 
 이제 앞서의 viscouse drag 처럼 속도에 비례하는(하지만 방향은 반대힌) 힘이 작용한다고 하자. 앞으로의 계산의 편의를 위해 앞의 경우와는 달리 비례상수를 $2m\beta$ 로 놓는다. 그렇다면 운동방정식은 
 
@@ -284,9 +290,15 @@ $$
 x_p(t) = \text{Re}(\tilde{x}(t)) = \dfrac{f_0}{\sqrt{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}} \cos (\omega t + \theta_0 + \phi_0)
 $$ {#eq-particular_solution_of_ddho}
 
-이다. 그렇다면 일반해는 @eq-characteristic_solution_of_dho_for_overdampled, @eq-characteristic_solution_of_dho_for_underdampled, @eq-characteristic_solution_of_dho_for_criticallly_damped 가운데 해당되는 경우와 @eq-particular_solution_of_ddho 의 합으로 표현된다. 앞서 언급했듯이 $t\gg 1$ 이면 일시적인 해는 $0$ 으로 수렴하기 때문에 $x_p(t)$ 가 주도적이 된다. 이를 반영하여 $x_p(t)$ 를 **안정한 해 (steady solution)** 이라고 한다. 흥미로운 것은 외부 힘의 진동수 $\omega$ 와 조화진동자의 고유진동수 $\omega_0$ 가 가까울수록 $x_p(t)$ 의 진폭이 커지며 $\omega = \omega_0$ 라면 진폭이 발산하게된다. 이를 **공명(resonance)** 라고 한다. $x_0 (\omega) =\dfrac{f_0}{\sqrt{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}}$ 라고 할 때 $\omega/\omega_0$ 에 대한 $x_0(\omega)$ 는 @fig-resonance 와 같다. 
+이다. 그렇다면 일반해는 @eq-characteristic_solution_of_dho_for_overdampled, @eq-characteristic_solution_of_dho_for_underdampled, @eq-characteristic_solution_of_dho_for_criticallly_damped 가운데 해당되는 경우와 @eq-particular_solution_of_ddho 의 합으로 표현된다. 앞서 언급했듯이 $t\gg 1$ 이면 일시적인 해는 $0$ 으로 수렴하기 때문에 $x_p(t)$ 가 주도적이 된다. 이를 반영하여 $x_p(t)$ 를 **안정한 해 (steady solution)** 이라고 한다. 흥미로운 것은 외부 힘의 진동수 $\omega$ 와 조화진동자의 고유진동수 $\omega_0$ 가 가까울수록 $x_p(t)$ 의 진폭이 커지며 $\omega = \omega_0$ 라면 진폭이 발산하게된다. 이를 **공명(resonance)** 라고 한다. 안정해의 진폭 $x_0(\omega)$ 는 다음과 같이 표현된다.
 
-![Resonance](../images/classical%20mechanics/fig-resonance.png){#fig-resonance width=340}
+$$
+x_0 (\omega) =\dfrac{f_0}{\sqrt{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}}
+$$ {#eq-amplitude_of_steady_solution}
+
+$x_0$ 를 $\omega/\omega_0$ 에 대해 표현하면 @fig-resonance 와 같다. 
+
+![공명 곡선 (Resonance curve)](../images/classical%20mechanics/fig-resonance.png){#fig-resonance width=340}
 
 </br>
 
@@ -298,21 +310,41 @@ $$
 이므로, @eq-ddho_emo0 를 이용하면 
 
 $$
-\dfrac{dE}{dt} =  m \dot{x}\ddot{x} + m\omega_0^2 x\dot{x} = -2m \beta \dot{x}^2 + \dot{x}F(t) 
+\dfrac{dE}{dt} =  m \dot{x}\ddot{x} + m\omega_0^2 x\dot{x} = -2m \beta \dot{x}^2 + m\omega_0^2x \dot{x}+ \dot{x}F(t) 
 $$
 
-이며, $t \gg 0$ 에 대해 $\dot{x}_c(t)\to 0,\,x_c(t) \to 0$ 이므로 $x_p(t)$ 에 대한 것만 생각해도 된다. 
+이며, $t \gg 0$ 에 대해 $\dot{x}_c(t)\to 0,\,x_c(t) \to 0$ 이므로 $x_p(t)$ 에 대한 것만 생각해도 된다. $x_p(t) = x_0(\omega)e^{-\beta t}\cos (\omega t + \theta_0)$ 꼴이므로 $dE/dt$ 는 $\sin (\omega t + \theta_0)$ 와 $\cos (\omega t + \theta_0)$ 의 곱의 선형결합이라는 것을 짐작 할 수 있다. 우리는 한 주기에 대해 평균적으로 얼마나 에너지가 변화하는지를 계산 할 수 있다. 한 주기 $T=2\pi/\omega$ 이므로 한 주기동안의 평균적인 에너지 변화량 $\langle P \rangle$ 은 다음과 같다. 
 
 $$
-E
+\langle P\rangle :=  \dfrac{1}{T} \int_0^T \dfrac{dE}{dt}\, dt
 $$
 
+이다. 
+
+$$
+\begin{aligned}
+\int_0^T \cos^2 (\omega t +\theta_0) \, dt = \int_0^T \sin^2 (\omega t +\theta_0) \, dt = \dfrac{1}{2},\\
+\int_0^T \cos(\omega t+\theta_0) \sin (\omega t + \theta_0)\, dt = 0
+\end{aligned}
+$$ 
+
+임을 이용하면, 
+$$
+\begin{aligned}
+\langle P \rangle &= -m\beta \omega^2 (x_0(\omega))^2 + \dfrac{1}{2} f_0\cos \theta_0 x_0(\omega) \\
+&= -\dfrac{m\beta \omega^2 f_0^2}{(\omega_0^2-\omega^2)^2+ 4\beta^2 \omega^2} + \dfrac{f_0^2 \cos \theta_0}{2\sqrt{(\omega_0^2-\omega^2)^2+ 4\beta^2 \omega^2}} &\text{!to be checked}
+\end{aligned} 
+$$
+
+이다. 
 
 </br>
 
 ### 연습문제
 
 ::: {#exr-helliwell_1_16}
+
+#### Helliwell 1.16
 
 중성미자(neutrino) 는 전자 중성미자($\nu_e$), 뮤온 중성미자 ($\nu_\mu$), 타우 중성미자 ($\nu_\tau$) 의 세가지 형태가 있다고 여겨진다. 이 형태가 모두 질량이 없다면 다른 형태로의 자발젹 변환이 이루어 질 수 없다. 그러나 두 형태 사이에 질량 차이가 존재한다면 (각각 $\nu_1,\,\nu_2$ 라고 하자) $\nu_1 \to \nu_2$ 변환이 일어날 확률 $P_{12}= S_{12}\sin^2 (L/\lambda)$ 이다. 여기서 $S_{12}$ 는 *mixing strength parameter*, $L$ 은 중성미자의 이동거리, $\lambda$ 는 다음과 같이 결정되는 **고유 길이 (characteristic length)**이다. 
 
@@ -331,6 +363,48 @@ $$
 ($a$) $\lambda = 393.701 \, \textrm{km}$.
 
 ($b$) $\lambda = 1789.549 \, \textrm{km}$. $L=13000\, \textrm{km}$ 에 대해 $P = S_{12} \sin^2 (L/\lambda) = 0.69 \times S_{12}$.
+
+:::
+
+</br>
+
+:::{#exr-helliwell_1_17}
+
+#### Helliwell 1.17 
+
+Underdamped 감쇄조화진동자에서의 $Q$-인자($Q$-factor) $Q$ 는 진동자의 총 에너지 $E$ 와 한 사이클당 에너지 손실 $\Delta E$ 에 대해 다음과 같이 정의된다.
+
+$$
+Q= 2\pi\dfrac{E}{|\Delta E|}.
+$$
+
+($a$) 감쇄 계수 $\beta$ 와 진동자 주기 $T$ 에 대해 $Q \approx \pi /\beta T$ 임을 보여라. 
+
+($b$) $Q$ 는 $\beta$ 값이 작은 강제 조화 진동자에서의 공명 곡선의 날카로움을 기술하는데 사용 될 수도 있다. 이 때 $Q\approx \omega/(\Delta \omega)$ 임을 보여라. 여기서 $\Delta \omega$ 는 공명곡선의 최대값에 대해 $1/\sqrt{2}$ 가 되는 두 진동수의 차이이다.
+
+:::
+
+::: {.solution}
+
+($a$) 감쇠조화진동자($\ddot{x} - 2\beta \dot{x} + kx=0$) 의 해 $x(t) = Ae^{-\beta t}\cos (\omega t + \phi_0)$ 를 생각하자. 에너지 $E(t) = m\omega^2 e^{-2\beta t}\cos^2 (\omega t + \phi_0)$ 에 대해, $\beta T \ll 1$ 이라면
+
+$$
+Q = 2\pi \dfrac{m\omega^2}{m\omega^2 - m\omega^2 e^{-2\beta T}} \approx \dfrac{2\pi}{2\beta T} = \dfrac{\pi}{\beta T}.
+$$
+
+
+($b$) @eq-amplitude_of_steady_solution 로부터, $x_0(\omega) = x_0 (\omega_0)/\sqrt{2}$ 가 되도록 하는 $\omega$ 를 찾으면 
+
+$$
+(\omega^2-\omega_0^2)^2 = 4\beta^2 \omega^2
+$$
+
+이다. $\beta$ 가 매우 작은 조건에서 $\omega \approx \omega_0$ 이므로 $\Delta \omega = 2 \beta$ 이다.
+
+$$
+Q\approx \pi/(\beta T) = 2\pi /(\Delta \omega T) = \omega /(\Delta \omega).
+$$
+
 
 :::
 
@@ -742,6 +816,8 @@ $$
 
 ::: {#exr-helliwell_1_41}
 
+#### Helliwell 1.41
+
 원점으로부터 $R$ 만큼 떨어진 거리의 점질량 $m$ 과 원점을 중심으로 반지름 $a$, 두께 $\Delta a$, 총 질량 $\Delta M$ 인 spherical shell 을 생각하자. 이 shell 은 균일한 밀도 $\rho$ 을 가진다. 
 
 &emsp; ($a$) $\Delta a \ll a$ 일 때 $\Delta M$ 을 다른 값들에 대한 식으로 구하라. 
@@ -799,7 +875,7 @@ $$
 
 ::: {#exr-helliwell_1_53}
 
-#### 고전적인 빅뱅 우주 모델
+#### Helliwelll 1.53, 고전적인 빅뱅 우주 모델
 
 균일한 질량 밀도 $\rho(t)$ 를 갖는 거대한 구체의 먼지 분포를 생각하자. 즉 질량 밀도는 공간적으로는 균일하지만 시간에 대해서는 변화한다. 이 구체가 팽창하면 시간에 대해 감소할 것이고 이 구채가 수축하면 시간에 대해 증가한다. $t=0$ 일 때 이 구체는 한 점(여기서 원점으로 삼는다)에 집중되었으며, 밀도는 무한이고, 외부로 향하는 속도 역시 무한이다. 즉 빅뱅이 일어났다. 어떤 시간 $t_0$ 에서 밀도는 $\rho_0$ 이며 원점에서의 거리가 $r_0$ 인 한 특정 먼지 입자의 외부 방향 속력이 $v_0$ 라고 하자. 
 
@@ -918,6 +994,8 @@ $$
 
 ::: {#exr-helliwell_1_54}
 
+#### Helliwell 1.54
+
 프리드만 방정식은 상대론적 빅뱅 우주론에서 중요하다. Scale factor $a(t)$ 는 충분히 멀리 떨어진 두 점 사이의 거리-예를 들면 두 은하 사이의 거리-에 비례한다. 충분히 떨어졌다는 것은 국소적인 임의의 운동을 무시할 수 있다는 의미이다. 만약 $a$ 가 시간에 대해 증가한다면 두 은하 사이의 거리는 팽창하는 우주에 상응하여 증가한다. 문제를 간단하게 하기 위해 압력을 받지 않는 밀도가 $\rho$ 로 균일한 먼지로 가득찬 우주를 생각해보자. $a(t)$ 에 대한 프리드만 방정식은
 
 $$
@@ -968,7 +1046,7 @@ $$ {#eq-exr-helliwell_1_54_4}
 ($b$) @eq-exr-helliwell_1_54_3 의 첫번째 식의 양변에 $\dot{a}$ 를 곱하자. 좌변의 $\dfrac{1}{2}\dfrac{d}{dt}\left(\dot{a}^2\right)= \ddot{a}\dot{a}$, $\dfrac{d}{dt}\left(\dfrac{1}{a}\right) = -\dfrac{\dot{a}}{a^2}$ 이므로
 
 $$
-\dfrac{1}{2}{\dot{a}}^2 - \dfrac{GM/{R_0}^2}{a} = \text{const.} = \epsilon.
+\dfrac{1}{2}{\dot{a}}^2 - \dfrac{GM/{R_0}^3}{a} = \text{const.} = \epsilon.
 $$
 
 이다. 

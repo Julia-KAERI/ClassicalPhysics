@@ -7,46 +7,17 @@ crossref:
   
 ---
 
-## 해밀턴 의 원리
+## 변분법
 
-### Configuration space 와 시스템의 동역학
+수학적으로 어떤 함수의 집합 $F$ 에 대해 함수 $\phi$ 가 $F \mapsto \mathbb{R}$ 함수 일 때 $\phi$ 를 **범함수(functional)** 라고 한다. 변분법은 $f\in F$ 에 대해 $\phi (f)$ 를 최대 혹은 최소가 되도록 하는 $f$ 를 찾는 수학적인 방법을 말한다. 여기서 우리가 관심있는 것은 어떤 경로 의존적인 함수 $f(\boldsymbol{x},\, \dot{\boldsymbol{x}},\,t)$ 에 대해
 
-달랑베르 원리를 통해시스템의 특정 순간의 상태에서의 virtual displacement를 이용하여 라그랑쥬 방정식을 유도하였다. 라그랑쥬 방정식은 전혀 다른 방법, 즉 특정 시간 $t_1$ 과 $t_2$ 사이에서의 시스템의 전체 운동을 고려하고 실제 운동의 virtual variation을 이용하여 유도될 수 있다. 
+$$
+J = \int_C f(\boldsymbol{x},\, \dot{\boldsymbol{x}},\,t),\,dt
+$$
 
-특정 시간 $t_1$ 과 $t_2$ 사이의 시스템의 전체 운동 (entire motion of system between time $t_1$ and $t_2$)란 무슨 의미일까? 시스템을 기술하는데 $n$ 개의 일반화된 좌표가 필요할 때 이를 $q_1,\ldots,\,q_n$ 라 하자. 이것을 $\mathbb{R}^n$ 으로 나타낸 것을 **configuration space** 라 하며 특정 시간에서의 입자계는 configuration space에서의 한 점(point)으로 기술된다. 시간이 흐르면 각각의 시간에 대한 configuration space에서의 위치가 정해지며 $t_1$ 에서 $t_2$ 까지 시간의 변화에 대한 configuration space에서의 points의 집합, 즉 path를 $t_1$ 과 $t_2$ 사이의 시스템의 전체 운동이라 한다. 이 때 시간 $t$ 는 변수가 아닌 parameter로 고려되며 configuration space 상의 하나의 점은 하나 이상의 $t$ 값에 해당 할 수 있다.
+가 statinary valure 가 되도록 하는 경로 $\boldsymbol{x}(t)$ 를 찾는 것이다. 이것을 **변분법 (calculus of variation)** 이라고 한다.
 
 </br>
-
-### 해밀턴의 원리 {#sec-least_action_theorem}
-
-해밀턴의 원리는 force of constraint를 제외한 모든 힘들이 일반화된 스칼라 포텐셜로 부터 얻어질 수 있는 시스템 (이를 **monogenic system** 이라 한다)의 운동을 기술한다. 이 때 일반화된 포텐셜은 포텐셜이 $\{q_i\},\,\{\dot{q}_i\},\, t$ 의 함수인 것을 말한다. Monogenic system의 포텐셜이 위치만의 함수 일 때, 이 시스템은 보존적이다. 
-
-::: {.callout-important icon="false"}
-
-#### 해밀턴의 원리 (최소 작용의 원리)
-
-Monogenic system 에서 시간 $t_1$ 에서 $t_2$ 까지의 시스템의 운동은 Lagrangian $L=T-V$에 대한 선적분 
-
-$$
-S := \int_{t_1}^{t_2} L(\{q_i\},\, \{\dot{q}_i\}, t)\, dt
-$$ {#eq-action}
-
-이 stationary value를 갖도록 하는 경로를 따른다. 이 선적분의 값을 **action** 이라고 한다. 다시 말하자면  $t_1$ 에서의 위치 $\boldsymbol{x}_1$ 에서 $t_2$ 에서의 위치 $\boldsymbol{x}_2$ 사이의 모든 가능한 경로중 실제 자연법칙에 의해 선택되는 경로는 @eq-action 이 stationary value를 갖도록 하는 경로이다.
-:::
-
-
-
-Action $S$ 가 stationary value를 갖는다는 것은 다음이 성립한다는 뜻이다.
-
-$$
-\delta S = \delta \int_{t_1}^{t_2} L(q_1,\ldots,\,q_n,\,\dot{q}_1,\ldots,\,\dot{q}_n,\,t) \, dt=0\;.
-$$
-
-Holonomic constraint condition 에서 해밀턴의 원리와 라그랑쥬 방정식은 동치이다. 즉 해밀턴의 원리로부터 라그라윶 방정식을 유도할 수도 있고, 라그랑쥬 방정식으로부터 해밀턴의 원리를 유도할 수도 있다. 여기서는 해밀턴의 원리로부터 라그량주 방정식을 유도해 보도록 한다.
-
-</br>
-
-## 변분법 계산
 
 ### 1차원의 경우
 
@@ -95,11 +66,11 @@ $$
 $$
 :::
 
-따라서 우리는 @eq-stationary_condition_2 로부터 $J$ 가 stationary value를 갖기 위해서는 다음을 만족해야 함을 알게 되었다.
+따라서 우리는 @eq-stationary_condition_2 로부터 $J$ 가 stationary value를 갖기 위해서는 다음을 만족해야 함을 알게 되었다. 이를 1차원에서의 오일러-라그랑쥬 방정식(Euler-Lagrange equation) 이라고 한다.
 
 $$
-\dfrac{ \partial f}{\partial y} - \dfrac{d}{dx} \dfrac{\partial f}{\partial \dot{y}}=0\;.
-$$
+\dfrac{ \partial f}{\partial y} - \dfrac{d}{dx} \left(\dfrac{\partial f}{\partial \dot{y}}\right)=0\;.
+$$ {#eq-classical_euler_lagrange_equation_1d}
  
 Differential quantities $\delta y,\, \delta J$ 를 $\delta y \equiv \left( \dfrac{\partial y}{\partial \alpha}\right)_{0} d\alpha$, $\delta J \equiv \left(\dfrac{dJ}{d\alpha}\right)_0 d\alpha$ 로 정의하자. 아래첨자 $0$ 은 $\alpha=0$ 을 의미한다. 이 정의를 이용하면 @eq-stationary_condition_2 는 다음과 같이 쓸 수 있다.
 
@@ -108,11 +79,15 @@ $$
 $$
  
  
-### Examples
+ </br>
 
-#### 1. 평면상의 두 points 사이의 가장 짧은 거리.
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-평면상에서 두 points $(x_1,\,y_1),\,(x_2,\,y_2)$ 사이의 거리 $I$ 는 다음과 같이 주어진다.
+::: {#exm-classical_minimal_length_path_in_plane} 
+
+#### 평면상의 두 점 사이의 가장 짧은 거리.
+
+평면상에서 두 점 $(x_1,\,y_1),\,(x_2,\,y_2)$ 사이의 거리 $I$ 는 다음과 같이 주어진다.
 
 $$
 I = \int_1^2 ds = \int_1^2 \sqrt{1+\left(\dfrac{dy}{dx}\right)^2}\, dx\;.
@@ -126,9 +101,17 @@ $$
 
 이며 이것을 만족하는 것은 직선이다.
 
+:::
+
+</div>
+
 </br>
 
-#### 2.회전체의 최소부피.
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-classical_minima_volume_of_a_body_of_revolution}
+
+#### 회전체의 최소부피.
 
 ![회전의 최소 부피](../images/classical%20mechanics/minimum_surface_of_revolution.jpg)
 
@@ -164,9 +147,17 @@ $$
 
 이다. $a$ 와 $b$ 는 $(x_1,\,y_1),\, (x_2,\,y_2)$ 로 부터 얻을 수 있다.
 
+:::
+
+</div>
+
 </br>
 
-#### 3. The brachistochrone problem.
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-classical_brachistochrone_problem}
+
+#### The brachistochrone problem.
 
 ![Brachistochrone](../images/classical mechanics/fig-brahistochrone-1.png){width=30%}
 
@@ -216,14 +207,15 @@ $$
 
 이며, $\dfrac{dy}{dx}= \dfrac{dy}{d\theta}\dfrac{d\theta}{dx}$ 임을 이용하면 $\dfrac{dx}{d\theta} = 2a \sin^2 (\dfrac{\theta}{2})$ 이므로 $x=a(\theta - \sin\theta)$ 이다. 즉 $x=a(\theta - \sin \theta)$, $y=a(1-\cos \theta)$ 이다. 
 
+:::
+
+</div>
 
 </br>
 
-## 해밀턴의 원리로부터 라그랑쥬 방정식까지
+### 다차원의 경우
 
-### 오일러-라그랑쥬 방정식
-
-변분법 에서는 $f$ 가 많은 독립변수들 $y_1,\,y_2,\ldots$ 와 그 미분 $\dot{y}_1(x),\,\dot{y}_2 (x),\ldots$ 의 함수 일 때, $\displaystyle J=\int_1^2 f dx$ 에 대한 $\delta J$ 가 $0$ 이 되도록 하는 $y_i$ 들을 찾는다. 즉
+이제 $f$ 가 많은 독립변수들 $y_1,\,y_2,\ldots$ 와 그 미분 $\dot{y}_1(x),\,\dot{y}_2 (x),\ldots$ 의 함수 일 때, $\displaystyle J=\int_1^2 f dx$ 에 대한 $\delta J$ 가 $0$ 이 되도록 하는 $y_i$ 들을 찾아보자. 즉
 
 $$
 \delta J= \delta \int_1^2 f(y_1(x),\,y_2(x),\ldots,\,\dot{y}_1(x),\,\dot{y}_2 (x),\ldots,\,x)\, dx = 0
@@ -242,23 +234,65 @@ $$
 이다. $\{y_i\}$ 가 독립이므로 $\{\delta y_i\}$ 도 독립이다. $\delta J=0$ 이려면 모든 $i=1,\ldots,\,n$ 에 대해 다음을 만족해야 한다.
 $$
 \dfrac{\partial f}{\partial y_i} - \dfrac{d}{dx}\left( \dfrac{\partial f}{\partial \dot{y}_i}  \right) =0
-$$ {#eq-euler_lagrange}
+$$ {#eq-classical_euler_lagrange_for_muntidimensional_case}
 
-을 만족해야 한다. 이를 **오일러-라그랑쥬 방정식(Euler-Lagrange differential equation)** 이라 한다. 
+을 만족해야 한다. 1차원에서와 같이 이를 **오일러-라그랑쥬 방정식(Euler-Lagrange differential equation)** 이라 한다. 
 
 </br>
 
-### 해밀턴의 원리와 오일러-라그렝쥬 방정식
 
-해밀턴의 원리를 이용하면 $L(\{q_i\},\,\{\dot{q}_i\},\,t)=T(\{q_i\},\,\{\dot{q}_i\},\,t) - V(
-\{q_i\},\,\{\dot{q}_i\},\,t)$ 에 대해 action $\displaystyle S=\int_1^2 L(q_i,\,\dot{q}_i,\,t) dt$ 에 대한 $\delta S=0$ 이 되도록 해야 하므로 오일러-라그랑쥬 방정식은 다음과 같다.
+## 해밀턴 의 원리
+
+### Configuration space 와 시스템의 동역학
+
+달랑베르 원리를 통해시스템의 특정 순간의 상태에서의 virtual displacement를 이용하여 라그랑쥬 방정식을 유도하였다. 라그랑쥬 방정식은 전혀 다른 방법, 즉 특정 시간 $t_1$ 과 $t_2$ 사이에서의 시스템의 전체 운동을 고려하고 실제 운동의 virtual variation을 이용하여 유도될 수 있다. 
+
+특정 시간 $t_1$ 과 $t_2$ 사이의 시스템의 전체 운동 (entire motion of system between time $t_1$ and $t_2$)란 무슨 의미일까? 시스템을 기술하는데 $n$ 개의 일반화된 좌표가 필요할 때 이를 $q_1,\ldots,\,q_n$ 라 하자. 이것을 $\mathbb{R}^n$ 으로 나타낸 것을 **configuration space** 라 하며 특정 시간에서의 입자계는 configuration space에서의 한 점(point)으로 기술된다. 시간이 흐르면 각각의 시간에 대한 configuration space에서의 위치가 정해지며 $t_1$ 에서 $t_2$ 까지 시간의 변화에 대한 configuration space에서의 points의 집합, 즉 path를 $t_1$ 과 $t_2$ 사이의 시스템의 전체 운동이라 한다. 이 때 시간 $t$ 는 변수가 아닌 parameter로 고려되며 configuration space 상의 하나의 점은 하나 이상의 $t$ 값에 해당 할 수 있다.
+
+</br>
+
+### 해밀턴의 원리 {#sec-least_action_theorem}
+
+::: {.callout-note appearance="minimal"}
+
+::: {#def-classical_monogenic}
+
+#### Monogenic
+
+구속력을 제외한 모든 힘을 일반화된 변수에 대한 스칼라 포텐셜로부터 얻을 수 있을 때 이 시스템을 **monogenic** 이라고 하며 그렇지 않을 때 **multigenic** 이라고 한다.
+
+:::
+:::
+
+
+해밀턴의 원리는 mnogenic system의 운동을 기술한다. 이 때 일반화된 포텐셜은 포텐셜이 $\{q_i\},\,\{\dot{q}_i\},\, t$ 의 함수인 것을 말한다. Monogenic system의 포텐셜이 위치만의 함수 일 때, 이 시스템은 보존적이다. 
+
+::: {.callout-important icon="false"}
+
+#### 해밀턴의 원리 (최소 작용의 원리)
+
+Monogenic system 에서 시간 $t_1$ 에서 $t_2$ 까지의 시스템의 운동은 Lagrangian $L=T-V$에 대한 선적분 
+
+$$
+S := \int_{t_1}^{t_2} L(\{q_i\},\, \{\dot{q}_i\}, t)\, dt
+$$ {#eq-action}
+
+이 stationary value를 갖도록 하는 경로를 따른다. 이 선적분의 값을 **action** 이라고 한다. 다시 말하자면  $t_1$ 에서의 위치 $\boldsymbol{x}_1$ 에서 $t_2$ 에서의 위치 $\boldsymbol{x}_2$ 사이의 모든 가능한 경로중 실제 자연에 의해 선택되는 경로는 @eq-action 이 stationary value를 갖도록 하는 경로이다.
+:::
+
+
+
+Action $S$ 가 stationary value를 갖는다는 것은 다음이 성립한다는 뜻이다.
+
+$$
+\delta S = \delta \int_{t_1}^{t_2} L(q_1,\ldots,\,q_n,\,\dot{q}_1,\ldots,\,\dot{q}_n,\,t) \, dt=0\;.
+$$
+
+우리는 @eq-classical_euler_lagrange_for_muntidimensional_case 을 통해 라그랑쥬 방정식을 얻을 수 있다.
 
 $$
 \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_i}\right) - \dfrac{\partial L}{\partial q_i} = 0\, ,  \quad\quad i=1,\,2,\ldots,\,n\;.
 $$ {#eq-euler_lagrange_equation_of_motion}
-
-이제 우리는 holonomic constraints 를 갖는 monogenic system에서 해밀턴의 원리로부터 라그랑쥬 방정식을 얻었다.
-
 
 </br>
 

@@ -39,12 +39,12 @@ $\phi(x,\,t)$ 의 속도는 $c$ 이며 이것은 좌표계에 무관하다. 좌�
 
 </br>
 
-## 로렌츠 변환과 기초적인 결론
+## 로런츠 변환과 기초적인 결론
 
 상대성 이론은 우리의 직관과 어긋나는 결론을 내리는 경우가 매우 많다. 여기서는 이에 대해 다루도록 한다. 
 
 
-### 로렌츠 변환 {#sec-lelativity_lorentz_transform}
+### 로런츠 변환 {#sec-lelativity_lorentz_transform}
 
 두 좌표계 $\Sigma,\, \Sigma'$ 을 아래의 그림과 같이 생각하자. $\Sigma'$ 은 $\Sigma$ 에 대해 $\boldsymbol{V} = V\hat{\boldsymbol{e}}_1$ 의 일정한 속도로 움직인다. [$\Sigma, \Sigma',\, \mathcal{O},\, \mathcal{O}',\, V$ 는 특별한 설명 없이 앞으로도 계속 이 의미로 사용하겠다.]{.aside}
 
@@ -78,13 +78,13 @@ $$
 x = \gamma (x'+\beta c t'),\qquad y=y',\qquad z=z',\qquad ct = \gamma (ct' + \beta x')
 $$ {#eq-relativity_lorentz_eq_3}
 
-을 얻는다. 이렇게 $\Sigma$ 에서 $\Sigma'$ 좌표계로 변환하는 것을 **로렌츠 변환(Lorentz transformation)** 혹은 **로렌츠 부스트(Lorentz boost)** 라고 한다.
+을 얻는다. 이렇게 $\Sigma$ 에서 $\Sigma'$ 좌표계로 변환하는 것을 **로런츠 변환(Lorentz transformation)** 혹은 **로런츠 부스트(Lorentz boost)** 라고 한다.
 
 </br>
 
-### 로렌츠 변환에서의 빛의 속도
+### 로런츠 변환에서의 빛의 속도
 
-앞서와 같은 두 관성좌표계 $\Sigma,\, \Sigma'$ 을 생각하자. $t=0$ 에서 $\mathcal{O} = \mathcal{O'}$ 이었다. $\Sigma$ 좌표계에서 $t=0$ 에서 방출된 광자의 위치는 $x^2+y^2+z^2-(ct)^2=0$ 를 만족한다. 이제 로렌츠 변환을 통해 변환시켜보자.
+앞서와 같은 두 관성좌표계 $\Sigma,\, \Sigma'$ 을 생각하자. $t=0$ 에서 $\mathcal{O} = \mathcal{O'}$ 이었다. $\Sigma$ 좌표계에서 $t=0$ 에서 방출된 광자의 위치는 $x^2+y^2+z^2-(ct)^2=0$ 를 만족한다. 이제 로런츠 변환을 통해 변환시켜보자.
 
 $$
 \begin{aligned}
@@ -101,7 +101,7 @@ $$
 
 ### 세계선과 동시성
 
-이제 로렌츠 변환이 의미하는 바를 이해해보자. 우선 시공간 속을 움직이는 관측자의 경로를 **세계선 (world line)** 이라고 하자. 그리고 상황을 단순하게 하기 위해 3차원을 1차원으로 축약하여 시공간을 $x-t$ 좌표계에서 그리도록 하자. 
+이제 로런츠 변환이 의미하는 바를 이해해보자. 우선 시공간 속을 움직이는 관측자의 경로를 **세계선 (world line)** 이라고 하자. 그리고 상황을 단순하게 하기 위해 3차원을 1차원으로 축약하여 시공간을 $x-t$ 좌표계에서 그리도록 하자. 
 $\Sigma$ 좌표계에 대해 $x$ 축으로 $v$ 의 속도로 움직이는 관측자의 세계선은 아래 그림과 같다.
 
 ![세계선](../images/relativity/fig-simultaneity_1-1.png){#fig-world_line_1 width=40%}
@@ -119,7 +119,7 @@ $\Sigma$ 좌표계에 대해 $x$ 축으로 $v$ 의 속도로 움직이는 관측
 
 ### 시공간 도표
 
-자 이제 점점 재미있는 주제로 들어간다. 앞서 정지 좌표계 $\Sigma$ 에 대해 움직이는 좌표계 $\Sigma'$ 의 원점 $\mathcal{O}'$ 의 위치를 세계선으로 표현했다. 이 세계선의 위치는 로렌츠 변환에서 $x'=0$ 을 $\Sigma$ 좌표계에서의 $t-x$ 공간에서 표한한 것이다. 이제 $t'=0$ 은 $x'$ 축이므로 다음과 같이 표현 할 수 있을 것이다. @eq-relativity_lorentz_eq_3 로부터 $t'$, (즉 $x'=0$)  은 $t= \dfrac{1}{c\beta}x$ 으로 표현되며, $x'$ (즉 $t'=0$) 은 $t=\dfrac{\beta}{c}x$ 로 표현됨을 안다. 
+자 이제 점점 재미있는 주제로 들어간다. 앞서 정지 좌표계 $\Sigma$ 에 대해 움직이는 좌표계 $\Sigma'$ 의 원점 $\mathcal{O}'$ 의 위치를 세계선으로 표현했다. 이 세계선의 위치는 로런츠 변환에서 $x'=0$ 을 $\Sigma$ 좌표계에서의 $t-x$ 공간에서 표한한 것이다. 이제 $t'=0$ 은 $x'$ 축이므로 다음과 같이 표현 할 수 있을 것이다. @eq-relativity_lorentz_eq_3 로부터 $t'$, (즉 $x'=0$)  은 $t= \dfrac{1}{c\beta}x$ 으로 표현되며, $x'$ (즉 $t'=0$) 은 $t=\dfrac{\beta}{c}x$ 로 표현됨을 안다. 
 
 ![세계선](../images/relativity/fig-simultaneity_3-1.png){#fig-world_line_3 width=40%}
 
@@ -131,19 +131,19 @@ $\Sigma$ 좌표계에 대해 $x$ 축으로 $v$ 의 속도로 움직이는 관측
 
 ![$\Sigma'$ 에서의 길이 수축](../images/relativity/fig-simultaneity_4-1.png){#fig-lorentz_contration width=40%}
 
-즉 $\Sigma'$ 에서의 길이는 $\overline{\mathcal{O}'L'}$ 이며 이것은 로렌츠 변환에서 $L'=L/\gamma < L$ 로 나타난다. 이를 길이 수축이라고 한다. 
+즉 $\Sigma'$ 에서의 길이는 $\overline{\mathcal{O}'L'}$ 이며 이것은 로런츠 변환에서 $L'=L/\gamma < L$ 로 나타난다. 이를 길이 수축이라고 한다. 
 
 이제 길이 $L$ 인 막대기가 $\Sigma'$ 좌표계에서 $x=0,\, x=L'$ 에 놓여 있다고 하자. 그리고 이 막대기의 양 끝점의 세계선을 그리면 아래 그림과 같다. 
 
 ![$\Sigma$ 에서의 길이 수축](../images/relativity/fig-simultaneity_5-1.png){#fig-lorentz_contration width=50%}
 
-역시 로렌츠 변환을 통해 $L=L'/\gamma < L'$ 이 된다. 즉 길이 수축은 움직이는 물체는 움직이는 방향으로 길이가 짧아진다는 의미이다. 
+역시 로런츠 변환을 통해 $L=L'/\gamma < L'$ 이 된다. 즉 길이 수축은 움직이는 물체는 움직이는 방향으로 길이가 짧아진다는 의미이다. 
 
 </br>
 
 ::: {#exm-relativity_invariance_of_transverse_length}
 
-$\Sigma$ 좌표계에서 $x$ 방향이 아닌 $y$ 방향으로 길이 $L$ 인 막대기가 놓여 있을 때는 $\Sigma'$ 좌표계에서 봤을 때 그 길이가 변하지 않는다는 것을 로렌츠 변환을 통해 확인 할 수 있다. $\Sigma$ 좌표계에서의 $x^2+y^2=R^2$ 인 원은 $\Sigma'$ 좌표계에서 $x'^2/\gamma^2 + y'^2 = R^2$ 이 되므로 타원이 된다.
+$\Sigma$ 좌표계에서 $x$ 방향이 아닌 $y$ 방향으로 길이 $L$ 인 막대기가 놓여 있을 때는 $\Sigma'$ 좌표계에서 봤을 때 그 길이가 변하지 않는다는 것을 로런츠 변환을 통해 확인 할 수 있다. $\Sigma$ 좌표계에서의 $x^2+y^2=R^2$ 인 원은 $\Sigma'$ 좌표계에서 $x'^2/\gamma^2 + y'^2 = R^2$ 이 되므로 타원이 된다.
 
 
 :::
@@ -151,7 +151,7 @@ $\Sigma$ 좌표계에서 $x$ 방향이 아닌 $y$ 방향으로 길이 $L$ 인 �
 ### 시간 지연
 
 
-이제 $t$ 와 $t'$ 사이의 관계 역시 $\mathcal{O}$ 와 $\mathcal{O}^\prime$ 에 대한 로렌츠 변환식으로 부터 얻을 수 있다. 
+이제 $t$ 와 $t'$ 사이의 관계 역시 $\mathcal{O}$ 와 $\mathcal{O}^\prime$ 에 대한 로런츠 변환식으로 부터 얻을 수 있다. 
  
 ![시간 팽창](../images/relativity/fig-simultaneity_6-1.png){#fig-time_dialition width=50%}
 
@@ -169,14 +169,14 @@ $\Sigma'$ 좌표계가 $\Sigma$ 좌표계에 대해 $12c/13$ 의 속도로 움�
 
 ::: {.solution}
 
-($a$) $C_1$ 과 $C_2$ 가 $300c$ 만큼 떨어져 있다. 로렌츠 변환을 생각하면 $\Sigma$ 에서 $C'$ 이 $C_1 \to C_2$ 에 걸리는 시간 $t=300c/(12c/13)= 325\,\textrm{sec}$ 이므로 $C'$ 에서의 시간은  
+($a$) $C_1$ 과 $C_2$ 가 $300c$ 만큼 떨어져 있다. 로런츠 변환을 생각하면 $\Sigma$ 에서 $C'$ 이 $C_1 \to C_2$ 에 걸리는 시간 $t=300c/(12c/13)= 325\,\textrm{sec}$ 이므로 $C'$ 에서의 시간은  
 
 $$
 t' = \gamma \left(t-\dfrac{V}{c}x\right) = 125.
 $$
 
 
-($b$) 로렌츠 수축을 생각하면 $300c/\gamma\approx 115.4 c$ 즉 115.4 광초 만큼 떨어져 있다. 
+($b$) 로런츠 수축을 생각하면 $300c/\gamma\approx 115.4 c$ 즉 115.4 광초 만큼 떨어져 있다. 
 
 ($c$) $325 \,\textrm{sec}$.
 
@@ -335,9 +335,9 @@ $$
 
 ## 상대성 역학 
 
-### 4-벡터와 로렌츠 불변량
+### 4-벡터와 로런츠 불변량 {#sec-special_relativity_4_vectors_and_lorentz_invariants}
 
-우리는 상대성이론에서 좌표계마다 시간이 다르며, 로렌츠 변환이 공간적 좌표뿐만 아니라 시간에도 관계된다는 것을 알았다. 즉 시공간상의 변화는 이제 시간과 공간을 함께 고려하여 다루어야 한다. 그리고 시공간의 변화는 로렌츠 변화를 따라 변화해야 한다. 이렇게 로렌츠 변화를 따르는 4차원 벡터를 **4-벡터 (four-vector)**라고 한다. 시간과 공간에 대한 변화로부터 로렌츠 변환이 유도되었기 때문에 시공간에 대한 4-벡터는 당연히 존재해야 한다.
+우리는 상대성이론에서 좌표계마다 시간이 다르며, 로런츠 변환이 공간적 좌표뿐만 아니라 시간에도 관계된다는 것을 알았다. 즉 시공간상의 변화는 이제 시간과 공간을 함께 고려하여 다루어야 한다. 그리고 시공간의 변화는 로런츠 변화를 따라 변화해야 한다. 이렇게 로런츠 변화를 따르는 4차원 벡터를 **4-벡터 (four-vector)**라고 한다. 시간과 공간에 대한 변화로부터 로런츠 변환이 유도되었기 때문에 시공간에 대한 4-벡터는 당연히 존재해야 한다.
 
 </br>
 
@@ -356,7 +356,7 @@ $$
 
 </br>
 
-이 4 벡터에 대한 로렌츠 변환을 나타내는 로렌츠 변환 행렬은 다음과 같이 정의된다.(@eq-relativity_lorentz_eq_3)
+이 4 벡터에 대한 로런츠 변환을 나타내는 로런츠 변환 행렬은 다음과 같이 정의된다.(@eq-relativity_lorentz_eq_3)
 
 $$
 \boldsymbol{\Lambda} = \begin{bmatrix} \gamma & \gamma\beta & 0 & 0 \\ \gamma\beta & \gamma & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix} .
@@ -368,7 +368,7 @@ $$
 \boldsymbol{\Lambda} = \begin{bmatrix} \cosh \xi & \sinh \xi & 0 & 0 \\ \sinh \xi & \cosh\xi & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix} .
 $$ {#eq-relativity_lorentz_transform_matrix_2}
 
-이제 로렌츠 변환을 다음과 같이 표현 할 수 있다.
+이제 로런츠 변환을 다음과 같이 표현 할 수 있다.
 
 $$
 X = \boldsymbol{\Lambda}X'
@@ -405,7 +405,7 @@ $$
 ds^2 = dX'^T \cdot \boldsymbol{\eta} \cdot dX' = cdt'^2 - dx'^2 - dy'^2 - dz'^2 = ds'^2
 $$
 
-이 된다. 즉 $ds^2$ 는 로렌츠 변환에 대해 불변량이다. 이렇게 로렌츠 변화에 대해 불변인 물리량을 **로렌츠 불변량 (Lorentz invariants)** 라고 한다.
+이 된다. 즉 $ds^2$ 는 로런츠 변환에 대해 불변량이다. 이렇게 로런츠 변화에 대해 불변인 물리량을 **로런츠 불변량 (Lorentz invariants)** 라고 한다.
 
 </br>
 
@@ -420,7 +420,7 @@ $$
 가 성립하며, 따라서 $dt = \gamma d \tau \ge d\tau$ 이다. $\tau$ 는 $\Sigma'$ 관성좌표계에서 측정한 시간이며 이렇게 어떤 좌표계에서 측정한 시간을 그 좌표계의 **고유 시간 (proper time)** 이라고 하며 보통 $\tau$ 로 표기한다. 우리는 이미 시간 지연 (time dilation) 이라는 것을 안다. $\gamma=1.1$ 일 경우, 즉 $V \approx 0.42c$ 일 경우, $\mathcal{O}'$ 에서의 시간이 1초 흐를 때 $\mathcal{O}$ 에서의 시간은 $1.1$ 초 흐른다. 
 
 
-또하나 알수 있는 것은 $ds^2$ 가 로렌츠 불변량이기 때문에 $d\tau = \dfrac{1}{c} \sqrt{ds^2}$ 도 당연히 로렌츠 불변량이라는 것이다. $d\tau$ 가 로렌츠 불변량이므로 뒤에 나올 4-속도가 정의가능해진다. $d\tau$ 가 로렌츠 불변량인것은 어떻게 보면 당연한데 어떤 관성좌표계에서 측정하는 시간은 다른 어떤 관성좌표계에서도 간섭 할 수 없다는 의미이기 때문이다. 
+또하나 알수 있는 것은 $ds^2$ 가 로런츠 불변량이기 때문에 $d\tau = \dfrac{1}{c} \sqrt{ds^2}$ 도 당연히 로런츠 불변량이라는 것이다. $d\tau$ 가 로런츠 불변량이므로 뒤에 나올 4-속도가 정의가능해진다. $d\tau$ 가 로런츠 불변량인것은 어떻게 보면 당연한데 어떤 관성좌표계에서 측정하는 시간은 다른 어떤 관성좌표계에서도 간섭 할 수 없다는 의미이기 때문이다. 
 
 </br>
 
@@ -432,7 +432,7 @@ $$
 ds^2 = c^2dt^2 - dx^2 - dy^2 - dz^2=  \sum_{\mu=0}^3 \sum_{\nu = 0}^3 dX^\mu \eta_{\mu \nu}dX^\nu
 $$
 
-와 같이 표현 할 수 있다. 앞으로 첨자가 위에 붙어 있을 때와 아래에 붙어 있을 때의 차이에 대해 설명하겠지만 일단은 잠시 넘어가기로 하자. 일반적으로 우리가 생각하는 벡터는 첨자가 위에 붙은 벡터이며, 첨자가 위에 붙은 벡터에 대해 메트릭 텐서는 위에서 처럼 아래에 두 첨자가 붙고, 로렌츠 변환 텐서는 위와 아래에 하나씩 붙는다. 이렇게 4-벡터와 4-텐서(4 벡터의 변환을 나타내는 텐서)의 곱에 동일한 첨자가 하나는 위에 하나는 아래에 붙을 경우 그것에 대한 $\sum$ 기호를 표기하지 않아도 표기한 것처럼 사용하는 것을 **아인슈타인 표기법 (Einstein summmation convention)** 이라고 한다. 즉,
+와 같이 표현 할 수 있다. 앞으로 첨자가 위에 붙어 있을 때와 아래에 붙어 있을 때의 차이에 대해 설명하겠지만 일단은 잠시 넘어가기로 하자. 일반적으로 우리가 생각하는 벡터는 첨자가 위에 붙은 벡터이며, 첨자가 위에 붙은 벡터에 대해 메트릭 텐서는 위에서 처럼 아래에 두 첨자가 붙고, 로런츠 변환 텐서는 위와 아래에 하나씩 붙는다. 이렇게 4-벡터와 4-텐서(4 벡터의 변환을 나타내는 텐서)의 곱에 동일한 첨자가 하나는 위에 하나는 아래에 붙을 경우 그것에 대한 $\sum$ 기호를 표기하지 않아도 표기한 것처럼 사용하는 것을 **아인슈타인 표기법 (Einstein summmation convention)** 이라고 한다. 즉,
 
 $$
 ds^2 = dX^\mu \eta_{\mu \nu}dX^\nu
@@ -448,7 +448,7 @@ $$
 
 </br>
 
-### 속도의 로렌츠 변화
+### 속도의 로런츠 변화
 
 @exr-helliwell_2_6 에서 이미 보였던것을 확장한다. @fig-reference_frames_in_relativity 의 $\Sigma,\, \Sigma'$ 좌표계를 생각하자. $\Sigma'$ 이 $\Sigma$ 에 대해 속도 $\boldsymbol{V}=V\hat{\boldsymbol{e}}_1$ 으로 움직일 때 $\Sigma'$ 에서 속도 $\boldsymbol{u}=u\hat{\boldsymbol{e}}_1'$ 으로 움직이는 물체의 속도는 $\Sigma$ 에서 어떻게 측정될 것인가?
 
@@ -495,7 +495,7 @@ $$
 
 ### 4-속도 
 
-$d\tau$ 가 로렌츠 불변량이라는 것을 떠올리자. 4-벡터 $X^\mu$ 에 대해 $\dfrac{dX^\mu}{d\tau}$ 도 4-벡터이다. 즉 로렌츠 변환으로 변환된다. 이것은 속도와 같은 차원을 갖기 때문에 **4-속도 (4-velocity)** 라고 불리며 보통 $U^\mu$ 로 표기한다. 즉 4-속도는 다음과 같이 정의된다.
+$d\tau$ 가 로런츠 불변량이라는 것을 떠올리자. 4-벡터 $X^\mu$ 에 대해 $\dfrac{dX^\mu}{d\tau}$ 도 4-벡터이다. 즉 로런츠 변환으로 변환된다. 이것은 속도와 같은 차원을 갖기 때문에 **4-속도 (4-velocity)** 라고 불리며 보통 $U^\mu$ 로 표기한다. 즉 4-속도는 다음과 같이 정의된다.
 
 $$
 U^\mu := \dfrac{dX^\mu}{d\tau},\qquad \mu = 0,\,1,\,2,\,3.
@@ -516,7 +516,7 @@ $$ {#eq-relativity_invariance_of_4_velocity}
 
 </br>
 
-4-속도의 로랜츠 변환을 통해 속도의 로렌츠 변환을 알 수 있다. 즉 $\Sigma$ 좌표계의 4-속도와 $\Sigma'$ 좌표계의 4-속도를 보면, $U^\mu = \Lambda_{\nu}^\mu U^\nu$ 로 부터
+4-속도의 로랜츠 변환을 통해 속도의 로런츠 변환을 알 수 있다. 즉 $\Sigma$ 좌표계의 4-속도와 $\Sigma'$ 좌표계의 4-속도를 보면, $U^\mu = \Lambda_{\nu}^\mu U^\nu$ 로 부터
 
 $$
 U = \begin{bmatrix} U^0 \\ U^1 \\ U^2\\ U^3 \end{bmatrix} =  \begin{bmatrix} \gamma_V & \gamma_V\beta_V & 0 & 0 \\ \gamma_V\beta_V & \gamma_V & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix} \begin{bmatrix} U'^0 \\ U'^1 \\ U'^2\\ U'^3 \end{bmatrix} 
@@ -580,7 +580,7 @@ $$
 H = \sum_{i=1}^3 P^\mu (\dot{X}^\mu) -  mc^2\sqrt{1-\dfrac{v^2}{c^2}} = \gamma mc^2 
 $$
 
-이다. 우리는 이제 입자의 에너지 $\mathcal{E}=H$ 에 대해 $P^0 = \mathcal{E}/c$ 임을 안다. 즉 상대론의 4-운동량은 에너지와 운동량을 포함하며, 로렌츠 변환에 의해 보존되는 것은 에너지와 운동량의 조합인 4-운동량이다. 또한 우리는
+이다. 우리는 이제 입자의 에너지 $\mathcal{E}=H$ 에 대해 $P^0 = \mathcal{E}/c$ 임을 안다. 즉 상대론의 4-운동량은 에너지와 운동량을 포함하며, 로런츠 변환에 의해 보존되는 것은 에너지와 운동량의 조합인 4-운동량이다. 또한 우리는
 
 $$
 P^\mu = \left(\mathcal{E}/c,\, P^1,\, P^2,\, P^3\right)
@@ -690,7 +690,7 @@ $$
 \left(\dfrac{E+mc^2}{c},\,p_1,\,0,\,0\right) 
 $$ {#eq-relativity_threshold_3}
 
-이다. 4-운동량은 충돌 전후에 보존되어야 하며 4-운동량의 스칼라곱 $\eta_{\mu \nu}P^\mu P^\nu$ 은 로렌츠 변환에 대해 불변이다. $\Sigma_{\text{CM}}$ 에서는
+이다. 4-운동량은 충돌 전후에 보존되어야 하며 4-운동량의 스칼라곱 $\eta_{\mu \nu}P^\mu P^\nu$ 은 로런츠 변환에 대해 불변이다. $\Sigma_{\text{CM}}$ 에서는
 
 $$
 E_{\text{th}}^{\text{CM}}=c^2\sqrt{\left(\sum_i m_i\right)^2}
@@ -757,13 +757,13 @@ $$
 F^\mu := \dfrac{dP^\mu}{d\tau}.
 $$ {#eq-relativity_definition_of_4_force}
 
-$P^\mu$ 에 대한 로렌츠 변환 $P^{\mu'} = \Lambda_{\mu}^{\mu'} P^\mu$ 를 생각하면
+$P^\mu$ 에 대한 로런츠 변환 $P^{\mu'} = \Lambda_{\mu}^{\mu'} P^\mu$ 를 생각하면
 
 $$
 F^{\mu'} = \dfrac{dP^{\mu'}}{d\tau} = \dfrac{d(\Lambda^{\mu'}_{\mu} P^\mu)}{d\tau} = \Lambda_{\mu}^{\mu'} F^\mu
 $$
 
-임을 안다. 즉 4-힘도 로렌츠 변화를 따른다. 이제 4-힘이 의미하는 바를 생각해보자. $d\tau = (1/\gamma)dt$ 이므로, 4-속도 $U^\mu$ 에 대해 
+임을 안다. 즉 4-힘도 로런츠 변화를 따른다. 이제 4-힘이 의미하는 바를 생각해보자. $d\tau = (1/\gamma)dt$ 이므로, 4-속도 $U^\mu$ 에 대해 
 
 $$
 (F^0,\,F^1,\,F^2,\,F^3) = \gamma \dfrac{d}{dt}\left(\gamma mc,\, mU^1,\, mU^2,\,mU^3\right)
@@ -904,13 +904,13 @@ Transverse 의 경우를 생각하면 진동수의 변화가 생기지 않음을
 
 **상대론적 도플러 효과**
 
-상대론적으로는 로렌츠 변환으로 쉽게 구할 수 있다. 빛의 에너지 $E=h\nu$ 와 운동량 $h\nu/c$ 에 대해 빛의 4-운동량은
+상대론적으로는 로런츠 변환으로 쉽게 구할 수 있다. 빛의 에너지 $E=h\nu$ 와 운동량 $h\nu/c$ 에 대해 빛의 4-운동량은
 
 $$
 P^\mu = \left(\dfrac{h\nu}{c},\,\dfrac{h\nu}{c},\,0,\,0\right)
 $$
 
-이다. $\Sigma'$ 을 관측자의 관성계, $\Sigma$ 를 파동원의 관성계라고 하자. Longitudinal 한 경우 로렌츠 변환에 의해 
+이다. $\Sigma'$ 을 관측자의 관성계, $\Sigma$ 를 파동원의 관성계라고 하자. Longitudinal 한 경우 로런츠 변환에 의해 
 
 $$
  \left(\dfrac{h\nu'}{c},\,\dfrac{h\nu'}{c},\,0,\,0\right) = P^{\mu'} = \Lambda^{\mu'}_{\mu}P^\mu = \left(\gamma \dfrac{h\nu}{c} -  \gamma \beta \dfrac{h\nu}{c},\, \gamma \dfrac{h\nu}{c} -  \gamma \beta \dfrac{h\nu}{c},\,0,\,0\right)
@@ -924,7 +924,7 @@ $$
 
 이다. $\beta>0$ 이면 파동원이 관측자에서 멀어질 때 이며 $\nu'  < \nu$ 이므로 빛의 진동수가 작아진다. 이를 **적색 편이(redshift)** 라 한다. $\beta<0$ 이면 파동원이 관측자에게서 가까워 질 때 이며 $\nu'>\nu$ 이므로 및의 진동수가 커진다. 이를 **청색 편이(blueshift)** 라고 한다. 
 
-이제 Transverse 한 경우를 생각하자. 빛의 4-운동량을 $P^\mu = \left(\dfrac{h\nu}{c},\,0,\, \dfrac{h\nu}{c},\,0\right)$ 이라고 하면 로렌츠 변환에 의해
+이제 Transverse 한 경우를 생각하자. 빛의 4-운동량을 $P^\mu = \left(\dfrac{h\nu}{c},\,0,\, \dfrac{h\nu}{c},\,0\right)$ 이라고 하면 로런츠 변환에 의해
 
 $$
 \left(\dfrac{h\nu'}{c},\,p_1,\,p_2,\,0\right) = P^{\mu'} = \Lambda^{\mu'}_{\mu}P^\mu = \left(\gamma \dfrac{h\nu}{c},\, -  \gamma \beta \dfrac{h\nu}{c},\,\dfrac{h\nu}{c},\,0\right)
@@ -1169,7 +1169,7 @@ $$
 $$
 
 
-($b$) $V=\dfrac{4c}{5}$ 에 대해 $\beta = - \dfrac{4}{5},\, \gamma = \dfrac{5}{3}$ 이다. 로렌츠 변환행렬 
+($b$) $V=\dfrac{4c}{5}$ 에 대해 $\beta = - \dfrac{4}{5},\, \gamma = \dfrac{5}{3}$ 이다. 로런츠 변환행렬 
 
 $$
 \boldsymbol{\Lambda} = \begin{bmatrix} \gamma & \gamma \beta & 0 & 0 \\ \gamma \beta & \gamma & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix} = \dfrac{1}{3}\begin{bmatrix} 5 & -4 & 0 & 0 \\ -4 & 5 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix}
@@ -1256,7 +1256,7 @@ $$
 \square\,\phi :=  \dfrac{1}{c^2}\partial_t^2\phi - \nabla^2 \phi =0
 $$
 
-을 만족한다. 이때 $\square$ 를 **달랑베르 연산자(d'Alembert operator)** 라고 한다. 시공간에 대한 선형 변환에 의해 위의 형태가 변하지 않을 때 이 변환을 **푸앙카레 변환(Poincaré transformations)** 이라고 한다. 푸앙카레 변환에는 (i) 시공간에 대한 4 종류의 translation, (ii) 공간에서의 3 가지 회전, (iii) 3가지의 로렌츠 변환 이 있음을 보여라.
+을 만족한다. 이때 $\square$ 를 **달랑베르 연산자(d'Alembert operator)** 라고 한다. 시공간에 대한 선형 변환에 의해 위의 형태가 변하지 않을 때 이 변환을 **푸앙카레 변환(Poincaré transformations)** 이라고 한다. 푸앙카레 변환에는 (i) 시공간에 대한 4 종류의 translation, (ii) 공간에서의 3 가지 회전, (iii) 3가지의 로런츠 변환 이 있음을 보여라.
  
 :::
 
@@ -1301,16 +1301,16 @@ $$
 ::: {#exr-helliwell_2_29}
 
 #### 벨의 우주선 역설 
-우리의 관성좌표계에서 거리 $D$ 만큼 앞뒤로 떨어져 정지해있는 두 우주선이 있다. 정지길이 $D$ 인 가벼운 끈이 두우주선을 연결하고 있다고 하자. 두 우주선이 동시에 오른쪽으로 등가속운동을 시작한다고 하자. 이 끈은 여전히 그들을 묶고 있다. 두 우주선은 동시에 출발했고 같은 가속도를 가지고 있으므로 두 우주선의 간격과 줄의 길이는 우리 좌표계에서는 일정하다. 그러나 움직이는 줄은 $\sqrt{1-\beta^2}$ 만큼 로렌츠 수축되어야 하며, 따라서 이 줄은 끊어져야 하는가? 아니면 우리 좌표계에서 줄의 길이는 일정해야하며 이 줄은 끊어지지 않는가? *Hint* : 가속되는 물체의 **고유 길이(proper length)** 는 가속되는 물체와 같이 움직이는 어떤 좌표계에서 그 좌표계가 순간적으로 이 물체에 대해 정지했을 때의 좌표계에서 측정한 길이이다. [이를 [벨의 우주선 역설(Bell's spaceship paradox)](https://en.wikipedia.org/wiki/Bell%27s_spaceship_paradox) 이라고 한다. 이 문제는 E. Dewan 과 M. Beran 에 의해 1959년 제기되었으며 J. S. Bell 에 의해 1987 년 수정되었다. Bell 에 의해 제기되어 유명해져서 벨의 역설이라고 불리운다. 이 위키의 영어 문서를 꼭 읽어보기 바란다.]{.aside} 
+우리의 관성좌표계에서 거리 $D$ 만큼 앞뒤로 떨어져 정지해있는 두 우주선이 있다. 정지길이 $D$ 인 가벼운 끈이 두우주선을 연결하고 있다고 하자. 두 우주선이 동시에 오른쪽으로 등가속운동을 시작한다고 하자. 이 끈은 여전히 그들을 묶고 있다. 두 우주선은 동시에 출발했고 같은 가속도를 가지고 있으므로 두 우주선의 간격과 줄의 길이는 우리 좌표계에서는 일정하다. 그러나 움직이는 줄은 $\sqrt{1-\beta^2}$ 만큼 로런츠 수축되어야 하며, 따라서 이 줄은 끊어져야 하는가? 아니면 우리 좌표계에서 줄의 길이는 일정해야하며 이 줄은 끊어지지 않는가? *Hint* : 가속되는 물체의 **고유 길이(proper length)** 는 가속되는 물체와 같이 움직이는 어떤 좌표계에서 그 좌표계가 순간적으로 이 물체에 대해 정지했을 때의 좌표계에서 측정한 길이이다. [이를 [벨의 우주선 역설(Bell's spaceship paradox)](https://en.wikipedia.org/wiki/Bell%27s_spaceship_paradox) 이라고 한다. 이 문제는 E. Dewan 과 M. Beran 에 의해 1959년 제기되었으며 J. S. Bell 에 의해 1987 년 수정되었다. Bell 에 의해 제기되어 유명해져서 벨의 역설이라고 불리운다. 이 위키의 영어 문서를 꼭 읽어보기 바란다.]{.aside} 
 
 :::
 
 ::: {.solution}
 
-앞에 있는 우주선을 $B$, 뒤에 있는 우주선을 $A$ 라고 하자. 정지 좌표계에서 우주선 $A$ 가 속도 $v$ 가 되었을 때, $B$ 의 속도는 역시 $v$ 이며 $A-B$ 사이의 거리가 $D$ 가 된다. 로렌츠 수축만을 생각하면 이 줄에 장력을 받아야 하며, 두 우주선이 가속될수록 장력이 커질 것이기 때문에 이 줄은 언젠가 끊어져야 한다. 이것은 정지해 있는 좌표계에서이며 로켓과 움직이는 좌표계에서는 어떨까? 
+앞에 있는 우주선을 $B$, 뒤에 있는 우주선을 $A$ 라고 하자. 정지 좌표계에서 우주선 $A$ 가 속도 $v$ 가 되었을 때, $B$ 의 속도는 역시 $v$ 이며 $A-B$ 사이의 거리가 $D$ 가 된다. 로런츠 수축만을 생각하면 이 줄에 장력을 받아야 하며, 두 우주선이 가속될수록 장력이 커질 것이기 때문에 이 줄은 언젠가 끊어져야 한다. 이것은 정지해 있는 좌표계에서이며 로켓과 움직이는 좌표계에서는 어떨까? 
 
 
-$t=0$ 일 때 $A$ 의 위치를 $x=0$, $B$ 의 위치를 $x=D$ 라고 하자. $t=0$ 에서 가속되었다고 하자. 시간 $t$ 가 지난 후에도 정지좌표계에서의 $\overline{AB}=D$ 이어야 한다. 이 때 우주선 정지좌표계에 로렌츠 변환을 적용하면
+$t=0$ 일 때 $A$ 의 위치를 $x=0$, $B$ 의 위치를 $x=D$ 라고 하자. $t=0$ 에서 가속되었다고 하자. 시간 $t$ 가 지난 후에도 정지좌표계에서의 $\overline{AB}=D$ 이어야 한다. 이 때 우주선 정지좌표계에 로런츠 변환을 적용하면
 
 $$
 x'_A = \gamma (x + \beta ct),\, ct'_A =  \gamma( ct + \beta x),\qquad x'_B = \gamma(x+\beta ct + D),\, ct'_B = \gamma (ct + \beta (x+D))
@@ -1332,7 +1332,7 @@ $$
 
 ::: {.solution}
 
-($a$) $\Sigma$ 좌표계에서 $(t_A,\,x_A),\,(t_B,\,x_B)$ 이벤트가 $t_B>t_A$ 로 발생했다고 하자. 로렌츠 변환에 의해 $\Sigma'$ 좌표계에서는
+($a$) $\Sigma$ 좌표계에서 $(t_A,\,x_A),\,(t_B,\,x_B)$ 이벤트가 $t_B>t_A$ 로 발생했다고 하자. 로런츠 변환에 의해 $\Sigma'$ 좌표계에서는
 
 $$
 t'_B-t'_A = \gamma(t_B-t_A) - \dfrac{\gamma\beta}{c}(x_B-x_A)
@@ -1349,13 +1349,13 @@ $$
 
 ::: {#exr-helliwell_2_32}
 
-식의 표현이 모든 관성계에서 관성계에 대한 표시만을 제외하고 형태가 동일하다면 이 표현을 **로렌츠 공변(Lorentz covariant)** 라고 한다. 예를 들어 $A^\mu \eta_{\mu \nu}B^\nu = K$ 는 4-벡터 $A^\mu,\,B^\nu$ 와 상수 $K$ 에 대해 로렌츠 공변이다. 로렌츠 변환에 대해 
+식의 표현이 모든 관성계에서 관성계에 대한 표시만을 제외하고 형태가 동일하다면 이 표현을 **로런츠 공변(Lorentz covariant)** 라고 한다. 예를 들어 $A^\mu \eta_{\mu \nu}B^\nu = K$ 는 4-벡터 $A^\mu,\,B^\nu$ 와 상수 $K$ 에 대해 로런츠 공변이다. 로런츠 변환에 대해 
 
 $$
 K=A^\mu \eta_{\mu\nu}B^\nu = A^{\mu'} \Lambda^\mu_{\mu'} \eta_{\mu \nu} B^{\nu'}\Lambda^{\nu}_{\nu'} = A^{\nu'} \eta_{\mu' \nu'}B^{\nu'} 
 $$
 
-임을 안다. 이 값은 또한 **로렌츠 스칼라(Lorentz scalar)** 인데 로렌츠 변환에 대해 불변이기 때문이다. 아래와 같이 주어진 양 중에 어떤 것이 로렌츠 스칼라인가? 여기서 $K$ 는 상수이다. 
+임을 안다. 이 값은 또한 **로런츠 스칼라(Lorentz scalar)** 인데 로런츠 변환에 대해 불변이기 때문이다. 아래와 같이 주어진 양 중에 어떤 것이 로런츠 스칼라인가? 여기서 $K$ 는 상수이다. 
 
 ($a$) $KA^\mu \eta_{\mu \nu}$, ($b$) $C^\mu = D^\mu (A^\lambda \eta_{\lambda \nu} B^\nu)$, ($c$) $KA^\mu \eta_{\mu \nu} B^\lambda \eta_{\lambda \sigma}D^\nu F^\sigma$.
 
@@ -1363,7 +1363,7 @@ $$
 
 ::: {.solution}
 
-($c$) 만 로렌츠 스칼라이다.
+($c$) 만 로런츠 스칼라이다.
 
 :::
 
@@ -1371,13 +1371,13 @@ $$
 
 ::: {#exr-helliwell_2_33}
 
-로렌츠 스칼라가 아닌 로렌츠 공변식 $C^\lambda = K^\lambda h(A^\mu \eta_{\mu \nu}B^\nu)$ 를 생각하자. $h$ 는 $(\;)$ 안의 양에 대한 함수이다. 여기서 위첨자가 하나인 것은 4-벡터이다. 로렌츠 변환에 대해 $A^\mu \eta_{\mu \nu}B^\nu$ 는 로렌츠 공변이며 로렌츠 스칼라이다. 따라서 $h(A^\mu \eta_{\mu \nu}B^\nu)$ 도 로렌츠 변환에 대해 그 값이 변하지 않는다. 그렇지만 $K^\mu$ 는 4-벡터이며 $K^\mu = \Lambda_{\mu'}^{\mu}K^{\mu'}$ 과 같이 변환된다는 것을 안다. $C^\lambda$ 는 4-벡터처럼 변환하며 관찰자 $O'$ 은 $C^{\lambda'} = K^{\lambda'} h(A^{\mu'} \eta_{\mu' \nu'}B^{\nu'})$ 로 쓸 수 있다. 이런 양은 4-벡터와 같이 변환되므로 **로렌츠 벡터(Lorentz vector)** 라고 한다. ($a$) $K\eta_{\mu \nu}$, ($b$) $C^\lambda = D^\mu A^\lambda \eta_{\mu \nu}B^\nu$, ($c$) $KA^\mu \eta_{\mu \nu} B^\lambda \eta_{\lambda \sigma} D^\nu F^\sigma$ 가운데 로렌츠 벡터는 무엇인가?
+로런츠 스칼라가 아닌 로런츠 공변식 $C^\lambda = K^\lambda h(A^\mu \eta_{\mu \nu}B^\nu)$ 를 생각하자. $h$ 는 $(\;)$ 안의 양에 대한 함수이다. 여기서 위첨자가 하나인 것은 4-벡터이다. 로런츠 변환에 대해 $A^\mu \eta_{\mu \nu}B^\nu$ 는 로런츠 공변이며 로런츠 스칼라이다. 따라서 $h(A^\mu \eta_{\mu \nu}B^\nu)$ 도 로런츠 변환에 대해 그 값이 변하지 않는다. 그렇지만 $K^\mu$ 는 4-벡터이며 $K^\mu = \Lambda_{\mu'}^{\mu}K^{\mu'}$ 과 같이 변환된다는 것을 안다. $C^\lambda$ 는 4-벡터처럼 변환하며 관찰자 $O'$ 은 $C^{\lambda'} = K^{\lambda'} h(A^{\mu'} \eta_{\mu' \nu'}B^{\nu'})$ 로 쓸 수 있다. 이런 양은 4-벡터와 같이 변환되므로 **로런츠 벡터(Lorentz vector)** 라고 한다. ($a$) $K\eta_{\mu \nu}$, ($b$) $C^\lambda = D^\mu A^\lambda \eta_{\mu \nu}B^\nu$, ($c$) $KA^\mu \eta_{\mu \nu} B^\lambda \eta_{\lambda \sigma} D^\nu F^\sigma$ 가운데 로런츠 벡터는 무엇인가?
 
 :::
 
 ::: {.solution}
 
-($b$) 만 로렌츠 벡터이다.
+($b$) 만 로런츠 벡터이다.
 
 :::
 
@@ -1385,13 +1385,13 @@ $$
 
 ::: {#exr-helliwell_2_34}
 
-로렌츠 공변 개념은 어떤 표현식이 관성계 변환에 대해 어떻게 변할지를 빠르게 결정 할 수 있게 해준다. 상대성 이론은 모든 물리법칙이 서로 다른 관성계에서 같은 형태를 가져야 할 것을 요구한다. 따라서 물리법칙의 표현식은 로렌츠 공변이어야 한다. 개정된 제 2 법칙을 보자.
+로런츠 공변 개념은 어떤 표현식이 관성계 변환에 대해 어떻게 변할지를 빠르게 결정 할 수 있게 해준다. 상대성 이론은 모든 물리법칙이 서로 다른 관성계에서 같은 형태를 가져야 할 것을 요구한다. 따라서 물리법칙의 표현식은 로런츠 공변이어야 한다. 개정된 제 2 법칙을 보자.
 
 $$
 f^\mu = \dfrac{dp^\mu}{d\tau}.
 $$
 
-여기서 $f^\mu$ 는 로렌츠 벡터이므로 다른 관성계에서
+여기서 $f^\mu$ 는 로런츠 벡터이므로 다른 관성계에서
 
 $$
 f^{\mu'} = \dfrac{dp^{\mu'}}{d\tau}
@@ -1399,11 +1399,11 @@ $$
 
 이 된다. 예를 들어 constant 4-벡터 $K^\mu$ 에 대해 $f^\mu = K^\mu$ 라고 쓸 수 있다.
 
-($a$) 상대론적인 용수철 법칙 $f^\mu = -(0,\, k\boldsymbol{r})$ ($k=\text{const.}$) 는 로렌츠 공변식인가?
+($a$) 상대론적인 용수철 법칙 $f^\mu = -(0,\, k\boldsymbol{r})$ ($k=\text{const.}$) 는 로런츠 공변식인가?
 
-($b$) 수정된 용수철 법칙 $f^\mu = -KX^\mu = -k(ct,\, \boldsymbol{r})$ 은 로렌츠 공변식인가?
+($b$) 수정된 용수철 법칙 $f^\mu = -KX^\mu = -k(ct,\, \boldsymbol{r})$ 은 로런츠 공변식인가?
 
-($c$) 중력 $\boldsymbol{F} = - (k/r^3)\boldsymbol{r}$ 은 로렌츠 공변식인가?
+($c$) 중력 $\boldsymbol{F} = - (k/r^3)\boldsymbol{r}$ 은 로런츠 공변식인가?
 :::
 
 ::: {.solution}
@@ -1416,13 +1416,13 @@ $$
 
 ::: {#exr-helliwell_2_35}
 
-가장 일반적인 로렌츠 변환은 다음을 만족하는 $4\times 4$ 행렬 $\boldsymbol{\Lambda}$ 임을 보여라.
+가장 일반적인 로런츠 변환은 다음을 만족하는 $4\times 4$ 행렬 $\boldsymbol{\Lambda}$ 임을 보여라.
 
 $$
 \boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda}= \boldsymbol{\eta} ,\qquad \text{and}\qquad \det (\boldsymbol{\Lambda}) =1.
 $$
 
-로렌츠 변환은 정의에 의해 시공간에서 정의된 선형변환이며 광속을 보존하기 때문에 이 두 조건이 위의 식을 만족하는 필요충분조건임을 보이면 된다. 반사(reflection) 은 두번째 조건에 의해 배제된다.
+로런츠 변환은 정의에 의해 시공간에서 정의된 선형변환이며 광속을 보존하기 때문에 이 두 조건이 위의 식을 만족하는 필요충분조건임을 보이면 된다. 반사(reflection) 은 두번째 조건에 의해 배제된다.
 
 :::
 
@@ -1440,7 +1440,7 @@ $$
 X^T\boldsymbol{\eta}X =(X')^T\boldsymbol{\eta}X' = (\boldsymbol{\Lambda}X)^T \boldsymbol{\eta}(\boldsymbol{\Lambda}X)= X^T \boldsymbol{\Lambda}^T\boldsymbol{\eta}\boldsymbol{\Lambda}X
 $$
 
-이어야 한다. 따라서 $\boldsymbol{\eta} = \boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda}$ 이어야 한다. 로렌츠 변환은 $\boldsymbol{\beta}$ 에 대해 연속이어야 하므로 $\det(\boldsymbol{\Lambda})$ 도 연속이다. $\boldsymbol{\beta}=0$ 일 때 행렬식이 $1$ 이므로 $\det(\boldsymbol{\Lambda})=1$ 이다. 
+이어야 한다. 따라서 $\boldsymbol{\eta} = \boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda}$ 이어야 한다. 로런츠 변환은 $\boldsymbol{\beta}$ 에 대해 연속이어야 하므로 $\det(\boldsymbol{\Lambda})$ 도 연속이다. $\boldsymbol{\beta}=0$ 일 때 행렬식이 $1$ 이므로 $\det(\boldsymbol{\Lambda})=1$ 이다. 
 
 이제 $\boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda}= \boldsymbol{\eta}$ 임을 가정하면 $X^\mu \eta_{\mu \nu} X^{\mu} = X^{\mu'}\eta_{\mu' \nu'}X^{\nu'}$ 임을 안다. 즉 광속을 보존하는 변환이다.
 
@@ -1526,7 +1526,7 @@ $$
 \left(125\,\textrm{GeV}/c,\, 0,\,0,\,0 \right) = \left(\sqrt{m_b^2c^2 + p_b^2} + \sqrt{m_\overline{b}^2c^2 + p_\overline{b}^2},\, p_b+p_{\overline{b}},\,0,\,0\right)
 $$
 
-이므로 $p_b = \sqrt{(62.5)^2-(4.2)^2}\,\textrm{GeV}/c = 62.36\, \textrm{GeV}/c = -p_{\overline{b}}$ 이다. $\beta = 4/5,\, \gamma= 5/3$ 에 대해 로렌츠 변환을 수행하면, $E_b=187.31\, \textrm{GeV}$, $p_b = 187.27\, \textrm{GeV}/c$, $E_\overline{b}=21.02\, \textrm{GeV}$, $p_\overline{b} = -20.6\, \textrm{GeV}/c$.
+이므로 $p_b = \sqrt{(62.5)^2-(4.2)^2}\,\textrm{GeV}/c = 62.36\, \textrm{GeV}/c = -p_{\overline{b}}$ 이다. $\beta = 4/5,\, \gamma= 5/3$ 에 대해 로런츠 변환을 수행하면, $E_b=187.31\, \textrm{GeV}$, $p_b = 187.27\, \textrm{GeV}/c$, $E_\overline{b}=21.02\, \textrm{GeV}$, $p_\overline{b} = -20.6\, \textrm{GeV}/c$.
 
 :::
 
