@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir : docs
 
 book:
   title: "고전 역학과 전자기학"
@@ -10,36 +11,36 @@ book:
   
   chapters:
     - index.qmd
-    - part: docs/ClassicalMechanics/00_index.qmd
+    - part: src/ClassicalMechanics/00_index.qmd
       chapters:
-      - docs/ClassicalMechanics/01_basic_principles.qmd
-      - docs/ClassicalMechanics/02_variational_principle.qmd
-      - docs/ClassicalMechanics/03_hamilton_dynamics.qmd
-      - docs/ClassicalMechanics/one_body_problems.qmd
-      - docs/ClassicalMechanics/two_or_three_bodies_problems.qmd
-      - docs/ClassicalMechanics/A_proofs.qmd
+      - src/ClassicalMechanics/01_basic_principles.qmd
+      - src/ClassicalMechanics/02_variational_principle.qmd
+      - src/ClassicalMechanics/03_hamilton_dynamics.qmd
+      - src/ClassicalMechanics/one_body_problems.qmd
+      - src/ClassicalMechanics/two_or_three_bodies_problems.qmd
+      - src/ClassicalMechanics/A_proofs.qmd
       
-    - part: docs/Electromagnetism/00_index.qmd
+    - part: src/Electromagnetism/00_index.qmd
       chapters:
-      - docs/Electromagnetism/01_Maxwell.qmd
-    - part: docs/Relativity/00_index.qmd
+      - src/Electromagnetism/01_Maxwell.qmd
+    - part: src/Relativity/00_index.qmd
       chapters:
-      - docs/Relativity/01_introduction_to_special_relativity.qmd
-      - docs/Relativity/02_introduction_to_classical_field.qmd
-    - part: docs/Lanczos/Lanczos.qmd
+      - src/Relativity/01_introduction_to_special_relativity.qmd
+      - src/Relativity/02_introduction_to_classical_field.qmd
+    - part: src/Lanczos/Lanczos.qmd
       chapters:
-      - docs/Lanczos/00_01.qmd
-      - docs/Lanczos/01_01.qmd
-      - docs/Lanczos/02_01.qmd
-    - part: docs/topics/Topics.qmd
+      - src/Lanczos/00_01.qmd
+      - src/Lanczos/01_01.qmd
+      - src/Lanczos/02_01.qmd
+    - part: src/topics/Topics.qmd
       chapters:
-        - docs/topics/mathematical.qmd
-    - part: docs/images/images.qmd
+        - src/topics/mathematical.qmd
+    - part: src/images/images.qmd
       chapters:
-      - docs/images/images_classical_mechanics_01.qmd
-      - docs/images/images_classical_mechanics_02.qmd
-      - docs/images/images_relativity_01.qmd
-      - docs/images/images_test.qmd
+      - src/images/images_classical_mechanics_01.qmd
+      - src/images/images_classical_mechanics_02.qmd
+      - src/images/images_relativity_01.qmd
+      - src/images/images_test.qmd
     - references.qmd
 
 bibliography: references.bib
@@ -51,7 +52,7 @@ format:
     #   - html-hacks/load-font-awesome.html
     #   - html-hacks/load-xkcd-font.html
     # resources: web-resources/**
-    # https://quarto.org/docs/output-formats/html-themes.html#overview
+    # https://quarto.org/src/output-formats/html-themes.html#overview
     # theme: darkly
     theme: cosmo
     fontsize: 0.9em

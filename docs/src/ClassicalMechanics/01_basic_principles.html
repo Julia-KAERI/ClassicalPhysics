@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>고전 역학과 전자기학 - 1&nbsp; 뉴튼역학의 기본 원리</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../src/ClassicalMechanics/02_variational_principle.html" rel="next">
+<link href="../../src/ClassicalMechanics/00_index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/01_basic_principles.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/01_basic_principles.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리</span></a></li></ol></nav>
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리</span></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">고전 역학과 전자기학</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../src/ClassicalMechanics/00_index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">고전역학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/ClassicalMechanics/02_variational_principle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/ClassicalMechanics/one_body_problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/ClassicalMechanics/two_or_three_bodies_problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/ClassicalMechanics/A_proofs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../src/Electromagnetism/00_index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">고전 전자기학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/Electromagnetism/01_Maxwell.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">멕스웰 방정식</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">상대론</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../src/Lanczos/Lanczos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">변분 역학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/Lanczos/00_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/Lanczos/01_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">해석역학의 기본 개념</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/Lanczos/02_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">변분법</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../src/topics/Topics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">별도의 주제들</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../src/images/images.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">그림들</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/images/images_classical_mechanics_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">그림 : 고전역학 #1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/images/images_classical_mechanics_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">그림 : 고전역학 #2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/images/images_relativity_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">그림들-상대성이론</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/images/images_test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">그림들-테스트</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#뉴턴의-세가지-운동법칙" id="toc-뉴턴의-세가지-운동법칙" class="nav-link active" data-scroll-target="#뉴턴의-세가지-운동법칙"><span class="header-section-number">1.1</span> 뉴턴의 세가지 운동법칙</a>
+  <ul class="collapse">
+  <li><a href="#입자-공간-시간-좌표계" id="toc-입자-공간-시간-좌표계" class="nav-link" data-scroll-target="#입자-공간-시간-좌표계"><span class="header-section-number">1.1.1</span> 입자, 공간, 시간, 좌표계</a></li>
+  <li><a href="#뉴턴의-제-1-운동법칙과-관성좌표계" id="toc-뉴턴의-제-1-운동법칙과-관성좌표계" class="nav-link" data-scroll-target="#뉴턴의-제-1-운동법칙과-관성좌표계"><span class="header-section-number">1.1.2</span> 뉴턴의 제 1 운동법칙과 관성좌표계</a></li>
+  <li><a href="#뉴튼의-제2-운동법칙과-운동량" id="toc-뉴튼의-제2-운동법칙과-운동량" class="nav-link" data-scroll-target="#뉴튼의-제2-운동법칙과-운동량"><span class="header-section-number">1.1.3</span> 뉴튼의 제2 운동법칙과 운동량</a></li>
+  <li><a href="#뉴튼의-제3-운동법칙" id="toc-뉴튼의-제3-운동법칙" class="nav-link" data-scroll-target="#뉴튼의-제3-운동법칙"><span class="header-section-number">1.1.4</span> 뉴튼의 제3 운동법칙</a></li>
+  </ul></li>
+  <li><a href="#물리량" id="toc-물리량" class="nav-link" data-scroll-target="#물리량"><span class="header-section-number">1.2</span> 물리량</a>
+  <ul class="collapse">
+  <li><a href="#각운동량과-토크" id="toc-각운동량과-토크" class="nav-link" data-scroll-target="#각운동량과-토크"><span class="header-section-number">1.2.1</span> 각운동량과 토크</a></li>
+  <li><a href="#힘에-의한-일work" id="toc-힘에-의한-일work" class="nav-link" data-scroll-target="#힘에-의한-일work"><span class="header-section-number">1.2.2</span> 힘에 의한 일(Work)</a></li>
+  <li><a href="#보존력" id="toc-보존력" class="nav-link" data-scroll-target="#보존력"><span class="header-section-number">1.2.3</span> 보존력</a></li>
+  <li><a href="#입자에-대한-에너지-보존-정리" id="toc-입자에-대한-에너지-보존-정리" class="nav-link" data-scroll-target="#입자에-대한-에너지-보존-정리"><span class="header-section-number">1.2.4</span> 입자에 대한 에너지 보존 정리</a></li>
+  </ul></li>
+  <li><a href="#입자계의-동역학" id="toc-입자계의-동역학" class="nav-link" data-scroll-target="#입자계의-동역학"><span class="header-section-number">1.3</span> 입자계의 동역학</a>
+  <ul class="collapse">
+  <li><a href="#질량-중심과-입자계의-총-운동량" id="toc-질량-중심과-입자계의-총-운동량" class="nav-link" data-scroll-target="#질량-중심과-입자계의-총-운동량"><span class="header-section-number">1.3.1</span> 질량 중심과 입자계의 총 운동량</a></li>
+  <li><a href="#sec-total_angular_momentum" id="toc-sec-total_angular_momentum" class="nav-link" data-scroll-target="#sec-total_angular_momentum"><span class="header-section-number">1.3.2</span> 총 각운동량</a></li>
+  <li><a href="#질량중심-좌표계" id="toc-질량중심-좌표계" class="nav-link" data-scroll-target="#질량중심-좌표계"><span class="header-section-number">1.3.3</span> 질량중심 좌표계</a></li>
+  </ul></li>
+  <li><a href="#constraint" id="toc-constraint" class="nav-link" data-scroll-target="#constraint"><span class="header-section-number">1.4</span> Constraint</a>
+  <ul class="collapse">
+  <li><a href="#constraints의-분류" id="toc-constraints의-분류" class="nav-link" data-scroll-target="#constraints의-분류"><span class="header-section-number">1.4.1</span> constraints의 분류</a></li>
+  <li><a href="#일반화된-좌표계" id="toc-일반화된-좌표계" class="nav-link" data-scroll-target="#일반화된-좌표계"><span class="header-section-number">1.4.2</span> 일반화된 좌표계</a></li>
+  <li><a href="#예" id="toc-예" class="nav-link" data-scroll-target="#예"><span class="header-section-number">1.4.3</span> 예</a></li>
+  </ul></li>
+  <li><a href="#달랑베르-원리-와-라그랑쥬-방정식" id="toc-달랑베르-원리-와-라그랑쥬-방정식" class="nav-link" data-scroll-target="#달랑베르-원리-와-라그랑쥬-방정식"><span class="header-section-number">1.5</span> 달랑베르 원리 와 라그랑쥬 방정식</a>
+  <ul class="collapse">
+  <li><a href="#configuration-space" id="toc-configuration-space" class="nav-link" data-scroll-target="#configuration-space"><span class="header-section-number">1.5.1</span> Configuration space</a></li>
+  <li><a href="#virtual-displacement" id="toc-virtual-displacement" class="nav-link" data-scroll-target="#virtual-displacement"><span class="header-section-number">1.5.2</span> Virtual displacement</a></li>
+  <li><a href="#달랑베르-원리dalemberts-principle" id="toc-달랑베르-원리dalemberts-principle" class="nav-link" data-scroll-target="#달랑베르-원리dalemberts-principle"><span class="header-section-number">1.5.3</span> 달랑베르 원리(D’Alembert’s principle)</a></li>
+  <li><a href="#일반화된-좌표계에서의-달랑베르-원리" id="toc-일반화된-좌표계에서의-달랑베르-원리" class="nav-link" data-scroll-target="#일반화된-좌표계에서의-달랑베르-원리"><span class="header-section-number">1.5.4</span> 일반화된 좌표계에서의 달랑베르 원리</a></li>
+  <li><a href="#lagranges-equations" id="toc-lagranges-equations" class="nav-link" data-scroll-target="#lagranges-equations"><span class="header-section-number">1.5.5</span> Lagrange’s equations</a></li>
+  <li><a href="#lagrangian-is-not-unique" id="toc-lagrangian-is-not-unique" class="nav-link" data-scroll-target="#lagrangian-is-not-unique"><span class="header-section-number">1.5.6</span> Lagrangian is not unique</a></li>
+  </ul></li>
+  <li><a href="#속도에-의존하는-포텐셜과-dissipation-함수" id="toc-속도에-의존하는-포텐셜과-dissipation-함수" class="nav-link" data-scroll-target="#속도에-의존하는-포텐셜과-dissipation-함수"><span class="header-section-number">1.6</span> 속도에 의존하는 포텐셜과 dissipation 함수</a>
+  <ul class="collapse">
+  <li><a href="#일반화된-포텐셜" id="toc-일반화된-포텐셜" class="nav-link" data-scroll-target="#일반화된-포텐셜"><span class="header-section-number">1.6.1</span> 일반화된 포텐셜</a></li>
+  <li><a href="#전자기력에-대한-일반화된-포텐셜" id="toc-전자기력에-대한-일반화된-포텐셜" class="nav-link" data-scroll-target="#전자기력에-대한-일반화된-포텐셜"><span class="header-section-number">1.6.2</span> 전자기력에 대한 일반화된 포텐셜</a></li>
+  </ul></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제"><span class="header-section-number">1.7</span> 연습문제</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+
+<section id="뉴턴의-세가지-운동법칙" class="level2 page-columns page-full" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="뉴턴의-세가지-운동법칙"><span class="header-section-number">1.1</span> 뉴턴의 세가지 운동법칙</h2>
+<section id="입자-공간-시간-좌표계" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="입자-공간-시간-좌표계"><span class="header-section-number">1.1.1</span> 입자, 공간, 시간, 좌표계</h3>
+<p>고전역학에서 <strong>입자(particle)</strong> 는 질량을 가지고 있지만 부피가 없는, 혹은 그 부피란 것이 우리가 측정하고자 하는 양에 대해 무시할만한 어떤 추상적인 대상이다. 입자는 3차원 공간상에 존재하며 시간의 변화에 따라 공간상에서 움직일 수 있다. 입자의 시간에 따른 위치를 <strong>경로(path 혹은 trajectory)</strong> 라고 한다. 입자의 경로를 기술하기 위해 공간상에서의 위치의 기준이 되는 원점 <span class="math inline">\(\mathcal{O}\)</span> 을 설정하며, 이 원점에 대한 변위를 <strong>radius vector</strong> 라고 한다. 원점은 임의로 정할 수 있다. 고전역학에서 다루는 공간은 3차원 유클리드 공간이며, 원점 <span class="math inline">\(\mathcal{O}\)</span> 에 대해 임의의 표준 기저 <span class="math inline">\(\hat{\boldsymbol{e}}_1,\,\hat{\boldsymbol{e}}_2,\,\hat{\boldsymbol{e}}_3\)</span>, 혹은 <span class="math inline">\(\hat{\boldsymbol{x}},\, \hat{\boldsymbol{y}},\, \hat{\boldsymbol{z}}\)</span> 를 관례적으로 <span class="math inline">\(\hat{\boldsymbol{e}}_3 = \hat{\boldsymbol{e}}_1 \times \hat{\boldsymbol{e}}_2\)</span> 가 되도록 잡아 radius vector <span class="math inline">\(\boldsymbol{r}\)</span> 을 이 표준기저에 대한 좌표로 표현한다. 즉 <span class="math inline">\(\boldsymbol{r} = x\hat{\boldsymbol{e}}_1 + y \hat{\boldsymbol{e}}_2 + z\hat{\boldsymbol{e}}_3\)</span> 일 때 <span class="math inline">\(\boldsymbol{r}\)</span> 을 <span class="math inline">\((x,\,y,\,z)\)</span> 혹은 <span class="math inline">\(\begin{bmatrix} x &amp; y &amp; z\end{bmatrix}^T\)</span> 로 표현하며 이를 <strong>좌표(coordinate)</strong> 라고 한다.</p>
+<div id="fig-reference_frames" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-reference_frames-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/classical mechanics/fig-radius_vector_in_two_frame.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-reference_frames-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.1: 두 좌표계
+</figcaption>
+</figure>
+</div>
+<p>원점과 표준기저가 정해졌을 모든 위치의 좌표가 정해진다. 이렇게 위치를 특정하기 위해 정해진 원점과 표준기저를 <strong>기준틀(reference frame)</strong> 이라고 한다. 그런데 원점과 표준기저는 임의적이다. 즉 원점 자체는 공간상의 어느 위치에다 정해도 되며, 정해진 원점에 대해서도 가능한 표준기저는 무수히 많다. 즉 좌표계는 개수는 무한대이다. 또한 시간이라는 다른 변수도 존재한다. 하나의 원점 (<span class="math inline">\(\mathcal{O}_1\)</span>)에 대해 다른 좌표계의 원점(<span class="math inline">\(\mathcal{O}_2\)</span>)은 시간에 따라 그 위치가 바뀔 수도 있다. <span class="math inline">\(\mathcal{O}_2\)</span> 의 좌표가 <span class="math inline">\(\mathcal{O}_1\)</span> 으로 기술되는 좌표계에서 시간에 따라 일정하게 변할수도 있고, 시간의 제곱에 따라 변할수도 있다.</p>
+<p><br></p>
+<p>어떤 좌표계를 사용하더라도 유지되어야 할 기본적인 양(quantity)이 있다. 하나는 거리이다. 즉 공간상의 두 점 <span class="math inline">\(P_1,\, P_2\)</span> 사이의 거리는 어떤 좌표계에서도 동일해야 한다. 다른 하나는 시간이다. 두 사건의 시간상의 차이 <span class="math inline">\(t_2-t_1\)</span> 은 어느 좌표계에서든 같야야 한다. 아인슈타인 이전에는 이것을 당연하게 생각했으므로 이전에는 여기에 특별한 이름이 붙지 않았다. 이것은 뒤에 나올 상대성 이론과의 가장 큰 차이점이다.</p>
+<p><br></p>
+</section>
+<section id="뉴턴의-제-1-운동법칙과-관성좌표계" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="뉴턴의-제-1-운동법칙과-관성좌표계"><span class="header-section-number">1.1.2</span> 뉴턴의 제 1 운동법칙과 관성좌표계</h3>
+<p>뉴튼의 제 1 운동법칙은 좌표계 중에 기준이 되는 좌표계를 정하도록 한다.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+뉴튼의 제 1 운동법칙
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Every body continues in its state of rest, or of uniform motion in a straight line, unless it is compelled to change that state by forces impressed upon it.</em></p>
+<p>외부의 힘이 없다면, 모든 물체는 정지 상태나 직선으로 균일한 운동 상태를 유지한다.</p>
+</div>
+</div>
+<p>우주에 입자(particle) 하나만 존재하며 당신은 이 입자에 영항을 끼치지 않으면서 위치와 속도를 잴 수 있는 존재라고 하자. 이 입자의 운동에 어떤 영향도 끼치는 존재가 없을 때 그 입자는 정지상태나 직선으로 균일한 운동상태, 즉 등속운동상태를 유지하는 좌표계가 존재한다는 말이며, 이것을 <strong>관성좌표계(inertial frame)</strong> 이라고 한다. 어떤 관성좌표계 <span class="math inline">\(\mathcal{O}\)</span> 에 대해 다른 좌표계의 원점 <span class="math inline">\(\mathcal{O}'\)</span> 이 <span class="math inline">\(\boldsymbol{V} = (V_x,\,V_y,\,V_z)\)</span> 의 일정한 속도로 움직인다고 하자. 처음의 좌표계의 radius vector <span class="math inline">\(\boldsymbol{r} = (x,\,y,\,z)\)</span> 라고 하고, 뒤의 좌표계의 raduis vector <span class="math inline">\(\boldsymbol{r}'=(x',\,y',\, z')\)</span> 라고 하면,</p>
+<p><span class="math display">\[
+\boldsymbol{r}' = \boldsymbol{r}-\boldsymbol{V}t
+\]</span></p>
+<p>이므로, <span class="math inline">\(x'=x-V_xt,\, y' = y-V_yt,\, z'=z-V_zt\)</span> 이며,</p>
+<p><span class="math display">\[
+\dfrac{dx'}{dt}= \dfrac{dx}{dt}-V_x,\, \dfrac{dy'}{dt}= \dfrac{dy}{dt}-V_y,\, \dfrac{dz'}{dt}= \dfrac{dz}{dt}-V_z
+\]</span></p>
+<p>가 된다. 즉 <span class="math inline">\(\mathcal{O}\)</span> 에서의 등속운동은 <span class="math inline">\(\mathcal{O}'\)</span> 에서의 등속운동이다. 이렇게 한 좌표계에 대해 등속을 하는 다른 좌표계로 변환하는 것을 갈릴레이 변환(Galilean transformation) 이라고 하며, 관성좌표계에 대한 갈릴레이 변환은 다른 관성좌표계가 된다.</p>
+<p><br></p>
+</section>
+<section id="뉴튼의-제2-운동법칙과-운동량" class="level3 page-columns page-full" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="뉴튼의-제2-운동법칙과-운동량"><span class="header-section-number">1.1.3</span> 뉴튼의 제2 운동법칙과 운동량</h3>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+뉴튼의 제 2 운동법칙
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>The change of motion of an object is proportional to the force impressed; and is made in the direction of the straight line in which the force is impressed.</em></p>
+<p>운동량의 변화는 가해진 힘에 비례하며, 변화의 방향은 가해지는 힘의 방향이다.</p>
+</div>
+</div>
+<p>논의를 이어가기 전에 중요한 물리량을 정의하자.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-linear_momentum" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 1.1 (선형 운동량)</strong></span> 입자 <span class="math inline">\(m\)</span> 이 속도 <span class="math inline">\(\boldsymbol{v}\)</span> 로 운동할 때 <strong>선형 운동량 (linear momentum)</strong> 혹은 <strong>운동량(momentum)</strong> <span class="math inline">\(\boldsymbol{p}\)</span> 는 다음과 같이 정의된다.</p>
+<p><span class="math display">\[
+\boldsymbol{p} := m\boldsymbol{v}.
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>우리는 앞서 관성좌표계를 정의했다. 만약 입자가 정지를 포함한 등속운동 상태이지 않으면 무언가가 입자에 영향을 준다는 의미이며 그것을 <strong>힘(force)</strong> 라고 하고 정량적으로는 운동량 <span class="math inline">\(\boldsymbol{p}\)</span> 의 시간에 대한 변화량으로 정의한다. 영어 표현의 <code>motion</code> 은 현재 우리가 운동량 으로 부르는 값이다. 즉 외부에서 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 가 가해질 때 뉴튼의 제2 운동법칙은 다음을 말한다.</p>
+<p><span class="math display">\[
+\dfrac{d\boldsymbol{p}}{dt} = \dfrac{d}{dt}(m\boldsymbol{v})= \boldsymbol{F}.
+\]</span></p>
+<p>질량 <span class="math inline">\(m\)</span> 이 고정되어 있다고 하자. 그렇다면 <span class="math inline">\(\boldsymbol{F} = m\dfrac{d^2\boldsymbol{r}}{dt^2} = m\boldsymbol{a}\)</span> 이며, 힘에 대해 입자의 가속도는 <span class="math inline">\(m\)</span> 에 반비례하여 정해진다</p>
+<p><span class="math display">\[
+\boldsymbol{a} = \dfrac{1}{m}\boldsymbol{F}
+\]</span></p>
+<div class="page-columns page-full"><p>이 <span class="math inline">\(m\)</span> 을 <strong>관성질량(inerital mass)</strong><span class="math inline">\(^\dagger\)</span> 이라고 한다. <span class="math inline">\(\boldsymbol{F}=\boldsymbol{0}\)</span> 일 경우 운동량 <span class="math inline">\(\boldsymbol{p}\)</span> 는 일정하게 유지된다. 이것을 <strong>운동량 보존</strong> 이라고 한다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^\dagger\)</span> 관성질량과 비교되는 값은 중력질량이다. 이것은 만유인력을 다룰 때 설명한다.</span></div></div>
+<p><br></p>
+<p>두 좌표계 <span class="math inline">\(S\)</span> 와 <span class="math inline">\(S'\)</span> 을 생각하자. <span class="math inline">\(S'\)</span> 이 <span class="math inline">\(S\)</span> 에 대해 일정한 속도 <span class="math inline">\(\boldsymbol{V}\)</span> 로 움직인다고 하자. 또 <span class="math inline">\(t=0\)</span> 에서 두 좌표게의 원점이 일치했다고 하자. 그렇다면 <span class="math inline">\(S\)</span> 에서의 radius vector <span class="math inline">\(\boldsymbol{r}\)</span> 과 <span class="math inline">\(S'\)</span> 에서의 radius vector <span class="math inline">\(\boldsymbol{r}'\)</span> 사이에 다음의 관계가 존재한다.</p>
+<p><span class="math display">\[
+\boldsymbol{r}= \boldsymbol{r}'+\boldsymbol{V}t
+\]</span></p>
+<p>그렇다면 <span class="math inline">\(S\)</span> 에서 느끼는 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 와 <span class="math inline">\(S'\)</span> 에서 느끼는 힘 <span class="math inline">\(\boldsymbol{F}'\)</span> 사이의 관계는 다음과 같다.</p>
+<p><span class="math display">\[
+\boldsymbol{F} = \dfrac{d\boldsymbol{p}}{dt} = \dfrac{d}{dt}\left[m\left(\dfrac{d\boldsymbol{r}}{dt}\right)\right]= \dfrac{d}{dt} \left[ m \dfrac{{d(\boldsymbol{r}'+\boldsymbol{V}t)}}{dt}\right] = \dfrac{d\boldsymbol{p}'}{dt} = \boldsymbol{F}'
+\]</span></p>
+<p>즉 관성 좌표계에서 운동방정식은 동일하다. 이를 <strong>갈릴레이의 상대성 원리 (Galilean relativity)</strong> 라고 한다.</p>
+<p><br></p>
+</section>
+<section id="뉴튼의-제3-운동법칙" class="level3 page-columns page-full" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="뉴튼의-제3-운동법칙"><span class="header-section-number">1.1.4</span> 뉴튼의 제3 운동법칙</h3>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+뉴튼의 제 3 운동법칙
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>To every action, there is always opposed an equal reaction; or, the mutual actions of two bodies upon each other are always equal, and directed to contrary parts..</em></p>
+<p>모든 <em>action</em> 에 대해 크기가 같고 방향이 반대인 <em>reaction</em> 이 존재한다. 즉 두 물체 사이의 상호 <em>action</em> 은 항상 크기가 같고 방향이 반대이다.</p>
+</div>
+</div>
+<div class="page-columns page-full"><p>여기서의 <em>action</em><span class="math inline">\({}^\ast\)</span>  은 한 물체에서 다른 물체에 대해 힘을 가하는 것을 말한다. 즉 두 물체 사이 <span class="math inline">\(A\)</span> 와 <span class="math inline">\(B\)</span> 사이에 힘이 작용할 때 <span class="math inline">\(A\)</span> 가 <span class="math inline">\(B\)</span> 의 존재로 인해 받는 힘 <span class="math inline">\(\boldsymbol{F}_{BA}\)</span> 와 <span class="math inline">\(B\)</span> 가 <span class="math inline">\(A\)</span> 의 존재로 인해 받는 힘 <span class="math inline">\(\boldsymbol{F}_{AB}\)</span> 사이에는 <span class="math inline">\(\boldsymbol{F}_{BA}=-\boldsymbol{F}_{AB}\)</span> 의 관계가 성립한다는 의미이다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^\ast\)</span> 고전역학에서 action 은 뒤에 나올 라그랑지안의 시간 적분을 의미하기도 하며, 여기를 제외한 다른 부분에서는 주로 이 의미로 사용하겠다. 별도의 언급 없이 action-reaction 의 의미에서 사용하는 것은 여기 뿐이다.</span></div></div>
+<p><br></p>
+</section>
+</section>
+<section id="물리량" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="물리량"><span class="header-section-number">1.2</span> 물리량</h2>
+<section id="각운동량과-토크" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="각운동량과-토크"><span class="header-section-number">1.2.1</span> 각운동량과 토크</h3>
+<p>각운동량 <span class="math inline">\(\boldsymbol{L}\)</span> 은 <span class="math inline">\(\boldsymbol{L} = \boldsymbol{r} \times \boldsymbol{p}\)</span> 로 정의된다. 원점 <span class="math inline">\(\mathcal{O}\)</span> 로부터의 토크(torque) (혹은 moment of force) <span class="math inline">\(\boldsymbol{N}\)</span> 은 <span class="math inline">\(\boldsymbol{N} = \boldsymbol{r} \times \boldsymbol{F}\)</span> 로 정의된다. 이 때,</p>
+<p><span class="math display">\[
+\dfrac{d\boldsymbol{L}}{dt} = \dfrac{d}{dt} (\boldsymbol{r} \times m\boldsymbol{v}) = \boldsymbol{v} \times m \boldsymbol{v} + \boldsymbol{r} \times \dfrac{d}{dt}(m\boldsymbol{v}) = \boldsymbol{r} \times \boldsymbol{p} = \boldsymbol{N}
+\]</span></p>
+<p>이다. 즉 <span class="math inline">\(\boldsymbol{N}=0\)</span> 이면 <span class="math inline">\(\boldsymbol{L}\)</span> 이 보존됨을 알 수 있다.</p>
+<p><br></p>
+</section>
+<section id="힘에-의한-일work" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="힘에-의한-일work"><span class="header-section-number">1.2.2</span> 힘에 의한 일(Work)</h3>
+<p>External force <span class="math inline">\(\boldsymbol{F}\)</span> 에 의해 입자가 <span class="math inline">\(1\)</span> 지점에서 <span class="math inline">\(2\)</span> 지점으로 움직였다고 하자. 이 때, 이 particle에 가해진 힘 <span class="math inline">\(\boldsymbol{F}\)</span>가 한 일 <span class="math inline">\(W_{12}\)</span>는 다음과 같이 정의된다.</p>
+<p><span class="math display">\[
+W_{12} = \int_1^2 \boldsymbol{F} \cdot d\boldsymbol{s}\;.
+\]</span></p>
+<p>다음을 보자.</p>
+<p><span class="math display">\[
+W_{12} = \int_1^2 \boldsymbol{F} \cdot d\boldsymbol{s} = m \int \dfrac{d\boldsymbol{v}}{dt} \cdot \boldsymbol{v} dt = \dfrac{m}{2} \int \dfrac{d}{dt} v^2 dt = \dfrac{1}{2} m ({v_2}^2 - {v_1}^2)\;.
+\]</span></p>
+<p>이로부터 우리는 운동에너지 <span class="math inline">\(T=\dfrac{1}{2} mv^2\)</span> 를 정의할 필요를 얻게 된다. 그렇다면 <span class="math inline">\(W_{12} = T_2 - T_1\)</span> 이다.</p>
+<p><br></p>
+</section>
+<section id="보존력" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="보존력"><span class="header-section-number">1.2.3</span> 보존력</h3>
+<p>External force 가 벡터장 <span class="math inline">\(\boldsymbol{F}\)</span> 로 주어졌고, 이 <span class="math inline">\(\boldsymbol{F}\)</span> 에 의한 일 <span class="math inline">\(W_{12}\)</span> 이 그 경로에 의존하지 않을 때 이 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 를 <strong>보존력(conservative force)</strong> 라고 한다. 이 경우 다음을 만족한다.</p>
+<p><span class="math display">\[
+\oint_C \boldsymbol{F}\cdot d\boldsymbol{s}=0
+\]</span></p>
+<p>수학적으로 이것은 어떤 스칼라장 (scalar field) <span class="math inline">\(V(\boldsymbol{r})\)</span> 이 존재하여 <span class="math inline">\(\boldsymbol{F}= -\nabla V(\boldsymbol{r})\)</span> 인 것과 동치이다. 이 때 <span class="math inline">\(V(\boldsymbol{r})\)</span> 을 <strong>포텐셜(potential)</strong> 혹은 <strong>포텐셜 에너지(potential energy)</strong> 라고 한다.</p>
+<p><br></p>
+</section>
+<section id="입자에-대한-에너지-보존-정리" class="level3" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="입자에-대한-에너지-보존-정리"><span class="header-section-number">1.2.4</span> 입자에 대한 에너지 보존 정리</h3>
+<p>시스템에 작용하는 모든 힘이 보존력일 때 이 system을 <strong>보존계(conservative system)</strong> 라 한다. 보존계에서는</p>
+<p><span class="math display">\[
+W_{12} = \int_1^2 \boldsymbol{F}\cdot d \boldsymbol{s} = \int_1^2 -\nabla V(\boldsymbol{r}) \cdot d\boldsymbol{s} = V(1) - V(2)
+\]</span></p>
+<p>이다. <span class="math inline">\(V_1=V(1)\)</span>, <span class="math inline">\(V_2=V(2)\)</span> 라 할 경우 <span class="math inline">\(W_{12}=T_2 - T_1 = V_1 - V_2\)</span> 이므로 <span class="math inline">\(T_1 + V_1 = T_2 + V_2\)</span> 이다. 즉 보존계에서는 운동에너지와 위치에너지의 합이 항상 보존된다. 이를 <strong>보존계에서의 에너지 보존</strong> 이라 한다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="입자계의-동역학" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="입자계의-동역학"><span class="header-section-number">1.3</span> 입자계의 동역학</h2>
+<p>입자계에서 <span class="math inline">\(j\)</span>-번째 입자가 <span class="math inline">\(i\)</span>-번째 입자에 가하는 힘을 <span class="math inline">\(\boldsymbol{F}_{ji}\)</span> 라 하자. System 외부에서 <span class="math inline">\(i\)</span>-번째 입자에 가하는 힘을 <span class="math inline">\(\boldsymbol{F}^{(e)}_{i}\)</span> 라 하면 <span class="math inline">\(i\)</span> 번째 입자의 운동방정식은 다음과 같다.</p>
+<p><span class="math display">\[
+\sum_j \boldsymbol{F}_{ji} + \boldsymbol{F}^{(e)}_i = \dot{\boldsymbol{p}}_i = \frac{d}{dt} (m_i\boldsymbol{v}_i)
+\]</span></p>
+<p>제 3 운동법칙에 따라 모든 <span class="math inline">\(i,\,j\)</span> 에 대해 <span class="math inline">\(\boldsymbol{F}_{ij} = - \boldsymbol{F}_{ji}\)</span> 일 경우 모든 particle에 대해 더하면 다음과 같다. <span class="math inline">\(\boldsymbol{F}^{(e)} = \sum_i \boldsymbol{F}^{(e)}_i\)</span> 로 external force 의 총합이다.</p>
+<p><span id="eq-system_of_particles"><span class="math display">\[
+\dfrac{d^2}{dt^2} \sum_i m_i \boldsymbol{r}_i = \sum_i \boldsymbol{F}^{(e)}_i + \sum_{\substack{ i ,j \\ i \ne j }} \boldsymbol{F}_{ji} = \boldsymbol{F}^{(e)}  + 0
+\tag{1.1}\]</span></span></p>
+<p><br></p>
+<section id="질량-중심과-입자계의-총-운동량" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="질량-중심과-입자계의-총-운동량"><span class="header-section-number">1.3.1</span> 질량 중심과 입자계의 총 운동량</h3>
+<p>입자계 에서 <strong>질량 중심(center of mass)</strong> (혹은 center of gravity) <span class="math inline">\(\boldsymbol{R}\)</span> 는 다음과 같이 정의된다.</p>
+<p><span class="math display">\[
+\boldsymbol{R} = \dfrac{\sum_i m_i \boldsymbol{r}_i } {\sum_i m_i} = \dfrac{\sum_i m_i \boldsymbol{r}_i}{M}\;.
+\]</span></p>
+<p>입자계의 운동방정식 (<a href="#eq-system_of_particles" class="quarto-xref">식&nbsp;<span>1.1</span></a>) 을 사용하면 다음을 얻는다.</p>
+<p><span class="math display">\[
+M\dfrac{d^2\boldsymbol{R}}{dt^2} =\boldsymbol{F}^{(e)}\;.
+\]</span></p>
+<p>이로부터 입자계의 질량 줌심에 작용하는 모든 외령의 합이 질량 중심에 집중하여 작용하는 것처럼 움직인다는 것을 알 수 있다. 또한 총 운동량 <span class="math inline">\(\boldsymbol{P}\)</span> 를 <span class="math inline">\(\boldsymbol{P}=\sum_i m_i \dfrac{d\boldsymbol{r}_i}{dt} = M \dfrac{d\boldsymbol{R}}{dt}\)</span> 로 정의하면 질량 중심에 대한 운동방정식을 얻는다.</p>
+<p><span class="math display">\[
+\dot{\boldsymbol{P}} = \dfrac{d}{dt}\boldsymbol{P}=\boldsymbol{F}^{(e)}
+\]</span></p>
+<p><br></p>
+</section>
+<section id="sec-total_angular_momentum" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="sec-total_angular_momentum"><span class="header-section-number">1.3.2</span> 총 각운동량</h3>
+<p>입자계의 총 각운동량 <span class="math inline">\(\boldsymbol{L}\)</span> 은 개별 입자의 각운동량의 합으로 정의된다. 즉</p>
+<p><span class="math display">\[
+\boldsymbol{L} :=\sum_i \boldsymbol{L}_i
+\]</span></p>
+<p>이다. 따라서</p>
+<p><span id="eq-total_angular_momentum"><span class="math display">\[
+\begin{aligned}
+\dot{\boldsymbol{L}} := \dfrac{d\boldsymbol{L}}{dt} &amp;= \sum_i \dfrac{d}{dt}( \boldsymbol{r}_i \times \boldsymbol{p}_i) \\
+&amp;= \sum_i \dot{\boldsymbol{r}}_i \times \boldsymbol{p}_i + \boldsymbol{r}_i \times \dot{\boldsymbol{p}}_i = \sum_i \boldsymbol{r}_i \times \boldsymbol{F}^{(e)}_i +  \sum_{\substack{ i ,j \\ i \ne j }} \boldsymbol{r}_i \times \boldsymbol{F}_{ji}
+\end{aligned}
+\tag{1.2}\]</span></span></p>
+<p>이다. 여기서 <span class="math inline">\(\dot{\boldsymbol{r}}_i \times \boldsymbol{p}_i = 0\)</span> 이 이용되었다. 뉴턴의 제 3 운동법칙을 따르는 힘 이라면, 즉 <span class="math inline">\(\boldsymbol{F}_{ij}= -\boldsymbol{F}_{ji}\)</span> 라면,</p>
+<p><span class="math display">\[
+\boldsymbol{r}_i \times \boldsymbol{F}_{ji} + \boldsymbol{r}_j \times \boldsymbol{F}_{ij} = (\boldsymbol{r}_i - \boldsymbol{r}_j) \times \boldsymbol{F}_{ji} = \boldsymbol{r}_{ij} \times \boldsymbol{F}_{ji},\qquad \text{where }\boldsymbol{r}_{ij} = \boldsymbol{r}_i - \boldsymbol{r}_j
+\]</span></p>
+<p>로 쓸 수 있다.</p>
+<p>여기서 작용-반작용이 <span class="math inline">\(\boldsymbol{F}_{ji}=F_{ji}\hat{\boldsymbol{r}}_{ij}\)</span> 일 경우를 생각하자. (이를 the strong law of action and reaction 라고 한다.) 이 경우 <a href="#eq-total_angular_momentum" class="quarto-xref">식&nbsp;<span>1.2</span></a> 의 마지막 term은 아래와 같이 <span class="math inline">\(0\)</span> 이 된다.</p>
+<p><span class="math display">\[
+\sum_{\substack{ i ,j \\ i \ne j }} \boldsymbol{r}_i \times \boldsymbol{F}_{ji} = \sum_{i&lt;j} \boldsymbol{r}_{ij}\times \boldsymbol{F}_{ji} = 0\;.
+\]</span></p>
+<p>그리고 외력 <span class="math inline">\(\boldsymbol{F}^{(e)}\)</span>에 의한 토크를 <span class="math inline">\(\boldsymbol{N}^{(e)}=\sum\limits_i \boldsymbol{r}_i \times \boldsymbol{F}_i^{(e)}\)</span> 로 정의하면 다음이 성립한다.</p>
+<p><span class="math display">\[
+\dot{\boldsymbol{L}} = \dfrac{d\boldsymbol{L}}{dt} = \boldsymbol{N}^{(e)}\;.
+\]</span></p>
+<div class="callout callout-style-simple callout-caution no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>총 운동량 보존은 <span class="math inline">\(\boldsymbol{F}_{ij} = -\boldsymbol{F}_{ji}\)</span>만을 가정하였다. 이를 작용-반작용의 약한 형태(Weak form of the action and reaction principle) 라고 한다. 그러나 총 각운동량 보존은. <span class="math inline">\(\boldsymbol{F}_{ij} = F_{ij}\hat{\boldsymbol{r}}_{ij}\)</span>, 즉 central force 임을 가정하였다 (Strong form of the action and reaction principle).</p>
+</div>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="질량중심-좌표계" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="질량중심-좌표계"><span class="header-section-number">1.3.3</span> 질량중심 좌표계</h3>
+<p>입자계에서 질량중심을 <span class="math inline">\(\boldsymbol{R}=\sum\limits_i m_i \boldsymbol{r}_i\)</span> 로 정의했다. <span class="math inline">\(\boldsymbol{r}'_i=\boldsymbol{r}_i - \boldsymbol{R}\)</span> 이라고 하면 <span class="math inline">\(\boldsymbol{r}'_i\)</span> 는 질량 중심 <span class="math inline">\(\boldsymbol{R}\)</span> 로 부터의 radius vector이다. 이 때 질량 중심의 속도 <span class="math inline">\(\boldsymbol{V} = \dot{\boldsymbol{R}}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{v}'_i = \boldsymbol{v}_i -\boldsymbol{V}\)</span> 로 할 수 있다. 그렇다면 총 각운동량은 다음과 같다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\boldsymbol{L} &amp;= \sum_i \boldsymbol{r}_i \times m_i \boldsymbol{v}_i  \\
+&amp;=\sum_i \boldsymbol{R} \times m_i \boldsymbol{V} + \sum_i \boldsymbol{r}'_i  \times m_i \boldsymbol{v}'_i + \left(\sum_i m_i \boldsymbol{r}'_i \right) \times \boldsymbol{V} + \boldsymbol{R} \times \left( \dfrac{d}{dt} \sum_i m_i \boldsymbol{r}'_i\right)   \\
+&amp; = \boldsymbol{R} \times M\boldsymbol{V} + \sum_i \boldsymbol{r}'_i \times \boldsymbol{p}'_i\;.
+\end{aligned}
+\]</span></p>
+<p><br></p>
+<div class="callout callout-style-simple callout-caution no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>원점 <span class="math inline">\(\mathcal{O}\)</span> 에서의 입자계의 총 각운동량 <span class="math inline">\(\boldsymbol{L}\)</span>은 1) 모든 질량이 질량 중심 에 집중되어 있다고 가정할 때의 각운동량 <span class="math inline">\(\boldsymbol{L}_C\)</span> 와 2) 질량중심을 새로운 origin으로 했을때의 각운동량 <span class="math inline">\(\boldsymbol{L}_R\)</span> 의 합이다.</p>
+</div>
+</div>
+</div>
+<p>입자계에서 특정 시간에서의 각 입자의 위치의 집합을 configuration 이라고 한다. <span class="math inline">\(N\)</span> 입자의 경우 <span class="math inline">\(3N\)</span> 차원 벡터공간이 된다. 입자계가 configuration 1 에서 configuration 2 로 변화했을때의 총 일 <span class="math inline">\(W_{12}\)</span> 는 다음과 같다. <span id="eq-work_system_of_particles"><span class="math display">\[
+W_{12} = \sum_i \int_1^2 \boldsymbol{F}_i \cdot d\boldsymbol{s}_i = \sum_i \int_1^2 \boldsymbol{F}_i^{(e)}\cdot d\boldsymbol{s}_i + \sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \boldsymbol{F}_{ji}\cdot d\boldsymbol{s}_i\;.
+\tag{1.3}\]</span></span></p>
+<p>단일 입자의 경우를 생각하면,</p>
+<p><span class="math display">\[
+\sum_i \int_1^2 \boldsymbol{F}_i \cdot d\boldsymbol{s}_i = \sum_i \int_1^2 m_i \boldsymbol{v}_i \cdot \boldsymbol{v}_i dt = \sum_i \int_1^2 d(\dfrac{1}{2} m_i v_i^2) = T_2 - T_1
+\]</span></p>
+<p>이다. 이 때 총 운동에너지를 <span class="math inline">\(T = \dfrac{1}{2} \sum\limits_i m_i v_i^2\)</span> 로 하였다.</p>
+<p>질량중심 좌표계에서의 총 운동에너지는 다음과 같이 표현 할 수 있다.</p>
+<p><span class="math display">\[
+T=\frac{1}{2} \sum_i m_i (\boldsymbol{V} + \boldsymbol{v}'_i) \cdot (\boldsymbol{V} + \boldsymbol{v}'_i)  = \dfrac{1}{2} MV^2 + \dfrac{1}{2} \sum_i m_i {v'}_i^2
+\]</span></p>
+<div class="callout callout-style-simple callout-caution no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>원점 <span class="math inline">\(\mathcal{O}\)</span>에서의 입자계의 총 운동에너지 <span class="math inline">\(T\)</span> 는 모든 질량이 질량중심 에 집중되어 있다고 가정할 때의 운동에너지와 질량 중심을 원점으로 했을때의 운동에너지의 합이다.</p>
+</div>
+</div>
+</div>
+<p>각각의 외력 <span class="math inline">\(\boldsymbol{F}_i^{(e)}\)</span> 가 어떤 스칼라 함수 <span class="math inline">\(-V_i\)</span> 의 gradient일 경우를 생각하자. 즉 <span class="math inline">\(\boldsymbol{F}_i^{(e)} = -\nabla_i V_i\)</span> 일 경우,</p>
+<p><span class="math display">\[
+\sum_i \int_1^2 \boldsymbol{F}_i^{(e)} \cdot d\boldsymbol{s}_i = - \sum_i \int_1^2 (\nabla_i V_i) \cdot d\boldsymbol{s}_i = - \left. \sum_i V_i\right|_1^2 = \sum_i V_i (1) - V_i(2)
+\]</span></p>
+<p>이다. 입자 상호간의 힘 역시 보존력이라면, <span class="math inline">\(\boldsymbol{F}_{ij}\)</span> 와 <span class="math inline">\(\boldsymbol{F}_{ji}\)</span> 가 potential <span class="math inline">\(V_{ij}\)</span> 로 부터 얻어 질 수 있다. Strong law of action and reaction 조건에서 <span class="math inline">\(V_{ij} = V(|\boldsymbol{r}_i -\boldsymbol{r}_j|)\)</span> 이며</p>
+<p><span class="math display">\[
+\boldsymbol{F}_{ji} = -\nabla_i V_{ij} = + \nabla_j V_{ij} = -\boldsymbol{F}_{ij}
+\]</span></p>
+<p>이므로 <span class="math inline">\(\boldsymbol{F}_{ji}\)</span> 와 <span class="math inline">\(\boldsymbol{F}_{ij}\)</span> 모두 두 입자의 위치를 잇는 선상에 위치한다. 즉 어떤 scalar function <span class="math inline">\(f\)</span> 에 대해, <span class="math inline">\(V_{ij}\)</span> 는 다음과 같은 형태이다.</p>
+<p><span class="math display">\[
+\nabla V_{ij}(|\boldsymbol{r}_i - \boldsymbol{r}_j|) = (\boldsymbol{r}_i - \boldsymbol{r}_i) f
+\]</span></p>
+<p>만약 <span class="math inline">\(V_{ij}\)</span> 가 <span class="math inline">\(\boldsymbol{r}_i - \boldsymbol{r}_j\)</span> 이외의 다른 물리량에 의존한다면, 예를들어 <span class="math inline">\(V_{ij} = V(|\boldsymbol{v}_i - \boldsymbol{v}_j |)\)</span> 이거나 <span class="math inline">\(V(|\boldsymbol{S}_i - \boldsymbol{S}_j|)\)</span> 꼴이라면 (여기서 <span class="math inline">\(\boldsymbol{v}_i\)</span> 는 <span class="math inline">\(i\)</span> 번째 입자의 속도, <span class="math inline">\(\boldsymbol{S}_i\)</span> 는 <span class="math inline">\(i\)</span> 번째 입자의 spin) <span class="math inline">\(\boldsymbol{F}_{ij} = -\boldsymbol{F}_{ji}\)</span> 의 weak form of action and reaction principle은 성립하지만 strong form은 성립하지 않는다.</p>
+<p>입자간의 힘이 보존력이라면 <a href="#eq-work_system_of_particles" class="quarto-xref">식&nbsp;<span>1.3</span></a> 의 두번째 항은 <span class="math inline">\(\nabla_{ij} V_{ij}=\nabla_i V_{ij} = -\nabla_j V_{ij}\)</span>, <span class="math inline">\(d\boldsymbol{r}_{ij} = d\boldsymbol{s}_i - d\boldsymbol{s}_j = d\boldsymbol{r}_i -d\boldsymbol{r}_j\)</span> 를 이용하면</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \boldsymbol{F}_{ji}\cdot d\boldsymbol{s}_i  &amp;= - \dfrac{1}{2} \sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \left( \nabla_i V_{ij} \cdot d\boldsymbol{s}_i + \nabla_j V_{ij} \cdot d\boldsymbol{s}_j\right)  \\
+&amp;= -\dfrac{1}{2}\sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \nabla_{ij} V_{ij} \cdot d\boldsymbol{r}_{ij} = -\dfrac{1}{2} \left. \sum_{\substack{ i ,j \\ i \ne j }}  V_{ij}\right|_1^2
+\end{aligned}
+\]</span></p>
+<p>이다.</p>
+<div class="callout callout-style-simple callout-caution no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>만약 시스템의 내부 힘과 외력 모두 scalar function (즉 potential function)의 미분으로 표현 될 수 있다면 우리는 시스템의 <strong>total potential energy</strong> <span class="math inline">\(V\)</span>를 다음과 같이 정의 할 수 있다. <span class="math display">\[
+V=\sum_i V_i + \dfrac{1}{2} \sum_{\substack{ i ,j \\ i \ne j }} V_{ij}\;.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="constraint" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="constraint"><span class="header-section-number">1.4</span> Constraint</h2>
+<p><strong>Constraint</strong> 는 운동방정식의 제한조건을 의미한다. 예를 들어 강체의 경우 <span class="math inline">\(|\boldsymbol{r}_i - \boldsymbol{r}_j| =c_{ij} = \text{const.}\)</span></p>
+<p><br></p>
+<section id="constraints의-분류" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="constraints의-분류"><span class="header-section-number">1.4.1</span> constraints의 분류</h3>
+<p>Constraint가 시간과 위치에 대한 함수이며 다음과 같은 꼴로 표현 될 수 있을 때 <strong>holonomic constraint</strong> 라 하며 그렇지 않을 때 <strong>nonholonomic constraint</strong> 라 한다.</p>
+<p><span class="math display">\[
+f(\boldsymbol{r}_1,\,\boldsymbol{r}_2,\ldots,\,t) =0
+\]</span></p>
+<p>Constraint가 explicit한 시간 의존성이 없을 때, 즉 <span class="math inline">\(\dfrac{\partial}{\partial t} f(\boldsymbol{r}_i;\, \dot{\boldsymbol{r}}_i ;\,t)=0\)</span> 일 때 <strong>scleronomous constraint</strong> 라 하며 아닐 때 <strong>rheonomous constraint</strong> 라 한다.</p>
+<p><br></p>
+</section>
+<section id="일반화된-좌표계" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="일반화된-좌표계"><span class="header-section-number">1.4.2</span> 일반화된 좌표계</h3>
+<ol type="1">
+<li><p>물체의 운동을 기술할 때 constraints가 부여된다면 두가지 어려운 점이 발생한다. 우선 coordinates <span class="math inline">\(r_i\)</span> 는 더이상 서로 독립적이지 하지 않다. 두번째로는 <strong>force of constraint</strong> 문제가 있다.</p></li>
+<li><p>Holonomic constraint의 경우 소위 <strong>generalized coordinate</strong> 를 사용함으로서 문제를 풀 수 있다.</p></li>
+<li><p><span class="math inline">\(N\)</span>-입자계를 생각하자. constraint가 없다면 <span class="math inline">\(3N\)</span> 개의 독립적인 좌표변수가 존재한다. 이렇게 시스템을 기술하는데 필요한 독립적인 변수의 갯수를 <strong>자유도(degree of freedom)</strong> 라 한다. 만약 <span class="math inline">\(k\)</span> 개의 독립적인 holonomic constraints가 존재한다면 이 입자계의 자유도는 <span class="math inline">\(3N-k\)</span> 가 될 것이다.</p></li>
+<li><p>그렇다면 이 입자계는 <span class="math inline">\(3N-k\)</span> 개의 독립변수 <span class="math inline">\(q_1,\ldots,\,q_{3N-k}\)</span> 로 기술 될 수 있을 것이다. 즉 <span class="math inline">\(\boldsymbol{r}_i = \boldsymbol{r}_i (q_1,\ldots,\,q_{3N-k},t)\)</span> for <span class="math inline">\(i=1,\ldots,\,3N-k\)</span>. 이 경우 <span class="math inline">\(q_i\)</span> 가 length scale number일 필요가 없으며 어떤 <span class="math inline">\((q_i,\,q_j,\,q_k)\)</span> 가 vector일 필요도 없다. <em>모든 종류의 물리량이 일반화된 좌표계의 좌표변수가 될 수 있다.</em> Nonhonolomic constraints의 경우는 independent variables의 갯수를 줄이는 데 사용 될 수 없다.</p></li>
+</ol>
+<p><br></p>
+</section>
+<section id="예" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="예"><span class="header-section-number">1.4.3</span> 예</h3>
+<div id="fig-double_pendulum" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-double_pendulum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/classical mechanics/fig-double_pendulum-1.png" class="img-fluid figure-img" style="width:20.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-double_pendulum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.2: 쌍진자
+</figcaption>
+</figure>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="달랑베르-원리-와-라그랑쥬-방정식" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="달랑베르-원리-와-라그랑쥬-방정식"><span class="header-section-number">1.5</span> 달랑베르 원리 와 라그랑쥬 방정식</h2>
+<section id="configuration-space" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="configuration-space"><span class="header-section-number">1.5.1</span> Configuration space</h3>
+<p>입자계의 자유도가 <span class="math inline">\(M\)</span> 일 때 <span class="math inline">\(M\)</span> 개의 일반화된 좌표로 표현된 입자계가 가질 수 있는 모든 값의 집합을 <strong>configuration space</strong> 라고 한다. 따라서 입자계의 상태는 configuration space 에 포함되는 어떤 점으로 표현 할 수 있다.</p>
+<p><br></p>
+</section>
+<section id="virtual-displacement" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="virtual-displacement"><span class="header-section-number">1.5.2</span> Virtual displacement</h3>
+<p>시스템의 <strong>Virtual displacement</strong> 는 주어진 시간 <span class="math inline">\(t\)</span> 에서 주어진 힘과 constraints 조건에서 가능한 infinitesimal change of the coordinate <span class="math inline">\(\delta \boldsymbol{r}_i\)</span> 에 의한 입자계의 configuration space 상의 infinitesimal 한 변화를 의미한다. virtual이란 이름이 붙은 이유는 물리적으로 실제의 displacement는 특정 시간 간격에서 발생하지만 virtual displacement는 시간 <span class="math inline">\(t\)</span> 가 고정되어 있기 때문이다.</p>
+<p>시스템이 평형생태일 경우를 가정하자. 각 입자에 작용하는 힘 <span class="math inline">\(\boldsymbol{F}_i = 0\)</span> 이며 따라서 <span class="math inline">\(\boldsymbol{F}_i \cdot \delta \boldsymbol{r}_i=0\)</span> 이다. 또한 <span class="math inline">\(\sum\limits_i \boldsymbol{F}_i \cdot \delta \boldsymbol{r}_i = 0\)</span> 임은 자명하다. <span class="math inline">\(\boldsymbol{F}_i\)</span> 를 applied force <span class="math inline">\(\boldsymbol{F}^{(a)}_i\)</span> 와 force of constraint <span class="math inline">\(\boldsymbol{f}_i\)</span> 로 분리 할 수 있다. 즉 <span class="math inline">\(\boldsymbol{F}_i = \boldsymbol{F}^{(a)}_i + \boldsymbol{f}_i\)</span> 이며 따라서 다음이 성립한다.</p>
+<p><span class="math display">\[
+\sum_i \boldsymbol{F}_i \cdot \delta \boldsymbol{r}_i = \sum_i \boldsymbol{F}^{(a)}_i \cdot \delta \boldsymbol{r}_i + \sum_i \boldsymbol{f}_i \cdot \delta \boldsymbol{r}_i = 0\;.
+\]</span></p>
+<p>이제 constraint force 에 의한 <em>virtual work</em> 이 <span class="math inline">\(0\)</span> 인 시스템, 즉 <span class="math inline">\(\sum_i \boldsymbol{f}_i \cdot \delta \boldsymbol{r}_i=0\)</span> 인 시스템으로 제한해보자. 이 조건은 강체를 비롯한 많은 다른 제약 조건에 대해서도 유효하다는 것을 안다. 입자가 표면 위를 움직이도록 제약되어 있다면, constraint force 는 표면에 수직이며, virtural displacement 는 표면에 접선이어야 하므로 virtual work 은 <span class="math inline">\(0\)</span> 이다. 하지만 슬라이딩 마찰력이 존재할 경우 virtural work 이 <span class="math inline">\(0\)</span> 이 아니게 되는데 이런 시스템은 지금은 생각하지 않기로 하자. 이 제한은 마찰이 본질적으로 macroscopic 한 현상이라는 것을 고려하면 우리의 물리를 해치지 않는다. 반면에 구르는(rolling) constraint 는 이 조건을 위반하지 않는다. 왜냐하면 잠시 멈춘 지점에 작용하는 힘은 constraint 에 일관된 변위에 대해 virtual work 이 <span class="math inline">\(0\)</span> 이기 때문이다. 또한, 입자가 시간에 따라 움직이는 표면에 제약되어 있는 경우, constraint force 는 각 순간마다 표면에 수직이며, virtual work 은 <span class="math inline">\(0\)</span> 이지만 실제 시간 <span class="math inline">\(dt\)</span> 동안의 real displacement 에 의한 일은 <span class="math inline">\(0\)</span> 이 아닐 수 있다.</p>
+<div class="callout callout-style-simple callout-caution no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>We now restric ourselves to systems for which . We have seen that this condition holds true for rigid bodies and it is valid for a large number of other constraints. Thus, if a particle is constrained to move on a surface, the force of constraint is perpendicular to the surface, while the virtual displacement must be tangent to it, and hence the virtual work vanishes. This is no longer true if sliding friction forces are present, and we must exclude such system from our formulation. This restriction is not unduly hampering, since the friction is essentially a macroscopic phenomenon. On the other hand, the forces of rolling do not violate this condition, since the forces act on a point that is momentarily at rest and can do now work in an infinitesimal displacement consistent with the rolling constraint. Note that if a particle is constrained to a surface that is itself moving in time, the force of constraint is instantaneously perpendicular to the surface and the work during a virtual displacement is still zero even though the work during an actual displacement in the time <span class="math inline">\(dt\)</span> does not necessarily vanish.</p>
+</div>
+</div>
+</div>
+<p>따라서 우리는 applied forces에 의한 virtual work이 <span class="math inline">\(0\)</span>이 되는 system의 평행 조건을 얻게 된다. 즉 <span id="eq-principle_of_virtual_work"><span class="math display">\[
+\sum_i \boldsymbol{F}^{(a)}_i \cdot \delta \boldsymbol{r}_i = 0
+\tag{1.4}\]</span></span></p>
+<p>의 조건을 얻게 되며, 위의 <a href="#eq-principle_of_virtual_work" class="quarto-xref">식&nbsp;<span>1.4</span></a> 은 <em>the principle of virtual work</em> 이라 불린다. 이렇게 되면 각각의 <span class="math inline">\(i\)</span> 번째 입자에 대해 <span class="math inline">\(\boldsymbol{F}^{(a)}_i\)</span> 가 <span class="math inline">\(0\)</span> 인 조건이 아니게 되며, 따라서 <span class="math inline">\(\delta \boldsymbol{r}_i\)</span> 는 서로 독립적이지 않게 되고 위의 <a href="#eq-principle_of_virtual_work" class="quarto-xref">식&nbsp;<span>1.4</span></a> 가 하나의 constraint 처럼 작용한다. <a href="#eq-principle_of_virtual_work" class="quarto-xref">식&nbsp;<span>1.4</span></a> 는 constraint force <span class="math inline">\(\boldsymbol{f}_i\)</span> 를 포함하지 않는다는 측면에서 우리가 원하는 것이지만 단지 statics 만을 다룬다는 점에서 부족하다. 우리는 이것으로 부터 우리가 원하는 운동방정식을 얻고자 한다.</p>
+<p><br></p>
+</section>
+<section id="달랑베르-원리dalemberts-principle" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="달랑베르-원리dalemberts-principle"><span class="header-section-number">1.5.3</span> 달랑베르 원리(D’Alembert’s principle)</h3>
+<p>운동방정식 <span class="math inline">\(\boldsymbol{F}_i = \dot{\boldsymbol{p}}_i\)</span> 로부터 시작하자. <span class="math inline">\(\boldsymbol{F}_i - \dot{\boldsymbol{p}}_i=\boldsymbol{0}\)</span> 이며 이것은 시스템의 입자들이 actual force(<span class="math inline">\(\boldsymbol{F}\)</span>) 와 <em>reversed effecvive force</em> <span class="math inline">\(-\dot{\boldsymbol{p}}_i\)</span> 의 합에 의해 평행상태에 있게 된다는 의미이다. 이로부터</p>
+<p><span class="math display">\[
+\sum_i \left( \boldsymbol{F}_i - \dot{\boldsymbol{p}}_i \right) \cdot \delta \boldsymbol{r}_i = 0
+\]</span></p>
+<p>이다. 앞에서 말한 constraint forces 에 의한 virtureal work 이 <span class="math inline">\(0\)</span> 이라는 조건을 입히면, <span id="eq-dalembert_principle"><span class="math display">\[
+\sum_i \left( \boldsymbol{F}^{(a)}_i - \dot{\boldsymbol{p}}_i \right) \cdot \delta \boldsymbol{r}_i = 0\;
+\tag{1.5}\]</span></span></p>
+<p>이다. 이것을 <strong>달랑베르 원리(D’Alembert’s principle)</strong> 라고 한다. 위 식에 force of constraint가 나타나지 않는다. 이제 위첨자 <span class="math inline">\((a)\)</span>를 떼어도 모호하지 않을 것이다.</p>
+<p><br></p>
+</section>
+<section id="일반화된-좌표계에서의-달랑베르-원리" class="level3" data-number="1.5.4">
+<h3 data-number="1.5.4" class="anchored" data-anchor-id="일반화된-좌표계에서의-달랑베르-원리"><span class="header-section-number">1.5.4</span> 일반화된 좌표계에서의 달랑베르 원리</h3>
+<p>일반화된 좌표계 <span class="math inline">\(q_1,\,q_2,\ldots,\,q_n\)</span> 을 생각하자. <span class="math inline">\(\boldsymbol{r}_i = \boldsymbol{r}_i (q_1,\ldots,\,q_n,\,t)\)</span> 이므로 chain rule에 의해</p>
+<p><span class="math display">\[
+\boldsymbol{v}_i = \dfrac{d\boldsymbol{r}_i}{dt} = \sum_k \dfrac{\partial \boldsymbol{r}_i}{\partial q_k} \dot{q}_k + \dfrac{\partial \boldsymbol{r}_i}{\partial t}
+\]</span></p>
+<p>이다. 우리는 이로부터</p>
+<p><span id="eq-dlambert_1"><span class="math display">\[
+\dfrac{\partial \boldsymbol{v}_i}{\partial \dot{q}_k} = \dfrac{\partial \boldsymbol{r}_i}{\partial q_k}
+\tag{1.6}\]</span></span></p>
+<p>가 됨을 알 수 있다. Virtual displacement <span class="math inline">\(\delta \boldsymbol{r}_i\)</span> 는 정의에 의해 시간 <span class="math inline">\(t\)</span> 에 대한 편미분 항이 없이</p>
+<p><span class="math display">\[
+\delta \boldsymbol{r}_i = \sum_j\dfrac{\partial \boldsymbol{r}_i}{\partial q_j} \delta q_j
+\]</span></p>
+<p>이다. 이제,</p>
+<p><span id="eq-generalized_force_0"><span class="math display">\[
+\sum_i \boldsymbol{F}_i \cdot \delta \boldsymbol{r}_i = \sum_{i,\,j} \boldsymbol{F}_i \cdot \left( \dfrac{\partial \boldsymbol{r}_i}{\partial q_j}\right) \delta q_j = \sum_j Q_j \delta q_j
+\tag{1.7}\]</span></span></p>
+<p>를 통해 <strong>일반화된 힘(generalized force)</strong> 을 아래와 같이 정의한다.</p>
+<p><span id="eq-generalized_force"><span class="math display">\[
+Q_j = \sum\limits_i \boldsymbol{F}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j}.
+\tag{1.8}\]</span></span></p>
+<p>일반화된 좌표계에서 <span class="math inline">\(q_j\)</span> 가 거리의 차원을 갖지 않아도 되기 때문에 <span class="math inline">\(Q_j\)</span> 역시 힘과 같은 차원을 가질 필요는 없다. 다만 <span class="math inline">\(Q_j \delta q_j\)</span> 는 일(Work)과 같은 차원을 갖는다.</p>
+<p><br></p>
+</section>
+<section id="lagranges-equations" class="level3" data-number="1.5.5">
+<h3 data-number="1.5.5" class="anchored" data-anchor-id="lagranges-equations"><span class="header-section-number">1.5.5</span> Lagrange’s equations</h3>
+<p>달랑베르 원리(<a href="#eq-dalembert_principle" class="quarto-xref">식&nbsp;<span>1.5</span></a>) 은 <span class="math inline">\(\sum\limits_i \dot{p}_i \cdot \delta \boldsymbol{r}_i = \sum\limits_i m_i \ddot{\boldsymbol{r}}_i \cdot \delta \boldsymbol{r}_i\)</span> 로 쓸 수 있으며</p>
+<p><span class="math display">\[
+\sum\limits_i m_i \ddot{\boldsymbol{r}}_i\cdot \delta \boldsymbol{r}_i = \sum\limits_{i,\,j} m_i \ddot{\boldsymbol{r}}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} \delta q_j
+\]</span></p>
+<p>이다. 이 식과 다음의 식</p>
+<p><span class="math display">\[
+\dfrac{d}{dt} \left(\dfrac{\partial \boldsymbol{r}_i}{\partial q_j} \right) = \sum_k \dfrac{ \partial^2 \boldsymbol{r}_i }{\partial q_j \partial q_k} \dot{q}_k + \dfrac{\partial^2 \boldsymbol{r}_i}{\partial q_j \partial t}  = \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \dfrac{\partial \boldsymbol{v}_i}{\partial q_j}
+\]</span></p>
+<p>을 이용하면 달랑베르 원리를 다음과 같이 변형 할 수 있다.</p>
+<p><span id="eq-dalembert_principle2"><span class="math display">\[
+\sum_j \left[  \left\{ \dfrac{d}{dt} \left( \dfrac{\partial T}{\partial \dot{q}_j}\right) - \dfrac{\partial T}{\partial q_j}\right\} - Q_j \right] \delta q_j = 0\;.
+\tag{1.9}\]</span></span></p>
+<p>데카르트 좌표계에서는 항상 <span class="math inline">\(\dfrac{\partial T}{\partial q_j} = 0\)</span> 이지만 일반화된 좌표계에서는 그렇지 않을 수 있음에 주의하라.</p>
+<p><br></p>
+<p>Holonomic constraints 조건에서는 독립적인 일반화된 좌표 <span class="math inline">\(q_1,\ldots,\,q_n\)</span> 을 찾을 수 있다. 그렇다면 <a href="#eq-dalembert_principle2" class="quarto-xref">식&nbsp;<span>1.9</span></a> 는 각각의 <span class="math inline">\(q_j\)</span> 에 대해,</p>
+<p><span id="eq-lagrange_1"><span class="math display">\[
+\dfrac{d}{dt}\left( \dfrac{\partial T}{\partial \dot{q}_j}\right) - \dfrac{\partial T}{\partial q_j}= Q_j
+\tag{1.10}\]</span></span></p>
+<p>이 성립한다는 의미이다. <span class="math inline">\(n\)</span> 개의 일반화된 좌표에 대해 <span class="math inline">\(n\)</span> 개의 위와 같은 방정식이 존재한다.</p>
+<p>이제 모든 힘이 보존력일 때, 즉 스칼라 함수의 미분으로 부터 얻어질 수 있을 때를 생각하자. <span class="math inline">\(\boldsymbol{F}_i = -\nabla_i V\)</span> 일 경우 generalized force의 정의에 의해 <span class="math inline">\(Q_j\)</span> 는 다음과 같다.</p>
+<p><span class="math display">\[
+Q_j = \sum_i \boldsymbol{F}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = -\sum_i (\nabla_i V) \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = - \dfrac{\partial V}{\partial q_j}\;.
+\]</span></p>
+<p>그렇다면 <a href="#eq-lagrange_1" class="quarto-xref">식&nbsp;<span>1.10</span></a> 은 다음과 같다.</p>
+<p><span id="eq-lagrange_2"><span class="math display">\[
+\dfrac{d}{dt} \left( \dfrac{\partial T}{\partial \dot{q}_j}\right) - \dfrac{\partial (T-V)}{\partial q_j} = 0\;.
+\tag{1.11}\]</span></span></p>
+<p><a href="#eq-lagrange_2" class="quarto-xref">식&nbsp;<span>1.11</span></a> 형태의 운동방정식은 포텐셜 <span class="math inline">\(V\)</span> 가 꼭 보존계에만 제한되지 않는다. <span class="math inline">\(V\)</span> 가 시간에 대해 명시적인 함수가 아니기만 하면 이 시스템은 보존계이다.</p>
+<p>지금까지는 <span class="math inline">\(V\)</span> 가 generalized velocity에 의존하지 않는다고 가정하였다. 이 경우 <a href="#eq-lagrange_2" class="quarto-xref">식&nbsp;<span>1.11</span></a> 는 다음과 같다.</p>
+<p><span id="eq-Lagrange_0"><span class="math display">\[
+\dfrac{d}{dt} \left( \dfrac{\partial (T-V)}{\partial \dot{q}_j} \right) - \dfrac{\partial (T-V)}{\partial q_j} = 0
+\tag{1.12}\]</span></span></p>
+<p>여기서 <em>Lagrangian</em> <span class="math inline">\(L\)</span> 을 <span class="math inline">\(L=T-V\)</span> 로 정의한다면,</p>
+<p><span id="eq-Lagrange"><span class="math display">\[
+\dfrac{d}{dt} \left( \dfrac{\partial L}{\partial \dot{q}_j} \right) - \dfrac{\partial L}{\partial q_j} = 0
+\tag{1.13}\]</span></span></p>
+<p>이며 이를 <strong>라그랑쥬 방정식(Lagrange’s equation)</strong> 이라 한다.</p>
+<p><br></p>
+</section>
+<section id="lagrangian-is-not-unique" class="level3" data-number="1.5.6">
+<h3 data-number="1.5.6" class="anchored" data-anchor-id="lagrangian-is-not-unique"><span class="header-section-number">1.5.6</span> Lagrangian is not unique</h3>
+<p>Lagrangian <span class="math inline">\(L(q,\,\dot{q},\,t)\)</span> 와 어떤 미분가능하며 <span class="math inline">\(q,\,t\)</span> 에만 의존하는 함수 <span class="math inline">\(F(q,\,t)\)</span> 에 대해, <span class="math inline">\(L'(q,\,\dot{q},\,t) = L(q,\,\dot{q},\,t) + \dfrac{dF}{dt}\)</span> 라고 하면 <span class="math inline">\(L'\)</span> 에 대한 라그랑쥬 방정식은 <span class="math inline">\(L\)</span> 에 대한 라그랑쥬 방정식과 같다. 즉 라그랑쥬 방정식 어떤 System에 대한 Lagrangian은 unique 하지 않다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="속도에-의존하는-포텐셜과-dissipation-함수" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="속도에-의존하는-포텐셜과-dissipation-함수"><span class="header-section-number">1.6</span> 속도에 의존하는 포텐셜과 dissipation 함수</h2>
+<section id="일반화된-포텐셜" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="일반화된-포텐셜"><span class="header-section-number">1.6.1</span> 일반화된 포텐셜</h3>
+<p>만약 generalized force <span class="math inline">\(Q_j\)</span> 를 어떤 함수 <span class="math inline">\(U(q_j,\,\dot{q}_j)\)</span> 에 대한</p>
+<p><span class="math display">\[
+Q_j = - \dfrac{ \partial U}{\partial q_j} + \dfrac{d}{dt} \left( \dfrac{\partial U}{\partial \dot{q}_j}\right)
+\]</span></p>
+<p>로 얻을 수 있다면 Lagrangian <span class="math inline">\(L=T-U\)</span> 에 대한 라그랑주 방정식 <a href="#eq-Lagrange" class="quarto-xref">식&nbsp;<span>1.13</span></a> 가 성립한다. 이 때 <span class="math inline">\(U\)</span>를 <em>generalized potential</em> 혹은 <em>velocity-dependent potential</em> 이라 한다.</p>
+<p><br></p>
+</section>
+<section id="전자기력에-대한-일반화된-포텐셜" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="전자기력에-대한-일반화된-포텐셜"><span class="header-section-number">1.6.2</span> 전자기력에 대한 일반화된 포텐셜</h3>
+<p>Generalized potential <span class="math inline">\(U\)</span> 가 다음과 같이 주어졌다고 하자.</p>
+<p><span id="eq-electromagnetic_potential"><span class="math display">\[
+U=q \phi - q \boldsymbol{A} \cdot \boldsymbol{v}\;.
+\tag{1.14}\]</span></span></p>
+<p>이. <span class="math inline">\(U\)</span> 에 대한 generalize force가 Lorentz force 임을 보일 수 있다. 맥스웰 방정식을 보자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\nabla \cdot \boldsymbol{E} = \dfrac{\rho}{\epsilon_0},  &amp; &amp; \nabla \times \boldsymbol{E} = - \dfrac{\partial \boldsymbol{B}}{\partial t}\\
+&amp;\nabla \cdot \boldsymbol{B} = 0, &amp; &amp; \nabla \times \boldsymbol{B} = {\mu_0}\left(\boldsymbol{J} + \epsilon_0 \dfrac{\partial \boldsymbol{E}}{\partial t}\right)
+\end{aligned}
+\]</span></p>
+<p>이며 <span class="math inline">\(\boldsymbol{E} = -\nabla \phi\)</span>, <span class="math inline">\(\boldsymbol{B}=\nabla \times \boldsymbol{A}\)</span> 이다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac{\partial U}{\partial x} &amp;= q\left(\dfrac{\partial \phi}{\partial x} - \dfrac{\partial A_x}{\partial x} v_x - \dfrac{\partial A_y}{\partial x} v_y - \dfrac{\partial A_z}{\partial x} v_z\right)
+\\
+\dfrac{d}{dt}\left(\dfrac{\partial U}{\partial v_x}\right) &amp;= -\dfrac{d}{dt}\left(qA_x\right) = q\dfrac{dA_x}{dt} = -q\left(\dfrac{\partial A_x}{\partial x}v_x + \dfrac{\partial A_x}{\partial y}v_y + \dfrac{\partial A_x}{\partial z}v_z + \dfrac{\partial A}{\partial t}\right)
+\end{aligned}
+\]</span></p>
+<p>로부터,</p>
+<p><span class="math display">\[
+\begin{aligned}
+Q_x &amp;= -\dfrac{\partial U}{\partial x} + \dfrac{d}{dt}\left(\dfrac{\partial U}{\partial v_x}\right) \\
+&amp;= -q\left[\dfrac{\partial \phi}{\partial x} -\left(\dfrac{\partial A_y}{\partial x}-\dfrac{\partial A_x}{\partial y}\right) v_y  + \left(\dfrac{\partial A_x}{\partial z} - \dfrac{\partial A_z}{\partial x} \right) v_z\right]\\
+&amp;= q (E_x + (\boldsymbol{v} \times \boldsymbol{B})_x)
+\end{aligned}
+\]</span></p>
+<p>을 얻는다. 즉 <a href="#eq-electromagnetic_potential" class="quarto-xref">식&nbsp;<span>1.14</span></a> 로부터 얻은 generalized force 는 로런츠 힘(Lorentz force) 이다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="연습문제" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="연습문제"><span class="header-section-number">1.7</span> 연습문제</h2>
+<div id="exr-goldstein_1_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 1.1 (Goldestein 1.4)</strong></span> 일정한 질량을 갖는 single particle의 운동방정식은 다음과 같은 kinetic energy에 대한 differential equation을 만족함을 보이시오.</p>
+<p><span class="math display">\[
+\dfrac{dT}{dt} = \mathbf{F}\cdot \mathbf{v}\;.
+\]</span></p>
+<p>만약 질량이 시간에 대해 변한다면 다음의 미분방정식을 만족함을 보이시오.</p>
+<p><span class="math display">\[
+\dfrac{d(mT)}{dt} = \mathbf{F} \cdot \mathbf{p}\;.
+\]</span></p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>For <span class="math inline">\(m=\text{constant}\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac{dT}{dt} = \dfrac{d}{dt}\left(\dfrac{1}{2}mv^2 \right) = m\mathbf{v}\cdot\dot{\mathbf{v}}= \mathbf{F}\cdot \mathbf{v}\;.\notag
+\end{aligned}
+\]</span></p>
+<p>For <span class="math inline">\(\dot{m}\ne 0\)</span> case,</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \mathbf{F} &amp;= \dot{\mathbf{p}} = \dot{m} \mathbf{v} + m \dot{\mathbf{v}}\;.\notag \\
+    \dfrac{dT}{dt} &amp;= \dfrac{d}{dt}\left(\dfrac{1}{2}m^2v^2 \right) = m^2\mathbf{v}\cdot\dot{\mathbf{v}} +  \dot{m}m v^2= \mathbf{F}\cdot \mathbf{v} = m\mathbf{v} \cdot (\dot{m} \mathbf{v} + m \dot{\mathbf{v}}) = \mathbf{F}\cdot \mathbf{p}\;.\notag
+    \end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+<div id="exr-goldsteind_1_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 1.2 (Goldstein 1.5)</strong></span> 임의의 origin에서의 center of mass에 대한 position vector <span class="math inline">\(\mathbf{R}\)</span> 의 크기 <span class="math inline">\(R=\|\mathbf{R}\|\)</span> 은 다음의 방정식을 만족함을 보이시오.</p>
+<p><span class="math display">\[
+M^2R^2 = M \sum\limits_i m_i {r_i}^2 - \dfrac{1}{2} \sum_{i,\,j}m_i m_j {r_{ij}}^2 \;.
+\]</span></p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\mathbf{R}=\sum\limits_i m_i \mathbf{r}_i\)</span>, <span class="math inline">\(M=\sum\limits_i m_i\)</span> 에 대해</p>
+<p><span class="math display">\[
+\begin{aligned}
+M\sum_i m_i {r_i}^2 - \dfrac{1}{2} \sum_{i,\,j}m_i m_j {r_{ij}}^2  &amp;= \sum_{i,\,j}m_i m_j {r_i}^2 - \dfrac{1}{2} \sum_{i,\,j} m_i m_j {r_{i,\,j}}^2\notag \\
+&amp;= \dfrac{1}{2} \sum_{i,\,j} m_i m_i ({r_i}^2 + {r_j}^2 - {r_{i,\,j}}^2)  \notag \\
+&amp;= \dfrac{1}{2} \sum_{i,\,j}m_i m_j (2 \mathbf{r}_i \cdot \mathbf{r}_j) = (M\mathbf{R}) \cdot (M\mathbf{R}) \notag \\
+&amp;= M^2R^2\;. \notag
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+<div id="exr-goldstein_1_11" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 1.3 (Goldstein 1.11)</strong></span> 라그랑쥬 방정식 (<a href="#eq-lagrange_1" class="quarto-xref">식&nbsp;<span>1.10</span></a>) 은 다음과 같이 변형됨을 보여라. 아래의 방정식을 라그랑쥬 방정식의 <em>Nielson 형식</em> 이라고 한다.</p>
+<p><span class="math display">\[
+\dfrac{\partial \dot{T}}{\partial \dot{q}_j} - 2\dfrac{\partial T}{\partial q_j} = Q_j.
+\]</span></p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(T = T(\{q_j\},\, \{\dot{q}_j\}, t)\)</span> 라 하면, <span class="math display">\[
+\begin{aligned}
+\dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot{q}_j}\right) &amp;= \sum_i \left(\dfrac{\partial^2 T}{\partial q_i\partial \dot{q}_j}\right) \dot{q}_i  + \left(\dfrac{\partial^2 T}{\partial \dot{q}_i \partial \dot{q}_j}\right) \ddot{q}_i  + \left(\dfrac{\partial^2 T}{\partial t \partial \dot{q}_j}\right), \\
+\dfrac{\partial \dot{T}}{\partial \dot{q}_j} &amp;= \sum_{i} \dfrac{\partial}{\partial \dot{q}_j} \left[ \dfrac{\partial T}{\partial q_i}\dot{q}_i  + \dfrac{\partial T}{\partial \dot{q}_i} \ddot{q}_i  + \dfrac{\partial T}{\partial t}\right] \\
+&amp;= \sum_i\left[\left(\dfrac{\partial^2 T}{\partial q_i \partial \dot{q}_j}\right) \dot{q}_i  + \dfrac{\partial T}{\partial q_i} \delta_{ij}+  \left(\dfrac{\partial^2 T}{\partial \dot{q}_i \partial \dot{q}_j}\right) \ddot{q}_i  + \left(\dfrac{\partial^2 T}{\partial t \partial \dot{q}_j}\right)\right] \\
+&amp;= \dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot{q}_j}\right) + \dfrac{\partial T}{\partial q_j}
+\end{aligned}
+\]</span></p>
+<p>이므로,</p>
+<p><span class="math display">\[
+\dfrac{\partial \dot{T}}{\partial \dot{q}_j} - 2\dfrac{\partial T}{\partial q_j} = \dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot{q}_j}\right) - \dfrac{\partial T}{\partial q_j} = Q_j
+\]</span></p>
+<p>이다.</p>
+</div>
+<p><br></p>
+<div id="exr-goldestein_1_15" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 1.4 (Goldstein 1.15)</strong></span> 자유도가 <span class="math inline">\(n\)</span> 인 시스템의 independent generalized coordinates <span class="math inline">\(q_1,\ldots,\,q_n\)</span> 를 생각하자. 이 시스템의 라그랑지안이 <span class="math inline">\(L(\{q_i\},\, \{\dot{q}_i\},\,t)\)</span> 로 주어졌다. 우리가 이 시스템의 좌표를 역시 독립적인 <span class="math inline">\(s_1,\ldots,\,s_n\)</span> 으로 변화시키면, 즉</p>
+<p><span class="math display">\[
+q_i = q_i (s_1,\ldots,\,s_n,\,t)
+\]</span></p>
+<p>로 변환시키면 (이 변환을 <em>point transformation</em> 이라고 한다) <span class="math inline">\(\{s_i\}\)</span> 좌표료 표현된 오일러-라그랑쥬 방정식은</p>
+<p><span class="math display">\[
+\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{s}_j}\right) - \dfrac{\partial L}{\partial s_j}=0
+\]</span></p>
+<p>이 됨을 보여라.</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(q_j = q_j (\{s_i\}, t)\)</span> 이므로,</p>
+<p><span class="math display">\[
+\dot{q}_i = \dfrac{dq_i}{dt} = \sum_{j} \dfrac{\partial q_i}{\partial s_j} \dot{s}_j + \dfrac{\partial q_i}{\partial t}
+\]</span></p>
+<p>이다. 따라서 <span class="math inline">\(\dfrac{\partial \dot{s}_j}{\partial \dot{q}_i} = \dfrac{\partial s_j}{\partial q_i}\)</span> 이므로 다음과 같이 보일 수 있다. <span class="math display">\[
+\begin{aligned}
+\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{s}_j}\right) - \dfrac{\partial L}{\partial s_j}
+&amp;= \dfrac{d}{dt} \left[ \sum_i \left(\dfrac{\partial L}{\partial q_i}\dfrac{\partial q_i}{\partial \dot{s}_j} +\dfrac{\partial L}{\partial \dot{q}_i}\dfrac{\partial \dot{q}_i}{\partial \dot{s}_j} \right) \right]  + \sum_i \dfrac{\partial L}{\partial q_i} \dfrac{\partial q_i}{\partial s_j} \\
+&amp;= \sum_i \left[\dfrac{d}{dt} \left(\dfrac{\partial L}{\partial \dot{q}_i} \right) + \dfrac{\partial L}{\partial q_i}\right] \left(\dfrac{\partial q_i}{\partial s_j}\right) \\
+&amp;=0
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../src/ClassicalMechanics/00_index.html" class="pagination-link" aria-label="고전역학">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">고전역학</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../src/ClassicalMechanics/02_variational_principle.html" class="pagination-link" aria-label="변분 원리와 라그랑쥬 방정식">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
