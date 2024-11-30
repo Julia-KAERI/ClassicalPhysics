@@ -1,0 +1,16 @@
+---
+title: "Electrostatics 1."
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+:::{.callout-important appearance="minimal"}
+
+$$
+\nabla \cdot \bf{E} = \dfrac{\rho}{\varepsilon_0}
+$$
+:::

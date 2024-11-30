@@ -7,6 +7,10 @@ crossref:
   
 ---
 
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
 ## 변분법
 
 수학적으로 어떤 함수의 집합 $F$ 에 대해 함수 $\phi$ 가 $F \mapsto \mathbb{R}$ 함수 일 때 $\phi$ 를 **범함수(functional)** 라고 한다. 변분법은 $f\in F$ 에 대해 $\phi (f)$ 를 최대 혹은 최소가 되도록 하는 $f$ 를 찾는 수학적인 방법을 말한다. 여기서 우리가 관심있는 것은 어떤 경로 의존적인 함수 $f(\boldsymbol{x},\, \dot{\boldsymbol{x}},\,t)$ 에 대해
@@ -21,7 +25,8 @@ $$
 
 ### 1차원의 경우
 
-![1차원 경로](../images/classical%20mechanics/fig-path_1d.png){#fig-1d_path_variational width=250}
+![1차원 경로](../images/classical%20mechanics/path1d/path1d.png){#fig-1d_path_variational width=250}
+
 
 $x_1$ 과 $x_2$ 사이의 경로 $y=y(x)$ 에서 정의된 함수 $f(y,\,\dot{y},\,x)$ 를 생각하자. 그리고 선적분 $\displaystyle J=\int_{x_1}^{x_2} f(y,\,\dot{y},\,x)\, dx$ 가 stationary value를 갖도록 하는 경로를 찾아야 한다고 하자. 우리가 찾고자 하는 경로와 그 이웃 경로를 다음 식과 같은 관계로 표현하자. 두 경로는 시작점과 끝점이 같아야 한다. 
 
@@ -157,9 +162,9 @@ $$
 
 ::: {#exm-classical_brachistochrone_problem}
 
-#### The brachistochrone problem.
+#### The brachistochrone problem
 
-![Brachistochrone](../images/classical mechanics/fig-brahistochrone-1.png){width=30%}
+![Brachistochrone](../images/tikzfigure/brachistochrone/brachistochrone.png){width=30%}
 
 
 
@@ -509,8 +514,7 @@ $$
 
 ### 병진 대칭 (Translational Symmetry)
 
-![Translational Symmetry](../images/classical mechanics/fig-translational_symmeetry.png){width=50%}
-
+![Translational Symmetry](../images/classical%20mechanics/translational_symmetry/translational_symmetry.png){#fig-part1_translational_symmetry width=50%}
 
 일반화된 좌표계 $q_j$ 에 대해 $\boldsymbol{r}_i(q_j+dq_j) -\boldsymbol{r}_i (q_j)$ 는 어떤 특정한 방향으로의 병진 이동(translation)을 뜻한다고 생각해보자. 예를 들면 데카르트 좌표계에서의 시스템의 질량중심. 운동에너지 $T$ 는 원점(origin)에 영향을 받지 않으므로, $\partial T/\partial q_j=0$ 일 것이다. 또한 보존계 이며 포텐셜 에너지 $V$가 velocity-indepedent 라고 가정하자. 이 때의 라그랑쥬 방정식은 다음과 같다.
 
@@ -554,7 +558,7 @@ $$
 \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \hat{\boldsymbol{n}}\times \boldsymbol{r}_i
 $$
 
-![Rotational Symmetry](../images/classical mechanics/fig-rotation_of_vector.png){#fig-rotsym width=350}
+![Rotational Symmetry](../images/classical%20mechanics/rotation_of_vector/rotation_of_vector.png){#fig-rotsym width=350}
 
 그렇다면 generalized force $Q_j$ 는
 

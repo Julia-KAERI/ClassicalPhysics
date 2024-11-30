@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>고전 역학과 전자기학 - 1&nbsp; 뉴튼역학의 기본 원리</title>
+<title>1&nbsp; 뉴튼역학의 기본 원리 – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -107,22 +107,22 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/01_basic_principles.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/01_basic_principles.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/01_basic_principles.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리</span></a></li></ol></nav>
       <h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리</span></h1>
                       </div>
   </div>
@@ -161,7 +161,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/ClassicalMechanics/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">고전역학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -208,15 +208,15 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/Electromagnetism/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">고전 전자기학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Electromagnetism/01_Maxwell.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">멕스웰 방정식</span></span></a>
+  <a href="../../src/Electromagnetism/electrostatics_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Electrostatics 1.</span></span></a>
   </div>
 </li>
       </ul>
@@ -225,7 +225,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">상대론</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -248,7 +248,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/Lanczos/Lanczos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">변분 역학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -277,7 +277,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/topics/Topics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">별도의 주제들</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -294,7 +294,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/images/images.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">그림들</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -392,15 +392,23 @@ window.Quarto = {
 
 
 
+<div class="hidden">
+<p>% %</p>
+%
+<p><span class="math display">\[
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
+\]</span></p>
+</div>
 <section id="뉴턴의-세가지-운동법칙" class="level2 page-columns page-full" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="뉴턴의-세가지-운동법칙"><span class="header-section-number">1.1</span> 뉴턴의 세가지 운동법칙</h2>
 <section id="입자-공간-시간-좌표계" class="level3" data-number="1.1.1">
 <h3 data-number="1.1.1" class="anchored" data-anchor-id="입자-공간-시간-좌표계"><span class="header-section-number">1.1.1</span> 입자, 공간, 시간, 좌표계</h3>
 <p>고전역학에서 <strong>입자(particle)</strong> 는 질량을 가지고 있지만 부피가 없는, 혹은 그 부피란 것이 우리가 측정하고자 하는 양에 대해 무시할만한 어떤 추상적인 대상이다. 입자는 3차원 공간상에 존재하며 시간의 변화에 따라 공간상에서 움직일 수 있다. 입자의 시간에 따른 위치를 <strong>경로(path 혹은 trajectory)</strong> 라고 한다. 입자의 경로를 기술하기 위해 공간상에서의 위치의 기준이 되는 원점 <span class="math inline">\(\mathcal{O}\)</span> 을 설정하며, 이 원점에 대한 변위를 <strong>radius vector</strong> 라고 한다. 원점은 임의로 정할 수 있다. 고전역학에서 다루는 공간은 3차원 유클리드 공간이며, 원점 <span class="math inline">\(\mathcal{O}\)</span> 에 대해 임의의 표준 기저 <span class="math inline">\(\hat{\boldsymbol{e}}_1,\,\hat{\boldsymbol{e}}_2,\,\hat{\boldsymbol{e}}_3\)</span>, 혹은 <span class="math inline">\(\hat{\boldsymbol{x}},\, \hat{\boldsymbol{y}},\, \hat{\boldsymbol{z}}\)</span> 를 관례적으로 <span class="math inline">\(\hat{\boldsymbol{e}}_3 = \hat{\boldsymbol{e}}_1 \times \hat{\boldsymbol{e}}_2\)</span> 가 되도록 잡아 radius vector <span class="math inline">\(\boldsymbol{r}\)</span> 을 이 표준기저에 대한 좌표로 표현한다. 즉 <span class="math inline">\(\boldsymbol{r} = x\hat{\boldsymbol{e}}_1 + y \hat{\boldsymbol{e}}_2 + z\hat{\boldsymbol{e}}_3\)</span> 일 때 <span class="math inline">\(\boldsymbol{r}\)</span> 을 <span class="math inline">\((x,\,y,\,z)\)</span> 혹은 <span class="math inline">\(\begin{bmatrix} x &amp; y &amp; z\end{bmatrix}^T\)</span> 로 표현하며 이를 <strong>좌표(coordinate)</strong> 라고 한다.</p>
-<div id="fig-reference_frames" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-reference_frames" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-reference_frames-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/classical mechanics/fig-radius_vector_in_two_frame.png" class="img-fluid figure-img" style="width:70.0%">
+<img src="../images/classical mechanics/radius_vector/radius_vector.png" class="img-fluid figure-img" style="width:70.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-reference_frames-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;1.1: 두 좌표계
@@ -725,7 +733,7 @@ f(\boldsymbol{r}_1,\,\boldsymbol{r}_2,\ldots,\,t) =0
 </section>
 <section id="예" class="level3" data-number="1.4.3">
 <h3 data-number="1.4.3" class="anchored" data-anchor-id="예"><span class="header-section-number">1.4.3</span> 예</h3>
-<div id="fig-double_pendulum" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-double_pendulum" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-double_pendulum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/classical mechanics/fig-double_pendulum-1.png" class="img-fluid figure-img" style="width:20.0%">
@@ -1031,18 +1039,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1074,7 +1071,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1082,7 +1101,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

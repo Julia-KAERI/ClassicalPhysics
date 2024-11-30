@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>고전 역학과 전자기학 - 14&nbsp; 그림 : 고전역학 #1</title>
+<title>14&nbsp; 그림 : 고전역학 #1 – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -103,6 +103,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -112,22 +141,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/images/images.html">그림들</a></li><li class="breadcrumb-item"><a href="../../src/images/images_classical_mechanics_01.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">그림 : 고전역학 #1</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/images/images.html">그림들</a></li><li class="breadcrumb-item"><a href="../../src/images/images_classical_mechanics_01.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">그림 : 고전역학 #1</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/images/images.html">그림들</a></li><li class="breadcrumb-item"><a href="../../src/images/images_classical_mechanics_01.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">그림 : 고전역학 #1</span></a></li></ol></nav>
       <h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">그림 : 고전역학 #1</span></h1>
                       </div>
   </div>
@@ -166,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../src/ClassicalMechanics/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">고전역학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -213,15 +242,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../src/Electromagnetism/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">고전 전자기학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Electromagnetism/01_Maxwell.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">멕스웰 방정식</span></span></a>
+  <a href="../../src/Electromagnetism/electrostatics_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Electrostatics 1.</span></span></a>
   </div>
 </li>
       </ul>
@@ -230,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">상대론</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -253,7 +282,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../src/Lanczos/Lanczos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">변분 역학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -282,7 +311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../src/topics/Topics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">별도의 주제들</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -299,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../src/images/images.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">그림들</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -341,7 +370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
@@ -351,477 +380,769 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="cell" data-layout-align="center">
+<div class="cell">
 <details class="code-fold">
-<summary>코드</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, engine = 'tikz'}</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-radius_vector_in_two_frame</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| code-fold: true</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-width: 6</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: asis</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-align: center</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "두 좌표계"</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="in">\usetikzlibrary {3d} </span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="in">\usetikzlibrary {arrows}</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="in">\usetikzlibrary{shapes.geometric}</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{tikzpicture} %[=&gt;stealth]</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="in">  \coordinate (O) at (0,0);</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="in">  \coordinate (O1) at (2.5, -0.5);</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [-&gt;] (O) -- (xyz cs:x=3);</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [-&gt;] (O) -- (xyz cs:y=3);</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [-&gt;] (O) -- (xyz cs:z=3); </span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [-&gt;] (O1) -- (xyz cs:x=5.5, y=-0.5);</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [-&gt;] (2.5,-0.5) -- (xyz cs:x=2.5, y=2.5);</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [-&gt;] (2.5,-0.5) -- (xyz cs:x=2.5, y=-0.5, z=3); </span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="in">  \node[below, scale=.7] at (O) {$\mathcal{O}$};</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="in">  \node[below, scale=.7] at (O1) {$\mathcal{O^\prime}$};</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [thick, -{stealth}] (0, 0) -- (xyz cs:x=2,y=2, z=1);</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="in">  \node[below right, scale=.7] at  (xyz cs:x=1,y=1, z=0.5) {$\boldsymbol{r}$};</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [thick, -{stealth}] (2.5, -0.5) --(xyz cs:x=2, y=2, z = 1);</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="in">  \node[left, scale=.7] at (xyz cs:x=2.25, y=0.75, z = 0.5) {$\boldsymbol{r}^\prime$};</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="in">\end{tikzpicture}</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>} </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-radius_vector_in_two_frame" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-radius_vector_in_two_frame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images_classical_mechanics_01_files/figure-html/fig-radius_vector_in_two_frame-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-radius_vector_in_two_frame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;14.1: 두 좌표계
-</figcaption>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="images_classical_mechanics_01_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
-<details class="code-fold">
-<summary>코드</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, engine = 'tikz'}</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-refrence_frame</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| code-fold: true</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: asis</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-width: 6</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-align: center</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "두 좌표계"</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm,&gt;=stealth]</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;] (xyz cs:x=-1) -- (xyz cs:x=6) node[above] {$x$};</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;] (xyz cs:y=-1) -- (xyz cs:y=6) node[right] {$z$};</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;] (xyz cs:z=-1) -- (xyz cs:z=6) node[above] {$y$};</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in">\node[anchor= north west] at (xyz cs:x=0) {$\mathcal{O}$};</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;] (xyz cs:x=9) -- (xyz cs:x=16) node[above] {$x'$};</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;] (xyz cs:x=10, y=-1) -- (xyz cs:x=10, y=6) node[right] {$z'$};</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;] (xyz cs:x=10, z=-1) -- (xyz cs:x=10, z=6) node[above] {$y'$};</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="in">\node[anchor= north west] at (xyz cs:x=10) {$\mathcal{O}'$};</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="in">\end{tikzpicture}</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div id="fig-refrence_frame" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-refrence_frame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images_classical_mechanics_01_files/figure-html/fig-refrence_frame-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-refrence_frame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;14.2: 두 좌표계
-</figcaption>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">%\usetikzlibrary{calc}</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">%\usetikzlibrary{decorations.pathmorphing} % for snakes</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {shapes.geometric} <span class="co">% for star</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{bending} <span class="co">% for arrow head angle</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{angles,quotes} <span class="co">% for pic (angle labels)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows.meta} <span class="co">% for arrow size</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {3d} </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows}</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{shapes.geometric}</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>} <span class="co">%[=&gt;stealth]</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\coordinate</span> (O) at (0,0);</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\coordinate</span> (O1) at (2.5, -0.5);</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\draw</span> [-&gt;] (O) -- (xyz cs:x=3);</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\draw</span> [-&gt;] (O) -- (xyz cs:y=3);</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\draw</span> [-&gt;] (O) -- (xyz cs:z=3); </span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\draw</span> [-&gt;] (O1) -- (xyz cs:x=5.5, y=-0.5);</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\draw</span> [-&gt;] (2.5,-0.5) -- (xyz cs:x=2.5, y=2.5);</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\draw</span> [-&gt;] (2.5,-0.5) -- (xyz cs:x=2.5, y=-0.5, z=3); </span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\node</span>[below, scale=.7] at (O) {<span class="ss">$</span><span class="sc">\mathcal</span><span class="ss">{O}$</span>};</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\node</span>[below, scale=.7] at (O1) {<span class="ss">$</span><span class="sc">\mathcal</span><span class="ss">{O^</span><span class="sc">\prime</span><span class="ss">}$</span>};</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\draw</span> [thick, -{stealth}] (0, 0) -- (xyz cs:x=2,y=2, z=1);</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\node</span>[below right, scale=.7] at  (xyz cs:x=1,y=1, z=0.5) {<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{r}$</span>};</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\draw</span> [thick, -{stealth}] (2.5, -0.5) --(xyz cs:x=2, y=2, z = 1);</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\node</span>[left, scale=.7] at (xyz cs:x=2.25, y=0.75, z = 0.5) {<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{r}^</span><span class="sc">\prime</span><span class="ss">$</span>};</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/radius_vector/radius_vector.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>Radius vector</figcaption>
 </figure>
 </div>
-</div>
-<div class="cell" data-layout-align="center">
+<p><br></p>
+<div class="cell">
 <details class="code-fold">
-<summary>코드</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, engine = 'tikz'}</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-double_pendulum</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| code-fold: true</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: asis</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-width: 2</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-height: 5</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-align: center</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "쌍진자"</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in">\usetikzlibrary{calc}</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="in">\usetikzlibrary{arrows}</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{tikzpicture}[scale=1, rotate=0]</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="in">\coordinate(O) at (0, 0);</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="in">\coordinate(A) at (3,-3);</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="in">\coordinate(B) at (1,-5.2);</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="in">\coordinate(D1) at ([shift=({0,-3})]O);;</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="in">\coordinate(D2) at ([shift=({0,-3})]A);</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[dashed] (O) -- (D1);</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[dashed] (A) -- (D2);</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[thick] (0, 0) -- (A) -- (B) ;</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="in">\filldraw[red] (A) circle(3px);</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="in">\filldraw[blue] (B) circle(3px);</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;, &gt;=stealth ,semithick] (0,-1) arc(-90:-45:1);</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;, &gt;=stealth, semithick] ([shift=({0, -1})]A) arc(270:230:1);</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="in">\node[anchor= north] at (0.4, -0.9) {$\theta$};</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="in">\node[anchor= north] at (2.6, -3.9) {$\phi$};</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="in">\end{tikzpicture}</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">%\usetikzlibrary{calc}</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">%\usetikzlibrary{decorations.pathmorphing} % for snakes</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {shapes.geometric} <span class="co">% for star</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{bending} <span class="co">% for arrow head angle</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{angles,quotes} <span class="co">% for pic (angle labels)</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows.meta} <span class="co">% for arrow size</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {3d} </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows}</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{shapes.geometric}</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[x=0.5cm,y=0.5cm,z=0.3cm,&gt;=stealth]</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-&gt;] (xyz cs:x=-1) -- (xyz cs:x=6) node[above] {<span class="ss">$x$</span>};</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-&gt;] (xyz cs:y=-1) -- (xyz cs:y=6) node[right] {<span class="ss">$z$</span>};</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-&gt;] (xyz cs:z=-1) -- (xyz cs:z=6) node[above] {<span class="ss">$y$</span>};</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[anchor= north west] at (xyz cs:x=0) {<span class="ss">$</span><span class="sc">\mathcal</span><span class="ss">{O}$</span>};</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-&gt;] (xyz cs:x=9) -- (xyz cs:x=16) node[above] {<span class="ss">$x'$</span>};</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-&gt;] (xyz cs:x=10, y=-1) -- (xyz cs:x=10, y=6) node[right] {<span class="ss">$z'$</span>};</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-&gt;] (xyz cs:x=10, z=-1) -- (xyz cs:x=10, z=6) node[above] {<span class="ss">$y'$</span>};</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[anchor= north west] at (xyz cs:x=10) {<span class="ss">$</span><span class="sc">\mathcal</span><span class="ss">{O}'$</span>};</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-double_pendulum" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-double_pendulum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images_classical_mechanics_01_files/figure-html/fig-double_pendulum-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="192">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-double_pendulum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;14.3: 쌍진자
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/reference_frame/reference_frame.png" class="img-fluid figure-img"></p>
+<figcaption>Reference Frame</figcaption>
 </figure>
 </div>
-</div>
-<div class="cell" data-layout-align="center">
+<p><br></p>
+<div class="cell">
 <details class="code-fold">
-<summary>코드</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, engine = 'tikz'}</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-brahistochrone</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| code-fold: true</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: asis</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-width: 4</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-align: center</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "Brachistochrone"</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{tikzpicture}[scale=1.4, rotate=0]</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="in">  \coordinate (O) at (0,0);</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="in">  \coordinate (A) at (4,0);</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="in">  \coordinate (B) at (0,-4);</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="in">  \coordinate (P1) at (1,0);</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="in">  \coordinate (R2) at (4,-3.5);</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw[-stealth, thick] (-0.5,0) -- (A);</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="in">  \node [anchor=south east] at (A) {$x$};</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw[-stealth, thick] (0,0.5) -- (B);</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="in">  \node [anchor=south east] at (B) {$y$};</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw node[fill,circle, scale=0.3] at (0.7,0) {};</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw node[anchor=south] at (0.7,0) {$1$};</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw node[fill,circle, scale=0.3] at (R2) {};</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw node[anchor=north] at (R2) {$2$};</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [blue, ultra thick] plot [smooth, tension=0.7] coordinates {(0.7,0) (1.5,-0.5) (2,-1.7) (2.5, -2.3) (3.4,-2.9) (4,-3.5)};</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [-stealth, thick] (2.2,-1.7)--(2.7, -2.15);</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw node[anchor=south] at (2.2, -1.7) {$\boldsymbol{v}$};</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="in">\end{tikzpicture}</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">%\usetikzlibrary{calc}</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">%\usetikzlibrary{decorations.pathmorphing} % for snakes</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {shapes.geometric} <span class="co">% for star</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{bending} <span class="co">% for arrow head angle</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{angles,quotes} <span class="co">% for pic (angle labels)</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows.meta} <span class="co">% for arrow size</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {3d} </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows}</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{shapes.geometric}</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[scale=1.4, rotate=0]</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (O) at (0,0);</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (A) at (4,0);</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (B) at (0,-4);</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (P1) at (1,0);</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (R2) at (4,-3.5);</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-stealth, thick] (-0.5,0) -- (A);</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [anchor=south east] at (A) {<span class="ss">$x$</span>};</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-stealth, thick] (0,0.5) -- (B);</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [anchor=south east] at (B) {<span class="ss">$y$</span>};</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> node[fill,circle, scale=0.3] at (0.7,0) {};</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> node[anchor=south] at (0.7,0) {<span class="ss">$1$</span>};</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> node[fill,circle, scale=0.3] at (R2) {};</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> node[anchor=north] at (R2) {<span class="ss">$2$</span>};</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [blue, ultra thick] plot [smooth, tension=0.7] coordinates {(0.7,0) (1.5,-0.5) (2,-1.7) (2.5, -2.3) (3.4,-2.9) (4,-3.5)};</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [-stealth, thick] (2.2,-1.7)--(2.7, -2.15);</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> node[anchor=south] at (2.2, -1.7) {<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{v}$</span>};</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-brahistochrone" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-brahistochrone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images_classical_mechanics_01_files/figure-html/fig-brahistochrone-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-brahistochrone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;14.4: Brachistochrone
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/brachistochrone/brachistochrone.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>Brachistochrone</figcaption>
 </figure>
 </div>
-</div>
-<div class="cell" data-layout-align="center">
+<p><br></p>
+<div class="cell">
 <details class="code-fold">
-<summary>코드</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, engine = 'tikz'}</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-translational_symmeetry</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| code-fold: true</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: asis</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-width: 4</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-align: center</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "Translational Symmeetry"</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="in">  \begin{tikzpicture}[scale=1.2, rotate=0]</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="in">    \coordinate (O) at (0,0);</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="in">    \coordinate (A) at (4,0);</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="in">    \coordinate (B) at (0,4);</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="in">    \coordinate (R1) at (2.5,3);</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="in">    \coordinate (R2) at (4,3);</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="in">    \draw[thick] (-1,0) -- (A);</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="in">    \draw[thick] (0,-1) -- (B);</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="in">    \draw[-stealth, ultra thick] (O) -- (R1);</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="in">    \draw[-stealth, ultra thick] (O) -- (R2);</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="in">    \draw[-stealth, ultra thick, blue] (R1) -- (R2);</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="in">    \node [anchor=south east] at (1.25,1.5) {$\boldsymbol{r}_i(q_j)$};</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="in">    \node [anchor=north west] at (2,1.5) {$\boldsymbol{r}_i(q_j+dq_j)$};</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="in">    \node [anchor=south ] at (3.25,3) {$dq_j\hat{\boldsymbol{n}}$};</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="in">  \end{tikzpicture}</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">%\usetikzlibrary{calc}</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">%\usetikzlibrary{decorations.pathmorphing} % for snakes</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {shapes.geometric} <span class="co">% for star</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{bending} <span class="co">% for arrow head angle</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{angles,quotes} <span class="co">% for pic (angle labels)</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows.meta} <span class="co">% for arrow size</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {3d} </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows}</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{shapes.geometric}</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[scale=1.2, rotate=0]</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (O) at (0,0);</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (A) at (4,0);</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (B) at (0,4);</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (R1) at (2.5,3);</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (R2) at (4,3);</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick] (-1,0) -- (A);</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick] (0,-1) -- (B);</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-stealth, ultra thick] (O) -- (R1);</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-stealth, ultra thick] (O) -- (R2);</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-stealth, ultra thick, blue] (R1) -- (R2);</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [anchor=south east] at (1.25,1.5) {<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{r}_i(q_j)$</span>};</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [anchor=north west] at (2,1.5) {<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{r}_i(q_j+dq_j)$</span>};</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [anchor=south ] at (3.25,3) {<span class="ss">$dq_j</span><span class="sc">\hat</span><span class="ss">{</span><span class="sc">\boldsymbol</span><span class="ss">{n}}$</span>};</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-translational_symmeetry" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-translational_symmeetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images_classical_mechanics_01_files/figure-html/fig-translational_symmeetry-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-translational_symmeetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;14.5: Translational Symmeetry
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/translational_symmetry/translational_symmetry.png" class="img-fluid figure-img" width="300"></p>
+<figcaption>Translational Symmetry</figcaption>
 </figure>
 </div>
-</div>
-<div class="cell" data-layout-align="center">
+<div class="cell">
 <details class="code-fold">
-<summary>코드</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, engine = 'tikz'}</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-rotation_of_vector</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| code-fold: true</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-width: 6</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: asis</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-align: center</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "두 좌표계"</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="in">\usetikzlibrary {3d} </span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="in">\usetikzlibrary {arrows}</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="in">\usetikzlibrary{shapes.geometric}</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{tikzpicture} %[=&gt;stealth]</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="in">\tikzset{</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="in">    partial ellipse/.style args={#1:#2:#3}{</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="in">        insert path={+ (#1:#3) arc (#1:#2:#3)}</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="in">    }</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [-&gt;] (0,0) -- (xyz cs:x=3);</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [-&gt;] (0,0) -- (xyz cs:y=4.5);</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [-&gt;] (0,0) -- (xyz cs:z=3); </span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [dashed] (0.0,3.0) ellipse (1.5 and 0.5);</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [thick, -{stealth}] (0, 0) -- (xyz cs:x=0.7,y=2.55);</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="in">  \node[below, scale=.6] at (0.3, 2.3) {$\boldsymbol{r}_i (q_j)$};</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [thick, -{stealth}] (0, 0) --(xyz cs:x=1.4,y=2.8);</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="in">  \node[scale=.6] at (1.5, 1.7) {$\boldsymbol{r}_i (q_j+dq_j)$};</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [red, thick, -{stealth}] (0.7, 2.55) -- (1.4, 2.8);</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="in">  \node[red, scale=.6] at (1.0, 2.5) {$d\boldsymbol{r}_i$};</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [thick, -{stealth}] (0, 3) -- (0, 3.7) node[right, scale=0.6] {$\;\hat{\boldsymbol{n}}$};</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [teal] (0, 3) -- (0.7, 2.55);</span></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [teal] (0, 3) -- (1.4, 2.8);</span></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw[teal, -&gt;] (0, 3.0) [partial ellipse=297:340:0.6 and 0.2] node[above, scale=0.6] {$dq_j$} ;</span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw[purple, -&gt;] (0, 0) [partial ellipse=90:75:1 and 1] node[above left, scale=0.6] {$\theta$} ;</span></span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="in">\end{tikzpicture}</span></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {3d} </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows}</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{shapes.geometric}</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {3d} </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows}</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{shapes.geometric}</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>} <span class="co">%[=&gt;stealth]</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\tikzset</span>{</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        partial ellipse/.style args={#1:#2:#3}{</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>            insert path={+ (#1:#3) arc (#1:#2:#3)}</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\draw</span> [-&gt;] (0,0) -- (xyz cs:x=3);</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\draw</span> [-&gt;] (0,0) -- (xyz cs:y=4.5);</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\draw</span> [-&gt;] (0,0) -- (xyz cs:z=3); </span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\draw</span> [dashed] (0.0,3.0) ellipse (1.5 and 0.5);</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\draw</span> [thick, -{stealth}] (0, 0) -- (xyz cs:x=0.7,y=2.55);</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\node</span>[below, scale=.6] at (0.3, 2.3) {<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{r}_i (q_j)$</span>};</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\draw</span> [thick, -{stealth}] (0, 0) --(xyz cs:x=1.4,y=2.8);</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\node</span>[scale=.6] at (1.5, 1.7) {<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{r}_i (q_j+dq_j)$</span>};</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\draw</span> [red, thick, -{stealth}] (0.7, 2.55) -- (1.4, 2.8);</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\node</span>[red, scale=.6] at (1.0, 2.5) {<span class="ss">$d</span><span class="sc">\boldsymbol</span><span class="ss">{r}_i$</span>};</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\draw</span> [thick, -{stealth}] (0, 3) -- (0, 3.7) node[right, scale=0.6] {<span class="ss">$</span><span class="sc">\;\hat</span><span class="ss">{</span><span class="sc">\boldsymbol</span><span class="ss">{n}}$</span>};</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\draw</span> [teal] (0, 3) -- (0.7, 2.55);</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\draw</span> [teal] (0, 3) -- (1.4, 2.8);</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\draw</span>[teal, -&gt;] (0, 3.0) [partial ellipse=297:340:0.6 and 0.2] node[above, scale=0.6] {<span class="ss">$dq_j$</span>} ;</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>      <span class="fu">\draw</span>[purple, -&gt;] (0, 0) [partial ellipse=90:75:1 and 1] node[above left, scale=0.6] {<span class="ss">$</span><span class="sc">\theta</span><span class="ss">$</span>} ;</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-rotation_of_vector" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-rotation_of_vector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images_classical_mechanics_01_files/figure-html/fig-rotation_of_vector-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rotation_of_vector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;14.6: 두 좌표계
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/rotation_of_vector/rotation_of_vector.png" class="img-fluid figure-img" width="300"></p>
+<figcaption>Rotation of Vector</figcaption>
 </figure>
 </div>
-</div>
-<div class="cell" data-layout-align="center">
+<p><br></p>
+<div class="cell">
 <details class="code-fold">
-<summary>코드</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, engine = 'tikz'}</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-path_1d</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| code-fold: true</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: asis</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-width: 4</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-align: center</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "Brachistochrone"</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{tikzpicture}[scale=1.4, rotate=0]</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="in">  \coordinate (O) at (0,0);</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="in">  \coordinate (A) at (4,0);</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="in">  \coordinate (B) at (0,4);</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="in">  \coordinate (P1) at (0.7, 0.7);</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="in">  \coordinate (P2) at (3.3,3.3);</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw[-stealth, thick] (-0.5,0) -- (A);</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="in">  \node [anchor=south east] at (A) {$x$};</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw[-stealth, thick] (0,-0.5) -- (B);</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="in">  \node [above] at (B) {$y$};</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw node[fill,circle, scale=0.3] at (P1) {};</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw node[fill,circle, scale=0.3] at (P2) {};</span></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="in">  \node[below] at (P1) {$(x_1,\,y_1)$};</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="in">  \node[above] at (P2) {$(x_2,\,y_2)$};</span></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [blue, thick] plot [smooth, tension=0.6] coordinates {(P1) (1.3, 2.2) (2.2,2.5) (2.6,3.0) (P2)};</span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="in">  \draw [blue, thick] plot [smooth, tension=0.7] coordinates {(P1) (1.3, 1.4) (2.1,2.0) (2.6,2.3) (P2)};</span></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="in">\end{tikzpicture}</span></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {3d} </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows}</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{shapes.geometric}</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[scale=1.4, rotate=0]</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (O) at (0,0);</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (A) at (4,0);</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (B) at (0,4);</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (P1) at (0.7, 0.7);</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (P2) at (3.3,3.3);</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-stealth, thick] (-0.5,0) -- (A);</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [anchor=south east] at (A) {<span class="ss">$x$</span>};</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-stealth, thick] (0,-0.5) -- (B);</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [above] at (B) {<span class="ss">$y$</span>};</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> node[fill,circle, scale=0.3] at (P1) {};</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> node[fill,circle, scale=0.3] at (P2) {};</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[below] at (P1) {<span class="ss">$(x_1,</span><span class="sc">\,</span><span class="ss">y_1)$</span>};</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[above] at (P2) {<span class="ss">$(x_2,</span><span class="sc">\,</span><span class="ss">y_2)$</span>};</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [blue, thick] plot [smooth, tension=0.6] coordinates {(P1) (1.3, 2.2) (2.2,2.5) (2.6,3.0) (P2)};</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [blue, thick] plot [smooth, tension=0.7] coordinates {(P1) (1.3, 1.4) (2.1,2.0) (2.6,2.3) (P2)};</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-path_1d" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-path_1d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images_classical_mechanics_01_files/figure-html/fig-path_1d-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-path_1d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;14.7: Brachistochrone
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/path1d/path1d.png" class="img-fluid figure-img" width="300"></p>
+<figcaption>Path 1D</figcaption>
 </figure>
 </div>
-</div>
-<div class="cell" data-layout-align="center">
+<p><br></p>
+<div class="cell">
 <details class="code-fold">
-<summary>코드</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows}</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{positioning}</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{calc}</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows}</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{decorations.pathreplacing}</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[domain=1.05:6, samples = 100, scale=1]</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[-{stealth}] (0.5, 0) -- (6.5,0) node[right, scale=0.6] {<span class="ss">$x$</span>};</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[-{stealth}] (0.9,-0.5) -- (0.9,2.2) node[above, scale=0.6] {<span class="ss">$V(x)$</span>};</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[color=black]   plot[id=veff] (<span class="fu">\x</span>, {2* ( (<span class="fu">\x</span> * <span class="fu">\x</span>) - (4 * <span class="fu">\x</span>) +  3 + (1 * (<span class="fu">\x</span>^-1)))  * exp(-0.2* (<span class="fu">\x</span>^2)) + 0.6 } ) ;</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[dashed, red] (0.9, 0.15) node[left, scale=0.6] {<span class="ss">$E_1$</span>}-- (6.0, 0.15) ;</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[dashed, blue] (0.9, 0.5) node[left, scale=0.6] {<span class="ss">$E_2$</span>}-- (6.0, 0.5) ;</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[dashed, violet] (0.9, 1.0) node[left, scale=0.6] {<span class="ss">$E_3$</span>}-- (6.0, 1.0) ;</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[dashdotted] (1.3, 1.0) node[above, scale=0.6] {<span class="ss">$$} -- (1.3, -0.18) node[below, scale=0.6] {</span><span class="er">$</span><span class="ss">x_1</span><span class="er">$</span><span class="ss">};</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="sc">\draw</span><span class="ss">[dashdotted] (1.49, 0.55) -- (1.49, -0.05) node [below, scale=0.6] {</span><span class="er">$</span><span class="ss">x_2</span><span class="er">$</span><span class="ss">};</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="sc">\draw</span><span class="ss">[dashdotted] (2.65, 0.55) -- (2.65, -0.05) node [below, scale=0.6] {</span><span class="er">$</span><span class="ss">x_3</span><span class="er">$</span><span class="ss">};</span></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="sc">\draw</span><span class="ss">[dotted] (1.94, 0.15) -- (1.94, -0.05) node [below, scale=0.6] {</span><span class="er">$</span><span class="ss">x_0</span><span class="er">$</span><span class="ss">};</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows}</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{positioning}</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{calc}</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows}</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{decorations.pathreplacing}</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[domain=1.05:6, samples = 100, scale=1]</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-{stealth}] (0.5, 0) -- (6.5,0) node[right, scale=0.6] {<span class="ss">$x$</span>};</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-{stealth}] (0.9,-0.5) -- (0.9,2.2) node[above, scale=0.6] {<span class="ss">$V(x)$</span>};</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[color=black]   plot[id=veff] (<span class="fu">\x</span>, {2* ( (<span class="fu">\x</span> * <span class="fu">\x</span>) - (4 * <span class="fu">\x</span>) +  3 + (1 * (<span class="fu">\x</span>^-1)))  * exp(-0.2* (<span class="fu">\x</span>^2)) + 0.6 } ) ;</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[dashed, red] (0.9, 0.15) node[left, scale=0.6] {<span class="ss">$E_1$</span>}-- (6.0, 0.15) ;</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[dashed, blue] (0.9, 0.5) node[left, scale=0.6] {<span class="ss">$E_2$</span>}-- (6.0, 0.5) ;</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[dashed, violet] (0.9, 1.0) node[left, scale=0.6] {<span class="ss">$E_3$</span>}-- (6.0, 1.0) ;</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[dashdotted] (1.3, 1.0) node[above, scale=0.6] {<span class="ss">$$} -- (1.3, -0.18) node[below, scale=0.6] {</span><span class="er">$</span><span class="ss">x_1</span><span class="er">$</span><span class="ss">};</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span><span class="sc">\draw</span><span class="ss">[dashdotted] (1.49, 0.55) -- (1.49, -0.05) node [below, scale=0.6] {</span><span class="er">$</span><span class="ss">x_2</span><span class="er">$</span><span class="ss">};</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span><span class="sc">\draw</span><span class="ss">[dashdotted] (2.65, 0.55) -- (2.65, -0.05) node [below, scale=0.6] {</span><span class="er">$</span><span class="ss">x_3</span><span class="er">$</span><span class="ss">};</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span><span class="sc">\draw</span><span class="ss">[dotted] (1.94, 0.15) -- (1.94, -0.05) node [below, scale=0.6] {</span><span class="er">$</span><span class="ss">x_0</span><span class="er">$</span><span class="ss">};</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-Potential" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-Potential-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images_classical_mechanics_01_files/figure-html/fig-Potential-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="768">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Potential-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;14.8: Potentials
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/potential/potential.png" class="img-fluid figure-img" width="500"></p>
+<figcaption>Potential</figcaption>
 </figure>
 </div>
-</div>
-<div class="cell" data-layout-align="center">
+<p><br></p>
+<div class="cell">
 <details class="code-fold">
-<summary>코드</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {3d} </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows}</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{shapes.geometric}</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[=&gt;stealth, scale=3]</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [black, thick] plot [smooth, tension=1] coordinates { (0,1.5) (1.5,1.0) (2, 0)};</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [black, very thick, -{stealth}] (0, 0) node[left, scale =1.2] {<span class="ss">$O$</span>}-- (1.19, 1.19);</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [black, very thick, -{stealth}] (0, 0) -- (1.5, 0.99); </span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [thick] (0.6,0.6) arc (45:29:0.6);</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span> [right, scale=1.2] at (0.6, 0.6) {<span class="ss">$d</span><span class="sc">\theta</span><span class="ss">$</span>};</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span> [above, scale=1.2] at (0.8, 0.8) {<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{r}$</span>};</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [thick, dashed] (1.19, 1.19) -- (1.35, 0.9);</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span> [above, scale = 1.2] at (1.35, 1.3) {<span class="ss">$r d</span><span class="sc">\theta</span><span class="ss">$</span> };</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [black, thick, -{stealth}] plot [smooth, tension=1] coordinates { (1.35,1.3) (1.29, 1.0)};</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {3d} </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows}</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{shapes.geometric}</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[=&gt;stealth, scale=3]</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [black, thick] plot [smooth, tension=1] coordinates { (0,1.5) (1.5,1.0) (2, 0)};</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [black, very thick, -{stealth}] (0, 0) node[left, scale =1.2] {<span class="ss">$O$</span>}-- (1.19, 1.19);</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [black, very thick, -{stealth}] (0, 0) -- (1.5, 0.99); </span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [thick] (0.6,0.6) arc (45:29:0.6);</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [right, scale=1.2] at (0.6, 0.6) {<span class="ss">$d</span><span class="sc">\theta</span><span class="ss">$</span>};</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [above, scale=1.2] at (0.8, 0.8) {<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{r}$</span>};</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [thick, dashed] (1.19, 1.19) -- (1.35, 0.9);</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [above, scale = 1.2] at (1.35, 1.3) {<span class="ss">$r d</span><span class="sc">\theta</span><span class="ss">$</span> };</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [black, thick, -{stealth}] plot [smooth, tension=1] coordinates { (1.35,1.3) (1.29, 1.0)};</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-area_swept_by_radius_vector" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-area_swept_by_radius_vector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images_classical_mechanics_01_files/figure-html/fig-area_swept_by_radius_vector-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="288">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-area_swept_by_radius_vector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;14.9: 두 좌표계
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/area_swept/area_swept.png" class="img-fluid figure-img" width="300"></p>
+<figcaption>Area Swept by radius vector</figcaption>
 </figure>
 </div>
-</div>
-<div class="cell" data-layout-align="center">
+<p><br></p>
+<div class="cell">
 <details class="code-fold">
-<summary>코드</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows}</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{positioning}</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{calc}</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows}</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{decorations.pathreplacing}</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[domain=0.26:6, samples = 100, scale=1]</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[-{stealth}] (-0.5, 0) -- (6.5,0) node[right, scale=0.6] {<span class="ss">$r$</span>};</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[-{stealth}] (0,-1.5) -- (0,2.2) node[right, scale=0.6] {<span class="ss">$V_{</span><span class="sc">\textrm</span>{eff}<span class="ss">}(r)$</span>};</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[color=black]   plot[id=veff] (<span class="fu">\x</span>, {  (<span class="fu">\x</span>^-2 -  2.8* <span class="fu">\x</span>^-1)/2} ) ;</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co">%\draw[dashed, red] (0.9, 0.15) node[left, scale=0.6] {$E_1$}-- (6.0, 0.15) ;</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co">%\draw[dashed, blue] (0.9, 0.5) node[left, scale=0.6] {$E_2$}-- (6.0, 0.5) ;</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co">%\draw[dashed, violet] (0.9, 1.0) node[left, scale=0.6] {$E_3$}-- (6.0, 1.0) ;</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co">%\draw[dashdotted] (1.3, 1.0) node[above, scale=0.6] {$$} -- (1.3, -0.18) node[below, scale=0.6] {$x_1$};</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co">%\draw[dashdotted] (1.49, 0.55) -- (1.49, -0.05) node [below, scale=0.6] %{$x_2$};</span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[dashed] (0.71, -0.95) -- (0.71, 0.05) node [above, scale=0.6] {<span class="ss">$r_0$</span>};</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="co">%\draw[dotted] (1.94, 0.15) -- (1.94, -0.05) node [below, scale=0.6] {$x_0$};</span></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows}</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{positioning}</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{calc}</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows}</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{decorations.pathreplacing}</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[domain=0.26:6, samples = 100, scale=1]</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-{stealth}] (-0.5, 0) -- (6.5,0) node[right, scale=0.6] {<span class="ss">$r$</span>};</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[-{stealth}] (0,-1.5) -- (0,2.2) node[right, scale=0.6] {<span class="ss">$V_{</span><span class="sc">\textrm</span>{eff}<span class="ss">}(r)$</span>};</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[color=black]   plot[id=veff] (<span class="fu">\x</span>, {  (<span class="fu">\x</span>^-2 -  2.8* <span class="fu">\x</span>^-1)/2} ) ;</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">%\draw[dashed, red] (0.9, 0.15) node[left, scale=0.6] {$E_1$}-- (6.0, 0.15) ;</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">%\draw[dashed, blue] (0.9, 0.5) node[left, scale=0.6] {$E_2$}-- (6.0, 0.5) ;</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">%\draw[dashed, violet] (0.9, 1.0) node[left, scale=0.6] {$E_3$}-- (6.0, 1.0) ;</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">%\draw[dashdotted] (1.3, 1.0) node[above, scale=0.6] {$$} -- (1.3, -0.18) node[below, scale=0.6] {$x_1$};</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">%\draw[dashdotted] (1.49, 0.55) -- (1.49, -0.05) node [below, scale=0.6] %{$x_2$};</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[dashed] (0.71, -0.95) -- (0.71, 0.05) node [above, scale=0.6] {<span class="ss">$r_0$</span>};</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">%\draw[dotted] (1.94, 0.15) -- (1.94, -0.05) node [below, scale=0.6] {$x_0$};</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-effective_potential_for_kepler_problem" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-effective_potential_for_kepler_problem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images_classical_mechanics_01_files/figure-html/fig-effective_potential_for_kepler_problem-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-effective_potential_for_kepler_problem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;14.10: 케플러 문제
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/effective_potential_for_kepler_orbit/effective_potential.png" class="img-fluid figure-img" width="500"></p>
+<figcaption>Effective potential for Kepler orbit</figcaption>
 </figure>
 </div>
-</div>
-<div class="cell" data-layout-align="center">
+<p><br></p>
+<div class="cell">
 <details class="code-fold">
-<summary>코드</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows.meta}</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[line cap=round]</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=0:0.93*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=0.93*pi:3.1*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=3.1*pi:5.25*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=5.25*pi:7.40*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=7.40*pi:9.55*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=9.55*pi:11.70*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=11.70*pi:13.84*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=13.84*pi:15.98*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=15.98*pi:18.12*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=18.12*pi:20.26*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=20.26*pi:20.53*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[fill=none, dashed, blue, thick](0,0) circle (5);</span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[fill=none, ](0,0) circle (0.05);</span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[thick,  -{Stealth[length=2mm]}] (0, 0) -- (-2.5, 4.33);</span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[thick,  -{Stealth[length=2mm]}] (0, 0) -- (0.556, 0);</span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span>[black, left] at (-1.25, 2.17) {<span class="ss">$r_{</span><span class="sc">\textrm</span>{max}<span class="ss">}$</span>};</span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span>[black, below] at (0.278, 0) {<span class="ss">$r_{</span><span class="sc">\textrm</span>{min}<span class="ss">}$</span>};</span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[thick] (-4.776, -1.094) -- (-5.166, -1.184);</span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[thick] (-3.823, -3.065) -- (-4.135, -3.315);</span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [thick, {Stealth[length=2mm]}-{Stealth[length=2mm]}] (-5.069,-1.161) arc (192.9:218.716:5.2);</span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span>[left] at (-4.7, -2.2) {<span class="ss">$</span><span class="sc">\Delta</span><span class="ss"> </span><span class="sc">\theta</span><span class="ss">$</span>};</span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows.meta}</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[line cap=round]</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=0:0.93*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=0.93*pi:3.1*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=3.1*pi:5.25*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=5.25*pi:7.40*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=7.40*pi:9.55*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=9.55*pi:11.70*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=11.70*pi:13.84*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=13.84*pi:15.98*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=15.98*pi:18.12*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=18.12*pi:20.26*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick, -{Stealth[length=2mm]}] plot[variable=<span class="fu">\t</span>,domain=20.26*pi:20.53*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 + 0.8*cos(0.9331 * <span class="fu">\t</span> r))});</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[fill=none, dashed, blue, thick](0,0) circle (5);</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[fill=none, ](0,0) circle (0.05);</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick,  -{Stealth[length=2mm]}] (0, 0) -- (-2.5, 4.33);</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick,  -{Stealth[length=2mm]}] (0, 0) -- (0.556, 0);</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[black, left] at (-1.25, 2.17) {<span class="ss">$r_{</span><span class="sc">\textrm</span>{max}<span class="ss">}$</span>};</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[black, below] at (0.278, 0) {<span class="ss">$r_{</span><span class="sc">\textrm</span>{min}<span class="ss">}$</span>};</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick] (-4.776, -1.094) -- (-5.166, -1.184);</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick] (-3.823, -3.065) -- (-4.135, -3.315);</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [thick, {Stealth[length=2mm]}-{Stealth[length=2mm]}] (-5.069,-1.161) arc (192.9:218.716:5.2);</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[left] at (-4.7, -2.2) {<span class="ss">$</span><span class="sc">\Delta</span><span class="ss"> </span><span class="sc">\theta</span><span class="ss">$</span>};</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-central_field_orbit" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-central_field_orbit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images_classical_mechanics_01_files/figure-html/fig-central_field_orbit-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-central_field_orbit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;14.11: 중심장의 궤도
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/central_field_orbit/orbit.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>중심장의 궤도</figcaption>
 </figure>
 </div>
-</div>
-<div class="cell" data-layout-align="center">
+<p><br></p>
+<div class="cell">
 <details class="code-fold">
-<summary>코드</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows.meta}</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[line cap=round, scale=3]</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\filldraw</span>[](0,0) circle (0.02);</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span>[left, scale = 1.5] at (0, 0) {<span class="ss">$O$</span>};</span>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows.meta}</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[line cap=round, scale=3]</span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[black, thick] plot[variable=<span class="fu">\t</span>,domain=0:2*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)},{sin(<span class="fu">\t</span> r)});</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span>[right, scale=1.5] at (0.707, 0.707) {<span class="ss">$</span><span class="sc">\varepsilon</span><span class="ss"> =0$</span>};</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[blue, thick] plot[variable=<span class="fu">\t</span>,domain=0:2*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1+0.7 * cos(<span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1+0.7 * cos(<span class="fu">\t</span> r))});</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span>[blue, scale = 1.5] at (-1.5, 1.2) {<span class="ss">$</span><span class="sc">\varepsilon</span><span class="ss"> = 0.7$</span>};</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, thick] plot[variable=<span class="fu">\t</span>,domain=-2*pi/3:2*pi/3, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1+  cos(<span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 +  cos(<span class="fu">\t</span> r))});</span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span>[red, scale = 1.5] at (-1.3, 1.7) {<span class="ss">$</span><span class="sc">\varepsilon</span><span class="ss"> = 1$</span>};</span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[teal, thick] plot[variable=<span class="fu">\t</span>,domain=-2*pi/3:2*pi/3, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1.0+ 1.2* cos(<span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1.0 + 1.2* cos(<span class="fu">\t</span> r))});</span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span>[teal, scale = 1.5] at (-0.4, 1.8) {<span class="ss">$</span><span class="sc">\varepsilon</span><span class="ss"> = 1.2$</span>};</span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\filldraw</span>[](0,0) circle (0.02);</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[left, scale = 1.5] at (0, 0) {<span class="ss">$O$</span>};</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[black, thick] plot[variable=<span class="fu">\t</span>,domain=0:2*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)},{sin(<span class="fu">\t</span> r)});</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[right, scale=1.5] at (0.707, 0.707) {<span class="ss">$</span><span class="sc">\varepsilon</span><span class="ss"> =0$</span>};</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[blue, thick] plot[variable=<span class="fu">\t</span>,domain=0:2*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1+0.7 * cos(<span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1+0.7 * cos(<span class="fu">\t</span> r))});</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[blue, scale = 1.5] at (-1.5, 1.2) {<span class="ss">$</span><span class="sc">\varepsilon</span><span class="ss"> = 0.7$</span>};</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick] plot[variable=<span class="fu">\t</span>,domain=-2*pi/3:2*pi/3, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1+  cos(<span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 +  cos(<span class="fu">\t</span> r))});</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[red, scale = 1.5] at (-1.3, 1.7) {<span class="ss">$</span><span class="sc">\varepsilon</span><span class="ss"> = 1$</span>};</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[teal, thick] plot[variable=<span class="fu">\t</span>,domain=-2*pi/3:2*pi/3, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1.0+ 1.2* cos(<span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1.0 + 1.2* cos(<span class="fu">\t</span> r))});</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[teal, scale = 1.5] at (-0.4, 1.8) {<span class="ss">$</span><span class="sc">\varepsilon</span><span class="ss"> = 1.2$</span>};</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-kepler_orbit_1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-kepler_orbit_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images_classical_mechanics_01_files/figure-html/fig-kepler_orbit_1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kepler_orbit_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;14.12: $arepislon$ 에 따른 궤도
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/keppler_orbit/keppler_orbit.png" class="img-fluid figure-img" width="400"></p>
+<figcaption><span class="math inline">\(\varepsilon\)</span> 에 따른 궤도</figcaption>
 </figure>
 </div>
+<p><br></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows.meta}</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[line cap=round, scale=3]</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\filldraw</span>[](0,0) circle (0.02);</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[left, scale = 1.5] at (0, 0) {<span class="ss">$O$</span>};</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[black, thick] plot[variable=<span class="fu">\t</span>,domain=0:2*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)},{sin(<span class="fu">\t</span> r)});</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[right, scale=1.5] at (0.707, 0.707) {<span class="ss">$</span><span class="sc">\varepsilon</span><span class="ss"> =0$</span>};</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[blue, thick] plot[variable=<span class="fu">\t</span>,domain=0:2*pi, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1+0.7 * cos(<span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1+0.7 * cos(<span class="fu">\t</span> r))});</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[blue, scale = 1.5] at (-1.5, 1.2) {<span class="ss">$</span><span class="sc">\varepsilon</span><span class="ss"> = 0.7$</span>};</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[red, thick] plot[variable=<span class="fu">\t</span>,domain=-2*pi/3:2*pi/3, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1+  cos(<span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1 +  cos(<span class="fu">\t</span> r))});</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[red, scale = 1.5] at (-1.3, 1.7) {<span class="ss">$</span><span class="sc">\varepsilon</span><span class="ss"> = 1$</span>};</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[teal, thick] plot[variable=<span class="fu">\t</span>,domain=-2*pi/3:2*pi/3, samples=100, smooth,thick] ({cos(<span class="fu">\t</span> r)/(1.0+ 1.2* cos(<span class="fu">\t</span> r))},{sin(<span class="fu">\t</span> r)/(1.0 + 1.2* cos(<span class="fu">\t</span> r))});</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[teal, scale = 1.5] at (-0.4, 1.8) {<span class="ss">$</span><span class="sc">\varepsilon</span><span class="ss"> = 1.2$</span>};</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/frame_and_scattering/frame_and_scattering.png" class="img-fluid figure-img" width="450"></p>
+<figcaption>좌표계와 산란</figcaption>
+</figure>
+</div>
+<p><br></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {arrows.meta}</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span> {calc}</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[line cap=round, scale = 2]</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (A) at (-0.7, 0);</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (B) at (0.5, 0);</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (C) at (0.309, 0.951);</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[fill=none, blue, thick](0,0) circle (1);</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick,  -{Stealth[length=2mm]}] (0, 0) node [below, scale=0.8] {<span class="ss">$O$</span>} -- (C) node [above, scale=0.8] {<span class="ss">$C$</span>};</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick, red,  -{Stealth[length=2mm]}] (A) node [below, black, scale=0.8] {<span class="ss">$A$</span>} -- (C);</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick, teal,  -{Stealth[length=2mm]}] (C) -- (B) node [below, black, scale=0.8] {<span class="ss">$B$</span>} ;</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick, red, dashed,-{Stealth[length=2mm]}] (A) -- (0, 0);</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick, teal, dashed,-{Stealth[length=2mm]}] (0, 0) -- (B);</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick,  -{Stealth[length=2mm]}] (0, 0)  -- (<span class="ss">$0.5*(C)$</span>) node[below right, scale=0.8] {<span class="ss">$</span><span class="sc">\hat</span><span class="ss">{</span><span class="sc">\boldsymbol</span><span class="ss">{n}}_0$</span>};</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[above,scale=0.8] at (<span class="ss">$0.5*(A) + 0.5*(C)$</span> ){<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{p}'_1$</span>};</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[ right,scale=0.8] at (<span class="ss">$0.5*(B) + 0.5*(C)$</span> ){<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{p}'_2$</span>};</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">%\node [below, scale=0.8] at ($0.5*(A)$) {$\boldsymbol{p}_A$};</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    <span class="co">%\node [below, scale=0.8] at ($0.5*(B)$) {$\boldsymbol{p}_B$};</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/momentum_in_lab_frame/momentum_in_lab_frame.png" class="img-fluid figure-img" width="250"></p>
+<figcaption>실험실 좌표계에서 산란이 발생했을 때의 운동량 벡터</figcaption>
+</figure>
+</div>
+<p><br></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows.meta}</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{calc}</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[line cap=round, scale = 2]</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (A) at (-0.7, 0);</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (B) at (1.0, 0);</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (C) at (0.309, 0.951);</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[fill=none, blue, thick](0,0) circle (1);</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick,  -{Stealth[length=2mm]}] (0, 0) node [below, scale=0.8] {<span class="ss">$O$</span>} -- (C) node [above, scale=0.8] {<span class="ss">$C$</span>};</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick, red,  -{Stealth[length=2mm]}] (A) node [below, black, scale=0.8] {<span class="ss">$A$</span>} -- (C);</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick, teal,  -{Stealth[length=2mm]}] (C) -- (B) node [below, black, scale=0.8] {<span class="ss">$B$</span>} ;</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick, black,-{Stealth[length=2mm]}] (A) -- (B);</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[below, scale=0.8] at (0.5, 0) {<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{p}_1$</span>};</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.3,0.0) arc (0:70:0.3);</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [scale=0.8] at (0.35, 0.2) {<span class="ss">$</span><span class="sc">\Theta</span><span class="ss">$</span>};</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [teal, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.7,0.0) arc (180:127:0.3);</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [scale=0.8] at (0.63, 0.2) {<span class="ss">$</span><span class="sc">\theta</span><span class="ss">_2$</span>};</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [red, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-0.4,0.0) arc (0:44:0.3);</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [scale=0.8] at (-0.3, 0.15) {<span class="ss">$</span><span class="sc">\theta</span><span class="ss">_1$</span>};</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[above,scale=0.8] at (<span class="ss">$0.5*(A) + 0.5*(C)$</span> ){<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{p}'_1$</span>};</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[ right,scale=0.8] at (<span class="ss">$0.5*(B) + 0.5*(C)$</span> ){<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{p}'_2$</span>};</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[scale=0.8] at (0.0, -1.2) {<span class="ss">$(a)</span><span class="sc">\,</span><span class="ss"> m_1&lt;m_2$</span>};</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">%\node [below, scale=0.8] at ($0.5*(A)$) {$\boldsymbol{p}_A$};</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>    <span class="co">%\node [below, scale=0.8] at ($0.5*(B)$) {$\boldsymbol{p}_B$};</span></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\begin</span>{<span class="ex">scope</span>}[shift={(3,0)}]</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (A) at (-1.6, 0);</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (B) at (1.0, 0);</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (C) at (0.309, 0.951);</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[fill=none, blue, thick](0,0) circle (1);</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick,  -{Stealth[length=2mm]}] (0, 0) node [below, scale=0.8] {<span class="ss">$O$</span>} -- (C) node [above, scale=0.8] {<span class="ss">$C$</span>};</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick, red,  -{Stealth[length=2mm]}] (A) node [below, black, scale=0.8] {<span class="ss">$A$</span>} -- (C);</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick, teal,  -{Stealth[length=2mm]}] (C) -- (B) node [below, black, scale=0.8] {<span class="ss">$B$</span>} ;</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick, black,-{Stealth[length=2mm]}] (A) -- (B);</span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[below, scale=0.8] at (-0.3, 0) {<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{p}_1$</span>};</span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.3,0.0) arc (0:70:0.3);</span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [scale=0.8] at (0.35, 0.2) {<span class="ss">$</span><span class="sc">\Theta</span><span class="ss">$</span>};</span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [teal, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.7,0.0) arc (180:127:0.3);</span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [scale=0.8] at (0.63, 0.2) {<span class="ss">$</span><span class="sc">\theta</span><span class="ss">_2$</span>};</span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [red, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-1.2,0.0) arc (0:35:0.3);</span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [scale=0.8] at (-1.1, 0.11) {<span class="ss">$</span><span class="sc">\theta</span><span class="ss">_1$</span>};</span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [thick, red, dashed] (A) -- (-0.625, 0.7806);</span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [red, dashed, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-0.9,0.0) arc (0:39:0.7);</span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [scale=0.8] at (-0.70, 0.15) {<span class="ss">$</span><span class="sc">\theta</span><span class="ss">_{</span><span class="sc">\textrm</span>{max}<span class="ss">}$</span>};</span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[above,scale=0.8] at (<span class="ss">$0.3*(A) + 0.7*(C)$</span> ){<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{p}'_1$</span>};</span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[ right,scale=0.8] at (<span class="ss">$0.5*(B) + 0.5*(C)$</span> ){<span class="ss">$</span><span class="sc">\boldsymbol</span><span class="ss">{p}'_2$</span>};</span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[scale=0.8] at (0.0, -1.2) {<span class="ss">$(b)</span><span class="sc">\,</span><span class="ss"> m_1&gt;m_2$</span>};</span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">scope</span>}</span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/elastic_scattering_angles/elastic_scatteiing_angles.png" class="img-fluid figure-img" width="450"></p>
+<figcaption><span class="math inline">\(m_2\)</span> 가 정지해 있을 때의 실험실 좌표계</figcaption>
+</figure>
+</div>
+<p><br></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows.meta}</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{calc}</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[line cap=round, scale=1]</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\begin</span>{<span class="ex">scope</span>}[rotate=-50.2]</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (A) at (-1, 0);</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[teal, thick] plot[variable=<span class="fu">\t</span>,domain=1:3, samples=100, smooth,thick] ({-<span class="fu">\t</span>},{1.2*sqrt( <span class="fu">\t</span>^2-1)});</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[teal, thick] plot[variable=<span class="fu">\t</span>,domain=1:2, samples=100, smooth,thick] ({-<span class="fu">\t</span>},{-1.2*sqrt( <span class="fu">\t</span>^2-1)});</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[teal, thick, {Stealth[length=3mm]}-] plot[variable=<span class="fu">\t</span>,domain=2:3, samples=100, smooth,thick] ({-<span class="fu">\t</span>},{-1.2*sqrt( <span class="fu">\t</span>^2-1)});</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">scope</span>}</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[dashed, thick] (-4.5, 0) -- (2, 0);</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[dashed, thick] (-4.5, -1) -- (2, -1);</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [above left, scale=0.8] at (A) {<span class="ss">$A$</span>};</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [dashed] (<span class="ss">$-1.3*(A)$</span>) -- (A);</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [dashed] (0, 0) -- (0.82, 4.47);</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\filldraw</span> (<span class="ss">$-1.3*(A)$</span>) circle[radius=1pt];</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [below, scale=0.8] at (<span class="ss">$-1.3*(A)$</span>) {<span class="ss">$O$</span>};</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[black, {Stealth[length=2mm]}-{Stealth[length=2mm]}] (-2, -1) -- (-2, 0);</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [right, scale=0.8] at (-2, -0.5) {<span class="ss">$</span><span class="sc">\rho</span><span class="ss">$</span>};</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [blue, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.7,0.0) arc (0:75:0.7);</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [scale=0.8] at (0.73, 0.5) {<span class="ss">$</span><span class="sc">\Theta</span><span class="ss">$</span>};</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [red, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (<span class="ss">$-1.3*(A) - (0.6, 0)$</span>) arc (180:132:0.6);</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [scale=0.8] at (0.0, -0.7) {<span class="ss">$</span><span class="sc">\theta</span><span class="ss">_0$</span>};</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/rutherford_scattering/rutherford_scattering.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>러더퍼드 산란</figcaption>
+</figure>
+</div>
+<p><br></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows.meta}</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{calc}</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[line cap=round, scale = 2]</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> (2,0) arc (-0:-180:4 and 2)coordinate[pos=0.75] (a);</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[dotted] (2,0) arc (0:180:4 and 2);</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> (2,0) arc (0:180:4);</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\begin</span>{<span class="ex">scope</span>}[rotate around={50:(-2,0)}]</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[shade,fill=gray!40] (1.3, 0.5) -- (-2,0) -- (1.3,-0.5);</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[fill=gray!40] (1.3,0) circle(0.2 and 0.5);</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">scope</span>}</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick,-stealth] (-2,0) -- (a);</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick] (-2,0) -- node[pos=0.75,fill,inner sep=2pt,circle,yscale=0.7](b){}(-2,5);</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> (a) to[bend left] (b);</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/solid_angle/solid_angle.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>고체각</figcaption>
+</figure>
+</div>
+<p><br></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows.meta}</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{calc}</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[line cap=round, scale = 2]</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\coordinate</span> (A) at (-0.809, 0.588);</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[fill=none, red, thick](0,0) circle (1);</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[dashed] (-3, 0) -- (0, 0);</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick, -{Stealth[length=2mm]}] (-3, 0.588) -- (-2, 0.588);</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[thick, -{Stealth[length=2mm]}] (-2, 0.588) -- (A) -- (<span class="ss">$(A) + (-0.309, 0.951)$</span>);</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[dashed] (0, 0) -- (<span class="ss">$2*(A)$</span>);</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span>[{Stealth[length=2mm]}-{Stealth[length=2mm]}] (-1.5, 0) -- (-1.5, 0.588);</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[left] at (-1.5, 0.295) {<span class="ss">$</span><span class="sc">\rho</span><span class="ss">$</span>};</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [blue, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-0.4,0.0) arc (180:144:0.4);</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [scale=1] at (-0.5, 0.15) {<span class="ss">$</span><span class="sc">\theta</span><span class="ss">_0$</span>};</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [-{Stealth[length=2mm]}] (0, 0) -- (1, 0);</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> [above] at (0.5, 0) {<span class="ss">$R$</span>};</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/potential_wall/potential_wall.png" class="img-fluid figure-img" width="350"></p>
+<figcaption>Potential Wall</figcaption>
+</figure>
+</div>
+<p><br></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[border=3pt,tikz]{<span class="ex">standalone</span>}</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{arrows.meta}</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{calc}</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[line cap=round, scale = 2]</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co">%\begin{scope}</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co">%  \clip (0,0) circle (1);</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co">%  \fill[gray!20] (-0.625,0) circle (1.5);</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co">%  \fill[gray!0] (-0.945,0) circle (1.7);</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="co">%\end{scope}</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">scope</span>}</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\clip</span> (0,0) circle (1cm);</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\fill</span>[gray!50] (2.0,0) circle (1.7);</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\fill</span>[gray!0, opacity = 0.9] (2.0,0) circle (1.5);</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">scope</span>}</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="fu">\def\e</span>{2.2};</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="fu">\def\a</span>{0.1};</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="fu">\def\s</span>{sqrt(<span class="fu">\e*\e</span>-1)};</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> (0,0) circle (1cm);</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [blue, dashed] (0.5275,0.8500) arc (30:-30:1.7);</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [blue, dashed] (0.6875,0.726) arc (27.35:-27.35:1.5);</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [thick] (-3, 0) -- (1.2, 0);</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [blue] (0, 0) -- (<span class="ss">$1.5 *(0.6075, 0.778)$</span>);</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [blue, -{Stealth[length=1.5mm]}] (0.2, 0) arc (0:49.1:0.2);</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span> [scale = 0.7] at (0.28, 0.1) {<span class="ss">$</span><span class="sc">\Theta</span><span class="ss">$</span>}; </span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [blue] (0, 0) -- (<span class="ss">$1.2*(0.5275, -0.8500)$</span>);</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [blue] (0, 0) -- (<span class="ss">$1.2*(0.6875, -0.726)$</span>);</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [blue, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.580, -0.935) arc (-58:-46.5:1.1);</span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span> [scale = 0.7] at (0.72, -0.95) {<span class="ss">$d</span><span class="sc">\Theta</span><span class="ss">$</span>};</span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">scope</span>}[rotate=116]</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a><span class="fu">\coordinate</span> (A) at (-1, 0);</span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[teal, thick] plot[variable=<span class="fu">\t</span>,domain=-2.2:3, samples=100, smooth,thick] ({<span class="fu">\a</span> * (cosh(<span class="fu">\t</span>) + <span class="fu">\e</span>)}, {<span class="fu">\a</span> * sqrt(<span class="fu">\e*\e</span>-1)*sinh(<span class="fu">\t</span>)});</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, dashed] (<span class="fu">\a</span> * <span class="fu">\e</span>, 0) -- ({<span class="fu">\a</span> * <span class="fu">\e</span> + 0.6},  { 0.6 * sqrt(<span class="fu">\e*\e</span>-1) });</span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span>[red, dashed] (<span class="fu">\a</span> * <span class="fu">\e</span>, 0) -- ({<span class="fu">\a</span> * <span class="fu">\e</span> + 0.6},  { -0.6 * sqrt(<span class="fu">\e*\e</span>-1) });</span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">scope</span>}</span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a><span class="fu">\draw</span> [blue, {Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-1.5, 0) -- (-1.5, 0.23);</span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span> [right, scale=0.7] at (-1.5, 0.11) {<span class="ss">$</span><span class="sc">\rho</span><span class="ss">$</span>};</span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classical mechanics/cross_section/cross_section.png" class="img-fluid figure-img" width="450"></p>
+<figcaption>Cross Section</figcaption>
+</figure>
 </div>
 
 
@@ -862,18 +1183,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -905,7 +1215,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -913,7 +1245,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

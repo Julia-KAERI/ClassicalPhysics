@@ -6,242 +6,382 @@ crossref:
   chapters: true
 ---
 
+
 ```{r, engine = 'tikz'}
-#| label: fig-refrence_frame_in_relativity
 #| code-fold: true
-#| echo: fenced
-#| output: asis
-#| fig-width: 4
-#| fig-align: center
-#| fig-cap: "두 좌표계"
+
+\begin{tikzpicture} 
+\end{tikzpicture}
+```
+
+
+```{tex}
+documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\begin{document}
 
 
 \begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm]
-\draw[thick,->,>=stealth] (xyz cs:x=-1) -- (xyz cs:x=12) node[below] {$x$};
-\draw[thick, ->,>=stealth] (xyz cs:z=1) -- (xyz cs:z=-6) node[right] {$z$};
-\draw[thick, ->,>=stealth] (xyz cs:y=-1) node[below] {$\Sigma$}-- (xyz cs:y=6) node[above] {$y$};
+    \draw[thick,->,>=stealth] (xyz cs:x=-1) -- (xyz cs:x=12) node[below] {$x$};
+    \draw[thick, ->,>=stealth] (xyz cs:z=1) -- (xyz cs:z=-6) node[right] {$z$};
+    \draw[thick, ->,>=stealth] (xyz cs:y=-1) node[below] {$\Sigma$}-- (xyz cs:y=6) node[above] {$y$};
+    
+    \draw[thick, ->,>=stealth] (xyz cs:x=7, z=0.3) -- (xyz cs:x=14, z=0.3) node[above] {$x^\prime$};
+    \draw[thick, ->,>=stealth] (xyz cs:x=8, y=-1, z=0.3) node[below] {$\Sigma^\prime$}-- (xyz cs:x=8, y=6, z=0.3) node[right] {$y\prime$};
+    \draw[thick, ->,>=stealth] (xyz cs:x=8, z=1) -- (xyz cs:x=8, z=-6) node[above] {$z^\prime$};
+    
+    \draw[thick, ->] (xyz cs:x=0.2, y=4) -- (xyz cs:x=4, y=4) node[above] {$\boldsymbol{V}t$} -- (xyz cs:x=8, y=4);
+    \end{tikzpicture}
 
-\draw[thick, ->,>=stealth] (xyz cs:x=7, z=0.3) -- (xyz cs:x=14, z=0.3) node[above] {$x^\prime$};
-\draw[thick, ->,>=stealth] (xyz cs:x=8, y=-1, z=0.3) node[below] {$\Sigma^\prime$}-- (xyz cs:x=8, y=6, z=0.3) node[right] {$y\prime$};
-\draw[thick, ->,>=stealth] (xyz cs:x=8, z=1) -- (xyz cs:x=8, z=-6) node[above] {$z^\prime$};
-
-\draw[thick, ->] (xyz cs:x=0.2, y=4) -- (xyz cs:x=4, y=4) node[above] {$\boldsymbol{V}t$} -- (xyz cs:x=8, y=4);
-\end{tikzpicture}
+\end{document}
 ```
 
-```{r, engine = 'tikz'}
-#| label: fig-simultaneity_1
-#| code-fold: true
-#| echo: fenced
-#| output: asis
-#| fig-width: 3
-#| fig-align: center
-#| fig-cap: "세계선"
+![특수상대성 이론에서의 관성계](relativity/reference_frame/reference_frame.png){width=350}
 
-
+```{tex}
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\begin{document}
 \begin{tikzpicture}[]
-\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
-\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
-\draw[blue] (0,0)-- (2, 4) node[above] {$\begin{array}{l} x=vt \\ x^\prime=0 \end{array}$};
-\draw[red, dashed] (0,0)-- (4, 4) node[above] {$x=ct$};
-\end{tikzpicture}
+    \draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+    \draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+    \draw[blue] (0,0)-- (2, 4) node[above] {$\begin{array}{l} x=vt \\ x^\prime=0 \end{array}$};
+    \draw[red, dashed] (0,0)-- (4, 4) node[above] {$x=ct$};
+    \end{tikzpicture}
+
+\end{document}
 ```
 
+![세계선](relativity/worldline/worldline.png){width=300}
 
-```{r, engine = 'tikz'}
-#| label: fig-simultaneity_2
-#| code-fold: true
-#| echo: fenced
-#| output: asis
-#| fig-width: 4
-#| fig-align: center
-#| fig-cap: "Σ 에서의 세계선"
-
-
+```{tex}
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\begin{document}
 \begin{tikzpicture}[]
-\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
-\draw[thick,->,>=stealth] (-1, 0) -- (6, 0) node[right] {$x$};
-\draw[blue] (0,0)-- (2, 4) node[above] {$\mathcal{O}_1$};
-\draw[blue] (1.5, 0) -- (3.5, 4) node[above] {$\mathcal{O}_2$};
-\draw[blue] (3, 0)-- (5, 4) node[above] {$\mathcal{O}_3$};
-\draw[red, dashed] (0,0)-- (2, 2) node[above, rotate=45] {$x=ct$} -- (3, 3);
-\draw[red, dashed] (0,0)-- (-1, 1) node[above, rotate=-45] {$x=-ct$} -- (-1.5, 1.5);
-\draw[red, dashed] (3,3) -- (4, 2);
-\draw[thick, violet, densely dotted] (0, 2) -- (4, 2) ;
-\filldraw[blue] (3, 3) circle(2px) node[right] {$a$};
-\filldraw[blue] (4, 2) circle(2px) node[right] {$b$};
-\node[below] at (1.5, 0) {$L$};
-\node[below] at (3 , 0) {$2L$};
-\node[left] at (0, 2) {$t_\ast$};
-\end{tikzpicture}
+    \draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+    \draw[thick,->,>=stealth] (-1, 0) -- (6, 0) node[right] {$x$};
+    \draw[blue] (0,0)-- (2, 4) node[above] {$\mathcal{O}_1$};
+    \draw[blue] (1.5, 0) -- (3.5, 4) node[above] {$\mathcal{O}_2$};
+    \draw[blue] (3, 0)-- (5, 4) node[above] {$\mathcal{O}_3$};
+    \draw[red, dashed] (0,0)-- (2, 2) node[above, rotate=45] {$x=ct$} -- (3, 3);
+    \draw[red, dashed] (0,0)-- (-1, 1) node[above, rotate=-45] {$x=-ct$} -- (-1.5, 1.5);
+    \draw[red, dashed] (3,3) -- (4, 2);
+    \draw[thick, violet, densely dotted] (0, 2) -- (4, 2) ;
+    \filldraw[blue] (3, 3) circle(2px) node[right] {$a$};
+    \filldraw[blue] (4, 2) circle(2px) node[right] {$b$};
+    \node[below] at (1.5, 0) {$L$};
+    \node[below] at (3 , 0) {$2L$};
+    \node[left] at (0, 2) {$t_\ast$};
+    \end{tikzpicture}
+\end{document}
 ```
 
-```{r, engine = 'tikz'}
-#| label: fig-simultaneity_3
-#| code-fold: true
-#| echo: fenced
-#| output: asis
-#| fig-width: 3
-#| fig-align: center
-#| fig-cap: "세계선"
-
-
-\begin{tikzpicture}[]
-\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
-\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
-\draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
-\draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
-\draw[red, dashed] (0,0)-- (4, 4) node[above] {$x=ct$};
-\end{tikzpicture}
-```
-
-
-```{r, engine = 'tikz'}
-#| label: fig-simultaneity_4
-#| code-fold: true
-#| echo: fenced
-#| output: asis
-#| fig-width: 3
-#| fig-align: center
-#| fig-cap: "세계선"
-
-
-\begin{tikzpicture}[]
-\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
-\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
-\draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
-\draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
-\draw[red, dashed] (0,0)-- (4, 4) node[above] {$x=ct$};
-\draw[] (2, 0.1) -- (2, -0.1) node[below] {$L$};
-\draw[violet, dashed] (2, 0) -- (2, 1) node[above, black] {$L^\prime$};
-\filldraw[blue] (2, 1) circle(1px);
-\end{tikzpicture}
-```
-
-
-```{r, engine = 'tikz'}
-#| label: fig-simultaneity_5
-#| code-fold: true
-#| echo: fenced
-#| output: asis
-#| fig-width: 3
-#| fig-align: center
-#| fig-cap: "세계선"
-
-
-\begin{tikzpicture}[]
-\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
-\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
-\draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
-\draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
-\draw[red, dashed] (0,0)-- (4, 4) node[right] {$x=ct$};
-\draw[] (1.5, 0.1) -- (1.5, -0.1) node[below] {$L$};
-\draw[violet, dashed] (1.5, 0) -- (3.5, 4) ;
-\filldraw[blue] (2, 1) circle(1px) node[above left, black] {$L^\prime$};
-\end{tikzpicture}
-```
-
-```{r, engine = 'tikz'}
-#| label: fig-simultaneity_6
-#| code-fold: true
-#| echo: fenced
-#| output: asis
-#| fig-width: 3
-#| fig-align: center
-#| fig-cap: "세계선"
-
-
-\begin{tikzpicture}[]
-\draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
-\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
-\draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
-\draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
-\draw[red, dashed] (0,0)-- (4, 4) node[right] {$x=ct$};
-\filldraw[blue] (1.5, 3) circle(1px) node[right, black] {$t^\prime=1$};
-\draw[thick, violet, densely dotted] (1.5, 3) -- (0, 3) node[left, black] {$t$};
-\end{tikzpicture}
-```
-
-```{r, engine = 'tikz'}
-#| label: fig-twin_paradox_1
-#| code-fold: true
-#| echo: fenced
-#| output: asis
-#| fig-width: 2.5
-#| fig-align: center
-#| fig-cap: "쌍동이의 역설"
-
-
-\begin{tikzpicture}[]
-\draw[thick,->,>=stealth] (0, -1) -- (0, 7) node[above] {$t$};
-\draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
-\draw[very thick, blue, ->,>=stealth] (0,0) --(0.75, 1.5) node[right, black] {$P_1$}-- (1.5, 3);
-\draw[very thick, blue, ->,>=stealth] (1.5, 3) --(0.75, 4.5) node[right, black] {$P_2$}-- (0, 6);
-% \draw[red, dashed] (0,0)-- (4, 4) node[right] {$x=ct$};
-\draw[thick, violet, dashed](0, 0.5) -- (0.5, 1);
-\draw[thick, violet, dashed](0, 1) -- (1, 2);
-\draw[thick, violet, dashed](0, 1.5) -- (1.5, 3);
-\draw[thick, violet, dashed](0, 4.5) -- (1.5, 3);
-\draw[thick, violet, dashed](0, 5) -- (1, 4);
-\draw[thick, violet, dashed](0, 5.5) -- (0.5, 5);
-\end{tikzpicture}
-```
+![$\Sigma$ 에서의 세계선](relativity/worldline_for_multyframe/wordline_for_multyframe.png){width=350}
 
 </br>
 
-```{r, engine = 'tikz'}
-#| label: fig-relativity_pole_and_barn_paradox_1
-#| code-fold: true
-#| echo: fenced
-#| fig-width: 6
-#| output: asis
-#| fig-align: center
-#| fig-cap: "장대와 헛간의 역설"
+```{tex}
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[]
+    \draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+    \draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+    \draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
+    \draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
+    \draw[red, dashed] (0,0)-- (4, 4) node[above] {$x=ct$};
+    \end{tikzpicture}
+\end{document}
+```
+![동시성1](relativity/simultaneity_1/simultaneity_1.png){width=300}
+
+</br>
+
+```{tex}
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[]
+    \draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+    \draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+    \draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
+    \draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
+    \draw[red, dashed] (0,0)-- (4, 4) node[above] {$x=ct$};
+    \draw[] (2, 0.1) -- (2, -0.1) node[below] {$L$};
+    \draw[violet, dashed] (2, 0) -- (2, 1) node[above, black] {$L^\prime$};
+    \filldraw[blue] (2, 1) circle(1px);
+    \end{tikzpicture}
+
+\end{document}
+```
+
+![길이 수축 1](relativity/length_contraction/length_contration.png){width=300}
+
+</br>
+
+```{tex}
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[]
+    \draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+    \draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+    \draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
+    \draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
+    \draw[red, dashed] (0,0)-- (4, 4) node[right] {$x=ct$};
+    \draw[] (1.5, 0.1) -- (1.5, -0.1) node[below] {$L$};
+    \draw[violet, dashed] (1.5, 0) -- (3.5, 4) ;
+    \filldraw[blue] (2, 1) circle(1px) node[above left, black] {$L^\prime$};
+    \end{tikzpicture}
+
+\end{document}
+```
+
+![길이 수축2](relativity/length_contraction2/length_contration2.png){width=300}
+
+</br>
+
+```{tex}
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[]
+    \draw[thick,->,>=stealth] (0, -1) -- (0, 4) node[above] {$t$};
+    \draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+    \draw[thick, blue, ->,>=stealth] (0,0)-- (2, 4) node[above] {$t^\prime$};
+    \draw[thick, blue, ->,>=stealth] (0,0)-- (4, 2) node[right] {$x^\prime$};
+    \draw[red, dashed] (0,0)-- (4, 4) node[right] {$x=ct$};
+    \filldraw[blue] (1.5, 3) circle(1px) node[right, black] {$t^\prime=1$};
+    \draw[thick, violet, densely dotted] (1.5, 3) -- (0, 3) node[left, black] {$t$};
+    \end{tikzpicture}
+
+\end{document}
+```
+
+![시간 지연](relativity/time_dilation/time_dilation.png){width=300}
+
+</br>
+
+```{tex}
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[]
+    \draw[thick,->,>=stealth] (0, -1) -- (0, 7) node[above] {$t$};
+    \draw[thick,->,>=stealth] (-1, 0) -- (4, 0) node[right] {$x$};
+    \draw[very thick, blue, ->,>=stealth] (0,0) --(0.75, 1.5) node[right, black] {$P_1$}-- (1.5, 3);
+    \draw[very thick, blue, ->,>=stealth] (1.5, 3) --(0.75, 4.5) node[right, black] {$P_2$}-- (0, 6);
+    % \draw[red, dashed] (0,0)-- (4, 4) node[right] {$x=ct$};
+    \draw[thick, violet, dashed](0, 0.5) -- (0.5, 1);
+    \draw[thick, violet, dashed](0, 1) -- (1, 2);
+    \draw[thick, violet, dashed](0, 1.5) -- (1.5, 3);
+    \draw[thick, violet, dashed](0, 4.5) -- (1.5, 3);
+    \draw[thick, violet, dashed](0, 5) -- (1, 4);
+    \draw[thick, violet, dashed](0, 5.5) -- (0.5, 5);
+    \end{tikzpicture}
+
+\end{document}
+```
+
+![쌍둥이 역설](relativity/twin_paradox/twin_paradox.png){width=250}
+</br>
+
+```{tex}
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
 \usetikzlibrary {arrows.meta}
 \usetikzlibrary {calc}
+\begin{document}
 \begin{tikzpicture}[line cap=round, scale = 2]
 
-% font scale
-\def\fs{2.0}
-\def\tk{0.05}
+    % font scale
+    \def\fs{2.0}
+    \def\tk{0.05}
+    
+    \draw [thick, -{Stealth[length=2mm]}] (-2., 0) -- (2.5, 0) node [right, scale=\fs] {$x$};
+    \draw [thick, -{Stealth[length=2mm]}] (0, -1) -- (0, 5) node [above, scale=\fs] {$ct$};
+    
+    \filldraw [blue, opacity=0.2] (-1.0, 0) -- (2, 5) -- (3.0, 5) -- (-0.0, 0) -- cycle;
+    \filldraw [red, opacity=0.2] (0, 0) -- (0, 5) -- (1, 5) -- (1, 0) -- cycle;
+    \node[scale=\fs] at (0.5, 4.7) {$\textrm{barn}$};
+    \node[scale=\fs] at (2.3, 4.7) {$\textrm{pole}$};
+    
+    \filldraw[teal] (-1.0, \tk) -- (-0.0, \tk) -- (-0.0, -\tk) -- (-1.0, -\tk) --cycle; 
+    \filldraw[teal] (0, 1.67 + \tk) -- (1, 1.67 +\tk) -- (1, 1.67-\tk) -- (0, 1.67-\tk) --cycle; 
+    
+    \draw[thick] (-0.1, 1.67) node[left, scale=\fs] {$t_1$}-- (0.1, 1.67);
+    \draw[thick] (-0.1, 3.33) node[left, scale=\fs] {$t_2$}-- (0.1, 3.33);
+    \draw[dashed] (0.0, 3.33) -- (1.0, 3.33);
+    
+    \node[below, scale=\fs] at(0, -1) {$(a)\;\Sigma$};
+    
+    
+    \begin{scope}[xshift=6cm]
+    
+    \draw [thick, -{Stealth[length=2mm]}] (-2., 0) -- (3, 0) node [right, scale=\fs] {$x'$};
+    \draw [thick, -{Stealth[length=2mm]}] (0, -1) -- (0, 5) node [above, scale=\fs] {$ct'$};
+    
+    \filldraw [blue, opacity=0.2] (0.0, 0) -- (0, 5) -- (1.25, 5) -- (1.25, 0) -- cycle;
+    \filldraw [red, opacity=0.2] (1.25, 0) -- (-1.75, 5) -- (-1.11, 5) -- (1.89, 0) -- cycle;
+    \node[scale=\fs] at (-1.3, 4.7) {$\textrm{barn}$};
+    \node[scale=\fs] at (0.7, 4.7) {$\textrm{pole}$};
+    
+    \filldraw[teal] (0, \tk) -- (1.25, \tk) -- (1.25, -\tk) -- (0, -\tk) --cycle; 
+    \filldraw[teal] (0, 2.083 + \tk) -- (1.25, 2.083+\tk) -- (1.25, 2.083-\tk) -- (0, 2.083-\tk) --cycle; 
+    \filldraw[teal] (0, 1.06 + \tk) -- (1.25, 1.06+\tk) -- (1.25, 1.06-\tk) -- (0, 1.06-\tk) --cycle; 
+    
+    
+    \draw[thick] (-0.1, 1.06) node[left, scale=\fs] {$t_1'$}-- (0.1, 1.06);
+    \draw[thick] (-0.1, 2.083) node[left, scale=\fs] {$t_2'$}-- (0.1, 2.083);
+    
+    \node[below, scale=\fs] at(0, -1) {$(b)\;\Sigma'$};
+    \end{scope}
+    \end{tikzpicture}
 
-\draw [thick, -{Stealth[length=2mm]}] (-2., 0) -- (2.5, 0) node [right, scale=\fs] {$x$};
-\draw [thick, -{Stealth[length=2mm]}] (0, -1) -- (0, 5) node [above, scale=\fs] {$ct$};
-
-\filldraw [blue, opacity=0.2] (-1.0, 0) -- (2, 5) -- (3.0, 5) -- (-0.0, 0) -- cycle;
-\filldraw [red, opacity=0.2] (0, 0) -- (0, 5) -- (1, 5) -- (1, 0) -- cycle;
-\node[scale=\fs] at (0.5, 4.7) {$\textrm{barn}$};
-\node[scale=\fs] at (2.3, 4.7) {$\textrm{pole}$};
-
-\filldraw[teal] (-1.0, \tk) -- (-0.0, \tk) -- (-0.0, -\tk) -- (-1.0, -\tk) --cycle; 
-\filldraw[teal] (0, 1.67 + \tk) -- (1, 1.67 +\tk) -- (1, 1.67-\tk) -- (0, 1.67-\tk) --cycle; 
-
-\draw[thick] (-0.1, 1.67) node[left, scale=\fs] {$t_1$}-- (0.1, 1.67);
-\draw[thick] (-0.1, 3.33) node[left, scale=\fs] {$t_2$}-- (0.1, 3.33);
-\draw[dashed] (0.0, 3.33) -- (1.0, 3.33);
-
-\node[below, scale=\fs] at(0, -1) {$(a)\;\Sigma$};
-
-
-\begin{scope}[xshift=6cm]
-
-\draw [thick, -{Stealth[length=2mm]}] (-2., 0) -- (3, 0) node [right, scale=\fs] {$x'$};
-\draw [thick, -{Stealth[length=2mm]}] (0, -1) -- (0, 5) node [above, scale=\fs] {$ct'$};
-
-\filldraw [blue, opacity=0.2] (0.0, 0) -- (0, 5) -- (1.25, 5) -- (1.25, 0) -- cycle;
-\filldraw [red, opacity=0.2] (1.25, 0) -- (-1.75, 5) -- (-1.11, 5) -- (1.89, 0) -- cycle;
-\node[scale=\fs] at (-1.3, 4.7) {$\textrm{barn}$};
-\node[scale=\fs] at (0.7, 4.7) {$\textrm{pole}$};
-
-\filldraw[teal] (0, \tk) -- (1.25, \tk) -- (1.25, -\tk) -- (0, -\tk) --cycle; 
-\filldraw[teal] (0, 2.083 + \tk) -- (1.25, 2.083+\tk) -- (1.25, 2.083-\tk) -- (0, 2.083-\tk) --cycle; 
-\filldraw[teal] (0, 1.06 + \tk) -- (1.25, 1.06+\tk) -- (1.25, 1.06-\tk) -- (0, 1.06-\tk) --cycle; 
-
-
-\draw[thick] (-0.1, 1.06) node[left, scale=\fs] {$t_1'$}-- (0.1, 1.06);
-\draw[thick] (-0.1, 2.083) node[left, scale=\fs] {$t_2'$}-- (0.1, 2.083);
-
-\node[below, scale=\fs] at(0, -1) {$(b)\;\Sigma'$};
-\end{scope}
-\end{tikzpicture}
+\end{document}
 ```
+![장대와 헛간의 역설](relativity/pole_and_barn/pole_and_barn.png){width=500}
+
+</br>
+
+```{tex}
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[line cap=round]
+
+    \filldraw[] (-4, 0) circle (0.05) node [above] {$\textrm{photon}$};
+    \draw[thick, -{Stealth[length=2mm]}] (-4, 0) -- (-2, 0);
+    \node[below] at (-3, 0) {$h\nu/c$};
+    \draw[dashed] (-2, 0) -- (3, 0);
+    
+    \shade[ball color=gray!40]   (0,0) circle (0.2) node [yshift=3ex] {$e^-$};
+    
+    \draw[dashed] (0, 0) -- (1.2, 1);
+    \filldraw[] (1.2, 1) circle (0.05) ;
+    \draw[thick, -{Stealth[length=2mm]}] (1.2, 1) -- (2.4, 2) node [xshift=-5ex] {$h\nu'/c$}; %'
+    \draw[-{Stealth[length=2mm]}] (1, 0) arc (0:39.8:1);
+    \node at (1.2, 0.4) {$\theta$};
+    \draw[dashed] (0, 0) -- (1.2, -1.3);
+    \draw[thick, -{Stealth[length=2mm]}] (1.2, -1.3) -- (1.8, -1.95) node[xshift=-5ex] {$p_e$};
+    \shade[ball color=gray!80]   (1.2, -1.3)   circle (0.2);
+    
+    \end{tikzpicture}
+\end{document}
+```
+
+![콤프턴 산란](relativity/compton_scattering/compton_scattering.png){width=400}
+
+</br>
+
+```{tex}
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[line cap=round, scale = 2]
+
+    \draw [thick, -{Stealth[length=2mm]}] (-0.1, 0) -- (2, 0) node [right, scale=0.7] {$t$};
+    \draw [thick, -{Stealth[length=2mm]}] (0, -0.1) -- (0, 1.5) node [left, scale=0.7] {$v(t)$};
+    
+    
+    \def\a{2.0};
+    \def\b{1.0};
+    \draw[dashed] (0, 1) -- (2, 1);
+    \draw[very thick, teal] plot[variable=\t,domain=0:2, samples=100, smooth,thick] ({\t}, {\a*\t/sqrt(1+(\a*\t)^2)}) node[below left, scale=0.7, black] {rel.};
+    \draw[very thick, dashed, red] (0, 0) -- (0.6, 1.2) node[above, scale=0.7, black] {non-rel.};
+    \node [left, scale=0.7] at (0, 1) {$c$}; 
+    
+    
+    \begin{scope}[shift={(2.5,0)}]
+    \draw [thick, -{Stealth[length=2mm]}] (-0.1, 0) -- (1.5, 0) node [right, scale=0.7] {$x$};
+    \draw [thick, -{Stealth[length=2mm]}] (0, -0.1) -- (0, 1.5) node [left, scale=0.7] {$ct$};
+    
+    \draw [dashed] (0, 0) -- (1.5, 1.5) node[right, scale=0.7] {$x=ct$};
+    
+    \draw[very thick, teal] plot[variable=\t,domain=0:1.0, samples=100, smooth,thick] ({\t}, {sqrt((\t+1/\a)^2 -1/(\a^2))}) node [above, scale=0.7, black] {rel.};
+    \draw[very thick, dashed, red] plot[variable=\t,domain=0.0:1.5, samples=100, smooth,thick] ({\t}, {sqrt(2*\t/\a)}) node [right, scale=0.7, black] {non-rel.};
+    
+    \end{scope}
+    \end{tikzpicture}
+\end{document}
+```
+
+![등가속 운동](relativity/uniform_acceleration/uniform_acceleration1.png){width=450}
+
+</br>
+
+```{tex}
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[line cap=round, scale = 2]
+    % 관찰자가 움직일때의 도플러 효과
+    \draw[fill=none, blue](0,0) circle (0.4);
+    \draw[fill=none, blue](0,0) circle (0.60);
+    \draw[fill=none, blue](0,0) circle (0.80);
+    \draw[fill=none, blue](0,0) circle (1);
+    
+    \filldraw[] (0, 0) circle (0.03) node[below, scale=0.7] {$S$};
+    \filldraw[] (1, 0) circle (0.03) node[right, scale=0.7] {$O$};
+    \draw[thick, -{Stealth[length=2mm]}] (1, 0) -- (0.7, 0);
+    
+    \node [below, scale = 0.7] at (0, -1.1) {$(a)$}; 
+    
+    \begin{scope}[shift={(3,0)}]
+    \draw[fill=none, blue](0,0) circle (1);
+    \draw[fill=none, blue](0.1,0) circle (0.8);
+    \draw[fill=none, blue](0.2,0) circle (0.60);
+    \draw[fill=none, blue](0.3,0) circle (0.4);
+    
+    \filldraw[] (0, 0) circle (0.03) node[below, scale=0.7] {$S$};
+    \filldraw[] (1, 0) circle (0.03) node[right, scale=0.7] {$O$};
+    \draw[thick, -{Stealth[length=2mm]}] (0, 0) -- (0.3, 0);
+    \node [below, scale = 0.7] at (0, -1.1) {$(b)$}; 
+    \end{scope}
+    \end{tikzpicture}
+\end{document}
+```
+
+![도플러 효과](relativity/doppler_effect/doppler_effect1.png){width=500}
+
+</br>
+
+```{tex}
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[line cap=round, scale = 2]
+
+
+    \draw [gray!20, fill=gray!20] (0,0) ellipse (2 and 1);
+    \node[right, scale=0.8] at (0, 0) {$O$};
+    \node [black, scale=1] at (0, 0.5) {Galaxy};
+    \draw [very thick, blue, -{Stealth[length=2mm]}] (0, 0) -- (-3, -0.5) node[above, scale=1] {Jet};
+    \draw [] (0, -3) -- (0, -2.05);
+    \draw [] (0, -2) -- (0, -0);
+    
+    \draw (-0.1,-1.5) .. controls + (0,-0.1) and + (0,0.1) ..  ++ (0.2, 0)    ++ (0,-0.2);
+    \draw (-0.1,-1.55) .. controls + (0,-0.1) and + (0,0.1) ..  ++ (0.2, 0)    ++ (0,-0.2);
+    
+    \draw[-{Stealth[length=2mm]}] (0, -0.3) arc (270:190:0.3);
+    \node [] at (-0.3, -0.3) {$\theta$}; 
+    
+    \begin{scope}[shift={(4,0)}]
+    \end{scope}
+    
+    \end{tikzpicture}
+\end{document}
+```
+
+![Galactic Jet](relativity/galactic_jet/galactic_jet.png){width=400}
+
+</br>

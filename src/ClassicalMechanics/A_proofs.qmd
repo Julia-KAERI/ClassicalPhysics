@@ -7,6 +7,10 @@ crossref:
   
 ---
 
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
 ## Bertrand's theorem {#sec-Bertrand_theorem}
 
 Bertrand's theorem 은 포텐셜이 $V(\boldsymbol{r}) =  K\|\boldsymbol{r}\|^n$ 으로 주어졌을 때 닫힌 경로를 갖는 경우는 $n=-1,\,2$ 인 두가지 경우 뿐이라는 것을 말한다. 여기서는 S.A. Chin, *A truly elementary proof of Bertrand’s theorem*, Am. J. Phys. 83, 320-323 (2015) 논문의 방식을 따라 증명하도록 한다.
