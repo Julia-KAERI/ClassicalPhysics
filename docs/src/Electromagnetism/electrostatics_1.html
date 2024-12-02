@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -353,6 +373,7 @@ window.Quarto = {
   <li><a href="#sec-part2_application_of_gauss_law" id="toc-sec-part2_application_of_gauss_law" class="nav-link" data-scroll-target="#sec-part2_application_of_gauss_law"><span class="header-section-number">7.2.1</span> 가우스 법칙의 응용</a></li>
   <li><a href="#sec-part2_force_on_a_layer_of_charge" id="toc-sec-part2_force_on_a_layer_of_charge" class="nav-link" data-scroll-target="#sec-part2_force_on_a_layer_of_charge"><span class="header-section-number">7.2.2</span> 전하 층에서의 힘</a></li>
   </ul></li>
+  <li><a href="#sec-part2_energy_associated_with_electric_field" id="toc-sec-part2_energy_associated_with_electric_field" class="nav-link" data-scroll-target="#sec-part2_energy_associated_with_electric_field"><span class="header-section-number">7.3</span> 전기장과 에너지</a></li>
   </ul>
 </nav>
     </div>
@@ -678,15 +699,8 @@ E_r(r) 2\pi r L = \dfrac{\lambda L}{\epsilon_0}
 \]</span></p>
 <p>이다. <span class="math inline">\(r \approx r_0^+\)</span> 에서는 <span class="math inline">\(\boldsymbol{E}=\dfrac{\sigma}{\epsilon_0}\hat{\boldsymbol{r}}\)</span> 이다.</p>
 <p>특정한 전하를 갖는 하전 입자가 표면에 모여 있으며, 당연히 하전 입자들 사이에 쿨롱힘이 존재한다. 개별적인 하전입자를 다루지 않고 구의 표면에 <span class="math inline">\(dA\)</span> 의 조그만 면적을 가진 조각을 생각하자. 이 조각의 전하 <span class="math inline">\(dq= \sigma dA\)</span> 이다.</p>
-<p>이 <span class="math inline">\(dA\)</span> 에 작용하는 힘은 (<span class="math inline">\(1\)</span>) 전체 구의 표면에서 <span class="math inline">\(dA\)</span> 를 제외한 부분에 의해 받는 힘과 (<span class="math inline">\(2\)</span>) <span class="math inline">\(dA\)</span> 자체의 전하들 사이에 의해 <span class="math inline">\(dA\)</span> 가 받는 힘, 두가지로 나누어 볼 수 있다. 그런데 뉴턴의 제 3 법칙에 의해 (<span class="math inline">\(2\)</span>) 의한 힘은 <span class="math inline">\(0\)</span> 이며 따라서 <span class="math inline">\(dA\)</span> 를 분리하지 않고 전체 전하 분포에 의해 받는 힘을 생각해도 된다. 이것은 실제로 계산의 사소한지만 복잡한 부분을 제거해 주고 비교적 간단하게 만들어 준다. 따라서 <span class="math inline">\(dA\)</span> 에 가해지는 쿨롱힘 <span class="math inline">\(d\boldsymbol{F}_{dA}\)</span> 는</p>
-<p><span class="math display">\[
-d\boldsymbol{F}_{dA}= \boldsymbol{E}\cdot dq = \dfrac{\sigma}{\epsilon_0}{\sigma dA}\hat{\boldsymbol{r}} = \dfrac{\sigma^2}{\epsilon_0}dA\hat{\boldsymbol{r}}
-\]</span></p>
-<p>이다. 이 힘은 구면 전체에 동일하기 때문에 우리는 전하 층이 받는 압력 <span class="math inline">\(P\)</span> 를 아래와 같이 계산 할 수 있다.</p>
-<p><span class="math display">\[
-P = \dfrac{\|d\boldsymbol{F}_{dA}\|}{dA}= \dfrac{\sigma^2}{\epsilon_0}
-\]</span></p>
-<p><br></p>
+<p>이 <span class="math inline">\(dA\)</span> 에 작용하는 힘은 (<span class="math inline">\(1\)</span>) 전체 구의 표면에서 <span class="math inline">\(dA\)</span> 조각을 제외한 부분에 의해 받는 힘과 (<span class="math inline">\(2\)</span>) <span class="math inline">\(dA\)</span> 자체의 전하들 사이에 의해 <span class="math inline">\(dA\)</span> 가 받는 힘, 두가지로 나누어 볼 수 있다. 그런데 뉴턴의 제 3 법칙에 의해 (<span class="math inline">\(2\)</span>) 의한 힘은 <span class="math inline">\(0\)</span> 이며 따라서 <span class="math inline">\(dA\)</span> 를 분리하지 않고 전체 전하 분포에 의해 받는 힘을 생각해도 된다. 이것은 실제로 계산의 사소한지만 복잡한 부분을 제거해 주고 비교적 간단하게 만들어 준다.</p>
+<p>이제 다음 문제로 넘어가자. <span class="math inline">\(dA\)</span> 조각의 양쪽 면에 대한 전기장이 다른 경우 어떤 전기장을 사용해야 하는가? 아니면 이 두 전기장의 어떤 조함을 사용해야 하는가? 이것을 따져 보기 위해 실제 존재하는 물리적인 시스템을 생각해보자. 즉 두께를 가지진 전하 분포.</p>
 <p>이제 아래 그림과 같은 전하 밀도 <span class="math inline">\(\rho(x)\)</span> 를 가진 전하층을 생각하자. 두께 <span class="math inline">\(d\)</span> 에 대해 <span class="math inline">\(\sigma = \int \rho(x)\,dx\)</span> 이다.</p>
 <div id="fig-part2_electrostatics_charge_layer" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -718,10 +732,52 @@ P = \epsilon_0 \int_{E_1}{E_2} E^2 dE = \dfrac{\epsilon_0}{2} (E_2^2-E_1^2)
 <p><span id="eq-part2_charge_layer_pressure_2"><span class="math display">\[
 P=\dfrac{\sigma}{2}(E_1+E_2)
 \tag{7.17}\]</span></span></p>
+<p>이다. 즉 면 전하 밀도 <span class="math inline">\(\sigma\)</span> 가 주어졌을 때 전하 층이 받는 단위면적당 힘은 양쪽의 전기장의 평균에 전하밀도를 곱한 값으로 전하 층의 두께에 무관한 값이다.</p>
+<p>이제 앞선 문제, 균일한 표면 전하 밀도를 가진 구를 생각하자. 두께가 반지름에 비해 아주 작다면</p>
+<p><span id="eq-part2_pressure_of_charged_spherical_shell"><span class="math display">\[
+P = \dfrac{\sigma^2}{2\epsilon_0}
+\tag{7.18}\]</span></span></p>
 <p>이다.</p>
-
-
+<p><br></p>
 </section>
+</section>
+<section id="sec-part2_energy_associated_with_electric_field" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="sec-part2_energy_associated_with_electric_field"><span class="header-section-number">7.3</span> 전기장과 에너지</h2>
+<p>균일한 표면 전하 밀도 <span class="math inline">\(\sigma\)</span> 를 가진 구의 표면에서의 압력은 <a href="#eq-part2_pressure_of_charged_spherical_shell" class="quarto-xref">식&nbsp;<span>7.18</span></a> 이다. 그렇다면 이것의 반지름을 <span class="math inline">\(dr\)</span> 만큼 줄일 때의 에너지를 생각해보자. 여기서 압력은 구의 밖으로, 즉 radial 방향으로 가해지므로 반지름을 <span class="math inline">\(dr\)</span> 만큼 줄이는데는 일을 해 줘야 하므 이는 내부에너지 <span class="math inline">\(U\)</span> 의 증가 <span class="math inline">\(dU\)</span> 이다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+dU  &amp;=  P \times [\text{area}] \times  dr = \dfrac{\sigma^2}{2\epsilon_0} \times 4\pi r^2 \cdot dr \\[0.3em]
+&amp;= \dfrac{2\pi \sigma^2 r^2 dr}{\epsilon_0} \\[0.3em]
+&amp;= \dfrac{\epsilon_0 E^2 4\pi r^2\,dr}{2} = \dfrac{\epsilon_0 E^2}{2}dv
+\end{aligned}
+\]</span></p>
+<p>이다. 여기서 <span class="math inline">\(E\)</span> 는 표면의 전하밀도 바로 바깥에서의 전기장의 크기, 즉 <span class="math inline">\(E=\|\boldsymbol{E}_\text{out}(r)\|\)</span> 이며 <span class="math inline">\(dv\)</span> 는 <span class="math inline">\(dr\)</span> 만큼의 변화에 따른 구의 부피의 변화이다.</p>
+<p>여기서 직접 증명하지는 않겠지만 어떤 전하 분포를 이루기 위한 에너지는 위의 구 표면에서와 같은 형태로 다음과 같다.</p>
+<p><span id="eq-part1_electrostatic_energy_too_early"><span class="math display">\[
+U = \dfrac{\epsilon_0}{2}\int_{\text{entire field}}E^2\, dv
+\tag{7.19}\]</span></span></p>
+<p>위 식을 도입한것은 <span class="citation" data-cites="Purcell2013electricity">Purcell (<a href="../ClassicalMechanics/00_index.html#ref-Purcell2013electricity" role="doc-biblioref">2013</a>)</span> 의 순서를 따랐지만 개인적으로 약간 억지스럽다.</p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-part1_electrostatic_energy_of_uniform_sphere" class="theorem example">
+<p><span class="theorem-title"><strong>보기 7.8 (균일한 전하밀도를 가진 구의 에너지)</strong></span> <a href="#exm-part1_charge_distribution_uniform_sphere" class="quarto-xref">보기&nbsp;<span>7.5</span></a> 와 <a href="#eq-part1_electrostatic_energy_too_early" class="quarto-xref">식&nbsp;<span>7.19</span></a> 를 이용하여 계산해보자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+U &amp;= \dfrac{\epsilon_0}{2} \left[\int_{\text{in sphere}} E_{\text{in}}^2 \, dv + \int_{\text{out of sphere}} E_{\text{out}}^2\, dv\right] \\
+&amp;= \dfrac{\epsilon_0}{2} \left[\int_0^{2\pi}\int_0^\pi \int_0^R \dfrac{\rho_0^2r^2}{9\epsilon_0^2} r^2\, dr\sin\theta \, d\theta d\phi + \int_0^{2\pi}\int_0^\pi \int_R^\infty \dfrac{\rho_0^2 R^6}{9\epsilon_0^2 r^4}  r^2\sin\theta \, drd\theta d\phi\right] \\
+&amp;= \dfrac{4\pi \rho^2 R^5}{15 \epsilon_0} = \dfrac{3Q^2}{20 \pi \epsilon_0 R} \qquad \left(\text{where } Q= \rho_0 \dfrac{4\pi R^3}{3}\right)
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Purcell2013electricity" class="csl-entry" role="listitem">
+Purcell, E. M. 2013. <em>Electricity and Magnetism</em>. Electricity and Magnetism. Cambridge University Press. <a href="https://books.google.co.kr/books?id=A2rS5vlSFq0C">https://books.google.co.kr/books?id=A2rS5vlSFq0C</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

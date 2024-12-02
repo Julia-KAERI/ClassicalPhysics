@@ -369,19 +369,9 @@ $$
 
 특정한 전하를 갖는 하전 입자가 표면에 모여 있으며, 당연히 하전 입자들 사이에 쿨롱힘이 존재한다. 개별적인 하전입자를 다루지 않고 구의 표면에 $dA$ 의 조그만 면적을 가진 조각을 생각하자. 이 조각의 전하 $dq= \sigma dA$ 이다.
 
-이 $dA$ 에 작용하는 힘은 ($1$) 전체 구의 표면에서 $dA$ 를 제외한 부분에 의해 받는 힘과 ($2$) $dA$ 자체의 전하들 사이에 의해 $dA$ 가 받는 힘, 두가지로 나누어 볼 수 있다. 그런데 뉴턴의 제 3 법칙에 의해 ($2$) 의한 힘은 $0$ 이며 따라서 $dA$ 를 분리하지 않고 전체 전하 분포에 의해 받는 힘을 생각해도 된다. 이것은 실제로 계산의 사소한지만 복잡한 부분을 제거해 주고 비교적 간단하게 만들어 준다. 따라서 $dA$ 에 가해지는 쿨롱힘 $d\bf{F}_{dA}$ 는
+이 $dA$ 에 작용하는 힘은 ($1$) 전체 구의 표면에서 $dA$ 조각을 제외한 부분에 의해 받는 힘과 ($2$) $dA$ 자체의 전하들 사이에 의해 $dA$ 가 받는 힘, 두가지로 나누어 볼 수 있다. 그런데 뉴턴의 제 3 법칙에 의해 ($2$) 의한 힘은 $0$ 이며 따라서 $dA$ 를 분리하지 않고 전체 전하 분포에 의해 받는 힘을 생각해도 된다. 이것은 실제로 계산의 사소한지만 복잡한 부분을 제거해 주고 비교적 간단하게 만들어 준다. 
 
-$$
-d\bf{F}_{dA}= \bf{E}\cdot dq = \dfrac{\sigma}{\epsilon_0}{\sigma dA}\hat{\bf{r}} = \dfrac{\sigma^2}{\epsilon_0}dA\hat{\bf{r}}
-$$
-
-이다. 이 힘은 구면 전체에 동일하기 때문에 우리는 전하 층이 받는 압력 $P$ 를 아래와 같이 계산 할 수 있다.
-
-$$
-P = \dfrac{\|d\bf{F}_{dA}\|}{dA}= \dfrac{\sigma^2}{\epsilon_0}
-$$
-
-</br>
+이제 다음 문제로 넘어가자. $dA$ 조각의 양쪽 면에 대한 전기장이 다른 경우 어떤 전기장을 사용해야 하는가? 아니면 이 두 전기장의 어떤 조함을 사용해야 하는가? 이것을 따져 보기 위해 실제 존재하는 물리적인 시스템을 생각해보자. 즉 두께를 가지진 전하 분포.
 
 이제 아래 그림과 같은 전하 밀도 $\rho(x)$ 를 가진 전하층을 생각하자. 두께 $d$ 에 대해 $\sigma = \int \rho(x)\,dx$ 이다.
 
@@ -418,4 +408,62 @@ $$
 P=\dfrac{\sigma}{2}(E_1+E_2)
 $${#eq-part2_charge_layer_pressure_2}
 
-이다. 
+이다. 즉 면 전하 밀도 $\sigma$ 가 주어졌을 때 전하 층이 받는 단위면적당 힘은 양쪽의 전기장의 평균에 전하밀도를 곱한 값으로 전하 층의 두께에 무관한 값이다. 
+
+이제 앞선 문제, 균일한 표면 전하 밀도를 가진 구를 생각하자. 두께가 반지름에 비해 아주 작다면 
+
+$$
+P = \dfrac{\sigma^2}{2\epsilon_0}
+$$ {#eq-part2_pressure_of_charged_spherical_shell}
+
+이다.
+
+</br>
+
+## 전기장과 에너지 {#sec-part2_energy_associated_with_electric_field}
+
+균일한 표면 전하 밀도 $\sigma$ 를 가진 구의 표면에서의 압력은 @eq-part2_pressure_of_charged_spherical_shell 이다. 그렇다면 이것의 반지름을 $dr$ 만큼 줄일 때의 에너지를 생각해보자. 여기서 압력은 구의 밖으로, 즉 radial 방향으로 가해지므로 반지름을 $dr$ 만큼 줄이는데는 일을 해 줘야 하므 이는 내부에너지 $U$ 의 증가 $dU$ 이다. 
+
+$$
+\begin{aligned}
+dU  &=  P \times [\text{area}] \times  dr = \dfrac{\sigma^2}{2\epsilon_0} \times 4\pi r^2 \cdot dr \\[0.3em]
+&= \dfrac{2\pi \sigma^2 r^2 dr}{\epsilon_0} \\[0.3em]
+&= \dfrac{\epsilon_0 E^2 4\pi r^2\,dr}{2} = \dfrac{\epsilon_0 E^2}{2}dv
+\end{aligned}
+$$
+
+이다. 여기서 $E$ 는 표면의 전하밀도 바로 바깥에서의 전기장의 크기, 즉 $E=\|\bf{E}_\text{out}(r)\|$ 이며 $dv$ 는 $dr$ 만큼의 변화에 따른 구의 부피의 변화이다. 
+
+여기서 직접 증명하지는 않겠지만 어떤 전하 분포를 이루기 위한 에너지는 위의 구 표면에서와 같은 형태로 다음과 같다.
+
+$$
+U = \dfrac{\epsilon_0}{2}\int_{\text{entire field}}E^2\, dv
+$$ {#eq-part1_electrostatic_energy_too_early}
+
+위 식을 도입한것은 @Purcell2013electricity 의 순서를 따랐지만 개인적으로 약간 억지스럽다. 
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part1_electrostatic_energy_of_uniform_sphere}
+
+#### 균일한 전하밀도를 가진 구의 에너지
+
+@exm-part1_charge_distribution_uniform_sphere 와 @eq-part1_electrostatic_energy_too_early 를 이용하여 계산해보자.
+
+$$
+\begin{aligned}
+U &= \dfrac{\epsilon_0}{2} \left[\int_{\text{in sphere}} E_{\text{in}}^2 \, dv + \int_{\text{out of sphere}} E_{\text{out}}^2\, dv\right] \\
+&= \dfrac{\epsilon_0}{2} \left[\int_0^{2\pi}\int_0^\pi \int_0^R \dfrac{\rho_0^2r^2}{9\epsilon_0^2} r^2\, dr\sin\theta \, d\theta d\phi + \int_0^{2\pi}\int_0^\pi \int_R^\infty \dfrac{\rho_0^2 R^6}{9\epsilon_0^2 r^4}  r^2\sin\theta \, drd\theta d\phi\right] \\
+&= \dfrac{4\pi \rho^2 R^5}{15 \epsilon_0} = \dfrac{3Q^2}{20 \pi \epsilon_0 R} \qquad \left(\text{where } Q= \rho_0 \dfrac{4\pi R^3}{3}\right)
+\end{aligned}
+$$
+
+:::
+
+</div></br>
+
+
+
+
