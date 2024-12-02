@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -317,7 +346,29 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<div class="hidden">
+<p>% %</p>
+%
+<p><span class="math display">\[
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
+\]</span></p>
+</div>
+<p><br></p>
 <p>고전 전자기학의 기본원리에 대해 설명한다. 여기서는 4개의 맥스웰 방정식과 하나의 로렌츠 힘 식을 바탕으로 내용을 설명한다.</p>
+<p>맥스웰 방정식은 다음과 같다.</p>
+<p><span id="eq-part2_maxwell_eq"><span class="math display">\[
+\begin{aligned}
+\nabla \cdot \boldsymbol{E} &amp;= \dfrac{\rho}{\epsilon_0},\\[0.3em]
+\nabla \cdot \boldsymbol{B} &amp;= 0, \\[0.3em]
+\nabla \times \boldsymbol{E} &amp;= - \dfrac{\partial \boldsymbol{B}}{\partial t}, \\[0.3em]
+\nabla \times \boldsymbol{B} &amp;= \mu_0 \epsilon_0 \dfrac{\partial \boldsymbol{E}}{\partial t} + \mu_0 \boldsymbol{J}.
+\end{aligned}
+\tag{1}\]</span></span></p>
+<p>또한 로렌츠 힘은 다음과 같다.</p>
+<p><span id="eq-part2_lorentz_force"><span class="math display">\[
+\boldsymbol{F}_{\text{Lorentz}} = q\boldsymbol{E} + q\boldsymbol{v}\times \boldsymbol{B}
+\tag{2}\]</span></span></p>
 
 
 

@@ -7,5 +7,25 @@ crossref:
   
 ---
 
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
 고전 전자기학의 기본원리에 대해 설명한다. 여기서는 4개의 맥스웰 방정식과 하나의 로렌츠 힘 식을 바탕으로 내용을 설명한다. 
 
+맥스웰 방정식은 다음과 같다.
+
+$$
+\begin{aligned}
+\nabla \cdot \bf{E} &= \dfrac{\rho}{\epsilon_0},\\[0.3em]
+\nabla \cdot \bf{B} &= 0, \\[0.3em]
+\nabla \times \bf{E} &= - \dfrac{\partial \bf{B}}{\partial t}, \\[0.3em]
+\nabla \times \bf{B} &= \mu_0 \epsilon_0 \dfrac{\partial \bf{E}}{\partial t} + \mu_0 \bf{J}.
+\end{aligned}
+$$ {#eq-part2_maxwell_eq}
+
+또한 로렌츠 힘은 다음과 같다.
+
+$$
+\bf{F}_{\text{Lorentz}} = q\bf{E} + q\bf{v}\times \bf{B}
+$$ {#eq-part2_lorentz_force}

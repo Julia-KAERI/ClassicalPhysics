@@ -1,5 +1,5 @@
 ---
-title: "Electrostatics 1."
+title: "Electrostatics 1"
 number-sections: true
 number-depth: 3
 crossref:
@@ -8,9 +8,414 @@ crossref:
 
 {{< include ../../latexmacros.qmd >}}
 
-:::{.callout-important appearance="minimal"}
+:::{.callout-important icon="false"}
+
+#### 전기장에 대한 가우스 법칙
+$$
+\nabla \cdot \bf{E} = \dfrac{\rho}{\epsilon_0}
+$$ {#eq-part2_gauss_law}
+:::
+
+</br>
+
+## 전하
+
+### 전하에 관한 기본적인 성질 {#sec-part2_basic_properties_of_charge}
+
+1. 고립된 시스템의 전하량은 보존된다. 즉 고립계에서 양의 전하량과 음의 전하량의 합은 항상 같다. 이것은 상대론적 좌표 변환에 대해서도 성립한다.
+
+2. 전하는 양자화 되어 있다. 즉 발견되는 전하는 모두 전자의 전하량 $-e$ 의 정수배이다.  
+
+첫번째는 고전 전자기학과 아무 문제가 없지만 두번째는 문제가 될 수 있다. 그러나 전자의 전하량은 일반적으로 다루는 전하량에 비해 매우 작으며, 전자나 양성자같은 기본적인 하전 입자의 크기도 $10^{-15}\,\text{m}$ 보다 작다. 따라서 전하가 연속적으로 분포할 수 있다고 가정한다.
+
+</br>
+
+### 쿨롱 법칙 {#sec-part2_coulomb_law}
+
+자기장 $\bf{B}=\bf{0}$ 일 때 로렌츠 힘은 $\bf{F}=q\bf{E}$ 이다. 첫번째 맥스웰 방정식과 로렌츠 힘으로부터 우리는 두 전하 사이에 작용하는 힘을 계산 할 수 있다. 각각 $\bf{r}_1$, $\bf{r}_2$ 의 위치에 점전하 $q_1,\,q_2$ 가 있다고 하자. $q_1$ 에 의해 발생하는 전기장을 $\bf{E}_1$ 이라고 하면 가우스 법칙에 의해
 
 $$
-\nabla \cdot \bf{E} = \dfrac{\rho}{\varepsilon_0}
+\nabla \cdot \bf{E}_1 (\bf{r}')= \dfrac{q_1\delta (\bf{r}'-\bf{r}_1)}{\epsilon_0}
 $$
+
+이다. 대칭을 고려하여 전하 $q_1$ 이 위치한 $\bf{r}_1$ 을 중심으로 한 구의 표면 $S_1$ 과 $S_1$ 의 내부인 부피 $V_1$ 을 생각하면
+
+$$
+\int_{V_1}\dfrac{q_1\delta(\bf{r}'-\bf{r}_1)}{\epsilon_0}= \dfrac{q_1}{\epsilon_0}
+$$ 
+
+이며
+$$
+\int_{V_1}\nabla \cdot \bf{E}_1(\bf{r}') \,d^3\bf{r}' = \int_{S_1} \bf{E}_1 \cdot \hat{\bf{n}}\,dS = 4 \pi \|\bf{r}-\bf{r}_1\|^2 (\bf{E}_1\cdot \hat{\bf{n}})
+$$ {#eq-part2_coulomb_force_derivation_1}
+
+이다. 이로부터,
+
+$$
+\bf{E}_1(\bf{r}) = \dfrac{q_1}{4\pi\epsilon_0} \dfrac{\bf{r}-\bf{r}_1}{\|\bf{r}-\bf{r}\|^3}
+$$
+
+을 얻으며, $q_2$ 가 받는 로렌츠 힘 $\bf{F}_2$ 는 $\bf{r}_{21} = \bf{r}_2-\bf{r}_1$, $r_{21} = \|\bf{r}_{21}\|$ 라고 하면
+
+$$
+\bf{F}_2 = q_2 \bf{E}_1(\bf{r_2})= \dfrac{q_1q_2}{4\pi\epsilon_0} \dfrac{\bf{r}_2-\bf{r}_1}{\|\bf{r}_2-\bf{r}_1\|^3} = \dfrac{q_1q_2}{4\pi\epsilon_0} \dfrac{\hat{\bf{r}}_{21}}{r_{21}^2}
+$$ {#eq-part2_coulolb_force}
+
+이다. @eq-part2_coulolb_force 가 잘 알려진 쿨롱 법칙이며 두 전하 사이에 작용하는 힘을 **쿨롱 힘(Coulomb force)** 라고 한다. 또한 $q_2$ 에 의해 $q_1$ 이 받는 로렌츠 $\bf{F}_1$ 이 $\bf{F}_1 = - \bf{F}_2$ 라는 것은 쉽게 보일 수 있다.
+
+여기에 한가지 짚고 넘어가야 할 것은 @eq-part2_coulomb_force_derivation_1 에서 어떤 상수벡처 $\bf{C}$ 를 $\bf{E}_1$ 에 더한다고 해도 수식 전개에 모순이 없다는 것이다. 이것은 고전역학에서 포텐셜 에너지를 정의할때도 마찬가지인데 우리는 $\|\bf{r}\|\to \infty$ 극한에서 $\bf{E}(\bf{r})\to \bf{0}$ 이 되도록 하는 관습을 따른다.
+
+
+전자와 전자간에 작용하는 힘은 이 쿨롱힘 이외에도 전자가 가진 스핀(spin) 물리량에 의한 자기력과, 전자가 움직일 때 받는 자기력이 존재한다. 스핀-스핀에 의한 자기력은 쿨롱 힘에 비해 $10^-4$ 정도 작고, 전자가 움직이지 않는다면 이동하는 전자에 의한 자기력도 존재하지 않기때문에 여기서는 이에 대해 생각하지 않기로 하자.
+
+전하의 단위는 쿨롱(Coulomb, $C$) 이며 전자의 전하 $e=-1.602 \times 10^{-19}\, \text{C}$ 이다. $\epsilon_0$ 는 진공의 유전율로 이에 대해서는 이후 설명하기로 하자. 어쨌든
+
+$$
+\epsilon_0 = 8.854 \times 10^{-12}\dfrac{\text{C}^2}{\text{N} \cdot \text{m}}
+$$
+
+이다.
+
+</br>
+
+### 중첩의 원리 {#sec-part2_theorey_of_superposition}
+
+하나의 전하분포 $\rho_1$ 에 의한 전기장 $\bf{E}_1(\bf{r})$ 과 다른 전하분포 $\rho_2$ 에 의한 전기장 $\bf{E}_2(\bf{r})$ 을 알고 있다고 하자. 그렇다면 전하분포 $\rho_1$ 과 $\rho_2$ 가 동시에 존재 할 경우의 전기장 $\bf{E}(\bf{r})$ 은
+
+$$
+\nabla \cdot \bf{E}(\bf{r}) = \dfrac{\rho_1 + \rho_2}{\epsilon_0} = \nabla \cdot (\bf{E}_1(\bf{r}) + \bf{E}_2(\bf{r}))
+$$
+
+이므로 어떤 상수 벡터 $\bf{C}$ 에 대해
+
+$$
+\bf{E}(\bf{r}) = \bf{E}_1(\bf{r})+\bf{E}_2(\bf{r})+ \bf{C}
+$$
+
+이다. $\rho_1$ 과 $\rho_2$ 가 우주에 대해 유한한 부피를 차지하는 것으로 가정 할 수 있다. 앞서 전기장이 $\bf{E}(\bf{r} \to \infty)$ 극한에서 $\bf{0}$ 이 되는 관례를 따른다고 했으므로 여기서도 $\bf{C}=\bf{0}$ 으로 놓을 수 있다. 즉
+
+$$
+\bf{E}(\bf{r}) = \bf{E}_1(\bf{r})+\bf{E}_2(\bf{r})
+$$
+
+이다. 이를 중첩의 원리라고 하며, 전하분포 뿐 아니라 모든 종류의 source 에 대해서도 성립하는 것으로 가정한다. 이로부터 $\bf{r}_i$ 위치에 있는 전하 $q_i$ 에 의 한 전기장 $\bf{E}(\bf{r})$ 은 다음과 같이 각각의 전하에 의해 생성되는 전기장의 합이다.
+
+$$
+\bf{E}(\bf{r}) = \sum_{i}\dfrac{q_i}{4\pi \epsilon_0}\dfrac{\bf{r}-\bf{r}_i}{\|\bf{r}-\bf{r}_i\|^3}
+$$
+
+</br>
+
+### 전하 시스템의 에너지 {#sec-part2_energy_of_charges}
+
+전하 $q_1$ 이 $\bf{r}_1$에 있으며 전하 $q_2$ 가 아주 멀리 떨어진 거리에서 $\bf{r}_2$ 까지 오기까지의 일 $W_2$ 를 구할 수 있다. 이때 가해주는 힘은 쿨롱힘 $\bf{F}$ 에 대해 $-\bf{F}$ 이어야 한다.
+
+$$
+W_2 = \int_{\infty}^{\bf{r}_2} \left[-\dfrac{q_1q_2}{4\pi\epsilon_0}\dfrac{\bf{r}-\bf{r}_1}{\|\bf{r}-\bf{r}_1\|^3} \right]\cdot d\bf{r} = \left. \dfrac{q_1q_2}{4\pi\epsilon_0}\dfrac{1}{\|\bf{r}-\bf{r}_1\|}\right|_{\infty}^{\bf{r}_2} = \dfrac{1}{4\pi\epsilon_0}\dfrac{q_1q_2}{r_{21}}
+$$
+
+$q_1q_2>0$ 이면 $W>0$ 이다. 즉 두 전하 사이에 척력이 존재하므로 외부에서 일을 해 주어야 한다. 그러나 $q_1q_2<0$ 이면 $W<0$ 으로 에너지가 증가한다. 
+
+이제 세번째 무한히 멀리 떨어진 위치에서 전하 $q_3$ 를 $\bf{r}_3$ 까지 움직이는데 소요된 일 $W_3$ 를 구할 수 있다. 중첩원리에 따라 $q_1$ 과의 상호작용에 의해 소요된 일과 $q_2$ 와의 상호작용에 소요된 일의 합이다.
+
+$$
+W_3 = \dfrac{1}{4\pi\epsilon_0}\dfrac{q_1q_3}{r_{31}} + \dfrac{1}{4\pi\epsilon_0}\dfrac{q_2q_3}{r_{32}}
+$$
+
+즉 $q_2$ 를 먼저 $\bf{r}_2$ 에 위치시킨 후 $q_3$ 에 위치시길때 소요된 일을 $U$ 라고 하면
+
+$$
+U = W_2+W_3 = \dfrac{1}{4\pi\epsilon_0}\left(\dfrac{q_1q_2}{r_{12}} + \dfrac{q_2q_3}{r_{23}}+ \dfrac{q_1q_3}{r_{13}}\right)
+$$
+
+이다. $U$ 는 $q_1,\,q_2,\,q_3$ 와 그 위치에 대해 완전히 대칭이며, 이로부터 전하의 배치와 무관한 값이라는 것을 알 수 있다. 같은 방식으로 고전역학에서 포텐셜 에너지를 구했던 것처럼 위에서 구한 $U$ 를 **전기적 포텐셜 에너지(electrical potential energy)** 라고 한다. 또한 $q_1,\ldots,\,q_n$ 이 각각 $\bf{r}_1,\ldots,\,\bf{r}_n$ 의 위치에 있을 때의 포텐셜 에너지 $U$ 는
+
+$$
+U = \sum_{i=1}^n\sum_{j=i+1}^n \dfrac{1}{4\pi\epsilon_0}\dfrac{q_iq_j}{r_{ij}} = \dfrac{1}{2}\sum_{i,\,j=1,\,i\ne j}^n \dfrac{1}{4\pi\epsilon_0}\dfrac{q_iq_j}{r_{ij}},\qquad \text{where }r_{ij}= \|\bf{r}_i-\bf{r}_j\|
+$$ {#eq-part1_electrosttic_potential_energy_1}
+
+임을 알 수 있다. 포텐셜 에너지는 전체적인 전하 분포에만 관련이 있으며, 이 에너지 가운데 어떤 부분이 어떤 전하에 속하는지 판단하는 것은 무의미하다.
+
+</br>
+
+## 전하 분포와 전기장
+
+### 가우스 법칙의 응용 {#sec-part2_application_of_gauss_law}
+
+전하 분포가 어떤 대칭성을 띌 때 전기장 혹은 전기장의 크기를 쉽게 계산 할 수 있다. 가장 대표적인 경우가 앞서 보았던 점전하에 의한 전기장이다. 점전하는 구형 대칭(spherical symmetry) 를 가지고 있으므로 이를 이용하면 전기장을 쉽게 계산 할 수 있다. 이제 전기정에 대한 가우스 법칙(@eq-part2_gauss_law) 의 적분 형태를 생각해보자.
+
+$$
+\bf{E}(\bf{r}) = \dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\bf{r}')(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3}d^3\bf{r}'
+$$ {#eq-part2_electric_field_due_to_charge_distribution}
+
+이제 위 식 @eq-part2_electric_field_due_to_charge_distribution 을 이용하여 여러 상황에서의 전기장을 구해보자.
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part1_charge_distribution_circular_charge}
+
+![원형 전하 분포](../images/Electromagnetism/electrostatics_ring/ring.png){#fig-part1_ring width=300}
+
+반경 $R$ 인 원형 선이 선전하 밀도 $\lambda$ 로 $xy$ 평면상에 원점을 중심으로 위치한다고 하자. 이 때 $(0,\,0,\,z)$ 에서의 전기장 $\bf{E}(0,\,0,\,z)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,z)=E_y(0,\,0,\,z)=0$ 이며
+
+$$
+\begin{aligned}
+E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^{2\pi} \dfrac{\lambda Rz\,d\theta}{(R^2+z^2)^{3/2}} = \dfrac{\lambda Rz}{2\epsilon_0(R^2+z^2)^{3/2}}
+\end{aligned}
+$${#eq-part2_electric_field_due_to_line_charge}
+
+이다.
+
 :::
+
+</div>
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part1_charge_distribution_hemisphere_shell}
+
+#### 반구 shell 의 전하 분포
+
+![반구 전하 분포](../images/Electromagnetism/electrostatics_hemisphere/hemisphere.png){#fig-part1_hemisphere width=300}
+
+반경 $R$ 인 반구형 셸의 면전하밀도가 $\sigma$ 로 $xy$ 평면상에 원점을 중심으로 그림과 같이 아래로 위치한다고 하자. 이 때 $(0,\,0,\,0)$ 에서의 전기장 $\bf{E}(0,\,0,\,0)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,0)=E_y(0,\,0,\,0)=0$ 이며 구면좌표계에서
+
+$$
+\begin{aligned}
+E_z(0,\,0,\,0) =\dfrac{1}{4\pi\epsilon_0}\int_0^{2\pi} \int_{\pi/2}^\pi \dfrac{\sigma R^2 \sin\theta \cos\theta \,d\theta d\phi\theta}{R^2} = \dfrac{\sigma}{4\epsilon_0}
+\end{aligned}
+$${#eq-part2_electric_field_due_to_charged_hemisphere_shell}
+
+이다.
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part1_charge_distribution_hemisphere}
+
+#### 반구의 전하 분포
+
+@fig-part1_hemisphere 에서 shell 이 아닌 반구 전체이며 전하밀도가 $\rho$ 라고 하자. 이 때 $(0,\,0,\,0)$ 에서의 전기장 $\bf{E}(0,\,0,\,z)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,z)=E_y(0,\,0,\,z)=0$ 이며 구면좌표계에서
+
+$$
+\begin{aligned}
+E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^R\int_0^{2\pi}  \int_{\pi/2}^\pi \dfrac{\rho r^2 \sin\theta \cos\theta \,dr d\theta d\phi\theta}{r^2} = \dfrac{\rho R}{4\epsilon_0}
+\end{aligned}
+$${#eq-part2_electric_field_due_to_charged_hemisphere}
+
+이다.
+
+:::
+
+</div>
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part1_charge_distribution_spherical_symmetry}
+
+#### 구 대칭 전하 분포
+
+전하 분포 $\rho(\bf{r})$ 가 원점을 중심으로 구 대칭을 이룬다면, 즉 $\rho(\bf{r})=\rho(r)$ 이라고 하자. 대칭을 생각하면 당연히 전기장은 $\hat{\bf{r}}$ 방향이며 $\bf{E}(\bf{r}) = E_r(\bf{r})\hat{\bf{r}}$ 로 놓을 수 있고 $E_r(\bf{r})$ 만 고려하면 된다. 반경 $r$ 인 구면을 $S_r$, 그 내부의 부피를 $V_r$ 이라고 하고 그 $S_r$ 의 내부에 있는 전하량을 $Q_r$ 이라고 하면 가우스 법칙에 의해
+
+$$
+\int_{V_r} \nabla \cdot \bf{E}(\bf{r'}) d^3\bf{r}' = \oint_{S_r}E_r(r)dS= 4\pi r^2 E_r(r)
+$$
+
+이며
+
+$$
+\int_{V_r} \dfrac{\rho(\bf{r}')}{\epsilon_0}\, d^3\bf{r}' = \dfrac{Q_r}{\epsilon_0}
+$$
+
+이므로
+
+$$
+\bf{E}(\bf{r}) = \dfrac{1}{4\pi \epsilon_0}\dfrac{Q_r}{r^2}\hat{\bf{r}}
+$$ {#eq-part2_electric_field_due_to_radial-distribution}
+
+이다. 
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part1_charge_distribution_uniform_sphere}
+
+#### 균일한 구형 전하분포
+
+@exm-part1_charge_distribution_spherical_symmetry 로부터 $0\le r<R$ 일 때 $\rho(r)=\rho_0$ 이고 $r\ge 0$ 일 때 $\rho(r)=0$ 인 경우를 보자. $0\le r<R$ 일 경우의 전기장 $\bf{E}_{\text{in}}(r)$ 은
+
+$$
+\bf{E}_{\text{in}}(r)= \dfrac{1}{4\pi\epsilon_0}\dfrac{\rho_0 4\pi r^3/3}{r^2}\hat{\bf{r}}= \dfrac{\rho_0 r}{3\epsilon_0}\hat{\bf{r}}
+$$ {#eq-part2_electric_field_inside_of_uniformly_charged_sphere}
+
+이며 $r\ge R$ 일 경우의 전기장 $\bf{E}_{\text{out}}(r)$ 은
+
+$$
+\bf{E}_{\text{out}}(r) = \dfrac{1}{4\pi\epsilon_0}\dfrac{\rho_0 4\pi R^3 /3}{r^2}\hat{\bf{r}} = \dfrac{\rho_0R^3}{3\epsilon_0 r^2} \hat{\bf{r}}
+$${#eq-part2_electric_field_outside_of_uniformly_charged_sphere}
+
+이다. 이 분포의 총 전하량 $Q=\dfrac{4\pi \rho_0 R^3}{3}$ 을 생각하면 $\bf{E}_{\text{out}}(r)= \dfrac{Q}{4\pi \epsilon_0 r^2}\hat{\bf{r}}$ 이므로 모든 전하가 중심에 모여있을 때의 전기장과 같다. 전기장의 세기 $E(r)$ 을 그래프로 그리면 아래와 같다.
+
+![균일한 구형 전하 분포에서의 전기장](../images/Electromagnetism/electrostatics_uniform_sphere/efield.png){#fig-part2_electrostatics_uniform_sphere width=350}
+
+:::
+
+</div>
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part1_charge_distribution_line_charge}
+
+#### 무한히 긴 선 전하
+
+![무한히 긴 선 전하](../images/Electromagnetism/electrostatics_long_line_charge/image.png){#fig-part2_electrostatics_line_charge width=300}
+
+위의 그림과 같이 배치된 선 전하 밀도 $\lambda$ 의 무한히 긴 전하선에 의한 전기장을 구해보자. 그림에서는 $P$ 가 $y$ 축 위에 선전하와 $d$ 만큼의 거리를 두고 위치한다. $x$ 방향의 전기장은 무한히 긴 전하밀도에 의해 상쇄되기 때문에 $y$ 방향의 전기장만이 남는다. 
+
+$$
+\begin{aligned}
+E_y(P) &= \dfrac{1}{4\pi\epsilon_0}\int_{-\infty}^\infty \dfrac{\lambda \cos (\theta (x)) \,dx}{(x^2+r^2)} 
+\end{aligned}
+$$
+
+여기서 $x^2+r^2 = r^2/\cos^2\theta$ 이며 $x=r\tan\theta$ 에 의해 $dx = r \sec^2 \theta$ 임을 이용하면 그렇다면 $\theta$ 에 대한 적분구간 $[-\pi/2,\, \pi/2]$ 로 바뀌게 되며
+
+$$
+E_y(P) =  \dfrac{1}{4\pi\epsilon_0} \int_{-\pi/2}^{\pi/2} \dfrac{\lambda \cos \theta \, d\theta}{r} = \dfrac{\lambda }{2\pi \epsilon_0 r}
+$$
+
+이다. 원통좌표계 $(r,\,\theta,\,z)$ 에 대해
+
+$$
+\bf{E}(r,\,\theta,\,z)= \dfrac{\lambda}{2\pi \epsilon_0 r}\hat{\bf{r}}
+$$ {#eq-part2_electric_field_due_to_infinite_line_charge_1}
+
+이다. 
+
+이것을 가우스 법칙을 이용해 구해보자. 아래와 같은 높이 $L$, 반지름 $r$ 인 실린더 모양의 가우스 면을 생각하자.
+
+![무한히 긴 선 전하의 가우스 면](../images/Electromagnetism/electrostatics_long_line_charge/gauss_surface.png){#fig-part2_electrostatics_line_charge width=300}
+
+양쪽의 원으로는 전기장이 존재하지 않으며 원통좌표계에서 $\hat{\bf{r}}$ 방향으로만 전기장이 존재할것이라는 것을 알 수 있다. 따라서
+
+$$
+E_r(r) 2\pi r L = \dfrac{\lambda L}{\epsilon_0}
+$$
+
+이므로
+
+$$
+\bf{E}(r,\,\theta,\,z)= \dfrac{\lambda}{2\pi \epsilon_0 r}\hat{\bf{r}}
+$${#eq-part2_electric_field_due_to_infinite_line_charge_2}
+
+을 얻으며 앞서 직접 적분에 의해 얻은 값과 같다.
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part1_charge_distribution_plane}
+
+#### 무한 대전 평면
+
+![균일하게 대전된 무한 평면](../images/Electromagnetism/electrostatics_infinite_charged_plane/figure.png){#fig-pat2_infinite_charged_plane width=400}
+
+균일한 면 전하 밀도 $\sigma$ 를 갖는 무한 평면을 생각하자. 그리고 위의 그림과 같이 이 평면의 일부를 관통하는 직육면체를 생각한다. 대칭성을 고려하면 당연히 평면에 수직한 성분을 제외한 성분의 전기장은 $0$ 이다. 이 전기장의 세기를 $E$ 라고 하고 가우스의 법칙윽 적용하면
+
+$$
+2AE = \dfrac{\sigma A}{\epsilon_0}
+$$
+
+로 $E=\dfrac{\sigma}{2\epsilon_0}$ 이다. 즉 균일한 무한 대전 평면에 의한 전기장은 평면으로 부터의 거리에 무관하게 같은 전기장 세기를 갖는다.
+
+이 무한 대전 평면이 $xy$ 평면상에 위치한다고 하자. 그렇다면 
+
+$$
+\bf{E}(z>0)= \dfrac{\sigma}{2\epsilon_0}\hat{\bf{z}},\qquad \bf{E}(z<0)= - \dfrac{\sigma}{2\epsilon_0}\hat{\bf{z}}
+$$ {#eq-part2_electric_field_due_to_infinitly_charged_plain}
+
+로 $\bf{E}$ 는 $z=0$ 에서 $\Delta \bf{E}(z\approx 0) = \bf{E}(z=0^+)-\bf{E}(z=0^-)= \dfrac{\sigma}{\epsilon_0}$ 불연속성을 보여준다. 
+
+:::
+
+</div></br>
+
+### 전하 층에서의 힘 {#sec-part2_force_on_a_layer_of_charge}
+
+![균일한 표면 전하 밀도를 가진 구](../images/Electromagnetism/electrostatics_uniform_surface_charge_sphere.png){#fig-part2_electrostatics_uniform_surface_charge_sphere width=300}
+
+반지름 $r_0$ 인 구의 표면이 면 전하밀도 $\sigma$ 로 대전되어 있다고 하자. 내부에서의 전기장은 $0$ 이며 외부에서의 전기장은 
+
+$$
+\bf{E}=\dfrac{1}{4\pi\epsilon_0}\dfrac{Q}{r^2}\hat{\bf{r}} = \dfrac{\sigma}{\epsilon_0}\dfrac{r_0^2}{r^2} \hat{\bf{r}}
+$$
+
+이다. $r \approx r_0^+$ 에서는 $\bf{E}=\dfrac{\sigma}{\epsilon_0}\hat{\bf{r}}$ 이다.
+
+특정한 전하를 갖는 하전 입자가 표면에 모여 있으며, 당연히 하전 입자들 사이에 쿨롱힘이 존재한다. 개별적인 하전입자를 다루지 않고 구의 표면에 $dA$ 의 조그만 면적을 가진 조각을 생각하자. 이 조각의 전하 $dq= \sigma dA$ 이다.
+
+이 $dA$ 에 작용하는 힘은 ($1$) 전체 구의 표면에서 $dA$ 를 제외한 부분에 의해 받는 힘과 ($2$) $dA$ 자체의 전하들 사이에 의해 $dA$ 가 받는 힘, 두가지로 나누어 볼 수 있다. 그런데 뉴턴의 제 3 법칙에 의해 ($2$) 의한 힘은 $0$ 이며 따라서 $dA$ 를 분리하지 않고 전체 전하 분포에 의해 받는 힘을 생각해도 된다. 이것은 실제로 계산의 사소한지만 복잡한 부분을 제거해 주고 비교적 간단하게 만들어 준다. 따라서 $dA$ 에 가해지는 쿨롱힘 $d\bf{F}_{dA}$ 는
+
+$$
+d\bf{F}_{dA}= \bf{E}\cdot dq = \dfrac{\sigma}{\epsilon_0}{\sigma dA}\hat{\bf{r}} = \dfrac{\sigma^2}{\epsilon_0}dA\hat{\bf{r}}
+$$
+
+이다. 이 힘은 구면 전체에 동일하기 때문에 우리는 전하 층이 받는 압력 $P$ 를 아래와 같이 계산 할 수 있다.
+
+$$
+P = \dfrac{\|d\bf{F}_{dA}\|}{dA}= \dfrac{\sigma^2}{\epsilon_0}
+$$
+
+</br>
+
+이제 아래 그림과 같은 전하 밀도 $\rho(x)$ 를 가진 전하층을 생각하자. 두께 $d$ 에 대해 $\sigma = \int \rho(x)\,dx$ 이다.
+
+![대전된 전하층](../images/Electromagnetism/electrostatics_charged_layer/charged_layer.png){#fig-part2_electrostatics_charge_layer width=150}
+
+
+가우스 법칙에 의해 
+
+$$
+E_2-E_1 = \dfrac{\sigma}{\epsilon_0}
+$$ {#eq-part2_charge_layer_field_difference}
+
+이다. $d$ 내의 $x$ 에 위치한 아주 작은 두께 $dx$ 층에 대헤 생각하자. 또한 $dx$ 층 내의 면적 $A$ 인 조각을 생각하자. 층 내의 전기장 $E$ 에 대해 $A$ 가 받는 힘 $dF$ 는 
+
+$$
+dF = E(x)\sigma(x) A = E(x)\rho(x) dx A
+$$
+
+이며, 따라서
+
+$$
+P = \dfrac{\int dF}{A} = \int E(x)\rho(x)dx
+$$
+
+여기서 가우스 법칙으로부터 $\rho (x) = \epsilon_0 E'(x)$ 이므로
+
+$$
+P = \epsilon_0 \int_{E_1}{E_2} E^2 dE = \dfrac{\epsilon_0}{2} (E_2^2-E_1^2)
+$$ {#eq-part2_charge_layer_pressure_1}
+
+이다. @eq-part2_charge_layer_field_difference 를 이용하면
+
+$$
+P=\dfrac{\sigma}{2}(E_1+E_2)
+$${#eq-part2_charge_layer_pressure_2}
+
+이다. 

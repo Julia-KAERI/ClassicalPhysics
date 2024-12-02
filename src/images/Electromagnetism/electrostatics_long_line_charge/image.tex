@@ -1,0 +1,27 @@
+\documentclass[tikz]{standalone}
+\usepackage{amsmath}
+% \usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta} % for arrow size
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \coordinate (P) at (0, 2);
+    \draw[-latex] (-1, 0) -- (3, 0) node[below] {$x$};
+    \draw[-latex] (0, -1) -- (0, 3) node[above] {$y$};
+    \draw[very thick, teal ] (-0.7, 0) -- (2.5, 0);
+    \node[above] at (0.5, 0.0) {$\lambda$};
+    \draw[red,] (P) -- (1.5, 0) node [black, left, midway] {$R$};
+    \draw[red,] (P) -- (1.6, 0);
+    \draw[black] (1.5, 0.2) -- (1.5, -0.2);
+    \draw[black] (1.6, 0.2) -- (1.6, -0.2);
+    \draw[-{Stealth[length=2mm]}] (1.3, -0.1) -- (1.5, -0.1);
+    \draw[-{Stealth[length=2mm]}] (1.8, -0.1) -- (1.6, -0.1);
+    \node[below] at (1.55, -0.15) {$dx$};
+    \draw[blue, -latex] (0, 1.5) arc (270:305:0.5);
+    \node[right] at (0.1, 1.4) {$\theta$};
+    \node[left] at (0, 1) {$r$};
+    \draw[blue, -latex] (0.547, 0.4964) arc (290:307:1.6);
+    \draw[blue, -latex] (1.385, 1.2) arc (330:309:1.6) node [black, below right] {$d\theta$};
+    \filldraw[black] (P) circle (1pt) node[above right]{$P$};
+   \end{tikzpicture}
+\end{document}

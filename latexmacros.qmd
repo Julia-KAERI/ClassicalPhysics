@@ -9,6 +9,7 @@ format: html
 
 %\newcommand{\bf}[1]{\boldsymbol{#1}}
 
+
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
@@ -16,6 +17,7 @@ format: html
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\im}{\operatorname{im}}
 \newcommand{\rank}{\operatorname{rank}}
+
 
 
 \def\Xint#1{\mathchoice
