@@ -156,7 +156,7 @@ $$ {#eq-part2_electric_field_due_to_charge_distribution}
 
 ::: {#exm-part1_charge_distribution_circular_charge}
 
-![원형 전하 분포](../images/Electromagnetism/electrostatics_ring/ring.png){#fig-part1_ring width=300}
+![원형 전하 분포](../images/Electromagnetism/electrostatics/electrostatics_ring/ring.png){#fig-part1_ring width=300}
 
 반경 $R$ 인 원형 선이 선전하 밀도 $\lambda$ 로 $xy$ 평면상에 원점을 중심으로 위치한다고 하자. 이 때 $(0,\,0,\,z)$ 에서의 전기장 $\bf{E}(0,\,0,\,z)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,z)=E_y(0,\,0,\,z)=0$ 이며
 
@@ -180,7 +180,7 @@ $${#eq-part2_electric_field_due_to_line_charge}
 
 #### 반구 shell 의 전하 분포
 
-![반구 전하 분포](../images/Electromagnetism/electrostatics_hemisphere/hemisphere.png){#fig-part1_hemisphere width=300}
+![반구 전하 분포](../images/Electromagnetism/electrostatics/electrostatics_hemisphere/hemisphere.png){#fig-part1_hemisphere width=300}
 
 반경 $R$ 인 반구형 셸의 면전하밀도가 $\sigma$ 로 $xy$ 평면상에 원점을 중심으로 그림과 같이 아래로 위치한다고 하자. 이 때 $(0,\,0,\,0)$ 에서의 전기장 $\bf{E}(0,\,0,\,0)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,0)=E_y(0,\,0,\,0)=0$ 이며 구면좌표계에서
 
@@ -268,7 +268,7 @@ $${#eq-part2_electric_field_outside_of_uniformly_charged_sphere}
 
 이다. 이 분포의 총 전하량 $Q=\dfrac{4\pi \rho_0 R^3}{3}$ 을 생각하면 $\bf{E}_{\text{out}}(r)= \dfrac{Q}{4\pi \epsilon_0 r^2}\hat{\bf{r}}$ 이므로 모든 전하가 중심에 모여있을 때의 전기장과 같다. 전기장의 세기 $E(r)$ 을 그래프로 그리면 아래와 같다.
 
-![균일한 구형 전하 분포에서의 전기장](../images/Electromagnetism/electrostatics_uniform_sphere/efield.png){#fig-part2_electrostatics_uniform_sphere width=350}
+![균일한 구형 전하 분포에서의 전기장](../images/Electromagnetism/electrostatics/electrostatics_uniform_sphere/efield.png){#fig-part2_electrostatics_uniform_sphere width=350}
 
 :::
 
@@ -282,7 +282,7 @@ $${#eq-part2_electric_field_outside_of_uniformly_charged_sphere}
 
 #### 무한히 긴 선 전하
 
-![무한히 긴 선 전하](../images/Electromagnetism/electrostatics_long_line_charge/image.png){#fig-part2_electrostatics_line_charge width=300}
+![무한히 긴 선 전하](../images/Electromagnetism/electrostatics/electrostatics_long_line_charge/image.png){#fig-part2_electrostatics_line_charge width=300}
 
 위의 그림과 같이 배치된 선 전하 밀도 $\lambda$ 의 무한히 긴 전하선에 의한 전기장을 구해보자. 그림에서는 $P$ 가 $y$ 축 위에 선전하와 $d$ 만큼의 거리를 두고 위치한다. $x$ 방향의 전기장은 무한히 긴 전하밀도에 의해 상쇄되기 때문에 $y$ 방향의 전기장만이 남는다. 
 
@@ -308,7 +308,7 @@ $$ {#eq-part2_electric_field_due_to_infinite_line_charge_1}
 
 이것을 가우스 법칙을 이용해 구해보자. 아래와 같은 높이 $L$, 반지름 $r$ 인 실린더 모양의 가우스 면을 생각하자.
 
-![무한히 긴 선 전하의 가우스 면](../images/Electromagnetism/electrostatics_long_line_charge/gauss_surface.png){#fig-part2_electrostatics_line_charge width=300}
+![무한히 긴 선 전하의 가우스 면](../images/Electromagnetism/electrostatics/electrostatics_long_line_charge/gauss_surface.png){#fig-part2_electrostatics_line_charge width=300}
 
 양쪽의 원으로는 전기장이 존재하지 않으며 원통좌표계에서 $\hat{\bf{r}}$ 방향으로만 전기장이 존재할것이라는 것을 알 수 있다. 따라서
 
@@ -333,7 +333,7 @@ $${#eq-part2_electric_field_due_to_infinite_line_charge_2}
 
 #### 무한 대전 평면
 
-![균일하게 대전된 무한 평면](../images/Electromagnetism/electrostatics_infinite_charged_plane/figure.png){#fig-pat2_infinite_charged_plane width=400}
+![균일하게 대전된 무한 평면](../images/Electromagnetism/electrostatics/electrostatics_infinite_charged_plane/figure.png){#fig-pat2_infinite_charged_plane width=400}
 
 균일한 면 전하 밀도 $\sigma$ 를 갖는 무한 평면을 생각하자. 그리고 위의 그림과 같이 이 평면의 일부를 관통하는 직육면체를 생각한다. 대칭성을 고려하면 당연히 평면에 수직한 성분을 제외한 성분의 전기장은 $0$ 이다. 이 전기장의 세기를 $E$ 라고 하고 가우스의 법칙윽 적용하면
 
@@ -357,7 +357,7 @@ $$ {#eq-part2_electric_field_due_to_infinitly_charged_plain}
 
 ### 전하 층에서의 힘 {#sec-part2_force_on_a_layer_of_charge}
 
-![균일한 표면 전하 밀도를 가진 구](../images/Electromagnetism/electrostatics_uniform_surface_charge_sphere.png){#fig-part2_electrostatics_uniform_surface_charge_sphere width=300}
+![균일한 표면 전하 밀도를 가진 구](../images/Electromagnetism/electrostatics/electrostatics_uniform_surface_charge_sphere.png){#fig-part2_electrostatics_uniform_surface_charge_sphere width=300}
 
 반지름 $r_0$ 인 구의 표면이 면 전하밀도 $\sigma$ 로 대전되어 있다고 하자. 내부에서의 전기장은 $0$ 이며 외부에서의 전기장은 
 
@@ -375,7 +375,7 @@ $$
 
 이제 아래 그림과 같은 전하 밀도 $\rho(x)$ 를 가진 전하층을 생각하자. 두께 $d$ 에 대해 $\sigma = \int \rho(x)\,dx$ 이다.
 
-![대전된 전하층](../images/Electromagnetism/electrostatics_charged_layer/charged_layer.png){#fig-part2_electrostatics_charge_layer width=150}
+![대전된 전하층](../images/Electromagnetism/electrostatics/electrostatics_charged_layer/charged_layer.png){#fig-part2_electrostatics_charge_layer width=150}
 
 
 가우스 법칙에 의해 
@@ -464,6 +464,52 @@ $$
 
 </div></br>
 
+## Problems
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part2_purcell_1_1}
+#### 중력과 전기력 (Purcell 1.1)
+</br>
+($a$) 기본 입자의 범주에서 질량의 기본 단위는 핵자, 즉 양성자나 중성자의 질량으로 이 입자들은 일상적인 물질의 기본입자이다. 핵자의 질량 $1.67 \cdot 10^{-27}\text{ kg}$ 과 중력상수 $G=6.67 \cdot 10^{-11} \, \text{m}^3/(\text{kg s}^2)$ 가 주어졌을 때, 두 양성자의 중력에 의한 인력과 쿨롱힘에 의한 척력을 비교하라. 이것은 중력이 왜 매우 약한 힘인지 보여준다.
+
+($b$) 헬륭 핵에서의 두 양성자의 거리는 순간적으로 $10^{-15}\,\text{m}$ 이 될 수 있다. 이 거리에서의 전기적 척력의 크기는 얼마인가? 두 강입자가 이 거리만큼 떨어졌을 때  핵력의 크기는 이보다 더 크다.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+($a$) 양성자의 질량 $m_p$ 와 양성자 및 전자의 전하 $e$ 에 대해 
+
+$$
+\dfrac{F_\text{gravitation}}{F_\text{electrostatic}} = \dfrac{Gm_p^2}{1/(4\pi\epsilon_0)e^2} \approx 8.0566\cdot 10^{-37}.
+$$
 
 
+($b$) $F=\dfrac{1}{4\pi\epsilon_0}\dfrac{e^2}{10^{-30}} = 231 \text{N}$.
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part2_purcell_1_2}
+#### 삼각형으로부터 힘이 $0$ 인 곳 (Purcell 1.2)
+</br>
+정삼각형의 두 꼭지점에 양의 이온이, 나머지 한 꼭지점에 음의 이온이 고정되어 있다고하자. 이 상황에서의 대칭축을 따라 어느 위치에 네번째 이온을 놓았을 때 이 네번쩨 이온에 대한 힘이 $0$ 이 될까? 이런 위치가 하나 이상 존재하는가? 수치해석적으로 풀어야 할 수도 있다.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+![그림](../images/Electromagnetism/electrostatics/exr_purcell_1_2/purcell1_2.png){#fig_part2_purcell_1_2 width=200}
+
+위의 그림과같은 전하 배치를 생각하자. 전하는 원점을 중심으로 하는 정삼각형에 위치해 있으며 대칭축은 $y$ 축이다. 
+
+:::
 

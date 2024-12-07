@@ -1,0 +1,19 @@
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta} % for arrow size
+\begin{document}
+\begin{tikzpicture}[scale=1.4, rotate=0]
+    \coordinate (A) at (0, 1);
+    \coordinate (B) at ({-cos(30)}, {-sin(30)});
+    \coordinate (C) at ({cos(30)}, {-sin(30)});
+    \coordinate (P) at (0, 0.3);
+    \filldraw[red] (A) circle (1pt) node[above right] {$-e$};
+    \filldraw[blue] (B) circle (1pt) node[left] {$+e$};
+    \filldraw[blue] (C) circle (1pt) node[right] {$+e$};
+    \filldraw[black] (P) circle (1pt) node[right] {$P$};
+    \draw[thick, -latex] (0, -1) -- (0, 1.5) node [above] {$y$};
+    \draw[thick, -latex] (-1.3, 0) -- (1.3, 0) node [above] {$x$};
+    
+    \end{tikzpicture}
+\end{document}
