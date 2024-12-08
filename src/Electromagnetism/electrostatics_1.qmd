@@ -507,9 +507,322 @@ $$
 
 ::: {.solution}
 
-![그림](../images/Electromagnetism/electrostatics/exr_purcell_1_2/purcell1_2.png){#fig_part2_purcell_1_2 width=200}
+![그림](../images/Electromagnetism/electrostatics/exr_purcell_1_2/purcell_1_2.png){#fig-part2_purcell_1_2 width=400}
 
-위의 그림과같은 전하 배치를 생각하자. 전하는 원점을 중심으로 하는 정삼각형에 위치해 있으며 대칭축은 $y$ 축이다. 
+위의 그림과같은 전하 배치를 생각하자. 전하는 원점을 중심으로 하는 정삼각형에 위치해 있으며 대칭축은 $y$ 축이다. $y$ 축상의 점 $(0,\,y)$ 에서는 전기장의 $x$ 방향 성분이 $0$ 이므로 전기장의 $y$ 방향 성분만을 고려하면 된다. 그리고 일단 세 점에 의한 삼각형 내부에서는 전기장이 $0$ 이 되는 점이 존재하지 않느다. $E_y(x,\,y)$ 는 삼각형 내부에서 항상 양수임을 알 수 있다. 
+
+$$
+\begin{aligned}
+{E}_y(0,\,y) &= \dfrac{1}{4\pi \epsilon_0} \left[\dfrac{-e(y-1)}{|y-1|^{3/2}} + \dfrac{e (y+1/2)}{(3/4 + (y+1/2))^{3/2}}+ \dfrac{e (y+1/2)}{(3/4 + (y+1/2))^{3/2}}\right]
+\end{aligned}
+$$
+
+이며 이것이 $0$ 이 되는 $y$ 는
+
+$$
+0 = \dfrac{1}{(y-1)^2} + \dfrac{2(y+1/2)}{(3/4 + (y+1/2))^{3/2}}
+$$
+
+이며 $y\approx -0.62669$ 와 $y \approx 4.873241$ 에서 전기장이 $0$ 이 된다.
 
 :::
 
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part2_purcell_1_3}
+#### 콘의 꼭지점 (Purcell 1.3)
+</br>
+**Force from a cone **
+($a$) 아이스크림에서 아이스크림을 뺀 속이 빈 콘 의 꼭지점에 전하 $q$ 가 있으며 콘의 표면 전하 밀도는 $\sigma$ 이다. 콘의 경사의 길이는 $L$ 이고 경사의 반각은 $\theta$ 일 때 이 콘에 의해 전하 $q$ 에 가해지는 힘에 대해 무엇을 말할 수 있는가? 
+
+($b$) 아래 그림과 같이 콘에서 꼭지점 쪽의 경사의 반이 사라졌을 때 전하 $q$ 가 받는 힘은 얼마인가? $\theta$ 가 얼마 일 때 받는 힘이 최대가 되는가?
+
+![그림](../images/Electromagnetism/electrostatics/exr_purcell_1_3/figure.png){#fig-part2_purcell_1_3 width=300}
+
+
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+![그림](../images/Electromagnetism/electrostatics/exr_purcell_1_3/problem_1_3.png){#fig-part2_purcell_1_2_solution width=500}
+
+($a$) 위의 그림과 같이 정의하자. $z$ 가 $0$ 부터 $L\cos \theta$ 까지 변화하며, $z$ 와 $z+dz$ 사이의 부분 전하에 의한 전기장을 생각하자. 대칭에 의해 $\hat{z}$ 성분 이외는 상쇄되므로,
+$$
+\begin{aligned}
+dE_z &= \dfrac{1}{4 \pi \epsilon_0} \dfrac{dq}{z^2/\cos^2\theta } = \dfrac{\sigma}{4 \pi \epsilon_0}\dfrac{2 \pi z \tan \theta dz}{z^2/\cos^2 \theta} = \dfrac{\sigma}{4\epsilon_0}\dfrac{\sin (2\theta)}{z}\, dz
+\end{aligned}
+$$
+
+이다. 즉,
+
+$$
+F_z = \dfrac{q\sigma \sin (2\theta)}{4\epsilon_0} \int_{z_i}^{z_f} \dfrac{dz}{z} = \dfrac{q\sigma \sin (2\theta)}{4\epsilon_0} \ln \left(\dfrac{z_f}{z_i}\right)
+$$
+
+이다. $z=0$ 부터 적분하면 발산한다.
+
+
+($b$) $z=\left( \dfrac{L}{2}\cos \theta,\, L\cos \theta\right)$ 구간에서 적분하면,
+
+$$
+F_z = \dfrac{q\sigma \sin (2\theta)}{4\epsilon_0}\ln 2
+$$
+
+이다. $F_z$ 는 $2\theta = \dfrac{\pi}{2}$ 일 때 이므로, $\theta = \dfrac{\pi}{4}$ 일 때 최대가 된다.
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part2_purcell_1_4}
+#### 직사각형을 위한 일(Purcell 1.4)
+</br>
+
+두 양성자와 전자가 변의 길이가 $a,\,b$ 인 직사각형의 꼭지점에 위치한다. 본질적으로 두개의 배치가 있을 수 있다. 네 전하가 무한히 멀리 떨어져 있는 데서 시작하여 이 시스템이 이 이루어 지는데 필요한 일을 계산하라. 두가지 배치중에 일이 양수인 경우가 있는가? 그렇다면 $a$ 와 $b$ 의 관계는 어떠한가?
+
+:::
+
+</div> </br>
+
+::: {.soltion}
+
+아래와 같은 두가지 배치를 생각 할 수 있다.
+
+![Purcell exercise 1.4. 빨간색 점은 양전하, 파란색 점은 음전하를 의미한다.](../images/Electromagnetism/electrostatics/exr_purcell_1_4/problem_1-4.png){#fig-part2_purcell_exercise_1_4 width=500}
+
+
+$$
+\begin{aligned}
+U_1 &= \dfrac{e^2}{4\pi\epsilon_0} \left(\dfrac{2}{b} - \dfrac{2}{a} - \dfrac{2}{\sqrt{a^2+b^2}}\right) \\
+U_2 &= \dfrac{e^2}{4\pi\epsilon_0} \left( -\dfrac{2}{b} - \dfrac{2}{a} + \dfrac{2}{\sqrt{a^2+b^2}} \right)
+\end{aligned}
+$$
+
+이다. $U_2$ 의 경우,
+
+$$
+U_2 = \dfrac{e^2}{4\pi\epsilon_0} \dfrac{1}{ab\sqrt{a^2+b^2}} ( ab-a\sqrt{a^2+b^2}-b\sqrt{a^2+b^2})
+$$
+
+이며 $\sqrt{a^2+b^2}>a,\, \sqrt{a^2+b^2}>b$ 이므로 어떤 $a,\,b\in \mathbb{R}$ 에 대해서도 $U_2<0$ 이다.
+
+$U_1=0$ 이려면,
+
+$$
+\begin{aligned}
+&a\sqrt{a^2+b^2} = b\sqrt{a^2+b^2}+ab \qquad & ;x=\dfrac{b}{a}\\
+\implies & \sqrt{1+x^2}= \dfrac{x}{1-x}
+\end{aligned}
+$$
+
+이며 수치해석적으로 이 값을 구하면, $b=0.531 \times a$ 이다. (교재에의 solution 에는 $a$ 와 $b$ 가 바뀌어져 나온다.)
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part2_purcell_1_5}
+#### Stable or Unstable? (Purcell 1.5)
+</br>
+
+@exr-part2_purcell_1_37 과 같은 조건에서 중심 위치에서의 포텐셜은 stable 한가 unstable 한가? (Pucell 의 나머지 설명은 이미 아는 것이므로 생략한다.)
+:::
+
+</div> </br>
+
+::: {.solution}
+
+전하 $-Q$ 가 원점 근처의 $x,\,y$ 에 위치했을 때의 에너지는 $Q$ 를 포함하는 에너지를 제외하면 모두 상수이므로 여기서는 생각하지 않아도 된다. 따라서,
+
+$$
+\begin{aligned}
+U(x,\,y) &= \dfrac{-qQ}{4\pi\epsilon_0} \left[\dfrac{1}{\sqrt{(a-x)^2+(a-y)^2}} + \dfrac{1}{\sqrt{(a+x)^2+(a-y)^2}} \right. \\[0.3em]
+&\qquad + \left.\dfrac{1}{\sqrt{(a-x)^2+(a+y)^2}}+\dfrac{1}{\sqrt{(a+x)^2+(a+y)^2}}\right] \\[0.3em]
+\end{aligned} 
+$$
+
+
+여기서 series expansion 을 사용하면 $(x,\,y)\approx (0,\,0)$ 에서
+
+$$
+\begin{aligned}
+\dfrac{1}{\sqrt{(a-x)^2+(a-y)^2}} \approx \dfrac{1}{\sqrt{2}a} + \dfrac{x}{2\sqrt{2}a^2} + \dfrac{y}{2\sqrt{2}a^2}+\dfrac{x^2}{8\sqrt{2}a^3}+\dfrac{y^2}{8\sqrt{2}a^3} + \dfrac{3xy}{8\sqrt{2}a^3}
+\end{aligned}
+$$
+
+이므로
+
+$$
+\begin{aligned}
+U(x,\,y) &= \dfrac{-qQ}{4\pi\epsilon_0a} \left[2\sqrt{2} + \dfrac{\sqrt{2}(x^2+y^2)}{4}\right]
+\end{aligned}
+$$
+
+이다. 따라서 unstable 하다.
+
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part2_purcell_1_6}
+#### 평행상태의 포텐셜 에너지 0 (Purcell 1.6)
+</br>
+![그림](../images/Electromagnetism/electrostatics/exr_purcell_1_6/figure.png){#fig-part2_exr_purcell_1_6 width=250}
+
+($a$) 위의 그림 ($a$) 처럼 2개의 전하 $q$ 가 각각 전하 $Q$ 와 $d$ 의 거리를 두고 배치되어 있다. 이 시스템이 평행상태가 되려면 $Q$ 값이 어때야 하는가? 
+
+($b$) 그림 ($b$) 같은 전하 배치에 대해 같은 질문에 대해 답하라.
+
+($c$) 위의 두 경우 총 포텐셜 에너지가 $0$ 임으르 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+($a$) 왼쪽 전하에 가해지는 힘 $F_1$, $Q$ 에 가해지는 힘 $F_Q$,  오른쪽 전하에 가하지는 힘 $F_2$ 는 각각 다음과 같다.
+
+$$
+\begin{aligned}
+F_1 &= \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{qQ}{d^2} + \dfrac{q^2}{4d^2}\right] \\[0.3em]
+F_Q &= \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{qQ}{d^2} - \dfrac{qQ}{d^2}\right] = 0 \\[0.3em]
+F_2 &= - F_1
+\end{aligned}
+$$
+
+따라서 $Q=-\dfrac{q}{4}$ 이어야 한다.
+
+($b$) $Q$ 에 가해지는 힘은 $0$ 이며 대칭을 생각하면 하나에 가해지는 힘만을 생각하면 된다. 맨 위의 전하에 가해지는 힘 $\bf{F}$ 는
+
+$$
+\bf{F}= \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{qQ}{d^2}+ \sqrt{3}\dfrac{q^2}{3d^2}\right]
+$$
+
+이므로 $Q=- \dfrac{q}{\sqrt{3}}$ 이다.
+
+($c$) ($a$) 의 경우 포텐셜 에너지 $U_a$ 는
+
+$$
+U_a = \dfrac{1}{4\pi \epsilon_0} \left[\dfrac{q^2}{2d} + 2\times \dfrac{qQ}{d}\right] = 0.
+$$
+
+($b$) 의 경우 포텐셜 에너지 $U_b$ 는
+
+$$
+U_b = \dfrac{1}{4\pi\epsilon_0} \left[3\times \dfrac{q^2}{\sqrt{3}d}  + 3 \times \dfrac{qQ}{d}\right]=0.
+$$
+
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part2_purcell_1_7}
+#### 2차원 격자에서의 포텐셜 에너지 (Purcell 1.7)
+</br>
+
+정사각형으로 구성된 무한한 2차원 이온 결정구조를 생각하자. 정사각형의 한 변의 길이는 $a$ 이며 각 격자점마다 번갈아가며 전하 크기 $e$ 인 이온이 그 부호를 바꿔가며 배치되어 있다. 이온당 포텐셜 에너지를 계산하라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+전체 포텐셜 에너지 $U$ 는 @eq-part1_electrosttic_potential_energy_1 에 주어져 있다. 한 입자에 대한 포텐셜 에너지는 그 입자를 원점으로 놓고 계산하면 된다. 
+
+$$
+U_{\text{1-ion}} = \dfrac{1}{2} \sum_{i,\,j=-\infty,\, (i,\,j)\ne (0,\,0)}^\infty \dfrac{1}{4\pi\epsilon_0} \dfrac{e^2(-1)^{i+j}}{\sqrt{i^2+j^2}a} = \dfrac{e^2}{4\pi\epsilon_0 a }\left[\sum_{i,\,j=-\infty,\, (i,\,j)\ne (0,\,0)}^\infty\dfrac{1}{2}\dfrac{(-1)^{i+j}}{\sqrt{i^2+j^2}a} \right]
+$$
+
+여기서 $[\cdots]$ 부분을 계산하는 Julia 코드는 다음과 같다. 
+
+
+```julia
+function calc_potential_per_ion(M::Integer)
+    U = 0.0
+    for i in -M:1:M, j ∈ -M:1:M
+        if (i, j) == (0, 0)
+            U += 0
+        elseif iseven(i+j)
+            U += 1/sqrt(i^2+j^2)/2
+        else 
+            U -=1/sqrt(i^2+j^2)/2
+        end
+    end
+    return U
+end
+
+M = [1, 3, 5, 10, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 50000]
+P = calc_potential_per_ion.(M)
+```
+
+그 결과는 아래와 같다.
+
+![결과](../images/Electromagnetism/electrostatics/exr_purcell_1_7/result.png){#fig-part2_exr_purcell_1_7_result width=400}
+
+즉
+
+$$
+U_{\text{1-ion}}= -0.807764 \times \dfrac{e^2}{4\pi \epsilon_0 a}
+$$
+
+이다. 
+
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part2_purcell_1_37}
+#### 모서리에서의 힘이 0. (Purcell 1.37)
+</br>
+($a$) 정사각형의 네 모서리에 전하 $q$ 가 위치한다. 정하각형의 중앙에 크기가 $Q$ 이고 사인이 반대인 전하가 위치한다. 각 네 모서리의 힘이 $0$ 이 되려면 $Q$ 는 어떤 값이어야 하는가?
+
+($b$) ($a$) 에서의 $Q$ 값에 대해 @exr-part2_purcell_1_6 에서와 같이 시스템의 포텐셜 에너지가 $0$ 임을 보여라. 
+
+:::
+
+</div> </br>
+
+::: {.solution}
+
+각각 $P_1=(a,\,a)$, $P_2=(a,\,-a)$, $P_3=(-a,\,a)$, $P_4=(-a,\,-a)$ 에 전하 $q$ 가 위치한다고 하고 $-Q$ 가 원점에 위치한다고 하자. 
+
+$P_1$ 에 가해지는 힘 $\bf{F}_1$ 은
+
+$$
+\begin{aligned}
+\bf{F}_1 &= \dfrac{1}{4\pi \epsilon_0} \left[\dfrac{(0, 2aq^2)}{8a^3} + \dfrac{(2aq^2, 0)}{8a^2} + \dfrac{(2aq^2, 2aq^2)}{16\sqrt{2}a^3} - \dfrac{(aqQ, aqQ)}{2\sqrt{2}a^3}\right] \\[0.3em]
+&= \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{(2aq^2(1+2\sqrt{2})-8aqQ, (2aq^2(1+2\sqrt{2})-8aqQ)}{16\sqrt{2}a^3}\right]
+\end{aligned}
+$$
+
+이므로 $Q=\dfrac{1+2\sqrt{2}}{4}q$ 이면 $\bf{F}_1=\bf{0}$ 이며 다른 전하에 가해지는 힘도 마찬가지이다.
+
+($b$) 
+
+$$
+\begin{aligned}
+U&=\dfrac{1}{4\pi\epsilon_0} \left[4 \times \dfrac{q^2}{2a}  +  2 \times \dfrac{q^2}{2\sqrt{2}a} -4 \times \dfrac{qQ}{\sqrt{2}a}\right] \\[0.3em]
+&=\dfrac{1}{4\pi\epsilon_0}\dfrac{((4\sqrt{2}+2)q-8Q)q}{2\sqrt{2}a} = 0
+\end{aligned}
+$$
+
+:::

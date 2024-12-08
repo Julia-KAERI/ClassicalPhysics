@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -798,13 +832,250 @@ U &amp;= \dfrac{\epsilon_0}{2} \left[\int_{\text{in sphere}} E_{\text{in}}^2 \, 
 <p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span></p>
-<div id="fig_part2_purcell_1_2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="../images/Electromagnetism/electrostatics/exr_purcell_1_2/purcell1_2.png" class="img-fluid figure-img" width="200"></p>
-<figcaption>그림</figcaption>
+<div id="fig-part2_purcell_1_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-part2_purcell_1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Electromagnetism/electrostatics/exr_purcell_1_2/purcell_1_2.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-part2_purcell_1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;7.9: 그림
+</figcaption>
 </figure>
 </div>
-<p>위의 그림과같은 전하 배치를 생각하자. 전하는 원점을 중심으로 하는 정삼각형에 위치해 있으며 대칭축은 <span class="math inline">\(y\)</span> 축이다.</p>
+<p>위의 그림과같은 전하 배치를 생각하자. 전하는 원점을 중심으로 하는 정삼각형에 위치해 있으며 대칭축은 <span class="math inline">\(y\)</span> 축이다. <span class="math inline">\(y\)</span> 축상의 점 <span class="math inline">\((0,\,y)\)</span> 에서는 전기장의 <span class="math inline">\(x\)</span> 방향 성분이 <span class="math inline">\(0\)</span> 이므로 전기장의 <span class="math inline">\(y\)</span> 방향 성분만을 고려하면 된다. 그리고 일단 세 점에 의한 삼각형 내부에서는 전기장이 <span class="math inline">\(0\)</span> 이 되는 점이 존재하지 않느다. <span class="math inline">\(E_y(x,\,y)\)</span> 는 삼각형 내부에서 항상 양수임을 알 수 있다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+{E}_y(0,\,y) &amp;= \dfrac{1}{4\pi \epsilon_0} \left[\dfrac{-e(y-1)}{|y-1|^{3/2}} + \dfrac{e (y+1/2)}{(3/4 + (y+1/2))^{3/2}}+ \dfrac{e (y+1/2)}{(3/4 + (y+1/2))^{3/2}}\right]
+\end{aligned}
+\]</span></p>
+<p>이며 이것이 <span class="math inline">\(0\)</span> 이 되는 <span class="math inline">\(y\)</span> 는</p>
+<p><span class="math display">\[
+0 = \dfrac{1}{(y-1)^2} + \dfrac{2(y+1/2)}{(3/4 + (y+1/2))^{3/2}}
+\]</span></p>
+<p>이며 <span class="math inline">\(y\approx -0.62669\)</span> 와 <span class="math inline">\(y \approx 4.873241\)</span> 에서 전기장이 <span class="math inline">\(0\)</span> 이 된다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-part2_purcell_1_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.3 (콘의 꼭지점 (Purcell 1.3))</strong></span> <br> <strong>Force from a cone </strong> (<span class="math inline">\(a\)</span>) 아이스크림에서 아이스크림을 뺀 속이 빈 콘 의 꼭지점에 전하 <span class="math inline">\(q\)</span> 가 있으며 콘의 표면 전하 밀도는 <span class="math inline">\(\sigma\)</span> 이다. 콘의 경사의 길이는 <span class="math inline">\(L\)</span> 이고 경사의 반각은 <span class="math inline">\(\theta\)</span> 일 때 이 콘에 의해 전하 <span class="math inline">\(q\)</span> 에 가해지는 힘에 대해 무엇을 말할 수 있는가?</p>
+<p>(<span class="math inline">\(b\)</span>) 아래 그림과 같이 콘에서 꼭지점 쪽의 경사의 반이 사라졌을 때 전하 <span class="math inline">\(q\)</span> 가 받는 힘은 얼마인가? <span class="math inline">\(\theta\)</span> 가 얼마 일 때 받는 힘이 최대가 되는가?</p>
+<div id="fig-part2_purcell_1_3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-part2_purcell_1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Electromagnetism/electrostatics/exr_purcell_1_3/figure.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-part2_purcell_1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;7.10: 그림
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span></p>
+<div id="fig-part2_purcell_1_2_solution" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-part2_purcell_1_2_solution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Electromagnetism/electrostatics/exr_purcell_1_3/problem_1_3.png" class="img-fluid figure-img" width="500">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-part2_purcell_1_2_solution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;7.11: 그림
+</figcaption>
+</figure>
+</div>
+<p>(<span class="math inline">\(a\)</span>) 위의 그림과 같이 정의하자. <span class="math inline">\(z\)</span> 가 <span class="math inline">\(0\)</span> 부터 <span class="math inline">\(L\cos \theta\)</span> 까지 변화하며, <span class="math inline">\(z\)</span> 와 <span class="math inline">\(z+dz\)</span> 사이의 부분 전하에 의한 전기장을 생각하자. 대칭에 의해 <span class="math inline">\(\hat{z}\)</span> 성분 이외는 상쇄되므로, <span class="math display">\[
+\begin{aligned}
+dE_z &amp;= \dfrac{1}{4 \pi \epsilon_0} \dfrac{dq}{z^2/\cos^2\theta } = \dfrac{\sigma}{4 \pi \epsilon_0}\dfrac{2 \pi z \tan \theta dz}{z^2/\cos^2 \theta} = \dfrac{\sigma}{4\epsilon_0}\dfrac{\sin (2\theta)}{z}\, dz
+\end{aligned}
+\]</span></p>
+<p>이다. 즉,</p>
+<p><span class="math display">\[
+F_z = \dfrac{q\sigma \sin (2\theta)}{4\epsilon_0} \int_{z_i}^{z_f} \dfrac{dz}{z} = \dfrac{q\sigma \sin (2\theta)}{4\epsilon_0} \ln \left(\dfrac{z_f}{z_i}\right)
+\]</span></p>
+<p>이다. <span class="math inline">\(z=0\)</span> 부터 적분하면 발산한다.</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(z=\left( \dfrac{L}{2}\cos \theta,\, L\cos \theta\right)\)</span> 구간에서 적분하면,</p>
+<p><span class="math display">\[
+F_z = \dfrac{q\sigma \sin (2\theta)}{4\epsilon_0}\ln 2
+\]</span></p>
+<p>이다. <span class="math inline">\(F_z\)</span> 는 <span class="math inline">\(2\theta = \dfrac{\pi}{2}\)</span> 일 때 이므로, <span class="math inline">\(\theta = \dfrac{\pi}{4}\)</span> 일 때 최대가 된다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-part2_purcell_1_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.4 (직사각형을 위한 일(Purcell 1.4))</strong></span> <br></p>
+<p>두 양성자와 전자가 변의 길이가 <span class="math inline">\(a,\,b\)</span> 인 직사각형의 꼭지점에 위치한다. 본질적으로 두개의 배치가 있을 수 있다. 네 전하가 무한히 멀리 떨어져 있는 데서 시작하여 이 시스템이 이 이루어 지는데 필요한 일을 계산하라. 두가지 배치중에 일이 양수인 경우가 있는가? 그렇다면 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 의 관계는 어떠한가?</p>
+</div>
+</div>
+<p><br></p>
+<div class="soltion">
+<p>아래와 같은 두가지 배치를 생각 할 수 있다.</p>
+<div id="fig-part2_purcell_exercise_1_4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-part2_purcell_exercise_1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Electromagnetism/electrostatics/exr_purcell_1_4/problem_1-4.png" class="img-fluid figure-img" width="500">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-part2_purcell_exercise_1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;7.12: Purcell exercise 1.4. 빨간색 점은 양전하, 파란색 점은 음전하를 의미한다.
+</figcaption>
+</figure>
+</div>
+<p><span class="math display">\[
+\begin{aligned}
+U_1 &amp;= \dfrac{e^2}{4\pi\epsilon_0} \left(\dfrac{2}{b} - \dfrac{2}{a} - \dfrac{2}{\sqrt{a^2+b^2}}\right) \\
+U_2 &amp;= \dfrac{e^2}{4\pi\epsilon_0} \left( -\dfrac{2}{b} - \dfrac{2}{a} + \dfrac{2}{\sqrt{a^2+b^2}} \right)
+\end{aligned}
+\]</span></p>
+<p>이다. <span class="math inline">\(U_2\)</span> 의 경우,</p>
+<p><span class="math display">\[
+U_2 = \dfrac{e^2}{4\pi\epsilon_0} \dfrac{1}{ab\sqrt{a^2+b^2}} ( ab-a\sqrt{a^2+b^2}-b\sqrt{a^2+b^2})
+\]</span></p>
+<p>이며 <span class="math inline">\(\sqrt{a^2+b^2}&gt;a,\, \sqrt{a^2+b^2}&gt;b\)</span> 이므로 어떤 <span class="math inline">\(a,\,b\in \mathbb{R}\)</span> 에 대해서도 <span class="math inline">\(U_2&lt;0\)</span> 이다.</p>
+<p><span class="math inline">\(U_1=0\)</span> 이려면,</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;a\sqrt{a^2+b^2} = b\sqrt{a^2+b^2}+ab \qquad &amp; ;x=\dfrac{b}{a}\\
+\implies &amp; \sqrt{1+x^2}= \dfrac{x}{1-x}
+\end{aligned}
+\]</span></p>
+<p>이며 수치해석적으로 이 값을 구하면, <span class="math inline">\(b=0.531 \times a\)</span> 이다. (교재에의 solution 에는 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 가 바뀌어져 나온다.)</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-part2_purcell_1_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.5 (Stable or Unstable? (Purcell 1.5))</strong></span> <br></p>
+<p><a href="#exr-part2_purcell_1_37" class="quarto-xref">연습문제&nbsp;<span>7.8</span></a> 과 같은 조건에서 중심 위치에서의 포텐셜은 stable 한가 unstable 한가? (Pucell 의 나머지 설명은 이미 아는 것이므로 생략한다.)</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>전하 <span class="math inline">\(-Q\)</span> 가 원점 근처의 <span class="math inline">\(x,\,y\)</span> 에 위치했을 때의 에너지는 <span class="math inline">\(Q\)</span> 를 포함하는 에너지를 제외하면 모두 상수이므로 여기서는 생각하지 않아도 된다. 따라서,</p>
+<p><span class="math display">\[
+\begin{aligned}
+U(x,\,y) &amp;= \dfrac{-qQ}{4\pi\epsilon_0} \left[\dfrac{1}{\sqrt{(a-x)^2+(a-y)^2}} + \dfrac{1}{\sqrt{(a+x)^2+(a-y)^2}} \right. \\[0.3em]
+&amp;\qquad + \left.\dfrac{1}{\sqrt{(a-x)^2+(a+y)^2}}+\dfrac{1}{\sqrt{(a+x)^2+(a+y)^2}}\right] \\[0.3em]
+\end{aligned}
+\]</span></p>
+<p>여기서 series expansion 을 사용하면 <span class="math inline">\((x,\,y)\approx (0,\,0)\)</span> 에서</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac{1}{\sqrt{(a-x)^2+(a-y)^2}} \approx \dfrac{1}{\sqrt{2}a} + \dfrac{x}{2\sqrt{2}a^2} + \dfrac{y}{2\sqrt{2}a^2}+\dfrac{x^2}{8\sqrt{2}a^3}+\dfrac{y^2}{8\sqrt{2}a^3} + \dfrac{3xy}{8\sqrt{2}a^3}
+\end{aligned}
+\]</span></p>
+<p>이므로</p>
+<p><span class="math display">\[
+\begin{aligned}
+U(x,\,y) &amp;= \dfrac{-qQ}{4\pi\epsilon_0a} \left[2\sqrt{2} + \dfrac{\sqrt{2}(x^2+y^2)}{4}\right]
+\end{aligned}
+\]</span></p>
+<p>이다. 따라서 unstable 하다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-part2_purcell_1_6" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.6 (평행상태의 포텐셜 에너지 0 (Purcell 1.6))</strong></span> <br> <img src="../images/Electromagnetism/electrostatics/exr_purcell_1_6/figure.png" id="fig-part2_exr_purcell_1_6" class="img-fluid" width="250" alt="그림"></p>
+<p>(<span class="math inline">\(a\)</span>) 위의 그림 (<span class="math inline">\(a\)</span>) 처럼 2개의 전하 <span class="math inline">\(q\)</span> 가 각각 전하 <span class="math inline">\(Q\)</span> 와 <span class="math inline">\(d\)</span> 의 거리를 두고 배치되어 있다. 이 시스템이 평행상태가 되려면 <span class="math inline">\(Q\)</span> 값이 어때야 하는가?</p>
+<p>(<span class="math inline">\(b\)</span>) 그림 (<span class="math inline">\(b\)</span>) 같은 전하 배치에 대해 같은 질문에 대해 답하라.</p>
+<p>(<span class="math inline">\(c\)</span>) 위의 두 경우 총 포텐셜 에너지가 <span class="math inline">\(0\)</span> 임으르 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 왼쪽 전하에 가해지는 힘 <span class="math inline">\(F_1\)</span>, <span class="math inline">\(Q\)</span> 에 가해지는 힘 <span class="math inline">\(F_Q\)</span>, 오른쪽 전하에 가하지는 힘 <span class="math inline">\(F_2\)</span> 는 각각 다음과 같다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+F_1 &amp;= \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{qQ}{d^2} + \dfrac{q^2}{4d^2}\right] \\[0.3em]
+F_Q &amp;= \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{qQ}{d^2} - \dfrac{qQ}{d^2}\right] = 0 \\[0.3em]
+F_2 &amp;= - F_1
+\end{aligned}
+\]</span></p>
+<p>따라서 <span class="math inline">\(Q=-\dfrac{q}{4}\)</span> 이어야 한다.</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(Q\)</span> 에 가해지는 힘은 <span class="math inline">\(0\)</span> 이며 대칭을 생각하면 하나에 가해지는 힘만을 생각하면 된다. 맨 위의 전하에 가해지는 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 는</p>
+<p><span class="math display">\[
+\boldsymbol{F}= \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{qQ}{d^2}+ \sqrt{3}\dfrac{q^2}{3d^2}\right]
+\]</span></p>
+<p>이므로 <span class="math inline">\(Q=- \dfrac{q}{\sqrt{3}}\)</span> 이다.</p>
+<p>(<span class="math inline">\(c\)</span>) (<span class="math inline">\(a\)</span>) 의 경우 포텐셜 에너지 <span class="math inline">\(U_a\)</span> 는</p>
+<p><span class="math display">\[
+U_a = \dfrac{1}{4\pi \epsilon_0} \left[\dfrac{q^2}{2d} + 2\times \dfrac{qQ}{d}\right] = 0.
+\]</span></p>
+<p>(<span class="math inline">\(b\)</span>) 의 경우 포텐셜 에너지 <span class="math inline">\(U_b\)</span> 는</p>
+<p><span class="math display">\[
+U_b = \dfrac{1}{4\pi\epsilon_0} \left[3\times \dfrac{q^2}{\sqrt{3}d}  + 3 \times \dfrac{qQ}{d}\right]=0.
+\]</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-part2_purcell_1_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.7 (2차원 격자에서의 포텐셜 에너지 (Purcell 1.7))</strong></span> <br></p>
+<p>정사각형으로 구성된 무한한 2차원 이온 결정구조를 생각하자. 정사각형의 한 변의 길이는 <span class="math inline">\(a\)</span> 이며 각 격자점마다 번갈아가며 전하 크기 <span class="math inline">\(e\)</span> 인 이온이 그 부호를 바꿔가며 배치되어 있다. 이온당 포텐셜 에너지를 계산하라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>전체 포텐셜 에너지 <span class="math inline">\(U\)</span> 는 <a href="#eq-part1_electrosttic_potential_energy_1" class="quarto-xref">식&nbsp;<span>7.4</span></a> 에 주어져 있다. 한 입자에 대한 포텐셜 에너지는 그 입자를 원점으로 놓고 계산하면 된다.</p>
+<p><span class="math display">\[
+U_{\text{1-ion}} = \dfrac{1}{2} \sum_{i,\,j=-\infty,\, (i,\,j)\ne (0,\,0)}^\infty \dfrac{1}{4\pi\epsilon_0} \dfrac{e^2(-1)^{i+j}}{\sqrt{i^2+j^2}a} = \dfrac{e^2}{4\pi\epsilon_0 a }\left[\sum_{i,\,j=-\infty,\, (i,\,j)\ne (0,\,0)}^\infty\dfrac{1}{2}\dfrac{(-1)^{i+j}}{\sqrt{i^2+j^2}a} \right]
+\]</span></p>
+<p>여기서 <span class="math inline">\([\cdots]\)</span> 부분을 계산하는 Julia 코드는 다음과 같다.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">calc_potential_per_ion</span>(M<span class="op">::</span><span class="dt">Integer</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    U <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="op">-</span>M<span class="op">:</span><span class="fl">1</span><span class="op">:</span>M, j <span class="op">∈</span> <span class="op">-</span>M<span class="op">:</span><span class="fl">1</span><span class="op">:</span>M</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (i, j) <span class="op">==</span> (<span class="fl">0</span>, <span class="fl">0</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            U <span class="op">+=</span> <span class="fl">0</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elseif</span> <span class="fu">iseven</span>(i<span class="op">+</span>j)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            U <span class="op">+=</span> <span class="fl">1</span><span class="op">/</span><span class="fu">sqrt</span>(i<span class="op">^</span><span class="fl">2</span><span class="op">+</span>j<span class="op">^</span><span class="fl">2</span>)<span class="op">/</span><span class="fl">2</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            U <span class="op">-=</span><span class="fl">1</span><span class="op">/</span><span class="fu">sqrt</span>(i<span class="op">^</span><span class="fl">2</span><span class="op">+</span>j<span class="op">^</span><span class="fl">2</span>)<span class="op">/</span><span class="fl">2</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> U</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>M <span class="op">=</span> [<span class="fl">1</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">10</span>, <span class="fl">50</span>, <span class="fl">100</span>, <span class="fl">200</span>, <span class="fl">500</span>, <span class="fl">1000</span>, <span class="fl">2000</span>, <span class="fl">5000</span>, <span class="fl">10000</span>, <span class="fl">50000</span>]</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> <span class="fu">calc_potential_per_ion</span>.(M)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>그 결과는 아래와 같다.</p>
+<div id="fig-part2_exr_purcell_1_7_result" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-part2_exr_purcell_1_7_result-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Electromagnetism/electrostatics/exr_purcell_1_7/result.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-part2_exr_purcell_1_7_result-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;7.13: 결과
+</figcaption>
+</figure>
+</div>
+<p>즉</p>
+<p><span class="math display">\[
+U_{\text{1-ion}}= -0.807764 \times \dfrac{e^2}{4\pi \epsilon_0 a}
+\]</span></p>
+<p>이다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-part2_purcell_1_37" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.8 (모서리에서의 힘이 0. (Purcell 1.37))</strong></span> <br> (<span class="math inline">\(a\)</span>) 정사각형의 네 모서리에 전하 <span class="math inline">\(q\)</span> 가 위치한다. 정하각형의 중앙에 크기가 <span class="math inline">\(Q\)</span> 이고 사인이 반대인 전하가 위치한다. 각 네 모서리의 힘이 <span class="math inline">\(0\)</span> 이 되려면 <span class="math inline">\(Q\)</span> 는 어떤 값이어야 하는가?</p>
+<p>(<span class="math inline">\(b\)</span>) (<span class="math inline">\(a\)</span>) 에서의 <span class="math inline">\(Q\)</span> 값에 대해 <a href="#exr-part2_purcell_1_6" class="quarto-xref">연습문제&nbsp;<span>7.6</span></a> 에서와 같이 시스템의 포텐셜 에너지가 <span class="math inline">\(0\)</span> 임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>각각 <span class="math inline">\(P_1=(a,\,a)\)</span>, <span class="math inline">\(P_2=(a,\,-a)\)</span>, <span class="math inline">\(P_3=(-a,\,a)\)</span>, <span class="math inline">\(P_4=(-a,\,-a)\)</span> 에 전하 <span class="math inline">\(q\)</span> 가 위치한다고 하고 <span class="math inline">\(-Q\)</span> 가 원점에 위치한다고 하자.</p>
+<p><span class="math inline">\(P_1\)</span> 에 가해지는 힘 <span class="math inline">\(\boldsymbol{F}_1\)</span> 은</p>
+<p><span class="math display">\[
+\begin{aligned}
+\boldsymbol{F}_1 &amp;= \dfrac{1}{4\pi \epsilon_0} \left[\dfrac{(0, 2aq^2)}{8a^3} + \dfrac{(2aq^2, 0)}{8a^2} + \dfrac{(2aq^2, 2aq^2)}{16\sqrt{2}a^3} - \dfrac{(aqQ, aqQ)}{2\sqrt{2}a^3}\right] \\[0.3em]
+&amp;= \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{(2aq^2(1+2\sqrt{2})-8aqQ, (2aq^2(1+2\sqrt{2})-8aqQ)}{16\sqrt{2}a^3}\right]
+\end{aligned}
+\]</span></p>
+<p>이므로 <span class="math inline">\(Q=\dfrac{1+2\sqrt{2}}{4}q\)</span> 이면 <span class="math inline">\(\boldsymbol{F}_1=\boldsymbol{0}\)</span> 이며 다른 전하에 가해지는 힘도 마찬가지이다.</p>
+<p>(<span class="math inline">\(b\)</span>)</p>
+<p><span class="math display">\[
+\begin{aligned}
+U&amp;=\dfrac{1}{4\pi\epsilon_0} \left[4 \times \dfrac{q^2}{2a}  +  2 \times \dfrac{q^2}{2\sqrt{2}a} -4 \times \dfrac{qQ}{\sqrt{2}a}\right] \\[0.3em]
+&amp;=\dfrac{1}{4\pi\epsilon_0}\dfrac{((4\sqrt{2}+2)q-8Q)q}{2\sqrt{2}a} = 0
+\end{aligned}
+\]</span></p>
 </div>
 
 
