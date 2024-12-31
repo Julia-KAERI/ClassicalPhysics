@@ -6,16 +6,9 @@ crossref:
   chapters: true
 ---
 
+</br>
 
-```{r, engine = 'tikz'}
-#| code-fold: true
-
-\begin{tikzpicture} 
-\end{tikzpicture}
-```
-
-
-```{tex}
+```{.tex}
 documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \begin{document}
@@ -38,7 +31,9 @@ documentclass[border=3pt,tikz]{standalone}
 
 ![특수상대성 이론에서의 관성계](relativity/reference_frame/reference_frame.png){width=350}
 
-```{tex}
+</br>
+
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \begin{document}
@@ -54,7 +49,10 @@ documentclass[border=3pt,tikz]{standalone}
 
 ![세계선](relativity/worldline/worldline.png){width=300}
 
-```{tex}
+
+</br>
+
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \begin{document}
@@ -81,7 +79,7 @@ documentclass[border=3pt,tikz]{standalone}
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \begin{document}
@@ -98,7 +96,7 @@ documentclass[border=3pt,tikz]{standalone}
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \begin{document}
@@ -120,7 +118,7 @@ documentclass[border=3pt,tikz]{standalone}
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \begin{document}
@@ -142,7 +140,7 @@ documentclass[border=3pt,tikz]{standalone}
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \begin{document}
@@ -163,7 +161,7 @@ documentclass[border=3pt,tikz]{standalone}
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \begin{document}
@@ -185,9 +183,10 @@ documentclass[border=3pt,tikz]{standalone}
 ```
 
 ![쌍둥이 역설](relativity/twin_paradox/twin_paradox.png){width=250}
+
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary {arrows.meta}
@@ -245,7 +244,7 @@ documentclass[border=3pt,tikz]{standalone}
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary{arrows.meta}
@@ -277,7 +276,7 @@ documentclass[border=3pt,tikz]{standalone}
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary{arrows.meta}
@@ -315,7 +314,7 @@ documentclass[border=3pt,tikz]{standalone}
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary{arrows.meta}
@@ -353,7 +352,7 @@ documentclass[border=3pt,tikz]{standalone}
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary{arrows.meta}

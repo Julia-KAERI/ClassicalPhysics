@@ -1,0 +1,103 @@
+---
+title: "Electrostatics 2"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+:::{.callout-important icon="false"}
+
+#### 페러데이의 법칙
+$$
+\boxed{
+\begin{aligned}
+\quad\nabla \times \bf{E} = - \dfrac{\partial \bf{B}}{\partial t} \quad
+\end{aligned}
+}
+$$ {#eq-part2_faraday_law}
+
+:::
+
+
+
+</br>
+
+## 전기장에 대한 선적분과 전위차
+
+### 정전기 조건과 스토크스 정리
+
+전하 분포가 시간에 대해 변하지 않으며 외부 자기장 역시 시간에 대해 변하지 않을 때, 즉 $\dfrac{\partial \bf{B}}{\partial t}=\bf{0}$ 일 때
+
+$$
+\nabla \times \bf{E} = \bf{0}
+$$ {#eq-part2_faraday_law_2}
+
+가 성립한다. 스토크스의 정리로부터 임의의 닫힌 경로 $C$ 와 이 경로에 의해 생기는 면 $S$ 에 대해
+
+$$
+\int_S (\nabla \times \bf{E}) \bf{\cdot} d\bf{a} = \oint_{C} \bf{E\cdot} d\bf{s}
+$$
+
+임을 안다. $\nabla \times \bf{E}=\bf{0}$ 인 조건에서
+
+$$
+\oint_C \bf{E \cdot}d\bf{s} = 0
+$$
+
+이다. 우리는 이로부터 $\bf{E}$ 를 임의의 경로 $C_1$ 을 따라 $P_1$ 에서 $P_2$ 까지 적분할 때 어떤 경로를 취하든 그 값이 같다는 것을 안다. 
+
+
+</br>
+
+### 전위차
+
+이제 그 값에 $-$ 를 취한 값을 $P_1$ 과 $P_2$ 의 **전위차 (electric potential difference)** 라고 한다. 
+
+$$
+\phi_{21}:= - \int_{P_1}^{P_2} \bf{E\cdot} d\bf{s}
+$$ {#eq-part2_potential_difference}
+
+전하 $q$ 를 $P_1$ 에서 $P_2$ 로 이동시켰을 때의 일 $W$ 는
+
+$$
+W = -\int_{P_1}^{P_2} \bf{F \cdot} d\bf{s} = -\int_{P_1}^{P_2} q\bf{E \cdot} d\bf{s} = q\,\phi_{21}
+$$
+
+이다. 즉 전위차 $\phi_{21}$ 은 단위 전하를 $P_1$ 에서 $P_2$ 로 이동시킬 때 드는 에너지이다. 
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part1_potential_of_uniform_sphere_charge_distribution_}
+
+@exm-part1_charge_distribution_uniform_sphere 의 상황에서 무한히 멀리 떨어진 곳으로부터 구의 외부 혹은 내부의 한 지점까지 전위차를 구해보자. 우선 구의 중심을 원점으로 놓고, 원점으로부터 $r>R$ 까지의 전위차 $\phi_{\text{out}}(r)$ 은
+
+$$
+\phi_{\text{out}}(r) = - \int_{-\infty}^{r} E(r')\,dr' = -\int_{-\infty}^{r} \dfrac{\rho R^3}{3\epsilon_0 r'^2}\, dr' = \dfrac{\rho R^3}{3\epsilon_0 r}
+$$
+
+이며 $r \le R$ 까지의 전위차 $\phi_{\text{in}}(r)$ 은
+
+$$
+\begin{aligned}
+\phi_{\text{in}}(r) &= -\int_{-\infty}^R E(r')\,dr' -\int_{R}^r E(r')\, dr' \\
+&= -\int_{-\infty}^R \dfrac{\rho R^3}{3\epsilon_0 r'^2}\, dr' - \int_{R}^r \dfrac{\rho r'}{3\epsilon_0} dr' \\
+&= \dfrac{\rho R^2}{2\epsilon_0} - \dfrac{\rho r^2}{6\epsilon_0}
+\end{aligned}
+$$
+
+![균일한 전하 밀도를 가진 구에서의 전위차](../images/Electromagnetism/electrostatics/electrostatics_potential_uniform_sphere/electrostatics_potential_uniform_sphere.png){#fig-part2_electrosttics_potential_uniform_sphere width=450}
+
+
+:::
+
+</div></br>
+
+</br>
+
+### 전위차의 Gradient 
+

@@ -6,18 +6,9 @@ crossref:
   chapters: true
 ---
 
-```{r, engine = 'tikz'}
-#| code-fold: true
-
-\begin{tikzpicture} 
-\end{tikzpicture}
-```
 
 
-```{tex}
-#| code-fold: true
-#| code-summary: "Show the code"
-
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 %\usetikzlibrary{calc}
@@ -58,8 +49,7 @@ crossref:
 
 </br>
 
-```{tex}
-#| code-fold: true
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 %\usetikzlibrary{calc}
@@ -91,8 +81,7 @@ crossref:
 
 </br>
 
-```{tex}
-#| code-fold: true
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 %\usetikzlibrary{calc}
@@ -131,8 +120,7 @@ crossref:
 
 </br>
 
-```{tex}
-#| code-fold: true
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 %\usetikzlibrary{calc}
@@ -166,8 +154,9 @@ crossref:
 
 ![Translational Symmetry](classical%20mechanics/translational_symmetry/translational_symmetry.png){width=300}
 
-```{tex}
-#| code-fold: true
+</br>
+
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary {3d} 
@@ -208,8 +197,7 @@ crossref:
 
 </br>
 
-```{tex}
-#| code-fold: true
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary {3d} 
@@ -240,8 +228,7 @@ crossref:
 
 </br>
 
-```{tex}
-#| code-fold: true
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary{arrows}
@@ -273,8 +260,7 @@ crossref:
 
 </br>
 
-```{tex}
-#| code-fold: true
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary {3d} 
@@ -299,8 +285,7 @@ crossref:
 
 </br>
 
-```{tex}
-#| code-fold: true
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary{arrows}
@@ -332,8 +317,7 @@ crossref:
 
 </br>
 
-```{tex}
-#| code-fold: true
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary {arrows.meta}
@@ -371,8 +355,7 @@ crossref:
 
 </br>
 
-```{tex}
-#| code-fold: true
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary {arrows.meta}
@@ -401,7 +384,7 @@ crossref:
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary {arrows.meta}
@@ -430,7 +413,7 @@ crossref:
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary {arrows.meta}
@@ -463,7 +446,7 @@ crossref:
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary{arrows.meta}
@@ -538,7 +521,7 @@ crossref:
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary{arrows.meta}
@@ -580,7 +563,7 @@ crossref:
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary{arrows.meta}
@@ -605,7 +588,7 @@ crossref:
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary{arrows.meta}
@@ -632,7 +615,7 @@ crossref:
 
 </br>
 
-```{tex}
+```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
 \usetikzlibrary{arrows.meta}

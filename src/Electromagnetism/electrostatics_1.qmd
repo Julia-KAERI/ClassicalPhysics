@@ -12,8 +12,11 @@ crossref:
 
 #### 전기장에 대한 가우스 법칙
 $$
-\nabla \cdot \bf{E} = \dfrac{\rho}{\epsilon_0}
+\boxed{
+\quad\nabla \cdot \bf{E} = \dfrac{\rho}{\epsilon_0} \quad
+}
 $$ {#eq-part2_gauss_law}
+
 :::
 
 </br>
