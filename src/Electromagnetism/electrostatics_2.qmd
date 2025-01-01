@@ -58,7 +58,7 @@ $$
 
 $$
 \phi_{21}:= - \int_{P_1}^{P_2} \bf{E\cdot} d\bf{s}
-$$ {#eq-part2_potential_difference}
+$$ {#eq-part2_potential_difference_from_electric_field}
 
 전하 $q$ 를 $P_1$ 에서 $P_2$ 로 이동시켰을 때의 일 $W$ 는
 
@@ -101,3 +101,24 @@ $$
 
 ### 전위차의 Gradient 
 
+지금까지 전위차는 전기장 $\bf{E}$ 에 대한 경로적분으로 주어졌다. 그러나 거꾸로 전위차를 알 때 전기장을 구할 수 있다. @eq-part2_potential_difference_from_electric_field 로부터,
+
+$$
+\bf{E}(\bf{r}) = -\nabla \phi (\bf{r})
+$$ {#eq-part2_electric_field_from_potential}
+
+임을 안다. 또한 @eq-part2_electric_field_due_to_charge_distribution 와 
+
+$$
+\nabla_{\bf{r}} \left(\dfrac{1}{\|\bf{r}-\bf{r}'\|}\right) = - \dfrac{\bf{r}-\bf{r}'}{\|\bf{r}-\bf{r}'\|^3}
+$$ {#eq-part2_gradient_of_inverse_of_distance}
+
+로부터,
+
+$$
+\begin{aligned}
+\nabla_{\bf{r}}\phi(\bf{r}) &= -\dfrac{1}{4\pi \epsilon_0}\int_V \dfrac{\rho(\bf{r}')(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3}d^3\bf{r}' = \nabla_{\bf{r}} \left(\dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}d^3\bf{r}'\right)
+\end{aligned}
+$$
+
+을 얻는다. 우리는 두 함수 $\nabla f(\bf{r}) = \nabla g(\bf{r})$ 일 때 $f(\bf{r})- g(\bf{r})= \text{constant}$ 임을 안다. 

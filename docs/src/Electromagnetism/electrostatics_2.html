@@ -413,7 +413,7 @@ window.Quarto = {
 <section id="전위차" class="level3" data-number="8.1.2">
 <h3 data-number="8.1.2" class="anchored" data-anchor-id="전위차"><span class="header-section-number">8.1.2</span> 전위차</h3>
 <p>이제 그 값에 <span class="math inline">\(-\)</span> 를 취한 값을 <span class="math inline">\(P_1\)</span> 과 <span class="math inline">\(P_2\)</span> 의 <strong>전위차 (electric potential difference)</strong> 라고 한다.</p>
-<p><span id="eq-part2_potential_difference"><span class="math display">\[
+<p><span id="eq-part2_potential_difference_from_electric_field"><span class="math display">\[
 \phi_{21}:= - \int_{P_1}^{P_2} \boldsymbol{E\cdot} d\boldsymbol{s}
 \tag{8.3}\]</span></span></p>
 <p>전하 <span class="math inline">\(q\)</span> 를 <span class="math inline">\(P_1\)</span> 에서 <span class="math inline">\(P_2\)</span> 로 이동시켰을 때의 일 <span class="math inline">\(W\)</span> 는</p>
@@ -453,6 +453,21 @@ W = -\int_{P_1}^{P_2} \boldsymbol{F \cdot} d\boldsymbol{s} = -\int_{P_1}^{P_2} q
 </section>
 <section id="전위차의-gradient" class="level3" data-number="8.1.3">
 <h3 data-number="8.1.3" class="anchored" data-anchor-id="전위차의-gradient"><span class="header-section-number">8.1.3</span> 전위차의 Gradient</h3>
+<p>지금까지 전위차는 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 에 대한 경로적분으로 주어졌다. 그러나 거꾸로 전위차를 알 때 전기장을 구할 수 있다. <a href="#eq-part2_potential_difference_from_electric_field" class="quarto-xref">식&nbsp;<span>8.3</span></a> 로부터,</p>
+<p><span id="eq-part2_electric_field_from_potential"><span class="math display">\[
+\boldsymbol{E}(\boldsymbol{r}) = -\nabla \phi (\boldsymbol{r})
+\tag{8.4}\]</span></span></p>
+<p>임을 안다. 또한 <a href="electrostatics_1.html#eq-part2_electric_field_due_to_charge_distribution" class="quarto-xref">식&nbsp;<span>7.5</span></a> 와</p>
+<p><span id="eq-part2_gradient_of_inverse_of_distance"><span class="math display">\[
+\nabla_{\boldsymbol{r}} \left(\dfrac{1}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\right) = - \dfrac{\boldsymbol{r}-\boldsymbol{r}'}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3}
+\tag{8.5}\]</span></span></p>
+<p>로부터,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\nabla_{\boldsymbol{r}}\phi(\boldsymbol{r}) &amp;= -\dfrac{1}{4\pi \epsilon_0}\int_V \dfrac{\rho(\boldsymbol{r}')(\boldsymbol{r}-\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3}d^3\boldsymbol{r}' = \nabla_{\boldsymbol{r}} \left(\dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}d^3\boldsymbol{r}'\right)
+\end{aligned}
+\]</span></p>
+<p>을 얻는다. 우리는 두 함수 <span class="math inline">\(\nabla f(\boldsymbol{r}) = \nabla g(\boldsymbol{r})\)</span> 일 때 <span class="math inline">\(f(\boldsymbol{r})- g(\boldsymbol{r})= \text{constant}\)</span> 임을 안다.</p>
 
 
 </section>
