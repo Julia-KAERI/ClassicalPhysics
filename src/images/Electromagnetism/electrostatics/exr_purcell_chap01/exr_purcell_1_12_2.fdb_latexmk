@@ -1,13 +1,13 @@
 # Fdb version 4
-["pdflatex"] 1735719388 "/Users/jiyongso/Documents/Projects/ClassicalMechanics/src/images/Electromagnetism/electrostatics/exr_purcell_1_2/exr_purcell_1_2.tex" "exr_purcell_1_2.pdf" "exr_purcell_1_2" 1735719389 0
-  "/Users/jiyongso/Documents/Projects/ClassicalMechanics/src/images/Electromagnetism/electrostatics/exr_purcell_1_2/exr_purcell_1_2.tex" 1733547434 878 c35261980a53caf90145ca2a06407a74 ""
-  "/dev/null" 1735719388 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1735887743 "/Users/jiyongso/Documents/Projects/ClassicalMechanics/src/images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_12_2.tex" "exr_purcell_1_12_2.pdf" "exr_purcell_1_12_2" 1735887744 0
+  "/Users/jiyongso/Documents/Projects/ClassicalMechanics/src/images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_12_2.tex" 1735887743 767 ffbb19d2a94506ecda56f61a2c2b433c ""
+  "/dev/null" 1735887743 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
-  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
-  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
@@ -114,10 +114,10 @@
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1688180853 7883464 d57d5cc84d616d37fd126c42e853bbc9 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "/usr/local/texlive/texmf-local/web2c/texmf.cnf" 1654406346 73 d7d431d574bcc3da163525eacf5f12b1 ""
-  "exr_purcell_1_2.aux" 1735719388 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "exr_purcell_1_2.tex" 1733547434 878 c35261980a53caf90145ca2a06407a74 ""
+  "exr_purcell_1_12_2.aux" 1735887744 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "exr_purcell_1_12_2.tex" 1735887743 767 ffbb19d2a94506ecda56f61a2c2b433c ""
   (generated)
-  "exr_purcell_1_2.aux"
-  "exr_purcell_1_2.log"
-  "exr_purcell_1_2.pdf"
+  "exr_purcell_1_12_2.aux"
+  "exr_purcell_1_12_2.log"
+  "exr_purcell_1_12_2.pdf"
   (rewritten before read)
