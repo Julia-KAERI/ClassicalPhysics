@@ -352,6 +352,13 @@ window.Quarto = {
   <li><a href="#정전기-조건과-스토크스-정리" id="toc-정전기-조건과-스토크스-정리" class="nav-link" data-scroll-target="#정전기-조건과-스토크스-정리"><span class="header-section-number">8.1.1</span> 정전기 조건과 스토크스 정리</a></li>
   <li><a href="#전위차" id="toc-전위차" class="nav-link" data-scroll-target="#전위차"><span class="header-section-number">8.1.2</span> 전위차</a></li>
   <li><a href="#전위차의-gradient" id="toc-전위차의-gradient" class="nav-link" data-scroll-target="#전위차의-gradient"><span class="header-section-number">8.1.3</span> 전위차의 Gradient</a></li>
+  <li><a href="#등전위면과-전기장" id="toc-등전위면과-전기장" class="nav-link" data-scroll-target="#등전위면과-전기장"><span class="header-section-number">8.1.4</span> 등전위면과 전기장</a></li>
+  <li><a href="#정전기-에너지" id="toc-정전기-에너지" class="nav-link" data-scroll-target="#정전기-에너지"><span class="header-section-number">8.1.5</span> 정전기 에너지</a></li>
+  </ul></li>
+  <li><a href="#다중극-전개-multipole-expansions" id="toc-다중극-전개-multipole-expansions" class="nav-link" data-scroll-target="#다중극-전개-multipole-expansions"><span class="header-section-number">8.2</span> 다중극 전개 (Multipole expansions)</a>
+  <ul class="collapse">
+  <li><a href="#sec-part2_electric_dipole_moment" id="toc-sec-part2_electric_dipole_moment" class="nav-link" data-scroll-target="#sec-part2_electric_dipole_moment"><span class="header-section-number">8.2.1</span> 쌍극자 모멘트</a></li>
+  <li><a href="#다중극-전개" id="toc-다중극-전개" class="nav-link" data-scroll-target="#다중극-전개"><span class="header-section-number">8.2.2</span> 다중극 전개</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -423,8 +430,8 @@ W = -\int_{P_1}^{P_2} \boldsymbol{F \cdot} d\boldsymbol{s} = -\int_{P_1}^{P_2} q
 <p>이다. 즉 전위차 <span class="math inline">\(\phi_{21}\)</span> 은 단위 전하를 <span class="math inline">\(P_1\)</span> 에서 <span class="math inline">\(P_2\)</span> 로 이동시킬 때 드는 에너지이다.</p>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-part1_potential_of_uniform_sphere_charge_distribution_" class="theorem example">
-<p><span class="theorem-title"><strong>예제 8.1</strong></span> <a href="electrostatics_1.html#exm-part1_charge_distribution_uniform_sphere" class="quarto-xref">예제&nbsp;<span>7.5</span></a> 의 상황에서 무한히 멀리 떨어진 곳으로부터 구의 외부 혹은 내부의 한 지점까지 전위차를 구해보자. 우선 구의 중심을 원점으로 놓고, 원점으로부터 <span class="math inline">\(r&gt;R\)</span> 까지의 전위차 <span class="math inline">\(\phi_{\text{out}}(r)\)</span> 은</p>
+<div id="exm-part2_potential_of_uniform_sphere_charge_distribution_" class="theorem example">
+<p><span class="theorem-title"><strong>예제 8.1</strong></span> <a href="electrostatics_1.html#exm-part2_charge_distribution_uniform_sphere" class="quarto-xref">예제&nbsp;<span>7.5</span></a> 의 상황에서 무한히 멀리 떨어진 곳으로부터 구의 외부 혹은 내부의 한 지점까지 전위차를 구해보자. 우선 구의 중심을 원점으로 놓고, 원점으로부터 <span class="math inline">\(r&gt;R\)</span> 까지의 전위차 <span class="math inline">\(\phi_{\text{out}}(r)\)</span> 은</p>
 <p><span class="math display">\[
 \phi_{\text{out}}(r) = - \int_{-\infty}^{r} E(r')\,dr' = -\int_{-\infty}^{r} \dfrac{\rho R^3}{3\epsilon_0 r'^2}\, dr' = \dfrac{\rho R^3}{3\epsilon_0 r}
 \]</span></p>
@@ -462,12 +469,109 @@ W = -\int_{P_1}^{P_2} \boldsymbol{F \cdot} d\boldsymbol{s} = -\int_{P_1}^{P_2} q
 \nabla_{\boldsymbol{r}} \left(\dfrac{1}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\right) = - \dfrac{\boldsymbol{r}-\boldsymbol{r}'}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3}
 \tag{8.5}\]</span></span></p>
 <p>로부터,</p>
-<p><span class="math display">\[
+<p><span id="eq-part2_gradient_of_inverse_of_distance_2"><span class="math display">\[
 \begin{aligned}
 \nabla_{\boldsymbol{r}}\phi(\boldsymbol{r}) &amp;= -\dfrac{1}{4\pi \epsilon_0}\int_V \dfrac{\rho(\boldsymbol{r}')(\boldsymbol{r}-\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3}d^3\boldsymbol{r}' = \nabla_{\boldsymbol{r}} \left(\dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}d^3\boldsymbol{r}'\right)
 \end{aligned}
-\]</span></p>
+\tag{8.6}\]</span></span></p>
 <p>을 얻는다. 우리는 두 함수 <span class="math inline">\(\nabla f(\boldsymbol{r}) = \nabla g(\boldsymbol{r})\)</span> 일 때 <span class="math inline">\(f(\boldsymbol{r})- g(\boldsymbol{r})= \text{constant}\)</span> 임을 안다.</p>
+<p>전하 분포가 국소화 되어 있다면, 즉 유한한 부피 내에 전하분포가 존재한다면 <span class="math inline">\(\|\boldsymbol{r}\|\to \infty\)</span> 일 때</p>
+<p><span class="math display">\[
+\int_V \dfrac{\rho(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\, d^3\boldsymbol{r}' \approx \dfrac{1}{\|\boldsymbol{r}\|} \int_V \rho(\boldsymbol{r}')\, d^3\boldsymbol{r}' \to 0
+\]</span></p>
+<p>이므로 <span class="math inline">\(\phi (\boldsymbol{r})\)</span> 을 <span class="math inline">\(\lim_{\|\boldsymbol{r}\|\to \infty} \phi(\boldsymbol{r})=0\)</span> 이 되도록 정할 수 있다. 즉</p>
+<p><span id="eq-part2_electric_potential"><span class="math display">\[
+\phi(\boldsymbol{r}) := \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}d^3\boldsymbol{r}'.
+\tag{8.7}\]</span></span></p>
+<p>그러나 전하 분포가 무한하다면 <a href="#eq-part2_gradient_of_inverse_of_distance_2" class="quarto-xref">식&nbsp;<span>8.6</span></a> 의 우변의 <span class="math inline">\(\int_V \rho(\boldsymbol{r}')/\|\boldsymbol{r}-\boldsymbol{r}'\|\, d^3\boldsymbol{r}'\)</span> 이 발산하며, 이 경우 임의의 점 <span class="math inline">\(\boldsymbol{r}_0\)</span> 를 <span class="math inline">\(\phi(\boldsymbol{r}_0)=0\)</span> 으로 잡고 전위차를 계산한다.</p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-part2_potential_from_infinite_line_charge" class="theorem example">
+<p><span class="theorem-title"><strong>예제 8.2 (무한한 선 전하에 의한 전위)</strong></span> <a href="electrostatics_1.html#exm-part2_charge_distribution_line_charge" class="quarto-xref">예제&nbsp;<span>7.6</span></a> 에서 임의의 <span class="math inline">\(\boldsymbol{r}_0\)</span> 로부터의 전위차를 구해보자.</p>
+<p><span class="math display">\[
+\phi(\boldsymbol{r}) = -\int_{\boldsymbol{r}_0}^{\boldsymbol{r}} \dfrac{\lambda}{2\pi\epsilon_o r'}dr' = -\dfrac{\lambda}{2\pi\epsilon_0} \left(\ln \|\boldsymbol{r}\| - \ln \|\boldsymbol{r}_0\|\right).
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-part2_potential_from_uniformly_charged_disk" class="theorem example">
+<p><span class="theorem-title"><strong>예제 8.3 (균일하게 대전된 디스크로부터의 전위)</strong></span> <span class="math inline">\(xy\)</span> 평면상에 원점을 중심으로 반지름 <span class="math inline">\(R\)</span>, 면 전하 밀도 <span class="math inline">\(\sigma\)</span> 의 디스크가 위치한다고 하자. <span class="math inline">\(z\)</span> 축 위의 점 <span class="math inline">\((0,\,0,\,z)\)</span> 에서의 전위 <span class="math inline">\(\phi(z)\)</span> 는</p>
+<p><span class="math display">\[
+\phi (z) = \dfrac{1}{4\pi\epsilon_0}\int_{0}^R \int_0^{2\pi} \dfrac{\sigma\, r\,dr\,d\theta}{\sqrt{z^2+r^2}} = \dfrac{\sigma}{2\epsilon_0} \left[\sqrt{z^2+R^2}-|z|\right]
+\]</span></p>
+<p>이다. <span class="math inline">\(|z| \gg R\)</span> 인 근사에서 <span class="math inline">\(Q=\sigma \pi R^2\)</span> 을 생각하면</p>
+<p><span class="math display">\[
+\phi(z) = \dfrac{\sigma}{2\epsilon_0}\left[|z|\sqrt{1+\left(\dfrac{R}{z}\right)^2} -1\right] \approx \dfrac{\sigma |z|}{2\epsilon_0} \dfrac{R^2}{2z^2} = \dfrac{Q}{4\pi \epsilon_0|z|}
+\]</span></p>
+<p>로 점전하 <span class="math inline">\(|Q|\)</span> 에 의한 전위와 같다는 것을 알 수 있다.</p>
+<p>이제 전위로부터 전기장을 계산해 보자. <span class="math inline">\(z&gt;0\)</span> 인 경우</p>
+<p><span class="math display">\[
+E_z(z) = - \dfrac{d\phi (z)}{dz} = \dfrac{\sigma}{2\epsilon_0} \left[1-\dfrac{z}{\sqrt{z^2+R^2}}\right]
+\]</span></p>
+<p>이며 <span class="math inline">\(z \to 0\)</span> 극한에서 <span class="math inline">\(E_z(z=0^+) = \dfrac{\sigma}{2\epsilon_0}\)</span> 로 무한 대전 평면에서의 전기장과 같다. 마찬가지로 <span class="math inline">\(E_z(z=0^-)= - \dfrac{\sigma}{2\epsilon_0}\)</span> 이다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="등전위면과-전기장" class="level3" data-number="8.1.4">
+<h3 data-number="8.1.4" class="anchored" data-anchor-id="등전위면과-전기장"><span class="header-section-number">8.1.4</span> 등전위면과 전기장</h3>
+<p><a href="#eq-part2_electric_field_from_potential" class="quarto-xref">식&nbsp;<span>8.4</span></a> 로부터 우리는 전기장의 방향은 전위 <span class="math inline">\(\phi(\boldsymbol{r})\)</span> 를 가장 빠르게 감소시키는 방향이라는 것을 알 수 있다. 즉 <span class="math inline">\(\phi(\boldsymbol{r})=C\)</span> 의 등전위면에 대해 수직인 방향이며 전위를 감소시키는 방향이다.</p>
+<p><br></p>
+</section>
+<section id="정전기-에너지" class="level3" data-number="8.1.5">
+<h3 data-number="8.1.5" class="anchored" data-anchor-id="정전기-에너지"><span class="header-section-number">8.1.5</span> 정전기 에너지</h3>
+<p><a href="electrostatics_1.html#eq-part2_electrostatic_potential_energy_1" class="quarto-xref">식&nbsp;<span>7.4</span></a> 를 다시 보자.</p>
+<p><span class="math display">\[
+U = \dfrac{1}{2}\sum_{i\ne j=1}^N \dfrac{q_i q_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2}\sum_{i=1}^N q_i \sum_{j\ne i=1}^N \dfrac{q_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2} \sum_{i=1}^N q_i \phi(\boldsymbol{r}_i)
+\]</span></p>
+<p>이며 여기서 <span class="math inline">\(\phi(\boldsymbol{r}_i) = \sum_{j\ne i = 1}^N \dfrac{q_j}{4\pi \epsilon_0 r_{ij}}\)</span> 는 <span class="math inline">\(i\)</span> 번째 전하를 제외한 전하에 의한 <span class="math inline">\(q_i\)</span> 가 위치한 지점 <span class="math inline">\(\boldsymbol{r}_i\)</span> 에서의 전위이다. 이로부터</p>
+<p><span id="eq-part2_electrostatic_potential_energy_by_charge_distribution_and_potential"><span class="math display">\[
+\boxed{
+U = \dfrac{1}{2} \int \rho(\boldsymbol{r})\phi (\boldsymbol{r})\, d^3 \boldsymbol{r}
+}
+\tag{8.8}\]</span></span></p>
+<p>을 얻는다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="다중극-전개-multipole-expansions" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="다중극-전개-multipole-expansions"><span class="header-section-number">8.2</span> 다중극 전개 (Multipole expansions)</h2>
+<section id="sec-part2_electric_dipole_moment" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="sec-part2_electric_dipole_moment"><span class="header-section-number">8.2.1</span> 쌍극자 모멘트</h3>
+<div id="fig-part2_electric_dipole" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-part2_electric_dipole-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Electromagnetism/electrostatics_2/electric_dipole.png" class="img-fluid figure-img" width="200">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-part2_electric_dipole-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.2: 전기 쌍극자
+</figcaption>
+</figure>
+</div>
+<p>전하 <span class="math inline">\(+q\)</span> 와 <span class="math inline">\(-q\)</span> 가 위의 그림과 같이 <span class="math inline">\(d\)</span> 의 거리만큼 떨어져 있다고 하고 원점을 두 전하의 중앙에 두자. 그리고 <span class="math inline">\(+q\)</span> 로부터의 변위를 <span class="math inline">\(\boldsymbol{r}_1\)</span>, <span class="math inline">\(-q\)</span> 로부터의 변위를 <span class="math inline">\(\boldsymbol{r}_2\)</span> 라고 하고 원점으로부터의 변위를 <span class="math inline">\(\boldsymbol{r}\)</span> 라고 하자.</p>
+<p><span class="math display">\[
+\phi(\boldsymbol{r})= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{q}{\|\boldsymbol{r}_1\|} - \dfrac{q}{\|\boldsymbol{r}_2\|}\right]
+\]</span></p>
+<p>이다. 여기서 <span class="math inline">\(-q\)</span> 에서 <span class="math inline">\(q\)</span> 까지의 변위벡터를 <span class="math inline">\(\boldsymbol{d}\)</span> 라고 하면 <span class="math inline">\(\boldsymbol{r}_1 = \boldsymbol{r}-\frac{1}{2}\boldsymbol{d}\)</span>, <span class="math inline">\(\boldsymbol{r}_2 = \boldsymbol{r}+\frac{1}{2}\boldsymbol{d}\)</span> 이다. 많은 경우 우리는 <span class="math inline">\(\|\boldsymbol{r}\| \gg \|\boldsymbol{d}\|\)</span> 인 경우에 관심있으며, 이 조건에서의 전위 <span class="math inline">\(\phi(\boldsymbol{r})\)</span> 은 (계산의 편의를 위해 <span class="math inline">\(\boldsymbol{\epsilon} = \boldsymbol{d}/2\)</span> 로 놓자.)</p>
+<p><span class="math display">\[
+\begin{aligned}
+\phi(\boldsymbol{r}) &amp;= \dfrac{q}{4\pi\epsilon_0}\left[\dfrac{1}{\|\boldsymbol{r}-\boldsymbol{\epsilon}\|} - \dfrac{1}{\|\boldsymbol{r}+\boldsymbol{\epsilon}\|}\right] \\[0.3em]
+&amp;= \dfrac{q}{4\pi\epsilon_0}\left[\dfrac{1}{(r^2+\epsilon^2 - 2r\epsilon \cos \theta)^{1/2}}-\dfrac{1}{(r^2+\epsilon^2 + 2r\epsilon \cos \theta)^{1/2}}\right] \\[0.3em]
+&amp;\approx \dfrac{1}{4\pi\epsilon_0}\dfrac{qd \cos \theta}{\|\boldsymbol{r}\|^2} = \dfrac{1}{4\pi\epsilon_0}\dfrac{q\boldsymbol{d}\cdot \boldsymbol{r}}{\|\boldsymbol{r}\|^3}
+\end{aligned}
+\]</span></p>
+<p>이다.</p>
+<p>위의 경우는 총 전하량이 <span class="math inline">\(0\)</span> 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 <span class="math inline">\(\|\boldsymbol{r}\|^{-2}\)</span> 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 <span class="math inline">\(0\)</span> 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다.</p>
+<p><br></p>
+</section>
+<section id="다중극-전개" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="다중극-전개"><span class="header-section-number">8.2.2</span> 다중극 전개</h3>
+<p><span class="math inline">\(\|\boldsymbol{r}_&gt;\| &gt; \|\boldsymbol{r}_&lt;\|\)</span> 일 때 <span class="math inline">\(k\)</span> 차 르장드르 다항식 <span class="math inline">\(P_k\)</span> 와 <span class="math inline">\(\boldsymbol{r}_&gt;\)</span> 와 <span class="math inline">\(\boldsymbol{r}_&lt;\)</span> 가 이루는 각 <span class="math inline">\(\theta\)</span> 에 대해 다음이 성립한다.</p>
+<p><span id="eq-part2_legendre_expansion"><span class="math display">\[
+\dfrac{1}{\|\boldsymbol{r}_&gt;-\boldsymbol{r}_&lt;\|} = \dfrac{1}{\|\boldsymbol{r}_&gt;\|} \sum_{k=0}^\infty \left(\dfrac{\|\boldsymbol{r}_&lt;\|}{\|\boldsymbol{r}_&gt;\|}\right)^k P_k (\cos \theta)
+\tag{8.9}\]</span></span></p>
+<p>이 때</p>
 
 
 </section>

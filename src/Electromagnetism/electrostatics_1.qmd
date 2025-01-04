@@ -135,7 +135,7 @@ $$
 
 $$
 U = \sum_{i=1}^n\sum_{j=i+1}^n \dfrac{1}{4\pi\epsilon_0}\dfrac{q_iq_j}{r_{ij}} = \dfrac{1}{2}\sum_{i,\,j=1,\,i\ne j}^n \dfrac{1}{4\pi\epsilon_0}\dfrac{q_iq_j}{r_{ij}},\qquad \text{where }r_{ij}= \|\bf{r}_i-\bf{r}_j\|
-$$ {#eq-part1_electrosttic_potential_energy_1}
+$$ {#eq-part2_electrostatic_potential_energy_1}
 
 임을 알 수 있다. 포텐셜 에너지는 전체적인 전하 분포에만 관련이 있으며, 이 에너지 가운데 어떤 부분이 어떤 전하에 속하는지 판단하는 것은 무의미하다.
 
@@ -157,10 +157,10 @@ $$ {#eq-part2_electric_field_due_to_charge_distribution}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part1_charge_distribution_circular_charge}
+::: {#exm-part2_charge_distribution_circular_charge}
 #### 균일하게 대전된 고리에 의한 전기장
 
-![원형 전하 분포](../images/Electromagnetism/electrostatics/electrostatics_ring/ring.png){#fig-part1_ring width=300}
+![원형 전하 분포](../images/Electromagnetism/electrostatics/electrostatics_ring/ring.png){#fig-part2_ring width=300}
 
 반경 $R$ 인 원형 선이 선전하 밀도 $\lambda$ 로 $xy$ 평면상에 원점을 중심으로 위치한다고 하자. 이 때 $(0,\,0,\,z)$ 에서의 전기장 $\bf{E}(0,\,0,\,z)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,z)=E_y(0,\,0,\,z)=0$ 이며
 
@@ -180,11 +180,11 @@ $${#eq-part2_electric_field_due_to_line_charge}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part1_charge_distribution_hemisphere_shell}
+::: {#exm-part2_charge_distribution_hemisphere_shell}
 
 #### 반구 shell 의 전하 분포
 
-![반구 전하 분포](../images/Electromagnetism/electrostatics/electrostatics_hemisphere/hemisphere.png){#fig-part1_hemisphere width=300}
+![반구 전하 분포](../images/Electromagnetism/electrostatics/electrostatics_hemisphere/hemisphere.png){#fig-part2_hemisphere width=300}
 
 반경 $R$ 인 반구형 셸의 면전하밀도가 $\sigma$ 로 $xy$ 평면상에 원점을 중심으로 그림과 같이 아래로 위치한다고 하자. 이 때 $(0,\,0,\,0)$ 에서의 전기장 $\bf{E}(0,\,0,\,0)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,0)=E_y(0,\,0,\,0)=0$ 이며 구면좌표계에서
 
@@ -202,11 +202,11 @@ $${#eq-part2_electric_field_due_to_charged_hemisphere_shell}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part1_charge_distribution_hemisphere}
+::: {#exm-part2_charge_distribution_hemisphere}
 
 #### 반구의 전하 분포
 
-@fig-part1_hemisphere 에서 shell 이 아닌 반구 전체이며 전하밀도가 $\rho$ 라고 하자. 이 때 $(0,\,0,\,0)$ 에서의 전기장 $\bf{E}(0,\,0,\,z)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,z)=E_y(0,\,0,\,z)=0$ 이며 구면좌표계에서
+@fig-part2_hemisphere 에서 shell 이 아닌 반구 전체이며 전하밀도가 $\rho$ 라고 하자. 이 때 $(0,\,0,\,0)$ 에서의 전기장 $\bf{E}(0,\,0,\,z)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,z)=E_y(0,\,0,\,z)=0$ 이며 구면좌표계에서
 
 $$
 \begin{aligned}
@@ -224,7 +224,7 @@ $${#eq-part2_electric_field_due_to_charged_hemisphere}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part1_charge_distribution_spherical_symmetry}
+::: {#exm-part2_charge_distribution_spherical_symmetry}
 
 #### 구 대칭 전하 분포
 
@@ -254,11 +254,11 @@ $$ {#eq-part2_electric_field_due_to_radial-distribution}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part1_charge_distribution_uniform_sphere}
+::: {#exm-part2_charge_distribution_uniform_sphere}
 
 #### 균일한 구형 전하분포
 
-@exm-part1_charge_distribution_spherical_symmetry 로부터 $0\le r<R$ 일 때 $\rho(r)=\rho_0$ 이고 $r\ge 0$ 일 때 $\rho(r)=0$ 인 경우를 보자. $0\le r<R$ 일 경우의 전기장 $\bf{E}_{\text{in}}(r)$ 은
+@exm-part2_charge_distribution_spherical_symmetry 로부터 $0\le r<R$ 일 때 $\rho(r)=\rho_0$ 이고 $r\ge 0$ 일 때 $\rho(r)=0$ 인 경우를 보자. $0\le r<R$ 일 경우의 전기장 $\bf{E}_{\text{in}}(r)$ 은
 
 $$
 \bf{E}_{\text{in}}(r)= \dfrac{1}{4\pi\epsilon_0}\dfrac{\rho_0 4\pi r^3/3}{r^2}\hat{\bf{r}}= \dfrac{\rho_0 r}{3\epsilon_0}\hat{\bf{r}}
@@ -282,7 +282,7 @@ $${#eq-part2_electric_field_outside_of_uniformly_charged_sphere}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part1_charge_distribution_line_charge}
+::: {#exm-part2_charge_distribution_line_charge}
 
 #### 무한히 긴 선 전하
 
@@ -333,7 +333,7 @@ $${#eq-part2_electric_field_due_to_infinite_line_charge_2}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part1_charge_distribution_plane}
+::: {#exm-part2_charge_distribution_plane}
 
 #### 무한 대전 평면
 
@@ -442,7 +442,7 @@ $$
 
 $$
 U = \dfrac{\epsilon_0}{2}\int_{\text{entire field}}E^2\, dv
-$$ {#eq-part1_electrostatic_energy_too_early}
+$$ {#eq-part2_electrostatic_energy_too_early}
 
 위 식을 도입한것은 @Purcell2013electricity 의 순서를 따랐지만 개인적으로 약간 억지스럽다. 
 
@@ -450,11 +450,11 @@ $$ {#eq-part1_electrostatic_energy_too_early}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part1_electrostatic_energy_of_uniform_sphere}
+::: {#exm-part2_electrostatic_energy_of_uniform_sphere}
 
 #### 균일한 전하밀도를 가진 구의 에너지
 
-@exm-part1_charge_distribution_uniform_sphere 와 @eq-part1_electrostatic_energy_too_early 를 이용하여 계산해보자.
+@exm-part2_charge_distribution_uniform_sphere 와 @eq-part2_electrostatic_energy_too_early 를 이용하여 계산해보자.
 
 $$
 \begin{aligned}
@@ -745,7 +745,7 @@ $$
 
 ::: {.solution}
 
-전체 포텐셜 에너지 $U$ 는 @eq-part1_electrosttic_potential_energy_1 에 주어져 있다. 한 입자에 대한 포텐셜 에너지는 그 입자를 원점으로 놓고 계산하면 된다. 
+전체 포텐셜 에너지 $U$ 는 @eq-part2_electrostatic_potential_energy_1 에 주어져 있다. 한 입자에 대한 포텐셜 에너지는 그 입자를 원점으로 놓고 계산하면 된다. 
 
 $$
 U_{\text{1-ion}} = \dfrac{1}{2} \sum_{i,\,j=-\infty,\, (i,\,j)\ne (0,\,0)}^\infty \dfrac{1}{4\pi\epsilon_0} \dfrac{e^2(-1)^{i+j}}{\sqrt{i^2+j^2}a} = \dfrac{e^2}{4\pi\epsilon_0 a }\left[\sum_{i,\,j=-\infty,\, (i,\,j)\ne (0,\,0)}^\infty\dfrac{1}{2}\dfrac{(-1)^{i+j}}{\sqrt{i^2+j^2}a} \right]
@@ -1033,7 +1033,7 @@ $$
 </div> </br>
 
 ::: {.solution}
-($a$) @exm-part1_charge_distribution_circular_charge 의 결과를 이용한다. 대칭에 의해 $E_x(z) = E_y(z) = 0$ 이므로 $E_z(z)$ 만을 생각한다. $\lambda = Q/2\pi r$ 이므로
+($a$) @exm-part2_charge_distribution_circular_charge 의 결과를 이용한다. 대칭에 의해 $E_x(z) = E_y(z) = 0$ 이므로 $E_z(z)$ 만을 생각한다. $\lambda = Q/2\pi r$ 이므로
 
 $$
 E_z(z)= \dfrac{Q}{4\pi\epsilon_0}\left[\dfrac{z}{(r^2+z^2)^{3/2}} - \dfrac{z-h}{(r^2+(z-h)^2)^{3/2}}\right].
@@ -1125,7 +1125,6 @@ $$
 #### 원을 통과하는 플럭스. (Purcell 1.15)
 </br>
 
-
 ![Purcell 1.15](../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_15.png){#fig-part2_exr_purcell_1_15 width=200}
 
 점전하 $q$ 가 원점에 위치한다. 여기에서 거리 $l$ 만큼 떨어진 곳에 위치한 원을 생각하자. 원에 대해 그림과 같이 각 $\theta$ 를 이룬다. 원점의 전하 이외의 전하는 없기 때문에 이 원을 경계로 갖는, 그리고 원점의 오른쪽에 있는 표면은 모두 같은 플럭스를 포함해야 한다(이유는?). 아래의 두가지 경우에 대해 플럭스를 계산하라.
@@ -1162,6 +1161,82 @@ $$
 \end{aligned}
 $$
 :::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part2_purcell_1_16}
+#### 가우스 법칙과 두 점전하. (Purcell 1.16)
+</br>
+($a$) 전하 $q$ 를 갖는 두 점전하가 $x=\pm l$ 에 위치하고 있다. $x$ 축상의 원점 근처에서의 전기장 $E_x$ 를 구하라. $y$ 축상의 원점 근처에서 $E_y$ 를 구하라. $x\ll l,\, y\ll l$ 조건에서 적절한 근사를 취하라.
+
+($b$) 작은 실린더의 대칭축이 $x$ 축을 따라 있으며 원점에 중심이 위치한다. 반지름은 $r_0$ 이고 높이는 $2x_0$ 이다. ($a$) 의 결과를 이용하여 가우스 법칙에 따라 실린더를 통과하는 플럭스가 $0$ 임을 보여라.
+
+:::
+
+</div> </br>
+
+::: {.solution}
+
+$|t| \ll 1$ 에 대해 $\dfrac{1}{(1+t)^2} \approx 1 - 2t$, $\dfrac{1}{(1+t^2)^{3/2}}\approx 1$ 이다. $t^2$ 이상의 항은 무시하였다.
+
+($a$) $x$ 축의 $x$ 위치에서의 전기장은 $x\ll l$ 근사를 사용하면 
+
+$$
+\begin{aligned}
+E_x(x) &= \dfrac{q}{4\pi \epsilon_0 (l+x)^2}- \dfrac{q}{4\pi\epsilon_0 (l-x)^2} \\[0.3em]
+&\approx \dfrac{q}{4\pi\epsilon_0 l^2}\left[\left(1-\dfrac{2x}{l}\right) - \left(1+ \dfrac{2x}{l}\right)\right] = - \dfrac{qx}{\pi \epsilon_0 l^3}
+\end{aligned}
+$$ {#eq-part2_exr_purcell_1_16_1}
+
+이다. $y$ 축의 $y$ 위치에서의 전기장은 ($y^2$ 항을 제거하면)
+
+$$
+E_y(y) = 2 \cdot \dfrac{q}{4\pi \epsilon_0 (l^2+y^2)} \cdot \dfrac{y}{\sqrt{l^2+y^2}} \approx \dfrac{qy}{2\pi\epsilon_0 l^3}
+$${#eq-part2_exr_purcell_1_16_2}
+
+이다. 
+
+($b$) $x=x_0$ 의 원 $S_1$ 에서의 플럭스를 $\Phi_1$, $x=-x_0$ 의 원 $S_2$ 에서의 플럭스를 $\Phi_2$, 원통의 옆면 $S_3$ 에서의 플럭스를 $\Phi_3$ 라고 하자. 원통좌표계를 사용한다. 
+
+$$
+\begin{aligned}
+\Phi_1 &= \int_{S_1} \bf{E}(x=x_0)\bf{\cdot}\hat{\bf{x}}\, da = - \dfrac{qx_0}{\pi \epsilon_0 l^3} \pi r_0^2 = - \dfrac{qr_0^2 x_0}{\epsilon_0 l^3}\\[0.3em]
+\Phi_2 &= \int_{S_2}\bf{E}(x=-x_0)\bf{\cdot}(-\hat{\bf{x}}) \, da =- \dfrac{qr_0^2 x_0}{\epsilon_0 l^3} = \Phi_1 \\[0.3em]
+\Phi_3 &= \int_{S_3} \bf{E}(\rho=r_0) \bf{\cdot}\hat{\bf{\rho}}\, da = \dfrac{qr_0}{2\pi\epsilon_0 l^3} (2\pi r_0 \cdot 2x_0) = 2 \dfrac{qr_0^2 x_0}{\pi \epsilon_0 l^3} = -(\Phi_1 + \Phi_2)
+\end{aligned}
+$$
+
+이다. 즉 $\Phi_1+\Phi_2 + \Phi_3=0$ 이다. 
+
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part2_purcell_1_17}
+#### 구형 껍질 내부의 전기장. (Purcell 1.17)
+</br>
+
+![Purcell 1.17](../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_17.png){#fig-part2_exr_purcell_1_17 width=200}
+
+균일하게 대전된 속이 빈 구형 껍질을 생각하자. 위의 그림과 같이 얇은 원뿔의 끝의 두 조각을 고려하여 껍질 내의 전기장이 $0$ 임을 보여라. 이로부터 다음장에서 다룰 전기 포텐셜이 내부에서 $0$ 임을 보일 수 있다.
+
+:::
+
+</div> </br>
+
+::: {.solution}
+
+
+
+
+
+:::
+
 
 
 </br>
