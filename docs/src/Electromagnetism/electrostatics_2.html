@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -355,10 +375,16 @@ window.Quarto = {
   <li><a href="#등전위면과-전기장" id="toc-등전위면과-전기장" class="nav-link" data-scroll-target="#등전위면과-전기장"><span class="header-section-number">8.1.4</span> 등전위면과 전기장</a></li>
   <li><a href="#정전기-에너지" id="toc-정전기-에너지" class="nav-link" data-scroll-target="#정전기-에너지"><span class="header-section-number">8.1.5</span> 정전기 에너지</a></li>
   </ul></li>
-  <li><a href="#다중극-전개-multipole-expansions" id="toc-다중극-전개-multipole-expansions" class="nav-link" data-scroll-target="#다중극-전개-multipole-expansions"><span class="header-section-number">8.2</span> 다중극 전개 (Multipole expansions)</a>
+  <li><a href="#르장드르-다항식과-구면조화함수" id="toc-르장드르-다항식과-구면조화함수" class="nav-link" data-scroll-target="#르장드르-다항식과-구면조화함수"><span class="header-section-number">8.2</span> 르장드르 다항식과 구면조화함수</a>
   <ul class="collapse">
-  <li><a href="#sec-part2_electric_dipole_moment" id="toc-sec-part2_electric_dipole_moment" class="nav-link" data-scroll-target="#sec-part2_electric_dipole_moment"><span class="header-section-number">8.2.1</span> 쌍극자 모멘트</a></li>
-  <li><a href="#다중극-전개" id="toc-다중극-전개" class="nav-link" data-scroll-target="#다중극-전개"><span class="header-section-number">8.2.2</span> 다중극 전개</a></li>
+  <li><a href="#르장드르-다항식" id="toc-르장드르-다항식" class="nav-link" data-scroll-target="#르장드르-다항식"><span class="header-section-number">8.2.1</span> 르장드르 다항식</a></li>
+  <li><a href="#르장드르-연관-함수-associated-legendre-function" id="toc-르장드르-연관-함수-associated-legendre-function" class="nav-link" data-scroll-target="#르장드르-연관-함수-associated-legendre-function"><span class="header-section-number">8.2.2</span> 르장드르 연관 함수 (Associated legendre function)</a></li>
+  <li><a href="#구면조화함수" id="toc-구면조화함수" class="nav-link" data-scroll-target="#구면조화함수"><span class="header-section-number">8.2.3</span> 구면조화함수</a></li>
+  </ul></li>
+  <li><a href="#다중극-전개-multipole-expansions" id="toc-다중극-전개-multipole-expansions" class="nav-link" data-scroll-target="#다중극-전개-multipole-expansions"><span class="header-section-number">8.3</span> 다중극 전개 (Multipole expansions)</a>
+  <ul class="collapse">
+  <li><a href="#sec-part2_electric_dipole_moment" id="toc-sec-part2_electric_dipole_moment" class="nav-link" data-scroll-target="#sec-part2_electric_dipole_moment"><span class="header-section-number">8.3.1</span> 쌍극자 모멘트</a></li>
+  <li><a href="#다중극-전개" id="toc-다중극-전개" class="nav-link" data-scroll-target="#다중극-전개"><span class="header-section-number">8.3.2</span> 다중극 전개</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -535,10 +561,138 @@ U = \dfrac{1}{2} \int \rho(\boldsymbol{r})\phi (\boldsymbol{r})\, d^3 \boldsymbo
 <p><br></p>
 </section>
 </section>
-<section id="다중극-전개-multipole-expansions" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="다중극-전개-multipole-expansions"><span class="header-section-number">8.2</span> 다중극 전개 (Multipole expansions)</h2>
-<section id="sec-part2_electric_dipole_moment" class="level3" data-number="8.2.1">
-<h3 data-number="8.2.1" class="anchored" data-anchor-id="sec-part2_electric_dipole_moment"><span class="header-section-number">8.2.1</span> 쌍극자 모멘트</h3>
+<section id="르장드르-다항식과-구면조화함수" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="르장드르-다항식과-구면조화함수"><span class="header-section-number">8.2</span> 르장드르 다항식과 구면조화함수</h2>
+<p>여기서는 르장드르 다항식, 르장드르 연관 다항식, 그리고 구면조화함수에 대해 간단하게 정리한다. 자세한 내용은 <span class="citation" data-cites="Arfken2013mathematical">Arfken et al. (<a href="../ClassicalMechanics/00_index.html#ref-Arfken2013mathematical" role="doc-biblioref">2013</a>)</span>, <span class="citation" data-cites="Jackson_classical_1999">Jackson (<a href="../ClassicalMechanics/00_index.html#ref-Jackson_classical_1999" role="doc-biblioref">1999</a>)</span> 등을 참고하라.</p>
+<p>기본적으로 구면좌표계에서 라플라스 방정식 <span class="math inline">\(\nabla^2 \phi (r,\,\theta,\, \varphi) = 0\)</span> 을 살펴보자. 우선 구면좌표계에서</p>
+<p><span id="eq-part2_laplace_equation_in_spherical_coordinate"><span class="math display">\[
+\nabla^2 \phi = \dfrac{1}{r}\dfrac{\partial^2}{\partial r^2}(r\phi) + \dfrac{1}{r^2 \sin \theta}\dfrac{\partial}{\partial \theta}\left(\sin \theta \dfrac{\partial \phi}{\partial \theta}\right) + \dfrac{1}{r^2 \sin^2 \theta}\dfrac{\partial^2 \phi}{\partial \varphi^2}
+\tag{8.9}\]</span></span></p>
+<p>이며 변수분리법을 이용하여 <span class="math inline">\(\phi (r,\, \theta,\,\varphi) = \dfrac{R(r)}{r}\Theta(\theta)\Phi(\varphi)\)</span> 로 놓으면 위의 라플라스 방정식은 다음과 같이 변한다.</p>
+<p><span id="eq-part2_laplace_equation_in_spherical_coordinate_2"><span class="math display">\[
+r^2 \sin^2 \theta \left[\dfrac{1}{R} \dfrac{d^2 R}{dr^2} + \dfrac{1}{\Theta r^2\sin\theta} \dfrac{d}{d\theta}\left(\sin \theta \dfrac{d\Theta}{d\theta}\right)\right] + \dfrac{1}{\Phi}\dfrac{d^2 \Phi}{d\varphi^2}=0
+\tag{8.10}\]</span></span></p>
+<p>위 식에서 마지막 항 <span class="math inline">\(\dfrac{1}{\Phi}\Phi''(\varphi)\)</span> 를 보자. 여기에 <span class="math inline">\(\varphi\)</span> 의존성이 있다면 미분방정식의 앞부분에도 <span class="math inline">\(\varphi\)</span> 의존성이 있어야 하므로 변수분리 가정에 모순된다. 따라서 어떤 상수값밖에 가질 수 없다. 이 상수값을 <span class="math inline">\(-m^2\)</span> 라고 하자. 즉 <span class="math display">\[
+\dfrac{1}{\Phi}\dfrac{d^2 \Phi}{d^2\varphi} = -m^2
+\]</span></p>
+<p>를 얻는다. <span class="math inline">\(\Phi(\varphi)= e^{\pm im\varphi}\)</span> 이며 single-valued 이어야 하므로 <span class="math inline">\(\Phi(\varphi + 2\pi) = \Phi(\varphi)\)</span> 이어야 한다. 즉 <span class="math inline">\(m\)</span> 은 정수이다.</p>
+<p>이제 남은 두 식은 다음과 같다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac{1}{\sin\theta} \dfrac{d}{d\theta}\left(\sin \theta \dfrac{d\Theta}{d\theta}\right) + \left[l(l+1)- \dfrac{m^2}{\sin^2\theta}\right]\Theta &amp;=0,  \\[0.3em]
+\dfrac{d^2 R}{dr^2} - \dfrac{l(l+1)}{r^2}R &amp;= 0.
+\end{aligned}
+\]</span></p>
+<p>여기서 <span class="math inline">\(l(l+1)\)</span> 은 임의의 실수이다. <span class="math inline">\(R(r)\)</span> 에 대해 해는</p>
+<p><span class="math display">\[
+R_l(r) = a_l r^{l+1} + b_l r^{-l}
+\]</span></p>
+<p>이며 <span class="math inline">\(\Theta\)</span> 는 <span class="math inline">\(m,\,l\)</span> 에 대해 성립하며 역시 single valued 조건 등에 의해 <span class="math inline">\(l\)</span> 은 음이 아닌 정수이고 <span class="math inline">\(m\)</span> 은 <span class="math inline">\(-l\)</span> 부터 <span class="math inline">\(l\)</span> 까지의 값을 가질 수 있다는 것을 보일 수 있다. <span class="math inline">\(m=0\)</span> 일 경우 <span class="math inline">\(l\)</span> 값에 대한 미분방정식의 해는 뒤에 나올 르장드르 다항식 <span class="math inline">\(P_l(\cos\theta)\)</span> 이며 <span class="math inline">\(m \ne 0\)</span> 경우의 해가 연관 르장드르 다항식 <span class="math inline">\(P_{l}^m(\cos \theta)\)</span> 이다. 즉 라플라스 방정식 <span class="math inline">\(\nabla^2 \phi(r,\, \theta,\, \phi)=0\)</span> 의 해는</p>
+<p><span class="math display">\[
+\phi(r,\,\theta,\,\varphi) = \sum_{l=0}^\infty\sum_{m=-l}^l (a_l r^l + b_l r^{l-1})P_{l}^m(\cos \theta) e^{im\varphi}
+\]</span></p>
+<p>로 주어진다. 이 때 구면조화함수 <span class="math inline">\(Y_{l}^m(\theta,\, \varphi) := P_l^m(\cos \theta)e^{im\varphi}\)</span> 로 정의한다. 즉</p>
+<p><span class="math display">\[
+\phi(r,\,\theta,\,\varphi) = \sum_{l=0}^\infty\sum_{m=-l}^l (a_l r^l + b_l r^{l-1}) Y_{l}^m(\theta,\, \varphi)
+\]</span></p>
+<p>이다.</p>
+<p><br></p>
+<section id="르장드르-다항식" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="르장드르-다항식"><span class="header-section-number">8.2.1</span> 르장드르 다항식</h3>
+<section id="생성함수" class="level4">
+<h4 class="anchored" data-anchor-id="생성함수"><strong>1. 생성함수</strong></h4>
+<p><span id="eq-part2_generator_of_legendre_polymonals"><span class="math display">\[
+\dfrac{1}{\sqrt{1-2xt + t^2}} = \sum_{n=0}^\infty P_n (x) t^n
+\tag{8.11}\]</span></span></p>
+<p><br></p>
+</section>
+<section id="재귀관계" class="level4">
+<h4 class="anchored" data-anchor-id="재귀관계"><strong>2. 재귀관계</strong></h4>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(nP_n (x) = (2n-1)xP_{n-1}(x) - (n-1)P_{n-2}(x)\)</span>,</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(xP'_n(x) - P'_{n-1}(x) = nP_n (x)\)</span>,</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(P'_n(x)- xP'_{n-1}(x) = nP_{n-1}(x)\)</span>,</p>
+<p> (<span class="math inline">\(4\)</span>) <span class="math inline">\((1-x^2)P'_n(x) = nP_{n-1}(x) - nxP_n(x)\)</span>,</p>
+<p> (<span class="math inline">\(5\)</span>) <span class="math inline">\((2n+1)P_n(x) = P'_{n+1}(x) - P'_{n-1}(x)\)</span>,</p>
+<p> (<span class="math inline">\(6\)</span>) <span class="math inline">\((1-x^2)P'_{n-1}(x) = nxP_{n-1}(x) - nP_n(x)\)</span>.</p>
+<p><br></p>
+</section>
+<section id="직교성" class="level4">
+<h4 class="anchored" data-anchor-id="직교성"><strong>3. 직교성</strong></h4>
+<p><span id="eq-part2_orthogonalizty_of_legendre_polynomial"><span class="math display">\[
+\int_{-1}^1 P_n(x) P_m(x)\, dx = \dfrac{2}{2n+1} \delta_{mn}
+\tag{8.12}\]</span></span></p>
+<p><br></p>
+</section>
+<section id="르장드르-다항식-1" class="level4">
+<h4 class="anchored" data-anchor-id="르장드르-다항식-1"><strong>4. 르장드르 다항식</strong></h4>
+<p><span class="math inline">\(0\)</span> 차에서 <span class="math inline">\(5\)</span> 차 르장드르 다항식은 다음과 같다. <span class="math display">\[
+\begin{aligned}
+P_0(x) &amp;= 1, \\[0.3em]
+P_1(x) &amp;= x, \\[0.3em]
+P_2(x) &amp;= \dfrac{1}{2} (3x^2-1), \\[0.3em]
+P_3(x) &amp;= \dfrac{1}{2} (5x^3-3x), \\[0.3em]
+P_4(x) &amp;= \dfrac{1}{8}(35 x^4-30x^2 +3) , \\[0.3em]
+P_5(x) &amp;= \dfrac{1}{8}(63x^5 - 70x^3 +15x).
+\end{aligned}
+\]</span></p>
+<p><br></p>
+</section>
+</section>
+<section id="르장드르-연관-함수-associated-legendre-function" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="르장드르-연관-함수-associated-legendre-function"><span class="header-section-number">8.2.2</span> 르장드르 연관 함수 (Associated legendre function)</h3>
+<section id="정의" class="level4">
+<h4 class="anchored" data-anchor-id="정의"><strong>1. 정의</strong></h4>
+<p><span id="eq-part2_definition_of_associated_legendre_polynomial"><span class="math display">\[
+\begin{aligned}
+P_n^m &amp;= (1-x)^{|m|/2} \dfrac{d^{|m|} P_n(x)}{dx^{|m|}},\\[0.3em]
+P_n^{-m} &amp;= (-1)^m \dfrac{(n-m)!}{(n+m)!} P_{n}^m (x).
+\end{aligned}
+\tag{8.13}\]</span></span></p>
+<p><br></p>
+</section>
+<section id="직교성-1" class="level4">
+<h4 class="anchored" data-anchor-id="직교성-1"><strong>2. 직교성</strong></h4>
+<p><span id="eq-part2_orthogonality_of_associated_legendre_polynomials"><span class="math display">\[
+\int_{-b}^b P_n^m \left(\dfrac{x}{b}\right)P_l^m \left(\dfrac{x}{b}\right)^m dx = \dfrac{2b}{2n+1}\dfrac{(n+|m|)!}{(n-|m|)!} \delta _{ln}.
+\tag{8.14}\]</span></span></p>
+<p><br></p>
+</section>
+<section id="재귀관계-1" class="level4">
+<h4 class="anchored" data-anchor-id="재귀관계-1"><strong>3. 재귀관계</strong></h4>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(P_n^{m+1} (x) = \dfrac{2mx}{\sqrt{1-x^2}}P_n^m(x) + [m(m-1)-n(n+1)] P_n^{m-1}(x)\)</span>,</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\((2n+1) xP_n^m(x) = (n+m)P_{n-1}^m (x) + (n-m+1)P_{n+1}^m (x)\)</span>,</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\((2n+1)\sqrt{1-x^2} P_{n}^m (x) = P_{n+1}^{m+1} (x) - P_{n-1}^{m+1}(x)\)</span>,</p>
+<p> (<span class="math inline">\(4\)</span>) <span class="math inline">\(2\sqrt{1-x^2} \dfrac{dP_n^m(x)}{dx} = P_{n}^{m+1}(x) - (n+m)(n-m+1)P_{n}^{m-1}(x)\)</span>.</p>
+<p><br></p>
+</section>
+</section>
+<section id="구면조화함수" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="구면조화함수"><span class="header-section-number">8.2.3</span> 구면조화함수</h3>
+<section id="정의-1" class="level4">
+<h4 class="anchored" data-anchor-id="정의-1"><strong>1. 정의</strong></h4>
+<p>구면조화함수는 <span class="math inline">\((r,\, \theta,\, \varphi)\)</span> 에 의해 기술되는 구면좌표계에서 아래와 같이 정의되는 함수이다.</p>
+<p><span id="eq-part2_definition_of_spherical_harmomics"><span class="math display">\[
+Y_l^m (\theta,\, \varphi) = \sqrt{\dfrac{2l+1}{4\pi}\dfrac{(l-|m|)!}{(l+|m|)!}} P_l^m(\cos\theta) e^{im\varphi}
+\tag{8.15}\]</span></span></p>
+<p><br></p>
+</section>
+<section id="직교성-2" class="level4">
+<h4 class="anchored" data-anchor-id="직교성-2"><strong>2.직교성</strong></h4>
+<p><span id="eq-part2_orthogonamity_of_spherical_harmonics"><span class="math display">\[
+\oint_{\Omega} {Y_{l'}^{m'}}^\ast (\theta,\, \varphi)\, Y_l^m (\theta,\, \varphi) =\delta_{ll'}\delta_{mm'}
+\tag{8.16}\]</span></span></p>
+<p><br></p>
+<p>또한 같은 <span class="math inline">\(l\)</span> 에 대해 다음 관계를 만족한다.</p>
+<p><span id="eq-part2_similarity_of_spherical_harmonics"><span class="math display">\[
+Y_l^{-m}(\theta,\, \varphi) = (-1)^mY_{l}^m (\theta,\, \varphi).
+\tag{8.17}\]</span></span></p>
+</section>
+</section>
+</section>
+<section id="다중극-전개-multipole-expansions" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="다중극-전개-multipole-expansions"><span class="header-section-number">8.3</span> 다중극 전개 (Multipole expansions)</h2>
+<section id="sec-part2_electric_dipole_moment" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="sec-part2_electric_dipole_moment"><span class="header-section-number">8.3.1</span> 쌍극자 모멘트</h3>
 <div id="fig-part2_electric_dipole" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-part2_electric_dipole-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -565,15 +719,36 @@ U = \dfrac{1}{2} \int \rho(\boldsymbol{r})\phi (\boldsymbol{r})\, d^3 \boldsymbo
 <p>위의 경우는 총 전하량이 <span class="math inline">\(0\)</span> 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 <span class="math inline">\(\|\boldsymbol{r}\|^{-2}\)</span> 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 <span class="math inline">\(0\)</span> 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다.</p>
 <p><br></p>
 </section>
-<section id="다중극-전개" class="level3" data-number="8.2.2">
-<h3 data-number="8.2.2" class="anchored" data-anchor-id="다중극-전개"><span class="header-section-number">8.2.2</span> 다중극 전개</h3>
+<section id="다중극-전개" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="다중극-전개"><span class="header-section-number">8.3.2</span> 다중극 전개</h3>
 <p><span class="math inline">\(\|\boldsymbol{r}_&gt;\| &gt; \|\boldsymbol{r}_&lt;\|\)</span> 일 때 <span class="math inline">\(k\)</span> 차 르장드르 다항식 <span class="math inline">\(P_k\)</span> 와 <span class="math inline">\(\boldsymbol{r}_&gt;\)</span> 와 <span class="math inline">\(\boldsymbol{r}_&lt;\)</span> 가 이루는 각 <span class="math inline">\(\theta\)</span> 에 대해 다음이 성립한다.</p>
 <p><span id="eq-part2_legendre_expansion"><span class="math display">\[
 \dfrac{1}{\|\boldsymbol{r}_&gt;-\boldsymbol{r}_&lt;\|} = \dfrac{1}{\|\boldsymbol{r}_&gt;\|} \sum_{k=0}^\infty \left(\dfrac{\|\boldsymbol{r}_&lt;\|}{\|\boldsymbol{r}_&gt;\|}\right)^k P_k (\cos \theta)
-\tag{8.9}\]</span></span></p>
-<p>이 때</p>
+\tag{8.18}\]</span></span></p>
+<p>그렇다면 <a href="#eq-part2_electric_potential" class="quarto-xref">식&nbsp;<span>8.7</span></a> 에서 정해진 원점과 가능한 전하 분포 <span class="math inline">\(\rho(\boldsymbol{r}')\)</span> 에 대해 <span class="math inline">\(\|\boldsymbol{r}\| &gt; \|\boldsymbol{r}'\|\)</span> 일 때,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\phi(\boldsymbol{r}) &amp;=\dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\,d^3\boldsymbol{r}' \\[0.3em]
+&amp;= \dfrac{1}{4\pi\epsilon_0}\sum_{k=0}^\infty \dfrac{1}{\|\boldsymbol{r}\|^{k+1}} \int_V \|\boldsymbol{r}'\|^k P_k(\cos\theta')\,\rho(\boldsymbol{r}')\,d^3\boldsymbol{r'} \\[0.3em]
+\end{aligned}
+\]</span></p>
+<p>이다. 즉,</p>
+<p><span id="eq-part2_multiple_expansion"><span class="math display">\[
+\phi(\boldsymbol{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Q_k}{\|\boldsymbol{r}\|^{k+1}},\qquad \text{where }Q_k = \int_V \|\boldsymbol{r}'\|^k P_k(\cos\theta')\,\rho(\boldsymbol{r}')\,d^3\boldsymbol{r'}
+\tag{8.19}\]</span></span></p>
+<p>이다.</p>
+<p><br></p>
+<p><span class="math inline">\(\rho(\boldsymbol{r'})=q\delta(\boldsymbol{r}')\)</span> 이라면, 즉 점전하라면</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Arfken2013mathematical" class="csl-entry" role="listitem">
+Arfken, G. B., G. B. Arfken, H. J. Weber, and F. E. Harris. 2013. <em>Mathematical Methods for Physicists: A Comprehensive Guide</em>. Elsevier Science. <a href="https://books.google.co.kr/books?id=qLFo_Z-PoGIC">https://books.google.co.kr/books?id=qLFo_Z-PoGIC</a>.
+</div>
+<div id="ref-Jackson_classical_1999" class="csl-entry" role="listitem">
+Jackson, John David. 1999. <em>Classical Electrodynamics</em>. 3rd ed. New York, <span>NY</span>: Wiley. <a href="http://cdsweb.cern.ch/record/490457">http://cdsweb.cern.ch/record/490457</a>.
+</div>
+</div>
 </section>
 </section>
 

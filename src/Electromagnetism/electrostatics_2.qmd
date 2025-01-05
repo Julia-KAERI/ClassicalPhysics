@@ -221,6 +221,175 @@ $$ {#eq-part2_electrostatic_potential_energy_by_charge_distribution_and_potentia
 
 </br>
 
+## 르장드르 다항식과 구면조화함수
+
+여기서는 르장드르 다항식, 르장드르 연관 다항식, 그리고 구면조화함수에 대해 간단하게 정리한다. 자세한 내용은 @Arfken2013mathematical, @Jackson_classical_1999 등을 참고하라. 
+
+기본적으로 구면좌표계에서 라플라스 방정식 $\nabla^2 \phi (r,\,\theta,\, \varphi) = 0$ 을 살펴보자. 우선 구면좌표계에서
+
+$$
+\nabla^2 \phi = \dfrac{1}{r}\dfrac{\partial^2}{\partial r^2}(r\phi) + \dfrac{1}{r^2 \sin \theta}\dfrac{\partial}{\partial \theta}\left(\sin \theta \dfrac{\partial \phi}{\partial \theta}\right) + \dfrac{1}{r^2 \sin^2 \theta}\dfrac{\partial^2 \phi}{\partial \varphi^2}
+$$ {#eq-part2_laplace_equation_in_spherical_coordinate}
+
+이며 변수분리법을 이용하여 $\phi (r,\, \theta,\,\varphi) = \dfrac{R(r)}{r}\Theta(\theta)\Phi(\varphi)$ 로 놓으면 위의 라플라스 방정식은 다음과 같이 변한다. 
+
+$$
+r^2 \sin^2 \theta \left[\dfrac{1}{R} \dfrac{d^2 R}{dr^2} + \dfrac{1}{\Theta r^2\sin\theta} \dfrac{d}{d\theta}\left(\sin \theta \dfrac{d\Theta}{d\theta}\right)\right] + \dfrac{1}{\Phi}\dfrac{d^2 \Phi}{d\varphi^2}=0
+$${#eq-part2_laplace_equation_in_spherical_coordinate_2}
+
+
+위 식에서 마지막 항 $\dfrac{1}{\Phi}\Phi''(\varphi)$ 를 보자. 여기에 $\varphi$ 의존성이 있다면 미분방정식의 앞부분에도 $\varphi$ 의존성이 있어야 하므로 변수분리 가정에 모순된다. 따라서 어떤 상수값밖에 가질 수 없다. 이 상수값을 $-m^2$ 라고 하자. 즉
+$$
+\dfrac{1}{\Phi}\dfrac{d^2 \Phi}{d^2\varphi} = -m^2
+$$
+
+를 얻는다. $\Phi(\varphi)= e^{\pm im\varphi}$ 이며 single-valued 이어야 하므로 $\Phi(\varphi + 2\pi) = \Phi(\varphi)$ 이어야 한다. 즉 $m$ 은 정수이다.
+
+이제 남은 두 식은 다음과 같다.
+
+$$
+\begin{aligned}
+\dfrac{1}{\sin\theta} \dfrac{d}{d\theta}\left(\sin \theta \dfrac{d\Theta}{d\theta}\right) + \left[l(l+1)- \dfrac{m^2}{\sin^2\theta}\right]\Theta &=0,  \\[0.3em]
+\dfrac{d^2 R}{dr^2} - \dfrac{l(l+1)}{r^2}R &= 0.
+\end{aligned}
+$$
+
+여기서 $l(l+1)$ 은 임의의 실수이다. $R(r)$ 에 대해 해는
+
+$$
+R_l(r) = a_l r^{l+1} + b_l r^{-l}
+$$
+
+이며 $\Theta$ 는 $m,\,l$ 에 대해 성립하며 역시 single valued 조건 등에 의해 $l$ 은 음이 아닌 정수이고 $m$ 은 $-l$ 부터 $l$ 까지의 값을 가질 수 있다는 것을 보일 수 있다. $m=0$ 일 경우 $l$ 값에 대한 미분방정식의 해는 뒤에 나올 르장드르 다항식 $P_l(\cos\theta)$ 이며 $m \ne 0$ 경우의 해가 연관 르장드르 다항식 $P_{l}^m(\cos \theta)$ 이다. 즉 라플라스 방정식 $\nabla^2 \phi(r,\, \theta,\, \phi)=0$ 의 해는
+
+$$
+\phi(r,\,\theta,\,\varphi) = \sum_{l=0}^\infty\sum_{m=-l}^l (a_l r^l + b_l r^{l-1})P_{l}^m(\cos \theta) e^{im\varphi}
+$$
+
+로 주어진다. 이 때 구면조화함수 $Y_{l}^m(\theta,\, \varphi) := P_l^m(\cos \theta)e^{im\varphi}$ 로 정의한다. 즉
+
+$$
+\phi(r,\,\theta,\,\varphi) = \sum_{l=0}^\infty\sum_{m=-l}^l (a_l r^l + b_l r^{l-1}) Y_{l}^m(\theta,\, \varphi)
+$$
+
+이다. 
+
+</br>
+
+
+### 르장드르 다항식
+
+#### **1. 생성함수**
+
+
+$$
+\dfrac{1}{\sqrt{1-2xt + t^2}} = \sum_{n=0}^\infty P_n (x) t^n
+$$ {#eq-part2_generator_of_legendre_polymonals}
+
+</br>
+
+#### **2. 재귀관계**
+
+&emsp;($1$) $nP_n (x) = (2n-1)xP_{n-1}(x) - (n-1)P_{n-2}(x)$,
+
+&emsp;($2$) $xP'_n(x) - P'_{n-1}(x) = nP_n (x)$,
+
+&emsp;($3$) $P'_n(x)- xP'_{n-1}(x) = nP_{n-1}(x)$,
+
+&emsp;($4$) $(1-x^2)P'_n(x) = nP_{n-1}(x) - nxP_n(x)$, 
+
+&emsp;($5$) $(2n+1)P_n(x) = P'_{n+1}(x) - P'_{n-1}(x)$, 
+
+&emsp;($6$) $(1-x^2)P'_{n-1}(x) = nxP_{n-1}(x) - nP_n(x)$.
+
+</br>
+
+#### **3. 직교성**
+
+$$
+\int_{-1}^1 P_n(x) P_m(x)\, dx = \dfrac{2}{2n+1} \delta_{mn}
+$$ {#eq-part2_orthogonalizty_of_legendre_polynomial}
+
+
+</br>
+
+#### **4. 르장드르 다항식**
+
+$0$ 차에서 $5$ 차 르장드르 다항식은 다음과 같다.
+$$
+\begin{aligned}
+P_0(x) &= 1, \\[0.3em]
+P_1(x) &= x, \\[0.3em]
+P_2(x) &= \dfrac{1}{2} (3x^2-1), \\[0.3em]
+P_3(x) &= \dfrac{1}{2} (5x^3-3x), \\[0.3em]
+P_4(x) &= \dfrac{1}{8}(35 x^4-30x^2 +3) , \\[0.3em]
+P_5(x) &= \dfrac{1}{8}(63x^5 - 70x^3 +15x).
+\end{aligned}
+$$
+
+</br>
+
+### 르장드르 연관 함수 (Associated legendre function)
+
+#### **1. 정의**
+$$
+\begin{aligned}
+P_n^m &= (1-x)^{|m|/2} \dfrac{d^{|m|} P_n(x)}{dx^{|m|}},\\[0.3em]
+P_n^{-m} &= (-1)^m \dfrac{(n-m)!}{(n+m)!} P_{n}^m (x). 
+\end{aligned}
+$$ {#eq-part2_definition_of_associated_legendre_polynomial}
+
+</br>
+
+#### **2. 직교성**
+
+$$
+\int_{-b}^b P_n^m \left(\dfrac{x}{b}\right)P_l^m \left(\dfrac{x}{b}\right)^m dx = \dfrac{2b}{2n+1}\dfrac{(n+|m|)!}{(n-|m|)!} \delta _{ln}.
+$$ {#eq-part2_orthogonality_of_associated_legendre_polynomials}
+
+</br>
+
+#### **3. 재귀관계**
+
+&emsp;($1$) $P_n^{m+1} (x) = \dfrac{2mx}{\sqrt{1-x^2}}P_n^m(x) + [m(m-1)-n(n+1)] P_n^{m-1}(x)$, 
+
+&emsp;($2$) $(2n+1) xP_n^m(x) = (n+m)P_{n-1}^m (x) + (n-m+1)P_{n+1}^m (x)$, 
+
+&emsp;($3$) $(2n+1)\sqrt{1-x^2} P_{n}^m (x) = P_{n+1}^{m+1} (x) - P_{n-1}^{m+1}(x)$,
+
+&emsp;($4$) $2\sqrt{1-x^2} \dfrac{dP_n^m(x)}{dx} = P_{n}^{m+1}(x) - (n+m)(n-m+1)P_{n}^{m-1}(x)$.
+
+</br>
+
+### 구면조화함수
+
+#### **1. 정의** 
+
+구면조화함수는 $(r,\, \theta,\, \varphi)$ 에 의해 기술되는 구면좌표계에서 아래와 같이 정의되는 함수이다.
+
+
+$$
+Y_l^m (\theta,\, \varphi) = \sqrt{\dfrac{2l+1}{4\pi}\dfrac{(l-|m|)!}{(l+|m|)!}} P_l^m(\cos\theta) e^{im\varphi}
+$$ {#eq-part2_definition_of_spherical_harmomics}
+
+</br>
+
+#### **2.직교성** 
+
+$$
+\oint_{\Omega} {Y_{l'}^{m'}}^\ast (\theta,\, \varphi)\, Y_l^m (\theta,\, \varphi) =\delta_{ll'}\delta_{mm'}
+$$ {#eq-part2_orthogonamity_of_spherical_harmonics}
+
+</br>
+
+또한 같은 $l$ 에 대해 다음 관계를 만족한다.
+
+$$
+Y_l^{-m}(\theta,\, \varphi) = (-1)^mY_{l}^m (\theta,\, \varphi).
+$$ {#eq-part2_similarity_of_spherical_harmonics}
+
+
+
 ## 다중극 전개 (Multipole expansions)
 
 ### 쌍극자 모멘트 {#sec-part2_electric_dipole_moment}
@@ -247,7 +416,7 @@ $$
 
 이다. 
 
-위의 경우는 총 전하량이 $0$ 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 $\|\bf{r}\|^{-2}$ 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 $0$ 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다.  
+위의 경우는 총 전하량이 $0$ 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 $\|\bf{r}\|^{-2}$ 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 $0$ 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다.   
 
 </br>
 
@@ -259,7 +428,28 @@ $$
 \dfrac{1}{\|\bf{r}_>-\bf{r}_<\|} = \dfrac{1}{\|\bf{r}_>\|} \sum_{k=0}^\infty \left(\dfrac{\|\bf{r}_<\|}{\|\bf{r}_>\|}\right)^k P_k (\cos \theta)
 $$ {#eq-part2_legendre_expansion}
 
-이 때
+그렇다면 @eq-part2_electric_potential 에서 정해진 원점과 가능한 전하 분포 $\rho(\bf{r}')$ 에 대해 $\|\bf{r}\| > \|\bf{r}'\|$ 일 때,
+
+$$
+\begin{aligned}
+\phi(\bf{r}) &=\dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}' \\[0.3em]
+&= \dfrac{1}{4\pi\epsilon_0}\sum_{k=0}^\infty \dfrac{1}{\|\bf{r}\|^{k+1}} \int_V \|\bf{r}'\|^k P_k(\cos\theta')\,\rho(\bf{r}')\,d^3\bf{r'} \\[0.3em]
+\end{aligned}
+$$
+
+이다. 즉, 
+
+$$
+\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Q_k}{\|\bf{r}\|^{k+1}},\qquad \text{where }Q_k = \int_V \|\bf{r}'\|^k P_k(\cos\theta')\,\rho(\bf{r}')\,d^3\bf{r'}
+$$ {#eq-part2_multiple_expansion}
+
+이다. 
+
+</br>
+
+$\rho(\bf{r'})=q\delta(\bf{r}')$ 이라면, 즉 점전하라면 
+
+
 
 
 
