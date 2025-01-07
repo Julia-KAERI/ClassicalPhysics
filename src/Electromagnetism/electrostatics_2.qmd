@@ -478,15 +478,24 @@ $$ {#eq-part2_spherical_haromics_expansion_of_inverse_vector_difference}
 전하 $+q$ 와 $-q$ 가 위의 그림과 같이 $d$ 의 거리만큼 떨어져 있다고 하고 원점을 두 전하의 중앙에 두자. 그리고 $+q$ 로부터의 변위를 $\bf{r}_1$, $-q$ 로부터의 변위를 $\bf{r}_2$ 라고 하고 원점으로부터의 변위를 $\bf{r}$ 라고 하자. 그리고 $-q$ 전하의 위치로부터 $+q$ 전하의 위치까지의 변위를 $\bf{d}$ 라고 하자. 이 때의 전기 포텐셜 $\phi (\bf{r})$ 은 $r=\|\bf{r}\|$ 이라고 할 때 $r>d$ 의 조건과 @eq-part2_legendre_expansion 와 @eq-part2_parity_of_legendre_polynomial 로부터 다음을 얻는다.
 $$
 \begin{aligned}
-\phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{q}{\|\bf{r}_1\|} - \dfrac{q}{\|\bf{r}_2\|}\right] = \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{1}{\|\bf{r}-\bf{d}/2\|} - \dfrac{1}{\|\bf{r}+\bf{d}/2\|}\right] \\[0.3em]
-&= \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{d^k}{2^kr^{k+1}} \left[P_k(\cos\theta)- P_k (-\cos\theta)\right] \\
-&=\dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{2d^{2k+1}}{2^{2k+1}r^{2k+2}} P_{2k+1}(\cos\theta) \\
-&= \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{d\cos\theta}{r^2} + \dfrac{d^3(5\cos^3\theta - 3\cos \theta) }{8r^4} + \cdots \right]
+\phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{q}{\|\bf{r}_1\|} - \dfrac{q}{\|\bf{r}_2\|}\right] = \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{1}{\|\bf{r}-\bf{d}/2\|} - \dfrac{1}{\|\bf{r}+\bf{d}/2\|}\right] \\[0.3em]
+&= \dfrac{q}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{d^k}{2^kr^{k+1}} \left[P_k(\cos\theta)- P_k (-\cos\theta)\right] \\
+&=\dfrac{q}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{2d^{2k+1}}{2^{2k+1}r^{2k+2}} P_{2k+1}(\cos\theta) \\
+&= \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{d\cos\theta}{r^2} + \dfrac{d^3(5\cos^3\theta - 3\cos \theta) }{8r^4} + \cdots \right] \approx\dfrac{1}{4\pi\epsilon_0} \dfrac{qd\cos\theta}{r^2}
 \end{aligned}
+$$ {#eq-part2_electric_potential_dipole_1}
+
+
+위의 경우는 총 전하량이 $0$ 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 $\|\bf{r}\|^{-2}$ 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 $0$ 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다. @eq-part2_electric_potential_dipole_1 에서 $1/r^2$ 에 비례하는 부분에 대해 전기 쌍극자 모멘트 $\bf{\mu}$ 를
+
 $$
+\bf{\mu}:=q\bf{d}
+$$ {#eq-part2_electric_dipole_moment}
 
-
-위의 경우는 총 전하량이 $0$ 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 $\|\bf{r}\|^{-2}$ 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 $0$ 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다.   
+로 정의하면 전기 쌍극자 모멘트에 의한 전기 포텐셜 $\phi_d(\bf{r})$ 은 다음과 같다. 
+$$
+\phi_d (\bf{r})= \dfrac{1}{4\pi\epsilon_0} \dfrac{\bf{\mu\cdot r}}{r^3}
+$$ {#eq-part2_electric_potential_dipole_2}
 
 </br>
 

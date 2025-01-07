@@ -70,7 +70,7 @@ $$
 
 ::: {.callout-note appearance="minimal" icon="false"}
 
-::: {#def-linear_momentum}
+::: {#def-CM_linear_momentum}
 
 #### 선형 운동량 
 
@@ -78,7 +78,7 @@ $$
 
 $$
 \boldsymbol{p} := m\boldsymbol{v}. 
-$$
+$$ {#eq-CM_linear_momentum}
 
 :::
 :::
@@ -135,13 +135,29 @@ $$
 
 ## 물리량
 
-### 각운동량과 토크
+### 각운동량과 토크 {#sec-CM_angular_momentum_and_torque}
 
-각운동량 $\boldsymbol{L}$ 은 $\boldsymbol{L} = \boldsymbol{r} \times \boldsymbol{p}$ 로 정의된다. 원점 $\mathcal{O}$ 로부터의 토크(torque) (혹은 moment of force) $\boldsymbol{N}$ 은 $\boldsymbol{N} = \boldsymbol{r} \times \boldsymbol{F}$ 로 정의된다. 이 때, 
+각운동량 $\boldsymbol{L}$ 은 다음과 같이 정의된다.
+
+$$
+\boxed{
+\boldsymbol{L} := \boldsymbol{r} \times \boldsymbol{p}
+}
+$$ {#eq-CM_def_angular_momentum}
+
+원점 $\mathcal{O}$ 로부터의 토크(torque) (혹은 moment of force) $\boldsymbol{N}$ 은 
+
+$$
+\boxed{
+\boldsymbol{N} := \boldsymbol{r} \times \boldsymbol{F}
+}
+$$ {#eq-CM_def_torque}
+
+로 정의된다. 이 때, 
 
 $$
 \dfrac{d\boldsymbol{L}}{dt} = \dfrac{d}{dt} (\boldsymbol{r} \times m\boldsymbol{v}) = \boldsymbol{v} \times m \boldsymbol{v} + \boldsymbol{r} \times \dfrac{d}{dt}(m\boldsymbol{v}) = \boldsymbol{r} \times \boldsymbol{p} = \boldsymbol{N} 
-$$
+$$  {#eq-CM_def_torque}
 
 이다. 즉 $\boldsymbol{N}=0$ 이면 $\boldsymbol{L}$ 이 보존됨을 알 수 있다.
 
@@ -152,8 +168,10 @@ $$
 External force $\boldsymbol{F}$ 에 의해 입자가 $1$ 지점에서 $2$ 지점으로 움직였다고 하자. 이 때, 이 particle에 가해진 힘 $\boldsymbol{F}$가 한 일 $W_{12}$는 다음과 같이 정의된다.
 
 $$
-W_{12} = \int_1^2 \boldsymbol{F} \cdot d\boldsymbol{s}\;.
-$$
+\boxed{
+W_{12} := \int_1^2 \boldsymbol{F} \cdot d\boldsymbol{s}\;.
+}
+$${#eq-CM_def_work}
 
 다음을 보자. 
 
@@ -171,7 +189,7 @@ External force 가 벡터장 $\boldsymbol{F}$ 로 주어졌고, 이 $\boldsymbol
 
 $$
 \oint_C \boldsymbol{F}\cdot d\boldsymbol{s}=0
-$$
+$$ {#eq-CM_sufficient_condition_for_conservative_force}
 
 수학적으로 이것은 어떤 스칼라장 (scalar field) $V(\boldsymbol{r})$ 이 존재하여 $\boldsymbol{F}= -\nabla V(\boldsymbol{r})$ 인 것과 동치이다. 이 때 $V(\boldsymbol{r})$ 을 **포텐셜(potential)** 혹은 **포텐셜 에너지(potential energy)** 라고 한다.
 
@@ -183,7 +201,7 @@ $$
 
 $$
 W_{12} = \int_1^2 \boldsymbol{F}\cdot d \boldsymbol{s} = \int_1^2 -\nabla V(\boldsymbol{r}) \cdot d\boldsymbol{s} = V(1) - V(2)
-$$
+$$ {#eq-CM_energy_conservation_theorem_for_conservative_system}
 
 이다. $V_1=V(1)$, $V_2=V(2)$ 라 할 경우 $W_{12}=T_2 - T_1 = V_1 - V_2$ 이므로 $T_1 + V_1 = T_2 + V_2$ 이다. 즉 보존계에서는 운동에너지와 위치에너지의 합이 항상 보존된다. 이를 **보존계에서의 에너지 보존**  이라 한다.
 
@@ -211,19 +229,19 @@ $$ {#eq-system_of_particles}
 
 $$
 \boldsymbol{R} = \dfrac{\sum_i m_i \boldsymbol{r}_i } {\sum_i m_i} = \dfrac{\sum_i m_i \boldsymbol{r}_i}{M}\;.
-$$
+$$ {#eq-CM_center_of_mass}
 
 입자계의 운동방정식 (@eq-system_of_particles) 을 사용하면 다음을 얻는다.
 
 $$
 M\dfrac{d^2\boldsymbol{R}}{dt^2} =\boldsymbol{F}^{(e)}\;.
-$$
+$$ {#eq-CM_equation_of_motion_for_center_of_mass_1}
 
-이로부터 입자계의 질량 줌심에 작용하는 모든 외령의 합이 질량 중심에 집중하여 작용하는 것처럼 움직인다는 것을 알 수 있다. 또한 총 운동량 $\boldsymbol{P}$ 를 $\boldsymbol{P}=\sum_i m_i \dfrac{d\boldsymbol{r}_i}{dt} = M \dfrac{d\boldsymbol{R}}{dt}$ 로 정의하면 질량 중심에 대한 운동방정식을 얻는다. 
+이로부터 입자계의 질량 줌심에 작용하는 모든 외령의 합이 질량 중심에 집중하여 작용하는 것처럼 움직인다는 것을 알 수 있다. 또한 총 운동량 $\boldsymbol{P}$ 를 $\boldsymbol{P}:=\sum_i m_i \dfrac{d\boldsymbol{r}_i}{dt} = M \dfrac{d\boldsymbol{R}}{dt}$ 로 정의하면 질량 중심에 대한 운동방정식을 얻는다. 
 
 $$
 \dot{\boldsymbol{P}} = \dfrac{d}{dt}\boldsymbol{P}=\boldsymbol{F}^{(e)}
-$$
+$${#eq-CM_equation_of_motion_for_center_of_mass_2}
 
 </br>
 
@@ -233,7 +251,7 @@ $$
 
 $$
 \boldsymbol{L} :=\sum_i \boldsymbol{L}_i
-$$ 
+$$ {#eq-CM_total_angular_momentum}
 
 이다. 따라서 
 
@@ -242,7 +260,7 @@ $$
 \dot{\boldsymbol{L}} := \dfrac{d\boldsymbol{L}}{dt} &= \sum_i \dfrac{d}{dt}( \boldsymbol{r}_i \times \boldsymbol{p}_i) \\
 &= \sum_i \dot{\boldsymbol{r}}_i \times \boldsymbol{p}_i + \boldsymbol{r}_i \times \dot{\boldsymbol{p}}_i = \sum_i \boldsymbol{r}_i \times \boldsymbol{F}^{(e)}_i +  \sum_{\substack{ i ,j \\ i \ne j }} \boldsymbol{r}_i \times \boldsymbol{F}_{ji} 
 \end{aligned}
-$$ {#eq-total_angular_momentum}
+$$ {#eq-CM_derivative_of_total_angular_momentum}
 
 이다. 여기서 $\dot{\boldsymbol{r}}_i \times \boldsymbol{p}_i = 0$ 이 이용되었다. 뉴턴의 제 3 운동법칙을 따르는 힘 이라면, 즉 $\boldsymbol{F}_{ij}= -\boldsymbol{F}_{ji}$ 라면, 
 
@@ -252,7 +270,7 @@ $$
 
 로 쓸 수 있다.  
 
-여기서 작용-반작용이 $\boldsymbol{F}_{ji}=F_{ji}\hat{\boldsymbol{r}}_{ij}$ 일 경우를 생각하자. (이를 the strong law of action and reaction 라고 한다.) 이 경우 @eq-total_angular_momentum 의 마지막 term은 아래와 같이 $0$ 이 된다.
+여기서 작용-반작용이 $\boldsymbol{F}_{ji}=F_{ji}\hat{\boldsymbol{r}}_{ij}$ 일 경우를 생각하자. (이를 the strong law of action and reaction 라고 한다.) 이 경우 @eq-CM_derivative_of_total_angular_momentum 의 마지막 term은 아래와 같이 $0$ 이 된다.
 
 $$
 \sum_{\substack{ i ,j \\ i \ne j }} \boldsymbol{r}_i \times \boldsymbol{F}_{ji} = \sum_{i<j} \boldsymbol{r}_{ij}\times \boldsymbol{F}_{ji} = 0\;.
@@ -262,7 +280,7 @@ $$
 
 $$
 \dot{\boldsymbol{L}} = \dfrac{d\boldsymbol{L}}{dt} = \boldsymbol{N}^{(e)}\;.
-$$
+$$ {#eq-CM_equation_of_motion_for_total_angular_momentum}
 
 
 ::: {.callout-caution appearance="minimal" icon="false"}
@@ -281,7 +299,7 @@ $$
 &=\sum_i \boldsymbol{R} \times m_i \boldsymbol{V} + \sum_i \boldsymbol{r}'_i  \times m_i \boldsymbol{v}'_i + \left(\sum_i m_i \boldsymbol{r}'_i \right) \times \boldsymbol{V} + \boldsymbol{R} \times \left( \dfrac{d}{dt} \sum_i m_i \boldsymbol{r}'_i\right)   \\
 & = \boldsymbol{R} \times M\boldsymbol{V} + \sum_i \boldsymbol{r}'_i \times \boldsymbol{p}'_i\;.
 \end{aligned}
-$$
+$$ {#eq-CM_total_angular_momentum_for_center_of_mass_coord}
 
 </br>
 
@@ -307,7 +325,7 @@ $$
 
 $$
 T=\frac{1}{2} \sum_i m_i (\boldsymbol{V} + \boldsymbol{v}'_i) \cdot (\boldsymbol{V} + \boldsymbol{v}'_i)  = \dfrac{1}{2} MV^2 + \dfrac{1}{2} \sum_i m_i {v'}_i^2
-$$
+$$ {#eq-CM_total_kinetic_energy_in_center_of_mass_coord}
 
 ::: {.callout-caution appearance="minimal" icon="false"}
 원점 $\mathcal{O}$에서의 입자계의 총 운동에너지 $T$ 는 모든 질량이 질량중심 에 집중되어 있다고 가정할 때의 운동에너지와 질량 중심을 원점으로 했을때의 운동에너지의 합이다. 
@@ -363,11 +381,13 @@ $$
 
 ### constraints의 분류
 
-Constraint가 시간과 위치에 대한 함수이며 다음과 같은 꼴로 표현 될 수 있을 때 **holonomic constraint** 라 하며 그렇지 않을 때 **nonholonomic constraint** 라 한다.
+Constraint가 시간과 위치에 대한 함수이며 다음과 같은 꼴로 표현 될 수 있을 때 **holonomic** 이라 한다. 
 
 $$
-f(\boldsymbol{r}_1,\,\boldsymbol{r}_2,\ldots,\,t) =0
-$$
+f(\boldsymbol{r}_1,\,\boldsymbol{r}_2,\ldots,\,t) =0.
+$$ {#eq-CM_holonomic_constraint}
+
+Holonomic constraint 가 아닌 constraint 는 **nonholonomic** 이라고 한다.
 
 Constraint가 explicit한 시간 의존성이 없을 때, 즉 $\dfrac{\partial}{\partial t} f(\boldsymbol{r}_i;\, \dot{\boldsymbol{r}}_i ;\,t)=0$  일 때 **scleronomous constraint** 라 하며 아닐 때 **rheonomous constraint** 라 한다. 
 
