@@ -931,7 +931,9 @@ $$
 
 </br>
 
-## 연습문제
+## 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_12}
 
@@ -943,6 +945,8 @@ $$
 
 ($c$) $v=0.99c$ 일 때의 $v_{\textrm{app}}$ 의 최대값을 구하라. 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -977,11 +981,15 @@ $$ {#eq-halliwell_2_12_2}
 
 </br>
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-helliwell_2_15}
 
 속도 변환에 관한 식을 미분함으로서 가속도 변환에 대한 식을 얻을 수 있다. $\Sigma \to \Sigma'$ 좌표계 변환에서의 가속도 $a_x'$ 을 $a_x,\,v_x,\,V$ 로 표현하라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1022,12 +1030,15 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_16}
 
 전자가 $0.9c$ 의 속도로 움직인다. 운동량이 2배가 되려면 얼마나 빨리 움직여야 하는가?
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1037,12 +1048,15 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#ext-helliwell_2_17}
+::: {#exr-helliwell_2_17}
 
 원자핵이 실험실에서 정지 해 있다가 각각 운동량이 $p_\gamma$ 인 두개의 같은 방향에 대한 광자에 순서대로 맞았으며 광자는 원자핵에 흡수되었다. 원자핵의 최종 질량이 $M^\ast$ 일 때 속도를 구하여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1051,12 +1065,15 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_18}
 
 두 입자가 정면 충돌 후 하나로 뭉쳐 정지했다. 첫번째 입자는 질량 $m$ 에 속도가 $(24/25)c$ 이고 두번째 입자는 질량 $M$ 에 속도 $(5/13)c$ 이었다. $M$ 을 $m$ 으로 표현하라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1069,12 +1086,15 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_19}
 
 우주선 $A$ 가 $(3/5)c$ 로 가면서 먼저 출발하여 같은 방향으로 $(4/5)c$ 로 가고 있는 우주선 $B$ 에 메시지를 보냈다. 메시지는 $A$ 좌표계에서 $100\,\textrm{fs} (1\,\textrm{fs}=10^{-15} \,\textrm{s})$ 간격의 펄스로 이루어졌다. $B$ 가 받은 펄스 간격은 얼마인가?
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1087,12 +1107,15 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_20}
 
 외계인의 우주선이 지구로 $(3/5)c$ 로 접근하는 것이 관측되었다. 요격 탐사선(intercepting probe) 가 지구에서 $(4/5)c$ 로 우주선을 향해 발사되었다. 둘이 접근함에 따라 탐사선이 외계인을 향해 탐사선의 좌표계에서 펄스 간격이 $12\,\textrm{ps}$ 인 신호를 외계선으로 보냈다. 외계선에서 받은 신호의 펄스 간격은 얼마인가?
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1104,12 +1127,15 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_21}
 
 지구의 오르간주자가 연주하는 바흐의 Toccata and Fugue in D Minor 를 강력한 라디오 안테나로 송출하고 있다. 지구로부터 $(3/5)c$ 의 속도로 멀어지는 우주선의 여행자가 이 음악을 듣고 있다. 이 여행자가 듣는 조성은?
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1118,6 +1144,7 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_22}
 
@@ -1129,6 +1156,8 @@ $$
 
 실제로는 ($a$) 의 계산속도보다 느린데 태양계 자체가 지구 은하를 중심으로 움직이기 때문이다.
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1145,6 +1174,7 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_23}
 
@@ -1154,6 +1184,9 @@ $$
 
 ($b$) $+x$ 방향으로 $(4/5)c$ 속도로 움직이는 좌표계에서의 양성자의 4-속도를 구하고 역시 불변제곱량을 구하라.
 :::
+
+</div>
+</br>
 
 ::: {.solution}
 
@@ -1175,7 +1208,7 @@ $$
 :::
 
 </br>
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-helliwell_2_24}
 
 파이온 $\pi^+$ 는 자신의 정지좌표계에서 $26\, \textrm{ns}$ 후에 붕괴한다. 입자가속기에서 에너지 $100 \, mc^2$ 의 파이온을 만들었다고 하자. 
@@ -1185,6 +1218,8 @@ $$
 ($b$) 다른 파이온은 그의 질량 에너지와 같은 운동에너지를 가진다. 이것이 거리 $D$ 를 날아가 붕괴하면 그것의 정지좌표계에서 얼마나 오래 살아 남는가?
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1196,12 +1231,15 @@ $$
 
 </br>
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_25}
 
 총 에너지 $E=12000 \textrm{MeV}$ 인 광자가 질량 $M_0$ 인 정지상태의 핵에 흡수되었고 이후 핵의 질량이 $M$ 이 되고 $(12/13)c$ 의 속도로 움직인다. 이것의 운동량을 $\textrm{MeV}/c$ 단위로 구하고 질량 $M$ 과 $M_0$ 를 $\textrm{MeV}/c^2$ 단위로 구하라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1216,13 +1254,15 @@ $$
 :::
 
 </br>
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_27}
 
 운동량 4-벡터와 속도 4-벡터는 time-like 이고, 힘에 대한 4-벡터는 space-like 임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1241,6 +1281,8 @@ $$
 
 </br>
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-helliwell_2_28}
 
 #### 시공간에 대한 푸앙카레 변환
@@ -1254,6 +1296,8 @@ $$
 을 만족한다. 이때 $\square$ 를 **달랑베르 연산자(d'Alembert operator)** 라고 한다. 시공간에 대한 선형 변환에 의해 위의 형태가 변하지 않을 때 이 변환을 **푸앙카레 변환(Poincaré transformations)** 이라고 한다. 푸앙카레 변환에는 (i) 시공간에 대한 4 종류의 translation, (ii) 공간에서의 3 가지 회전, (iii) 3가지의 로런츠 변환 이 있음을 보여라.
  
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1292,13 +1336,18 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_29}
 
 #### 벨의 우주선 역설 
-우리의 관성좌표계에서 거리 $D$ 만큼 앞뒤로 떨어져 정지해있는 두 우주선이 있다. 정지길이 $D$ 인 가벼운 끈이 두우주선을 연결하고 있다고 하자. 두 우주선이 동시에 오른쪽으로 등가속운동을 시작한다고 하자. 이 끈은 여전히 그들을 묶고 있다. 두 우주선은 동시에 출발했고 같은 가속도를 가지고 있으므로 두 우주선의 간격과 줄의 길이는 우리 좌표계에서는 일정하다. 그러나 움직이는 줄은 $\sqrt{1-\beta^2}$ 만큼 로런츠 수축되어야 하며, 따라서 이 줄은 끊어져야 하는가? 아니면 우리 좌표계에서 줄의 길이는 일정해야하며 이 줄은 끊어지지 않는가? *Hint* : 가속되는 물체의 **고유 길이(proper length)** 는 가속되는 물체와 같이 움직이는 어떤 좌표계에서 그 좌표계가 순간적으로 이 물체에 대해 정지했을 때의 좌표계에서 측정한 길이이다. [이를 [벨의 우주선 역설(Bell's spaceship paradox)](https://en.wikipedia.org/wiki/Bell%27s_spaceship_paradox) 이라고 한다. 이 문제는 E. Dewan 과 M. Beran 에 의해 1959년 제기되었으며 J. S. Bell 에 의해 1987 년 수정되었다. Bell 에 의해 제기되어 유명해져서 벨의 역설이라고 불리운다. 이 위키의 영어 문서를 꼭 읽어보기 바란다.]{.aside} 
+우리의 관성좌표계에서 거리 $D$ 만큼 앞뒤로 떨어져 정지해있는 두 우주선이 있다. 정지길이 $D$ 인 가벼운 끈이 두우주선을 연결하고 있다고 하자. 두 우주선이 동시에 오른쪽으로 등가속운동을 시작한다고 하자. 이 끈은 여전히 그들을 묶고 있다. 두 우주선은 동시에 출발했고 같은 가속도를 가지고 있으므로 두 우주선의 간격과 줄의 길이는 우리 좌표계에서는 일정하다. 그러나 움직이는 줄은 $\sqrt{1-\beta^2}$ 만큼 로런츠 수축되어야 하며, 따라서 이 줄은 끊어져야 하는가? 아니면 우리 좌표계에서 줄의 길이는 일정해야하며 이 줄은 끊어지지 않는가? *Hint* : 가속되는 물체의 **고유 길이(proper length)** 는 가속되는 물체와 같이 움직이는 어떤 좌표계에서 그 좌표계가 순간적으로 이 물체에 대해 정지했을 때의 좌표계에서 측정한 길이이다. 
+
+이를 [벨의 우주선 역설(Bell's spaceship paradox)](https://en.wikipedia.org/wiki/Bell%27s_spaceship_paradox) 이라고 한다. 이 문제는 E. Dewan 과 M. Beran 에 의해 1959년 제기되었으며 J. S. Bell 에 의해 1987 년 수정되었다. Bell 에 의해 제기되어 유명해져서 벨의 역설이라고 불리운다. 이 위키의 영어 문서를 꼭 읽어보기 바란다.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1316,6 +1365,7 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_30}
 
@@ -1324,6 +1374,8 @@ $$
 ($b$) $\Sigma$ 관성계에의 $A$ 에서 $B$ 로의 신호가 $v=2c$ 로 전달된다고 하자. $V,\,(|V|<c)$ 로 움직이는 $\Sigma'$ 관성계에서 $B$ 의 신호가 $A$ 의 신호보다 먼저 도착했다고 할 때 $V$ 를 구하라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1341,6 +1393,7 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_32}
 
@@ -1356,6 +1409,8 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($c$) 만 로런츠 스칼라이다.
@@ -1363,12 +1418,15 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_33}
 
 로런츠 스칼라가 아닌 로런츠 공변식 $C^\lambda = K^\lambda h(A^\mu \eta_{\mu \nu}B^\nu)$ 를 생각하자. $h$ 는 $(\;)$ 안의 양에 대한 함수이다. 여기서 위첨자가 하나인 것은 4-벡터이다. 로런츠 변환에 대해 $A^\mu \eta_{\mu \nu}B^\nu$ 는 로런츠 공변이며 로런츠 스칼라이다. 따라서 $h(A^\mu \eta_{\mu \nu}B^\nu)$ 도 로런츠 변환에 대해 그 값이 변하지 않는다. 그렇지만 $K^\mu$ 는 4-벡터이며 $K^\mu = \Lambda_{\mu'}^{\mu}K^{\mu'}$ 과 같이 변환된다는 것을 안다. $C^\lambda$ 는 4-벡터처럼 변환하며 관찰자 $O'$ 은 $C^{\lambda'} = K^{\lambda'} h(A^{\mu'} \eta_{\mu' \nu'}B^{\nu'})$ 로 쓸 수 있다. 이런 양은 4-벡터와 같이 변환되므로 **로런츠 벡터(Lorentz vector)** 라고 한다. ($a$) $K\eta_{\mu \nu}$, ($b$) $C^\lambda = D^\mu A^\lambda \eta_{\mu \nu}B^\nu$, ($c$) $KA^\mu \eta_{\mu \nu} B^\lambda \eta_{\lambda \sigma} D^\nu F^\sigma$ 가운데 로런츠 벡터는 무엇인가?
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1377,6 +1435,7 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_34}
 
@@ -1401,6 +1460,8 @@ $$
 ($c$) 중력 $\boldsymbol{F} = - (k/r^3)\boldsymbol{r}$ 은 로런츠 공변식인가?
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($a$) No, ($b$) Yes, ($c$) No.
@@ -1408,6 +1469,7 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_35}
 
@@ -1420,6 +1482,8 @@ $$
 로런츠 변환은 정의에 의해 시공간에서 정의된 선형변환이며 광속을 보존하기 때문에 이 두 조건이 위의 식을 만족하는 필요충분조건임을 보이면 된다. 반사(reflection) 은 두번째 조건에 의해 배제된다.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1442,13 +1506,15 @@ $$
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_36}
 
 $\pi^0$ 메존은 질랑 $m_\pi=135.0\, \textrm{MeV}/c^2$ 이며 대기권 상부에서 우주에서 입사하는 양성자가 질소 원자 핵과 충돌하여 생성된다. $\pi^0$ 메존의 평균적인 라이프타임은 $8.4 \times 10^{-17}\,\textrm{s}$ 이며 거의 대부분 두개의 광자로 붕괴한다. 어떤 에너지 $E=500 \, \textrm{MeV}$ 인 파이온이 지면을 향해 평균 라이프타임의 세배 만큼 낙하하다가 두개의 광자로 붕괴되었는데 하나는 위쪽으로, 하나는 아래쪽으로 붕괴했다고 하자. ($a$) $\pi^0$ 는 생성 후 붕괴까지 지면으로 얼마나 낙하했는가? ($b$) 지면의 관성계에서 두 광자의 진동수를 구하라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1471,12 +1537,15 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_37}
 
 $\pi^-$ 메존은 질량 $m_\pi = 140.0\, \textrm{MeV}/c^2$ 이며 가속기의 $(p,\,p)$ 충돌로 생성된다. 파이온은 곧바로 뮤온과 뮤온-반중성미자로 붕괴된다.($\pi^- \to \mu^- + \overline{\nu}_\mu$) 반중성미자는 매우 적은 질량을 가지며, 이 계산에서는 무시 할 수 있다. 뮤온의 질량은 $105.7 \, \textrm{MeV}/c^2$ 이다. 원래의 파이온에 대한 정지관성계에서 ($a$) 뮤온의 에너지와 3-운동량을 구하고 ($b$) 반중성미자의 총 에너지와 3-운동량을 구하라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1506,12 +1575,15 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-helliwell_2_38}
 
 힉스 입자는 $125 \,\textrm{GeV}/c^2$ 의 질량 에너지를 갖는다. 일단 상성되면 힉스입자는 다양한 집합의 입자로 곧바로 붕괴하는데 60% 정도의 시간동안 $(b\overline{b})$ 쿼크-반쿼크 쌍으로 붕괴한다. $b$ 는 bottom quark 로 쿼크, 반쿼크 모두 $4.2 \, \textrm{GeV}/c^2$ 의 질량 에너지를 가진다. 이 반응은 $H \to b + \overline{b}$ 혹은 $H \to b\overline{b}$ 로 쓴다. 어떤 힉스 입자가 $v=(4/5)c$ 의 속도루 실험실 좌표계에서 움직이다가 $(b\overline{b})$ 로 붕괴되었으며 $b$ 는 앞방향 $\overline{b}$ 는 뒷방향으로 움직였다고 하자. 실험실 관성계에서의 $b$ 와 $\overline{b}$ 의 에너지와 운동량을 계산하라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1526,12 +1598,14 @@ $$
 :::
 
 </br>
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-helliwell_2_39}
 
 **타키온(Tachyons)** 은 빛보다 빨리 움직이는 가상의 입자이다. ($a$) 타키온에 허수 질량을 부여한다면, 즉 $m=im_0,\, m_0\in \mathbb{R}$ 라고 하면 타키온의 4-운동량은 실수임을 보여라. ($b$) 4-운동량의 invariant square 는 음수임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 *trivial*

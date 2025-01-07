@@ -380,7 +380,7 @@ window.Quarto = {
   <li><a href="#sec-relativity_4_force" id="toc-sec-relativity_4_force" class="nav-link" data-scroll-target="#sec-relativity_4_force"><span class="header-section-number">9.4.7</span> 4-힘</a></li>
   <li><a href="#도플러-효과" id="toc-도플러-효과" class="nav-link" data-scroll-target="#도플러-효과"><span class="header-section-number">9.4.8</span> 도플러 효과</a></li>
   </ul></li>
-  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1"><span class="header-section-number">9.5</span> 연습문제</a></li>
+  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul>
 </nav>
     </div>
@@ -1120,14 +1120,17 @@ P^\mu = \left(\dfrac{h\nu}{c},\,\dfrac{h\nu}{c},\,0,\,0\right)
 <p><br></p>
 </section>
 </section>
-<section id="연습문제-1" class="level2 page-columns page-full" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="연습문제-1"><span class="header-section-number">9.5</span> 연습문제</h2>
+<section id="연습문제-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h2>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_12" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 9.5</strong></span> 멀리 떨어진 은하의 중심에서 우리의 시야에서 90 도 방향으로 물질의 분사 즉 jet 를 관측했다고 하자. 은하의 적색편이로부터 지구에서 은하의 중심까지의 거리를 알고 있기때문에 우리는 분사된 물질이 주어진 시간동안 얼마나 나가는지 계산할 수 있지만 은하의 핵과 분사 사이의 각이 증가하는 것을 관측했다. 이 정보로부터 우리는 jet 의 속도를 알 수 있다. 이 분출된 jet 로부터의 빛이 우리에게 오는데 걸리는 시간은 jet 의 시작점으로부터의 시간과 거의 차이가 나지 않는데 이것은 거리의 차이가 거의 나지 않기 때문이다. Jet 와 우리의 시야가 은하의 중심에 대해 <span class="math inline">\(\theta\)</span> 의 각도를 이룬다고 하자. Jet 의 속력 <span class="math inline">\(v\)</span> 에 대해 우리의 시야 방향 성분 <span class="math inline">\(v_{\parallel} = v\cos \theta\)</span> 이며 시야의 지각 방향 성분 <span class="math inline">\(v_\perp = v \sin \theta\)</span> 이다. Jet 가 우리쪽으로 점점 다가오기 때문에 <span class="math inline">\(\theta\)</span> 는 점점 작아진다.</p>
 <p>(<span class="math inline">\(a\)</span>) 우리가 지구에서 관측한 jet 의 속도를 <span class="math inline">\(v_\textrm{app}\)</span> 라고 하자. 이 속도가 빛의 속도보다 클 수 있음을 보여라.</p>
 <p>(<span class="math inline">\(b\)</span>) 주어진 <span class="math inline">\(v\)</span> 에 대해 <span class="math inline">\(v_\textrm{app}\)</span> 를 최대로 하는 <span class="math inline">\(\theta\)</span> 를 구하라.</p>
 <p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(v=0.99c\)</span> 일 때의 <span class="math inline">\(v_{\textrm{app}}\)</span> 의 최대값을 구하라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -1153,9 +1156,12 @@ v_{\textrm{app}}= \dfrac{vt \sin \theta}{t(1-(v/c)\cos \theta)} = \dfrac{v\sin \
 <p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(v_{\textrm{app}}\)</span> 의 최대값은 <span class="math inline">\(7.02c\)</span>.</p>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_15" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 9.6</strong></span> 속도 변환에 관한 식을 미분함으로서 가속도 변환에 대한 식을 얻을 수 있다. <span class="math inline">\(\Sigma \to \Sigma'\)</span> 좌표계 변환에서의 가속도 <span class="math inline">\(a_x'\)</span> 을 <span class="math inline">\(a_x,\,v_x,\,V\)</span> 로 표현하라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(v'_x = \dfrac{v_x-V}{1-v_xV/c^2}\)</span> 이므로,</p>
 <p><span class="math display">\[
@@ -1184,66 +1190,87 @@ a'_z &amp; = \dfrac{a_z - (a_zv_x-a_xv_z)V/c^2}{\gamma^2 (1-v_xV/c^2)^3}
 \]</span></p>
 <p>임을 알 수 있다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_16" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 9.7</strong></span> 전자가 <span class="math inline">\(0.9c\)</span> 의 속도로 움직인다. 운동량이 2배가 되려면 얼마나 빨리 움직여야 하는가?</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">\[
 \dfrac{m_ev}{\sqrt{1-v^2/c^2}} = \dfrac{2m_e(0.9c)}{\sqrt{1-0.9^2}} \implies v=0.972 c
 \]</span></p>
 </div>
-<p><br></p>
-<div id="ext-helliwell_2_17">
-<p>원자핵이 실험실에서 정지 해 있다가 각각 운동량이 <span class="math inline">\(p_\gamma\)</span> 인 두개의 같은 방향에 대한 광자에 순서대로 맞았으며 광자는 원자핵에 흡수되었다. 원자핵의 최종 질량이 <span class="math inline">\(M^\ast\)</span> 일 때 속도를 구하여라.</p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-helliwell_2_17" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 9.8</strong></span> 원자핵이 실험실에서 정지 해 있다가 각각 운동량이 <span class="math inline">\(p_\gamma\)</span> 인 두개의 같은 방향에 대한 광자에 순서대로 맞았으며 광자는 원자핵에 흡수되었다. 원자핵의 최종 질량이 <span class="math inline">\(M^\ast\)</span> 일 때 속도를 구하여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>전후의 운동량을 비교해보면, <span class="math inline">\(2p_\gamma = \gamma M^\ast v\)</span> 이므로 <span class="math inline">\(v = \dfrac{2p_\gamma c}{\sqrt{(M^\ast c)^2 + 4{p_\gamma}^2}}\)</span>.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_18" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.8</strong></span> 두 입자가 정면 충돌 후 하나로 뭉쳐 정지했다. 첫번째 입자는 질량 <span class="math inline">\(m\)</span> 에 속도가 <span class="math inline">\((24/25)c\)</span> 이고 두번째 입자는 질량 <span class="math inline">\(M\)</span> 에 속도 <span class="math inline">\((5/13)c\)</span> 이었다. <span class="math inline">\(M\)</span> 을 <span class="math inline">\(m\)</span> 으로 표현하라.</p>
+<p><span class="theorem-title"><strong>연습문제 9.9</strong></span> 두 입자가 정면 충돌 후 하나로 뭉쳐 정지했다. 첫번째 입자는 질량 <span class="math inline">\(m\)</span> 에 속도가 <span class="math inline">\((24/25)c\)</span> 이고 두번째 입자는 질량 <span class="math inline">\(M\)</span> 에 속도 <span class="math inline">\((5/13)c\)</span> 이었다. <span class="math inline">\(M\)</span> 을 <span class="math inline">\(m\)</span> 으로 표현하라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(v=(24/25)c\)</span>, <span class="math inline">\(u=(5/13)c\)</span> 로 표현하면 운동량 보존으로 부터 <span class="math inline">\(\gamma_v mv = \gamma_u M u\)</span> 이어야 한다. 즉,</p>
 <p><span class="math display">\[
 M = \dfrac{\gamma_v v}{\gamma_u u}m = \dfrac{\sqrt{1-(5/13)^2}}{\sqrt{1-(24/25)^2}}m = 8.2286 m
 \]</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_19" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.9</strong></span> 우주선 <span class="math inline">\(A\)</span> 가 <span class="math inline">\((3/5)c\)</span> 로 가면서 먼저 출발하여 같은 방향으로 <span class="math inline">\((4/5)c\)</span> 로 가고 있는 우주선 <span class="math inline">\(B\)</span> 에 메시지를 보냈다. 메시지는 <span class="math inline">\(A\)</span> 좌표계에서 <span class="math inline">\(100\,\textrm{fs} (1\,\textrm{fs}=10^{-15} \,\textrm{s})\)</span> 간격의 펄스로 이루어졌다. <span class="math inline">\(B\)</span> 가 받은 펄스 간격은 얼마인가?</p>
+<p><span class="theorem-title"><strong>연습문제 9.10</strong></span> 우주선 <span class="math inline">\(A\)</span> 가 <span class="math inline">\((3/5)c\)</span> 로 가면서 먼저 출발하여 같은 방향으로 <span class="math inline">\((4/5)c\)</span> 로 가고 있는 우주선 <span class="math inline">\(B\)</span> 에 메시지를 보냈다. 메시지는 <span class="math inline">\(A\)</span> 좌표계에서 <span class="math inline">\(100\,\textrm{fs} (1\,\textrm{fs}=10^{-15} \,\textrm{s})\)</span> 간격의 펄스로 이루어졌다. <span class="math inline">\(B\)</span> 가 받은 펄스 간격은 얼마인가?</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(B\)</span> 에서 봤을 때 <span class="math inline">\(A\)</span> 의 속도 <span class="math inline">\(v=\dfrac{\frac{4c}{5} - \frac{3c}{5}}{1-\frac{4}{5}\frac{3}{5}}= \dfrac{5c}{13}\)</span> 이다. 도플러 효과를 생각하자. 펄스 간격 <span class="math inline">\(T=1/\nu\)</span> 이므로</p>
 <p><span class="math display">\[
 T_B= \sqrt{\dfrac{1+5/13}{1-5/13}}T_A = 150\, \textrm{fs}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_20" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.10</strong></span> 외계인의 우주선이 지구로 <span class="math inline">\((3/5)c\)</span> 로 접근하는 것이 관측되었다. 요격 탐사선(intercepting probe) 가 지구에서 <span class="math inline">\((4/5)c\)</span> 로 우주선을 향해 발사되었다. 둘이 접근함에 따라 탐사선이 외계인을 향해 탐사선의 좌표계에서 펄스 간격이 <span class="math inline">\(12\,\textrm{ps}\)</span> 인 신호를 외계선으로 보냈다. 외계선에서 받은 신호의 펄스 간격은 얼마인가?</p>
+<p><span class="theorem-title"><strong>연습문제 9.11</strong></span> 외계인의 우주선이 지구로 <span class="math inline">\((3/5)c\)</span> 로 접근하는 것이 관측되었다. 요격 탐사선(intercepting probe) 가 지구에서 <span class="math inline">\((4/5)c\)</span> 로 우주선을 향해 발사되었다. 둘이 접근함에 따라 탐사선이 외계인을 향해 탐사선의 좌표계에서 펄스 간격이 <span class="math inline">\(12\,\textrm{ps}\)</span> 인 신호를 외계선으로 보냈다. 외계선에서 받은 신호의 펄스 간격은 얼마인가?</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>외계선에서 본 지구 탐사선의 속도 <span class="math inline">\(v=\dfrac{\frac{3c}{5}+\frac{4c}{5}}{1+ \frac{3}{5} \frac{4}{5}}=\dfrac{35c}{37}\)</span> 이므로 도플러 효과를 생각하면</p>
 <p><span class="math display">\[
 T_{\textrm{alien}} = \sqrt{\dfrac{1-35/37}{1+35/37}}T_{\textrm{probe}} = 2\,\textrm{ps}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_21" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.11</strong></span> 지구의 오르간주자가 연주하는 바흐의 Toccata and Fugue in D Minor 를 강력한 라디오 안테나로 송출하고 있다. 지구로부터 <span class="math inline">\((3/5)c\)</span> 의 속도로 멀어지는 우주선의 여행자가 이 음악을 듣고 있다. 이 여행자가 듣는 조성은?</p>
+<p><span class="theorem-title"><strong>연습문제 9.12</strong></span> 지구의 오르간주자가 연주하는 바흐의 Toccata and Fugue in D Minor 를 강력한 라디오 안테나로 송출하고 있다. 지구로부터 <span class="math inline">\((3/5)c\)</span> 의 속도로 멀어지는 우주선의 여행자가 이 음악을 듣고 있다. 이 여행자가 듣는 조성은?</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>도플러 효과로부터 <span class="math inline">\(\nu_{\textrm{starship}} = \sqrt{\dfrac{1-3/5}{1+3/5}} \nu_{\textrm{earth}}= \dfrac{1}{2}\nu_{\textrm{earth}}\)</span> 이다. 음악의 모든 진동수가 반으로 줄었으므로 역시 D minor 이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_22" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.12</strong></span> 안드로메다 은하(M31)는 우리가 속한 은하군(group of galaxies) 에 속하며 우리의 은하(MW)로부터 250만 광년 떨어져 있다. M31 에서 방출된 빛의 파장을 분광계로 측정했을 때 적색 편이가 <span class="math inline">\(\Delta \lambda/\lambda = -0.001001\)</span> 로 측정되었다. 이 때 <span class="math inline">\(\lambda\)</span> 는 실험실에서 측정한 파장이며 <span class="math inline">\(\Delta \lambda\)</span> 는 파장의 변화로 <span class="math inline">\(\Delta \lambda &lt; 0\)</span> 인 것은 청색 편이를 의미한다.</p>
+<p><span class="theorem-title"><strong>연습문제 9.13</strong></span> 안드로메다 은하(M31)는 우리가 속한 은하군(group of galaxies) 에 속하며 우리의 은하(MW)로부터 250만 광년 떨어져 있다. M31 에서 방출된 빛의 파장을 분광계로 측정했을 때 적색 편이가 <span class="math inline">\(\Delta \lambda/\lambda = -0.001001\)</span> 로 측정되었다. 이 때 <span class="math inline">\(\lambda\)</span> 는 실험실에서 측정한 파장이며 <span class="math inline">\(\Delta \lambda\)</span> 는 파장의 변화로 <span class="math inline">\(\Delta \lambda &lt; 0\)</span> 인 것은 청색 편이를 의미한다.</p>
 <p>(<span class="math inline">\(a\)</span>) 이 파장의 변화가 도플러 효과 때문이라면 M31 은 얼마의 속도로 우리에게 다가오는가?</p>
 <p>(<span class="math inline">\(b\)</span>) 이 속도가 M31 이 우리 은하계로 다가오는 속도이며, 시간에 따라 변하지 않는다면 얼마 후에 M31 은 우리 은하와 충돌하는가?</p>
 <p>실제로는 (<span class="math inline">\(a\)</span>) 의 계산속도보다 느린데 태양계 자체가 지구 은하를 중심으로 움직이기 때문이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>원래 빛의 파장을 <span class="math inline">\(\lambda_0\)</span>, 실험실에서 측정한 이동한 파장을 <span class="math inline">\(\lambda\)</span> 라고 하자.</p>
 <p><span class="math inline">\((\lambda-\lambda_0)/\lambda = - 0.001001\)</span> 이므로 <span class="math inline">\(\lambda_0/\lambda = 1.001001 = \nu/\nu_0\)</span> 이다.</p>
@@ -1252,12 +1279,15 @@ T_{\textrm{alien}} = \sqrt{\dfrac{1-35/37}{1+35/37}}T_{\textrm{probe}} = 2\,\tex
 \]</span></p>
 <p>이므로 <span class="math inline">\(\beta \approx 0.001\)</span> 이며 따라서 대략 25 억년 후에 충돌한다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_23" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.13</strong></span> 양성자가 <span class="math inline">\(xy\)</span> 평면에서 <span class="math inline">\(v=(3/5)c\)</span> 로 <span class="math inline">\(x,\,y\)</span> 욱 각각에 <span class="math inline">\(45^\circ\)</span> 각도를 이루며 움직인다.</p>
+<p><span class="theorem-title"><strong>연습문제 9.14</strong></span> 양성자가 <span class="math inline">\(xy\)</span> 평면에서 <span class="math inline">\(v=(3/5)c\)</span> 로 <span class="math inline">\(x,\,y\)</span> 욱 각각에 <span class="math inline">\(45^\circ\)</span> 각도를 이루며 움직인다.</p>
 <p>(<span class="math inline">\(a\)</span>) 양성자의 4-속도 <span class="math inline">\(U^\mu\)</span> 를 구하고 <span class="math inline">\(\eta_{\mu\nu}U^\mu U^\nu\)</span> 를 계산하라.</p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(+x\)</span> 방향으로 <span class="math inline">\((4/5)c\)</span> 속도로 움직이는 좌표계에서의 양성자의 4-속도를 구하고 역시 불변제곱량을 구하라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(\gamma = \dfrac{5}{4}\)</span> 이므로 <span class="math inline">\(U^\mu = \left(\dfrac{5c}{4},\, \dfrac{3\sqrt{2}c}{8}, \, \dfrac{3\sqrt{2}c}{8}, 0,  \right)\)</span> 이다. 따라서</p>
 <p><span class="math display">\[
@@ -1269,20 +1299,26 @@ T_{\textrm{alien}} = \sqrt{\dfrac{1-35/37}{1+35/37}}T_{\textrm{probe}} = 2\,\tex
 \]</span></p>
 <p>에 대해 <span class="math inline">\(U' = \boldsymbol{\Lambda}U\)</span> 를 구하면 <span class="math inline">\(U' = (1.376,\, -0.783,\, 0.530,  \, 0)\)</span> 이며 역시 불변제곱량 <span class="math inline">\(\eta_{\mu\nu}U'^\mu U'\nu = c^2\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_24" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.14</strong></span> 파이온 <span class="math inline">\(\pi^+\)</span> 는 자신의 정지좌표계에서 <span class="math inline">\(26\, \textrm{ns}\)</span> 후에 붕괴한다. 입자가속기에서 에너지 <span class="math inline">\(100 \, mc^2\)</span> 의 파이온을 만들었다고 하자.</p>
+<p><span class="theorem-title"><strong>연습문제 9.15</strong></span> 파이온 <span class="math inline">\(\pi^+\)</span> 는 자신의 정지좌표계에서 <span class="math inline">\(26\, \textrm{ns}\)</span> 후에 붕괴한다. 입자가속기에서 에너지 <span class="math inline">\(100 \, mc^2\)</span> 의 파이온을 만들었다고 하자.</p>
 <p>(<span class="math inline">\(a\)</span>) 붕괴 전에 날아가는 거리는 얼마인가?</p>
 <p>(<span class="math inline">\(b\)</span>) 다른 파이온은 그의 질량 에너지와 같은 운동에너지를 가진다. 이것이 거리 <span class="math inline">\(D\)</span> 를 날아가 붕괴하면 그것의 정지좌표계에서 얼마나 오래 살아 남는가?</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(\gamma mc^2 = 100 mc^2\)</span> 이므로 <span class="math inline">\(\gamma=100\)</span>, <span class="math inline">\(v=\sqrt{0.9999}c\)</span> 이다. 실험실 좌표계에서의 붕괴 시간은 <span class="math inline">\(\gamma \times 26\,\textrm{ns}=2.6\times 10^{-6}\,\textrm{sec}\)</span> 이며 빛의 속도를 <span class="math inline">\(c=3.0\times 10^8\,\textrm{m/s}\)</span> 로 잡으면 거리는 <span class="math inline">\(\sqrt{0.9999}\times c \times (\gamma \times 26\, \textrm{ns})=780\, \textrm{m}\)</span>.</p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\gamma=2\)</span> 이므로 <span class="math inline">\(v=(\sqrt{3}/2)c\)</span> 이다. 실험실 좌표계에서의 생존 시간은 <span class="math inline">\(D/v=2D/(\sqrt{3c})\)</span> 이며, 파이온 정지좌표계에서의 시간은 <span class="math inline">\(D/v/\gamma = D/(\sqrt{3}c)\)</span> 이다.</p>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_25" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.15</strong></span> 총 에너지 <span class="math inline">\(E=12000 \textrm{MeV}\)</span> 인 광자가 질량 <span class="math inline">\(M_0\)</span> 인 정지상태의 핵에 흡수되었고 이후 핵의 질량이 <span class="math inline">\(M\)</span> 이 되고 <span class="math inline">\((12/13)c\)</span> 의 속도로 움직인다. 이것의 운동량을 <span class="math inline">\(\textrm{MeV}/c\)</span> 단위로 구하고 질량 <span class="math inline">\(M\)</span> 과 <span class="math inline">\(M_0\)</span> 를 <span class="math inline">\(\textrm{MeV}/c^2\)</span> 단위로 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 9.16</strong></span> 총 에너지 <span class="math inline">\(E=12000 \textrm{MeV}\)</span> 인 광자가 질량 <span class="math inline">\(M_0\)</span> 인 정지상태의 핵에 흡수되었고 이후 핵의 질량이 <span class="math inline">\(M\)</span> 이 되고 <span class="math inline">\((12/13)c\)</span> 의 속도로 움직인다. 이것의 운동량을 <span class="math inline">\(\textrm{MeV}/c\)</span> 단위로 구하고 질량 <span class="math inline">\(M\)</span> 과 <span class="math inline">\(M_0\)</span> 를 <span class="math inline">\(\textrm{MeV}/c^2\)</span> 단위로 구하라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(E=12000\,\textrm{MeV}\)</span> 이므로 광자의 운동량 <span class="math inline">\(p_\gamma = 12000/c \textrm{MeV}/c\)</span> 이다. 흡수 후 입자의 운동량 <span class="math inline">\(p=\gamma Mv= (12/5)Mc\)</span> 이다. 흡수 전후의 4 운동량 보존에 의해</p>
 <p><span class="math display">\[
@@ -1290,10 +1326,13 @@ T_{\textrm{alien}} = \sqrt{\dfrac{1-35/37}{1+35/37}}T_{\textrm{probe}} = 2\,\tex
 \]</span></p>
 <p>이며 <span class="math inline">\(12000/c = \dfrac{12}{5}Mc\)</span> 이므로 <span class="math inline">\(M=5000 \, \textrm{MeV}/c^2\)</span>, <span class="math inline">\(M_0 = 1000\,\textrm{MeV}/c^2\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_27" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.16</strong></span> 운동량 4-벡터와 속도 4-벡터는 time-like 이고, 힘에 대한 4-벡터는 space-like 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 9.17</strong></span> 운동량 4-벡터와 속도 4-벡터는 time-like 이고, 힘에 대한 4-벡터는 space-like 임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>속도 4벡터 <span class="math inline">\(U=(\gamma c,\, \gamma v_x,\, \gamma v_y,\, \gamma v_z)\)</span> 에 대해 <span class="math inline">\(\eta_{\mu\nu}U^\mu U^\nu = \gamma^2(c^2-v^2)= c^2&gt;0\)</span> 이므로 time-like 이다. 운동량 4 벡터 <span class="math inline">\(P = mU\)</span> 이므로 <span class="math inline">\(\eta_{\mu\nu}P^\mu P^\nu = m^2c^2&gt;0\)</span> 이므로 역시 time-like 이다.</p>
 <p>4-힘 벡터 <span class="math inline">\(F=\left(\dfrac{\gamma}{c} \boldsymbol{v}\cdot \boldsymbol{F},\, \gamma \boldsymbol{F}\right)\)</span> 에 대해</p>
@@ -1303,13 +1342,16 @@ T_{\textrm{alien}} = \sqrt{\dfrac{1-35/37}{1+35/37}}T_{\textrm{probe}} = 2\,\tex
 <p>이므로 4-힘은 space-like 이다.</p>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_28" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.17 (시공간에 대한 푸앙카레 변환)</strong></span> 빛에 대한 파동방정식은 스칼라 포텐셜 <span class="math inline">\(\phi\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>연습문제 9.18 (시공간에 대한 푸앙카레 변환)</strong></span> 빛에 대한 파동방정식은 스칼라 포텐셜 <span class="math inline">\(\phi\)</span> 에 대해</p>
 <p><span class="math display">\[
 \square\,\phi :=  \dfrac{1}{c^2}\partial_t^2\phi - \nabla^2 \phi =0
 \]</span></p>
 <p>을 만족한다. 이때 <span class="math inline">\(\square\)</span> 를 <strong>달랑베르 연산자(d’Alembert operator)</strong> 라고 한다. 시공간에 대한 선형 변환에 의해 위의 형태가 변하지 않을 때 이 변환을 <strong>푸앙카레 변환(Poincaré transformations)</strong> 이라고 한다. 푸앙카레 변환에는 (i) 시공간에 대한 4 종류의 translation, (ii) 공간에서의 3 가지 회전, (iii) 3가지의 로런츠 변환 이 있음을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>4-벡터 <span class="math inline">\(X=(ct,\,x,\,y,\,z)\)</span> 에 대한 편미분 연산자 <span class="math inline">\(\partial^\mu\)</span> 와 <span class="math inline">\(\partial_\mu\)</span> 는</p>
 <p><span class="math display">\[
@@ -1335,10 +1377,14 @@ x' = \gamma(x + \beta ct),\qquad y'=y,\qquad z'=z,\qquad ct' = \gamma(ct + \beta
 \end{aligned}
 \]</span></p>
 </div>
-<p><br></p>
-<div id="exr-helliwell_2_29" class="theorem exercise page-columns page-full">
-<div class="page-columns page-full"><p><span class="theorem-title"><strong>연습문제 9.18 (벨의 우주선 역설)</strong></span> 우리의 관성좌표계에서 거리 <span class="math inline">\(D\)</span> 만큼 앞뒤로 떨어져 정지해있는 두 우주선이 있다. 정지길이 <span class="math inline">\(D\)</span> 인 가벼운 끈이 두우주선을 연결하고 있다고 하자. 두 우주선이 동시에 오른쪽으로 등가속운동을 시작한다고 하자. 이 끈은 여전히 그들을 묶고 있다. 두 우주선은 동시에 출발했고 같은 가속도를 가지고 있으므로 두 우주선의 간격과 줄의 길이는 우리 좌표계에서는 일정하다. 그러나 움직이는 줄은 <span class="math inline">\(\sqrt{1-\beta^2}\)</span> 만큼 로런츠 수축되어야 하며, 따라서 이 줄은 끊어져야 하는가? 아니면 우리 좌표계에서 줄의 길이는 일정해야하며 이 줄은 끊어지지 않는가? <em>Hint</em> : 가속되는 물체의 <strong>고유 길이(proper length)</strong> 는 가속되는 물체와 같이 움직이는 어떤 좌표계에서 그 좌표계가 순간적으로 이 물체에 대해 정지했을 때의 좌표계에서 측정한 길이이다. </p><div class="no-row-height column-margin column-container"><span class="margin-aside">이를 <a href="https://en.wikipedia.org/wiki/Bell%27s_spaceship_paradox">벨의 우주선 역설(Bell’s spaceship paradox)</a> 이라고 한다. 이 문제는 E. Dewan 과 M. Beran 에 의해 1959년 제기되었으며 J. S. Bell 에 의해 1987 년 수정되었다. Bell 에 의해 제기되어 유명해져서 벨의 역설이라고 불리운다. 이 위키의 영어 문서를 꼭 읽어보기 바란다.</span></div></div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-helliwell_2_29" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 9.19 (벨의 우주선 역설)</strong></span> 우리의 관성좌표계에서 거리 <span class="math inline">\(D\)</span> 만큼 앞뒤로 떨어져 정지해있는 두 우주선이 있다. 정지길이 <span class="math inline">\(D\)</span> 인 가벼운 끈이 두우주선을 연결하고 있다고 하자. 두 우주선이 동시에 오른쪽으로 등가속운동을 시작한다고 하자. 이 끈은 여전히 그들을 묶고 있다. 두 우주선은 동시에 출발했고 같은 가속도를 가지고 있으므로 두 우주선의 간격과 줄의 길이는 우리 좌표계에서는 일정하다. 그러나 움직이는 줄은 <span class="math inline">\(\sqrt{1-\beta^2}\)</span> 만큼 로런츠 수축되어야 하며, 따라서 이 줄은 끊어져야 하는가? 아니면 우리 좌표계에서 줄의 길이는 일정해야하며 이 줄은 끊어지지 않는가? <em>Hint</em> : 가속되는 물체의 <strong>고유 길이(proper length)</strong> 는 가속되는 물체와 같이 움직이는 어떤 좌표계에서 그 좌표계가 순간적으로 이 물체에 대해 정지했을 때의 좌표계에서 측정한 길이이다.</p>
+<p>이를 <a href="https://en.wikipedia.org/wiki/Bell%27s_spaceship_paradox">벨의 우주선 역설(Bell’s spaceship paradox)</a> 이라고 한다. 이 문제는 E. Dewan 과 M. Beran 에 의해 1959년 제기되었으며 J. S. Bell 에 의해 1987 년 수정되었다. Bell 에 의해 제기되어 유명해져서 벨의 역설이라고 불리운다. 이 위키의 영어 문서를 꼭 읽어보기 바란다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>앞에 있는 우주선을 <span class="math inline">\(B\)</span>, 뒤에 있는 우주선을 <span class="math inline">\(A\)</span> 라고 하자. 정지 좌표계에서 우주선 <span class="math inline">\(A\)</span> 가 속도 <span class="math inline">\(v\)</span> 가 되었을 때, <span class="math inline">\(B\)</span> 의 속도는 역시 <span class="math inline">\(v\)</span> 이며 <span class="math inline">\(A-B\)</span> 사이의 거리가 <span class="math inline">\(D\)</span> 가 된다. 로런츠 수축만을 생각하면 이 줄에 장력을 받아야 하며, 두 우주선이 가속될수록 장력이 커질 것이기 때문에 이 줄은 언젠가 끊어져야 한다. 이것은 정지해 있는 좌표계에서이며 로켓과 움직이는 좌표계에서는 어떨까?</p>
 <p><span class="math inline">\(t=0\)</span> 일 때 <span class="math inline">\(A\)</span> 의 위치를 <span class="math inline">\(x=0\)</span>, <span class="math inline">\(B\)</span> 의 위치를 <span class="math inline">\(x=D\)</span> 라고 하자. <span class="math inline">\(t=0\)</span> 에서 가속되었다고 하자. 시간 <span class="math inline">\(t\)</span> 가 지난 후에도 정지좌표계에서의 <span class="math inline">\(\overline{AB}=D\)</span> 이어야 한다. 이 때 우주선 정지좌표계에 로런츠 변환을 적용하면</p>
@@ -1347,11 +1393,14 @@ x'_A = \gamma (x + \beta ct),\, ct'_A =  \gamma( ct + \beta x),\qquad x'_B = \ga
 \]</span></p>
 <p>이다. <span class="math inline">\(x'_B- x'_A = \gamma D &gt; D\)</span> 이므로 우주선 좌표계에서의 길이는 <span class="math inline">\(D\)</span> 보다 크고, 따라서 충분히 가속되었다면 줄은 끊어져야 한다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_30" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.19</strong></span> (<span class="math inline">\(a\)</span>) 두 이벤트의 시간 순서가 모든 관성좌표계에서 같을 필요충분조건은 이 두 이벤트가 <span class="math inline">\(c\)</span> 이하의 신호로 묶여 있을 경우임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 9.20</strong></span> (<span class="math inline">\(a\)</span>) 두 이벤트의 시간 순서가 모든 관성좌표계에서 같을 필요충분조건은 이 두 이벤트가 <span class="math inline">\(c\)</span> 이하의 신호로 묶여 있을 경우임을 보여라.</p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\Sigma\)</span> 관성계에의 <span class="math inline">\(A\)</span> 에서 <span class="math inline">\(B\)</span> 로의 신호가 <span class="math inline">\(v=2c\)</span> 로 전달된다고 하자. <span class="math inline">\(V,\,(|V|&lt;c)\)</span> 로 움직이는 <span class="math inline">\(\Sigma'\)</span> 관성계에서 <span class="math inline">\(B\)</span> 의 신호가 <span class="math inline">\(A\)</span> 의 신호보다 먼저 도착했다고 할 때 <span class="math inline">\(V\)</span> 를 구하라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(\Sigma\)</span> 좌표계에서 <span class="math inline">\((t_A,\,x_A),\,(t_B,\,x_B)\)</span> 이벤트가 <span class="math inline">\(t_B&gt;t_A\)</span> 로 발생했다고 하자. 로런츠 변환에 의해 <span class="math inline">\(\Sigma'\)</span> 좌표계에서는</p>
 <p><span class="math display">\[
@@ -1360,28 +1409,35 @@ t'_B-t'_A = \gamma(t_B-t_A) - \dfrac{\gamma\beta}{c}(x_B-x_A)
 <p>이며, <span class="math inline">\(t'_B-t'_A&lt;0\)</span> 이려면 <span class="math inline">\(\dfrac{x_B-x_A}{t_B-t_A}&gt; \dfrac{c}{\beta} &gt; 1\)</span> 이다.</p>
 <p>(<span class="math inline">\(b\)</span>) (<span class="math inline">\(a\)</span>) 의 결과에서 <span class="math inline">\(2c=\dfrac{x_B-x_A}{t_B-t_A} &gt; \dfrac{c}{\beta}\)</span> 이므로 <span class="math inline">\(\beta&gt;\dfrac{1}{2}\)</span>. 즉 <span class="math inline">\(V&gt;\dfrac{1}{2}c\)</span>.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_32" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.20</strong></span> 식의 표현이 모든 관성계에서 관성계에 대한 표시만을 제외하고 형태가 동일하다면 이 표현을 <strong>로런츠 공변(Lorentz covariant)</strong> 라고 한다. 예를 들어 <span class="math inline">\(A^\mu \eta_{\mu \nu}B^\nu = K\)</span> 는 4-벡터 <span class="math inline">\(A^\mu,\,B^\nu\)</span> 와 상수 <span class="math inline">\(K\)</span> 에 대해 로런츠 공변이다. 로런츠 변환에 대해</p>
+<p><span class="theorem-title"><strong>연습문제 9.21</strong></span> 식의 표현이 모든 관성계에서 관성계에 대한 표시만을 제외하고 형태가 동일하다면 이 표현을 <strong>로런츠 공변(Lorentz covariant)</strong> 라고 한다. 예를 들어 <span class="math inline">\(A^\mu \eta_{\mu \nu}B^\nu = K\)</span> 는 4-벡터 <span class="math inline">\(A^\mu,\,B^\nu\)</span> 와 상수 <span class="math inline">\(K\)</span> 에 대해 로런츠 공변이다. 로런츠 변환에 대해</p>
 <p><span class="math display">\[
 K=A^\mu \eta_{\mu\nu}B^\nu = A^{\mu'} \Lambda^\mu_{\mu'} \eta_{\mu \nu} B^{\nu'}\Lambda^{\nu}_{\nu'} = A^{\nu'} \eta_{\mu' \nu'}B^{\nu'}
 \]</span></p>
 <p>임을 안다. 이 값은 또한 <strong>로런츠 스칼라(Lorentz scalar)</strong> 인데 로런츠 변환에 대해 불변이기 때문이다. 아래와 같이 주어진 양 중에 어떤 것이 로런츠 스칼라인가? 여기서 <span class="math inline">\(K\)</span> 는 상수이다.</p>
 <p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(KA^\mu \eta_{\mu \nu}\)</span>, (<span class="math inline">\(b\)</span>) <span class="math inline">\(C^\mu = D^\mu (A^\lambda \eta_{\lambda \nu} B^\nu)\)</span>, (<span class="math inline">\(c\)</span>) <span class="math inline">\(KA^\mu \eta_{\mu \nu} B^\lambda \eta_{\lambda \sigma}D^\nu F^\sigma\)</span>.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(c\)</span>) 만 로런츠 스칼라이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_33" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.21</strong></span> 로런츠 스칼라가 아닌 로런츠 공변식 <span class="math inline">\(C^\lambda = K^\lambda h(A^\mu \eta_{\mu \nu}B^\nu)\)</span> 를 생각하자. <span class="math inline">\(h\)</span> 는 <span class="math inline">\((\;)\)</span> 안의 양에 대한 함수이다. 여기서 위첨자가 하나인 것은 4-벡터이다. 로런츠 변환에 대해 <span class="math inline">\(A^\mu \eta_{\mu \nu}B^\nu\)</span> 는 로런츠 공변이며 로런츠 스칼라이다. 따라서 <span class="math inline">\(h(A^\mu \eta_{\mu \nu}B^\nu)\)</span> 도 로런츠 변환에 대해 그 값이 변하지 않는다. 그렇지만 <span class="math inline">\(K^\mu\)</span> 는 4-벡터이며 <span class="math inline">\(K^\mu = \Lambda_{\mu'}^{\mu}K^{\mu'}\)</span> 과 같이 변환된다는 것을 안다. <span class="math inline">\(C^\lambda\)</span> 는 4-벡터처럼 변환하며 관찰자 <span class="math inline">\(O'\)</span> 은 <span class="math inline">\(C^{\lambda'} = K^{\lambda'} h(A^{\mu'} \eta_{\mu' \nu'}B^{\nu'})\)</span> 로 쓸 수 있다. 이런 양은 4-벡터와 같이 변환되므로 <strong>로런츠 벡터(Lorentz vector)</strong> 라고 한다. (<span class="math inline">\(a\)</span>) <span class="math inline">\(K\eta_{\mu \nu}\)</span>, (<span class="math inline">\(b\)</span>) <span class="math inline">\(C^\lambda = D^\mu A^\lambda \eta_{\mu \nu}B^\nu\)</span>, (<span class="math inline">\(c\)</span>) <span class="math inline">\(KA^\mu \eta_{\mu \nu} B^\lambda \eta_{\lambda \sigma} D^\nu F^\sigma\)</span> 가운데 로런츠 벡터는 무엇인가?</p>
+<p><span class="theorem-title"><strong>연습문제 9.22</strong></span> 로런츠 스칼라가 아닌 로런츠 공변식 <span class="math inline">\(C^\lambda = K^\lambda h(A^\mu \eta_{\mu \nu}B^\nu)\)</span> 를 생각하자. <span class="math inline">\(h\)</span> 는 <span class="math inline">\((\;)\)</span> 안의 양에 대한 함수이다. 여기서 위첨자가 하나인 것은 4-벡터이다. 로런츠 변환에 대해 <span class="math inline">\(A^\mu \eta_{\mu \nu}B^\nu\)</span> 는 로런츠 공변이며 로런츠 스칼라이다. 따라서 <span class="math inline">\(h(A^\mu \eta_{\mu \nu}B^\nu)\)</span> 도 로런츠 변환에 대해 그 값이 변하지 않는다. 그렇지만 <span class="math inline">\(K^\mu\)</span> 는 4-벡터이며 <span class="math inline">\(K^\mu = \Lambda_{\mu'}^{\mu}K^{\mu'}\)</span> 과 같이 변환된다는 것을 안다. <span class="math inline">\(C^\lambda\)</span> 는 4-벡터처럼 변환하며 관찰자 <span class="math inline">\(O'\)</span> 은 <span class="math inline">\(C^{\lambda'} = K^{\lambda'} h(A^{\mu'} \eta_{\mu' \nu'}B^{\nu'})\)</span> 로 쓸 수 있다. 이런 양은 4-벡터와 같이 변환되므로 <strong>로런츠 벡터(Lorentz vector)</strong> 라고 한다. (<span class="math inline">\(a\)</span>) <span class="math inline">\(K\eta_{\mu \nu}\)</span>, (<span class="math inline">\(b\)</span>) <span class="math inline">\(C^\lambda = D^\mu A^\lambda \eta_{\mu \nu}B^\nu\)</span>, (<span class="math inline">\(c\)</span>) <span class="math inline">\(KA^\mu \eta_{\mu \nu} B^\lambda \eta_{\lambda \sigma} D^\nu F^\sigma\)</span> 가운데 로런츠 벡터는 무엇인가?</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(b\)</span>) 만 로런츠 벡터이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_34" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.22</strong></span> 로런츠 공변 개념은 어떤 표현식이 관성계 변환에 대해 어떻게 변할지를 빠르게 결정 할 수 있게 해준다. 상대성 이론은 모든 물리법칙이 서로 다른 관성계에서 같은 형태를 가져야 할 것을 요구한다. 따라서 물리법칙의 표현식은 로런츠 공변이어야 한다. 개정된 제 2 법칙을 보자.</p>
+<p><span class="theorem-title"><strong>연습문제 9.23</strong></span> 로런츠 공변 개념은 어떤 표현식이 관성계 변환에 대해 어떻게 변할지를 빠르게 결정 할 수 있게 해준다. 상대성 이론은 모든 물리법칙이 서로 다른 관성계에서 같은 형태를 가져야 할 것을 요구한다. 따라서 물리법칙의 표현식은 로런츠 공변이어야 한다. 개정된 제 2 법칙을 보자.</p>
 <p><span class="math display">\[
 f^\mu = \dfrac{dp^\mu}{d\tau}.
 \]</span></p>
@@ -1394,17 +1450,22 @@ f^{\mu'} = \dfrac{dp^{\mu'}}{d\tau}
 <p>(<span class="math inline">\(b\)</span>) 수정된 용수철 법칙 <span class="math inline">\(f^\mu = -KX^\mu = -k(ct,\, \boldsymbol{r})\)</span> 은 로런츠 공변식인가?</p>
 <p>(<span class="math inline">\(c\)</span>) 중력 <span class="math inline">\(\boldsymbol{F} = - (k/r^3)\boldsymbol{r}\)</span> 은 로런츠 공변식인가?</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) No, (<span class="math inline">\(b\)</span>) Yes, (<span class="math inline">\(c\)</span>) No.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_35" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.23</strong></span> 가장 일반적인 로런츠 변환은 다음을 만족하는 <span class="math inline">\(4\times 4\)</span> 행렬 <span class="math inline">\(\boldsymbol{\Lambda}\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 9.24</strong></span> 가장 일반적인 로런츠 변환은 다음을 만족하는 <span class="math inline">\(4\times 4\)</span> 행렬 <span class="math inline">\(\boldsymbol{\Lambda}\)</span> 임을 보여라.</p>
 <p><span class="math display">\[
 \boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda}= \boldsymbol{\eta} ,\qquad \text{and}\qquad \det (\boldsymbol{\Lambda}) =1.
 \]</span></p>
 <p>로런츠 변환은 정의에 의해 시공간에서 정의된 선형변환이며 광속을 보존하기 때문에 이 두 조건이 위의 식을 만족하는 필요충분조건임을 보이면 된다. 반사(reflection) 은 두번째 조건에 의해 배제된다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(X=(ct, x, y, z),\, X'=(ct',\,x',\,y',\,z')\)</span> 이라고 하자. <span class="math inline">\(X'=\boldsymbol{\Lambda}X\)</span> 일 때</p>
 <p><span class="math display">\[
@@ -1417,10 +1478,13 @@ X^T\boldsymbol{\eta}X =(X')^T\boldsymbol{\eta}X' = (\boldsymbol{\Lambda}X)^T \bo
 <p>이어야 한다. 따라서 <span class="math inline">\(\boldsymbol{\eta} = \boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda}\)</span> 이어야 한다. 로런츠 변환은 <span class="math inline">\(\boldsymbol{\beta}\)</span> 에 대해 연속이어야 하므로 <span class="math inline">\(\det(\boldsymbol{\Lambda})\)</span> 도 연속이다. <span class="math inline">\(\boldsymbol{\beta}=0\)</span> 일 때 행렬식이 <span class="math inline">\(1\)</span> 이므로 <span class="math inline">\(\det(\boldsymbol{\Lambda})=1\)</span> 이다.</p>
 <p>이제 <span class="math inline">\(\boldsymbol{\Lambda}^T \cdot \boldsymbol{\eta} \cdot \boldsymbol{\Lambda}= \boldsymbol{\eta}\)</span> 임을 가정하면 <span class="math inline">\(X^\mu \eta_{\mu \nu} X^{\mu} = X^{\mu'}\eta_{\mu' \nu'}X^{\nu'}\)</span> 임을 안다. 즉 광속을 보존하는 변환이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_36" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.24</strong></span> <span class="math inline">\(\pi^0\)</span> 메존은 질랑 <span class="math inline">\(m_\pi=135.0\, \textrm{MeV}/c^2\)</span> 이며 대기권 상부에서 우주에서 입사하는 양성자가 질소 원자 핵과 충돌하여 생성된다. <span class="math inline">\(\pi^0\)</span> 메존의 평균적인 라이프타임은 <span class="math inline">\(8.4 \times 10^{-17}\,\textrm{s}\)</span> 이며 거의 대부분 두개의 광자로 붕괴한다. 어떤 에너지 <span class="math inline">\(E=500 \, \textrm{MeV}\)</span> 인 파이온이 지면을 향해 평균 라이프타임의 세배 만큼 낙하하다가 두개의 광자로 붕괴되었는데 하나는 위쪽으로, 하나는 아래쪽으로 붕괴했다고 하자. (<span class="math inline">\(a\)</span>) <span class="math inline">\(\pi^0\)</span> 는 생성 후 붕괴까지 지면으로 얼마나 낙하했는가? (<span class="math inline">\(b\)</span>) 지면의 관성계에서 두 광자의 진동수를 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 9.25</strong></span> <span class="math inline">\(\pi^0\)</span> 메존은 질랑 <span class="math inline">\(m_\pi=135.0\, \textrm{MeV}/c^2\)</span> 이며 대기권 상부에서 우주에서 입사하는 양성자가 질소 원자 핵과 충돌하여 생성된다. <span class="math inline">\(\pi^0\)</span> 메존의 평균적인 라이프타임은 <span class="math inline">\(8.4 \times 10^{-17}\,\textrm{s}\)</span> 이며 거의 대부분 두개의 광자로 붕괴한다. 어떤 에너지 <span class="math inline">\(E=500 \, \textrm{MeV}\)</span> 인 파이온이 지면을 향해 평균 라이프타임의 세배 만큼 낙하하다가 두개의 광자로 붕괴되었는데 하나는 위쪽으로, 하나는 아래쪽으로 붕괴했다고 하자. (<span class="math inline">\(a\)</span>) <span class="math inline">\(\pi^0\)</span> 는 생성 후 붕괴까지 지면으로 얼마나 낙하했는가? (<span class="math inline">\(b\)</span>) 지면의 관성계에서 두 광자의 진동수를 구하라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(500\,\textrm{MeV} = \gamma m_\pi c^2\)</span> 으로부터 <span class="math inline">\(\gamma = 3.7\)</span> 임을 안다. <span class="math inline">\(\pi^0\)</span> 의 속도 <span class="math inline">\(v=0.963 c\)</span> 이며 (파이온 정지좌표계에서) 라이프타임(<span class="math inline">\(t_L\)</span>) 의 세배 만큼 낙하하다가 붕괴했으므로 지면 관성계에서의 낙하 시간은</p>
 <p><span class="math display">\[
@@ -1433,10 +1497,13 @@ X^T\boldsymbol{\eta}X =(X')^T\boldsymbol{\eta}X' = (\boldsymbol{\Lambda}X)^T \bo
 \]</span></p>
 <p>을 얻는다. 여기서 <span class="math inline">\(\nu_1\)</span> 은 위로 향하는 광자의 진동수이고 <span class="math inline">\(\nu_2\)</span> 는 아래로 향하는 광자의 진동수이다. <span class="math inline">\(E=\sqrt{m_\pi^2c^4 + p^2c^2}\)</span> 이므로, <span class="math inline">\(p=481.43\, \textrm{MeV}/c\)</span> 이다. 이로부터 <span class="math inline">\(\nu_1 = 4.514\times 10^{21}\, \textrm{Hz}\)</span>, <span class="math inline">\(\nu_2 = 1.187 \times 10^{23}\, \textrm{Hz}\)</span> 임을 계산 할 수 있다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_37" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.25</strong></span> <span class="math inline">\(\pi^-\)</span> 메존은 질량 <span class="math inline">\(m_\pi = 140.0\, \textrm{MeV}/c^2\)</span> 이며 가속기의 <span class="math inline">\((p,\,p)\)</span> 충돌로 생성된다. 파이온은 곧바로 뮤온과 뮤온-반중성미자로 붕괴된다.(<span class="math inline">\(\pi^- \to \mu^- + \overline{\nu}_\mu\)</span>) 반중성미자는 매우 적은 질량을 가지며, 이 계산에서는 무시 할 수 있다. 뮤온의 질량은 <span class="math inline">\(105.7 \, \textrm{MeV}/c^2\)</span> 이다. 원래의 파이온에 대한 정지관성계에서 (<span class="math inline">\(a\)</span>) 뮤온의 에너지와 3-운동량을 구하고 (<span class="math inline">\(b\)</span>) 반중성미자의 총 에너지와 3-운동량을 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 9.26</strong></span> <span class="math inline">\(\pi^-\)</span> 메존은 질량 <span class="math inline">\(m_\pi = 140.0\, \textrm{MeV}/c^2\)</span> 이며 가속기의 <span class="math inline">\((p,\,p)\)</span> 충돌로 생성된다. 파이온은 곧바로 뮤온과 뮤온-반중성미자로 붕괴된다.(<span class="math inline">\(\pi^- \to \mu^- + \overline{\nu}_\mu\)</span>) 반중성미자는 매우 적은 질량을 가지며, 이 계산에서는 무시 할 수 있다. 뮤온의 질량은 <span class="math inline">\(105.7 \, \textrm{MeV}/c^2\)</span> 이다. 원래의 파이온에 대한 정지관성계에서 (<span class="math inline">\(a\)</span>) 뮤온의 에너지와 3-운동량을 구하고 (<span class="math inline">\(b\)</span>) 반중성미자의 총 에너지와 3-운동량을 구하라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\pi^-\)</span> 의 운동량은 <span class="math inline">\(0\)</span> 이므로 붕괴 전 후의 4-운동량 보존을 생각하면 다음이 성립한다. <span class="math display">\[
 \left(m_\pi c,\,0,\,0,\,0\right) = \left(\dfrac{\sqrt{m_\mu^2c^4 + p_\mu^2c^2}}{c} + p_{\overline{\nu}},\, p_\mu + p_{\overline{\nu}},\,0,\,0\right).
@@ -1453,10 +1520,13 @@ p_\mu = \dfrac{m_\mu^2 c - m_\pi^2 c}{2m_\pi} = 30.1 \,\textrm{MeV}/c,\qquad p_{
 <p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(E_{\mu} = \sqrt{m_\mu^2 c^4 + p_\mu^2c^2} = 109.9 \,\textrm{MeV}\)</span>, <span class="math inline">\(\boldsymbol{p}_\mu = (30.1\, \textrm{MeV}/c,\,0,\,0)\)</span></p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(E_{\overline{\nu}}= 30.1\,\textrm{MeV},\, \boldsymbol{p}_{\overline{\nu}} = (-30.1\, \textrm{MeV}/c,\,0,\,0)\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_38" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.26</strong></span> 힉스 입자는 <span class="math inline">\(125 \,\textrm{GeV}/c^2\)</span> 의 질량 에너지를 갖는다. 일단 상성되면 힉스입자는 다양한 집합의 입자로 곧바로 붕괴하는데 60% 정도의 시간동안 <span class="math inline">\((b\overline{b})\)</span> 쿼크-반쿼크 쌍으로 붕괴한다. <span class="math inline">\(b\)</span> 는 bottom quark 로 쿼크, 반쿼크 모두 <span class="math inline">\(4.2 \, \textrm{GeV}/c^2\)</span> 의 질량 에너지를 가진다. 이 반응은 <span class="math inline">\(H \to b + \overline{b}\)</span> 혹은 <span class="math inline">\(H \to b\overline{b}\)</span> 로 쓴다. 어떤 힉스 입자가 <span class="math inline">\(v=(4/5)c\)</span> 의 속도루 실험실 좌표계에서 움직이다가 <span class="math inline">\((b\overline{b})\)</span> 로 붕괴되었으며 <span class="math inline">\(b\)</span> 는 앞방향 <span class="math inline">\(\overline{b}\)</span> 는 뒷방향으로 움직였다고 하자. 실험실 관성계에서의 <span class="math inline">\(b\)</span> 와 <span class="math inline">\(\overline{b}\)</span> 의 에너지와 운동량을 계산하라.</p>
+<p><span class="theorem-title"><strong>연습문제 9.27</strong></span> 힉스 입자는 <span class="math inline">\(125 \,\textrm{GeV}/c^2\)</span> 의 질량 에너지를 갖는다. 일단 상성되면 힉스입자는 다양한 집합의 입자로 곧바로 붕괴하는데 60% 정도의 시간동안 <span class="math inline">\((b\overline{b})\)</span> 쿼크-반쿼크 쌍으로 붕괴한다. <span class="math inline">\(b\)</span> 는 bottom quark 로 쿼크, 반쿼크 모두 <span class="math inline">\(4.2 \, \textrm{GeV}/c^2\)</span> 의 질량 에너지를 가진다. 이 반응은 <span class="math inline">\(H \to b + \overline{b}\)</span> 혹은 <span class="math inline">\(H \to b\overline{b}\)</span> 로 쓴다. 어떤 힉스 입자가 <span class="math inline">\(v=(4/5)c\)</span> 의 속도루 실험실 좌표계에서 움직이다가 <span class="math inline">\((b\overline{b})\)</span> 로 붕괴되었으며 <span class="math inline">\(b\)</span> 는 앞방향 <span class="math inline">\(\overline{b}\)</span> 는 뒷방향으로 움직였다고 하자. 실험실 관성계에서의 <span class="math inline">\(b\)</span> 와 <span class="math inline">\(\overline{b}\)</span> 의 에너지와 운동량을 계산하라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>힉스 정지 좌표계, 즉 운동량 중심 좌표계에서 생각하자. 붕괴 전후의 4 운동량은</p>
 <p><span class="math display">\[
@@ -1464,10 +1534,13 @@ p_\mu = \dfrac{m_\mu^2 c - m_\pi^2 c}{2m_\pi} = 30.1 \,\textrm{MeV}/c,\qquad p_{
 \]</span></p>
 <p>이므로 <span class="math inline">\(p_b = \sqrt{(62.5)^2-(4.2)^2}\,\textrm{GeV}/c = 62.36\, \textrm{GeV}/c = -p_{\overline{b}}\)</span> 이다. <span class="math inline">\(\beta = 4/5,\, \gamma= 5/3\)</span> 에 대해 로런츠 변환을 수행하면, <span class="math inline">\(E_b=187.31\, \textrm{GeV}\)</span>, <span class="math inline">\(p_b = 187.27\, \textrm{GeV}/c\)</span>, <span class="math inline">\(E_\overline{b}=21.02\, \textrm{GeV}\)</span>, <span class="math inline">\(p_\overline{b} = -20.6\, \textrm{GeV}/c\)</span>.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_2_39" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.27</strong></span> <strong>타키온(Tachyons)</strong> 은 빛보다 빨리 움직이는 가상의 입자이다. (<span class="math inline">\(a\)</span>) 타키온에 허수 질량을 부여한다면, 즉 <span class="math inline">\(m=im_0,\, m_0\in \mathbb{R}\)</span> 라고 하면 타키온의 4-운동량은 실수임을 보여라. (<span class="math inline">\(b\)</span>) 4-운동량의 invariant square 는 음수임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 9.28</strong></span> <strong>타키온(Tachyons)</strong> 은 빛보다 빨리 움직이는 가상의 입자이다. (<span class="math inline">\(a\)</span>) 타키온에 허수 질량을 부여한다면, 즉 <span class="math inline">\(m=im_0,\, m_0\in \mathbb{R}\)</span> 라고 하면 타키온의 4-운동량은 실수임을 보여라. (<span class="math inline">\(b\)</span>) 4-운동량의 invariant square 는 음수임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><em>trivial</em></p>
 </div>

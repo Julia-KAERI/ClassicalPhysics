@@ -17,7 +17,7 @@ $$
 \quad\nabla \times \bf{E} = - \dfrac{\partial \bf{B}}{\partial t} \quad
 \end{aligned}
 }
-$$ {#eq-part2_faraday_law}
+$$ {#eq-EM_faraday_law}
 
 :::
 
@@ -33,7 +33,7 @@ $$ {#eq-part2_faraday_law}
 
 $$
 \nabla \times \bf{E} = \bf{0}
-$$ {#eq-part2_faraday_law_2}
+$$ {#eq-EM_faraday_law_2}
 
 가 성립한다. 스토크스의 정리로부터 임의의 닫힌 경로 $C$ 와 이 경로에 의해 생기는 면 $S$ 에 대해
 
@@ -58,7 +58,7 @@ $$
 
 $$
 \phi_{21}:= - \int_{P_1}^{P_2} \bf{E\cdot} d\bf{s}
-$$ {#eq-part2_potential_difference_from_electric_field}
+$$ {#eq-EM_potential_difference_from_electric_field}
 
 전하 $q$ 를 $P_1$ 에서 $P_2$ 로 이동시켰을 때의 일 $W$ 는
 
@@ -72,9 +72,9 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part2_potential_of_uniform_sphere_charge_distribution_}
+::: {#exm-EM_potential_of_uniform_sphere_charge_distribution_}
 
-@exm-part2_charge_distribution_uniform_sphere 의 상황에서 무한히 멀리 떨어진 곳으로부터 구의 외부 혹은 내부의 한 지점까지 전위차를 구해보자. 우선 구의 중심을 원점으로 놓고, 원점으로부터 $r>R$ 까지의 전위차 $\phi_{\text{out}}(r)$ 은
+@exm-EM_charge_distribution_uniform_sphere 의 상황에서 무한히 멀리 떨어진 곳으로부터 구의 외부 혹은 내부의 한 지점까지 전위차를 구해보자. 우선 구의 중심을 원점으로 놓고, 원점으로부터 $r>R$ 까지의 전위차 $\phi_{\text{out}}(r)$ 은
 
 $$
 \phi_{\text{out}}(r) = - \int_{-\infty}^{r} E(r')\,dr' = -\int_{-\infty}^{r} \dfrac{\rho R^3}{3\epsilon_0 r'^2}\, dr' = \dfrac{\rho R^3}{3\epsilon_0 r}
@@ -90,7 +90,7 @@ $$
 \end{aligned}
 $$
 
-![균일한 전하 밀도를 가진 구에서의 전위차](../images/Electromagnetism/electrostatics/electrostatics_potential_uniform_sphere/electrostatics_potential_uniform_sphere.png){#fig-part2_electrosttics_potential_uniform_sphere width=450}
+![균일한 전하 밀도를 가진 구에서의 전위차](../images/Electromagnetism/electrostatics/electrostatics_potential_uniform_sphere/electrostatics_potential_uniform_sphere.png){#fig-EM_electrosttics_potential_uniform_sphere width=450}
 
 
 :::
@@ -101,17 +101,17 @@ $$
 
 ### 전위차의 Gradient 
 
-지금까지 전위차는 전기장 $\bf{E}$ 에 대한 경로적분으로 주어졌다. 그러나 거꾸로 전위차를 알 때 전기장을 구할 수 있다. @eq-part2_potential_difference_from_electric_field 로부터,
+지금까지 전위차는 전기장 $\bf{E}$ 에 대한 경로적분으로 주어졌다. 그러나 거꾸로 전위차를 알 때 전기장을 구할 수 있다. @eq-EM_potential_difference_from_electric_field 로부터,
 
 $$
 \bf{E}(\bf{r}) = -\nabla \phi (\bf{r})
-$$ {#eq-part2_electric_field_from_potential}
+$$ {#eq-EM_electric_field_from_potential}
 
-임을 안다. 또한 @eq-part2_electric_field_due_to_charge_distribution 와 
+임을 안다. 또한 @eq-EM_electric_field_due_to_charge_distribution 와 
 
 $$
 \nabla_{\bf{r}} \left(\dfrac{1}{\|\bf{r}-\bf{r}'\|}\right) = - \dfrac{\bf{r}-\bf{r}'}{\|\bf{r}-\bf{r}'\|^3}
-$$ {#eq-part2_gradient_of_inverse_of_distance}
+$$ {#eq-EM_gradient_of_inverse_of_distance}
 
 로부터,
 
@@ -119,7 +119,7 @@ $$
 \begin{aligned}
 \nabla_{\bf{r}}\phi(\bf{r}) &= -\dfrac{1}{4\pi \epsilon_0}\int_V \dfrac{\rho(\bf{r}')(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3}d^3\bf{r}' = \nabla_{\bf{r}} \left(\dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}d^3\bf{r}'\right)
 \end{aligned}
-$${#eq-part2_gradient_of_inverse_of_distance_2}
+$${#eq-EM_gradient_of_inverse_of_distance_2}
 
 을 얻는다. 우리는 두 함수 $\nabla f(\bf{r}) = \nabla g(\bf{r})$ 일 때 $f(\bf{r})- g(\bf{r})= \text{constant}$ 임을 안다. 
 
@@ -133,21 +133,21 @@ $$
 
 $$
 \phi(\bf{r}) := \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}d^3\bf{r}'.
-$$ {#eq-part2_electric_potential}
+$$ {#eq-EM_electric_potential}
 
 
-그러나 전하 분포가 무한하다면 @eq-part2_gradient_of_inverse_of_distance_2 의 우변의 $\int_V \rho(\bf{r}')/\|\bf{r}-\bf{r}'\|\, d^3\bf{r}'$ 이 발산하며, 이 경우 임의의 점 $\bf{r}_0$ 를 $\phi(\bf{r}_0)=0$ 으로 잡고 전위차를 계산한다.
+그러나 전하 분포가 무한하다면 @eq-EM_gradient_of_inverse_of_distance_2 의 우변의 $\int_V \rho(\bf{r}')/\|\bf{r}-\bf{r}'\|\, d^3\bf{r}'$ 이 발산하며, 이 경우 임의의 점 $\bf{r}_0$ 를 $\phi(\bf{r}_0)=0$ 으로 잡고 전위차를 계산한다.
 
 
 </br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part2_potential_from_infinite_line_charge}
+::: {#exm-EM_potential_from_infinite_line_charge}
 
 #### 무한한 선 전하에 의한 전위
 
-@exm-part2_charge_distribution_line_charge 에서 임의의 $\bf{r}_0$ 로부터의 전위차를 구해보자.
+@exm-EM_charge_distribution_line_charge 에서 임의의 $\bf{r}_0$ 로부터의 전위차를 구해보자.
 
 $$
 \phi(\bf{r}) = -\int_{\bf{r}_0}^{\bf{r}} \dfrac{\lambda}{2\pi\epsilon_o r'}dr' = -\dfrac{\lambda}{2\pi\epsilon_0} \left(\ln \|\bf{r}\| - \ln \|\bf{r}_0\|\right).
@@ -161,7 +161,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part2_potential_from_uniformly_charged_disk}
+::: {#exm-EM_potential_from_uniformly_charged_disk}
 
 #### 균일하게 대전된 디스크로부터의 전위
 
@@ -196,13 +196,13 @@ $$
 
 ### 등전위면과 전기장
 
-@eq-part2_electric_field_from_potential 로부터 우리는 전기장의 방향은 전위 $\phi(\bf{r})$ 를 가장 빠르게 감소시키는 방향이라는 것을 알 수 있다. 즉 $\phi(\bf{r})=C$ 의 등전위면에 대해 수직인 방향이며 전위를 감소시키는 방향이다. 
+@eq-EM_electric_field_from_potential 로부터 우리는 전기장의 방향은 전위 $\phi(\bf{r})$ 를 가장 빠르게 감소시키는 방향이라는 것을 알 수 있다. 즉 $\phi(\bf{r})=C$ 의 등전위면에 대해 수직인 방향이며 전위를 감소시키는 방향이다. 
 
 </br>
 
 ### 정전기 에너지
 
-@eq-part2_electrostatic_potential_energy_1 를 다시 보자.
+@eq-EM_electrostatic_potential_energy_1 를 다시 보자.
 
 $$
 U = \dfrac{1}{2}\sum_{i\ne j=1}^N \dfrac{q_i q_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2}\sum_{i=1}^N q_i \sum_{j\ne i=1}^N \dfrac{q_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2} \sum_{i=1}^N q_i \phi(\bf{r}_i)
@@ -215,7 +215,7 @@ $$
 \boxed{
 U = \dfrac{1}{2} \int \rho(\bf{r})\phi (\bf{r})\, d^3 \bf{r}
 }
-$$ {#eq-part2_electrostatic_potential_energy_by_charge_distribution_and_potential}
+$$ {#eq-EM_electrostatic_potential_energy_by_charge_distribution_and_potential}
 
 을 얻는다.
 
@@ -229,13 +229,13 @@ $$ {#eq-part2_electrostatic_potential_energy_by_charge_distribution_and_potentia
 
 $$
 \nabla^2 \phi = \dfrac{1}{r}\dfrac{\partial^2}{\partial r^2}(r\phi) + \dfrac{1}{r^2 \sin \theta}\dfrac{\partial}{\partial \theta}\left(\sin \theta \dfrac{\partial \phi}{\partial \theta}\right) + \dfrac{1}{r^2 \sin^2 \theta}\dfrac{\partial^2 \phi}{\partial \varphi^2}
-$$ {#eq-part2_laplace_equation_in_spherical_coordinate}
+$$ {#eq-EM_laplace_equation_in_spherical_coordinate}
 
 이며 변수분리법을 이용하여 $\phi (r,\, \theta,\,\varphi) = \dfrac{R(r)}{r}\Theta(\theta)\Phi(\varphi)$ 로 놓으면 위의 라플라스 방정식은 다음과 같이 변한다. 
 
 $$
 r^2 \sin^2 \theta \left[\dfrac{1}{R} \dfrac{d^2 R}{dr^2} + \dfrac{1}{\Theta r^2\sin\theta} \dfrac{d}{d\theta}\left(\sin \theta \dfrac{d\Theta}{d\theta}\right)\right] + \dfrac{1}{\Phi}\dfrac{d^2 \Phi}{d\varphi^2}=0
-$${#eq-part2_laplace_equation_in_spherical_coordinate_2}
+$${#eq-EM_laplace_equation_in_spherical_coordinate_2}
 
 
 위 식에서 마지막 항 $\dfrac{1}{\Phi}\Phi''(\varphi)$ 를 보자. 여기에 $\varphi$ 의존성이 있다면 미분방정식의 앞부분에도 $\varphi$ 의존성이 있어야 하므로 변수분리 가정에 모순된다. 따라서 어떤 상수값밖에 가질 수 없다. 이 상수값을 $-m^2$ 라고 하자. 즉
@@ -285,7 +285,7 @@ $$
 
 $$
 \dfrac{1}{\sqrt{1-2xt + t^2}} = \sum_{n=0}^\infty P_n (x) t^n.
-$$ {#eq-part2_generator_of_legendre_polymonals}
+$$ {#eq-EM_generator_of_legendre_polymonals}
 
 두 벡터 $\bf{r}_>\, \bf{r}_<$ 이 $\|\bf{r}_>\| > \|\bf{r}_<\|$ 라고 하자. $t=\dfrac{\|\bf{r}_<\|}{\|\bf{r}_>\|}$ 에 대해 
 
@@ -293,7 +293,7 @@ $$
 \begin{aligned}
 \dfrac{1}{\|\bf{r}_>-\bf{r}_<\|} &=  \dfrac{1}{\|\bf{r}_>\|} \dfrac{1}{\sqrt{1-2\cos \theta t+t^2}} = \dfrac{1}{\|\bf{r}_>\|}\sum_{n=0}^\infty \left(\dfrac{\|\bf{r}_<\|}{\|\bf{r}_>\|}\right)^n P_n (\cos \theta)
 \end{aligned}
-$$ {#eq-part2_legendre_expansion}
+$$ {#eq-EM_legendre_expansion}
 
 이다. 
 
@@ -320,11 +320,11 @@ $$ {#eq-part2_legendre_expansion}
 
 $$
 \int_{-1}^1 P_n(x) P_m(x)\, dx = \dfrac{2}{2n+1} \delta_{mn}
-$$ {#eq-part2_orthogonality_of_legendre_polynomial}
+$$ {#eq-EM_orthogonality_of_legendre_polynomial}
 
 $$
 P_n(-x) = (-1)^n P_n(x)
-$${#eq-part2_parity_of_legendre_polynomial}
+$${#eq-EM_parity_of_legendre_polynomial}
 
 
 
@@ -346,7 +346,7 @@ P_4(x) &= \dfrac{1}{8}(35 x^4-30x^2 +3) , \\[0.3em]
 P_5(x) &= \dfrac{1}{8}(63x^5 - 70x^3 +15x).
 \end{aligned}
 }
-$$ {#eq-part2_legendre_polynomials}
+$$ {#eq-EM_legendre_polynomials}
 
 
 </br>
@@ -359,7 +359,7 @@ $$
 P_n^m &= (1-x)^{|m|/2} \dfrac{d^{|m|} P_n(x)}{dx^{|m|}},\\[0.3em]
 P_n^{-m} &= (-1)^m \dfrac{(n-m)!}{(n+m)!} P_{n}^m (x). 
 \end{aligned}
-$$ {#eq-part2_definition_of_associated_legendre_polynomial}
+$$ {#eq-EM_definition_of_associated_legendre_polynomial}
 
 </br>
 
@@ -367,7 +367,7 @@ $$ {#eq-part2_definition_of_associated_legendre_polynomial}
 
 $$
 \int_{-b}^b P_n^m \left(\dfrac{x}{b}\right)P_l^m \left(\dfrac{x}{b}\right)^m dx = \dfrac{2b}{2n+1}\dfrac{(n+|m|)!}{(n-|m|)!} \delta _{ln}.
-$$ {#eq-part2_orthogonality_of_associated_legendre_polynomials}
+$$ {#eq-EM_orthogonality_of_associated_legendre_polynomials}
 
 </br>
 
@@ -392,7 +392,7 @@ $$ {#eq-part2_orthogonality_of_associated_legendre_polynomials}
 
 $$
 Y_l^m (\theta,\, \varphi) = \sqrt{\dfrac{2l+1}{4\pi}\dfrac{(l-|m|)!}{(l+|m|)!}} P_l^m(\cos\theta) e^{im\varphi}
-$$ {#eq-part2_definition_of_spherical_harmomics}
+$$ {#eq-EM_definition_of_spherical_harmomics}
 
 </br>
 
@@ -400,7 +400,7 @@ $$ {#eq-part2_definition_of_spherical_harmomics}
 
 $$
 \oint_{\Omega} {Y_{l'}^{m'}}^\ast (\theta,\, \varphi)\, Y_l^m (\theta,\, \varphi) d\Omega =\int_0^{2\pi} \int_0^\pi d\theta  {Y_{l'}^{m'}}^\ast (\theta,\, \varphi)\, Y_l^m (\theta,\, \varphi)  \sin \theta\, d\theta d\varphi= \delta_{ll'}\delta_{mm'}
-$$ {#eq-part2_orthogonamity_of_spherical_harmonics}
+$$ {#eq-EM_orthogonamity_of_spherical_harmonics}
 
 </br>
 
@@ -408,7 +408,7 @@ $$ {#eq-part2_orthogonamity_of_spherical_harmonics}
 
 $$
 Y_l^{-m}(\theta,\, \varphi) = (-1)^mY_{l}^m (\theta,\, \varphi).
-$$ {#eq-part2_similarity_of_spherical_harmonics}
+$$ {#eq-EM_similarity_of_spherical_harmonics}
 
 </br>
 
@@ -416,7 +416,7 @@ $$ {#eq-part2_similarity_of_spherical_harmonics}
 
 $$
 \sum_{l=0}^\infty \sum_{m=-l}^l {Y_{l}^m}^\ast (\theta',\, \varphi')\,Y_l^m (\theta,\, \varphi) = \delta (\varphi - \varphi')\,\delta(\cos \theta - \cos \theta')
-$$ {#eq-part2_completeness_of_spherical_harmonics}
+$$ {#eq-EM_completeness_of_spherical_harmonics}
 
 </br>
 
@@ -447,7 +447,7 @@ Y_3^{-2}(\theta,\,\varphi) &= \sqrt{\dfrac{7}{480\pi}} 15 \cos \theta \sin^2\the
 Y_3^{3}(\theta,\, \varphi) &= \sqrt{\dfrac{7}{2880\pi}} 15 \sin^3 \theta \,e^{-3i\varphi} = - \sqrt{\dfrac{7}{2880\pi}} \dfrac{15(x^3-3xy^2 - i(3x^2y-y^3))}{r^3} \\[0.3em]
 \end{aligned}
 }
-$$ {#eq-part2_spherical_harmonics}
+$$ {#eq-EM_spherical_harmonics}
 
 </br>
 
@@ -457,25 +457,25 @@ $$ {#eq-part2_spherical_harmonics}
 
 $$
 P_l(\cos\gamma) = \dfrac{4\pi}{2l+1} \sum_{m=-l}^l {Y_l^m}^\ast(\theta,\,\varphi') Y_l^m(\theta,\, \varphi)
-$$ {#eq-part2_addition_theorem_for_spherical_harmonics}
+$$ {#eq-EM_addition_theorem_for_spherical_harmonics}
 
-임을 보일 수 있다. 그렇다면 @eq-part2_legendre_expansion 로부터
+임을 보일 수 있다. 그렇다면 @eq-EM_legendre_expansion 로부터
 
 $$
 \dfrac{1}{\|\bf{r}_> - \bf{r}_<\|} = \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1} \left(\dfrac{\|\bf{r}_<\|^l}{\|\bf{r}_>\|^{l+1}}\right) {Y_l^m}^\ast(\theta,\,\varphi') Y_l^m(\theta,\, \varphi)
-$$ {#eq-part2_spherical_haromics_expansion_of_inverse_vector_difference}
+$$ {#eq-EM_spherical_haromics_expansion_of_inverse_vector_difference}
 
 </br>
 
 ## 다중극 전개 (Multipole expansions)
 
-### 쌍극자 모멘트 {#sec-part2_electric_dipole_moment}
+### 쌍극자 모멘트 {#sec-EM_electric_dipole_moment}
 
 
-![전기 쌍극자](../images/Electromagnetism/electrostatics_2/electric_dipole.png){#fig-part2_electric_dipole width=200}
+![전기 쌍극자](../images/Electromagnetism/electrostatics_2/electric_dipole.png){#fig-EM_electric_dipole width=200}
 
 
-전하 $+q$ 와 $-q$ 가 위의 그림과 같이 $d$ 의 거리만큼 떨어져 있다고 하고 원점을 두 전하의 중앙에 두자. 그리고 $+q$ 로부터의 변위를 $\bf{r}_1$, $-q$ 로부터의 변위를 $\bf{r}_2$ 라고 하고 원점으로부터의 변위를 $\bf{r}$ 라고 하자. 그리고 $-q$ 전하의 위치로부터 $+q$ 전하의 위치까지의 변위를 $\bf{d}$ 라고 하자. 이 때의 전기 포텐셜 $\phi (\bf{r})$ 은 $r=\|\bf{r}\|$ 이라고 할 때 $r>d$ 의 조건과 @eq-part2_legendre_expansion 와 @eq-part2_parity_of_legendre_polynomial 로부터 다음을 얻는다.
+전하 $+q$ 와 $-q$ 가 위의 그림과 같이 $d$ 의 거리만큼 떨어져 있다고 하고 원점을 두 전하의 중앙에 두자. 그리고 $+q$ 로부터의 변위를 $\bf{r}_1$, $-q$ 로부터의 변위를 $\bf{r}_2$ 라고 하고 원점으로부터의 변위를 $\bf{r}$ 라고 하자. 그리고 $-q$ 전하의 위치로부터 $+q$ 전하의 위치까지의 변위를 $\bf{d}$ 라고 하자. 이 때의 전기 포텐셜 $\phi (\bf{r})$ 은 $r=\|\bf{r}\|$ 이라고 할 때 $r>d$ 의 조건과 @eq-EM_legendre_expansion 와 @eq-EM_parity_of_legendre_polynomial 로부터 다음을 얻는다.
 $$
 \begin{aligned}
 \phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{q}{\|\bf{r}_1\|} - \dfrac{q}{\|\bf{r}_2\|}\right] = \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{1}{\|\bf{r}-\bf{d}/2\|} - \dfrac{1}{\|\bf{r}+\bf{d}/2\|}\right] \\[0.3em]
@@ -483,19 +483,19 @@ $$
 &=\dfrac{q}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{2d^{2k+1}}{2^{2k+1}r^{2k+2}} P_{2k+1}(\cos\theta) \\
 &= \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{d\cos\theta}{r^2} + \dfrac{d^3(5\cos^3\theta - 3\cos \theta) }{8r^4} + \cdots \right] \approx\dfrac{1}{4\pi\epsilon_0} \dfrac{qd\cos\theta}{r^2}
 \end{aligned}
-$$ {#eq-part2_electric_potential_dipole_1}
+$$ {#eq-EM_electric_potential_dipole_1}
 
 
-위의 경우는 총 전하량이 $0$ 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 $\|\bf{r}\|^{-2}$ 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 $0$ 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다. @eq-part2_electric_potential_dipole_1 에서 $1/r^2$ 에 비례하는 부분에 대해 전기 쌍극자 모멘트 $\bf{\mu}$ 를
+위의 경우는 총 전하량이 $0$ 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 $\|\bf{r}\|^{-2}$ 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 $0$ 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다. @eq-EM_electric_potential_dipole_1 에서 $1/r^2$ 에 비례하는 부분에 대해 전기 쌍극자 모멘트 $\bf{\mu}$ 를
 
 $$
 \bf{\mu}:=q\bf{d}
-$$ {#eq-part2_electric_dipole_moment}
+$$ {#eq-EM_electric_dipole_moment}
 
 로 정의하면 전기 쌍극자 모멘트에 의한 전기 포텐셜 $\phi_d(\bf{r})$ 은 다음과 같다. 
 $$
 \phi_d (\bf{r})= \dfrac{1}{4\pi\epsilon_0} \dfrac{\bf{\mu\cdot r}}{r^3}
-$$ {#eq-part2_electric_potential_dipole_2}
+$$ {#eq-EM_electric_potential_dipole_2}
 
 </br>
 
@@ -505,9 +505,9 @@ $\|\bf{r}_>\| > \|\bf{r}_<\|$ 일 때 $k$ 차 르장드르 다항식 $P_k$ 와 $
 
 $$
 \dfrac{1}{\|\bf{r}_>-\bf{r}_<\|} = \dfrac{1}{\|\bf{r}_>\|} \sum_{k=0}^\infty \left(\dfrac{\|\bf{r}_<\|}{\|\bf{r}_>\|}\right)^k P_k (\cos \theta)
-$$ {#eq-part2_legendre_expansion_x}
+$$ {#eq-EM_legendre_expansion_x}
 
-그렇다면 @eq-part2_electric_potential 에서 정해진 원점과 가능한 전하 분포 $\rho(\bf{r}')$ 에 대해 $\|\bf{r}\| > \|\bf{r}'\|$ 일 때,
+그렇다면 @eq-EM_electric_potential 에서 정해진 원점과 가능한 전하 분포 $\rho(\bf{r}')$ 에 대해 $\|\bf{r}\| > \|\bf{r}'\|$ 일 때,
 
 $$
 \begin{aligned}
@@ -520,7 +520,7 @@ $$
 
 $$
 \phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Q_k}{\|\bf{r}\|^{k+1}},\qquad \text{where }Q_k = \int_V \|\bf{r}'\|^k P_k(\cos\theta')\,\rho(\bf{r}')\,d^3\bf{r'}
-$$ {#eq-part2_multiple_expansion}
+$$ {#eq-EM_multiple_expansion}
 
 이다. 
 

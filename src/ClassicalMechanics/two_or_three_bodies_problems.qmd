@@ -273,6 +273,7 @@ $$ {#eq-CM_rutherford_formular}
 
 
 #### 연습문제
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-landau_18_1}
 
@@ -287,6 +288,8 @@ $$
 이 때의 유효 산란 단면적을 구하라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -312,12 +315,15 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-rutherford_cross_section}
 
 러더포드 산란단면적 @eq-CM_rutherford_formular 을 증명하라.
 
 ::: 
+
+</div></br>
 
 ::: {.solution}
 
