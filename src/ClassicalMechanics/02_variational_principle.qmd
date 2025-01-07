@@ -40,7 +40,7 @@ $$ {#eq-initial_path}
 
 $$
 J(\alpha) = \int_{x_1}^{x_2} f(y(x,\,\alpha),\,\dot{y}(x,\,\alpha),\,x),\,dx
-$$ {#eq-stationary_condition} 
+$$ {#eq-CM_stationary_condition} 
 
 이며 stationary point를 얻는 것은 다음을 만족할 때 이다.
 
@@ -56,11 +56,11 @@ $$
 \end{aligned}
 $$
 
-따라서 stationary condition 식 @eq-stationary_condition 은 다음과 같게 된다.
+따라서 stationary condition 식 @eq-CM_stationary_condition 은 다음과 같게 된다.
 
 $$
 \int_{x_1}^{x_2} \left[\dfrac{ \partial f}{\partial y} - \dfrac{d}{dx} \left(\dfrac{\partial f}{\partial \dot{y}}\right)\right]\left( \dfrac{dy}{d\alpha}\right)_{\alpha=0} dx = 0\;.
-$$ {#eq-stationary_condition_2}
+$$ {#eq-CM_stationary_condition_2}
 
 
 ::: {.callout-caution appearance="minimal" icon="false"}
@@ -71,13 +71,13 @@ $$
 $$
 :::
 
-따라서 우리는 @eq-stationary_condition_2 로부터 $J$ 가 stationary value를 갖기 위해서는 다음을 만족해야 함을 알게 되었다. 이를 1차원에서의 오일러-라그랑쥬 방정식(Euler-Lagrange equation) 이라고 한다.
+따라서 우리는 @eq-CM_stationary_condition_2 로부터 $J$ 가 stationary value를 갖기 위해서는 다음을 만족해야 함을 알게 되었다. 이를 1차원에서의 오일러-라그랑쥬 방정식(Euler-Lagrange equation) 이라고 한다.
 
 $$
 \dfrac{ \partial f}{\partial y} - \dfrac{d}{dx} \left(\dfrac{\partial f}{\partial \dot{y}}\right)=0\;.
-$$ {#eq-classical_euler_lagrange_equation_1d}
+$$ {#eq-CM_euler_lagrange_equation_1d}
  
-Differential quantities $\delta y,\, \delta J$ 를 $\delta y \equiv \left( \dfrac{\partial y}{\partial \alpha}\right)_{0} d\alpha$, $\delta J \equiv \left(\dfrac{dJ}{d\alpha}\right)_0 d\alpha$ 로 정의하자. 아래첨자 $0$ 은 $\alpha=0$ 을 의미한다. 이 정의를 이용하면 @eq-stationary_condition_2 는 다음과 같이 쓸 수 있다.
+Differential quantities $\delta y,\, \delta J$ 를 $\delta y \equiv \left( \dfrac{\partial y}{\partial \alpha}\right)_{0} d\alpha$, $\delta J \equiv \left(\dfrac{dJ}{d\alpha}\right)_0 d\alpha$ 로 정의하자. 아래첨자 $0$ 은 $\alpha=0$ 을 의미한다. 이 정의를 이용하면 @eq-CM_stationary_condition_2 는 다음과 같이 쓸 수 있다.
 
 $$
 \delta J = \int_{x_0}^{x_1} \left[ \dfrac{\partial f}{\partial y}-\dfrac{d}{dx}\left( \dfrac{\partial f}{\partial \dot{y}} \right)\right] \delta y \, dx=0\;.
@@ -114,7 +114,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-classical_minima_volume_of_a_body_of_revolution}
+::: {#exm-CM_minima_volume_of_a_body_of_revolution}
 
 #### 회전체의 최소부피.
 
@@ -160,11 +160,11 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-classical_brachistochrone_problem}
+::: {#exm-CM_classical_brachistochrone_problem}
 
 #### The brachistochrone problem
 
-![Brachistochrone](../images/tikzfigure/brachistochrone/brachistochrone.png){width=30%}
+![Brachistochrone](../images/classical%20mechanics/brachistochrone/brachistochrone.png){width=30%}
 
 
 
@@ -239,7 +239,7 @@ $$
 이다. $\{y_i\}$ 가 독립이므로 $\{\delta y_i\}$ 도 독립이다. $\delta J=0$ 이려면 모든 $i=1,\ldots,\,n$ 에 대해 다음을 만족해야 한다.
 $$
 \dfrac{\partial f}{\partial y_i} - \dfrac{d}{dx}\left( \dfrac{\partial f}{\partial \dot{y}_i}  \right) =0
-$$ {#eq-classical_euler_lagrange_for_muntidimensional_case}
+$$ {#eq-CM_euler_lagrange_for_muntidimensional_case}
 
 을 만족해야 한다. 1차원에서와 같이 이를 **오일러-라그랑쥬 방정식(Euler-Lagrange differential equation)** 이라 한다. 
 
@@ -256,11 +256,11 @@ $$ {#eq-classical_euler_lagrange_for_muntidimensional_case}
 
 </br>
 
-### 해밀턴의 원리 {#sec-least_action_theorem}
+### 해밀턴의 원리 {#sec-CM_least_action_theorem}
 
 ::: {.callout-note appearance="minimal"}
 
-::: {#def-classical_monogenic}
+::: {#def-CM_classical_monogenic}
 
 #### Monogenic
 
@@ -280,9 +280,9 @@ Monogenic system 에서 시간 $t_1$ 에서 $t_2$ 까지의 시스템의 운동�
 
 $$
 S := \int_{t_1}^{t_2} L(\{q_i\},\, \{\dot{q}_i\}, t)\, dt
-$$ {#eq-action}
+$$ {#eq-CM_definition_of_action}
 
-이 stationary value를 갖도록 하는 경로를 따른다. 이 선적분의 값을 **action** 이라고 한다. 다시 말하자면  $t_1$ 에서의 위치 $\boldsymbol{x}_1$ 에서 $t_2$ 에서의 위치 $\boldsymbol{x}_2$ 사이의 모든 가능한 경로중 실제 자연에 의해 선택되는 경로는 @eq-action 이 stationary value를 갖도록 하는 경로이다.
+이 stationary value를 갖도록 하는 경로를 따른다. 이 선적분의 값을 **action** 이라고 한다. 다시 말하자면  $t_1$ 에서의 위치 $\boldsymbol{x}_1$ 에서 $t_2$ 에서의 위치 $\boldsymbol{x}_2$ 사이의 모든 가능한 경로중 실제 자연에 의해 선택되는 경로는 @eq-CM_definition_of_action 이 stationary value를 갖도록 하는 경로이다.
 :::
 
 
@@ -293,11 +293,11 @@ $$
 \delta S = \delta \int_{t_1}^{t_2} L(q_1,\ldots,\,q_n,\,\dot{q}_1,\ldots,\,\dot{q}_n,\,t) \, dt=0\;.
 $$
 
-우리는 @eq-classical_euler_lagrange_for_muntidimensional_case 을 통해 라그랑쥬 방정식을 얻을 수 있다.
+우리는 @eq-CM_euler_lagrange_for_muntidimensional_case 을 통해 라그랑쥬 방정식을 얻을 수 있다.
 
 $$
 \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_i}\right) - \dfrac{\partial L}{\partial q_i} = 0\, ,  \quad\quad i=1,\,2,\ldots,\,n\;.
-$$ {#eq-euler_lagrange_equation_of_motion}
+$$ {#eq-CM_euler_lagrange_equation_of_motion}
 
 </br>
 
@@ -322,30 +322,30 @@ Equations of constraints가 아래와 같은 형식일 때만 nonholonomic syste
 
 $$
 \sum_k a_{lk}dq_k  + a_{lt}dt = 0\;.
-$$ {#eq-nonholonomic_constraints}
+$$ {#eq-CM_nonholonomic_constraints}
 
-여기서 $l$ 은 이러한 nonholonomic equations of constraints에 대한 index 이다. $m$개의 이러한 방정식이 존재한다고 생각하자. 그리고 $a_{lk}$ 와 $a_{lt}$ 는 $q$ 와 time의 함수일 수 있다는 것을 유념하자. 변분경로 혹은 변분경로를 구성하는 변위는 @eq-nonholonomic_constraints 의 제약 조건을 충족해야 한다고 예상된다. 그러나 @eq-nonholonomic_constraints 가 적분 가능(integrable) 하지 않으면 이러한 다양한 경로를 구성할 수 없다는 것이 증명 되었으며, 이 경우 제약 조건은 실제로는 homolomic 이다. 그럼에도 불구하고 정확한 운동 방정식으로 이어지는 변분 원리는 virtual displacement 에 의해 실제 운동으로부터 다양한 경로가 구성될 때 얻을 수 있다.
+여기서 $l$ 은 이러한 nonholonomic equations of constraints에 대한 index 이다. $m$개의 이러한 방정식이 존재한다고 생각하자. 그리고 $a_{lk}$ 와 $a_{lt}$ 는 $q$ 와 time의 함수일 수 있다는 것을 유념하자. 변분경로 혹은 변분경로를 구성하는 변위는 @eq-CM_nonholonomic_constraints 의 제약 조건을 충족해야 한다고 예상된다. 그러나 @eq-CM_nonholonomic_constraints 가 적분 가능(integrable) 하지 않으면 이러한 다양한 경로를 구성할 수 없다는 것이 증명 되었으며, 이 경우 제약 조건은 실제로는 homolomic 이다. 그럼에도 불구하고 정확한 운동 방정식으로 이어지는 변분 원리는 virtual displacement 에 의해 실제 운동으로부터 다양한 경로가 구성될 때 얻을 수 있다.
 
 
 주어진 equations of constraints로부터 Virtual displacement에 대한 equation of constraints를 아래와 같다. 
 
 $$
 \sum_k a_{lk}dq_k = 0\;.
-$$ {#eq-nonholonomic_displacement}
+$$ {#eq-CM_nonholonomic_displacement}
 
-이제 *Lagrange multiplier method* 를 사용하자. 위의 @eq-nonholonomic_displacement 에서 모든 $l=1,\,2,\ldots,\,m$ 에 대해
+이제 *Lagrange multiplier method* 를 사용하자. 위의 @eq-CM_nonholonomic_displacement 에서 모든 $l=1,\,2,\ldots,\,m$ 에 대해
 
 $$
 \lambda_l \sum\limits_k a_{lk}\delta q_k = 0
-$$ {#eq-lagrange_multiplier}
+$$ {#eq-CM_lagrange_multiplier}
 
 이다. 해밀턴의 원리 $\delta \int_1^2 L \, dt =0$ 이 nonholonomic system 에서도 성립함을 가정하면 다음이 성립한다. 
 
 $$
 \int_1^2 dt \sum_k \left[ \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k} \right)\right] dq_k = 0
-$$ {#eq-hamilton_t1}
+$$ {#eq-CM_hamilton_t1}
 
-Lagrange multiplier 방법을 이용하기 위해 @eq-lagrange_multiplier 를 다음과 같이 쓸 수 있다.
+Lagrange multiplier 방법을 이용하기 위해 @eq-CM_lagrange_multiplier 를 다음과 같이 쓸 수 있다.
 
 $$%\label{eq:lagrange_multiplier_2}
 \int_1^2 \sum_{k,\,l} \lambda_l \, a_{lk}\, \delta q_k\,  dt=0\;.
@@ -355,28 +355,28 @@ $$
 
 $$
 \int_1^2 dt \sum_{k=1}^n \left[ \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt} \left(  \dfrac{\partial L}{\partial \dot{q}_k}\right)  + \sum_l \lambda_l \, a_{lk} \right] \delta q_k = 0\;.
-$$ {#eq-lagrange_multiplier_2}
+$$ {#eq-CM_lagrange_multiplier_2}
 
-여기서 $\{ \delta q_k\}$ 는 여전히 dependent 하며 $m$ 개의 관계- @eq-nonholonomic_displacement -로 연결되어 있다. 따라서 $n-m$ 개의 $\delta q_k$ 들이 독립적이 되도록 선택 될 수 있다. 하지만 아직 $m$ 개의 $\lambda_l$ 값을 우리는 모른다. $\lambda_l$ 이 다음을 만족하도록 선택된다고 하자.
+여기서 $\{ \delta q_k\}$ 는 여전히 dependent 하며 $m$ 개의 관계- @eq-CM_nonholonomic_displacement -로 연결되어 있다. 따라서 $n-m$ 개의 $\delta q_k$ 들이 독립적이 되도록 선택 될 수 있다. 하지만 아직 $m$ 개의 $\lambda_l$ 값을 우리는 모른다. $\lambda_l$ 이 다음을 만족하도록 선택된다고 하자.
 
 $$
 \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k}  \right) + \sum_l \lambda_l \, a_{lk} = 0,\quad\quad k = n-m+1,\ldots,\,n\,.
-$$ {#eq-lambda_choice}
+$$ {#eq-CM_lambda_choice}
 
-이것은 $1$ 부터 $n$ 까지의 변수 $\{q_k\}$ 중 마지막 $m$ 개에 대한 equation of motion 이다.  그렇다면 앞의 $n-m$ 개의 $\{q_k\}$ 에 대해 @eq-lagrange_multiplier_2 를 다음과 같이 쓸 수 있다.
+이것은 $1$ 부터 $n$ 까지의 변수 $\{q_k\}$ 중 마지막 $m$ 개에 대한 equation of motion 이다.  그렇다면 앞의 $n-m$ 개의 $\{q_k\}$ 에 대해 @eq-CM_lagrange_multiplier_2 를 다음과 같이 쓸 수 있다.
 
 $$
 \int_1^2 dt \sum_{k=1}^{n-m} \left[ \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt} \left(  \dfrac{\partial L}{\partial \dot{q}_k}\right)  + \sum_l \lambda_l \, a_{lk} \right] \delta q_k = 0\;.
-$$ {#eq-lagrange_multiplier_3}
+$$ {#eq-CM_lagrange_multiplier_3}
 
-$q_1,\ldots,\,q_{n-m}$ 은 독립적이므로 @eq-lambda_choice 와 @eq-lagrange_multiplier_3 를 합하면 다음과 같다.
+$q_1,\ldots,\,q_{n-m}$ 은 독립적이므로 @eq-CM_lambda_choice 와 @eq-CM_lagrange_multiplier_3 를 합하면 다음과 같다.
 
 $$
 \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k} \right) - \dfrac{\partial L}{\partial q_k} =\sum_l \lambda_l \, a_{lk},\quad\quad k=1,\ldots,\,m.
-$$ {#eq-lagrange_multiplier_4}
+$$ {#eq-CM_lagrange_multiplier_4}
 
 
-자, 이제 우리가 모르는 것은 $n$ 개의 $q_k$ 와 $m$ 개의 $\lambda_l$ 이다. @eq-lagrange_multiplier_4 는 $n$ 개의 equations 만을 표현한다. 우리는 여기에 더해 @eq-nonholonomic_constraints 의 1st order differential form,
+자, 이제 우리가 모르는 것은 $n$ 개의 $q_k$ 와 $m$ 개의 $\lambda_l$ 이다. @eq-CM_lagrange_multiplier_4 는 $n$ 개의 equations 만을 표현한다. 우리는 여기에 더해 @eq-CM_nonholonomic_constraints 의 1st order differential form,
 
 $$
 \sum_k a_{lk} \,\dot{q}_k + a_{lt}=0
@@ -384,11 +384,11 @@ $$
 
 을 생각한다. 이제 원래 $n$ 개의 식과 함께 $n+m$ 개의 식을 갖게 되었다. 그런데 우리는 $n$ 개의 $\{q_i\}$ 에 대한 정보와 더불어 $m$ 개의 $\{\lambda_j\}$ 에 대한 정보도 얻었다. 각각의 $\lambda_i$ 는 무엇을 의미할까?
 
-System에 대한 constraints를 제거하고 대신에 applied external forces $Q'_k$ 를 system의 motion이 변화하지 않도록 놓자. 명백하게 applied external forces는 forces of constraints 이다. @eq-lagrange_multiplier_4 에서 $Q'_k = \sum\limits_l \lambda_l \, a_{lk}$ 로 놓으면,
+System에 대한 constraints를 제거하고 대신에 applied external forces $Q'_k$ 를 system의 motion이 변화하지 않도록 놓자. 명백하게 applied external forces는 forces of constraints 이다. @eq-CM_lagrange_multiplier_4 에서 $Q'_k = \sum\limits_l \lambda_l \, a_{lk}$ 로 놓으면,
 
 $$
 \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k}\right) - \dfrac{\partial L}{\partial q_k} = Q'_k \, 
-$$ {#eq-lagrange_multiplier_5}
+$$ {#eq-CM_lagrange_multiplier_5}
 
 이다. 즉 $\{\lambda_l\}$ 은 constraints 조건과 더불어 general forces of constraints를 준다. 
 
@@ -410,7 +410,9 @@ $$
 
 
 
-### examples
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-classical_minimal_length_path_in_plane} 
 
 
 ![A hoop rolling down an inclined plane.](../images/classical%20mechanics/hoop.png){#fig-rolling_hoop width=300}
@@ -449,6 +451,8 @@ $$
 
 를 통해 $\theta,\, x,\, \lambda$ 를 얻으려 한다. 계산을 해 보면 $\dot{x}=\sqrt{gl \sin \phi}$ 를 얻을 수 있다.
 
+:::
+</div>
 
 </br>
 
@@ -463,7 +467,7 @@ $$
 
 ::: {.callout-note appearance="minimal" icon="false"}
 
-::: {#def-first_integral}
+::: {#def-CM_first_integral}
 
 #### first integral 과 운동 상수
 
@@ -485,8 +489,9 @@ $$
 Monogenic system이며 포텐셜이 위치에만 의존하면 $\partial L /\partial \dot{x}_j = m\ddot{x}_j$ 이며 우리가 아는 momentum이다. 이것을 일반화하여 **canonical momentum**(혹은 **conjugate momentum**) $p_j$ 를 다음과 같이 정의한다.
 
 $$
-p_j = \dfrac{\partial L}{\partial \dot{q}_j}
-$$ {#eq-canonical_momentum}
+\boxed{
+p_j = \dfrac{\partial L}{\partial \dot{q}_j} }
+$$ {#eq-CM_canonical_momentum}
 
 :::
 
@@ -502,9 +507,9 @@ $$
 
 </br>
 
-### Cyclic coordinate {#sec-cyclic_coordinate_lagrangian}
+### Cyclic coordinate {#sec-CM_cyclic_coordinate_lagrangian}
 
-일반화된 좌표계에서 표현된 라그랑지안이 어떤 $q_i$ 에 대해 의존성이 없을 경우, 즉 $\dfrac{\partial L}{\partial q_i}=0$ 일 경우 $\dfrac{\partial L}{\partial \dot{q_j}}=p_j = \text{const.}$ 이다. 이때의 $p_j$ 를 **cyclic coordinate** 혹은 **ignorable coordinate** 라 한다. 즉 generalized momentum conjugate to cyclic coordinate $q_j$ 에 대한 canonical momentum $p_j$ 는 보존된다. 이렇게 보존되는 $p_j$ 는 라그랑지안에서 first integral(@def-first_integral) 이다.
+일반화된 좌표계에서 표현된 라그랑지안이 어떤 $q_i$ 에 대해 의존성이 없을 경우, 즉 $\dfrac{\partial L}{\partial q_i}=0$ 일 경우 $\dfrac{\partial L}{\partial \dot{q_j}}=p_j = \text{const.}$ 이다. 이때의 $p_j$ 를 **cyclic coordinate** 혹은 **ignorable coordinate** 라 한다. 즉 generalized momentum conjugate to cyclic coordinate $q_j$ 에 대한 canonical momentum $p_j$ 는 보존된다. 이렇게 보존되는 $p_j$ 는 라그랑지안에서 first integral(@def-CM_first_integral) 이다.
 
 </br>
 
@@ -522,7 +527,7 @@ $$
 \dot{p}_j \equiv \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_j} \right) = -\dfrac{\partial V}{\partial q_j} \equiv Q_j \;.
 $$
 
-우리는 이것이 총 선형 운동량에 대한 운동방정식임을 안다. $Q_j$ 는 total force $\boldsymbol{F}$ 의 $q_j$ 의 translation 방향 성분으로 아래와 같이 표현 할 수 있다.(@eq-generalized_force)
+우리는 이것이 총 선형 운동량에 대한 운동방정식임을 안다. $Q_j$ 는 total force $\boldsymbol{F}$ 의 $q_j$ 의 translation 방향 성분으로 아래와 같이 표현 할 수 있다.(@eq-CM_generalized_force)
 
 $$
 Q_j = \sum_i \boldsymbol{F}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j}\,.
@@ -540,7 +545,7 @@ $$
 Q_j = -\dfrac{\partial V}{\partial q_j} = \sum_i \boldsymbol{F}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j}= \hat{\boldsymbol{n}} \cdot \sum_i \boldsymbol{F}_i = \hat{\boldsymbol{n}},\cdot \boldsymbol{F}
 $$
 
-이다. 이제 conjugate momentum of $q_j$ 를 보면, (@eq-dlambert_1 를 이용하였다.)
+이다. 이제 conjugate momentum of $q_j$ 를 보면, (@eq-CM_dlambert_1 를 이용하였다.)
 
 $$
 p_j = \dfrac{\partial T}{\partial \dot{q}_j} = \dfrac{\partial}{\partial \dot{q}_j}\left( \dfrac{1}{2} \sum_i m_i {\dot{\boldsymbol{r}}_i}^2 \right) = \sum_i m_i \boldsymbol{v}_i \cdot \dfrac{\partial \dot{\boldsymbol{r}}_i}{\partial \dot{q}_j} =\sum_i m_i \boldsymbol{v}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \hat{\boldsymbol{n}} \cdot \left( \sum_i m_i \boldsymbol{v}_i \right)
@@ -582,7 +587,7 @@ Lagrangian $L$ 이 exiplicitly depends on time 이라면, $L$ 의 시간에 대�
 
 $$
 \dfrac{dL}{dt}= \sum_i \dfrac{\partial L}{\partial q_i}\dfrac{dq_i}{dt}+\sum_i \dfrac{\partial L}{\partial \dot{q}_i}\dfrac{d\dot{q}}{dt}+ \dfrac{\partial L}{\partial t}
-$$ {#eq-time_derivative_lagrangian}
+$$ {#eq-CM_time_derivative_lagrangian}
 
 Lagrangian equation 으로부터,
 

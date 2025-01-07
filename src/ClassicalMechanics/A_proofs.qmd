@@ -25,7 +25,7 @@ Bertrand's theorem 은 포텐셜이 $V(\boldsymbol{r}) =  K\|\boldsymbol{r}\|^n$
 
 ### 소개
 
-많은 부분이 @sec-central_force 로부터 이어진다. $r=\|\boldsymbol{r}\|$, $l = \|\boldsymbol{L}\|$ 이라고 하자. 우리는 이미 다음의 방정식을 알고 있다.
+많은 부분이 @sec-CM_central_force 로부터 이어진다. $r=\|\boldsymbol{r}\|$, $l = \|\boldsymbol{L}\|$ 이라고 하자. 우리는 이미 다음의 방정식을 알고 있다.
 
 $$
 \begin{aligned}

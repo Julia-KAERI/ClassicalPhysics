@@ -1,0 +1,534 @@
+---
+title: "Electrostatics 2"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+:::{.callout-important icon="false"}
+
+#### 페러데이의 법칙
+$$
+\boxed{
+\begin{aligned}
+\quad\nabla \times \bf{E} = - \dfrac{\partial \bf{B}}{\partial t} \quad
+\end{aligned}
+}
+$$ {#eq-part2_faraday_law}
+
+:::
+
+
+
+</br>
+
+## 전기장에 대한 선적분과 전위차
+
+### 정전기 조건과 스토크스 정리
+
+전하 분포가 시간에 대해 변하지 않으며 외부 자기장 역시 시간에 대해 변하지 않을 때, 즉 $\dfrac{\partial \bf{B}}{\partial t}=\bf{0}$ 일 때
+
+$$
+\nabla \times \bf{E} = \bf{0}
+$$ {#eq-part2_faraday_law_2}
+
+가 성립한다. 스토크스의 정리로부터 임의의 닫힌 경로 $C$ 와 이 경로에 의해 생기는 면 $S$ 에 대해
+
+$$
+\int_S (\nabla \times \bf{E}) \bf{\cdot} d\bf{a} = \oint_{C} \bf{E\cdot} d\bf{s}
+$$
+
+임을 안다. $\nabla \times \bf{E}=\bf{0}$ 인 조건에서
+
+$$
+\oint_C \bf{E \cdot}d\bf{s} = 0
+$$
+
+이다. 우리는 이로부터 $\bf{E}$ 를 임의의 경로 $C_1$ 을 따라 $P_1$ 에서 $P_2$ 까지 적분할 때 어떤 경로를 취하든 그 값이 같다는 것을 안다. 
+
+
+</br>
+
+### 전위차
+
+이제 그 값에 $-$ 를 취한 값을 $P_1$ 과 $P_2$ 의 **전위차 (electric potential difference)** 라고 한다. 
+
+$$
+\phi_{21}:= - \int_{P_1}^{P_2} \bf{E\cdot} d\bf{s}
+$$ {#eq-part2_potential_difference_from_electric_field}
+
+전하 $q$ 를 $P_1$ 에서 $P_2$ 로 이동시켰을 때의 일 $W$ 는
+
+$$
+W = -\int_{P_1}^{P_2} \bf{F \cdot} d\bf{s} = -\int_{P_1}^{P_2} q\bf{E \cdot} d\bf{s} = q\,\phi_{21}
+$$
+
+이다. 즉 전위차 $\phi_{21}$ 은 단위 전하를 $P_1$ 에서 $P_2$ 로 이동시킬 때 드는 에너지이다. 
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part2_potential_of_uniform_sphere_charge_distribution_}
+
+@exm-part2_charge_distribution_uniform_sphere 의 상황에서 무한히 멀리 떨어진 곳으로부터 구의 외부 혹은 내부의 한 지점까지 전위차를 구해보자. 우선 구의 중심을 원점으로 놓고, 원점으로부터 $r>R$ 까지의 전위차 $\phi_{\text{out}}(r)$ 은
+
+$$
+\phi_{\text{out}}(r) = - \int_{-\infty}^{r} E(r')\,dr' = -\int_{-\infty}^{r} \dfrac{\rho R^3}{3\epsilon_0 r'^2}\, dr' = \dfrac{\rho R^3}{3\epsilon_0 r}
+$$
+
+이며 $r \le R$ 까지의 전위차 $\phi_{\text{in}}(r)$ 은
+
+$$
+\begin{aligned}
+\phi_{\text{in}}(r) &= -\int_{-\infty}^R E(r')\,dr' -\int_{R}^r E(r')\, dr' \\
+&= -\int_{-\infty}^R \dfrac{\rho R^3}{3\epsilon_0 r'^2}\, dr' - \int_{R}^r \dfrac{\rho r'}{3\epsilon_0} dr' \\
+&= \dfrac{\rho R^2}{2\epsilon_0} - \dfrac{\rho r^2}{6\epsilon_0}
+\end{aligned}
+$$
+
+![균일한 전하 밀도를 가진 구에서의 전위차](../images/Electromagnetism/electrostatics/electrostatics_potential_uniform_sphere/electrostatics_potential_uniform_sphere.png){#fig-part2_electrosttics_potential_uniform_sphere width=450}
+
+
+:::
+
+</div></br>
+
+</br>
+
+### 전위차의 Gradient 
+
+지금까지 전위차는 전기장 $\bf{E}$ 에 대한 경로적분으로 주어졌다. 그러나 거꾸로 전위차를 알 때 전기장을 구할 수 있다. @eq-part2_potential_difference_from_electric_field 로부터,
+
+$$
+\bf{E}(\bf{r}) = -\nabla \phi (\bf{r})
+$$ {#eq-part2_electric_field_from_potential}
+
+임을 안다. 또한 @eq-part2_electric_field_due_to_charge_distribution 와 
+
+$$
+\nabla_{\bf{r}} \left(\dfrac{1}{\|\bf{r}-\bf{r}'\|}\right) = - \dfrac{\bf{r}-\bf{r}'}{\|\bf{r}-\bf{r}'\|^3}
+$$ {#eq-part2_gradient_of_inverse_of_distance}
+
+로부터,
+
+$$
+\begin{aligned}
+\nabla_{\bf{r}}\phi(\bf{r}) &= -\dfrac{1}{4\pi \epsilon_0}\int_V \dfrac{\rho(\bf{r}')(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3}d^3\bf{r}' = \nabla_{\bf{r}} \left(\dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}d^3\bf{r}'\right)
+\end{aligned}
+$${#eq-part2_gradient_of_inverse_of_distance_2}
+
+을 얻는다. 우리는 두 함수 $\nabla f(\bf{r}) = \nabla g(\bf{r})$ 일 때 $f(\bf{r})- g(\bf{r})= \text{constant}$ 임을 안다. 
+
+전하 분포가 국소화 되어 있다면, 즉 유한한 부피 내에 전하분포가 존재한다면 $\|\bf{r}\|\to \infty$ 일 때 
+
+$$
+\int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\, d^3\bf{r}' \approx \dfrac{1}{\|\bf{r}\|} \int_V \rho(\bf{r}')\, d^3\bf{r}' \to 0
+$$
+
+이므로 $\phi (\bf{r})$ 을 $\lim_{\|\bf{r}\|\to \infty} \phi(\bf{r})=0$ 이 되도록 정할 수 있다. 즉
+
+$$
+\phi(\bf{r}) := \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}d^3\bf{r}'.
+$$ {#eq-part2_electric_potential}
+
+
+그러나 전하 분포가 무한하다면 @eq-part2_gradient_of_inverse_of_distance_2 의 우변의 $\int_V \rho(\bf{r}')/\|\bf{r}-\bf{r}'\|\, d^3\bf{r}'$ 이 발산하며, 이 경우 임의의 점 $\bf{r}_0$ 를 $\phi(\bf{r}_0)=0$ 으로 잡고 전위차를 계산한다.
+
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part2_potential_from_infinite_line_charge}
+
+#### 무한한 선 전하에 의한 전위
+
+@exm-part2_charge_distribution_line_charge 에서 임의의 $\bf{r}_0$ 로부터의 전위차를 구해보자.
+
+$$
+\phi(\bf{r}) = -\int_{\bf{r}_0}^{\bf{r}} \dfrac{\lambda}{2\pi\epsilon_o r'}dr' = -\dfrac{\lambda}{2\pi\epsilon_0} \left(\ln \|\bf{r}\| - \ln \|\bf{r}_0\|\right).
+$$
+
+
+:::
+</div>
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part2_potential_from_uniformly_charged_disk}
+
+#### 균일하게 대전된 디스크로부터의 전위
+
+$xy$ 평면상에 원점을 중심으로 반지름 $R$, 면 전하 밀도 $\sigma$ 의 디스크가 위치한다고 하자. $z$ 축 위의 점 $(0,\,0,\,z)$ 에서의 전위 $\phi(z)$ 는
+
+$$
+\phi (z) = \dfrac{1}{4\pi\epsilon_0}\int_{0}^R \int_0^{2\pi} \dfrac{\sigma\, r\,dr\,d\theta}{\sqrt{z^2+r^2}} = \dfrac{\sigma}{2\epsilon_0} \left[\sqrt{z^2+R^2}-|z|\right]
+$$
+
+이다. $|z| \gg R$ 인 근사에서 $Q=\sigma \pi R^2$ 을 생각하면 
+
+$$
+\phi(z) = \dfrac{\sigma}{2\epsilon_0}\left[|z|\sqrt{1+\left(\dfrac{R}{z}\right)^2} -1\right] \approx \dfrac{\sigma |z|}{2\epsilon_0} \dfrac{R^2}{2z^2} = \dfrac{Q}{4\pi \epsilon_0|z|}
+$$
+
+로 점전하 $|Q|$ 에 의한 전위와 같다는 것을 알 수 있다. 
+
+
+이제 전위로부터 전기장을 계산해 보자. $z>0$ 인 경우
+
+$$
+E_z(z) = - \dfrac{d\phi (z)}{dz} = \dfrac{\sigma}{2\epsilon_0} \left[1-\dfrac{z}{\sqrt{z^2+R^2}}\right]
+$$
+
+이며 $z \to 0$ 극한에서 $E_z(z=0^+) = \dfrac{\sigma}{2\epsilon_0}$ 로 무한 대전 평면에서의 전기장과 같다. 마찬가지로 $E_z(z=0^-)= - \dfrac{\sigma}{2\epsilon_0}$ 이다. 
+
+:::
+
+</div>
+
+</br>
+
+### 등전위면과 전기장
+
+@eq-part2_electric_field_from_potential 로부터 우리는 전기장의 방향은 전위 $\phi(\bf{r})$ 를 가장 빠르게 감소시키는 방향이라는 것을 알 수 있다. 즉 $\phi(\bf{r})=C$ 의 등전위면에 대해 수직인 방향이며 전위를 감소시키는 방향이다. 
+
+</br>
+
+### 정전기 에너지
+
+@eq-part2_electrostatic_potential_energy_1 를 다시 보자.
+
+$$
+U = \dfrac{1}{2}\sum_{i\ne j=1}^N \dfrac{q_i q_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2}\sum_{i=1}^N q_i \sum_{j\ne i=1}^N \dfrac{q_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2} \sum_{i=1}^N q_i \phi(\bf{r}_i)
+$$
+
+이며 여기서 $\phi(\bf{r}_i) = \sum_{j\ne i = 1}^N \dfrac{q_j}{4\pi \epsilon_0 r_{ij}}$ 는 $i$ 번째 전하를 제외한 전하에 의한 $q_i$ 가 위치한 지점 $\bf{r}_i$ 에서의 전위이다. 이로부터
+
+
+$$
+\boxed{
+U = \dfrac{1}{2} \int \rho(\bf{r})\phi (\bf{r})\, d^3 \bf{r}
+}
+$$ {#eq-part2_electrostatic_potential_energy_by_charge_distribution_and_potential}
+
+을 얻는다.
+
+</br>
+
+## 르장드르 다항식과 구면조화함수
+
+여기서는 르장드르 다항식, 르장드르 연관 다항식, 그리고 구면조화함수에 대해 간단하게 정리한다. 자세한 내용은 @Arfken2013mathematical, @Jackson_classical_1999 등을 참고하라. 
+
+기본적으로 구면좌표계에서 라플라스 방정식 $\nabla^2 \phi (r,\,\theta,\, \varphi) = 0$ 을 살펴보자. 우선 구면좌표계에서
+
+$$
+\nabla^2 \phi = \dfrac{1}{r}\dfrac{\partial^2}{\partial r^2}(r\phi) + \dfrac{1}{r^2 \sin \theta}\dfrac{\partial}{\partial \theta}\left(\sin \theta \dfrac{\partial \phi}{\partial \theta}\right) + \dfrac{1}{r^2 \sin^2 \theta}\dfrac{\partial^2 \phi}{\partial \varphi^2}
+$$ {#eq-part2_laplace_equation_in_spherical_coordinate}
+
+이며 변수분리법을 이용하여 $\phi (r,\, \theta,\,\varphi) = \dfrac{R(r)}{r}\Theta(\theta)\Phi(\varphi)$ 로 놓으면 위의 라플라스 방정식은 다음과 같이 변한다. 
+
+$$
+r^2 \sin^2 \theta \left[\dfrac{1}{R} \dfrac{d^2 R}{dr^2} + \dfrac{1}{\Theta r^2\sin\theta} \dfrac{d}{d\theta}\left(\sin \theta \dfrac{d\Theta}{d\theta}\right)\right] + \dfrac{1}{\Phi}\dfrac{d^2 \Phi}{d\varphi^2}=0
+$${#eq-part2_laplace_equation_in_spherical_coordinate_2}
+
+
+위 식에서 마지막 항 $\dfrac{1}{\Phi}\Phi''(\varphi)$ 를 보자. 여기에 $\varphi$ 의존성이 있다면 미분방정식의 앞부분에도 $\varphi$ 의존성이 있어야 하므로 변수분리 가정에 모순된다. 따라서 어떤 상수값밖에 가질 수 없다. 이 상수값을 $-m^2$ 라고 하자. 즉
+$$
+\dfrac{1}{\Phi}\dfrac{d^2 \Phi}{d^2\varphi} = -m^2
+$$
+
+를 얻는다. $\Phi(\varphi)= e^{\pm im\varphi}$ 이며 single-valued 이어야 하므로 $\Phi(\varphi + 2\pi) = \Phi(\varphi)$ 이어야 한다. 즉 $m$ 은 정수이다.
+
+이제 남은 두 식은 다음과 같다.
+
+$$
+\begin{aligned}
+\dfrac{1}{\sin\theta} \dfrac{d}{d\theta}\left(\sin \theta \dfrac{d\Theta}{d\theta}\right) + \left[l(l+1)- \dfrac{m^2}{\sin^2\theta}\right]\Theta &=0,  \\[0.3em]
+\dfrac{d^2 R}{dr^2} - \dfrac{l(l+1)}{r^2}R &= 0.
+\end{aligned}
+$$
+
+여기서 $l(l+1)$ 은 임의의 실수이다. $R(r)$ 에 대해 해는
+
+$$
+R_l(r) = a_l r^{l+1} + b_l r^{-l}
+$$
+
+이며 $\Theta$ 는 $m,\,l$ 에 대해 성립하며 역시 single valued 조건 등에 의해 $l$ 은 음이 아닌 정수이고 $m$ 은 $-l$ 부터 $l$ 까지의 값을 가질 수 있다는 것을 보일 수 있다. $m=0$ 일 경우 $l$ 값에 대한 미분방정식의 해는 뒤에 나올 르장드르 다항식 $P_l(\cos\theta)$ 이며 $m \ne 0$ 경우의 해가 연관 르장드르 다항식 $P_{l}^m(\cos \theta)$ 이다. 즉 라플라스 방정식 $\nabla^2 \phi(r,\, \theta,\, \phi)=0$ 의 해는
+
+$$
+\phi(r,\,\theta,\,\varphi) = \sum_{l=0}^\infty\sum_{m=-l}^l (a_l r^l + b_l r^{-(l+1)})P_{l}^m(\cos \theta) e^{im\varphi}
+$$
+
+로 주어진다. 이 때 구면조화함수 $Y_{l}^m(\theta,\, \varphi) := P_l^m(\cos \theta)e^{im\varphi}$ 로 정의한다. 즉
+
+$$
+\phi(r,\,\theta,\,\varphi) = \sum_{l=0}^\infty\sum_{m=-l}^l (a_l r^l + b_l r^{-(l+1)}) Y_{l}^m(\theta,\, \varphi)
+$$
+
+이다. 
+
+</br>
+
+
+### 르장드르 다항식
+
+#### **1. 생성함수**
+
+르장드르 다항식은 다음을 만족하는 $P_n(x)$ 이며 이 때 $1/\sqrt{1-2xt+t^2}$ 를 르장드르 다항식의 **생성 함수(generator)** 라고 한다.
+
+$$
+\dfrac{1}{\sqrt{1-2xt + t^2}} = \sum_{n=0}^\infty P_n (x) t^n.
+$$ {#eq-part2_generator_of_legendre_polymonals}
+
+두 벡터 $\bf{r}_>\, \bf{r}_<$ 이 $\|\bf{r}_>\| > \|\bf{r}_<\|$ 라고 하자. $t=\dfrac{\|\bf{r}_<\|}{\|\bf{r}_>\|}$ 에 대해 
+
+$$
+\begin{aligned}
+\dfrac{1}{\|\bf{r}_>-\bf{r}_<\|} &=  \dfrac{1}{\|\bf{r}_>\|} \dfrac{1}{\sqrt{1-2\cos \theta t+t^2}} = \dfrac{1}{\|\bf{r}_>\|}\sum_{n=0}^\infty \left(\dfrac{\|\bf{r}_<\|}{\|\bf{r}_>\|}\right)^n P_n (\cos \theta)
+\end{aligned}
+$$ {#eq-part2_legendre_expansion}
+
+이다. 
+
+
+</br>
+
+#### **2. 재귀관계**
+
+&emsp;($1$) $nP_n (x) = (2n-1)xP_{n-1}(x) - (n-1)P_{n-2}(x)$,
+
+&emsp;($2$) $xP'_n(x) - P'_{n-1}(x) = nP_n (x)$,
+
+&emsp;($3$) $P'_n(x)- xP'_{n-1}(x) = nP_{n-1}(x)$,
+
+&emsp;($4$) $(1-x^2)P'_n(x) = nP_{n-1}(x) - nxP_n(x)$, 
+
+&emsp;($5$) $(2n+1)P_n(x) = P'_{n+1}(x) - P'_{n-1}(x)$, 
+
+&emsp;($6$) $(1-x^2)P'_{n-1}(x) = nxP_{n-1}(x) - nP_n(x)$.
+
+</br>
+
+#### **3. 직교성 과 Parity**
+
+$$
+\int_{-1}^1 P_n(x) P_m(x)\, dx = \dfrac{2}{2n+1} \delta_{mn}
+$$ {#eq-part2_orthogonality_of_legendre_polynomial}
+
+$$
+P_n(-x) = (-1)^n P_n(x)
+$${#eq-part2_parity_of_legendre_polynomial}
+
+
+
+</br>
+
+#### **4. 르장드르 다항식**
+
+$0$ 차에서 $5$ 차 르장드르 다항식은 다음과 같다.
+
+
+$$
+\boxed{
+\begin{aligned}
+P_0(x) &= 1, \\[0.3em]
+P_1(x) &= x, \\[0.3em]
+P_2(x) &= \dfrac{1}{2} (3x^2-1), \\[0.3em]
+P_3(x) &= \dfrac{1}{2} (5x^3-3x), \\[0.3em]
+P_4(x) &= \dfrac{1}{8}(35 x^4-30x^2 +3) , \\[0.3em]
+P_5(x) &= \dfrac{1}{8}(63x^5 - 70x^3 +15x).
+\end{aligned}
+}
+$$ {#eq-part2_legendre_polynomials}
+
+
+</br>
+
+### 르장드르 연관 함수 (Associated legendre function)
+
+#### **1. 정의**
+$$
+\begin{aligned}
+P_n^m &= (1-x)^{|m|/2} \dfrac{d^{|m|} P_n(x)}{dx^{|m|}},\\[0.3em]
+P_n^{-m} &= (-1)^m \dfrac{(n-m)!}{(n+m)!} P_{n}^m (x). 
+\end{aligned}
+$$ {#eq-part2_definition_of_associated_legendre_polynomial}
+
+</br>
+
+#### **2. 직교성**
+
+$$
+\int_{-b}^b P_n^m \left(\dfrac{x}{b}\right)P_l^m \left(\dfrac{x}{b}\right)^m dx = \dfrac{2b}{2n+1}\dfrac{(n+|m|)!}{(n-|m|)!} \delta _{ln}.
+$$ {#eq-part2_orthogonality_of_associated_legendre_polynomials}
+
+</br>
+
+#### **3. 재귀관계**
+
+&emsp;($1$) $P_n^{m+1} (x) = \dfrac{2mx}{\sqrt{1-x^2}}P_n^m(x) + [m(m-1)-n(n+1)] P_n^{m-1}(x)$, 
+
+&emsp;($2$) $(2n+1) xP_n^m(x) = (n+m)P_{n-1}^m (x) + (n-m+1)P_{n+1}^m (x)$, 
+
+&emsp;($3$) $(2n+1)\sqrt{1-x^2} P_{n}^m (x) = P_{n+1}^{m+1} (x) - P_{n-1}^{m+1}(x)$,
+
+&emsp;($4$) $2\sqrt{1-x^2} \dfrac{dP_n^m(x)}{dx} = P_{n}^{m+1}(x) - (n+m)(n-m+1)P_{n}^{m-1}(x)$.
+
+</br>
+
+### 구면조화함수
+
+#### **1. 정의** 
+
+구면조화함수는 $(r,\, \theta,\, \varphi)$ 에 의해 기술되는 구면좌표계에서 아래와 같이 정의되는 함수이다.
+
+
+$$
+Y_l^m (\theta,\, \varphi) = \sqrt{\dfrac{2l+1}{4\pi}\dfrac{(l-|m|)!}{(l+|m|)!}} P_l^m(\cos\theta) e^{im\varphi}
+$$ {#eq-part2_definition_of_spherical_harmomics}
+
+</br>
+
+#### **2.직교성** 
+
+$$
+\oint_{\Omega} {Y_{l'}^{m'}}^\ast (\theta,\, \varphi)\, Y_l^m (\theta,\, \varphi) d\Omega =\int_0^{2\pi} \int_0^\pi d\theta  {Y_{l'}^{m'}}^\ast (\theta,\, \varphi)\, Y_l^m (\theta,\, \varphi)  \sin \theta\, d\theta d\varphi= \delta_{ll'}\delta_{mm'}
+$$ {#eq-part2_orthogonamity_of_spherical_harmonics}
+
+</br>
+
+또한 같은 $l$ 에 대해 다음 관계를 만족한다.
+
+$$
+Y_l^{-m}(\theta,\, \varphi) = (-1)^mY_{l}^m (\theta,\, \varphi).
+$$ {#eq-part2_similarity_of_spherical_harmonics}
+
+</br>
+
+#### **4.완비성**
+
+$$
+\sum_{l=0}^\infty \sum_{m=-l}^l {Y_{l}^m}^\ast (\theta',\, \varphi')\,Y_l^m (\theta,\, \varphi) = \delta (\varphi - \varphi')\,\delta(\cos \theta - \cos \theta')
+$$ {#eq-part2_completeness_of_spherical_harmonics}
+
+</br>
+
+#### **5. 구면조화함수** 
+
+$$
+\boxed{
+\begin{aligned}
+Y_0^0(\theta,\, \varphi) &= \dfrac{1}{\sqrt{4\pi}}\\[0.3em]
+\hline
+Y_1^1(\theta,\, \varphi) &= -\sqrt{\dfrac{3}{8\pi}} \sin \theta\, e^{i\varphi} = - \sqrt{\dfrac{3}{8\pi}}\dfrac{x+iy}{r}\\[0.3em]
+Y_1^0(\theta,\, \varphi) &= \sqrt{\dfrac{3}{4\pi}}\cos\theta = \sqrt{\dfrac{3}{4\pi}}\dfrac{z}{r}\\[0.3em]
+Y_1^{-1}(\theta,\, \varphi) &= \sqrt{\dfrac{3}{8\pi}} \sin \theta \, e^{-i\varphi} = - \sqrt{\dfrac{3}{8\pi}}\dfrac{x-iy}{r}\\[0.3em]
+\hline
+Y_2^2(\theta,\, \varphi) &=\sqrt{\dfrac{5}{96\pi}} 3 \sin \theta \cos\theta \, e^{2i\varphi} = \sqrt{\dfrac{45}{96\pi}} \dfrac{x^2-y^2+2ixy}{r^2}\\[0.3em]
+Y_2^1(\theta,\, \varphi)&= -\sqrt{\dfrac{5}{24\pi}} 3 \sin \theta \cos \theta 
+\, e^{i\varphi} = -\sqrt{\dfrac{5}{24\pi}} \dfrac{3z(x+iy)}{r^2}\\[0.3em]
+Y_2^0(\theta,\,\varphi) &= \sqrt{\dfrac{5}{4\pi}} \left(\dfrac{3}{2} \cos^2 \theta -\dfrac{1}{2}\right) = \sqrt{\dfrac{5}{4\pi}} \left(\dfrac{3}{2}\left(\dfrac{z}{r}\right)^2-\dfrac{1}{2}\right)\\[0.3em]
+Y_2^{-1}(\theta,\, \varphi)&= +\sqrt{\dfrac{5}{24\pi}} 3 \sin \theta \cos \theta \, e^{-i\varphi} = +\sqrt{\dfrac{5}{24\pi}} \dfrac{3z(x-iy)}{r^2}\\[0.3em]
+Y_2^{-2}(\theta,\, \varphi) &=\sqrt{\dfrac{5}{96\pi}} 3 \sin \theta \cos\theta \,e^{-2i\varphi} = \sqrt{\dfrac{45}{96\pi}} \dfrac{x^2-y^2-2ixy}{r^2}\\[0.3em]
+\hline
+Y_3^{3}(\theta,\, \varphi) &= -\sqrt{\dfrac{7}{2880\pi}} 15 \sin^3 \theta \,e^{3i\varphi} = - \sqrt{\dfrac{7}{2880\pi}} \dfrac{15(x^3-3xy^2 + i(3x^2y-y^3))}{r^3} \\[0.3em]
+Y_3^{2}(\theta,\,\varphi) &= \sqrt{\dfrac{7}{480\pi}} 15 \cos \theta \sin^2\theta \,  e^{2i\varphi} = \sqrt{\dfrac{7}{480 \pi}} \dfrac{15z(x^2-y^2+2ixy)}{r^3} \\[0.3em]
+Y_3^1(\theta,\,\varphi) &= -\sqrt{\dfrac{7}{48 \pi}} \left(\dfrac{15}{2}\cos^2 \theta -\dfrac{3}{2}\right) \sin \theta \, e^{i\varphi} = - \sqrt{\dfrac{7}{48 \pi}} \left(\dfrac{15}{2}z^2-\dfrac{3}{2}r^2\right) \dfrac{x+iy}{r^3} \\[0.3em]
+Y_3^0(\theta,\,\varphi) &= \sqrt{\dfrac{7}{4 \pi}} \left(\dfrac{5}{2}\cos^3 \theta -\dfrac{3}{2}\cos \theta\right) =  \sqrt{\dfrac{7}{4 \pi}} \left[\dfrac{5}{2}\left(\dfrac{z}{r}\right)^3 - \dfrac{3}{2}\dfrac{z}{r}\right]\\[0.3em]
+Y_3^{-1}(\theta,\,\varphi) &= \sqrt{\dfrac{7}{48 \pi}} \left(\dfrac{15}{2}\cos^2 \theta -\dfrac{3}{2}\right) \sin \theta\, e^{-i\varphi}=  \sqrt{\dfrac{7}{48 \pi}} \left(\dfrac{15}{2}z^2-\dfrac{3}{2}r^2\right) \dfrac{x-iy}{r^3} \\[0.3em]
+Y_3^{-2}(\theta,\,\varphi) &= \sqrt{\dfrac{7}{480\pi}} 15 \cos \theta \sin^2\theta \,  e^{-2i\varphi} = \sqrt{\dfrac{7}{480 \pi}} \dfrac{15z(x^2-y^2-2ixy)}{r^3} \\[0.3em]
+Y_3^{3}(\theta,\, \varphi) &= \sqrt{\dfrac{7}{2880\pi}} 15 \sin^3 \theta \,e^{-3i\varphi} = - \sqrt{\dfrac{7}{2880\pi}} \dfrac{15(x^3-3xy^2 - i(3x^2y-y^3))}{r^3} \\[0.3em]
+\end{aligned}
+}
+$$ {#eq-part2_spherical_harmonics}
+
+</br>
+
+### 르장드르 다항식과 구면조화함수
+
+두 위치 벡터 $\bf{r},\, \bf{r}'$ 이 구면좌표계에서 각각 $(r,\, \theta,\, \varphi),\, (r',\, \theta',\, \varphi')$ 로 표현된다고 하자. $\bf{r}'$ 과 $\bf{r}'$ 사이의 각이 $\gamma$ 일 때
+
+$$
+P_l(\cos\gamma) = \dfrac{4\pi}{2l+1} \sum_{m=-l}^l {Y_l^m}^\ast(\theta,\,\varphi') Y_l^m(\theta,\, \varphi)
+$$ {#eq-part2_addition_theorem_for_spherical_harmonics}
+
+임을 보일 수 있다. 그렇다면 @eq-part2_legendre_expansion 로부터
+
+$$
+\dfrac{1}{\|\bf{r}_> - \bf{r}_<\|} = \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1} \left(\dfrac{\|\bf{r}_<\|^l}{\|\bf{r}_>\|^{l+1}}\right) {Y_l^m}^\ast(\theta,\,\varphi') Y_l^m(\theta,\, \varphi)
+$$ {#eq-part2_spherical_haromics_expansion_of_inverse_vector_difference}
+
+</br>
+
+## 다중극 전개 (Multipole expansions)
+
+### 쌍극자 모멘트 {#sec-part2_electric_dipole_moment}
+
+
+![전기 쌍극자](../images/Electromagnetism/electrostatics_2/electric_dipole.png){#fig-part2_electric_dipole width=200}
+
+
+전하 $+q$ 와 $-q$ 가 위의 그림과 같이 $d$ 의 거리만큼 떨어져 있다고 하고 원점을 두 전하의 중앙에 두자. 그리고 $+q$ 로부터의 변위를 $\bf{r}_1$, $-q$ 로부터의 변위를 $\bf{r}_2$ 라고 하고 원점으로부터의 변위를 $\bf{r}$ 라고 하자. 그리고 $-q$ 전하의 위치로부터 $+q$ 전하의 위치까지의 변위를 $\bf{d}$ 라고 하자. 이 때의 전기 포텐셜 $\phi (\bf{r})$ 은 $r=\|\bf{r}\|$ 이라고 할 때 $r>d$ 의 조건과 @eq-part2_legendre_expansion 와 @eq-part2_parity_of_legendre_polynomial 로부터 다음을 얻는다.
+$$
+\begin{aligned}
+\phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{q}{\|\bf{r}_1\|} - \dfrac{q}{\|\bf{r}_2\|}\right] = \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{1}{\|\bf{r}-\bf{d}/2\|} - \dfrac{1}{\|\bf{r}+\bf{d}/2\|}\right] \\[0.3em]
+&= \dfrac{q}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{d^k}{2^kr^{k+1}} \left[P_k(\cos\theta)- P_k (-\cos\theta)\right] \\
+&=\dfrac{q}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{2d^{2k+1}}{2^{2k+1}r^{2k+2}} P_{2k+1}(\cos\theta) \\
+&= \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{d\cos\theta}{r^2} + \dfrac{d^3(5\cos^3\theta - 3\cos \theta) }{8r^4} + \cdots \right] \approx\dfrac{1}{4\pi\epsilon_0} \dfrac{qd\cos\theta}{r^2}
+\end{aligned}
+$$ {#eq-part2_electric_potential_dipole_1}
+
+
+위의 경우는 총 전하량이 $0$ 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 $\|\bf{r}\|^{-2}$ 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 $0$ 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다. @eq-part2_electric_potential_dipole_1 에서 $1/r^2$ 에 비례하는 부분에 대해 전기 쌍극자 모멘트 $\bf{\mu}$ 를
+
+$$
+\bf{\mu}:=q\bf{d}
+$$ {#eq-part2_electric_dipole_moment}
+
+로 정의하면 전기 쌍극자 모멘트에 의한 전기 포텐셜 $\phi_d(\bf{r})$ 은 다음과 같다. 
+$$
+\phi_d (\bf{r})= \dfrac{1}{4\pi\epsilon_0} \dfrac{\bf{\mu\cdot r}}{r^3}
+$$ {#eq-part2_electric_potential_dipole_2}
+
+</br>
+
+### 다중극 전개
+
+$\|\bf{r}_>\| > \|\bf{r}_<\|$ 일 때 $k$ 차 르장드르 다항식 $P_k$ 와 $\bf{r}_>$ 와 $\bf{r}_<$ 가 이루는 각 $\theta$ 에 대해 다음이 성립한다.
+
+$$
+\dfrac{1}{\|\bf{r}_>-\bf{r}_<\|} = \dfrac{1}{\|\bf{r}_>\|} \sum_{k=0}^\infty \left(\dfrac{\|\bf{r}_<\|}{\|\bf{r}_>\|}\right)^k P_k (\cos \theta)
+$$ {#eq-part2_legendre_expansion_x}
+
+그렇다면 @eq-part2_electric_potential 에서 정해진 원점과 가능한 전하 분포 $\rho(\bf{r}')$ 에 대해 $\|\bf{r}\| > \|\bf{r}'\|$ 일 때,
+
+$$
+\begin{aligned}
+\phi(\bf{r}) &=\dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}' \\[0.3em]
+&= \dfrac{1}{4\pi\epsilon_0}\sum_{k=0}^\infty \dfrac{1}{\|\bf{r}\|^{k+1}} \int_V \|\bf{r}'\|^k P_k(\cos\theta')\,\rho(\bf{r}')\,d^3\bf{r'} \\[0.3em]
+\end{aligned}
+$$
+
+이다. 즉, 
+
+$$
+\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Q_k}{\|\bf{r}\|^{k+1}},\qquad \text{where }Q_k = \int_V \|\bf{r}'\|^k P_k(\cos\theta')\,\rho(\bf{r}')\,d^3\bf{r'}
+$$ {#eq-part2_multiple_expansion}
+
+이다. 
+
+</br>
+
+$\rho(\bf{r'})=q\delta(\bf{r}')$ 이라면, 즉 점전하라면 
+
+
+
+
+

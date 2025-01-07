@@ -18,18 +18,18 @@ crossref:
 
 ## Hamiltonian
 
-### 해밀토니안 {#sec-hamiltonian}
+### 해밀토니안 {#sec-CM_hamiltonian}
 라그랑지안 $L$ 은 일반화된 좌표계 $\{q_i\}$ 에 대해 $\{q_i\}$ 와 $\{\dot{q}_i\}$ 의 함수이다. 이 때 **canonical momentum** $p_i$ 는 다음과 같이 정의된다.
 
 $$
-p_i := \dfrac{\partial L}{\partial \dot{q}_i}
-$$
+\boxed{p_i := \dfrac{\partial L}{\partial \dot{q}_i}}
+$$ {#eq-CM_canonical_momentum}
 
 라그랑지안 $L$ 은 $\dot{q}_i$ 에 대해 convex 이다. 따라서  $\dot{q}_i$ 에 대해 [르장드르 변환](../topics/mathematical.qmd#sec-legendre_transform) 을 수행 할 수있으며, 이 변환의 결과를 **해밀토니안(Hamiltonian)** 이라고 한다. 즉, 해밀토니안 $H$ 는 다음과 같다.
 
 $$
 H\left(\{q_i\}, \{p_i\}, t\right) = \sum_{i} \dot{q}_i p_i - L(\{q_i\}, \{\dot{q}_i\}, t)
-$$ {#eq-hamiltonian}
+$$ {#eq-CM_hamiltonian}
 
 해밀토니안은 $\{q_i\},\, \{p_i\},\, t$ 에 대한 함수이므로 그 differrentail 은 다음과 같다.
 
@@ -37,7 +37,7 @@ $$
 dH = \sum_i \left(\dfrac{\partial H}{\partial q_i}\right) dq_i + \sum_i \left(\dfrac{\partial H}{\partial p_i}\right) dp_i + \dfrac{\partial H}{\partial t}\, dt
 $$
 
-또한 @eq-hamiltonian 으로 부터, 
+또한 @eq-CM_hamiltonian 으로 부터, 
 
 $$
 dH = \sum_i\left(-\dfrac{\partial L}{\partial q_i}\right)dq_i + \sum_i \left(\dot{q}_i\right)\, dp_i + \left(p_i - \sum_i \dfrac{\partial L}{\partial \dot{q}_i}\right) d\dot{q}_i - \dfrac{\partial L}{\partial t}\,dt
@@ -59,13 +59,13 @@ $$
 
 $$
 \dot{q}_i = \dfrac{\partial H}{\partial p_i},\qquad \dot{p}_i =- \dfrac{\partial H}{\partial q_i}, 
-$$ {#eq-canonical_equation_of_hamiltonian}
+$$ {#eq-CM_canonical_equation_of_hamiltonian}
 
 $$
 \dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
-$$ {#eq-time_dependence_of_hamiltonian} 
+$$ {#eq-CM_time_dependence_of_hamiltonian} 
 
-를 얻는다. @eq-canonical_equation_of_hamiltonian 을 **해밀턴의 정준 방정식(canonical equations of Haminton)** 이라고 부른다. 우리는 이를 통해 $n$ 개의 2차 미분방정식(라그랑쥬 방정식) 을 $2n$ 개의 1차 미분방정식(해밀턴의 정준 방정식) 으로 바꿨다. 차이는 (이것은 매우 중요하다) 라그랑지안이 일반화된 좌표계에서 $\{q_i\},\, \{\dot{q}_i\},\,t$ 의 함수라면 해밀토니안은 $\{q_i\},\, \{p_i\},\,t$ 의 함수라는 것이다.
+를 얻는다. @eq-CM_canonical_equation_of_hamiltonian 을 **해밀턴의 정준 방정식(canonical equations of Haminton)** 이라고 부른다. 우리는 이를 통해 $n$ 개의 2차 미분방정식(라그랑쥬 방정식) 을 $2n$ 개의 1차 미분방정식(해밀턴의 정준 방정식) 으로 바꿨다. 차이는 (이것은 매우 중요하다) 라그랑지안이 일반화된 좌표계에서 $\{q_i\},\, \{\dot{q}_i\},\,t$ 의 함수라면 해밀토니안은 $\{q_i\},\, \{p_i\},\,t$ 의 함수라는 것이다.
 
 </br>
 
@@ -77,7 +77,7 @@ $$ {#eq-time_dependence_of_hamiltonian}
 
 2. $q_i$ 에 대한 conjugate momentum $p_i = \dfrac{\partial L}{\partial \dot{q}_i}$ 를 구한다.
 
-3. @eq-hamiltonian 로 해밀토니안을 구한다.
+3. @eq-CM_hamiltonian 로 해밀토니안을 구한다.
 
 
 이것은 진짜로 일반화된 좌표계에서는 쉽지 않은 일이다. $\{p_i\}$ 를 구한 후 모든 $\dot{q}_j$ 를 $\{q_i\},\, \{p_i\},\,t$ 에 대한 함수로 다시 기술해야 하기 때문이다. 하지만 물리적으로 중요한 많은 문제에 대해서는 지름길이 존재한다.
@@ -86,13 +86,13 @@ $$ {#eq-time_dependence_of_hamiltonian}
 
 $$
 f(tx_1,\ldots,\,t x_n) = t^k f(x_1,\ldots,\,x_n)
-$$ {#eq-homogeneous_function}
+$$ {#eq-CM_homogeneous_function}
 
 이 성립한다는 의미다. 이 경우,
 
 $$
 k f(x_1,\ldots,\,x_n) = \sum_{i=1}^n x_i \dfrac{\partial f}{\partial x_i}
-$$ {#eq-differential_of_homogeneous_function}
+$$ {#eq-CM_differential_of_homogeneous_function}
 
 가 성립한다. $L_0,\,L_1,\,L_2$ 를 각각 $\{\dot{q}_i\}$ 에 대한 $0,\,1,\,2$ 차 동차함수(homogeneous function) 이며 $L=L_0 + L_1 + L_2$ 라면, 
 
@@ -125,7 +125,7 @@ H = \dfrac{1}{2} (\boldsymbol{p}-\boldsymbol{a})^T \boldsymbol{T}^{-1} (\boldsym
 $$
 
 
-이다. 이제 이것을 전자기장에서의 라그랑지안에 대해 생각해보자. @eq-generalized_force 으로 주어진 일반화된 포텐셜에 대해 
+이다. 이제 이것을 전자기장에서의 라그랑지안에 대해 생각해보자. @eq-CM_generalized_force 으로 주어진 일반화된 포텐셜에 대해 
 
 $$
 L = T-U = \dfrac{1}{2}mv^2 -q\phi + q \boldsymbol{A\cdot v}
@@ -141,7 +141,7 @@ $$
 
 $$
 H = \sum_{i=1}^3\dfrac{(p_i- qA_i)^2}{2m} + q\phi
-$$ {#eq-hamiltonian_of_charged_particle}
+$$ {#eq-CM_hamiltonian_of_charged_particle}
 
 
 </br>
@@ -155,7 +155,7 @@ $$
 \boldsymbol{J} = \begin{bmatrix} \boldsymbol{0} & \boldsymbol{1}\\ -\boldsymbol{1} & \boldsymbol{0} \end{bmatrix}
 $$
 
-그렇다면 해밀턴의 정준방정식 @eq-canonical_equation_of_hamiltonian 은 다음과 같이 쓸 수 있다.
+그렇다면 해밀턴의 정준방정식 @eq-CM_canonical_equation_of_hamiltonian 은 다음과 같이 쓸 수 있다.
 
 $$
 \dot{\boldsymbol{\eta}} =  \boldsymbol{J} \dfrac{\partial H}{\partial \boldsymbol{\eta}}
@@ -173,7 +173,7 @@ $$
 
 ### Cyclic coordinate 와 보존 정리 {#sec-cyclic_coordinate_hamiltonian}
 
-@sec-cyclic_coordinate_lagrangian 에서 다루었던 cyclic coordinate 를 다시 생각해보자. 라그랑지안과 해밀토니안의 관계 즉 $H = \sum_i \dot{q}_i p_i -L$ 을 생각해보면
+@sec-CM_cyclic_coordinate_lagrangian 에서 다루었던 cyclic coordinate 를 다시 생각해보자. 라그랑지안과 해밀토니안의 관계 즉 $H = \sum_i \dot{q}_i p_i -L$ 을 생각해보면
 
 $$
 \dfrac{\partial L}{\partial q_i}=0 \iff \dfrac{\partial H}{\partial q_i}=0
@@ -182,7 +182,7 @@ $$
 이 성립한다. $\dot{p}_i = - \dfrac{\partial H}{\partial q_i}$ 이므로 $H$ 에 explicit 한 $q_i$ 의존성이 없다면 $p_i$ 는 운동상수이다. 
 
 
-또한 해밀턴 운동방정식 @eq-canonical_equation_of_hamiltonian 과 @eq-time_dependence_of_hamiltonian 으로부터
+또한 해밀턴 운동방정식 @eq-CM_canonical_equation_of_hamiltonian 과 @eq-CM_time_dependence_of_hamiltonian 으로부터
 $$
 \dfrac{dH}{dt} = \sum_i \left[\dfrac{\partial H}{\partial q_i} \dot{q_i} + \dfrac{\partial H}{\partial p_i} \dot{p}_i\right] + \dfrac{\partial H}{\partial t} = \sum_i \left[-\dot{p}_i \dot{q}_i  + \dot{q}_i \dot{p}_i\right] + \dfrac{\partial H}{\partial t} = \dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
 $$
@@ -193,7 +193,7 @@ $$
 
 ### 변분법으로부터 해밀턴 방정식으로
 
-[해밀턴의 원리](02_variational_principle.qmd#sec-least_action_theorem) 를 상기하자. 라그랑쥬 방정식은 해밀턴의 원리로부터의 자연스러운 결론이다. 이제 해밀턴의 원리로부터 해밀턴의 운동방정식이 자연스럽게 유도됨을 보이고자 한다. $L = \sum_i \dot{q}_i p_i - H(\{q_i\},\, \{p_i\},\,t)$ 이므로 action $S$ 는
+[해밀턴의 원리](02_variational_principle.qmd#sec-CM_least_action_theorem) 를 상기하자. 라그랑쥬 방정식은 해밀턴의 원리로부터의 자연스러운 결론이다. 이제 해밀턴의 원리로부터 해밀턴의 운동방정식이 자연스럽게 유도됨을 보이고자 한다. $L = \sum_i \dot{q}_i p_i - H(\{q_i\},\, \{p_i\},\,t)$ 이므로 action $S$ 는
 
 $$
 S = \int_{t_1}^{t_2} \left[\sum_i \dot{q}_i p_i - H(\{q_i\},\, \{p_i\},\,t)\right] \, dt
@@ -254,7 +254,7 @@ P_i = P_i (\{q_i\},\, \{p_i\},\, t),
 \end{aligned}
 $$ {#eq-transformation_in_phase_space}
 
-일 것이다. 우리가 원하는 것은 이 변환에 대해 @eq-canonical_equation_of_hamiltonian 와 같은 해밀턴 운동방정식이 만족되는 것이다. 즉 변환된 해밀토니안을 $\overline{H}$ 라고 하면
+일 것이다. 우리가 원하는 것은 이 변환에 대해 @eq-CM_canonical_equation_of_hamiltonian 와 같은 해밀턴 운동방정식이 만족되는 것이다. 즉 변환된 해밀토니안을 $\overline{H}$ 라고 하면
 
 $$
 \dot{Q}_i = \dfrac{\partial \overline{H}}{\partial P_i}, \qquad \dot{P}_i = - \dfrac{\partial \overline{H}}{\partial Q_i}

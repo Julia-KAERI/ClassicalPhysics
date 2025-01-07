@@ -15,7 +15,7 @@ crossref:
 
 </br>
 
-## 1차원 Drag force {#sec-1d_drag_force}
+## 1차원 Drag force {#sec-CM_1d_drag_force}
 
 예를 들어 유체안을 낮은 속도로 움직이며, 유체에 난류가 없을 때 질량 $m$ 인 입자의 운동을 방해하는 힘이 근사적으로 속도에 비례한다. 즉,
 
@@ -84,12 +84,16 @@ $$
 
 ### 연습문제
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-helliwell_1_9}
 
 #### Helliwell 1.9
 
 질량 $m$ 인 물체에 drag force $F=-kv^n$ 이 가해진다. 물체가 $t=0$ 에서 속도가 $v_0$ 일 때 이후의 속도를 시간에 대한 함수로 구하라.
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -109,7 +113,7 @@ $$
 :::
 
 </br>
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-helliwell_1_10}
 
 #### Helliwell 1.10
@@ -117,6 +121,8 @@ $$
 질량 $m$, 반지름 $R$ 인 작은 공이 정지상태에서 점성계수 $\eta$ 인 액체로 떨어졌다. 여기에 작용하는 힘은 중력 $mg$ 와 스토크스 법칙에 의한 선형 drag force $F_{\text{Stokes}} = - 6 \pi \eta R v$ 이다. 공의 속력을 시간의 함수로 구하고, 이 답이 시간이 짧을 때 와 길 때 make sense 함을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -148,7 +154,7 @@ $$
 :::
 
 </br>
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-helliwell_1_11}
 
 #### Helliwell 1.11
@@ -162,6 +168,8 @@ $$
 임을 보였다. 여기서 $v_T$ 는 종단속도이다. (a) 높이 $h$ 지점에서 낙하할 때 걸리는 시간은 얼마인자 구하라. (b) 이 결과에 대해 $h$ 가 작을 때와 클 때의 극한을 구하라. 
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -226,13 +234,13 @@ $$
 
 $$
 x(t) = A_1 e^{-\gamma_1 t} + A_2 e^{-\gamma_2 t}
-$$ {#eq-characteristic_solution_of_dho_for_overdampled}
+$$ {#eq-CM_characteristic_solution_of_dho_for_overdampled}
 
 이다. 이 경우를 **overdamped** 라고 한다. 반대로 $\beta^2<\omega^2_0$ 일 경우 $\omega_1 =  \sqrt{\omega_0^2-\beta^2}$ 에 대해 
 
 $$
 x(t) = e^{-\beta t}\text{Re}(A_1 e^{i\omega_1 t} + A_2 e^{-i \omega_1 t}) = A e^{-\beta t} \cos (\omega_1 t + \theta_0)
-$$ {#eq-characteristic_solution_of_dho_for_underdampled}
+$$ {#eq-CM_characteristic_solution_of_dho_for_underdampled}
 
 를 얻는다.[$\operatorname{Re}(a)$ 는 복소수 $a$ 에 대해 실수부만을 취하는 함수이다.]{.aside} 이런 경우를 **underdamped** 라고 하며, overdampled 와는 달리 oscillation 이 존재한다.
 
@@ -246,7 +254,7 @@ $$
 
 $$
 x(t) = (A_1+A_2t)e^{-\beta t}
-$${#eq-characteristic_solution_of_dho_for_criticallly_damped}
+$${#eq-CM_characteristic_solution_of_dho_for_criticallly_damped}
 
 이다. 세가지 경우 모두 $A_1,\,A_2$ 는 초기조건 의해 정해진다. 
 
@@ -258,13 +266,13 @@ DHO 에 어떤 시간에 의존하는 힘 $F(t)$ 가 계속 가해진다고 하�
 
 $$
 m\ddot{x} = -2m\beta \dot{x} -k x + F(t)
-$$ {#eq-ddho_emo0}
+$$ {#eq-CM_ddho_emo0}
 
 가 된다. 이렇게 조화진동자에 외부의 힘이 가해지는 것을 **강제 조화 진동자 (forced harmonic oscillator)** 라고 한다. 흥미로운 경우는 $F(t) = F_0 \cos (\omega t + \phi_0)$ 와 같이 형태 경우이다. $f_0 = \dfrac{F_0}{m}$ 이라고 하면 운동방정식은 
 
 $$
 \ddot{x} + 2\beta \dot{x} + \omega_0^2 x = f_0 \cos (\omega t + \phi_0)
-$$ {#eq-ddho_emo}
+$$ {#eq-CM_ddho_emo}
 
 가 된다. 이런 미분방정식은 동차(homogeneous) 가 아니므로 비동차(inhomogeneous) 미분방정식이 된다. 비동차 미분방정식의 한 해 $x_p(t)$ 에 동차형태의 미분방정식 $\ddot{x} + 2\beta \dot{x} - \omega_0^2 x =0$ 의 한 해 $x_c(t)$ 의 선형결합 형태 $x_g(t) = ax_c(t) + x_p(t)$ 는 위의 미분 방정식을 만족한다. 이 경우 동차형태의 미분방정식의 해를 **고유해(characteristic solution)** 라고 한다. 우리는 이 미분방정식의 고유해를 이미 알고 있다.
 
@@ -272,9 +280,9 @@ $$ {#eq-ddho_emo}
 
 $$
 \ddot{\tilde{x}} + 2\beta \dot{\tilde{x}} + \omega_0^2 \tilde {x} = \tilde{f}_0 e^{i\omega t}
-$$ {#eq-ddho_eom_complex}
+$$ {#eq-CM_ddho_eom_complex}
 
-를 생각하자. $\tilde{x}$ 의 실수부는 @eq-ddho_emo 를 만족한다. $\tilde{x} = \tilde{x}_0 e^{i\omega t}$ 로 놓으면, 
+를 생각하자. $\tilde{x}$ 의 실수부는 @eq-CM_ddho_emo 를 만족한다. $\tilde{x} = \tilde{x}_0 e^{i\omega t}$ 로 놓으면, 
 
 $$
 (-\omega^2 + 2i\beta \omega + \omega_0^2) \tilde{x}_0 e^{i\omega t} =  \tilde{f}_0 e^{i\omega t}
@@ -284,7 +292,8 @@ $$
 
 $$
 \begin{aligned}
-\tilde{x}_0 = \dfrac{\tilde{f}_0}{\omega_0^2 + 2i\beta \omega - \omega^2}& = \dfrac{\tilde{f}_0}{\sqrt{( \omega_0^2-\omega^2) ^2+ 4 \beta^2 \omega^2}} e^{i\theta_0}, \qquad \text{where } \theta_0 := \tan^{-1}\left(-\dfrac{2\beta \omega}{\omega_0^2-\omega^2}\right)
+\tilde{x}_0 &= \dfrac{\tilde{f}_0}{\omega_0^2 + 2i\beta \omega - \omega^2} = \dfrac{\tilde{f}_0}{\sqrt{( \omega_0^2-\omega^2) ^2+ 4 \beta^2 \omega^2}} e^{i\theta_0}\\[0.3em]
+&\qquad \text{where } \theta_0 := \tan^{-1}\left(-\dfrac{2\beta \omega}{\omega_0^2-\omega^2}\right)
 \end{aligned}
 $$
 
@@ -292,13 +301,13 @@ $$
 
 $$
 x_p(t) = \text{Re}(\tilde{x}(t)) = \dfrac{f_0}{\sqrt{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}} \cos (\omega t + \theta_0 + \phi_0)
-$$ {#eq-particular_solution_of_ddho}
+$$ {#eq-CM_particular_solution_of_ddho}
 
-이다. 그렇다면 일반해는 @eq-characteristic_solution_of_dho_for_overdampled, @eq-characteristic_solution_of_dho_for_underdampled, @eq-characteristic_solution_of_dho_for_criticallly_damped 가운데 해당되는 경우와 @eq-particular_solution_of_ddho 의 합으로 표현된다. 앞서 언급했듯이 $t\gg 1$ 이면 일시적인 해는 $0$ 으로 수렴하기 때문에 $x_p(t)$ 가 주도적이 된다. 이를 반영하여 $x_p(t)$ 를 **안정한 해 (steady solution)** 이라고 한다. 흥미로운 것은 외부 힘의 진동수 $\omega$ 와 조화진동자의 고유진동수 $\omega_0$ 가 가까울수록 $x_p(t)$ 의 진폭이 커지며 $\omega = \omega_0$ 라면 진폭이 발산하게된다. 이를 **공명(resonance)** 라고 한다. 안정해의 진폭 $x_0(\omega)$ 는 다음과 같이 표현된다.
+이다. 그렇다면 일반해는 @eq-CM_characteristic_solution_of_dho_for_overdampled, @eq-CM_characteristic_solution_of_dho_for_underdampled, @eq-CM_characteristic_solution_of_dho_for_criticallly_damped 가운데 해당되는 경우와 @eq-CM_particular_solution_of_ddho 의 합으로 표현된다. 앞서 언급했듯이 $t\gg 1$ 이면 일시적인 해는 $0$ 으로 수렴하기 때문에 $x_p(t)$ 가 주도적이 된다. 이를 반영하여 $x_p(t)$ 를 **안정한 해 (steady solution)** 이라고 한다. 흥미로운 것은 외부 힘의 진동수 $\omega$ 와 조화진동자의 고유진동수 $\omega_0$ 가 가까울수록 $x_p(t)$ 의 진폭이 커지며 $\omega = \omega_0$ 라면 진폭이 발산하게된다. 이를 **공명(resonance)** 라고 한다. 안정해의 진폭 $x_0(\omega)$ 는 다음과 같이 표현된다.
 
 $$
 x_0 (\omega) =\dfrac{f_0}{\sqrt{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}}
-$$ {#eq-amplitude_of_steady_solution}
+$$ {#eq-CM_amplitude_of_steady_solution}
 
 $x_0$ 를 $\omega/\omega_0$ 에 대해 표현하면 @fig-resonance 와 같다. 
 
@@ -311,7 +320,7 @@ $$
 E= \dfrac{1}{2}m\dot{x}^2 + \dfrac{1}{2}m\omega_0^2 {x}^2
 $$
 
-이므로, @eq-ddho_emo0 를 이용하면 
+이므로, @eq-CM_ddho_emo0 를 이용하면 
 
 $$
 \dfrac{dE}{dt} =  m \dot{x}\ddot{x} + m\omega_0^2 x\dot{x} = -2m \beta \dot{x}^2 + m\omega_0^2x \dot{x}+ \dot{x}F(t) 
@@ -346,6 +355,7 @@ $$
 
 ### 연습문제
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-helliwell_1_16}
 
 #### Helliwell 1.16
@@ -362,6 +372,8 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($a$) $\lambda = 393.701 \, \textrm{km}$.
@@ -371,7 +383,7 @@ $$
 :::
 
 </br>
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 :::{#exr-helliwell_1_17}
 
 #### Helliwell 1.17 
@@ -388,6 +400,8 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($a$) 감쇠조화진동자($\ddot{x} - 2\beta \dot{x} + kx=0$) 의 해 $x(t) = Ae^{-\beta t}\cos (\omega t + \phi_0)$ 를 생각하자. 에너지 $E(t) = m\omega^2 e^{-2\beta t}\cos^2 (\omega t + \phi_0)$ 에 대해, $\beta T \ll 1$ 이라면
@@ -397,7 +411,7 @@ Q = 2\pi \dfrac{m\omega^2}{m\omega^2 - m\omega^2 e^{-2\beta T}} \approx \dfrac{2
 $$
 
 
-($b$) @eq-amplitude_of_steady_solution 로부터, $x_0(\omega) = x_0 (\omega_0)/\sqrt{2}$ 가 되도록 하는 $\omega$ 를 찾으면 
+($b$) @eq-CM_amplitude_of_steady_solution 로부터, $x_0(\omega) = x_0 (\omega_0)/\sqrt{2}$ 가 되도록 하는 $\omega$ 를 찾으면 
 
 $$
 (\omega^2-\omega_0^2)^2 = 4\beta^2 \omega^2
@@ -440,13 +454,13 @@ $$
 t = \sqrt{\dfrac{m}{2}}\int_0^x \dfrac{dx}{\sqrt{E-V(x)}} + \text{const.}
 $$
 
-이다. 포텐셜 에너지 $V(x)$ 가 아래 @fig-1d_potential 와 같다고 하자. $\dfrac{1}{2}m\dot{x}^2 = E-V(x)\ge 0$ 이어야 하므로 초기조건과 총 에너지 $E$ 에 의해 입자가 움직일 수 있는 구간이 결정된다. 예를 들어 @fig-1d_potential 에서 $E=E_1$ 일 때 입자는 $[x_2,\,x_3]$ 구간에서 밖에 존재 할 수 없다. 이렇게 $U(x)=E$ 인 $x$ 를 **turning point** 라고 한다. 이 경우 입자는 주기운동을 하며, 그 주기 $T$ 는 $x_2\to x_3$ 이동에 걸리는 시간과 $x_3 \to x_2$ 에 걸리는 시간의 합이며, 이 두 시간은 같기 때문에 아래와 같이 구할 수 있다.
+이다. 포텐셜 에너지 $V(x)$ 가 아래 @fig-CM_1d_potential 와 같다고 하자. $\dfrac{1}{2}m\dot{x}^2 = E-V(x)\ge 0$ 이어야 하므로 초기조건과 총 에너지 $E$ 에 의해 입자가 움직일 수 있는 구간이 결정된다. 예를 들어 @fig-CM_1d_potential 에서 $E=E_1$ 일 때 입자는 $[x_2,\,x_3]$ 구간에서 밖에 존재 할 수 없다. 이렇게 $U(x)=E$ 인 $x$ 를 **turning point** 라고 한다. 이 경우 입자는 주기운동을 하며, 그 주기 $T$ 는 $x_2\to x_3$ 이동에 걸리는 시간과 $x_3 \to x_2$ 에 걸리는 시간의 합이며, 이 두 시간은 같기 때문에 아래와 같이 구할 수 있다.
 
 $$
 T(E) = 2 \times \sqrt{\dfrac{m}{2}}\int_{x_2}^{x_3} \dfrac{dx}{\sqrt{E-V(x)}} = \sqrt{2m}\int_{x_2}^{x_3} \dfrac{dx}{\sqrt{E-V(x)}}.
 $$ {#eq-period_1d_potential_bounded}
 
-![일차원 포텐셜](../images/classical%20mechanics/potential/potential.png){#fig-1d_potential width=500}
+![일차원 포텐셜](../images/classical%20mechanics/potential/potential.png){#fig-CM_1d_potential width=500}
 
 
 $E=E_3$ 인 경우에는 입자는 $x>x_1$ 인 영역 전체에 존재 할 수 있다. $E=E_1$ 인 경우, 즉 $V(x)$ 의 극소값과 에너지가 같을 경우 입자는 정지해 있게 된다. 흥미로은 경우는 에너지가 $E_1$ 보다 약간 큰 경우이다. $V(x)$ 가 $x_0$ 근처에서 미분가능하다면, $V'(x_0)=0$ 이므로
@@ -461,7 +475,7 @@ $$
 
 
 
-## 중심력 {#sec-central_force}
+## 중심력 {#sec-CM_central_force}
 
 ### 중심력 (Central force)
 
@@ -469,10 +483,10 @@ $$
 
 $$
 V(\boldsymbol{r}_1,\,\boldsymbol{r}_2) = V(\|\boldsymbol{r}_1-\boldsymbol{r}_2\|) = V(r),\qquad \text{where }\boldsymbol{r} := \boldsymbol{r}_1-\boldsymbol{r}_2 
-$$ {#eq-central_field}
+$$ {#eq-CM_central_field}
 
 
-일 때 이를 **중심장(central field)** 라고 하고 중심장에 의해 발생하는 힘을 **중심력(central force)** 라고 한다. 포텐셜이 @eq-central_field 와 같이 주어졌을 경우,
+일 때 이를 **중심장(central field)** 라고 하고 중심장에 의해 발생하는 힘을 **중심력(central force)** 라고 한다. 포텐셜이 @eq-CM_central_field 와 같이 주어졌을 경우,
 
 $$
 \begin{aligned}
@@ -481,20 +495,20 @@ $$
 \end{aligned}
 $$
 
-가 된다. 즉 두 입자 사이에 작용하는 힘은 $\boldsymbol{r}$ 방향이다. 중심력의 경우 두 물체의 각운동량의 합은 보존된다는 것을 이미 @sec-total_angular_momentum 에서 보였다. 
+가 된다. 즉 두 입자 사이에 작용하는 힘은 $\boldsymbol{r}$ 방향이다. 중심력의 경우 두 물체의 각운동량의 합은 보존된다는 것을 이미 @sec-CM_total_angular_momentum 에서 보였다. 
 
 중심력으로는 대표적으로 만유인력과 쿨롱 힘이 존재한다. 둘 다 중심장이며 질량 $m_1,\,m_2$ 인 입자가 각각 $\boldsymbol{r}_1,\,\boldsymbol{r}_2$ 위치에 있을 경우의 포텐셜 $V_G(r)$ 는
 
 $$
 V_G (r) = - \dfrac{Gm_1m_2}{r}
-$$ {#eq-gravitational_potential}
+$$ {#eq-CM_gravitational_potential}
 
 
 이다. 이 때 만유인력 상수 $G=6.67384 \times 10^{−11} \textrm{N} \cdot \textrm{m}^2 \cdot \textrm{kg}^{−2}$ 이다. 전하 $e_1,\,e_2$ 가 역시 각각 $\boldsymbol{r}_1,\,\boldsymbol{r}_2$ 위치에 있을 경우의 포텐셜 $V_C(r)$ 는
 
 $$
 V_C (r) = - \dfrac{k_e e_1e_2}{r}
-$$ {#eq-coulomb_force}
+$$ {#eq-CM_coulomb_force}
 
 이며 $k_{\text{e}}=8.98755 \times 10^{9}\ \mathrm {N{\cdot }m^{2}{\cdot }C^{-2}}$ 이다.
 </br>
@@ -505,7 +519,7 @@ $$ {#eq-coulomb_force}
 
 $$
 L = \dfrac{1}{2}m_1 \|\dot{\boldsymbol{r}_1}\|^2 + \dfrac{1}{2}m_2 \|\dot{\boldsymbol{r}_2}\|^2 + V(\|\boldsymbol{r}_1-\boldsymbol{r}_2\|).
-$$ {#eq-lagrangian_of_2body}
+$$ {#eq-CM_lagrangian_of_2body}
 
 이 때 
 
@@ -514,25 +528,25 @@ $$
 \boldsymbol{r} &:=\boldsymbol{r}_1-\boldsymbol{r}_2, \\
 \boldsymbol{R} &:= \dfrac{m_1 \boldsymbol{r}_1 + m_2 \boldsymbol{r}_2}{m_1+m_2}
 \end{aligned}
-$$
+$${#eq-CM_center_of_mass_and_relative_radius}
 
 라고 정의하자. $\boldsymbol{R}$ 은 $m_1,\,m_2$ 로 이루어진 입자의 무게중심이며 $\boldsymbol{r}$ 은 상대적인 변위이다. 그렇다면, 
 
 $$
 \boldsymbol{r}_1 = \dfrac{m_2}{m_1+m_2}\boldsymbol{r} +\boldsymbol{R},\qquad \boldsymbol{r}_2 = -\dfrac{m_1}{m_1+m_2}\boldsymbol{r} + \boldsymbol{R}
-$$
+$$ 
 
 이 되며, $\mu := \dfrac{m_1m_2}{m_1+m_2},\, M :=m_1+m_2$ 에 대해 
 
 $$
 L = \dfrac{1}{2}\mu \|\dot{\boldsymbol{r}}\|^2 + V(\|\boldsymbol{r}\|) + \dfrac{1}{2}M\|\dot{\boldsymbol{R}}\|^2 .
-$$ {#eq-lagrangian_of_2body_reduced_mass}
+$$ {#eq-CM_lagrangian_of_2body_reduced_mass}
 
-이다. $\mu$ 는 **환원 질량(reduced mass)** 라고 불리며 $M$ 은 두 물체의 질량의 합이다. @eq-lagrangian_of_2body_reduced_mass 의 $L$ 은 두 변수 $\boldsymbol{r}$ 과 $\boldsymbol{R}$ 이 분리되어 있으며 $\boldsymbol{R}=0$ 인 좌표계를 생각 할 수 있는데 보통 실험실 좌표계라고 한다. 실험실 좌표계에서의 라그랑지안은 다음과 같다. 
+이다. $\mu$ 는 **환원 질량(reduced mass)** 라고 불리며 $M$ 은 두 물체의 질량의 합이다. @eq-CM_lagrangian_of_2body_reduced_mass 의 $L$ 은 두 변수 $\boldsymbol{r}$ 과 $\boldsymbol{R}$ 이 분리되어 있으며 $\boldsymbol{R}=0$ 인 좌표계를 생각 할 수 있는데 보통 실험실 좌표계라고 한다. 실험실 좌표계에서의 라그랑지안은 다음과 같다. 
 
 $$
 L = \dfrac{1}{2}\mu \|\dot{\boldsymbol{r}}\|^2 + V(\|\boldsymbol{r}\|).
-$$ {#eq-lagrangian_of_2body_reduced_mass_LAB_frame}
+$$ {#eq-CM_lagrangian_of_2body_reduced_mass_LAB_frame}
 
 즉 두 입자의 상대적인 변위의 차에 의존하는 포텐셜을 가진 시스템에서는 이체문제가 일체문제가 된다. 여기에서의 각운동량 $\boldsymbol{L}=\boldsymbol{r}\times \boldsymbol{p}$ 를 생각하면, 
 
@@ -546,15 +560,15 @@ $$
 \dot{\boldsymbol{r}} = \dot{r}\hat{\boldsymbol{r}} + r\dot{\theta}\hat{\boldsymbol{\theta}}
 $$
 
-이며 따라서, @eq-lagrangian_of_2body_reduced_mass_LAB_frame 은 
+이며 따라서, @eq-CM_lagrangian_of_2body_reduced_mass_LAB_frame 은 
 
 $$
 L = \dfrac{1}{2}\mu \dot{r}^2 + \dfrac{1}{2}\mu r^2 \dot{\theta}^2 + V(r)
-$$ {#eq-lagrangian_for_reduced_to_1d}
+$$ {#eq-CM_lagrangian_for_reduced_to_1d}
 
 이다. 여기에 $\theta$ 에 대한 일반화된 운동량 $p_\theta = \mu r^2 \dot{\theta}$ 는 각운동량이며 $\dfrac{\partial L}{\partial \theta}=0$ 이므로 시간에 대한 불변량이다. 변위벡터 $\boldsymbol{r}=r\hat{\boldsymbol{r}}$ 이 $d\theta$ 만큼 변할 때 변위벡터가 쓸어가는 면적은 $\dfrac{1}{2}r^2d\theta$ 이며 이는 $\dfrac{p_\theta}{\mu}dt$ 이므로 일정하다. 즉 $V(r)$ 에 무관하게 중심력에서는 케플러 2법칙이 성립한다. 
 
-![변위 벡터에 의해 쓸려지는 면적](../images/classical%20mechanics/area_swept/area_swept.png){#fig-area_swept_by_radius_vector width=250}
+![변위 벡터에 의해 쓸려지는 면적](../images/classical%20mechanics/area_swept/area_swept.png){#fig-CM_area_swept_by_radius_vector width=250}
 
 </br>
 
@@ -575,20 +589,20 @@ $$
 
 $$
 t = \int \left[\dfrac{2}{\mu}  \left(E-V(r) - \dfrac{l^2}{2\mu r^2}\right)\right]^{-1/2}\, dr + \text{const.}
-$$ {#eq-reduced_to_1d_t}
+$$ {#eq-CM_reduced_to_1d_t}
 
 이며, $\dot{\theta}= l/(\mu r^2)$ 이므로
 
 $$
 \theta = \int \dfrac{l}{r^2} \left[2\mu  \left(E-V(r) - \dfrac{l^2}{2\mu r^2}\right)\right]^{-1/2}\, dr + \text{const.}
-$$ {#eq-reduced_to_1d_theta}
+$$ {#eq-CM_reduced_to_1d_theta}
 
 이다. 
 
 
 </br>
 
-@eq-lagrangian_for_reduced_to_1d 을 보자. $l = \mu r^2\dot{\theta}$ 에 대해
+@eq-CM_lagrangian_for_reduced_to_1d 을 보자. $l = \mu r^2\dot{\theta}$ 에 대해
 
 $$
 L = \dfrac{1}{2}\mu \dot{r}^2 + V_{\textrm{eff}}(r),\qquad {\textrm{where }}V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} + V(r)
@@ -600,15 +614,15 @@ $$
 \lim_{r \to 0} \dfrac{l^2}{2\mu r^2} = +\infty,\qquad \lim_{r \to \infty} \dfrac{l^2}{2\mu r^2} = 0
 $$
 
-이며 $\lim_{r \to \infty}V(r) = 0$ 임을 안다. 많은 경우 이에 대한 운동은 @fig-1d_potential 의 닫힌 상태($E_2$ 의 상태) 이며 $r$ 에 대한 최소값($r_{\textrm{min}}$)과 최대값($r_{\textrm{max}}$)이 존재한다. @eq-reduced_to_1d_theta 로부터 $r_{\textrm{min}}$ 에서 $r_{\textrm{max}}$ 까지의 $\theta$ 의 차이를 *aspidal angle* 이라고 한다. $\Delta \theta$ 를 계산 할 수 있다. 
+이며 $\lim_{r \to \infty}V(r) = 0$ 임을 안다. 많은 경우 이에 대한 운동은 @fig-CM_1d_potential 의 닫힌 상태($E_2$ 의 상태) 이며 $r$ 에 대한 최소값($r_{\textrm{min}}$)과 최대값($r_{\textrm{max}}$)이 존재한다. @eq-CM_reduced_to_1d_theta 로부터 $r_{\textrm{min}}$ 에서 $r_{\textrm{max}}$ 까지의 $\theta$ 의 차이를 *aspidal angle* 이라고 한다. $\Delta \theta$ 를 계산 할 수 있다. 
 
 $$
 \Delta \theta = \int_{r_\textrm{min}}^{r_\textrm{max}}  \dfrac{l}{r^2} \left[2\mu  \left(E-V(r) - \dfrac{l^2}{2\mu r^2}\right)\right]^{-1/2}\, dr 
-$$ {#eq-reduced_1d_potential_precession}
+$$ {#eq-CM_reduced_1d_potential_precession}
 
 이 때 $\Delta \theta$ 가 $2\pi$ 의 유리수배라면 즉 최대공약수가 $1$ 인 두 정수 $n_1,\,n_2$ 에 대해 $\Delta \theta = 2\pi \dfrac{n_1}{n_2}$ 라면 $n_2$ 번의 회전 후에 이 경로는 원래 위치로 돌아와서 반복되지만, 즉 닫힌 경로를 갖지만 무리수배라면 열린 경로를 갖는다. 즉 제자리도 돌아오지 않는다. 열린 경로를 갖는 중심장은 $V(r)\propto \dfrac{1}{r}$ 인 경우와 $\propto r^2$ 인 경우 뿐이다$^1$. [$^1$ L. D. Landau and E. M. Lifshitz, *Mechanics*]{.aside}
 
-![중심장에서의 경로](../images/classical%20mechanics/central_field_orbit/orbit.png){#fig-central_field_orbin width=500}
+![중심장에서의 경로](../images/classical%20mechanics/central_field_orbit/orbit.png){#fig-CM_central_field_orbin width=500}
 
 
 </br>
@@ -631,19 +645,19 @@ $$
 
 $$
 V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} - \dfrac{K}{r}
-$$ {#eq-effective_potential_for_kepler_problem}
+$$ {#eq-CM_effective_potential_for_kepler_problem}
 
 
-이다. $V'_{\textrm{eff}}(r)=0$ 인 경우는 $r=r_0=\dfrac{l^2}{\mu K}$ 이며 이 때 $V_{\textrm{eff}}(r)$ 은 최소값을 갖는다. $V_{\textrm{eff}}(r)$ 은 아래 @fig-effective_potential_for_kepler_problem_1 과 같다.  
+이다. $V'_{\textrm{eff}}(r)=0$ 인 경우는 $r=r_0=\dfrac{l^2}{\mu K}$ 이며 이 때 $V_{\textrm{eff}}(r)$ 은 최소값을 갖는다. $V_{\textrm{eff}}(r)$ 은 아래 @fig-CM_effective_potential_for_kepler_problem_1 과 같다.  
 
-![케플러 문제에서의 $V_\textrm{eff}$](../images/classical%20mechanics/effective_potential_for_kepler_orbit/effective_potential.png){#fig-effective_potential_for_kepler_problem_1 width=530}
+![케플러 문제에서의 $V_\textrm{eff}$](../images/classical%20mechanics/effective_potential_for_kepler_orbit/effective_potential.png){#fig-CM_effective_potential_for_kepler_problem_1 width=530}
 
-정확한 궤적은 @eq-reduced_to_1d_theta 을 통해 얻을 수 있다. $p = \dfrac{l^2}{\mu K}$ 와 $\varepsilon = \sqrt{1+\dfrac{2El^2}{\mu K^2}}$ 에 대해 아래와 같은 궤적을 얻을 수 있다. 증명은 어렵지 않으며 @exr-proof_of_kepler_orbit 을 보라.
+정확한 궤적은 @eq-CM_reduced_to_1d_theta 을 통해 얻을 수 있다. $p = \dfrac{l^2}{\mu K}$ 와 $\varepsilon = \sqrt{1+\dfrac{2El^2}{\mu K^2}}$ 에 대해 아래와 같은 궤적을 얻을 수 있다. 증명은 어렵지 않으며 @exr-proof_of_kepler_orbit 을 보라.
 
 
 $$
 \dfrac{p}{r} = 1+ \varepsilon \cos\theta.
-$$ {#eq-orbit_for_kepler_problem}
+$$ {#eq-CM_orbit_for_kepler_problem}
 
 
 위의 식은 잘 알려진 이차곡선의 극좌표계 형식이다. 이때의 $\varepsilon$ 을 **이심률 (eccentricity)** 라고 하며 이심률 값에 따라 곡선의 모양이 달라진다. @tbl-eccentricity_and_orbit 는 이심률에 따른 궤도의 모양을 분류하였고, @fig-kepler_orbit 은 $\varepsilon$ 값에 따른 궤도를 보여준다.
@@ -674,7 +688,7 @@ $$ {#eq-definition_of_laplace_runge_lentz_vector}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#prp-properties_of_RLR_vector}
+::: {#prp-CM_properties_of_RLR_vector}
 
  $\|\boldsymbol{r}\|=r_{min}$ 일 때의 radius vector를 $\boldsymbol{r}_{min}$ 이라고 하자. LRL 벡터 $\boldsymbol{A}$ 는 다음과 같은 성질을 가진다.
 
@@ -709,28 +723,30 @@ $$
 \dfrac{1}{r} =\dfrac{mK}{l^2}\left(1+ \dfrac{A}{mK} \cos \theta\right)
 $$
 
-를 얻는다. 이를 @eq-orbit_for_kepler_problem 와 비교해보라. 이로부터 
+를 얻는다. 이를 @eq-CM_orbit_for_kepler_problem 와 비교해보라. 이로부터 
 
 $$
 \|\boldsymbol{A}\|^2 = mK^2 + 2mEl^2
-$$ {#eq-magnitude_of_RLR_vector}
+$$ {#eq-CM_magnitude_of_RLR_vector}
 
 임을 알 수 있다.
 
 
-우리는 운동상수로 $\boldsymbol{L},\,\boldsymbol{A},\,E$ 가 있다는 것을 알았다. $\boldsymbol{L}$ 과 $\boldsymbol{A}$ 는 3차원 벡터이므로 총 7개의 양이 운동상수이다. 시스템의 자유도가 $3$ 이므로 우리는 6개의 독립적인 초기조건(초기 위치로부터 3개의 값, 초기 속도로부터 3개의 값) 을 통해 운동을 정의 할 수 있다. 시간 변수를 생각하면 독립적인 운동상수는 5 개 이어야 한다. @prp-properties_of_RLR_vector 의 ($2$) 와 @eq-magnitude_of_RLR_vector 가 운동상수에 추가적인 조건을 부여하기 때문에 정확히 5개의 독립적인 운동상수가 있게 된다. 
+우리는 운동상수로 $\boldsymbol{L},\,\boldsymbol{A},\,E$ 가 있다는 것을 알았다. $\boldsymbol{L}$ 과 $\boldsymbol{A}$ 는 3차원 벡터이므로 총 7개의 양이 운동상수이다. 시스템의 자유도가 $3$ 이므로 우리는 6개의 독립적인 초기조건(초기 위치로부터 3개의 값, 초기 속도로부터 3개의 값) 을 통해 운동을 정의 할 수 있다. 시간 변수를 생각하면 독립적인 운동상수는 5 개 이어야 한다. @prp-CM_properties_of_RLR_vector 의 ($2$) 와 @eq-CM_magnitude_of_RLR_vector 가 운동상수에 추가적인 조건을 부여하기 때문에 정확히 5개의 독립적인 운동상수가 있게 된다. 
  
 
 </br>
 
-## 연습문제
+## 연습문제 {.unnumbered}
 
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-proof_of_kepler_orbit}
 
-@eq-reduced_to_1d_theta 로부터 @eq-orbit_for_kepler_problem 를 얻어라.
+@eq-CM_reduced_to_1d_theta 로부터 @eq-CM_orbit_for_kepler_problem 를 얻어라.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -775,12 +791,14 @@ $$
 :::
 
 </br>
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-proof_of_laplace_runge_lenz}
 
-@prp-properties_of_RLR_vector 를 증명하라.
+@prp-CM_properties_of_RLR_vector 를 증명하라.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -815,7 +833,7 @@ $$
 :::
 
 </br>
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-helliwell_1_41}
 
 #### Helliwell 1.41
@@ -832,8 +850,9 @@ $$
 
 ($c$) spherical shell 이 아니라 sphere 이며 sphecally symmetric 할 때 구 내부의 원점으로부터의 거리 $R$ 인 지점의 중력은 구의 중심을 향하며 그 크기가 $GmM(R)/R^2$ 임을 보여라. 여기서 $M(R)$ 은 반경 $R$ 보다 구에서 반지름 $R$ 인 부분의 질량이다. 즉 $R$ 바깥의 구체의 질량은 중력장에 영향을 끼치지 않는다.
 
-
 :::
+
+\</div></br>
 
 ::: {.solution}
 
@@ -874,7 +893,7 @@ $$
 :::
 
 </br>
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-helliwell_1_53}
 
 #### Helliwelll 1.53, 고전적인 빅뱅 우주 모델
@@ -923,6 +942,8 @@ $${#eq-exr-helliwell_1_53_4}
 
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -993,7 +1014,7 @@ $$
 
 
 </br>
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-helliwell_1_54}
 
 #### Helliwell 1.54
@@ -1039,6 +1060,8 @@ $$ {#eq-exr-helliwell_1_54_4}
 ($g$) $M,\, \Lambda$ 가 모두 양수일 때 $a(t)$ 에 대해 정량적인 스케치를 구하라. $M$ 과 $\Lambda$ 를 포함하는 항중에서 $t$ 가 작을 때 지배하는 항은 무엇인가? $t$ 가 클 때 지배하는 항은 무엇인가?
 
 :::
+
+</div></br>
 
 ::: {.solution}
 

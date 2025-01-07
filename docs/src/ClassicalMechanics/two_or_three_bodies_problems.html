@@ -377,7 +377,7 @@ window.Quarto = {
 <section id="자발적-붕괴-spontaneous-disintegration" class="level3" data-number="5.1.1">
 <h3 data-number="5.1.1" class="anchored" data-anchor-id="자발적-붕괴-spontaneous-disintegration"><span class="header-section-number">5.1.1</span> 자발적 붕괴 (Spontaneous disintegration)</h3>
 <p>가장 간단한 경우로 질량이 <span class="math inline">\(m\)</span> 인 한 입자가 질량이 각각 <span class="math inline">\(m_1,\,m_2\)</span> 인 두개의 부분으로 붕괴되는 경우를 살펴보자. 이 경우 붕괴된 두 입자가 각각 독립적으로, 즉 상호작용없이 움직인다고 가정한다. 이 시스템을 설명하기 가장 편한 좌표계는 붕괴전 입자가 정지해있도록 하는 좌표계이다. 이를 <strong>질량중심 좌표계(center-of-mass reference frame)</strong> 라고 하자. 질량중심 좌표계에서 붕괴 후 입자 각각의 운동량을 <span class="math inline">\(\boldsymbol{p}_1,\, \boldsymbol{p}_2\)</span> 라고 하면 운동량 보존에 의해 <span class="math inline">\(\boldsymbol{p}_1 + \boldsymbol{p}_2= \boldsymbol{0}\)</span> 이 된다. 이제 <span class="math inline">\(p_0 = \|\boldsymbol{p}_1\| = \|\boldsymbol{p}_2\|\)</span> 라고 하고, 붕괴 이전의 내부에너지를 <span class="math inline">\(E_i\)</span>, 붕괴 이후의 내부에너지를 각각 <span class="math inline">\(E_{1i},\, E_{2i}\)</span> 라고 하면 에너지 보존에 의해</p>
-<p><span id="eq-energy_conservation_for_spantaneous_disintegration"><span class="math display">\[
+<p><span id="eq-CM_energy_conservation_for_spantaneous_disintegration"><span class="math display">\[
 E_i = E_{1i} + \dfrac{{p_0}^2}{2m_1} + E_{2i} + \dfrac{{p_0}^2}{2m_2}
 \tag{5.1}\]</span></span></p>
 <p>가 성립한다. 이 때 붕괴 전후의 내부에너지의 차이</p>
@@ -390,18 +390,18 @@ E_i = E_{1i} + \dfrac{{p_0}^2}{2m_1} + E_{2i} + \dfrac{{p_0}^2}{2m_2}
 \]</span></p>
 <p>이다. 잘량중심 좌표계애서의 속도는 각각 <span class="math inline">\(v_{10}=p_0/m_1,\, v_{20}=p_0/m_2\)</span> 이다.</p>
 <p>입자 <span class="math inline">\(m\)</span> 이 <span class="math inline">\(\boldsymbol{V}\)</span> 로 움직이는 좌표계를 생각하자. 일반적으로 우리가 실험적으로 자발적 붕괴를 관측할 때에 실험자에 대해 입자는 정지해 있는 경우보다 어느 속도로 움직이는 경우가 대부분이다. 따라서 이를 <strong>실험실 좌표계(laboratory reference frame)</strong> 라고 하자. 보통 산란 실험은 실험실 좌표계로 나오고 이것을 분석하여 물리적 의미를 따지는 것은 잘량중심 좌표계에서 한다. 즉 실험실 좌표계의 값을 잘량중심 좌표계로 변환하는 것이 중요하다.</p>
-<div id="fig-reference_system_scattering" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-CM_reference_system_scattering" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-reference_system_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CM_reference_system_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/classical mechanics/frame_and_scattering/frame_and_scattering.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-reference_system_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_reference_system_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;5.1: 실험실 좌표계
 </figcaption>
 </figure>
 </div>
-<p><span class="math inline">\(\boldsymbol{v}_{01}\)</span> 이나 <span class="math inline">\(\boldsymbol{v}_{02}\)</span> 가 실험실 좌표계에서 속도가 어떻게 변하는지 살펴 보자. <a href="#fig-reference_system_scattering" class="quarto-xref">그림&nbsp;<span>5.1</span></a> 을 보자. 입자 인덱스 <span class="math inline">\(1,\,2\)</span> 를 떼어 놓으면 실험실 좌표계에서의 속도 <span class="math inline">\(\boldsymbol{v}= \boldsymbol{V} + \boldsymbol{v}_0\)</span> 이다. <span class="math inline">\(\boldsymbol{V}\)</span> 와 <span class="math inline">\(\boldsymbol{v}\)</span> 가 <span class="math inline">\(\theta\)</span> 의 사잇각을 갖는다면</p>
-<p><span id="eq-scattering_1"><span class="math display">\[
+<p><span class="math inline">\(\boldsymbol{v}_{01}\)</span> 이나 <span class="math inline">\(\boldsymbol{v}_{02}\)</span> 가 실험실 좌표계에서 속도가 어떻게 변하는지 살펴 보자. <a href="#fig-CM_reference_system_scattering" class="quarto-xref">그림&nbsp;<span>5.1</span></a> 을 보자. 입자 인덱스 <span class="math inline">\(1,\,2\)</span> 를 떼어 놓으면 실험실 좌표계에서의 속도 <span class="math inline">\(\boldsymbol{v}= \boldsymbol{V} + \boldsymbol{v}_0\)</span> 이다. <span class="math inline">\(\boldsymbol{V}\)</span> 와 <span class="math inline">\(\boldsymbol{v}\)</span> 가 <span class="math inline">\(\theta\)</span> 의 사잇각을 갖는다면</p>
+<p><span id="eq-CM_scattering_1"><span class="math display">\[
 v^2 + V^2 - 2 vV\cos \theta = {v_0}^2
 \tag{5.2}\]</span></span></p>
 <p>이다. <span class="math inline">\(V &gt; v_0\)</span> 라면 <span class="math inline">\(\theta\)</span> 는 다음과 같이 정해지는 <span class="math inline">\(\theta_\textrm{max}\)</span> 보다 클수 없다. 즉</p>
@@ -409,14 +409,14 @@ v^2 + V^2 - 2 vV\cos \theta = {v_0}^2
 \theta \le \theta_{\textrm{max}} = \sin^{-1}(v_0/V)
 \]</span></p>
 <p>질량중심 좌표계와 실험실 좌표계의 각도 <span class="math inline">\(\theta\)</span> 와 <span class="math inline">\(\theta_0\)</span> 의 관계는 다음과 같다.</p>
-<p><span id="eq-angle_transform_from_lab_to_stationary"><span class="math display">\[
+<p><span id="eq-CM_angle_transform_from_lab_to_stationary"><span class="math display">\[
 \tan \theta = \dfrac{v_0 \sin \theta_0}{v_0 \cos \theta_0 + V}.
 \tag{5.3}\]</span></span></p>
 <p>혹은 우리가 잘량중심 좌표계에서 계산한 것을 실험실 좌표계에서의 값과 직접 맞춰보고 싶을 때도 있다. 이 경우</p>
-<p><span id="eq-angle_transform_from_stationary_to_lab"><span class="math display">\[
+<p><span id="eq-CM_angle_transform_from_stationary_to_lab"><span class="math display">\[
 \cos \theta_0 = - \dfrac{V}{v_0} \sin^2 \theta \pm \cos \theta \sqrt{1 - \dfrac{V^2}{{v_0}^2} \sin^2 \theta  }
 \tag{5.4}\]</span></span></p>
-<p><span class="math inline">\(v_0&gt;V\)</span> 라면, 즉 <a href="#fig-reference_system_scattering" class="quarto-xref">그림&nbsp;<span>5.1</span></a> (<span class="math inline">\(a\)</span>) 의 경우라면 <span class="math inline">\(\theta_0\)</span> 와 <span class="math inline">\(\theta\)</span> 가 전단사이다. 그러나 <span class="math inline">\(v_0&lt;V\)</span> 라면, 즉 <a href="#fig-reference_system_scattering" class="quarto-xref">그림&nbsp;<span>5.1</span></a> (<span class="math inline">\(b\)</span>) 의 경우라면 그렇지 않으며, 그림에서 보듯이 <span class="math inline">\(\overrightarrow{AB}\)</span> 와 <span class="math inline">\(\overrightarrow{AC}\)</span> 의 두가지 경우가 가능하다.</p>
+<p><span class="math inline">\(v_0&gt;V\)</span> 라면, 즉 <a href="#fig-CM_reference_system_scattering" class="quarto-xref">그림&nbsp;<span>5.1</span></a> (<span class="math inline">\(a\)</span>) 의 경우라면 <span class="math inline">\(\theta_0\)</span> 와 <span class="math inline">\(\theta\)</span> 가 전단사이다. 그러나 <span class="math inline">\(v_0&lt;V\)</span> 라면, 즉 <a href="#fig-CM_reference_system_scattering" class="quarto-xref">그림&nbsp;<span>5.1</span></a> (<span class="math inline">\(b\)</span>) 의 경우라면 그렇지 않으며, 그림에서 보듯이 <span class="math inline">\(\overrightarrow{AB}\)</span> 와 <span class="math inline">\(\overrightarrow{AC}\)</span> 의 두가지 경우가 가능하다.</p>
 <p>일반적으로 자발적 붕괴 실험은 하나의 입자의 붕괴가 아니라 다수의 입자의 붕괴를 통계적으로 다룬다. 그리고 자발적 붕괴의 분포는 완전히 임의적이기 때문에 질량중심 좌표계에서의 고체각(solid angle) <span class="math inline">\(d\Omega\)</span> 로 입사되는 붕괴된 입자의 갯수는 <span class="math inline">\(d\Omega\)</span> 에 비례한다. 즉 <span class="math inline">\(N\)</span> 개의 입자가 붕괴되었을때 <span class="math inline">\(d\Omega\)</span> 의 고체각에 입사되는 입자의 갯수 <span class="math inline">\(N_{d\Omega}\)</span> 는</p>
 <p><span class="math display">\[
 N_{d\Omega}= N\dfrac{d\Omega}{4\pi}
@@ -463,13 +463,13 @@ p_{10}= p_{20} = p'_{10}= p'_{20}
 \boldsymbol{p}'_2 &amp;= m_2 \boldsymbol{v}'_2 = -m v \hat{\boldsymbol{n}}_0 + \dfrac{m_2(\boldsymbol{p}_1 + \boldsymbol{p_2})}{m_1+m_2}
 \end{aligned}
 \]</span></p>
-<p>이다. 이것을 그림으로 그리면 아래 <a href="#fig-elastic_scattering" class="quarto-xref">그림&nbsp;<span>5.2</span></a> 와 같다. 그림에서 원은 반지름이 <span class="math inline">\(mv\)</span> 이다.</p>
-<div id="fig-elastic_scattering" class="quarto-figure quarto-figure-center quarto-float anchored">
+<p>이다. 이것을 그림으로 그리면 아래 <a href="#fig-CM_elastic_scattering" class="quarto-xref">그림&nbsp;<span>5.2</span></a> 와 같다. 그림에서 원은 반지름이 <span class="math inline">\(mv\)</span> 이다.</p>
+<div id="fig-CM_elastic_scattering" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-elastic_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CM_elastic_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/classical mechanics/momentum_in_lab_frame/momentum_in_lab_frame.png" class="img-fluid figure-img" width="220">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elastic_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_elastic_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;5.2: 탄성 충돌 후 실험실 좌표계에서의 운동량 벡터
 </figcaption>
 </figure>
@@ -479,26 +479,26 @@ p_{10}= p_{20} = p'_{10}= p'_{20}
 \overrightarrow{OC} = mv,\quad\overrightarrow{AO} = \dfrac{m_1}{m_1+m_2}(\boldsymbol{p}_1+ \boldsymbol{p}_2), \quad \overrightarrow{OB} = \dfrac{m_2}{m_1+m_2}(\boldsymbol{p}_1+ \boldsymbol{p}_2)
 \]</span></p>
 <p>임을 알 수 있다.</p>
-<p>많은 경우 충돌실험은 정지해 있는 한 입자에 대해 다른 입자를 충돌시킨다. 여기서 <span class="math inline">\(m_2\)</span> 입자가 충돌 전에 정지해 있다고 하자. 즉 <span class="math inline">\(\boldsymbol{v}_2=\boldsymbol{0}\)</span> 이며 <span class="math inline">\(\boldsymbol{v}=\boldsymbol{v}_1\)</span> 이다. <span class="math inline">\(\overrightarrow{OB}=mv\)</span> 이며, 따라서 <span class="math inline">\(\overrightarrow{AB}= \boldsymbol{p}_1\)</span> 이 된다 <a href="#fig-elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>5.3</span></a> 는 <span class="math inline">\(m_2\)</span> 가 정지해 있을 때의 실험실 좌표계에서의 운동량에 관련된 도식이다.</p>
-<div id="fig-elastic_scattering_angles_ss" class="quarto-figure quarto-figure-center quarto-float anchored">
+<p>많은 경우 충돌실험은 정지해 있는 한 입자에 대해 다른 입자를 충돌시킨다. 여기서 <span class="math inline">\(m_2\)</span> 입자가 충돌 전에 정지해 있다고 하자. 즉 <span class="math inline">\(\boldsymbol{v}_2=\boldsymbol{0}\)</span> 이며 <span class="math inline">\(\boldsymbol{v}=\boldsymbol{v}_1\)</span> 이다. <span class="math inline">\(\overrightarrow{OB}=mv\)</span> 이며, 따라서 <span class="math inline">\(\overrightarrow{AB}= \boldsymbol{p}_1\)</span> 이 된다 <a href="#fig-CM_elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>5.3</span></a> 는 <span class="math inline">\(m_2\)</span> 가 정지해 있을 때의 실험실 좌표계에서의 운동량에 관련된 도식이다.</p>
+<div id="fig-CM_elastic_scattering_angles_ss" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-elastic_scattering_angles_ss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CM_elastic_scattering_angles_ss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/classical mechanics/elastic_scattering_angles/elastic_scatteiing_angles.png" class="img-fluid figure-img" width="560">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elastic_scattering_angles_ss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_elastic_scattering_angles_ss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;5.3: <span class="math inline">\(m_2\)</span> 가 정지해 있을 때의 실험실 좌표계
 </figcaption>
 </figure>
 </div>
-<p><span class="math inline">\(m_1&lt;m_2\)</span> 일 때는 <span class="math inline">\(AO &lt; mv\)</span> 이며 <span class="math inline">\(m_1&gt;m_2\)</span> 일 때는 <span class="math inline">\(AO &gt; mv\)</span> 이다. <span class="math inline">\(\theta_1,\,\theta_2\)</span> 는 충돌 이후 <span class="math inline">\(m_1\)</span> 과 <span class="math inline">\(m_2\)</span> 의 이동 각도이다. 이제 질량중심좌표계에서의 산란각 <span class="math inline">\(\Theta\)</span> 와 <span class="math inline">\(\theta_1,\,\theta_2\)</span> 의 관계는 <a href="#fig-elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>5.3</span></a> 로 부터 다음과 같음을 쉽게 계산 할 수 있다.</p>
-<p><span id="eq-elastic_scattering_scaterring_angle"><span class="math display">\[
+<p><span class="math inline">\(m_1&lt;m_2\)</span> 일 때는 <span class="math inline">\(AO &lt; mv\)</span> 이며 <span class="math inline">\(m_1&gt;m_2\)</span> 일 때는 <span class="math inline">\(AO &gt; mv\)</span> 이다. <span class="math inline">\(\theta_1,\,\theta_2\)</span> 는 충돌 이후 <span class="math inline">\(m_1\)</span> 과 <span class="math inline">\(m_2\)</span> 의 이동 각도이다. 이제 질량중심좌표계에서의 산란각 <span class="math inline">\(\Theta\)</span> 와 <span class="math inline">\(\theta_1,\,\theta_2\)</span> 의 관계는 <a href="#fig-CM_elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>5.3</span></a> 로 부터 다음과 같음을 쉽게 계산 할 수 있다.</p>
+<p><span id="eq-CM_elastic_scattering_scaterring_angle"><span class="math display">\[
 \begin{aligned}
 \tan \theta_1 &amp;= \dfrac{|OC| \sin \Theta}{|AO| + |OC|\cos \Theta} = \dfrac{mv \sin \Theta}{\dfrac{m_1^2}{m_1+m_2}v + mv\sin \Theta} = \dfrac{m_2 \sin \Theta}{m_1 + m_2 \sin \Theta}, \\
 \theta_2 &amp;= \dfrac{1}{2}(\pi - \Theta).
 \end{aligned}
 \tag{5.5}\]</span></span></p>
 <p>또한 <span class="math inline">\(v_1',\,v_2'\)</span> 을 계산해보면 다음과 같다.</p>
-<p><span id="eq-elastic_scattering_velocity_in_lab_frame"><span class="math display">\[
+<p><span id="eq-CM_elastic_scattering_velocity_in_lab_frame"><span class="math display">\[
 \begin{aligned}
 v_1' &amp;= \dfrac{p_1'}{m_1} = \dfrac{\sqrt{|AO|^2 + |OC|^2 - 2|AO||OC| \cos (\pi - \Theta)}}{m_1} \\
 &amp;= \dfrac{\sqrt{{m_1}^2 + {m_2}^2 + 2m_1m_2 \cos \Theta}}{m_1+m_2}v, \\
@@ -507,7 +507,7 @@ v_2' &amp;= \dfrac{p_2'}{m_2} = \dfrac{\sqrt{|OC|^2+|OB|^2-2|OC||OB|\cos \Theta}
 \end{aligned}
 \tag{5.6}\]</span></span></p>
 <p><br></p>
-<p>두 입자가 충돌 후 같은 방향 혹은 반대 방향을 향하는 것을 <strong>정면 충돌(head-on collison)</strong> 이라고 한다. 즉 <span class="math inline">\(\Theta = \pi\)</span> 가 된다. 정면충돌의 경우 충돌 후의 속도는 <a href="#eq-elastic_scattering_velocity_in_lab_frame" class="quarto-xref">식&nbsp;<span>5.6</span></a> 으로부터 알 수 있으며,</p>
+<p>두 입자가 충돌 후 같은 방향 혹은 반대 방향을 향하는 것을 <strong>정면 충돌(head-on collison)</strong> 이라고 한다. 즉 <span class="math inline">\(\Theta = \pi\)</span> 가 된다. 정면충돌의 경우 충돌 후의 속도는 <a href="#eq-CM_elastic_scattering_velocity_in_lab_frame" class="quarto-xref">식&nbsp;<span>5.6</span></a> 으로부터 알 수 있으며,</p>
 <p><span id="eq-final_velocity_for_head_on_scattering"><span class="math display">\[
 \boldsymbol{v}_1' = \dfrac{m_1-m_2}{m_1+m_2}\boldsymbol{v},\qquad \boldsymbol{v}_2' = \dfrac{2m_1}{m_1+m_2}\boldsymbol{v}
 \tag{5.7}\]</span></span></p>
@@ -516,7 +516,7 @@ v_2' &amp;= \dfrac{p_2'}{m_2} = \dfrac{\sqrt{|OC|^2+|OB|^2-2|OC||OB|\cos \Theta}
 E'_{2,\max} = \dfrac{1}{2}m_2 {v'_2}^2 = \dfrac{4m_1m_2}{(m_1 + m_2)^2}\left(\dfrac{1}{2}m_1 v^2\right) = \dfrac{4m_1m_2}{(m_1 + m_2)^2}E_1.
 \]</span></p>
 <p><br></p>
-<p><a href="#fig-elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>5.3</span></a> 에서 볼 수 있듯이 <span class="math inline">\(m_1&lt;m_2\)</span> 일 때 <span class="math inline">\(m_1\)</span> 은 어떤 방향이든지 가능하지만 <span class="math inline">\(m_1&gt;m_2\)</span> 일 때는 <span class="math inline">\(m_1\)</span> 의 방향은 <span class="math inline">\(\theta_{\max}\)</span> 이하의 산란각만 가능하다. <span class="math inline">\(\theta_\max\)</span> 는 다음과 같다.</p>
+<p><a href="#fig-CM_elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>5.3</span></a> 에서 볼 수 있듯이 <span class="math inline">\(m_1&lt;m_2\)</span> 일 때 <span class="math inline">\(m_1\)</span> 은 어떤 방향이든지 가능하지만 <span class="math inline">\(m_1&gt;m_2\)</span> 일 때는 <span class="math inline">\(m_1\)</span> 의 방향은 <span class="math inline">\(\theta_{\max}\)</span> 이하의 산란각만 가능하다. <span class="math inline">\(\theta_\max\)</span> 는 다음과 같다.</p>
 <p><span class="math display">\[
 \sin \theta_\max = \dfrac{|OC|}{|OA|} = \dfrac{m_2}{m_1} .
 \]</span></p>
@@ -525,45 +525,45 @@ E'_{2,\max} = \dfrac{1}{2}m_2 {v'_2}^2 = \dfrac{4m_1m_2}{(m_1 + m_2)^2}\left(\df
 </section>
 <section id="산란" class="level3" data-number="5.1.3">
 <h3 data-number="5.1.3" class="anchored" data-anchor-id="산란"><span class="header-section-number">5.1.3</span> 산란</h3>
-<div id="fig-rutherford_scattering" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-CM_rutherford_scattering" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-rutherford_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CM_rutherford_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/classical mechanics/rutherford_scattering/rutherford_scattering.png" class="img-fluid figure-img" width="370">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rutherford_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_rutherford_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;5.4: 러더퍼드 산란
 </figcaption>
 </figure>
 </div>
-<p>원점 <span class="math inline">\(O\)</span> 로부터의 포텐셜 <span class="math inline">\(V(r)\)</span> 의 영향을 받는 질량 <span class="math inline">\(m\)</span> 인 입자의 운동을 생각해보자. 이것은 기본적으로 1체문제이며 <a href="one_body_problems.html#sec-central_force" class="quarto-xref"><span> 4.4</span></a> 에서 다루었다. <a href="one_body_problems.html#eq-reduced_to_1d_theta" class="quarto-xref">식&nbsp;<span>4.18</span></a> 로 부터</p>
-<p><span id="eq-rutherford_1"><span class="math display">\[
+<p>원점 <span class="math inline">\(O\)</span> 로부터의 포텐셜 <span class="math inline">\(V(r)\)</span> 의 영향을 받는 질량 <span class="math inline">\(m\)</span> 인 입자의 운동을 생각해보자. 이것은 기본적으로 1체문제이며 <a href="one_body_problems.html#sec-CM_central_force" class="quarto-xref"><span> 4.4</span></a> 에서 다루었다. <a href="one_body_problems.html#eq-CM_reduced_to_1d_theta" class="quarto-xref">식&nbsp;<span>4.19</span></a> 로 부터</p>
+<p><span id="eq-CM_rutherford_1"><span class="math display">\[
 \theta_0 = \int_{r_{\min}}^\infty \dfrac{l/r^2}{\sqrt{2m(E-V(r)) - l^2/r^2}}\, dr
 \tag{5.8}\]</span></span></p>
-<p>이며, <span class="math inline">\(r_\min\)</span> 은 적분 분모의 <span class="math inline">\(\sqrt{\cdots}\)</span> 를 <span class="math inline">\(0\)</span> 으로 한다는 것을 기억하자. <span class="math inline">\(V(r\to \infty) = 0\)</span> 이며 따라서 이때의 속도를 <span class="math inline">\(\boldsymbol{v}_0\)</span> 라고 하자. <strong>충격 변수(impact parameter)</strong> <span class="math inline">\(\rho\)</span> 를 <a href="#fig-rutherford_scattering" class="quarto-xref">그림&nbsp;<span>5.4</span></a> 와 같이 정의하자. 그렇다면 <span class="math inline">\(m\)</span> 의 에너지 <span class="math inline">\(E\)</span> 와 각운동량 <span class="math inline">\(l=\|\boldsymbol{L}\|\)</span> 은</p>
+<p>이며, <span class="math inline">\(r_\min\)</span> 은 적분 분모의 <span class="math inline">\(\sqrt{\cdots}\)</span> 를 <span class="math inline">\(0\)</span> 으로 한다는 것을 기억하자. <span class="math inline">\(V(r\to \infty) = 0\)</span> 이며 따라서 이때의 속도를 <span class="math inline">\(\boldsymbol{v}_0\)</span> 라고 하자. <strong>충격 변수(impact parameter)</strong> <span class="math inline">\(\rho\)</span> 를 <a href="#fig-CM_rutherford_scattering" class="quarto-xref">그림&nbsp;<span>5.4</span></a> 와 같이 정의하자. 그렇다면 <span class="math inline">\(m\)</span> 의 에너지 <span class="math inline">\(E\)</span> 와 각운동량 <span class="math inline">\(l=\|\boldsymbol{L}\|\)</span> 은</p>
 <p><span class="math display">\[
 E= \dfrac{1}{2}m{v_{0}}^2,\qquad l = m \rho v_0
 \]</span></p>
 <p>이다.</p>
-<p><span id="eq-rutherford_2"><span class="math display">\[
+<p><span id="eq-CM_rutherford_2"><span class="math display">\[
 \theta_0 = \int_{r_{\min}}^\infty  \dfrac{\rho/r^2}{\sqrt{1-(\rho^2/r^2) - 2V(r)/(m{v_0}^2)}}\, dr
 \tag{5.9}\]</span></span></p>
-<p>보통 우리가 측정하는 것은 <span class="math inline">\(\theta_0\)</span> 가 아닌 <span class="math inline">\(\Theta\)</span> 이다. <span class="math inline">\(\Theta = |\pi - 2 \theta_0|\)</span> 이므로 <a href="#eq-rutherford_1" class="quarto-xref">식&nbsp;<span>5.8</span></a> 을 <span class="math inline">\(\Theta\)</span> 와 <span class="math inline">\(\rho\)</span> 에 대패 표현하면,</p>
-<p><span id="eq-rutherford_3"><span class="math display">\[
+<p>보통 우리가 측정하는 것은 <span class="math inline">\(\theta_0\)</span> 가 아닌 <span class="math inline">\(\Theta\)</span> 이다. <span class="math inline">\(\Theta = |\pi - 2 \theta_0|\)</span> 이므로 <a href="#eq-CM_rutherford_1" class="quarto-xref">식&nbsp;<span>5.8</span></a> 을 <span class="math inline">\(\Theta\)</span> 와 <span class="math inline">\(\rho\)</span> 에 대패 표현하면,</p>
+<p><span id="eq-CM_rutherford_3"><span class="math display">\[
 \Theta  = \left|\pi - 2\int_{r_{\min}}^\infty  \dfrac{\rho/r^2}{\sqrt{1-(\rho^2/r^2) - 2V(r)/(m{v_0}^2)}}\, dr\right|
 \tag{5.10}\]</span></span></p>
 <p>이다.</p>
-<div id="fig-scattering_cross_section" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-CM_scattering_cross_section" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-scattering_cross_section-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CM_scattering_cross_section-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/classical mechanics/cross_section/cross_section.png" class="img-fluid figure-img" width="500">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scattering_cross_section-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_scattering_cross_section-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;5.5: 산란 실험
 </figcaption>
 </figure>
 </div>
 <p>물리학에서 많이 이루어지는 산란 실험은 동일한 초기 속도 <span class="math inline">\(\boldsymbol{v}_0\)</span> 를 갖는 공간적으로 균일한 분포를 가진 다수의 입자를 입사시키며, 이 균일한 입자들이 <span class="math inline">\(\boldsymbol{v}_0\)</span> 와 수직한 방향으로 <span class="math inline">\(A\)</span> 만큼의 면적을 갖고 있다고 하자. <span class="math inline">\(N\)</span> 개의 입자가 입사되었을 때 산란각 <span class="math inline">\(\Theta\)</span> 와 <span class="math inline">\(\Theta + d\Theta\)</span> 사이로 산란되는 입자의 갯수를 <span class="math inline">\(dN(\Theta)\)</span> 이라고 하자. 입사 입자가 우리는 산란단면적 <span class="math inline">\(d\sigma\)</span> 를 다음과 같이 정의 할 수 있다.</p>
-<p><span id="eq-cross_section"><span class="math display">\[
+<p><span id="eq-CM_cross_section"><span class="math display">\[
 \dfrac{d \sigma}{A} := \dfrac{dN(\Theta)}{N}.
 \tag{5.11}\]</span></span></p>
 <p><span class="math inline">\(\rho\)</span> 와 <span class="math inline">\(\Theta\)</span> 사이에 전단사 관계가 존재한다고 하자. 그렇다면 우리는 <span class="math inline">\(\rho(\Theta)\)</span> 를 생각 할 수 있다. 문제를 바꾸어 <span class="math inline">\(\rho(\Theta)\)</span> 와 <span class="math inline">\(\rho(\Theta ) + d\rho(\Theta)\)</span> 에 입사되는 빔의 비율을 <span class="math inline">\(d\sigma\)</span> 라고 하면,</p>
@@ -571,29 +571,29 @@ E= \dfrac{1}{2}m{v_{0}}^2,\qquad l = m \rho v_0
 d \sigma = A \dfrac{2 \pi \rho d\rho}{A} = 2\pi \rho \left|\dfrac{d\rho}{d\Theta}\right|d \Theta
 \]</span></p>
 <p>이다. 고체각 <span class="math inline">\(\Omega= 2\pi \sin \Theta d\Theta\)</span> 를 생각하면,</p>
-<p><span id="eq-cross_section_2"><span class="math display">\[
+<p><span id="eq-CM_cross_section_2"><span class="math display">\[
 d\sigma = \dfrac{\rho (\Theta)}{\sin \Theta}\left|\dfrac{d\rho}{d\Theta}\right|d\Omega
 \tag{5.12}\]</span></span></p>
 <p>이다.</p>
 <p><br></p>
 <p>이제 중요한 <span class="math inline">\(V(r) = - \dfrac{K}{r}\)</span> 인 경우를 살펴보자. 이 경우를 러더포드 산란(Rutherford scattering) 이라고 하며 산란단면적은 다음과 같다. (증명은 <a href="#exr-rutherford_cross_section" class="quarto-xref">연습문제&nbsp;<span>5.2</span></a>)</p>
-<p><span id="eq-rutherford_formular"><span class="math display">\[
+<p><span id="eq-CM_rutherford_formular"><span class="math display">\[
 d\sigma = \left(\dfrac{K}{2m{v_0}^2}\right)^2\dfrac{d\Omega}{\sin^4(\Theta/2)}.
 \tag{5.13}\]</span></span></p>
 <p>러더포드 산란단면적은 <span class="math inline">\(K\)</span> 가 양수인지 음수인지, 즉 포텐셜이 서로 끄는지 밀어내는지와 무관하며 그 절대값에만 관련이 있다는 것을 알 수 있다.</p>
 <section id="연습문제" class="level4">
 <h4 class="anchored" data-anchor-id="연습문제">연습문제</h4>
 <div id="exr-landau_18_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.1</strong></span> 반지름 <span class="math inline">\(R\)</span> 인 완벽한 딱딱한 공을 생각하자(<a href="#fig-perfect_rigid_sphere" class="quarto-xref">그림&nbsp;<span>5.6</span></a>). 즉 포텐셜은 다음과 같다.</p>
+<p><span class="theorem-title"><strong>연습문제 5.1</strong></span> 반지름 <span class="math inline">\(R\)</span> 인 완벽한 딱딱한 공을 생각하자(<a href="#fig-CM_perfect_rigid_sphere" class="quarto-xref">그림&nbsp;<span>5.6</span></a>). 즉 포텐셜은 다음과 같다.</p>
 <p><span class="math display">\[
 V(r) = \left\{\begin{array}{ll}0 \qquad &amp;\text{if } r&gt;R, \\  +\infty &amp;\text{if } r\le R.\end{array}\right.
 \]</span></p>
-<div id="fig-perfect_rigid_sphere" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-CM_perfect_rigid_sphere" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-perfect_rigid_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CM_perfect_rigid_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/classical mechanics/potential_wall/potential_wall.png" class="img-fluid figure-img" width="350">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-perfect_rigid_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_perfect_rigid_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;5.6: Perpect regid sphere
 </figcaption>
 </figure>
@@ -616,10 +616,10 @@ d\sigma = \dfrac{R\cos (\Theta/2)}{\sin \Theta} \dfrac{R}{2}\sin (\Theta/2) d\Om
 </div>
 <p><br></p>
 <div id="exr-rutherford_cross_section" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.2</strong></span> 러더포드 산란단면적 <a href="#eq-rutherford_formular" class="quarto-xref">식&nbsp;<span>5.13</span></a> 을 증명하라.</p>
+<p><span class="theorem-title"><strong>연습문제 5.2</strong></span> 러더포드 산란단면적 <a href="#eq-CM_rutherford_formular" class="quarto-xref">식&nbsp;<span>5.13</span></a> 을 증명하라.</p>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-rutherford_2" class="quarto-xref">식&nbsp;<span>5.9</span></a> 로부터</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-CM_rutherford_2" class="quarto-xref">식&nbsp;<span>5.9</span></a> 로부터</p>
 <p><span class="math display">\[
 \begin{aligned}
 \theta_0 &amp;= \int_{r_{\min}}^\infty  \dfrac{\rho/r^2}{\sqrt{1-(\rho^2/r^2) - 2K/r(m{v_0}^2)}}\, dr &amp; &amp;; s=1/r \\
@@ -644,7 +644,7 @@ d\sigma = \dfrac{R\cos (\Theta/2)}{\sin \Theta} \dfrac{R}{2}\sin (\Theta/2) d\Om
 <p><span class="math display">\[
 \dfrac{d\rho}{d\Theta} =  \left(\dfrac{|K|}{m{v_0}^2}\right) \dfrac{1}{2\sin^2 (\Theta/2)}
 \]</span></p>
-<p><a href="#eq-cross_section_2" class="quarto-xref">식&nbsp;<span>5.12</span></a> 로부터,</p>
+<p><a href="#eq-CM_cross_section_2" class="quarto-xref">식&nbsp;<span>5.12</span></a> 로부터,</p>
 <p><span class="math display">\[
 d\sigma = \left(\dfrac{K}{m{v_0}^2}\right)^2 \dfrac{\cot(\Theta/2)}{2\sin^2(\Theta/2) \sin (\Theta)}d\Omega =  \left(\dfrac{K}{2m{v_0}^2}\right)^2\dfrac{d\Omega}{\sin^4(\Theta/2)}
 \]</span></p>
