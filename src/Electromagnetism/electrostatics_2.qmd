@@ -90,7 +90,7 @@ $$
 \end{aligned}
 $$
 
-![균일한 전하 밀도를 가진 구에서의 전위차](../images/Electromagnetism/electrostatics/electrostatics_potential_uniform_sphere/electrostatics_potential_uniform_sphere.png){#fig-EM_electrosttics_potential_uniform_sphere width=450}
+![균일한 전하 밀도를 가진 구에서의 전위차](images/electrostatics/electrostatics_potential_uniform_sphere/electrostatics_potential_uniform_sphere.png){#fig-EM_electrosttics_potential_uniform_sphere width=450}
 
 
 :::
@@ -287,11 +287,11 @@ $$
 \dfrac{1}{\sqrt{1-2xt + t^2}} = \sum_{n=0}^\infty P_n (x) t^n.
 $$ {#eq-EM_generator_of_legendre_polymonals}
 
-두 벡터 $\bf{r}_>\, \bf{r}_<$ 이 $\|\bf{r}_>\| > \|\bf{r}_<\|$ 라고 하자. $t=\dfrac{\|\bf{r}_<\|}{\|\bf{r}_>\|}$ 에 대해 
+두 벡터 $\bf{r}_>,\, \bf{r}_<$ 이 $r_> > r_<$ 라고 하자. $t=\dfrac{r_<}{r_>}$ 에 대해 
 
 $$
 \begin{aligned}
-\dfrac{1}{\|\bf{r}_>-\bf{r}_<\|} &=  \dfrac{1}{\|\bf{r}_>\|} \dfrac{1}{\sqrt{1-2\cos \theta t+t^2}} = \dfrac{1}{\|\bf{r}_>\|}\sum_{n=0}^\infty \left(\dfrac{\|\bf{r}_<\|}{\|\bf{r}_>\|}\right)^n P_n (\cos \theta)
+\dfrac{1}{\|\bf{r}_>-\bf{r}_<\|} &=  \dfrac{1}{r_>} \dfrac{1}{\sqrt{1-2\cos \theta t+t^2}} = \dfrac{1}{r_>}\sum_{n=0}^\infty \left(\dfrac{r_<}{r_>}\right)^n P_n (\cos \theta)
 \end{aligned}
 $$ {#eq-EM_legendre_expansion}
 
@@ -453,7 +453,7 @@ $$ {#eq-EM_spherical_harmonics}
 
 ### 르장드르 다항식과 구면조화함수
 
-두 위치 벡터 $\bf{r},\, \bf{r}'$ 이 구면좌표계에서 각각 $(r,\, \theta,\, \varphi),\, (r',\, \theta',\, \varphi')$ 로 표현된다고 하자. $\bf{r}'$ 과 $\bf{r}'$ 사이의 각이 $\gamma$ 일 때
+두 위치 벡터 $\bf{r},\, \bf{r}'$ 이 구면좌표계에서 각각 $(r,\, \theta,\, \varphi),\, (r',\, \theta',\, \varphi')$ 로 표현된다고 하자. $\bf{r}$ 과 $\bf{r}'$ 사이의 각이 $\gamma$ 일 때
 
 $$
 P_l(\cos\gamma) = \dfrac{4\pi}{2l+1} \sum_{m=-l}^l {Y_l^m}^\ast(\theta,\,\varphi') Y_l^m(\theta,\, \varphi)
@@ -462,8 +462,11 @@ $$ {#eq-EM_addition_theorem_for_spherical_harmonics}
 임을 보일 수 있다. 그렇다면 @eq-EM_legendre_expansion 로부터
 
 $$
-\dfrac{1}{\|\bf{r}_> - \bf{r}_<\|} = \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1} \left(\dfrac{\|\bf{r}_<\|^l}{\|\bf{r}_>\|^{l+1}}\right) {Y_l^m}^\ast(\theta,\,\varphi') Y_l^m(\theta,\, \varphi)
+\dfrac{1}{\|\bf{r}_> - \bf{r}_<\|} = \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1} \left(\dfrac{r_<^l}{r_>^{l+1}}\right) {Y_l^m}^\ast(\theta,\,\varphi') Y_l^m(\theta,\, \varphi)
 $$ {#eq-EM_spherical_haromics_expansion_of_inverse_vector_difference}
+
+이다. 
+
 
 </br>
 
@@ -486,47 +489,62 @@ $$
 $$ {#eq-EM_electric_potential_dipole_1}
 
 
-위의 경우는 총 전하량이 $0$ 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 $\|\bf{r}\|^{-2}$ 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 $0$ 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다. @eq-EM_electric_potential_dipole_1 에서 $1/r^2$ 에 비례하는 부분에 대해 전기 쌍극자 모멘트 $\bf{\mu}$ 를
+위의 경우는 총 전하량이 $0$ 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 $\|\bf{r}\|^{-2}$ 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 $0$ 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다. @eq-EM_electric_potential_dipole_1 에서 $1/r^2$ 에 비례하는 부분에 대해 **전기 쌍극자 모멘트(electric dipole moment)** $\bf{p}$ 를
 
 $$
-\bf{\mu}:=q\bf{d}
+\bf{p}:=q\bf{d}
 $$ {#eq-EM_electric_dipole_moment}
 
 로 정의하면 전기 쌍극자 모멘트에 의한 전기 포텐셜 $\phi_d(\bf{r})$ 은 다음과 같다. 
 $$
-\phi_d (\bf{r})= \dfrac{1}{4\pi\epsilon_0} \dfrac{\bf{\mu\cdot r}}{r^3}
+\phi_d (\bf{r})= \dfrac{1}{4\pi\epsilon_0} \dfrac{\bf{p\cdot r}}{r^3}
 $$ {#eq-EM_electric_potential_dipole_2}
 
 </br>
 
 ### 다중극 전개
 
-$\|\bf{r}_>\| > \|\bf{r}_<\|$ 일 때 $k$ 차 르장드르 다항식 $P_k$ 와 $\bf{r}_>$ 와 $\bf{r}_<$ 가 이루는 각 $\theta$ 에 대해 다음이 성립한다.
-
-$$
-\dfrac{1}{\|\bf{r}_>-\bf{r}_<\|} = \dfrac{1}{\|\bf{r}_>\|} \sum_{k=0}^\infty \left(\dfrac{\|\bf{r}_<\|}{\|\bf{r}_>\|}\right)^k P_k (\cos \theta)
-$$ {#eq-EM_legendre_expansion_x}
-
-그렇다면 @eq-EM_electric_potential 에서 정해진 원점과 가능한 전하 분포 $\rho(\bf{r}')$ 에 대해 $\|\bf{r}\| > \|\bf{r}'\|$ 일 때,
+@eq-EM_legendre_expansion 를 사용하여 전하 분포 $\rho(\bf{r}')$ 에 대해 $\|\bf{r}\| > \|\bf{r}'\|$ 일 때의 전기 포텐셜을 계산하면
 
 $$
 \begin{aligned}
 \phi(\bf{r}) &=\dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}' \\[0.3em]
 &= \dfrac{1}{4\pi\epsilon_0}\sum_{k=0}^\infty \dfrac{1}{\|\bf{r}\|^{k+1}} \int_V \|\bf{r}'\|^k P_k(\cos\theta')\,\rho(\bf{r}')\,d^3\bf{r'} \\[0.3em]
+&= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{1}{r}\int_V \rho(\bf{r}')\, d^3\bf{r}' + \dfrac{1}{r^2}\int_V r'\cos \gamma \, \rho(\bf{r}')\,d^3\bf{r}'  \right.\\[0.3em]
+&\qquad \qquad + \left.\int_V r'^2\left(\dfrac{3}{2}\cos^2 \gamma' - \dfrac{1}{2}\right)\rho(\bf{r}') \, d^3\bf{r}' + \cdots \right]
 \end{aligned}
 $$
 
-이다. 즉, 
+이다. 즉, 다중극 모멘트 $Q_k$ 
 
 $$
-\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Q_k}{\|\bf{r}\|^{k+1}},\qquad \text{where }Q_k = \int_V \|\bf{r}'\|^k P_k(\cos\theta')\,\rho(\bf{r}')\,d^3\bf{r'}
-$$ {#eq-EM_multiple_expansion}
+Q_k := \int_V (r')^k P_k(\cos\gamma)\,\rho(\bf{r}')\,d^3\bf{r'}
+$$ {#eq-EM_electric_multipole_moment}
 
-이다. 
+에 대해 전기 포텐셜을 다음과 같이 쓸 수 있다.
+$$
+\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Q_k}{r^{k+1}}
+$$ {#eq-EM_multipole_expansion}
+
+여기서 전기 쌍극자 모먼트 $Q_1$ 은
+
+$$
+Q_1 = \int_V r' \cos \gamma \rho(\bf{r}')\, d^3\bf{r}'
+$$
+
+이며 @fig-EM_electric_dipole 의 전하 분포 $\rho(\bf{r}') = q\delta(\bf{r}'-\bf{d}/2) -q\delta(\bf{r}'+\bf{d}/2)$ 및 $\bf{p}= q\bf{d}$ 를 대입하면 $Q_1 = qd\cos \gamma$ 이고 @eq-EM_electric_potential_dipole_2 의 결과를 얻는다. 
 
 </br>
 
-$\rho(\bf{r'})=q\delta(\bf{r}')$ 이라면, 즉 점전하라면 
+르장드르 다항식을 이용한 다중극 전개는 위치 벡터 $\bf{r}$ 을 중심으로 전개하지만 @eq-EM_spherical_haromics_expansion_of_inverse_vector_difference 를 이용하여 구면조화함수를 사용하면 정해진 좌표계에서 표현 할 수 있다. 즉
+
+$$
+\begin{aligned}
+\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{1}{r^{l+1}} \int_V (r')^l {Y_{l}^m}^\ast (\theta,\, \varphi) Y_l^m (\theta,\, \varphi) 
+\end{aligned}
+$$
+
+
 
 
 

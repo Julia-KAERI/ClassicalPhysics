@@ -473,7 +473,7 @@ W = -\int_{P_1}^{P_2} \boldsymbol{F \cdot} d\boldsymbol{s} = -\int_{P_1}^{P_2} q
 <div id="fig-EM_electrosttics_potential_uniform_sphere" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_electrosttics_potential_uniform_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/electrostatics_potential_uniform_sphere/electrostatics_potential_uniform_sphere.png" class="img-fluid figure-img" width="450">
+<img src="images/electrostatics/electrostatics_potential_uniform_sphere/electrostatics_potential_uniform_sphere.png" class="img-fluid figure-img" width="450">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_electrosttics_potential_uniform_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;8.1: 균일한 전하 밀도를 가진 구에서의 전위차
@@ -606,10 +606,10 @@ R_l(r) = a_l r^{l+1} + b_l r^{-l}
 <p><span id="eq-EM_generator_of_legendre_polymonals"><span class="math display">\[
 \dfrac{1}{\sqrt{1-2xt + t^2}} = \sum_{n=0}^\infty P_n (x) t^n.
 \tag{8.11}\]</span></span></p>
-<p>두 벡터 <span class="math inline">\(\boldsymbol{r}_&gt;\, \boldsymbol{r}_&lt;\)</span> 이 <span class="math inline">\(\|\boldsymbol{r}_&gt;\| &gt; \|\boldsymbol{r}_&lt;\|\)</span> 라고 하자. <span class="math inline">\(t=\dfrac{\|\boldsymbol{r}_&lt;\|}{\|\boldsymbol{r}_&gt;\|}\)</span> 에 대해</p>
+<p>두 벡터 <span class="math inline">\(\boldsymbol{r}_&gt;,\, \boldsymbol{r}_&lt;\)</span> 이 <span class="math inline">\(r_&gt; &gt; r_&lt;\)</span> 라고 하자. <span class="math inline">\(t=\dfrac{r_&lt;}{r_&gt;}\)</span> 에 대해</p>
 <p><span id="eq-EM_legendre_expansion"><span class="math display">\[
 \begin{aligned}
-\dfrac{1}{\|\boldsymbol{r}_&gt;-\boldsymbol{r}_&lt;\|} &amp;=  \dfrac{1}{\|\boldsymbol{r}_&gt;\|} \dfrac{1}{\sqrt{1-2\cos \theta t+t^2}} = \dfrac{1}{\|\boldsymbol{r}_&gt;\|}\sum_{n=0}^\infty \left(\dfrac{\|\boldsymbol{r}_&lt;\|}{\|\boldsymbol{r}_&gt;\|}\right)^n P_n (\cos \theta)
+\dfrac{1}{\|\boldsymbol{r}_&gt;-\boldsymbol{r}_&lt;\|} &amp;=  \dfrac{1}{r_&gt;} \dfrac{1}{\sqrt{1-2\cos \theta t+t^2}} = \dfrac{1}{r_&gt;}\sum_{n=0}^\infty \left(\dfrac{r_&lt;}{r_&gt;}\right)^n P_n (\cos \theta)
 \end{aligned}
 \tag{8.12}\]</span></span></p>
 <p>이다.</p>
@@ -743,14 +743,15 @@ Y_3^{3}(\theta,\, \varphi) &amp;= \sqrt{\dfrac{7}{2880\pi}} 15 \sin^3 \theta \,e
 </section>
 <section id="르장드르-다항식과-구면조화함수-1" class="level3" data-number="8.2.4">
 <h3 data-number="8.2.4" class="anchored" data-anchor-id="르장드르-다항식과-구면조화함수-1"><span class="header-section-number">8.2.4</span> 르장드르 다항식과 구면조화함수</h3>
-<p>두 위치 벡터 <span class="math inline">\(\boldsymbol{r},\, \boldsymbol{r}'\)</span> 이 구면좌표계에서 각각 <span class="math inline">\((r,\, \theta,\, \varphi),\, (r',\, \theta',\, \varphi')\)</span> 로 표현된다고 하자. <span class="math inline">\(\boldsymbol{r}'\)</span> 과 <span class="math inline">\(\boldsymbol{r}'\)</span> 사이의 각이 <span class="math inline">\(\gamma\)</span> 일 때</p>
+<p>두 위치 벡터 <span class="math inline">\(\boldsymbol{r},\, \boldsymbol{r}'\)</span> 이 구면좌표계에서 각각 <span class="math inline">\((r,\, \theta,\, \varphi),\, (r',\, \theta',\, \varphi')\)</span> 로 표현된다고 하자. <span class="math inline">\(\boldsymbol{r}\)</span> 과 <span class="math inline">\(\boldsymbol{r}'\)</span> 사이의 각이 <span class="math inline">\(\gamma\)</span> 일 때</p>
 <p><span id="eq-EM_addition_theorem_for_spherical_harmonics"><span class="math display">\[
 P_l(\cos\gamma) = \dfrac{4\pi}{2l+1} \sum_{m=-l}^l {Y_l^m}^\ast(\theta,\,\varphi') Y_l^m(\theta,\, \varphi)
 \tag{8.23}\]</span></span></p>
 <p>임을 보일 수 있다. 그렇다면 <a href="#eq-EM_legendre_expansion" class="quarto-xref">식&nbsp;<span>8.12</span></a> 로부터</p>
 <p><span id="eq-EM_spherical_haromics_expansion_of_inverse_vector_difference"><span class="math display">\[
-\dfrac{1}{\|\boldsymbol{r}_&gt; - \boldsymbol{r}_&lt;\|} = \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1} \left(\dfrac{\|\boldsymbol{r}_&lt;\|^l}{\|\boldsymbol{r}_&gt;\|^{l+1}}\right) {Y_l^m}^\ast(\theta,\,\varphi') Y_l^m(\theta,\, \varphi)
+\dfrac{1}{\|\boldsymbol{r}_&gt; - \boldsymbol{r}_&lt;\|} = \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1} \left(\dfrac{r_&lt;^l}{r_&gt;^{l+1}}\right) {Y_l^m}^\ast(\theta,\,\varphi') Y_l^m(\theta,\, \varphi)
 \tag{8.24}\]</span></span></p>
+<p>이다.</p>
 <p><br></p>
 </section>
 </section>
@@ -776,35 +777,45 @@ P_l(\cos\gamma) = \dfrac{4\pi}{2l+1} \sum_{m=-l}^l {Y_l^m}^\ast(\theta,\,\varphi
 &amp;= \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{d\cos\theta}{r^2} + \dfrac{d^3(5\cos^3\theta - 3\cos \theta) }{8r^4} + \cdots \right] \approx\dfrac{1}{4\pi\epsilon_0} \dfrac{qd\cos\theta}{r^2}
 \end{aligned}
 \tag{8.25}\]</span></span></p>
-<p>위의 경우는 총 전하량이 <span class="math inline">\(0\)</span> 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 <span class="math inline">\(\|\boldsymbol{r}\|^{-2}\)</span> 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 <span class="math inline">\(0\)</span> 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다. <a href="#eq-EM_electric_potential_dipole_1" class="quarto-xref">식&nbsp;<span>8.25</span></a> 에서 <span class="math inline">\(1/r^2\)</span> 에 비례하는 부분에 대해 전기 쌍극자 모멘트 <span class="math inline">\(\boldsymbol{\mu}\)</span> 를</p>
+<p>위의 경우는 총 전하량이 <span class="math inline">\(0\)</span> 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 <span class="math inline">\(\|\boldsymbol{r}\|^{-2}\)</span> 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 <span class="math inline">\(0\)</span> 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다. <a href="#eq-EM_electric_potential_dipole_1" class="quarto-xref">식&nbsp;<span>8.25</span></a> 에서 <span class="math inline">\(1/r^2\)</span> 에 비례하는 부분에 대해 <strong>전기 쌍극자 모멘트(electric dipole moment)</strong> <span class="math inline">\(\boldsymbol{p}\)</span> 를</p>
 <p><span id="eq-EM_electric_dipole_moment"><span class="math display">\[
-\boldsymbol{\mu}:=q\boldsymbol{d}
+\boldsymbol{p}:=q\boldsymbol{d}
 \tag{8.26}\]</span></span></p>
 <p>로 정의하면 전기 쌍극자 모멘트에 의한 전기 포텐셜 <span class="math inline">\(\phi_d(\boldsymbol{r})\)</span> 은 다음과 같다. <span id="eq-EM_electric_potential_dipole_2"><span class="math display">\[
-\phi_d (\boldsymbol{r})= \dfrac{1}{4\pi\epsilon_0} \dfrac{\boldsymbol{\mu\cdot r}}{r^3}
+\phi_d (\boldsymbol{r})= \dfrac{1}{4\pi\epsilon_0} \dfrac{\boldsymbol{p\cdot r}}{r^3}
 \tag{8.27}\]</span></span></p>
 <p><br></p>
 </section>
 <section id="다중극-전개" class="level3" data-number="8.3.2">
 <h3 data-number="8.3.2" class="anchored" data-anchor-id="다중극-전개"><span class="header-section-number">8.3.2</span> 다중극 전개</h3>
-<p><span class="math inline">\(\|\boldsymbol{r}_&gt;\| &gt; \|\boldsymbol{r}_&lt;\|\)</span> 일 때 <span class="math inline">\(k\)</span> 차 르장드르 다항식 <span class="math inline">\(P_k\)</span> 와 <span class="math inline">\(\boldsymbol{r}_&gt;\)</span> 와 <span class="math inline">\(\boldsymbol{r}_&lt;\)</span> 가 이루는 각 <span class="math inline">\(\theta\)</span> 에 대해 다음이 성립한다.</p>
-<p><span id="eq-EM_legendre_expansion_x"><span class="math display">\[
-\dfrac{1}{\|\boldsymbol{r}_&gt;-\boldsymbol{r}_&lt;\|} = \dfrac{1}{\|\boldsymbol{r}_&gt;\|} \sum_{k=0}^\infty \left(\dfrac{\|\boldsymbol{r}_&lt;\|}{\|\boldsymbol{r}_&gt;\|}\right)^k P_k (\cos \theta)
-\tag{8.28}\]</span></span></p>
-<p>그렇다면 <a href="#eq-EM_electric_potential" class="quarto-xref">식&nbsp;<span>8.7</span></a> 에서 정해진 원점과 가능한 전하 분포 <span class="math inline">\(\rho(\boldsymbol{r}')\)</span> 에 대해 <span class="math inline">\(\|\boldsymbol{r}\| &gt; \|\boldsymbol{r}'\|\)</span> 일 때,</p>
+<p><a href="#eq-EM_legendre_expansion" class="quarto-xref">식&nbsp;<span>8.12</span></a> 를 사용하여 전하 분포 <span class="math inline">\(\rho(\boldsymbol{r}')\)</span> 에 대해 <span class="math inline">\(\|\boldsymbol{r}\| &gt; \|\boldsymbol{r}'\|\)</span> 일 때의 전기 포텐셜을 계산하면</p>
 <p><span class="math display">\[
 \begin{aligned}
 \phi(\boldsymbol{r}) &amp;=\dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\,d^3\boldsymbol{r}' \\[0.3em]
 &amp;= \dfrac{1}{4\pi\epsilon_0}\sum_{k=0}^\infty \dfrac{1}{\|\boldsymbol{r}\|^{k+1}} \int_V \|\boldsymbol{r}'\|^k P_k(\cos\theta')\,\rho(\boldsymbol{r}')\,d^3\boldsymbol{r'} \\[0.3em]
+&amp;= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{1}{r}\int_V \rho(\boldsymbol{r}')\, d^3\boldsymbol{r}' + \dfrac{1}{r^2}\int_V r'\cos \gamma \, \rho(\boldsymbol{r}')\,d^3\boldsymbol{r}'  \right.\\[0.3em]
+&amp;\qquad \qquad + \left.\int_V r'^2\left(\dfrac{3}{2}\cos^2 \gamma' - \dfrac{1}{2}\right)\rho(\boldsymbol{r}') \, d^3\boldsymbol{r}' + \cdots \right]
 \end{aligned}
 \]</span></p>
-<p>이다. 즉,</p>
-<p><span id="eq-EM_multiple_expansion"><span class="math display">\[
-\phi(\boldsymbol{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Q_k}{\|\boldsymbol{r}\|^{k+1}},\qquad \text{where }Q_k = \int_V \|\boldsymbol{r}'\|^k P_k(\cos\theta')\,\rho(\boldsymbol{r}')\,d^3\boldsymbol{r'}
+<p>이다. 즉, 다중극 모멘트 <span class="math inline">\(Q_k\)</span></p>
+<p><span id="eq-EM_electric_multipole_moment"><span class="math display">\[
+Q_k := \int_V (r')^k P_k(\cos\gamma)\,\rho(\boldsymbol{r}')\,d^3\boldsymbol{r'}
+\tag{8.28}\]</span></span></p>
+<p>에 대해 전기 포텐셜을 다음과 같이 쓸 수 있다. <span id="eq-EM_multipole_expansion"><span class="math display">\[
+\phi(\boldsymbol{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Q_k}{r^{k+1}}
 \tag{8.29}\]</span></span></p>
-<p>이다.</p>
+<p>여기서 전기 쌍극자 모먼트 <span class="math inline">\(Q_1\)</span> 은</p>
+<p><span class="math display">\[
+Q_1 = \int_V r' \cos \gamma \rho(\boldsymbol{r}')\, d^3\boldsymbol{r}'
+\]</span></p>
+<p>이며 <a href="#fig-EM_electric_dipole" class="quarto-xref">그림&nbsp;<span>8.2</span></a> 의 전하 분포 <span class="math inline">\(\rho(\boldsymbol{r}') = q\delta(\boldsymbol{r}'-\boldsymbol{d}/2) -q\delta(\boldsymbol{r}'+\boldsymbol{d}/2)\)</span> 및 <span class="math inline">\(\boldsymbol{p}= q\boldsymbol{d}\)</span> 를 대입하면 <span class="math inline">\(Q_1 = qd\cos \gamma\)</span> 이고 <a href="#eq-EM_electric_potential_dipole_2" class="quarto-xref">식&nbsp;<span>8.27</span></a> 의 결과를 얻는다.</p>
 <p><br></p>
-<p><span class="math inline">\(\rho(\boldsymbol{r'})=q\delta(\boldsymbol{r}')\)</span> 이라면, 즉 점전하라면</p>
+<p>르장드르 다항식을 이용한 다중극 전개는 위치 벡터 <span class="math inline">\(\boldsymbol{r}\)</span> 을 중심으로 전개하지만 <a href="#eq-EM_spherical_haromics_expansion_of_inverse_vector_difference" class="quarto-xref">식&nbsp;<span>8.24</span></a> 를 이용하여 구면조화함수를 사용하면 정해진 좌표계에서 표현 할 수 있다. 즉</p>
+<p><span class="math display">\[
+\begin{aligned}
+\phi(\boldsymbol{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{1}{r^{l+1}} \int_V (r')^l {Y_{l}^m}^\ast (\theta,\, \varphi) Y_l^m (\theta,\, \varphi)
+\end{aligned}
+\]</span></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
