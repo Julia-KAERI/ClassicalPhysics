@@ -48,7 +48,7 @@ $\phi(x,\,t)$ 의 속도는 $c$ 이며 이것은 좌표계에 무관하다. 좌�
 
 두 좌표계 $\Sigma,\, \Sigma'$ 을 아래의 그림과 같이 생각하자. $\Sigma'$ 은 $\Sigma$ 에 대해 $\boldsymbol{V} = V\hat{\boldsymbol{e}}_1$ 의 일정한 속도로 움직인다. [$\Sigma, \Sigma',\, \mathcal{O},\, \mathcal{O}',\, V$ 는 특별한 설명 없이 앞으로도 계속 이 의미로 사용하겠다.]{.aside}
 
-![상대성 이론의 두 좌표계](../images/relativity/reference_frame/reference_frame.png){#fig-reference_frames_in_relativity width="60%"}
+![상대성 이론의 두 좌표계](images/reference_frame.png){#fig-RT_reference_frames_in_relativity width="60%"}
 
 위의 그림과 같이 두 좌표계에 대해 $\boldsymbol{r} = \boldsymbol{r}' + \boldsymbol{V}t$ 이며 $\boldsymbol{V} = V\hat{\boldsymbol{e}}_1$ 인 시스템을 생각하자. $\boldsymbol{r} = (x, y, z)$, $\boldsymbol{r}'=(x', y', z')$ 이며 각 좌표계의 시간을 $t,\,t'$ 이라고 하자.
 
@@ -56,17 +56,17 @@ $\phi(x,\,t)$ 의 속도는 $c$ 이며 이것은 좌표계에 무관하다. 좌�
 
 $$
 x=\gamma x' + \zeta t',\qquad x' = \gamma' x + \zeta' t ,\qquad y=y',\qquad z=z'
-$$ {#eq-lorentz_eq_1}
+$$ {#eq-RT_lorentz_eq_1}
 
-여기서 $\gamma,\,\gamma',\,\zeta,\,\zeta'$ 은 좌표, 시간과는 독립적인 파라미터이다. $x'=0$ 일 때 $x=Vt$ 이어야 한다. 따라서 $\zeta' = -\gamma' V$ 이다. 또한 $x=0$ 일 때 $x'=-Vt'$ 이므로 $\zeta = V\gamma$ 이며 이로부터 @eq-lorentz_eq_1 은 다음과 같이 변화한다.
+여기서 $\gamma,\,\gamma',\,\zeta,\,\zeta'$ 은 좌표, 시간과는 독립적인 파라미터이다. $x'=0$ 일 때 $x=Vt$ 이어야 한다. 따라서 $\zeta' = -\gamma' V$ 이다. 또한 $x=0$ 일 때 $x'=-Vt'$ 이므로 $\zeta = V\gamma$ 이며 이로부터 @eq-RT_lorentz_eq_1 은 다음과 같이 변화한다.
 
 $$
 x=\gamma(x'+Vt'),\qquad x'=\gamma'(x-Vt),\qquad y=y',\qquad z=z'
-$$ {#eq-relativity_pre_lorentz_eq_2}
+$$ {#eq-RT_pre_lorentz_eq_2}
 
 이제 $\Sigma$ 의 원점에 시계 $C$ 이, $\Sigma'$ 의 원점에 시계 $C'$ 가 있다고 하자. $C$ 는 $t$ 를 $C'$ 은 $t'$ 을 측정한다. $t=1$ 일 때 $\mathcal{O}$ 의 $\Sigma'$ 에서의 위치는 $-\gamma' V$ 이어야 한다. $t'=1$ 일 때 $\mathcal{O}'$ 의 $\Sigma$ 에서의 위치는 $\gamma V$ 이어야 한다. 우리는 $\Sigma$ 와 $\Sigma'$ 의 차이는 하나가 다른 하나에 대해 일정한 속도로 움직이는 것 밖에 없다는 것을 안다. 따라서 상대론의 첫번째 기본 가정에 의해 $\gamma = \gamma'$ 이어야 한다는 것을 안다.
 
-자 이제 상대론의 두번째 기본 가정이 등장할 때다. $t=t'=0$ 일 때 $\mathcal{O}$ 와 $\mathcal{O'}$ 이 일치하며, 빛이 $+x$ 방향으로 방출되었다고 하자. 그렇다면 $\Sigma$ 에서의 빛의 위치는 $x=ct$ 이며 $\Sigma'$ 에서의 빛의 위치는 $x'=ct'$ 이어야 한다. 이제 $\gamma=\gamma'$ 과 @eq-relativity_pre_lorentz_eq_2 로부터 다음 식을 얻는다. 
+자 이제 상대론의 두번째 기본 가정이 등장할 때다. $t=t'=0$ 일 때 $\mathcal{O}$ 와 $\mathcal{O'}$ 이 일치하며, 빛이 $+x$ 방향으로 방출되었다고 하자. 그렇다면 $\Sigma$ 에서의 빛의 위치는 $x=ct$ 이며 $\Sigma'$ 에서의 빛의 위치는 $x'=ct'$ 이어야 한다. 이제 $\gamma=\gamma'$ 과 @eq-RT_pre_lorentz_eq_2 로부터 다음 식을 얻는다. 
 
 $$
 ct = \gamma (c+V)t',\qquad ct' = \gamma (c-V)t
@@ -76,7 +76,7 @@ $$
 
 $$
 x = \gamma (x'+\beta c t'),\qquad y=y',\qquad z=z',\qquad ct = \gamma (ct' + \beta x')
-$$ {#eq-relativity_lorentz_eq_3}
+$$ {#eq-RT_lorentz_eq_3}
 
 을 얻는다. 이렇게 $\Sigma$ 에서 $\Sigma'$ 좌표계로 변환하는 것을 **로런츠 변환(Lorentz transformation)** 혹은 **로런츠 부스트(Lorentz boost)** 라고 한다.
 
@@ -104,13 +104,13 @@ $$
 이제 로런츠 변환이 의미하는 바를 이해해보자. 우선 시공간 속을 움직이는 관측자의 경로를 **세계선 (world line)** 이라고 하자. 그리고 상황을 단순하게 하기 위해 3차원을 1차원으로 축약하여 시공간을 $x-t$ 좌표계에서 그리도록 하자. 
 $\Sigma$ 좌표계에 대해 $x$ 축으로 $v$ 의 속도로 움직이는 관측자의 세계선은 아래 그림과 같다.
 
-![세계선](../images/relativity/worldline/worldline.png){#fig-world_line_1 width=40%}
+![세계선](images/worldline.png){#fig-RT_world_line_1 width=40%}
 
 </br>
 
 이제 세계의 좌표계 $\Sigma,\, \Sigma_1,\, \Sigma_2,\, \Sigma_3$ 와 각 좌표계의 원점 $\mathcal{O},\, \mathcal{O}_1,\, \mathcal{O}_2,\, \mathcal{O}_3$ 을 생각하자. $\Sigma_1,\,\Sigma_2,\, \Sigma_3$ 는 $\Sigma$ 에 대해 모두 $V$ 의 속도로 움직이며, $t=0$ 일 때 $\mathcal{O}_1,\,\mathcal{O}_2,\,\mathcal{O}_3$ 의 위치는 각각 $0,\, L,\, 2L$ 이었다고 하자. 이제 $\mathcal{O}_1$ 과 $\mathcal{O}_3$ 에서 각각 $\mathcal{O}_2$ 의 방향으로 빛을 쏘았다고 하자. $\mathcal{O}_2$ 의 입장에서는 당연히 $\mathcal{O}_1$ 과 $\mathcal{O}_3$ 에서 같은 시간에 빛을 쏘아야 두 빛이 동시에 $\mathcal{O}_2$ 에 도착한다. 그렇다면 $\mathcal{O}$ 의 입장에서도 그러할까? 아래 그림을 보자. 아래 그림은 $\Sigma$ 에서의 세계선이다.
 
-![$\Sigma$ 에서의 세계선](../images/relativity/worldline_for_multyframe/wordline_for_multyframe.png){#fig-world_line_2 width=60%}
+![$\Sigma$ 에서의 세계선](images/wordline_for_multyframe.png){#fig-RT_world_line_2 width=60%}
 
 그렇다면 $\Sigma$ 에서 보았을 때에 $\mathcal{O}_2$ 에 동시에 빛이 도달하기 위해서는 그림과 같이 $\mathcal{O}_1$ 에서 $t=0$ 에 빛이 방출될 경우 $\mathcal{O}_3$ 에서는 $t_\ast >0$ 에 빛이 방출되어야 한다. 즉 $\Sigma$ 와 $\Sigma_2$ 에서의 동시성은 일치하지 않는다. 
 
@@ -119,9 +119,9 @@ $\Sigma$ 좌표계에 대해 $x$ 축으로 $v$ 의 속도로 움직이는 관측
 
 ### 시공간 도표
 
-자 이제 점점 재미있는 주제로 들어간다. 앞서 정지 좌표계 $\Sigma$ 에 대해 움직이는 좌표계 $\Sigma'$ 의 원점 $\mathcal{O}'$ 의 위치를 세계선으로 표현했다. 이 세계선의 위치는 로런츠 변환에서 $x'=0$ 을 $\Sigma$ 좌표계에서의 $t-x$ 공간에서 표한한 것이다. 이제 $t'=0$ 은 $x'$ 축이므로 다음과 같이 표현 할 수 있을 것이다. @eq-relativity_lorentz_eq_3 로부터 $t'$, (즉 $x'=0$)  은 $t= \dfrac{1}{c\beta}x$ 으로 표현되며, $x'$ (즉 $t'=0$) 은 $t=\dfrac{\beta}{c}x$ 로 표현됨을 안다. 
+자 이제 점점 재미있는 주제로 들어간다. 앞서 정지 좌표계 $\Sigma$ 에 대해 움직이는 좌표계 $\Sigma'$ 의 원점 $\mathcal{O}'$ 의 위치를 세계선으로 표현했다. 이 세계선의 위치는 로런츠 변환에서 $x'=0$ 을 $\Sigma$ 좌표계에서의 $t-x$ 공간에서 표한한 것이다. 이제 $t'=0$ 은 $x'$ 축이므로 다음과 같이 표현 할 수 있을 것이다. @eq-RT_lorentz_eq_3 로부터 $t'$, (즉 $x'=0$)  은 $t= \dfrac{1}{c\beta}x$ 으로 표현되며, $x'$ (즉 $t'=0$) 은 $t=\dfrac{\beta}{c}x$ 로 표현됨을 안다. 
 
-![세계선](../images/relativity/simultaneity_1/simultaneity_1.png){#fig-world_line_3 width=40%}
+![세계선](images/simultaneity_1.png){#fig-RT_world_line_3 width=40%}
 
 </br>
 
@@ -129,31 +129,33 @@ $\Sigma$ 좌표계에 대해 $x$ 축으로 $v$ 의 속도로 움직이는 관측
 
 길이 $L$ 인 막대기가 $x$ 축상에 놓여 있다고 하자. 편의상 한 끝점을 $\mathcal{O}$ 에 다른 끝점을 $x=L$ 에 놓을 수 있다. 이제 막대기의 양 끝의 세계선은 $\Sigma$ 좌표계에서 $x=0$ 과 $x=L$ 이다. 이제 움직이는 좌표계 $\Sigma'$ 에서 생각하자.
 
-![$\Sigma'$ 에서의 길이 수축](../images/relativity/length_contraction/length_contration.png){#fig-lorentz_contration width=300}
+![$\Sigma'$ 에서의 길이 수축](images/length_contration.png){#fig-RT_lorentz_contration width=300}
 
 즉 $\Sigma'$ 에서의 길이는 $\overline{\mathcal{O}'L'}$ 이며 이것은 로런츠 변환에서 $L'=L/\gamma < L$ 로 나타난다. 이를 길이 수축이라고 한다. 
 
 이제 길이 $L$ 인 막대기가 $\Sigma'$ 좌표계에서 $x=0,\, x=L'$ 에 놓여 있다고 하자. 그리고 이 막대기의 양 끝점의 세계선을 그리면 아래 그림과 같다. 
 
-![$\Sigma$ 에서의 길이 수축](../images/relativity/length_contraction2/length_contration2.png){#fig-lorentz_contration width=300}
+![$\Sigma$ 에서의 길이 수축](images/length_contration2.png){#fig-RT_lorentz_contration width=300}
 
 역시 로런츠 변환을 통해 $L=L'/\gamma < L'$ 이 된다. 즉 길이 수축은 움직이는 물체는 움직이는 방향으로 길이가 짧아진다는 의미이다. 
 
 </br>
 
-::: {#exm-relativity_invariance_of_transverse_length}
+::: {#exm-RT_invariance_of_transverse_length}
 
 $\Sigma$ 좌표계에서 $x$ 방향이 아닌 $y$ 방향으로 길이 $L$ 인 막대기가 놓여 있을 때는 $\Sigma'$ 좌표계에서 봤을 때 그 길이가 변하지 않는다는 것을 로런츠 변환을 통해 확인 할 수 있다. $\Sigma$ 좌표계에서의 $x^2+y^2=R^2$ 인 원은 $\Sigma'$ 좌표계에서 $x'^2/\gamma^2 + y'^2 = R^2$ 이 되므로 타원이 된다.
 
 
 :::
 
+</br>
+
 ### 시간 지연
 
 
 이제 $t$ 와 $t'$ 사이의 관계 역시 $\mathcal{O}$ 와 $\mathcal{O}^\prime$ 에 대한 로런츠 변환식으로 부터 얻을 수 있다. 
  
-![시간 지연](../images/relativity/time_dilation/time_dilation.png){#fig-time_dialition width=300}
+![시간 지연](images/time_dilation.png){#fig-RT_time_dialition width=300}
 
 $t'=1$ 일 때의 $t=\gamma t' > t'$ 이다. 즉 움직이는 시계는 정지한 시계보다 느리게 간다. 이것을 **시간 지연 (time dilation)** 이라고 한다.
 
@@ -161,7 +163,7 @@ $t'=1$ 일 때의 $t=\gamma t' > t'$ 이다. 즉 움직이는 시계는 정지�
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exr-helliwell_2_5}
+::: {#exr-RT_helliwell_2_5}
 
 $\Sigma'$ 좌표계가 $\Sigma$ 좌표계에 대해 $12c/13$ 의 속도로 움직인다고 하자. 동기화된 시계 $C_1,\,C_2$ 가 $\Sigma$ 좌푝계에 5 광분(light meter) 떨어져 위치해 있다. ($a$) $\Sigma'$ 의 원점에 위치한 시계 $C'$ 가 $C_1$ 위치를 지나 $C_2$ 방향으로 움직인다고 하자. 이 때 $t=t'=0$ 이었다면 $C'$ 이 $B$ 를 지날 때 $C'$ 의 시간은 얼마인가? ($b$) $\Sigma'$ 에서의 $C_1$ 과 $C_2$ 의 거리는 얼마인가? ($c$) $C'$ 이 $B$ 를 지날 때 $C_2$ 의 시간은 얼마인가?
 
@@ -188,7 +190,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exr-helliwell_2_10}
+::: {#exr-RT_helliwell_2_10}
 
 우주로부터 오는 고에너지 양성자가 지구 대기 상부의 공기를 이루는 원자의 핵과 충돌하여 다양한 입자들을 아래로 방출하는데 여기에는 $\pi^+,\, \pi^-,\, \pi^0$ 의 파이온 입자가 포함되어 있다. 전하가 있는 파이온 입자($\pi^+,\, \pi^-$) 는 다음과 같이 뮤온과 중성미자로 붕괴한다.
 
@@ -232,7 +234,7 @@ $$
 
 여기에 틈은 속도를 $\boldsymbol{V}$ 에서 $-\boldsymbol{V}$ 로 바꾸는 순간에 있을 수 밖에 없다. 이 순간을 제외하면 모든 것이 대칭적이기 때문이다. 이제 속도를 바꾸지 않는 $E$ 의 입장에서 보자. $E$ 와 $S$ 가 같은 시간을 가리키도록 안내선을 그어보자.  
 
-![쌍동이의 역설](../images/relativity/twin_paradox/twin_paradox.png){#fig-twin-paradox width=250}
+![쌍동이의 역설](images/twin_paradox.png){#fig-RT_twin-paradox width=250}
 
 그림에서 보다시피 경로를 $P_1$ 에서 $P_2$ 로 옮기는 순간 $\Sigma$ 에서 엄청난 시간 변화가 일어난다. 이것은 실제로 가속운동을 따르는 일반상대성 이론에서 정확히 다룰 수 있지만, 특수상대성 이론만으로도 우주선을 타고 왕복한 $B$ 에서 흐른 시간이 짧다는 것을 알 수 있다.
 
@@ -267,9 +269,9 @@ $$
 
 :::
 
-영희는 헛간에 앉아 있으며 ($\Sigma$ 좌표계) 철수가 10 m 짜리 장대를 들고 헛간에 대해 $3c/5$ 의 속도로 달리고 있다고 하자 ($\Sigma'$ 좌표계). 헛간에는 자동으로 접근을 인지하는 장치가 달려 있어 다가오면 열리고 나가면 닫힌다고 하자. 아래 @fig-relativity_pole_and_barn_paradox 에서 녹색 막대는 각각의 좌표계에서의 장대이며, 오렌지색 그림은 헛간의 길이이다. 
+영희는 헛간에 앉아 있으며 ($\Sigma$ 좌표계) 철수가 10 m 짜리 장대를 들고 헛간에 대해 $3c/5$ 의 속도로 달리고 있다고 하자 ($\Sigma'$ 좌표계). 헛간에는 자동으로 접근을 인지하는 장치가 달려 있어 다가오면 열리고 나가면 닫힌다고 하자. 아래 @fig-RT_pole_and_barn_paradox 에서 녹색 막대는 각각의 좌표계에서의 장대이며, 오렌지색 그림은 헛간의 길이이다. 
 
-![두 관성계에서 본 장대와 헛간](../images/relativity/pole_and_barn/pole_and_barn.png){#fig-relativity_pole_and_barn_paradox width=500}
+![두 관성계에서 본 장대와 헛간](images/pole_and_barn.png){#fig-RT_pole_and_barn_paradox width=500}
 
 
 $t=t'=0$ 에서 장대가 헛간의 뒷문을 통과한다고 하자. $\Sigma$ 좌표계에서 는 $t_1$ 의 시간에 동시적으로 장대가 헛간에 들어와 있다. 그러나 $\Sigma'$ 좌표계에서는 장대의 앞부분이 헛간의 앞문을 지나는 시간($t_1'$) 과 장대의 뒷부분이 헛간의 뒷문을 지나는 시간($t_2'$) 이 다르다. 
@@ -279,16 +281,16 @@ $t=t'=0$ 에서 장대가 헛간의 뒷문을 통과한다고 하자. $\Sigma$ �
 
 ### 민코프스키 광원뿔
 
-![민코프스키 광원뿔 (출처 : Wikipedia)](https://upload.wikimedia.org/wikipedia/commons/9/90/World_line2.svg){#fig-mincowsky_light_cone width=70%}
+![민코프스키 광원뿔 (출처 : Wikipedia)](https://upload.wikimedia.org/wikipedia/commons/9/90/World_line2.svg){#fig-RT_mincowsky_light_cone width=70%}
 
 상대성이론에서 시공간이라는 개념을 정립하고 완성한 사람은 [헤르만 민코프스키](https://en.wikipedia.org/wiki/Hermann_Minkowski) 이다. 위의 그림에서 future light cone 은 관찰자(observer) 위치에서 빛이 발생되었을 때 빛이 갈 수 있는 시공간상의 가능한 경로이다. past light cone 은 $t=0$ 에 관찰자의 위치에 도달할 수 있있는 빛의 과거의 시공간상의 경로이다. 광속 불변에 의해 이 경로는 시공간상의 원뿔의 표면에 위치할 수 밖에 없다. 
 
 
 </br>
 
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+### 연습문제 {.unnumbered}
 
-### 연습문제
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exr-helliwell_2_6}
 
@@ -338,7 +340,7 @@ $$
 
 ::: {.callout-note appearance="minimal" icon="false"}
 
-::: {#def-4vector}
+::: {#def-RT_4vector}
 
 #### 시공간의 위치에 대한 4-벡터
 
@@ -351,23 +353,23 @@ $$
 
 </br>
 
-이 4 벡터에 대한 로런츠 변환을 나타내는 로런츠 변환 행렬은 다음과 같이 정의된다.(@eq-relativity_lorentz_eq_3)
+이 4 벡터에 대한 로런츠 변환을 나타내는 로런츠 변환 행렬은 다음과 같이 정의된다.(@eq-RT_lorentz_eq_3)
 
 $$
 \boldsymbol{\Lambda} = \begin{bmatrix} \gamma & \gamma\beta & 0 & 0 \\ \gamma\beta & \gamma & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix} .
-$$ {#eq-relativity_lorentz_transform_matrix}
+$$ {#eq-RT_lorentz_transform_matrix}
 
 $\gamma^2 - \gamma^2\beta^2 = 1/(1-\beta^2) - \beta^2/(1-\beta^2)=1$ 이므로 $\cosh(\xi) = \gamma,\, \sinh(\xi)=\gamma \beta$ 로 놓고 아래와 같이 표현 할 수 있다.
 
 $$
 \boldsymbol{\Lambda} = \begin{bmatrix} \cosh \xi & \sinh \xi & 0 & 0 \\ \sinh \xi & \cosh\xi & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix} .
-$$ {#eq-relativity_lorentz_transform_matrix_2}
+$$ {#eq-RT_lorentz_transform_matrix_2}
 
 이제 로런츠 변환을 다음과 같이 표현 할 수 있다.
 
 $$
 X = \boldsymbol{\Lambda}X'
-$$ {#eq-relativity_lorentz_transform_1}
+$$ {#eq-RT_lorentz_transform_1}
 
 
 시간과 공간에서의 미소변화를 각각 $dt,\,dx,\,dy,\,dz$ 라고 했을 때 $X$ 의 미소변화(infinitesimal displacement) $dX$ 는 다음과 같이 쓸 수 있다.
@@ -433,7 +435,7 @@ $$
 ds^2 = dX^\mu \eta_{\mu \nu}dX^\nu
 $$
 
-로 쓸 수 있다. @eq-relativity_lorentz_transform_1 을 4-벡터와 4-텐서로 나타내면
+로 쓸 수 있다. @eq-RT_lorentz_transform_1 을 4-벡터와 4-텐서로 나타내면
 
 $$
 dX^\mu = \Lambda^\mu_\nu dX'^\nu
@@ -445,7 +447,7 @@ $$
 
 ### 속도의 로런츠 변화
 
-@exr-helliwell_2_6 에서 이미 보였던것을 확장한다. @fig-reference_frames_in_relativity 의 $\Sigma,\, \Sigma'$ 좌표계를 생각하자. $\Sigma'$ 이 $\Sigma$ 에 대해 속도 $\boldsymbol{V}=V\hat{\boldsymbol{e}}_1$ 으로 움직일 때 $\Sigma'$ 에서 속도 $\boldsymbol{u}=u\hat{\boldsymbol{e}}_1'$ 으로 움직이는 물체의 속도는 $\Sigma$ 에서 어떻게 측정될 것인가?
+@exr-helliwell_2_6 에서 이미 보였던것을 확장한다. @fig-RT_reference_frames_in_relativity 의 $\Sigma,\, \Sigma'$ 좌표계를 생각하자. $\Sigma'$ 이 $\Sigma$ 에 대해 속도 $\boldsymbol{V}=V\hat{\boldsymbol{e}}_1$ 으로 움직일 때 $\Sigma'$ 에서 속도 $\boldsymbol{u}=u\hat{\boldsymbol{e}}_1'$ 으로 움직이는 물체의 속도는 $\Sigma$ 에서 어떻게 측정될 것인가?
 
 이제 $\Sigma'$ 에 대해 $\boldsymbol{u}=u\hat{\boldsymbol{e}}_1'$ 으로 움직이는 $\Sigma''$ 좌표계를 생각  할 수 있다. $\beta_2 = u/c,\, \gamma_2 = 1/\sqrt{1-{\beta_2}^2}$ 에 대해 
 
@@ -494,7 +496,7 @@ $d\tau$ 가 로런츠 불변량이라는 것을 떠올리자. 4-벡터 $X^\mu$ �
 
 $$
 U^\mu := \dfrac{dX^\mu}{d\tau},\qquad \mu = 0,\,1,\,2,\,3.
-$$ {#eq-relativity_def_4vector}
+$$ {#eq-RT_def_4vector}
 
 
 따라서, 
@@ -528,7 +530,7 @@ $$
 
 $$
 I = -\int_{t_i}^{t_f} mc^2\, d\tau = -\int_{t_i}^{t_f} m c^2\sqrt{1-\dfrac{v^2}{c^2}} \, dt
-$$ {#eq-relativistic_action}
+$$ {#eq-RT_action}
 
 즉 상대론적 라그랑지안은 $-mc^2 \sqrt{1-v^2/c^2}$ 으로 정의된다. 상대론에서 어떤 결과를 얻었을 때 최소한 $v \ll c$ 조건에서 고전역학과 일치하는지를 확인해야 한다. 
 
@@ -547,13 +549,13 @@ $$
 
 $$
 P = (P^0,\, P^1,\, P^2,\,P^3) = mU = \left(\gamma mc,\, \gamma m \dfrac{dx}{dt},\, \gamma m \dfrac{dy}{dt},, \gamma m \dfrac{dz}{dt}\right)
-$$ {#eq-relativity_4_momentum}
+$$ {#eq-RT_4_momentum}
 
 상대론에서의 운동량도 4-벡터이다. 따라서,
 
 $$
 P^\mu \eta_{\mu, \nu}P^\nu = \gamma^2 m^2(c^2-v^2) = m^2c^2
-$$ {#eq-reliativity_invariance_of_4_momentum}
+$$ {#eq-RT_invariance_of_4_momentum}
 
 
 이 된다. 이것의 의미는 잠시 후에 알아보자.
@@ -579,7 +581,7 @@ $$
 
 $$
 P^\mu = \left(\mathcal{E}/c,\, P^1,\, P^2,\, P^3\right)
-$$ {#eq-relativity_4_momentum_2}
+$$ {#eq-RT_4_momentum_2}
 
 로 쓸 수 있다.
 
@@ -597,7 +599,7 @@ $$
 
 $$
 \mathcal{E} = \sqrt{p^2c^2 + m^2c^4}
-$$ {#eq-relativity_relativistic_energy_for_massless_particle}
+$$ {#eq-RT_relativistic_energy_for_massless_particle}
 
 
 을 얻는다. 이로부터 질량이 없는 입자의 에너지는 $\mathcal{E} = cp$ 이다. 

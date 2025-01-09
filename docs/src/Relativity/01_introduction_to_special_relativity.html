@@ -359,7 +359,7 @@ window.Quarto = {
   <li><a href="#쌍둥이의-역설" id="toc-쌍둥이의-역설" class="nav-link" data-scroll-target="#쌍둥이의-역설"><span class="header-section-number">9.2.7</span> 쌍둥이의 역설</a></li>
   <li><a href="#장대와-헛간의-역설" id="toc-장대와-헛간의-역설" class="nav-link" data-scroll-target="#장대와-헛간의-역설"><span class="header-section-number">9.2.8</span> 장대와 헛간의 역설</a></li>
   <li><a href="#민코프스키-광원뿔" id="toc-민코프스키-광원뿔" class="nav-link" data-scroll-target="#민코프스키-광원뿔"><span class="header-section-number">9.2.9</span> 민코프스키 광원뿔</a></li>
-  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제"><span class="header-section-number">9.2.10</span> 연습문제</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
   <li><a href="#상대성-역학" id="toc-상대성-역학" class="nav-link" data-scroll-target="#상대성-역학"><span class="header-section-number">9.3</span> 상대성 역학</a>
   <ul class="collapse">
@@ -428,32 +428,32 @@ window.Quarto = {
 <section id="sec-lelativity_lorentz_transform" class="level3 page-columns page-full" data-number="9.2.1">
 <h3 data-number="9.2.1" class="anchored" data-anchor-id="sec-lelativity_lorentz_transform"><span class="header-section-number">9.2.1</span> 로런츠 변환</h3>
 <div class="page-columns page-full"><p>두 좌표계 <span class="math inline">\(\Sigma,\, \Sigma'\)</span> 을 아래의 그림과 같이 생각하자. <span class="math inline">\(\Sigma'\)</span> 은 <span class="math inline">\(\Sigma\)</span> 에 대해 <span class="math inline">\(\boldsymbol{V} = V\hat{\boldsymbol{e}}_1\)</span> 의 일정한 속도로 움직인다. </p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(\Sigma, \Sigma',\, \mathcal{O},\, \mathcal{O}',\, V\)</span> 는 특별한 설명 없이 앞으로도 계속 이 의미로 사용하겠다.</span></div></div>
-<div id="fig-reference_frames_in_relativity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-RT_reference_frames_in_relativity" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-reference_frames_in_relativity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/relativity/reference_frame/reference_frame.png" class="img-fluid figure-img" style="width:60.0%">
+<div aria-describedby="fig-RT_reference_frames_in_relativity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/reference_frame.png" class="img-fluid figure-img" style="width:60.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-reference_frames_in_relativity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RT_reference_frames_in_relativity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;9.1: 상대성 이론의 두 좌표계
 </figcaption>
 </figure>
 </div>
 <p>위의 그림과 같이 두 좌표계에 대해 <span class="math inline">\(\boldsymbol{r} = \boldsymbol{r}' + \boldsymbol{V}t\)</span> 이며 <span class="math inline">\(\boldsymbol{V} = V\hat{\boldsymbol{e}}_1\)</span> 인 시스템을 생각하자. <span class="math inline">\(\boldsymbol{r} = (x, y, z)\)</span>, <span class="math inline">\(\boldsymbol{r}'=(x', y', z')\)</span> 이며 각 좌표계의 시간을 <span class="math inline">\(t,\,t'\)</span> 이라고 하자.</p>
 <p>뉴튼 역학에서는 <span class="math inline">\(t=t'\)</span> 이며 <span class="math inline">\(x=x'+Vt,\, y=y',\,z=z'\)</span> 을 만족했다. 그러나 이 변환은 무엇보다도 상대론의 기본 가정중에 두번째를 만족하지 않는다. 이제 다른 가정을 해 보자. 일단 <span class="math inline">\((x, y, z, t)\)</span> 와 <span class="math inline">\((x', y', z', t')\)</span> 사이의 선형 변환관계를 생각하자. 이렇게 놓는 다는 것은 일단은 갈릴레이 변환을 제외하고는 가장 간단한 변환이기 때문이다. 이것이 좋은 물리인지는 아직 모른다.</p>
-<p><span id="eq-lorentz_eq_1"><span class="math display">\[
+<p><span id="eq-RT_lorentz_eq_1"><span class="math display">\[
 x=\gamma x' + \zeta t',\qquad x' = \gamma' x + \zeta' t ,\qquad y=y',\qquad z=z'
 \tag{9.2}\]</span></span></p>
-<p>여기서 <span class="math inline">\(\gamma,\,\gamma',\,\zeta,\,\zeta'\)</span> 은 좌표, 시간과는 독립적인 파라미터이다. <span class="math inline">\(x'=0\)</span> 일 때 <span class="math inline">\(x=Vt\)</span> 이어야 한다. 따라서 <span class="math inline">\(\zeta' = -\gamma' V\)</span> 이다. 또한 <span class="math inline">\(x=0\)</span> 일 때 <span class="math inline">\(x'=-Vt'\)</span> 이므로 <span class="math inline">\(\zeta = V\gamma\)</span> 이며 이로부터 <a href="#eq-lorentz_eq_1" class="quarto-xref">식&nbsp;<span>9.2</span></a> 은 다음과 같이 변화한다.</p>
-<p><span id="eq-relativity_pre_lorentz_eq_2"><span class="math display">\[
+<p>여기서 <span class="math inline">\(\gamma,\,\gamma',\,\zeta,\,\zeta'\)</span> 은 좌표, 시간과는 독립적인 파라미터이다. <span class="math inline">\(x'=0\)</span> 일 때 <span class="math inline">\(x=Vt\)</span> 이어야 한다. 따라서 <span class="math inline">\(\zeta' = -\gamma' V\)</span> 이다. 또한 <span class="math inline">\(x=0\)</span> 일 때 <span class="math inline">\(x'=-Vt'\)</span> 이므로 <span class="math inline">\(\zeta = V\gamma\)</span> 이며 이로부터 <a href="#eq-RT_lorentz_eq_1" class="quarto-xref">식&nbsp;<span>9.2</span></a> 은 다음과 같이 변화한다.</p>
+<p><span id="eq-RT_pre_lorentz_eq_2"><span class="math display">\[
 x=\gamma(x'+Vt'),\qquad x'=\gamma'(x-Vt),\qquad y=y',\qquad z=z'
 \tag{9.3}\]</span></span></p>
 <p>이제 <span class="math inline">\(\Sigma\)</span> 의 원점에 시계 <span class="math inline">\(C\)</span> 이, <span class="math inline">\(\Sigma'\)</span> 의 원점에 시계 <span class="math inline">\(C'\)</span> 가 있다고 하자. <span class="math inline">\(C\)</span> 는 <span class="math inline">\(t\)</span> 를 <span class="math inline">\(C'\)</span> 은 <span class="math inline">\(t'\)</span> 을 측정한다. <span class="math inline">\(t=1\)</span> 일 때 <span class="math inline">\(\mathcal{O}\)</span> 의 <span class="math inline">\(\Sigma'\)</span> 에서의 위치는 <span class="math inline">\(-\gamma' V\)</span> 이어야 한다. <span class="math inline">\(t'=1\)</span> 일 때 <span class="math inline">\(\mathcal{O}'\)</span> 의 <span class="math inline">\(\Sigma\)</span> 에서의 위치는 <span class="math inline">\(\gamma V\)</span> 이어야 한다. 우리는 <span class="math inline">\(\Sigma\)</span> 와 <span class="math inline">\(\Sigma'\)</span> 의 차이는 하나가 다른 하나에 대해 일정한 속도로 움직이는 것 밖에 없다는 것을 안다. 따라서 상대론의 첫번째 기본 가정에 의해 <span class="math inline">\(\gamma = \gamma'\)</span> 이어야 한다는 것을 안다.</p>
-<p>자 이제 상대론의 두번째 기본 가정이 등장할 때다. <span class="math inline">\(t=t'=0\)</span> 일 때 <span class="math inline">\(\mathcal{O}\)</span> 와 <span class="math inline">\(\mathcal{O'}\)</span> 이 일치하며, 빛이 <span class="math inline">\(+x\)</span> 방향으로 방출되었다고 하자. 그렇다면 <span class="math inline">\(\Sigma\)</span> 에서의 빛의 위치는 <span class="math inline">\(x=ct\)</span> 이며 <span class="math inline">\(\Sigma'\)</span> 에서의 빛의 위치는 <span class="math inline">\(x'=ct'\)</span> 이어야 한다. 이제 <span class="math inline">\(\gamma=\gamma'\)</span> 과 <a href="#eq-relativity_pre_lorentz_eq_2" class="quarto-xref">식&nbsp;<span>9.3</span></a> 로부터 다음 식을 얻는다.</p>
+<p>자 이제 상대론의 두번째 기본 가정이 등장할 때다. <span class="math inline">\(t=t'=0\)</span> 일 때 <span class="math inline">\(\mathcal{O}\)</span> 와 <span class="math inline">\(\mathcal{O'}\)</span> 이 일치하며, 빛이 <span class="math inline">\(+x\)</span> 방향으로 방출되었다고 하자. 그렇다면 <span class="math inline">\(\Sigma\)</span> 에서의 빛의 위치는 <span class="math inline">\(x=ct\)</span> 이며 <span class="math inline">\(\Sigma'\)</span> 에서의 빛의 위치는 <span class="math inline">\(x'=ct'\)</span> 이어야 한다. 이제 <span class="math inline">\(\gamma=\gamma'\)</span> 과 <a href="#eq-RT_pre_lorentz_eq_2" class="quarto-xref">식&nbsp;<span>9.3</span></a> 로부터 다음 식을 얻는다.</p>
 <p><span class="math display">\[
 ct = \gamma (c+V)t',\qquad ct' = \gamma (c-V)t
 \]</span></p>
 <p>이 식을 연립하여 계산하면, <span class="math inline">\(\beta = \dfrac{V}{c},\,\gamma = \dfrac{1}{\sqrt{1-\beta^2}}\)</span> 에 대해</p>
-<p><span id="eq-relativity_lorentz_eq_3"><span class="math display">\[
+<p><span id="eq-RT_lorentz_eq_3"><span class="math display">\[
 x = \gamma (x'+\beta c t'),\qquad y=y',\qquad z=z',\qquad ct = \gamma (ct' + \beta x')
 \tag{9.4}\]</span></span></p>
 <p>을 얻는다. 이렇게 <span class="math inline">\(\Sigma\)</span> 에서 <span class="math inline">\(\Sigma'\)</span> 좌표계로 변환하는 것을 <strong>로런츠 변환(Lorentz transformation)</strong> 혹은 <strong>로런츠 부스트(Lorentz boost)</strong> 라고 한다.</p>
@@ -476,24 +476,24 @@ x = \gamma (x'+\beta c t'),\qquad y=y',\qquad z=z',\qquad ct = \gamma (ct' + \be
 <section id="세계선과-동시성" class="level3" data-number="9.2.3">
 <h3 data-number="9.2.3" class="anchored" data-anchor-id="세계선과-동시성"><span class="header-section-number">9.2.3</span> 세계선과 동시성</h3>
 <p>이제 로런츠 변환이 의미하는 바를 이해해보자. 우선 시공간 속을 움직이는 관측자의 경로를 <strong>세계선 (world line)</strong> 이라고 하자. 그리고 상황을 단순하게 하기 위해 3차원을 1차원으로 축약하여 시공간을 <span class="math inline">\(x-t\)</span> 좌표계에서 그리도록 하자. <span class="math inline">\(\Sigma\)</span> 좌표계에 대해 <span class="math inline">\(x\)</span> 축으로 <span class="math inline">\(v\)</span> 의 속도로 움직이는 관측자의 세계선은 아래 그림과 같다.</p>
-<div id="fig-world_line_1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-RT_world_line_1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-world_line_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/relativity/worldline/worldline.png" class="img-fluid figure-img" style="width:40.0%">
+<div aria-describedby="fig-RT_world_line_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/worldline.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-world_line_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RT_world_line_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;9.2: 세계선
 </figcaption>
 </figure>
 </div>
 <p><br></p>
 <p>이제 세계의 좌표계 <span class="math inline">\(\Sigma,\, \Sigma_1,\, \Sigma_2,\, \Sigma_3\)</span> 와 각 좌표계의 원점 <span class="math inline">\(\mathcal{O},\, \mathcal{O}_1,\, \mathcal{O}_2,\, \mathcal{O}_3\)</span> 을 생각하자. <span class="math inline">\(\Sigma_1,\,\Sigma_2,\, \Sigma_3\)</span> 는 <span class="math inline">\(\Sigma\)</span> 에 대해 모두 <span class="math inline">\(V\)</span> 의 속도로 움직이며, <span class="math inline">\(t=0\)</span> 일 때 <span class="math inline">\(\mathcal{O}_1,\,\mathcal{O}_2,\,\mathcal{O}_3\)</span> 의 위치는 각각 <span class="math inline">\(0,\, L,\, 2L\)</span> 이었다고 하자. 이제 <span class="math inline">\(\mathcal{O}_1\)</span> 과 <span class="math inline">\(\mathcal{O}_3\)</span> 에서 각각 <span class="math inline">\(\mathcal{O}_2\)</span> 의 방향으로 빛을 쏘았다고 하자. <span class="math inline">\(\mathcal{O}_2\)</span> 의 입장에서는 당연히 <span class="math inline">\(\mathcal{O}_1\)</span> 과 <span class="math inline">\(\mathcal{O}_3\)</span> 에서 같은 시간에 빛을 쏘아야 두 빛이 동시에 <span class="math inline">\(\mathcal{O}_2\)</span> 에 도착한다. 그렇다면 <span class="math inline">\(\mathcal{O}\)</span> 의 입장에서도 그러할까? 아래 그림을 보자. 아래 그림은 <span class="math inline">\(\Sigma\)</span> 에서의 세계선이다.</p>
-<div id="fig-world_line_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-RT_world_line_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-world_line_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/relativity/worldline_for_multyframe/wordline_for_multyframe.png" class="img-fluid figure-img" style="width:60.0%">
+<div aria-describedby="fig-RT_world_line_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/wordline_for_multyframe.png" class="img-fluid figure-img" style="width:60.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-world_line_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RT_world_line_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;9.3: <span class="math inline">\(\Sigma\)</span> 에서의 세계선
 </figcaption>
 </figure>
@@ -503,13 +503,13 @@ x = \gamma (x'+\beta c t'),\qquad y=y',\qquad z=z',\qquad ct = \gamma (ct' + \be
 </section>
 <section id="시공간-도표" class="level3" data-number="9.2.4">
 <h3 data-number="9.2.4" class="anchored" data-anchor-id="시공간-도표"><span class="header-section-number">9.2.4</span> 시공간 도표</h3>
-<p>자 이제 점점 재미있는 주제로 들어간다. 앞서 정지 좌표계 <span class="math inline">\(\Sigma\)</span> 에 대해 움직이는 좌표계 <span class="math inline">\(\Sigma'\)</span> 의 원점 <span class="math inline">\(\mathcal{O}'\)</span> 의 위치를 세계선으로 표현했다. 이 세계선의 위치는 로런츠 변환에서 <span class="math inline">\(x'=0\)</span> 을 <span class="math inline">\(\Sigma\)</span> 좌표계에서의 <span class="math inline">\(t-x\)</span> 공간에서 표한한 것이다. 이제 <span class="math inline">\(t'=0\)</span> 은 <span class="math inline">\(x'\)</span> 축이므로 다음과 같이 표현 할 수 있을 것이다. <a href="#eq-relativity_lorentz_eq_3" class="quarto-xref">식&nbsp;<span>9.4</span></a> 로부터 <span class="math inline">\(t'\)</span>, (즉 <span class="math inline">\(x'=0\)</span>) 은 <span class="math inline">\(t= \dfrac{1}{c\beta}x\)</span> 으로 표현되며, <span class="math inline">\(x'\)</span> (즉 <span class="math inline">\(t'=0\)</span>) 은 <span class="math inline">\(t=\dfrac{\beta}{c}x\)</span> 로 표현됨을 안다.</p>
-<div id="fig-world_line_3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>자 이제 점점 재미있는 주제로 들어간다. 앞서 정지 좌표계 <span class="math inline">\(\Sigma\)</span> 에 대해 움직이는 좌표계 <span class="math inline">\(\Sigma'\)</span> 의 원점 <span class="math inline">\(\mathcal{O}'\)</span> 의 위치를 세계선으로 표현했다. 이 세계선의 위치는 로런츠 변환에서 <span class="math inline">\(x'=0\)</span> 을 <span class="math inline">\(\Sigma\)</span> 좌표계에서의 <span class="math inline">\(t-x\)</span> 공간에서 표한한 것이다. 이제 <span class="math inline">\(t'=0\)</span> 은 <span class="math inline">\(x'\)</span> 축이므로 다음과 같이 표현 할 수 있을 것이다. <a href="#eq-RT_lorentz_eq_3" class="quarto-xref">식&nbsp;<span>9.4</span></a> 로부터 <span class="math inline">\(t'\)</span>, (즉 <span class="math inline">\(x'=0\)</span>) 은 <span class="math inline">\(t= \dfrac{1}{c\beta}x\)</span> 으로 표현되며, <span class="math inline">\(x'\)</span> (즉 <span class="math inline">\(t'=0\)</span>) 은 <span class="math inline">\(t=\dfrac{\beta}{c}x\)</span> 로 표현됨을 안다.</p>
+<div id="fig-RT_world_line_3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-world_line_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/relativity/simultaneity_1/simultaneity_1.png" class="img-fluid figure-img" style="width:40.0%">
+<div aria-describedby="fig-RT_world_line_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/simultaneity_1.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-world_line_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RT_world_line_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;9.4: 세계선
 </figcaption>
 </figure>
@@ -519,43 +519,44 @@ x = \gamma (x'+\beta c t'),\qquad y=y',\qquad z=z',\qquad ct = \gamma (ct' + \be
 <section id="길이-수축" class="level3" data-number="9.2.5">
 <h3 data-number="9.2.5" class="anchored" data-anchor-id="길이-수축"><span class="header-section-number">9.2.5</span> 길이 수축</h3>
 <p>길이 <span class="math inline">\(L\)</span> 인 막대기가 <span class="math inline">\(x\)</span> 축상에 놓여 있다고 하자. 편의상 한 끝점을 <span class="math inline">\(\mathcal{O}\)</span> 에 다른 끝점을 <span class="math inline">\(x=L\)</span> 에 놓을 수 있다. 이제 막대기의 양 끝의 세계선은 <span class="math inline">\(\Sigma\)</span> 좌표계에서 <span class="math inline">\(x=0\)</span> 과 <span class="math inline">\(x=L\)</span> 이다. 이제 움직이는 좌표계 <span class="math inline">\(\Sigma'\)</span> 에서 생각하자.</p>
-<div id="fig-lorentz_contration" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-RT_lorentz_contration" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-lorentz_contration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/relativity/length_contraction/length_contration.png" class="img-fluid figure-img" width="300">
+<div aria-describedby="fig-RT_lorentz_contration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/length_contration.png" class="img-fluid figure-img" width="300">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lorentz_contration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RT_lorentz_contration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;9.5: <span class="math inline">\(\Sigma'\)</span> 에서의 길이 수축
 </figcaption>
 </figure>
 </div>
 <p>즉 <span class="math inline">\(\Sigma'\)</span> 에서의 길이는 <span class="math inline">\(\overline{\mathcal{O}'L'}\)</span> 이며 이것은 로런츠 변환에서 <span class="math inline">\(L'=L/\gamma &lt; L\)</span> 로 나타난다. 이를 길이 수축이라고 한다.</p>
 <p>이제 길이 <span class="math inline">\(L\)</span> 인 막대기가 <span class="math inline">\(\Sigma'\)</span> 좌표계에서 <span class="math inline">\(x=0,\, x=L'\)</span> 에 놓여 있다고 하자. 그리고 이 막대기의 양 끝점의 세계선을 그리면 아래 그림과 같다.</p>
-<div id="fig-lorentz_contration" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-RT_lorentz_contration" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-lorentz_contration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/relativity/length_contraction2/length_contration2.png" class="img-fluid figure-img" width="300">
+<div aria-describedby="fig-RT_lorentz_contration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/length_contration2.png" class="img-fluid figure-img" width="300">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lorentz_contration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RT_lorentz_contration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;9.6: <span class="math inline">\(\Sigma\)</span> 에서의 길이 수축
 </figcaption>
 </figure>
 </div>
 <p>역시 로런츠 변환을 통해 <span class="math inline">\(L=L'/\gamma &lt; L'\)</span> 이 된다. 즉 길이 수축은 움직이는 물체는 움직이는 방향으로 길이가 짧아진다는 의미이다.</p>
 <p><br></p>
-<div id="exm-relativity_invariance_of_transverse_length" class="theorem example">
+<div id="exm-RT_invariance_of_transverse_length" class="theorem example">
 <p><span class="theorem-title"><strong>예제 9.1</strong></span> <span class="math inline">\(\Sigma\)</span> 좌표계에서 <span class="math inline">\(x\)</span> 방향이 아닌 <span class="math inline">\(y\)</span> 방향으로 길이 <span class="math inline">\(L\)</span> 인 막대기가 놓여 있을 때는 <span class="math inline">\(\Sigma'\)</span> 좌표계에서 봤을 때 그 길이가 변하지 않는다는 것을 로런츠 변환을 통해 확인 할 수 있다. <span class="math inline">\(\Sigma\)</span> 좌표계에서의 <span class="math inline">\(x^2+y^2=R^2\)</span> 인 원은 <span class="math inline">\(\Sigma'\)</span> 좌표계에서 <span class="math inline">\(x'^2/\gamma^2 + y'^2 = R^2\)</span> 이 되므로 타원이 된다.</p>
 </div>
+<p><br></p>
 </section>
 <section id="시간-지연" class="level3" data-number="9.2.6">
 <h3 data-number="9.2.6" class="anchored" data-anchor-id="시간-지연"><span class="header-section-number">9.2.6</span> 시간 지연</h3>
 <p>이제 <span class="math inline">\(t\)</span> 와 <span class="math inline">\(t'\)</span> 사이의 관계 역시 <span class="math inline">\(\mathcal{O}\)</span> 와 <span class="math inline">\(\mathcal{O}^\prime\)</span> 에 대한 로런츠 변환식으로 부터 얻을 수 있다.</p>
-<div id="fig-time_dialition" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-RT_time_dialition" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-time_dialition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/relativity/time_dilation/time_dilation.png" class="img-fluid figure-img" width="300">
+<div aria-describedby="fig-RT_time_dialition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/time_dilation.png" class="img-fluid figure-img" width="300">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-time_dialition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RT_time_dialition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;9.7: 시간 지연
 </figcaption>
 </figure>
@@ -563,7 +564,7 @@ x = \gamma (x'+\beta c t'),\qquad y=y',\qquad z=z',\qquad ct = \gamma (ct' + \be
 <p><span class="math inline">\(t'=1\)</span> 일 때의 <span class="math inline">\(t=\gamma t' &gt; t'\)</span> 이다. 즉 움직이는 시계는 정지한 시계보다 느리게 간다. 이것을 <strong>시간 지연 (time dilation)</strong> 이라고 한다.</p>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exr-helliwell_2_5" class="theorem exercise">
+<div id="exr-RT_helliwell_2_5" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 9.1</strong></span> <span class="math inline">\(\Sigma'\)</span> 좌표계가 <span class="math inline">\(\Sigma\)</span> 좌표계에 대해 <span class="math inline">\(12c/13\)</span> 의 속도로 움직인다고 하자. 동기화된 시계 <span class="math inline">\(C_1,\,C_2\)</span> 가 <span class="math inline">\(\Sigma\)</span> 좌푝계에 5 광분(light meter) 떨어져 위치해 있다. (<span class="math inline">\(a\)</span>) <span class="math inline">\(\Sigma'\)</span> 의 원점에 위치한 시계 <span class="math inline">\(C'\)</span> 가 <span class="math inline">\(C_1\)</span> 위치를 지나 <span class="math inline">\(C_2\)</span> 방향으로 움직인다고 하자. 이 때 <span class="math inline">\(t=t'=0\)</span> 이었다면 <span class="math inline">\(C'\)</span> 이 <span class="math inline">\(B\)</span> 를 지날 때 <span class="math inline">\(C'\)</span> 의 시간은 얼마인가? (<span class="math inline">\(b\)</span>) <span class="math inline">\(\Sigma'\)</span> 에서의 <span class="math inline">\(C_1\)</span> 과 <span class="math inline">\(C_2\)</span> 의 거리는 얼마인가? (<span class="math inline">\(c\)</span>) <span class="math inline">\(C'\)</span> 이 <span class="math inline">\(B\)</span> 를 지날 때 <span class="math inline">\(C_2\)</span> 의 시간은 얼마인가?</p>
 </div>
 <div class="proof solution">
@@ -577,7 +578,7 @@ t' = \gamma \left(t-\dfrac{V}{c}x\right) = 125.
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exr-helliwell_2_10" class="theorem exercise">
+<div id="exr-RT_helliwell_2_10" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 9.2</strong></span> 우주로부터 오는 고에너지 양성자가 지구 대기 상부의 공기를 이루는 원자의 핵과 충돌하여 다양한 입자들을 아래로 방출하는데 여기에는 <span class="math inline">\(\pi^+,\, \pi^-,\, \pi^0\)</span> 의 파이온 입자가 포함되어 있다. 전하가 있는 파이온 입자(<span class="math inline">\(\pi^+,\, \pi^-\)</span>) 는 다음과 같이 뮤온과 중성미자로 붕괴한다.</p>
 <p><span class="math display">\[
 \pi^+ \to \mu^+ + \nu,\qquad \text{and}\qquad \pi^- \to \mu^- + \nu.
@@ -611,12 +612,12 @@ t' = \gamma \left(t-\dfrac{V}{c}x\right) = 125.
 </div>
 </div>
 <p>여기에 틈은 속도를 <span class="math inline">\(\boldsymbol{V}\)</span> 에서 <span class="math inline">\(-\boldsymbol{V}\)</span> 로 바꾸는 순간에 있을 수 밖에 없다. 이 순간을 제외하면 모든 것이 대칭적이기 때문이다. 이제 속도를 바꾸지 않는 <span class="math inline">\(E\)</span> 의 입장에서 보자. <span class="math inline">\(E\)</span> 와 <span class="math inline">\(S\)</span> 가 같은 시간을 가리키도록 안내선을 그어보자.</p>
-<div id="fig-twin-paradox" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-RT_twin-paradox" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-twin-paradox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/relativity/twin_paradox/twin_paradox.png" class="img-fluid figure-img" width="250">
+<div aria-describedby="fig-RT_twin-paradox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/twin_paradox.png" class="img-fluid figure-img" width="250">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-twin-paradox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RT_twin-paradox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;9.8: 쌍동이의 역설
 </figcaption>
 </figure>
@@ -649,13 +650,13 @@ t' = \gamma \left(t-\dfrac{V}{c}x\right) = 125.
 <p>10m 짜리 장대(pole)를 길이 8m 의 헛간(barn)에 넣는것은 고전역학적으로 불가능하다고 여겨진다. 만약 장대가 <span class="math inline">\(3c/5\)</span> 의 속도로 움직인다면 헛간의 좌표계에서 장대의 길이는 <span class="math inline">\(10/\sqrt{1-(3/5)^2} = 8 \textrm{m}\)</span> 로 줄어들어 헛간에 들어갈 수 있게 된다. 그런데 장대의 좌표계에서는 오히려 헛간의 길이가 <span class="math inline">\(8/\sqrt{1-(3/5)^2} =  6.4 \textrm{m}\)</span> 로 줄어들어 헛간에 넣을 수 없게 된다. 즉 헛간의 좌표계에서는 장대가 헛간에 들어가지만 장대의 좌표계에서는 장대가 헛간에 들어갈 수 없다.</p>
 </div>
 </div>
-<p>영희는 헛간에 앉아 있으며 (<span class="math inline">\(\Sigma\)</span> 좌표계) 철수가 10 m 짜리 장대를 들고 헛간에 대해 <span class="math inline">\(3c/5\)</span> 의 속도로 달리고 있다고 하자 (<span class="math inline">\(\Sigma'\)</span> 좌표계). 헛간에는 자동으로 접근을 인지하는 장치가 달려 있어 다가오면 열리고 나가면 닫힌다고 하자. 아래 <a href="#fig-relativity_pole_and_barn_paradox" class="quarto-xref">그림&nbsp;<span>9.9</span></a> 에서 녹색 막대는 각각의 좌표계에서의 장대이며, 오렌지색 그림은 헛간의 길이이다.</p>
-<div id="fig-relativity_pole_and_barn_paradox" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>영희는 헛간에 앉아 있으며 (<span class="math inline">\(\Sigma\)</span> 좌표계) 철수가 10 m 짜리 장대를 들고 헛간에 대해 <span class="math inline">\(3c/5\)</span> 의 속도로 달리고 있다고 하자 (<span class="math inline">\(\Sigma'\)</span> 좌표계). 헛간에는 자동으로 접근을 인지하는 장치가 달려 있어 다가오면 열리고 나가면 닫힌다고 하자. 아래 <a href="#fig-RT_pole_and_barn_paradox" class="quarto-xref">그림&nbsp;<span>9.9</span></a> 에서 녹색 막대는 각각의 좌표계에서의 장대이며, 오렌지색 그림은 헛간의 길이이다.</p>
+<div id="fig-RT_pole_and_barn_paradox" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-relativity_pole_and_barn_paradox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/relativity/pole_and_barn/pole_and_barn.png" class="img-fluid figure-img" width="500">
+<div aria-describedby="fig-RT_pole_and_barn_paradox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/pole_and_barn.png" class="img-fluid figure-img" width="500">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-relativity_pole_and_barn_paradox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RT_pole_and_barn_paradox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;9.9: 두 관성계에서 본 장대와 헛간
 </figcaption>
 </figure>
@@ -665,12 +666,12 @@ t' = \gamma \left(t-\dfrac{V}{c}x\right) = 125.
 </section>
 <section id="민코프스키-광원뿔" class="level3" data-number="9.2.9">
 <h3 data-number="9.2.9" class="anchored" data-anchor-id="민코프스키-광원뿔"><span class="header-section-number">9.2.9</span> 민코프스키 광원뿔</h3>
-<div id="fig-mincowsky_light_cone" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-RT_mincowsky_light_cone" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-mincowsky_light_cone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-RT_mincowsky_light_cone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/World_line2.svg" class="img-fluid figure-img" style="width:70.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mincowsky_light_cone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RT_mincowsky_light_cone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;9.10: 민코프스키 광원뿔 (출처 : Wikipedia)
 </figcaption>
 </figure>
@@ -678,8 +679,9 @@ t' = \gamma \left(t-\dfrac{V}{c}x\right) = 125.
 <p>상대성이론에서 시공간이라는 개념을 정립하고 완성한 사람은 <a href="https://en.wikipedia.org/wiki/Hermann_Minkowski">헤르만 민코프스키</a> 이다. 위의 그림에서 future light cone 은 관찰자(observer) 위치에서 빛이 발생되었을 때 빛이 갈 수 있는 시공간상의 가능한 경로이다. past light cone 은 <span class="math inline">\(t=0\)</span> 에 관찰자의 위치에 도달할 수 있있는 빛의 과거의 시공간상의 경로이다. 광속 불변에 의해 이 경로는 시공간상의 원뿔의 표면에 위치할 수 밖에 없다.</p>
 <p><br></p>
 </section>
-<section id="연습문제" class="level3 border" style="background-color:#F2F4F4  ;padding:5px;" data-number="9.2.10">
-<h3 data-number="9.2.10" class="anchored" data-anchor-id="연습문제"><span class="header-section-number">9.2.10</span> 연습문제</h3>
+<section id="연습문제" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exr-helliwell_2_6" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 9.4</strong></span> 두 우주선 <span class="math inline">\(A,\,B\)</span> 가 일직선상에서 접근하고 있다. <span class="math inline">\(A\)</span> 는 <span class="math inline">\(4c/5\)</span> 의 속도이며 <span class="math inline">\(B\)</span> 는 <span class="math inline">\(3c/5\)</span> 의 속도로 움직인다고 하자. 각각의 우주선의 좌표계를 <span class="math inline">\(\Sigma_A,\, \Sigma_B\)</span> 라고 하자. (<span class="math inline">\(a\)</span>) <span class="math inline">\(\Sigma_A\)</span> 에서 본 <span class="math inline">\(B\)</span> 의 속도는 무엇인가? (<span class="math inline">\(b\)</span>) <span class="math inline">\(A\)</span> 의 속도가 <span class="math inline">\((1-\epsilon)c\)</span> 이며 역시 <span class="math inline">\(B\)</span> 의 속도도 <span class="math inline">\((1-\epsilon)c\)</span> 라고 하자. 당연히 <span class="math inline">\(0&lt;\epsilon &lt;1\)</span> 이다. <span class="math inline">\(\Sigma_B\)</span> 에서 본 <span class="math inline">\(A\)</span> 의 속도는 무엇인가? <span class="math inline">\(\epsilon\)</span> 이 아무리 <span class="math inline">\(1\)</span> 에 접근하더라도 이 속도는 <span class="math inline">\(c\)</span> 보다 작다는 것을 보여라.</p>
 </div>
@@ -699,8 +701,9 @@ x_A = \gamma(x + \beta ct), \qquad ct_A = \gamma (ct+\beta x), \qquad \beta = -v
 \]</span></p>
 <p>이다. <span class="math inline">\(a\ne b\)</span> 에 대해 <span class="math inline">\(a^2 + b^2 &gt; 2|ab|\)</span> 임을 이용하면, <span class="math inline">\(1+(1-\epsilon)^2 &gt; 2(1-\epsilon)\)</span> 이므로 <span class="math inline">\(|x_A/t_A| &lt; c\)</span> 이다.</p>
 </div>
-</section>
+</div>
 <p><br></p>
+</section>
 </section>
 <section id="상대성-역학" class="level2" data-number="9.3">
 <h2 data-number="9.3" class="anchored" data-anchor-id="상대성-역학"><span class="header-section-number">9.3</span> 상대성 역학</h2>
@@ -714,7 +717,7 @@ x_A = \gamma(x + \beta ct), \qquad ct_A = \gamma (ct+\beta x), \qquad \beta = -v
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-4vector" class="theorem definition">
+<div id="def-RT_4vector" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 9.1 (시공간의 위치에 대한 4-벡터)</strong></span> 시간과 공간에 대한 4-벡터를 대문자로 다음과 같이 표기한다. <span class="math display">\[
 X:= (ct, x, y, z) = (X^0, X^1, X^2, X^3)
 \]</span></p>
@@ -723,16 +726,16 @@ X:= (ct, x, y, z) = (X^0, X^1, X^2, X^3)
 </div>
 </div>
 <p><br></p>
-<p>이 4 벡터에 대한 로런츠 변환을 나타내는 로런츠 변환 행렬은 다음과 같이 정의된다.(<a href="#eq-relativity_lorentz_eq_3" class="quarto-xref">식&nbsp;<span>9.4</span></a>)</p>
-<p><span id="eq-relativity_lorentz_transform_matrix"><span class="math display">\[
+<p>이 4 벡터에 대한 로런츠 변환을 나타내는 로런츠 변환 행렬은 다음과 같이 정의된다.(<a href="#eq-RT_lorentz_eq_3" class="quarto-xref">식&nbsp;<span>9.4</span></a>)</p>
+<p><span id="eq-RT_lorentz_transform_matrix"><span class="math display">\[
 \boldsymbol{\Lambda} = \begin{bmatrix} \gamma &amp; \gamma\beta &amp; 0 &amp; 0 \\ \gamma\beta &amp; \gamma &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1\end{bmatrix} .
 \tag{9.5}\]</span></span></p>
 <p><span class="math inline">\(\gamma^2 - \gamma^2\beta^2 = 1/(1-\beta^2) - \beta^2/(1-\beta^2)=1\)</span> 이므로 <span class="math inline">\(\cosh(\xi) = \gamma,\, \sinh(\xi)=\gamma \beta\)</span> 로 놓고 아래와 같이 표현 할 수 있다.</p>
-<p><span id="eq-relativity_lorentz_transform_matrix_2"><span class="math display">\[
+<p><span id="eq-RT_lorentz_transform_matrix_2"><span class="math display">\[
 \boldsymbol{\Lambda} = \begin{bmatrix} \cosh \xi &amp; \sinh \xi &amp; 0 &amp; 0 \\ \sinh \xi &amp; \cosh\xi &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1\end{bmatrix} .
 \tag{9.6}\]</span></span></p>
 <p>이제 로런츠 변환을 다음과 같이 표현 할 수 있다.</p>
-<p><span id="eq-relativity_lorentz_transform_1"><span class="math display">\[
+<p><span id="eq-RT_lorentz_transform_1"><span class="math display">\[
 X = \boldsymbol{\Lambda}X'
 \tag{9.7}\]</span></span></p>
 <p>시간과 공간에서의 미소변화를 각각 <span class="math inline">\(dt,\,dx,\,dy,\,dz\)</span> 라고 했을 때 <span class="math inline">\(X\)</span> 의 미소변화(infinitesimal displacement) <span class="math inline">\(dX\)</span> 는 다음과 같이 쓸 수 있다.</p>
@@ -778,7 +781,7 @@ ds^2 = c^2dt^2 - dx^2 - dy^2 - dz^2=  \sum_{\mu=0}^3 \sum_{\nu = 0}^3 dX^\mu \et
 <p><span class="math display">\[
 ds^2 = dX^\mu \eta_{\mu \nu}dX^\nu
 \]</span></p>
-<p>로 쓸 수 있다. <a href="#eq-relativity_lorentz_transform_1" class="quarto-xref">식&nbsp;<span>9.7</span></a> 을 4-벡터와 4-텐서로 나타내면</p>
+<p>로 쓸 수 있다. <a href="#eq-RT_lorentz_transform_1" class="quarto-xref">식&nbsp;<span>9.7</span></a> 을 4-벡터와 4-텐서로 나타내면</p>
 <p><span class="math display">\[
 dX^\mu = \Lambda^\mu_\nu dX'^\nu
 \]</span></p>
@@ -787,7 +790,7 @@ dX^\mu = \Lambda^\mu_\nu dX'^\nu
 </section>
 <section id="속도의-로런츠-변화" class="level3" data-number="9.3.4">
 <h3 data-number="9.3.4" class="anchored" data-anchor-id="속도의-로런츠-변화"><span class="header-section-number">9.3.4</span> 속도의 로런츠 변화</h3>
-<p><a href="#exr-helliwell_2_6" class="quarto-xref">연습문제&nbsp;<span>9.4</span></a> 에서 이미 보였던것을 확장한다. <a href="#fig-reference_frames_in_relativity" class="quarto-xref">그림&nbsp;<span>9.1</span></a> 의 <span class="math inline">\(\Sigma,\, \Sigma'\)</span> 좌표계를 생각하자. <span class="math inline">\(\Sigma'\)</span> 이 <span class="math inline">\(\Sigma\)</span> 에 대해 속도 <span class="math inline">\(\boldsymbol{V}=V\hat{\boldsymbol{e}}_1\)</span> 으로 움직일 때 <span class="math inline">\(\Sigma'\)</span> 에서 속도 <span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{e}}_1'\)</span> 으로 움직이는 물체의 속도는 <span class="math inline">\(\Sigma\)</span> 에서 어떻게 측정될 것인가?</p>
+<p><a href="#exr-helliwell_2_6" class="quarto-xref">연습문제&nbsp;<span>9.4</span></a> 에서 이미 보였던것을 확장한다. <a href="#fig-RT_reference_frames_in_relativity" class="quarto-xref">그림&nbsp;<span>9.1</span></a> 의 <span class="math inline">\(\Sigma,\, \Sigma'\)</span> 좌표계를 생각하자. <span class="math inline">\(\Sigma'\)</span> 이 <span class="math inline">\(\Sigma\)</span> 에 대해 속도 <span class="math inline">\(\boldsymbol{V}=V\hat{\boldsymbol{e}}_1\)</span> 으로 움직일 때 <span class="math inline">\(\Sigma'\)</span> 에서 속도 <span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{e}}_1'\)</span> 으로 움직이는 물체의 속도는 <span class="math inline">\(\Sigma\)</span> 에서 어떻게 측정될 것인가?</p>
 <p>이제 <span class="math inline">\(\Sigma'\)</span> 에 대해 <span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{e}}_1'\)</span> 으로 움직이는 <span class="math inline">\(\Sigma''\)</span> 좌표계를 생각 할 수 있다. <span class="math inline">\(\beta_2 = u/c,\, \gamma_2 = 1/\sqrt{1-{\beta_2}^2}\)</span> 에 대해</p>
 <p><span class="math display">\[
 X'' = \boldsymbol{\Lambda}_2X' = \begin{bmatrix} \gamma_2 &amp; -\gamma_2\beta_2 &amp; 0 &amp; 0 \\ -\gamma_2\beta_2 &amp; \gamma_2 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1\end{bmatrix} X'
@@ -818,7 +821,7 @@ v_y(\Sigma'') = \dfrac{y''}{t''}= \dfrac{y}{\gamma (t - Vx/c^2)} = \dfrac{v_y(\S
 <section id="속도" class="level3" data-number="9.3.5">
 <h3 data-number="9.3.5" class="anchored" data-anchor-id="속도"><span class="header-section-number">9.3.5</span> 4-속도</h3>
 <p><span class="math inline">\(d\tau\)</span> 가 로런츠 불변량이라는 것을 떠올리자. 4-벡터 <span class="math inline">\(X^\mu\)</span> 에 대해 <span class="math inline">\(\dfrac{dX^\mu}{d\tau}\)</span> 도 4-벡터이다. 즉 로런츠 변환으로 변환된다. 이것은 속도와 같은 차원을 갖기 때문에 <strong>4-속도 (4-velocity)</strong> 라고 불리며 보통 <span class="math inline">\(U^\mu\)</span> 로 표기한다. 즉 4-속도는 다음과 같이 정의된다.</p>
-<p><span id="eq-relativity_def_4vector"><span class="math display">\[
+<p><span id="eq-RT_def_4vector"><span class="math display">\[
 U^\mu := \dfrac{dX^\mu}{d\tau},\qquad \mu = 0,\,1,\,2,\,3.
 \tag{9.8}\]</span></span></p>
 <p>따라서,</p>
@@ -843,7 +846,7 @@ U = \begin{bmatrix} U^0 \\ U^1 \\ U^2\\ U^3 \end{bmatrix} =  \begin{bmatrix} \ga
 <section id="상대론에서의-자유입자의-action" class="level3" data-number="9.4.1">
 <h3 data-number="9.4.1" class="anchored" data-anchor-id="상대론에서의-자유입자의-action"><span class="header-section-number">9.4.1</span> 상대론에서의 자유입자의 action</h3>
 <p>뉴튼역학에서의 <a href="../../src/ClassicalMechanics/02_variational_principle.html#sec-least_action_theorem">해밀턴의 원리</a>, 즉 최소작용의 원리에 상응하는 상대론적인 action 은 자유입자에 대해 다음과 같이 정의된다.</p>
-<p><span id="eq-relativistic_action"><span class="math display">\[
+<p><span id="eq-RT_action"><span class="math display">\[
 I = -\int_{t_i}^{t_f} mc^2\, d\tau = -\int_{t_i}^{t_f} m c^2\sqrt{1-\dfrac{v^2}{c^2}} \, dt
 \tag{9.11}\]</span></span></p>
 <p>즉 상대론적 라그랑지안은 <span class="math inline">\(-mc^2 \sqrt{1-v^2/c^2}\)</span> 으로 정의된다. 상대론에서 어떤 결과를 얻었을 때 최소한 <span class="math inline">\(v \ll c\)</span> 조건에서 고전역학과 일치하는지를 확인해야 한다.</p>
@@ -856,11 +859,11 @@ I = -\int_{t_i}^{t_f} mc^2\, d\tau = -\int_{t_i}^{t_f} m c^2\sqrt{1-\dfrac{v^2}{
 <section id="상대론에서의-운동량" class="level3" data-number="9.4.2">
 <h3 data-number="9.4.2" class="anchored" data-anchor-id="상대론에서의-운동량"><span class="header-section-number">9.4.2</span> 상대론에서의 운동량</h3>
 <p>고전역학에서의 운동량은 <span class="math inline">\(m\boldsymbol{v}\)</span> 로 결정되었다. 상대론에서의 운동량 <span class="math inline">\(P\)</span> 는 4-속도 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\(mU=\gamma m \dot{X}\)</span> 로 결정된다. 즉,</p>
-<p><span id="eq-relativity_4_momentum"><span class="math display">\[
+<p><span id="eq-RT_4_momentum"><span class="math display">\[
 P = (P^0,\, P^1,\, P^2,\,P^3) = mU = \left(\gamma mc,\, \gamma m \dfrac{dx}{dt},\, \gamma m \dfrac{dy}{dt},, \gamma m \dfrac{dz}{dt}\right)
 \tag{9.12}\]</span></span></p>
 <p>상대론에서의 운동량도 4-벡터이다. 따라서,</p>
-<p><span id="eq-reliativity_invariance_of_4_momentum"><span class="math display">\[
+<p><span id="eq-RT_invariance_of_4_momentum"><span class="math display">\[
 P^\mu \eta_{\mu, \nu}P^\nu = \gamma^2 m^2(c^2-v^2) = m^2c^2
 \tag{9.13}\]</span></span></p>
 <p>이 된다. 이것의 의미는 잠시 후에 알아보자.</p>
@@ -877,7 +880,7 @@ H = \sum_i p_i \dot{q}_i - L
 H = \sum_{i=1}^3 P^\mu (\dot{X}^\mu) -  mc^2\sqrt{1-\dfrac{v^2}{c^2}} = \gamma mc^2
 \]</span></p>
 <p>이다. 우리는 이제 입자의 에너지 <span class="math inline">\(\mathcal{E}=H\)</span> 에 대해 <span class="math inline">\(P^0 = \mathcal{E}/c\)</span> 임을 안다. 즉 상대론의 4-운동량은 에너지와 운동량을 포함하며, 로런츠 변환에 의해 보존되는 것은 에너지와 운동량의 조합인 4-운동량이다. 또한 우리는</p>
-<p><span id="eq-relativity_4_momentum_2"><span class="math display">\[
+<p><span id="eq-RT_4_momentum_2"><span class="math display">\[
 P^\mu = \left(\mathcal{E}/c,\, P^1,\, P^2,\, P^3\right)
 \tag{9.14}\]</span></span></p>
 <p>로 쓸 수 있다.</p>
@@ -890,7 +893,7 @@ P^\mu = \left(\mathcal{E}/c,\, P^1,\, P^2,\, P^3\right)
 P_\mu P^\mu = \mathcal{E}^2/c^2 - p^2 = m^2c^2
 \]</span></p>
 <p>로부터</p>
-<p><span id="eq-relativity_relativistic_energy_for_massless_particle"><span class="math display">\[
+<p><span id="eq-RT_relativistic_energy_for_massless_particle"><span class="math display">\[
 \mathcal{E} = \sqrt{p^2c^2 + m^2c^4}
 \tag{9.15}\]</span></span></p>
 <p>을 얻는다. 이로부터 질량이 없는 입자의 에너지는 <span class="math inline">\(\mathcal{E} = cp\)</span> 이다.</p>
