@@ -714,17 +714,6 @@
     ]
   },
   {
-    "objectID": "src/images/images_classical_mechanics_02.html",
-    "href": "src/images/images_classical_mechanics_02.html",
-    "title": "16  그림 : 고전역학 #2",
-    "section": "",
-    "text": "Show the code\n```{r, engine = 'tikz'}\n#| label: fig-refrence_frame_in_relativity\n#| code-fold: true\n#| fig-width: 6\n#| output: asis\n#| fig-align: center\n#| fig-cap: \"두 좌표계\"\n\n\\usetikzlibrary {3d} \n\\begin{tikzpicture}[z={(10:10mm)},x={(-45:5mm)}]\n  \\def\\wave{\n    \\draw[fill,thick,fill opacity=.2]\n     (0,0) sin (1,1) cos (2,0) sin (3,-1) cos (4,0)\n           sin (5,1) cos (6,0) sin (7,-1) cos (8,0)\n           sin (9,1) cos (10,0)sin (11,-1)cos (12,0);\n    \\foreach \\shift in {0,4,8}\n    {\n      \\begin{scope}[xshift=\\shift cm,thin]\n        \\draw (.5,0)  -- (0.5,0 |- 45:1cm);\n        \\draw (1,0)   -- (1,1);\n        \\draw (1.5,0) -- (1.5,0 |- 45:1cm);\n        \\draw (2.5,0) -- (2.5,0 |- -45:1cm);\n        \\draw (3,0)   -- (3,-1);\n        \\draw (3.5,0) -- (3.5,0 |- -45:1cm);\n      \\end{scope}\n    }\n  }\n  \\begin{scope}[canvas is zy plane at x=0,fill=blue]\n    \\wave\n    \\node at (6,-1.5) [transform shape] {magnetic field};\n  \\end{scope}\n  \\begin{scope}[canvas is zx plane at y=0,fill=red]\n    \\draw[help lines] (0,-2) grid (12,2);\n    \\wave\n    \\node at (6,1.5) [rotate=180,xscale=-1,transform shape] {electric field};\n  \\end{scope}\n\\end{tikzpicture}\n```\n\n\n\n\n\n\n\n그림 16.1: 두 좌표계\n\n\n\n\n\n\n\nShow the code\n```{r, engine = 'tikz'}\n#| label: fig-cross_section_2\n#| code-fold: true\n#| fig-width: 6\n#| output: asis\n#| fig-align: center\n#| fig-cap: \"두 관성계에서의 자발적 붕괘\"\n\\usetikzlibrary {arrows.meta}\n\\usetikzlibrary {calc}\n\\begin{tikzpicture}[line cap=round, scale = 2]\n%\\begin{scope}\n%  \\clip (0,0) circle (1);\n%  \\fill[gray!20] (-0.625,0) circle (1.5);\n%  \\fill[gray!0] (-0.945,0) circle (1.7);\n%\\end{scope}\n\n\\draw (0,0) circle (1cm);\n\n\\draw[white, fill=gray!20] (0.5300, 0) ellipse (0.2 and 0.848); \n\\draw[white, fill=gray!0] (0.7001, 0) ellipse (0.2 and 0.7133); \n\n\\draw (0,0) circle (1cm);\n\\end{tikzpicture}\n```\n\n\n\n\n\n\n\n그림 16.2: 두 관성계에서의 자발적 붕괘\n\n\n\n\n\n\nShow the code\n```{r, engine = 'tikz'}\n#| label: fig-cross_section_3\n#| code-fold: true\n#| fig-width: 6\n#| output: asis\n#| fig-align: center\n#| fig-cap: \"두 관성계에서의 자발적 붕괘\"\n\\usetikzlibrary {arrows.meta}\n\\usetikzlibrary {calc}\n\\begin{tikzpicture}[line cap=round, scale = 2]\n\n\\draw[thick,  -{Stealth[length=2mm]}] (-2, 0) -- (3, 0);\n\\draw[thick,  -{Stealth[length=2mm]}] (0, -2) -- (0, 2);\n\n\n\\def\\e{2.406};\n\\def\\a{0.1};\n\\def\\s{sqrt(\\e*\\e-1)};\n\n\\begin{scope}[rotate=0]\n\\coordinate (A) at (-1, 0);\n\\draw[teal, thick] plot[variable=\\t,domain=-2:2, samples=100, smooth,thick] ({\\a * (cosh(\\t) + \\e)}, {\\a * sqrt(\\e*\\e-1)*sinh(\\t)});\n\n\n\\draw (0,0) circle (1);\n\\draw (\\a * \\e, -2) -- (\\a * \\e , 2);\n\n\\draw[red, dashed] (\\a * \\e, 0) -- ({\\a * \\e + 0.4},  { 0.4 * sqrt(\\e*\\e-1) });\n\\draw[red, dashed] (\\a * \\e, 0) -- ({\\a * \\e + 0.4},  { -0.4 * sqrt(\\e*\\e-1) });\n\\end{scope}\n\n\\begin{scope}[rotate=114.55]\n\\coordinate (A) at (-1, 0);\n\\draw[teal, thick] plot[variable=\\t,domain=-2:2, samples=100, smooth,thick] ({\\a * (cosh(\\t) + \\e)}, {\\a * sqrt(\\e*\\e-1)*sinh(\\t)});\n\n\\draw[red, dashed] (\\a * \\e, 0) -- ({\\a * \\e + 0.4},  { 0.4 * sqrt(\\e*\\e-1) });\n\\draw[red, dashed] (\\a * \\e, 0) -- ({\\a * \\e + 0.4},  { -0.4 * sqrt(\\e*\\e-1) });\n\\end{scope}\n\\end{tikzpicture}\n```\n\n\n\n\n\n\n\n그림 16.3: 두 관성계에서의 자발적 붕괘",
-    "crumbs": [
-      "그림들",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>그림 : 고전역학 #2</span>"
-    ]
-  },
-  {
     "objectID": "src/images/images_relativity_01.html",
     "href": "src/images/images_relativity_01.html",
     "title": "17  그림들-상대성이론",
@@ -733,17 +722,6 @@
     "crumbs": [
       "그림들",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>그림들-상대성이론</span>"
-    ]
-  },
-  {
-    "objectID": "src/images/images_test.html",
-    "href": "src/images/images_test.html",
-    "title": "18  그림들-테스트",
-    "section": "",
-    "text": "Show the code\n\\usetikzlibrary {arrows.meta}\n\\usetikzlibrary {calc}\n\\begin{tikzpicture}[line cap=round, scale = 2]\n\n\n% 관찰자가 움직일때의 도플러 효과\n\\draw[fill=none, blue](0,0) circle (0.4);\n\\draw[fill=none, blue](0,0) circle (0.60);\n\\draw[fill=none, blue](0,0) circle (0.80);\n\\draw[fill=none, blue](0,0) circle (1);\n\n\\filldraw[] (0, 0) circle (0.03) node[below, scale=0.7] {$S$};\n\\filldraw[] (1, 0) circle (0.03) node[right, scale=0.7] {$O$};\n\\draw[thick, -{Stealth[length=2mm]}] (1, 0) -- (0.7, 0);\n\n\\node [below, scale = 0.7] at (0, -1.1) {$(a)$}; \n\n\\begin{scope}[shift={(3,0)}]\n\\draw[fill=none, blue](0,0) circle (1);\n\\draw[fill=none, blue](0.1,0) circle (0.8);\n\\draw[fill=none, blue](0.2,0) circle (0.60);\n\\draw[fill=none, blue](0.3,0) circle (0.4);\n\n\\filldraw[] (0, 0) circle (0.03) node[below, scale=0.7] {$S$};\n\\filldraw[] (1, 0) circle (0.03) node[right, scale=0.7] {$O$};\n\\draw[thick, -{Stealth[length=2mm]}] (0, 0) -- (0.3, 0);\n\\node [below, scale = 0.7] at (0, -1.1) {$(b)$}; \n\n\\end{scope}\n\n\n\\end{tikzpicture}\n\n\n\n\n\n\n\n그림 18.1: 도플러 효과\n\n\n\n\n\n\nShow the code\n\\usetikzlibrary {arrows.meta}\n\\usetikzlibrary {calc}\n\\begin{tikzpicture}[line cap=round, scale = 2]\n\n\n\\draw [gray!20, fill=gray!20] (0,0) ellipse (2 and 1);\n\\node[right, scale=0.8] at (0, 0) {$O$};\n\\node [black, scale=1] at (0, 0.5) {Galaxy};\n\\draw [very thick, blue, -{Stealth[length=2mm]}] (0, 0) -- (-3, -0.5) node[above, scale=1] {Jet};\n\\draw [] (0, -3) -- (0, -2.05);\n\\draw [] (0, -2) -- (0, -0);\n\n\\draw (-0.1,-1.5) .. controls + (0,-0.1) and + (0,0.1) ..  ++ (0.2, 0)    ++ (0,-0.2);\n\\draw (-0.1,-1.55) .. controls + (0,-0.1) and + (0,0.1) ..  ++ (0.2, 0)    ++ (0,-0.2);\n\n\\draw[-{Stealth[length=2mm]}] (0, -0.3) arc (270:190:0.3);\n\\node [] at (-0.3, -0.3) {$\\theta$}; \n\n\\begin{scope}[shift={(4,0)}]\n\n\n\n\\end{scope}\n\n\\end{tikzpicture}\n\n\n\n\n\n\n\n그림 18.2: 도플러 효과\n\n\n\n\n\n\nShow the code\n\\usetikzlibrary {arrows.meta}\n\\usetikzlibrary {calc}\n\\begin{tikzpicture}[line cap=round, scale = 2]\n\n\n\\draw [thick] (0, 0) -- (0, 1) -- (-3, 0) --cycle;\n\\draw [] (-0.2, 0) -- (-0.2, 0.2) -- (0, 0.2);\n\\node [right] at (0, 0) {$C$};\n\\node [right] at (0, 1) {$A$};\n\\node [left] at (-3, 0) {$B$};\n\n\\end{tikzpicture}\n\n\n\n\n\n\n\n그림 18.3: 도플러 효과",
-    "crumbs": [
-      "그림들",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>그림들-테스트</span>"
     ]
   },
   {
@@ -774,6 +752,17 @@
     "text": "% %\n%\n\\[\n\\DeclarePairedDelimiters{\\set}{\\{}{\\}}\n\\DeclareMathOperator*{\\argmax}{argmax}\n\\]\n\n\n고전 전자기학의 기본원리에 대해 설명한다. 여기서는 4개의 맥스웰 방정식과 로렌츠 힘, 그리고 전하량 보존을 바탕으로 내용을 설명한다.\n맥스웰 방정식은 다음과 같다.\n\\[\n\\begin{aligned}\n\\nabla \\cdot \\boldsymbol{E} &= \\dfrac{\\rho}{\\epsilon_0},\\\\[0.3em]\n\\nabla \\cdot \\boldsymbol{B} &= 0, \\\\[0.3em]\n\\nabla \\times \\boldsymbol{E} &= - \\dfrac{\\partial \\boldsymbol{B}}{\\partial t}, \\\\[0.3em]\n\\nabla \\times \\boldsymbol{B} &= \\mu_0 \\epsilon_0 \\dfrac{\\partial \\boldsymbol{E}}{\\partial t} + \\mu_0 \\boldsymbol{J}.\n\\end{aligned}\n\\tag{1}\\]\n또한 로렌츠 힘은 다음과 같다.\n\\[\n\\boldsymbol{F}_{\\text{Lorentz}} = q\\boldsymbol{E} + q\\boldsymbol{v}\\times \\boldsymbol{B}.\n\\tag{2}\\]\n전하량 보존은 다음과 같다.\n\\[\n\\dfrac{\\partial \\rho}{\\partial t } + \\nabla \\cdot \\boldsymbol{J}=0.\n\\tag{3}\\]",
     "crumbs": [
       "고전 전자기학"
+    ]
+  },
+  {
+    "objectID": "src/images/images_test.html",
+    "href": "src/images/images_test.html",
+    "title": "18  그림들-테스트",
+    "section": "",
+    "text": "Show the code\n\\usetikzlibrary {arrows.meta}\n\\usetikzlibrary {calc}\n\\begin{tikzpicture}[line cap=round, scale = 2]\n\n\n% 관찰자가 움직일때의 도플러 효과\n\\draw[fill=none, blue](0,0) circle (0.4);\n\\draw[fill=none, blue](0,0) circle (0.60);\n\\draw[fill=none, blue](0,0) circle (0.80);\n\\draw[fill=none, blue](0,0) circle (1);\n\n\\filldraw[] (0, 0) circle (0.03) node[below, scale=0.7] {$S$};\n\\filldraw[] (1, 0) circle (0.03) node[right, scale=0.7] {$O$};\n\\draw[thick, -{Stealth[length=2mm]}] (1, 0) -- (0.7, 0);\n\n\\node [below, scale = 0.7] at (0, -1.1) {$(a)$}; \n\n\\begin{scope}[shift={(3,0)}]\n\\draw[fill=none, blue](0,0) circle (1);\n\\draw[fill=none, blue](0.1,0) circle (0.8);\n\\draw[fill=none, blue](0.2,0) circle (0.60);\n\\draw[fill=none, blue](0.3,0) circle (0.4);\n\n\\filldraw[] (0, 0) circle (0.03) node[below, scale=0.7] {$S$};\n\\filldraw[] (1, 0) circle (0.03) node[right, scale=0.7] {$O$};\n\\draw[thick, -{Stealth[length=2mm]}] (0, 0) -- (0.3, 0);\n\\node [below, scale = 0.7] at (0, -1.1) {$(b)$}; \n\n\\end{scope}\n\n\n\\end{tikzpicture}\n\n\n\n\n\n\n\n그림 18.1: 도플러 효과\n\n\n\n\n\n\nShow the code\n\\usetikzlibrary {arrows.meta}\n\\usetikzlibrary {calc}\n\\begin{tikzpicture}[line cap=round, scale = 2]\n\n\n\\draw [gray!20, fill=gray!20] (0,0) ellipse (2 and 1);\n\\node[right, scale=0.8] at (0, 0) {$O$};\n\\node [black, scale=1] at (0, 0.5) {Galaxy};\n\\draw [very thick, blue, -{Stealth[length=2mm]}] (0, 0) -- (-3, -0.5) node[above, scale=1] {Jet};\n\\draw [] (0, -3) -- (0, -2.05);\n\\draw [] (0, -2) -- (0, -0);\n\n\\draw (-0.1,-1.5) .. controls + (0,-0.1) and + (0,0.1) ..  ++ (0.2, 0)    ++ (0,-0.2);\n\\draw (-0.1,-1.55) .. controls + (0,-0.1) and + (0,0.1) ..  ++ (0.2, 0)    ++ (0,-0.2);\n\n\\draw[-{Stealth[length=2mm]}] (0, -0.3) arc (270:190:0.3);\n\\node [] at (-0.3, -0.3) {$\\theta$}; \n\n\\begin{scope}[shift={(4,0)}]\n\n\n\n\\end{scope}\n\n\\end{tikzpicture}\n\n\n\n\n\n\n\n그림 18.2: 도플러 효과\n\n\n\n\n\n\nShow the code\n\\usetikzlibrary {arrows.meta}\n\\usetikzlibrary {calc}\n\\begin{tikzpicture}[line cap=round, scale = 2]\n\n\n\\draw [thick] (0, 0) -- (0, 1) -- (-3, 0) --cycle;\n\\draw [] (-0.2, 0) -- (-0.2, 0.2) -- (0, 0.2);\n\\node [right] at (0, 0) {$C$};\n\\node [right] at (0, 1) {$A$};\n\\node [left] at (-3, 0) {$B$};\n\n\\end{tikzpicture}\n\n\n\n\n\n\n\n그림 18.3: 도플러 효과",
+    "crumbs": [
+      "그림들",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>그림들-테스트</span>"
     ]
   }
 ]
