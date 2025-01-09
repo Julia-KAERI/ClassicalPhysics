@@ -311,7 +311,7 @@ $$ {#eq-CM_amplitude_of_steady_solution}
 
 $x_0$ 를 $\omega/\omega_0$ 에 대해 표현하면 @fig-resonance 와 같다. 
 
-![공명 곡선 (Resonance curve)](../images/classical%20mechanics/resonance/resonance.png){#fig-resonance width=340}
+![공명 곡선 (Resonance curve)](images/resonance/resonance.png){#fig-resonance width=340}
 
 </br>
 
@@ -460,7 +460,7 @@ $$
 T(E) = 2 \times \sqrt{\dfrac{m}{2}}\int_{x_2}^{x_3} \dfrac{dx}{\sqrt{E-V(x)}} = \sqrt{2m}\int_{x_2}^{x_3} \dfrac{dx}{\sqrt{E-V(x)}}.
 $$ {#eq-period_1d_potential_bounded}
 
-![일차원 포텐셜](../images/classical%20mechanics/potential/potential.png){#fig-CM_1d_potential width=500}
+![일차원 포텐셜](images/potential/potential.png){#fig-CM_1d_potential width=500}
 
 
 $E=E_3$ 인 경우에는 입자는 $x>x_1$ 인 영역 전체에 존재 할 수 있다. $E=E_1$ 인 경우, 즉 $V(x)$ 의 극소값과 에너지가 같을 경우 입자는 정지해 있게 된다. 흥미로은 경우는 에너지가 $E_1$ 보다 약간 큰 경우이다. $V(x)$ 가 $x_0$ 근처에서 미분가능하다면, $V'(x_0)=0$ 이므로
@@ -568,7 +568,7 @@ $$ {#eq-CM_lagrangian_for_reduced_to_1d}
 
 이다. 여기에 $\theta$ 에 대한 일반화된 운동량 $p_\theta = \mu r^2 \dot{\theta}$ 는 각운동량이며 $\dfrac{\partial L}{\partial \theta}=0$ 이므로 시간에 대한 불변량이다. 변위벡터 $\boldsymbol{r}=r\hat{\boldsymbol{r}}$ 이 $d\theta$ 만큼 변할 때 변위벡터가 쓸어가는 면적은 $\dfrac{1}{2}r^2d\theta$ 이며 이는 $\dfrac{p_\theta}{\mu}dt$ 이므로 일정하다. 즉 $V(r)$ 에 무관하게 중심력에서는 케플러 2법칙이 성립한다. 
 
-![변위 벡터에 의해 쓸려지는 면적](../images/classical%20mechanics/area_swept/area_swept.png){#fig-CM_area_swept_by_radius_vector width=250}
+![변위 벡터에 의해 쓸려지는 면적](images/area_swept/area_swept.png){#fig-CM_area_swept_by_radius_vector width=250}
 
 </br>
 
@@ -622,7 +622,7 @@ $$ {#eq-CM_reduced_1d_potential_precession}
 
 이 때 $\Delta \theta$ 가 $2\pi$ 의 유리수배라면 즉 최대공약수가 $1$ 인 두 정수 $n_1,\,n_2$ 에 대해 $\Delta \theta = 2\pi \dfrac{n_1}{n_2}$ 라면 $n_2$ 번의 회전 후에 이 경로는 원래 위치로 돌아와서 반복되지만, 즉 닫힌 경로를 갖지만 무리수배라면 열린 경로를 갖는다. 즉 제자리도 돌아오지 않는다. 열린 경로를 갖는 중심장은 $V(r)\propto \dfrac{1}{r}$ 인 경우와 $\propto r^2$ 인 경우 뿐이다$^1$. [$^1$ L. D. Landau and E. M. Lifshitz, *Mechanics*]{.aside}
 
-![중심장에서의 경로](../images/classical%20mechanics/central_field_orbit/orbit.png){#fig-CM_central_field_orbin width=500}
+![중심장에서의 경로](images/central_field_orbit/orbit.png){#fig-CM_central_field_orbin width=500}
 
 
 </br>
@@ -650,7 +650,7 @@ $$ {#eq-CM_effective_potential_for_kepler_problem}
 
 이다. $V'_{\textrm{eff}}(r)=0$ 인 경우는 $r=r_0=\dfrac{l^2}{\mu K}$ 이며 이 때 $V_{\textrm{eff}}(r)$ 은 최소값을 갖는다. $V_{\textrm{eff}}(r)$ 은 아래 @fig-CM_effective_potential_for_kepler_problem_1 과 같다.  
 
-![케플러 문제에서의 $V_\textrm{eff}$](../images/classical%20mechanics/effective_potential_for_kepler_orbit/effective_potential.png){#fig-CM_effective_potential_for_kepler_problem_1 width=530}
+![케플러 문제에서의 $V_\textrm{eff}$](images/effective_potential_for_kepler_orbit/effective_potential.png){#fig-CM_effective_potential_for_kepler_problem_1 width=530}
 
 정확한 궤적은 @eq-CM_reduced_to_1d_theta 을 통해 얻을 수 있다. $p = \dfrac{l^2}{\mu K}$ 와 $\varepsilon = \sqrt{1+\dfrac{2El^2}{\mu K^2}}$ 에 대해 아래와 같은 궤적을 얻을 수 있다. 증명은 어렵지 않으며 @exr-proof_of_kepler_orbit 을 보라.
 
@@ -672,7 +672,7 @@ $$ {#eq-CM_orbit_for_kepler_problem}
 : 이심률에 따른 궤도 {#tbl-eccentricity_and_orbit} 
 
 
-![$\varepsilon$ 값에 따른 궤도](../images/classical%20mechanics/keppler_orbit/keppler_orbit.png){#fig-kepler_orbit width=400}
+![$\varepsilon$ 값에 따른 궤도](images/keppler_orbit/keppler_orbit.png){#fig-kepler_orbit width=400}
 
 </br>
 
@@ -792,6 +792,7 @@ $$
 
 </br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-proof_of_laplace_runge_lenz}
 
 @prp-CM_properties_of_RLR_vector 를 증명하라.
@@ -852,7 +853,7 @@ $$
 
 :::
 
-\</div></br>
+</div></br>
 
 ::: {.solution}
 
@@ -1012,9 +1013,9 @@ $$
 
 :::
 
-
 </br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-helliwell_1_54}
 
 #### Helliwell 1.54

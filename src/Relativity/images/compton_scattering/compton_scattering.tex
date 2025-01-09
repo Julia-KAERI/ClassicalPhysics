@@ -1,0 +1,25 @@
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[line cap=round]
+
+    \filldraw[] (-4, 0) circle (0.05) node [above] {$\textrm{photon}$};
+    \draw[thick, -{Stealth[length=2mm]}] (-4, 0) -- (-2, 0);
+    \node[below] at (-3, 0) {$h\nu/c$};
+    \draw[dashed] (-2, 0) -- (3, 0);
+    
+    \shade[ball color=gray!40]   (0,0) circle (0.2) node [yshift=3ex] {$e^-$};
+    
+    \draw[dashed] (0, 0) -- (1.2, 1);
+    \filldraw[] (1.2, 1) circle (0.05) ;
+    \draw[thick, -{Stealth[length=2mm]}] (1.2, 1) -- (2.4, 2) node [xshift=-5ex] {$h\nu'/c$}; %'
+    \draw[-{Stealth[length=2mm]}] (1, 0) arc (0:39.8:1);
+    \node at (1.2, 0.4) {$\theta$};
+    \draw[dashed] (0, 0) -- (1.2, -1.3);
+    \draw[thick, -{Stealth[length=2mm]}] (1.2, -1.3) -- (1.8, -1.95) node[xshift=-5ex] {$p_e$};
+    \shade[ball color=gray!80]   (1.2, -1.3)   circle (0.2);
+    
+    \end{tikzpicture}
+\end{document}

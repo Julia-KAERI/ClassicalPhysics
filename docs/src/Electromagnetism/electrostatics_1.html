@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>고전 역학과 전자기학 - 7&nbsp; Electrostatics 1</title>
+<title>7&nbsp; Electrostatics 1 – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -123,7 +123,7 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -161,22 +161,22 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electromagnetism/00_index.html">고전 전자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electromagnetism/electrostatics_1.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Electrostatics 1</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electromagnetism/00_index.html">고전 전자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electromagnetism/electrostatics_1.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Electrostatics 1</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electromagnetism/00_index.html">고전 전자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electromagnetism/electrostatics_1.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Electrostatics 1</span></a></li></ol></nav>
       <h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Electrostatics 1</span></h1>
                       </div>
   </div>
@@ -215,7 +215,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/ClassicalMechanics/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">고전역학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -262,7 +262,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/Electromagnetism/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">고전 전자기학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -285,7 +285,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">상대론</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -308,7 +308,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/Lanczos/Lanczos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">변분 역학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -337,7 +337,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/topics/Topics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">별도의 주제들</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -354,7 +354,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/images/images.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">그림들</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -549,10 +549,10 @@ U = \sum_{i=1}^n\sum_{j=i+1}^n \dfrac{1}{4\pi\epsilon_0}\dfrac{q_iq_j}{r_{ij}} =
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-EM_charge_distribution_circular_charge" class="theorem example">
 <p><span class="theorem-title"><strong>예제 7.1 (균일하게 대전된 고리에 의한 전기장)</strong></span> &nbsp;</p>
-<div id="fig-EM_ring" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_ring" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_ring-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/electrostatics_ring/ring.png" class="img-fluid figure-img" width="300">
+<img src="images/electrostatics/electrostatics_ring/ring.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_ring-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;7.1: 원형 전하 분포
@@ -572,10 +572,10 @@ E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^{2\pi} \dfrac{\lambda Rz\,d\thet
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-EM_charge_distribution_hemisphere_shell" class="theorem example">
 <p><span class="theorem-title"><strong>예제 7.2 (반구 shell 의 전하 분포)</strong></span> &nbsp;</p>
-<div id="fig-EM_hemisphere" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_hemisphere" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_hemisphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/electrostatics_hemisphere/hemisphere.png" class="img-fluid figure-img" width="300">
+<img src="images/electrostatics/electrostatics_hemisphere/hemisphere.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_hemisphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;7.2: 반구 전하 분포
@@ -633,10 +633,10 @@ E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^R\int_0^{2\pi}  \int_{\pi/2}^\pi
 \boldsymbol{E}_{\text{out}}(r) = \dfrac{1}{4\pi\epsilon_0}\dfrac{\rho_0 4\pi R^3 /3}{r^2}\hat{\boldsymbol{r}} = \dfrac{\rho_0R^3}{3\epsilon_0 r^2} \hat{\boldsymbol{r}}
 \tag{7.11}\]</span></span></p>
 <p>이다. 이 분포의 총 전하량 <span class="math inline">\(Q=\dfrac{4\pi \rho_0 R^3}{3}\)</span> 을 생각하면 <span class="math inline">\(\boldsymbol{E}_{\text{out}}(r)= \dfrac{Q}{4\pi \epsilon_0 r^2}\hat{\boldsymbol{r}}\)</span> 이므로 모든 전하가 중심에 모여있을 때의 전기장과 같다. 전기장의 세기 <span class="math inline">\(E(r)\)</span> 을 그래프로 그리면 아래와 같다.</p>
-<div id="fig-EM_electrostatics_uniform_sphere" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_electrostatics_uniform_sphere" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_electrostatics_uniform_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/electrostatics_uniform_sphere/efield.png" class="img-fluid figure-img" width="350">
+<img src="images/electrostatics/electrostatics_uniform_sphere/efield.png" class="img-fluid figure-img" width="350">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_electrostatics_uniform_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;7.3: 균일한 구형 전하 분포에서의 전기장
@@ -649,10 +649,10 @@ E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^R\int_0^{2\pi}  \int_{\pi/2}^\pi
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-EM_charge_distribution_line_charge" class="theorem example">
 <p><span class="theorem-title"><strong>예제 7.6 (무한히 긴 선 전하)</strong></span> &nbsp;</p>
-<div id="fig-EM_electrostatics_line_charge" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_electrostatics_line_charge" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_electrostatics_line_charge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/electrostatics_long_line_charge/image.png" class="img-fluid figure-img" width="300">
+<img src="images/electrostatics/electrostatics_long_line_charge/image.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_electrostatics_line_charge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;7.4: 무한히 긴 선 전하
@@ -675,10 +675,10 @@ E_y(P) =  \dfrac{1}{4\pi\epsilon_0} \int_{-\pi/2}^{\pi/2} \dfrac{\lambda \cos \t
 \tag{7.12}\]</span></span></p>
 <p>이다.</p>
 <p>이것을 가우스 법칙을 이용해 구해보자. 아래와 같은 높이 <span class="math inline">\(L\)</span>, 반지름 <span class="math inline">\(r\)</span> 인 실린더 모양의 가우스 면을 생각하자.</p>
-<div id="fig-EM_electrostatics_line_charge" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_electrostatics_line_charge" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_electrostatics_line_charge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/electrostatics_long_line_charge/gauss_surface.png" class="img-fluid figure-img" width="300">
+<img src="images/electrostatics/electrostatics_long_line_charge/gauss_surface.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_electrostatics_line_charge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;7.5: 무한히 긴 선 전하의 가우스 면
@@ -700,10 +700,10 @@ E_r(r) 2\pi r L = \dfrac{\lambda L}{\epsilon_0}
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-EM_charge_distribution_plane" class="theorem example">
 <p><span class="theorem-title"><strong>예제 7.7 (무한 대전 평면)</strong></span> &nbsp;</p>
-<div id="fig-pat2_infinite_charged_plane" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-pat2_infinite_charged_plane" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pat2_infinite_charged_plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/electrostatics_infinite_charged_plane/figure.png" class="img-fluid figure-img" width="400">
+<img src="images/electrostatics/electrostatics_infinite_charged_plane/figure.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pat2_infinite_charged_plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;7.6: 균일하게 대전된 무한 평면
@@ -726,10 +726,10 @@ E_r(r) 2\pi r L = \dfrac{\lambda L}{\epsilon_0}
 </section>
 <section id="sec-EM_force_on_a_layer_of_charge" class="level3" data-number="7.2.2">
 <h3 data-number="7.2.2" class="anchored" data-anchor-id="sec-EM_force_on_a_layer_of_charge"><span class="header-section-number">7.2.2</span> 전하 층에서의 힘</h3>
-<div id="fig-EM_electrostatics_uniform_surface_charge_sphere" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_electrostatics_uniform_surface_charge_sphere" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_electrostatics_uniform_surface_charge_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/electrostatics_uniform_surface_charge_sphere.png" class="img-fluid figure-img" width="300">
+<img src="images/electrostatics/electrostatics_uniform_surface_charge_sphere.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_electrostatics_uniform_surface_charge_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;7.7: 균일한 표면 전하 밀도를 가진 구
@@ -745,10 +745,10 @@ E_r(r) 2\pi r L = \dfrac{\lambda L}{\epsilon_0}
 <p>이 <span class="math inline">\(dA\)</span> 에 작용하는 힘은 (<span class="math inline">\(1\)</span>) 전체 구의 표면에서 <span class="math inline">\(dA\)</span> 조각을 제외한 부분에 의해 받는 힘과 (<span class="math inline">\(2\)</span>) <span class="math inline">\(dA\)</span> 자체의 전하들 사이에 의해 <span class="math inline">\(dA\)</span> 가 받는 힘, 두가지로 나누어 볼 수 있다. 그런데 뉴턴의 제 3 법칙에 의해 (<span class="math inline">\(2\)</span>) 의한 힘은 <span class="math inline">\(0\)</span> 이며 따라서 <span class="math inline">\(dA\)</span> 를 분리하지 않고 전체 전하 분포에 의해 받는 힘을 생각해도 된다. 이것은 실제로 계산의 사소한지만 복잡한 부분을 제거해 주고 비교적 간단하게 만들어 준다.</p>
 <p>이제 다음 문제로 넘어가자. <span class="math inline">\(dA\)</span> 조각의 양쪽 면에 대한 전기장이 다른 경우 어떤 전기장을 사용해야 하는가? 아니면 이 두 전기장의 어떤 조함을 사용해야 하는가? 이것을 따져 보기 위해 실제 존재하는 물리적인 시스템을 생각해보자. 즉 두께를 가지진 전하 분포.</p>
 <p>이제 아래 그림과 같은 전하 밀도 <span class="math inline">\(\rho(x)\)</span> 를 가진 전하층을 생각하자. 두께 <span class="math inline">\(d\)</span> 에 대해 <span class="math inline">\(\sigma = \int \rho(x)\,dx\)</span> 이다.</p>
-<div id="fig-EM_electrostatics_charge_layer" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_electrostatics_charge_layer" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_electrostatics_charge_layer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/electrostatics_charged_layer/charged_layer.png" class="img-fluid figure-img" width="150">
+<img src="images/electrostatics/electrostatics_charged_layer/charged_layer.png" class="img-fluid figure-img" width="150">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_electrostatics_charge_layer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;7.8: 대전된 전하층
@@ -840,10 +840,10 @@ U &amp;= \dfrac{\epsilon_0}{2} \left[\int_{\text{in sphere}} E_{\text{in}}^2 \, 
 <p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span></p>
-<div id="fig-EM_purcell_1_2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_purcell_1_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_purcell_1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_2.png" class="img-fluid figure-img" width="400">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_2.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_purcell_1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;7.9: 그림
@@ -867,10 +867,10 @@ U &amp;= \dfrac{\epsilon_0}{2} \left[\int_{\text{in sphere}} E_{\text{in}}^2 \, 
 <div id="exr-EM_purcell_1_3" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 7.3 (콘의 꼭지점 (Purcell 1.3))</strong></span> <br> <strong>Force from a cone </strong> (<span class="math inline">\(a\)</span>) 아이스크림에서 아이스크림을 뺀 속이 빈 콘 의 꼭지점에 전하 <span class="math inline">\(q\)</span> 가 있으며 콘의 표면 전하 밀도는 <span class="math inline">\(\sigma\)</span> 이다. 콘의 경사의 길이는 <span class="math inline">\(L\)</span> 이고 경사의 반각은 <span class="math inline">\(\theta\)</span> 일 때 이 콘에 의해 전하 <span class="math inline">\(q\)</span> 에 가해지는 힘에 대해 무엇을 말할 수 있는가?</p>
 <p>(<span class="math inline">\(b\)</span>) 아래 그림과 같이 콘에서 꼭지점 쪽의 경사의 반이 사라졌을 때 전하 <span class="math inline">\(q\)</span> 가 받는 힘은 얼마인가? <span class="math inline">\(\theta\)</span> 가 얼마 일 때 받는 힘이 최대가 되는가?</p>
-<div id="fig-EM_purcell_1_3" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_purcell_1_3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_purcell_1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_3_0.png" class="img-fluid figure-img" width="300">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_3_0.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_purcell_1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;7.10: 그림
@@ -882,10 +882,10 @@ U &amp;= \dfrac{\epsilon_0}{2} \left[\int_{\text{in sphere}} E_{\text{in}}^2 \, 
 <p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span></p>
-<div id="fig-EM_purcell_1_2_solution" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_purcell_1_2_solution" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_purcell_1_2_solution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_3.png" class="img-fluid figure-img" width="500">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_3.png" class="img-fluid figure-img" width="500">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_purcell_1_2_solution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;7.11: 그림
@@ -918,10 +918,10 @@ F_z = \dfrac{q\sigma \sin (2\theta)}{4\epsilon_0}\ln 2
 <p><br></p>
 <div class="soltion">
 <p>아래와 같은 두가지 배치를 생각 할 수 있다.</p>
-<div id="fig-EM_purcell_exercise_1_4" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_purcell_exercise_1_4" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_purcell_exercise_1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_4.png" class="img-fluid figure-img" width="500">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_4.png" class="img-fluid figure-img" width="500">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_purcell_exercise_1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;7.12: Purcell exercise 1.4. 빨간색 점은 양전하, 파란색 점은 음전하를 의미한다.
@@ -981,7 +981,17 @@ U(x,\,y) &amp;= \dfrac{-qQ}{4\pi\epsilon_0a} \left[2\sqrt{2} + \dfrac{\sqrt{2}(x
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.6 (평행상태의 포텐셜 에너지 0 (Purcell 1.6))</strong></span> <br> <img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_6.png" id="fig-EM_exr_purcell_1_6" class="img-fluid" width="250" alt="그림"></p>
+<p><span class="theorem-title"><strong>연습문제 7.6 (평행상태의 포텐셜 에너지 0 (Purcell 1.6))</strong></span> <br></p>
+<div id="fig-EM_exr_purcell_1_6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-EM_exr_purcell_1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_6.png" class="img-fluid figure-img" width="250">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_exr_purcell_1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;7.13: 그림
+</figcaption>
+</figure>
+</div>
 <p>(<span class="math inline">\(a\)</span>) 위의 그림 (<span class="math inline">\(a\)</span>) 처럼 2개의 전하 <span class="math inline">\(q\)</span> 가 각각 전하 <span class="math inline">\(Q\)</span> 와 <span class="math inline">\(d\)</span> 의 거리를 두고 배치되어 있다. 이 시스템이 평행상태가 되려면 <span class="math inline">\(Q\)</span> 값이 어때야 하는가?</p>
 <p>(<span class="math inline">\(b\)</span>) 그림 (<span class="math inline">\(b\)</span>) 같은 전하 배치에 대해 같은 질문에 대해 답하라.</p>
 <p>(<span class="math inline">\(c\)</span>) 위의 두 경우 총 포텐셜 에너지가 <span class="math inline">\(0\)</span> 임으르 보여라.</p>
@@ -1043,13 +1053,13 @@ U_{\text{1-ion}} = \dfrac{1}{2} \sum_{i,\,j=-\infty,\, (i,\,j)\ne (0,\,0)}^\inft
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>M <span class="op">=</span> [<span class="fl">1</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">10</span>, <span class="fl">50</span>, <span class="fl">100</span>, <span class="fl">200</span>, <span class="fl">500</span>, <span class="fl">1000</span>, <span class="fl">2000</span>, <span class="fl">5000</span>, <span class="fl">10000</span>, <span class="fl">50000</span>]</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> <span class="fu">calc_potential_per_ion</span>.(M)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>그 결과는 아래와 같다.</p>
-<div id="fig-EM_exr_purcell_1_7_result" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_exr_purcell_1_7_result" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_exr_purcell_1_7_result-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_7.png" class="img-fluid figure-img" width="400">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_7.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_exr_purcell_1_7_result-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;7.13: 결과
+그림&nbsp;7.14: 결과
 </figcaption>
 </figure>
 </div>
@@ -1068,13 +1078,13 @@ U_{\text{1-ion}}= -0.807764 \times \dfrac{e^2}{4\pi \epsilon_0 a}
 <p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span></p>
-<div id="fig-EM_exr_purcell_1_8" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_exr_purcell_1_8" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_exr_purcell_1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_8.png" class="img-fluid figure-img" width="250">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_8.png" class="img-fluid figure-img" width="250">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_exr_purcell_1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;7.14: 문제 설명
+그림&nbsp;7.15: 문제 설명
 </figcaption>
 </figure>
 </div>
@@ -1128,7 +1138,17 @@ E_y(r,\theta) = \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{2qy}{(a^2+y^2)^{3/2}} - \
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_10" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.10 (두 전하에서의 전기장 (Purcell 1.10))</strong></span> <br> <img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_10.png" class="img-fluid" width="200" alt="Purcell 1.10"></p>
+<p><span class="theorem-title"><strong>연습문제 7.10 (두 전하에서의 전기장 (Purcell 1.10))</strong></span> <br></p>
+<div id="fig-EM_exr_purcell_1_10" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-EM_exr_purcell_1_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_10.png" class="img-fluid figure-img" width="200">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_exr_purcell_1_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;7.16: Purcell 1.10
+</figcaption>
+</figure>
+</div>
 <p>위의 그림과 같이 한쪽 방향으로만 무한대로 뻗친 선전하 밀도 <span class="math inline">\(\lambda\)</span> 의 선을 생각하자. 한쪽 끝의 바로 끝부분에서 선의 방향과 수직으로 <span class="math inline">\(l\)</span> 만큼 떨어진 지점에서의 전기장을 구하라. <span class="math inline">\(l\)</span> 값에 관계 없이 전기장의 방향은 항상 선전하의 방향과 <span class="math inline">\(45^\circ\)</span> 를 이룬다는 것을 확인하라.</p>
 </div>
 </div>
@@ -1168,13 +1188,13 @@ E_{x}(\mathcal{O}) &amp;= \dfrac{1}{4\pi\epsilon_0} \int_{-\infty}^0 \int_0^{R} 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_12" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 7.12 (반구 Shell 에서의 전기장. (Purcell 1.12))</strong></span> <br></p>
-<div id="fig-part_exrp_purcell_1_12" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-part_exrp_purcell_1_12" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-part_exrp_purcell_1_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_12.png" class="img-fluid figure-img" width="250">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_12.png" class="img-fluid figure-img" width="250">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-part_exrp_purcell_1_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;7.15: 반구형 shell
+그림&nbsp;7.17: 반구형 shell
 </figcaption>
 </figure>
 </div>
@@ -1208,13 +1228,13 @@ E_z(z&lt;R) &amp;= \dfrac{R^2\sigma}{2\epsilon_0}\left[\dfrac{R}{2z^2\sqrt{R^2+z
 \end{aligned}
 \]</span></p>
 <p><span class="math inline">\(E_z(z/R)\)</span> 을 그래프로 그리면 아래와 같다. <span class="math inline">\(z=R\)</span> 에서 불연속성이 발생한다.</p>
-<div id="fig-EM_exr_purcell_1_12_2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_exr_purcell_1_12_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_exr_purcell_1_12_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_12_2.png" class="img-fluid figure-img" width="300">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_12_2.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_exr_purcell_1_12_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;7.16: 균일하게 대전된 Hemispherical shell 에서 대칭축에서의 전기장
+그림&nbsp;7.18: 균일하게 대전된 Hemispherical shell 에서 대칭축에서의 전기장
 </figcaption>
 </figure>
 </div>
@@ -1232,13 +1252,13 @@ E_z(z\gg R) \approx \dfrac{\sigma R^2}{2\epsilon_0 z^2}\left[\dfrac{R}{z} + 1\ri
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_13" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 7.13 (균일한 전기장. (Purcell 1.13))</strong></span> <br></p>
-<div id="fig-part_exrp_purcell_1_13" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-part_exrp_purcell_1_13" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-part_exrp_purcell_1_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_13.png" class="img-fluid figure-img" width="250">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_13.png" class="img-fluid figure-img" width="250">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-part_exrp_purcell_1_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;7.17: 두 링
+그림&nbsp;7.19: 두 링
 </figcaption>
 </figure>
 </div>
@@ -1258,13 +1278,13 @@ f'(0) = \lim_{h \to 0^+}\dfrac{f(h)-f(0)}{h} = \lim_{h\to 0^+}\dfrac{f(-h)-f(0)}
 \]</span></p>
 <p>이다. 즉 <span class="math inline">\(f'(0)=0\)</span> 이며 따라서 <span class="math inline">\(f\)</span> 는 <span class="math inline">\(0\)</span> 에서 극점이다. 마찬가지로 <span class="math inline">\(E_z(z)\)</span> 는 <span class="math inline">\(z=h/2\)</span> 에서 극점을 갖는다.</p>
 <p>이제 <span class="math inline">\(h=1\)</span> 로 놓고 <span class="math inline">\(r\)</span> 값을 변화시켜 가며 <span class="math inline">\(E_z(z)\)</span> 값을 그래프로 그리면 다음과 같다.</p>
-<div id="fig-EM_exr_purcell_1_13_result" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_exr_purcell_1_13_result" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_exr_purcell_1_13_result-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_13_1.png" class="img-fluid figure-img" width="450">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_13_1.png" class="img-fluid figure-img" width="450">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_exr_purcell_1_13_result-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;7.18: Purcell 1.13 result
+그림&nbsp;7.20: Purcell 1.13 result
 </figcaption>
 </figure>
 </div>
@@ -1314,13 +1334,13 @@ v_0 = \sqrt{\dfrac{qm\sigma}{\epsilon_0}z} \propto \sqrt{z}
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_15" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 7.15 (원을 통과하는 플럭스. (Purcell 1.15))</strong></span> <br></p>
-<div id="fig-EM_exr_purcell_1_15" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_exr_purcell_1_15" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_exr_purcell_1_15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_15.png" class="img-fluid figure-img" width="200">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_15.png" class="img-fluid figure-img" width="200">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_exr_purcell_1_15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;7.19: Purcell 1.15
+그림&nbsp;7.21: Purcell 1.15
 </figcaption>
 </figure>
 </div>
@@ -1385,13 +1405,13 @@ E_y(y) = 2 \cdot \dfrac{q}{4\pi \epsilon_0 (l^2+y^2)} \cdot \dfrac{y}{\sqrt{l^2+
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_17" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 7.17 (구형 껍질 내부의 전기장. (Purcell 1.17))</strong></span> <br></p>
-<div id="fig-EM_exr_purcell_1_17" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-EM_exr_purcell_1_17" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EM_exr_purcell_1_17-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Electromagnetism/electrostatics/exr_purcell_chap01/exr_purcell_1_17.png" class="img-fluid figure-img" width="200">
+<img src="images/electrostatics/exr_purcell_chap01/exr_purcell_1_17.png" class="img-fluid figure-img" width="200">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_exr_purcell_1_17-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;7.20: Purcell 1.17
+그림&nbsp;7.22: Purcell 1.17
 </figcaption>
 </figure>
 </div>
@@ -1474,18 +1494,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1517,7 +1526,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1525,7 +1556,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

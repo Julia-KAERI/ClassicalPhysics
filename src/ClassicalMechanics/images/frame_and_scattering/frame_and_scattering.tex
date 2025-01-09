@@ -1,0 +1,68 @@
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary {arrows.meta}
+\begin{document}
+\begin{tikzpicture}[line cap=round, scale = 2]
+
+    \draw[fill=none, blue, thick](0,0) circle (1);
+    \draw[dashdotted] (0, 0) -- (1, 0);
+    \draw[thick,  -{Stealth[length=2mm]}] (0, 0) -- (0.5, 0.866);
+    \node[below right, scale = 0.8] at (0.3, 0.6) {$\boldsymbol{v}_0$};
+    \draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (0.3,0.0) arc (0:60:0.3);
+    
+    
+    
+    \node[right, scale=0.8] at (0.3, 0.15) {$\theta_0$};
+    
+    \draw[thick,  -{Stealth[length=2mm]}] (-0.7, 0)  -- (0, 0);
+    \node[below left, scale=0.8] at (-0.7, 0) {$A$};
+    
+    \node[below, scale=0.8] at (-0.4, 0) {$\boldsymbol{V}$};
+    \draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (-0.4,0.0) arc (0:35:0.3);
+    \node[scale=0.8] at (-0.32 , 0.12) {$\theta$};
+    
+    
+    \draw[thick,  -{Stealth[length=2mm]}] (-0.7, 0)  -- (0.5, 0.866);
+    \node[above, scale = 0.8] at (-0.1, 0.433) {$\boldsymbol{v}$};
+    
+    
+    \draw[fill=none, blue, thick](3, 0) circle (1);
+    \draw[dashdotted] (3, 0) -- (4, 0);
+    
+    \draw[thick,  -{Stealth[length=2mm]}] (1.5, 0)  -- (3, 0);
+    \node[below left, scale=0.8] at (1.5, 0) {$A$};
+    \draw[thick,  -{Stealth[length=2mm]}] (3, 0) -- (3.5, 0.866);
+    \node[below right, scale = 0.8] at (3.3, 0.6) {$\boldsymbol{v}_0$};
+    \draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (3.3,0.0) arc (0:60:0.3);
+    \node[right, scale=0.8] at (3.3, 0.15) {$\theta_0$};
+    
+    \node[scale=0.8] at(0.0, -1.2) {$(a)\; \|\boldsymbol{V}\|<\|\boldsymbol{v}_0\|$};
+    
+    \node[below, scale=0.8] at (2.5, 0) {$\boldsymbol{V}$};
+    
+    \draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (1.8,0.0) arc (0:25:0.3);
+    \node[below, scale=0.8] at (1.8, -0.1) {$\theta$};
+    \draw [] plot [smooth, tension=1] coordinates { (1.75,-0.1) (1.75, 0.0) (1.80, 0.05)};
+    
+    \draw [{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}] (1.9,0.0) arc (0:42:0.4);
+    
+    \draw [] plot [smooth, tension=1] coordinates { (1.5,0.5) (1.7, 0.3) (1.88, 0.12)};
+    \node[above, scale=0.8] at (1.5,0.5) {$\theta_{\textrm{max}}$};
+    
+    
+    \draw[thick,  -{Stealth[length=2mm]}] (1.5, 0) -- (3.5, 0.866);
+    \node[above, scale = 0.8] at (3.1, 0.7) {$\boldsymbol{v}$};
+    
+    
+    \draw[dashed] (1.5, 0) -- (2.333, 0.746);
+    \draw[dashed, {Stealth[length=1.5mm]}-] (2.333, 0.746) -- (3, 0);
+    
+    \node[scale=0.8] at(3.0, -1.2) {$(b)\; \|\boldsymbol{V}\|>\|\boldsymbol{v}_0\|$};
+    
+    \filldraw[black] (3.5, 0.866) circle(0.5px);
+    
+    \node[above, scale=0.8] at (3.5, 0.866) {$C$};
+    \filldraw[black] (2.025, 0.225) circle(0.5px);
+    \node[below right, scale = 0.8] at (2.025, 0.225) {$B$};
+    \end{tikzpicture}
+\end{document}

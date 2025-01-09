@@ -1,0 +1,31 @@
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary {arrows.meta}
+\begin{document}
+\begin{tikzpicture}[line cap=round]
+    \draw[red, thick, -{Stealth[length=2mm]}] plot[variable=\t,domain=0:0.93*pi, samples=100, smooth,thick] ({cos(\t r)/(1 + 0.8*cos(0.9331 * \t r))},{sin(\t r)/(1 + 0.8*cos(0.9331 * \t r))});
+    \draw[red, thick, -{Stealth[length=2mm]}] plot[variable=\t,domain=0.93*pi:3.1*pi, samples=100, smooth,thick] ({cos(\t r)/(1 + 0.8*cos(0.9331 * \t r))},{sin(\t r)/(1 + 0.8*cos(0.9331 * \t r))});
+    \draw[red, thick, -{Stealth[length=2mm]}] plot[variable=\t,domain=3.1*pi:5.25*pi, samples=100, smooth,thick] ({cos(\t r)/(1 + 0.8*cos(0.9331 * \t r))},{sin(\t r)/(1 + 0.8*cos(0.9331 * \t r))});
+    \draw[red, thick, -{Stealth[length=2mm]}] plot[variable=\t,domain=5.25*pi:7.40*pi, samples=100, smooth,thick] ({cos(\t r)/(1 + 0.8*cos(0.9331 * \t r))},{sin(\t r)/(1 + 0.8*cos(0.9331 * \t r))});
+    \draw[red, thick, -{Stealth[length=2mm]}] plot[variable=\t,domain=7.40*pi:9.55*pi, samples=100, smooth,thick] ({cos(\t r)/(1 + 0.8*cos(0.9331 * \t r))},{sin(\t r)/(1 + 0.8*cos(0.9331 * \t r))});
+    \draw[red, thick, -{Stealth[length=2mm]}] plot[variable=\t,domain=9.55*pi:11.70*pi, samples=100, smooth,thick] ({cos(\t r)/(1 + 0.8*cos(0.9331 * \t r))},{sin(\t r)/(1 + 0.8*cos(0.9331 * \t r))});
+    \draw[red, thick, -{Stealth[length=2mm]}] plot[variable=\t,domain=11.70*pi:13.84*pi, samples=100, smooth,thick] ({cos(\t r)/(1 + 0.8*cos(0.9331 * \t r))},{sin(\t r)/(1 + 0.8*cos(0.9331 * \t r))});
+    \draw[red, thick, -{Stealth[length=2mm]}] plot[variable=\t,domain=13.84*pi:15.98*pi, samples=100, smooth,thick] ({cos(\t r)/(1 + 0.8*cos(0.9331 * \t r))},{sin(\t r)/(1 + 0.8*cos(0.9331 * \t r))});
+    \draw[red, thick, -{Stealth[length=2mm]}] plot[variable=\t,domain=15.98*pi:18.12*pi, samples=100, smooth,thick] ({cos(\t r)/(1 + 0.8*cos(0.9331 * \t r))},{sin(\t r)/(1 + 0.8*cos(0.9331 * \t r))});
+    \draw[red, thick, -{Stealth[length=2mm]}] plot[variable=\t,domain=18.12*pi:20.26*pi, samples=100, smooth,thick] ({cos(\t r)/(1 + 0.8*cos(0.9331 * \t r))},{sin(\t r)/(1 + 0.8*cos(0.9331 * \t r))});
+    \draw[red, thick, -{Stealth[length=2mm]}] plot[variable=\t,domain=20.26*pi:20.53*pi, samples=100, smooth,thick] ({cos(\t r)/(1 + 0.8*cos(0.9331 * \t r))},{sin(\t r)/(1 + 0.8*cos(0.9331 * \t r))});
+    
+    \draw[fill=none, dashed, blue, thick](0,0) circle (5);
+    \draw[fill=none, ](0,0) circle (0.05);
+    \draw[thick,  -{Stealth[length=2mm]}] (0, 0) -- (-2.5, 4.33);
+    \draw[thick,  -{Stealth[length=2mm]}] (0, 0) -- (0.556, 0);
+    \node[black, left] at (-1.25, 2.17) {$r_{\textrm{max}}$};
+    \node[black, below] at (0.278, 0) {$r_{\textrm{min}}$};
+    
+    \draw[thick] (-4.776, -1.094) -- (-5.166, -1.184);
+    \draw[thick] (-3.823, -3.065) -- (-4.135, -3.315);
+    
+    \draw [thick, {Stealth[length=2mm]}-{Stealth[length=2mm]}] (-5.069,-1.161) arc (192.9:218.716:5.2);
+    \node[left] at (-4.7, -2.2) {$\Delta \theta$};
+    \end{tikzpicture}
+\end{document}

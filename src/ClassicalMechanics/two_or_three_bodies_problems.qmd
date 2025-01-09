@@ -38,7 +38,7 @@ $$
 
 
 
-![실험실 좌표계](../images/classical%20mechanics/frame_and_scattering/frame_and_scattering.png){#fig-CM_reference_system_scattering}
+![실험실 좌표계](images/frame_and_scattering/frame_and_scattering.png){#fig-CM_reference_system_scattering width=500}
 
 
 $\boldsymbol{v}_{01}$ 이나 $\boldsymbol{v}_{02}$ 가 실험실 좌표계에서 속도가 어떻게 변하는지 살펴 보자. @fig-CM_reference_system_scattering 을 보자. 입자 인덱스 $1,\,2$ 를 떼어 놓으면 실험실 좌표계에서의 속도 $\boldsymbol{v}= \boldsymbol{V} + \boldsymbol{v}_0$ 이다. $\boldsymbol{V}$ 와 $\boldsymbol{v}$ 가 $\theta$ 의 사잇각을 갖는다면 
@@ -138,7 +138,7 @@ $$
 
 이다. 이것을 그림으로 그리면 아래 @fig-CM_elastic_scattering 와 같다. 그림에서 원은 반지름이 $mv$ 이다. 
 
-![탄성 충돌 후 실험실 좌표계에서의 운동량 벡터](../images/classical%20mechanics/momentum_in_lab_frame/momentum_in_lab_frame.png){#fig-CM_elastic_scattering width=220}
+![탄성 충돌 후 실험실 좌표계에서의 운동량 벡터](images/momentum_in_lab_frame/momentum_in_lab_frame.png){#fig-CM_elastic_scattering width=220}
 
 
 위 그림에서 
@@ -153,7 +153,7 @@ $$
 
 많은 경우 충돌실험은 정지해 있는 한 입자에 대해 다른 입자를 충돌시킨다. 여기서 $m_2$ 입자가 충돌 전에 정지해 있다고 하자. 즉 $\boldsymbol{v}_2=\boldsymbol{0}$ 이며 $\boldsymbol{v}=\boldsymbol{v}_1$ 이다. $\overrightarrow{OB}=mv$ 이며, 따라서 $\overrightarrow{AB}= \boldsymbol{p}_1$ 이 된다 @fig-CM_elastic_scattering_angles_ss 는 $m_2$ 가 정지해 있을 때의 실험실 좌표계에서의 운동량에 관련된 도식이다.
 
-![$m_2$ 가 정지해 있을 때의 실험실 좌표계](../images/classical%20mechanics/elastic_scattering_angles/elastic_scatteiing_angles.png){#fig-CM_elastic_scattering_angles_ss width=560}
+![$m_2$ 가 정지해 있을 때의 실험실 좌표계](images/elastic_scattering_angles/elastic_scatteiing_angles.png){#fig-CM_elastic_scattering_angles_ss width=560}
 
 $m_1<m_2$ 일 때는 $AO < mv$ 이며 $m_1>m_2$ 일 때는 $AO > mv$ 이다. $\theta_1,\,\theta_2$ 는 충돌 이후 $m_1$ 과 $m_2$ 의 이동 각도이다. 이제 질량중심좌표계에서의 산란각 $\Theta$ 와 $\theta_1,\,\theta_2$ 의 관계는 @fig-CM_elastic_scattering_angles_ss 로 부터 다음과 같음을 쉽게 계산 할 수 있다. 
 
@@ -206,7 +206,7 @@ $m_1=m_2$ 인 경우에는 $\boldsymbol{p}'_1 \cdot \boldsymbol{p}'_2 = 0$ 이 �
 
 ### 산란
 
-![러더퍼드 산란](../images/classical%20mechanics/rutherford_scattering/rutherford_scattering.png){#fig-CM_rutherford_scattering width=370}
+![러더퍼드 산란](images/rutherford_scattering/rutherford_scattering.png){#fig-CM_rutherford_scattering width=370}
 
 원점 $O$ 로부터의 포텐셜 $V(r)$ 의 영향을 받는 질량 $m$ 인 입자의 운동을 생각해보자. 이것은 기본적으로 1체문제이며 @sec-CM_central_force 에서 다루었다. @eq-CM_reduced_to_1d_theta 로 부터
 
@@ -236,7 +236,7 @@ $${#eq-CM_rutherford_3}
 
 이다. 
 
-![산란 실험](../images/classical%20mechanics/cross_section/cross_section.png){#fig-CM_scattering_cross_section width=500}
+![산란 실험](images/cross_section/cross_section.png){#fig-CM_scattering_cross_section width=500}
 
 
 물리학에서 많이 이루어지는 산란 실험은 동일한 초기 속도 $\boldsymbol{v}_0$ 를 갖는 공간적으로 균일한 분포를 가진 다수의 입자를 입사시키며, 이 균일한 입자들이 $\boldsymbol{v}_0$ 와 수직한 방향으로 $A$ 만큼의 면적을 갖고 있다고 하자. $N$ 개의 입자가 입사되었을 때 산란각 $\Theta$ 와 $\Theta + d\Theta$ 사이로 산란되는 입자의 갯수를 $dN(\Theta)$ 이라고 하자. 입사 입자가 우리는 산란단면적 $d\sigma$ 를 다음과 같이 정의 할 수 있다.
@@ -270,9 +270,10 @@ $$ {#eq-CM_rutherford_formular}
 
 러더포드 산란단면적은 $K$ 가 양수인지 음수인지, 즉 포텐셜이 서로 끄는지 밀어내는지와 무관하며 그 절대값에만 관련이 있다는 것을 알 수 있다. 
 
+</br>
 
+## 연습문제 {.unnumbered}
 
-#### 연습문제
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-landau_18_1}
@@ -283,7 +284,7 @@ $$
 V(r) = \left\{\begin{array}{ll}0 \qquad &\text{if } r>R, \\  +\infty &\text{if } r\le R.\end{array}\right.
 $$
 
-![Perpect regid sphere](../images/classical%20mechanics/potential_wall/potential_wall.png){#fig-CM_perfect_rigid_sphere width=350}
+![Perpect regid sphere](images/potential_wall/potential_wall.png){#fig-CM_perfect_rigid_sphere width=350}
 
 이 때의 유효 산란 단면적을 구하라.
 

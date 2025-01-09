@@ -472,7 +472,7 @@ $$ {#eq-EM_spherical_haromics_expansion_of_inverse_vector_difference}
 ### 쌍극자 모멘트 {#sec-EM_electric_dipole_moment}
 
 
-![전기 쌍극자](../images/Electromagnetism/electrostatics_2/electric_dipole.png){#fig-EM_electric_dipole width=200}
+![전기 쌍극자](images/electrostatics_2/electric_dipole.png){#fig-EM_electric_dipole width=200}
 
 
 전하 $+q$ 와 $-q$ 가 위의 그림과 같이 $d$ 의 거리만큼 떨어져 있다고 하고 원점을 두 전하의 중앙에 두자. 그리고 $+q$ 로부터의 변위를 $\bf{r}_1$, $-q$ 로부터의 변위를 $\bf{r}_2$ 라고 하고 원점으로부터의 변위를 $\bf{r}$ 라고 하자. 그리고 $-q$ 전하의 위치로부터 $+q$ 전하의 위치까지의 변위를 $\bf{d}$ 라고 하자. 이 때의 전기 포텐셜 $\phi (\bf{r})$ 은 $r=\|\bf{r}\|$ 이라고 할 때 $r>d$ 의 조건과 @eq-EM_legendre_expansion 와 @eq-EM_parity_of_legendre_polynomial 로부터 다음을 얻는다.
