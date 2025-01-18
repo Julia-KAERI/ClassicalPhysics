@@ -316,7 +316,7 @@ $$ {#eq-EM_legendre_expansion}
 
 </br>
 
-#### **3. 직교성 과 Parity**
+#### **3. 직교성(Orthogonality) 과 반전성(Parity)**
 
 $$
 \int_{-1}^1 P_n(x) P_m(x)\, dx = \dfrac{2}{2n+1} \delta_{mn}
@@ -326,6 +326,7 @@ $$
 P_n(-x) = (-1)^n P_n(x)
 $${#eq-EM_parity_of_legendre_polynomial}
 
+따라서 자연수 $m$ 에 대해 $P_{2m}(-x)= P_{2m}(x)$ 이고 $P_{2m+1}(0)=0$ 이다. 
 
 
 </br>
@@ -363,11 +364,18 @@ $$ {#eq-EM_definition_of_associated_legendre_polynomial}
 
 </br>
 
-#### **2. 직교성**
+#### **2. 직교성(Orthogonality) 과 반전성(Parity)**
 
 $$
 \int_{-b}^b P_n^m \left(\dfrac{x}{b}\right)P_l^m \left(\dfrac{x}{b}\right)^m dx = \dfrac{2b}{2n+1}\dfrac{(n+|m|)!}{(n-|m|)!} \delta _{ln}.
 $$ {#eq-EM_orthogonality_of_associated_legendre_polynomials}
+
+$$
+P_l^m(-x) = (-1)^{l-m} P_l^m(x)
+$${#eq-EM_parity_of_associated_legendre_polynomials}
+
+
+
 
 </br>
 
@@ -396,10 +404,13 @@ $$ {#eq-EM_definition_of_spherical_harmomics}
 
 </br>
 
-#### **2.직교성** 
+#### **2.직교성과 반전성** 
 
 $$
-\oint_{\Omega} {Y_{l'}^{m'}}^\ast (\theta,\, \varphi)\, Y_l^m (\theta,\, \varphi) d\Omega =\int_0^{2\pi} \int_0^\pi d\theta  {Y_{l'}^{m'}}^\ast (\theta,\, \varphi)\, Y_l^m (\theta,\, \varphi)  \sin \theta\, d\theta d\varphi= \delta_{ll'}\delta_{mm'}
+\begin{aligned}
+\oint_{\Omega} {Y_{l'}^{m'}}^\ast (\theta,\, \varphi)\, Y_l^m (\theta,\, \varphi) d\Omega &=\int_0^{2\pi} \int_0^\pi  {Y_{l'}^{m'}}^\ast (\theta,\, \varphi)\, Y_l^m (\theta,\, \varphi)  \sin \theta\, d\theta d\varphi \\[0.3em]
+&= \delta_{ll'}\delta_{mm'}
+\end{aligned}
 $$ {#eq-EM_orthogonamity_of_spherical_harmonics}
 
 </br>
@@ -410,9 +421,30 @@ $$
 Y_l^{-m}(\theta,\, \varphi) = (-1)^mY_{l}^m (\theta,\, \varphi).
 $$ {#eq-EM_similarity_of_spherical_harmonics}
 
+그리고 $\bf{r} \mapsto -\bf{r}$ 변환에 대해 다음이 성립한다.
+
+$$
+\begin{aligned}
+Y_{l}^m (-\bf{r}) &= (-1)^l Y_l^m(\bf{r})\\[0.3em]
+Y_{l}^m \left(\pi - \theta,\,\varphi + \pi \right) &=(-1)^l Y_l^m(\theta,\, \varphi)
+\end{aligned}
+$$ {#eq-EM_parity_of_spherical_harmonics}
+
 </br>
 
-#### **4.완비성**
+#### **4. 특별한 값**
+
+$$
+\begin{aligned}
+{Y_{l}^m(\theta,\,\varphi)}^\ast &= (-1)^mY_{l}^{-m}(\theta,\, \varphi), \\[0.3em]
+Y_l^m (0,\, \varphi) &= \sqrt{\dfrac{2l+1}{4\pi}}\delta_{m0},\\[0.3em]
+Y_l^m (\pi,\,\varphi) &= (-1)^lY_{l}^m(0,\, \varphi) = (-1)^l\sqrt{\dfrac{2l+1}{4\pi}}\delta_{m0}.
+\end{aligned}
+$$ {#eq-EM_conjugate_of_spherical_harmonics}
+
+</br>
+
+#### **5.완비성**
 
 $$
 \sum_{l=0}^\infty \sum_{m=-l}^l {Y_{l}^m}^\ast (\theta',\, \varphi')\,Y_l^m (\theta,\, \varphi) = \delta (\varphi - \varphi')\,\delta(\cos \theta - \cos \theta')
@@ -420,7 +452,7 @@ $$ {#eq-EM_completeness_of_spherical_harmonics}
 
 </br>
 
-#### **5. 구면조화함수** 
+#### **6. 구면조화함수** 
 
 $$
 \boxed{
@@ -540,10 +572,82 @@ $$
 
 $$
 \begin{aligned}
-\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{1}{r^{l+1}} \int_V (r')^l {Y_{l}^m}^\ast (\theta,\, \varphi) Y_l^m (\theta,\, \varphi) 
+\phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1}\dfrac{Y_l^m (\theta,\, \varphi) }{r^{l+1}} \int_V (r')^l {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\theta',\, \varphi') \, d^3\bf{r}' 
+\end{aligned}
+$$ {#eq-EM_electrostatics_multpile_expansion_using_spherical_harmonics}
+
+이다. 여기서 구면좌표계에서 $d^3\bf{r}' = r'^2 \sin \theta' \, dr'd\theta'd\varphi'$ 임을 알며 
+
+$$
+\begin{aligned}
+Q_{lm} := & \int_V (r')^l {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\theta',\, \varphi') \, d^3\bf{r}' \\[0.3em]
+=&\int_V (r')^{l+2} {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\theta',\, \varphi') \, \, dr'd\sin\theta' d\varphi'
+\end{aligned}
+$$ {#eq-EM-electrostatics_moltiple_moment_2}
+
+이라고 하면
+
+$$
+\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1}\dfrac{Y_l^m (\theta,\, \varphi) }{r^{l+1}} Q_{lm}
+$${#eq-EM_electrostatics_multpile_expansion_using_spherical_harmonics_2}
+
+이다.
+
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-EM_potential_of_uniform_sphere_charge_distribution_}
+@eq-EM_electrostatics_multpile_expansion_using_spherical_harmonics_2 을 이용하여 아래 그림의 다중극 상태를 보자.
+
+![다중극](images/electrostatics_2/manypoles.png){#fig-EM_electrostatics_manipoles width=600}
+
+#### **Monopole**
+
+$\rho(\bf{r}') = q\delta(\bf{r}') = \dfrac{q}{r'^2 \sin \theta'}\,\delta(r')\delta(\theta')\delta(\varphi')$ 이다. 
+
+$$
+\begin{aligned}
+Q_{lm} &= q\int_{V} (r')^{l} {Y_{l}^{m}}^\ast (\theta',\, \varphi') \delta (r')\delta(\theta')\delta(\varphi') dr'd\theta'd\varphi' \\
+&= q\delta_{l0}\delta_{m0}
 \end{aligned}
 $$
 
+이며 $r'=0$ 인 조건에서 $l=0$ 이외에는 $Q_{ml}=0$ 이므로 
+
+$$
+\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \dfrac{q}{r}
+$$
+
+이다.
+
+</br>
+
+#### **Dipole**
+
+$\rho(\bf{r}') = q\delta\left(\bf{r}'-\dfrac{d}{2}\hat{\bf{z}}\right) - q\delta\left(\bf{r}'+\dfrac{d}{2}\hat{\bf{z}}\right)$ 라면, 즉 전하가 $z$ 축상에 위치한다면 
+
+$$
+\begin{aligned}
+Q_{lm} &= q\left(\dfrac{d}{2}\right)^{l}\left[{Y_{l}^m}^\ast (0, 0) - {Y_l^m}^\ast(\pi,0)\right] = q\left(\dfrac{d}{2}\right)^{l} \left(1-(-1)^l\right) {Y_{l}^m}^{\ast}(0, 0) \\[0.3em]
+&= \dfrac{q\sqrt{2l+1} }{\sqrt{4\pi}}\delta_{m0} \left(\dfrac{d}{2}\right)^{l} \left(1-(-1)^l\right)
+\end{aligned}
+$$
+
+이다. $l$ 이 홀수일 때만 $Q_{lm}\ne 0$ 이므로 $l=2k+1$ 로 놓으면 
+
+$$
+\begin{aligned}
+\phi(\bf{r}) &= \dfrac{2q}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Y_{2k+1}^0(0,\,\varphi)}{r^{2k+2}}\sqrt{\dfrac{4k+3}{4\pi}} \left(\dfrac{d}{2}\right)^{2k+1} \\
+&= \dfrac{q}{4\pi\epsilon_0} \left[2\sqrt{\dfrac{3}{4\pi}}\left(\dfrac{d}{2}\right)\dfrac{Y_{1}^0(\theta,\varphi)}{r^2} + 2 \sqrt{\dfrac{7}{4\pi}} \left(\dfrac{d}{2}\right)^{3} \dfrac{Y_3^0(\theta,\, \varphi)}{r^4} + \cdots\right] \\[0.3em]
+&= 
+\end{aligned}
+$$
+
+:::
+
+</div>
 
 
 
