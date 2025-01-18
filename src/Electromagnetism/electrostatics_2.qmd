@@ -54,7 +54,7 @@ $$
 
 ### 전위차
 
-이제 그 값에 $-$ 를 취한 값을 $P_1$ 과 $P_2$ 의 **전위차 (electric potential difference)** 라고 한다. 
+이제 그 값에 $-$ 를 취한 값을 $P_1$ 과 $P_2$ 의 **전기 포텐셜(electric potential)** 혹은 **전위차 (electric potential difference)** 라고 한다. 
 
 $$
 \phi_{21}:= - \int_{P_1}^{P_2} \bf{E\cdot} d\bf{s}
@@ -99,9 +99,9 @@ $$
 
 </br>
 
-### 전위차의 Gradient 
+### 전기장과 전기 포텐셜의 Gradient 
 
-지금까지 전위차는 전기장 $\bf{E}$ 에 대한 경로적분으로 주어졌다. 그러나 거꾸로 전위차를 알 때 전기장을 구할 수 있다. @eq-EM_potential_difference_from_electric_field 로부터,
+지금까지 전기 포텐셜은 전기장 $\bf{E}$ 에 대한 경로적분으로 주어졌다. 그러나 거꾸로 포텐셜을 알 때 전기장을 구할 수 있다. @eq-EM_potential_difference_from_electric_field 로부터,
 
 $$
 \bf{E}(\bf{r}) = -\nabla \phi (\bf{r})
@@ -123,20 +123,34 @@ $${#eq-EM_gradient_of_inverse_of_distance_2}
 
 을 얻는다. 우리는 두 함수 $\nabla f(\bf{r}) = \nabla g(\bf{r})$ 일 때 $f(\bf{r})- g(\bf{r})= \text{constant}$ 임을 안다. 
 
-전하 분포가 국소화 되어 있다면, 즉 유한한 부피 내에 전하분포가 존재한다면 $\|\bf{r}\|\to \infty$ 일 때 
+전하 분포가 국소화 되어 있다면, 즉 유한한 부피 내에 전하분포가 존재한다면 $r\to \infty$ 일 때 
 
 $$
-\int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\, d^3\bf{r}' \approx \dfrac{1}{\|\bf{r}\|} \int_V \rho(\bf{r}')\, d^3\bf{r}' \to 0
+\int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\, d^3\bf{r}' \approx \dfrac{1}{r} \int_V \rho(\bf{r}')\, d^3\bf{r}' \to 0
 $$
 
-이므로 $\phi (\bf{r})$ 을 $\lim_{\|\bf{r}\|\to \infty} \phi(\bf{r})=0$ 이 되도록 정할 수 있다. 즉
+이므로 $\phi (\bf{r})$ 을 $\lim_{r\to \infty} \phi(\bf{r})=0$ 이 되도록 정할 수 있다. 즉
 
 $$
 \phi(\bf{r}) := \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}d^3\bf{r}'.
 $$ {#eq-EM_electric_potential}
 
 
-그러나 전하 분포가 무한하다면 @eq-EM_gradient_of_inverse_of_distance_2 의 우변의 $\int_V \rho(\bf{r}')/\|\bf{r}-\bf{r}'\|\, d^3\bf{r}'$ 이 발산하며, 이 경우 임의의 점 $\bf{r}_0$ 를 $\phi(\bf{r}_0)=0$ 으로 잡고 전위차를 계산한다.
+그러나 전하 분포가 무한하다면 @eq-EM_gradient_of_inverse_of_distance_2 의 우변의 $\int_V \rho(\bf{r}')/\|\bf{r}-\bf{r}'\|\, d^3\bf{r}'$ 이 발산하며, 이 경우 임의의 점 $\bf{r}_0$ 를 $\phi(\bf{r}_0)=0$ 으로 잡고 전위차를 계산한다. 
+
+@eq-EM_electric_field_from_potential 로 부터 알 수 있는 전기 포텐셜의 또 하나의 특징은 전기장과 같이 중첩의 원리가 성립한다는 것이다. $\bf{E}_1,\,\bf{E}_2,\ldots$ 에 대한 전기 포텐셜 $\phi_1,\, \phi_2,\ldots$ 를 생각하자.
+
+$$
+\bf{E}= \bf{E}_1 + \bf{E}_2 + \cdots = \nabla \phi_1 + \nabla \phi_2 + \cdots = \nabla (\phi_1 + \phi_2 + \cdots)
+$$
+
+이므로 $\bf{E}= \nabla \phi$ 인 전기 포텐셜 $\phi$ 는
+
+$$
+\phi = \phi_1 + \phi_2 + \cdots
+$$
+
+이다. 
 
 
 </br>
@@ -558,7 +572,7 @@ $$
 \phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Q_k}{r^{k+1}}
 $$ {#eq-EM_multipole_expansion}
 
-여기서 전기 쌍극자 모먼트 $Q_1$ 은
+여기서 전기 쌍극자 모멘트 $Q_1$ 은
 
 $$
 Q_1 = \int_V r' \cos \gamma \rho(\bf{r}')\, d^3\bf{r}'
@@ -598,7 +612,7 @@ $${#eq-EM_electrostatics_multpile_expansion_using_spherical_harmonics_2}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-EM_potential_of_uniform_sphere_charge_distribution_}
+::: {#exm-EM_multipole_expansion_of_potentials_monopoe_dipole_cases}
 @eq-EM_electrostatics_multpile_expansion_using_spherical_harmonics_2 을 이용하여 아래 그림의 다중극 상태를 보자.
 
 ![다중극](images/electrostatics_2/manypoles.png){#fig-EM_electrostatics_manipoles width=600}
@@ -610,14 +624,14 @@ $\rho(\bf{r}') = q\delta(\bf{r}') = \dfrac{q}{r'^2 \sin \theta'}\,\delta(r')\del
 $$
 \begin{aligned}
 Q_{lm} &= q\int_{V} (r')^{l} {Y_{l}^{m}}^\ast (\theta',\, \varphi') \delta (r')\delta(\theta')\delta(\varphi') dr'd\theta'd\varphi' \\
-&= q\delta_{l0}\delta_{m0}
+&= q{Y_0^0}^\ast(0,\, 0)\delta_{l0}\delta_{m0}
 \end{aligned}
 $$
 
-이며 $r'=0$ 인 조건에서 $l=0$ 이외에는 $Q_{ml}=0$ 이므로 
+이므로 
 
 $$
-\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \dfrac{q}{r}
+\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \dfrac{4\pi q}{r} Y_0^0(\theta,\, \varphi){Y_0^0}^\ast(0,\,0)=\dfrac{1}{4\pi\epsilon_0} \dfrac{q}{r}
 $$
 
 이다.
@@ -629,28 +643,101 @@ $$
 $\rho(\bf{r}') = q\delta\left(\bf{r}'-\dfrac{d}{2}\hat{\bf{z}}\right) - q\delta\left(\bf{r}'+\dfrac{d}{2}\hat{\bf{z}}\right)$ 라면, 즉 전하가 $z$ 축상에 위치한다면 
 
 $$
+Q_{lm} = q\left(\dfrac{d}{2}\right)^{l}\left[{Y_{l}^m}^\ast (0, 0) - {Y_l^m}^\ast(\pi,0)\right]
+$$
+
+이다. @eq-EM_conjugate_of_spherical_harmonics 의 두번째 식으로 부터 
+
+
+$$
 \begin{aligned}
-Q_{lm} &= q\left(\dfrac{d}{2}\right)^{l}\left[{Y_{l}^m}^\ast (0, 0) - {Y_l^m}^\ast(\pi,0)\right] = q\left(\dfrac{d}{2}\right)^{l} \left(1-(-1)^l\right) {Y_{l}^m}^{\ast}(0, 0) \\[0.3em]
+Q_{lm}&= q\left(\dfrac{d}{2}\right)^{l} \left(1-(-1)^l\right) {Y_{l}^m}^{\ast}(0, 0) \\[0.3em]
 &= \dfrac{q\sqrt{2l+1} }{\sqrt{4\pi}}\delta_{m0} \left(\dfrac{d}{2}\right)^{l} \left(1-(-1)^l\right)
 \end{aligned}
 $$
 
-이다. $l$ 이 홀수일 때만 $Q_{lm}\ne 0$ 이므로 $l=2k+1$ 로 놓으면 
-
+이다. $l$ 이 홀수일 때만 $Q_{lm}\ne 0$ 이므로 전기 포텐셜은
 $$
 \begin{aligned}
-\phi(\bf{r}) &= \dfrac{2q}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Y_{2k+1}^0(0,\,\varphi)}{r^{2k+2}}\sqrt{\dfrac{4k+3}{4\pi}} \left(\dfrac{d}{2}\right)^{2k+1} \\
-&= \dfrac{q}{4\pi\epsilon_0} \left[2\sqrt{\dfrac{3}{4\pi}}\left(\dfrac{d}{2}\right)\dfrac{Y_{1}^0(\theta,\varphi)}{r^2} + 2 \sqrt{\dfrac{7}{4\pi}} \left(\dfrac{d}{2}\right)^{3} \dfrac{Y_3^0(\theta,\, \varphi)}{r^4} + \cdots\right] \\[0.3em]
-&= 
+\phi(\bf{r}) &= \dfrac{2q}{4\pi\epsilon_0} \sum_{l=1,\,l=\text{odd}}^\infty \sqrt{\dfrac{4\pi}{2l+1}}\dfrac{Y_{l}^0(\theta,\,\varphi)}{r^{l+1}} \left(\dfrac{d}{2}\right)^{l} \\
+&= \dfrac{2q}{4\pi\epsilon_0} \left[\sqrt{\dfrac{4\pi}{3}} \dfrac{Y_{1}^0(\theta,\varphi)}{r^2}\left(\dfrac{d}{2}\right) + \sqrt{\dfrac{4\pi}{7}} \dfrac{Y_3^0(\theta,\, \varphi)}{r^4}\left(\dfrac{d}{2}\right)^{3}  + \cdots\right] \\[0.3em]
+&= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{qd \cos \theta}{r^2} + \dfrac{qd^3(5\cos^3\theta - 3 \cos \theta)}{8r^4} + \cdots \right] 
 \end{aligned}
+$$
+
+전기 포텐셜의 첫번째 항은 @eq-EM_electric_potential_dipole_2 와 같음을 알 수 있다.
+:::
+
+</div>
+
+</br>
+
+## 라플라시안
+
+전기 포텐셜 $\phi$ 와 전기장 $\bf{E}$ 사이에 $\bf{E}=-\nabla \varphi$ 임을 안다. 또한 멕스웰 방정식의 가우스 법칙으로부터 $\bf{\nabla \cdot E} = \dfrac{\rho}{\epsilon_0}$ 임을 안다. 이로부터
+
+$$
+\nabla \cdot (\nabla \phi) = \nabla^2 \phi = - \dfrac{\rho}{\epsilon_0}
+$$
+
+임을 안다. $\rho(\bf{x})=0$ 인 $\bf{x}$ 에 대해 
+
+$$
+\nabla^2 \phi (\bf{x})=0
+$$ {#eq-EM_electrostatics_laplace_equation}
+
+이며 이를 라플라스 방정식이라고 한다. 앞서 구면조화함수에서 나온 그것과 같다. 
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-EM_electrostatics_laplacian_1}
+
+$\phi(\bf{x})$ 가 라플라스 방정식의 해라면 전하가 없는 공간상의 임의의 구 $V$ 의 표면 $S$ 에 대한 적분값의 평균은 구의 중심에서의 함수값과 같다. 즉 구의 중심 $\bf{x}_0$ 에 대해 다음이 성립한다.
+
+$$
+\dfrac{1}{\text{area of }S} \oint_S \phi (\bf{x})\, dS = \phi (\bf{x}_0)
 $$
 
 :::
 
 </div>
+</br>
+
+::: {.proof}
+
+$\bf{x}_0$ 를 원점으로 잡고 원점을 중심으로 반지름 $R$ 인 구의 표면 $S$ 를 생각하자. $\overline{\phi}$ 를 $S$ 에서의 $\phi$ 의 평균값이라고 하면
+
+$$
+\overline{\phi} = \dfrac{1}{4\pi R^2}\oint_S \phi(\bf{x}) dS = \dfrac{1}{4\pi}\int \phi(\bf{x}) R^2 d\Omega = \dfrac{1}{4\pi} \int \phi(\bf{x})d\Omega = \dfrac{1}{4\pi} \int \phi(R,\,\theta,\,\varphi) d\Omega
+$$
+
+이다. 여기서 $d\Omega$ 는 고체각을 의미한다. 그렇다면
+
+$$
+\begin{aligned}
+\dfrac{d\overline{\phi}}{dR} &= \dfrac{1}{4\pi} \int \dfrac{\partial \phi}{\partial R}\, d\Omega = \dfrac{1}{4\pi} \int\dfrac{\partial \phi}{\partial R}\hat{\bf{R}}\cdot \hat{\bf{R}} , d\Omega \\
+&= \dfrac{1}{4\pi R^2} \int \nabla \phi \cdot d\bf{a} = \dfrac{1}{4\pi R^2}\int_V \nabla^2 \phi \,dV = 0
+\end{aligned}
+$$
+
+이므로 $\overline{\phi}=\text{const}$ 이다. 즉 임의의 구 표면에 대한 평균값은 항상 일정하며 반지름 $R\to 0$ 극한에서의 평균값은 중앙값일 것이므로 $\overline{\phi} = \phi (\bf{0})$ 이다. $\square$
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-EM_electrostatics_Earnshow_principle}
+
+#### Earnshow 정리
 
 
+:::
 
-
+</div>
+</br>
 
 
