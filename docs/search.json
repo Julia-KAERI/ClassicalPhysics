@@ -792,7 +792,7 @@
     "href": "src/Electromagnetism/electrostatics_2.html#연습문제",
     "title": "8  Electrostatics 2",
     "section": "연습문제",
-    "text": "연습문제\n\n\n연습문제 8.1 (모서리에서의 힘이 0. (Purcell 2.1)) \n연습문제 7.18\n\n\n\n\n\n\n\nArfken, G. B., G. B. Arfken, H. J. Weber, and F. E. Harris. 2013. Mathematical Methods for Physicists: A Comprehensive Guide. Elsevier Science. https://books.google.co.kr/books?id=qLFo_Z-PoGIC.\n\n\nJackson, John David. 1999. Classical Electrodynamics. 3rd ed. New York, NY: Wiley. http://cdsweb.cern.ch/record/490457.",
+    "text": "연습문제\n\n\n연습문제 8.1 (두 구 shell 의 조합. (Purcell 2.1)) \n연습문제 7.18 에서 반지름 \\(R\\) 인 구 shell 의 self energy 가 $ 임을 보았다. 만약 두 shell 이 하나의 바로 위에 다음 것을 겹친다면, 즉 \\(2Q\\) 인 구 shell 을 만든다면\n\n\n\n\n\n\n\nArfken, G. B., G. B. Arfken, H. J. Weber, and F. E. Harris. 2013. Mathematical Methods for Physicists: A Comprehensive Guide. Elsevier Science. https://books.google.co.kr/books?id=qLFo_Z-PoGIC.\n\n\nJackson, John David. 1999. Classical Electrodynamics. 3rd ed. New York, NY: Wiley. http://cdsweb.cern.ch/record/490457.",
     "crumbs": [
       "고전 전자기학",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Electrostatics 2</span>"

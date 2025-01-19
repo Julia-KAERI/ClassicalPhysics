@@ -769,10 +769,10 @@ $$
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-EM_purcell_2_1}
-#### 모서리에서의 힘이 0. (Purcell 2.1)
+#### 두 구 shell 의 조합. (Purcell 2.1)
 </br>
 
-@exr-EM_purcell_1_32
+@exr-EM_purcell_1_32 에서 반지름 $R$ 인 구 shell 의 self energy 가 $\dfrac{Q^2}{8\pi\epsilon_0 R} 임을 보았다. 만약 두 shell 이 하나의 바로 위에 다음 것을 겹친다면, 즉 $2Q$ 인 구 shell 을 만든다면 
 
 :::
 
