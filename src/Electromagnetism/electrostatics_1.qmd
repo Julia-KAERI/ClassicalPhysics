@@ -468,7 +468,7 @@ $$
 
 </div></br>
 
-## Problems
+## 연습문제 {.unnumbered}
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -1234,9 +1234,49 @@ $$
 ::: {.solution}
 
 
+:::
 
+</br>
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
+::: {#exr-EM_purcell_1_32}
+#### 구형 shell 에너지 (Purcell 1.32)
+</br>
+
+반지름 $R$ 인 구 sheel 에 전하 $Q$ 가 균일하게 대전되었다. 이 시스템에 저장된 에너지는 $\dfrac{Q^2}{8\pi \epsilon_0R}$ 임을 다음의 두가지 방법으로 보이자.
+
+($a$) @eq-EM_electrostatic_energy_too_early 를 사용하여 구하라.
+
+($b$) 전하 $dq$ 를 가진 infinitesimaly 얇은 껍데기를 계속 쌓는 방법으로 구하라.
+
+:::
+
+</div> </br>
+
+::: {.soltution}
+
+($a$) 구 내부의 전기장은 $\bf{0}$ 이며 외부는 $\dfrac{Q}{4\pi\epsilon_0 r^2}\hat{\bf{r}}$ 이므로 @eq-EM_electrostatic_energy_too_early 를 사용하면
+
+$$
+\begin{aligned}
+U = \dfrac{\epsilon_0}{2}\int_{\text{outside of sphere}} \left(\dfrac{Q}{4\pi\epsilon_0}\right)^2 \dfrac{1}{r^4} dV = \dfrac{Q^2}{8 \pi \epsilon_0} \int_{R}^\infty \dfrac{1}{r^2}dr= \dfrac{Q^2}{8\pi\epsilon_0 R}
+\end{aligned}
+$$
+
+($b$) $q$ 만큼의 전하를 가진 shell 에 의한 전기장은 $\dfrac{q\hat{\bf{r}}}{4\pi\epsilon_0 r^2}$ 이다. 여기에 $dq$ 만큼의 전하를 $r=\infty$ 에서 $R$ 까지 이동시킨 다면 포텐셜 에너지 $U(q+dq)$ 와 $U(q)$ 의 관계는 다음과 같다.
+
+$$
+U(q+dq) = U(q) + \dfrac{1}{4\pi\epsilon_0}\dfrac{qdq}{R}
+$$
+
+따라서 
+
+$$
+U(Q)= \int_0^Q \dfrac{1}{4\pi\epsilon_0}\dfrac{qdq}{R} = \dfrac{Q^2}{8\pi\epsilon_0 R}
+$$
+
+이다. 
 :::
 
 
