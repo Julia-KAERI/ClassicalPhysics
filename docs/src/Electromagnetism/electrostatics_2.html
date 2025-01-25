@@ -958,6 +958,7 @@ Q_{lm}&amp;= q\left(\dfrac{d}{2}\right)^{l} \left(1-(-1)^l\right) {Y_{l}^m}^{\as
 </div>
 <p><br></p>
 <p>전하들이 역학적 평형 상태에 존재한다고 생각해 보자. <span class="math inline">\(\boldsymbol{r}\)</span> 에 위치한 전하 <span class="math inline">\(q\)</span> 가 역학적 평형 상태에 존재한다면 <span class="math inline">\(\boldsymbol{F}=q\boldsymbol{E}(\boldsymbol{r}) = -q\nabla \phi(\boldsymbol{r})=\boldsymbol{0}\)</span> 이어야 한다. 즉 <span class="math inline">\(\nabla \phi (\boldsymbol{r})=\boldsymbol{0}\)</span> 이어야 한다. 또한 <span class="math inline">\(\boldsymbol{r}\)</span> 은 <span class="math inline">\(\phi(\boldsymbol{r})\)</span> 의 극점이야 한다. <span class="math inline">\(\boldsymbol{E}=\boldsymbol{0}\)</span> 인 조건만으로는 전하들의 역학적 평형을 정의 할 수 없으며 <span class="math inline">\(\phi(\boldsymbol{r})\)</span> 까지 고려해야 한다. 그러나 정전기적 상태, 즉 전기장 만을 고려할 때 전하들의 역학적 평형이 존재하지 않으며 이는 아래의 Earnshaw 의 정리로 알 수 있다. 예를 들어 <a href="electrostatics_1.html#exr-EM_purcell_1_2" class="quarto-xref">연습문제&nbsp;<span>7.2</span></a>, <a href="electrostatics_1.html#exr-EM_purcell_1_37" class="quarto-xref">연습문제&nbsp;<span>7.19</span></a> 에서는 <span class="math inline">\(\boldsymbol{E}=0\)</span> 일 수 있음을 보여준다.</p>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-EM_electrostatics_Earnshaw_principle" class="theorem">
 <p><span class="theorem-title"><strong>정리 8.2 (Earnshaw 정리)</strong></span> 유한하고 전하가 존재하지 않는 공간 <span class="math inline">\(R\)</span> 에서의 전기 포텐셜 <span class="math inline">\(\phi(\boldsymbol{r})\)</span> 의 극점은 <span class="math inline">\(R\)</span> 의 경계에서만 존재한다.</p>
@@ -980,11 +981,175 @@ Q_{lm}&amp;= q\left(\dfrac{d}{2}\right)^{l} \left(1-(-1)^l\right) {Y_{l}^m}^{\as
 <section id="연습문제" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-EM_purcell_2_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 8.1 (두 구 shell 의 조합. (Purcell 2.1))</strong></span> <br></p>
-<p><a href="electrostatics_1.html#exr-EM_purcell_1_32" class="quarto-xref">연습문제&nbsp;<span>7.18</span></a> 에서 반지름 <span class="math inline">\(R\)</span> 인 구 shell 의 self energy 가 $ 임을 보았다. 만약 두 shell 이 하나의 바로 위에 다음 것을 겹친다면, 즉 <span class="math inline">\(2Q\)</span> 인 구 shell 을 만든다면</p>
+<div id="exr-EM_purcell_2_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 8.1 (정육면체의 중악과 모서리에서의 포텐셜 (Purcell 2.4))</strong></span> <br></p>
+<p>균일한 전하 밀도 <span class="math inline">\(\rho\)</span> 를 가진 한 변의 길이가 <span class="math inline">\(b\)</span> 인 정육면체를 생각하자. 무한히 멀리 떨어진 위치에서의 포텐셜을 <span class="math inline">\(0\)</span> 으로 잡는다. 정육면체 중앙에서의 포텐셜을 <span class="math inline">\(\phi_0\)</span>, 한 꼭지점에서의 포텐셜을 <span class="math inline">\(\phi_1\)</span> 이라고 했을 때 두 포텐셜의 비율 <span class="math inline">\(\phi_0/\phi_1\)</span> 을 구하라.</p>
+</div>
 </div>
 <p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>총 전하가 <span class="math inline">\(Q\)</span> 인 균일한 전하 밀도를 가진, 한 변의 길이가 <span class="math inline">\(s\)</span> 인 정육면체의 중앙에서의 포텐셜 <span class="math inline">\(\phi_C\)</span> 를 생각하자. 주어진 값에서 거리의 차원은 <span class="math inline">\(s\)</span> 밖에 없으며 포텐셜의 차원은 전하에 비례하고 거리에 반비례 하므로 <span class="math inline">\(\phi_C \propto Q/s\)</span> 이다. <span class="math inline">\(Q=\rho s^3\)</span> 이므로 <span class="math inline">\(\phi_C(\rho,\,s) \propto \rho s^2\)</span> 이다. 따라서 상수 <span class="math inline">\(a\)</span> 에 대해</p>
+<p><span class="math display">\[
+\phi_C(\rho,\,s) = a\rho s^2
+\]</span></p>
+<p>라고 쓸 수 있다. <span class="math inline">\(\phi_0 = \phi_C(\rho,\, b) = a\rho b^2\)</span> 이다.</p>
+<p>이제 한 변의 길이가 <span class="math inline">\(2b\)</span> 인, 역시 전하 밀도 <span class="math inline">\(\rho\)</span> 를 가진 정육면체를 생각하자. 그렇다면 원점에서의 포텐셜 <span class="math inline">\(\phi_2=4a\rho b^2\)</span> 이다. 그런데 여기서의 원점은 한 변의 길이가 <span class="math inline">\(b\)</span> 인 <span class="math inline">\((\pm b/2,\, \pm b/2,\, \pm b/2)\)</span> 를 중심으로 갖는 8개의 정육면체의 공통의 꼭지점으로 생각 할 수 있다. 중첩의 원리를 생각하면 <span class="math inline">\(\phi_2 = 8 \phi_1\)</span> 이며, 따라서</p>
+<p><span class="math display">\[
+\phi_1 = \dfrac{\phi_2}{8}= \dfrac{\phi_0}{2}
+\]</span></p>
+<p>이다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-EM_purcell_2_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 8.2 (정육면체로부터의 탈출 (Purcell 2.5))</strong></span> <br></p>
+<p>8 개의 양성자가 정육면체의 꼭지점에 고정되어 있으며 8개의 양성자는 정육면체의 중심 근처에 자유롭게 떠 있다. 주위에 다른 전자는 없고 중력도 생각하지 않는다. 이 아홉번째 양성자는 잡혀있는가? 포텐셜 에너지를 내려가기만 하는 탈출 경로를 찾을 수 있는가?</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>8 개의 양성자가 각각 <span class="math inline">\((\pm 1,\pm 1,\, \pm 1)\)</span> 에 위치한다고 하자. 이 때 내부에서의 포텐셜은</p>
+<p><span class="math display">\[
+\phi(\boldsymbol{x})= \dfrac{e}{4\pi\epsilon_0} \sum_{i=1}^8 \dfrac{e}{\|\boldsymbol{x}-\boldsymbol{s}_i\|}
+\]</span></p>
+<p>이다. 이제 <span class="math inline">\(e/4\pi\epsilon_0=1\)</span> 로 놓고 생각하자. <span class="math inline">\((0,\,0,\,0) \to (1,\,0,\,0)\)</span> 인 경로를 생각하자. 이 경로상에서의 포텐셜은</p>
+<p><span class="math display">\[
+\psi (x) = \phi(x,\,0,\,0) = \sum_{i=1}^8 \dfrac{1}{\|(x,\,0,\,0) - \boldsymbol{s}_i\|}
+\]</span></p>
+<p>이며 이것을 그래프로 그리면 다음과 같다.</p>
+<div id="fig-EM_electrostatics_escape_from_cube" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-EM_electrostatics_escape_from_cube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="notebook/escape_from_cube.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EM_electrostatics_escape_from_cube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.4: <span class="math inline">\(\psi(x)\)</span>
+</figcaption>
+</figure>
+</div>
+<p>즉 최소한 원점에서 <span class="math inline">\((1,\,0,\,0)\)</span> 으로 가는 경로를 통해 양성자가 정육면체를 탈출 할 수 있다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-EM_purcell_2_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 8.3 (구 껍질의 전하분포로부터의 포텐셜을 적분으로 직접 구하기 (Purcell 2.7))</strong></span> <br></p>
+<p>반지름 <span class="math inline">\(R\)</span> 인 구 껍질에 전하 <span class="math inline">\(Q\)</span> 가 균일하게 분포되어있다. 우리는 <a href="electrostatics_1.html#exm-EM_charge_distribution_uniform_sphere" class="quarto-xref">예제&nbsp;<span>7.5</span></a> 에서 가우스 분포를 이용하여 전기장을 구했다. 여기서는 적분을 통해 포텐셜을 구하고 이 포텐셜을 미분하여 전기장을 구하라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>면 전하 밀도 <span class="math inline">\(\sigma = \dfrac{Q}{4\pi R^2}\)</span> 이다. 전하 분포가 구형 대칭이므로 포텐셜을 <span class="math inline">\(\boldsymbol{r}=r\hat{\boldsymbol{z}}\)</span> 에서의 포텐셜을 구해도 무방하다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\phi(\boldsymbol{r}) &amp;=\dfrac{1}{4\pi\epsilon_0} \int_0^{2\pi} \int_0^\pi \dfrac{\sigma R^2 \sin \theta d\theta d\varphi}{\sqrt{r^2+R^2 -2rR \cos\theta}} \\
+&amp;= \dfrac{1}{2\epsilon_0} \int_0^\pi \dfrac{\sigma R}{r} \left[\dfrac{d}{d\theta}\sqrt{r^2+R^2-2rR\cos\theta}\right] \, d\theta \\
+&amp;= \dfrac{\sigma R}{2\epsilon_0 r} \left(|r+R| - |r-R|\right)
+\end{aligned}
+\]</span></p>
+<p>이다. 따라서</p>
+<p><span class="math display">\[
+\phi(\boldsymbol{r}) = \left\{\begin{array}{ll} \dfrac{\sigma R^2}{\epsilon_0 r} = \dfrac{Q}{4\pi\epsilon_0 r}, \quad &amp; r&gt;R, \\ \dfrac{\sigma R}{\epsilon_0} = \dfrac{Q}{4\pi\epsilon_0 R}, &amp; r&lt;R.\end{array}\right.
+\]</span></p>
+<p>이며, <span class="math inline">\(\phi(\boldsymbol{r})= \phi(r)\)</span> 이므로</p>
+<p><span class="math display">\[
+\boldsymbol{E}(r) = -\nabla \phi(r) = - \dfrac{d\phi(r)}{dr} \hat{\boldsymbol{r}}= \left\{\begin{array}{ll}\dfrac{Q}{4\pi\epsilon_0 r^2}\hat{\boldsymbol{r}},\qquad &amp; r&gt;R, \\ 0 &amp; r&lt;R.  \end{array}\right.
+\]</span></p>
+<p>이다.</p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-EM_purcell_2_8" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 8.4 (역제곱 법칙의 증명 (Purcell 2.8))</strong></span> <br></p>
+<p>케빈디시와 멕스웰은 쿨롱 법칙의 역제곱 성질을 확인하기 위한 실험을 수행하였다. 이 문제는 이 실험에 숨겨진 이론을 제시한다.</p>
+<p>(<span class="math inline">\(a\)</span>) 쿨롱 법칙이 <span class="math inline">\(kq_1q_2/r^{2+\delta}\)</span> 형태로 가정하자. 반지름이 <span class="math inline">\(R\)</span> 이고 전하 <span class="math inline">\(Q\)</span> 가 균일한 표면 전하 분포를 갖는 속이 빈 구형 껍질을 생각하자. 구의 중심으로부터 <span class="math inline">\(r\)</span> 만큼 떨어진 곳에서의 포텐셜이 다음과 같음을 보여라.</p>
+<p><span id="eq-EM_electrostatics_exr_purcell_2_8_1"><span class="math display">\[
+\begin{aligned}
+\phi(r) &amp;= \dfrac{kQ}{2(1-\delta^2)rR}\left[f(R+r) - f(R-r)\right]\qquad &amp; (\text{for }r&lt;R),\\
+\phi(r) &amp;= \dfrac{kQ}{2(1-\delta^2)rR}\left[f(R+r) - f(r-R)\right]&amp; (\text{for } r&gt;R).
+\end{aligned}
+\tag{8.37}\]</span></span></p>
+<p>여기서 <span class="math inline">\(f(x) = x^{1-\delta}\)</span> 이고 <span class="math inline">\(k \equiv 1/4\pi\epsilon_0\)</span> 이다. (주의: 우리는 보통 <span class="math inline">\(\delta \ll 1\)</span> 인 경우만 생각하며 <a href="#eq-EM_electrostatics_exr_purcell_2_8_1" class="quarto-xref">식&nbsp;<span>8.37</span></a> 의 분모의 <span class="math inline">\((1-\delta^2)\)</span> 은 <span class="math inline">\(1\)</span> 로 적합하게 근사할 수 있다. 이후에서는 이를 무시한다.)</p>
+<p>(<span class="math inline">\(b\)</span>) 반지름이 <span class="math inline">\(a,\,b\)</span> 이며 <span class="math inline">\(a&gt;b\)</span> 인 두 구형 껍질이 같은 중심으로 위치해 있으며 각각 <span class="math inline">\(Q_a,\,Q_b\)</span> 의 전하가 표면에 균일하게 분포하고 있다. 이 껍질 표면에서의 포텐셜은 다음과 같음을 보여라.</p>
+<p><span id="eq-EM_electrostatics_exr_purcell_2_8_2"><span class="math display">\[
+\begin{aligned}
+\phi_a &amp;= \dfrac{kQ_a}{2a^2} f(2a) + \dfrac{kQ_b}{2ab}\left[f(a+b) - f(a-b)\right], \\[0.3em]
+\phi_b &amp;= \dfrac{kQ_b}{2b^2}f(2b) + \dfrac{kQ_a}{2ab}\left[f(a+b) - f(a-b)\right].
+\end{aligned}
+\tag{8.38}\]</span></span></p>
+<p>(<span class="math inline">\(c\)</span>) 두 구형 껍질이 연결된다면 같은 전위 <span class="math inline">\(\phi\)</span> 를 갖게 되어 내부 껍질의 전하는</p>
+<p><span id="eq-EM_electrostatics_exr_purcell_2_8_3"><span class="math display">\[
+Q_b = \dfrac{2b\phi}{k} \cdot \dfrac{bf(2a)-a\left[f(a+b)-f(a-b)\right]}{f(2a)f(2b) - \left[f(a+b) -f(a-b)\right]^2}
+\tag{8.39}\]</span></span></p>
+<p>이 됨을 보여라. 만약 <span class="math inline">\(\delta = 0\)</span> 이라면 <span class="math inline">\(f(x) = x\)</span> 이며 <span class="math inline">\(Q_b=0\)</span> 이 된다. 따라서 <span class="math inline">\(Q_b\ne 0\)</span> 라면 <span class="math inline">\(\delta \ne 0\)</span> 이다. <span class="math inline">\(\delta\)</span> 가 작다면 <span class="math inline">\(Q_b\)</span> 를 <span class="math inline">\(\delta\)</span> 에 대한 1차항까지 전개 할 수 있다. 이 때 <span class="math inline">\(f(x) = xe^{-\delta \ln x} \approx x(1-\delta \ln x)\)</span> 를 사용한다. 그러나 이 방법은 너무 번잡스럽다. 컴퓨터를 이용하 다양한 <span class="math inline">\(a,\,b,\, \delta\)</span> 값에 대해 <span class="math inline">\(Q_b\)</span> 를 그려보라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 앞의 문제와 같이 <span class="math inline">\(\boldsymbol{r}=r\hat{\boldsymbol{z}}\)</span> 로 놓아도 된다. <span class="math inline">\(\sigma = Q/4\pi R^2\)</span> 라고 놓자. 구 표면의 <span class="math inline">\(dq(\boldsymbol{r}')\)</span> 에 의 한 전기 포텐셜을 생각하면</p>
+<p><span class="math display">\[
+\begin{aligned}
+d\phi(\boldsymbol{r}) &amp;= \int_{-\infty}^r \left(d\boldsymbol{E} \cdot \hat{\boldsymbol{z}}\right) dz = \int_{-\infty}^r \dfrac{k\,dq(\boldsymbol{r}')(z-z')}{\|z\hat{\boldsymbol{z}}-\boldsymbol{r}'\|^{3+\delta}}\, dz \\[0.3em]
+&amp;= -\dfrac{k\, dq(\boldsymbol{r}')}{1+\delta} \left[\dfrac{1}{\|z\hat{\boldsymbol{z}}-\boldsymbol{r}'\|^{1+\delta}}\right]_{z=-\infty}^r \\[0.3em]
+&amp;= \dfrac{k\, dq(\boldsymbol{r}')}{1+\delta}\dfrac{1}{\|r\hat{\boldsymbol{z}}-\boldsymbol{r}'\|^{1+\delta}}
+\end{aligned}
+\]</span></p>
+<p>이며 이로부터,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\phi(r) &amp;= \dfrac{k}{1+\delta} \int_0^\pi \int_0^{2\pi} \dfrac{\sigma R^2 \sin \theta \, d\theta d\varphi}{\|r\hat{\boldsymbol{z}}-\boldsymbol{r}'\|^{1+\delta}} \\[0.3em]
+&amp;= \dfrac{2\pi k}{1+\delta} \int_0^\pi \dfrac{\sigma \,R^2\, \sin \theta \, d\theta}{(r^2+R^2 - 2rR \cos\theta)^{(1+\delta)/2}} \\[0.3em]
+&amp;= \dfrac{2\pi k}{1-\delta^2}\dfrac{\sigma R^2}{rR} \left[(r^2+R^2 - 2rR \cos\theta)^{(1-\delta)/2}\right]_{\theta=0}^{\theta = \pi} \\[0.3em]
+&amp;= \dfrac{2\pi k \sigma R^2}{(1-\delta^2)rR}\left[|r+R|^{(1-\delta)}  - |r-R|^{(1-\delta)}\right] \\[0.3em]
+&amp;= \dfrac{k Q}{2(1-\delta^2)rR}\left[|r+R|^{(1-\delta)}  - |r-R|^{(1-\delta)}\right]
+\end{aligned}
+\]</span></p>
+<p>임을 안다. 위 식은 <a href="#eq-EM_electrostatics_exr_purcell_2_8_1" class="quarto-xref">식&nbsp;<span>8.37</span></a> 과 같다.</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(a&gt;b\)</span> 이므로, 그리고 문제에서 제시한대로 <span class="math inline">\(1-\delta^2 \approx 1\)</span> 로 놓으면</p>
+<p><span class="math display">\[
+\begin{aligned}
+\phi_a &amp;= \dfrac{kQ_a}{2a^2}f(2a) + \dfrac{kQ_b}{2ab}\left[f(a+b) - f(a-b)\right],\\[0.3em]
+\phi_b &amp;= \dfrac{kQ_b}{2b^2}f(2b) + \dfrac{kQ_a}{2ab}\left[f(a+b) - f(a-b)\right]
+\end{aligned}
+\]</span></p>
+<p>임을 안다.</p>
+<p>(<span class="math inline">\(c\)</span>) 두 껍질이 연결된다면 전하가 이동하여 포텐셜이 같아진다. 변경된 전하를 각각 <span class="math inline">\(Q_a',\, Q_b'\)</span> 이라고 하고 같아진 포텐셜을 <span class="math inline">\(\phi\)</span> 라고 하면</p>
+<p><span id="eq-EM_electrostatics_exr_purcell_2_8_4"><span class="math display">\[
+\begin{aligned}
+\phi &amp;= \dfrac{kQ_a'}{2a^2}f(2a) + \dfrac{kQ_b'}{2ab}\left[f(a+b) - f(a-b)\right] \\[0.3em]
+&amp;=\dfrac{kQ_b'}{2b^2}f(2b) + \dfrac{kQ_a'}{2ab}\left[f(a+b) - f(a-b)\right]
+\end{aligned}
+\tag{8.40}\]</span></span></p>
+<p>이며</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\dfrac{k}{2a^2b}Q'_a\left[bf(2a) - af(a+b) + af(a-b)\right] \\
+&amp;\qquad \qquad = \dfrac{k}{2ab^2}Q_b'\left[af(2b) - bf(a+b) + bf(a-b)\right]
+\end{aligned}
+\]</span></p>
+<p>이므로</p>
+<p><span class="math display">\[
+Q'_a = \dfrac{a Q_b'}{b}\dfrac{\left[af(2b) - bf(a+b) + bf(a-b)\right]}{\left[bf(2a) - af(a+b) + af(a-b)\right] }
+\]</span></p>
+<p>이다. <a href="#eq-EM_electrostatics_exr_purcell_2_8_4" class="quarto-xref">식&nbsp;<span>8.40</span></a> 의 첫번째 줄에 대입하면</p>
+<p><span class="math display">\[
+\begin{aligned}
+\phi &amp;= \dfrac{kQ_b'}{2ab}f(2a)\dfrac{\left[af(2b) - bf(a+b) + bf(a-b)\right]}{\left[bf(2a) - af(a+b) + af(a-b)\right] } + \dfrac{kQ_b'}{2ab}\left[f(a+b) - f(a-b)\right]  \\[0.3em]
+&amp;=\dfrac{kQ_b'}{2ab} \dfrac{[\cdots]}{bf(2a) - af(a+b) + af(a-b)}
+\end{aligned}
+\]</span></p>
+<p>이며</p>
+<p><span class="math display">\[
+\begin{aligned}
+{}[\cdots] &amp;= af(2a)f(2b) - bf(2a)f(a+b) + bf(2a)f(a-b) \\[0.2em]
+&amp;\qquad + bf(2a)f(a+b)-bf(2a)f(a-b)  -a(f(a+b)- f(a-b))^2 \\[0.2em]
+&amp;= af(2a)f(2b)-a(f(a+b)- f(a-b))^2
+\end{aligned}
+\]</span></p>
+<p>이다. 이로부터</p>
+<p><span class="math display">\[
+Q'_b = \dfrac{2b \phi}{k}\dfrac{bf(2a) - a[f(a+b) -f(a-b)]}{f(2a)f(2b)-(f(a+b)- f(a-b))^2}
+\]</span></p>
+<p>을 얻는다.</p>
 </div>
 
 

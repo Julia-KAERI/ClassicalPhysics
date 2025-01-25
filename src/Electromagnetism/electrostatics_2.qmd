@@ -730,6 +730,8 @@ $$
 
 전하들이 역학적 평형 상태에 존재한다고 생각해 보자. $\bf{r}$ 에 위치한 전하 $q$ 가 역학적 평형 상태에 존재한다면 $\bf{F}=q\bf{E}(\bf{r}) = -q\nabla \phi(\bf{r})=\bf{0}$ 이어야 한다. 즉 $\nabla \phi (\bf{r})=\bf{0}$ 이어야 한다. 또한 $\bf{r}$ 은 $\phi(\bf{r})$ 의 극점이야 한다. $\bf{E}=\bf{0}$ 인 조건만으로는 전하들의 역학적 평형을 정의 할 수 없으며 $\phi(\bf{r})$ 까지 고려해야 한다. 그러나 정전기적 상태, 즉 전기장 만을 고려할 때 전하들의 역학적 평형이 존재하지 않으며 이는 아래의 Earnshaw 의 정리로 알 수 있다. 예를 들어 @exr-EM_purcell_1_2, @exr-EM_purcell_1_37 에서는 $\bf{E}=0$ 일 수 있음을 보여준다. 
 
+</br>
+
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-EM_electrostatics_Earnshaw_principle}
@@ -768,13 +770,247 @@ $$
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-EM_purcell_2_1}
-#### 두 구 shell 의 조합. (Purcell 2.1)
+::: {#exr-EM_purcell_2_4}
+#### 정육면체의 중악과 모서리에서의 포텐셜 (Purcell 2.4)
 </br>
 
-@exr-EM_purcell_1_32 에서 반지름 $R$ 인 구 shell 의 self energy 가 $\dfrac{Q^2}{8\pi\epsilon_0 R} 임을 보았다. 만약 두 shell 이 하나의 바로 위에 다음 것을 겹친다면, 즉 $2Q$ 인 구 shell 을 만든다면 
+균일한 전하 밀도 $\rho$ 를 가진 한 변의 길이가 $b$ 인 정육면체를 생각하자. 무한히 멀리 떨어진 위치에서의 포텐셜을 $0$ 으로 잡는다. 정육면체 중앙에서의 포텐셜을 $\phi_0$, 한 꼭지점에서의 포텐셜을 $\phi_1$ 이라고 했을 때 두 포텐셜의 비율 $\phi_0/\phi_1$ 을 구하라.
+
+:::
+</div>
+
+</br>
+
+::: {.solution}
+
+총 전하가 $Q$ 인 균일한 전하 밀도를 가진, 한 변의 길이가 $s$ 인 정육면체의 중앙에서의 포텐셜 $\phi_C$ 를 생각하자. 주어진 값에서 거리의 차원은 $s$ 밖에 없으며 포텐셜의 차원은 전하에 비례하고 거리에 반비례 하므로 $\phi_C \propto Q/s$ 이다. $Q=\rho s^3$ 이므로 $\phi_C(\rho,\,s) \propto \rho s^2$ 이다. 따라서 상수 $a$ 에 대해 
+
+$$
+\phi_C(\rho,\,s) = a\rho s^2
+$$
+
+라고 쓸 수 있다. $\phi_0 = \phi_C(\rho,\, b) = a\rho b^2$ 이다.
+
+이제 한 변의 길이가 $2b$ 인, 역시 전하 밀도 $\rho$ 를 가진 정육면체를 생각하자. 그렇다면 원점에서의 포텐셜 $\phi_2=4a\rho b^2$ 이다. 그런데 여기서의 원점은 한 변의 길이가 $b$ 인 $(\pm b/2,\, \pm b/2,\, \pm b/2)$ 를 중심으로 갖는 8개의 정육면체의 공통의 꼭지점으로 생각 할 수 있다. 중첩의 원리를 생각하면 $\phi_2 = 8 \phi_1$ 이며, 따라서
+
+$$
+\phi_1 = \dfrac{\phi_2}{8}= \dfrac{\phi_0}{2}
+$$
+
+이다. 
 
 :::
 
 </br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-EM_purcell_2_5}
+#### 정육면체로부터의 탈출 (Purcell 2.5)
+</br>
+
+8 개의 양성자가 정육면체의 꼭지점에 고정되어 있으며 8개의 양성자는 정육면체의 중심 근처에 자유롭게 떠 있다. 주위에 다른 전자는 없고 중력도 생각하지 않는다. 이 아홉번째 양성자는 잡혀있는가? 포텐셜 에너지를 내려가기만 하는 탈출 경로를 찾을 수 있는가? 
+
+:::
 </div>
+
+</br>
+
+::: {.solution}
+
+8 개의 양성자가 각각 $(\pm 1,\pm 1,\, \pm 1)$ 에 위치한다고 하자. 이 때 내부에서의 포텐셜은
+
+$$
+\phi(\bf{x})= \dfrac{e}{4\pi\epsilon_0} \sum_{i=1}^8 \dfrac{e}{\|\bf{x}-\bf{s}_i\|}
+$$
+
+이다. 이제 $e/4\pi\epsilon_0=1$ 로 놓고 생각하자. $(0,\,0,\,0) \to (1,\,0,\,0)$ 인 경로를 생각하자. 이 경로상에서의 포텐셜은
+
+$$
+\psi (x) = \phi(x,\,0,\,0) = \sum_{i=1}^8 \dfrac{1}{\|(x,\,0,\,0) - \bf{s}_i\|}
+$$
+
+이며 이것을 그래프로 그리면 다음과 같다.
+
+![$\psi(x)$](notebook/escape_from_cube.png){#fig-EM_electrostatics_escape_from_cube width=400}
+
+즉 최소한 원점에서 $(1,\,0,\,0)$ 으로 가는 경로를 통해 양성자가 정육면체를 탈출 할 수 있다.
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-EM_purcell_2_7}
+#### 구 껍질의 전하분포로부터의 포텐셜을 적분으로 직접 구하기 (Purcell 2.7)
+</br>
+
+반지름 $R$ 인 구 껍질에 전하 $Q$ 가 균일하게 분포되어있다. 우리는 @exm-EM_charge_distribution_uniform_sphere 에서 가우스 분포를 이용하여 전기장을 구했다. 여기서는 적분을 통해 포텐셜을 구하고 이 포텐셜을 미분하여 전기장을 구하라.
+
+:::
+</div>
+
+</br>
+
+
+::: {.solution}
+
+면 전하 밀도 $\sigma = \dfrac{Q}{4\pi R^2}$ 이다. 전하 분포가 구형 대칭이므로 포텐셜을 $\bf{r}=r\hat{\bf{z}}$ 에서의 포텐셜을 구해도 무방하다. 
+
+$$
+\begin{aligned}
+\phi(\bf{r}) &=\dfrac{1}{4\pi\epsilon_0} \int_0^{2\pi} \int_0^\pi \dfrac{\sigma R^2 \sin \theta d\theta d\varphi}{\sqrt{r^2+R^2 -2rR \cos\theta}} \\
+&= \dfrac{1}{2\epsilon_0} \int_0^\pi \dfrac{\sigma R}{r} \left[\dfrac{d}{d\theta}\sqrt{r^2+R^2-2rR\cos\theta}\right] \, d\theta \\
+&= \dfrac{\sigma R}{2\epsilon_0 r} \left(|r+R| - |r-R|\right)
+\end{aligned}
+$$
+
+이다. 따라서
+
+$$
+\phi(\bf{r}) = \left\{\begin{array}{ll} \dfrac{\sigma R^2}{\epsilon_0 r} = \dfrac{Q}{4\pi\epsilon_0 r}, \quad & r>R, \\ \dfrac{\sigma R}{\epsilon_0} = \dfrac{Q}{4\pi\epsilon_0 R}, & r<R.\end{array}\right.
+$$
+
+이며, $\phi(\bf{r})= \phi(r)$ 이므로
+
+$$
+\bf{E}(r) = -\nabla \phi(r) = - \dfrac{d\phi(r)}{dr} \hat{\bf{r}}= \left\{\begin{array}{ll}\dfrac{Q}{4\pi\epsilon_0 r^2}\hat{\bf{r}},\qquad & r>R, \\ 0 & r<R.  \end{array}\right.
+$$
+
+이다. 
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-EM_purcell_2_8}
+#### 역제곱 법칙의 증명 (Purcell 2.8)
+</br>
+
+케빈디시와 멕스웰은 쿨롱 법칙의 역제곱 성질을 확인하기 위한 실험을 수행하였다. 이 문제는 이 실험에 숨겨진 이론을 제시한다.
+
+($a$) 쿨롱 법칙이 $kq_1q_2/r^{2+\delta}$ 형태로 가정하자. 반지름이 $R$ 이고 전하 $Q$ 가 균일한 표면 전하 분포를 갖는 속이 빈 구형 껍질을 생각하자. 구의 중심으로부터 $r$ 만큼 떨어진 곳에서의 포텐셜이 다음과 같음을 보여라.
+
+$$
+\begin{aligned}
+\phi(r) &= \dfrac{kQ}{2(1-\delta^2)rR}\left[f(R+r) - f(R-r)\right]\qquad & (\text{for }r<R),\\
+\phi(r) &= \dfrac{kQ}{2(1-\delta^2)rR}\left[f(R+r) - f(r-R)\right]& (\text{for } r>R).
+\end{aligned}
+$$ {#eq-EM_electrostatics_exr_purcell_2_8_1}
+
+여기서 $f(x) = x^{1-\delta}$ 이고 $k \equiv 1/4\pi\epsilon_0$ 이다. (주의: 우리는 보통 $\delta \ll 1$ 인 경우만 생각하며 @eq-EM_electrostatics_exr_purcell_2_8_1 의 분모의 $(1-\delta^2)$ 은 $1$ 로 적합하게 근사할 수 있다. 이후에서는 이를 무시한다.) 
+
+($b$) 반지름이 $a,\,b$ 이며 $a>b$ 인 두 구형 껍질이 같은 중심으로 위치해 있으며 각각 $Q_a,\,Q_b$ 의 전하가 표면에 균일하게 분포하고 있다. 이 껍질 표면에서의 포텐셜은 다음과 같음을 보여라.
+
+$$
+\begin{aligned}
+\phi_a &= \dfrac{kQ_a}{2a^2} f(2a) + \dfrac{kQ_b}{2ab}\left[f(a+b) - f(a-b)\right], \\[0.3em]
+\phi_b &= \dfrac{kQ_b}{2b^2}f(2b) + \dfrac{kQ_a}{2ab}\left[f(a+b) - f(a-b)\right].
+\end{aligned}
+$${#eq-EM_electrostatics_exr_purcell_2_8_2}
+
+($c$) 두 구형 껍질이 연결된다면 같은 전위 $\phi$ 를 갖게 되어 내부 껍질의 전하는
+
+$$
+Q_b = \dfrac{2b\phi}{k} \cdot \dfrac{bf(2a)-a\left[f(a+b)-f(a-b)\right]}{f(2a)f(2b) - \left[f(a+b) -f(a-b)\right]^2}
+$${#eq-EM_electrostatics_exr_purcell_2_8_3}
+
+이 됨을 보여라. 만약 $\delta = 0$ 이라면 $f(x) = x$ 이며 $Q_b=0$ 이 된다. 따라서 $Q_b\ne 0$ 라면 $\delta \ne 0$ 이다. $\delta$ 가 작다면 $Q_b$ 를 $\delta$ 에 대한 1차항까지 전개 할 수 있다. 이 때 $f(x) = xe^{-\delta \ln x} \approx x(1-\delta \ln x)$ 를 사용한다. 그러나 이 방법은 너무 번잡스럽다. 컴퓨터를 이용하 다양한 $a,\,b,\, \delta$ 값에 대해 $Q_b$ 를 그려보라. 
+
+
+:::
+</div>
+
+</br>
+
+::: {.solution}
+
+($a$) 앞의 문제와 같이 $\bf{r}=r\hat{\bf{z}}$ 로 놓아도 된다. $\sigma = Q/4\pi R^2$ 라고 놓자. 구 표면의 $dq(\bf{r}')$ 에 의 한 전기 포텐셜을 생각하면
+
+$$
+\begin{aligned}
+d\phi(\bf{r}) &= \int_{-\infty}^r \left(d\bf{E} \cdot \hat{\bf{z}}\right) dz = \int_{-\infty}^r \dfrac{k\,dq(\bf{r}')(z-z')}{\|z\hat{\bf{z}}-\bf{r}'\|^{3+\delta}}\, dz \\[0.3em]
+&= -\dfrac{k\, dq(\bf{r}')}{1+\delta} \left[\dfrac{1}{\|z\hat{\bf{z}}-\bf{r}'\|^{1+\delta}}\right]_{z=-\infty}^r \\[0.3em]
+&= \dfrac{k\, dq(\bf{r}')}{1+\delta}\dfrac{1}{\|r\hat{\bf{z}}-\bf{r}'\|^{1+\delta}}
+\end{aligned}
+$$
+
+이며 이로부터,
+
+$$
+\begin{aligned}
+\phi(r) &= \dfrac{k}{1+\delta} \int_0^\pi \int_0^{2\pi} \dfrac{\sigma R^2 \sin \theta \, d\theta d\varphi}{\|r\hat{\bf{z}}-\bf{r}'\|^{1+\delta}} \\[0.3em] 
+&= \dfrac{2\pi k}{1+\delta} \int_0^\pi \dfrac{\sigma \,R^2\, \sin \theta \, d\theta}{(r^2+R^2 - 2rR \cos\theta)^{(1+\delta)/2}} \\[0.3em]
+&= \dfrac{2\pi k}{1-\delta^2}\dfrac{\sigma R^2}{rR} \left[(r^2+R^2 - 2rR \cos\theta)^{(1-\delta)/2}\right]_{\theta=0}^{\theta = \pi} \\[0.3em]
+&= \dfrac{2\pi k \sigma R^2}{(1-\delta^2)rR}\left[|r+R|^{(1-\delta)}  - |r-R|^{(1-\delta)}\right] \\[0.3em]
+&= \dfrac{k Q}{2(1-\delta^2)rR}\left[|r+R|^{(1-\delta)}  - |r-R|^{(1-\delta)}\right] 
+\end{aligned}
+$$
+
+임을 안다. 위 식은 @eq-EM_electrostatics_exr_purcell_2_8_1 과 같다.
+
+($b$) $a>b$ 이므로, 그리고 문제에서 제시한대로 $1-\delta^2 \approx 1$ 로 놓으면
+
+$$
+\begin{aligned}
+\phi_a &= \dfrac{kQ_a}{2a^2}f(2a) + \dfrac{kQ_b}{2ab}\left[f(a+b) - f(a-b)\right],\\[0.3em]
+\phi_b &= \dfrac{kQ_b}{2b^2}f(2b) + \dfrac{kQ_a}{2ab}\left[f(a+b) - f(a-b)\right]
+\end{aligned}
+$$
+
+임을 안다.
+
+($c$) 두 껍질이 연결된다면 전하가 이동하여 포텐셜이 같아진다. 변경된 전하를 각각 $Q_a',\, Q_b'$ 이라고 하고 같아진 포텐셜을 $\phi$ 라고 하면 
+
+$$
+\begin{aligned}
+\phi &= \dfrac{kQ_a'}{2a^2}f(2a) + \dfrac{kQ_b'}{2ab}\left[f(a+b) - f(a-b)\right] \\[0.3em]
+&=\dfrac{kQ_b'}{2b^2}f(2b) + \dfrac{kQ_a'}{2ab}\left[f(a+b) - f(a-b)\right]
+\end{aligned}
+$$ {#eq-EM_electrostatics_exr_purcell_2_8_4}
+
+이며 
+
+$$
+\begin{aligned}
+&\dfrac{k}{2a^2b}Q'_a\left[bf(2a) - af(a+b) + af(a-b)\right] \\
+&\qquad \qquad = \dfrac{k}{2ab^2}Q_b'\left[af(2b) - bf(a+b) + bf(a-b)\right]
+\end{aligned}
+$$
+
+이므로 
+
+$$
+Q'_a = \dfrac{a Q_b'}{b}\dfrac{\left[af(2b) - bf(a+b) + bf(a-b)\right]}{\left[bf(2a) - af(a+b) + af(a-b)\right] }
+$$
+
+이다. @eq-EM_electrostatics_exr_purcell_2_8_4 의 첫번째 줄에 대입하면
+
+$$
+\begin{aligned}
+\phi &= \dfrac{kQ_b'}{2ab}f(2a)\dfrac{\left[af(2b) - bf(a+b) + bf(a-b)\right]}{\left[bf(2a) - af(a+b) + af(a-b)\right] } + \dfrac{kQ_b'}{2ab}\left[f(a+b) - f(a-b)\right]  \\[0.3em]
+&=\dfrac{kQ_b'}{2ab} \dfrac{[\cdots]}{bf(2a) - af(a+b) + af(a-b)}
+\end{aligned}
+$$
+
+이며
+
+$$
+\begin{aligned}
+{}[\cdots] &= af(2a)f(2b) - bf(2a)f(a+b) + bf(2a)f(a-b) \\[0.2em]
+&\qquad + bf(2a)f(a+b)-bf(2a)f(a-b)  -a(f(a+b)- f(a-b))^2 \\[0.2em]
+&= af(2a)f(2b)-a(f(a+b)- f(a-b))^2
+\end{aligned}
+$$
+
+이다. 이로부터
+
+$$
+Q'_b = \dfrac{2b \phi}{k}\dfrac{bf(2a) - a[f(a+b) -f(a-b)]}{f(2a)f(2b)-(f(a+b)- f(a-b))^2}
+$$
+
+을 얻는다.
+:::
