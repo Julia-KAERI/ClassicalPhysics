@@ -1,5 +1,5 @@
 ---
-title: "Electrostatics 1"
+title: "전기장과 쿨롱힘"
 number-sections: true
 number-depth: 3
 crossref:
@@ -1323,3 +1323,41 @@ $$
 
 :::
 
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-EM_purcell_1_61}
+#### 구의 포텐셜 에너지. (Purcell 1.61)
+</br>
+
+반지름 $R$ 인 구가 균일한 부피 전하 밀도 $\rho$ 를 갖는다. 우리는 구의 전하에 의한 포텐셜 에너지를 알고자 한다. @exm-EM_electrostatic_energy_of_uniform_sphere 에서는 전기장에 의한 에너지 밀도를 적분하여 포텐셜 에너지를 구했다. 여기서는 구를 층층히 쌓아 구해보자. 구형 대칭을 이룬 전하분포에 의한 전기장은 전하가 중심에 모여있는 것과 같다는 것을 이용하라.
+
+:::
+
+</div> </br>
+
+::: {.solution}
+
+$\Delta q = 4 \pi \rho r^2 \Delta r$ 을 $-\infty$ 에서 $r$ 까지 이동시키는데 전기장은 
+
+$$
+\bf{E}_{dq}=\dfrac{4\pi \rho r^3/3}{4\pi \epsilon_0 r'^2}\hat{\bf{r'}} = \dfrac{\rho r^3}{3 \epsilon_0 r'^2}
+$$
+
+이므로
+
+$$
+\Delta U = -\int_{-\infty}^r \dfrac{\rho r^3}{3\epsilon_0 r'^2}\Delta q\, dr' = \dfrac{4 \pi \rho^2 r^5 \Delta r}{3 \epsilon_0 r} = \dfrac{4\pi \rho^2 r^4 \Delta r}{3 \epsilon_0}
+$$
+
+이다. 따라서
+
+$$
+U = \int_{0}^R \dfrac{4\pi \rho^2 r^4}{3\epsilon_0}\, dr = \dfrac{4\pi \rho^2 R^5}{15 \epsilon_0} = \dfrac{3Q^2}{20 \pi \epsilon_0 R}
+$$
+
+로 @exm-EM_electrostatic_energy_of_uniform_sphere 의 결과와 같다.
+
+:::

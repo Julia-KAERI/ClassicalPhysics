@@ -24,6 +24,7 @@ book:
       chapters:
       - src/Electromagnetism/electrostatics_1.qmd
       - src/Electromagnetism/electrostatics_2.qmd
+      - src/Electromagnetism/electrostatics_3.qmd
     - part: src/Relativity/00_index.qmd
       chapters:
       - src/Relativity/01_introduction_to_special_relativity.qmd
