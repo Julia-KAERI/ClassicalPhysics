@@ -439,6 +439,28 @@
     ]
   },
   {
+    "objectID": "src/Electromagnetism/electrostatics_3.html#도체의-전기적-성질",
+    "href": "src/Electromagnetism/electrostatics_3.html#도체의-전기적-성질",
+    "title": "9  도체와 전기장",
+    "section": "",
+    "text": "그림 9.1: 외부 전기장에 대해 (\\(a\\)) 전기적으로 중성인 부도체의 경우, (\\(b\\)) 도체의 경우 내부의 전하가 이동하기 시작하며 (\\(c\\)) 도체 표면의 전하 분포로 인해 내부 전기장이 사라진 경우 (출처 Purcell (2013))\n\n\n\n\n\n\n\n\n\n\n\n\n예제 9.1 (구 대칭 전기장) 반지름 \\(R\\) 인 도체의 구 껍질을 생각하자. 구의 내부에 전하 \\(q\\) 가 있을 때의 구 외부의 전기장은 전하 \\(q\\) 가 구의 중심에 있고 구 껍질이 사라졌을 때의 전기장과 같는 것을 보이자. 구 껍질은 안쪽 면과 바깥쪽 면이 존재하며 안쪽 면과 바깥쪽 면 사이의 도체 부분에 아래 그림과 같은 가우스 면을 생각하자.\n\n\n\n\n\n\n그림 9.2: 도체 구 껍질 내부의 가우스 면\n\n\n\n도체 내부의 전기장은 \\(\\boldsymbol{0}\\) 이기 때문에 가우스 면에 가우스 법칙을 적용하면\n\\[\n\\dfrac{Q_{in}}{\\epsilon_0} =  \\int \\boldsymbol{E\\cdot}d\\boldsymbol{a} = \\pi R_{\\text{in}}^2 E = 0\n\\]\n이다. 즉 구 내부의 \\(q\\) 전하에 대해 구 껍질의 안쪽 면에 \\(-q\\) 의 유도 전하가 발생하며 따라서 구 껍질의 바깥족 면에느느 \\(+q\\) 의 유도 전하가 발생하게 된다. \\(q\\) 의 전하가 구의 중심에 있지 않다면 구 껍찔 안쪽 면의 유도전하는 균일하지 않다. 그러나 일단 구 껍질 내부 유도전하가 \\(q\\) 의 전하를 구 내부 껍찔 외부에서 가리기 때문에 구 껍질 외부의 포텐셜 혹은 전기장을 결정하는 것은 구 껍찔 바깥쪽 면에 유도되는 유도전하의 분포이다.\n그렇다면 이제 구 껍질 바깥쪽의 유도 전하를 보자. 일단 구 껍질 바깥쪽의 전하들은 자기 자신들에 의해 발생하는 전기장 이외의 전기장을 느낄 수 없으며, 따라서 균일하게 분포 할 수 밖에 없다. 즉 구 껍찔 바깥족 면은 균일한 면 전하 밀도 \\(\\dfrac{q}{4\\pi R^2}\\) 를 가지며, 따라서 구 껍질 외부에서의 포텐셜은 가우스 법칙에 따라\n\\[\n\\phi (r&gt;R)= \\dfrac{1}{4\\pi\\epsilon_0}\\dfrac{q}{r}\n\\]\n이다.\n좀 더 일반적으로 구형이 아닌, 어떤 전하를 내부에 포함하는 임의의 도체 껍질을 생각하자. 중요한 것은 도체 껍질 내부의 가우스 면의 전기장이 \\(0\\) 이기 때문에 도체 껍질 외부의 전기장 혹은 포텐셜은 전하의 위치와는 무관하게 도체 껍질 내부의 전하를 무시하고 그 전하가 도체 껍질 외부에 분포하고 있을 때의 전기장 혹은 포텐셜만 생각하면 된다는 것이다.",
+    "crumbs": [
+      "고전 전자기학",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>도체와 전기장</span>"
+    ]
+  },
+  {
+    "objectID": "src/Electromagnetism/electrostatics_3.html#일반적인-정전기-문제와-유일성-정리",
+    "href": "src/Electromagnetism/electrostatics_3.html#일반적인-정전기-문제와-유일성-정리",
+    "title": "9  도체와 전기장",
+    "section": "9.2 일반적인 정전기 문제와 유일성 정리",
+    "text": "9.2 일반적인 정전기 문제와 유일성 정리\n도체 \\(C_1,\\,C_2,\\ldots\\) 가 존재하고 각 도체에서의 포텐셜이 \\(\\phi_1,\\,\\phi_2,\\ldots\\) 라고 하자. 이 때 도체 외부에서의 포텐셜은 라플라스 방정식(식 8.36) 을 만족한다. 이제 문제는 라플라스 방정식을 만족하면서, 각 도체 표면에서의 경계조건 \\(\\phi(C_i)= \\phi_i\\) 역시 만족하는 \\(\\phi(\\boldsymbol{r})\\) 을 찾는 것이 된다. 라플라스 방정식이 편미분 방정식이기 때문에 전형적인 편미분 방정식의 경계 조건 문제(boundary condition problem) 이 된다.\n\n\n\n\nPurcell, E. M. 2013. Electricity and Magnetism. Electricity and Magnetism. Cambridge University Press. https://books.google.co.kr/books?id=A2rS5vlSFq0C.",
+    "crumbs": [
+      "고전 전자기학",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>도체와 전기장</span>"
+    ]
+  },
+  {
     "objectID": "src/Relativity/01_introduction_to_special_relativity.html",
     "href": "src/Relativity/01_introduction_to_special_relativity.html",
     "title": "10  특수 상대론의 기초",
@@ -785,39 +807,6 @@
     "text": "% %\n%\n\\[\n\\DeclarePairedDelimiters{\\set}{\\{}{\\}}\n\\DeclareMathOperator*{\\argmax}{argmax}\n\\]\n\n\n고전 전자기학의 기본원리에 대해 설명한다. 여기서는 4개의 맥스웰 방정식과 로렌츠 힘, 그리고 전하량 보존을 바탕으로 내용을 설명한다.\n맥스웰 방정식은 다음과 같다.\n\\[\n\\begin{aligned}\n\\nabla \\cdot \\boldsymbol{E} &= \\dfrac{\\rho}{\\epsilon_0},\\\\[0.3em]\n\\nabla \\cdot \\boldsymbol{B} &= 0, \\\\[0.3em]\n\\nabla \\times \\boldsymbol{E} &= - \\dfrac{\\partial \\boldsymbol{B}}{\\partial t}, \\\\[0.3em]\n\\nabla \\times \\boldsymbol{B} &= \\mu_0 \\epsilon_0 \\dfrac{\\partial \\boldsymbol{E}}{\\partial t} + \\mu_0 \\boldsymbol{J}.\n\\end{aligned}\n\\tag{1}\\]\n또한 로렌츠 힘은 다음과 같다.\n\\[\n\\boldsymbol{F}_{\\text{Lorentz}} = q\\boldsymbol{E} + q\\boldsymbol{v}\\times \\boldsymbol{B}.\n\\tag{2}\\]\n전하량 보존은 다음과 같다.\n\\[\n\\dfrac{\\partial \\rho}{\\partial t } + \\nabla \\cdot \\boldsymbol{J}=0.\n\\tag{3}\\]",
     "crumbs": [
       "고전 전자기학"
-    ]
-  },
-  {
-    "objectID": "src/Electromagnetism/electrostatics_3.html#도체와-부도체",
-    "href": "src/Electromagnetism/electrostatics_3.html#도체와-부도체",
-    "title": "9  도체와 전기장",
-    "section": "",
-    "text": "그림 9.1: 외부 전기장에 대해 (\\(a\\)) 전기적으로 중성인 부도체의 경우, (\\(b\\)) 도체의 경우 내부의 전하가 이동하기 시작하며 (\\(c\\)) 도체 표면의 전하 분포로 인해 내부 전기장이 사라진 경우 (출처 Purcell (2013))\n\n\n\n\n\n\n\nPurcell, E. M. 2013. Electricity and Magnetism. Electricity and Magnetism. Cambridge University Press. https://books.google.co.kr/books?id=A2rS5vlSFq0C.",
-    "crumbs": [
-      "고전 전자기학",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>도체와 전기장</span>"
-    ]
-  },
-  {
-    "objectID": "src/Electromagnetism/electrostatics_3.html#도체의-전기적-성질",
-    "href": "src/Electromagnetism/electrostatics_3.html#도체의-전기적-성질",
-    "title": "9  도체와 전기장",
-    "section": "",
-    "text": "그림 9.1: 외부 전기장에 대해 (\\(a\\)) 전기적으로 중성인 부도체의 경우, (\\(b\\)) 도체의 경우 내부의 전하가 이동하기 시작하며 (\\(c\\)) 도체 표면의 전하 분포로 인해 내부 전기장이 사라진 경우 (출처 Purcell (2013))\n\n\n\n\n\n\n\n\n\n\n\n\n예제 9.1 (구 대칭 전기장) 반지름 \\(R\\) 인 도체의 구 껍질을 생각하자. 구의 내부에 전하 \\(q\\) 가 있을 때의 구 외부의 전기장은 전하 \\(q\\) 가 구의 중심에 있고 구 껍질이 사라졌을 때의 전기장과 같는 것을 보이자. 구 껍질은 안쪽 면과 바깥쪽 면이 존재하며 안쪽 면과 바깥쪽 면 사이의 도체 부분에 아래 그림과 같은 가우스 면을 생각하자.\n\n\n\n\n\n\n그림 9.2: 도체 구 껍질 내부의 가우스 면\n\n\n\n도체 내부의 전기장은 \\(\\boldsymbol{0}\\) 이기 때문에 가우스 면에 가우스 법칙을 적용하면\n\\[\n\\dfrac{Q_{in}}{\\epsilon_0} =  \\int \\boldsymbol{E\\cdot}d\\boldsymbol{a} = \\pi R_{\\text{in}}^2 E = 0\n\\]\n이다. 즉 구 내부의 \\(q\\) 전하에 대해 구 껍질의 안쪽 면에 \\(-q\\) 의 유도 전하가 발생하며 따라서 구 껍질의 바깥족 면에느느 \\(+q\\) 의 유도 전하가 발생하게 된다. \\(q\\) 의 전하가 구의 중심에 있지 않다면 구 껍찔 안쪽 면의 유도전하는 균일하지 않다. 그러나 일단 구 껍질 내부 유도전하가 \\(q\\) 의 전하를 구 내부 껍찔 외부에서 가리기 때문에 구 껍질 외부의 포텐셜 혹은 전기장을 결정하는 것은 구 껍찔 바깥쪽 면에 유도되는 유도전하의 분포이다.\n그렇다면 이제 구 껍질 바깥쪽의 유도 전하를 보자. 일단 구 껍질 바깥쪽의 전하들은 자기 자신들에 의해 발생하는 전기장 이외의 전기장을 느낄 수 없으며, 따라서 균일하게 분포 할 수 밖에 없다. 즉 구 껍찔 바깥족 면은 균일한 면 전하 밀도 \\(\\dfrac{q}{4\\pi R^2}\\) 를 가지며, 따라서 구 껍질 외부에서의 포텐셜은 가우스 법칙에 따라\n\\[\n\\phi (r&gt;R)= \\dfrac{1}{4\\pi\\epsilon_0}\\dfrac{q}{r}\n\\]\n이다.\n좀 더 일반적으로 구형이 아닌, 어떤 전하를 내부에 포함하는 임의의 도체 껍질을 생각하자. 중요한 것은 도체 껍질 내부의 가우스 면의 전기장이 \\(0\\) 이기 때문에 도체 껍질 외부의 전기장 혹은 포텐셜은 전하의 위치와는 무관하게 도체 껍질 내부의 전하를 무시하고 그 전하가 도체 껍질 외부에 분포하고 있을 때의 전기장 혹은 포텐셜만 생각하면 된다는 것이다.",
-    "crumbs": [
-      "고전 전자기학",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>도체와 전기장</span>"
-    ]
-  },
-  {
-    "objectID": "src/Electromagnetism/electrostatics_3.html#일반적인-정전기-문제와-유일성-정리",
-    "href": "src/Electromagnetism/electrostatics_3.html#일반적인-정전기-문제와-유일성-정리",
-    "title": "9  도체와 전기장",
-    "section": "9.2 일반적인 정전기 문제와 유일성 정리",
-    "text": "9.2 일반적인 정전기 문제와 유일성 정리\n도체 \\(C_1,\\,C_2,\\ldots\\) 가 존재하고 각 도체에서의 포텐셜이 \\(\\phi_1,\\,\\phi_2,\\ldots\\) 라고 하자. 이 때 도체 외부에서의 포텐셜은 라플라스 방정식(식 8.36) 을 만족한다. 이제 문제는 라플라스 방정식을 만족하면서, 각 도체 표면에서의 경계조건 \\(\\phi(C_i)= \\phi_i\\) 역시 만족하는 \\(\\phi(\\boldsymbol{r})\\) 을 찾는 것이 된다. 라플라스 방정식이 편미분 방정식이기 때문에 전형적인 편미분 방정식의 경계 조건 문제(boundary condition problem) 이 된다.\n\n\n\n\nPurcell, E. M. 2013. Electricity and Magnetism. Electricity and Magnetism. Cambridge University Press. https://books.google.co.kr/books?id=A2rS5vlSFq0C.",
-    "crumbs": [
-      "고전 전자기학",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>도체와 전기장</span>"
     ]
   }
 ]
