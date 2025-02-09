@@ -10,6 +10,16 @@
     ]
   },
   {
+    "objectID": "src/ClassicalMechanics/00_index.html",
+    "href": "src/ClassicalMechanics/00_index.html",
+    "title": "고전역학",
+    "section": "",
+    "text": "% %\n%\n\\[\n\\DeclarePairedDelimiters{\\set}{\\{}{\\}}\n\\DeclareMathOperator*{\\argmax}{argmax}\n\\]\n\n고전역학의 기본원리에 대해 설명한다.\n\n참고문헌\n\n\nArfken, G. B., G. B. Arfken, H. J. Weber, and F. E. Harris. 2013.\nMathematical Methods for Physicists: A Comprehensive Guide.\nElsevier Science. https://books.google.co.kr/books?id=qLFo_Z-PoGIC.\n\n\nArnold, V. I., K. Vogtmann, and A. Weinstein. 2013. Mathematical\nMethods of Classical Mechanics. Graduate Texts in Mathematics.\nSpringer New York. https://books.google.co.kr/books?id=UOQlBQAAQBAJ.\n\n\nGoldstein, H. 1980. Classical Mechanics. Addison-Wesley Series\nin Physics. Addison-Wesley Publishing Company. https://books.google.co.kr/books?id=9M8QAQAAIAAJ.\n\n\nHelliwell, T. M., and V. V. Sahakian. 2020. Modern Classical\nMechanics. Cambridge University Press.\n\n\nJackson, John David. 1999. Classical Electrodynamics. 3rd ed.\nNew York, NY: Wiley. http://cdsweb.cern.ch/record/490457.\n\n\nLandau, L. D., and E. M. Lifshitz. 1976. Mechanics, Third Edition:\nVolume 1 (Course of Theoretical Physics). 3rd ed. Paperback;\nButterworth-Heinemann. http://www.worldcat.org/isbn/0750628960.\n\n\nPurcell, E. M. 2013. Electricity and Magnetism. Electricity and\nMagnetism. Cambridge University Press. https://books.google.co.kr/books?id=A2rS5vlSFq0C.\n\n\nSymon, K. R. 1971. Mechanics. Addison-Wesley Series in Physics.\nAddison-Wesley Publishing Company. https://books.google.co.kr/books?id=JVk_4udwNtkC.\n\n\nThornton, S. T., and J. B. Marion. 2004. Classical Dynamics of\nParticles and Systems. Brooks/Cole. https://books.google.co.kr/books?id=HOqLQgAACAAJ.",
+    "crumbs": [
+      "고전역학"
+    ]
+  },
+  {
     "objectID": "src/ClassicalMechanics/01_basic_principles.html",
     "href": "src/ClassicalMechanics/01_basic_principles.html",
     "title": "1  뉴튼역학의 기본 원리",
@@ -307,6 +317,16 @@
     ]
   },
   {
+    "objectID": "src/Electromagnetism/00_index.html",
+    "href": "src/Electromagnetism/00_index.html",
+    "title": "고전 전자기학",
+    "section": "",
+    "text": "% %\n%\n\\[\n\\DeclarePairedDelimiters{\\set}{\\{}{\\}}\n\\DeclareMathOperator*{\\argmax}{argmax}\n\\]\n\n\n고전 전자기학의 기본원리에 대해 설명한다. 여기서는 4개의 맥스웰 방정식과 로렌츠 힘, 그리고 전하량 보존을 바탕으로 내용을 설명한다.\n맥스웰 방정식은 다음과 같다.\n\\[\n\\begin{aligned}\n\\nabla \\cdot \\boldsymbol{E} &= \\dfrac{\\rho}{\\epsilon_0},\\\\[0.3em]\n\\nabla \\cdot \\boldsymbol{B} &= 0, \\\\[0.3em]\n\\nabla \\times \\boldsymbol{E} &= - \\dfrac{\\partial \\boldsymbol{B}}{\\partial t}, \\\\[0.3em]\n\\nabla \\times \\boldsymbol{B} &= \\mu_0 \\epsilon_0 \\dfrac{\\partial \\boldsymbol{E}}{\\partial t} + \\mu_0 \\boldsymbol{J}.\n\\end{aligned}\n\\tag{1}\\]\n또한 로렌츠 힘은 다음과 같다.\n\\[\n\\boldsymbol{F}_{\\text{Lorentz}} = q\\boldsymbol{E} + q\\boldsymbol{v}\\times \\boldsymbol{B}.\n\\tag{2}\\]\n전하량 보존은 다음과 같다.\n\\[\n\\dfrac{\\partial \\rho}{\\partial t } + \\nabla \\cdot \\boldsymbol{J}=0.\n\\tag{3}\\]",
+    "crumbs": [
+      "고전 전자기학"
+    ]
+  },
+  {
     "objectID": "src/Electromagnetism/electrostatics_1.html",
     "href": "src/Electromagnetism/electrostatics_1.html",
     "title": "7  전기장과 쿨롱힘",
@@ -454,7 +474,7 @@
     "href": "src/Electromagnetism/electrostatics_3.html#일반적인-정전기-문제와-유일성-정리",
     "title": "9  도체와 전기장",
     "section": "9.2 일반적인 정전기 문제와 유일성 정리",
-    "text": "9.2 일반적인 정전기 문제와 유일성 정리\n\n9.2.1 문제의 경우\n(\\(1\\)) 도체 \\(C_1,\\,C_2,\\ldots\\) 가 존재하고 각 도체에서의 포텐셜이 \\(\\phi_1,\\,\\phi_2,\\ldots\\) 라고 하자. 이 때 도체 외부에서의 포텐셜은 라플라스 방정식(식 8.36) 을 만족한다. 이제 문제는 라플라스 방정식을 만족하면서, 각 도체 표면에서의 경계조건 \\(\\phi(C_i)= \\phi_i\\) 역시 만족하는 \\(\\phi(\\boldsymbol{r})\\) 을 찾는 것이 된다. 라플라스 방정식이 편미분 방정식이기 때문에 전형적인 편미분 방정식의 경계 조건 문제(boundary condition problem) 이 된다. 이 경우 시스템 전체의 경계조건이 필요한데 \\(\\|\\boldsymbol{r}\\|\\to \\infty\\) 에서 \\(\\phi(\\boldsymbol{r}) \\to 0\\) 이거나 시스템 전체가 도체 면의 내부에 포함되어 있어야 한다.\n(\\(2\\)) 혹은 각 도체마다 \\(q_k\\) 의 전하를 갖는 경우를 생각 할 수 있다. 도체는 모든 전하가 표면에 분포하므로 \\(\\nabla \\phi_k = \\boldsymbol{E}_k\\) 를 표면에 대해 적분하여 \\(\\phi_k\\) 를 구할 수도 있다.\n(\\(3\\)) 각 도체마다 각각 포텐셜 혹은 전하가 정해질 수도 있다.\n\n\n\n9.2.2 유일성 정리\n우선 각 도체 \\(C_1,\\,C_2,\\ldots\\) 마다 각 도체 표면 에서의 포텐셜 \\(\\phi_1,\\,\\phi_2,\\ldots\\) 가 정해졌다고 하자. 전체 도체가 어떤 도체 내에 있거나 무한히 펼쳐져 있다고 하자. 무한히 펼쳐져 있을 경우 \\(\\|\\boldsymbol{r}\\|\\to \\infty\\) 에 대해 \\(\\phi\\to 0\\) 이어야 한다. 이 경계조건을 만족하는 \\(\\phi\\) 가 존재한다고 하자. 여기에 다른 해가 있을 수 있을까? 답은 없다 이다.\n\n\n\n정리 9.2 (유일성 정리) 도체로 이루어진 시스템에서 각 도체의 표면의 포텐셜이 \\(\\phi_k\\) 일 때 이 경계조건을 만족하며 \\(\\|\\boldsymbol{r}\\|\\to\\infty\\) 에서 \\(0\\) 이 경계조건을 만족하는 해는 유일하다.\n\n\n\n\n(증명). \\(\\phi\\) 이외에 \\(\\psi\\) 라는 다른 해가 존재한다고 가정하자. 그렇다면 \\(c \\phi + (1-c) \\psi\\) 역시 해이다. 따라서 무수히 많은 해가 존재하게 된다. 이제\n\\[\n\\chi(\\boldsymbol{r}) = \\phi(\\boldsymbol{r})- \\psi(\\boldsymbol{r})\n\\]\n이라고 하자. 모든 도체의 경계 \\(C_i\\) 에서 \\(\\chi(C_i)=0\\) 이므로 해가 아니다. 하지만 \\(\\chi\\) 는 각 도체 \\(C_1,\\,C_2\\) 의 표면에서의 포텐셜이 모두 \\(0\\) 인 문제의 해가 된다. 무한히 펼쳐진 공간을 생각한다면 \\(\\|\\boldsymbol{r}\\|\\to \\infty\\) 일 때의 경계조건에 의해 \\(\\displaystyle \\lim_{\\|\\boldsymbol{r}\\|\\to\\infty} \\chi(\\boldsymbol{r}) = 0\\) 이 된다.\n전체 공간에서 도체가 존재하는 부분을 뺀 공간을 \\(V\\) 라고 하고 \\(V\\) 의 경계를 \\(S\\) 라고 하자. \\(\\nabla^2 \\chi=0\\) 을 이용하면 \\[\n\\int_V \\nabla \\boldsymbol{\\cdot}(\\chi \\nabla \\chi)\\, d^3\\boldsymbol{r} = \\int_V \\|\\nabla \\chi\\|^2\\, d^3\\boldsymbol{r} + \\int(\\chi \\nabla^2 \\chi)\\,d^3\\boldsymbol{r} = \\int_V \\|\\nabla \\chi\\|^2\\, d^3\\boldsymbol{r}\n\\]\n이다. 또한 경계에서 \\(\\chi=0\\) 임을 이용하면 \\[\n\\int_V \\nabla \\boldsymbol{\\cdot}(\\chi \\nabla \\chi)\\, d^3\\boldsymbol{r} = \\int_S \\chi \\nabla \\chi \\boldsymbol{\\cdot}\\hat{\\boldsymbol{n}}\\, da = 0\n\\]\n이다. 즉\n\\[\n\\int_V \\|\\nabla \\chi\\|^2\\, d^3\\boldsymbol{r}=0\n\\]\n이며 이는 \\(\\chi = \\text{constant}\\) 임을 의미한다. \\(\\|\\boldsymbol{r}\\|\\to\\infty\\) 의 경계 조건을 생각하면 \\(\\chi = 0\\) 이며 따라서 \\(\\phi = \\psi\\) 이다. 즉 해는 유일하다. \\(\\square\\)\n\n\n이 유일셩 정리는 공간 내에 전하가 정지하여 있을 때로 쉽게 확장 될 수 있다. 증명에서 우리는 \\(\\phi\\) 나 \\(\\psi\\) 가 라플라스 방정식을 만족한다는 것을 가정하지 않았다. 라플라스 방정식을 만족하도록 가정된 것은 \\(\\chi\\) 뿐이다. 전하가 분표한다면 \\(\\nabla \\phi = \\nabla \\psi = - \\rho/\\varepsilon_0\\) 이므로 \\(\\chi\\) 의 조건에는 전혀 영향을 미치지 않는다.\n\n\n\n따름정리 9.1 도체 내부의 빈 공간에 전하가 없다면 내부의 전기장은 \\(\\boldsymbol{0}\\) 이다.\n\n\n\n\n(증명). 도체 내부 빈 공간의 포텐셜 \\(\\phi\\) 는 라플라스 방정식을 만족해야 하며 도체 내부를 이루는 경계면에서 포텐셜이 일정하므로 \\(\\phi(\\text{on the boundary})=\\phi_0=\\text{constant}\\) 이어야 한다. \\(\\phi(\\boldsymbol{r})=\\phi_0\\) 라고 놓으면 경계조건을 만족하기 때문에 유일성 정리(정리 9.2)에 의해 이것이 유일한 해이다. 따라서 \\(\\boldsymbol{E}_{\\text{in}} = -\\nabla \\phi = 0\\). \\(\\square\\)\n\n\n위의 따름정리는 도체로 둘러 싸기만 하면 도체 외부의 전하 분포가 어쨌든 도체 내부의 도체가 아닌 공간의 전기장이 사라진다는 의미이다. 도체 외부의 전하 분포, 혹은 전기장에 따라 도체의 내/외부 표면에 전하가 유도되는데 이 전하 유도의 결과로 도체 내의 공간의 전기장은 항상 사라지게 된다.\n\n\n\n\nPurcell, E. M. 2013. Electricity and Magnetism. Electricity and Magnetism. Cambridge University Press. https://books.google.co.kr/books?id=A2rS5vlSFq0C.",
+    "text": "9.2 일반적인 정전기 문제와 유일성 정리\n\n9.2.1 문제의 경우\n(\\(1\\)) 도체 \\(C_1,\\,C_2,\\ldots\\) 가 존재하고 각 도체에서의 포텐셜이 \\(\\phi_1,\\,\\phi_2,\\ldots\\) 라고 하자. 이 때 도체 외부에서의 포텐셜은 라플라스 방정식(식 8.38) 을 만족한다. 이제 문제는 라플라스 방정식을 만족하면서, 각 도체 표면에서의 경계조건 \\(\\phi(C_i)= \\phi_i\\) 역시 만족하는 \\(\\phi(\\boldsymbol{r})\\) 을 찾는 것이 된다. 라플라스 방정식이 편미분 방정식이기 때문에 전형적인 편미분 방정식의 경계 조건 문제(boundary condition problem) 이 된다. 이 경우 시스템 전체의 경계조건이 필요한데 \\(\\|\\boldsymbol{r}\\|\\to \\infty\\) 에서 \\(\\phi(\\boldsymbol{r}) \\to 0\\) 이거나 시스템 전체가 도체 면의 내부에 포함되어 있어야 한다.\n(\\(2\\)) 혹은 각 도체마다 \\(q_k\\) 의 전하를 갖는 경우를 생각 할 수 있다. 도체는 모든 전하가 표면에 분포하므로 \\(\\nabla \\phi_k = \\boldsymbol{E}_k\\) 를 표면에 대해 적분하여 \\(\\phi_k\\) 를 구할 수도 있다.\n(\\(3\\)) 각 도체마다 각각 포텐셜 혹은 전하가 정해질 수도 있다.\n\n\n\n9.2.2 유일성 정리\n우선 각 도체 \\(C_1,\\,C_2,\\ldots\\) 마다 각 도체 표면 에서의 포텐셜 \\(\\phi_1,\\,\\phi_2,\\ldots\\) 가 정해졌다고 하자. 전체 도체가 어떤 도체 내에 있거나 무한히 펼쳐져 있다고 하자. 무한히 펼쳐져 있을 경우 \\(\\|\\boldsymbol{r}\\|\\to \\infty\\) 에 대해 \\(\\phi\\to 0\\) 이어야 한다. 이 경계조건을 만족하는 \\(\\phi\\) 가 존재한다고 하자. 여기에 다른 해가 있을 수 있을까? 답은 없다 이다.\n\n\n\n정리 9.2 (유일성 정리) 도체로 이루어진 시스템에서 각 도체의 표면의 포텐셜이 \\(\\phi_k\\) 일 때 이 경계조건을 만족하며 \\(\\|\\boldsymbol{r}\\|\\to\\infty\\) 에서 \\(0\\) 이 경계조건을 만족하는 해는 유일하다.\n\n\n\n\n(증명). \\(\\phi\\) 이외에 \\(\\psi\\) 라는 다른 해가 존재한다고 가정하자. 그렇다면 \\(c \\phi + (1-c) \\psi\\) 역시 해이다. 따라서 무수히 많은 해가 존재하게 된다. 이제\n\\[\n\\chi(\\boldsymbol{r}) = \\phi(\\boldsymbol{r})- \\psi(\\boldsymbol{r})\n\\]\n이라고 하자. 모든 도체의 경계 \\(C_i\\) 에서 \\(\\chi(C_i)=0\\) 이므로 해가 아니다. 하지만 \\(\\chi\\) 는 각 도체 \\(C_1,\\,C_2\\) 의 표면에서의 포텐셜이 모두 \\(0\\) 인 문제의 해가 된다. 무한히 펼쳐진 공간을 생각한다면 \\(\\|\\boldsymbol{r}\\|\\to \\infty\\) 일 때의 경계조건에 의해 \\(\\displaystyle \\lim_{\\|\\boldsymbol{r}\\|\\to\\infty} \\chi(\\boldsymbol{r}) = 0\\) 이 된다.\n전체 공간에서 도체가 존재하는 부분을 뺀 공간을 \\(V\\) 라고 하고 \\(V\\) 의 경계를 \\(S\\) 라고 하자. \\(\\nabla^2 \\chi=0\\) 을 이용하면 \\[\n\\int_V \\nabla \\boldsymbol{\\cdot}(\\chi \\nabla \\chi)\\, d^3\\boldsymbol{r} = \\int_V \\|\\nabla \\chi\\|^2\\, d^3\\boldsymbol{r} + \\int(\\chi \\nabla^2 \\chi)\\,d^3\\boldsymbol{r} = \\int_V \\|\\nabla \\chi\\|^2\\, d^3\\boldsymbol{r}\n\\]\n이다. 또한 경계에서 \\(\\chi=0\\) 임을 이용하면 \\[\n\\int_V \\nabla \\boldsymbol{\\cdot}(\\chi \\nabla \\chi)\\, d^3\\boldsymbol{r} = \\int_S \\chi \\nabla \\chi \\boldsymbol{\\cdot}\\hat{\\boldsymbol{n}}\\, da = 0\n\\]\n이다. 즉\n\\[\n\\int_V \\|\\nabla \\chi\\|^2\\, d^3\\boldsymbol{r}=0\n\\]\n이며 이는 \\(\\chi = \\text{constant}\\) 임을 의미한다. \\(\\|\\boldsymbol{r}\\|\\to\\infty\\) 의 경계 조건을 생각하면 \\(\\chi = 0\\) 이며 따라서 \\(\\phi = \\psi\\) 이다. 즉 해는 유일하다. \\(\\square\\)\n\n\n이 유일셩 정리는 공간 내에 전하가 정지하여 있을 때로 쉽게 확장 될 수 있다. 증명에서 우리는 \\(\\phi\\) 나 \\(\\psi\\) 가 라플라스 방정식을 만족한다는 것을 가정하지 않았다. 라플라스 방정식을 만족하도록 가정된 것은 \\(\\chi\\) 뿐이다. 전하가 분표한다면 \\(\\nabla \\phi = \\nabla \\psi = - \\rho/\\varepsilon_0\\) 이므로 \\(\\chi\\) 의 조건에는 전혀 영향을 미치지 않는다.\n\n\n\n따름정리 9.1 도체 내부의 빈 공간에 전하가 없다면 내부의 전기장은 \\(\\boldsymbol{0}\\) 이다.\n\n\n\n\n(증명). 도체 내부 빈 공간의 포텐셜 \\(\\phi\\) 는 라플라스 방정식을 만족해야 하며 도체 내부를 이루는 경계면에서 포텐셜이 일정하므로 \\(\\phi(\\text{on the boundary})=\\phi_0=\\text{constant}\\) 이어야 한다. \\(\\phi(\\boldsymbol{r})=\\phi_0\\) 라고 놓으면 경계조건을 만족하기 때문에 유일성 정리(정리 9.2)에 의해 이것이 유일한 해이다. 따라서 \\(\\boldsymbol{E}_{\\text{in}} = -\\nabla \\phi = 0\\). \\(\\square\\)\n\n\n위의 따름정리는 도체로 둘러 싸기만 하면 도체 외부의 전하 분포가 어쨌든 도체 내부의 도체가 아닌 공간의 전기장이 사라진다는 의미이다. 도체 외부의 전하 분포, 혹은 전기장에 따라 도체의 내/외부 표면에 전하가 유도되는데 이 전하 유도의 결과로 도체 내의 공간의 전기장은 항상 사라지게 된다.\n\n\n\n\nPurcell, E. M. 2013. Electricity and Magnetism. Electricity and Magnetism. Cambridge University Press. https://books.google.co.kr/books?id=A2rS5vlSFq0C.",
     "crumbs": [
       "고전 전자기학",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>도체와 전기장</span>"
@@ -736,6 +756,16 @@
     ]
   },
   {
+    "objectID": "src/topics/Topics.html",
+    "href": "src/topics/Topics.html",
+    "title": "별도의 주제들",
+    "section": "",
+    "text": "별도의 주제들..",
+    "crumbs": [
+      "별도의 주제들"
+    ]
+  },
+  {
     "objectID": "src/topics/mathematical.html",
     "href": "src/topics/mathematical.html",
     "title": "15  수학적 자료",
@@ -777,36 +807,6 @@
     "crumbs": [
       "그림들",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>그림들-상대성이론</span>"
-    ]
-  },
-  {
-    "objectID": "src/topics/Topics.html",
-    "href": "src/topics/Topics.html",
-    "title": "별도의 주제들",
-    "section": "",
-    "text": "별도의 주제들..",
-    "crumbs": [
-      "별도의 주제들"
-    ]
-  },
-  {
-    "objectID": "src/ClassicalMechanics/00_index.html",
-    "href": "src/ClassicalMechanics/00_index.html",
-    "title": "고전역학",
-    "section": "",
-    "text": "% %\n%\n\\[\n\\DeclarePairedDelimiters{\\set}{\\{}{\\}}\n\\DeclareMathOperator*{\\argmax}{argmax}\n\\]\n\n고전역학의 기본원리에 대해 설명한다.\n\n참고문헌\n\n\nArfken, G. B., G. B. Arfken, H. J. Weber, and F. E. Harris. 2013.\nMathematical Methods for Physicists: A Comprehensive Guide.\nElsevier Science. https://books.google.co.kr/books?id=qLFo_Z-PoGIC.\n\n\nArnold, V. I., K. Vogtmann, and A. Weinstein. 2013. Mathematical\nMethods of Classical Mechanics. Graduate Texts in Mathematics.\nSpringer New York. https://books.google.co.kr/books?id=UOQlBQAAQBAJ.\n\n\nGoldstein, H. 1980. Classical Mechanics. Addison-Wesley Series\nin Physics. Addison-Wesley Publishing Company. https://books.google.co.kr/books?id=9M8QAQAAIAAJ.\n\n\nHelliwell, T. M., and V. V. Sahakian. 2020. Modern Classical\nMechanics. Cambridge University Press.\n\n\nJackson, John David. 1999. Classical Electrodynamics. 3rd ed.\nNew York, NY: Wiley. http://cdsweb.cern.ch/record/490457.\n\n\nLandau, L. D., and E. M. Lifshitz. 1976. Mechanics, Third Edition:\nVolume 1 (Course of Theoretical Physics). 3rd ed. Paperback;\nButterworth-Heinemann. http://www.worldcat.org/isbn/0750628960.\n\n\nPurcell, E. M. 2013. Electricity and Magnetism. Electricity and\nMagnetism. Cambridge University Press. https://books.google.co.kr/books?id=A2rS5vlSFq0C.\n\n\nSymon, K. R. 1971. Mechanics. Addison-Wesley Series in Physics.\nAddison-Wesley Publishing Company. https://books.google.co.kr/books?id=JVk_4udwNtkC.\n\n\nThornton, S. T., and J. B. Marion. 2004. Classical Dynamics of\nParticles and Systems. Brooks/Cole. https://books.google.co.kr/books?id=HOqLQgAACAAJ.",
-    "crumbs": [
-      "고전역학"
-    ]
-  },
-  {
-    "objectID": "src/Electromagnetism/00_index.html",
-    "href": "src/Electromagnetism/00_index.html",
-    "title": "고전 전자기학",
-    "section": "",
-    "text": "% %\n%\n\\[\n\\DeclarePairedDelimiters{\\set}{\\{}{\\}}\n\\DeclareMathOperator*{\\argmax}{argmax}\n\\]\n\n\n고전 전자기학의 기본원리에 대해 설명한다. 여기서는 4개의 맥스웰 방정식과 로렌츠 힘, 그리고 전하량 보존을 바탕으로 내용을 설명한다.\n맥스웰 방정식은 다음과 같다.\n\\[\n\\begin{aligned}\n\\nabla \\cdot \\boldsymbol{E} &= \\dfrac{\\rho}{\\epsilon_0},\\\\[0.3em]\n\\nabla \\cdot \\boldsymbol{B} &= 0, \\\\[0.3em]\n\\nabla \\times \\boldsymbol{E} &= - \\dfrac{\\partial \\boldsymbol{B}}{\\partial t}, \\\\[0.3em]\n\\nabla \\times \\boldsymbol{B} &= \\mu_0 \\epsilon_0 \\dfrac{\\partial \\boldsymbol{E}}{\\partial t} + \\mu_0 \\boldsymbol{J}.\n\\end{aligned}\n\\tag{1}\\]\n또한 로렌츠 힘은 다음과 같다.\n\\[\n\\boldsymbol{F}_{\\text{Lorentz}} = q\\boldsymbol{E} + q\\boldsymbol{v}\\times \\boldsymbol{B}.\n\\tag{2}\\]\n전하량 보존은 다음과 같다.\n\\[\n\\dfrac{\\partial \\rho}{\\partial t } + \\nabla \\cdot \\boldsymbol{J}=0.\n\\tag{3}\\]",
-    "crumbs": [
-      "고전 전자기학"
     ]
   }
 ]
