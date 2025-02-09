@@ -231,7 +231,39 @@ U = \dfrac{1}{2} \int \rho(\bf{r})\phi (\bf{r})\, d^3 \bf{r}
 }
 $$ {#eq-EM_electrostatic_potential_energy_by_charge_distribution_and_potential}
 
-을 얻는다.
+을 얻는다. 위 식을 다르게 보자.
+
+$$
+\begin{aligned}
+U &= \dfrac{1}{2}\int\rho(\bf{r})\,\phi(\bf{r})\,d^3\bf{r} = \dfrac{\epsilon_0}{2} \int (\nabla \bf{\cdot E}) \,\phi (\bf{r})\,d^3\bf{r} \\[0.3em]
+&= \dfrac{\epsilon_0}{2} \int \nabla \bf{\cdot} (\phi \bf{E})\, d^3\bf{r} - \dfrac{\epsilon_0}{2} \int (\nabla \phi) \bf{\cdot E}\, d^3\bf{r} \\[0.3em]
+&= \dfrac{\epsilon_0}{2} \int_S \phi \bf{E \cdot} \hat{\bf{n}}\,da + \dfrac{\epsilon_0}{2} \int \|\bf{E}\|^2 \,d^3\bf{r}
+\end{aligned}
+$$
+
+이다. 전체 공간에 대한 적분이며 여기서 $\phi,\, \bf{E}$ 가 모두 $0$ 이 되므로 위 식의 첫번째 항은 $0$ 이 된다. 따라서,
+
+$$
+\boxed{
+U = \dfrac{\epsilon_0}{2}\int\|\bf{E}\|^2\, d^3\bf{r}.}
+$${#eq-EM_electrostatic_potential_energy_by_electric_field}
+
+이다. 우리는 여기서 항상 $U$ 가 non-negative 라는 사실을 알 수 있다. 또한 
+
+$$
+u_E = \dfrac{\epsilon_0}{2}\|\bf{E}\|^2
+$${#eq-EM_electrostatic_energy_density}
+
+를 정전기 에너지 밀도라고 부를 수 있게 된다.
+
+
+
+
+
+
+
+
+
 
 </br>
 
