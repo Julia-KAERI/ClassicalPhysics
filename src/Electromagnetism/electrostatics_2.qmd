@@ -248,7 +248,11 @@ $$
 U = \dfrac{\epsilon_0}{2}\int\|\bf{E}\|^2\, d^3\bf{r}.}
 $${#eq-EM_electrostatic_potential_energy_by_electric_field}
 
-이다. 우리는 여기서 항상 $U$ 가 non-negative 라는 사실을 알 수 있다. 또한 
+이다. 우리는 여기서 항상 $U$ 가 non-negative 라는 사실을 알 수 있다. 이것은 @eq-EM_electrostatic_potential_energy_1 와 다른 결과인데 @eq-EM_electrostatic_potential_energy_1 에 따르면 양전하와 음전하 각각 하나씩의 에너지는 음수이기 때문이다. 이런 불일치는  @eq-EM_electrostatic_potential_energy_1 에 점전하 자체의 self-energy 가 포함되지 않는 반면에 @eq-EM_electrostatic_potential_energy_by_electric_field 에는 $\bf{E}=\dfrac{q\hat{\bf{r}}}{4\pi\epsilon_0 r^2}$ 의 형태로 점전하의 self-energy 가 포함되었기 때문이다. 
+
+
+
+또한 
 
 $$
 u_E = \dfrac{\epsilon_0}{2}\|\bf{E}\|^2
