@@ -1,0 +1,108 @@
+---
+title: "필요한 수학적 사실들"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+## 기본적인 정리들
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-EM_math_divergence_theorem}
+#### 발산 정리
+
+공간의 부피 $V$ 와 부피를 둘러싼 표면 $S$ 에 대해 다음이 성립한다.
+
+$$
+\begin{aligned}
+\int_V \nabla \bf{\cdot A}\, d^3\bf{r}& = \oint_S \bf{A\cdot }d\bf{a},
+\end{aligned}
+$${#eq-EM_math_divergence_theorem}
+
+이를 이용하면 다음을 보일 수 있다. 
+$$
+\begin{aligned}
+\int_V \nabla \cdot \psi \, d^3 \bf{r} &= \oint_s \psi\, d\bf{a},\\[0.3em]
+\int_V \nabla \times \bf{B} &= \oint_S d\bf{a} \times \bf{B}.
+\end{aligned}
+$$ {#eq-EM_math_divergence_theorem_2}
+
+:::
+
+</div>
+</br>
+
+::: {.proof}
+
+@eq-EM_math_divergence_theorem 은 잘 알려진 정리이다. 임의의 $\bf{0}$ 이 아닌 상수벡터 $\bf{c}$ 에 대해
+
+$$
+\begin{aligned}
+\int_V \nabla (\bf{c}\psi ) = \bf{c\cdot}\int_V \psi\, d^3\bf{r}= \bf{c\cdot}\oint_S \psi d\bf{a}
+\end{aligned}
+$$
+
+이므로 @eq-EM_math_divergence_theorem_2 이므로 첫번째 식이 성립한다. 역시 임의의 $\bf{0}$ 이 아닌 상수벡터 $\bf{c}$ 에 대해 $\bf{A} = \bf{B}\times\bf{c}$ 라면
+
+$$
+\nabla \cdot (\bf{B} \times \bf{c}) = \bf{c \cdot} (\nabla \times \bf{B})
+$$
+
+이므로
+
+$$
+\int_V \nabla \bf{\cdot}(\bf{B}\times \bf{c})\, d^3\bf{r}= \bf{c}\cdot \int_V (\nabla \times \bf{B})\, d^3\bf{r} = \oint_S \left(\bf{B} \times \bf{c}\right) \cdot d\bf{a} = \bf{c \cdot}\oint_S d\bf{a} \times \bf{B}.
+$$
+
+이다. 임의의 $\bf{c}$ 에 대해 성립하므로 @eq-EM_math_divergence_theorem_2 의 두번째 식을 보였다. $\square$
+
+:::
+
+
+</br>
+
+### 그린의 항등식들
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-EM_math_green_1st_identity}
+#### 그린의 첫번째 항등식
+공간의 부피 $V$ 와 부피를 둘러싼 표면 $S$ 에 대해 다음이 성립한다.
+$$
+\int_V d^3\bf{r} [\phi\nabla^2\psi + \nabla \phi \bf{\cdot} \nabla\psi] = \oint_S (\phi \nabla \psi)\cdot d \bf{a}
+$$ {#eq-EM_math_green_1st_identity}
+:::
+
+</div>
+</br>
+
+::: {.proof}
+
+$\bf{A} = \phi \nabla \psi$ 라 놓고 @thm-EM_math_divergence_theorem 를 적용한다. $\square$
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-EM_math_green_2nd_identity}
+#### 그린의 두번째 항등식
+공간의 부피 $V$ 와 부피를 둘러싼 표면 $S$ 에 대해 다음이 성립한다.
+$$
+\int_V d^3\bf{r} [\phi\nabla^2\psi - \nabla \phi \nabla^2\psi] = \oint_S (\phi \nabla \psi - \psi \nabla \phi)\cdot d \bf{a}
+$$ {#eq-EM_math_green_2nd_identity}
+:::
+
+</div>
+</br>
+
+::: {.proof}
+
+$\bf{A} = \phi \nabla \psi$, $\bf{B} = \psi \nabla \phi$ 로 놓고 @thm-EM_math_green_1st_identity 를 이용한다. $\square$
+
+:::

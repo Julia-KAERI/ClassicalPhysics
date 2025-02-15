@@ -22,6 +22,7 @@ book:
       
     - part: src/Electromagnetism/00_index.qmd
       chapters:
+      - src/Electromagnetism/01_mathematics.qmd
       - src/Electromagnetism/electrostatics_1.qmd
       - src/Electromagnetism/electrostatics_2.qmd
       - src/Electromagnetism/electrostatics_3.qmd

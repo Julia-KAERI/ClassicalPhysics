@@ -214,58 +214,6 @@ $$
 
 </br>
 
-### 정전기 에너지 
-
-@eq-EM_electrostatic_potential_energy_1 를 다시 보자.
-
-$$
-U = \dfrac{1}{2}\sum_{i\ne j=1}^N \dfrac{q_i q_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2}\sum_{i=1}^N q_i \sum_{j\ne i=1}^N \dfrac{q_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2} \sum_{i=1}^N q_i \phi(\bf{r}_i)
-$$
-
-이며 여기서 $\phi(\bf{r}_i) = \sum_{j\ne i = 1}^N \dfrac{q_j}{4\pi \epsilon_0 r_{ij}}$ 는 $i$ 번째 전하를 제외한 전하에 의한 $q_i$ 가 위치한 지점 $\bf{r}_i$ 에서의 전위이다. 이로부터
-
-
-$$
-\boxed{
-U = \dfrac{1}{2} \int \rho(\bf{r})\phi (\bf{r})\, d^3 \bf{r}
-}
-$$ {#eq-EM_electrostatic_potential_energy_by_charge_distribution_and_potential}
-
-을 얻는다. 위 식을 다르게 보자.
-
-$$
-\begin{aligned}
-U &= \dfrac{1}{2}\int\rho(\bf{r})\,\phi(\bf{r})\,d^3\bf{r} = \dfrac{\epsilon_0}{2} \int (\nabla \bf{\cdot E}) \,\phi (\bf{r})\,d^3\bf{r} \\[0.3em]
-&= \dfrac{\epsilon_0}{2} \int \nabla \bf{\cdot} (\phi \bf{E})\, d^3\bf{r} - \dfrac{\epsilon_0}{2} \int (\nabla \phi) \bf{\cdot E}\, d^3\bf{r} \\[0.3em]
-&= \dfrac{\epsilon_0}{2} \int_S \phi \bf{E \cdot} \hat{\bf{n}}\,da + \dfrac{\epsilon_0}{2} \int \|\bf{E}\|^2 \,d^3\bf{r}
-\end{aligned}
-$$
-
-이다. 전체 공간에 대한 적분이며 여기서 $\phi,\, \bf{E}$ 가 모두 $0$ 이 되므로 위 식의 첫번째 항은 $0$ 이 된다. 따라서,
-
-$$
-\boxed{
-U = \dfrac{\epsilon_0}{2}\int\|\bf{E}\|^2\, d^3\bf{r}.}
-$${#eq-EM_electrostatic_potential_energy_by_electric_field}
-
-이다. 우리는 여기서 항상 $U$ 가 non-negative 라는 사실을 알 수 있다. 이것은 @eq-EM_electrostatic_potential_energy_1 와 다른 결과인데 @eq-EM_electrostatic_potential_energy_1 에 따르면 양전하와 음전하 각각 하나씩의 에너지는 음수이기 때문이다. 이런 불일치는  @eq-EM_electrostatic_potential_energy_1 에 점전하 자체의 self-energy 가 포함되지 않는 반면에 @eq-EM_electrostatic_potential_energy_by_electric_field 에는 $\bf{E}=\dfrac{q\hat{\bf{r}}}{4\pi\epsilon_0 r^2}$ 의 형태로 점전하의 self-energy 가 포함되었기 때문이다. 
-
-
-
-또한 
-
-$$
-u_E = \dfrac{\epsilon_0}{2}\|\bf{E}\|^2
-$${#eq-EM_electrostatic_energy_density}
-
-를 정전기 에너지 밀도라고 부를 수 있게 된다.
-
-
-
-
-
-
-
 
 
 
@@ -798,6 +746,82 @@ $$
 이므로 모순이다. $\bf{r}_0$ 가 극대점일 경우 $\hat{\bf{n}}\bf{\cdot}\nabla \phi <0$ 이므로 위의 식의 부호가 반대가 되어 역시 모순이 된다. $\square$
 
 :::
+
+</br>
+
+
+## 정전기 에너지 
+
+@eq-EM_electrostatic_potential_energy_1 를 다시 보자.
+
+$$
+U = \dfrac{1}{2}\sum_{i\ne j=1}^N \dfrac{q_i q_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2}\sum_{i=1}^N q_i \sum_{j\ne i=1}^N \dfrac{q_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2} \sum_{i=1}^N q_i \phi(\bf{r}_i)
+$$
+
+이며 여기서 $\phi(\bf{r}_i) = \sum_{j\ne i = 1}^N \dfrac{q_j}{4\pi \epsilon_0 r_{ij}}$ 는 $i$ 번째 전하를 제외한 전하에 의한 $q_i$ 가 위치한 지점 $\bf{r}_i$ 에서의 전위이다. 이로부터
+
+
+$$
+\boxed{
+U = \dfrac{1}{2} \int \rho(\bf{r})\phi (\bf{r})\, d^3 \bf{r}
+}
+$$ {#eq-EM_electrostatic_potential_energy_by_charge_distribution_and_potential}
+
+을 얻는다. 위 식을 다르게 보자.
+
+$$
+\begin{aligned}
+U &= \dfrac{1}{2}\int\rho(\bf{r})\,\phi(\bf{r})\,d^3\bf{r} = \dfrac{\epsilon_0}{2} \int (\nabla \bf{\cdot E}) \,\phi (\bf{r})\,d^3\bf{r} \\[0.3em]
+&= \dfrac{\epsilon_0}{2} \int \nabla \bf{\cdot} (\phi \bf{E})\, d^3\bf{r} - \dfrac{\epsilon_0}{2} \int (\nabla \phi) \bf{\cdot E}\, d^3\bf{r} \\[0.3em]
+&= \dfrac{\epsilon_0}{2} \int_S \phi \bf{E \cdot} \hat{\bf{n}}\,da + \dfrac{\epsilon_0}{2} \int \|\bf{E}\|^2 \,d^3\bf{r}
+\end{aligned}
+$$
+x
+이다. 전체 공간에 대한 적분이며 여기서 $\phi,\, \bf{E}$ 가 모두 $0$ 이 되므로 위 식의 첫번째 항은 $0$ 이 된다. 따라서,
+
+$$
+\boxed{
+U = \dfrac{\epsilon_0}{2}\int\|\bf{E}\|^2\, d^3\bf{r}.}
+$$ {#eq-EM_electrostatic_potential_energy_by_electric_field}
+
+이다. 우리는 여기서 항상 $U$ 가 non-negative 라는 사실을 알 수 있다. 이것은 @eq-EM_electrostatic_potential_energy_1 와 다른 결과인데 @eq-EM_electrostatic_potential_energy_1 에 따르면 양전하와 음전하 각각 하나씩의 에너지는 음수이기 때문이다. 이런 불일치는  @eq-EM_electrostatic_potential_energy_1 에 점전하 자체의 self-energy 가 포함되지 않는 반면에 @eq-EM_electrostatic_potential_energy_by_electric_field 에는 $\bf{E}=\dfrac{q\hat{\bf{r}}}{4\pi\epsilon_0 r^2}$ 의 형태로 점전하의 self-energy 가 포함되었기 때문이다. 
+
+
+
+또한 @eq-EM_electrostatic_potential_energy_by_electric_field 로부터
+
+$$
+u_E = \dfrac{\epsilon_0}{2}\|\bf{E}\|^2
+$${#eq-EM_electrostatic_energy_density}
+
+를 정전기 에너지 밀도라고 부를 수 있게 된다.
+
+</br>
+
+### Green's reciprocal relation {#sec-EM_electrostatics_green_reciprocal_relation}
+
+전하 밀도 $\rho_1$ 에 의한 전기포텐셜 $\phi_1$ 과 전하 밀도 $\rho_2$ 에 의한 전기 포텐셜 $\phi_2$ 를 생각하자. 즉 $\nabla \phi_1 = - \rho_1/\epsilon_0,\, \nabla \phi_2 = - \rho_2\epsilon_0$ 이다. 그렇다면 
+
+$$
+\begin{aligned}
+U_{12} &= \int_V \rho_1(\bf{r}) \phi_2(\bf{r})\,d^3\bf{r} = \dfrac{1}{4\pi \epsilon_0}\int_V d^3\bf{r}\rho_1(\bf{r})\int_V d^3\bf{r}' \dfrac{\rho_2(\bf{r}')}{\|\bf{r}-\bf{r}'\|} \\[0.3em]
+&= \dfrac{1}{4\pi\epsilon_0} \int_V \int_V \dfrac{\rho_1(\bf{r})\rho_2(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}\,d^3\bf{r}' \\[0.3em]
+&= \int_V \rho_2(\bf{r}) \phi_1(\bf{r})\,d^3{\bf{r}} = U_{21}
+\end{aligned}
+$$ 
+
+즉 다음의 관계가 성립한다.
+$$
+\int_V \rho_1(\bf{r}) \phi_2(\bf{r})\,d^3\bf{r} = \dfrac{1}{4\pi \epsilon_0} \int_V \int_V \dfrac{\rho_1(\bf{r})\rho_2(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}\,d^3\bf{r}' = \int_V \rho_2(\bf{r}) \phi_1(\bf{r})\,d^3{\bf{r}}
+$${#eq-EM_electrostatics_green_reciprocal_relation}
+
+@eq-EM_electrostatics_green_reciprocal_relation 을 Green's reciprical relation 이라고 한다.
+
+
+
+
+
+
 
 
 </br>
