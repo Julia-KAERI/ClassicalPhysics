@@ -1,0 +1,37 @@
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{tikz-3dplot}
+% \usepackage{tikz-3dplot-circleofsphere}
+\begin{document}
+\tdplotsetmaincoords{50}{120}
+
+\pgfmathsetmacro{\rvec}{.9}
+\pgfmathsetmacro{\thetavec}{30}
+\pgfmathsetmacro{\phivec}{60}
+
+\begin{tikzpicture}[scale=3, tdplot_main_coords]
+\usetikzlibrary{arrows.meta}
+  % variables
+    \coordinate (O) at (0,0,0);
+    \draw[thick,->] (0,0,0) -- (1.5,0,0) node[anchor=north east]{$x$};
+    \draw[thick,->] (0,0,0) -- (0,1.5,0) node[anchor=north west]{$y$};
+    \draw[thick,->] (0,0,0) -- (0,0,1.5) node[anchor=south]{$z$};
+
+    \tdplotdrawarc{(O)}{0.2}{0}{\phivec}{anchor=north}{$\varphi_0$}
+
+    \tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+    \draw[very thick, -stealth,color=red] (O) -- (P) node[xshift=0.2cm, yshift=-0.2cm] {$\hat{\boldsymbol{n}}$};
+    \draw[thick, dashed, color=red] (O) -- (Pxy);
+    \draw[thick, dashed, color=red] (P) -- (Pxy);
+
+    \tdplotsetrotatedcoords{10}{110}{40};
+\draw[teal, very thick, tdplot_rotated_coords] (1,0,0) arc (0:360:1);
+ 
+    \tdplotsetthetaplanecoords{\phivec}
+    \tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}%
+        {\thetavec}{anchor=south west, xshift=-0.2cm, yshift=-0.1cm}{$\theta_0$}
+    % \draw[very thick, teal, tdplot_rotated_coords] (\rvec,0,0) arc (0:360:\rvec);
+    
+\end{tikzpicture}
+\end{document}

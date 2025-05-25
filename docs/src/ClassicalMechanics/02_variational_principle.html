@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -37,10 +57,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-b467865d89f01302b3bb45791fa41ab5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -361,28 +381,31 @@ window.Quarto = {
   <ul>
   <li><a href="#변분법" id="toc-변분법" class="nav-link active" data-scroll-target="#변분법"><span class="header-section-number">2.1</span> 변분법</a>
   <ul class="collapse">
-  <li><a href="#차원의-경우" id="toc-차원의-경우" class="nav-link" data-scroll-target="#차원의-경우"><span class="header-section-number">2.1.1</span> 1차원의 경우</a></li>
-  <li><a href="#다차원의-경우" id="toc-다차원의-경우" class="nav-link" data-scroll-target="#다차원의-경우"><span class="header-section-number">2.1.2</span> 다차원의 경우</a></li>
+  <li><a href="#sec-CM_variational_method_1dimension" id="toc-sec-CM_variational_method_1dimension" class="nav-link" data-scroll-target="#sec-CM_variational_method_1dimension"><span class="header-section-number">2.1.1</span> 1차원의 경우</a></li>
+  <li><a href="#sec-CM_variational_method_n_dimension" id="toc-sec-CM_variational_method_n_dimension" class="nav-link" data-scroll-target="#sec-CM_variational_method_n_dimension"><span class="header-section-number">2.1.2</span> 다차원의 경우</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
   <li><a href="#해밀턴-의-원리" id="toc-해밀턴-의-원리" class="nav-link" data-scroll-target="#해밀턴-의-원리"><span class="header-section-number">2.2</span> 해밀턴 의 원리</a>
   <ul class="collapse">
-  <li><a href="#configuration-space-와-시스템의-동역학" id="toc-configuration-space-와-시스템의-동역학" class="nav-link" data-scroll-target="#configuration-space-와-시스템의-동역학"><span class="header-section-number">2.2.1</span> Configuration space 와 시스템의 동역학</a></li>
+  <li><a href="#sec-CM_configuration_space_and_system_dynamics" id="toc-sec-CM_configuration_space_and_system_dynamics" class="nav-link" data-scroll-target="#sec-CM_configuration_space_and_system_dynamics"><span class="header-section-number">2.2.1</span> 구성공간 와 시스템의 동역학</a></li>
   <li><a href="#sec-CM_least_action_theorem" id="toc-sec-CM_least_action_theorem" class="nav-link" data-scroll-target="#sec-CM_least_action_theorem"><span class="header-section-number">2.2.2</span> 해밀턴의 원리</a></li>
   </ul></li>
-  <li><a href="#nonholonomic-systemsast-과-해밀턴의-원리" id="toc-nonholonomic-systemsast-과-해밀턴의-원리" class="nav-link" data-scroll-target="#nonholonomic-systemsast-과-해밀턴의-원리"><span class="header-section-number">2.3</span> Nonholonomic Systems<span class="math inline">\({}^\ast\)</span> 과 해밀턴의 원리</a>
+  <li><a href="#nonholonomic-systems-과-해밀턴의-원리" id="toc-nonholonomic-systems-과-해밀턴의-원리" class="nav-link" data-scroll-target="#nonholonomic-systems-과-해밀턴의-원리"><span class="header-section-number">2.3</span> Nonholonomic Systems 과 해밀턴의 원리</a>
   <ul class="collapse">
   <li><a href="#nonholonomic-constraints-system-과-holonomic-system" id="toc-nonholonomic-constraints-system-과-holonomic-system" class="nav-link" data-scroll-target="#nonholonomic-constraints-system-과-holonomic-system"><span class="header-section-number">2.3.1</span> Nonholonomic constraints system 과 holonomic system</a></li>
   <li><a href="#간단한-nonholonomic-case" id="toc-간단한-nonholonomic-case" class="nav-link" data-scroll-target="#간단한-nonholonomic-case"><span class="header-section-number">2.3.2</span> 간단한 nonholonomic case</a></li>
   </ul></li>
-  <li><a href="#대칭과-보존" id="toc-대칭과-보존" class="nav-link" data-scroll-target="#대칭과-보존"><span class="header-section-number">2.4</span> 대칭과 보존</a>
+  <li><a href="#변분-방법의-장점" id="toc-변분-방법의-장점" class="nav-link" data-scroll-target="#변분-방법의-장점"><span class="header-section-number">2.4</span> 변분 방법의 장점</a></li>
+  <li><a href="#대칭과-보존" id="toc-대칭과-보존" class="nav-link" data-scroll-target="#대칭과-보존"><span class="header-section-number">2.5</span> 대칭과 보존</a>
   <ul class="collapse">
-  <li><a href="#phase-space" id="toc-phase-space" class="nav-link" data-scroll-target="#phase-space"><span class="header-section-number">2.4.1</span> Phase space</a></li>
-  <li><a href="#monogenic-system-이며-포텐셜이-위치에만-의존하는-경우" id="toc-monogenic-system-이며-포텐셜이-위치에만-의존하는-경우" class="nav-link" data-scroll-target="#monogenic-system-이며-포텐셜이-위치에만-의존하는-경우"><span class="header-section-number">2.4.2</span> Monogenic system 이며 포텐셜이 위치에만 의존하는 경우</a></li>
-  <li><a href="#sec-CM_cyclic_coordinate_lagrangian" id="toc-sec-CM_cyclic_coordinate_lagrangian" class="nav-link" data-scroll-target="#sec-CM_cyclic_coordinate_lagrangian"><span class="header-section-number">2.4.3</span> Cyclic coordinate</a></li>
-  <li><a href="#병진-대칭-translational-symmetry" id="toc-병진-대칭-translational-symmetry" class="nav-link" data-scroll-target="#병진-대칭-translational-symmetry"><span class="header-section-number">2.4.4</span> 병진 대칭 (Translational Symmetry)</a></li>
-  <li><a href="#회전-대칭" id="toc-회전-대칭" class="nav-link" data-scroll-target="#회전-대칭"><span class="header-section-number">2.4.5</span> 회전 대칭</a></li>
-  <li><a href="#time-symmetry" id="toc-time-symmetry" class="nav-link" data-scroll-target="#time-symmetry"><span class="header-section-number">2.4.6</span> Time symmetry</a></li>
+  <li><a href="#sec-CM_variational_phase_space" id="toc-sec-CM_variational_phase_space" class="nav-link" data-scroll-target="#sec-CM_variational_phase_space"><span class="header-section-number">2.5.1</span> Phase space</a></li>
+  <li><a href="#monogenic-system-이며-포텐셜이-위치에만-의존하는-경우" id="toc-monogenic-system-이며-포텐셜이-위치에만-의존하는-경우" class="nav-link" data-scroll-target="#monogenic-system-이며-포텐셜이-위치에만-의존하는-경우"><span class="header-section-number">2.5.2</span> Monogenic system 이며 포텐셜이 위치에만 의존하는 경우</a></li>
+  <li><a href="#sec-CM_cyclic_coordinate_lagrangian" id="toc-sec-CM_cyclic_coordinate_lagrangian" class="nav-link" data-scroll-target="#sec-CM_cyclic_coordinate_lagrangian"><span class="header-section-number">2.5.3</span> 순환 좌표</a></li>
+  <li><a href="#sec-CM_variation_translational_symmetry" id="toc-sec-CM_variation_translational_symmetry" class="nav-link" data-scroll-target="#sec-CM_variation_translational_symmetry"><span class="header-section-number">2.5.4</span> 병진 대칭 (Translational Symmetry)</a></li>
+  <li><a href="#sec-CM_variation_rotational_symmetry" id="toc-sec-CM_variation_rotational_symmetry" class="nav-link" data-scroll-target="#sec-CM_variation_rotational_symmetry"><span class="header-section-number">2.5.5</span> 회전 대칭</a></li>
+  <li><a href="#sec-CM_variation_time_symmetry" id="toc-sec-CM_variation_time_symmetry" class="nav-link" data-scroll-target="#sec-CM_variation_time_symmetry"><span class="header-section-number">2.5.6</span> 시간 대칭</a></li>
   </ul></li>
+  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul>
 </nav>
     </div>
@@ -406,12 +429,12 @@ window.Quarto = {
 <h2 data-number="2.1" class="anchored" data-anchor-id="변분법"><span class="header-section-number">2.1</span> 변분법</h2>
 <p>수학적으로 어떤 함수의 집합 <span class="math inline">\(F\)</span> 에 대해 함수 <span class="math inline">\(\phi\)</span> 가 <span class="math inline">\(F \mapsto \mathbb{R}\)</span> 함수 일 때 <span class="math inline">\(\phi\)</span> 를 <strong>범함수(functional)</strong> 라고 한다. 변분법은 <span class="math inline">\(f\in F\)</span> 에 대해 <span class="math inline">\(\phi (f)\)</span> 를 최대 혹은 최소가 되도록 하는 <span class="math inline">\(f\)</span> 를 찾는 수학적인 방법을 말한다. 여기서 우리가 관심있는 것은 어떤 경로 의존적인 함수 <span class="math inline">\(f(\boldsymbol{x},\, \dot{\boldsymbol{x}},\,t)\)</span> 에 대해</p>
 <p><span class="math display">\[
-J = \int_C f(\boldsymbol{x},\, \dot{\boldsymbol{x}},\,t),\,dt
+J = \int_C f(\boldsymbol{x},\, \dot{\boldsymbol{x}},\,t)\,dt
 \]</span></p>
-<p>가 statinary valure 가 되도록 하는 경로 <span class="math inline">\(\boldsymbol{x}(t)\)</span> 를 찾는 것이다. 이것을 <strong>변분법 (calculus of variation)</strong> 이라고 한다.</p>
+<p>가 stationary valure 가 되도록 하는 경로 <span class="math inline">\(\boldsymbol{x}(t)\)</span> 를 찾는 것이다. 이것을 <strong>변분법 (calculus of variation)</strong> 이라고 한다.</p>
 <p><br></p>
-<section id="차원의-경우" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="차원의-경우"><span class="header-section-number">2.1.1</span> 1차원의 경우</h3>
+<section id="sec-CM_variational_method_1dimension" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="sec-CM_variational_method_1dimension"><span class="header-section-number">2.1.1</span> 1차원의 경우</h3>
 <div id="fig-1d_path_variational" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1d_path_variational-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -423,28 +446,28 @@ J = \int_C f(\boldsymbol{x},\, \dot{\boldsymbol{x}},\,t),\,dt
 </figure>
 </div>
 <p><span class="math inline">\(x_1\)</span> 과 <span class="math inline">\(x_2\)</span> 사이의 경로 <span class="math inline">\(y=y(x)\)</span> 에서 정의된 함수 <span class="math inline">\(f(y,\,\dot{y},\,x)\)</span> 를 생각하자. 그리고 선적분 <span class="math inline">\(\displaystyle J=\int_{x_1}^{x_2} f(y,\,\dot{y},\,x)\, dx\)</span> 가 stationary value를 갖도록 하는 경로를 찾아야 한다고 하자. 우리가 찾고자 하는 경로와 그 이웃 경로를 다음 식과 같은 관계로 표현하자. 두 경로는 시작점과 끝점이 같아야 한다.</p>
-<p><span id="eq-initial_path"><span class="math display">\[
+<p><span id="eq-CM_variational_in_1d_initial_path"><span class="math display">\[
 y(x,\,\alpha) = y(x,\,0) + \alpha \eta(x)\;.
 \tag{2.1}\]</span></span></p>
-<p>여기서 <span class="math inline">\(\alpha\)</span> 는 infinitesimal deviation을 위한 parameter이며 <span class="math inline">\(\eta(x)\)</span> 는 임의의 경로인데, 경로의 시작과 끝이 정해졌다는 가정 하에서 생각하므로 <span class="math inline">\(\eta(x_1)=\eta(x_2)=0\)</span> 이다. 또한 우리는 <span class="math inline">\(\eta(x)\)</span> 가 well-behaved function 이라고 가정한다. 즉 <span class="math inline">\(\eta(x)\)</span> 는 <span class="math inline">\([x_1,\,x_2]\)</span> 에서 연속이며 non-singular 하다고 생각한다.</p>
+<p>여기서 <span class="math inline">\(\alpha\)</span> 는 infinitesimal deviation을 위한 parameter이며 <span class="math inline">\(\eta(x)\)</span> 는 임의의 경로인데, 경로의 시작과 끝이 정해졌다는 가정 하에서 생각하므로 <span class="math inline">\(\eta(x_1)=\eta(x_2)=0\)</span> 이다. 또한 우리는 <span class="math inline">\(\eta(x)\)</span> 가 well-behaved function 이라고 가정한다. 즉 <span class="math inline">\(\eta(x)\)</span> 는 <span class="math inline">\([x_1,\,x_2]\)</span> 구간에서 연속이며 <a href="https://en.wikipedia.org/wiki/Singular_function">non-singular</a> 하다고 생각한다.</p>
 <p>이제 선적분 <span class="math inline">\(J\)</span> 는 <span class="math inline">\(\alpha\)</span> 의 함수로</p>
-<p><span id="eq-CM_stationary_condition"><span class="math display">\[
-J(\alpha) = \int_{x_1}^{x_2} f(y(x,\,\alpha),\,\dot{y}(x,\,\alpha),\,x),\,dx
-\tag{2.2}\]</span></span></p>
-<p>이며 stationary point를 얻는 것은 다음을 만족할 때 이다.</p>
 <p><span class="math display">\[
-\left( \dfrac{dJ}{d\alpha} \right)_{\alpha=0}=0\;.
+J(\alpha) = \int_{x_1}^{x_2} f(y(x,\,\alpha),\,\dot{y}(x,\,\alpha),\,x)\,dx
 \]</span></p>
-<p>계산을 통해 다음을 보일 수 있다.</p>
-<p><span class="math display">\[
+<p>이며 stationary point를 얻는 것은 다음을 만족할 때 이다.</p>
+<p><span id="eq-CM_stationary_condition"><span class="math display">\[
+\left( \dfrac{dJ}{d\alpha} \right)_{\alpha=0}=0\;.
+\tag{2.2}\]</span></span></p>
+<p>계산을 통해 다음을 보일 수 있다(<a href="#exr-CM_variational_devivation_of_euler_lagrange_eq" class="quarto-xref">연습문제&nbsp;<span>2.1</span></a>).</p>
+<p><span id="eq-CM_variational_derivative_of_J_to_alpha"><span class="math display">\[
 \begin{aligned}
 \dfrac{dJ}{d\alpha} &amp; = \int_{x_1}^{x_2} \left[ \dfrac{\partial f}{\partial y}\dfrac{\partial y}{\partial \alpha} + \dfrac{\partial f}{\partial \dot{y}}\dfrac{\partial \dot{y}}{\partial \alpha} \right] \, dx = \int_{x_1}^{x_2} \left(\dfrac{ \partial f}{\partial y} - \dfrac{d}{dx} \dfrac{\partial f}{\partial \dot{y}}\right) \dfrac{dy}{d\alpha} dx \;.
 \end{aligned}
-\]</span></p>
-<p>따라서 stationary condition 식 <a href="#eq-CM_stationary_condition" class="quarto-xref">식&nbsp;<span>2.2</span></a> 은 다음과 같게 된다.</p>
+\tag{2.3}\]</span></span></p>
+<p>따라서 stationary condition 인 <a href="#eq-CM_stationary_condition" class="quarto-xref">식&nbsp;<span>2.2</span></a> 은 다음과 같게 된다.</p>
 <p><span id="eq-CM_stationary_condition_2"><span class="math display">\[
 \int_{x_1}^{x_2} \left[\dfrac{ \partial f}{\partial y} - \dfrac{d}{dx} \left(\dfrac{\partial f}{\partial \dot{y}}\right)\right]\left( \dfrac{dy}{d\alpha}\right)_{\alpha=0} dx = 0\;.
-\tag{2.3}\]</span></span></p>
+\tag{2.4}\]</span></span></p>
 <div class="callout callout-style-simple callout-caution no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -458,17 +481,17 @@ J(\alpha) = \int_{x_1}^{x_2} f(y(x,\,\alpha),\,\dot{y}(x,\,\alpha),\,x),\,dx
 </div>
 </div>
 </div>
-<p>따라서 우리는 <a href="#eq-CM_stationary_condition_2" class="quarto-xref">식&nbsp;<span>2.3</span></a> 로부터 <span class="math inline">\(J\)</span> 가 stationary value를 갖기 위해서는 다음을 만족해야 함을 알게 되었다. 이를 1차원에서의 오일러-라그랑쥬 방정식(Euler-Lagrange equation) 이라고 한다.</p>
+<p>따라서 우리는 <a href="#eq-CM_stationary_condition_2" class="quarto-xref">식&nbsp;<span>2.4</span></a> 로부터 <span class="math inline">\(J\)</span> 가 stationary value를 갖기 위해서는 다음을 만족해야 함을 알게 되었다. 이를 1차원에서의 <strong>오일러-라그랑쥬 방정식(Euler-Lagrange equation)</strong> 이라고 한다.</p>
 <p><span id="eq-CM_euler_lagrange_equation_1d"><span class="math display">\[
 \dfrac{ \partial f}{\partial y} - \dfrac{d}{dx} \left(\dfrac{\partial f}{\partial \dot{y}}\right)=0\;.
-\tag{2.4}\]</span></span></p>
-<p>Differential quantities <span class="math inline">\(\delta y,\, \delta J\)</span> 를 <span class="math inline">\(\delta y \equiv \left( \dfrac{\partial y}{\partial \alpha}\right)_{0} d\alpha\)</span>, <span class="math inline">\(\delta J \equiv \left(\dfrac{dJ}{d\alpha}\right)_0 d\alpha\)</span> 로 정의하자. 아래첨자 <span class="math inline">\(0\)</span> 은 <span class="math inline">\(\alpha=0\)</span> 을 의미한다. 이 정의를 이용하면 <a href="#eq-CM_stationary_condition_2" class="quarto-xref">식&nbsp;<span>2.3</span></a> 는 다음과 같이 쓸 수 있다.</p>
+\tag{2.5}\]</span></span></p>
+<p>Differential quantities <span class="math inline">\(\delta y,\, \delta J\)</span> 를 <span class="math inline">\(\delta y \equiv \left( \dfrac{\partial y}{\partial \alpha}\right)_{0} d\alpha\)</span>, <span class="math inline">\(\delta J \equiv \left(\dfrac{dJ}{d\alpha}\right)_0 d\alpha\)</span> 로 정의하자. 아래첨자 <span class="math inline">\(0\)</span> 은 <span class="math inline">\(\alpha=0\)</span> 을 의미한다. 이 정의를 이용하면 <a href="#eq-CM_stationary_condition_2" class="quarto-xref">식&nbsp;<span>2.4</span></a> 는 다음과 같이 쓸 수 있다.</p>
 <p><span class="math display">\[
 \delta J = \int_{x_0}^{x_1} \left[ \dfrac{\partial f}{\partial y}-\dfrac{d}{dx}\left( \dfrac{\partial f}{\partial \dot{y}} \right)\right] \delta y \, dx=0\;.
 \]</span></p>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-classical_minimal_length_path_in_plane" class="theorem example">
+<div id="exm-CM_variational_length_path_in_plane" class="theorem example">
 <p><span class="theorem-title"><strong>예제 2.1 (평면상의 두 점 사이의 가장 짧은 거리.)</strong></span> 평면상에서 두 점 <span class="math inline">\((x_1,\,y_1),\,(x_2,\,y_2)\)</span> 사이의 거리 <span class="math inline">\(I\)</span> 는 다음과 같이 주어진다.</p>
 <p><span class="math display">\[
 I = \int_1^2 ds = \int_1^2 \sqrt{1+\left(\dfrac{dy}{dx}\right)^2}\, dx\;.
@@ -482,7 +505,7 @@ I = \int_1^2 ds = \int_1^2 \sqrt{1+\left(\dfrac{dy}{dx}\right)^2}\, dx\;.
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-CM_minima_volume_of_a_body_of_revolution" class="theorem example">
+<div id="exm-CM_variational_minima_volume_of_a_body_of_revolution" class="theorem example">
 <p><span class="theorem-title"><strong>예제 2.2 (회전체의 최소부피)</strong></span> &nbsp;</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -515,7 +538,7 @@ x= a \cosh \left(\dfrac{y-b}{a}\right)
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-CM_classical_brachistochrone_problem" class="theorem example">
+<div id="exm-CM_variational_brachistochrone_problem" class="theorem example">
 <p><span class="theorem-title"><strong>예제 2.3 (The brachistochrone problem)</strong></span> &nbsp;</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -556,8 +579,8 @@ y(1+\dot{y}^2) = \dfrac{1}{2gc^2} = 2a=\text{constant}
 </div>
 <p><br></p>
 </section>
-<section id="다차원의-경우" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="다차원의-경우"><span class="header-section-number">2.1.2</span> 다차원의 경우</h3>
+<section id="sec-CM_variational_method_n_dimension" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="sec-CM_variational_method_n_dimension"><span class="header-section-number">2.1.2</span> 다차원의 경우</h3>
 <p>이제 <span class="math inline">\(f\)</span> 가 많은 독립변수들 <span class="math inline">\(y_1,\,y_2,\ldots\)</span> 와 그 미분 <span class="math inline">\(\dot{y}_1(x),\,\dot{y}_2 (x),\ldots\)</span> 의 함수 일 때, <span class="math inline">\(\displaystyle J=\int_1^2 f dx\)</span> 에 대한 <span class="math inline">\(\delta J\)</span> 가 <span class="math inline">\(0\)</span> 이 되도록 하는 <span class="math inline">\(y_i\)</span> 들을 찾아보자. 즉</p>
 <p><span class="math display">\[
 \delta J= \delta \int_1^2 f(y_1(x),\,y_2(x),\ldots,\,\dot{y}_1(x),\,\dot{y}_2 (x),\ldots,\,x)\, dx = 0
@@ -572,17 +595,44 @@ y(1+\dot{y}^2) = \dfrac{1}{2gc^2} = 2a=\text{constant}
 \]</span></p>
 <p>이다. <span class="math inline">\(\{y_i\}\)</span> 가 독립이므로 <span class="math inline">\(\{\delta y_i\}\)</span> 도 독립이다. <span class="math inline">\(\delta J=0\)</span> 이려면 모든 <span class="math inline">\(i=1,\ldots,\,n\)</span> 에 대해 다음을 만족해야 한다. <span id="eq-CM_euler_lagrange_for_muntidimensional_case"><span class="math display">\[
 \dfrac{\partial f}{\partial y_i} - \dfrac{d}{dx}\left( \dfrac{\partial f}{\partial \dot{y}_i}  \right) =0
-\tag{2.5}\]</span></span></p>
+\tag{2.6}\]</span></span></p>
 <p>을 만족해야 한다. 1차원에서와 같이 이를 <strong>오일러-라그랑쥬 방정식(Euler-Lagrange differential equation)</strong> 이라 한다.</p>
+<p><br></p>
+</section>
+<section id="연습문제" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-CM_variational_devivation_of_euler_lagrange_eq" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.1</strong></span> <a href="#eq-CM_variational_derivative_of_J_to_alpha" class="quarto-xref">식&nbsp;<span>2.3</span></a> 를 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">\[
+\begin{aligned}
+\dfrac{dJ}{d\alpha} &amp; = \int_{x_1}^{x_2} \left[ \dfrac{\partial f}{\partial y}\dfrac{\partial y}{\partial \alpha} + \dfrac{\partial f}{\partial \dot{y}}\dfrac{\partial \dot{y}}{\partial \alpha} \right] \, dx
+\end{aligned}
+\]</span></p>
+<p>에서</p>
+<p><span class="math display">\[
+\dfrac{\partial \dot{y}}{\partial \alpha} = \dfrac{\partial^2y}{\partial x \partial \alpha}
+\]</span></p>
+<p>이다. 따라서</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int_{x_1}^{x_2} \dfrac{\partial f}{\partial \dot{y}}\dfrac{\partial \dot{y}}{\partial \alpha} \, dx &amp;= \int_{x_1}^{x_2} \dfrac{\partial f}{\partial \dot{y}}\dfrac{\partial^2 y}{\partial x\partial \alpha} \, dx = \left.\dfrac{\partial f}{\partial \dot{y}}\dfrac{\partial y}{\partial \alpha}\right|_{x_1}^{x_2} - \int_{x_1}^{x_2}\dfrac{\partial}{\partial x}\left(\dfrac{\partial f}{\partial \dot{y}}\right) \dfrac{\partial y}{\partial \alpha} \, dx
+\end{aligned}
+\]</span></p>
+<p>이다. <span class="math inline">\(\dfrac{\partial y}{\partial \alpha} = \eta(x)\)</span> 이며 <span class="math inline">\(\eta(x_1)=\eta(x_2)=0\)</span> 이므로 <a href="#eq-CM_variational_derivative_of_J_to_alpha" class="quarto-xref">식&nbsp;<span>2.3</span></a> 이 성립한다.</p>
+</div>
 <p><br></p>
 </section>
 </section>
 <section id="해밀턴-의-원리" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="해밀턴-의-원리"><span class="header-section-number">2.2</span> 해밀턴 의 원리</h2>
-<section id="configuration-space-와-시스템의-동역학" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="configuration-space-와-시스템의-동역학"><span class="header-section-number">2.2.1</span> Configuration space 와 시스템의 동역학</h3>
-<p>달랑베르 원리를 통해시스템의 특정 순간의 상태에서의 virtual displacement를 이용하여 라그랑쥬 방정식을 유도하였다. 라그랑쥬 방정식은 전혀 다른 방법, 즉 특정 시간 <span class="math inline">\(t_1\)</span> 과 <span class="math inline">\(t_2\)</span> 사이에서의 시스템의 전체 운동을 고려하고 실제 운동의 virtual variation을 이용하여 유도될 수 있다.</p>
-<p>특정 시간 <span class="math inline">\(t_1\)</span> 과 <span class="math inline">\(t_2\)</span> 사이의 시스템의 전체 운동 (entire motion of system between time <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span>)란 무슨 의미일까? 시스템을 기술하는데 <span class="math inline">\(n\)</span> 개의 일반화된 좌표가 필요할 때 이를 <span class="math inline">\(q_1,\ldots,\,q_n\)</span> 라 하자. 이것을 <span class="math inline">\(\mathbb{R}^n\)</span> 으로 나타낸 것을 <strong>configuration space</strong> 라 하며 특정 시간에서의 입자계는 configuration space에서의 한 점(point)으로 기술된다. 시간이 흐르면 각각의 시간에 대한 configuration space에서의 위치가 정해지며 <span class="math inline">\(t_1\)</span> 에서 <span class="math inline">\(t_2\)</span> 까지 시간의 변화에 대한 configuration space에서의 points의 집합, 즉 path를 <span class="math inline">\(t_1\)</span> 과 <span class="math inline">\(t_2\)</span> 사이의 시스템의 전체 운동이라 한다. 이 때 시간 <span class="math inline">\(t\)</span> 는 변수가 아닌 parameter로 고려되며 configuration space 상의 하나의 점은 하나 이상의 <span class="math inline">\(t\)</span> 값에 해당 할 수 있다.</p>
+<section id="sec-CM_configuration_space_and_system_dynamics" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="sec-CM_configuration_space_and_system_dynamics"><span class="header-section-number">2.2.1</span> 구성공간 와 시스템의 동역학</h3>
+<p>달랑베르 원리를 통해 시스템의 특정 순간의 상태에서의 가상 변위(virtual dispacement)를 이용하여 라그랑쥬 방정식을 유도하였다. 라그랑쥬 방정식은 전혀 다른 방법, 즉 특정 시간 구간 <span class="math inline">\([t_1,\,t_2]\)</span> 에 대한 일반화된 좌표의 구성공간 에서의 경로와 이 경로에 대한 virtual variation을 이용하여 유도될 수 있다. 이 때 시간 <span class="math inline">\(t\)</span> 는 변수가 아닌 매개변수로 고려되며 구성공간 상의 하나의 점은 하나 이상의 <span class="math inline">\(t\)</span> 값에 해당 할 수 있다.</p>
 <p><br></p>
 </section>
 <section id="sec-CM_least_action_theorem" class="level3" data-number="2.2.2">
@@ -599,7 +649,7 @@ y(1+\dot{y}^2) = \dfrac{1}{2gc^2} = 2a=\text{constant}
 </div>
 </div>
 </div>
-<p>해밀턴의 원리는 mnogenic system의 운동을 기술한다. 이 때 일반화된 포텐셜은 포텐셜이 <span class="math inline">\(\{q_i\},\,\{\dot{q}_i\},\, t\)</span> 의 함수인 것을 말한다. Monogenic system의 포텐셜이 위치만의 함수 일 때, 이 시스템은 보존적이다.</p>
+<p>해밀턴의 원리는 monogenic system의 운동을 기술한다. 이 때 일반화된 포텐셜은 포텐셜이 <span class="math inline">\(\{q_i\} = \boldsymbol{q},\,\{\dot{q}_i\}=\dot{\boldsymbol{q}},\, t\)</span> 의 함수인 것을 말한다. Monogenic system의 포텐셜이 위치만의 함수 일 때, 이 시스템은 보존적이다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -610,31 +660,32 @@ y(1+\dot{y}^2) = \dfrac{1}{2gc^2} = 2a=\text{constant}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Monogenic system 에서 시간 <span class="math inline">\(t_1\)</span> 에서 <span class="math inline">\(t_2\)</span> 까지의 시스템의 운동은 Lagrangian <span class="math inline">\(L=T-V\)</span>에 대한 선적분</p>
+<p>Monogenic system 에서 시간 <span class="math inline">\(t_1\)</span> 에서 <span class="math inline">\(t_2\)</span> 까지의 시스템의 운동은 라그랑지안 <span class="math inline">\(L=T-V\)</span>에 대한 선적분</p>
 <p><span id="eq-CM_definition_of_action"><span class="math display">\[
-S := \int_{t_1}^{t_2} L(\{q_i\},\, \{\dot{q}_i\}, t)\, dt
-\tag{2.6}\]</span></span></p>
-<p>이 stationary value를 갖도록 하는 경로를 따른다. 이 선적분의 값을 <strong>action</strong> 이라고 한다. 다시 말하자면 <span class="math inline">\(t_1\)</span> 에서의 위치 <span class="math inline">\(\boldsymbol{x}_1\)</span> 에서 <span class="math inline">\(t_2\)</span> 에서의 위치 <span class="math inline">\(\boldsymbol{x}_2\)</span> 사이의 모든 가능한 경로중 실제 자연에 의해 선택되는 경로는 <a href="#eq-CM_definition_of_action" class="quarto-xref">식&nbsp;<span>2.6</span></a> 이 stationary value를 갖도록 하는 경로이다.</p>
+S := \int_{t_1}^{t_2} L(\boldsymbol{q},\, \dot{\boldsymbol{q}}, t)\, dt
+\tag{2.7}\]</span></span></p>
+<p>이 stationary value를 갖도록 하는 경로를 따른다. 이 선적분 <span class="math inline">\(S\)</span> 의 값을 <strong>action</strong> 이라고 한다. 다시 말하자면 <span class="math inline">\(t_1\)</span> 에서의 <span class="math inline">\(\boldsymbol{q}_1 = \boldsymbol{q}(t_1)\)</span> 에서 <span class="math inline">\(t_2\)</span> 에서의 <span class="math inline">\(\boldsymbol{q}_2 =\boldsymbol{q}(t_2)\)</span> 사이의 모든 가능한 경로중 실제 자연에 의해 선택되는 경로는 <a href="#eq-CM_definition_of_action" class="quarto-xref">식&nbsp;<span>2.7</span></a> 이 stationary value를 갖도록 하는 경로이다.</p>
 </div>
 </div>
 <p>Action <span class="math inline">\(S\)</span> 가 stationary value를 갖는다는 것은 다음이 성립한다는 뜻이다.</p>
 <p><span class="math display">\[
-\delta S = \delta \int_{t_1}^{t_2} L(q_1,\ldots,\,q_n,\,\dot{q}_1,\ldots,\,\dot{q}_n,\,t) \, dt=0\;.
+\delta S = \delta \int_{t_1}^{t_2} L(\boldsymbol{q},\,\dot{\boldsymbol{q}},\,t) \, dt=0\;.
 \]</span></p>
-<p>우리는 <a href="#eq-CM_euler_lagrange_for_muntidimensional_case" class="quarto-xref">식&nbsp;<span>2.5</span></a> 을 통해 라그랑쥬 방정식을 얻을 수 있다.</p>
+<p>우리는 <a href="#eq-CM_euler_lagrange_for_muntidimensional_case" class="quarto-xref">식&nbsp;<span>2.6</span></a> 을 통해 달랑베르 원리로 부터 얻은 똑같은 라그랑쥬 방정식 (<a href="01_basic_principles.html#eq-CM_Lagrange_equation_from_Dlambert_principle" class="quarto-xref">식&nbsp;<span>1.34</span></a>) 을 얻을 수 있다.</p>
 <p><span id="eq-CM_euler_lagrange_equation_of_motion"><span class="math display">\[
 \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_i}\right) - \dfrac{\partial L}{\partial q_i} = 0\, ,  \quad\quad i=1,\,2,\ldots,\,n\;.
-\tag{2.7}\]</span></span></p>
+\tag{2.8}\]</span></span></p>
+<p>우리는 변분법에서 라그랑쥬 방정식을 유도할 때 모든 <span class="math inline">\(\boldsymbol{q}\)</span> 의 성분이 각각 독립임을 가정하였다. 이것은 구성공간에서의 holonomic 조건과 동치이다. 즉 holonomic 조건에서 해밀톤의 원리를 이용하여 달랑베르 정리와 같은 결과를 얻었다.</p>
 <p><br></p>
 </section>
 </section>
-<section id="nonholonomic-systemsast-과-해밀턴의-원리" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="nonholonomic-systemsast-과-해밀턴의-원리"><span class="header-section-number">2.3</span> Nonholonomic Systems<span class="math inline">\({}^\ast\)</span> 과 해밀턴의 원리</h2>
+<section id="nonholonomic-systems-과-해밀턴의-원리" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="nonholonomic-systems-과-해밀턴의-원리"><span class="header-section-number">2.3</span> Nonholonomic Systems 과 해밀턴의 원리</h2>
 <section id="nonholonomic-constraints-system-과-holonomic-system" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="nonholonomic-constraints-system-과-holonomic-system"><span class="header-section-number">2.3.1</span> Nonholonomic constraints system 과 holonomic system</h3>
 <p>Nonholonomic system을 다룰 때 holonomic system과의 차이점.</p>
 <ul>
-<li><p>해밀턴의 원리를 이용해서든 달랑베르 원리(D’Alembert’s principle)을 이용해서든 holonomic constraints 조건에서 라그랑쥬 방정식을 얻을 때, holonomic constraints 조건은 맨 마지막에 가서 변수들의 variation 이 독립적이라는 것을 가정 할 때 나온다. Holonomic constraints system에서는 당장의 일반화된 좌표가 독립적이지 않더라도 <span class="math inline">\(f(q_1,\ldots,\,q_n,\,t)=0\)</span> 꼴의 equation of constraints를 통해 독립적인 일반화된 좌표계를 구성 할 수 있는데, nonholonomic constraints system에서는 일반적으로 이것이 불가능하다.</p></li>
+<li><p>해밀턴의 원리를 이용해서든 달랑베르 원리(D’Alembert’s principle)을 이용해서든 holonomic 구속 조건에서 라그랑쥬 방정식을 얻을 때, holonomic 구속 조건은 맨 마지막에 가서 변수들의 variation 이 독립적이라는 것을 가정 할 때 나온다. Holonomic 구속 조건이 부여된 시스템에서는 당장의 일반화된 좌표가 독립적이지 않더라도 <span class="math inline">\(f(q_1,\ldots,\,q_n,\,t)=0\)</span> 꼴의 equation of constraints 를 통해 독립적인 일반화된 좌표계를 구성 할 수 있는데, nonholonomic constraints system 에서는 일반적으로 이것이 불가능하다.</p></li>
 <li><p>Varied path는 <span class="math inline">\(y_i (x,\,\alpha) = y_i (x,\,0)+\alpha \eta_i (x)\)</span> 형태로 구성된다. 그리고 <span class="math inline">\(\delta y_i\)</span> 는 실제 경로와 이웃의 가상 경로의 virtual displacement 를 의미한다. 독립적인 일반화된 좌표계 조건에서는 마지막 최종 변경 후 point만이 중요하지만 좌표계가 독립적이지 않으면 displacement가 constraints 조건을 따르며 변화했는지 여부가 매우 중요하다.</p></li>
 </ul>
 <p>위의 두가지 경우를 고려하면 일반적으로 non-holonomic system을 다루기가 매후 힘들다는 것을 예상 할 수 있다. 그러나 그 가운데 특별한 경우는 어느정도 다룰 수 있는데 그것을 이제 확인해 보자.</p>
@@ -642,52 +693,52 @@ S := \int_{t_1}^{t_2} L(\{q_i\},\, \{\dot{q}_i\}, t)\, dt
 </section>
 <section id="간단한-nonholonomic-case" class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="간단한-nonholonomic-case"><span class="header-section-number">2.3.2</span> 간단한 nonholonomic case</h3>
-<p>Equations of constraints가 아래와 같은 형식일 때만 nonholonomic system에 대한 타당한 직접적인 처리가 가능한 것 처럼 보인다.</p>
+<p>구속조건이 아래와 같은 행태의 식으로 주어질 때만 nonholonomic system 에 대한 타당한 직접적인 처리가 가능한 것 처럼 보인다.</p>
 <p><span id="eq-CM_nonholonomic_constraints"><span class="math display">\[
 \sum_k a_{lk}dq_k  + a_{lt}dt = 0\;.
-\tag{2.8}\]</span></span></p>
-<p>여기서 <span class="math inline">\(l\)</span> 은 이러한 nonholonomic equations of constraints에 대한 index 이다. <span class="math inline">\(m\)</span>개의 이러한 방정식이 존재한다고 생각하자. 그리고 <span class="math inline">\(a_{lk}\)</span> 와 <span class="math inline">\(a_{lt}\)</span> 는 <span class="math inline">\(q\)</span> 와 time의 함수일 수 있다는 것을 유념하자. 변분경로 혹은 변분경로를 구성하는 변위는 <a href="#eq-CM_nonholonomic_constraints" class="quarto-xref">식&nbsp;<span>2.8</span></a> 의 제약 조건을 충족해야 한다고 예상된다. 그러나 <a href="#eq-CM_nonholonomic_constraints" class="quarto-xref">식&nbsp;<span>2.8</span></a> 가 적분 가능(integrable) 하지 않으면 이러한 다양한 경로를 구성할 수 없다는 것이 증명 되었으며, 이 경우 제약 조건은 실제로는 homolomic 이다. 그럼에도 불구하고 정확한 운동 방정식으로 이어지는 변분 원리는 virtual displacement 에 의해 실제 운동으로부터 다양한 경로가 구성될 때 얻을 수 있다.</p>
+\tag{2.9}\]</span></span></p>
+<p>여기서 <span class="math inline">\(l\)</span> 은 이러한 nonholonomic equations of constraints에 대한 index 이다. <span class="math inline">\(m\)</span>개의 이러한 방정식이 존재한다고 생각하자. 그리고 <span class="math inline">\(a_{lk}\)</span> 와 <span class="math inline">\(a_{lt}\)</span> 는 <span class="math inline">\(\boldsymbol{q}\)</span> 와 시간의 함수일 수 있다는 것을 유념하자. 변분경로 혹은 변분경로를 구성하는 변위는 <a href="#eq-CM_nonholonomic_constraints" class="quarto-xref">식&nbsp;<span>2.9</span></a> 의 제약 조건을 충족해야 한다고 예상된다. 그러나 <a href="#eq-CM_nonholonomic_constraints" class="quarto-xref">식&nbsp;<span>2.9</span></a> 가 적분 가능(integrable) 하지 않으면 이러한 다양한 경로를 구성할 수 없다는 것이 증명 되었으며, 이 경우 제약 조건은 실제로는 homolomic 이다. 그럼에도 불구하고 정확한 운동 방정식으로 이어지는 변분 원리는 가상 변위에 의해 실제 운동으로부터 다양한 경로가 구성될 때 얻을 수 있다.</p>
 <p>주어진 equations of constraints로부터 Virtual displacement에 대한 equation of constraints를 아래와 같다.</p>
 <p><span id="eq-CM_nonholonomic_displacement"><span class="math display">\[
 \sum_k a_{lk}dq_k = 0\;.
-\tag{2.9}\]</span></span></p>
-<p>이제 <em>Lagrange multiplier method</em> 를 사용하자. 위의 <a href="#eq-CM_nonholonomic_displacement" class="quarto-xref">식&nbsp;<span>2.9</span></a> 에서 모든 <span class="math inline">\(l=1,\,2,\ldots,\,m\)</span> 에 대해</p>
+\tag{2.10}\]</span></span></p>
+<p>이제 <em>Lagrange multiplier method</em> 를 사용하자. 위의 <a href="#eq-CM_nonholonomic_displacement" class="quarto-xref">식&nbsp;<span>2.10</span></a> 에서 모든 <span class="math inline">\(l=1,\,2,\ldots,\,m\)</span> 에 대해</p>
 <p><span id="eq-CM_lagrange_multiplier"><span class="math display">\[
 \lambda_l \sum\limits_k a_{lk}\delta q_k = 0
-\tag{2.10}\]</span></span></p>
+\tag{2.11}\]</span></span></p>
 <p>이다. 해밀턴의 원리 <span class="math inline">\(\delta \int_1^2 L \, dt =0\)</span> 이 nonholonomic system 에서도 성립함을 가정하면 다음이 성립한다.</p>
 <p><span id="eq-CM_hamilton_t1"><span class="math display">\[
 \int_1^2 dt \sum_k \left[ \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k} \right)\right] dq_k = 0
-\tag{2.11}\]</span></span></p>
-<p>Lagrange multiplier 방법을 이용하기 위해 <a href="#eq-CM_lagrange_multiplier" class="quarto-xref">식&nbsp;<span>2.10</span></a> 를 다음과 같이 쓸 수 있다.</p>
+\tag{2.12}\]</span></span></p>
+<p>Lagrange multiplier 방법을 이용하기 위해 <a href="#eq-CM_lagrange_multiplier" class="quarto-xref">식&nbsp;<span>2.11</span></a> 를 다음과 같이 쓸 수 있다.</p>
 <p><span class="math display">\[%\label{eq:lagrange_multiplier_2}
 \int_1^2 \sum_{k,\,l} \lambda_l \, a_{lk}\, \delta q_k\,  dt=0\;.
 \]</span></p>
 <p>위의 두 식을 결합하면,</p>
 <p><span id="eq-CM_lagrange_multiplier_2"><span class="math display">\[
 \int_1^2 dt \sum_{k=1}^n \left[ \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt} \left(  \dfrac{\partial L}{\partial \dot{q}_k}\right)  + \sum_l \lambda_l \, a_{lk} \right] \delta q_k = 0\;.
-\tag{2.12}\]</span></span></p>
-<p>여기서 <span class="math inline">\(\{ \delta q_k\}\)</span> 는 여전히 dependent 하며 <span class="math inline">\(m\)</span> 개의 관계- <a href="#eq-CM_nonholonomic_displacement" class="quarto-xref">식&nbsp;<span>2.9</span></a> -로 연결되어 있다. 따라서 <span class="math inline">\(n-m\)</span> 개의 <span class="math inline">\(\delta q_k\)</span> 들이 독립적이 되도록 선택 될 수 있다. 하지만 아직 <span class="math inline">\(m\)</span> 개의 <span class="math inline">\(\lambda_l\)</span> 값을 우리는 모른다. <span class="math inline">\(\lambda_l\)</span> 이 다음을 만족하도록 선택된다고 하자.</p>
+\tag{2.13}\]</span></span></p>
+<p>여기서 <span class="math inline">\(\{ \delta q_k\}\)</span> 는 여전히 dependent 하며 <span class="math inline">\(m\)</span> 개의 관계- <a href="#eq-CM_nonholonomic_displacement" class="quarto-xref">식&nbsp;<span>2.10</span></a> -로 연결되어 있다. 따라서 <span class="math inline">\(n-m\)</span> 개의 <span class="math inline">\(\delta q_k\)</span> 들이 독립적이 되도록 선택 될 수 있다. 하지만 아직 <span class="math inline">\(m\)</span> 개의 <span class="math inline">\(\lambda_l\)</span> 값을 우리는 모른다. <span class="math inline">\(\lambda_l\)</span> 이 다음을 만족하도록 선택된다고 하자.</p>
 <p><span id="eq-CM_lambda_choice"><span class="math display">\[
 \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k}  \right) + \sum_l \lambda_l \, a_{lk} = 0,\quad\quad k = n-m+1,\ldots,\,n\,.
-\tag{2.13}\]</span></span></p>
-<p>이것은 <span class="math inline">\(1\)</span> 부터 <span class="math inline">\(n\)</span> 까지의 변수 <span class="math inline">\(\{q_k\}\)</span> 중 마지막 <span class="math inline">\(m\)</span> 개에 대한 equation of motion 이다. 그렇다면 앞의 <span class="math inline">\(n-m\)</span> 개의 <span class="math inline">\(\{q_k\}\)</span> 에 대해 <a href="#eq-CM_lagrange_multiplier_2" class="quarto-xref">식&nbsp;<span>2.12</span></a> 를 다음과 같이 쓸 수 있다.</p>
+\tag{2.14}\]</span></span></p>
+<p>이것은 <span class="math inline">\(1\)</span> 부터 <span class="math inline">\(n\)</span> 까지의 변수 <span class="math inline">\(\{q_k\}\)</span> 중 마지막 <span class="math inline">\(m\)</span> 개에 대한 equation of motion 이다. 그렇다면 앞의 <span class="math inline">\(n-m\)</span> 개의 <span class="math inline">\(\{q_k\}\)</span> 에 대해 <a href="#eq-CM_lagrange_multiplier_2" class="quarto-xref">식&nbsp;<span>2.13</span></a> 를 다음과 같이 쓸 수 있다.</p>
 <p><span id="eq-CM_lagrange_multiplier_3"><span class="math display">\[
 \int_1^2 dt \sum_{k=1}^{n-m} \left[ \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt} \left(  \dfrac{\partial L}{\partial \dot{q}_k}\right)  + \sum_l \lambda_l \, a_{lk} \right] \delta q_k = 0\;.
-\tag{2.14}\]</span></span></p>
-<p><span class="math inline">\(q_1,\ldots,\,q_{n-m}\)</span> 은 독립적이므로 <a href="#eq-CM_lambda_choice" class="quarto-xref">식&nbsp;<span>2.13</span></a> 와 <a href="#eq-CM_lagrange_multiplier_3" class="quarto-xref">식&nbsp;<span>2.14</span></a> 를 합하면 다음과 같다.</p>
+\tag{2.15}\]</span></span></p>
+<p><span class="math inline">\(q_1,\ldots,\,q_{n-m}\)</span> 은 독립적이므로 <a href="#eq-CM_lambda_choice" class="quarto-xref">식&nbsp;<span>2.14</span></a> 와 <a href="#eq-CM_lagrange_multiplier_3" class="quarto-xref">식&nbsp;<span>2.15</span></a> 를 합하면 다음과 같다.</p>
 <p><span id="eq-CM_lagrange_multiplier_4"><span class="math display">\[
 \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k} \right) - \dfrac{\partial L}{\partial q_k} =\sum_l \lambda_l \, a_{lk},\quad\quad k=1,\ldots,\,m.
-\tag{2.15}\]</span></span></p>
-<p>자, 이제 우리가 모르는 것은 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(q_k\)</span> 와 <span class="math inline">\(m\)</span> 개의 <span class="math inline">\(\lambda_l\)</span> 이다. <a href="#eq-CM_lagrange_multiplier_4" class="quarto-xref">식&nbsp;<span>2.15</span></a> 는 <span class="math inline">\(n\)</span> 개의 equations 만을 표현한다. 우리는 여기에 더해 <a href="#eq-CM_nonholonomic_constraints" class="quarto-xref">식&nbsp;<span>2.8</span></a> 의 1st order differential form,</p>
+\tag{2.16}\]</span></span></p>
+<p>자, 이제 우리가 모르는 것은 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(q_k\)</span> 와 <span class="math inline">\(m\)</span> 개의 <span class="math inline">\(\lambda_l\)</span> 이다. <a href="#eq-CM_lagrange_multiplier_4" class="quarto-xref">식&nbsp;<span>2.16</span></a> 는 <span class="math inline">\(n\)</span> 개의 equations 만을 표현한다. 우리는 여기에 더해 <a href="#eq-CM_nonholonomic_constraints" class="quarto-xref">식&nbsp;<span>2.9</span></a> 의 1st order differential form,</p>
 <p><span class="math display">\[
 \sum_k a_{lk} \,\dot{q}_k + a_{lt}=0
 \]</span></p>
 <p>을 생각한다. 이제 원래 <span class="math inline">\(n\)</span> 개의 식과 함께 <span class="math inline">\(n+m\)</span> 개의 식을 갖게 되었다. 그런데 우리는 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(\{q_i\}\)</span> 에 대한 정보와 더불어 <span class="math inline">\(m\)</span> 개의 <span class="math inline">\(\{\lambda_j\}\)</span> 에 대한 정보도 얻었다. 각각의 <span class="math inline">\(\lambda_i\)</span> 는 무엇을 의미할까?</p>
-<p>System에 대한 constraints를 제거하고 대신에 applied external forces <span class="math inline">\(Q'_k\)</span> 를 system의 motion이 변화하지 않도록 놓자. 명백하게 applied external forces는 forces of constraints 이다. <a href="#eq-CM_lagrange_multiplier_4" class="quarto-xref">식&nbsp;<span>2.15</span></a> 에서 <span class="math inline">\(Q'_k = \sum\limits_l \lambda_l \, a_{lk}\)</span> 로 놓으면,</p>
+<p>System에 대한 constraints를 제거하고 대신에 applied external forces <span class="math inline">\(Q'_k\)</span> 를 system의 motion이 변화하지 않도록 놓자. 명백하게 applied external forces는 forces of constraints 이다. <a href="#eq-CM_lagrange_multiplier_4" class="quarto-xref">식&nbsp;<span>2.16</span></a> 에서 <span class="math inline">\(Q'_k = \sum\limits_l \lambda_l \, a_{lk}\)</span> 로 놓으면,</p>
 <p><span id="eq-CM_lagrange_multiplier_5"><span class="math display">\[
 \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k}\right) - \dfrac{\partial L}{\partial q_k} = Q'_k \,
-\tag{2.16}\]</span></span></p>
+\tag{2.17}\]</span></span></p>
 <p>이다. 즉 <span class="math inline">\(\{\lambda_l\}\)</span> 은 constraints 조건과 더불어 general forces of constraints를 준다.</p>
 <p><br></p>
 <p>이제 지금까지 사용된 Hamilton’s principle for nonholonomic systems 에 의해서도 virtual displacement에 의한 work는 없다는 것을 보이자. Hamiltons’s principle을 다시 쓰면 다음과 같다.</p>
@@ -740,11 +791,18 @@ r\dot{\theta} = \dot{x}
 <p><br></p>
 </section>
 </section>
-<section id="대칭과-보존" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="대칭과-보존"><span class="header-section-number">2.4</span> 대칭과 보존</h2>
-<section id="phase-space" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="phase-space"><span class="header-section-number">2.4.1</span> Phase space</h3>
-<p>우리는 <span class="math inline">\(n\)</span> 개의 일반화된 좌표 <span class="math inline">\(q_1,\ldots,\,q_n\)</span> 으로 구성되는 공간을 <em>configuration space</em> 라고 불렀다. 이와 달리 일반화된 좌표 <span class="math inline">\(q_1,\ldots,\,q_n\)</span> 과 그 canonical momentumm <span class="math inline">\(p_1,\ldots,\,p_n\)</span> 으로 구성되는 공간을 <strong>phase space</strong> 라고 한다.</p>
+<section id="변분-방법의-장점" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="변분-방법의-장점"><span class="header-section-number">2.4</span> 변분 방법의 장점</h2>
+<p>우리는 역학을 기술하는 세가지 방법, 즉 (<span class="math inline">\(1\)</span>) 뉴턴의 3 원리에 의한 뉴턴 역학, (<span class="math inline">\(2\)</span>) 달랑베르 원리에 따른 달랑베르 역학, (<span class="math inline">\(3\)</span>) 해밀턴의 원리와 변분법을 이용한 변분 역학 에 대해 알아보았다.</p>
+<p>앞서 변분 역학을 non-holonomic 구속 조건을 포함하도록 확장했지만 변분 역학의 가장 큰 장점은 monogenic 조건과 holonomic 구속 조건에서 독립적인 일반화된 좌표를 사용할 때 드러난다. 변분 역학은 간결하고 우아할 뿐만 아니라 특정한 일반화된 좌표계에 구애되지 않고 운동에너지와 포텐셜 에너지라는 물리량만을 이용한다는 장점이 있다. 여기서 나온 식들은 좌표의 변환에 대해 불변이다. 즉 <span class="math inline">\(\boldsymbol{q} = (x,\,y,\,z)\)</span> 이든 <span class="math inline">\(\boldsymbol{q} = (r,\,\theta,\, \varphi)\)</span> 이든 오일러-라그랑쥬 방정식의 형태는 동일하다.</p>
+<p>변분 역학의 장점 가운데 하나는 라그랑지안 형식이 역학이 아닌 시스템에까지 확장 될 수 있다는 것이다. 이 확장은 전기장, 전자기장, 기본입자의 장의 성질까지 확장된다. 이 확장된 영역에서 이미 풀어놓은 시스템이 있다면 자연스럽게 변분역학에 적용 될 수 있다.</p>
+<p><br></p>
+</section>
+<section id="대칭과-보존" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="대칭과-보존"><span class="header-section-number">2.5</span> 대칭과 보존</h2>
+<section id="sec-CM_variational_phase_space" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="sec-CM_variational_phase_space"><span class="header-section-number">2.5.1</span> Phase space</h3>
+<p>우리는 <span class="math inline">\(n\)</span> 개의 일반화된 좌표 <span class="math inline">\(q_1,\ldots,\,q_n\)</span> 으로 구성되는 공간을 <strong>구성공간(configuration space)</strong> 라고 불렀다. 이와 달리 일반화된 좌표 <span class="math inline">\(q_1,\ldots,\,q_n\)</span> 과 그 정준 모멘트 <span class="math inline">\(p_1,\ldots,\,p_n\)</span> 으로 구성되는 공간을 <strong>위상공간(phase space)</strong> 라고 한다.</p>
 <p>자유도가 <span class="math inline">\(n\)</span> 개인 시스템은 시간에 대한 2차 미분방정식 <span class="math inline">\(n\)</span> 개로 표현되며, <span class="math inline">\(2n\)</span> 개의 적분상수를 필요로 한다. 이들은 대개 초기조건으로부터 얻어지며 보통 시간 <span class="math inline">\(t=t_0\)</span> 에 대해 각각 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(q_j(t_0)\)</span> 와 <span class="math inline">\(\dot{q}_j(t_0)\)</span> 값이다. 그러나 상당수의 경우 (아마도 대부분의 경우) 이것들이 정확하게 풀리지 않는다. 하지만 완전한 해가 얻어질 수 없더라도 중요한 물리를 얻을 수 있는 경우가 있다. 많은 경우 이러한 중요한 물리가 얻어진 해보다 더 중요하다. 여기서는 이러한 것들은 무엇이 있고, 어떻게 확인할 수 있는지를 알아보자.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -752,16 +810,20 @@ r\dot{\theta} = \dot{x}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-CM_first_integral" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.2 (first integral 과 운동 상수)</strong></span> 미분방정식으로 기술되는 물리계에서 그 경로 전체에 대해 어떤 phase space 의 좌표 즉 일반화된 좌표와 운동량, 그리고 시간에 대한 함수가 그 값이 일정할 때 이를 <strong>운동 상수(constant of motion)</strong> 이라 한다. 어떤 phase space coordinate만의 함수가 전체 경로에 대해 그 값이 일정할 때 <strong>first integral</strong> 이라 한다.</p>
+<div id="def-CM_first_integral_and_constant_of_motion" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 2.2 (제일적분 과 운동 상수)</strong></span> 미분방정식으로 기술되는 물리계에서 그 경로 전체에 대해 어떤 위상의 좌표 즉 일반화된 좌표와 운동량, 그리고 시간에 대한 함수가 그 값이 일정할 때 이를 <strong>제일적분(first integral)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
 </div>
+<p>따라서 제일적분은 아래 <span class="math inline">\(f\)</span> 와 같은 형태의 함수이다.</p>
+<p><span class="math display">\[
+f(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t) = \text{constant}.
+\]</span></p>
 <p><br></p>
 </section>
-<section id="monogenic-system-이며-포텐셜이-위치에만-의존하는-경우" class="level3" data-number="2.4.2">
-<h3 data-number="2.4.2" class="anchored" data-anchor-id="monogenic-system-이며-포텐셜이-위치에만-의존하는-경우"><span class="header-section-number">2.4.2</span> Monogenic system 이며 포텐셜이 위치에만 의존하는 경우</h3>
+<section id="monogenic-system-이며-포텐셜이-위치에만-의존하는-경우" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="monogenic-system-이며-포텐셜이-위치에만-의존하는-경우"><span class="header-section-number">2.5.2</span> Monogenic system 이며 포텐셜이 위치에만 의존하는 경우</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -769,37 +831,37 @@ r\dot{\theta} = \dot{x}
 </div>
 <div class="callout-body-container">
 <div id="def-canonical_momentum" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.3 (Canonical momentum)</strong></span> Monogenic system이며 포텐셜이 위치에만 의존하면 <span class="math inline">\(\partial L /\partial \dot{x}_j = m\ddot{x}_j\)</span> 이며 우리가 아는 momentum이다. 이것을 일반화하여 <strong>canonical momentum</strong>(혹은 <strong>conjugate momentum</strong>) <span class="math inline">\(p_j\)</span> 를 다음과 같이 정의한다.</p>
+<p><span class="theorem-title"><strong>정의 2.3 (Canonical momentum)</strong></span> Monogenic system이며 포텐셜이 위치에만 의존하면 <span class="math inline">\(\partial L /\partial \dot{x}_j = m\ddot{x}_j\)</span> 이며 우리가 아는 momentum이다. 이것을 일반화하여 <span class="math inline">\(q_j\)</span> 에 대한 <strong>정준 운동량(canonical momentum or conjugate momentum)</strong> <span class="math inline">\(p_j\)</span> 를 다음과 같이 정의한다.</p>
 <p><span id="eq-CM_canonical_momentum"><span class="math display">\[
 \boxed{
 p_j = \dfrac{\partial L}{\partial \dot{q}_j} }
-\tag{2.17}\]</span></span></p>
+\tag{2.18}\]</span></span></p>
 </div>
 </div>
 </div>
 </div>
-<p>여기서 <span class="math inline">\(q_j\)</span> 는 데카르트 좌표계의 좌표가 아닌 일반화된 좌표계의 좌표이므로 <span class="math inline">\(p_j\)</span> 는 linear momentum dimension 이 아닌 다른 dimension을 가질 수 있다. 또한 속도-의존적 포텐셜을 가진 시스템 에서는 소위 mechanical momentum과 다른 값을 가진다. 예를 들어 전자기장 에서의 입자계의 Lagrangian은 다음과 같이 주어진다. (아래의 <span class="math inline">\(q_i\)</span> 는 <span class="math inline">\(i\)</span> 번째 입자의 전하(charge) 이다.)</p>
+<p>여기서 <span class="math inline">\(q_j\)</span> 는 데카르트 좌표계의 좌표가 아닌 일반화된 좌표계의 좌표이므로 <span class="math inline">\(p_j\)</span> 는 선형 운동량의 차원이 아닌 다른 차원을 가질 수 있다. 또한 속도-의존적 포텐셜을 가진 시스템 에서는 소위 역학적 운동량(mechanical momentum)과 다른 값을 가진다. 예를 들어 전자기장 에서의 입자계의 라그랑지안은 다음과 같이 주어진다. (아래의 <span class="math inline">\(q_i\)</span> 는 <span class="math inline">\(i\)</span> 번째 입자의 전하(charge) 이다.)</p>
 <p><span class="math display">\[
 L = \sum_i \dfrac{1}{2} m_i {\dot{r}_i}^2 - \sum_i q_i \phi(x_i) + \sum_i {q_i} \boldsymbol{A}(x_i) \cdot \dot{\boldsymbol{r}}_i\;.
 \]</span></p>
-<p>이 때의 generalized momentum <span class="math inline">\(\boldsymbol{p}\)</span> 가 mehcanical momentum과 다름은 쉽게 보일 수 있다.</p>
+<p>이 때의 일반화된 운동량 <span class="math inline">\(\boldsymbol{p}\)</span> 가 mehcanical momentum과 다름은 쉽게 보일 수 있다.</p>
 <p><br></p>
 </section>
-<section id="sec-CM_cyclic_coordinate_lagrangian" class="level3" data-number="2.4.3">
-<h3 data-number="2.4.3" class="anchored" data-anchor-id="sec-CM_cyclic_coordinate_lagrangian"><span class="header-section-number">2.4.3</span> Cyclic coordinate</h3>
-<p>일반화된 좌표계에서 표현된 라그랑지안이 어떤 <span class="math inline">\(q_i\)</span> 에 대해 의존성이 없을 경우, 즉 <span class="math inline">\(\dfrac{\partial L}{\partial q_i}=0\)</span> 일 경우 <span class="math inline">\(\dfrac{\partial L}{\partial \dot{q_j}}=p_j = \text{const.}\)</span> 이다. 이때의 <span class="math inline">\(p_j\)</span> 를 <strong>cyclic coordinate</strong> 혹은 <strong>ignorable coordinate</strong> 라 한다. 즉 generalized momentum conjugate to cyclic coordinate <span class="math inline">\(q_j\)</span> 에 대한 canonical momentum <span class="math inline">\(p_j\)</span> 는 보존된다. 이렇게 보존되는 <span class="math inline">\(p_j\)</span> 는 라그랑지안에서 first integral(<a href="#def-CM_first_integral" class="quarto-xref">정의&nbsp;<span>2.2</span></a>) 이다.</p>
+<section id="sec-CM_cyclic_coordinate_lagrangian" class="level3" data-number="2.5.3">
+<h3 data-number="2.5.3" class="anchored" data-anchor-id="sec-CM_cyclic_coordinate_lagrangian"><span class="header-section-number">2.5.3</span> 순환 좌표</h3>
+<p>일반화된 좌표계에서 표현된 라그랑지안이 어떤 <span class="math inline">\(q_i\)</span> 에 대해 의존성이 없을 경우, 즉 <span class="math inline">\(\dfrac{\partial L}{\partial q_i}=0\)</span> 일 경우 <span class="math inline">\(\dfrac{\partial L}{\partial \dot{q_j}}=p_j = \text{const.}\)</span> 이다. 이때의 <span class="math inline">\(p_j\)</span> 를 <strong>순환 좌표(cyclic coordinate)</strong> 라고 한다. 즉 순환좌표에 <span class="math inline">\(q_j\)</span> 에 대한 정준 운동량 <span class="math inline">\(p_j\)</span> 는 보존된다. 이렇게 보존되는 <span class="math inline">\(p_j\)</span> 는 라그랑지안에서 제일적분이다.</p>
 <p><br></p>
 <p>일반화된 운동량 보존은 우리가 알고 있는 선형 운동량 보존이나 각운동량 보존보다 일반적이다. 예를 들어 전자기장에서의 하전 입자의 운동에서 보존되는것은 전자기장에서의 일반화된 운동량이다.</p>
 <p><br></p>
 </section>
-<section id="병진-대칭-translational-symmetry" class="level3" data-number="2.4.4">
-<h3 data-number="2.4.4" class="anchored" data-anchor-id="병진-대칭-translational-symmetry"><span class="header-section-number">2.4.4</span> 병진 대칭 (Translational Symmetry)</h3>
-<div id="fig-part1_translational_symmetry" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="sec-CM_variation_translational_symmetry" class="level3" data-number="2.5.4">
+<h3 data-number="2.5.4" class="anchored" data-anchor-id="sec-CM_variation_translational_symmetry"><span class="header-section-number">2.5.4</span> 병진 대칭 (Translational Symmetry)</h3>
+<div id="fig-CM_variation_translational_symmetry" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-part1_translational_symmetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CM_variation_translational_symmetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/translational_symmetry/translational_symmetry.png" class="img-fluid figure-img" style="width:50.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-part1_translational_symmetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_variation_translational_symmetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;2.3: Translational Symmetry
 </figcaption>
 </figure>
@@ -808,7 +870,7 @@ L = \sum_i \dfrac{1}{2} m_i {\dot{r}_i}^2 - \sum_i q_i \phi(x_i) + \sum_i {q_i} 
 <p><span class="math display">\[
 \dot{p}_j \equiv \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_j} \right) = -\dfrac{\partial V}{\partial q_j} \equiv Q_j \;.
 \]</span></p>
-<p>우리는 이것이 총 선형 운동량에 대한 운동방정식임을 안다. <span class="math inline">\(Q_j\)</span> 는 total force <span class="math inline">\(\boldsymbol{F}\)</span> 의 <span class="math inline">\(q_j\)</span> 의 translation 방향 성분으로 아래와 같이 표현 할 수 있다.(<a href="01_basic_principles.html#eq-CM_generalized_force" class="quarto-xref">식&nbsp;<span>1.23</span></a>)</p>
+<p>우리는 이것이 총 선형 운동량에 대한 운동방정식임을 안다. <span class="math inline">\(Q_j\)</span> 는 total force <span class="math inline">\(\boldsymbol{F}\)</span> 의 <span class="math inline">\(q_j\)</span> 의 translation 방향 성분으로 아래와 같이 표현 할 수 있다.(<a href="01_basic_principles.html#eq-CM_generalized_force" class="quarto-xref">식&nbsp;<span>1.27</span></a>)</p>
 <p><span class="math display">\[
 Q_j = \sum_i \boldsymbol{F}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j}\,.
 \]</span></p>
@@ -816,62 +878,265 @@ Q_j = \sum_i \boldsymbol{F}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q
 <p><span class="math display">\[
 \boldsymbol{r}_i (q_j+dq_j) - \boldsymbol{r}_i (q_j) = \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} dq_j = \hat{\boldsymbol{n}}dq_j
 \]</span></p>
-<p>이다. <span class="math inline">\(\hat{\boldsymbol{n}}\)</span> 은 병진 방향으로의 단위벡터 이므로 개개의 입자들의 radial vector <span class="math inline">\(\boldsymbol{r}_i\)</span> 에 독립적임에 유의하자. 따라서,</p>
+<p>이다. <span class="math inline">\(\hat{\boldsymbol{n}}\)</span> 은 병진 방향으로의 단위벡터 이므로 개개의 입자들의 위치 벡터 <span class="math inline">\(\boldsymbol{r}_i\)</span> 에 독립적임에 유의하자. 따라서,</p>
 <p><span class="math display">\[
 Q_j = -\dfrac{\partial V}{\partial q_j} = \sum_i \boldsymbol{F}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j}= \hat{\boldsymbol{n}} \cdot \sum_i \boldsymbol{F}_i = \hat{\boldsymbol{n}},\cdot \boldsymbol{F}
 \]</span></p>
-<p>이다. 이제 conjugate momentum of <span class="math inline">\(q_j\)</span> 를 보면, (<a href="01_basic_principles.html#eq-CM_dlambert_1" class="quarto-xref">식&nbsp;<span>1.21</span></a> 를 이용하였다.)</p>
+<p>이다. 이제 <span class="math inline">\(q_j\)</span> 에 대한 정준운동량 <span class="math inline">\(p_j\)</span> 는 (<a href="01_basic_principles.html#eq-CM_dlambert_1" class="quarto-xref">식&nbsp;<span>1.24</span></a> 를 이용하였다.)</p>
 <p><span class="math display">\[
 p_j = \dfrac{\partial T}{\partial \dot{q}_j} = \dfrac{\partial}{\partial \dot{q}_j}\left( \dfrac{1}{2} \sum_i m_i {\dot{\boldsymbol{r}}_i}^2 \right) = \sum_i m_i \boldsymbol{v}_i \cdot \dfrac{\partial \dot{\boldsymbol{r}}_i}{\partial \dot{q}_j} =\sum_i m_i \boldsymbol{v}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \hat{\boldsymbol{n}} \cdot \left( \sum_i m_i \boldsymbol{v}_i \right)
 \]</span></p>
-<p>이다. 즉, <span class="math inline">\(p_j\)</span> 는 시스템의 총 선형 운동량의 <span class="math inline">\(j\)</span>-번째 성분이다. 그렇다면 <span class="math inline">\(q_j\)</span> 가 cyclic인 경우, <span class="math inline">\(Q_j=0\)</span> 이므로 <span class="math inline">\(\dot{p}_j=0\)</span> 이다. 즉 <span class="math inline">\(p_j=\text{const.}\)</span> 이다.</p>
+<p>이다. 즉, <span class="math inline">\(p_j\)</span> 는 시스템의 총 선형 운동량의 <span class="math inline">\(j\)</span>-번째 성분이다. 그렇다면 <span class="math inline">\(q_j\)</span> 가 순환좌표인 경우, <span class="math inline">\(Q_j=0\)</span> 이므로 <span class="math inline">\(\dot{p}_j=0\)</span> 이다. 즉 <span class="math inline">\(p_j=\text{const.}\)</span> 이다.</p>
 <p><br></p>
 </section>
-<section id="회전-대칭" class="level3" data-number="2.4.5">
-<h3 data-number="2.4.5" class="anchored" data-anchor-id="회전-대칭"><span class="header-section-number">2.4.5</span> 회전 대칭</h3>
-<p><span class="math inline">\(dq_j\)</span>가 어떤 축에 대한 infinitesimal pure rotation of the vector <span class="math inline">\(\boldsymbol{r}_i\)</span> 에 상응한다고 하고 <span class="math inline">\(\hat{\boldsymbol{n}}\)</span> 을 그 회전축의 unit vector라 하자 (<a href="#fig-rotsym" class="quarto-xref">그림&nbsp;<span>2.4</span></a>). 그렇다면, <span class="math inline">\(|d\boldsymbol{r}_i| = r_i \sin \theta \, dq_j\)</span> 이다. 이로부터, <span class="math inline">\(\boldsymbol{r}_i\)</span>의 <span class="math inline">\(q_j\)</span>에 대한 편미분은 <span class="math inline">\(\boldsymbol{r}_i\)</span>와 <span class="math inline">\(\boldsymbol{n}\)</span> 모두와 직교할 것이므로, 아래와 같은 꼴을 가질 것임을 알 수 있다.</p>
+<section id="sec-CM_variation_rotational_symmetry" class="level3" data-number="2.5.5">
+<h3 data-number="2.5.5" class="anchored" data-anchor-id="sec-CM_variation_rotational_symmetry"><span class="header-section-number">2.5.5</span> 회전 대칭</h3>
+<p><span class="math inline">\(dq_j\)</span> 가 어떤 축에 대한 위치 벡터 <span class="math inline">\(\boldsymbol{r}_i\)</span> 의 미소회전(infinitesimal rotation) 에 상응한다고 하고 <span class="math inline">\(\hat{\boldsymbol{n}}\)</span> 을 그 회전축의 단위벡터라고 하자 (<a href="#fig-CM_variation_rotational_symmetry" class="quarto-xref">그림&nbsp;<span>2.4</span></a>). 그렇다면, <span class="math inline">\(|d\boldsymbol{r}_i| = r_i \sin \theta \, dq_j\)</span> 이다. 이로부터, <span class="math inline">\(\boldsymbol{r}_i\)</span>의 <span class="math inline">\(q_j\)</span>에 대한 편미분은 <span class="math inline">\(\boldsymbol{r}_i\)</span>와 <span class="math inline">\(\boldsymbol{n}\)</span> 모두와 직교할 것이므로, 아래와 같은 꼴을 가질 것임을 알 수 있다.</p>
 <p><span class="math display">\[
 \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \hat{\boldsymbol{n}}\times \boldsymbol{r}_i
 \]</span></p>
-<div id="fig-rotsym" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-CM_variation_rotational_symmetry" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-rotsym-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-CM_variation_rotational_symmetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/rotation_of_vector/rotation_of_vector.png" class="img-fluid figure-img" width="350">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rotsym-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_variation_rotational_symmetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;2.4: Rotational Symmetry
 </figcaption>
 </figure>
 </div>
-<p>그렇다면 generalized force <span class="math inline">\(Q_j\)</span> 는</p>
+<p>그렇다면 일반화된 힘 <span class="math inline">\(Q_j\)</span> 는</p>
 <p><span class="math display">\[
-Q_j = \sum_i \boldsymbol{F}_i \cdot (\boldsymbol{n} \times \boldsymbol{r}_i) = \boldsymbol{n} \cdot \left(\sum_i \boldsymbol{r}_i \times \boldsymbol{F}_i \right) = \boldsymbol{n} \cdot \boldsymbol{N}
+Q_j = \sum_i \boldsymbol{F}_i \cdot (\hat{\boldsymbol{n}} \times \boldsymbol{r}_i) = \hat{\boldsymbol{n}} \cdot \left(\sum_i \boldsymbol{r}_i \times \boldsymbol{F}_i \right) = \hat{\boldsymbol{n}} \cdot \boldsymbol{N}
 \]</span></p>
-<p>으로 쓸 수 있다. Conjugate momentu <span class="math inline">\(p_j\)</span> 는 다음과 같다.</p>
+<p>으로 쓸 수 있다. 정준 운동량 <span class="math inline">\(p_j\)</span> 는 다음과 같다.</p>
 <p><span class="math display">\[
 p_j = \dfrac{\partial T}{\partial \dot{q}_j} = \sum_i m_i \boldsymbol{v}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \sum_i \boldsymbol{n} \cdot (\boldsymbol{r}_i \times m_i \boldsymbol{v}_i) = \boldsymbol{n}\cdot \sum_i \boldsymbol{L}_i = \boldsymbol{n} \cdot \boldsymbol{L}\;.
 \]</span></p>
 <p><span class="math inline">\(q_j\)</span> 가 cyclic 일 경우 <span class="math inline">\(Q_j=0\)</span> 이며, 따라서 <span class="math inline">\(\boldsymbol{n} \cdot \boldsymbol{L}=\text{constant}\)</span> 이다. 즉 각운동량 보존.</p>
 <p><br></p>
 </section>
-<section id="time-symmetry" class="level3" data-number="2.4.6">
-<h3 data-number="2.4.6" class="anchored" data-anchor-id="time-symmetry"><span class="header-section-number">2.4.6</span> Time symmetry</h3>
-<p>Lagrangian <span class="math inline">\(L\)</span> 이 exiplicitly depends on time 이라면, <span class="math inline">\(L\)</span> 의 시간에 대한 미분은 다음과 같다.</p>
+<section id="sec-CM_variation_time_symmetry" class="level3" data-number="2.5.6">
+<h3 data-number="2.5.6" class="anchored" data-anchor-id="sec-CM_variation_time_symmetry"><span class="header-section-number">2.5.6</span> 시간 대칭</h3>
+<p>라그랑지안 <span class="math inline">\(L\)</span> 이 시간에 대해 명시적으로 의존한다면 <span class="math inline">\(L\)</span> 의 시간에 대한 미분은 다음과 같다.</p>
 <p><span id="eq-CM_time_derivative_lagrangian"><span class="math display">\[
 \dfrac{dL}{dt}= \sum_i \dfrac{\partial L}{\partial q_i}\dfrac{dq_i}{dt}+\sum_i \dfrac{\partial L}{\partial \dot{q}_i}\dfrac{d\dot{q}}{dt}+ \dfrac{\partial L}{\partial t}
-\tag{2.18}\]</span></span></p>
-<p>Lagrangian equation 으로부터,</p>
+\tag{2.19}\]</span></span></p>
+<p>라그랑쥬 방정식으로부터,</p>
 <p><span class="math display">\[
 \dfrac{d}{dt}\left( \sum_j \dot{q}_j \dfrac{\partial L}{\partial \dot{q}_j} -L\right) + \dfrac{\partial L}{\partial t}=0
 \]</span></p>
-<p>임을 알 수 있다. 여기서 <span class="math inline">\(h(q,\,\dot{q},\,t)\)</span>를 <strong>energy function</strong> 이라 하며 르장드르 변환에 의해 함수의 domain 을 <span class="math inline">\(q,\,p,\,t\)</span> 로 바꾼 <span class="math inline">\(H(q,\,p,\,t)\)</span> 를 <strong>Hamiltonian</strong> 이라 한다. 따라서,</p>
+<p>임을 알 수 있다. 여기서 <strong>에너지 함수(energy function)</strong> <span class="math inline">\(h(q,\,\dot{q},\,t)\)</span> 를 아래와 같이 정의한다.</p>
+<p><span id="eq-CM_variation_definition_of_energy_function"><span class="math display">\[
+h(q,\, \dot{q},\,t) = \sum_j \dot{q}_j \dfrac{\partial L}{\partial \dot{q}_j} - L.
+\tag{2.20}\]</span></span></p>
+<p>참고로 르장드르 변환을 통해 함수의 독립변수를 <span class="math inline">\(q,\,p,\,t\)</span> 로 바꾼 <span class="math inline">\(H(q,\,p,\,t)\)</span> 를 <strong>해밀토니안(Hamiltonian)</strong> 이라 한다. 따라서,</p>
 <p><span class="math display">\[
 \dfrac{dh}{dt} = -\dfrac{\partial L}{\partial t}
 \]</span></p>
-<p>이므로 Lagrangian이 explicit time dependence가 없다면, 즉 <span class="math inline">\(\dfrac{\partial L}{\partial t}=0\)</span> 이라면 <span class="math inline">\(H\)</span> 는 보존된다.</p>
-
-
+<p>이므로 라그랑지안에 명시적인 시간 의존성이 없다면, 즉 <span class="math inline">\(\dfrac{\partial L}{\partial t}=0\)</span> 이라면 <span class="math inline">\(h\)</span> 는 보존된다.</p>
 </section>
+</section>
+<section id="연습문제-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h2>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-goldstein_2_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.2 (Goldstein 2.1)</strong></span> 공간에서의 두 점의 최단거리는 직선임을 보이시오.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(n\)</span>차원 유클리도 공간에서의 매개화된 곡선 <span class="math inline">\(\boldsymbol{f} : [t_1,\,t_2] \to \mathbb{R}^n\)</span>을 생각하자. <span class="math inline">\(\boldsymbol{f} (t) = \sum\limits_{i=1}^n \hat{e}_i f_i (t)\)</span>라 하면 곡선의 길이 <span class="math inline">\(l\)</span>은 다음과 같이 주어진다.</p>
+<p><span class="math display">\[\tag{1}
+l = \int_{t_1}^{t_2} L(f,\,\dot{f},\,t)\,dt=\int\limits_{t_1}^{t_2}\sqrt{\sum_{i=1}^n \left(\dfrac{df_i}{dt}\right)^2}\,dt = \int\limits_{t_1}^{t_2}\sqrt{\sum_{i=1}^n \left( \dot{f}_i\right)^2}\,dt
+\]</span></p>
+<p><span class="math inline">\(l\)</span> 을 최소로 하는 곡선은 오일러-라그랑쥬 방정식에 의해,</p>
+<p><span class="math display">\[
+\dfrac{d}{dt} \left(\dfrac{\partial L}{\partial \dot{f_i}} \right) - \dfrac{\partial L}{\partial f_i}=0  \implies \dfrac{\dot{f}_i}{\sqrt{\sum\limits_{j=1}^n \left( \dot{f}_j\right)^2}} = c_i=\text{const.} \quad\text{for each }i=1,\ldots,\,n\;.
+\]</span></p>
+<p>여기서,</p>
+<p><span class="math display">\[
+\sum_{i=1}^n \left(\dfrac{\dot{f}_i}{\sqrt{\sum\limits_{j=1}^n \left( \dot{f}_j\right)^2}}\right)^2 = 1 = \sum_{i=1}^n {c_i}^2
+\]</span></p>
+<p>이므로 최소한 하나의 <span class="math inline">\(c_i\)</span> 는 <span class="math inline">\(0\)</span> 이 아니다. <span class="math inline">\(c_i\ne 0\)</span> 일 때, <span class="math inline">\(k \ne i\)</span> 에 대해,</p>
+<p><span class="math display">\[\tag{4}
+\dfrac{\partial}{\partial f_k}\dfrac{\dot{f}_i}{\sqrt{\sum\limits_{j=1}^n \left( \dot{f}_j\right)^2}}=-\dfrac{1}{2}\dfrac{\dot{f}_i\ddot{f}_k}{\left(\sum\limits_{j=1}^n \left( \dot{f}_j\right)^2\right)^{3/2}}=0\;.
+\]</span></p>
+<p>따라서 모든 <span class="math inline">\(k\ne i\)</span> 에 대해 <span class="math inline">\(\dot{f}_k = \text{const.}\)</span> 이다. <span class="math inline">\(c_j\ne 0\)</span>인 <span class="math inline">\(j\)</span> 가 하나 이상 존재한다면 모든 index에 대해 <span class="math inline">\(\dot{f}_i=\text{const.}\)</span>이며, <span class="math inline">\(c_j \ne 0\)</span> 인 index가 단 하나이면 <span class="math inline">\(\dot{f}_j = \text{const.}\)</span> 이다. 즉 모든 <span class="math inline">\(f_j=a_jt +b_j\)</span> for arbitrary <span class="math inline">\(a_j,\,b_j\)</span> 이므로 <span class="math inline">\(\boldsymbol{f}\)</span> 는 직선이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-goldstein_2_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.3 (Goldstein 2.2)</strong></span> 구면에서의 geodesics는 대원(그 중심이 sphere의 중심과 일치하며 성분이 구의 표면에 존재하는 원)임을 보이시오.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>구면좌표계에서</p>
+<p><span class="math display">\[
+d\boldsymbol{r}= dr \hat{e}_{r} + rd\theta \hat{e}_{\theta}+ r\sin \theta d\varphi \,\hat{e}_{\varphi}
+\]</span></p>
+<p>이고 구면에서 <span class="math display">\[
+\| d\boldsymbol{r}\| = \sqrt{r^2 d\theta^2 + r^2 \sin^2 \!\theta \,d \varphi^2}
+\]</span></p>
+<p>이다 따라서 <span class="math inline">\((\theta_1,\,\varphi_1)\)</span> 에서 <span class="math inline">\((\theta_2,\,\varphi_2)\)</span> 까지의 거리 <span class="math inline">\(l\)</span> 은 다음 식으로 주어진다. (여기서 <span class="math inline">\(\dot{\varphi} = d\varphi/d\theta\)</span> 라 하자.) <span class="math display">\[\tag{1}
+l=\int \| d\boldsymbol{r} \| = \int r \sqrt{1+ \sin^2 \!\theta \left(\dfrac{d\varphi}{d\theta}\right)^2}d\theta  = \int r\sqrt{1+\sin^2\!\theta (\dot{\varphi})^2}
+\]</span></p>
+<p>오일러-라그랑쥬 방정식을 이용하면,</p>
+<p><span class="math display">\[\tag{2}
+\dfrac{d}{d\theta}\left(\dfrac{\partial l}{\partial \dot{\varphi}}\right) - \dfrac{\partial l}{\partial \varphi}=0 \implies \dfrac{d}{d \theta}\left(\dfrac{\sin^2\!\theta \, \dot{\varphi}}{\sqrt{1+\sin^2\!\theta (\dot{\varphi})^2}} \right)=0\,.
+\]</span></p>
+<p>따라서 어떤 상수 <span class="math inline">\(c\)</span> 에 대해</p>
+<p><span class="math display">\[
+\sin^2\! \theta \, \dot{\varphi} = c\sqrt{1+\sin^2\! \theta \, \dot{\varphi}^2}
+\]</span></p>
+<p>이다. <span class="math inline">\(\sin^4\! \theta (\dot{\varphi})^2 = c^2(1+\sin^2\! \theta (\dot{\varphi})^2)\)</span> 이므로 아래가 성립한다.</p>
+<p><span class="math display">\[\tag{3}
+\Delta \varphi = \int_{\theta_1}^{\theta} \dfrac{d\varphi}{d\theta} d\theta = \int_{\theta_1}^{\theta} \dfrac{c}{\sin \theta \sqrt{\sin^2\! \theta -c^2}}d\theta\;.
+\]</span></p>
+<p><span class="math inline">\(u=\cot \theta\)</span> 라고 하자. 그렇다면 <span class="math inline">\(du=-\csc^2\! \theta d\theta\)</span> 이고 <span class="math inline">\(u^2+1=\csc^2\!\theta\)</span> 이며, <span class="math display">\[
+\begin{aligned}
+  \varphi &amp;= \int_{u_1}^{u}\dfrac{c(-\sin^2\! \theta) du}{\sin \theta(\sin^2\! \theta -c^2)}= -\int_{u_1}^u \dfrac{c\,du}{\sqrt{1-c^2 \csc^2\! \theta}} = -\int_{u_1}^2 \dfrac{c\, du}{\sqrt{1-c^2(u^2+1)}}  \\
+  &amp;=-\int_{u_1}^u \dfrac{c\, du}{\sqrt{1-c^2-c^2u^2}} =-\int_{u_1}^u \dfrac{du}{\sqrt{(1-c^2)/c^2 -u^2}} = \cos^{-1} \left( \dfrac{c}{\sqrt{1-c^2}}u \right) + \varphi_1
+\end{aligned}
+\]</span></p>
+<p>따라서 어떤 상수 <span class="math inline">\(a\)</span> 에 대해 <span class="math display">\[\tag{4}
+\cos (\varphi - \varphi_1) = \dfrac{c}{\sqrt{1-c^2}} u = a\cot \theta
+\]</span></p>
+<div id="fig-CM_great_circle" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-CM_great_circle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/great_circle/great_circle.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_great_circle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;2.5: 3챠원 상의 대원
+</figcaption>
+</figure>
+</div>
+<p>이제 위의 방정식이 대원의 방정식임을 보이자. 대원이 이루는 평면에 수직인 단위벡터 <span class="math inline">\(\hat{\boldsymbol{n}}\)</span> 을 <span class="math inline">\(\hat{\boldsymbol{n}}=(\sin \theta_0 \cos \varphi_0,\, \sin\theta_0 \sin\varphi_0,\,\cos \theta_0)\)</span> 라 하자. <span class="math inline">\(\hat{\boldsymbol{n}}\)</span> 에 의해 정해지는 반지름 <span class="math inline">\(R\)</span> 인 구면상의 대원은 <span class="math inline">\(\boldsymbol{r}=(R \sin \theta \cos \varphi,\, R \sin \theta \sin \varphi,\, R \cos \theta)\)</span> 로 쓸 수 있으며, <span class="math inline">\(\hat{\boldsymbol{n}} \boldsymbol{\cdot} \boldsymbol{r}=0\)</span> 을 만족한다. 이로부터, <span class="math display">\[\begin{align}
+&amp; R \sin \theta \sin \theta_0 \cos \varphi \cos \varphi_0 + R \sin \theta \sin \theta_0 \sin \varphi \sin \varphi_0 + R \cos \theta \cos \theta_0 = 0 \notag \\
+\implies &amp;\sin \theta_0 \cos (\varphi -\varphi_0) = - \cos \theta \cos \theta_0 \notag \\
+\implies &amp;\cos(\varphi -\varphi_0) = - \dfrac{\cos \theta_0}{\sin \theta_0} \cot \theta \tag{5}
+\end{align}\]</span> 식 (4)와 (5)를 비교해보면 일치함을 할 수 있다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-goldstein_2_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.4 (Goldstein 2.5)</strong></span> 회전체의 최소부피 문제 (<a href="#exm-CM_variational_minima_volume_of_a_body_of_revolution" class="quarto-xref">예제&nbsp;<span>2.2</span></a>) 문제에서 <span class="math inline">\(y_2=y_1\)</span>, <span class="math inline">\(x_2=-x_1\)</span> 인 경우를 생각하자. Parameter <span class="math inline">\(a\)</span> 에 대한 조건을 dimensionless qualtities <span class="math inline">\(k=x_2/a\)</span> 와 <span class="math inline">\(\alpha = y_2/x_2\)</span> 를 이용하여 transcendental equation 으로 기술하라. <span class="math inline">\(\alpha\)</span> 가 어떤 값 <span class="math inline">\(\alpha_0\)</span> 가 크게 되도록 하는 <span class="math inline">\(k\)</span> (그리고 <span class="math inline">\(a\)</span>)값은 둘 뿐이며 <span class="math inline">\(\alpha = \alpha_0\)</span> 일 경우는 한가지 경우만 존재하고, <span class="math inline">\(\alpha &lt; \alpha_0\)</span> 이면 실수인 <span class="math inline">\(k\)</span> 나 <span class="math inline">\(a\)</span> 값은 존재하지 않음을 보이시오. 필요하다면 <span class="math inline">\(\alpha_0\)</span> 의 값을 수치해석적으로 구하시오.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span></p>
+<div id="fig-CM_goldstein_2_5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-CM_goldstein_2_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/goldstein_exr_2_5/fig.png" class="img-fluid figure-img" width="250">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_goldstein_2_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;2.6: …
+</figcaption>
+</figure>
+</div>
+<p><span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="00_index.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span> 에는 <span class="math inline">\(y\)</span> 축을 중심으로 한 회전체를 다뤘지만 여기서는 주어진 조건을 따르기 위해서는 <span class="math inline">\(x\)</span> 축을 중심으로 하는 회전을 생각해야 한다. 따라서, <span class="math inline">\(y = a \cosh \left(\dfrac{x-b}{a}\right)\)</span> 꼴이어야 하며 <span class="math inline">\(y_2=y_1\)</span>, <span class="math inline">\(x_2=-x_1\)</span> 조건으로 부터 <span class="math inline">\(b=0\)</span> 이므로, <span class="math display">\[
+y = a \cosh \left(\dfrac{x}{a}\right)
+\]</span></p>
+<p>이며 <span class="math inline">\(y_1= y_2 = a \cosh (x_2/a) = a \cosh k\)</span> 이다. <span class="math inline">\(\alpha =y_2/x_2\)</span>, <span class="math inline">\(k=x_2/a\)</span> 로 놓으면, <span class="math inline">\(\alpha\)</span> 는 <span class="math inline">\(k\)</span> 의 함수이며 다음과 같다.</p>
+<p><span class="math display">\[
+\alpha(k) = \dfrac{1}{k} \cosh k \;.
+\]</span></p>
+<p><span class="math inline">\(\alpha (k)\)</span> 는 한개의 극값을 가지며 이 때의 <span class="math inline">\(k\)</span>값 을 <span class="math inline">\(k_0\)</span>, <span class="math inline">\(\alpha_0 = \alpha (k_0)\)</span> 라 하면 문제의 조건을 만족함을 알 수 있다. 그리고 이때의 <span class="math inline">\(\alpha_0 \approx 1.51\)</span> 이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-goldstein_2_9" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.5 (Goldstein 2.9)</strong></span> 당구공 2개가 충돌 하는 순간 두 공사이에는 매우 큰 힘이 미소시간 <span class="math inline">\(\Delta t\)</span> 동안 작용하며, 따라서 <span class="math inline">\(\displaystyle \int_{\Delta t}F\, dt\)</span> 는 유한하다. 이러한 종류의 힘을 <em>implusive force</em> 라 하며 시간에 대한 적분을 <em>impluse</em> 라고 한다. 만약 impluseive forces가 존재한다면 라그랑쥬 방정식은 다음과 같이 변함을 보이시오.</p>
+<p><span class="math display">\[
+\left( \dfrac{\partial L}{\partial \dot{q}_j} \right)_f-\left(\dfrac{\partial L}{\partial \dot{q}_j} \right)_i = S_j \;.
+\]</span></p>
+<p>여기서 아래첨자 <span class="math inline">\(i\)</span> 와 <span class="math inline">\(f\)</span> 는 impluse 전, 후 를 의미하며 <span class="math inline">\(S_j\)</span> 는 generalized impulsive forces corresponding to <span class="math inline">\(q_j\)</span> 를, <span class="math inline">\(L\)</span> 은 모든 non-impulsive forces를 포함하는 라그랑지안을 의미한다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>라그랑쥬 방정식으로부터</p>
+<p><span class="math display">\[
+\dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_j}\right) - \dfrac{\partial L}{\partial q_j} = Q_j\;.
+\]</span></p>
+<p>이다. <span class="math inline">\(\Delta t\)</span> 구간에서 적분하면</p>
+<p><span class="math display">\[\left( \dfrac{\partial L}{\partial \dot{q}_j} \right)_f-\left(\dfrac{\partial L}{\partial \dot{q}_j} \right)_i - \int_{\Delta t}  \left( \dfrac{\partial L}{\partial q_j} \right) dt = S_j \;.
+\]</span> 여기서 <span class="math inline">\(\displaystyle \int_{\Delta t}  \left( \dfrac{\partial L}{\partial q_j} \right) dt\)</span> 를 생각하자. <span class="math inline">\(\dfrac{\partial L}{\partial q_j}\)</span>는 연속함수라고 생각 할 수 있으므로 <span class="math inline">\(\Delta t \to 0\)</span> limit에서 이 적분은 무시할 수 있다. 따라서,</p>
+<p><span class="math display">\[
+\left( \dfrac{\partial L}{\partial \dot{q}_j} \right)_f-\left(\dfrac{\partial L}{\partial \dot{q}_j} \right)_i = S_j \;.
+\]</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-goldstein_2_10" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 2.6 (Goldstein 2.10)</strong></span> <em>Generalized mechianics</em> 는 라그랑지안이 <span class="math inline">\(q_j\)</span> 에 대한 2차 미분 이상을 포함하는 고전역학의 변형된 형태이다. 라그랑지안이 <span class="math inline">\(L(q_i,\,\dot{q}_i,\,\ddot{q}_i,\,t)\)</span> 형태일 때 변분법과 해밀턴의 원리를 사용하고, 또 양 긑점에서 <span class="math inline">\(q_i\)</span> 와 <span class="math inline">\(\dot{q}_i\)</span> 의 variation이 <span class="math inline">\(0\)</span> 임을 가정하여 이에 대한 오일러-라그랑쥬 방정식이 다음 형태임을 보이시오.</p>
+<p><span class="math display">\[
+\dfrac{d^2}{dt^2} \left(\dfrac{\partial L}{\partial \ddot{q}_j} \right)- \dfrac{d}{dt} \left( \dfrac{\partial L}{\partial \dot{q}_j}\right) + \dfrac{\partial L}{\partial q_j}= 0\;, \qquad i=1,\,2,\ldots,\,n .
+\]</span></p>
+<p>이 결과를 다음 형태의 라그랑지안에 적용하여 운동방정식을 구하시오. <span class="math display">\[
+L = -\dfrac{m}{2} q\ddot{q} - \dfrac{k}{2}q^2\;.
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="00_index.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span> 의 과정을 그대로 따라가기로 하자. 경로 <span class="math inline">\(q (t,\,\alpha)\)</span> 를 아래와같이 놓자.</p>
+<p><span class="math display">\[\tag{1}
+q(t,\,\alpha) = q(t,\,0)+ \alpha \eta (t)\;.
+\]</span></p>
+<p>라그랑지안 <span class="math inline">\(L(q,\,\dot{q},\,\ddot{q},\,t)\)</span> 로 부터</p>
+<p><span class="math display">\[\tag{2}
+J(\alpha)= \int_{t_1}^{t_2} L(q,\,\dot{q},\,\ddot{q},\,t)\, dot
+\]</span></p>
+<p>이며 실제 경로 <span class="math inline">\(q(t,\,0)\)</span> 에서 stationary value 를 가져야 한다. 즉 <span class="math inline">\(\left( \dfrac{dJ}{d\alpha}\right)_{\alpha=0}=0\)</span>.</p>
+<p><span class="math display">\[\tag{3}
+\dfrac{dJ}{d\alpha} = \int_{t_1}^{t_2} \left[ \dfrac{\partial L}{\partial q}\dfrac{\partial q}{\partial t} + \dfrac{\partial L}{\partial \dot{q}}\dfrac{\partial \dot{q}}{\partial t} + \dfrac{\partial L}{\partial \ddot{q}}\dfrac{\partial \ddot{q}}{\partial t} \right] \, dt
+\]</span></p>
+<p>우리는 부분적분과 경계조건 <span class="math inline">\(\eta(t_1)=\eta(t_2)\)</span> 을 통해 다음이 성립한다는 것을 안다.</p>
+<p><span class="math display">\[
+\int_{t_1}^{t_2} \dfrac{\partial L}{\partial \dot{q}} \dfrac{\partial \dot{q}}{\partial \alpha} \, dt = - \int_{t_1}^{t_2} \dfrac{d}{dt} \left( \dfrac{\partial L}{\partial \dot{q}}\right)\dfrac{\partial q}{\partial t}\, dt
+\]</span></p>
+<p>같은 방법으로 <span class="math inline">\(\dot{\eta}(t_1)=\dot{\eta}(t_2)\)</span> 일 때 다음이 성립한다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int_{t_1}^{t_2} \dfrac{\partial L}{\partial \ddot{q}} \dfrac{\partial \ddot{q}}{\partial \alpha} \, dt &amp;= - \int_{t_1}^{t_2} \dfrac{d}{dt} \left( \dfrac{\partial L}{\partial \ddot{q}}\right)\left( \dfrac{\partial \dot{q}}{\partial t}\right)\, dt \\
+&amp;= \left[ \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \ddot{q}}\right) \left(\dfrac{\partial q}{\partial t}\right)\right]_{t_1}^{t_2} + \int_{t_1}^{t_2} \dfrac{d^2}{dt^2}\left( \dfrac{\partial L}{\partial \ddot{q}}\right) \left(\dfrac{\partial q}{\partial t}\right)\, dt
+\end{aligned}
+\]</span></p>
+<p>여기서 <span class="math inline">\(\dfrac{\partial q}{\partial t} = \dfrac{d \eta(t)}{d t}= \dot{\eta}(t)\)</span> 이고 문제의 조건에 의해 <span class="math inline">\(\dot{\eta}(t_1)= \dot{\eta}(t_2)=0\)</span> 이므로</p>
+<p><span class="math display">\[
+\int_{t_1}^{t_2} \dfrac{\partial L}{\partial \ddot{q}} \dfrac{\partial \ddot{q}}{\partial \alpha} \, dt =  \int_{t_1}^{t_2} \dfrac{d^2}{dt^2} \left( \dfrac{\partial L}{\partial \ddot{q}}\right)\dfrac{\partial q}{\partial t}\, dt
+\]</span></p>
+<p>이다. 이것을 (3)식에 넣으면</p>
+<p><span class="math display">\[\tag{4}
+  \dfrac{dJ}{d\alpha} = \int_{t_1}^{t_2} \left[ \dfrac{\partial L}{\partial q} -\dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}}\right) + \dfrac{d^2}{dt^2}\left( \dfrac{\partial L}{\partial \ddot{q}}\right) \right] \left(\dfrac{\partial q}{\partial t} \right) \, dt
+\]</span></p>
+<p>을 얻는다. 따라서 문제에 주어진</p>
+<p><span class="math display">\[
+\dfrac{d^2}{dt^2} \left(\dfrac{\partial L}{\partial \ddot{q}_j} \right)- \dfrac{d}{dt} \left( \dfrac{\partial L}{\partial \dot{q}_j}\right) + \dfrac{\partial L}{\partial q_j}= 0\;, \qquad i=1,\,2,\ldots,\,n .
+\]</span></p>
+<p>을 얻었다.</p>
+<p>이제 <span class="math inline">\(L = -\dfrac{m}{2} q\ddot{q} - \dfrac{k}{2}q^2\;.\)</span> 에 대한 운동방정식을 구해보자.</p>
+<p><span class="math display">\[
+\dfrac{\partial L}{\partial \ddot{q}}= - \dfrac{mq}{2},\qquad \dfrac{\partial L}{\partial \dot{q}} = 0,\, \qquad \dfrac{\partial L}{\partial q}= -kq
+\]</span></p>
+<p>이므로</p>
+<p><span class="math display">\[
+\dfrac{m\ddot{q}}{2}+ kq=0
+\]</span></p>
+<p>이다.</p>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Goldstein1980Mechanics" class="csl-entry" role="listitem">
+Goldstein, H. 1980. <em>Classical Mechanics</em>. Addison-Wesley Series in Physics. Addison-Wesley Publishing Company. <a href="https://books.google.co.kr/books?id=9M8QAQAAIAAJ">https://books.google.co.kr/books?id=9M8QAQAAIAAJ</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -957,8 +1222,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -1069,7 +1332,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

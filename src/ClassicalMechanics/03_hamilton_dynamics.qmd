@@ -16,6 +16,20 @@ crossref:
 
 </br>
 
+## 르장드르 변환과 해밀턴 운동방정식
+
+$n$-자유도 시스템의 라그랑지안 역학은 $n$ 개의 2차 미분방정식(오일러-라그랑쥬 방정식) 으로 기술된다.
+
+$$
+\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_j}\right) - \dfrac{\partial L}{\partial q_j} = 0.
+$$
+
+이 방정식의 해를 구하기 위해서는 $2n$ 개의 초기값이 필요하며 ($1$) 특정 시간 $t$ 에 대해 $n$ 개의 $q_i(t)$ 와 역시 $n$ 개의 $\dot{q}(t_i)$ 이거나 ($2$) 두 시간 $t_1,\,t_2$ 에 대해 $n$ 개의 $q_i(t_1)$ 과 $q_i(t_2)$ 이다. 
+
+
+
+</br>
+
 ## Hamiltonian
 
 ### 해밀토니안 {#sec-CM_hamiltonian}

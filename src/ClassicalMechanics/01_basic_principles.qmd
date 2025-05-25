@@ -10,9 +10,9 @@ crossref:
 
 ## 뉴턴의 세가지 운동법칙
 
-### 입자, 공간, 시간, 좌표계
+### 입자, 공간, 시간, 좌표계 {#sec-CM_particle_space_time_reference_frame}
 
-고전역학에서 **입자(particle)** 는 질량을 가지고 있지만 부피가 없는, 혹은 그 부피란 것이 우리가 측정하고자 하는 양에 대해 무시할만한 어떤 추상적인 대상이다. 입자는 3차원 공간상에 존재하며 시간의 변화에 따라 공간상에서 움직일 수 있다. 입자의 시간에 따른 위치를 **경로(path 혹은 trajectory)** 라고 한다. 입자의 경로를 기술하기 위해 공간상에서의 위치의 기준이 되는 원점 $\mathcal{O}$ 을 설정하며, 이 원점에 대한 변위를 **radius vector** 라고 한다. 원점은 임의로 정할 수 있다. 고전역학에서 다루는 공간은 3차원 유클리드 공간이며, 원점 $\mathcal{O}$ 에 대해 임의의 표준 기저 $\hat{\boldsymbol{e}}_1,\,\hat{\boldsymbol{e}}_2,\,\hat{\boldsymbol{e}}_3$, 혹은 $\hat{\boldsymbol{x}},\, \hat{\boldsymbol{y}},\, \hat{\boldsymbol{z}}$ 를 관례적으로 $\hat{\boldsymbol{e}}_3 = \hat{\boldsymbol{e}}_1 \times \hat{\boldsymbol{e}}_2$ 가 되도록 잡아 radius vector $\boldsymbol{r}$ 을 이 표준기저에 대한 좌표로 표현한다. 즉 $\boldsymbol{r} = x\hat{\boldsymbol{e}}_1 + y \hat{\boldsymbol{e}}_2 + z\hat{\boldsymbol{e}}_3$ 일 때 $\boldsymbol{r}$ 을 $(x,\,y,\,z)$ 혹은 $\begin{bmatrix} x & y & z\end{bmatrix}^T$ 로 표현하며 이를 **좌표(coordinate)** 라고 한다.
+고전역학에서 **입자(particle)** 는 질량을 가지고 있지만 부피가 없는, 혹은 그 부피란 것이 우리가 측정하고자 하는 양에 대해 무시할만한 어떤 추상적인 대상이다. 입자는 3차원 공간상에 존재하며 시간의 변화에 따라 공간상에서 움직일 수 있다. 입자의 시간에 따른 위치를 **경로(path 혹은 trajectory)** 라고 한다. 입자의 경로를 기술하기 위해 공간상에서의 위치의 기준이 되는 원점 $\mathcal{O}$ 을 설정하며, 이 원점에 대한 변위를 **위치 벡터(position vector)** 혹은 **반경 벡터(radius vector)** 라고 한다. 원점은 임의로 정할 수 있다. 고전역학에서 다루는 공간은 3차원 유클리드 공간이며, 원점 $\mathcal{O}$ 에 대해 임의의 표준 기저 $\hat{\bf{e}}_1,\,\hat{\bf{e}}_2,\,\hat{\bf{e}}_3$, 혹은 $\hat{\bf{x}},\, \hat{\bf{y}},\, \hat{\bf{z}}$ 를 관례적으로 $\hat{\bf{e}}_3 = \hat{\bf{e}}_1 \times \hat{\bf{e}}_2$ 가 되도록 잡아 radius vector $\bf{r}$ 을 이 표준기저에 대한 좌표로 표현한다. 즉 $\bf{r} = x\hat{\bf{e}}_1 + y \hat{\bf{e}}_2 + z\hat{\bf{e}}_3$ 일 때 $\bf{r}$ 을 $(x,\,y,\,z)$ 혹은 $\begin{bmatrix} x & y & z\end{bmatrix}^T$ 로 표현하며 이를 **좌표(coordinate)** 라고 한다.
 
 ![두 좌표계](images/radius_vector/radius_vector.png){#fig-reference_frames width="70%"}
 
@@ -25,7 +25,13 @@ crossref:
 
 </br>
 
-### 뉴턴의 제 1 운동법칙과 관성좌표계
+### 뉴턴의 제 1 운동법칙, 관성좌표계와 갈릴레이 변환 {#sec-CM_1st_law_of_newton}
+
+속도 $\bf{v}$ 는 정해진 원점에 대한 위치벡터 $\bf{r}$ 에 대해 아래와 같이 정의된다.
+
+$$
+\bf{v} := \dfrac{d\bf{r}}{dt}. 
+$$ {#eq-CM_definition_of_velocity}
 
 뉴튼의 제 1 운동법칙은 좌표계 중에 기준이 되는 좌표계를 정하도록 한다. 
 
@@ -38,10 +44,10 @@ crossref:
 
 :::
 
-우주에 입자(particle) 하나만 존재하며 당신은 이 입자에 영항을 끼치지 않으면서 위치와 속도를 잴 수 있는 존재라고 하자. 이 입자의 운동에 어떤 영향도 끼치는 존재가 없을 때 그 입자는 정지상태나 직선으로 균일한 운동상태, 즉 등속운동상태를 유지하는 좌표계가 존재한다는 말이며, 이것을 **관성좌표계(inertial frame)** 이라고 한다. 어떤 관성좌표계 $\mathcal{O}$ 에 대해 다른 좌표계의 원점 $\mathcal{O}'$ 이 $\boldsymbol{V} = (V_x,\,V_y,\,V_z)$ 의 일정한 속도로 움직인다고 하자. 처음의 좌표계의 radius vector $\boldsymbol{r} = (x,\,y,\,z)$ 라고 하고, 뒤의 좌표계의 raduis vector $\boldsymbol{r}'=(x',\,y',\, z')$ 라고 하면, 
+우주에 입자(particle) 하나만 존재하며 당신은 이 입자에 영항을 끼치지 않으면서 위치와 속도를 잴 수 있는 존재라고 하자. 이 입자의 운동에 어떤 영향도 끼치는 존재가 없을 때 그 입자는 정지상태나 직선으로 균일한 운동상태, 즉 등속운동상태를 유지하는 좌표계가 존재한다는 말이며, 이것을 **관성좌표계(inertial frame)** 이라고 한다. 어떤 관성좌표계 $\mathcal{O}$ 에 대해 다른 좌표계의 원점 $\mathcal{O}'$ 이 $\bf{V} = (V_x,\,V_y,\,V_z)$ 의 일정한 속도로 움직인다고 하자. 처음의 좌표계의 radius vector $\bf{r} = (x,\,y,\,z)$ 라고 하고, 뒤의 좌표계의 위치 벡터 $\bf{r}'=(x',\,y',\, z')$ 라고 하면, 
 
 $$
-\boldsymbol{r}' = \boldsymbol{r}-\boldsymbol{V}t
+\bf{r}' = \bf{r}-\bf{V}t
 $$
 
 이므로, $x'=x-V_xt,\, y' = y-V_yt,\, z'=z-V_zt$ 이며, 
@@ -55,7 +61,7 @@ $$
 
 </br>
 
-### 뉴튼의 제2 운동법칙과 운동량
+### 뉴튼의 제2 운동법칙과 운동량 {#sec-CM_the_1st_law_of_newton}
 
 ::: {.callout-important icon="false"}
 #### 뉴튼의 제 2 운동법칙
@@ -74,51 +80,51 @@ $$
 
 #### 선형 운동량 
 
-입자 $m$ 이 속도 $\boldsymbol{v}$ 로 운동할 때 **선형 운동량 (linear momentum)** 혹은 **운동량(momentum)** $\boldsymbol{p}$ 는 다음과 같이 정의된다.
+입자 $m$ 이 속도 $\bf{v}$ 로 운동할 때 **선형 운동량 (linear momentum)** 혹은 **운동량(momentum)** $\bf{p}$ 는 다음과 같이 정의된다.
 
 $$
-\boldsymbol{p} := m\boldsymbol{v}. 
+\bf{p} := m\bf{v}. 
 $$ {#eq-CM_linear_momentum}
 
 :::
 :::
 
 
-우리는 앞서 관성좌표계를 정의했다. 만약 입자가 정지를 포함한 등속운동 상태이지 않으면 무언가가 입자에 영향을 준다는 의미이며 그것을 **힘(force)** 라고 하고 정량적으로는 운동량 $\boldsymbol{p}$ 의 시간에 대한 변화량으로 정의한다. 영어 표현의 `motion` 은 현재 우리가 운동량  으로 부르는 값이다. 즉 외부에서 힘 $\boldsymbol{F}$ 가 가해질 때 뉴튼의 제2 운동법칙은 다음을 말한다. 
+우리는 앞서 관성좌표계를 정의했다. 만약 입자가 정지를 포함한 등속운동 상태이지 않으면 무언가가 입자에 영향을 준다는 의미이며 그것을 **힘(force)** 라고 하고 정량적으로는 운동량 $\bf{p}$ 의 시간에 대한 변화량으로 정의한다. 영어 표현의 `motion` 은 현재 우리가 운동량  으로 부르는 값이다. 즉 외부에서 힘 $\bf{F}$ 가 가해질 때 뉴튼의 제2 운동법칙은 다음을 말한다. 
 
 $$
-\dfrac{d\boldsymbol{p}}{dt} = \dfrac{d}{dt}(m\boldsymbol{v})= \boldsymbol{F}.
+\dfrac{d\bf{p}}{dt} = \dfrac{d}{dt}(m\bf{v})= \bf{F}.
 $$
 
 
-질량 $m$ 이 고정되어 있다고 하자. 그렇다면 $\boldsymbol{F} = m\dfrac{d^2\boldsymbol{r}}{dt^2} = m\boldsymbol{a}$ 이며, 힘에 대해 입자의 가속도는 $m$ 에 반비례하여 정해진다
+질량 $m$ 이 고정되어 있다고 하자. 그렇다면 $\bf{F} = m\dfrac{d^2\bf{r}}{dt^2} = m\bf{a}$ 이며, 힘에 대해 입자의 가속도는 $m$ 에 반비례하여 정해진다.
 
 $$
-\boldsymbol{a} = \dfrac{1}{m}\boldsymbol{F}
+\bf{a} = \dfrac{1}{m}\bf{F}.
 $$
 
-이 $m$ 을 **관성질량(inerital mass)**$^\dagger$ 이라고 한다.[$^\dagger$ 관성질량과 비교되는 값은 중력질량이다. 이것은 만유인력을 다룰 때 설명한다.]{.aside} $\boldsymbol{F}=\boldsymbol{0}$ 일 경우 운동량 $\boldsymbol{p}$ 는 일정하게 유지된다. 이것을 **운동량 보존** 이라고 한다.
+이때의 $m$ 을 **관성질량(inerital mass)**$^\dagger$ 이라고 한다.[$^\dagger$ 관성질량과 비교되는 값은 중력질량이다. 이것은 만유인력을 다룰 때 설명한다.]{.aside} $\bf{F}=\bf{0}$ 일 경우 운동량 $\bf{p}$ 는 일정하게 유지된다. 이것을 **운동량 보존** 이라고 한다.
 
 
 </br>
 
-두 좌표계 $S$ 와 $S'$ 을 생각하자. $S'$ 이 $S$ 에 대해 일정한 속도 $\boldsymbol{V}$ 로 움직인다고 하자. 또 $t=0$ 에서 두 좌표게의 원점이 일치했다고 하자. 그렇다면 $S$ 에서의 radius vector $\boldsymbol{r}$ 과 $S'$ 에서의 radius vector $\boldsymbol{r}'$ 사이에 다음의 관계가 존재한다.
+두 좌표계 $S$ 와 $S'$ 을 생각하자. $S'$ 이 $S$ 에 대해 일정한 속도 $\bf{V}$ 로 움직인다고 하자. 또 $t=0$ 에서 두 좌표게의 원점이 일치했다고 하자. 그렇다면 $S$ 에서의 위치 벡터 $\bf{r}$ 과 $S'$ 에서의 위치 벡터 $\bf{r}'$ 사이에 다음의 관계가 존재한다.
 
 $$
-\boldsymbol{r}= \boldsymbol{r}'+\boldsymbol{V}t
+\bf{r}= \bf{r}'+\bf{V}t
 $$
 
-그렇다면 $S$ 에서 느끼는 힘 $\boldsymbol{F}$ 와 $S'$ 에서 느끼는 힘 $\boldsymbol{F}'$ 사이의 관계는 다음과 같다.
+그렇다면 $S$ 에서 느끼는 힘 $\bf{F}$ 와 $S'$ 에서 느끼는 힘 $\bf{F}'$ 사이의 관계는 다음과 같다.
 
 $$
-\boldsymbol{F} = \dfrac{d\boldsymbol{p}}{dt} = \dfrac{d}{dt}\left[m\left(\dfrac{d\boldsymbol{r}}{dt}\right)\right]= \dfrac{d}{dt} \left[ m \dfrac{{d(\boldsymbol{r}'+\boldsymbol{V}t)}}{dt}\right] = \dfrac{d\boldsymbol{p}'}{dt} = \boldsymbol{F}'
+\bf{F} = \dfrac{d\bf{p}}{dt} = \dfrac{d}{dt}\left[m\left(\dfrac{d\bf{r}}{dt}\right)\right]= \dfrac{d}{dt} \left[ m \dfrac{{d(\bf{r}'+\bf{V}t)}}{dt}\right] = \dfrac{d}{dt}\left[m \dfrac{d\bf{r}'}{dt}\right]=\dfrac{d\bf{p}'}{dt} 
 $$
 
 즉 관성 좌표계에서 운동방정식은 동일하다. 이를 **갈릴레이의 상대성 원리 (Galilean relativity)** 라고 한다.
 
 </br>
 
-### 뉴튼의 제3 운동법칙
+### 뉴튼의 제3 운동법칙 {#sec-CM_the_3rd_law_of_newton}
 
 ::: {.callout-important icon="false"}
 #### 뉴튼의 제 3 운동법칙
@@ -129,7 +135,7 @@ $$
 
 :::
 
-여기서의 *action*${}^\ast$ [$^\ast$ 고전역학에서 action 은 뒤에 나올 라그랑지안의 시간 적분을 의미하기도 하며, 여기를 제외한 다른 부분에서는 주로 이 의미로 사용하겠다. 별도의 언급 없이 action-reaction 의 의미에서 사용하는 것은 여기 뿐이다.]{.aside} 은 한 물체에서 다른 물체에 대해 힘을 가하는 것을 말한다. 즉 두 물체 사이 $A$ 와 $B$ 사이에 힘이 작용할 때 $A$ 가 $B$ 의 존재로 인해 받는 힘 $\boldsymbol{F}_{BA}$ 와 $B$ 가 $A$ 의 존재로 인해 받는 힘 $\boldsymbol{F}_{AB}$ 사이에는 $\boldsymbol{F}_{BA}=-\boldsymbol{F}_{AB}$ 의 관계가 성립한다는 의미이다.
+여기서의 *action*${}^\ast$ [$^\ast$ 고전역학에서 action 은 뒤에 나올 라그랑지안의 시간 적분을 의미하기도 하며, 여기를 제외한 다른 부분에서는 주로 이 의미로 사용하겠다. 별도의 언급 없이 action-reaction 의 의미에서 사용하는 것은 여기 뿐이다.]{.aside} 은 한 물체에서 다른 물체에 대해 힘을 가하는 것을 말한다. 즉 두 물체 사이 $A$ 와 $B$ 사이에 힘이 작용할 때 $A$ 가 $B$ 의 존재로 인해 받는 힘 $\bf{F}_{BA}$ 와 $B$ 가 $A$ 의 존재로 인해 받는 힘 $\bf{F}_{AB}$ 사이에는 $\bf{F}_{BA}=-\bf{F}_{AB}$ 의 관계가 성립한다는 의미이다.
 
 </br>
 
@@ -137,186 +143,201 @@ $$
 
 ### 각운동량과 토크 {#sec-CM_angular_momentum_and_torque}
 
-각운동량 $\boldsymbol{L}$ 은 다음과 같이 정의된다.
+각운동량 $\bf{L}$ 은 다음과 같이 정의된다.
 
 $$
 \boxed{
-\boldsymbol{L} := \boldsymbol{r} \times \boldsymbol{p}
+\bf{L} := \bf{r} \times \bf{p}
 }
 $$ {#eq-CM_def_angular_momentum}
 
-원점 $\mathcal{O}$ 로부터의 토크(torque) (혹은 moment of force) $\boldsymbol{N}$ 은 
+이 때, 
+
+$$
+\dfrac{d\bf{L}}{dt} = \dfrac{d}{dt} (\bf{r} \times m\bf{v}) = \bf{v} \times m \bf{v} + \bf{r} \times \dfrac{d}{dt}(m\bf{v}) = \bf{r} \times \bf{p} = \bf{N} 
+$$  {#eq-CM_def_torque}
+
+이다. 원점 $\mathcal{O}$ 로부터의 **토크(torque)** (혹은 moment of force) $\bf{N}$ 은 
 
 $$
 \boxed{
-\boldsymbol{N} := \boldsymbol{r} \times \boldsymbol{F}
+\bf{N} := \bf{r} \times \bf{F}
 }
 $$ {#eq-CM_def_torque}
 
-로 정의된다. 이 때, 
-
-$$
-\dfrac{d\boldsymbol{L}}{dt} = \dfrac{d}{dt} (\boldsymbol{r} \times m\boldsymbol{v}) = \boldsymbol{v} \times m \boldsymbol{v} + \boldsymbol{r} \times \dfrac{d}{dt}(m\boldsymbol{v}) = \boldsymbol{r} \times \boldsymbol{p} = \boldsymbol{N} 
-$$  {#eq-CM_def_torque}
-
-이다. 즉 $\boldsymbol{N}=0$ 이면 $\boldsymbol{L}$ 이 보존됨을 알 수 있다.
+로 정의된다. 즉 $\bf{N}=0$ 이면 $\bf{L}$ 이 보존됨을 알 수 있다.
 
 </br>
 
 ### 힘에 의한 일(Work)
 
-External force $\boldsymbol{F}$ 에 의해 입자가 $1$ 지점에서 $2$ 지점으로 움직였다고 하자. 이 때, 이 particle에 가해진 힘 $\boldsymbol{F}$가 한 일 $W_{12}$는 다음과 같이 정의된다.
+외력 $\bf{F}$ 에 의해 입자가 $P_1$ 지점에서 $P_2$ 지점으로 움직였다고 하자. 이 때, 이 입자에 가해진 힘 $\bf{F}$가 한 일 $W_{12}$는 다음과 같이 정의된다.
 
 $$
 \boxed{
-W_{12} := \int_1^2 \boldsymbol{F} \cdot d\boldsymbol{s}\;.
+W_{12} := \int_{P_1}^{P_2}\bf{F} \cdot d\bf{s}\;.
 }
 $${#eq-CM_def_work}
 
-다음을 보자. 
+$v_1,\, v_2$ 를 각각 $P_1,\,P_2$ 에서의 속도 $\bf{v}_1,\, \bf{v}_2$ 의 크기 라고 하자. 즉 $v_1=\|\bf{v}_1\|,\, v_2=\|\bf{v}_2\|$ 이다. 그렇다면 다음이 성립한다.
 
 $$
-W_{12} = \int_1^2 \boldsymbol{F} \cdot d\boldsymbol{s} = m \int \dfrac{d\boldsymbol{v}}{dt} \cdot \boldsymbol{v} dt = \dfrac{m}{2} \int \dfrac{d}{dt} v^2 dt = \dfrac{1}{2} m ({v_2}^2 - {v_1}^2)\;.
+W_{12} = \int_{P_1}^{P_2} \bf{F} \cdot d\bf{s} = m \int \dfrac{d\bf{v}}{dt} \cdot \bf{v} dt = \dfrac{m}{2} \int \dfrac{d}{dt} v^2 dt = \dfrac{1}{2} m ({v_2}^2 - {v_1}^2)\;.
 $$
 
 이로부터 우리는 운동에너지 $T=\dfrac{1}{2} mv^2$ 를 정의할 필요를 얻게 된다. 그렇다면 $W_{12} = T_2 - T_1$ 이다.
 
 </br>
 
-### 보존력
- 
-External force 가 벡터장 $\boldsymbol{F}$ 로 주어졌고, 이 $\boldsymbol{F}$ 에 의한 일 $W_{12}$ 이 그 경로에 의존하지 않을 때 이 힘 $\boldsymbol{F}$ 를 **보존력(conservative force)** 라고 한다. 이 경우 다음을 만족한다.
+### 보존력과 포텐셜 에너지 {#sec-CM_conservative_force_and_potential_energy}
+
+외력이 벡터장 $\bf{F}$ 로 주어졌고, 이 $\bf{F}$ 에 의한 일 $W_{12}$ 이 그 경로에 의존하지 않을 때 이 힘 $\bf{F}$ 를 **보존력(conservative force)** 라고 한다. 이 경우 다음을 만족한다.
 
 $$
-\oint_C \boldsymbol{F}\cdot d\boldsymbol{s}=0
+\oint_C \bf{F}\cdot d\bf{s}=0
 $$ {#eq-CM_sufficient_condition_for_conservative_force}
 
-수학적으로 이것은 어떤 스칼라장 (scalar field) $V(\boldsymbol{r})$ 이 존재하여 $\boldsymbol{F}= -\nabla V(\boldsymbol{r})$ 인 것과 동치이다. 이 때 $V(\boldsymbol{r})$ 을 **포텐셜(potential)** 혹은 **포텐셜 에너지(potential energy)** 라고 한다.
+수학적으로 이것은 어떤 스칼라장 (scalar field) $V(\bf{r})$ 이 존재하여 $\bf{F}= -\nabla V(\bf{r})$ 인 것과 동치이다. 이 때 $V(\bf{r})$ 을 **포텐셜(potential)** 혹은 **포텐셜 에너지(potential energy)** 라고 한다.
 
 </br>
 
-### 입자에 대한 에너지 보존 정리
+### 입자에 대한 에너지 보존 정리 {#sec-CM_energy_consrvertion}
 
 시스템에 작용하는 모든 힘이 보존력일 때 이 system을 **보존계(conservative system)** 라 한다. 보존계에서는 
 
 $$
-W_{12} = \int_1^2 \boldsymbol{F}\cdot d \boldsymbol{s} = \int_1^2 -\nabla V(\boldsymbol{r}) \cdot d\boldsymbol{s} = V(1) - V(2)
+W_{12} = \int_1^2 \bf{F}\cdot d \bf{s} = \int_1^2 -\nabla V(\bf{r}) \cdot d\bf{s} = V(1) - V(2)
 $$ {#eq-CM_energy_conservation_theorem_for_conservative_system}
 
 이다. $V_1=V(1)$, $V_2=V(2)$ 라 할 경우 $W_{12}=T_2 - T_1 = V_1 - V_2$ 이므로 $T_1 + V_1 = T_2 + V_2$ 이다. 즉 보존계에서는 운동에너지와 위치에너지의 합이 항상 보존된다. 이를 **보존계에서의 에너지 보존**  이라 한다.
+
+포텐셜 $V=V(\bf{x},\,t)$ 가 위치 뿐만 아니라 명시적으로 시간에 의존한다고 하자. 즉 $\partial V/\partial t \ne 0$ 이라고 하자. 이 경우 입자가 $t$ 에서 $t+dt$ 시간 동안 $\bf{x}$ 에서 $\bf{x}+d\bf{s}$ 만큼 움직였을 때의 일은 
+
+$$
+\bf{F\cdot}d\bf{s} = - \dfrac{\partial V}{\partial s}ds
+$$
+
+이며 이 값은 $-V(\bf{x}+d\bf{s},\, t+dt) + V(\bf{x},\,t)$ 와 같지 않다. 이 경우 역학적 에너지 $T+V$ 는 정의되지만 보존되지는 않는다.
+
 
 </br>
 
 ## 입자계의 동역학
 
-입자계에서 $j$-번째 입자가 $i$-번째 입자에 가하는 힘을 $\boldsymbol{F}_{ji}$ 라 하자. System 외부에서 $i$-번째 입자에 가하는 힘을 $\boldsymbol{F}^{(e)}_{i}$ 라 하면 $i$ 번째 입자의 운동방정식은 다음과 같다.
+입자계에서 $j$-번째 입자가 $i$-번째 입자에 가하는 힘을 $\bf{F}_{ji}$ 라 하자. 시스템 외부에서 $i$-번째 입자에 가하는 힘을 $\bf{F}^{(e)}_{i}$ 라 하면 $i$ 번째 입자의 운동방정식은 다음과 같다.
 
 $$
-\sum_j \boldsymbol{F}_{ji} + \boldsymbol{F}^{(e)}_i = \dot{\boldsymbol{p}}_i = \frac{d}{dt} (m_i\boldsymbol{v}_i)
-$$
+\dot{\bf{p}}_i = \frac{d}{dt} (m_i\bf{v}_i) = \sum_j \bf{F}_{ji} + \bf{F}^{(e)}_i.
+$$ {#eq-CM_equation_of_motion_in_particle_system}
 
-제 3 운동법칙에 따라 모든 $i,\,j$ 에 대해 $\boldsymbol{F}_{ij} = - \boldsymbol{F}_{ji}$ 일 경우 모든 particle에 대해 더하면 다음과 같다. $\boldsymbol{F}^{(e)} = \sum_i \boldsymbol{F}^{(e)}_i$ 로 external force 의 총합이다. 
+제 3 운동법칙에 따라 모든 $i,\,j$ 에 대해 $\bf{F}_{ij} = - \bf{F}_{ji}$ 일 경우 모든 particle에 대해 더하면 다음과 같다. 여기서 $\bf{F}^{(e)} = \sum_i \bf{F}^{(e)}_i$ 는 external force 의 총합이다. 
 
 $$
-\dfrac{d^2}{dt^2} \sum_i m_i \boldsymbol{r}_i = \sum_i \boldsymbol{F}^{(e)}_i + \sum_{\substack{ i ,j \\ i \ne j }} \boldsymbol{F}_{ji} = \boldsymbol{F}^{(e)}  + 0
-$$ {#eq-system_of_particles}
+\dfrac{d^2}{dt^2} \sum_i m_i \bf{r}_i = \sum_i \bf{F}^{(e)}_i + \sum_{\substack{ i ,j \\ i \ne j }} \bf{F}_{ji} = \bf{F}^{(e)}  + 0
+$$ {#eq-CM_system_of_particles}
 
 </br>
 
-### 질량 중심과 입자계의 총 운동량   
+### 질량 중심과 입자계의 총 운동량 {#sec-CM_total_momentum_and_COM}  
 
-입자계 에서 **질량 중심(center of mass)** (혹은 center of gravity) $\boldsymbol{R}$ 는 다음과 같이 정의된다.
+입자계 에서 **질량 중심(center of mass)** (혹은 center of gravity) $\bf{R}$ 는 다음과 같이 정의된다.
 
 $$
-\boldsymbol{R} = \dfrac{\sum_i m_i \boldsymbol{r}_i } {\sum_i m_i} = \dfrac{\sum_i m_i \boldsymbol{r}_i}{M}\;.
+\bf{R} = \dfrac{\sum_i m_i \bf{r}_i } {\sum_i m_i} = \dfrac{\sum_i m_i \bf{r}_i}{M}\;.
 $$ {#eq-CM_center_of_mass}
 
-입자계의 운동방정식 (@eq-system_of_particles) 을 사용하면 다음을 얻는다.
+여기서 $M=\sum_i m_i$ 는 시스템의 입자의 질량의 총 합이며 @eq-CM_system_of_particles 으로 부터 다음을 얻는다.
 
 $$
-M\dfrac{d^2\boldsymbol{R}}{dt^2} =\boldsymbol{F}^{(e)}\;.
+M\dfrac{d^2\bf{R}}{dt^2} =\bf{F}^{(e)}\;.
 $$ {#eq-CM_equation_of_motion_for_center_of_mass_1}
 
-이로부터 입자계의 질량 줌심에 작용하는 모든 외령의 합이 질량 중심에 집중하여 작용하는 것처럼 움직인다는 것을 알 수 있다. 또한 총 운동량 $\boldsymbol{P}$ 를 $\boldsymbol{P}:=\sum_i m_i \dfrac{d\boldsymbol{r}_i}{dt} = M \dfrac{d\boldsymbol{R}}{dt}$ 로 정의하면 질량 중심에 대한 운동방정식을 얻는다. 
+이로부터 입자계의 질량 줌심에 작용하는 모든 외력의 합이 질량 중심에 집중하여 작용하는 것처럼 움직인다는 것을 알 수 있다. 또한 총 운동량 $\bf{P}$ 를 
 
 $$
-\dot{\boldsymbol{P}} = \dfrac{d}{dt}\boldsymbol{P}=\boldsymbol{F}^{(e)}
+\bf{P}:=\sum_i m_i \dfrac{d\bf{r}_i}{dt} = M \dfrac{d\bf{R}}{dt}
+$$ {#eq-CM_definition_of_total_momentum}
+
+로 정의하면 질량 중심에 대한 운동방정식을 얻는다. 
+
+$$
+\dfrac{d \bf{P}}{dt} =\bf{F}^{(e)}.
 $${#eq-CM_equation_of_motion_for_center_of_mass_2}
+
+즉 외력이 작용하지 않을 때는 입자계의 총 각운동량은 보존된다.
 
 </br>
 
 ### 총 각운동량 {#sec-CM_total_angular_momentum}
 
-입자계의 총 각운동량 $\boldsymbol{L}$ 은 개별 입자의 각운동량의 합으로 정의된다. 즉
+입자계의 총 각운동량 $\bf{L}$ 은 개별 입자의 각운동량의 합으로 정의된다. 즉
 
 $$
-\boldsymbol{L} :=\sum_i \boldsymbol{L}_i
+\bf{L} :=\sum_i \bf{L}_i
 $$ {#eq-CM_total_angular_momentum}
 
 이다. 따라서 
 
 $$
 \begin{aligned}
-\dot{\boldsymbol{L}} := \dfrac{d\boldsymbol{L}}{dt} &= \sum_i \dfrac{d}{dt}( \boldsymbol{r}_i \times \boldsymbol{p}_i) \\
-&= \sum_i \dot{\boldsymbol{r}}_i \times \boldsymbol{p}_i + \boldsymbol{r}_i \times \dot{\boldsymbol{p}}_i = \sum_i \boldsymbol{r}_i \times \boldsymbol{F}^{(e)}_i +  \sum_{\substack{ i ,j \\ i \ne j }} \boldsymbol{r}_i \times \boldsymbol{F}_{ji} 
+\dfrac{d\bf{L}}{dt} &= \sum_i \dfrac{d}{dt}( \bf{r}_i \times \bf{p}_i) \\
+&= \sum_i \dot{\bf{r}}_i \times \bf{p}_i + \bf{r}_i \times \dot{\bf{p}}_i = \sum_i \bf{r}_i \times \bf{F}^{(e)}_i +  \sum_{\substack{ i ,j \\ i \ne j }} \bf{r}_i \times \bf{F}_{ji} 
 \end{aligned}
 $$ {#eq-CM_derivative_of_total_angular_momentum}
 
-이다. 여기서 $\dot{\boldsymbol{r}}_i \times \boldsymbol{p}_i = 0$ 이 이용되었다. 뉴턴의 제 3 운동법칙을 따르는 힘 이라면, 즉 $\boldsymbol{F}_{ij}= -\boldsymbol{F}_{ji}$ 라면, 
+이다. 여기서 $\dot{\bf{r}}_i \times \bf{p}_i = 0$ 이 이용되었다. 뉴턴의 제 3 운동법칙을 따르는 힘 이라면, 즉 $\bf{F}_{ij}= -\bf{F}_{ji}$ 라면, 
 
 $$
-\boldsymbol{r}_i \times \boldsymbol{F}_{ji} + \boldsymbol{r}_j \times \boldsymbol{F}_{ij} = (\boldsymbol{r}_i - \boldsymbol{r}_j) \times \boldsymbol{F}_{ji} = \boldsymbol{r}_{ij} \times \boldsymbol{F}_{ji},\qquad \text{where }\boldsymbol{r}_{ij} = \boldsymbol{r}_i - \boldsymbol{r}_j
+\bf{r}_i \times \bf{F}_{ji} + \bf{r}_j \times \bf{F}_{ij} = (\bf{r}_i - \bf{r}_j) \times \bf{F}_{ji} = \bf{r}_{ij} \times \bf{F}_{ji},\qquad \text{where }\bf{r}_{ij} = \bf{r}_i - \bf{r}_j
 $$
 
 로 쓸 수 있다.  
 
-여기서 작용-반작용이 $\boldsymbol{F}_{ji}=F_{ji}\hat{\boldsymbol{r}}_{ij}$ 일 경우를 생각하자. (이를 the strong law of action and reaction 라고 한다.) 이 경우 @eq-CM_derivative_of_total_angular_momentum 의 마지막 term은 아래와 같이 $0$ 이 된다.
+여기서 작용-반작용이 $\bf{F}_{ji}=F_{ji}\hat{\bf{r}}_{ij}$ 일 경우를 생각하자(작용 반작용의 강한 조건). 이 경우 @eq-CM_derivative_of_total_angular_momentum 의 마지막 항은 아래와 같이 $0$ 이 된다.
 
 $$
-\sum_{\substack{ i ,j \\ i \ne j }} \boldsymbol{r}_i \times \boldsymbol{F}_{ji} = \sum_{i<j} \boldsymbol{r}_{ij}\times \boldsymbol{F}_{ji} = 0\;.
+\sum_{\substack{ i ,j \\ i \ne j }} \bf{r}_i \times \bf{F}_{ji} = \sum_{i<j} \bf{r}_{ij}\times \bf{F}_{ji} = 0\;.
 $$
 
-그리고 외력 $\boldsymbol{F}^{(e)}$에 의한 토크를 $\boldsymbol{N}^{(e)}=\sum\limits_i \boldsymbol{r}_i \times \boldsymbol{F}_i^{(e)}$ 로 정의하면 다음이 성립한다.
+그리고 외력 $\bf{F}^{(e)}$에 의한 토크를 $\bf{N}^{(e)}=\sum\limits_i \bf{r}_i \times \bf{F}_i^{(e)}$ 로 정의하면 다음이 성립한다.
 
 $$
-\dot{\boldsymbol{L}} = \dfrac{d\boldsymbol{L}}{dt} = \boldsymbol{N}^{(e)}\;.
+\dot{\bf{L}} = \dfrac{d\bf{L}}{dt} = \bf{N}^{(e)}\;.
 $$ {#eq-CM_equation_of_motion_for_total_angular_momentum}
 
 
-::: {.callout-caution appearance="minimal" icon="false"}
-총 운동량 보존은 $\boldsymbol{F}_{ij} = -\boldsymbol{F}_{ji}$만을 가정하였다. 이를 작용-반작용의 약한 형태(Weak form of the action and reaction principle) 라고 한다. 그러나 총 각운동량 보존은. $\boldsymbol{F}_{ij} = F_{ij}\hat{\boldsymbol{r}}_{ij}$, 즉 central force 임을 가정하였다 (Strong form of the action and reaction principle).  
-:::
+</br>
+
+#### **작용 반작용의 강한 조건과 약한 조건**
+
+총 운동량 보존은 $\bf{F}_{ij} = -\bf{F}_{ji}$만을 가정하였다. 이를 작용-반작용의 약한 조건(Weak form of the action and reaction principle) 라고 한다. 그러나 총 각운동량 보존은. $\bf{F}_{ij} = F_{ij}\hat{\bf{r}}_{ij}$, 즉 central force 임을 가정하였다 이를 작용-반작용의 강한 조건 이라고 한다.  
+
 
 </br>
 
-### 질량중심 좌표계
+### 질량중심 좌표계 {#sec-CM_COM_refrence_frame}
 
-입자계에서 질량중심을 $\boldsymbol{R}=\sum\limits_i m_i \boldsymbol{r}_i$ 로 정의했다. $\boldsymbol{r}'_i=\boldsymbol{r}_i - \boldsymbol{R}$ 이라고 하면 $\boldsymbol{r}'_i$ 는 질량 중심 $\boldsymbol{R}$ 로 부터의 radius vector이다. 이 때 질량 중심의 속도 $\boldsymbol{V} = \dot{\boldsymbol{R}}$ 에 대해 $\boldsymbol{v}'_i = \boldsymbol{v}_i -\boldsymbol{V}$ 로 할 수 있다. 그렇다면 총 각운동량은 다음과 같다.
+입자계에서 질량중심을 $\bf{R}=\sum\limits_i m_i \bf{r}_i$ 로 정의했다. $\bf{r}'_i=\bf{r}_i - \bf{R}$ 이라고 하면 $\bf{r}'_i$ 는 질량 중심 $\bf{R}$ 을 원점으로 삼은 위치벡터이다. 이 때 질량 중심의 속도 $\bf{V} = \dot{\bf{R}}$ 에 대해 $\bf{v}'_i = \bf{v}_i -\bf{V}$ 로 할 수 있다. 그렇다면 총 각운동량은 다음과 같다.
 
 $$
 \begin{aligned}
-\boldsymbol{L} &= \sum_i \boldsymbol{r}_i \times m_i \boldsymbol{v}_i  \\
-&=\sum_i \boldsymbol{R} \times m_i \boldsymbol{V} + \sum_i \boldsymbol{r}'_i  \times m_i \boldsymbol{v}'_i + \left(\sum_i m_i \boldsymbol{r}'_i \right) \times \boldsymbol{V} + \boldsymbol{R} \times \left( \dfrac{d}{dt} \sum_i m_i \boldsymbol{r}'_i\right)   \\
-& = \boldsymbol{R} \times M\boldsymbol{V} + \sum_i \boldsymbol{r}'_i \times \boldsymbol{p}'_i\;.
+\bf{L} &= \sum_i \bf{r}_i \times m_i \bf{v}_i  \\
+&=\sum_i \bf{R} \times m_i \bf{V} + \sum_i \bf{r}'_i  \times m_i \bf{v}'_i + \left(\sum_i m_i \bf{r}'_i \right) \times \bf{V} + \bf{R} \times \left( \dfrac{d}{dt} \sum_i m_i \bf{r}'_i\right)   \\
+& = \bf{R} \times M\bf{V} + \sum_i \bf{r}'_i \times \bf{p}'_i\;.
 \end{aligned}
 $$ {#eq-CM_total_angular_momentum_for_center_of_mass_coord}
 
-</br>
+즉 원점 $\mathcal{O}$ 에서의 입자계의 총 각운동량 $\bf{L}$ 은 ($1$) 모든 질량이 질량 중심 에 집중되어 있다고 가정할 때의 각운동량 $\bf{L}_C= \bf{R}\times (M\bf{V})$ 와 ($2$) 질량중심을 새로운 origin으로 했을때의 각운동량 $\bf{L}_R=\sum_i \bf{r}_i' \times \bf{p}'_i$ 의 합이다. 
 
-::: {.callout-caution appearance="minimal" icon="false"}
-원점 $\mathcal{O}$ 에서의 입자계의 총 각운동량 $\boldsymbol{L}$은 1) 모든 질량이 질량 중심 에 집중되어 있다고 가정할 때의 각운동량 $\boldsymbol{L}_C$ 와 2) 질량중심을 새로운 origin으로 했을때의 각운동량 $\boldsymbol{L}_R$ 의 합이다. 
-:::
-
-
-입자계에서 특정 시간에서의 각 입자의 위치의 집합을 configuration 이라고 한다. $N$ 입자의 경우 $3N$ 차원 벡터공간이 된다. 입자계가 configuration 1 에서 configuration 2 로 변화했을때의 총 일 $W_{12}$ 는 다음과 같다.
+입자계에서 특정 시간에서의 각 입자의 위치의 집합을 **구성공간(configuration space)** 이라고 한다. 이 구성공간은 $N$ 입자의 경우 $3N$ 차원 벡터공간이 된다. 입자계가 configuration 1($\mathcal{C}_1$) 에서 configuration 2 ($\mathcal{C}_2$) 로 변화했을때의 총 일 $W_{12}$ 는 다음과 같다.
 $$ 
-W_{12} = \sum_i \int_1^2 \boldsymbol{F}_i \cdot d\boldsymbol{s}_i = \sum_i \int_1^2 \boldsymbol{F}_i^{(e)}\cdot d\boldsymbol{s}_i + \sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \boldsymbol{F}_{ji}\cdot d\boldsymbol{s}_i\;.
+W_{12} = \sum_i \int_1^2 \bf{F}_i \cdot d\bf{s}_i = \sum_i \int_1^2 \bf{F}_i^{(e)}\cdot d\bf{s}_i + \sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \bf{F}_{ji}\cdot d\bf{s}_i\;.
 $$ {#eq-work_system_of_particles}
 
 단일 입자의 경우를 생각하면,
 
 $$
-\sum_i \int_1^2 \boldsymbol{F}_i \cdot d\boldsymbol{s}_i = \sum_i \int_1^2 m_i \boldsymbol{v}_i \cdot \boldsymbol{v}_i dt = \sum_i \int_1^2 d(\dfrac{1}{2} m_i v_i^2) = T_2 - T_1
+\sum_i \int_1^2 \bf{F}_i \cdot d\bf{s}_i = \sum_i \int_1^2 m_i \bf{v}_i \cdot \bf{v}_i dt = \sum_i \int_1^2 d(\dfrac{1}{2} m_i v_i^2) = T_2 - T_1
 $$
 
 이다. 이 때 총 운동에너지를 $T = \dfrac{1}{2} \sum\limits_i m_i v_i^2$ 로 하였다.
@@ -324,40 +345,39 @@ $$
 질량중심 좌표계에서의 총 운동에너지는 다음과 같이 표현 할 수 있다.
 
 $$
-T=\frac{1}{2} \sum_i m_i (\boldsymbol{V} + \boldsymbol{v}'_i) \cdot (\boldsymbol{V} + \boldsymbol{v}'_i)  = \dfrac{1}{2} MV^2 + \dfrac{1}{2} \sum_i m_i {v'}_i^2
+T=\frac{1}{2} \sum_i m_i (\bf{V} + \bf{v}'_i) \cdot (\bf{V} + \bf{v}'_i)  = \dfrac{1}{2} MV^2 + \dfrac{1}{2} \sum_i m_i {v'}_i^2.
 $$ {#eq-CM_total_kinetic_energy_in_center_of_mass_coord}
 
-::: {.callout-caution appearance="minimal" icon="false"}
-원점 $\mathcal{O}$에서의 입자계의 총 운동에너지 $T$ 는 모든 질량이 질량중심 에 집중되어 있다고 가정할 때의 운동에너지와 질량 중심을 원점으로 했을때의 운동에너지의 합이다. 
-:::
+
+즉 원점 $\mathcal{O}$ 에서의 입자계의 총 운동에너지 $T$ 는 모든 질량이 질량중심 에 집중되어 있다고 가정할 때의 운동에너지와 질량 중심을 원점으로 했을때의 각 입자의 운동에너지의 총합의 합이다. 
 
 
-각각의 외력 $\boldsymbol{F}_i^{(e)}$ 가 어떤 스칼라 함수 $-V_i$ 의 gradient일 경우를 생각하자. 즉 $\boldsymbol{F}_i^{(e)} = -\nabla_i V_i$ 일 경우,
-
-$$
-\sum_i \int_1^2 \boldsymbol{F}_i^{(e)} \cdot d\boldsymbol{s}_i = - \sum_i \int_1^2 (\nabla_i V_i) \cdot d\boldsymbol{s}_i = - \left. \sum_i V_i\right|_1^2 = \sum_i V_i (1) - V_i(2)
-$$
-
-이다. 입자 상호간의 힘 역시 보존력이라면, $\boldsymbol{F}_{ij}$ 와 $\boldsymbol{F}_{ji}$ 가 potential $V_{ij}$ 로 부터 얻어 질 수 있다. Strong law of action and reaction 조건에서 $V_{ij} = V(|\boldsymbol{r}_i -\boldsymbol{r}_j|)$ 이며 
+각각의 외력 $\bf{F}_i^{(e)}$ 가 어떤 스칼라 함수 $-V_i$ 의 미분일 경우를 생각하자. 즉 $\bf{F}_i^{(e)} = -\nabla_i V_i$ 일 경우,
 
 $$
-\boldsymbol{F}_{ji} = -\nabla_i V_{ij} = + \nabla_j V_{ij} = -\boldsymbol{F}_{ij}
+\sum_i \int_1^2 \bf{F}_i^{(e)} \cdot d\bf{s}_i = - \sum_i \int_1^2 (\nabla_i V_i) \cdot d\bf{s}_i = - \left. \sum_i V_i\right|_1^2 = \sum_i V_i (1) - V_i(2)
 $$
 
-이므로 $\boldsymbol{F}_{ji}$ 와 $\boldsymbol{F}_{ij}$ 모두 두 입자의 위치를 잇는 선상에 위치한다. 즉 어떤 scalar function $f$ 에 대해, $V_{ij}$ 는 다음과 같은 형태이다.
+이다. 입자 상호간의 힘 역시 보존력이라면, $\bf{F}_{ij}$ 와 $\bf{F}_{ji}$ 가 포텐셜 $V_{ij}$ 로 부터 얻어 질 수 있다. 강한 작용-반작용 조건에서 $V_{ij} = V(|\bf{r}_i -\bf{r}_j|)$ 이며 
 
 $$
-\nabla V_{ij}(|\boldsymbol{r}_i - \boldsymbol{r}_j|) = (\boldsymbol{r}_i - \boldsymbol{r}_i) f
+\bf{F}_{ji} = -\nabla_i V_{ij} = + \nabla_j V_{ij} = -\bf{F}_{ij}
 $$
 
-만약 $V_{ij}$ 가 $\boldsymbol{r}_i - \boldsymbol{r}_j$ 이외의 다른 물리량에 의존한다면, 예를들어 $V_{ij} = V(|\boldsymbol{v}_i - \boldsymbol{v}_j |)$ 이거나 $V(|\boldsymbol{S}_i - \boldsymbol{S}_j|)$ 꼴이라면 (여기서 $\boldsymbol{v}_i$ 는 $i$ 번째 입자의 속도, $\boldsymbol{S}_i$ 는 $i$ 번째 입자의 spin)  $\boldsymbol{F}_{ij} = -\boldsymbol{F}_{ji}$ 의 weak form of action and reaction principle은 성립하지만 strong form은 성립하지 않는다.
+이므로 $\bf{F}_{ji}$ 와 $\bf{F}_{ij}$ 모두 두 입자의 위치를 잇는 선상에 위치한다. 즉 어떤 스칼라 함수 $f$ 에 대해, $V_{ij}$ 는 다음과 같은 형태이다.
 
-입자간의 힘이 보존력이라면 @eq-work_system_of_particles 의 두번째 항은 $\nabla_{ij} V_{ij}=\nabla_i V_{ij} = -\nabla_j V_{ij}$, $d\boldsymbol{r}_{ij} = d\boldsymbol{s}_i - d\boldsymbol{s}_j = d\boldsymbol{r}_i -d\boldsymbol{r}_j$ 를 이용하면
+$$
+\nabla V_{ij}(|\bf{r}_i - \bf{r}_j|) = (\bf{r}_i - \bf{r}_i) f
+$$
+
+만약 $V_{ij}$ 가 $\bf{r}_i - \bf{r}_j$ 이외의 다른 물리량에 의존한다면, 예를들어 $i$ 번째 입자의 속도 $\bf{v}_i$ 에 대해 $V_{ij} = V(|\bf{v}_i - \bf{v}_j |)$ 이거나 $i$ 번째 입자의 spin $\bf{S}_i$ 에 대해 $V(|\bf{S}_i - \bf{S}_j|)$ 꼴이라면 $\bf{F}_{ij} = -\bf{F}_{ji}$ 의 작용 반작용의 약한 조건은 만족하지만 강한 조건은 만족하지 않는다. 
+
+입자간의 힘이 보존력이라면 @eq-work_system_of_particles 의 두번째 항은 $\nabla_{ij} V_{ij}=\nabla_i V_{ij} = -\nabla_j V_{ij}$, $d\bf{r}_{ij} = d\bf{s}_i - d\bf{s}_j = d\bf{r}_i -d\bf{r}_j$ 를 이용하면
 
 $$
 \begin{aligned}
-\sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \boldsymbol{F}_{ji}\cdot d\boldsymbol{s}_i  &= - \dfrac{1}{2} \sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \left( \nabla_i V_{ij} \cdot d\boldsymbol{s}_i + \nabla_j V_{ij} \cdot d\boldsymbol{s}_j\right)  \\
-&= -\dfrac{1}{2}\sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \nabla_{ij} V_{ij} \cdot d\boldsymbol{r}_{ij} = -\dfrac{1}{2} \left. \sum_{\substack{ i ,j \\ i \ne j }}  V_{ij}\right|_1^2
+\sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \bf{F}_{ji}\cdot d\bf{s}_i  &= - \dfrac{1}{2} \sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \left( \nabla_i V_{ij} \cdot d\bf{s}_i + \nabla_j V_{ij} \cdot d\bf{s}_j\right)  \\
+&= -\dfrac{1}{2}\sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \nabla_{ij} V_{ij} \cdot d\bf{r}_{ij} = -\dfrac{1}{2} \left. \sum_{\substack{ i ,j \\ i \ne j }}  V_{ij}\right|_1^2
 \end{aligned}
 $$
 
@@ -370,126 +390,124 @@ V=\sum_i V_i + \dfrac{1}{2} \sum_{\substack{ i ,j \\ i \ne j }} V_{ij}\;.
 $$
 ::: 
 
+</br>
+
+## 구속조건
+
+**구속조건(Constraint)** 는 운동방정식의 제한조건을 의미한다. 예를 들어 강체의 경우 $|\bf{r}_i - \bf{r}_j| =c_{ij} = \text{const.}$
 
 </br>
 
-## Constraint
-
-**Constraint** 는 운동방정식의 제한조건을 의미한다. 예를 들어 강체의 경우 $|\boldsymbol{r}_i - \boldsymbol{r}_j| =c_{ij} = \text{const.}$
-
-</br>
-
-### constraints의 분류
+### 구속조건의 분류 {#sec-CM_classification_of_constraints}
 
 Constraint가 시간과 위치에 대한 함수이며 다음과 같은 꼴로 표현 될 수 있을 때 **holonomic** 이라 한다. 
 
 $$
-f(\boldsymbol{r}_1,\,\boldsymbol{r}_2,\ldots,\,t) =0.
+f(\bf{r}_1,\,\bf{r}_2,\ldots,\,t) =0.
 $$ {#eq-CM_holonomic_constraint}
 
 Holonomic constraint 가 아닌 constraint 는 **nonholonomic** 이라고 한다.
 
-Constraint가 explicit한 시간 의존성이 없을 때, 즉 $\dfrac{\partial}{\partial t} f(\boldsymbol{r}_i;\, \dot{\boldsymbol{r}}_i ;\,t)=0$  일 때 **scleronomous constraint** 라 하며 아닐 때 **rheonomous constraint** 라 한다. 
+Constraint가 explicit한 시간 의존성이 없을 때, 즉 $\dfrac{\partial}{\partial t} f(\bf{r}_i;\, \dot{\bf{r}}_i ;\,t)=0$  일 때 **scleronomous constraint** 라 하며 아닐 때 **rheonomous constraint** 라 한다. 
 
 </br>
 
-### 일반화된 좌표계
+### Constraints 와 일반화된 좌표계 {#sec-CM_generalized_coordinates}
 
-1. 물체의 운동을 기술할 때 constraints가 부여된다면 두가지 어려운 점이 발생한다. 우선 coordinates $r_i$ 는 더이상 서로 독립적이지 하지 않다. 두번째로는 **force of constraint** 문제가 있다. 
+물체의 운동을 기술할 때 constraints가 부여된다면 두가지 어려운 점이 발생한다. 우선 좌표 $(r_1,\,r_2,\ldots)$ 는 더이상 서로 독립적이지 하지 않다. 두번째로는 **구속력(force of constraint)** 문제가 있다. 
 
-2. Holonomic constraint의 경우 소위 **generalized coordinate** 를 사용함으로서 문제를 풀 수 있다. 
+Holonomic 의 경우 소위 **일반화된 좌표계(generalized coordinate)** 를 사용함으로서 문제를 풀 수 있다. 
 
-3. $N$-입자계를 생각하자. constraint가 없다면 $3N$ 개의 독립적인 좌표변수가 존재한다. 이렇게 시스템을 기술하는데 필요한 독립적인 변수의 갯수를 **자유도(degree of freedom)** 라 한다. 만약 $k$ 개의 독립적인 holonomic constraints가 존재한다면 이 입자계의 자유도는 $3N-k$ 가 될 것이다.
-
-4. 그렇다면 이 입자계는 $3N-k$ 개의 독립변수 $q_1,\ldots,\,q_{3N-k}$ 로 기술 될 수 있을 것이다. 즉 $\boldsymbol{r}_i = \boldsymbol{r}_i (q_1,\ldots,\,q_{3N-k},t)$ for $i=1,\ldots,\,3N-k$. 이 경우 $q_i$ 가 length scale number일 필요가 없으며 어떤 $(q_i,\,q_j,\,q_k)$ 가 vector일 필요도 없다. *모든 종류의 물리량이 일반화된 좌표계의 좌표변수가 될 수 있다.* Nonhonolomic constraints의 경우는 independent variables의 갯수를 줄이는 데 사용 될 수 없다.
+$N$-입자계를 생각하자. 구속조건이 없다면 $3N$ 개의 독립적인 좌표변수가 존재한다. 이렇게 시스템을 기술하는데 필요한 독립적인 변수의 갯수를 **자유도(degree of freedom)** 라고 한다. 만약 $k$ 개의 독립적인 holonomic constraints가 존재한다면 이 입자계의 자유도는 $3N-k$ 가 될 것이다. 그렇다면 이 입자계는 $3N-k$ 개의 독립변수 $q_1,\ldots,\,q_{3N-k}$ 로 기술 될 수 있을 것이다. 즉 $\bf{r}_i = \bf{r}_i (q_1,\ldots,\,q_{3N-k},t)$ for $i=1,\ldots,\,3N-k$. 이 경우 $q_i$ 가 거리 단위의 값일 필요가 없으며 어떤 $(q_i,\,q_j,\,q_k)$ 가 벡터일 필요도 없다. *모든 종류의 물리량이 일반화된 좌표계의 좌표변수가 될 수 있다.* Nonhonolomic 구속조건의 경우는 독립변수의 개수를 줄이는 데 사용 될 수 없다.
 
 </br>
 
 
 ## 달랑베르 원리 와 라그랑쥬 방정식
 
-### Configuration space
 
-입자계의 자유도가 $M$ 일 때 $M$ 개의 일반화된 좌표로 표현된 입자계가 가질 수 있는 모든 값의 집합을 **configuration space** 라고 한다. 따라서 입자계의 상태는 configuration space 에 포함되는 어떤 점으로 표현 할 수 있다.  
-
-</br>
-
-### Virtual displacement
+### 가상 변위와 가상 일의 원리 {#sec-CM_principle_of_virtural_work}
 
  
-시스템의 **Virtual displacement** 는 주어진 시간 $t$ 에서 주어진 힘과 constraints 조건에서 가능한 infinitesimal change of the coordinate $\delta \boldsymbol{r}_i$ 에 의한 입자계의 configuration space 상의 infinitesimal 한 변화를 의미한다. virtual이란 이름이 붙은 이유는 물리적으로 실제의 displacement는 특정 시간 간격에서 발생하지만 virtual displacement는 시간 $t$ 가 고정되어 있기 때문이다.
+시스템의 **가상 번위 (virtual displacement)** 는 주어진 시간 $t$ 에서 주어진 힘과 구속조건에서 가능한 좌표의 미소 변화(infinitesimal change of the coordinate) $\delta \bf{r}_i$ 에 의한 구성공간(configuration space) 상의 미소 변화를 의미한다. virtual이란 이름이 붙은 이유는 물리적으로 실제의 변위는 특정 시간 간격에서 발생하지만 가상변위는 시간 $t$ 가 고정되어 있기 때문이다.
 
 
-시스템이 평형생태일 경우를 가정하자. 각 입자에 작용하는 힘 $\boldsymbol{F}_i = 0$ 이며 따라서 $\boldsymbol{F}_i \cdot \delta \boldsymbol{r}_i=0$ 이다. 또한 $\sum\limits_i \boldsymbol{F}_i \cdot \delta \boldsymbol{r}_i = 0$ 임은 자명하다. $\boldsymbol{F}_i$ 를 applied force $\boldsymbol{F}^{(a)}_i$ 와 force of constraint $\boldsymbol{f}_i$ 로 분리 할 수 있다. 즉 $\boldsymbol{F}_i = \boldsymbol{F}^{(a)}_i + \boldsymbol{f}_i$ 이며 따라서 다음이 성립한다.
+시스템이 평형생태일 경우를 가정하자. 각 입자에 작용하는 힘 $\bf{F}_i = 0$ 이며 따라서 $\bf{F}_i \cdot \delta \bf{r}_i=0$ 이다. 또한 $\sum\limits_i \bf{F}_i \cdot \delta \bf{r}_i = 0$ 임은 자명하다. $\bf{F}_i$ 를 applied force $\bf{F}^{(a)}_i$ 와 구속력 $\bf{f}_i$ 로 분리 할 수 있다. 즉 $\bf{F}_i = \bf{F}^{(a)}_i + \bf{f}_i$ 이며 따라서 다음이 성립한다.
 
 $$
-\sum_i \boldsymbol{F}_i \cdot \delta \boldsymbol{r}_i = \sum_i \boldsymbol{F}^{(a)}_i \cdot \delta \boldsymbol{r}_i + \sum_i \boldsymbol{f}_i \cdot \delta \boldsymbol{r}_i = 0\;.
+\sum_i \bf{F}_i \cdot \delta \bf{r}_i = \sum_i \bf{F}^{(a)}_i \cdot \delta \bf{r}_i + \sum_i \bf{f}_i \cdot \delta \bf{r}_i = 0\;.
 $$
 
 
-이제 constraint force 에 의한  *virtual work* 이 $0$ 인 시스템, 즉 $\sum_i \boldsymbol{f}_i \cdot \delta \boldsymbol{r}_i=0$ 인 시스템으로 제한해보자. 이 조건은 강체를 비롯한 많은 다른 제약 조건에 대해서도 유효하다는 것을 안다. 입자가 표면 위를 움직이도록 제약되어 있다면, constraint force 는 표면에 수직이며, virtural displacement 는 표면에 접선이어야 하므로 virtual work 은 $0$ 이다. 하지만 슬라이딩 마찰력이 존재할 경우 virtural work 이 $0$ 이 아니게 되는데 이런 시스템은 지금은 생각하지 않기로 하자. 이 제한은 마찰이 본질적으로 macroscopic 한 현상이라는 것을 고려하면 우리의 물리를 해치지 않는다. 반면에 구르는(rolling) constraint 는 이 조건을 위반하지 않는다. 왜냐하면 잠시 멈춘 지점에 작용하는 힘은 constraint 에 일관된 변위에 대해 virtual work 이 $0$ 이기 때문이다. 또한, 입자가 시간에 따라 움직이는 표면에 제약되어 있는 경우, constraint force 는 각 순간마다 표면에 수직이며, virtual work 은 $0$ 이지만 실제 시간 $dt$ 동안의 real displacement 에 의한 일은 $0$ 이 아닐 수 있다.
+이제 구속력에 의한  **가상 일(virtual work)** 이 $0$ 인 시스템, 즉 $\sum_i \bf{f}_i \cdot \delta \bf{r}_i=0$ 인 시스템으로 제한해보자. 이 조건은 강체를 비롯한 많은 다른 제약 조건에 대해서도 유효하다는 것을 안다. 예를 들어 입자가 표면 위를 움직이도록 제약되어 있다면, 가상힘은 표면에 수직이며, 가상 변위는 표면에 접선이어야 하므로 가상 일은 $0$ 이다. 하지만 미끌어지는(sliding) 마찰력이 존재할 경우 가상 일이 $0$ 이 아니게 되는데 이런 시스템은 지금은 생각하지 않기로 하자. 이 제한은 마찰이 본질적으로 거시적인 현상이라는 것을 고려하면 우리의 물리를 해치지 않는다. 반면에 구르는(rolling) 구속조건은 이 조건을 위반하지 않는다. 왜냐하면 잠시 멈춘 지점에 작용하는 힘은 구속조건에 부합하는 변위에 대해 가상 일 이 $0$ 이기 때문이다. 또한 입자가 시간에 따라 움직이는 표면에 제약되어 있는 경우, 구속력은 각 순간마다 표면에 수직이며, 가상 일 은 $0$ 이지만 실제 시간 $dt$ 동안의 실제 변위에 의한 일은 $0$ 이 아닐 수 있다.
 
-::: {.callout-caution appearance="minimal" icon="false"}
-We now restric ourselves to systems for which \textit{the net virtual work of the forces of constraint is zero}. We have seen that this condition holds true for rigid bodies and it is valid for a large number of other constraints. Thus, if a particle is constrained to move on a surface, the force of constraint is perpendicular to the surface, while the virtual displacement must be tangent to it, and hence the virtual work vanishes. This is no longer true if sliding friction forces are present, and we must exclude such system from our formulation.  This restriction is not unduly hampering, since the friction is essentially a macroscopic phenomenon. On the other hand, the forces of rolling do not violate this condition, since the forces act on a point that is momentarily at rest and can do now work in an infinitesimal displacement consistent with the rolling constraint. Note that if a particle is constrained to a surface that is itself moving in time, the force of constraint is instantaneously perpendicular to the surface and the work during a virtual displacement is still zero even though the work during an actual displacement in the time $dt$ does not necessarily vanish.
-:::
-
-따라서 우리는 applied forces에 의한 virtual work이 $0$이 되는 system의 평행 조건을 얻게 된다. 즉
+따라서 우리는 applied forces에 의한 가상 일이 $0$ 이 되는 system의 평행 조건을 얻게 된다. 즉
 $$
-\sum_i \boldsymbol{F}^{(a)}_i \cdot \delta \boldsymbol{r}_i = 0
+\sum_i \bf{F}^{(a)}_i \cdot \delta \bf{r}_i = 0
 $$ {#eq-CM_principle_of_virtual_work}
 
-의 조건을 얻게 되며, 위의 @eq-CM_principle_of_virtual_work 은 *the principle of virtual work* 이라 불린다. 이렇게 되면 각각의 $i$ 번째 입자에 대해 $\boldsymbol{F}^{(a)}_i$ 가 $0$ 인 조건이 아니게 되며, 따라서 $\delta \boldsymbol{r}_i$ 는 서로 독립적이지 않게 되고 위의 @eq-CM_principle_of_virtual_work 가 하나의 constraint 처럼 작용한다. @eq-CM_principle_of_virtual_work 는 constraint force $\boldsymbol{f}_i$ 를 포함하지 않는다는 측면에서 우리가 원하는 것이지만 단지 statics 만을 다룬다는 점에서 부족하다. 우리는 이것으로 부터 우리가 원하는 운동방정식을 얻고자 한다.
+의 조건을 얻게 되며, 위의 @eq-CM_principle_of_virtual_work 은 **가상 일의 원리(the principle of virtual work)** 이라 불린다. $\delta \bf{r}_i$ 들은 서로 구속조건에 묶여 있기 때문에 서로 독립이 아니며 따라서 그 계수인 $\bf{F}^{(a)}_i$ 도 모두 $0$ 이 아니어도 된다(선형대수학을 생각하라). 즉 일반적으로 $\bf{F}^{(a)}_i \ne \bf{0}$ 이다.  
+
+
+이렇게 되면 각각의 $i$ 번째 입자에 대해 $\bf{F}^{(a)}_i$ 가 $0$ 인 조건이 아니게 되며, 따라서 $\delta \bf{r}_i$ 는 서로 독립적이지 않게 되고 위의 @eq-CM_principle_of_virtual_work 가 하나의 constraint 이며 따라서 일반화된 좌표계에 대한 가상 변외로 변환해야 한다. @eq-CM_principle_of_virtual_work 는 constraint force $\bf{f}_i$ 를 포함하지 않는다는 측면에서 우리가 원하는 것이지만 단지 statics 만을 다룬다는 점에서 부족하다. 우리는 이것으로 부터 우리가 원하는 운동방정식을 얻고자 한다.
 
 </br>
 
-### 달랑베르 원리(D'Alembert's principle)
+### 달랑베르 원리(D'Alembert's principle) {#sec-CM_dlambert_principle}
 
-운동방정식 $\boldsymbol{F}_i = \dot{\boldsymbol{p}}_i$ 로부터 시작하자. $\boldsymbol{F}_i - \dot{\boldsymbol{p}}_i=\boldsymbol{0}$ 이며 이것은 시스템의 입자들이 actual force($\boldsymbol{F}$) 와 *reversed effecvive force* $-\dot{\boldsymbol{p}}_i$ 의 합에 의해 평행상태에 있게 된다는 의미이다. 이로부터
+운동방정식 $\bf{F}_i = \dot{\bf{p}}_i$ 로부터 시작하자. $\bf{F}_i - \dot{\bf{p}}_i=\bf{0}$ 이며 이것은 시스템의 입자들이 실제 힘 $\bf{F}$ 와 *reversed effecvive force* $-\dot{\bf{p}}_i$ 의 합에 의해 평행상태에 있게 된다는 의미이다. 여기에 가상 변외를 적용하면
 
 $$
-\sum_i \left( \boldsymbol{F}_i - \dot{\boldsymbol{p}}_i \right) \cdot \delta \boldsymbol{r}_i = 0
+\sum_i \left( \bf{F}_i - \dot{\bf{p}}_i \right) \cdot \delta \bf{r}_i = 0
 $$
 
-이다. 앞에서 말한 constraint forces 에 의한 virtureal work 이 $0$ 이라는 조건을 입히면,
+라고 쓸 수 있다. $\bf{F}_i = \bf{F}^{(a)}_i + \bf{f}_i$ 로 놓으면
+
 $$
-\sum_i \left( \boldsymbol{F}^{(a)}_i - \dot{\boldsymbol{p}}_i \right) \cdot \delta \boldsymbol{r}_i = 0\;
+\sum_i \left(\bf{F}^{(a)} - \dot{\bf{p}}_i\right) \bf{\cdot}\delta \bf{r}_i + \sum_i \bf{f}_i \bf{\cdot}\delta \bf{r}_i = 0
+$$
+
+이며 구속력에 의한 가상 일이 $0$ 이라는 조건을 입히면,
+
+$$
+\sum_i \left( \bf{F}^{(a)}_i - \dot{\bf{p}}_i \right) \cdot \delta \bf{r}_i = 0\;
 $$ {#eq-CM_dalembert_principle}
 
-이다. 이것을 **달랑베르 원리(D'Alembert's principle)** 라고 한다. 위 식에 force of constraint가 나타나지 않는다. 이제 위첨자 $(a)$를 떼어도 모호하지 않을 것이다.
+이다. 이것을 **달랑베르 원리(D'Alembert's principle)** 라고 한다. 위 식에는 구속력이 포함되지 않으므로 위첨자 $(a)$ 를 떼어도 모호하지 않을 것이다. 여기서 우리는 항상 일반적인 데카르트 좌표계가 아닌 일반화된 좌표계에서 기술해야 하며 @eq-CM_dalembert_principle 도 일반화된 좌표계로 변환하여야 한다는 것이다. 앞에서도 그랬지만 자유도가 $n$ 인 일반화된 좌표계의 좌표를 $(q_1,\ldots,\,q_n)$ 으로 표기하기로 한다.
 
 </br>
 
 ### 일반화된 좌표계에서의 달랑베르 원리
 
-일반화된 좌표계 $q_1,\,q_2,\ldots,\,q_n$ 을 생각하자. $\boldsymbol{r}_i = \boldsymbol{r}_i (q_1,\ldots,\,q_n,\,t)$ 이므로 chain rule에 의해
+일반화된 좌표계 $q_1,\,q_2,\ldots,\,q_n$ 을 생각하자. $\bf{r}_i = \bf{r}_i (q_1,\ldots,\,q_n,\,t)$ 이므로 chain rule에 의해
 
 $$
-\boldsymbol{v}_i = \dfrac{d\boldsymbol{r}_i}{dt} = \sum_k \dfrac{\partial \boldsymbol{r}_i}{\partial q_k} \dot{q}_k + \dfrac{\partial \boldsymbol{r}_i}{\partial t} 
+\bf{v}_i = \dfrac{d\bf{r}_i}{dt} = \sum_k \dfrac{\partial \bf{r}_i}{\partial q_k} \dot{q}_k + \dfrac{\partial \bf{r}_i}{\partial t} 
 $$
 
 이다. 우리는 이로부터
 
 $$
-\dfrac{\partial \boldsymbol{v}_i}{\partial \dot{q}_k} = \dfrac{\partial \boldsymbol{r}_i}{\partial q_k}
+\boxed{\dfrac{\partial \bf{v}_i}{\partial \dot{q}_k} = \dfrac{\partial \bf{r}_i}{\partial q_k}}
 $$ {#eq-CM_dlambert_1}
 
-가 됨을 알 수 있다. Virtual displacement $\delta \boldsymbol{r}_i$ 는 정의에 의해 시간 $t$ 에 대한 편미분 항이 없이
+가 됨을 알 수 있다. 가상 변위 $\delta \bf{r}_i$ 는 정의에 의해 시간 $t$ 에 대한 편미분 항이 없으며 다음과 같다.
 
 $$
-\delta \boldsymbol{r}_i = \sum_j\dfrac{\partial \boldsymbol{r}_i}{\partial q_j} \delta q_j
-$$
+\boxed{\delta \bf{r}_i = \sum_j\dfrac{\partial \bf{r}_i}{\partial q_j} \delta q_j.}
+$$ {#eq-CM_virtual_displacement_and_generalized_coordinate}
 
-이다. 이제, 
+이제, 
 
 $$
-\sum_i \boldsymbol{F}_i \cdot \delta \boldsymbol{r}_i = \sum_{i,\,j} \boldsymbol{F}_i \cdot \left( \dfrac{\partial \boldsymbol{r}_i}{\partial q_j}\right) \delta q_j = \sum_j Q_j \delta q_j
+\sum_i \bf{F}_i \cdot \delta \bf{r}_i = \sum_{i,\,j} \bf{F}_i \cdot \left( \dfrac{\partial \bf{r}_i}{\partial q_j}\right) \delta q_j = \sum_j Q_j \delta q_j
 $$ {#eq-CM_generalized_force_0}
 
-를 통해 **일반화된 힘(generalized force)** 을 아래와 같이 정의한다. 
+를 통해 **일반화된 힘(generalized force)** $Q_j$ 를 아래와 같이 정의한다. 
 
 $$
 \boxed{
-Q_j = \sum\limits_i \boldsymbol{F}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j}
+Q_j = \sum\limits_i \bf{F}_i \cdot \dfrac{\partial \bf{r}_i}{\partial q_j}
 }
 $$ {#eq-CM_generalized_force}
 
@@ -497,116 +515,127 @@ $$ {#eq-CM_generalized_force}
 
 </br>
 
-### Lagrange's equations
+### Lagrange's equations {#sec-CM_lagrange_equation}
 
-달랑베르 원리(@eq-CM_dalembert_principle) 은 $\sum\limits_i \dot{p}_i \cdot \delta \boldsymbol{r}_i = \sum\limits_i m_i \ddot{\boldsymbol{r}}_i \cdot \delta \boldsymbol{r}_i$ 로 쓸 수 있으며 
-
-$$
-\sum\limits_i m_i \ddot{\boldsymbol{r}}_i\cdot \delta \boldsymbol{r}_i = \sum\limits_{i,\,j} m_i \ddot{\boldsymbol{r}}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} \delta q_j
-$$
-
-이다. 이 식과 다음의 식
+달랑베르 원리(@eq-CM_dalembert_principle) 은 $\sum\limits_i \dot{p}_i \cdot \delta \bf{r}_i = \sum\limits_i m_i \ddot{\bf{r}}_i \cdot \delta \bf{r}_i$ 로 쓸 수 있으며 
 
 $$
-\dfrac{d}{dt} \left(\dfrac{\partial \boldsymbol{r}_i}{\partial q_j} \right) = \sum_k \dfrac{ \partial^2 \boldsymbol{r}_i }{\partial q_j \partial q_k} \dot{q}_k + \dfrac{\partial^2 \boldsymbol{r}_i}{\partial q_j \partial t}  = \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = \dfrac{\partial \boldsymbol{v}_i}{\partial q_j}
+\sum\limits_i m_i \ddot{\bf{r}}_i\cdot \delta \bf{r}_i = \sum\limits_{i,\,j} m_i \ddot{\bf{r}}_i \cdot \dfrac{\partial \bf{r}_i}{\partial q_j} \delta q_j
+$$ {#eq-CM_sec_lagrange_1}
+
+이다. 또한
+
+$$
+\dfrac{d}{dt} \left(\dfrac{\partial \bf{r}_i}{\partial q_j} \right) = \sum_k \dfrac{ \partial^2 \bf{r}_i }{\partial q_j \partial q_k} \dot{q}_k + \dfrac{\partial^2 \bf{r}_i}{\partial q_j \partial t}  = \dfrac{\partial \dot{\bf{r}}_i}{\partial q_j} = \dfrac{\partial \bf{v}_i}{\partial q_j}
+$$ {#eq-CM_sec_lagrange_2}
+
+이다. 이로부터 @eq-CM_dlambert_1 과 @eq-CM_sec_lagrange_2 를 이용하면, 그리고 $T_i = m_iv_i^2/2$ 라고 놓으면,
+
+$$
+\begin{aligned}
+\sum_{i} m_i \ddot{\bf{r}}_i \cdot \dfrac{\partial \bf{r}_i}{\partial q_j} &= \sum_i \left[\dfrac{d}{dt} \left(m_i \dot{\bf{r}}_i \bf{\cdot} \dfrac{\partial \bf{r}_i}{\partial q_j} \right)- m_i \dot{\bf{r}}_i \bf{\cdot} \dfrac{d}{dt}\left(\dfrac{\partial \bf{r}_i}{\partial q_j}\right)\right] \\[0.2em]
+&= \sum_i \left[\dfrac{d}{dt} \left(m_i \bf{v}_i \bf{\cdot} \dfrac{\partial \bf{v}_i}{\partial \dot{q}_j} \right)- m_i \bf{v}_i \bf{\cdot} \dfrac{\partial \bf{v}_i}{\partial q_j}\right] \\[0.3em]
+&= \sum_{i} \left[\dfrac{d}{dt} \dfrac{\partial}{\partial \dot{q}_j}\left(\dfrac{1}{2}m_i\|\bf{v}_i\|^2\right) - \dfrac{\partial}{\partial q_j}\left(\dfrac{1}{2}m_i \|\bf{v}_i\|^2\right)\right] \\[0.3em]
+&= \sum_i \left[\dfrac{d}{dt}\left(\dfrac{\partial T_i}{\partial \dot{q}_j}\right) -\dfrac{\partial T_i}{\partial q_j}\right] 
+\end{aligned}
 $$
 
-을 이용하면 달랑베르 원리를 다음과 같이 변형 할 수 있다.
+이다. 총 운동에너지 $T = \sum_i T_i$ 라고 놓으고 위 식과 @eq-CM_sec_lagrange_1 를 결합하면 다음을 얻는다.
 
 $$
 \sum_j \left[  \left\{ \dfrac{d}{dt} \left( \dfrac{\partial T}{\partial \dot{q}_j}\right) - \dfrac{\partial T}{\partial q_j}\right\} - Q_j \right] \delta q_j = 0\;.
-$$ {#eq-CM_dalembert_principle2}
+$$ {#eq-CM_dlembert_principle2}
 
-데카르트 좌표계에서는 항상 $\dfrac{\partial T}{\partial q_j} = 0$ 이지만 일반화된 좌표계에서는 그렇지 않을 수 있음에 주의하라.
+한가지 주의할점은 데카르트 좌표계에서는 항상 $\dfrac{\partial T}{\partial q_j} = 0$ 이지만 일반화된 좌표계에서는 그렇지 않을 수 있다는 것이다.
 
 </br>
 
-Holonomic constraints 조건에서는 독립적인 일반화된 좌표 $q_1,\ldots,\,q_n$ 을 찾을 수 있다. 그렇다면 @eq-CM_dalembert_principle2 는 각각의 $q_j$ 에 대해,
+Holonomic 구속 조건에서는 독립적인 일반화된 좌표 $q_1,\ldots,\,q_n$ 을 찾을 수 있다. 그렇다면 @eq-CM_dlembert_principle2 는 각각의 $q_j$ 에 대해,
 
 $$
 \boxed{
 \dfrac{d}{dt}\left( \dfrac{\partial T}{\partial \dot{q}_j}\right) - \dfrac{\partial T}{\partial q_j}= Q_j
 }
-$$ {#eq-CM_lagrange_from_dalembert_1}
+$$ {#eq-CM_lagrange_from_dlembert_1}
 
-이 성립한다는 의미이다. $n$ 개의 일반화된 좌표에 대해 $n$ 개의 위와 같은 방정식이 존재한다.  
+이 성립한다는 의미이다. $n$ 개의 일반화된 좌표에 대해 $n$ 개의 @eq-CM_lagrange_from_dlembert_1 의 방정식이 존재한다.  
 
-이제 모든 힘이 보존력일 때, 즉 스칼라 함수의 미분으로 부터 얻어질 수 있을 때를 생각하자. $\boldsymbol{F}_i = -\nabla_i V$ 일 경우 generalized force의 정의에 의해 $Q_j$ 는 다음과 같다.
+이제 모든 힘이 보존력일 때, 즉 스칼라 함수의 미분으로 부터 얻어질 수 있을 때를 생각하자. $\bf{F}_i = -\nabla_i V$ 일 경우 일반화된 힘의 정의에 의해 $Q_j$ 는 다음과 같다.
 
 $$
-Q_j = \sum_i \boldsymbol{F}_i \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = -\sum_i (\nabla_i V) \cdot \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = - \dfrac{\partial V}{\partial q_j}\;.
+Q_j = \sum_i \bf{F}_i \cdot \dfrac{\partial \bf{r}_i}{\partial q_j} = -\sum_i (\nabla_i V) \cdot \dfrac{\partial \bf{r}_i}{\partial q_j} = - \dfrac{\partial V}{\partial q_j}\;.
 $$
 
-그렇다면 @eq-CM_lagrange_from_dalembert_1 은 다음과 같다.
+그렇다면 @eq-CM_lagrange_from_dlembert_1 은 다음과 같다.
 
 $$
 \dfrac{d}{dt} \left( \dfrac{\partial T}{\partial \dot{q}_j}\right) - \dfrac{\partial (T-V)}{\partial q_j} = 0\;.
-$$ {#eq-CM_lagrange_from_delembert_2}
+$$ {#eq-CM_lagrange_from_dlembert_2}
 
 
-@eq-CM_lagrange_from_delembert_2 형태의 운동방정식은 포텐셜 $V$ 가 꼭 보존계에만 제한되지 않는다. $V$ 가 시간에 대해 명시적인 함수가 아니기만 하면 이 시스템은 보존계이다. 
+@eq-CM_lagrange_from_dlembert_2 형태의 운동방정식은 포텐셜 $V$ 가 꼭 보존계에만 제한되지 않는다. $V$ 가 시간에 대해 명시적인 함수가 아니기만 하면 이 시스템은 보존계이다. 
 
 
-지금까지는 $V$ 가 generalized velocity에 의존하지 않는다고 가정하였다. 이 경우 @eq-CM_lagrange_from_delembert_2 는 다음과 같다.
+지금까지는 $V$ 가 일반화된 속도 $\dot{q}_j$ 에 의존하지 않는다고 가정하였다. 이 경우 @eq-CM_lagrange_from_dlembert_2 는 다음과 같다.
 
 $$
 \dfrac{d}{dt} \left( \dfrac{\partial (T-V)}{\partial \dot{q}_j} \right) - \dfrac{\partial (T-V)}{\partial q_j} = 0
-$$ {#eq-CM_lagrange_from_delembert_}
+$$ {#eq-CM_lagrange_from_dlembert_3}
 
-여기서 *Lagrangian* $L$ 을 $L=T-V$ 로 정의한다면,
+여기서 **라그랑지안 (Lagrangian)** $L$ 을 $L=T-V$ 로 정의한다면,
 
 $$
 \dfrac{d}{dt} \left( \dfrac{\partial L}{\partial \dot{q}_j} \right) - \dfrac{\partial L}{\partial q_j} = 0
-$$ {#eq-Lagrange}
+$$ {#eq-CM_Lagrange_equation_from_Dlambert_principle}
 
-이며 이를 **라그랑쥬 방정식(Lagrange's equation)** 이라 한다.
+이며 이를 **라그랑쥬 방정식(Lagrange's equation)** 혹은 **오일러-라그랑쥬 방정식(Euler-lagrange's equation)** 이라 한다.
 
 </br>
 
-### Lagrangian is not unique
+#### **Lagrangian is not unique**
 
-Lagrangian $L(q,\,\dot{q},\,t)$ 와 어떤 미분가능하며 $q,\,t$ 에만 의존하는 함수 $F(q,\,t)$ 에 대해, 
+라그랑지안 $L(q,\,\dot{q},\,t)$ 와 어떤 미분가능하며 $q,\,t$ 에만 의존하는 함수 $F(q,\,t)$ 에 대해, 
 
 $$
 L'(q,\,\dot{q},\,t) = L(q,\,\dot{q},\,t) + \dfrac{dF}{dt}
-$$ 
+$$ {#eq-CM_non_uniqueness_of_largangian}
 
-라고 하면 $L'$ 에 대한 라그랑쥬 방정식은 $L$ 에 대한 라그랑쥬 방정식과 같다. 즉 라그랑쥬 방정식 어떤 System에 대한 Lagrangian은 unique 하지 않다. 
+라고 하면 $L'$ 에 대한 라그랑쥬 방정식은 $L$ 에 대한 라그랑쥬 방정식과 같다. 즉 어떤 시스템에 대한 라그랑지안은 유일하지 않다. 때때로 $L=T-V$ 보다 @eq-CM_non_uniqueness_of_largangian 형태의 라그랑지안이 유용한 경우가 있다.
 
 </br>
 
 ## 속도에 의존하는 포텐셜과 dissipation 함수
 
-### 일반화된 포텐셜
+### 일반화된 포텐셜 {#sec-CM_generalized_potential}
 
-만약 generalized force $Q_j$ 를 어떤 함수 $U(q_j,\,\dot{q}_j)$ 에 대한
+만약 일반화된 힘 $Q_j$ 를 어떤 함수 $U(q_j,\,\dot{q}_j)$ 에 대한
 
 $$
 Q_j = - \dfrac{ \partial U}{\partial q_j} + \dfrac{d}{dt} \left( \dfrac{\partial U}{\partial \dot{q}_j}\right)
 $$ {#eq-CM_generalized_force_from_generalized_potential}
 
-로 얻을 수 있다면 Lagrangian $L=T-U$ 에 대한 라그랑주 방정식 @eq-Lagrange 가 성립한다. 이 때 $U$를 *generalized potential* 혹은 *velocity-dependent potential* 이라 한다.
+로 얻을 수 있다면 일반화된 힘 $L=T-U$ 에 대한 라그랑주 방정식 @eq-CM_Lagrange_equation_from_Dlambert_principle 가 성립한다. 이 때 $U$를 **일반회된 포텐셜 (generalized potential)** 혹은 **속도 의존 포텐셜(velocity-dependent potential)** 이라 한다.
 
 </br>
 
-### 전자기력에 대한 일반화된 포텐셜
+### 전자기력에 대한 일반화된 포텐셜 {#sec-CM_generalized_potential_electromagnetic_force}
 
-Generalized potential $U$ 가 다음과 같이 주어졌다고 하자.
+일반화된 포텐셜 $U$ 가 다음과 같이 주어졌다고 하자.
 
 $$
-U=q \phi - q \boldsymbol{A} \cdot \boldsymbol{v}\;.
+U=q \phi - q \bf{A} \cdot \bf{v}\;.
 $$ {#eq-CM_electromagnetic_potential}
 
-이. $U$ 에 대한 generalize force가 Lorentz force 임을 보일 수 있다. 맥스웰 방정식을 보자.
+이. $U$ 에 대한 일반화된 힘이 로런츠 힘임을 보일 수 있다. 맥스웰 방정식을 보자.
 
 $$
 \begin{aligned}
-&\nabla \cdot \boldsymbol{E} = \dfrac{\rho}{\epsilon_0},  & & \nabla \times \boldsymbol{E} = - \dfrac{\partial \boldsymbol{B}}{\partial t}\\
-&\nabla \cdot \boldsymbol{B} = 0, & & \nabla \times \boldsymbol{B} = {\mu_0}\left(\boldsymbol{J} + \epsilon_0 \dfrac{\partial \boldsymbol{E}}{\partial t}\right)
+&\nabla \cdot \bf{E} = \dfrac{\rho}{\epsilon_0},  & & \nabla \times \bf{E} = - \dfrac{\partial \bf{B}}{\partial t}\\
+&\nabla \cdot \bf{B} = 0, & & \nabla \times \bf{B} = {\mu_0}\left(\bf{J} + \epsilon_0 \dfrac{\partial \bf{E}}{\partial t}\right)
 \end{aligned}
 $$
 
-이며 $\boldsymbol{E} = -\nabla \phi$, $\boldsymbol{B}=\nabla \times \boldsymbol{A}$ 이다. 
+이며 $\bf{E} = -\nabla \phi$, $\bf{B}=\nabla \times \bf{A}$ 이다. 
 
 $$
 \begin{aligned}
@@ -622,18 +651,20 @@ $$
 \begin{aligned}
 Q_x &= -\dfrac{\partial U}{\partial x} + \dfrac{d}{dt}\left(\dfrac{\partial U}{\partial v_x}\right) \\
 &= -q\left[\dfrac{\partial \phi}{\partial x} -\left(\dfrac{\partial A_y}{\partial x}-\dfrac{\partial A_x}{\partial y}\right) v_y  + \left(\dfrac{\partial A_x}{\partial z} - \dfrac{\partial A_z}{\partial x} \right) v_z\right]\\
-&= q (E_x + (\boldsymbol{v} \times \boldsymbol{B})_x)
+&= q (E_x + (\bf{v} \times \bf{B})_x)
 \end{aligned}
 $$
 
-을 얻는다. 즉 @eq-CM_electromagnetic_potential 로부터 얻은 generalized force 는 로런츠 힘(Lorentz force) 이다.
+을 얻는다. 즉 @eq-CM_electromagnetic_potential 로부터 얻은 일반화된 힘은 로런츠 힘(Lorentz force) 이다.
 
 
 
 
 </br>
 
-## 연습문제
+## 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-goldstein_1_4}
 
@@ -652,6 +683,8 @@ $$
 $$
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -676,6 +709,8 @@ $$
 
 </br>
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-goldsteind_1_5}
 
 #### Goldstein 1.5
@@ -687,6 +722,7 @@ M^2R^2 = M \sum\limits_i m_i {r_i}^2 - \dfrac{1}{2} \sum_{i,\,j}m_i m_j {r_{ij}}
 $$
 
 :::
+</div></br>
 
 ::: {.solution}
 
@@ -704,18 +740,21 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-goldstein_1_11}
 
 #### Goldstein 1.11
 
-라그랑쥬 방정식 (@eq-CM_lagrange_from_dalembert_1) 은 다음과 같이 변형됨을 보여라. 아래의 방정식을 라그랑쥬 방정식의 *Nielson 형식* 이라고 한다.
+라그랑쥬 방정식 (@eq-CM_lagrange_from_dlembert_1) 은 다음과 같이 변형됨을 보여라. 아래의 방정식을 라그랑쥬 방정식의 *Nielson 형식* 이라고 한다.
 
 $$
 \dfrac{\partial \dot{T}}{\partial \dot{q}_j} - 2\dfrac{\partial T}{\partial q_j} = Q_j.
 $$
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -740,6 +779,9 @@ $$
 
 </br>
 
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-goldestein_1_15}
 
 #### Goldstein 1.15
@@ -759,6 +801,9 @@ $$
 이 됨을 보여라. 
 
 :::
+
+</div></br>
+
 ::: {.solution}
 
 $q_j = q_j (\{s_i\}, t)$ 이므로, 
