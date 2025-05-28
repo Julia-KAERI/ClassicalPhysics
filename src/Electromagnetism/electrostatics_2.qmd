@@ -355,8 +355,8 @@ $$ {#eq-EM_legendre_polynomials}
 #### **1. 정의**
 $$
 \begin{aligned}
-P_n^m &= (1-x)^{|m|/2} \dfrac{d^{|m|} P_n(x)}{dx^{|m|}},\\[0.3em]
-P_n^{-m} &= (-1)^m \dfrac{(n-m)!}{(n+m)!} P_{n}^m (x). 
+P_n^m(x) &= (1-x)^{|m|/2} \dfrac{d^{|m|} P_n(x)}{dx^{|m|}},\\[0.3em]
+P_n^{-m}(x) &= (-1)^m \dfrac{(n-m)!}{(n+m)!} P_{n}^m (x). 
 \end{aligned}
 $$ {#eq-EM_definition_of_associated_legendre_polynomial}
 
