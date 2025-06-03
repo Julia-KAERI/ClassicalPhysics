@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>17&nbsp; 수학적 자료 – 고전 역학과 전자기학</title>
+<title>4&nbsp; 정준 변환 – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/images/images.html" rel="next">
-<link href="../../src/topics/Topics.html" rel="prev">
+<link href="../../src/ClassicalMechanics/one_body_problems.html" rel="next">
+<link href="../../src/ClassicalMechanics/03_hamilton_dynamics.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,7 +101,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -110,7 +110,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/topics/Topics.html">별도의 주제들</a></li><li class="breadcrumb-item"><a href="../../src/topics/mathematical.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">수학적 자료</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/04_canonical_transform.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">정준 변환</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -122,8 +122,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/topics/Topics.html">별도의 주제들</a></li><li class="breadcrumb-item"><a href="../../src/topics/mathematical.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">수학적 자료</span></a></li></ol></nav>
-      <h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">수학적 자료</span></h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/04_canonical_transform.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">정준 변환</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">정준 변환</span></h1>
                       </div>
   </div>
     
@@ -186,7 +186,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ClassicalMechanics/04_canonical_transform.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/ClassicalMechanics/04_canonical_transform.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
   </div>
 </li>
@@ -308,7 +308,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
@@ -365,58 +365,270 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#sec-legencre_transform" id="toc-sec-legencre_transform" class="nav-link active" data-scroll-target="#sec-legencre_transform"><span class="header-section-number">17.1</span> 르장드르 변환</a>
+  <li><a href="#정준-변환의-방정식" id="toc-정준-변환의-방정식" class="nav-link active" data-scroll-target="#정준-변환의-방정식"><span class="header-section-number">4.1</span> 정준 변환의 방정식</a>
   <ul class="collapse">
-  <li><a href="#변수-함수의-경우" id="toc-변수-함수의-경우" class="nav-link" data-scroll-target="#변수-함수의-경우">1변수 함수의 경우</a></li>
-  <li><a href="#변수-함수의-경우-1" id="toc-변수-함수의-경우-1" class="nav-link" data-scroll-target="#변수-함수의-경우-1">2변수 함수의 경우</a></li>
-  <li><a href="#lagrangian-의-convexity" id="toc-lagrangian-의-convexity" class="nav-link" data-scroll-target="#lagrangian-의-convexity">Lagrangian 의 convexity</a></li>
+  <li><a href="#정준-변환의-방정식-1" id="toc-정준-변환의-방정식-1" class="nav-link" data-scroll-target="#정준-변환의-방정식-1"><span class="header-section-number">4.1.1</span> 정준 변환의 방정식</a></li>
+  <li><a href="#sec-CM_sorts_of_canonical_transformation" id="toc-sec-CM_sorts_of_canonical_transformation" class="nav-link" data-scroll-target="#sec-CM_sorts_of_canonical_transformation"><span class="header-section-number">4.1.2</span> 정준변환의 분류</a></li>
+  <li><a href="#sec-CM_generating_function_of_the_transformation" id="toc-sec-CM_generating_function_of_the_transformation" class="nav-link" data-scroll-target="#sec-CM_generating_function_of_the_transformation"><span class="header-section-number">4.1.3</span> 변환 생성 함수</a></li>
   </ul></li>
+  <li><a href="#정준변환의-예" id="toc-정준변환의-예" class="nav-link" data-scroll-target="#정준변환의-예"><span class="header-section-number">4.2</span> 정준변환의 예</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
 
 
-<section id="sec-legencre_transform" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="sec-legencre_transform"><span class="header-section-number">17.1</span> 르장드르 변환</h2>
-<p>함수 <span class="math inline">\(f: \mathbb{R}\to \mathbb{R}\)</span> 가 <span class="math inline">\(t\in [0,\,1]\)</span> 에 대해</p>
+<div class="hidden">
+<p>% %</p>
+%
 <p><span class="math display">\[
-f(tx) + f((1-t)y) \ge tf(x)+ (1-t)f(y)
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
-<p>일 때 <span class="math inline">\(f\)</span> 를 <strong>convex</strong> 라고 한다. <span class="math inline">\(f\in C^2\)</span> 라면 이것은 <span class="math inline">\(\dfrac{d^2 f}{dx^2} \ge 0\)</span> 과 동치이다. <span class="math inline">\(\dfrac{d^2g}{dx^2} \le 0\)</span> 인 함수를 <strong>conclave</strong> 라고 하며 이 경우 <span class="math inline">\(f=-g\)</span> 는 convex 이다. 만약 <span class="math inline">\(\dfrac{d^2f}{dx^2} &gt; 0\)</span> 라면 이를 <strong>strictly convex</strong> 라고 한다. <span class="math inline">\(f\)</span> 가 strictly convex 이면 <span class="math inline">\(f'(x)\)</span> 는 전단사이며 이는 <span class="math inline">\(f'(x)\)</span> 의 역함수가 존재함을 의미한다. <span class="math inline">\(f:\mathbb{R}^n \to \mathbb{R}\)</span> 이며 <span class="math inline">\(\partial^2_x f &gt;0\)</span> 이면 <span class="math inline">\(x\)</span> 에 대해 strictly convex 라고 한다.</p>
+</div>
+<p>많은 경우 해밀토니안으로 역학계의 문제를 푸는 것이 라그랑지안을 이용해 푸는 것보다 많이 쉬워지거나 하지는 않는다. 그렇다면 왜 굳이 해밀토니안을 배우는 것일까? 그것은 고전역학애 내제된 수학적 구조를 보는데 해밀토니안 방법이 훨씬 유용하기 때문이다. 이 방법은 또한 통계역학이나 양자역학이 발전하는데 해밀토니안이 큰 기여를 했다.</p>
 <p><br></p>
-<section id="변수-함수의-경우" class="level3">
-<h3 class="anchored" data-anchor-id="변수-함수의-경우">1변수 함수의 경우</h3>
-<p><span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span> 이 <span class="math inline">\(C^2\)</span> 함수라고 하자. <span class="math inline">\(f\)</span> 가 strictly convext 이면 <span class="math inline">\(\dfrac{d^2f}{dx^2} &gt;0\)</span> 이다. <span class="math inline">\(u = f'(x)\)</span> 라 하면 <span class="math inline">\(f'\)</span> 이 전단사이므로 <span class="math inline">\(x\)</span> 를 <span class="math inline">\(u\)</span> 의 함수로 표현 할 수 있다. 즉 <span class="math inline">\(x=x(u)\)</span> 가 된다. 이 때 <span class="math inline">\(g = f-ux\)</span> 로 놓으면, <span class="math inline">\(dg = df-udx - xdu = -xdu\)</span> 이다. 즉, <span class="math inline">\(\dfrac{dg}{du} = x\)</span> 가 되도록 하는 <span class="math inline">\(u\)</span> 에 대한 함수 <span class="math inline">\(g\)</span> 가 자연스럽게 나온다. 이 때</p>
+<section id="정준-변환의-방정식" class="level2 page-columns page-full" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="정준-변환의-방정식"><span class="header-section-number">4.1</span> 정준 변환의 방정식</h2>
+<section id="정준-변환의-방정식-1" class="level3 page-columns page-full" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="정준-변환의-방정식-1"><span class="header-section-number">4.1.1</span> 정준 변환의 방정식</h3>
+<p><a href="01_basic_principles.html#exr-goldestein_1_15" class="quarto-xref">연습문제&nbsp;<span>1.4</span></a> 에서 점변환을 정의하였다. 여기서는 이것이 매우 중요하므로 정식으로 정의하기로 하자.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-CM_point_transformations" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 4.1 (점변환)</strong></span> 독립적인 일반화된 좌표 <span class="math inline">\(\boldsymbol{q}\)</span> 에서 다른 독립적인 일반화된 좌표 <span class="math inline">\(\boldsymbol{Q}\)</span> 로의 아래와 같은 형태의 변환을 <strong>점변환 (point transformation)</strong> 이라고 한다.</p>
+<p><span id="eq-CM_point_transformation"><span class="math display">\[
+Q_i =Q(\boldsymbol{q},\,t).
+\tag{4.1}\]</span></span></p>
+</div>
+</div>
+</div>
+</div>
+<p>해밀토니안이 구성되는 위상공간에서는 좌표와 운동량이 독립적인 좌표이다. 따라서 좌표 뿐만 아니라 운동량도 <a href="#eq-CM_point_transformation" class="quarto-xref">식&nbsp;<span>4.1</span></a> 와 같은 형태로 변해야 한다. 그렇다면 위상공간에서 아래와 같이 변환된다.</p>
+<p><span id="eq-CM_transformation_in_phase_space"><span class="math display">\[
+\begin{aligned}
+Q_i = Q_i (\boldsymbol{q},\, \boldsymbol{p},\, t), \\
+P_i = P_i (\boldsymbol{q},\, \boldsymbol{p},\, t),
+\end{aligned}
+\tag{4.2}\]</span></span></p>
+<p>일 것이다. 우리가 원하는 것은 이 변환에 대해 <a href="03_hamilton_dynamics.html#eq-CM_canonical_equation_of_hamiltonian" class="quarto-xref">식&nbsp;<span>3.3</span></a> 와 같은 정준방정식이 만족되는 것이다. 어떤 함수 <span class="math inline">\(\overline{H}=\overline{H}(\boldsymbol{Q},\, \boldsymbol{P},\,t)\)</span> 에 대해</p>
+<p><span id="eq-CM_hamilton_equation_of_motion_after_point_transformation"><span class="math display">\[
+\dot{Q}_i = \dfrac{\partial \overline{H}}{\partial P_i}, \qquad \dot{P}_i = - \dfrac{\partial \overline{H}}{\partial Q_i}
+\tag{4.3}\]</span></span></p>
+<p>라면 <span class="math inline">\(\overline{H}\)</span> 는 <span class="math inline">\((\boldsymbol{Q},\,\boldsymbol{P})\)</span> 위상공간에서의 해밀토니안 역할을 수행하는 것이다.</p>
+<p>앞서 <a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html#sec-CM_modified_hamilton_principle">변형된 해밀턴의 원리</a> 에서 보았듯이 <span class="math inline">\(\boldsymbol{Q},\, \boldsymbol{P}\)</span> 가 정준 좌표라면 변형된 해밀턴 원리를 만족시켜야 한다. 즉</p>
+<p><span id="eq-CM_modifield_hamiltons_principle_in_new_coord"><span class="math display">\[
+\delta \int_{t_1}^{t_2} \left(\sum_i \dot{Q}_i P_i - \overline{H}(\boldsymbol{Q},\, \boldsymbol{P},\, t)\right)\, dt = 0.
+\tag{4.4}\]</span></span></p>
+<p>또한</p>
+<p><span id="eq-CM_modifield_hamiltons_principle_in_old_coord"><span class="math display">\[
+\delta \int_{t_1}^{t_2} \left(\sum_i \dot{q}_i p_i - H(\boldsymbol{q},\, \boldsymbol{p},\, t)\right)\, dt = 0
+\tag{4.5}\]</span></span></p>
+<div class="page-columns page-full"><p>이어야 한다. <a href="#eq-CM_modifield_hamiltons_principle_in_old_coord" class="quarto-xref">식&nbsp;<span>4.5</span></a> 와 <a href="#eq-CM_modifield_hamiltons_principle_in_new_coord" class="quarto-xref">식&nbsp;<span>4.4</span></a> 가 동시에 만족한다는 것은 두 식이 같다는 것을 의미하지 않는다. 일반적으로 두 식이 같을 때의 조건은 어떤 상수 <span class="math inline">\(\lambda\)</span> 와 <span class="math inline">\(C_2\)</span> 급 함수<span class="math inline">\(^\ast\)</span> <span class="math inline">\(G\)</span> 에 대해 </p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^{\ast}\)</span> <span class="math inline">\(C_n\)</span> 급 함수는 <span class="math inline">\(n\)</span> 번 미분 가능하고, 그 <span class="math inline">\(n\)</span> 차 도함수가 연속인 함수이다</span></div></div>
+<p><span id="eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0"><span class="math display">\[
+\lambda \left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_{i}\dot{Q}_i P_i - \overline{H} + \dfrac{dG}{dt}
+\tag{4.6}\]</span></span></p>
+<p>을 만족하는 경우이다.</p>
 <p><br></p>
 </section>
-<section id="변수-함수의-경우-1" class="level3">
-<h3 class="anchored" data-anchor-id="변수-함수의-경우-1">2변수 함수의 경우</h3>
-<p><span class="math inline">\(f\)</span> 가 <span class="math inline">\(x,\,y\)</span> 의 함수라고 하자. <span class="math inline">\(df = (\partial_x f) dx + (\partial_y f) dy\)</span> 이며 <span class="math inline">\(u=\partial_x f,\, v = \partial_y f\)</span> 라고 놓으면,</p>
+<section id="sec-CM_sorts_of_canonical_transformation" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="sec-CM_sorts_of_canonical_transformation"><span class="header-section-number">4.1.2</span> 정준변환의 분류</h3>
+<p>위상공간의 점변환을 상수 <span class="math inline">\(\mu,\, \nu\)</span> 에 대해 <span class="math inline">\(\boldsymbol{Q} = \mu \boldsymbol{q},\, \boldsymbol{P} = \nu \boldsymbol{p}\)</span> 로 놓자. 그렇다면 <span class="math inline">\(\overline{H}(\boldsymbol{Q},\, \boldsymbol{P}) = \mu\nu H(\boldsymbol{q},\, \boldsymbol{p})\)</span> 에 대해 <a href="#eq-CM_hamilton_equation_of_motion_after_point_transformation" class="quarto-xref">식&nbsp;<span>4.3</span></a> 이 성립하며</p>
 <p><span class="math display">\[
-df = u\, dx+v\, dy
+\mu \nu \left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_i \dot{Q}_i P_i -\overline{H}
 \]</span></p>
-<p>가 된다. <span class="math inline">\(f\)</span> 가 <span class="math inline">\(x\)</span> 에 대해 strictly convex 라고 하자. 이때 <span class="math inline">\(g= f-ux\)</span> 로 놓으면,</p>
-<p><span class="math display">\[
-dg = df - x\, du - u \, dx = - x\, du + v\, dy
-\]</span></p>
-<p>이다. 즉 <span class="math inline">\(g=g(u, y)\)</span> 이며 <span class="math inline">\(\dfrac{\partial g}{\partial u} = -x,\, \dfrac{\partial g}{\partial y} = v\)</span> 이다.</p>
+<p>이다. <a href="#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0" class="quarto-xref">식&nbsp;<span>4.6</span></a> 와 비교하면 <span class="math inline">\(\lambda = \mu\nu,\, G=\text{const.}\)</span> 인 꼴이다. 이런 변환을 <strong>스케일 변환(scale transformation)</strong> 이라고 하며 우리는 실제로 <a href="#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0" class="quarto-xref">식&nbsp;<span>4.6</span></a> 에서 <span class="math inline">\(\lambda=1\)</span> 인 경우에만 신경서도 된다는 것을 할 수 있다. 따라서 앞으로는 <span id="eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero"><span class="math display">\[
+\left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_{i}\dot{Q}_i P_i - \overline{H} + \dfrac{dG}{dt}
+\tag{4.7}\]</span></span></p>
+<p>인 경우만 다루기로 하자. 앞으로는 <span class="math inline">\(\lambda\ne 1\)</span> 일 경우는 <strong>확장된 정준 변환 (extended canonical transformation)</strong> 이라고 하고 <span class="math inline">\(\lambda =1\)</span> 인 경우에만 <strong>정준 변환</strong> 이라고 하기로 하자. 또 하나 정준변환 <a href="#eq-CM_transformation_in_phase_space" class="quarto-xref">식&nbsp;<span>4.2</span></a> 에서 시간에 대해 명시적인 의존성이 없을 경우 <strong>제한된 정준 변환 (restricted canonical transformation)</strong> 이라고 한다.</p>
 <p><br></p>
 </section>
-<section id="lagrangian-의-convexity" class="level3">
-<h3 class="anchored" data-anchor-id="lagrangian-의-convexity">Lagrangian 의 convexity</h3>
-<p><a href="https://physics.stackexchange.com/questions/103997/are-the-hamiltonian-and-lagrangian-always-convex-functions">이 포스트</a> 를 참고하라.</p>
-<p><span class="math display">\[
-L = \sum A_{ij}\dot{q}_i \dot{q}_j + \sum B_j \dot{q}_j + f(\{q_i\})
+<section id="sec-CM_generating_function_of_the_transformation" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="sec-CM_generating_function_of_the_transformation"><span class="header-section-number">4.1.3</span> 변환 생성 함수</h3>
+<p><a href="#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero" class="quarto-xref">식&nbsp;<span>4.7</span></a> 의 마지막 항 <span class="math inline">\(\dfrac{dG}{dt}\)</span> 은 action <span class="math inline">\(S_H\)</span> 의 계산을 위한 적분에서 양 끝점에 대해서만 기여한다. 따라서 <span class="math inline">\(G\)</span> 가 <span class="math inline">\((\boldsymbol{q},\, \boldsymbol{p},\,t)\)</span> 의 함수이거나 <span class="math inline">\((\boldsymbol{Q},\, \boldsymbol{P},\, t)\)</span> 의 함수라면 <span class="math inline">\(\delta S_H\)</span> 에 기여하지 않는다. 더우기 위상공간에서의 좌표변환(<a href="#eq-CM_transformation_in_phase_space" class="quarto-xref">식&nbsp;<span>4.2</span></a>) 과 그 역변환을 통해 <span class="math inline">\(G\)</span> 는 <span class="math inline">\((\boldsymbol{q},\, \boldsymbol{p},\,t)\)</span> 와 <span class="math inline">\((\boldsymbol{Q},\, \boldsymbol{P},\, t)\)</span> 의 혼합으로 표현 될 수 있다. 이 <span class="math inline">\(G\)</span> 함수는 이 두 쌍의 정준 변수 사이의 가교역할을 수행할 수 있으며 <strong>변환 생성 함수 (generating function of the transformation)</strong> 이라고 불린다. 이것을 좀 더 분명히 알아보자. <span class="math inline">\(n\)</span>-자유도 시스템을 가정하고 4가지 종류와 생성함수와 정준변환의 관계에 대해 알아보기로 하자.</p>
+<section id="g_1boldsymbolq-boldsymbolqt-의-경우" class="level4">
+<h4 class="anchored" data-anchor-id="g_1boldsymbolq-boldsymbolqt-의-경우"><strong>(1) <span class="math inline">\(G_1(\boldsymbol{q},\, \boldsymbol{Q},\,t)\)</span> 의 경우</strong></h4>
+<p>생성함수가 <span class="math inline">\((\boldsymbol{q},\, \boldsymbol{Q},\,t)\)</span> 의 함수 라면 <a href="#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero" class="quarto-xref">식&nbsp;<span>4.7</span></a> 는</p>
+<p><span id="eq-CM_lagrangian_for_type1_generationg_function"><span class="math display">\[
+\begin{aligned}
+\sum_i p_i \dot{q}_i - H &amp;= \sum_i P_i \dot{Q}_i - \overline{H} + \dfrac{dG_1}{dt} \\[0.3em]
+&amp;= \sum_i P_i\dot{Q}_i - \overline{H} + \dfrac{\partial G_1}{\partial t} + \sum_{i}\left(\dfrac{\partial G_1}{\partial q_i}\dot{q}_i + \dfrac{\partial G_1}{\partial Q_i} \dot{Q}_i\right)
+\end{aligned}
+\tag{4.8}\]</span></span></p>
+<p>이다. <span class="math inline">\(\boldsymbol{q}\)</span> 와 <span class="math inline">\(\boldsymbol{Q}\)</span> 는 각각 독립적이므로 이로부터</p>
+<p><span id="eq-CM_equations_for_type1_generating_function"><span class="math display">\[
+p_i = \dfrac{\partial G_1}{\partial q_i},\qquad P_i = - \dfrac{\partial G_1}{\partial Q_i},\qquad \overline{H} = H + \dfrac{\partial G_1}{\partial t}
+\tag{4.9}\]</span></span></p>
+<p>를 얻는다. 위 식의 첫번째 식으로부터 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(p_i\)</span> 를 <span class="math inline">\((\boldsymbol{q},\, \boldsymbol{Q},\,t)\)</span> 의 함수로 얻을 수 있다. 이 <span class="math inline">\(p_i\)</span> 가 가역이라면 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(Q_i\)</span> 를 <span class="math inline">\((\boldsymbol{q},\, \boldsymbol{p},\, t)\)</span> 의 함수로 얻을 수 있다. 또한 이를 이용하면 위 식의 두번째 식으로부터 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(P_i\)</span> 를 얻을 수 있다. 그리고 세번째 식으로부터 <span class="math inline">\(\overline{H}\)</span> 를 얻을 수 있다.</p>
+<p>이제 반대로 변환이 주어졌을 때(<a href="#eq-CM_transformation_in_phase_space" class="quarto-xref">식&nbsp;<span>4.2</span></a>) 생성함수를 어떻게 알 수 있을까? <span class="math display">\[
+dG_1 = \sum_i \left(\dfrac{\partial G_1}{\partial q_i} dq_i+ \dfrac{\partial G_1}{\partial Q_i} dQ_i
+\right)+ \dfrac{\partial G_1}{\partial t}dt
 \]</span></p>
-<p>일</p>
-
-
+<p>이며 <span class="math inline">\(dq_i,\, dQ_i\)</span> 의 계수는 <a href="#eq-CM_equations_for_type1_generating_function" class="quarto-xref">식&nbsp;<span>4.9</span></a> 로 부터 얻을 수 있다. …. to be done ..</p>
+<p><br></p>
 </section>
+<section id="g_2boldsymbolq-boldsymbolpt-인-경우" class="level4">
+<h4 class="anchored" data-anchor-id="g_2boldsymbolq-boldsymbolpt-인-경우"><strong>(2) <span class="math inline">\(G_2(\boldsymbol{q},\, \boldsymbol{P},\,t)\)</span> 인 경우</strong></h4>
+<p>생성함수가 원래의 좌표(<span class="math inline">\(\boldsymbol{q}\)</span>) 와 변환된 운동량(<span class="math inline">\(\boldsymbol{P}\)</span>), 그리고 시간의 함수일 경우를 생각해보자. 이 때</p>
+<p><span class="math display">\[
+G = G_2(\boldsymbol{q},\, \boldsymbol{P},\,t) - \sum_{i}Q_i P_i
+\]</span></p>
+<p>라 놓고 <a href="#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero" class="quarto-xref">식&nbsp;<span>4.7</span></a> 에 대입하면</p>
+<p><span id="eq-CM_lagrangian_for_type2_generationg_function"><span class="math display">\[
+\begin{aligned}
+\sum_i p_i \dot{q}_i - H &amp;= -\sum_i Q_i \dot{P}_i- \overline{H} + \sum_i \dfrac{\partial G_2}{\partial q_i}\dot{q}_i + \sum_i \dfrac{\partial G_2}{\partial P_i}\dot{P}_i + \dfrac{\partial G_2}{\partial t}
+\end{aligned}
+\tag{4.10}\]</span></span></p>
+<p>이므로,</p>
+<p><span id="eq-CM_equations_for_type2_generating_function"><span class="math display">\[
+p_i =\dfrac{\partial G_2}{\partial q_i},\qquad Q_i = \dfrac{\partial G_2}{\partial P_i},\qquad \overline{H} = H + \dfrac{\partial G_2}{\partial t}
+\tag{4.11}\]</span></span></p>
+<p>이다. 위 식의 첫번째 식으로부터 <span class="math inline">\(p_i = p_i(\boldsymbol{q},\, \boldsymbol{P},\,t)\)</span> 을 얻으며, 가역이라면 <span class="math inline">\(P_i\)</span> 를 <span class="math inline">\(\boldsymbol{q},\, \boldsymbol{p},\,t\)</span> 의 함수로 얻을 수 있다. 이제 두번째 식으로부터 <span class="math inline">\(\boldsymbol{Q}\)</span> 를 얻을 수 있다.</p>
+<p><br></p>
+</section>
+<section id="g_3boldsymbolp-boldsymbolqt-인-경우" class="level4">
+<h4 class="anchored" data-anchor-id="g_3boldsymbolp-boldsymbolqt-인-경우"><strong>(3) <span class="math inline">\(G_3(\boldsymbol{p},\, \boldsymbol{Q},\,t)\)</span> 인 경우</strong></h4>
+<p><span class="math display">\[
+G = \sum_i q_ip_i + G_3(\boldsymbol{p},\, \boldsymbol{Q},\,t)
+\]</span></p>
+<p>로 놓고 <a href="#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero" class="quarto-xref">식&nbsp;<span>4.7</span></a> 에 대입하면</p>
+<p><span id="eq-CM_lagrangian_for_type3_generationg_function"><span class="math display">\[
+\begin{aligned}
+-\sum_i \dot{p}_i q_i - H &amp;= \sum_i \dot{Q}_i P_i -\overline{H}+ \sum_i \dfrac{\partial G_2}{\partial p_i}\dot{p}_i + \sum_i \dfrac{\partial G_2}{\partial Q_i}\dot{Q}_i + \dfrac{\partial G_2}{\partial t}
+\end{aligned}
+\tag{4.12}\]</span></span></p>
+<p>이므로,</p>
+<p><span id="eq-CM_equations_for_type3_generating_function"><span class="math display">\[
+q_i = -\dfrac{\partial G_2}{\partial p_i},\qquad P_i = -\dfrac{\partial G_2}{\partial Q_i},\qquad \overline{H} = \overline{H}+ \dfrac{\partial G_2}{\partial t}
+\tag{4.13}\]</span></span></p>
+<p>이다. 역시 첫번째 식으로부터 <span class="math inline">\(\boldsymbol{q} = \boldsymbol{q}(\boldsymbol{p},\, \boldsymbol{Q},\,t)\)</span> 를 얻으며, 가역일 경우 <span class="math inline">\(\boldsymbol{Q} = \boldsymbol{Q}(\boldsymbol{q},\, \boldsymbol{p},\, t)\)</span> 를 얻는다. 두번째 식으로붜 <span class="math inline">\(\boldsymbol{P}\)</span> 를 얻는다.</p>
+<p><br></p>
+</section>
+<section id="g_4boldsymbolp-boldsymbolpt-인-경우" class="level4">
+<h4 class="anchored" data-anchor-id="g_4boldsymbolp-boldsymbolpt-인-경우"><strong>(4) <span class="math inline">\(G_4(\boldsymbol{p},\, \boldsymbol{P},\,t)\)</span> 인 경우</strong></h4>
+<p><span class="math display">\[
+G = \sum_i q_i p_i - \sum_i Q_i P_i + G_4(\boldsymbol{p},\,\boldsymbol{P},\,t)
+\]</span></p>
+<p>로 놓으면</p>
+<p><span id="eq-CM_lagrangian_for_type4_generationg_function"><span class="math display">\[
+-\sum_i q_i \dot{p}_i - H = - \sum_i Q_i \dot{P}_i - \overline{H}  + \sum_i\dfrac{\partial G_4}{\partial p_i} \dot{p_i} + \sum_i \dfrac{\partial G_4}{\partial P_i}\dot{P}_i + \dfrac{\partial G_4}{\partial t}
+\tag{4.14}\]</span></span></p>
+<p>이다. 이로부터</p>
+<p><span id="eq-CM_equations_for_type4_generating_function"><span class="math display">\[
+q_i = - \dfrac{\partial G_4}{\partial p_i},\qquad Q_i = \dfrac{\partial G_4}{\partial P_i},\qquad \overline{H}= H + \dfrac{\partial G_4}{\partial t}
+\tag{4.15}\]</span></span></p>
+<p>를 얻는다. <span class="math inline">\(\boldsymbol{q} = \boldsymbol{q}(\boldsymbol{p},\, \boldsymbol{P},\,t)\)</span> 이므로 가역이라면 <span class="math inline">\(\boldsymbol{P}= \boldsymbol{P}(\boldsymbol{q},\, \boldsymbol{p},\,t)\)</span> 를 얻을 수 있다. 이를 두번째 식에 적용하여 <span class="math inline">\(\boldsymbol{Q}_i = \boldsymbol{Q}(\boldsymbol{q},\, \boldsymbol{p},\,t)\)</span> 를 얻는다.</p>
+<p><br></p>
+</section>
+</section>
+</section>
+<section id="정준변환의-예" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="정준변환의-예"><span class="header-section-number">4.2</span> 정준변환의 예</h2>
+<p>여기서는 간단하고 다양한 예제를 통해 정준변환의 본질과 변환생성함수의 역할에 대해 알아보자.</p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-CM_exmaples_of_canonical_transformation_1" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.1</strong></span> 변환생성함수 <span class="math inline">\(G_2 = q_i P_i\)</span> 가 주어졌다고 하자. 그렇다면 <a href="#eq-CM_equations_for_type2_generating_function" class="quarto-xref">식&nbsp;<span>4.11</span></a> 에 따라</p>
+<p><span class="math display">\[
+p_i = P_i,\qquad Q_i = q_i,\qquad \overline{H} = H
+\]</span></p>
+<p>인 항등 변환이다. 즉 <span class="math inline">\(q_iP_i\)</span> 는 항등변환에 대한 변환생성함수이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-CM_exmaples_of_canonical_transformation_2" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.2</strong></span> 변환생성함수 <span class="math inline">\(G_2 = \sum_i g_i(\boldsymbol{q},\,t) P_i + h(\boldsymbol{q},\,t)\)</span> 가 주여졌다고 하자. 그리고 <span class="math inline">\(\{g_i\}\)</span> 는 서로 독립이라고 하자. <a href="#eq-CM_equations_for_type2_generating_function" class="quarto-xref">식&nbsp;<span>4.11</span></a> 에 따라</p>
+<p><span class="math display">\[
+Q_i = g_i(\boldsymbol{q},\,t)
+\]</span></p>
+<p>이다. 즉 이 정준 변환은 점변환이다. 이 때</p>
+<p><span class="math display">\[
+p_j = \sum_i \dfrac{\partial g_i}{\partial q_j}P_i + \dfrac{\partial h}{\partial q_j}
+\]</span></p>
+<p>이다. 이것을 행렬 표기법으로 표현할 수 있다.</p>
+<p><span class="math display">\[
+\boldsymbol{g} = \begin{bmatrix} g_1 \\ \vdots \\ g_n \end{bmatrix},\qquad \dfrac{\partial \boldsymbol{g}}{\partial \boldsymbol{q}} = \begin{bmatrix} \dfrac{\partial g_1}{\partial q_1} &amp; \cdots &amp;\dfrac{\partial g_1}{\partial q_n} \\ \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial g_n}{\partial q_1} &amp; \cdots &amp;\dfrac{\partial g_n}{\partial q_n} \end{bmatrix},\qquad \dfrac{\partial h}{\partial \boldsymbol{q}} = \begin{bmatrix} \dfrac{\partial h}{\partial q_1} &amp; \cdots &amp; \dfrac{\partial h}{\partial q_n} \end{bmatrix}
+\]</span></p>
+<p>에 대해 <span class="math display">\[
+\boldsymbol{p} = \begin{bmatrix} p_1 &amp;  \cdots &amp; p_n\end{bmatrix} =\boldsymbol{P} \left(\dfrac{\partial \boldsymbol{g}}{\partial \boldsymbol{q}}\right)+ \dfrac{\partial h}{\partial \boldsymbol{q}}
+\]</span></p>
+<p>이므로 <span class="math inline">\(\boldsymbol{P}\)</span> 는 아래와 같다.</p>
+<p><span class="math display">\[
+\boldsymbol{P} = \left(\boldsymbol{p}-\dfrac{\partial h}{\partial \boldsymbol{q}}\right)\left(\dfrac{\partial \boldsymbol{g}}{\partial \boldsymbol{q}}\right)^{-1}
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+<p><br></p>
+</section>
+<section id="연습문제" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Goldstein_9_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.1 (Goldestein 9.1)</strong></span> 두가지 종류이 해밀톤 방정식을 조합하기 위한 노력중의 하나는 복소수 영역으로 확장하는 것이다. <span class="math inline">\(1\)</span>-자유도 시스템에서 변환을 다음과 같이 정의하자.</p>
+<p><span class="math display">\[
+Q=q+ip,\qquad P = Q^\ast. \tag{1}
+\]</span></p>
+<p>해밀토니안이 변하지 않는다면 이 변환은 정준변환이 아님을 보여라. <span class="math inline">\(Q,\,P\)</span> 의 스케일을 조정한 어떤 좌표 <span class="math inline">\(Q',\,P'\)</span> 에 대해 <span class="math inline">\(Q',\, P'\)</span> 이 정준좌표가 되도록 할 수 있는가?</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(Q=q+ip,\, P=q-ip\)</span> 이므로 <span class="math inline">\(q=\dfrac{P+Q}{2},\, p = \dfrac{Q-P}{2i}\)</span> 이다. 이로부터 다음을 얻는다. <span class="math display">\[
+\begin{aligned}
+\dfrac{\partial H}{\partial Q} &amp;= \dfrac{\partial H}{\partial q}\dfrac{\partial q}{\partial Q} + \dfrac{\partial H}{\partial p}\dfrac{\partial p}{\partial Q} = \dfrac{-\dot{p}}{2} + \dfrac{-i\dot{q}}{2} = -\dfrac{i}{2}\dot{P}  \ne -\dot{P} \\[0.3em]
+\dfrac{\partial H}{\partial P} &amp;=  \dfrac{\partial H}{\partial q}\dfrac{\partial q}{\partial P} + \dfrac{\partial H}{\partial p}\dfrac{\partial p}{\partial P} = \dfrac{i}{2}(\dot{q}+i\dot{p}) = \dfrac{i}{2}\dot{Q} \ne \dot{Q}.
+\end{aligned}
+\]</span></p>
+<p>즉 문제의 <span class="math inline">\(P,\,Q\)</span> 에 대해서는 해밀턴 정준방정식이 성립하지 않는다. 이제 <span class="math inline">\(Q' = \alpha q + i\alpha p,\, P' = \beta q - i\beta p\)</span> 로 놓으면,</p>
+<p><span class="math display">\[
+q = \dfrac{\beta Q' + \alpha P'}{2\alpha \beta},\qquad p = \dfrac{\beta Q' - \alpha P'}{2i\alpha \beta}
+\]</span></p>
+<p>이다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac{\partial H}{\partial Q'} &amp;= \dfrac{-\dot{p}}{2\alpha} - \dfrac{\dot{qi}}{2\alpha} =\dfrac{-i}{2\alpha\beta}(\beta \dot{q} - i\beta \dot{p})  = \dfrac{-i}{2\alpha\beta}\dot{P}\\[0.3em]
+\dfrac{\partial H}{\partial P'} &amp;= \dfrac{-\dot{p}}{2\beta} + \dfrac{i\dot{q}}{2\beta} = \dfrac{i}{2\alpha \beta}(\alpha\dot{q}+ i\alpha \dot{p}) = \dfrac{i}{2\alpha \beta}\dot{Q}
+\end{aligned}
+\]</span></p>
+<p>이므로 <span class="math inline">\(2\alpha\beta = i\)</span> 인 조건만 만족하면 정준방정식이 성립한다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-Goldstein_9_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.2 (Goldstein 9.2)</strong></span> (<span class="math inline">\(a\)</span>) 해밀토니안이 <span class="math inline">\(H=\dfrac{p^2}{2} - \dfrac{1}{2q^2}\)</span> 으로 주어진 1차원 시스템을 생각하자. 여기에 <span class="math inline">\(D=\dfrac{pq}{2}-Ht\)</span> 는 운동상수임을 보여라.</p>
+<p>(<span class="math inline">\(b\)</span>) (<span class="math inline">\(a\)</span>) 의 결과를 일반화하여 해밀토니안이 <span class="math inline">\(H = \|\boldsymbol{p}\|^n - ar^{-n}\)</span> 으로 주어졌다고 하자. 이 때 <span class="math inline">\(\boldsymbol{p}\)</span> 는 데카르트 좌표계에서의 <span class="math inline">\(\boldsymbol{r}\)</span> 에 대한 정준운동량이다. 이 때 <span class="math inline">\(D=\dfrac{\boldsymbol{p\cdot r}}{n} -Ht\)</span> 가 운동상수임을 보여라.</p>
+<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(Q=\lambda q,\, P = (1/\lambda)p\)</span> 변환은 명백히 정준변환이다. 그러나 여기에 <span class="math inline">\(t'=\lambda^2t\)</span> 까지 포함시키면 정준변환이 되지 않는다. 그러나 이 변환에 대해 (<span class="math inline">\(a\)</span>) 의 <span class="math inline">\(D\)</span> 는 불변임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 해밀턴 운동벙정식에 의해 <span class="math inline">\(\dot{q} = p\)</span>, <span class="math inline">\(\dot{p} = - 1/q^3\)</span> 이다. 해밀토니안에 명시적인 <span class="math inline">\(t\)</span> 의존성이 없으므로 <span class="math inline">\(\dfrac{dH}{dt}= \dfrac{\partial H}{\partial t}=0\)</span> 이다. 따라서</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac{dD}{dt} &amp;= \dfrac{1}{2}(\dot{p}q + \dot{q}p) - H = \dfrac{p^2}{2} - \dfrac{1}{2q^2} - H = 0
+\end{aligned}
+\]</span></p>
+<p>이다.</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\dot{\boldsymbol{p}} = anr^{n-2}\boldsymbol{r}\)</span> 이며 <span class="math inline">\(\dot{\boldsymbol{r}}= n\boldsymbol{p}\|\boldsymbol{p}\|^{n-2}\)</span> 이고 역시 <span class="math inline">\(\dot{H}=0\)</span> 이므로,</p>
+<p><span class="math display">\[
+\dfrac{dD}{dt}= \dfrac{1}{n}(\dot{\boldsymbol{p}}\boldsymbol{\cdot r} + \boldsymbol{p \cdot} \dot{\boldsymbol{r}}) -H = 0
+\]</span></p>
+<p>이다.</p>
+<p>(<span class="math inline">\(c\)</span>)</p>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -839,13 +1051,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../src/topics/Topics.html" class="pagination-link" aria-label="별도의 주제들">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">별도의 주제들</span>
+      <a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html" class="pagination-link" aria-label="해밀턴 동역학">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/images/images.html" class="pagination-link" aria-label="그림들">
-        <span class="nav-page-text">그림들</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/ClassicalMechanics/one_body_problems.html" class="pagination-link" aria-label="고전역학의 1체 문제">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

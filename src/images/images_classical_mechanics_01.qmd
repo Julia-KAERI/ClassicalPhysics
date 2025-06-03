@@ -45,7 +45,7 @@ crossref:
 \end{document}
 ```
 
-![Radius vector](classical%20mechanics/radius_vector/radius_vector.png){width=400}
+![Radius vector](../ClassicalMechanics/images/radius_vector/radius_vector.png){width=400}
 
 </br>
 
@@ -77,7 +77,7 @@ crossref:
 \end{document}
 ```
 
-![Reference Frame](classical%20mechanics/reference_frame/reference_frame.png)
+![Reference Frame](../ClassicalMechanics/images/reference_frame/reference_frame.png)
 
 </br>
 
@@ -116,7 +116,7 @@ crossref:
 \end{document}
 ```
 
-![Brachistochrone](classical%20mechanics/brachistochrone/brachistochrone.png){width=400}
+![Brachistochrone](../ClassicalMechanics/images/brachistochrone/brachistochrone.png){width=400}
 
 </br>
 
@@ -152,7 +152,7 @@ crossref:
 \end{document}
 ``` 
 
-![Translational Symmetry](classical%20mechanics/translational_symmetry/translational_symmetry.png){width=300}
+![Translational Symmetry](../ClassicalMechanics/images/translational_symmetry/translational_symmetry.png){width=300}
 
 </br>
 
@@ -192,7 +192,7 @@ crossref:
     \end{tikzpicture}
 \end{document}
 ```
-![Rotation of Vector](classical%20mechanics/rotation_of_vector/rotation_of_vector.png){width=300}
+![Rotation of Vector](../ClassicalMechanics/images/rotation_of_vector/rotation_of_vector.png){width=300}
 
 
 </br>
@@ -200,6 +200,10 @@ crossref:
 ```{.tex}
 \documentclass[border=3pt,tikz]{standalone}
 \usepackage{amsmath}
+\usetikzlibrary {3d} 
+\usetikzlibrary {arrows}
+\usetikzlibrary{shapes.geometric}
+
 \usetikzlibrary {3d} 
 \usetikzlibrary {arrows}
 \usetikzlibrary{shapes.geometric}
@@ -218,13 +222,13 @@ crossref:
     \draw node[fill,circle, scale=0.3] at (P2) {};
     \node[below] at (P1) {$(x_1,\,y_1)$};
     \node[above] at (P2) {$(x_2,\,y_2)$};
-    \draw [blue, thick] plot [smooth, tension=0.6] coordinates {(P1) (1.3, 2.2) (2.2,2.5) (2.6,3.0) (P2)};
-    \draw [blue, thick] plot [smooth, tension=0.7] coordinates {(P1) (1.3, 1.4) (2.1,2.0) (2.6,2.3) (P2)};
+    \draw [blue, thick] plot [smooth, tension=0.6] coordinates {(P1) (1.3, 2.2) (2.2,2.6) (2.6,3.1) (P2)};
+    \draw [blue, thick] plot [smooth, tension=0.7] coordinates {(P1) (1.3, 1.01) (2.1,1.23) (2.6,1.6) (3.0, 2.0) (P2)};
   \end{tikzpicture}
 \end{document}
 ```
 
-![Path 1D](classical%20mechanics/path1d/path1d.png){width=300}
+![Path 1D](../ClassicalMechanics/images/path1d/path1d.png){width=300}
 
 </br>
 
@@ -256,7 +260,7 @@ crossref:
 \end{document}
 ```
 
-![Potential](classical%20mechanics/potential/potential.png){width=500}
+![Potential](../ClassicalMechanics/images/potential/potential.png){width=500}
 
 </br>
 
@@ -281,7 +285,7 @@ crossref:
 \end{document}
 ```
 
-![Area Swept by radius vector](classical%20mechanics/area_swept/area_swept.png){width=300}
+![Area Swept by radius vector](../ClassicalMechanics/images/area_swept/area_swept.png){width=300}
 
 </br>
 
@@ -313,7 +317,7 @@ crossref:
 \end{document}
 ```
 
-![Effective potential for Kepler orbit](classical%20mechanics/effective_potential_for_kepler_orbit/effective_potential.png){width=500}
+![Effective potential for Kepler orbit](../ClassicalMechanics/images/effective_potential_for_kepler_orbit/effective_potential.png){width=500}
 
 </br>
 
@@ -351,7 +355,7 @@ crossref:
 \end{document}
 ```
 
-![중심장의 궤도](classical%20mechanics/central_field_orbit/orbit.png){width=400}
+![중심장의 궤도](../ClassicalMechanics/images/central_field_orbit/orbit.png){width=400}
 
 </br>
 
@@ -380,7 +384,7 @@ crossref:
 \end{document}
 ```
 
-![$\varepsilon$ 에 따른 궤도](classical%20mechanics/keppler_orbit/keppler_orbit.png){width=400}
+![$\varepsilon$ 에 따른 궤도](../ClassicalMechanics/images/keppler_orbit/keppler_orbit.png){width=400}
 
 </br>
 
@@ -409,7 +413,7 @@ crossref:
 \end{document}
 ```
 
-![좌표계와 산란](classical%20mechanics/frame_and_scattering/frame_and_scattering.png){width=450}
+![좌표계와 산란](../ClassicalMechanics/images/frame_and_scattering/frame_and_scattering.png){width=450}
 
 </br>
 
@@ -442,7 +446,7 @@ crossref:
 \end{document}
 ```
 
-![실험실 좌표계에서 산란이 발생했을 때의 운동량 벡터](classical%20mechanics/momentum_in_lab_frame/momentum_in_lab_frame.png){width=250}
+![실험실 좌표계에서 산란이 발생했을 때의 운동량 벡터](../ClassicalMechanics/images/momentum_in_lab_frame/momentum_in_lab_frame.png){width=250}
 
 </br>
 
@@ -517,7 +521,7 @@ crossref:
 \end{document}
 ```
 
-![$m_2$ 가 정지해 있을 때의 실험실 좌표계](classical%20mechanics/elastic_scattering_angles/elastic_scatteiing_angles.png){width=450}
+![$m_2$ 가 정지해 있을 때의 실험실 좌표계](../ClassicalMechanics/images/elastic_scattering_angles/elastic_scatteiing_angles.png){width=450}
 
 </br>
 
@@ -558,7 +562,7 @@ crossref:
 \end{document}
 ```
 
-![러더퍼드 산란](classical%20mechanics/rutherford_scattering/rutherford_scattering.png){width=400}
+![러더퍼드 산란](../ClassicalMechanics/images/rutherford_scattering/rutherford_scattering.png){width=400}
 
 
 </br>
@@ -584,7 +588,7 @@ crossref:
 \end{document}
 ```
 
-![고체각](classical%20mechanics/solid_angle/solid_angle.png){width=400}
+![고체각](../ClassicalMechanics/images/solid_angle/solid_angle.png){width=400}
 
 </br>
 
@@ -611,7 +615,7 @@ crossref:
 \end{document}
 ```
 
-![Potential Wall](classical%20mechanics/potential_wall/potential_wall.png){width=350}
+![Potential Wall](../ClassicalMechanics/images/potential_wall/potential_wall.png){width=350}
 
 </br>
 
@@ -667,4 +671,4 @@ crossref:
 \end{document}
 ```
 
-![Cross Section](classical%20mechanics/cross_section/cross_section.png){width=450}
+![Cross Section](../ClassicalMechanics/images/cross_section/cross_section.png){width=450}

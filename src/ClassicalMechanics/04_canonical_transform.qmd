@@ -1,0 +1,348 @@
+---
+title: "정준 변환"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+많은 경우 해밀토니안으로 역학계의 문제를 푸는 것이 라그랑지안을 이용해 푸는 것보다 많이 쉬워지거나 하지는 않는다. 그렇다면 왜 굳이 해밀토니안을 배우는 것일까? 그것은 고전역학애 내제된 수학적 구조를 보는데 해밀토니안 방법이 훨씬 유용하기 때문이다. 이 방법은 또한 통계역학이나 양자역학이 발전하는데 해밀토니안이 큰 기여를 했다. 
+
+</br>
+
+## 정준 변환의 방정식 
+
+### 정준 변환의 방정식 
+
+@exr-goldestein_1_15 에서 점변환을 정의하였다. 여기서는 이것이 매우 중요하므로 정식으로 정의하기로 하자.
+
+::: {.callout-note appearance="minimal"}
+::: {#def-CM_point_transformations}
+
+#### 점변환
+독립적인 일반화된 좌표 $\bf{q}$ 에서 다른 독립적인 일반화된 좌표 $\bf{Q}$ 로의 아래와 같은 형태의 변환을 **점변환 (point transformation)** 이라고 한다. 
+
+$$
+Q_i =Q(\bf{q},\,t).
+$$ {#eq-CM_point_transformation}
+
+
+:::
+:::
+
+해밀토니안이 구성되는 위상공간에서는 좌표와 운동량이 독립적인 좌표이다. 따라서 좌표 뿐만 아니라 운동량도 @eq-CM_point_transformation 와 같은 형태로 변해야 한다. 그렇다면 위상공간에서 아래와 같이 변환된다.
+
+$$
+\begin{aligned}
+Q_i = Q_i (\bf{q},\, \bf{p},\, t), \\
+P_i = P_i (\bf{q},\, \bf{p},\, t),
+\end{aligned}
+$$ {#eq-CM_transformation_in_phase_space}
+
+일 것이다. 우리가 원하는 것은 이 변환에 대해 @eq-CM_canonical_equation_of_hamiltonian 와 같은 정준방정식이 만족되는 것이다. 어떤 함수 $\overline{H}=\overline{H}(\bf{Q},\, \bf{P},\,t)$ 에 대해
+
+$$
+\dot{Q}_i = \dfrac{\partial \overline{H}}{\partial P_i}, \qquad \dot{P}_i = - \dfrac{\partial \overline{H}}{\partial Q_i}
+$$ {#eq-CM_hamilton_equation_of_motion_after_point_transformation}
+
+라면 $\overline{H}$ 는 $(\bf{Q},\,\bf{P})$ 위상공간에서의 해밀토니안 역할을 수행하는 것이다. 
+
+
+앞서 [변형된 해밀턴의 원리](03_hamilton_dynamics.qmd#sec-CM_modified_hamilton_principle) 에서 보았듯이 $\bf{Q},\, \bf{P}$ 가 정준 좌표라면 변형된 해밀턴 원리를 만족시켜야 한다. 즉
+
+$$
+\delta \int_{t_1}^{t_2} \left(\sum_i \dot{Q}_i P_i - \overline{H}(\bf{Q},\, \bf{P},\, t)\right)\, dt = 0.
+$$ {#eq-CM_modifield_hamiltons_principle_in_new_coord}
+
+또한
+
+$$
+\delta \int_{t_1}^{t_2} \left(\sum_i \dot{q}_i p_i - H(\bf{q},\, \bf{p},\, t)\right)\, dt = 0
+$${#eq-CM_modifield_hamiltons_principle_in_old_coord}
+
+이어야 한다. @eq-CM_modifield_hamiltons_principle_in_old_coord 와 @eq-CM_modifield_hamiltons_principle_in_new_coord 가 동시에 만족한다는 것은 두 식이 같다는 것을 의미하지 않는다. 일반적으로 두 식이 같을 때의 조건은 어떤 상수 $\lambda$ 와 $C_2$ 급 함수$^\ast$ $G$ 에 대해 [$^{\ast}$ $C_n$ 급 함수는 $n$ 번 미분 가능하고, 그 $n$ 차 도함수가 연속인 함수이다]{.aside}
+
+$$
+\lambda \left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_{i}\dot{Q}_i P_i - \overline{H} + \dfrac{dG}{dt}
+$$ {#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0}
+
+을 만족하는 경우이다. 
+
+</br>
+
+### 정준변환의 분류 {#sec-CM_sorts_of_canonical_transformation}
+
+위상공간의 점변환을 상수 $\mu,\, \nu$ 에 대해 $\bf{Q} = \mu \bf{q},\, \bf{P} = \nu \bf{p}$ 로 놓자. 그렇다면 $\overline{H}(\bf{Q},\, \bf{P}) = \mu\nu H(\bf{q},\, \bf{p})$ 에 대해 @eq-CM_hamilton_equation_of_motion_after_point_transformation 이 성립하며
+
+$$
+\mu \nu \left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_i \dot{Q}_i P_i -\overline{H}
+$$
+
+이다. @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0 와 비교하면 $\lambda = \mu\nu,\, G=\text{const.}$ 인 꼴이다. 이런 변환을 **스케일 변환(scale transformation)** 이라고 하며 우리는 실제로 @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0 에서 $\lambda=1$ 인 경우에만 신경서도 된다는 것을 할 수 있다. 따라서 앞으로는 
+$$
+\left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_{i}\dot{Q}_i P_i - \overline{H} + \dfrac{dG}{dt}
+$$ {#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero}
+
+인 경우만 다루기로 하자. 앞으로는 $\lambda\ne 1$ 일 경우는 **확장된 정준 변환 (extended canonical transformation)** 이라고 하고 $\lambda =1$ 인 경우에만 **정준 변환** 이라고 하기로 하자. 또 하나 정준변환 @eq-CM_transformation_in_phase_space 에서 시간에 대해 명시적인 의존성이 없을 경우 **제한된 정준 변환 (restricted canonical transformation)** 이라고 한다. 
+
+</br>
+
+### 변환 생성 함수 {#sec-CM_generating_function_of_the_transformation}
+
+@eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero 의 마지막 항 $\dfrac{dG}{dt}$ 은 action $S_H$ 의 계산을 위한 적분에서 양 끝점에 대해서만 기여한다. 따라서 $G$ 가 $(\bf{q},\, \bf{p},\,t)$ 의 함수이거나 $(\bf{Q},\, \bf{P},\, t)$ 의 함수라면 $\delta S_H$ 에 기여하지 않는다. 더우기 위상공간에서의 좌표변환(@eq-CM_transformation_in_phase_space) 과 그 역변환을 통해 $G$ 는 $(\bf{q},\, \bf{p},\,t)$ 와 $(\bf{Q},\, \bf{P},\, t)$ 의 혼합으로 표현 될 수 있다. 이 $G$ 함수는 이 두 쌍의 정준 변수 사이의 가교역할을 수행할 수 있으며 **변환 생성 함수 (generating function of the transformation)** 이라고 불린다. 이것을 좀 더 분명히 알아보자. $n$-자유도 시스템을 가정하고 4가지 종류와 생성함수와 정준변환의 관계에 대해 알아보기로 하자. 
+
+
+#### **(1) $G_1(\bf{q},\, \bf{Q},\,t)$ 의 경우**
+
+생성함수가 $(\bf{q},\, \bf{Q},\,t)$ 의 함수 라면 @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero 는
+
+$$
+\begin{aligned}
+\sum_i p_i \dot{q}_i - H &= \sum_i P_i \dot{Q}_i - \overline{H} + \dfrac{dG_1}{dt} \\[0.3em]
+&= \sum_i P_i\dot{Q}_i - \overline{H} + \dfrac{\partial G_1}{\partial t} + \sum_{i}\left(\dfrac{\partial G_1}{\partial q_i}\dot{q}_i + \dfrac{\partial G_1}{\partial Q_i} \dot{Q}_i\right)
+\end{aligned}
+$$ {#eq-CM_lagrangian_for_type1_generationg_function}
+
+이다. $\bf{q}$ 와 $\bf{Q}$ 는 각각 독립적이므로 이로부터
+
+$$
+p_i = \dfrac{\partial G_1}{\partial q_i},\qquad P_i = - \dfrac{\partial G_1}{\partial Q_i},\qquad \overline{H} = H + \dfrac{\partial G_1}{\partial t}
+$${#eq-CM_equations_for_type1_generating_function}
+
+를 얻는다. 위 식의 첫번째 식으로부터 $n$ 개의 $p_i$ 를 $(\bf{q},\, \bf{Q},\,t)$ 의 함수로 얻을 수 있다. 이 $p_i$ 가 가역이라면 $n$ 개의 $Q_i$ 를  $(\bf{q},\, \bf{p},\, t)$ 의 함수로 얻을 수 있다. 또한 이를 이용하면 위 식의 두번째 식으로부터 $n$ 개의 $P_i$ 를 얻을 수 있다. 그리고 세번째 식으로부터 $\overline{H}$ 를 얻을 수 있다. 
+
+이제 반대로 변환이 주어졌을 때(@eq-CM_transformation_in_phase_space) 생성함수를 어떻게 알 수 있을까? 
+$$
+dG_1 = \sum_i \left(\dfrac{\partial G_1}{\partial q_i} dq_i+ \dfrac{\partial G_1}{\partial Q_i} dQ_i 
+\right)+ \dfrac{\partial G_1}{\partial t}dt
+$$
+
+이며 $dq_i,\, dQ_i$ 의 계수는 @eq-CM_equations_for_type1_generating_function 로 부터 얻을 수 있다.  .... to be done ..
+
+
+</br>
+
+#### **(2) $G_2(\bf{q},\, \bf{P},\,t)$ 인 경우**
+
+생성함수가 원래의 좌표($\bf{q}$) 와 변환된 운동량($\bf{P}$), 그리고 시간의 함수일 경우를 생각해보자. 이 때
+
+$$
+G = G_2(\bf{q},\, \bf{P},\,t) - \sum_{i}Q_i P_i
+$$
+
+라 놓고 @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero 에 대입하면
+
+$$
+\begin{aligned}
+\sum_i p_i \dot{q}_i - H &= -\sum_i Q_i \dot{P}_i- \overline{H} + \sum_i \dfrac{\partial G_2}{\partial q_i}\dot{q}_i + \sum_i \dfrac{\partial G_2}{\partial P_i}\dot{P}_i + \dfrac{\partial G_2}{\partial t}
+\end{aligned}
+$$ {#eq-CM_lagrangian_for_type2_generationg_function}
+
+이므로,
+
+$$
+p_i =\dfrac{\partial G_2}{\partial q_i},\qquad Q_i = \dfrac{\partial G_2}{\partial P_i},\qquad \overline{H} = H + \dfrac{\partial G_2}{\partial t}
+$$ {#eq-CM_equations_for_type2_generating_function}
+
+이다. 위 식의 첫번째 식으로부터 $p_i = p_i(\bf{q},\, \bf{P},\,t)$ 을 얻으며, 가역이라면 $P_i$ 를 $\bf{q},\, \bf{p},\,t$ 의 함수로 얻을 수 있다. 이제 두번째 식으로부터 $\bf{Q}$ 를 얻을 수 있다. 
+
+</br>
+
+#### **(3) $G_3(\bf{p},\, \bf{Q},\,t)$ 인 경우**
+
+$$
+G = \sum_i q_ip_i + G_3(\bf{p},\, \bf{Q},\,t)
+$$
+
+로 놓고 @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero 에 대입하면
+
+$$
+\begin{aligned}
+-\sum_i \dot{p}_i q_i - H &= \sum_i \dot{Q}_i P_i -\overline{H}+ \sum_i \dfrac{\partial G_2}{\partial p_i}\dot{p}_i + \sum_i \dfrac{\partial G_2}{\partial Q_i}\dot{Q}_i + \dfrac{\partial G_2}{\partial t}
+\end{aligned}
+$${#eq-CM_lagrangian_for_type3_generationg_function}
+
+이므로,
+
+$$
+q_i = -\dfrac{\partial G_2}{\partial p_i},\qquad P_i = -\dfrac{\partial G_2}{\partial Q_i},\qquad \overline{H} = \overline{H}+ \dfrac{\partial G_2}{\partial t}
+$${#eq-CM_equations_for_type3_generating_function}
+
+이다. 역시 첫번째 식으로부터 $\bf{q} = \bf{q}(\bf{p},\, \bf{Q},\,t)$ 를 얻으며, 가역일 경우 $\bf{Q} = \bf{Q}(\bf{q},\, \bf{p},\, t)$ 를 얻는다. 두번째 식으로붜 $\bf{P}$ 를 얻는다.
+
+</br>
+
+#### **(4) $G_4(\bf{p},\, \bf{P},\,t)$ 인 경우**
+
+$$
+G = \sum_i q_i p_i - \sum_i Q_i P_i + G_4(\bf{p},\,\bf{P},\,t)
+$$
+
+로 놓으면
+
+$$
+-\sum_i q_i \dot{p}_i - H = - \sum_i Q_i \dot{P}_i - \overline{H}  + \sum_i\dfrac{\partial G_4}{\partial p_i} \dot{p_i} + \sum_i \dfrac{\partial G_4}{\partial P_i}\dot{P}_i + \dfrac{\partial G_4}{\partial t}
+$${#eq-CM_lagrangian_for_type4_generationg_function}
+
+이다. 이로부터
+
+$$
+q_i = - \dfrac{\partial G_4}{\partial p_i},\qquad Q_i = \dfrac{\partial G_4}{\partial P_i},\qquad \overline{H}= H + \dfrac{\partial G_4}{\partial t}
+$${#eq-CM_equations_for_type4_generating_function}
+
+를 얻는다. $\bf{q} = \bf{q}(\bf{p},\, \bf{P},\,t)$ 이므로 가역이라면 $\bf{P}= \bf{P}(\bf{q},\, \bf{p},\,t)$ 를 얻을 수 있다. 이를 두번째 식에 적용하여 $\bf{Q}_i = \bf{Q}(\bf{q},\, \bf{p},\,t)$ 를 얻는다.
+
+</br>
+
+## 정준변환의 예
+
+여기서는 간단하고 다양한 예제를 통해 정준변환의 본질과 변환생성함수의 역할에 대해 알아보자.
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-CM_exmaples_of_canonical_transformation_1}
+
+변환생성함수 $G_2 = q_i P_i$ 가 주어졌다고 하자. 그렇다면 @eq-CM_equations_for_type2_generating_function 에 따라
+
+$$
+p_i = P_i,\qquad Q_i = q_i,\qquad \overline{H} = H
+$$
+
+인 항등 변환이다. 즉 $q_iP_i$ 는 항등변환에 대한 변환생성함수이다.
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-CM_exmaples_of_canonical_transformation_2}
+
+변환생성함수 $G_2 = \sum_i g_i(\bf{q},\,t) P_i + h(\bf{q},\,t)$ 가 주여졌다고 하자. 그리고 $\{g_i\}$ 는 서로 독립이라고 하자. @eq-CM_equations_for_type2_generating_function 에 따라
+
+$$
+Q_i = g_i(\bf{q},\,t)
+$$
+
+이다. 즉 이 정준 변환은 점변환이다. 이 때 
+
+$$
+p_j = \sum_i \dfrac{\partial g_i}{\partial q_j}P_i + \dfrac{\partial h}{\partial q_j}
+$$
+
+이다. 이것을 행렬 표기법으로 표현할 수 있다. 
+
+$$
+\bf{g} = \begin{bmatrix} g_1 \\ \vdots \\ g_n \end{bmatrix},\qquad \dfrac{\partial \bf{g}}{\partial \bf{q}} = \begin{bmatrix} \dfrac{\partial g_1}{\partial q_1} & \cdots &\dfrac{\partial g_1}{\partial q_n} \\ \vdots & \ddots & \vdots \\ \dfrac{\partial g_n}{\partial q_1} & \cdots &\dfrac{\partial g_n}{\partial q_n} \end{bmatrix},\qquad \dfrac{\partial h}{\partial \bf{q}} = \begin{bmatrix} \dfrac{\partial h}{\partial q_1} & \cdots & \dfrac{\partial h}{\partial q_n} \end{bmatrix}
+$$ 
+
+에 대해
+$$
+\bf{p} = \begin{bmatrix} p_1 &  \cdots & p_n\end{bmatrix} =\bf{P} \left(\dfrac{\partial \bf{g}}{\partial \bf{q}}\right)+ \dfrac{\partial h}{\partial \bf{q}}
+$$
+
+
+이므로 $\bf{P}$ 는 아래와 같다.
+
+$$
+\bf{P} = \left(\bf{p}-\dfrac{\partial h}{\partial \bf{q}}\right)\left(\dfrac{\partial \bf{g}}{\partial \bf{q}}\right)^{-1}
+$$
+
+:::
+
+</div></br>
+
+
+</br>
+
+## 연습문제 {.unnumbered}
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Goldstein_9_1}
+
+#### Goldestein 9.1
+두가지 종류이 해밀톤 방정식을 조합하기 위한 노력중의 하나는 복소수 영역으로 확장하는 것이다. $1$-자유도 시스템에서 변환을 다음과 같이 정의하자.
+
+$$
+Q=q+ip,\qquad P = Q^\ast. \tag{1}
+$$
+
+해밀토니안이 변하지 않는다면 이 변환은 정준변환이 아님을 보여라. $Q,\,P$ 의 스케일을 조정한 어떤 좌표 $Q',\,P'$ 에 대해 $Q',\, P'$ 이 정준좌표가 되도록 할 수 있는가?
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$Q=q+ip,\, P=q-ip$ 이므로 $q=\dfrac{P+Q}{2},\, p = \dfrac{Q-P}{2i}$ 이다. 이로부터 다음을 얻는다.
+$$
+\begin{aligned}
+\dfrac{\partial H}{\partial Q} &= \dfrac{\partial H}{\partial q}\dfrac{\partial q}{\partial Q} + \dfrac{\partial H}{\partial p}\dfrac{\partial p}{\partial Q} = \dfrac{-\dot{p}}{2} + \dfrac{-i\dot{q}}{2} = -\dfrac{i}{2}\dot{P}  \ne -\dot{P} \\[0.3em]
+\dfrac{\partial H}{\partial P} &=  \dfrac{\partial H}{\partial q}\dfrac{\partial q}{\partial P} + \dfrac{\partial H}{\partial p}\dfrac{\partial p}{\partial P} = \dfrac{i}{2}(\dot{q}+i\dot{p}) = \dfrac{i}{2}\dot{Q} \ne \dot{Q}.
+\end{aligned}
+$$
+
+즉 문제의 $P,\,Q$ 에 대해서는 해밀턴 정준방정식이 성립하지 않는다. 이제 $Q' = \alpha q + i\alpha p,\, P' = \beta q - i\beta p$ 로 놓으면,
+
+$$
+q = \dfrac{\beta Q' + \alpha P'}{2\alpha \beta},\qquad p = \dfrac{\beta Q' - \alpha P'}{2i\alpha \beta}
+$$
+
+이다. 
+
+$$
+\begin{aligned}
+\dfrac{\partial H}{\partial Q'} &= \dfrac{-\dot{p}}{2\alpha} - \dfrac{\dot{qi}}{2\alpha} =\dfrac{-i}{2\alpha\beta}(\beta \dot{q} - i\beta \dot{p})  = \dfrac{-i}{2\alpha\beta}\dot{P}\\[0.3em]
+\dfrac{\partial H}{\partial P'} &= \dfrac{-\dot{p}}{2\beta} + \dfrac{i\dot{q}}{2\beta} = \dfrac{i}{2\alpha \beta}(\alpha\dot{q}+ i\alpha \dot{p}) = \dfrac{i}{2\alpha \beta}\dot{Q}
+\end{aligned}
+$$
+
+이므로 $2\alpha\beta = i$ 인 조건만 만족하면 정준방정식이 성립한다. 
+:::
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-Goldstein_9_2}
+
+#### Goldstein 9.2
+
+($a$) 해밀토니안이 $H=\dfrac{p^2}{2} - \dfrac{1}{2q^2}$ 으로 주어진 1차원 시스템을 생각하자. 여기에 $D=\dfrac{pq}{2}-Ht$ 는 운동상수임을 보여라.
+
+($b$) ($a$) 의 결과를 일반화하여 해밀토니안이 $H = \|\bf{p}\|^n - ar^{-n}$ 으로 주어졌다고 하자. 이 때 $\bf{p}$ 는 데카르트 좌표계에서의 $\bf{r}$ 에 대한 정준운동량이다. 이 때 $D=\dfrac{\bf{p\cdot r}}{n} -Ht$ 가 운동상수임을 보여라.
+
+($c$) $Q=\lambda q,\, P = (1/\lambda)p$ 변환은 명백히 정준변환이다. 그러나 여기에 $t'=\lambda^2t$ 까지 포함시키면 정준변환이 되지 않는다. 그러나 이 변환에 대해 ($a$) 의 $D$ 는 불변임을 보여라. 
+:::
+
+</div></br>
+
+::: {.solution}
+
+($a$) 해밀턴 운동벙정식에 의해 $\dot{q} = p$, $\dot{p} = - 1/q^3$ 이다. 해밀토니안에 명시적인 $t$ 의존성이 없으므로 $\dfrac{dH}{dt}= \dfrac{\partial H}{\partial t}=0$ 이다. 따라서
+
+$$
+\begin{aligned}
+\dfrac{dD}{dt} &= \dfrac{1}{2}(\dot{p}q + \dot{q}p) - H = \dfrac{p^2}{2} - \dfrac{1}{2q^2} - H = 0
+\end{aligned}
+$$
+
+이다.
+
+($b$) $\dot{\bf{p}} = anr^{n-2}\bf{r}$ 이며 $\dot{\bf{r}}= n\bf{p}\|\bf{p}\|^{n-2}$ 이고 역시 $\dot{H}=0$ 이므로,
+
+$$
+\dfrac{dD}{dt}= \dfrac{1}{n}(\dot{\bf{p}}\bf{\cdot r} + \bf{p \cdot} \dot{\bf{r}}) -H = 0
+$$
+
+이다.
+
+($c$) 
+
+:::

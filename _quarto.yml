@@ -16,6 +16,7 @@ book:
       - src/ClassicalMechanics/01_basic_principles.qmd
       - src/ClassicalMechanics/02_variational_principle.qmd
       - src/ClassicalMechanics/03_hamilton_dynamics.qmd
+      - src/ClassicalMechanics/04_canonical_transform.qmd
       - src/ClassicalMechanics/one_body_problems.qmd
       - src/ClassicalMechanics/two_or_three_bodies_problems.qmd
       - src/ClassicalMechanics/A_proofs.qmd
