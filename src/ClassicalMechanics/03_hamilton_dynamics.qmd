@@ -20,15 +20,15 @@ crossref:
 
 ### 라그랑지안 역학과 해밀토니안 역학 {#sec-CM_lagrangian_and_hamiltonian_mechanics_intro}
 
-$n$-자유도 시스템의 라그랑지안 역학은 $n$ 개의 2차 미분방정식(오일러-라그랑쥬 방정식) 으로 기술된다.
+$n$-자유도 시스템의 라그랑지안 역학은 $n$ 개의 2차 미분방정식(라그랑쥬 방정식) 으로 기술된다.
 
 $$
 \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_j}\right) - \dfrac{\partial L}{\partial q_j} = 0.
 $$
 
-이 방정식의 해를 구하기 위해서는 $2n$ 개의 초기값이 필요하며 ($1$) 특정 시간 $t$ 에 대해 $n$ 개의 $q_i(t)$ 와 역시 $n$ 개의 $\dot{q}(t_i)$ 이거나 ($2$) 두 시간 $t_1,\,t_2$ 에 대해 $n$ 개의 $q_i(t_1)$ 과 $q_i(t_2)$ 이다. 즉 $n$ 개의 독립 변수 $\{q_i\}$ 와 시간에 대한 미분 $\{\dot{q}_i\}$ 에 관한 문제이다. 라그랑지안은  각각의 일반화된 좌표로 이루어진 $n$ 차원 구성 공간(configuration space) 에서 표현된다.
+이 방정식의 해를 구하기 위해서는 $2n$ 개의 초기값이 필요하며 ($1$) 특정 시간 $t$ 에 대해 $n$ 개의 $q_i(t)$ 와 역시 $n$ 개의 $\dot{q}(t_i)$ 이거나 ($2$) 두 시간 $t_1,\,t_2$ 에 대해 $n$ 개의 $q_i(t_1)$ 과 $q_i(t_2)$ 이다. 즉 $n$ 개의 독립 변수 $\{q_i\}$ 와 시간에 대한 미분 $\{\dot{q}_i\}$ 에 관한 문제이다. 라그랑지안은  각각의 일반화된 좌표로 이루어진 $n$ 차원 짜임새 공간에서 표현된다.
 
-이에 반해 $n$-자유도 시스템의 해밀토니안 역학은 $2n$ 개의 독립변수에 대한 $2n$ 개의 1차 이분방정식으로 기술된다. 필요한 초기조건은 라그랑지안과 동일한 $2n$ 개이며, $2n$ 차원의 위상 공간(phase space) 에서 표현된다. 이 $2n$ 개의 독립변수는 $n$ 개의 일반화된 변수 $\{q_i\}$ 와 $n$ 개의 정준 운동량 $\{p_i\}$ 이며 $(\boldsymbol{q},\, \boldsymbol{p})$ 를 **정준 변수 (canonical variables)** 라고 한다. 
+이에 반해 $n$-자유도 시스템의 해밀토니안 역학은 $2n$ 개의 독립변수에 대한 $2n$ 개의 1차 이분방정식으로 기술된다. 필요한 초기조건은 라그랑지안과 동일한 $2n$ 개이며, $2n$ 차원의 위상 공간에서 표현된다. 이 $2n$ 개의 독립변수는 $n$ 개의 일반화된 변수 $\{q_i\}$ 와 $n$ 개의 정준 운동량 $\{p_i\}$ 이며 $(\boldsymbol{q},\, \boldsymbol{p})$ 를 **정준 변수 (canonical variables)** 라고 한다. 
 
 $$
 \boxed{p_i := \dfrac{\partial L(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)}{\partial \dot{q}_i}.}
@@ -56,7 +56,7 @@ $$ {#eq-CM_canonical_momentum}
 $\boldsymbol{x},\, \boldsymbol{y}\in \R^n$ 이며 $F:\R^{2n} \to \R$ 이라고 하자. $F$ 가 미분가능하다면
 
 $$
-dF = \nabla_\boldsymbol{x} F \boldsymbol{\cdot} d\boldsymbol{x} + \nabla_\boldsymbol{y} F\boldsymbol{\cdot} \boldsymbol{y}
+dF = \nabla_\boldsymbol{x} F \boldsymbol{\cdot} d\boldsymbol{x} + \nabla_\boldsymbol{y} F\boldsymbol{\cdot} d\boldsymbol{y}
 $$
 
 이며 $\boldsymbol{u}=\nabla_\boldsymbol{x}F$ 에 대해
@@ -77,17 +77,28 @@ $$
 
 ### 해밀토니안 {#sec-CM_hamiltonian}
 
-라그랑지안 $L$ 은 $\dot{q}_i$ 에 대해 convex 이다. 따라서  $\dot{q}_i$ 에 대해 [르장드르 변환](../topics/mathematical.qmd#sec-legendre_transform) 을 수행 할 수있으며, 이 변환의 결과를 **해밀토니안(Hamiltonian)** 이라고 한다. 즉, 해밀토니안 $H$ 는 다음과 같다.
+::: {.callout-note appearance="minimal" icon="false"}
+
+::: {#def-CM_hamiltonian}
+
+#### 해밀토니안
+라그랑지안 $L(\bf{q},\, \dot{\bf{q}},\,t)$ 에 대해 아래와 같은 르장드르 변환을 수행하여 얻은 $H(\bf{q},\, \bf{p},\,t)$ 를 **해밀토니안(Hamiltonian)** 이라고 한다. 
 
 $$
 H\left(\boldsymbol{q}, \boldsymbol{p}, t\right) = \sum_{i} \dot{q}_i p_i - L(\boldsymbol{q}, \dot{\boldsymbol{q}}, t)
 $$ {#eq-CM_hamiltonian}
 
+:::
+
+:::
+
+</br>
+
 해밀토니안은 $\boldsymbol{q},\, \boldsymbol{p},\, t$ 에 대한 함수이므로 그 미분형식은 다음과 같다.
 
 $$
 dH = \sum_i \left(\dfrac{\partial H}{\partial q_i}\right) dq_i + \sum_i \left(\dfrac{\partial H}{\partial p_i}\right) dp_i + \dfrac{\partial H}{\partial t}\, dt
-$$
+$$ {#eq-CM_differential_form_of_hamiltonian}
 
 또한 @eq-CM_hamiltonian 으로 부터, 
 
@@ -117,7 +128,7 @@ $$
 \dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
 $$ {#eq-CM_time_dependence_of_hamiltonian} 
 
-를 얻는다. @eq-CM_canonical_equation_of_hamiltonian 을 **해밀턴의 정준 방정식(canonical equations of Haminton)** 이라고 부른다. 우리는 이를 통해 $n$ 개의 2차 미분방정식(라그랑쥬 방정식) 을 $2n$ 개의 1차 미분방정식(해밀턴의 정준 방정식) 으로 바꿨다. 차이는 (이것은 매우 중요하다) 라그랑지안이 일반화된 좌표계에서 $\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t$ 의 함수라면 해밀토니안은 $\boldsymbol{q},\, \boldsymbol{p},\,t$ 의 함수라는 것이다. 해밀턴 정준방정식을 따르는 좌표 $\bf{q},\, \bf{p}$ 를 **정준 좌표 (canonical coordinate)** 라고 한다.(운동량 변수도 정준 좌표에 포함된다.)
+를 얻는다. @eq-CM_canonical_equation_of_hamiltonian 을 **해밀턴 정준 방정식(canonical equations of Haminton)** 이라고 부른다. 우리는 이를 통해 $n$ 개의 2차 미분방정식(라그랑쥬 방정식) 을 $2n$ 개의 1차 미분방정식(해밀턴의 정준 방정식) 으로 바꿨다. 차이는 (이것은 매우 중요하다) 라그랑지안이 일반화된 좌표계에서 $\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t$ 의 함수라면 해밀토니안은 $\boldsymbol{q},\, \boldsymbol{p},\,t$ 의 함수라는 것이다. 해밀턴 정준방정식을 따르는 좌표 $\bf{q},\, \bf{p}$ 를 **정준 좌표 (canonical coordinate)** 라고 한다.(운동량 변수도 정준 좌표에 포함된다.)
 
 </br>
 
@@ -125,14 +136,14 @@ $$ {#eq-CM_time_dependence_of_hamiltonian}
 
 해밀토니안은 라그랑지안에 대한 르장드르 변환으로 정의된다. 따라서 다음과 같은 순서로 해밀토니안을 구한다.
 
-1. 적절한 (일반화된) 좌표계에서 라그랑지안 $L(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)$ 를 구한다.
+&emsp;($1$) 적절한 일반화된 좌표계에서 라그랑지안 $L(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)$ 를 구한다.
 
-2. $q_i$ 에 대한 정준 운동량 $p_i = \dfrac{\partial L}{\partial \dot{q}_i}$ 를 구한다.
+&emsp;($2$) 각각의 일반화된 좌표 $q_i$ 에 대한 정준 운동량 $p_i = \dfrac{\partial L}{\partial \dot{q}_i}$ 를 구한다.
 
-3. @eq-CM_hamiltonian 로 해밀토니안을 구한다.
+&emsp;($3$) @eq-CM_hamiltonian 로 해밀토니안을 구한다.
 
 
-이것은 진짜로 일반화된 좌표계에서는 쉽지 않은 일이다. $\{p_i\}$ 를 구한 후 모든 $\dot{q}_j$ 를 $\{q_i\},\, \{p_i\},\,t$ 에 대한 함수로 다시 기술해야 하기 때문이다. 하지만 물리적으로 중요한 많은 문제에 대해서는 지름길이 존재한다.
+이것은 진짜로 일반화된 좌표계에서는 쉽지 않은 일이다. $\bf{p}$ 를 구한 후 모든 $\dot{q}_j$ 를 $\bf{q},\, \bf{p},\,t$ 에 대한 함수로 다시 기술해야 하기 때문이다. 하지만 물리적으로 중요한 많은 문제에 대해서는 지름길이 존재한다.
 
 우선 라그랑지안 $L$ 이 $\{\dot{q}_i\}$ 에 대해 $0$, $1$, $2$ 차 로 homogeneous 한 함수의 합으로 표현 할 수 있을 때이다. 어떤 함수$f(x_1,\ldots,\,x_n)$ 이 $k$ 차로 homogeneous 하다는 것은 
 
@@ -158,7 +169,7 @@ $$
 L_0 = L_0 (\boldsymbol{q}),\quad L_1 = \boldsymbol{a}^T \dot{\boldsymbol{q}},\quad L_2 =\dfrac{1}{2}\dot{\boldsymbol{q}}^T \boldsymbol{T}\dot{\boldsymbol{q}}, 
 $$
 
-이다. 이 대 정준 운동량 $\boldsymbol{p}$ 는
+이다. 이 때 정준운동량 $\boldsymbol{p}$ 는
 
 $$
 \boldsymbol{p}= \boldsymbol{T}\dot{\boldsymbol{q}} + \boldsymbol{a}
@@ -237,9 +248,9 @@ $$ {#eq-CM_symplectic_determinant_of_J}
 
 </br>
 
-### Cyclic coordinate 와 보존 정리 {#sec-cyclic_coordinate_hamiltonian}
+### 순환좌표 와 보존 정리 {#sec-cyclic_coordinate_hamiltonian}
 
-@sec-CM_cyclic_coordinate_lagrangian 에서 다루었던 순환 좌표(cyclic coordinate) 를 다시 생각해보자. 라그랑지안과 해밀토니안의 관계 즉 $H = \sum_i \dot{q}_i p_i -L$ 을 생각해보면
+[정준운동량과 위상공간](#sec-CM_variational_phase_space) 에서 다루었던 순환 좌표를 다시 생각해보자. 라그랑지안과 해밀토니안의 관계 즉 $H = \sum_i \dot{q}_i p_i -L$ 을 생각해보면
 
 $$
 \dfrac{\partial L}{\partial q_i}=0 \iff \dfrac{\partial H}{\partial q_i}=0
@@ -321,7 +332,7 @@ $$
 S_H = \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - H(\bf{p},\, \bf{q},\,t)\right] \, dt
 $$ {#eq-CM_action_in_phase_space}
 
-이다. 여기서 라그랑지안에 대한 $S_L$ 는 구성공간에서의 경로에 대한 적분이지만 해밀토니안에 대한 $S_H$ 는 위상공간에서의 경로에 대한 적분이 이 되며, 해밀토니안 형식에 따라 $\bf{q}$ 와 $\bf{p}$ 는 각각 독립변수로 간주된다. 따라서 @eq-CM_action_in_phase_space 에서 적분되는 함수는 $\bf{q},\, \dot{q},\, \bf{p},\, \dot{\bf{p}}$ 의 함수로 표현되어야 한다. 따라서 어떤 경로의 variation 역시 위상공간에서의 경로의 variation 이다. 해밀턴의 원리는 구성공간에서의 action $S_L$ 에 대해 다루는데 **변형된 해밀턴의 원리 (modified Hamilton's principle)** 는 위상공간에서의 action $S_H$ 에 대해 $\delta S_H=0$ 이 되는 위상공간 상의 경로를 따른는 것을 주장한다. 즉
+이다. 여기서 라그랑지안에 대한 $S_L$ 는 짜임새 공간에서의 경로에 대한 적분이지만 해밀토니안에 대한 $S_H$ 는 위상공간에서의 경로에 대한 적분이 이 되며, 해밀토니안 형식에 따라 $\bf{q}$ 와 $\bf{p}$ 는 각각 독립변수로 간주된다. 따라서 @eq-CM_action_in_phase_space 에서 적분되는 함수는 $\bf{q},\, \dot{\bf{q}},\, \bf{p},\, \dot{\bf{p}}$ 의 함수로 표현되어야 한다. 따라서 어떤 경로의 변형 역시 위상공간에서의 경로의 변형 이다. 해밀턴의 원리는 짜임새 공간에서의 action $S_L$ 에 대해 다루는데 **변형된 해밀턴의 원리 (modified Hamilton's principle)** 는 위상공간에서의 action $S_H$ 에 대해 $\delta S_H=0$ 이 되는 위상공간 상의 경로를 따른는 것을 주장한다. 즉
 
 $$
 \delta S_H = \delta \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - H(\bf{p},\, \bf{q},\,t)\right] \, dt = 0
@@ -348,7 +359,7 @@ $$
 \dot{p}_i = - \dfrac{\partial H}{\partial q_i}
 $$
 
-를 얻을 수 있으며, $f$ 는 명시적인 $\dot{p}_i$ 의존성이 없으므로 두번째 식으로부터
+를 얻을 수 있으며, $F$ 는 명시적인 $\dot{p}_i$ 의존성이 없으므로 두번째 식으로부터
 
 $$
 \dot{q}_i = \dfrac{\partial H}{\partial q_i}
@@ -367,7 +378,7 @@ $$
 
 인 부분이다. 그런데 $F$ 는 $\bf{\dot{p}}$ 에 명시적인 의존성이 없기 때문에 위의 항은 항상 $0$ 이다. 즉 변형된 해밀톤의 원리에로부터 해밀턴 운동방정식을 유도할 때 $\delta \bf{p}=0$ 의 조건은 필요하지 않다. 해밀턴의 원리와 변형된 해밀턴의 원리는 동일한 경계조건을 사용한다.
 
-($2$)
+
 
 
 </br>

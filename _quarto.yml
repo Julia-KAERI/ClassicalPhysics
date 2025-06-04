@@ -62,7 +62,7 @@ format:
     # https://quarto.org/src/output-formats/html-themes.html#overview
     # theme: darkly
     theme: cosmo
-    fontsize: 0.9em
+    fontsize: 0.8em
     toc: true
     collapse: true
     # css: styles.css

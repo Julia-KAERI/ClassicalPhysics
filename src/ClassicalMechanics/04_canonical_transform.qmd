@@ -8,7 +8,7 @@ crossref:
 
 {{< include ../../latexmacros.qmd >}}
 
-많은 경우 해밀토니안으로 역학계의 문제를 푸는 것이 라그랑지안을 이용해 푸는 것보다 많이 쉬워지거나 하지는 않는다. 그렇다면 왜 굳이 해밀토니안을 배우는 것일까? 그것은 고전역학애 내제된 수학적 구조를 보는데 해밀토니안 방법이 훨씬 유용하기 때문이다. 이 방법은 또한 통계역학이나 양자역학이 발전하는데 해밀토니안이 큰 기여를 했다. 
+많은 경우 해밀토니안으로 역학계의 문제를 푸는 것이 라그랑지안을 이용해 푸는 것보다 쉬워지거나 하지는 않는다. 그렇다면 왜 굳이 해밀토니안을 배우는 것일까? 그것은 고전역학에 내제된 수학적 구조를 보는데 해밀토니안 방법이 훨씬 유용하기 때문이다. 이 방법은 또한 통계역학이나 양자역학이 발전하는데 해밀토니안이 큰 기여를 했다. 
 
 </br>
 
@@ -91,7 +91,7 @@ $$ {#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero}
 
 ### 변환 생성 함수 {#sec-CM_generating_function_of_the_transformation}
 
-@eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero 의 마지막 항 $\dfrac{dG}{dt}$ 은 action $S_H$ 의 계산을 위한 적분에서 양 끝점에 대해서만 기여한다. 따라서 $G$ 가 $(\bf{q},\, \bf{p},\,t)$ 의 함수이거나 $(\bf{Q},\, \bf{P},\, t)$ 의 함수라면 $\delta S_H$ 에 기여하지 않는다. 더우기 위상공간에서의 좌표변환(@eq-CM_transformation_in_phase_space) 과 그 역변환을 통해 $G$ 는 $(\bf{q},\, \bf{p},\,t)$ 와 $(\bf{Q},\, \bf{P},\, t)$ 의 혼합으로 표현 될 수 있다. 이 $G$ 함수는 이 두 쌍의 정준 변수 사이의 가교역할을 수행할 수 있으며 **변환 생성 함수 (generating function of the transformation)** 이라고 불린다. 이것을 좀 더 분명히 알아보자. $n$-자유도 시스템을 가정하고 4가지 종류와 생성함수와 정준변환의 관계에 대해 알아보기로 하자. 
+@eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero 의 마지막 항 $\dfrac{dG}{dt}$ 은 action $S_H$ 의 계산을 위한 적분에서 양 끝점에 대해서만 기여한다. 따라서 $G$ 가 $(\bf{q},\, \bf{p},\,t)$ 의 함수이거나 $(\bf{Q},\, \bf{P},\, t)$ 의 함수라면 $\delta S_H$ 에 기여하지 않는다. 더우기 위상공간에서의 좌표변환(@eq-CM_transformation_in_phase_space) 과 그 역변환을 통해 $G$ 는 $(\bf{q},\, \bf{p},\,t)$ 와 $(\bf{Q},\, \bf{P},\, t)$ 의 혼합으로 표현 될 수 있다. 이 $G$ 함수는 이 두 쌍의 정준 변수 사이의 가교역할을 수행할 수 있으며 이때문에 **변환 생성 함수 (generating function of the transformation)** 라고 불린다. 여기서는 변환생성함수에 대해 좀 더 분명히 알아보자. 이 절 전체에서 $n$-자유도 시스템을 가정하며, 4가지 종류와 생성함수와 정준변환의 관계에 대해 알아보기로 하자. 
 
 
 #### **(1) $G_1(\bf{q},\, \bf{Q},\,t)$ 의 경우**

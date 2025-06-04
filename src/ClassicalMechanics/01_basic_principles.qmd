@@ -12,7 +12,7 @@ crossref:
 
 ### 입자, 공간, 시간, 좌표계 {#sec-CM_particle_space_time_reference_frame}
 
-고전역학에서 **입자(particle)** 는 질량을 가지고 있지만 부피가 없는, 혹은 그 부피란 것이 우리가 측정하고자 하는 양에 대해 무시할만한 어떤 추상적인 대상이다. 입자는 3차원 공간상에 존재하며 시간의 변화에 따라 공간상에서 움직일 수 있다. 입자의 시간에 따른 위치를 **경로(path 혹은 trajectory)** 라고 한다. 입자의 경로를 기술하기 위해 공간상에서의 위치의 기준이 되는 원점 $\mathcal{O}$ 을 설정하며, 이 원점에 대한 변위를 **위치 벡터(position vector)** 혹은 **반경 벡터(radius vector)** 라고 한다. 원점은 임의로 정할 수 있다. 고전역학에서 다루는 공간은 3차원 유클리드 공간이며, 원점 $\mathcal{O}$ 에 대해 임의의 표준 기저 $\hat{\bf{e}}_1,\,\hat{\bf{e}}_2,\,\hat{\bf{e}}_3$, 혹은 $\hat{\bf{x}},\, \hat{\bf{y}},\, \hat{\bf{z}}$ 를 관례적으로 $\hat{\bf{e}}_3 = \hat{\bf{e}}_1 \times \hat{\bf{e}}_2$ 가 되도록 잡아 radius vector $\bf{r}$ 을 이 표준기저에 대한 좌표로 표현한다. 즉 $\bf{r} = x\hat{\bf{e}}_1 + y \hat{\bf{e}}_2 + z\hat{\bf{e}}_3$ 일 때 $\bf{r}$ 을 $(x,\,y,\,z)$ 혹은 $\begin{bmatrix} x & y & z\end{bmatrix}^T$ 로 표현하며 이를 **좌표(coordinate)** 라고 한다.
+고전역학에서 **입자(particle)** 는 질량을 가지고 있지만 부피가 없는, 혹은 그 부피란 것이 우리가 측정하고자 하는 양에 대해 무시할만한 어떤 추상적인 대상이다. 입자는 3차원 공간상에 존재하며 시간의 변화에 따라 공간상에서 움직일 수 있다. 입자의 시간에 따른 위치를 **경로(path 혹은 trajectory)** 라고 한다. 입자의 경로를 기술하기 위해 공간상에서의 위치의 기준이 되는 원점 $\mathcal{O}$ 을 설정하며, 이 원점에 대한 변위를 **위치 벡터(position vector)** 혹은 **반경 벡터(radius vector)** 라고 한다. 원점은 임의로 정할 수 있다. 고전역학에서 다루는 공간은 3차원 유클리드 공간이며, 원점 $\mathcal{O}$ 에 대해 임의의 표준 기저 $\hat{\bf{e}}_1,\,\hat{\bf{e}}_2,\,\hat{\bf{e}}_3$, 혹은 $\hat{\bf{x}},\, \hat{\bf{y}},\, \hat{\bf{z}}$ 를 관례적으로 $\hat{\bf{e}}_3 = \hat{\bf{e}}_1 \times \hat{\bf{e}}_2$ 가 되도록 잡아 위치벡터 $\bf{r}$ 을 이 표준기저에 대한 좌표로 표현한다. 즉 $\bf{r}(t) = x(t)\hat{\bf{e}}_1 + y(t) \hat{\bf{e}}_2 + z(t)\hat{\bf{e}}_3$ 일 때 $\bf{r}(t)$ 을 $(x(t),\,y(t),\,z(t))$ 혹은 $\begin{bmatrix} x(t) & y(t) & z(t)\end{bmatrix}^T$ 로 표현하며 이를 **좌표(coordinate)** 라고 한다.
 
 ![두 좌표계](images/radius_vector/radius_vector.png){#fig-reference_frames width="70%"}
 
@@ -44,7 +44,7 @@ $$ {#eq-CM_definition_of_velocity}
 
 :::
 
-우주에 입자(particle) 하나만 존재하며 당신은 이 입자에 영항을 끼치지 않으면서 위치와 속도를 잴 수 있는 존재라고 하자. 이 입자의 운동에 어떤 영향도 끼치는 존재가 없을 때 그 입자는 정지상태나 직선으로 균일한 운동상태, 즉 등속운동상태를 유지하는 좌표계가 존재한다는 말이며, 이것을 **관성좌표계(inertial frame)** 이라고 한다. 어떤 관성좌표계 $\mathcal{O}$ 에 대해 다른 좌표계의 원점 $\mathcal{O}'$ 이 $\bf{V} = (V_x,\,V_y,\,V_z)$ 의 일정한 속도로 움직인다고 하자. 처음의 좌표계의 radius vector $\bf{r} = (x,\,y,\,z)$ 라고 하고, 뒤의 좌표계의 위치 벡터 $\bf{r}'=(x',\,y',\, z')$ 라고 하면, 
+우주에 입자(particle) 하나만 존재하며 당신은 이 입자에 영항을 끼치지 않으면서 위치와 속도를 잴 수 있는 존재라고 하자. 이 입자의 운동에 어떤 영향도 끼치는 존재가 없을 때 그 입자는 정지상태나 직선으로 균일한 운동상태, 즉 등속운동상태를 유지하는 좌표계가 존재한다는 말이며, 이것을 **관성좌표계(inertial frame)** 이라고 한다. 어떤 관성좌표계 $\mathcal{O}$ 에 대해 다른 좌표계의 원점 $\mathcal{O}'$ 이 $\bf{V} = (V_x,\,V_y,\,V_z)$ 의 일정한 속도로 움직인다고 하자. 처음의 좌표계의 위치벡터 $\bf{r} = (x,\,y,\,z)$ 라고 하고, 뒤의 좌표계의 위치 벡터 $\bf{r}'=(x',\,y',\, z')$ 라고 하면, 
 
 $$
 \bf{r}' = \bf{r}-\bf{V}t
@@ -56,7 +56,7 @@ $$
 \dfrac{dx'}{dt}= \dfrac{dx}{dt}-V_x,\, \dfrac{dy'}{dt}= \dfrac{dy}{dt}-V_y,\, \dfrac{dz'}{dt}= \dfrac{dz}{dt}-V_z
 $$
 
-가 된다. 즉 $\mathcal{O}$ 에서의 등속운동은 $\mathcal{O}'$ 에서의 등속운동이다. 이렇게 한 좌표계에 대해 등속을 하는 다른 좌표계로 변환하는 것을 갈릴레이 변환(Galilean transformation) 이라고 하며, 관성좌표계에 대한 갈릴레이 변환은 다른 관성좌표계가 된다.
+가 된다. 즉 $\mathcal{O}$ 에서의 등속운동은 $\mathcal{O}'$ 에서의 등속운동이다. 이렇게 한 좌표계에 대해 등속을 하는 다른 좌표계로 변환하는 것을 **갈릴레이 변환(Galilean transformation)** 이라고 하며, 관성좌표계에 대한 갈릴레이 변환은 다른 관성좌표계가 된다.
 
 
 </br>
@@ -203,7 +203,7 @@ $$ {#eq-CM_sufficient_condition_for_conservative_force}
 
 ### 입자에 대한 에너지 보존 정리 {#sec-CM_energy_consrvertion}
 
-시스템에 작용하는 모든 힘이 보존력일 때 이 system을 **보존계(conservative system)** 라 한다. 보존계에서는 
+시스템에 작용하는 모든 힘이 보존력일 때 이 시스템을 **보존계(conservative system)** 라 한다. 보존계에서는 
 
 $$
 W_{12} = \int_1^2 \bf{F}\cdot d \bf{s} = \int_1^2 -\nabla V(\bf{r}) \cdot d\bf{s} = V(1) - V(2)
@@ -230,7 +230,7 @@ $$
 \dot{\bf{p}}_i = \frac{d}{dt} (m_i\bf{v}_i) = \sum_j \bf{F}_{ji} + \bf{F}^{(e)}_i.
 $$ {#eq-CM_equation_of_motion_in_particle_system}
 
-제 3 운동법칙에 따라 모든 $i,\,j$ 에 대해 $\bf{F}_{ij} = - \bf{F}_{ji}$ 일 경우 모든 particle에 대해 더하면 다음과 같다. 여기서 $\bf{F}^{(e)} = \sum_i \bf{F}^{(e)}_i$ 는 external force 의 총합이다. 
+제 3 운동법칙에 따라 모든 $i,\,j$ 에 대해 $\bf{F}_{ij} = - \bf{F}_{ji}$ 일 경우 모든 입자에 대해 더하면 다음과 같다. 여기서 $\bf{F}^{(e)} = \sum_i \bf{F}^{(e)}_i$ 는 외력(external force) 의 총합이다. 
 
 $$
 \dfrac{d^2}{dt^2} \sum_i m_i \bf{r}_i = \sum_i \bf{F}^{(e)}_i + \sum_{\substack{ i ,j \\ i \ne j }} \bf{F}_{ji} = \bf{F}^{(e)}  + 0
@@ -310,7 +310,7 @@ $$ {#eq-CM_equation_of_motion_for_total_angular_momentum}
 
 #### **작용 반작용의 강한 조건과 약한 조건**
 
-총 운동량 보존은 $\bf{F}_{ij} = -\bf{F}_{ji}$만을 가정하였다. 이를 작용-반작용의 약한 조건(Weak form of the action and reaction principle) 라고 한다. 그러나 총 각운동량 보존은. $\bf{F}_{ij} = F_{ij}\hat{\bf{r}}_{ij}$, 즉 central force 임을 가정하였다 이를 작용-반작용의 강한 조건 이라고 한다.  
+총 운동량 보존은 $\bf{F}_{ij} = -\bf{F}_{ji}$만을 가정하였다. 이를 작용-반작용의 약한 조건(Weak form of the action and reaction principle) 라고 한다. 그러나 총 각운동량 보존은 $\bf{F}_{ij} = F_{ij}\hat{\bf{r}}_{ij}$, 즉 중심력(central force) 임을 가정하였다 이를 작용-반작용의 강한 조건 이라고 한다.  
 
 
 </br>
@@ -329,15 +329,15 @@ $$ {#eq-CM_total_angular_momentum_for_center_of_mass_coord}
 
 즉 원점 $\mathcal{O}$ 에서의 입자계의 총 각운동량 $\bf{L}$ 은 ($1$) 모든 질량이 질량 중심 에 집중되어 있다고 가정할 때의 각운동량 $\bf{L}_C= \bf{R}\times (M\bf{V})$ 와 ($2$) 질량중심을 새로운 origin으로 했을때의 각운동량 $\bf{L}_R=\sum_i \bf{r}_i' \times \bf{p}'_i$ 의 합이다. 
 
-입자계에서 특정 시간에서의 각 입자의 위치의 집합을 **구성공간(configuration space)** 이라고 한다. 이 구성공간은 $N$ 입자의 경우 $3N$ 차원 벡터공간이 된다. 입자계가 configuration 1($\mathcal{C}_1$) 에서 configuration 2 ($\mathcal{C}_2$) 로 변화했을때의 총 일 $W_{12}$ 는 다음과 같다.
+입자계에서 $N$ 입자의 경우 각 입자마다 3개의 좌표로 표현되며 따라서 이 입자게는 $3N$ 차원 벡터공간에서의 위치로 표현된다. 이 $3N$ 차원 벡터공간상의 위치 $P_1$ 에서 $P_2$ 로 이동했을때의 총 일 $W_{12}$ 는 다음과 같다.
 $$ 
-W_{12} = \sum_i \int_1^2 \bf{F}_i \cdot d\bf{s}_i = \sum_i \int_1^2 \bf{F}_i^{(e)}\cdot d\bf{s}_i + \sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \bf{F}_{ji}\cdot d\bf{s}_i\;.
+W_{12} = \sum_i \int_{P_1}^{P_2} \bf{F}_i \cdot d\bf{s}_i = \sum_i  \int_{P_1}^{P_2} \bf{F}_i^{(e)}\cdot d\bf{s}_i + \sum_{\substack{ i ,j \\ i \ne j }}  \int_{P_1}^{P_2}\bf{F}_{ji}\cdot d\bf{s}_i\;.
 $$ {#eq-work_system_of_particles}
 
 단일 입자의 경우를 생각하면,
 
 $$
-\sum_i \int_1^2 \bf{F}_i \cdot d\bf{s}_i = \sum_i \int_1^2 m_i \bf{v}_i \cdot \bf{v}_i dt = \sum_i \int_1^2 d(\dfrac{1}{2} m_i v_i^2) = T_2 - T_1
+\sum_i \int_{P_1}^{P_2} \bf{F}_i \cdot d\bf{s}_i = \sum_i \\int_{P_1}^{P_2} m_i \bf{v}_i \cdot \bf{v}_i dt = \sum_i \int_{P_1}^{P_2} d\left(\dfrac{1}{2} m_i v_i^2\right) = T_2 - T_1
 $$
 
 이다. 이 때 총 운동에너지를 $T = \dfrac{1}{2} \sum\limits_i m_i v_i^2$ 로 하였다.
@@ -355,7 +355,7 @@ $$ {#eq-CM_total_kinetic_energy_in_center_of_mass_coord}
 각각의 외력 $\bf{F}_i^{(e)}$ 가 어떤 스칼라 함수 $-V_i$ 의 미분일 경우를 생각하자. 즉 $\bf{F}_i^{(e)} = -\nabla_i V_i$ 일 경우,
 
 $$
-\sum_i \int_1^2 \bf{F}_i^{(e)} \cdot d\bf{s}_i = - \sum_i \int_1^2 (\nabla_i V_i) \cdot d\bf{s}_i = - \left. \sum_i V_i\right|_1^2 = \sum_i V_i (1) - V_i(2)
+\sum_i \int_{P_1}^{P_2} \bf{F}_i^{(e)} \cdot d\bf{s}_i = - \sum_i \int_{P_1}^{P_2} (\nabla_i V_i) \cdot d\bf{s}_i = - \left. \sum_i V_i\right|_{P_1}^{P_2} = \sum_i V_i (P_1) - V_i(P_2)
 $$
 
 이다. 입자 상호간의 힘 역시 보존력이라면, $\bf{F}_{ij}$ 와 $\bf{F}_{ji}$ 가 포텐셜 $V_{ij}$ 로 부터 얻어 질 수 있다. 강한 작용-반작용 조건에서 $V_{ij} = V(|\bf{r}_i -\bf{r}_j|)$ 이며 
@@ -376,8 +376,8 @@ $$
 
 $$
 \begin{aligned}
-\sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \bf{F}_{ji}\cdot d\bf{s}_i  &= - \dfrac{1}{2} \sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \left( \nabla_i V_{ij} \cdot d\bf{s}_i + \nabla_j V_{ij} \cdot d\bf{s}_j\right)  \\
-&= -\dfrac{1}{2}\sum_{\substack{ i ,j \\ i \ne j }} \int_1^2 \nabla_{ij} V_{ij} \cdot d\bf{r}_{ij} = -\dfrac{1}{2} \left. \sum_{\substack{ i ,j \\ i \ne j }}  V_{ij}\right|_1^2
+\sum_{\substack{ i ,j \\ i \ne j }} \int_{P_1}^{P_2} \bf{F}_{ji}\cdot d\bf{s}_i  &= - \dfrac{1}{2} \sum_{\substack{ i ,j \\ i \ne j }} \int_{P_1}^{P_2} \left( \nabla_i V_{ij} \cdot d\bf{s}_i + \nabla_j V_{ij} \cdot d\bf{s}_j\right)  \\
+&= -\dfrac{1}{2}\sum_{\substack{ i ,j \\ i \ne j }} \int_{P_1}^{P_2} \nabla_{ij} V_{ij} \cdot d\bf{r}_{ij} = -\dfrac{1}{2} \left. \sum_{\substack{ i ,j \\ i \ne j }}  V_{ij}\right|_{P_1}^{P_2}
 \end{aligned}
 $$
 
@@ -400,37 +400,63 @@ $$
 
 ### 구속조건의 분류 {#sec-CM_classification_of_constraints}
 
-Constraint가 시간과 위치에 대한 함수이며 다음과 같은 꼴로 표현 될 수 있을 때 **holonomic** 이라 한다. 
+구속조건이 시간과 위치에 대한 함수이며 다음과 같은 꼴로 표현 될 수 있을 때 **holonomic** 이라 한다. 
 
 $$
 f(\bf{r}_1,\,\bf{r}_2,\ldots,\,t) =0.
 $$ {#eq-CM_holonomic_constraint}
 
-Holonomic constraint 가 아닌 constraint 는 **nonholonomic** 이라고 한다.
+Holonomic 하지 않은 구속조건은 **nonholonomic** 이라고 한다.
 
-Constraint가 explicit한 시간 의존성이 없을 때, 즉 $\dfrac{\partial}{\partial t} f(\bf{r}_i;\, \dot{\bf{r}}_i ;\,t)=0$  일 때 **scleronomous constraint** 라 하며 아닐 때 **rheonomous constraint** 라 한다. 
-
-</br>
-
-### Constraints 와 일반화된 좌표계 {#sec-CM_generalized_coordinates}
-
-물체의 운동을 기술할 때 constraints가 부여된다면 두가지 어려운 점이 발생한다. 우선 좌표 $(r_1,\,r_2,\ldots)$ 는 더이상 서로 독립적이지 하지 않다. 두번째로는 **구속력(force of constraint)** 문제가 있다. 
-
-Holonomic 의 경우 소위 **일반화된 좌표계(generalized coordinate)** 를 사용함으로서 문제를 풀 수 있다. 
-
-$N$-입자계를 생각하자. 구속조건이 없다면 $3N$ 개의 독립적인 좌표변수가 존재한다. 이렇게 시스템을 기술하는데 필요한 독립적인 변수의 갯수를 **자유도(degree of freedom)** 라고 한다. 만약 $k$ 개의 독립적인 holonomic constraints가 존재한다면 이 입자계의 자유도는 $3N-k$ 가 될 것이다. 그렇다면 이 입자계는 $3N-k$ 개의 독립변수 $q_1,\ldots,\,q_{3N-k}$ 로 기술 될 수 있을 것이다. 즉 $\bf{r}_i = \bf{r}_i (q_1,\ldots,\,q_{3N-k},t)$ for $i=1,\ldots,\,3N-k$. 이 경우 $q_i$ 가 거리 단위의 값일 필요가 없으며 어떤 $(q_i,\,q_j,\,q_k)$ 가 벡터일 필요도 없다. *모든 종류의 물리량이 일반화된 좌표계의 좌표변수가 될 수 있다.* Nonhonolomic 구속조건의 경우는 독립변수의 개수를 줄이는 데 사용 될 수 없다.
+구속조건에 명시적인 시간 의존성이 없을 때, 즉 $\dfrac{\partial}{\partial t} f(\bf{r}_i;\, \dot{\bf{r}}_i ;\,t)=0$  일 때 **scleronomous constraint** 라 하며 아닐 때 **rheonomous constraint** 라 한다. 
 
 </br>
 
+### 구속조건과 일반화된 좌표계 {#sec-CM_generalized_coordinates}
+
+물체의 운동을 기술할 때 구속조건이 부여된다면 두가지 어려운 점이 발생한다. 우선 좌표 $(r_1,\,r_2,\ldots)$ 는 더이상 서로 독립적이지 하지 않다. 두번째로는 **구속력(force of constraint)** 문제가 있다. 이중 첫번째에 대해 구속조건이 holonomic 할 때 소위 **일반화된 좌표계(generalized coordinate)** 를 사용함으로서 문제를 풀 수 있다. 
+
+$N$-입자계를 생각하자. 구속조건이 없다면 $3N$ 개의 독립적인 좌표변수가 존재한다. 이렇게 시스템을 기술하는데 필요한 독립적인 변수의 갯수를 **자유도(degree of freedom)** 라고 한다. 만약 $k$ 개의 독립적인 holonomic 구속조건이 존재한다면 이 입자계의 자유도는 $3N-k$ 가 될 것이다. 그렇다면 이 입자계는 $3N-k$ 개의 독립변수 $q_1,\ldots,\,q_{3N-k}$ 로 기술 될 수 있다. 즉 $\bf{r}_i = \bf{r}_i (q_1,\ldots,\,q_{3N-k},t)$ for $i=1,\ldots,\,3N-k$. 이 경우 $q_i$ 가 거리 단위의 값일 필요가 없으며 어떤 $(q_i,\,q_j,\,q_k)$ 가 벡터일 필요도 없다. *모든 종류의 물리량이 일반화된 좌표계의 좌표변수가 될 수 있다.* Nonhonolomic 구속조건의 경우는 독립변수의 개수를 줄이는 데 사용 될 수 없다. 이 일반화된 좌표에 대해 짜임새 공간이 아래와 같이 정의된다.
+
+
+</br>
+
+
+
+::: {.callout-note appearance="minimal" icon="false"}
+
+::: {#def-CM_configuration_space}
+
+#### 짜임새 공간
+
+어떤 $n$-자유도 시스템의 **짜임새 공간 (configuration space)** 은 이 시스템의 $n$ 개의 일반화된 좌표가 가질 수 있는 값의 집합이다.
+
+:::
+
+:::
+
+
+
+
+
+</br>
 
 ## 달랑베르 원리 와 라그랑쥬 방정식
 
 
 ### 가상 변위와 가상 일의 원리 {#sec-CM_principle_of_virtural_work}
 
- 
-시스템의 **가상 번위 (virtual displacement)** 는 주어진 시간 $t$ 에서 주어진 힘과 구속조건에서 가능한 좌표의 미소 변화(infinitesimal change of the coordinate) $\delta \bf{r}_i$ 에 의한 구성공간(configuration space) 상의 미소 변화를 의미한다. virtual이란 이름이 붙은 이유는 물리적으로 실제의 변위는 특정 시간 간격에서 발생하지만 가상변위는 시간 $t$ 가 고정되어 있기 때문이다.
+::: {.callout-note appearance="minimal" icon="false"}
 
+::: {#def-CM_vertual_displacement}
+
+#### 가상변위
+
+시스템의 **가상 번위 (virtual displacement)** 는 주어진 시간 $t$ 에서 주어진 힘과 구속조건에서 가능한 좌표의 미소 변화(infinitesimal change of the coordinate) $\delta \bf{r}_i$ 에 의한 짜임새 공간(configuration space) 상의 미소 변화를 의미한다. 가상(virtual)이란 이름이 붙은 이유는 물리적으로 실제의 변위는 특정 시간 간격에서 발생하지만 가상변위는 시간 $t$ 가 고정되어 있기 때문이다.
+
+:::
+
+:::
 
 시스템이 평형생태일 경우를 가정하자. 각 입자에 작용하는 힘 $\bf{F}_i = 0$ 이며 따라서 $\bf{F}_i \cdot \delta \bf{r}_i=0$ 이다. 또한 $\sum\limits_i \bf{F}_i \cdot \delta \bf{r}_i = 0$ 임은 자명하다. $\bf{F}_i$ 를 applied force $\bf{F}^{(a)}_i$ 와 구속력 $\bf{f}_i$ 로 분리 할 수 있다. 즉 $\bf{F}_i = \bf{F}^{(a)}_i + \bf{f}_i$ 이며 따라서 다음이 성립한다.
 
@@ -449,13 +475,13 @@ $$ {#eq-CM_principle_of_virtual_work}
 의 조건을 얻게 되며, 위의 @eq-CM_principle_of_virtual_work 은 **가상 일의 원리(the principle of virtual work)** 이라 불린다. $\delta \bf{r}_i$ 들은 서로 구속조건에 묶여 있기 때문에 서로 독립이 아니며 따라서 그 계수인 $\bf{F}^{(a)}_i$ 도 모두 $0$ 이 아니어도 된다(선형대수학을 생각하라). 즉 일반적으로 $\bf{F}^{(a)}_i \ne \bf{0}$ 이다.  
 
 
-이렇게 되면 각각의 $i$ 번째 입자에 대해 $\bf{F}^{(a)}_i$ 가 $0$ 인 조건이 아니게 되며, 따라서 $\delta \bf{r}_i$ 는 서로 독립적이지 않게 되고 위의 @eq-CM_principle_of_virtual_work 가 하나의 constraint 이며 따라서 일반화된 좌표계에 대한 가상 변외로 변환해야 한다. @eq-CM_principle_of_virtual_work 는 constraint force $\bf{f}_i$ 를 포함하지 않는다는 측면에서 우리가 원하는 것이지만 단지 statics 만을 다룬다는 점에서 부족하다. 우리는 이것으로 부터 우리가 원하는 운동방정식을 얻고자 한다.
+이렇게 되면 각각의 $i$ 번째 입자에 대해 $\bf{F}^{(a)}_i$ 가 $0$ 인 조건이 아니게 되며, 따라서 $\delta \bf{r}_i$ 는 서로 독립적이지 않게 되고 위의 @eq-CM_principle_of_virtual_work 가 하나의 구속조건이며 따라서 일반화된 좌표계에 대한 가상 변외로 변환해야 한다. @eq-CM_principle_of_virtual_work 는 구속력 $\bf{f}_i$ 를 포함하지 않는다는 측면에서 우리가 원하는 것이지만 단지 정적인 경우만을 다룬다는 점에서 부족하다. 우리는 이것으로 부터 우리가 원하는 운동방정식을 얻고자 한다.
 
 </br>
 
 ### 달랑베르 원리(D'Alembert's principle) {#sec-CM_dlambert_principle}
 
-운동방정식 $\bf{F}_i = \dot{\bf{p}}_i$ 로부터 시작하자. $\bf{F}_i - \dot{\bf{p}}_i=\bf{0}$ 이며 이것은 시스템의 입자들이 실제 힘 $\bf{F}$ 와 *reversed effecvive force* $-\dot{\bf{p}}_i$ 의 합에 의해 평행상태에 있게 된다는 의미이다. 여기에 가상 변외를 적용하면
+운동방정식 $\bf{F}_i = \dot{\bf{p}}_i$ 로부터 시작하자. $\bf{F}_i - \dot{\bf{p}}_i=\bf{0}$ 이며 이것은 시스템의 입자들이 실제 힘 $\bf{F}$ 와 소위 *reversed effecvive force* $-\dot{\bf{p}}_i$ 의 합에 의해 평행상태에 있게 된다는 의미이다. 여기에 가상변위를 적용하면
 
 $$
 \sum_i \left( \bf{F}_i - \dot{\bf{p}}_i \right) \cdot \delta \bf{r}_i = 0
@@ -477,7 +503,8 @@ $$ {#eq-CM_dalembert_principle}
 
 </br>
 
-### 일반화된 좌표계에서의 달랑베르 원리
+### 일반화된 좌표계에서의 달랑베르 원리 {#sec-CM_dlambert_principle_in_generalized_coordinate}
+
 
 일반화된 좌표계 $q_1,\,q_2,\ldots,\,q_n$ 을 생각하자. $\bf{r}_i = \bf{r}_i (q_1,\ldots,\,q_n,\,t)$ 이므로 chain rule에 의해
 
@@ -515,7 +542,7 @@ $$ {#eq-CM_generalized_force}
 
 </br>
 
-### Lagrange's equations {#sec-CM_lagrange_equation}
+### 라그랑쥬 방정식 {#sec-CM_lagrange_equation}
 
 달랑베르 원리(@eq-CM_dalembert_principle) 은 $\sum\limits_i \dot{p}_i \cdot \delta \bf{r}_i = \sum\limits_i m_i \ddot{\bf{r}}_i \cdot \delta \bf{r}_i$ 로 쓸 수 있으며 
 
