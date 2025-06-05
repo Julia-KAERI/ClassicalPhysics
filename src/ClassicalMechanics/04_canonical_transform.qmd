@@ -94,7 +94,7 @@ $$ {#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero}
 @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero 의 마지막 항 $\dfrac{dG}{dt}$ 은 action $S_H$ 의 계산을 위한 적분에서 양 끝점에 대해서만 기여한다. 따라서 $G$ 가 $(\bf{q},\, \bf{p},\,t)$ 의 함수이거나 $(\bf{Q},\, \bf{P},\, t)$ 의 함수라면 $\delta S_H$ 에 기여하지 않는다. 더우기 위상공간에서의 좌표변환(@eq-CM_transformation_in_phase_space) 과 그 역변환을 통해 $G$ 는 $(\bf{q},\, \bf{p},\,t)$ 와 $(\bf{Q},\, \bf{P},\, t)$ 의 혼합으로 표현 될 수 있다. 이 $G$ 함수는 이 두 쌍의 정준 변수 사이의 가교역할을 수행할 수 있으며 이때문에 **변환 생성 함수 (generating function of the transformation)** 라고 불린다. 여기서는 변환생성함수에 대해 좀 더 분명히 알아보자. 이 절 전체에서 $n$-자유도 시스템을 가정하며, 4가지 종류와 생성함수와 정준변환의 관계에 대해 알아보기로 하자. 
 
 
-#### **(1) $G_1(\bf{q},\, \bf{Q},\,t)$ 의 경우**
+#### **(1) Type I : $G_1(\bf{q},\, \bf{Q},\,t)$ 의 경우**
 
 생성함수가 $(\bf{q},\, \bf{Q},\,t)$ 의 함수 라면 @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero 는
 
@@ -113,18 +113,12 @@ $${#eq-CM_equations_for_type1_generating_function}
 
 를 얻는다. 위 식의 첫번째 식으로부터 $n$ 개의 $p_i$ 를 $(\bf{q},\, \bf{Q},\,t)$ 의 함수로 얻을 수 있다. 이 $p_i$ 가 가역이라면 $n$ 개의 $Q_i$ 를  $(\bf{q},\, \bf{p},\, t)$ 의 함수로 얻을 수 있다. 또한 이를 이용하면 위 식의 두번째 식으로부터 $n$ 개의 $P_i$ 를 얻을 수 있다. 그리고 세번째 식으로부터 $\overline{H}$ 를 얻을 수 있다. 
 
-이제 반대로 변환이 주어졌을 때(@eq-CM_transformation_in_phase_space) 생성함수를 어떻게 알 수 있을까? 
-$$
-dG_1 = \sum_i \left(\dfrac{\partial G_1}{\partial q_i} dq_i+ \dfrac{\partial G_1}{\partial Q_i} dQ_i 
-\right)+ \dfrac{\partial G_1}{\partial t}dt
-$$
-
-이며 $dq_i,\, dQ_i$ 의 계수는 @eq-CM_equations_for_type1_generating_function 로 부터 얻을 수 있다.  .... to be done ..
+이제 반대로 변환이 주어졌을 때(@eq-CM_transformation_in_phase_space) 생성함수를 어떻게 알 수 있을까? 주어진 변환을 이용하여 $p_i,\, P_i$ 를 $\bf{q},\, \bf{Q},\,t$ 의 함수로 표현 할 수 있다. 그리고 @eq-CM_equations_for_type1_generating_function 를 이용하여 $G_1(\bf{q},\, \bf{Q},\,t)$ 를 원리상 얻을 수 있다. 이 때 얻은 $G_1$ 에 임의의 시간에 대한 함수를 더해도 위의 모든 과정에 영향을 끼치지 않으므로 $G_1$ 에 대한 불확실성은 존재한다. 
 
 
 </br>
 
-#### **(2) $G_2(\bf{q},\, \bf{P},\,t)$ 인 경우**
+#### **(2) Type II : $G_2(\bf{q},\, \bf{P},\,t)$ 인 경우**
 
 생성함수가 원래의 좌표($\bf{q}$) 와 변환된 운동량($\bf{P}$), 그리고 시간의 함수일 경우를 생각해보자. 이 때
 
@@ -150,7 +144,7 @@ $$ {#eq-CM_equations_for_type2_generating_function}
 
 </br>
 
-#### **(3) $G_3(\bf{p},\, \bf{Q},\,t)$ 인 경우**
+#### **(3) Type III : $G_3(\bf{p},\, \bf{Q},\,t)$ 인 경우**
 
 $$
 G = \sum_i q_ip_i + G_3(\bf{p},\, \bf{Q},\,t)
@@ -174,7 +168,7 @@ $${#eq-CM_equations_for_type3_generating_function}
 
 </br>
 
-#### **(4) $G_4(\bf{p},\, \bf{P},\,t)$ 인 경우**
+#### **(4) Type IV : $G_4(\bf{p},\, \bf{P},\,t)$ 인 경우**
 
 $$
 G = \sum_i q_i p_i - \sum_i Q_i P_i + G_4(\bf{p},\,\bf{P},\,t)
@@ -206,7 +200,7 @@ $${#eq-CM_equations_for_type4_generating_function}
 
 ::: {#exm-CM_exmaples_of_canonical_transformation_1}
 
-변환생성함수 $G_2 = q_i P_i$ 가 주어졌다고 하자. 그렇다면 @eq-CM_equations_for_type2_generating_function 에 따라
+Type II 변환생성함수 $G_2 = q_i P_i$ 가 주어졌다고 하자. 그렇다면 @eq-CM_equations_for_type2_generating_function 에 따라
 
 $$
 p_i = P_i,\qquad Q_i = q_i,\qquad \overline{H} = H
@@ -222,7 +216,7 @@ $$
 
 ::: {#exm-CM_exmaples_of_canonical_transformation_2}
 
-변환생성함수 $G_2 = \sum_i g_i(\bf{q},\,t) P_i + h(\bf{q},\,t)$ 가 주여졌다고 하자. 그리고 $\{g_i\}$ 는 서로 독립이라고 하자. @eq-CM_equations_for_type2_generating_function 에 따라
+Type II 변환생성함수 $G_2 = \sum_i g_i(\bf{q},\,t) P_i + h(\bf{q},\,t)$ 가 주여졌다고 하자. 그리고 $\{g_i\}$ 는 서로 독립이라고 하자. @eq-CM_equations_for_type2_generating_function 에 따라
 
 $$
 Q_i = g_i(\bf{q},\,t)
@@ -252,12 +246,65 @@ $$
 \bf{P} = \left(\bf{p}-\dfrac{\partial h}{\partial \bf{q}}\right)\left(\dfrac{\partial \bf{g}}{\partial \bf{q}}\right)^{-1}
 $$
 
+즉 $\bf{Q} = \bf{Q}(\bf{q},\,t)$ 로 $\bf{p}$ 에 의존하지 않으나 $\bf{P} = \bf{P}(\bf{q},\, \bf{p},\, t)$ 로 $\bf{q},\, \bf{p}$ 모두에 의존한다. 
+
 :::
 
 </div></br>
 
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-</br>
+::: {#exm-CM_exmaples_of_canonical_transformation_3}
+
+Type I 변환생성함수 $G_1=\sum_{k} q_k Q_k$ 가 주어졌다고 하자. 그렇다면 @eq-CM_equations_for_type1_generating_function 에 따라
+
+$$
+p_i = Q_i,\qquad P_i = -q_i
+$$
+
+이다. 즉 일반화된 좌표와 운동량이 서로 뒤바뀐다. 
+
+:::
+
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-CM_exmaples_of_canonical_transformation_4}
+
+#### 단순조화진동자의 경우
+
+단순조화진동자의 해밀토니안은 아래와 같다.
+
+$$
+H = \dfrac{1}{2m}(p^2+m^2\omega^2 q^2)
+$$ {#eq-exm_ct_and_sho_1}
+
+만약 어떤 함수 $f$ 에 대해 아래와 같은 변환이 정준변환이라고 하자.
+
+$$
+p = f(P)\cos Q,\qquad q= \dfrac{f(P)}{m\omega} \sin Q.
+$${#eq-exm_ct_and_sho_2}
+
+그렇다면 변환된 해밀토니안 $\overline{H}$ 는
+
+$$
+\overline{H} = \dfrac{(f(P))^2}{2m}
+$${#eq-exm_ct_and_sho_3}
+
+이며 $Q$ 는 순환변수로 나타낼 수 있는 장점이 있다. 이제 이런 $f$ 를 찾아보자. 위의 @#eq-exm_ct_and_sho_2 로부터
+
+$$
+p =m\omega q \cot Q
+$$
+
+이며 
+
+
+:::
+
+</div></br>
+
 
 ## 연습문제 {.unnumbered}
 

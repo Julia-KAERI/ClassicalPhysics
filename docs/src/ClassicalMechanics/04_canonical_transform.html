@@ -455,8 +455,8 @@ P_i = P_i (\boldsymbol{q},\, \boldsymbol{p},\, t),
 <section id="sec-CM_generating_function_of_the_transformation" class="level3" data-number="4.1.3">
 <h3 data-number="4.1.3" class="anchored" data-anchor-id="sec-CM_generating_function_of_the_transformation"><span class="header-section-number">4.1.3</span> 변환 생성 함수</h3>
 <p><a href="#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero" class="quarto-xref">식&nbsp;<span>4.7</span></a> 의 마지막 항 <span class="math inline">\(\dfrac{dG}{dt}\)</span> 은 action <span class="math inline">\(S_H\)</span> 의 계산을 위한 적분에서 양 끝점에 대해서만 기여한다. 따라서 <span class="math inline">\(G\)</span> 가 <span class="math inline">\((\boldsymbol{q},\, \boldsymbol{p},\,t)\)</span> 의 함수이거나 <span class="math inline">\((\boldsymbol{Q},\, \boldsymbol{P},\, t)\)</span> 의 함수라면 <span class="math inline">\(\delta S_H\)</span> 에 기여하지 않는다. 더우기 위상공간에서의 좌표변환(<a href="#eq-CM_transformation_in_phase_space" class="quarto-xref">식&nbsp;<span>4.2</span></a>) 과 그 역변환을 통해 <span class="math inline">\(G\)</span> 는 <span class="math inline">\((\boldsymbol{q},\, \boldsymbol{p},\,t)\)</span> 와 <span class="math inline">\((\boldsymbol{Q},\, \boldsymbol{P},\, t)\)</span> 의 혼합으로 표현 될 수 있다. 이 <span class="math inline">\(G\)</span> 함수는 이 두 쌍의 정준 변수 사이의 가교역할을 수행할 수 있으며 이때문에 <strong>변환 생성 함수 (generating function of the transformation)</strong> 라고 불린다. 여기서는 변환생성함수에 대해 좀 더 분명히 알아보자. 이 절 전체에서 <span class="math inline">\(n\)</span>-자유도 시스템을 가정하며, 4가지 종류와 생성함수와 정준변환의 관계에 대해 알아보기로 하자.</p>
-<section id="g_1boldsymbolq-boldsymbolqt-의-경우" class="level4">
-<h4 class="anchored" data-anchor-id="g_1boldsymbolq-boldsymbolqt-의-경우"><strong>(1) <span class="math inline">\(G_1(\boldsymbol{q},\, \boldsymbol{Q},\,t)\)</span> 의 경우</strong></h4>
+<section id="type-i-g_1boldsymbolq-boldsymbolqt-의-경우" class="level4">
+<h4 class="anchored" data-anchor-id="type-i-g_1boldsymbolq-boldsymbolqt-의-경우"><strong>(1) Type I : <span class="math inline">\(G_1(\boldsymbol{q},\, \boldsymbol{Q},\,t)\)</span> 의 경우</strong></h4>
 <p>생성함수가 <span class="math inline">\((\boldsymbol{q},\, \boldsymbol{Q},\,t)\)</span> 의 함수 라면 <a href="#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero" class="quarto-xref">식&nbsp;<span>4.7</span></a> 는</p>
 <p><span id="eq-CM_lagrangian_for_type1_generationg_function"><span class="math display">\[
 \begin{aligned}
@@ -469,15 +469,11 @@ P_i = P_i (\boldsymbol{q},\, \boldsymbol{p},\, t),
 p_i = \dfrac{\partial G_1}{\partial q_i},\qquad P_i = - \dfrac{\partial G_1}{\partial Q_i},\qquad \overline{H} = H + \dfrac{\partial G_1}{\partial t}
 \tag{4.9}\]</span></span></p>
 <p>를 얻는다. 위 식의 첫번째 식으로부터 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(p_i\)</span> 를 <span class="math inline">\((\boldsymbol{q},\, \boldsymbol{Q},\,t)\)</span> 의 함수로 얻을 수 있다. 이 <span class="math inline">\(p_i\)</span> 가 가역이라면 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(Q_i\)</span> 를 <span class="math inline">\((\boldsymbol{q},\, \boldsymbol{p},\, t)\)</span> 의 함수로 얻을 수 있다. 또한 이를 이용하면 위 식의 두번째 식으로부터 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(P_i\)</span> 를 얻을 수 있다. 그리고 세번째 식으로부터 <span class="math inline">\(\overline{H}\)</span> 를 얻을 수 있다.</p>
-<p>이제 반대로 변환이 주어졌을 때(<a href="#eq-CM_transformation_in_phase_space" class="quarto-xref">식&nbsp;<span>4.2</span></a>) 생성함수를 어떻게 알 수 있을까? <span class="math display">\[
-dG_1 = \sum_i \left(\dfrac{\partial G_1}{\partial q_i} dq_i+ \dfrac{\partial G_1}{\partial Q_i} dQ_i
-\right)+ \dfrac{\partial G_1}{\partial t}dt
-\]</span></p>
-<p>이며 <span class="math inline">\(dq_i,\, dQ_i\)</span> 의 계수는 <a href="#eq-CM_equations_for_type1_generating_function" class="quarto-xref">식&nbsp;<span>4.9</span></a> 로 부터 얻을 수 있다. …. to be done ..</p>
+<p>이제 반대로 변환이 주어졌을 때(<a href="#eq-CM_transformation_in_phase_space" class="quarto-xref">식&nbsp;<span>4.2</span></a>) 생성함수를 어떻게 알 수 있을까? 주어진 변환을 이용하여 <span class="math inline">\(p_i,\, P_i\)</span> 를 <span class="math inline">\(\boldsymbol{q},\, \boldsymbol{Q},\,t\)</span> 의 함수로 표현 할 수 있다. 그리고 <a href="#eq-CM_equations_for_type1_generating_function" class="quarto-xref">식&nbsp;<span>4.9</span></a> 를 이용하여 <span class="math inline">\(G_1(\boldsymbol{q},\, \boldsymbol{Q},\,t)\)</span> 를 원리상 얻을 수 있다. 이 때 얻은 <span class="math inline">\(G_1\)</span> 에 임의의 시간에 대한 함수를 더해도 위의 모든 과정에 영향을 끼치지 않으므로 <span class="math inline">\(G_1\)</span> 에 대한 불확실성은 존재한다.</p>
 <p><br></p>
 </section>
-<section id="g_2boldsymbolq-boldsymbolpt-인-경우" class="level4">
-<h4 class="anchored" data-anchor-id="g_2boldsymbolq-boldsymbolpt-인-경우"><strong>(2) <span class="math inline">\(G_2(\boldsymbol{q},\, \boldsymbol{P},\,t)\)</span> 인 경우</strong></h4>
+<section id="type-ii-g_2boldsymbolq-boldsymbolpt-인-경우" class="level4">
+<h4 class="anchored" data-anchor-id="type-ii-g_2boldsymbolq-boldsymbolpt-인-경우"><strong>(2) Type II : <span class="math inline">\(G_2(\boldsymbol{q},\, \boldsymbol{P},\,t)\)</span> 인 경우</strong></h4>
 <p>생성함수가 원래의 좌표(<span class="math inline">\(\boldsymbol{q}\)</span>) 와 변환된 운동량(<span class="math inline">\(\boldsymbol{P}\)</span>), 그리고 시간의 함수일 경우를 생각해보자. 이 때</p>
 <p><span class="math display">\[
 G = G_2(\boldsymbol{q},\, \boldsymbol{P},\,t) - \sum_{i}Q_i P_i
@@ -495,8 +491,8 @@ p_i =\dfrac{\partial G_2}{\partial q_i},\qquad Q_i = \dfrac{\partial G_2}{\parti
 <p>이다. 위 식의 첫번째 식으로부터 <span class="math inline">\(p_i = p_i(\boldsymbol{q},\, \boldsymbol{P},\,t)\)</span> 을 얻으며, 가역이라면 <span class="math inline">\(P_i\)</span> 를 <span class="math inline">\(\boldsymbol{q},\, \boldsymbol{p},\,t\)</span> 의 함수로 얻을 수 있다. 이제 두번째 식으로부터 <span class="math inline">\(\boldsymbol{Q}\)</span> 를 얻을 수 있다.</p>
 <p><br></p>
 </section>
-<section id="g_3boldsymbolp-boldsymbolqt-인-경우" class="level4">
-<h4 class="anchored" data-anchor-id="g_3boldsymbolp-boldsymbolqt-인-경우"><strong>(3) <span class="math inline">\(G_3(\boldsymbol{p},\, \boldsymbol{Q},\,t)\)</span> 인 경우</strong></h4>
+<section id="type-iii-g_3boldsymbolp-boldsymbolqt-인-경우" class="level4">
+<h4 class="anchored" data-anchor-id="type-iii-g_3boldsymbolp-boldsymbolqt-인-경우"><strong>(3) Type III : <span class="math inline">\(G_3(\boldsymbol{p},\, \boldsymbol{Q},\,t)\)</span> 인 경우</strong></h4>
 <p><span class="math display">\[
 G = \sum_i q_ip_i + G_3(\boldsymbol{p},\, \boldsymbol{Q},\,t)
 \]</span></p>
@@ -513,8 +509,8 @@ q_i = -\dfrac{\partial G_2}{\partial p_i},\qquad P_i = -\dfrac{\partial G_2}{\pa
 <p>이다. 역시 첫번째 식으로부터 <span class="math inline">\(\boldsymbol{q} = \boldsymbol{q}(\boldsymbol{p},\, \boldsymbol{Q},\,t)\)</span> 를 얻으며, 가역일 경우 <span class="math inline">\(\boldsymbol{Q} = \boldsymbol{Q}(\boldsymbol{q},\, \boldsymbol{p},\, t)\)</span> 를 얻는다. 두번째 식으로붜 <span class="math inline">\(\boldsymbol{P}\)</span> 를 얻는다.</p>
 <p><br></p>
 </section>
-<section id="g_4boldsymbolp-boldsymbolpt-인-경우" class="level4">
-<h4 class="anchored" data-anchor-id="g_4boldsymbolp-boldsymbolpt-인-경우"><strong>(4) <span class="math inline">\(G_4(\boldsymbol{p},\, \boldsymbol{P},\,t)\)</span> 인 경우</strong></h4>
+<section id="type-iv-g_4boldsymbolp-boldsymbolpt-인-경우" class="level4">
+<h4 class="anchored" data-anchor-id="type-iv-g_4boldsymbolp-boldsymbolpt-인-경우"><strong>(4) Type IV : <span class="math inline">\(G_4(\boldsymbol{p},\, \boldsymbol{P},\,t)\)</span> 인 경우</strong></h4>
 <p><span class="math display">\[
 G = \sum_i q_i p_i - \sum_i Q_i P_i + G_4(\boldsymbol{p},\,\boldsymbol{P},\,t)
 \]</span></p>
@@ -537,7 +533,7 @@ q_i = - \dfrac{\partial G_4}{\partial p_i},\qquad Q_i = \dfrac{\partial G_4}{\pa
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-CM_exmaples_of_canonical_transformation_1" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.1</strong></span> 변환생성함수 <span class="math inline">\(G_2 = q_i P_i\)</span> 가 주어졌다고 하자. 그렇다면 <a href="#eq-CM_equations_for_type2_generating_function" class="quarto-xref">식&nbsp;<span>4.11</span></a> 에 따라</p>
+<p><span class="theorem-title"><strong>예제 4.1</strong></span> Type II 변환생성함수 <span class="math inline">\(G_2 = q_i P_i\)</span> 가 주어졌다고 하자. 그렇다면 <a href="#eq-CM_equations_for_type2_generating_function" class="quarto-xref">식&nbsp;<span>4.11</span></a> 에 따라</p>
 <p><span class="math display">\[
 p_i = P_i,\qquad Q_i = q_i,\qquad \overline{H} = H
 \]</span></p>
@@ -547,7 +543,7 @@ p_i = P_i,\qquad Q_i = q_i,\qquad \overline{H} = H
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-CM_exmaples_of_canonical_transformation_2" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.2</strong></span> 변환생성함수 <span class="math inline">\(G_2 = \sum_i g_i(\boldsymbol{q},\,t) P_i + h(\boldsymbol{q},\,t)\)</span> 가 주여졌다고 하자. 그리고 <span class="math inline">\(\{g_i\}\)</span> 는 서로 독립이라고 하자. <a href="#eq-CM_equations_for_type2_generating_function" class="quarto-xref">식&nbsp;<span>4.11</span></a> 에 따라</p>
+<p><span class="theorem-title"><strong>예제 4.2</strong></span> Type II 변환생성함수 <span class="math inline">\(G_2 = \sum_i g_i(\boldsymbol{q},\,t) P_i + h(\boldsymbol{q},\,t)\)</span> 가 주여졌다고 하자. 그리고 <span class="math inline">\(\{g_i\}\)</span> 는 서로 독립이라고 하자. <a href="#eq-CM_equations_for_type2_generating_function" class="quarto-xref">식&nbsp;<span>4.11</span></a> 에 따라</p>
 <p><span class="math display">\[
 Q_i = g_i(\boldsymbol{q},\,t)
 \]</span></p>
@@ -566,9 +562,41 @@ p_j = \sum_i \dfrac{\partial g_i}{\partial q_j}P_i + \dfrac{\partial h}{\partial
 <p><span class="math display">\[
 \boldsymbol{P} = \left(\boldsymbol{p}-\dfrac{\partial h}{\partial \boldsymbol{q}}\right)\left(\dfrac{\partial \boldsymbol{g}}{\partial \boldsymbol{q}}\right)^{-1}
 \]</span></p>
+<p>즉 <span class="math inline">\(\boldsymbol{Q} = \boldsymbol{Q}(\boldsymbol{q},\,t)\)</span> 로 <span class="math inline">\(\boldsymbol{p}\)</span> 에 의존하지 않으나 <span class="math inline">\(\boldsymbol{P} = \boldsymbol{P}(\boldsymbol{q},\, \boldsymbol{p},\, t)\)</span> 로 <span class="math inline">\(\boldsymbol{q},\, \boldsymbol{p}\)</span> 모두에 의존한다.</p>
 </div>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-CM_exmaples_of_canonical_transformation_3" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.3</strong></span> Type I 변환생성함수 <span class="math inline">\(G_1=\sum_{k} q_k Q_k\)</span> 가 주어졌다고 하자. 그렇다면 <a href="#eq-CM_equations_for_type1_generating_function" class="quarto-xref">식&nbsp;<span>4.9</span></a> 에 따라</p>
+<p><span class="math display">\[
+p_i = Q_i,\qquad P_i = -q_i
+\]</span></p>
+<p>이다. 즉 일반화된 좌표와 운동량이 서로 뒤바뀐다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-CM_exmaples_of_canonical_transformation_4" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.4 (단순조화진동자의 경우)</strong></span> 단순조화진동자의 해밀토니안은 아래와 같다.</p>
+<p><span id="eq-exm_ct_and_sho_1"><span class="math display">\[
+H = \dfrac{1}{2m}(p^2+m^2\omega^2 q^2)
+\tag{4.16}\]</span></span></p>
+<p>만약 어떤 함수 <span class="math inline">\(f\)</span> 에 대해 아래와 같은 변환이 정준변환이라고 하자.</p>
+<p><span id="eq-exm_ct_and_sho_2"><span class="math display">\[
+p = f(P)\cos Q,\qquad q= \dfrac{f(P)}{m\omega} \sin Q.
+\tag{4.17}\]</span></span></p>
+<p>그렇다면 변환된 해밀토니안 <span class="math inline">\(\overline{H}\)</span> 는</p>
+<p><span id="eq-exm_ct_and_sho_3"><span class="math display">\[
+\overline{H} = \dfrac{(f(P))^2}{2m}
+\tag{4.18}\]</span></span></p>
+<p>이며 <span class="math inline">\(Q\)</span> 는 순환변수로 나타낼 수 있는 장점이 있다. 이제 이런 <span class="math inline">\(f\)</span> 를 찾아보자. 위의 @#eq-exm_ct_and_sho_2 로부터</p>
+<p><span class="math display">\[
+p =m\omega q \cot Q
+\]</span></p>
+<p>이며</p>
+</div>
+</div>
 <p><br></p>
 </section>
 <section id="연습문제" class="level2 unnumbered">
