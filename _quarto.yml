@@ -17,10 +17,15 @@ book:
       - src/ClassicalMechanics/02_variational_principle.qmd
       - src/ClassicalMechanics/03_hamilton_dynamics.qmd
       - src/ClassicalMechanics/04_canonical_transform.qmd
-      - src/ClassicalMechanics/one_body_problems.qmd
-      - src/ClassicalMechanics/two_or_three_bodies_problems.qmd
+      - src/ClassicalMechanics/11_one_body_problems.qmd
+      - src/ClassicalMechanics/12_two_or_three_bodies_problems.qmd
+
       - src/ClassicalMechanics/A_proofs.qmd
-      
+    
+    - part: src/Mechanics_and_Symmetry/00_index.qmd
+      chapters:
+      - src/Mechanics_and_Symmetry/01_experimental_facts.qmd
+
     - part: src/Electromagnetism/00_index.qmd
       chapters:
       - src/Electromagnetism/01_mathematics.qmd
@@ -62,7 +67,7 @@ format:
     # https://quarto.org/src/output-formats/html-themes.html#overview
     # theme: darkly
     theme: cosmo
-    fontsize: 0.8em
+    fontsize: 0.9em
     toc: true
     collapse: true
     # css: styles.css

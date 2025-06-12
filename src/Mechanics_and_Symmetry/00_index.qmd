@@ -1,0 +1,30 @@
+---
+title: "고전역학과 대칭"
+number-sections: true
+number-depth: 2
+crossref:
+  chapters: true
+  
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+여기서는 @Arnold2013mathematical 를 바탕으로 고전역학을 처음부터 다시 재구성하도록 한다.
+
+### 참고문헌
+::: {#refs}
+
+@Helliwell_Sahakian_2020
+
+@Goldstein1980Mechanics
+
+@Landau1976Mechanics
+
+@Symon1971mechanics
+
+@Arnold2013mathematical
+
+@Marion2004classical
+
+
+:::
