@@ -47,12 +47,12 @@ book:
     - part: src/topics/Topics.qmd
       chapters:
         - src/topics/mathematical.qmd
-    - part: src/images/images.qmd
-      chapters:
-      - src/images/images_classical_mechanics_01.qmd
-      - src/images/images_classical_mechanics_02.qmd
-      - src/images/images_relativity_01.qmd
-      - src/images/images_test.qmd
+    # - part: src/images/images.qmd
+    #   chapters:
+    #   - src/images/images_classical_mechanics_01.qmd
+    #   - src/images/images_classical_mechanics_02.qmd
+    #   - src/images/images_relativity_01.qmd
+    #   - src/images/images_test.qmd
     - references.qmd
 
 bibliography: references.bib
