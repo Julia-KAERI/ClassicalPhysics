@@ -30,7 +30,7 @@ crossref:
 
 &emsp;**2**. 한 관성좌표계에 대해 균일한 직선 운동을 하는 좌표계는 관성좌표계이다.
 
-</br>
+</br> P
 
 ### 뉴턴의 결정론 {#sec-MS_newton_determinacy}
 
