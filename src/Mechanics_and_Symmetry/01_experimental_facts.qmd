@@ -55,7 +55,7 @@ $$
 \rho(x,\,y) := \|x-y\| = \sqrt{(x-y,\,, x-y)}.
 $$
 
-- 유클리드 구조를 가진 아핀 공간을 유클리드 공간이라고 하며 $n$ 차원 유클리드 공간을 $E^n$ 으로 표기한다.
+- 유클리드 구조를 가진 아핀 공간을 유클리드 공간이라고 하며 $n$ 차원 유클리드 공간을 $\E^n$ 으로 표기한다.
 
 </br>
 
@@ -251,6 +251,12 @@ $$
 :::
 
 <br>
+
+::: {.callout-note appearance="minimal" icon="false"}
+
+::: {#def-MS_configuration_space}
+
+#### 짜임새 공간
 $n$ 개의 점입자의 운동은 갈릴레이 공간에서 $n$ 개의 세계선으로 나타나며 갈릴레이 좌표계에서 $n$ 개의 미분가능한 사상
 
 $$
@@ -264,6 +270,9 @@ $$
 $$
 
 사상을 정의한다. 이 때 $\bf{x}(I)$ 가 이 $n$ 점입자의 경로가 된다.
+
+:::
+:::
 
 </br>
 
@@ -334,7 +343,7 @@ $$
 
 #### 공간의 등방성
 
-3차원 공간의 회전 역시 갈릴레이 변환이므로 뉴턴 방정식 역시 회전에 대해 불변이어야 한다. 이러한 성질을 **공간의 등방성(isotropy of space)** 라고 한다. 따라서 $\bf{\varphi}_i$ 가 뉴턴 방정식의 해 이고 $R:\R^3 \to \R^3$ 가 직교 행렬이라면 $R\bf{\varphi}_i : \R \to \R^3$ 역시 뉴턴 벙정식의 해이다. 즉,
+3차원 공간의 회전 역시 갈릴레이 변환이므로 뉴턴 방정식 역시 회전에 대해 불변이어야 한다. 이러한 성질을 **공간의 등방성(isotropy of space)** 라고 한다. 따라서 $\bf{\varphi}_i$ 가 뉴턴 방정식의 해 이고 $R:\R^3 \to \R^3$ 가 직교 행렬이라면 $R\bf{\varphi}_i : \R \to \R^3$ 역시 뉴턴 방정식의 해이다. 즉,
 
 $$
 \bf{F}(R\bf{x},\, R\bf{\dot{x}}) = R\bf{F}(\bf{x},\, \bf{\dot{x}})
@@ -370,7 +379,7 @@ $$
 
 #### Arnold p10.2, 뉴턴의 제 1 법칙
 
-두개의 점입자로 이루어진 역학계를 생각하자. 초기조건으로 속도가 둘 다 $\bf{0}$ 으로 주어졌다면 이 점입자들은 초기 위치에 의해 결정되는 직선상에서 운동한다는 것을 보여라.
+두개의 점입자로 이루어진 역학계를 생각하자. 초기조건으로 (어떤 관성좌표계에서) 속도가 둘 다 $\bf{0}$ 으로 주어졌다면 이 점입자들은 초기 위치에 의해 결정되는 직선상에서 운동한다는 것을 보여라.
 
 :::
 
@@ -380,6 +389,16 @@ $$
 
 두 점입자의 운동을 $\bf{x}_1,\,\bf{x}_2$ 라고 하자. 초기조건이 $t=0$ 일 때로 주어졌다고 하자. 이 때 $\bf{\dot{x}}_1(0)=\bf{\dot{x}}_2(0)=\bf{0}$ 이다. 공간의 등방성을 생각하면 $\bf{F}=0$ 이다.
 
+
+여기서 벡터의 회전에 대한 명제를 생각하자. 쉽게 증명 할 수 있다.
+
+> **명제 1** 두 벡터 $\bf{u},\,\bf{v}\in \R^3$ 를 생각하자. $\bf{u} \ne \bf{0}$ 에 대한 임의의 회전 $R_\bf{u}$ 를 생각하자. 이 때 어떤 상수 $c$ 에 대해 $\bf{u}=c\bf{v}$ 일 필요충분조건은 $R_\bf{u}\bf{v} = \bf{v}$ 인 것이다.
+
+$\ddot{\bf{x}}_i = \bf{f}_i(\bf{x}_1-\bf{x}_2,\, \dot{\bf{x}}_1-\dot{\bf{x}}_2),\;i=1,\,2$ 이며 
+
+
+
+  
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
@@ -434,5 +453,99 @@ $$
 ::: {.solution}
 
 길이/시간의 단위와 시간의 방향을 바꾼다면 서로 다른 관성계의 집합족을 얻을 수 있다.
+
+:::
+
+</br>
+
+## 역학계의 예 
+
+### 예 1 : 지구에서 낙하하는 돌 {#sec-MS_exmaple_of_mechanical_system_1}
+
+
+::: {.callout-note appearance="minimal" icon="false"}
+
+::: {#def-MS_derivative_to_vector}
+
+#### 벡터에 대한 스칼라 함수의 미분
+
+$U:\E^N \to \R$ 에 대해 
+
+$$
+\dfrac{dU}{d\bf{x}} = \left(\dfrac{\partial U}{\partial x_1},\ldots,\, \dfrac{\partial U}{\partial x_N}\right) = \begin{bmatrix} \dfrac{\partial U}{\partial x_1}\\ \vdots \\ \dfrac{\partial U}{\partial x_N}\end{bmatrix}
+$$
+
+로 정의한다. 
+
+
+:::
+:::
+
+
+질량 $m$ 인 돌이 자유낙하할 때 그 높이 $x$ 에 대한 운동방정식은 다음과 같다는 것이 실험적으로 알려져 있다.
+
+$$
+\ddot{x} = -g \qquad g\approx 9.8\;\text{m/s}^2.
+$$ {#eq-MS_falling_stone_1}
+
+
+실험적으로 지구상의 어떤 점 $0$ 에 대해 다음 방정식을 만족한다는 것이 알려져 있다.
+
+$$
+\ddot{\bf{x}} = -\dfrac{\partial U}{\partial \bf{x}},\qquad \text{where } U = -\bf{g \cdot x}.
+$$ {#eq-MS_falling_stone_2}
+
+이 때 $\bf{g}$ 는 중력가속도 벡터 라고 불리며 $\|\bf{g}\|=g$ 이고 지구 중심을 향하는 벡터이다.
+
+</br>
+
+### 예 2 : 아주 높은 위치에서의 낙하 {#sec-MS_exmaple_of_mechanical_system_2}
+
+많은 실험적 사실에서 그렇듯이 @eq-MS_falling_stone_1 는 적용 범위가 제한되어 있다. 자유낙하하는 물체의 더 정확한 법칙, 즉 뉴턴의 중력법칙에 의하면 지구 반경을 $r_E$, 지구반경을 포함한 물체의 높이 $r=r_E+x$ 에 대해 다음이 성립한다.
+
+$$
+\ddot{x} = - g\dfrac{r_E^2}{r^2}.
+$${#eq-MS_falling_stone_3}
+
+이 때 $k=gr_E^2$ 에 대해
+
+$$
+U = -\dfrac{k}{r}
+$$
+
+이다. 
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p12_1}
+
+#### Arnold p12.1
+
+어느정도의 속도로 돌을 던지면 지구 표면으로부터 무한히 멀리 떨어진 곳까지 갈 수 있을까?
+
+:::
+
+</div>
+
+::: {.solution}
+@eq-MS_falling_stone_3 로부터
+$$
+\dfrac{1}{2}\dfrac{d(\dot{r}^2)}{dt} = \ddot{r}\dot{r} = - k\dfrac{\dot{r}}{r^2}
+$$
+
+이며 이 식을 $t$ 에 대해 적분하면
+
+$$
+\dfrac{1}{2}(v^2-v_0^2) = \dfrac{k}{r} -\dfrac{k}{r_E}
+$$
+
+이다. $r\to \infty$ 극한에서 $v(r=\infty)=0$ 으로 놓으면
+
+$$
+v_0^2 = \dfrac{2k}{r_E} \approx 11,184 \text{km/sec}
+$$
+
+이다. 
+
 
 :::

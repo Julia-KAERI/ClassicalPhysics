@@ -361,6 +361,11 @@ window.Quarto = {
   <li><a href="#sec-MS_neuton_equation" id="toc-sec-MS_neuton_equation" class="nav-link" data-scroll-target="#sec-MS_neuton_equation"><span class="header-section-number">8.2.4</span> 뉴턴 방정식</a></li>
   <li><a href="#sec-MS_constraints_imposed_by_the_principle_of_relativity" id="toc-sec-MS_constraints_imposed_by_the_principle_of_relativity" class="nav-link" data-scroll-target="#sec-MS_constraints_imposed_by_the_principle_of_relativity"><span class="header-section-number">8.2.5</span> 상대성 이론에 의해 부과된 제약</a></li>
   </ul></li>
+  <li><a href="#역학계의-예" id="toc-역학계의-예" class="nav-link" data-scroll-target="#역학계의-예"><span class="header-section-number">8.3</span> 역학계의 예</a>
+  <ul class="collapse">
+  <li><a href="#sec-MS_exmaple_of_mechanical_system_1" id="toc-sec-MS_exmaple_of_mechanical_system_1" class="nav-link" data-scroll-target="#sec-MS_exmaple_of_mechanical_system_1"><span class="header-section-number">8.3.1</span> 예 1 : 지구에서 낙하하는 돌</a></li>
+  <li><a href="#sec-MS_exmaple_of_mechanical_system_2" id="toc-sec-MS_exmaple_of_mechanical_system_2" class="nav-link" data-scroll-target="#sec-MS_exmaple_of_mechanical_system_2"><span class="header-section-number">8.3.2</span> 예 2 : 아주 높은 위치에서의 낙하</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -418,7 +423,7 @@ window.Quarto = {
 \rho(x,\,y) := \|x-y\| = \sqrt{(x-y,\,, x-y)}.
 \]</span></p>
 <ul>
-<li>유클리드 구조를 가진 아핀 공간을 유클리드 공간이라고 하며 <span class="math inline">\(n\)</span> 차원 유클리드 공간을 <span class="math inline">\(E^n\)</span> 으로 표기한다.</li>
+<li>유클리드 구조를 가진 아핀 공간을 유클리드 공간이라고 하며 <span class="math inline">\(n\)</span> 차원 유클리드 공간을 <span class="math inline">\(\mathbb{E}^n\)</span> 으로 표기한다.</li>
 </ul>
 <p><br></p>
 </section>
@@ -554,7 +559,15 @@ G \left(\begin{bmatrix} t \\ \boldsymbol{x}\end{bmatrix}\right) = \begin{bmatrix
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>해상도가 좋으면 미분가능할지도. 가속도의 경우는 접벡터의 변화이므로 그림과 같은 가속도는 불가능하다.</p>
 </div>
-<p><br> <span class="math inline">\(n\)</span> 개의 점입자의 운동은 갈릴레이 공간에서 <span class="math inline">\(n\)</span> 개의 세계선으로 나타나며 갈릴레이 좌표계에서 <span class="math inline">\(n\)</span> 개의 미분가능한 사상</p>
+<p><br></p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-MS_configuration_space" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 8.4 (짜임새 공간)</strong></span> <span class="math inline">\(n\)</span> 개의 점입자의 운동은 갈릴레이 공간에서 <span class="math inline">\(n\)</span> 개의 세계선으로 나타나며 갈릴레이 좌표계에서 <span class="math inline">\(n\)</span> 개의 미분가능한 사상</p>
 <p><span class="math display">\[
 \boldsymbol{x}_i :\mathbb{R}\to \mathbb{R}^3,\qquad i=1,\ldots,\,n
 \]</span></p>
@@ -563,6 +576,10 @@ G \left(\begin{bmatrix} t \\ \boldsymbol{x}\end{bmatrix}\right) = \begin{bmatrix
 \boldsymbol{x} :\mathbb{R}\to \mathbb{R}^{3n}
 \]</span></p>
 <p>사상을 정의한다. 이 때 <span class="math inline">\(\boldsymbol{x}(I)\)</span> 가 이 <span class="math inline">\(n\)</span> 점입자의 경로가 된다.</p>
+</div>
+</div>
+</div>
+</div>
 <p><br></p>
 </section>
 <section id="sec-MS_neuton_equation" class="level3" data-number="8.2.4">
@@ -604,7 +621,7 @@ G \left(\begin{bmatrix} t \\ \boldsymbol{x}\end{bmatrix}\right) = \begin{bmatrix
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-MS_galilean_trasformation_of_rotation" class="theorem example">
-<p><span class="theorem-title"><strong>예제 8.4 (공간의 등방성)</strong></span> 3차원 공간의 회전 역시 갈릴레이 변환이므로 뉴턴 방정식 역시 회전에 대해 불변이어야 한다. 이러한 성질을 <strong>공간의 등방성(isotropy of space)</strong> 라고 한다. 따라서 <span class="math inline">\(\boldsymbol{\varphi}_i\)</span> 가 뉴턴 방정식의 해 이고 <span class="math inline">\(R:\mathbb{R}^3 \to \mathbb{R}^3\)</span> 가 직교 행렬이라면 <span class="math inline">\(R\boldsymbol{\varphi}_i : \mathbb{R}\to \mathbb{R}^3\)</span> 역시 뉴턴 벙정식의 해이다. 즉,</p>
+<p><span class="theorem-title"><strong>예제 8.4 (공간의 등방성)</strong></span> 3차원 공간의 회전 역시 갈릴레이 변환이므로 뉴턴 방정식 역시 회전에 대해 불변이어야 한다. 이러한 성질을 <strong>공간의 등방성(isotropy of space)</strong> 라고 한다. 따라서 <span class="math inline">\(\boldsymbol{\varphi}_i\)</span> 가 뉴턴 방정식의 해 이고 <span class="math inline">\(R:\mathbb{R}^3 \to \mathbb{R}^3\)</span> 가 직교 행렬이라면 <span class="math inline">\(R\boldsymbol{\varphi}_i : \mathbb{R}\to \mathbb{R}^3\)</span> 역시 뉴턴 방정식의 해이다. 즉,</p>
 <p><span class="math display">\[
 \boldsymbol{F}(R\boldsymbol{x},\, R\boldsymbol{\dot{x}}) = R\boldsymbol{F}(\boldsymbol{x},\, \boldsymbol{\dot{x}})
 \]</span></p>
@@ -623,11 +640,16 @@ G \left(\begin{bmatrix} t \\ \boldsymbol{x}\end{bmatrix}\right) = \begin{bmatrix
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-arnold_p10_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 8.5 (Arnold p10.2, 뉴턴의 제 1 법칙)</strong></span> 두개의 점입자로 이루어진 역학계를 생각하자. 초기조건으로 속도가 둘 다 <span class="math inline">\(\boldsymbol{0}\)</span> 으로 주어졌다면 이 점입자들은 초기 위치에 의해 결정되는 직선상에서 운동한다는 것을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 8.5 (Arnold p10.2, 뉴턴의 제 1 법칙)</strong></span> 두개의 점입자로 이루어진 역학계를 생각하자. 초기조건으로 (어떤 관성좌표계에서) 속도가 둘 다 <span class="math inline">\(\boldsymbol{0}\)</span> 으로 주어졌다면 이 점입자들은 초기 위치에 의해 결정되는 직선상에서 운동한다는 것을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>두 점입자의 운동을 <span class="math inline">\(\boldsymbol{x}_1,\,\boldsymbol{x}_2\)</span> 라고 하자. 초기조건이 <span class="math inline">\(t=0\)</span> 일 때로 주어졌다고 하자. 이 때 <span class="math inline">\(\boldsymbol{\dot{x}}_1(0)=\boldsymbol{\dot{x}}_2(0)=\boldsymbol{0}\)</span> 이다. 공간의 등방성을 생각하면 <span class="math inline">\(\boldsymbol{F}=0\)</span> 이다.</p>
+<p>여기서 벡터의 회전에 대한 명제를 생각하자. 쉽게 증명 할 수 있다.</p>
+<blockquote class="blockquote">
+<p><strong>명제 1</strong> 두 벡터 <span class="math inline">\(\boldsymbol{u},\,\boldsymbol{v}\in \mathbb{R}^3\)</span> 를 생각하자. <span class="math inline">\(\boldsymbol{u} \ne \boldsymbol{0}\)</span> 에 대한 임의의 회전 <span class="math inline">\(R_\boldsymbol{u}\)</span> 를 생각하자. 이 때 어떤 상수 <span class="math inline">\(c\)</span> 에 대해 <span class="math inline">\(\boldsymbol{u}=c\boldsymbol{v}\)</span> 일 필요충분조건은 <span class="math inline">\(R_\boldsymbol{u}\boldsymbol{v} = \boldsymbol{v}\)</span> 인 것이다.</p>
+</blockquote>
+<p><span class="math inline">\(\ddot{\boldsymbol{x}}_i = \boldsymbol{f}_i(\boldsymbol{x}_1-\boldsymbol{x}_2,\, \dot{\boldsymbol{x}}_1-\dot{\boldsymbol{x}}_2),\;i=1,\,2\)</span> 이며</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
@@ -658,6 +680,71 @@ G \left(\begin{bmatrix} t \\ \boldsymbol{x}\end{bmatrix}\right) = \begin{bmatrix
 </div>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>길이/시간의 단위와 시간의 방향을 바꾼다면 서로 다른 관성계의 집합족을 얻을 수 있다.</p>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="역학계의-예" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="역학계의-예"><span class="header-section-number">8.3</span> 역학계의 예</h2>
+<section id="sec-MS_exmaple_of_mechanical_system_1" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="sec-MS_exmaple_of_mechanical_system_1"><span class="header-section-number">8.3.1</span> 예 1 : 지구에서 낙하하는 돌</h3>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-MS_derivative_to_vector" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 8.5 (벡터에 대한 스칼라 함수의 미분)</strong></span> <span class="math inline">\(U:\mathbb{E}^N \to \mathbb{R}\)</span> 에 대해</p>
+<p><span class="math display">\[
+\dfrac{dU}{d\boldsymbol{x}} = \left(\dfrac{\partial U}{\partial x_1},\ldots,\, \dfrac{\partial U}{\partial x_N}\right) = \begin{bmatrix} \dfrac{\partial U}{\partial x_1}\\ \vdots \\ \dfrac{\partial U}{\partial x_N}\end{bmatrix}
+\]</span></p>
+<p>로 정의한다.</p>
+</div>
+</div>
+</div>
+</div>
+<p>질량 <span class="math inline">\(m\)</span> 인 돌이 자유낙하할 때 그 높이 <span class="math inline">\(x\)</span> 에 대한 운동방정식은 다음과 같다는 것이 실험적으로 알려져 있다.</p>
+<p><span id="eq-MS_falling_stone_1"><span class="math display">\[
+\ddot{x} = -g \qquad g\approx 9.8\;\text{m/s}^2.
+\tag{8.5}\]</span></span></p>
+<p>실험적으로 지구상의 어떤 점 <span class="math inline">\(0\)</span> 에 대해 다음 방정식을 만족한다는 것이 알려져 있다.</p>
+<p><span id="eq-MS_falling_stone_2"><span class="math display">\[
+\ddot{\boldsymbol{x}} = -\dfrac{\partial U}{\partial \boldsymbol{x}},\qquad \text{where } U = -\boldsymbol{g \cdot x}.
+\tag{8.6}\]</span></span></p>
+<p>이 때 <span class="math inline">\(\boldsymbol{g}\)</span> 는 중력가속도 벡터 라고 불리며 <span class="math inline">\(\|\boldsymbol{g}\|=g\)</span> 이고 지구 중심을 향하는 벡터이다.</p>
+<p><br></p>
+</section>
+<section id="sec-MS_exmaple_of_mechanical_system_2" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="sec-MS_exmaple_of_mechanical_system_2"><span class="header-section-number">8.3.2</span> 예 2 : 아주 높은 위치에서의 낙하</h3>
+<p>많은 실험적 사실에서 그렇듯이 <a href="#eq-MS_falling_stone_1" class="quarto-xref">식&nbsp;<span>8.5</span></a> 는 적용 범위가 제한되어 있다. 자유낙하하는 물체의 더 정확한 법칙, 즉 뉴턴의 중력법칙에 의하면 지구 반경을 <span class="math inline">\(r_E\)</span>, 지구반경을 포함한 물체의 높이 <span class="math inline">\(r=r_E+x\)</span> 에 대해 다음이 성립한다.</p>
+<p><span id="eq-MS_falling_stone_3"><span class="math display">\[
+\ddot{x} = - g\dfrac{r_E^2}{r^2}.
+\tag{8.7}\]</span></span></p>
+<p>이 때 <span class="math inline">\(k=gr_E^2\)</span> 에 대해</p>
+<p><span class="math display">\[
+U = -\dfrac{k}{r}
+\]</span></p>
+<p>이다.</p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-arnold_p12_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 8.10 (Arnold p12.1)</strong></span> 어느정도의 속도로 돌을 던지면 지구 표면으로부터 무한히 멀리 떨어진 곳까지 갈 수 있을까?</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-MS_falling_stone_3" class="quarto-xref">식&nbsp;<span>8.7</span></a> 로부터 <span class="math display">\[
+\dfrac{1}{2}\dfrac{d(\dot{r}^2)}{dt} = \ddot{r}\dot{r} = - k\dfrac{\dot{r}}{r^2}
+\]</span></p>
+<p>이며 이 식을 <span class="math inline">\(t\)</span> 에 대해 적분하면</p>
+<p><span class="math display">\[
+\dfrac{1}{2}(v^2-v_0^2) = \dfrac{k}{r} -\dfrac{k}{r_E}
+\]</span></p>
+<p>이다. <span class="math inline">\(r\to \infty\)</span> 극한에서 <span class="math inline">\(v(r=\infty)=0\)</span> 으로 놓으면</p>
+<p><span class="math display">\[
+v_0^2 = \dfrac{2k}{r_E} \approx 11,184 \text{km/sec}
+\]</span></p>
+<p>이다.</p>
 </div>
 
 
