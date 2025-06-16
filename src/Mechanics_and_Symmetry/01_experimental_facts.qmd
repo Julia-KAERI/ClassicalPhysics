@@ -464,7 +464,6 @@ $\ddot{\bf{x}}_i = \bf{f}_i(\bf{x}_1-\bf{x}_2,\, \dot{\bf{x}}_1-\dot{\bf{x}}_2),
 
 
 ::: {.callout-note appearance="minimal" icon="false"}
-
 ::: {#def-MS_derivative_to_vector}
 
 #### 벡터에 대한 스칼라 함수의 미분
@@ -547,5 +546,41 @@ $$
 
 이다. 
 
+:::
 
+</br>
+
+### 1차원 조화진동자 {#sec-MS_1d_harmonic_oscillator}
+
+1차원 조화진동자의 문제는 다음과 같다.
+
+$$
+\ddot {x} = - \omega^2 x.
+$$
+
+이 문제는 포텐셜을 @eq-MS_falling_stone_2 에 따라 아래와 같이 놓을 수 있다.
+
+$$
+U = \dfrac{\omega^2 x^2}{2}
+$$
+
+</br>
+
+### 보존력 {#sec-MS_conservative_systems}
+
+
+::: {.callout-note appearance="minimal" icon="false"}
+::: {#def-MS_conservative_systems}
+
+#### 보존계
+
+$n$ 개의 점입자로 이루어진 시스템에서 각각의 점입자의 질량이 $m_i,\,(i=1,\ldots,\,n)$ 일 때 어떤 $U:\R^{3n}\to \R$ 이 존재하여 갹각의 $i=1,\ldots,\,n$ 에 대해
+
+$$
+m_i \ddot{\bf{x}}_i = -\dfrac{\partial U}{\partial \bf{x}_i}
+$$
+
+일 때 이 시스템을 **보존계 (conservative system)** 이라고 한다.
+
+:::
 :::

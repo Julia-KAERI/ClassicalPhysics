@@ -25,6 +25,7 @@ book:
     - part: src/Mechanics_and_Symmetry/00_index.qmd
       chapters:
       - src/Mechanics_and_Symmetry/01_experimental_facts.qmd
+      - src/Mechanics_and_Symmetry/02_equations_of_motion.qmd
 
     - part: src/Electromagnetism/00_index.qmd
       chapters:

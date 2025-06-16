@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>상대론 – 고전 역학과 전자기학</title>
+<title>9&nbsp; 운동방정식 – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/Relativity/01_introduction_to_special_relativity.html" rel="next">
-<link href="../../src/Electromagnetism/electrostatics_3.html" rel="prev">
+<link href="../../src/Electromagnetism/00_index.html" rel="next">
+<link href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Relativity/00_index.html">상대론</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Mechanics_and_Symmetry/00_index.html">고전역학과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">운동방정식</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -93,8 +122,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">상대론</h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Mechanics_and_Symmetry/00_index.html">고전역학과 대칭</a></li><li class="breadcrumb-item"><a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">운동방정식</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">운동방정식</span></h1>
                       </div>
   </div>
     
@@ -198,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
@@ -241,7 +270,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">상대론</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -319,8 +348,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#자유도-시스템" id="toc-자유도-시스템" class="nav-link active" data-scroll-target="#자유도-시스템"><span class="header-section-number">9.1</span> 1-자유도 시스템</a>
+  <ul class="collapse">
+  <li><a href="#sec-SM_1_dof_system" id="toc-sec-SM_1_dof_system" class="nav-link" data-scroll-target="#sec-SM_1_dof_system"><span class="header-section-number">9.1.1</span> 정의</a></li>
+  <li><a href="#sec-SM_phase_flow" id="toc-sec-SM_phase_flow" class="nav-link" data-scroll-target="#sec-SM_phase_flow"><span class="header-section-number">9.1.2</span> 위상 흐름</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -329,8 +368,84 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<div class="hidden">
+<p>% %</p>
+%
+<p><span class="math display">\[
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
+\]</span></p>
+</div>
+<p>대부분의 경우 우리는 미분방정식으로 주어지는 운동방정식을 풀수도 없고 이 해를 완벽하게 기술 할 수도 없다. 여기서는 뉴턴방정식이 풀리는 몇몇 간단한 경우를 다뤄보기로 한다.</p>
+<p><br></p>
+<section id="자유도-시스템" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="자유도-시스템"><span class="header-section-number">9.1</span> 1-자유도 시스템</h2>
+<section id="sec-SM_1_dof_system" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="sec-SM_1_dof_system"><span class="header-section-number">9.1.1</span> 정의</h3>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-MS_1_dof_system" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 9.1 (보존계)</strong></span> 자유도 1 시스템은 아래와 같은 하나의 운동방정식으로 기술되는 시스템이다.</p>
+<p><span id="eq-MS_eom_of_1_dof_system"><span class="math display">\[
+\ddot{x} = f(x),\qquad x\in \mathbb{R}.
+\tag{9.1}\]</span></span></p>
+<p>이 때 운동에너지 <span class="math inline">\(T\)</span> 는</p>
+<p><span class="math display">\[
+T := \dfrac{1}{2}m\dot{x}^2
+\]</span></p>
+<p>이며 포텐셜 에너지 <span class="math inline">\(U\)</span> 는</p>
+<p><span class="math display">\[
+U(x) := -\int_{x_0}^x f(\xi) \,d\xi
+\]</span></p>
+<p>로 정의된다. 그리고 이 시스템의 총 에너지 <span class="math inline">\(E\)</span> 는 운동에너지와 포텐셜 에너지의 합이다.</p>
+<p><span class="math display">\[
+E = T+U.
+\]</span></p>
+<p>일반적으로 총 에너지는 <span class="math inline">\(x\)</span> 와 <span class="math inline">\(\dot{x}\)</span> 의 함수이다.</p>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="thm-MS_conservation_of_total_energy_in_1dof_system" class="theorem">
+<p><span class="theorem-title"><strong>정리 9.1 (에너지 보존 법칙)</strong></span> 운동방정식 <a href="#eq-MS_eom_of_1_dof_system" class="quarto-xref">식&nbsp;<span>9.1</span></a> 을 따르는 시스템의 총 에너지는 보존된다. 즉 <span class="math inline">\(E(x,\,\dot{x})\)</span> 는 시간에 무관하게 일정하다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(dE/dt=0\)</span> 임을 보이면 된다. <span class="math display">\[
+\dfrac{d(T+U)}{dt} = \dot{x}\ddot{x} + \dfrac{dU}{dx}\ddot{x} = \ddot{x}(\ddot{x}-f(x))=0. \quad \square
+\]</span></p>
+</div>
+<p><br></p>
+</section>
+<section id="sec-SM_phase_flow" class="level3" data-number="9.1.2">
+<h3 data-number="9.1.2" class="anchored" data-anchor-id="sec-SM_phase_flow"><span class="header-section-number">9.1.2</span> 위상 흐름</h3>
+<p><a href="#eq-MS_eom_of_1_dof_system" class="quarto-xref">식&nbsp;<span>9.1</span></a> 은 애래의 두 방정식으로 이루어진 시스템과 동등하다.</p>
+<p><span id="eq-MS_2eom_equivalent_to_1_dof_system"><span class="math display">\[
+\dot{x} = y,\qquad \dot{y}=f(x).
+\tag{9.2}\]</span></span></p>
+<p>위 식에 대해 <span class="math inline">\(x,\,y\)</span> 좌표로 이루어진 평면을 생각 할 수 있으며 이를 <strong>위상 평면 (phase plane)</strong> 이라고 한다. 위상 평면상에서 각 점을 <strong>위상 점 (phase point)</strong> 라고 한다. <a href="#eq-MS_2eom_equivalent_to_1_dof_system" class="quarto-xref">식&nbsp;<span>9.2</span></a> 의 두번째 식은 위상 평면상의 벡터장을 정의하며 이 벡터장을 <strong>위상 속도 벡터장(phase velocity vector field)</strong> 라고 한다.</p>
+<p><a href="#eq-MS_2eom_equivalent_to_1_dof_system" class="quarto-xref">식&nbsp;<span>9.2</span></a> 의 해는 위상 평면상의 위상 점의 운동 <span class="math inline">\(\boldsymbol{\varphi}:\mathbb{R}\to \mathbb{R}^2\)</span> 으로 각각의 시간 <span class="math inline">\(t\)</span> 에 대한 움직이는 위상점의 속도는 그 순간 위상 점의 위치에서의 위상 속도 벡터이다. <span class="math inline">\(\operatorname{im}(\boldsymbol{\varphi})\)</span> 를 <strong>위상 곡선 (phase curve)</strong> 이라고 한다.</p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-arnold_p16_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 9.1 (Arnold p16.1)</strong></span> 모든 위상점의 집합은 유일한 하나의 곡선임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>초기조건이 주어진 2변수 1계 미분방정식이다.</p>
+</div>
+<p><br></p>
+<p>하나의 점으로 이루어진 위상 곡선이 존재하며 이 대 이 점을 <strong>평형 위치 (equilibrium postition)</strong> 라고 한다. 평형 위치에서의 위상 속도 벡터는 영벡터이다.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -752,13 +867,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../src/Electromagnetism/electrostatics_3.html" class="pagination-link" aria-label="도체와 전기장">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">도체와 전기장</span></span>
+      <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="pagination-link" aria-label="실험적 사실">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">실험적 사실</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="pagination-link" aria-label="특수 상대론의 기초">
-        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/Electromagnetism/00_index.html" class="pagination-link" aria-label="고전 전자기학">
+        <span class="nav-page-text">고전 전자기학</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

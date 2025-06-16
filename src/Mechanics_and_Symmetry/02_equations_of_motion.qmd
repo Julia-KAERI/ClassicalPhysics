@@ -1,0 +1,110 @@
+---
+title: "운동방정식"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+대부분의 경우 우리는 미분방정식으로 주어지는 운동방정식을 풀수도 없고 이 해를 완벽하게 기술 할 수도 없다. 여기서는 뉴턴방정식이 풀리는 몇몇 간단한 경우를 다뤄보기로 한다.
+
+</br>
+
+## 1-자유도 시스템
+
+### 정의 {#sec-SM_1_dof_system}
+
+::: {.callout-note appearance="minimal" icon="false"}
+::: {#def-MS_1_dof_system}
+
+#### 보존계
+
+자유도 1 시스템은 아래와 같은 하나의 운동방정식으로 기술되는 시스템이다.
+
+$$
+\ddot{x} = f(x),\qquad x\in \R.
+$$ {#eq-MS_eom_of_1_dof_system}
+
+이 때 운동에너지 $T$ 는
+
+$$
+T := \dfrac{1}{2}m\dot{x}^2
+$$
+
+이며 포텐셜 에너지 $U$ 는
+
+$$
+U(x) := -\int_{x_0}^x f(\xi) \,d\xi
+$$
+
+로 정의된다. 그리고 이 시스템의 총 에너지 $E$ 는 운동에너지와 포텐셜 에너지의 합이다.
+
+$$
+E = T+U.
+$$
+
+일반적으로 총 에너지는 $x$ 와 $\dot{x}$ 의 함수이다.
+
+:::
+:::
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#thm-MS_conservation_of_total_energy_in_1dof_system}
+
+#### 에너지 보존 법칙
+
+운동방정식 @eq-MS_eom_of_1_dof_system 을 따르는 시스템의 총 에너지는 보존된다. 즉 $E(x,\,\dot{x})$ 는 시간에 무관하게 일정하다.
+
+
+
+:::
+
+</div>
+
+::: {.proof}
+
+$dE/dt=0$ 임을 보이면 된다.
+$$
+\dfrac{d(T+U)}{dt} = \dot{x}\ddot{x} + \dfrac{dU}{dx}\ddot{x} = \ddot{x}(\ddot{x}-f(x))=0. \quad \square
+$$
+:::
+
+</br>
+
+### 위상 흐름 {#sec-SM_phase_flow}
+
+@eq-MS_eom_of_1_dof_system 은 애래의 두 방정식으로 이루어진 시스템과 동등하다.
+
+$$
+\dot{x} = y,\qquad \dot{y}=f(x).
+$$ {#eq-MS_2eom_equivalent_to_1_dof_system}
+
+위 식에 대해 $x,\,y$ 좌표로 이루어진 평면을 생각 할 수 있으며 이를 **위상 평면 (phase plane)** 이라고 한다. 위상 평면상에서 각 점을 **위상 점 (phase point)** 라고 한다. @eq-MS_2eom_equivalent_to_1_dof_system 의 두번째 식은 위상 평면상의 벡터장을 정의하며 이 벡터장을 **위상 속도 벡터장(phase velocity vector field)** 라고 한다.
+
+@eq-MS_2eom_equivalent_to_1_dof_system 의 해는 위상 평면상의 위상 점의 운동 $\bf{\varphi}:\R \to \R^2$ 으로 각각의 시간 $t$ 에 대한 움직이는 위상점의 속도는 그 순간 위상 점의 위치에서의 위상 속도 벡터이다. $\im(\bf{\varphi})$ 를 **위상 곡선 (phase curve)** 이라고 한다.  
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exr-arnold_p16_1}
+
+#### Arnold p16.1
+
+모든 위상점의 집합은 유일한 하나의 곡선임을 보여라.
+
+:::
+</div>
+
+::: {.solution}
+
+초기조건이 주어진 2변수 1계 미분방정식이다.
+:::
+
+</br>
+
+하나의 점으로 이루어진 위상 곡선이 존재하며 이 대 이 점을 **평형 위치 (equilibrium postition)** 라고 한다. 평형 위치에서의 위상 속도 벡터는 영벡터이다.
+
