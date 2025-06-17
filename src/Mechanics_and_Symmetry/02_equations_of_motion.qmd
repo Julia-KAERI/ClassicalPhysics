@@ -76,7 +76,7 @@ $$
 
 </br>
 
-### 위상 흐름 {#sec-SM_phase_flow}
+### 위상 공간에서의 개념들 {#sec-SM_concepts_in_phase_space}
 
 @eq-MS_eom_of_1_dof_system 은 애래의 두 방정식으로 이루어진 시스템과 동등하다.
 
@@ -84,9 +84,9 @@ $$
 \dot{x} = y,\qquad \dot{y}=f(x).
 $$ {#eq-MS_2eom_equivalent_to_1_dof_system}
 
-위 식에 대해 $x,\,y$ 좌표로 이루어진 평면을 생각 할 수 있으며 이를 **위상 평면 (phase plane)** 이라고 한다. 위상 평면상에서 각 점을 **위상 점 (phase point)** 라고 한다. @eq-MS_2eom_equivalent_to_1_dof_system 의 두번째 식은 위상 평면상의 벡터장을 정의하며 이 벡터장을 **위상 속도 벡터장(phase velocity vector field)** 라고 한다.
+위 식에 대해 $x,\,y$ 좌표로 이루어진 평면을 생각 할 수 있으며 이를 **위상평면 (phase plane)** 이라고 한다. 위상 평면상에서 각 점을 **위상점 (phase point)** 라고 한다. @eq-MS_2eom_equivalent_to_1_dof_system 의 두번째 식은 위상 평면상의 벡터장을 정의하며 이 벡터장을 **위상속도 벡터장(phase velocity vector field)** 라고 한다.
 
-@eq-MS_2eom_equivalent_to_1_dof_system 의 해는 위상 평면상의 위상 점의 운동 $\bf{\varphi}:\R \to \R^2$ 으로 각각의 시간 $t$ 에 대한 움직이는 위상점의 속도는 그 순간 위상 점의 위치에서의 위상 속도 벡터이다. $\im(\bf{\varphi})$ 를 **위상 곡선 (phase curve)** 이라고 한다.  
+@eq-MS_2eom_equivalent_to_1_dof_system 의 해는 위상 평면상의 위상 점의 운동 $\bf{\varphi}:\R \to \R^2$ 으로 각각의 시간 $t$ 에 대한 움직이는 위상점의 속도는 그 순간 위상 점의 위치에서의 위상 속도 벡터이다. $\im(\bf{\varphi})$ 를 **위상곡선 (phase curve)** 이라고 한다.  
 
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
@@ -106,5 +106,178 @@ $$ {#eq-MS_2eom_equivalent_to_1_dof_system}
 
 </br>
 
-하나의 점으로 이루어진 위상 곡선이 존재하며 이 대 이 점을 **평형 위치 (equilibrium postition)** 라고 한다. 평형 위치에서의 위상 속도 벡터는 영벡터이다.
+하나의 점으로 이루어진 위상 곡선이 존재하며 이 때 이 점을 **평형점 (equilibrium postition)** 라고 한다. 평형 위치에서의 위상 속도 벡터는 영벡터이다. 
 
+에너지 보존 법칙을 통해 하나의 위상 곡선을 찾을 수 있다. 위상 곡선에서 총 에너지는 일정하다. 따라서 각각의 위상 곡선은 하나의 에너지 레벨 집합 $E(x,\,y)=h$ 위에 존재한다.
+
+</br>
+
+### 보기들 {#sec-MS_examples_of_1_dof_system}
+
+단순조화진동자의 기본 방정식은 아래와 같다.
+
+$$
+\ddot {x} = - x.
+$$
+
+이 때
+
+$$
+T = \dfrac{\dot{x}^2}{2},\qquad U=\dfrac{x^2}{2},\qquad E= \dfrac{\dot{x}^2}{2}+ \dfrac{x^2}{2}
+$$
+
+이다. 
+
+![방정식 $\ddot{x}=-x$ 에 대한 위상평면](figures/1d_sho_phase_plane/1d_sho_phase_plane.png){#fig-MS_phase_plane_for_1d_sho width=250}
+
+에너지 레벨 집합은 원점을 중심으로 하는 동심원들이다. 위상점 $\bf{\varphi} = (x,\,y)$ 에서의 위상속도벡터는 $\dot{\bf{\varphi}}=(y,\,-x)$ 로 $\bf{\varphi \cdot }\dot{\bf{\varphi}}=\bf{0}$ 이다.
+
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-MS_energy_level_set_in_phase_plane}
+
+#### 위상평면에서의 에너지 레벨 집합
+포텐셜 에너지가 @fig-MS_potential_energy_and_phase_curve 와 같이 주어졌다고 하자. 에너지 레벨 집합 $\frac{1}{2}y^2 + U(x) = E$ 을 그릴 때 아래 사실이 도움이 된다.
+
+1. @eq-MS_eom_of_1_dof_system 의 평형점은 $y=\dot{x}=0$ 이어야 하므로 위상 평면의 $x$ 축 상에 존재한다. 즉 평형점은 $(\partial U/\partial x)|_{x=\xi}=0$ 인 $\xi$ 에 대해 위상 평면에서의 $(\xi,\,0)$ 이다.
+2. 모든 에너지 레벨 집합은 평형점이 아닌 점 각각의 근방에서 매끄러운 곡선이다(음함수 정리를 생각하라). 에너지 $E$ 가 어떤 임계점 $\xi$ 에 대해서도 $E\ne U(\xi)$ 라면 $E$ 에 해당하는 에너지 레벨 집합은 매끄러운 곡선이다. 
+
+![포텐셜 에너지와 위상 곡선](figures/arnold_fig10.png){#fig-MS_potential_energy_and_phase_curve width=300}
+
+어떤 임계점 $\xi$ 에 대해 $E=U(\xi)$ 일 때 $E$ 를 **임계값 (critical value)** 라고 한다. 이로부터 우리가 주로 신경을 써야 하는 에너지 레벨 집합은 임계값 혹은 임계값 근처의 에너지 레벨 집합인 것을 알 수 있다.
+
+우리는 운동에너지가 항상 non-negative 인 것을 안다. 즉 $E\ge U(x)$ 이며 포텐셜 에너지가 작을 수록 속력이 크다는 것을 안다. 
+
+:::
+</div>
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p18_1}
+
+#### Arnold p18.1
+
+포텐셜 에너지의 극대점은 불안정 평형점이며 포텐셜 에너지의 극소점은 안정 평형점임을 보여라.
+
+:::
+</div>
+
+::: {.solution}
+
+trivial.
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p18_2}
+
+#### Arnold p18.2
+
+@fig-MS_potential_energy_and_phase_curve 의 레벨 $E_2$ 에 의해 분리되는 위상 곡선은 몇개인가?
+
+:::
+</div>
+
+::: {.solution}
+
+3 개. $E_3,\,E_4,\,E_5$ 레벨.
+:::
+
+</br>
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p18_4}
+
+#### Arnold p18.4
+
+$x_1$ 에서 $x_2$ 로 한방향으로 갈 수 있을 때 걸리는 시간은 다음과 같음을 보여라.
+
+$$
+t_2-t_1=\int_{x_1}^{x_2}\dfrac{dx}{\sqrt{2(E-U(x))}}.
+$$
+
+
+:::
+</div>
+
+::: {.solution}
+
+$E=\dfrac{\dot{x}^2}{2} +U(x)$ 로부터 $\dfrac{dx}{dt} = \sqrt{2(E-U(x))}$ 이며, 한쪽방향으로만 움직였으므로, 즉 $x(t)$ 가 전단사이므로,
+
+$$
+t_2-t_1 = \int_{x_1}^{x_2}\dfrac{dx}{\sqrt{2(E-U(x))}}.
+$$
+
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p20_1}
+
+#### Arnold p20.1
+
+$S(E)$ 가 에너지 $E$ 에 대한 닫힌 위상 곡선의 면적이라고 하자. 이 위상곡선상의 운동의 주기는 다음과 같음을 보여라.
+
+$$
+T=\dfrac{dS}{dE}.
+$$
+
+:::
+</div>
+
+::: {.solution}
+
+닫힌 위상 곡선이 $[x_1,\,x_2]$ 에서 정의되었다고 하자. $x_1,\,x_2$ 에서의 시간이 각각 $t_1,\,t_2$ 라고 하면 @exr-arnold_p18_4 에 의해 $T=2(t_2-t_1)$ 이다. 그렇다면 
+
+$$
+S = 2 \int_{x_1}^{x_2} \dot{x}\, dx = 2\int_{x_1}^{x_2} \sqrt{2(E-U(x))}\, dx 
+$$
+
+이며,
+
+$$
+\dfrac{dS}{dE} = 2\int_{x_1}^{x_2} \dfrac{\partial \sqrt{2(E-U(x))}}{\partial E}\, dx = 2\int_{x_1}^{x_2}\dfrac{dx}{\sqrt{2(E-U(x))}} = T.
+$$
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p20_2}
+
+#### Arnold p20.2
+
+$E_0$ 는 포텐셜의 극소점 $\xi$ 에서의 값이다. $\xi$ 근처의 미소 진동에서의 주기 $T_0 = \lim_{E\to E_0} T(E)$ 를 구하라.
+
+:::
+</div>
+
+::: {.solution}
+
+$U(x) = E_0 + \frac{1}{2}U''(\xi)(x-\xi)^2 + O((x-\xi)^3)$ 이며 
+
+
+$$
+\begin{aligned}
+T &= 2\int_{x_0}^{x_1} \dfrac{dx}{\sqrt{2\left[E-E_0 - \frac{1}{2}U''(\xi)(x-x_0)^2\right]}} \\[0.3em]
+&= \dfrac{2}{\sqrt{2(E-E_0)}} \int_{x_1}^{x_2} \dfrac{dx}{\sqrt{1-\dfrac{U''(\xi)}{2(E-E_0)}(x-\xi)^2}} \qquad;z=\sqrt{\dfrac{U''(\xi)}{2(E-E_0)}}(x-\xi)\\[0.3em]
+&= \dfrac{2}{\sqrt{U''(\xi)}}\int_{z_1}^{z_2} \dfrac{dz}{\sqrt{1-z^2}} =  \dfrac{2\pi}{\sqrt{U''(\xi)}}.
+\end{aligned}
+$$
+:::
+
+</br>
+
+### 위상 흐름 {#sec-MS_phase_flow}
+
+$M$ 이 위상 평면에서의 한 점이라고 하자. @eq-MS_2eom_equivalent_to_1_dof_system 을 보면 $t=0$ 일 때의 초기조건은 $M$ 에 의해 표현된다. 이 방정식의 해가 전체 시간축에 대해 표현 될 수 있다고 하자. 이 해는 어떤 시간에서든 $M$ 에 의존한다. 이를 아래와 같이 표현하자.
+
+$$
+M(t) = g^t(M)
+$$
