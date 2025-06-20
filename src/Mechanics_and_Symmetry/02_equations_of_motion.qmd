@@ -60,8 +60,6 @@ $$
 
 운동방정식 @eq-MS_eom_of_1_dof_system 을 따르는 시스템의 총 에너지는 보존된다. 즉 $E(x,\,\dot{x})$ 는 시간에 무관하게 일정하다.
 
-
-
 :::
 
 </div>
@@ -78,7 +76,7 @@ $$
 
 ### 위상 공간에서의 개념들 {#sec-SM_concepts_in_phase_space}
 
-@eq-MS_eom_of_1_dof_system 은 애래의 두 방정식으로 이루어진 시스템과 동등하다.
+@eq-MS_eom_of_1_dof_system 은 아래의 두 방정식으로 이루어진 시스템과 동등하다.
 
 $$
 \dot{x} = y,\qquad \dot{y}=f(x).
@@ -281,3 +279,114 @@ $M$ 이 위상 평면에서의 한 점이라고 하자. @eq-MS_2eom_equivalent_t
 $$
 M(t) = g^t(M)
 $$
+
+이런 방식으로 우리는 위상 평면에서 위상 평면으로의 함수 $g^t : \R^2 \to \R^2$ 를 정의 할 수 있다. 여기서 $g^t$ 는 미분동형사상 (diffeomorphism), 즉 미분가능한 전단사 함수이며 그 역함수도 미분가능한 함수이다. 우선 이 $g^t$ 의 수학적 성질에 대해 알아보자. 
+
+![위상 흐름](figures/phase_flow/phase_flow.png){#fig-MS_phase_flow width=230}
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#prp-MS_1d_diffeomorphsm_and_group}
+
+$g^t$ 이 아래의 성질을 가질 때  $\{g^t : t\in \R\}$ 는 군을 이룬다. 
+
+&emsp;($1$) $g^{t+s} := g^t \circ g^s$,
+
+&emsp;($2$) $g^{-t}$ 는 $g^t$ 의 역함수며,
+
+&emsp;($3$) $g^0$ 는 항등함수이다.
+
+:::
+
+</div>
+::: {.proof}
+
+trivial
+
+:::
+
+
+</br>
+
+이제 함수 $g(t,\,M) = g^t(M)$ 는 미분가능한 함수이며 따라서 $g^t$ 에 의한 변환의 집합은 1-매개변수 미분동형사상 군 (one-parameter group of diffeomorphism) 을 이룬다. 이 군을 **위상 흐름 (phase flow)** 라고 한다.
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-MS_phase_flow_1}
+
+방정식 $\ddot{x}=-x$ 에 의한 위상 흐름을 군 $g^t$ 라고 하면 $g^t$ 는 원점을 중심으로 각 $t$ 만큼의 회전이다. $y = \dot{x},\, \dot{y}=-x$ 의 해는 $x=x_0 \cos(t+\phi_0),\, y = -x_0 \sin(t+\phi_0)$.
+
+:::
+
+</div>
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p21_1}
+
+#### Arnold p21.1
+
+포텐셜이 $U=-x^4$ 로 주어진 시스템의 경우 위상 흐름을 정의 할 수 없음을 보여라.
+
+:::
+</div>
+
+::: {.solution}
+
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p21_2}
+
+#### Arnold p21.2
+
+포텐셜 에너지가 양수이면 위상 흐름이 존재함을 보여라.
+
+:::
+</div>
+
+::: {.solution}
+
+우선 bounded 인 경우 주기 운동이기 때문에 전체 시간에 대해 $g^t$ 가 존재한다. 따라서 위상 흐름이 존재한다. Unbounded 인 경우 $t=0$ 일 때 $x(t_0)=x_0$, $\dot{x}(t_0)= 0$ 이라고 하자. 이 때 $E = U(x_0)>0$ 이며 가능한 경로상의 $x$ 에 대해 $U(x)<U(x_0)$ 이다. 따라서
+
+$$
+\begin{aligned}
+t &= \int_{x_0}^x \dfrac{dx}{\sqrt{2(U(x_0)-U(x))}} > \int_{x_0}^x \dfrac{dx}{\sqrt{2U(x_0)}} = \dfrac{x-x_0}{\sqrt{2U(x_0)}}
+\end{aligned}
+$$
+
+이다. 즉 주어진 시간 $t$ 에 대해 
+
+$$
+x<x_0+t\sqrt{2U(x_0)}
+$$
+
+이므로 $x$ 는 유한하며 따라서 전체 시간에 대해 확장 될 수 있다. 즉 위상 흐름을 정의 할 수 있다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p21_3}
+
+#### Arnold p21.3
+
+원 $x^2+(y-1)^2 < \dfrac{1}{4}$ 에 대해 아래 두가지 상황애서의 위상 흐름의 변화를 보아라.
+
+&emsp;($a$) 역진자 $\ddot{x}=x$,
+
+&emsp;($b$) 비선형 진자 $\ddot{x} = -\sin x$.
+
+:::
+</div>
+::: {.solution}
+
+($a$) 역진자의 해는 $x(t)=ae^{t} + be^{-t},\, y(t) = ae^{t} - be^{-t}$ 이다. 초기조건 $(x_0,\,y_0)$ 에 대해 
+
+$$
+x(t) = \dfrac{x_0+y_0}{2} e^{t} + \dfrac{x_0-y_0}{2}e^{-t},\quad y(t) = \dfrac{x_0+y_0}{2} e^{t} - \dfrac{x_0-y_0}{2}e^{-t}
+$$
+
+:::

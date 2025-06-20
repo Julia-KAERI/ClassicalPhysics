@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.43">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-b467865d89f01302b3bb45791fa41ab5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -427,7 +427,7 @@ E = T+U.
 </section>
 <section id="sec-SM_concepts_in_phase_space" class="level3" data-number="9.1.2">
 <h3 data-number="9.1.2" class="anchored" data-anchor-id="sec-SM_concepts_in_phase_space"><span class="header-section-number">9.1.2</span> 위상 공간에서의 개념들</h3>
-<p><a href="#eq-MS_eom_of_1_dof_system" class="quarto-xref">식&nbsp;<span>9.1</span></a> 은 애래의 두 방정식으로 이루어진 시스템과 동등하다.</p>
+<p><a href="#eq-MS_eom_of_1_dof_system" class="quarto-xref">식&nbsp;<span>9.1</span></a> 은 아래의 두 방정식으로 이루어진 시스템과 동등하다.</p>
 <p><span id="eq-MS_2eom_equivalent_to_1_dof_system"><span class="math display">\[
 \dot{x} = y,\qquad \dot{y}=f(x).
 \tag{9.2}\]</span></span></p>
@@ -568,6 +568,79 @@ T &amp;= 2\int_{x_0}^{x_1} \dfrac{dx}{\sqrt{2\left[E-E_0 - \frac{1}{2}U''(\xi)(x
 <p><span class="math display">\[
 M(t) = g^t(M)
 \]</span></p>
+<p>이런 방식으로 우리는 위상 평면에서 위상 평면으로의 함수 <span class="math inline">\(g^t : \mathbb{R}^2 \to \mathbb{R}^2\)</span> 를 정의 할 수 있다. 여기서 <span class="math inline">\(g^t\)</span> 는 미분동형사상 (diffeomorphism), 즉 미분가능한 전단사 함수이며 그 역함수도 미분가능한 함수이다. 우선 이 <span class="math inline">\(g^t\)</span> 의 수학적 성질에 대해 알아보자.</p>
+<div id="fig-MS_phase_flow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-MS_phase_flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/phase_flow/phase_flow.png" class="img-fluid figure-img" width="230">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-MS_phase_flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;9.3: 위상 흐름
+</figcaption>
+</figure>
+</div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="prp-MS_1d_diffeomorphsm_and_group" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 9.1</strong></span> <span class="math inline">\(g^t\)</span> 이 아래의 성질을 가질 때 <span class="math inline">\(\{g^t : t\in \mathbb{R}\}\)</span> 는 군을 이룬다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(g^{t+s} := g^t \circ g^s\)</span>,</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(g^{-t}\)</span> 는 <span class="math inline">\(g^t\)</span> 의 역함수며,</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(g^0\)</span> 는 항등함수이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>trivial</p>
+</div>
+<p><br></p>
+<p>이제 함수 <span class="math inline">\(g(t,\,M) = g^t(M)\)</span> 는 미분가능한 함수이며 따라서 <span class="math inline">\(g^t\)</span> 에 의한 변환의 집합은 1-매개변수 미분동형사상 군 (one-parameter group of diffeomorphism) 을 이룬다. 이 군을 <strong>위상 흐름 (phase flow)</strong> 라고 한다.</p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-MS_phase_flow_1" class="theorem example">
+<p><span class="theorem-title"><strong>예제 9.2</strong></span> 방정식 <span class="math inline">\(\ddot{x}=-x\)</span> 에 의한 위상 흐름을 군 <span class="math inline">\(g^t\)</span> 라고 하면 <span class="math inline">\(g^t\)</span> 는 원점을 중심으로 각 <span class="math inline">\(t\)</span> 만큼의 회전이다. <span class="math inline">\(y = \dot{x},\, \dot{y}=-x\)</span> 의 해는 <span class="math inline">\(x=x_0 \cos(t+\phi_0),\, y = -x_0 \sin(t+\phi_0)\)</span>.</p>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-arnold_p21_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 9.7 (Arnold p21.1)</strong></span> 포텐셜이 <span class="math inline">\(U=-x^4\)</span> 로 주어진 시스템의 경우 위상 흐름을 정의 할 수 없음을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-arnold_p21_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 9.8 (Arnold p21.2)</strong></span> 포텐셜 에너지가 양수이면 위상 흐름이 존재함을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>우선 bounded 인 경우 주기 운동이기 때문에 전체 시간에 대해 <span class="math inline">\(g^t\)</span> 가 존재한다. 따라서 위상 흐름이 존재한다. Unbounded 인 경우 <span class="math inline">\(t=0\)</span> 일 때 <span class="math inline">\(x(t_0)=x_0\)</span>, <span class="math inline">\(\dot{x}(t_0)= 0\)</span> 이라고 하자. 이 때 <span class="math inline">\(E = U(x_0)&gt;0\)</span> 이며 가능한 경로상의 <span class="math inline">\(x\)</span> 에 대해 <span class="math inline">\(U(x)&lt;U(x_0)\)</span> 이다. 따라서</p>
+<p><span class="math display">\[
+\begin{aligned}
+t &amp;= \int_{x_0}^x \dfrac{dx}{\sqrt{2(U(x_0)-U(x))}} &gt; \int_{x_0}^x \dfrac{dx}{\sqrt{2U(x_0)}} = \dfrac{x-x_0}{\sqrt{2U(x_0)}}
+\end{aligned}
+\]</span></p>
+<p>이다. 즉 주어진 시간 <span class="math inline">\(t\)</span> 에 대해</p>
+<p><span class="math display">\[
+x&lt;x_0+t\sqrt{2U(x_0)}
+\]</span></p>
+<p>이므로 <span class="math inline">\(x\)</span> 는 유한하며 따라서 전체 시간에 대해 확장 될 수 있다. 즉 위상 흐름을 정의 할 수 있다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-arnold_p21_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 9.9 (Arnold p21.3)</strong></span> 원 <span class="math inline">\(x^2+(y-1)^2 &lt; \dfrac{1}{4}\)</span> 에 대해 아래 두가지 상황애서의 위상 흐름의 변화를 보아라.</p>
+<p> (<span class="math inline">\(a\)</span>) 역진자 <span class="math inline">\(\ddot{x}=x\)</span>,</p>
+<p> (<span class="math inline">\(b\)</span>) 비선형 진자 <span class="math inline">\(\ddot{x} = -\sin x\)</span>.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 역진자의 해는 <span class="math inline">\(x(t)=ae^{t} + be^{-t},\, y(t) = ae^{t} - be^{-t}\)</span> 이다. 초기조건 <span class="math inline">\((x_0,\,y_0)\)</span> 에 대해</p>
+<p><span class="math display">\[
+x(t) = \dfrac{x_0+y_0}{2} e^{t} + \dfrac{x_0-y_0}{2}e^{-t},\quad y(t) = \dfrac{x_0+y_0}{2} e^{t} - \dfrac{x_0-y_0}{2}e^{-t}
+\]</span></p>
+</div>
 
 
 </section>
