@@ -24,7 +24,7 @@ crossref:
 자유도 1 시스템은 아래와 같은 하나의 운동방정식으로 기술되는 시스템이다.
 
 $$
-\ddot{x} = f(x),\qquad x\in \R.
+\ddot{x} = \dfrac{1}{m}f(x),\qquad x\in \R.
 $$ {#eq-MS_eom_of_1_dof_system}
 
 이 때 운동에너지 $T$ 는
@@ -50,9 +50,7 @@ $$
 :::
 :::
 
-</br>
-
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-MS_conservation_of_total_energy_in_1dof_system}
 
@@ -68,7 +66,7 @@ $$
 
 $dE/dt=0$ 임을 보이면 된다.
 $$
-\dfrac{d(T+U)}{dt} = \dot{x}\ddot{x} + \dfrac{dU}{dx}\ddot{x} = \ddot{x}(\ddot{x}-f(x))=0. \quad \square
+\dfrac{d(T+U)}{dt} = m\dot{x}\ddot{x} + \dfrac{dU}{dx}\ddot{x} = \ddot{x}(m\ddot{x}-f(x))=0. \quad \square
 $$
 :::
 
@@ -76,7 +74,7 @@ $$
 
 ### 위상 공간에서의 개념들 {#sec-SM_concepts_in_phase_space}
 
-@eq-MS_eom_of_1_dof_system 은 아래의 두 방정식으로 이루어진 시스템과 동등하다.
+@eq-MS_eom_of_1_dof_system 은 아래의 두 방정식으로 이루어진 시스템과 동등하다. 편의를 위해 질량 $m=1$ 로 놓자. 앞으로 위상공간에 대해서는 질량 $m=1$ 로 간주하도록 하겠다.
 
 $$
 \dot{x} = y,\qquad \dot{y}=f(x).
@@ -284,7 +282,7 @@ $$
 
 ![위상 흐름](figures/phase_flow/phase_flow.png){#fig-MS_phase_flow width=230}
 
-</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-MS_1d_diffeomorphsm_and_group}
 
@@ -389,4 +387,266 @@ $$
 x(t) = \dfrac{x_0+y_0}{2} e^{t} + \dfrac{x_0-y_0}{2}e^{-t},\quad y(t) = \dfrac{x_0+y_0}{2} e^{t} - \dfrac{x_0-y_0}{2}e^{-t}
 $$
 
+이다. 이것을 위상 흐름의 변화로 보면 아래 그림 가운데 왼쪽 그림과 같다.
+
+($b$) 비선형 미분방정식이며 위상 흐름의 변화는 아래 그림 가운데 오른쪽 그림과 같다.
+
+![두가지 상황에서의 위상 흐름의 변화](figures/phase_flow2.png){#fig-Arnomd_exr_p21_3 width=600}
+
 :::
+
+</br>
+
+## 2-자유도 시스템
+
+### 정의 {#sec-MS_definitions_of_2_dof_system}
+
+
+::: {.callout-note appearance="minimal" icon="false"}
+::: {#def-MS_2_dof_system}
+
+#### 2-자유도 시스템
+
+**2-자유도** 시스템은 평면에서의 벡터장 $\bf{f}$ 에 대해 아래와 같은 미분방정식으로 정의된 시스팀이다.
+
+$$
+\ddot{\bf{x}} = \bf{f}(\bf{x}),\qquad \bf{x}\in \E^2.
+$$ {#eq-MS_equation_of_motion_for_2_dof_system}
+
+
+:::
+:::
+
+이 때 어떤 $U:\E^2\to \R$ 에 대해 $\bf{f} = -\partial U/\partial \bf{x}$ 일 때 이 시스템을 **보존적**이라고 하며 보존적인 2-자유도 시스템의 운동방정식은 $\ddot{\bf{x}}
+ = -\partial U/\partial \bf{x}$ 로 주어진다.
+
+</br>
+
+### 에너지 보존 법칙 {#sec-MS_energy_conservation_for_2_dof_system}
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-MS_conservation_of_total_energy_in_2_dof_system}
+
+#### 에너지 보존 법칙
+
+보존계에서의 총 에너지는 보존된다. 즉 
+
+$$
+E=\dfrac{1}{2}m\dot{\bf{x}}^2 + U(\bf{x})
+$$
+
+일 때 
+
+$$
+\dfrac{dE}{dt} = 0
+$$
+
+이다.
+:::
+
+</div>
+
+::: {.proof}
+
+$$
+\dfrac{dE}{dt} = m\dot{\bf{x}}\bf{\cdot}\ddot{\bf{x}} + \dfrac{\partial U}{\partial \bf{x}}\bf{\cdot}\dot{\bf{x}} = \dot{\bf{x}}\bf{\cdot}\left(m\ddot{\bf{x}} + \dfrac{\partial U}{\partial \bf{x}}\right) = 0. \qquad \square
+$$
+
+:::
+
+</br>
+
+1-자유도 시스템에서는 항상 포텐셜을 구할 수 있지만 2 이상의 자유도를 가진 시스템에서는 그렇지 않다.
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p22_1}
+
+#### Arnold p22.1
+
+2-자유도 시스템에서 보존적이지 않은 경우를 찾아라.
+
+:::
+</div>
+::: {.solution}
+
+$\bf{f}$ 가 보존적이면 $\nabla \times \bf{f}=-\nabla \times \left(\dfrac{\partial U}{\partial \bf{x}}\right)=\bf{0}$ 이다. 그런데 어떤 영이 아닌 벡터 $\bf{a}$ 에 대해 $\bf{f}=\bf{a}\times \bf{x}$ 이면, 
+
+$$
+\nabla \times (\bf{a}\times \bf{x}) = 2\bf{a} \ne \bf{0}
+$$
+
+이므로 보존적이지 않다.
+
+:::
+
+</br>
+
+### 위상 공간 {#sec-MS_phase_space_of_2_dof_system}
+
+@eq-MS_equation_of_motion_for_2_dof_system 은 다음과같이 쓸 수 있다.
+
+$$
+\begin{aligned}
+\dot{x}_1 &= y_1, & \dot{x}_2 &= y_2,\\[0.3em]
+\dot{y}_1 &= -\dfrac{\partial U}{\partial x_1}, & \dot{y}_2 &= - \dfrac{\partial U}{\partial x_2}.
+\end{aligned}
+$$ {#eq-MS_phase_space_equation_for_2_dof_system}
+
+2-자유도 시스템의 위상공간은 4차원이며 $x_1,\,x_2,\,y_1,\,y_2$ 의 좌표를 가진다. 4차원 위상 공간에서 $x_1,\,x_2$ 의 2차원 평면으로의 사영(projection) 은 움직이는 점의 경로이며 이 경로를 **궤도 (orbit)** 라고 부른다. 비록 위상공간에서는 교점이 없을지라도 궤도는 교점이 있을 수 있다.
+
+
+에너지 보존 법칙에 의해
+
+$$
+E=\dfrac{m\bf{\dot{x}}^2}{2}+U(\bf{x}) = \dfrac{m(y_1^2+y_2^2)}{2}+U(x_1,\,x_2)
+$$
+
+는 4차원 초평면 $E(x_1,\,x_2,\,y_1,\,y_2)=E_0$ 를 정의한다. 이 평면 $\pi_{E_0}$ 는 위상 흐름 $g^t$ 에 대해 불변이다. 즉 
+
+$$
+g^t(\pi_{E_0}) = \pi_{E_0}
+$$
+
+이다. 위상속도 벡터장은 각각의 $\pi_{E_0}$ 위의 점에서 접평면이며, 따라서 $\pi_{E_0}$ 는 위상 곡선 전체로 이루어져 있다.
+
+![에너지 레벨 평면과 위상 곡선](figures/arnold_fig16.png){#fig-MS_arnold_fig16 width=300}
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-MS_phase_space_of_2_dof_system_1}
+
+#### 2차원 진동자
+
+$U=\dfrac{1}{2}(x_1^2+x_2^2)$ 를 생각하자. $x_1,\,x_2$ 평면에서의 포탠셜 에너지 레벨 집합은 동심원이며 운동방정식은 $\ddot{x}_1 = -x_2,\, \ddot{x}_2 = -x_2$ 로 독립적인 2개의 1-자유도 시스템과 동등하다. 에너지 보존 법칙에 의해 
+
+$$
+E=\dfrac{1}{2}(y_1^1+y_2^2)+ \dfrac{1}{2}(x_1^2+x_2^2)
+$$
+
+이며 에너지 레벨 초평면 $\pi_{E_0}$ 는 4차원 구이다.
+
+:::
+
+</div>
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p24_1}
+
+#### Arnold p24.1
+
+@exm-MS_phase_space_of_2_dof_system_1 에서 기술된 2차원 진동자의 위상 곡선은 구에서의 대원(great circle)임을 보여라.
+
+:::
+</div>
+
+::: {.solution}
+
+$\ddot{x}_1=-x_1,\, \ddot{x}_2=-x_2$ 로부터 
+
+$$
+\begin{aligned}
+x_1 (t) &= a_1 \cos t + b_1 \sin t, \\
+y_1 (t) &= - a_1 \sin t + b_1 \cos t, \\
+x_2 (t) &= a_2 \cos t + b_2 \sin t , \\
+y_2 (t) &= -a_2 \sin t + b_2 \cos t,
+\end{aligned}\tag{1}
+$$ 
+
+를 얻는다. 이로부터
+$$
+\begin{aligned}
+\dfrac{b_1x_1 - a_1 y_1}{a_1^2+b_1^2} &= \dfrac{b_2x_2 - a_2y_2}{a_2^2+b_2^2} = \sin t,\\[0.3em]
+\dfrac{a_1x_1 + b_1 y_1}{a_1^2+b_1^2} & = \dfrac{a_2x_2 + b_2x_2}{a_2^2+b_2^2} = \cos t.
+\end{aligned} \tag{2}
+$$
+
+를 얻는다. 위의 두 식은 원점을 지나는 서로 다른 두 3차원 초평면이며 2차원 진동자의 위상 곡선은 이 두 평면상에 공통으로 위치해야 하므로, 또한 4차원 상의 구에 위치해야 하므로 대원을 이룬다.
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p24_2}
+
+#### Arnold p24.2
+
+2차원 진동자의 에너지 레벨 초평면 $\pi_{E_0}$ 위에서의 위상 곡선의 집합은 2차원 구를 이룬다는 것을 보여라. $w=(x_1+iy_1)/(x_2+iy_2)$ 는 소위 **호프 사상(Hopf map)** 이라는 3차원 $\pi_{E_0}$ 로부터 이 2차원 구로의 사상이다. 
+
+:::
+</div>
+
+::: {.solution}
+
+
+... to be done ...
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-arnold_p24_3}
+
+#### Arnold p24.3
+
+위상 곡선의 $x_1,\,x_2$ 평면으로의 projection 을 그려라. (즉 점의 운동의 궤도를 그려라)
+
+:::
+</div>
+
+::: {.solution}
+
+@exr-arnold_p24_1 의 식 ($1$) 로 부터 $(x_1,\,x_2)$ 는 타원임을 안다. [영문 위키피디아 : 타원](https://en.wikipedia.org/wiki/Ellipse) 의 general ellipse 부분을 참고하라.
+
+:::
+
+</br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-MS_lissajous_figures}
+
+#### 리사주 곡선
+
+평면상의 곡선에 대해 한가지 더 알아보자. 아래의 운동방정식을 생각하자.
+
+$$
+\ddot{x}_1 = -x_1,\qquad \ddot{x}_2 = -\omega^2 x_2.
+$$
+
+포텐셜 에너지는 
+
+$$
+U = \dfrac{1}{2}x_1^2 + \dfrac{1}{2}\omega^2x_2^2
+$$
+
+이다. 에너지 보존법칙으로부터
+
+$$
+E=\dfrac{1}{2}(\dot{x}_1^2 + \dot{x}_2^2) + U(x_1,\,x_2)
+$$
+
+는 일정하다는 것을 안다. 또한 모든 운동은 $U(x_1,\,x_2)\le E$ 인 타원 내부에서 일아난다. 또한 이 시스템은 독립적인 두 진동자로 이루어졌으며 각각의 진동자에 대해 에너지 보존 법칙이 성립한다. 즉
+
+$$
+E_1 = \dfrac{1}{2}\dot{x}_1^2 + \dfrac{1}{2}x_1^2,\qquad E_2=\dfrac{1}{2}\dot{x}_2^2 + \dfrac{1}{2}\omega^2 x_2^2
+$$
+
+에 대해 
+
+$$
+E=E_1+E_2
+$$
+
+이다. 결론적으로 $x_1$ 변수와 $x_2$ 변수는 각각 $|x_1|\le \sqrt{2E_1(0)},\quad |x_2| \le \sqrt{2E_2(0)}$ 로 제한된다. $x_1,\,x_2$ 에 허용된 영역은 $x_1,\,x_2$ 평면에서 직사각형이다.
+
+
+
+:::
+
+</div>

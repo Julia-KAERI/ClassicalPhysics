@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-b467865d89f01302b3bb45791fa41ab5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -360,6 +360,12 @@ window.Quarto = {
   <li><a href="#sec-MS_examples_of_1_dof_system" id="toc-sec-MS_examples_of_1_dof_system" class="nav-link" data-scroll-target="#sec-MS_examples_of_1_dof_system"><span class="header-section-number">9.1.3</span> 보기들</a></li>
   <li><a href="#sec-MS_phase_flow" id="toc-sec-MS_phase_flow" class="nav-link" data-scroll-target="#sec-MS_phase_flow"><span class="header-section-number">9.1.4</span> 위상 흐름</a></li>
   </ul></li>
+  <li><a href="#자유도-시스템-1" id="toc-자유도-시스템-1" class="nav-link" data-scroll-target="#자유도-시스템-1"><span class="header-section-number">9.2</span> 2-자유도 시스템</a>
+  <ul class="collapse">
+  <li><a href="#sec-MS_definitions_of_2_dof_system" id="toc-sec-MS_definitions_of_2_dof_system" class="nav-link" data-scroll-target="#sec-MS_definitions_of_2_dof_system"><span class="header-section-number">9.2.1</span> 정의</a></li>
+  <li><a href="#sec-MS_energy_conservation_for_2_dof_system" id="toc-sec-MS_energy_conservation_for_2_dof_system" class="nav-link" data-scroll-target="#sec-MS_energy_conservation_for_2_dof_system"><span class="header-section-number">9.2.2</span> 에너지 보존 법칙</a></li>
+  <li><a href="#sec-MS_phase_space_of_2_dof_system" id="toc-sec-MS_phase_space_of_2_dof_system" class="nav-link" data-scroll-target="#sec-MS_phase_space_of_2_dof_system"><span class="header-section-number">9.2.3</span> 위상 공간</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -393,7 +399,7 @@ window.Quarto = {
 <div id="def-MS_1_dof_system" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 9.1 (보존계)</strong></span> 자유도 1 시스템은 아래와 같은 하나의 운동방정식으로 기술되는 시스템이다.</p>
 <p><span id="eq-MS_eom_of_1_dof_system"><span class="math display">\[
-\ddot{x} = f(x),\qquad x\in \mathbb{R}.
+\ddot{x} = \dfrac{1}{m}f(x),\qquad x\in \mathbb{R}.
 \tag{9.1}\]</span></span></p>
 <p>이 때 운동에너지 <span class="math inline">\(T\)</span> 는</p>
 <p><span class="math display">\[
@@ -412,22 +418,22 @@ E = T+U.
 </div>
 </div>
 </div>
-<p><br></p>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-MS_conservation_of_total_energy_in_1dof_system" class="theorem">
 <p><span class="theorem-title"><strong>정리 9.1 (에너지 보존 법칙)</strong></span> 운동방정식 <a href="#eq-MS_eom_of_1_dof_system" class="quarto-xref">식&nbsp;<span>9.1</span></a> 을 따르는 시스템의 총 에너지는 보존된다. 즉 <span class="math inline">\(E(x,\,\dot{x})\)</span> 는 시간에 무관하게 일정하다.</p>
 </div>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(dE/dt=0\)</span> 임을 보이면 된다. <span class="math display">\[
-\dfrac{d(T+U)}{dt} = \dot{x}\ddot{x} + \dfrac{dU}{dx}\ddot{x} = \ddot{x}(\ddot{x}-f(x))=0. \quad \square
+\dfrac{d(T+U)}{dt} = m\dot{x}\ddot{x} + \dfrac{dU}{dx}\ddot{x} = \ddot{x}(m\ddot{x}-f(x))=0. \quad \square
 \]</span></p>
 </div>
 <p><br></p>
 </section>
 <section id="sec-SM_concepts_in_phase_space" class="level3" data-number="9.1.2">
 <h3 data-number="9.1.2" class="anchored" data-anchor-id="sec-SM_concepts_in_phase_space"><span class="header-section-number">9.1.2</span> 위상 공간에서의 개념들</h3>
-<p><a href="#eq-MS_eom_of_1_dof_system" class="quarto-xref">식&nbsp;<span>9.1</span></a> 은 아래의 두 방정식으로 이루어진 시스템과 동등하다.</p>
+<p><a href="#eq-MS_eom_of_1_dof_system" class="quarto-xref">식&nbsp;<span>9.1</span></a> 은 아래의 두 방정식으로 이루어진 시스템과 동등하다. 편의를 위해 질량 <span class="math inline">\(m=1\)</span> 로 놓자. 앞으로 위상공간에 대해서는 질량 <span class="math inline">\(m=1\)</span> 로 간주하도록 하겠다.</p>
 <p><span id="eq-MS_2eom_equivalent_to_1_dof_system"><span class="math display">\[
 \dot{x} = y,\qquad \dot{y}=f(x).
 \tag{9.2}\]</span></span></p>
@@ -579,8 +585,7 @@ M(t) = g^t(M)
 </figcaption>
 </figure>
 </div>
-<br>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MS_1d_diffeomorphsm_and_group" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 9.1</strong></span> <span class="math inline">\(g^t\)</span> 이 아래의 성질을 가질 때 <span class="math inline">\(\{g^t : t\in \mathbb{R}\}\)</span> 는 군을 이룬다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(g^{t+s} := g^t \circ g^s\)</span>,</p>
@@ -640,6 +645,188 @@ x&lt;x_0+t\sqrt{2U(x_0)}
 <p><span class="math display">\[
 x(t) = \dfrac{x_0+y_0}{2} e^{t} + \dfrac{x_0-y_0}{2}e^{-t},\quad y(t) = \dfrac{x_0+y_0}{2} e^{t} - \dfrac{x_0-y_0}{2}e^{-t}
 \]</span></p>
+<p>이다. 이것을 위상 흐름의 변화로 보면 아래 그림 가운데 왼쪽 그림과 같다.</p>
+<p>(<span class="math inline">\(b\)</span>) 비선형 미분방정식이며 위상 흐름의 변화는 아래 그림 가운데 오른쪽 그림과 같다.</p>
+<div id="fig-Arnomd_exr_p21_3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Arnomd_exr_p21_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/phase_flow2.png" class="img-fluid figure-img" width="600">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Arnomd_exr_p21_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;9.4: 두가지 상황에서의 위상 흐름의 변화
+</figcaption>
+</figure>
+</div>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="자유도-시스템-1" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="자유도-시스템-1"><span class="header-section-number">9.2</span> 2-자유도 시스템</h2>
+<section id="sec-MS_definitions_of_2_dof_system" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="sec-MS_definitions_of_2_dof_system"><span class="header-section-number">9.2.1</span> 정의</h3>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-MS_2_dof_system" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 9.2 (2-자유도 시스템)</strong></span> <strong>2-자유도</strong> 시스템은 평면에서의 벡터장 <span class="math inline">\(\boldsymbol{f}\)</span> 에 대해 아래와 같은 미분방정식으로 정의된 시스팀이다.</p>
+<p><span id="eq-MS_equation_of_motion_for_2_dof_system"><span class="math display">\[
+\ddot{\boldsymbol{x}} = \boldsymbol{f}(\boldsymbol{x}),\qquad \boldsymbol{x}\in \mathbb{E}^2.
+\tag{9.3}\]</span></span></p>
+</div>
+</div>
+</div>
+</div>
+<p>이 때 어떤 <span class="math inline">\(U:\mathbb{E}^2\to \mathbb{R}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{f} = -\partial U/\partial \boldsymbol{x}\)</span> 일 때 이 시스템을 <strong>보존적</strong>이라고 하며 보존적인 2-자유도 시스템의 운동방정식은 <span class="math inline">\(\ddot{\boldsymbol{x}}
+= -\partial U/\partial \boldsymbol{x}\)</span> 로 주어진다.</p>
+<p><br></p>
+</section>
+<section id="sec-MS_energy_conservation_for_2_dof_system" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="sec-MS_energy_conservation_for_2_dof_system"><span class="header-section-number">9.2.2</span> 에너지 보존 법칙</h3>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-MS_conservation_of_total_energy_in_2_dof_system" class="theorem">
+<p><span class="theorem-title"><strong>정리 9.2 (에너지 보존 법칙)</strong></span> 보존계에서의 총 에너지는 보존된다. 즉</p>
+<p><span class="math display">\[
+E=\dfrac{1}{2}m\dot{\boldsymbol{x}}^2 + U(\boldsymbol{x})
+\]</span></p>
+<p>일 때</p>
+<p><span class="math display">\[
+\dfrac{dE}{dt} = 0
+\]</span></p>
+<p>이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math display">\[
+\dfrac{dE}{dt} = m\dot{\boldsymbol{x}}\boldsymbol{\cdot}\ddot{\boldsymbol{x}} + \dfrac{\partial U}{\partial \boldsymbol{x}}\boldsymbol{\cdot}\dot{\boldsymbol{x}} = \dot{\boldsymbol{x}}\boldsymbol{\cdot}\left(m\ddot{\boldsymbol{x}} + \dfrac{\partial U}{\partial \boldsymbol{x}}\right) = 0. \qquad \square
+\]</span></p>
+</div>
+<p><br></p>
+<p>1-자유도 시스템에서는 항상 포텐셜을 구할 수 있지만 2 이상의 자유도를 가진 시스템에서는 그렇지 않다.</p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-arnold_p22_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 9.10 (Arnold p22.1)</strong></span> 2-자유도 시스템에서 보존적이지 않은 경우를 찾아라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\boldsymbol{f}\)</span> 가 보존적이면 <span class="math inline">\(\nabla \times \boldsymbol{f}=-\nabla \times \left(\dfrac{\partial U}{\partial \boldsymbol{x}}\right)=\boldsymbol{0}\)</span> 이다. 그런데 어떤 영이 아닌 벡터 <span class="math inline">\(\boldsymbol{a}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{f}=\boldsymbol{a}\times \boldsymbol{x}\)</span> 이면,</p>
+<p><span class="math display">\[
+\nabla \times (\boldsymbol{a}\times \boldsymbol{x}) = 2\boldsymbol{a} \ne \boldsymbol{0}
+\]</span></p>
+<p>이므로 보존적이지 않다.</p>
+</div>
+<p><br></p>
+</section>
+<section id="sec-MS_phase_space_of_2_dof_system" class="level3" data-number="9.2.3">
+<h3 data-number="9.2.3" class="anchored" data-anchor-id="sec-MS_phase_space_of_2_dof_system"><span class="header-section-number">9.2.3</span> 위상 공간</h3>
+<p><a href="#eq-MS_equation_of_motion_for_2_dof_system" class="quarto-xref">식&nbsp;<span>9.3</span></a> 은 다음과같이 쓸 수 있다.</p>
+<p><span id="eq-MS_phase_space_equation_for_2_dof_system"><span class="math display">\[
+\begin{aligned}
+\dot{x}_1 &amp;= y_1, &amp; \dot{x}_2 &amp;= y_2,\\[0.3em]
+\dot{y}_1 &amp;= -\dfrac{\partial U}{\partial x_1}, &amp; \dot{y}_2 &amp;= - \dfrac{\partial U}{\partial x_2}.
+\end{aligned}
+\tag{9.4}\]</span></span></p>
+<p>2-자유도 시스템의 위상공간은 4차원이며 <span class="math inline">\(x_1,\,x_2,\,y_1,\,y_2\)</span> 의 좌표를 가진다. 4차원 위상 공간에서 <span class="math inline">\(x_1,\,x_2\)</span> 의 2차원 평면으로의 사영(projection) 은 움직이는 점의 경로이며 이 경로를 <strong>궤도 (orbit)</strong> 라고 부른다. 비록 위상공간에서는 교점이 없을지라도 궤도는 교점이 있을 수 있다.</p>
+<p>에너지 보존 법칙에 의해</p>
+<p><span class="math display">\[
+E=\dfrac{m\boldsymbol{\dot{x}}^2}{2}+U(\boldsymbol{x}) = \dfrac{m(y_1^2+y_2^2)}{2}+U(x_1,\,x_2)
+\]</span></p>
+<p>는 4차원 초평면 <span class="math inline">\(E(x_1,\,x_2,\,y_1,\,y_2)=E_0\)</span> 를 정의한다. 이 평면 <span class="math inline">\(\pi_{E_0}\)</span> 는 위상 흐름 <span class="math inline">\(g^t\)</span> 에 대해 불변이다. 즉</p>
+<p><span class="math display">\[
+g^t(\pi_{E_0}) = \pi_{E_0}
+\]</span></p>
+<p>이다. 위상속도 벡터장은 각각의 <span class="math inline">\(\pi_{E_0}\)</span> 위의 점에서 접평면이며, 따라서 <span class="math inline">\(\pi_{E_0}\)</span> 는 위상 곡선 전체로 이루어져 있다.</p>
+<div id="fig-MS_arnold_fig16" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-MS_arnold_fig16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/arnold_fig16.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-MS_arnold_fig16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;9.5: 에너지 레벨 평면과 위상 곡선
+</figcaption>
+</figure>
+</div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-MS_phase_space_of_2_dof_system_1" class="theorem example">
+<p><span class="theorem-title"><strong>예제 9.3 (2차원 진동자)</strong></span> <span class="math inline">\(U=\dfrac{1}{2}(x_1^2+x_2^2)\)</span> 를 생각하자. <span class="math inline">\(x_1,\,x_2\)</span> 평면에서의 포탠셜 에너지 레벨 집합은 동심원이며 운동방정식은 <span class="math inline">\(\ddot{x}_1 = -x_2,\, \ddot{x}_2 = -x_2\)</span> 로 독립적인 2개의 1-자유도 시스템과 동등하다. 에너지 보존 법칙에 의해</p>
+<p><span class="math display">\[
+E=\dfrac{1}{2}(y_1^1+y_2^2)+ \dfrac{1}{2}(x_1^2+x_2^2)
+\]</span></p>
+<p>이며 에너지 레벨 초평면 <span class="math inline">\(\pi_{E_0}\)</span> 는 4차원 구이다.</p>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-arnold_p24_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 9.11 (Arnold p24.1)</strong></span> <a href="#exm-MS_phase_space_of_2_dof_system_1" class="quarto-xref">예제&nbsp;<span>9.3</span></a> 에서 기술된 2차원 진동자의 위상 곡선은 구에서의 대원(great circle)임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\ddot{x}_1=-x_1,\, \ddot{x}_2=-x_2\)</span> 로부터</p>
+<p><span class="math display">\[
+\begin{aligned}
+x_1 (t) &amp;= a_1 \cos t + b_1 \sin t, \\
+y_1 (t) &amp;= - a_1 \sin t + b_1 \cos t, \\
+x_2 (t) &amp;= a_2 \cos t + b_2 \sin t , \\
+y_2 (t) &amp;= -a_2 \sin t + b_2 \cos t,
+\end{aligned}\tag{1}
+\]</span></p>
+<p>를 얻는다. 이로부터 <span class="math display">\[
+\begin{aligned}
+\dfrac{b_1x_1 - a_1 y_1}{a_1^2+b_1^2} &amp;= \dfrac{b_2x_2 - a_2y_2}{a_2^2+b_2^2} = \sin t,\\[0.3em]
+\dfrac{a_1x_1 + b_1 y_1}{a_1^2+b_1^2} &amp; = \dfrac{a_2x_2 + b_2x_2}{a_2^2+b_2^2} = \cos t.
+\end{aligned} \tag{2}
+\]</span></p>
+<p>를 얻는다. 위의 두 식은 원점을 지나는 서로 다른 두 3차원 초평면이며 2차원 진동자의 위상 곡선은 이 두 평면상에 공통으로 위치해야 하므로, 또한 4차원 상의 구에 위치해야 하므로 대원을 이룬다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-arnold_p24_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 9.12 (Arnold p24.2)</strong></span> 2차원 진동자의 에너지 레벨 초평면 <span class="math inline">\(\pi_{E_0}\)</span> 위에서의 위상 곡선의 집합은 2차원 구를 이룬다는 것을 보여라. <span class="math inline">\(w=(x_1+iy_1)/(x_2+iy_2)\)</span> 는 소위 <strong>호프 사상(Hopf map)</strong> 이라는 3차원 <span class="math inline">\(\pi_{E_0}\)</span> 로부터 이 2차원 구로의 사상이다.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>… to be done …</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-arnold_p24_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 9.13 (Arnold p24.3)</strong></span> 위상 곡선의 <span class="math inline">\(x_1,\,x_2\)</span> 평면으로의 projection 을 그려라. (즉 점의 운동의 궤도를 그려라)</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#exr-arnold_p24_1" class="quarto-xref">연습문제&nbsp;<span>9.11</span></a> 의 식 (<span class="math inline">\(1\)</span>) 로 부터 <span class="math inline">\((x_1,\,x_2)\)</span> 는 타원임을 안다. <a href="https://en.wikipedia.org/wiki/Ellipse">영문 위키피디아 : 타원</a> 의 general ellipse 부분을 참고하라.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-MS_lissajous_figures" class="theorem example">
+<p><span class="theorem-title"><strong>예제 9.4 (리사주 곡선)</strong></span> 평면상의 곡선에 대해 한가지 더 알아보자. 아래의 운동방정식을 생각하자.</p>
+<p><span class="math display">\[
+\ddot{x}_1 = -x_1,\qquad \ddot{x}_2 = -\omega^2 x_2.
+\]</span></p>
+<p>포텐셜 에너지는</p>
+<p><span class="math display">\[
+U = \dfrac{1}{2}x_1^2 + \dfrac{1}{2}\omega^2x_2^2
+\]</span></p>
+<p>이다. 에너지 보존법칙으로부터</p>
+<p><span class="math display">\[
+E=\dfrac{1}{2}(\dot{x}_1^2 + \dot{x}_2^2) + U(x_1,\,x_2)
+\]</span></p>
+<p>는 일정하다는 것을 안다. 또한 모든 운동은 <span class="math inline">\(U(x_1,\,x_2)\le E\)</span> 인 타원 내부에서 일아난다. 또한 이 시스템은 독립적인 두 진동자로 이루어졌으며 각각의 진동자에 대해 에너지 보존 법칙이 성립한다. 즉</p>
+<p><span class="math display">\[
+E_1 = \dfrac{1}{2}\dot{x}_1^2 + \dfrac{1}{2}x_1^2,\qquad E_2=\dfrac{1}{2}\dot{x}_2^2 + \dfrac{1}{2}\omega^2 x_2^2
+\]</span></p>
+<p>에 대해</p>
+<p><span class="math display">\[
+E=E_1+E_2
+\]</span></p>
+<p>이다. 결론적으로 <span class="math inline">\(x_1\)</span> 변수와 <span class="math inline">\(x_2\)</span> 변수는 각각 <span class="math inline">\(|x_1|\le \sqrt{2E_1(0)},\quad |x_2| \le \sqrt{2E_2(0)}\)</span> 로 제한된다. <span class="math inline">\(x_1,\,x_2\)</span> 에 허용된 영역은 <span class="math inline">\(x_1,\,x_2\)</span> 평면에서 직사각형이다.</p>
+</div>
 </div>
 
 
