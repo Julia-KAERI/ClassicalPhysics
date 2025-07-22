@@ -154,18 +154,18 @@ $$ {#eq-CM_def_angular_momentum}
 이 때, 
 
 $$
-\dfrac{d\bf{L}}{dt} = \dfrac{d}{dt} (\bf{r} \times m\bf{v}) = \bf{v} \times m \bf{v} + \bf{r} \times \dfrac{d}{dt}(m\bf{v}) = \bf{r} \times \bf{p} = \bf{N} 
+\dfrac{d\bf{L}}{dt} = \dfrac{d}{dt} (\bf{r} \times m\bf{v}) = \bf{v} \times m \bf{v} + \bf{r} \times \dfrac{d}{dt}(m\bf{v}) = \bf{r} \times \bf{p}
 $$  {#eq-CM_def_torque}
 
-이다. 원점 $\mathcal{O}$ 로부터의 **토크(torque)** (혹은 moment of force) $\bf{N}$ 은 
+이다. 원점 $\mathcal{O}$ 로부터의 **토크(torque)** (혹은 moment of force) $\bf{N}$ 은 다음과 같이 정의된다.
 
 $$
 \boxed{
-\bf{N} := \bf{r} \times \bf{F}
+\bf{N} := \bf{r} \times \bf{F}.
 }
 $$ {#eq-CM_def_torque}
 
-로 정의된다. 즉 $\bf{N}=0$ 이면 $\bf{L}$ 이 보존됨을 알 수 있다.
+즉 $\bf{N}=0$ 이면 $\bf{L}$ 이 보존됨을 알 수 있다.
 
 </br>
 
@@ -224,10 +224,10 @@ $$
 
 ## 입자계의 동역학
 
-입자계에서 $j$-번째 입자가 $i$-번째 입자에 가하는 힘을 $\bf{F}_{ji}$ 라 하자. 시스템 외부에서 $i$-번째 입자에 가하는 힘을 $\bf{F}^{(e)}_{i}$ 라 하면 $i$ 번째 입자의 운동방정식은 다음과 같다.
+다수의 입자로 이루어진 입자계에서 우리는 계를 이루는 입자들 사이의 힘과 입자계 외부의 원인에 의해 입자계의 입자에 가해지는 힘을 모두 고려해야 한다. $N$ 개의 입자로 이루어진 계를 $N$-입자계라고 하자. 입자계에서 $j$-번째 입자가 $i$-번째 입자에 가하는 힘을 $\bf{F}_{ji}$ 라 하고 시스템 외부에서 $i$-번째 입자에 가하는 힘을 $\bf{F}^{(e)}_{i}$ 라 하면 $i$ 번째 입자에 가해지는 힘은 $\bf{F}_{ji} + \bf{F}^{(e)}_i$ 이며, 따라서 운동방정식은 다음과 같다.
 
 $$
-\dot{\bf{p}}_i = \frac{d}{dt} (m_i\bf{v}_i) = \sum_j \bf{F}_{ji} + \bf{F}^{(e)}_i.
+\dfrac{d\bf{p}_i}{dt} = \frac{d}{dt} (m_i\bf{v}_i) = \sum_j \bf{F}_{ji} + \bf{F}^{(e)}_i.
 $$ {#eq-CM_equation_of_motion_in_particle_system}
 
 제 3 운동법칙에 따라 모든 $i,\,j$ 에 대해 $\bf{F}_{ij} = - \bf{F}_{ji}$ 일 경우 모든 입자에 대해 더하면 다음과 같다. 여기서 $\bf{F}^{(e)} = \sum_i \bf{F}^{(e)}_i$ 는 외력(external force) 의 총합이다. 
@@ -270,10 +270,10 @@ $${#eq-CM_equation_of_motion_for_center_of_mass_2}
 
 ### 총 각운동량 {#sec-CM_total_angular_momentum}
 
-입자계의 총 각운동량 $\bf{L}$ 은 개별 입자의 각운동량의 합으로 정의된다. 즉
+$N$-입자계의 총 각운동량 $\bf{L}$ 은 개별 입자의 각운동량의 합으로 정의된다. 즉
 
 $$
-\bf{L} :=\sum_i \bf{L}_i
+\bf{L} :=\sum_{i=1}^N \bf{L}_i
 $$ {#eq-CM_total_angular_momentum}
 
 이다. 따라서 
@@ -285,15 +285,15 @@ $$
 \end{aligned}
 $$ {#eq-CM_derivative_of_total_angular_momentum}
 
-이다. 여기서 $\dot{\bf{r}}_i \times \bf{p}_i = 0$ 이 이용되었다. 뉴턴의 제 3 운동법칙을 따르는 힘 이라면, 즉 $\bf{F}_{ij}= -\bf{F}_{ji}$ 라면, 
+이다. 여기서 $\dot{\bf{r}}_i \times \bf{p}_i = 0$ 이 이용되었다. 뉴턴의 제 3 운동법칙을 따르는 힘 이라면, 즉 $\bf{F}_{ij}= -\bf{F}_{ji}$ 라면, $\bf{r}_{ij} = \bf{r}_i - \bf{r}_j$ 에 대해
 
 $$
-\bf{r}_i \times \bf{F}_{ji} + \bf{r}_j \times \bf{F}_{ij} = (\bf{r}_i - \bf{r}_j) \times \bf{F}_{ji} = \bf{r}_{ij} \times \bf{F}_{ji},\qquad \text{where }\bf{r}_{ij} = \bf{r}_i - \bf{r}_j
+\bf{r}_i \times \bf{F}_{ji} + \bf{r}_j \times \bf{F}_{ij} = (\bf{r}_i - \bf{r}_j) \times \bf{F}_{ji} = \bf{r}_{ij} \times \bf{F}_{ji}
 $$
 
 로 쓸 수 있다.  
 
-여기서 작용-반작용이 $\bf{F}_{ji}=F_{ji}\hat{\bf{r}}_{ij}$ 일 경우를 생각하자(작용 반작용의 강한 조건). 이 경우 @eq-CM_derivative_of_total_angular_momentum 의 마지막 항은 아래와 같이 $0$ 이 된다.
+여기서 작용 반작용의 강한 조건, 즉 $\bf{F}_{ji}=F_{ji}\hat{\bf{r}}_{ij}$ 일 경우를 생각하자. 이 경우 @eq-CM_derivative_of_total_angular_momentum 의 마지막 항은 아래와 같이 $0$ 이 된다.
 
 $$
 \sum_{\substack{ i ,j \\ i \ne j }} \bf{r}_i \times \bf{F}_{ji} = \sum_{i<j} \bf{r}_{ij}\times \bf{F}_{ji} = 0\;.
@@ -308,28 +308,31 @@ $$ {#eq-CM_equation_of_motion_for_total_angular_momentum}
 
 </br>
 
+::: {.callout-important icon="false"}
 #### **작용 반작용의 강한 조건과 약한 조건**
 
 총 운동량 보존은 $\bf{F}_{ij} = -\bf{F}_{ji}$만을 가정하였다. 이를 작용-반작용의 약한 조건(Weak form of the action and reaction principle) 라고 한다. 그러나 총 각운동량 보존은 $\bf{F}_{ij} = F_{ij}\hat{\bf{r}}_{ij}$, 즉 중심력(central force) 임을 가정하였다 이를 작용-반작용의 강한 조건 이라고 한다.  
 
+:::
 
 </br>
 
 ### 질량중심 좌표계 {#sec-CM_COM_refrence_frame}
 
-입자계에서 질량중심을 $\bf{R}=\sum\limits_i m_i \bf{r}_i$ 로 정의했다. $\bf{r}'_i=\bf{r}_i - \bf{R}$ 이라고 하면 $\bf{r}'_i$ 는 질량 중심 $\bf{R}$ 을 원점으로 삼은 위치벡터이다. 이 때 질량 중심의 속도 $\bf{V} = \dot{\bf{R}}$ 에 대해 $\bf{v}'_i = \bf{v}_i -\bf{V}$ 로 할 수 있다. 그렇다면 총 각운동량은 다음과 같다.
+$N$-입자계에서 질량중심을 $\bf{R}=\sum\limits_{i=1}^N m_i \bf{r}_i$ 로 정의했다. $\bf{r}'_i=\bf{r}_i - \bf{R}$ 이라고 하면 $\bf{r}'_i$ 는 질량 중심 $\bf{R}$ 을 원점으로 삼은 위치벡터이다. 이 때 질량 중심의 속도 $\bf{V} = \dot{\bf{R}}$ 에 대해 $\bf{v}'_i = \bf{v}_i -\bf{V}$ 로 할 수 있다. 그렇다면 총 각운동량은 다음과 같다.
 
 $$
 \begin{aligned}
 \bf{L} &= \sum_i \bf{r}_i \times m_i \bf{v}_i  \\
-&=\sum_i \bf{R} \times m_i \bf{V} + \sum_i \bf{r}'_i  \times m_i \bf{v}'_i + \left(\sum_i m_i \bf{r}'_i \right) \times \bf{V} + \bf{R} \times \left( \dfrac{d}{dt} \sum_i m_i \bf{r}'_i\right)   \\
+&=\sum_i \bf{R} \times m_i \bf{V} + \sum_i \bf{r}'_i  \times m_i \bf{v}'_i  \\[0.3em]
+& \qquad + \left(\sum_i m_i \bf{r}'_i \right) \times \bf{V} + \bf{R} \times \left( \dfrac{d}{dt} \sum_i m_i \bf{r}'_i\right) \\[0.3em]
 & = \bf{R} \times M\bf{V} + \sum_i \bf{r}'_i \times \bf{p}'_i\;.
 \end{aligned}
 $$ {#eq-CM_total_angular_momentum_for_center_of_mass_coord}
 
-즉 원점 $\mathcal{O}$ 에서의 입자계의 총 각운동량 $\bf{L}$ 은 ($1$) 모든 질량이 질량 중심 에 집중되어 있다고 가정할 때의 각운동량 $\bf{L}_C= \bf{R}\times (M\bf{V})$ 와 ($2$) 질량중심을 새로운 origin으로 했을때의 각운동량 $\bf{L}_R=\sum_i \bf{r}_i' \times \bf{p}'_i$ 의 합이다. 
+즉 원점 $\mathcal{O}$ 에서의 입자계의 총 각운동량 $\bf{L}$ 은 ($1$) 모든 질량이 질량 중심 에 집중되어 있다고 가정할 때의 각운동량 $\bf{L}_C= \bf{R}\times (M\bf{V})$ 와 ($2$) 질량중심을 새로운 원점으로 했을때의 각운동량 $\bf{L}_R=\sum_i \bf{r}_i' \times \bf{p}'_i$ 의 합이다. 
 
-입자계에서 $N$ 입자의 경우 각 입자마다 3개의 좌표로 표현되며 따라서 이 입자게는 $3N$ 차원 벡터공간에서의 위치로 표현된다. 이 $3N$ 차원 벡터공간상의 위치 $P_1$ 에서 $P_2$ 로 이동했을때의 총 일 $W_{12}$ 는 다음과 같다.
+$N$-입자계의 경우 각 입자마다 3개의 좌표로 표현되며 따라서 이 입자계는 $3N$ 차원 벡터공간에서의 위치로 표현된다. 이 $3N$ 차원 벡터공간상의 위치 $P_1$ 에서 $P_2$ 로 이동했을 때의 총 일 $W_{12}$ 는 다음과 같다.
 $$ 
 W_{12} = \sum_i \int_{P_1}^{P_2} \bf{F}_i \cdot d\bf{s}_i = \sum_i  \int_{P_1}^{P_2} \bf{F}_i^{(e)}\cdot d\bf{s}_i + \sum_{\substack{ i ,j \\ i \ne j }}  \int_{P_1}^{P_2}\bf{F}_{ji}\cdot d\bf{s}_i\;.
 $$ {#eq-work_system_of_particles}
@@ -337,7 +340,7 @@ $$ {#eq-work_system_of_particles}
 단일 입자의 경우를 생각하면,
 
 $$
-\sum_i \int_{P_1}^{P_2} \bf{F}_i \cdot d\bf{s}_i = \sum_i \\int_{P_1}^{P_2} m_i \bf{v}_i \cdot \bf{v}_i dt = \sum_i \int_{P_1}^{P_2} d\left(\dfrac{1}{2} m_i v_i^2\right) = T_2 - T_1
+\sum_i \int_{P_1}^{P_2} \bf{F}_i \cdot d\bf{s}_i = \sum_i \int_{P_1}^{P_2} m_i \bf{v}_i \cdot \bf{v}_i dt = \sum_i \int_{P_1}^{P_2} d\left(\dfrac{1}{2} m_i v_i^2\right) = T_2 - T_1
 $$
 
 이다. 이 때 총 운동에너지를 $T = \dfrac{1}{2} \sum\limits_i m_i v_i^2$ 로 하였다.
@@ -421,10 +424,7 @@ $N$-입자계를 생각하자. 구속조건이 없다면 $3N$ 개의 독립적�
 
 </br>
 
-
-
 ::: {.callout-note appearance="minimal" icon="false"}
-
 ::: {#def-CM_configuration_space}
 
 #### 짜임새 공간
@@ -432,17 +432,11 @@ $N$-입자계를 생각하자. 구속조건이 없다면 $3N$ 개의 독립적�
 어떤 $n$-자유도 시스템의 **짜임새 공간 (configuration space)** 은 이 시스템의 $n$ 개의 일반화된 좌표가 가질 수 있는 값의 집합이다.
 
 :::
-
 :::
-
-
-
-
 
 </br>
 
 ## 달랑베르 원리 와 라그랑쥬 방정식
-
 
 ### 가상 변위와 가상 일의 원리 {#sec-CM_principle_of_virtural_work}
 
@@ -467,7 +461,7 @@ $$
 
 이제 구속력에 의한  **가상 일(virtual work)** 이 $0$ 인 시스템, 즉 $\sum_i \bf{f}_i \cdot \delta \bf{r}_i=0$ 인 시스템으로 제한해보자. 이 조건은 강체를 비롯한 많은 다른 제약 조건에 대해서도 유효하다는 것을 안다. 예를 들어 입자가 표면 위를 움직이도록 제약되어 있다면, 가상힘은 표면에 수직이며, 가상 변위는 표면에 접선이어야 하므로 가상 일은 $0$ 이다. 하지만 미끌어지는(sliding) 마찰력이 존재할 경우 가상 일이 $0$ 이 아니게 되는데 이런 시스템은 지금은 생각하지 않기로 하자. 이 제한은 마찰이 본질적으로 거시적인 현상이라는 것을 고려하면 우리의 물리를 해치지 않는다. 반면에 구르는(rolling) 구속조건은 이 조건을 위반하지 않는다. 왜냐하면 잠시 멈춘 지점에 작용하는 힘은 구속조건에 부합하는 변위에 대해 가상 일 이 $0$ 이기 때문이다. 또한 입자가 시간에 따라 움직이는 표면에 제약되어 있는 경우, 구속력은 각 순간마다 표면에 수직이며, 가상 일 은 $0$ 이지만 실제 시간 $dt$ 동안의 실제 변위에 의한 일은 $0$ 이 아닐 수 있다.
 
-따라서 우리는 applied forces에 의한 가상 일이 $0$ 이 되는 system의 평행 조건을 얻게 된다. 즉
+따라서 우리는 applied forces에 의한 가상 일이 $0$ 이 되는 계의 평행 조건을 얻게 된다. 즉
 $$
 \sum_i \bf{F}^{(a)}_i \cdot \delta \bf{r}_i = 0
 $$ {#eq-CM_principle_of_virtual_work}
@@ -506,7 +500,7 @@ $$ {#eq-CM_dalembert_principle}
 ### 일반화된 좌표계에서의 달랑베르 원리 {#sec-CM_dlambert_principle_in_generalized_coordinate}
 
 
-일반화된 좌표계 $q_1,\,q_2,\ldots,\,q_n$ 을 생각하자. $\bf{r}_i = \bf{r}_i (q_1,\ldots,\,q_n,\,t)$ 이므로 chain rule에 의해
+일반화된 좌표계 $(q_1,\,q_2,\ldots,\,q_n)$ 을 생각하자. $\bf{r}_i = \bf{r}_i (q_1,\ldots,\,q_n,\,t)$ 이므로 미분의 연쇄 규칙에 의해
 
 $$
 \bf{v}_i = \dfrac{d\bf{r}_i}{dt} = \sum_k \dfrac{\partial \bf{r}_i}{\partial q_k} \dot{q}_k + \dfrac{\partial \bf{r}_i}{\partial t} 
@@ -619,7 +613,7 @@ $$ {#eq-CM_Lagrange_equation_from_Dlambert_principle}
 
 </br>
 
-#### **Lagrangian is not unique**
+#### **라그랑지안은 유일하지 않다.**
 
 라그랑지안 $L(q,\,\dot{q},\,t)$ 와 어떤 미분가능하며 $q,\,t$ 에만 의존하는 함수 $F(q,\,t)$ 에 대해, 
 

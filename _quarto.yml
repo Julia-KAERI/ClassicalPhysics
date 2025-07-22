@@ -40,11 +40,11 @@ book:
       - src/Relativity/01_introduction_to_special_relativity.qmd
       - src/Relativity/02_introduction_to_classical_field.qmd
 
-    - part: src/Lanczos/Lanczos.qmd
-      chapters:
-      - src/Lanczos/00_01.qmd
-      - src/Lanczos/01_01.qmd
-      - src/Lanczos/02_01.qmd
+    # - part: src/Lanczos/Lanczos.qmd
+    #   chapters:
+    #   - src/Lanczos/00_01.qmd
+    #   - src/Lanczos/01_01.qmd
+    #   - src/Lanczos/02_01.qmd
     - part: src/topics/Topics.qmd
       chapters:
         - src/topics/mathematical.qmd
