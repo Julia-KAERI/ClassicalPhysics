@@ -654,19 +654,20 @@ $$
 &\nabla \cdot \bf{E} = \dfrac{\rho}{\epsilon_0},  & & \nabla \times \bf{E} = - \dfrac{\partial \bf{B}}{\partial t}\\
 &\nabla \cdot \bf{B} = 0, & & \nabla \times \bf{B} = {\mu_0}\left(\bf{J} + \epsilon_0 \dfrac{\partial \bf{E}}{\partial t}\right)
 \end{aligned}
-$$
+$$ {#eq-CM_maxwell_equation}
 
-이며 $\bf{E} = -\nabla \phi$, $\bf{B}=\nabla \times \bf{A}$ 이다. 
+이며 여기서 $\bf{E} = -\nabla \phi$, $\bf{B}=\nabla \times \bf{A}$ 이다. 포텐셜에 대한 미분을 통해 다음을 얻는다.
 
 $$
 \begin{aligned}
 \dfrac{\partial U}{\partial x} &= q\left(\dfrac{\partial \phi}{\partial x} - \dfrac{\partial A_x}{\partial x} v_x - \dfrac{\partial A_y}{\partial x} v_y - \dfrac{\partial A_z}{\partial x} v_z\right)
 \\
-\dfrac{d}{dt}\left(\dfrac{\partial U}{\partial v_x}\right) &= -\dfrac{d}{dt}\left(qA_x\right) = q\dfrac{dA_x}{dt} = -q\left(\dfrac{\partial A_x}{\partial x}v_x + \dfrac{\partial A_x}{\partial y}v_y + \dfrac{\partial A_x}{\partial z}v_z + \dfrac{\partial A}{\partial t}\right)
+\dfrac{d}{dt}\left(\dfrac{\partial U}{\partial v_x}\right) &= -\dfrac{d}{dt}\left(qA_x\right) = q\dfrac{dA_x}{dt} \\[0.3em]
+&= -q\left(\dfrac{\partial A_x}{\partial x}v_x + \dfrac{\partial A_x}{\partial y}v_y + \dfrac{\partial A_x}{\partial z}v_z + \dfrac{\partial A}{\partial t}\right).
 \end{aligned}
 $$
 
-로부터, 
+이로부터, 
 
 $$
 \begin{aligned}
@@ -677,9 +678,6 @@ Q_x &= -\dfrac{\partial U}{\partial x} + \dfrac{d}{dt}\left(\dfrac{\partial U}{\
 $$
 
 을 얻는다. 즉 @eq-CM_electromagnetic_potential 로부터 얻은 일반화된 힘은 로런츠 힘(Lorentz force) 이다.
-
-
-
 
 </br>
 

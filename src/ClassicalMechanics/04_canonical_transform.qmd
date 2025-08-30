@@ -14,7 +14,7 @@ crossref:
 
 ## 정준 변환의 방정식 
 
-### 정준 변환의 방정식 
+### 정준 변환의 방정식 {#sec-CM_equation_of_canonical_transform}
 
 @exr-goldestein_1_15 에서 점변환을 정의하였다. 여기서는 이것이 매우 중요하므로 정식으로 정의하기로 하자.
 
@@ -80,7 +80,7 @@ $$
 \mu \nu \left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_i \dot{Q}_i P_i -\overline{H}
 $$
 
-이다. @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0 와 비교하면 $\lambda = \mu\nu,\, G=\text{const.}$ 인 꼴이다. 이런 변환을 **스케일 변환(scale transformation)** 이라고 하며 우리는 실제로 @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0 에서 $\lambda=1$ 인 경우에만 신경서도 된다는 것을 할 수 있다. 따라서 앞으로는 
+이다. @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0 와 비교하면 $\lambda = \mu\nu,\, G=\text{const.}$ 인 꼴이다. 이런 변환을 **스케일 변환(scale transformation)** 이라고 하며 우리는 실제로 @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0 에서 $\lambda=1$ 인 경우에만 신경써도 된다는 것을 할 수 있다. 따라서 앞으로는 
 $$
 \left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_{i}\dot{Q}_i P_i - \overline{H} + \dfrac{dG}{dt}
 $$ {#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero}

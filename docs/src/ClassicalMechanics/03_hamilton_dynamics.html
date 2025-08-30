@@ -407,6 +407,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>특별한 언급이 없는 한 이 장에서 <span class="math inline">\(p_i\)</span> 는 일반화된 좌표 <span class="math inline">\(q_i\)</span> 에 대한 정준운동량을 의미하며 질량에 속도를 곱한 선형 운동량과는 다르다. 일반화된 좌표를 <span class="math inline">\(Q\)</span> 나 <span class="math inline">\(Q_i\)</span> 와 같이 쓸 때의 정준운동량은 <span class="math inline">\(P\)</span> 나 <span class="math inline">\(P_i\)</span> 로 표기하기로 한다.</p>
+<p>또한 다변수 함수의 편미분에 대해 <a href="../Mechanics_and_Symmetry/01_experimental_facts.html#def-MS_derivative_to_vector" class="quarto-xref">정의&nbsp;<span>8.5</span></a> 의 표기법을 사용한다.</p>
 </div>
 </div>
 <p><br></p>
@@ -418,17 +419,17 @@ window.Quarto = {
 </ul>
 <p><span class="math inline">\(\boldsymbol{x},\, \boldsymbol{y}\in \mathbb{R}^n\)</span> 이며 <span class="math inline">\(F:\mathbb{R}^{2n} \to \mathbb{R}\)</span> 이라고 하자. <span class="math inline">\(F\)</span> 가 미분가능하다면</p>
 <p><span class="math display">\[
-dF = \nabla_\boldsymbol{x} F \boldsymbol{\cdot} d\boldsymbol{x} + \nabla_\boldsymbol{y} F\boldsymbol{\cdot} d\boldsymbol{y}
+dF = \sum_{i=1}^n \dfrac{\partial F}{\partial x_i} dx_i + \sum_{i=1}^n \dfrac{\partial F}{\partial y_j}dy_j = \dfrac{\partial F}{\partial \boldsymbol{x}}\boldsymbol{\cdot} d\boldsymbol{x} + \dfrac{\partial F}{\partial \boldsymbol{y}} \boldsymbol{\cdot} d\boldsymbol{y}
 \]</span></p>
-<p>이며 <span class="math inline">\(\boldsymbol{u}=\nabla_\boldsymbol{x}F\)</span> 에 대해</p>
+<p>이며, <span class="math inline">\(\boldsymbol{u}=\dfrac{\partial F}{\partial \boldsymbol{x}}\)</span> 에 대해</p>
 <p><span class="math display">\[
 G =  \boldsymbol{ u\cdot x} - F
 \]</span></p>
 <p>라고 하면</p>
 <p><span class="math display">\[
-dG = \boldsymbol{x \cdot} d\boldsymbol{u}  + \boldsymbol{u \cdot} d\boldsymbol{x}  - dF =  \boldsymbol{x \cdot}d\boldsymbol{u} - \nabla _\boldsymbol{y}F \boldsymbol{\cdot y}
+dG = \boldsymbol{x \cdot} d\boldsymbol{u}  + \boldsymbol{u \cdot} d\boldsymbol{x}  - dF =  \boldsymbol{x \cdot}d\boldsymbol{u} - \dfrac{\partial F}{\partial \boldsymbol{y}} \boldsymbol{\cdot} d\boldsymbol{y}
 \]</span></p>
-<p>이다. 그렇다면 <span class="math inline">\(G=G(\boldsymbol{u},\, \boldsymbol{y})\)</span> 이며, <span class="math inline">\(\nabla_\boldsymbol{u}G = \boldsymbol{x},\, \nabla_\boldsymbol{y}G = - \nabla_\boldsymbol{y}F\)</span> 이다.</p>
+<p>이다. 그렇다면 <span class="math inline">\(G=G(\boldsymbol{u},\, \boldsymbol{y})\)</span> 이며, <span class="math inline">\(\dfrac{\partial G}{\partial \boldsymbol{u}} = \boldsymbol{x},\, \dfrac{\partial G}{\partial \boldsymbol{y}} = - \dfrac{\partial F}{\partial \boldsymbol{y}}\)</span> 이다.</p>
 <p><br></p>
 </section>
 <section id="sec-CM_hamiltonian" class="level3" data-number="3.1.3">
@@ -559,7 +560,10 @@ H = \dfrac{\|\boldsymbol{p}- q\boldsymbol{A}\|^2}{2m} + q\phi
 \]</span></p>
 <p>이 성립한다. <span class="math inline">\(\dot{p}_i = - \dfrac{\partial H}{\partial q_i}\)</span> 이므로 <span class="math inline">\(H\)</span> 에 명시적인 <span class="math inline">\(q_i\)</span> 의존성이 없다면 <span class="math inline">\(p_i\)</span> 는 운동상수이다.</p>
 <p>또한 해밀턴 운동방정식 <a href="#eq-CM_canonical_equation_of_hamiltonian" class="quarto-xref">식&nbsp;<span>3.4</span></a> 과 <a href="#eq-CM_time_dependence_of_hamiltonian" class="quarto-xref">식&nbsp;<span>3.5</span></a> 으로부터 <span class="math display">\[
-\dfrac{dH}{dt} = \sum_i \left[\dfrac{\partial H}{\partial q_i} \dot{q_i} + \dfrac{\partial H}{\partial p_i} \dot{p}_i\right] + \dfrac{\partial H}{\partial t} = \sum_i \left[-\dot{p}_i \dot{q}_i  + \dot{q}_i \dot{p}_i\right] + \dfrac{\partial H}{\partial t} = \dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
+\begin{aligned}
+\dfrac{dH}{dt} &amp;= \sum_i \left[\dfrac{\partial H}{\partial q_i} \dot{q_i} + \dfrac{\partial H}{\partial p_i} \dot{p}_i\right] + \dfrac{\partial H}{\partial t} \\[0.3em]
+&amp;= \sum_i \left[-\dot{p}_i \dot{q}_i  + \dot{q}_i \dot{p}_i\right] + \dfrac{\partial H}{\partial t} = \dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
+\end{aligned}
 \]</span></p>
 <p>을 얻는다. 즉 라그랑지안이 명시적으로 시간에 의존적이지 않으면 해밀토니안 값은 운동상수이다.</p>
 <p><br></p>

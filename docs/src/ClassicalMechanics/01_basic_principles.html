@@ -889,21 +889,22 @@ Q_j = - \dfrac{ \partial U}{\partial q_j} + \dfrac{d}{dt} \left( \dfrac{\partial
 U=q \phi - q \boldsymbol{A} \cdot \boldsymbol{v}\;.
 \tag{1.37}\]</span></span></p>
 <p>이. <span class="math inline">\(U\)</span> 에 대한 일반화된 힘이 로런츠 힘임을 보일 수 있다. 맥스웰 방정식을 보자.</p>
-<p><span class="math display">\[
+<p><span id="eq-CM_maxwell_equation"><span class="math display">\[
 \begin{aligned}
 &amp;\nabla \cdot \boldsymbol{E} = \dfrac{\rho}{\epsilon_0},  &amp; &amp; \nabla \times \boldsymbol{E} = - \dfrac{\partial \boldsymbol{B}}{\partial t}\\
 &amp;\nabla \cdot \boldsymbol{B} = 0, &amp; &amp; \nabla \times \boldsymbol{B} = {\mu_0}\left(\boldsymbol{J} + \epsilon_0 \dfrac{\partial \boldsymbol{E}}{\partial t}\right)
 \end{aligned}
-\]</span></p>
-<p>이며 <span class="math inline">\(\boldsymbol{E} = -\nabla \phi\)</span>, <span class="math inline">\(\boldsymbol{B}=\nabla \times \boldsymbol{A}\)</span> 이다.</p>
+\tag{1.38}\]</span></span></p>
+<p>이며 여기서 <span class="math inline">\(\boldsymbol{E} = -\nabla \phi\)</span>, <span class="math inline">\(\boldsymbol{B}=\nabla \times \boldsymbol{A}\)</span> 이다. 포텐셜에 대한 미분을 통해 다음을 얻는다.</p>
 <p><span class="math display">\[
 \begin{aligned}
 \dfrac{\partial U}{\partial x} &amp;= q\left(\dfrac{\partial \phi}{\partial x} - \dfrac{\partial A_x}{\partial x} v_x - \dfrac{\partial A_y}{\partial x} v_y - \dfrac{\partial A_z}{\partial x} v_z\right)
 \\
-\dfrac{d}{dt}\left(\dfrac{\partial U}{\partial v_x}\right) &amp;= -\dfrac{d}{dt}\left(qA_x\right) = q\dfrac{dA_x}{dt} = -q\left(\dfrac{\partial A_x}{\partial x}v_x + \dfrac{\partial A_x}{\partial y}v_y + \dfrac{\partial A_x}{\partial z}v_z + \dfrac{\partial A}{\partial t}\right)
+\dfrac{d}{dt}\left(\dfrac{\partial U}{\partial v_x}\right) &amp;= -\dfrac{d}{dt}\left(qA_x\right) = q\dfrac{dA_x}{dt} \\[0.3em]
+&amp;= -q\left(\dfrac{\partial A_x}{\partial x}v_x + \dfrac{\partial A_x}{\partial y}v_y + \dfrac{\partial A_x}{\partial z}v_z + \dfrac{\partial A}{\partial t}\right).
 \end{aligned}
 \]</span></p>
-<p>로부터,</p>
+<p>이로부터,</p>
 <p><span class="math display">\[
 \begin{aligned}
 Q_x &amp;= -\dfrac{\partial U}{\partial x} + \dfrac{d}{dt}\left(\dfrac{\partial U}{\partial v_x}\right) \\
