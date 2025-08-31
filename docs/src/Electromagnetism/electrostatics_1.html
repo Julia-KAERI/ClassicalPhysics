@@ -462,13 +462,13 @@ window.Quarto = {
 <p><span id="eq-EM_coulolb_force"><span class="math display">\[
 \boldsymbol{F}_2 = q_2 \boldsymbol{E}_1(\boldsymbol{r_2})= \dfrac{q_1q_2}{4\pi\epsilon_0} \dfrac{\boldsymbol{r}_2-\boldsymbol{r}_1}{\|\boldsymbol{r}_2-\boldsymbol{r}_1\|^3} = \dfrac{q_1q_2}{4\pi\epsilon_0} \dfrac{\hat{\boldsymbol{r}}_{21}}{r_{21}^2}
 \tag{11.3}\]</span></span></p>
-<p>이다. <a href="#eq-EM_coulolb_force" class="quarto-xref">식&nbsp;<span>11.3</span></a> 가 잘 알려진 쿨롱 법칙이며 두 전하 사이에 작용하는 힘을 <strong>쿨롱 힘(Coulomb force)</strong> 라고 한다. 또한 <span class="math inline">\(q_2\)</span> 에 의해 <span class="math inline">\(q_1\)</span> 이 받는 로렌츠 <span class="math inline">\(\boldsymbol{F}_1\)</span> 이 <span class="math inline">\(\boldsymbol{F}_1 = - \boldsymbol{F}_2\)</span> 라는 것은 쉽게 보일 수 있다.</p>
+<p>이다. <a href="#eq-EM_coulolb_force" class="quarto-xref">식&nbsp;<span>11.3</span></a> 가 잘 알려진 쿨롱 법칙이며 두 전하 사이에 작용하는 힘을 <strong>쿨롱 힘(Coulomb force)</strong> 라고 한다. 또한 <span class="math inline">\(q_2\)</span> 에 의해 <span class="math inline">\(q_1\)</span> 이 받는 로렌츠힘 <span class="math inline">\(\boldsymbol{F}_1\)</span> 이 <span class="math inline">\(\boldsymbol{F}_1 = - \boldsymbol{F}_2\)</span> 라는 것은 쉽게 보일 수 있다.</p>
 <p>여기에 한가지 짚고 넘어가야 할 것은 <a href="#eq-EM_coulomb_force_derivation_1" class="quarto-xref">식&nbsp;<span>11.2</span></a> 에서 어떤 상수벡터 <span class="math inline">\(\boldsymbol{C}\)</span> 를 <span class="math inline">\(\boldsymbol{E}_1\)</span> 에 더한다고 해도 수식 전개에 모순이 없다는 것이다. 이것은 고전역학에서 포텐셜 에너지를 정의할때도 마찬가지인데 우리는 <span class="math inline">\(\|\boldsymbol{r}\|\to \infty\)</span> 극한에서 <span class="math inline">\(\boldsymbol{E}(\boldsymbol{r})\to \boldsymbol{0}\)</span> 이 되도록 하는 관습을 따른다.</p>
 <p>전자와 전자간에 작용하는 힘은 이 쿨롱힘 이외에도 전자가 가진 스핀(spin) 물리량에 의한 자기력과, 전자가 움직일 때 받는 자기력이 존재한다. 스핀-스핀에 의한 자기력은 쿨롱 힘에 비해 <span class="math inline">\(10^{-4}\)</span> 정도 작고, 전자가 움직이지 않는다면 이동하는 전자에 의한 자기력도 존재하지 않기때문에 여기서는 이에 대해 생각하지 않기로 하자.</p>
 <p>전하의 단위는 쿨롱(Coulomb, <span class="math inline">\(C\)</span>) 이며 전자의 전하 <span class="math inline">\(e=-1.602 \times 10^{-19}\, \text{C}\)</span> 이다. <span class="math inline">\(\epsilon_0\)</span> 는 진공의 유전율로 이에 대해서는 이후 설명하기로 하자. 어쨌든</p>
-<p><span class="math display">\[
-\epsilon_0 = 8.854 \times 10^{-12}\dfrac{\text{C}^2}{\text{N} \cdot \text{m}}
-\]</span></p>
+<p><span id="eq-EM_permittivity_of_free_space"><span class="math display">\[
+\epsilon_0 = 8.854\,187\,8188(14) \times 10^{-12}\dfrac{\text{C}^2}{\text{N} \cdot \text{m}}
+\tag{11.4}\]</span></span></p>
 <p>이다.</p>
 <p><br></p>
 </section>
@@ -482,7 +482,7 @@ window.Quarto = {
 <p><span class="math display">\[
 \boldsymbol{E}(\boldsymbol{r}) = \boldsymbol{E}_1(\boldsymbol{r})+\boldsymbol{E}_2(\boldsymbol{r})+ \boldsymbol{C}
 \]</span></p>
-<p>이다. <span class="math inline">\(\rho_1\)</span> 과 <span class="math inline">\(\rho_2\)</span> 가 우주에 대해 유한한 부피를 차지하는 것으로 가정 할 수 있다. 앞서 전기장이 <span class="math inline">\(\boldsymbol{E}(\boldsymbol{r} \to \infty)\)</span> 극한에서 <span class="math inline">\(\boldsymbol{0}\)</span> 이 되는 관례를 따른다고 했으므로 여기서도 <span class="math inline">\(\boldsymbol{C}=\boldsymbol{0}\)</span> 으로 놓을 수 있다. 즉</p>
+<p>이다. <span class="math inline">\(\rho_1\)</span> 과 <span class="math inline">\(\rho_2\)</span> 가 우주에 대해 유한한 부피를 차지하는 것으로 가정 할 수 있다. 앞서 전기장이 <span class="math inline">\(\displaystyle \lim_{r\to \infty}\boldsymbol{E}(\boldsymbol{r}) = 0\)</span> 이 되는 관례를 따른다고 했으므로 여기서도 <span class="math inline">\(\boldsymbol{C}=\boldsymbol{0}\)</span> 으로 놓을 수 있다. 즉</p>
 <p><span class="math display">\[
 \boldsymbol{E}(\boldsymbol{r}) = \boldsymbol{E}_1(\boldsymbol{r})+\boldsymbol{E}_2(\boldsymbol{r})
 \]</span></p>
@@ -510,7 +510,7 @@ U = W_2+W_3 = \dfrac{1}{4\pi\epsilon_0}\left(\dfrac{q_1q_2}{r_{12}} + \dfrac{q_2
 <p>이다. <span class="math inline">\(U\)</span> 는 <span class="math inline">\(q_1,\,q_2,\,q_3\)</span> 와 그 위치에 대해 완전히 대칭이며, 이로부터 전하의 배치 순서와 무관한 값이라는 것을 알 수 있다. 같은 방식으로 고전역학에서 포텐셜 에너지를 구했던 것처럼 위에서 구한 <span class="math inline">\(U\)</span> 를 <strong>전기적 포텐셜 에너지(electrical potential energy)</strong> 라고 한다. 또한 <span class="math inline">\(q_1,\ldots,\,q_n\)</span> 이 각각 <span class="math inline">\(\boldsymbol{r}_1,\ldots,\,\boldsymbol{r}_n\)</span> 의 위치에 있을 때의 포텐셜 에너지 <span class="math inline">\(U\)</span> 는</p>
 <p><span id="eq-EM_electrostatic_potential_energy_1"><span class="math display">\[
 U = \sum_{i=1}^n\sum_{j=i+1}^n \dfrac{1}{4\pi\epsilon_0}\dfrac{q_iq_j}{r_{ij}} = \dfrac{1}{2}\sum_{i,\,j=1,\,i\ne j}^n \dfrac{1}{4\pi\epsilon_0}\dfrac{q_iq_j}{r_{ij}},\qquad \text{where }r_{ij}= \|\boldsymbol{r}_i-\boldsymbol{r}_j\|
-\tag{11.4}\]</span></span></p>
+\tag{11.5}\]</span></span></p>
 <p>임을 알 수 있다. 포텐셜 에너지는 전체적인 전하 분포에만 관련이 있으며, 이 에너지 가운데 어떤 부분이 어떤 전하에 속하는지 판단하는 것은 무의미하다.</p>
 <p><br></p>
 </section>
@@ -522,8 +522,8 @@ U = \sum_{i=1}^n\sum_{j=i+1}^n \dfrac{1}{4\pi\epsilon_0}\dfrac{q_iq_j}{r_{ij}} =
 <p>전하 분포가 어떤 대칭성을 띌 때 전기장 혹은 전기장의 크기를 쉽게 계산 할 수 있다. 가장 대표적인 경우가 앞서 보았던 점전하에 의한 전기장이다. 점전하는 구형 대칭(spherical symmetry) 를 가지고 있으므로 이를 이용하면 전기장을 쉽게 계산 할 수 있다. 이제 전기정에 대한 가우스 법칙(<a href="#eq-EM_gauss_law" class="quarto-xref">식&nbsp;<span>11.1</span></a>) 의 적분 형태를 생각해보자.</p>
 <p><span id="eq-EM_electric_field_due_to_charge_distribution"><span class="math display">\[
 \boldsymbol{E}(\boldsymbol{r}) = \dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\boldsymbol{r}')(\boldsymbol{r}-\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3}d^3\boldsymbol{r}'
-\tag{11.5}\]</span></span></p>
-<p>이제 위 식 <a href="#eq-EM_electric_field_due_to_charge_distribution" class="quarto-xref">식&nbsp;<span>11.5</span></a> 을 이용하여 여러 상황에서의 전기장을 구해보자.</p>
+\tag{11.6}\]</span></span></p>
+<p>이제 위 식 <a href="#eq-EM_electric_field_due_to_charge_distribution" class="quarto-xref">식&nbsp;<span>11.6</span></a> 을 이용하여 여러 상황에서의 전기장을 구해보자.</p>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-EM_charge_distribution_circular_charge" class="theorem example">
@@ -543,11 +543,11 @@ U = \sum_{i=1}^n\sum_{j=i+1}^n \dfrac{1}{4\pi\epsilon_0}\dfrac{q_iq_j}{r_{ij}} =
 \begin{aligned}
 E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^{2\pi} \dfrac{\lambda Rz\,d\theta}{(R^2+z^2)^{3/2}} = \dfrac{\lambda Rz}{2\epsilon_0(R^2+z^2)^{3/2}}
 \end{aligned}
-\tag{11.6}\]</span></span></p>
+\tag{11.7}\]</span></span></p>
 <p>이다.</p>
 </div>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-EM_charge_distribution_hemisphere_shell" class="theorem example">
 <p><span class="theorem-title"><strong>예제 11.2 (반구 shell 의 전하 분포)</strong></span> &nbsp;</p>
@@ -566,7 +566,7 @@ E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^{2\pi} \dfrac{\lambda Rz\,d\thet
 \begin{aligned}
 E_z(0,\,0,\,0) =\dfrac{1}{4\pi\epsilon_0}\int_0^{2\pi} \int_{\pi/2}^\pi \dfrac{\sigma R^2 \sin\theta \cos\theta \,d\theta d\phi\theta}{R^2} = \dfrac{\sigma}{4\epsilon_0}
 \end{aligned}
-\tag{11.7}\]</span></span></p>
+\tag{11.8}\]</span></span></p>
 <p>이다.</p>
 </div>
 </div>
@@ -578,7 +578,7 @@ E_z(0,\,0,\,0) =\dfrac{1}{4\pi\epsilon_0}\int_0^{2\pi} \int_{\pi/2}^\pi \dfrac{\
 \begin{aligned}
 E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^R\int_0^{2\pi}  \int_{\pi/2}^\pi \dfrac{\rho r^2 \sin\theta \cos\theta \,dr d\theta d\phi\theta}{r^2} = \dfrac{\rho R}{4\epsilon_0}
 \end{aligned}
-\tag{11.8}\]</span></span></p>
+\tag{11.9}\]</span></span></p>
 <p>이다.</p>
 </div>
 </div>
@@ -596,7 +596,7 @@ E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^R\int_0^{2\pi}  \int_{\pi/2}^\pi
 <p>이므로</p>
 <p><span id="eq-EM_electric_field_due_to_radial-distribution"><span class="math display">\[
 \boldsymbol{E}(\boldsymbol{r}) = \dfrac{1}{4\pi \epsilon_0}\dfrac{Q_r}{r^2}\hat{\boldsymbol{r}}
-\tag{11.9}\]</span></span></p>
+\tag{11.10}\]</span></span></p>
 <p>이다.</p>
 </div>
 </div>
@@ -606,11 +606,11 @@ E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^R\int_0^{2\pi}  \int_{\pi/2}^\pi
 <p><span class="theorem-title"><strong>예제 11.5 (균일한 구형 전하분포)</strong></span> <a href="#exm-EM_charge_distribution_spherical_symmetry" class="quarto-xref">예제&nbsp;<span>11.4</span></a> 로부터 <span class="math inline">\(0\le r&lt;R\)</span> 일 때 <span class="math inline">\(\rho(r)=\rho_0\)</span> 이고 <span class="math inline">\(r\ge 0\)</span> 일 때 <span class="math inline">\(\rho(r)=0\)</span> 인 경우를 보자. <span class="math inline">\(0\le r&lt;R\)</span> 일 경우의 전기장 <span class="math inline">\(\boldsymbol{E}_{\text{in}}(r)\)</span> 은</p>
 <p><span id="eq-EM_electric_field_inside_of_uniformly_charged_sphere"><span class="math display">\[
 \boldsymbol{E}_{\text{in}}(r)= \dfrac{1}{4\pi\epsilon_0}\dfrac{\rho_0 4\pi r^3/3}{r^2}\hat{\boldsymbol{r}}= \dfrac{\rho_0 r}{3\epsilon_0}\hat{\boldsymbol{r}}
-\tag{11.10}\]</span></span></p>
+\tag{11.11}\]</span></span></p>
 <p>이며 <span class="math inline">\(r\ge R\)</span> 일 경우의 전기장 <span class="math inline">\(\boldsymbol{E}_{\text{out}}(r)\)</span> 은</p>
 <p><span id="eq-EM_electric_field_outside_of_uniformly_charged_sphere"><span class="math display">\[
 \boldsymbol{E}_{\text{out}}(r) = \dfrac{1}{4\pi\epsilon_0}\dfrac{\rho_0 4\pi R^3 /3}{r^2}\hat{\boldsymbol{r}} = \dfrac{\rho_0R^3}{3\epsilon_0 r^2} \hat{\boldsymbol{r}}
-\tag{11.11}\]</span></span></p>
+\tag{11.12}\]</span></span></p>
 <p>이다. 이 분포의 총 전하량 <span class="math inline">\(Q=\dfrac{4\pi \rho_0 R^3}{3}\)</span> 을 생각하면 <span class="math inline">\(\boldsymbol{E}_{\text{out}}(r)= \dfrac{Q}{4\pi \epsilon_0 r^2}\hat{\boldsymbol{r}}\)</span> 이므로 모든 전하가 중심에 모여있을 때의 전기장과 같다. 전기장의 세기 <span class="math inline">\(E(r)\)</span> 을 그래프로 그리면 아래와 같다.</p>
 <div id="fig-EM_electrostatics_uniform_sphere" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -651,7 +651,7 @@ E_y(P) =  \dfrac{1}{4\pi\epsilon_0} \int_{-\pi/2}^{\pi/2} \dfrac{\lambda \cos \t
 <p>이다. 원통좌표계 <span class="math inline">\((r,\,\theta,\,z)\)</span> 에 대해</p>
 <p><span id="eq-EM_electric_field_due_to_infinite_line_charge_1"><span class="math display">\[
 \boldsymbol{E}(r,\,\theta,\,z)= \dfrac{\lambda}{2\pi \epsilon_0 r}\hat{\boldsymbol{r}}
-\tag{11.12}\]</span></span></p>
+\tag{11.13}\]</span></span></p>
 <p>이다.</p>
 <p>이것을 가우스 법칙을 이용해 구해보자. 아래와 같은 높이 <span class="math inline">\(L\)</span>, 반지름 <span class="math inline">\(r\)</span> 인 실린더 모양의 가우스 면을 생각하자.</p>
 <div id="fig-EM_electrostatics_line_charge" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -671,7 +671,7 @@ E_r(r) 2\pi r L = \dfrac{\lambda L}{\epsilon_0}
 <p>이므로</p>
 <p><span id="eq-EM_electric_field_due_to_infinite_line_charge_2"><span class="math display">\[
 \boldsymbol{E}(r,\,\theta,\,z)= \dfrac{\lambda}{2\pi \epsilon_0 r}\hat{\boldsymbol{r}}
-\tag{11.13}\]</span></span></p>
+\tag{11.14}\]</span></span></p>
 <p>을 얻으며 앞서 직접 적분에 의해 얻은 값과 같다.</p>
 </div>
 </div>
@@ -697,7 +697,7 @@ E_r(r) 2\pi r L = \dfrac{\lambda L}{\epsilon_0}
 <p>이 무한 대전 평면이 <span class="math inline">\(xy\)</span> 평면상에 위치한다고 하자. 그렇다면</p>
 <p><span id="eq-EM_electric_field_due_to_infinitly_charged_plain"><span class="math display">\[
 \boldsymbol{E}(z&gt;0)= \dfrac{\sigma}{2\epsilon_0}\hat{\boldsymbol{z}},\qquad \boldsymbol{E}(z&lt;0)= - \dfrac{\sigma}{2\epsilon_0}\hat{\boldsymbol{z}}
-\tag{11.14}\]</span></span></p>
+\tag{11.15}\]</span></span></p>
 <p>로 <span class="math inline">\(\boldsymbol{E}\)</span> 는 <span class="math inline">\(z=0\)</span> 에서 <span class="math inline">\(\Delta \boldsymbol{E}(z\approx 0) = \boldsymbol{E}(z=0^+)-\boldsymbol{E}(z=0^-)= \dfrac{\sigma}{\epsilon_0}\)</span> 불연속성을 보여준다.</p>
 </div>
 </div>
@@ -721,7 +721,7 @@ E_r(r) 2\pi r L = \dfrac{\lambda L}{\epsilon_0}
 \]</span></p>
 <p>이다. <span class="math inline">\(r \approx r_0^+\)</span> 에서는 <span class="math inline">\(\boldsymbol{E}=\dfrac{\sigma}{\epsilon_0}\hat{\boldsymbol{r}}\)</span> 이다.</p>
 <p>특정한 전하를 갖는 하전 입자가 표면에 모여 있으며, 당연히 하전 입자들 사이에 쿨롱힘이 존재한다. 개별적인 하전입자를 다루지 않고 구의 표면에 <span class="math inline">\(dA\)</span> 의 조그만 면적을 가진 조각을 생각하자. 이 조각의 전하 <span class="math inline">\(dq= \sigma dA\)</span> 이다.</p>
-<p>이 <span class="math inline">\(dA\)</span> 에 작용하는 힘은 (<span class="math inline">\(1\)</span>) 전체 구의 표면에서 <span class="math inline">\(dA\)</span> 조각을 제외한 부분에 의해 받는 힘과 (<span class="math inline">\(2\)</span>) <span class="math inline">\(dA\)</span> 자체의 전하들 사이에 의해 <span class="math inline">\(dA\)</span> 가 받는 힘, 두가지로 나누어 볼 수 있다. 그런데 뉴턴의 제 3 법칙에 의해 (<span class="math inline">\(2\)</span>) 의한 힘은 <span class="math inline">\(0\)</span> 이며 따라서 <span class="math inline">\(dA\)</span> 를 분리하지 않고 전체 전하 분포에 의해 받는 힘을 생각해도 된다. 이것은 실제로 계산의 사소한지만 복잡한 부분을 제거해 주고 비교적 간단하게 만들어 준다.</p>
+<p>이 <span class="math inline">\(dA\)</span> 에 작용하는 힘은 <span class="math inline">\((1)\)</span> 전체 구의 표면에서 <span class="math inline">\(dA\)</span> 조각을 제외한 부분에 의해 받는 힘과 <span class="math inline">\((2)\)</span> <span class="math inline">\(dA\)</span> 자체의 전하들 사이에 의해 <span class="math inline">\(dA\)</span> 가 받는 힘, 두가지로 나누어 볼 수 있다. 그런데 뉴턴의 제 3 법칙에 의해 <span class="math inline">\((2)\)</span> 의한 힘은 <span class="math inline">\(0\)</span> 이며 따라서 <span class="math inline">\(dA\)</span> 를 분리하지 않고 전체 전하 분포에 의해 받는 힘을 생각해도 된다. 이것은 실제로 계산의 사소한지만 복잡한 부분을 제거해 주고 비교적 간단하게 만들어 준다.</p>
 <p>이제 다음 문제로 넘어가자. <span class="math inline">\(dA\)</span> 조각의 양쪽 면에 대한 전기장이 다른 경우 어떤 전기장을 사용해야 하는가? 아니면 이 두 전기장의 어떤 조함을 사용해야 하는가? 이것을 따져 보기 위해 실제 존재하는 물리적인 시스템을 생각해보자. 즉 두께를 가지진 전하 분포.</p>
 <p>이제 아래 그림과 같은 전하 밀도 <span class="math inline">\(\rho(x)\)</span> 를 가진 전하층을 생각하자. 두께 <span class="math inline">\(d\)</span> 에 대해 <span class="math inline">\(\sigma = \int \rho(x)\,dx\)</span> 이다.</p>
 <div id="fig-EM_electrostatics_charge_layer" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -737,7 +737,7 @@ E_r(r) 2\pi r L = \dfrac{\lambda L}{\epsilon_0}
 <p>가우스 법칙에 의해</p>
 <p><span id="eq-EM_charge_layer_field_difference"><span class="math display">\[
 E_2-E_1 = \dfrac{\sigma}{\epsilon_0}
-\tag{11.15}\]</span></span></p>
+\tag{11.16}\]</span></span></p>
 <p>이다. <span class="math inline">\(d\)</span> 내의 <span class="math inline">\(x\)</span> 에 위치한 아주 작은 두께 <span class="math inline">\(dx\)</span> 층에 대헤 생각하자. 또한 <span class="math inline">\(dx\)</span> 층 내의 면적 <span class="math inline">\(A\)</span> 인 조각을 생각하자. 층 내의 전기장 <span class="math inline">\(E\)</span> 에 대해 <span class="math inline">\(A\)</span> 가 받는 힘 <span class="math inline">\(dF\)</span> 는</p>
 <p><span class="math display">\[
 dF = E(x)\sigma(x) A = E(x)\rho(x) dx A
@@ -746,26 +746,25 @@ dF = E(x)\sigma(x) A = E(x)\rho(x) dx A
 <p><span class="math display">\[
 P = \dfrac{\int dF}{A} = \int E(x)\rho(x)dx
 \]</span></p>
-<p>여기서 가우스 법칙으로부터 <span class="math inline">\(\rho (x) = \epsilon_0 E'(x)\)</span> 이므로</p>
+<p>여기서 가우스 법칙으로부터 <span class="math inline">\(\rho (x) = \epsilon_0 E'(x)\)</span> 이므로 (<span class="math inline">\(dx=\epsilon_0 dE\)</span> 이다)</p>
 <p><span id="eq-EM_charge_layer_pressure_1"><span class="math display">\[
-P = \epsilon_0 \int_{E_1}{E_2} E^2 dE = \dfrac{\epsilon_0}{2} (E_2^2-E_1^2)
-\tag{11.16}\]</span></span></p>
-<p>이다. <a href="#eq-EM_charge_layer_field_difference" class="quarto-xref">식&nbsp;<span>11.15</span></a> 를 이용하면</p>
+P = \epsilon_0 \int_{E_1}^{E_2} E\, dE = \dfrac{\epsilon_0}{2} (E_2^2-E_1^2)
+\tag{11.17}\]</span></span></p>
+<p>이다. <a href="#eq-EM_charge_layer_field_difference" class="quarto-xref">식&nbsp;<span>11.16</span></a> 를 이용하면</p>
 <p><span id="eq-EM_charge_layer_pressure_2"><span class="math display">\[
 P=\dfrac{\sigma}{2}(E_1+E_2)
-\tag{11.17}\]</span></span></p>
+\tag{11.18}\]</span></span></p>
 <p>이다. 즉 면 전하 밀도 <span class="math inline">\(\sigma\)</span> 가 주어졌을 때 전하 층이 받는 단위면적당 힘은 양쪽의 전기장의 평균에 전하밀도를 곱한 값으로 전하 층의 두께에 무관한 값이다.</p>
-<p>이제 앞선 문제, 균일한 표면 전하 밀도를 가진 구를 생각하자. 두께가 반지름에 비해 아주 작다면</p>
+<p>이제 앞선 문제, 균일한 표면 전하 밀도를 가진 구를 생각하자. 두께가 반지름에 비해 아주 작다면 구의 표면의 전하가 단위면적당 받는 힘, 즉 압력 <span class="math inline">\(P\)</span> 는 아래와 같다.</p>
 <p><span id="eq-EM_pressure_of_charged_spherical_shell"><span class="math display">\[
 P = \dfrac{\sigma^2}{2\epsilon_0}
-\tag{11.18}\]</span></span></p>
-<p>이다.</p>
+\tag{11.19}\]</span></span></p>
 <p><br></p>
 </section>
 </section>
 <section id="sec-EM_energy_associated_with_electric_field" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="sec-EM_energy_associated_with_electric_field"><span class="header-section-number">11.3</span> 전기장과 에너지</h2>
-<p>균일한 표면 전하 밀도 <span class="math inline">\(\sigma\)</span> 를 가진 구의 표면에서의 압력은 <a href="#eq-EM_pressure_of_charged_spherical_shell" class="quarto-xref">식&nbsp;<span>11.18</span></a> 이다. 그렇다면 이것의 반지름을 <span class="math inline">\(dr\)</span> 만큼 줄일 때의 에너지를 생각해보자. 여기서 압력은 구의 밖으로, 즉 radial 방향으로 가해지므로 반지름을 <span class="math inline">\(dr\)</span> 만큼 줄이는데는 일을 해 줘야 하므 이는 내부에너지 <span class="math inline">\(U\)</span> 의 증가 <span class="math inline">\(dU\)</span> 이다.</p>
+<p>균일한 표면 전하 밀도 <span class="math inline">\(\sigma\)</span> 를 가진 구의 표면에서의 압력은 <a href="#eq-EM_pressure_of_charged_spherical_shell" class="quarto-xref">식&nbsp;<span>11.19</span></a> 이다. 그렇다면 이것의 반지름을 <span class="math inline">\(dr\)</span> 만큼 줄일 때의 에너지를 생각해보자. 여기서 압력은 구의 밖으로, 즉 radial 방향으로 가해지므로 반지름을 <span class="math inline">\(dr\)</span> 만큼 줄이는데는 일을 해 줘야 하므 이는 내부에너지 <span class="math inline">\(U\)</span> 의 증가 <span class="math inline">\(dU\)</span> 이다.</p>
 <p><span class="math display">\[
 \begin{aligned}
 dU  &amp;=  P \times [\text{area}] \times  dr = \dfrac{\sigma^2}{2\epsilon_0} \times 4\pi r^2 \cdot dr \\[0.3em]
@@ -777,12 +776,12 @@ dU  &amp;=  P \times [\text{area}] \times  dr = \dfrac{\sigma^2}{2\epsilon_0} \t
 <p>여기서 직접 증명하지는 않겠지만 어떤 전하 분포를 이루기 위한 에너지는 위의 구 표면에서와 같은 형태로 다음과 같다.</p>
 <p><span id="eq-EM_electrostatic_energy_too_early"><span class="math display">\[
 U = \dfrac{\epsilon_0}{2}\int_{\text{entire field}}E^2\, dv
-\tag{11.19}\]</span></span></p>
+\tag{11.20}\]</span></span></p>
 <p>위 식을 도입한것은 <span class="citation" data-cites="Purcell2013electricity">Purcell (<a href="../ClassicalMechanics/00_index.html#ref-Purcell2013electricity" role="doc-biblioref">2013</a>)</span> 의 순서를 따랐지만 개인적으로 약간 억지스럽다.</p>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-EM_electrostatic_energy_of_uniform_sphere" class="theorem example">
-<p><span class="theorem-title"><strong>예제 11.8 (균일한 전하밀도를 가진 구의 에너지)</strong></span> <a href="#exm-EM_charge_distribution_uniform_sphere" class="quarto-xref">예제&nbsp;<span>11.5</span></a> 와 <a href="#eq-EM_electrostatic_energy_too_early" class="quarto-xref">식&nbsp;<span>11.19</span></a> 를 이용하여 계산해보자.</p>
+<p><span class="theorem-title"><strong>예제 11.8 (균일한 전하밀도를 가진 구의 에너지)</strong></span> <a href="#exm-EM_charge_distribution_uniform_sphere" class="quarto-xref">예제&nbsp;<span>11.5</span></a> 와 <a href="#eq-EM_electrostatic_energy_too_early" class="quarto-xref">식&nbsp;<span>11.20</span></a> 를 이용하여 계산해보자.</p>
 <p><span class="math display">\[
 \begin{aligned}
 U &amp;= \dfrac{\epsilon_0}{2} \left[\int_{\text{in sphere}} E_{\text{in}}^2 \, dv + \int_{\text{out of sphere}} E_{\text{out}}^2\, dv\right] \\
@@ -802,7 +801,6 @@ U &amp;= \dfrac{\epsilon_0}{2} \left[\int_{\text{in sphere}} E_{\text{in}}^2 \, 
 <p>(<span class="math inline">\(b\)</span>) 헬륭 핵에서의 두 양성자의 거리는 순간적으로 <span class="math inline">\(10^{-15}\,\text{m}\)</span> 이 될 수 있다. 이 거리에서의 전기적 척력의 크기는 얼마인가? 두 강입자가 이 거리만큼 떨어졌을 때 핵력의 크기는 이보다 더 크다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 양성자의 질량 <span class="math inline">\(m_p\)</span> 와 양성자 및 전자의 전하 <span class="math inline">\(e\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -810,13 +808,12 @@ U &amp;= \dfrac{\epsilon_0}{2} \left[\int_{\text{in sphere}} E_{\text{in}}^2 \, 
 \]</span></p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(F=\dfrac{1}{4\pi\epsilon_0}\dfrac{e^2}{10^{-30}} = 231 \text{N}\)</span>.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_2" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.2 (삼각형으로부터 힘이 <span class="math inline">\(0\)</span> 인 곳 (Purcell 1.2))</strong></span> <br> 정삼각형의 두 꼭지점에 양의 이온이, 나머지 한 꼭지점에 음의 이온이 고정되어 있다고하자. 이 상황에서의 대칭축을 따라 어느 위치에 네번째 이온을 놓았을 때 이 네번쩨 이온에 대한 힘이 <span class="math inline">\(0\)</span> 이 될까? 이런 위치가 하나 이상 존재하는가? 수치해석적으로 풀어야 할 수도 있다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span></p>
 <div id="fig-EM_purcell_1_2" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -841,7 +838,7 @@ U &amp;= \dfrac{\epsilon_0}{2} \left[\int_{\text{in sphere}} E_{\text{in}}^2 \, 
 \]</span></p>
 <p>이며 <span class="math inline">\(y\approx -0.62669\)</span> 와 <span class="math inline">\(y \approx 4.873241\)</span> 에서 전기장이 <span class="math inline">\(0\)</span> 이 된다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_3" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.3 (콘의 꼭지점 (Purcell 1.3))</strong></span> <br> <strong>Force from a cone </strong> (<span class="math inline">\(a\)</span>) 아이스크림에서 아이스크림을 뺀 속이 빈 콘 의 꼭지점에 전하 <span class="math inline">\(q\)</span> 가 있으며 콘의 표면 전하 밀도는 <span class="math inline">\(\sigma\)</span> 이다. 콘의 경사의 길이는 <span class="math inline">\(L\)</span> 이고 경사의 반각은 <span class="math inline">\(\theta\)</span> 일 때 이 콘에 의해 전하 <span class="math inline">\(q\)</span> 에 가해지는 힘에 대해 무엇을 말할 수 있는가?</p>
@@ -858,7 +855,6 @@ U &amp;= \dfrac{\epsilon_0}{2} \left[\int_{\text{in sphere}} E_{\text{in}}^2 \, 
 </div>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span></p>
 <div id="fig-EM_purcell_1_2_solution" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -887,14 +883,13 @@ F_z = \dfrac{q\sigma \sin (2\theta)}{4\epsilon_0}\ln 2
 \]</span></p>
 <p>이다. <span class="math inline">\(F_z\)</span> 는 <span class="math inline">\(2\theta = \dfrac{\pi}{2}\)</span> 일 때 이므로, <span class="math inline">\(\theta = \dfrac{\pi}{4}\)</span> 일 때 최대가 된다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_4" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.4 (직사각형을 위한 일(Purcell 1.4))</strong></span> <br></p>
 <p>두 양성자와 전자가 변의 길이가 <span class="math inline">\(a,\,b\)</span> 인 직사각형의 꼭지점에 위치한다. 본질적으로 두개의 배치가 있을 수 있다. 네 전하가 무한히 멀리 떨어져 있는 데서 시작하여 이 시스템이 이 이루어 지는데 필요한 일을 계산하라. 두가지 배치중에 일이 양수인 경우가 있는가? 그렇다면 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 의 관계는 어떠한가?</p>
 </div>
 </div>
-<p><br></p>
 <div class="soltion">
 <p>아래와 같은 두가지 배치를 생각 할 수 있다.</p>
 <div id="fig-EM_purcell_exercise_1_4" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -927,14 +922,13 @@ U_2 = \dfrac{e^2}{4\pi\epsilon_0} \dfrac{1}{ab\sqrt{a^2+b^2}} ( ab-a\sqrt{a^2+b^
 \]</span></p>
 <p>이며 수치해석적으로 이 값을 구하면, <span class="math inline">\(b=0.531 \times a\)</span> 이다. (교재에의 solution 에는 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 가 바뀌어져 나온다.)</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_5" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.5 (Stable or Unstable? (Purcell 1.5))</strong></span> <br></p>
-<p><a href="#exr-EM_purcell_1_37" class="quarto-xref">연습문제&nbsp;<span>11.19</span></a> 과 같은 조건에서 중심 위치에서의 포텐셜은 stable 한가 unstable 한가? (Pucell 의 나머지 설명은 이미 아는 것이므로 생략한다.)</p>
+<p><a href="#exr-EM_purcell_1_37" class="quarto-xref">연습문제&nbsp;<span>11.21</span></a> 과 같은 조건에서 중심 위치에서의 포텐셜은 stable 한가 unstable 한가? (Pucell 의 나머지 설명은 이미 아는 것이므로 생략한다.)</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>전하 <span class="math inline">\(-Q\)</span> 가 원점 근처의 <span class="math inline">\(x,\,y\)</span> 에 위치했을 때의 에너지는 <span class="math inline">\(Q\)</span> 를 포함하는 에너지를 제외하면 모두 상수이므로 여기서는 생각하지 않아도 된다. 따라서,</p>
 <p><span class="math display">\[
@@ -957,7 +951,7 @@ U(x,\,y) &amp;= \dfrac{-qQ}{4\pi\epsilon_0a} \left[2\sqrt{2} + \dfrac{\sqrt{2}(x
 \]</span></p>
 <p>이다. 따라서 unstable 하다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_6" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.6 (평행상태의 포텐셜 에너지 0 (Purcell 1.6))</strong></span> <br></p>
@@ -976,7 +970,6 @@ U(x,\,y) &amp;= \dfrac{-qQ}{4\pi\epsilon_0a} \left[2\sqrt{2} + \dfrac{\sqrt{2}(x
 <p>(<span class="math inline">\(c\)</span>) 위의 두 경우 총 포텐셜 에너지가 <span class="math inline">\(0\)</span> 임으르 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 왼쪽 전하에 가해지는 힘 <span class="math inline">\(F_1\)</span>, <span class="math inline">\(Q\)</span> 에 가해지는 힘 <span class="math inline">\(F_Q\)</span>, 오른쪽 전하에 가하지는 힘 <span class="math inline">\(F_2\)</span> 는 각각 다음과 같다.</p>
 <p><span class="math display">\[
@@ -1001,16 +994,15 @@ U_a = \dfrac{1}{4\pi \epsilon_0} \left[\dfrac{q^2}{2d} + 2\times \dfrac{qQ}{d}\r
 U_b = \dfrac{1}{4\pi\epsilon_0} \left[3\times \dfrac{q^2}{\sqrt{3}d}  + 3 \times \dfrac{qQ}{d}\right]=0.
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_7" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.7 (2차원 격자에서의 포텐셜 에너지 (Purcell 1.7))</strong></span> <br></p>
 <p>정사각형으로 구성된 무한한 2차원 이온 결정구조를 생각하자. 정사각형의 한 변의 길이는 <span class="math inline">\(a\)</span> 이며 각 격자점마다 번갈아가며 전하 크기 <span class="math inline">\(e\)</span> 인 이온이 그 부호를 바꿔가며 배치되어 있다. 이온당 포텐셜 에너지를 계산하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>전체 포텐셜 에너지 <span class="math inline">\(U\)</span> 는 <a href="#eq-EM_electrostatic_potential_energy_1" class="quarto-xref">식&nbsp;<span>11.4</span></a> 에 주어져 있다. 한 입자에 대한 포텐셜 에너지는 그 입자를 원점으로 놓고 계산하면 된다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>전체 포텐셜 에너지 <span class="math inline">\(U\)</span> 는 <a href="#eq-EM_electrostatic_potential_energy_1" class="quarto-xref">식&nbsp;<span>11.5</span></a> 에 주어져 있다. 한 입자에 대한 포텐셜 에너지는 그 입자를 원점으로 놓고 계산하면 된다.</p>
 <p><span class="math display">\[
 U_{\text{1-ion}} = \dfrac{1}{2} \sum_{i,\,j=-\infty,\, (i,\,j)\ne (0,\,0)}^\infty \dfrac{1}{4\pi\epsilon_0} \dfrac{e^2(-1)^{i+j}}{\sqrt{i^2+j^2}a} = \dfrac{e^2}{4\pi\epsilon_0 a }\left[\sum_{i,\,j=-\infty,\, (i,\,j)\ne (0,\,0)}^\infty\dfrac{1}{2}\dfrac{(-1)^{i+j}}{\sqrt{i^2+j^2}a} \right]
 \]</span></p>
@@ -1048,13 +1040,12 @@ U_{\text{1-ion}}= -0.807764 \times \dfrac{e^2}{4\pi \epsilon_0 a}
 \]</span></p>
 <p>이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_8" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.8 (고리에서의 oscillation. (Purcell 1.8))</strong></span> <br> 반지름 <span class="math inline">\(R\)</span> 인 고리에 균일한 양의 전하 밀도 <span class="math inline">\(\lambda\)</span> 가 분포하고 있다. 질량이 <span class="math inline">\(m\)</span> 이고 전하가 <span class="math inline">\(q\)</span> 인 입자가 고리의 중심에 위치하고 있다가 작은 움직임을 주었다. 이 입자가 고리가 이루는 평면상에서 운동하도록 제한된다고 할 때, 그리고 그 움직임이 고리의 반지름에 비해 매우 작다고 할 때 이 입자는 단순 조화 진동을 함을 보이고 그 진동수를 구하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span></p>
 <div id="fig-EM_exr_purcell_1_8" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1087,7 +1078,7 @@ U(y) \approx \dfrac{\lambda q}{4\pi\epsilon_0 R}\left[2\pi + \dfrac{y^2}{2R^2} \
 \nu = \dfrac{1}{2\pi}\sqrt{\dfrac{\lambda q}{4 \pi \epsilon_0 R^3 m}}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_9" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.9 (두 전하에서의 전기장 (Purcell 1.9))</strong></span> <br> 전하 <span class="math inline">\(2q\)</span> 가 원점에, 전하 <span class="math inline">\(-q\)</span> 가 <span class="math inline">\(x\)</span> 축상의 <span class="math inline">\(x=a\)</span> 에 위치한다.</p>
@@ -1095,7 +1086,6 @@ U(y) \approx \dfrac{\lambda q}{4\pi\epsilon_0 R}\left[2\pi + \dfrac{y^2}{2R^2} \
 <p>(<span class="math inline">\(b\)</span>) 전하 <span class="math inline">\(-q\)</span> 의 위치를 <span class="math inline">\(x\)</span> 축과 수직으로 가르는 직선을 생각한다. 즉 <span class="math inline">\(x=a\)</span>. 최소한의 근사를 사용하여 이 직선상에서 전기장이 <span class="math inline">\(x\)</span> 축과 평행한 위치를 찾아라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(a&gt;0\)</span> 으로 놓고 생각한다. <span class="math inline">\(x\)</span> 축 방향의 전기장 <span class="math inline">\(E_x\)</span> 만 생각하면 되며 전기장이 <span class="math inline">\(0\)</span> 인 점은 <span class="math inline">\(x&gt;a\)</span> 위치에 존재한다.</p>
 <p><span class="math display">\[
@@ -1114,7 +1104,7 @@ E_y(r,\theta) = \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{2qy}{(a^2+y^2)^{3/2}} - \
 \]</span></p>
 <p>수치해석적으로 위 식의 해를 구하면 <span class="math inline">\(t \approx \pm 1.30477\)</span> 이다. 즉 <span class="math inline">\(y \approx \pm 1.30477 a\)</span> 에서 전기장이 <span class="math inline">\(x\)</span> 축에 평행하다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_10" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.10 (두 전하에서의 전기장 (Purcell 1.10))</strong></span> <br></p>
@@ -1131,7 +1121,6 @@ E_y(r,\theta) = \dfrac{1}{4\pi\epsilon_0} \left[\dfrac{2qy}{(a^2+y^2)^{3/2}} - \
 <p>위의 그림과 같이 한쪽 방향으로만 무한대로 뻗친 선전하 밀도 <span class="math inline">\(\lambda\)</span> 의 선을 생각하자. 한쪽 끝의 바로 끝부분에서 선의 방향과 수직으로 <span class="math inline">\(l\)</span> 만큼 떨어진 지점에서의 전기장을 구하라. <span class="math inline">\(l\)</span> 값에 관계 없이 전기장의 방향은 항상 선전하의 방향과 <span class="math inline">\(45^\circ\)</span> 를 이룬다는 것을 확인하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>선전하의 방향과 <span class="math inline">\(45^\circ\)</span> 를 이룬다는 것은 <span class="math inline">\(|E_x|=|E_y|\)</span> 라는 의미이다. <span class="math display">\[
 \begin{aligned}
@@ -1140,14 +1129,13 @@ E_y &amp;= \dfrac{1}{4\pi\epsilon_0} \int_{-\infty}^0 \dfrac{\lambda l dx}{(x^2+
 \end{aligned}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_11" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.11 (실린더 끝에서의 전기장. (Purcell 1.11))</strong></span> <br> (<span class="math inline">\(a\)</span>) 반지름 <span class="math inline">\(R\)</span> 인 half-infinite hollow cylindrical shell 이 균일한 표면전하밀도 <span class="math inline">\(\sigma\)</span> 로 대전되었다. 끝면의 중앙에서의 전기장을 구하라.</p>
 <p>(<span class="math inline">\(b\)</span>) 이 결과를 이용하여 반지름 <span class="math inline">\(R\)</span> 이며 균일한 전하 밀도 <span class="math inline">\(\rho\)</span> 를 가진 half-infinite solid cynilder 의 중앙에서의 전기장을 구하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 원점으로부터 실린더가 <span class="math inline">\(z\)</span> 축의 음의 부분으로 존재한다고 하자. 대칭에 의해 전기장의 <span class="math inline">\(z\)</span> 방향만 존재한다.</p>
 <p><span class="math display">\[
@@ -1163,7 +1151,7 @@ E_{x}(\mathcal{O}) &amp;= \dfrac{1}{4\pi\epsilon_0} \int_{-\infty}^0 \int_0^{R} 
 \end{aligned}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_12" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.12 (반구 Shell 에서의 전기장. (Purcell 1.12))</strong></span> <br></p>
@@ -1180,7 +1168,6 @@ E_{x}(\mathcal{O}) &amp;= \dfrac{1}{4\pi\epsilon_0} \int_{-\infty}^0 \int_0^{R} 
 <p>위의 그림과 같은 반지름이 <span class="math inline">\(R\)</span> 인 반구 shell 이 균일한 표면 전하 밀도 <span class="math inline">\(\sigma\)</span> 로 대전되었을 때 대칭축(그림에서는 <span class="math inline">\(z\)</span> 축) 상의 점 <span class="math inline">\((0,\,0,\,z)\)</span> 에서의 전기장을 구하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>구면좌표계를 사용한다. 대칭에 의해 <span class="math inline">\(E_x=E_y=0\)</span> 이므로 <span class="math inline">\(E_z(z)\)</span> 만을 생각한다.</p>
 <p><span class="math display">\[
@@ -1227,7 +1214,7 @@ E_z(z\gg R) \approx \dfrac{\sigma R^2}{2\epsilon_0 z^2}\left[\dfrac{R}{z} + 1\ri
 \]</span></p>
 <p>으로 heimispherical shell 이 전하량 <span class="math inline">\(Q\)</span> 의 점전하와 유사하게 작용한다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_13" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.13 (균일한 전기장. (Purcell 1.13))</strong></span> <br></p>
@@ -1245,7 +1232,6 @@ E_z(z\gg R) \approx \dfrac{\sigma R^2}{2\epsilon_0 z^2}\left[\dfrac{R}{z} + 1\ri
 <p>(<span class="math inline">\(b\)</span>) (<span class="math inline">\(a\)</span>) 에서 구한 전기장은 <span class="math inline">\(z=h/2\)</span> 에 대한 우함수 임을 확인하라. 즉 <span class="math inline">\(z=h/2\)</span> 에서 <span class="math inline">\(E_z(z)\)</span> 는 극값이며 이 근처에서는 전기장이 매우 균일하다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <a href="#exm-EM_charge_distribution_circular_charge" class="quarto-xref">예제&nbsp;<span>11.1</span></a> 의 결과를 이용한다. 대칭에 의해 <span class="math inline">\(E_x(z) = E_y(z) = 0\)</span> 이므로 <span class="math inline">\(E_z(z)\)</span> 만을 생각한다. <span class="math inline">\(\lambda = Q/2\pi r\)</span> 이므로</p>
 <p><span class="math display">\[
@@ -1268,7 +1254,7 @@ f'(0) = \lim_{h \to 0^+}\dfrac{f(h)-f(0)}{h} = \lim_{h\to 0^+}\dfrac{f(-h)-f(0)}
 </figure>
 </div>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_14" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.14 (무한평면의 홀 (Purcell 1.14))</strong></span> <br></p>
@@ -1277,7 +1263,6 @@ f'(0) = \lim_{h \to 0^+}\dfrac{f(h)-f(0)}{h} = \lim_{h\to 0^+}\dfrac{f(-h)-f(0)}
 <p>(<span class="math inline">\(c\)</span>) 전하 <span class="math inline">\(-q\)</span> 가 구멍의 원점을 지날 때의 속력을 구하라. <span class="math inline">\(z\)</span> 가 클 때 (동일한 조건으로 <span class="math inline">\(R\)</span> 이 작을 때) 의 근사값을 구하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 구멍의 중심을 원점으로 놓는다. 당연히 대칭에 의해 <span class="math inline">\(E_x(z) = E_y(z)=0\)</span> 이다.</p>
 <p><span class="math display">\[
@@ -1309,7 +1294,7 @@ v_0 = \sqrt{\dfrac{qm\sigma}{\epsilon_0}z} \propto \sqrt{z}
 \]</span></p>
 <p>이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_15" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.15 (원을 통과하는 플럭스. (Purcell 1.15))</strong></span> <br></p>
@@ -1328,7 +1313,6 @@ v_0 = \sqrt{\dfrac{qm\sigma}{\epsilon_0}z} \propto \sqrt{z}
 <p>(<span class="math inline">\(b\)</span>) 원점을 중심으로 원에 의해 결정되는 구의 cap.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>오른쪽을 <span class="math inline">\(\hat{\boldsymbol{z}}\)</span> 의 양의 방향으로 삼는다.</p>
 <p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(\boldsymbol{E}(x, y, z=l) = \dfrac{q}{4\pi\epsilon_0}\dfrac{(x, y, l)}{(x^2+y^2+l^2)^{3/2}}\)</span>, <span class="math inline">\(\hat{\boldsymbol{n}}=(0,0,1)\)</span> 이므로</p>
@@ -1348,14 +1332,13 @@ v_0 = \sqrt{\dfrac{qm\sigma}{\epsilon_0}z} \propto \sqrt{z}
 \end{aligned}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_16" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.16 (가우스 법칙과 두 점전하. (Purcell 1.16))</strong></span> <br> (<span class="math inline">\(a\)</span>) 전하 <span class="math inline">\(q\)</span> 를 갖는 두 점전하가 <span class="math inline">\(x=\pm l\)</span> 에 위치하고 있다. <span class="math inline">\(x\)</span> 축상의 원점 근처에서의 전기장 <span class="math inline">\(E_x\)</span> 를 구하라. <span class="math inline">\(y\)</span> 축상의 원점 근처에서 <span class="math inline">\(E_y\)</span> 를 구하라. <span class="math inline">\(x\ll l,\, y\ll l\)</span> 조건에서 적절한 근사를 취하라.</p>
 <p>(<span class="math inline">\(b\)</span>) 작은 실린더의 대칭축이 <span class="math inline">\(x\)</span> 축을 따라 있으며 원점에 중심이 위치한다. 반지름은 <span class="math inline">\(r_0\)</span> 이고 높이는 <span class="math inline">\(2x_0\)</span> 이다. (<span class="math inline">\(a\)</span>) 의 결과를 이용하여 가우스 법칙에 따라 실린더를 통과하는 플럭스가 <span class="math inline">\(0\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(|t| \ll 1\)</span> 에 대해 <span class="math inline">\(\dfrac{1}{(1+t)^2} \approx 1 - 2t\)</span>, <span class="math inline">\(\dfrac{1}{(1+t^2)^{3/2}}\approx 1\)</span> 이다. <span class="math inline">\(t^2\)</span> 이상의 항은 무시하였다.</p>
 <p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(x\)</span> 축의 <span class="math inline">\(x\)</span> 위치에서의 전기장은 <span class="math inline">\(x\ll l\)</span> 근사를 사용하면</p>
@@ -1364,11 +1347,11 @@ v_0 = \sqrt{\dfrac{qm\sigma}{\epsilon_0}z} \propto \sqrt{z}
 E_x(x) &amp;= \dfrac{q}{4\pi \epsilon_0 (l+x)^2}- \dfrac{q}{4\pi\epsilon_0 (l-x)^2} \\[0.3em]
 &amp;\approx \dfrac{q}{4\pi\epsilon_0 l^2}\left[\left(1-\dfrac{2x}{l}\right) - \left(1+ \dfrac{2x}{l}\right)\right] = - \dfrac{qx}{\pi \epsilon_0 l^3}
 \end{aligned}
-\tag{11.20}\]</span></span></p>
+\tag{11.21}\]</span></span></p>
 <p>이다. <span class="math inline">\(y\)</span> 축의 <span class="math inline">\(y\)</span> 위치에서의 전기장은 (<span class="math inline">\(y^2\)</span> 항을 제거하면)</p>
 <p><span id="eq-EM_exr_purcell_1_16_2"><span class="math display">\[
 E_y(y) = 2 \cdot \dfrac{q}{4\pi \epsilon_0 (l^2+y^2)} \cdot \dfrac{y}{\sqrt{l^2+y^2}} \approx \dfrac{qy}{2\pi\epsilon_0 l^3}
-\tag{11.21}\]</span></span></p>
+\tag{11.22}\]</span></span></p>
 <p>이다.</p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(x=x_0\)</span> 의 원 <span class="math inline">\(S_1\)</span> 에서의 플럭스를 <span class="math inline">\(\Phi_1\)</span>, <span class="math inline">\(x=-x_0\)</span> 의 원 <span class="math inline">\(S_2\)</span> 에서의 플럭스를 <span class="math inline">\(\Phi_2\)</span>, 원통의 옆면 <span class="math inline">\(S_3\)</span> 에서의 플럭스를 <span class="math inline">\(\Phi_3\)</span> 라고 하자. 원통좌표계를 사용한다.</p>
 <p><span class="math display">\[
@@ -1380,7 +1363,7 @@ E_y(y) = 2 \cdot \dfrac{q}{4\pi \epsilon_0 (l^2+y^2)} \cdot \dfrac{y}{\sqrt{l^2+
 \]</span></p>
 <p>이다. 즉 <span class="math inline">\(\Phi_1+\Phi_2 + \Phi_3=0\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_17" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.17 (구형 껍질 내부의 전기장. (Purcell 1.17))</strong></span> <br></p>
@@ -1397,22 +1380,48 @@ E_y(y) = 2 \cdot \dfrac{q}{4\pi \epsilon_0 (l^2+y^2)} \cdot \dfrac{y}{\sqrt{l^2+
 <p>균일하게 대전된 속이 빈 구형 껍질을 생각하자. 위의 그림과 같이 얇은 원뿔의 끝의 두 조각을 고려하여 껍질 내의 전기장이 <span class="math inline">\(0\)</span> 임을 보여라. 이로부터 다음장에서 다룰 전기 포텐셜이 내부에서 <span class="math inline">\(0\)</span> 임을 보일 수 있다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-EM_purcell_1_18" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 11.18 (표면에서의 전기장. (Purcell 1.18))</strong></span> <br></p>
+<p>아래의 세 경우에 대해 표면에서의 전기장을 구하라. 세 경우 모두 전하밀도는 <span class="math inline">\(\rho\)</span> 이다.</p>
+<p>(<span class="math inline">\(a\)</span>) 반지름 <span class="math inline">\(R\)</span> 인 구,</p>
+<p>(<span class="math inline">\(b\)</span>) 반지름이 <span class="math inline">\(R\)</span> 이고 길이가 무한한 원통,</p>
+<p>(<span class="math inline">\(c\)</span>) 두깨가 <span class="math inline">\(2R\)</span> 인 무한한 판.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <a href="#exm-EM_charge_distribution_uniform_sphere" class="quarto-xref">예제&nbsp;<span>11.5</span></a> 에서 보였듯이 <span class="math inline">\(E= \dfrac{\rho R}{3\epsilon_0}\)</span>.</p>
+<p>(<span class="math inline">\(b\)</span>) 가우스 법칙을 이용하면 <span class="math inline">\(2\pi R h E = \pi R^2 \rho H/\epsilon_0\)</span> 이며 이로부터 <span class="math inline">\(E=\dfrac{\rho R}{2\epsilon_0}\)</span>.</p>
+<p>(<span class="math inline">\(c\)</span>) 역시 가우스 칙을 이용하면 <span class="math inline">\(2AE = A(2R)\rho/\epsilon_0\)</span> 로부터 <span class="math inline">\(E=\dfrac{\rho R}{\epsilon_0}\)</span>.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-EM_purcell_1_20" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 11.19 (뇌운(thundercloud). (Purcell 1.20))</strong></span> <br></p>
+<p>특정한 뇌운(thundercloud) 가 머리 위를 지나갈 때, 지상에서 측정한 대기 중의 수직 전기장이 3000 N/C (또는 V/m)까지 증가하는 것을 관찰하였다.</p>
+<p>(<span class="math inline">\(a\)</span>) 수평방향으로의 1 제곱미터당 얼마나 많은 전하를 뇌운이 포함하고 있는가? 이 구름의 두께는 지상에서 구름까지의 높이보다 크다고 가정한다.</p>
+<p>(<span class="math inline">\(b\)</span>) 뇌운은 지름 1 <span class="math inline">\(mm\)</span> 의 물방울 형태로 충분한 물을 포함하고 있으며 0.25 cm 의 강수량을 기록핬고 How much charge does the thundercloud contain, in coulombs per square meter of horizontal area? Assume that the width of the cloud is large compared with the height above the ground. Suppose there is enough water in the thundercloud in the form of 1 mm diameter drops to make 0.25 cm of rainfall, and that it is those drops that carry the charge. How large is the electric field strength at the surface of one of the drops?</p>
+</div>
+</div>
+<div class="solutoin">
+
+</div>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_32" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 11.18 (구형 shell 에너지 (Purcell 1.32))</strong></span> <br></p>
+<p><span class="theorem-title"><strong>연습문제 11.20 (구형 shell 에너지 (Purcell 1.32))</strong></span> <br></p>
 <p>반지름 <span class="math inline">\(R\)</span> 인 구 sheel 에 전하 <span class="math inline">\(Q\)</span> 가 균일하게 대전되었다. 이 시스템에 저장된 에너지는 <span class="math inline">\(\dfrac{Q^2}{8\pi \epsilon_0R}\)</span> 임을 다음의 두가지 방법으로 보이자.</p>
-<p>(<span class="math inline">\(a\)</span>) <a href="#eq-EM_electrostatic_energy_too_early" class="quarto-xref">식&nbsp;<span>11.19</span></a> 를 사용하여 구하라.</p>
+<p>(<span class="math inline">\(a\)</span>) <a href="#eq-EM_electrostatic_energy_too_early" class="quarto-xref">식&nbsp;<span>11.20</span></a> 를 사용하여 구하라.</p>
 <p>(<span class="math inline">\(b\)</span>) 전하 <span class="math inline">\(dq\)</span> 를 가진 infinitesimaly 얇은 껍데기를 계속 쌓는 방법으로 구하라.</p>
 </div>
 </div>
 <p><br></p>
 <div class="soltution">
-<p>(<span class="math inline">\(a\)</span>) 구 내부의 전기장은 <span class="math inline">\(\boldsymbol{0}\)</span> 이며 외부는 <span class="math inline">\(\dfrac{Q}{4\pi\epsilon_0 r^2}\hat{\boldsymbol{r}}\)</span> 이므로 <a href="#eq-EM_electrostatic_energy_too_early" class="quarto-xref">식&nbsp;<span>11.19</span></a> 를 사용하면</p>
+<p>(<span class="math inline">\(a\)</span>) 구 내부의 전기장은 <span class="math inline">\(\boldsymbol{0}\)</span> 이며 외부는 <span class="math inline">\(\dfrac{Q}{4\pi\epsilon_0 r^2}\hat{\boldsymbol{r}}\)</span> 이므로 <a href="#eq-EM_electrostatic_energy_too_early" class="quarto-xref">식&nbsp;<span>11.20</span></a> 를 사용하면</p>
 <p><span class="math display">\[
 \begin{aligned}
 U = \dfrac{\epsilon_0}{2}\int_{\text{outside of sphere}} \left(\dfrac{Q}{4\pi\epsilon_0}\right)^2 \dfrac{1}{r^4} dV = \dfrac{Q^2}{8 \pi \epsilon_0} \int_{R}^\infty \dfrac{1}{r^2}dr= \dfrac{Q^2}{8\pi\epsilon_0 R}
@@ -1431,7 +1440,7 @@ U(Q)= \int_0^Q \dfrac{1}{4\pi\epsilon_0}\dfrac{qdq}{R} = \dfrac{Q^2}{8\pi\epsilo
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_37" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 11.19 (모서리에서의 힘이 0. (Purcell 1.37))</strong></span> <br></p>
+<p><span class="theorem-title"><strong>연습문제 11.21 (모서리에서의 힘이 0. (Purcell 1.37))</strong></span> <br></p>
 <p>(<span class="math inline">\(a\)</span>) 정사각형의 네 모서리에 전하 <span class="math inline">\(q\)</span> 가 위치한다. 정하각형의 중앙에 크기가 <span class="math inline">\(Q\)</span> 이고 사인이 반대인 전하가 위치한다. 각 네 모서리의 힘이 <span class="math inline">\(0\)</span> 이 되려면 <span class="math inline">\(Q\)</span> 는 어떤 값이어야 하는가?</p>
 <p>(<span class="math inline">\(b\)</span>) (<span class="math inline">\(a\)</span>) 에서의 <span class="math inline">\(Q\)</span> 값에 대해 <a href="#exr-EM_purcell_1_6" class="quarto-xref">연습문제&nbsp;<span>11.6</span></a> 에서와 같이 시스템의 포텐셜 에너지가 <span class="math inline">\(0\)</span> 임을 보여라.</p>
 </div>
@@ -1458,7 +1467,7 @@ U&amp;=\dfrac{1}{4\pi\epsilon_0} \left[4 \times \dfrac{q^2}{2a}  +  2 \times \df
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-EM_purcell_1_61" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 11.20 (구의 포텐셜 에너지. (Purcell 1.61))</strong></span> <br></p>
+<p><span class="theorem-title"><strong>연습문제 11.22 (구의 포텐셜 에너지. (Purcell 1.61))</strong></span> <br></p>
 <p>반지름 <span class="math inline">\(R\)</span> 인 구가 균일한 부피 전하 밀도 <span class="math inline">\(\rho\)</span> 를 갖는다. 우리는 구의 전하에 의한 포텐셜 에너지를 알고자 한다. <a href="#exm-EM_electrostatic_energy_of_uniform_sphere" class="quarto-xref">예제&nbsp;<span>11.8</span></a> 에서는 전기장에 의한 에너지 밀도를 적분하여 포텐셜 에너지를 구했다. 여기서는 구를 층층히 쌓아 구해보자. 구형 대칭을 이룬 전하분포에 의한 전기장은 전하가 중심에 모여있는 것과 같다는 것을 이용하라.</p>
 </div>
 </div>
