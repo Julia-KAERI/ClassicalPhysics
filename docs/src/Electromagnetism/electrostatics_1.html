@@ -467,7 +467,7 @@ window.Quarto = {
 <p>전자와 전자간에 작용하는 힘은 이 쿨롱힘 이외에도 전자가 가진 스핀(spin) 물리량에 의한 자기력과, 전자가 움직일 때 받는 자기력이 존재한다. 스핀-스핀에 의한 자기력은 쿨롱 힘에 비해 <span class="math inline">\(10^{-4}\)</span> 정도 작고, 전자가 움직이지 않는다면 이동하는 전자에 의한 자기력도 존재하지 않기때문에 여기서는 이에 대해 생각하지 않기로 하자.</p>
 <p>전하의 단위는 쿨롱(Coulomb, <span class="math inline">\(C\)</span>) 이며 전자의 전하 <span class="math inline">\(e=-1.602 \times 10^{-19}\, \text{C}\)</span> 이다. <span class="math inline">\(\epsilon_0\)</span> 는 진공의 유전율로 이에 대해서는 이후 설명하기로 하자. 어쨌든</p>
 <p><span id="eq-EM_permittivity_of_free_space"><span class="math display">\[
-\epsilon_0 = 8.854\,187\,8188(14) \times 10^{-12}\dfrac{\text{C}^2}{\text{N} \cdot \text{m}}
+\epsilon_0 = 8.854\,187\,8188(14) \times 10^{-12}\dfrac{\text{C}^2}{\text{N} \cdot \text{m}^2}
 \tag{11.4}\]</span></span></p>
 <p>이다.</p>
 <p><br></p>
@@ -1407,8 +1407,9 @@ E_y(y) = 2 \cdot \dfrac{q}{4\pi \epsilon_0 (l^2+y^2)} \cdot \dfrac{y}{\sqrt{l^2+
 <p>(<span class="math inline">\(b\)</span>) 뇌운은 지름 1 <span class="math inline">\(mm\)</span> 의 물방울 형태로 충분한 물을 포함하고 있으며 0.25 cm 의 강수량을 기록핬고 How much charge does the thundercloud contain, in coulombs per square meter of horizontal area? Assume that the width of the cloud is large compared with the height above the ground. Suppose there is enough water in the thundercloud in the form of 1 mm diameter drops to make 0.25 cm of rainfall, and that it is those drops that carry the charge. How large is the electric field strength at the surface of one of the drops?</p>
 </div>
 </div>
-<div class="solutoin">
-
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 가우스 법칙에 의해 <span class="math inline">\(2AE=\dfrac{\sigma A}{\epsilon_0}\)</span> 이므로 <span class="math inline">\(\sigma = 2\epsilon_0 E = 5.31 \times 10^{-12} \, \text{C}/\text{m}^2\)</span>.</p>
+<p>(<span class="math inline">\(b\)</span>)</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
@@ -1419,7 +1420,6 @@ E_y(y) = 2 \cdot \dfrac{q}{4\pi \epsilon_0 (l^2+y^2)} \cdot \dfrac{y}{\sqrt{l^2+
 <p>(<span class="math inline">\(b\)</span>) 전하 <span class="math inline">\(dq\)</span> 를 가진 infinitesimaly 얇은 껍데기를 계속 쌓는 방법으로 구하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="soltution">
 <p>(<span class="math inline">\(a\)</span>) 구 내부의 전기장은 <span class="math inline">\(\boldsymbol{0}\)</span> 이며 외부는 <span class="math inline">\(\dfrac{Q}{4\pi\epsilon_0 r^2}\hat{\boldsymbol{r}}\)</span> 이므로 <a href="#eq-EM_electrostatic_energy_too_early" class="quarto-xref">식&nbsp;<span>11.20</span></a> 를 사용하면</p>
 <p><span class="math display">\[
@@ -1445,7 +1445,6 @@ U(Q)= \int_0^Q \dfrac{1}{4\pi\epsilon_0}\dfrac{qdq}{R} = \dfrac{Q^2}{8\pi\epsilo
 <p>(<span class="math inline">\(b\)</span>) (<span class="math inline">\(a\)</span>) 에서의 <span class="math inline">\(Q\)</span> 값에 대해 <a href="#exr-EM_purcell_1_6" class="quarto-xref">연습문제&nbsp;<span>11.6</span></a> 에서와 같이 시스템의 포텐셜 에너지가 <span class="math inline">\(0\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>각각 <span class="math inline">\(P_1=(a,\,a)\)</span>, <span class="math inline">\(P_2=(a,\,-a)\)</span>, <span class="math inline">\(P_3=(-a,\,a)\)</span>, <span class="math inline">\(P_4=(-a,\,-a)\)</span> 에 전하 <span class="math inline">\(q\)</span> 가 위치한다고 하고 <span class="math inline">\(-Q\)</span> 가 원점에 위치한다고 하자.</p>
 <p><span class="math inline">\(P_1\)</span> 에 가해지는 힘 <span class="math inline">\(\boldsymbol{F}_1\)</span> 은</p>
@@ -1471,7 +1470,6 @@ U&amp;=\dfrac{1}{4\pi\epsilon_0} \left[4 \times \dfrac{q^2}{2a}  +  2 \times \df
 <p>반지름 <span class="math inline">\(R\)</span> 인 구가 균일한 부피 전하 밀도 <span class="math inline">\(\rho\)</span> 를 갖는다. 우리는 구의 전하에 의한 포텐셜 에너지를 알고자 한다. <a href="#exm-EM_electrostatic_energy_of_uniform_sphere" class="quarto-xref">예제&nbsp;<span>11.8</span></a> 에서는 전기장에 의한 에너지 밀도를 적분하여 포텐셜 에너지를 구했다. 여기서는 구를 층층히 쌓아 구해보자. 구형 대칭을 이룬 전하분포에 의한 전기장은 전하가 중심에 모여있는 것과 같다는 것을 이용하라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\Delta q = 4 \pi \rho r^2 \Delta r\)</span> 을 <span class="math inline">\(-\infty\)</span> 에서 <span class="math inline">\(r\)</span> 까지 이동시키는데 전기장은</p>
 <p><span class="math display">\[

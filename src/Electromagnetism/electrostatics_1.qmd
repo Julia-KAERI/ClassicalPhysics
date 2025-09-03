@@ -74,7 +74,7 @@ $$ {#eq-EM_coulolb_force}
 전하의 단위는 쿨롱(Coulomb, $C$) 이며 전자의 전하 $e=-1.602 \times 10^{-19}\, \text{C}$ 이다. $\epsilon_0$ 는 진공의 유전율로 이에 대해서는 이후 설명하기로 하자. 어쨌든
 
 $$
-\epsilon_0 = 8.854\,187\,8188(14) \times 10^{-12}\dfrac{\text{C}^2}{\text{N} \cdot \text{m}}
+\epsilon_0 = 8.854\,187\,8188(14) \times 10^{-12}\dfrac{\text{C}^2}{\text{N} \cdot \text{m}^2}
 $$ {#eq-EM_permittivity_of_free_space}
 
 이다.
@@ -1242,7 +1242,12 @@ field strength at the surface of one of the drops?
 
 </div>
 
-::: {.solutoin}
+::: {.solution}
+
+($a$) 가우스 법칙에 의해 $2AE=\dfrac{\sigma A}{\epsilon_0}$ 이므로 $\sigma = 2\epsilon_0 E = 5.31 \times 10^{-12} \, \text{C}/\text{m}^2$.
+
+($b$)
+
 
 
 :::
@@ -1261,7 +1266,7 @@ field strength at the surface of one of the drops?
 
 :::
 
-</div> </br>
+</div>
 
 ::: {.soltution}
 
@@ -1304,7 +1309,7 @@ $$
 
 :::
 
-</div> </br>
+</div>
 
 ::: {.solution}
 
@@ -1345,7 +1350,7 @@ $$
 
 :::
 
-</div> </br>
+</div>
 
 ::: {.solution}
 
