@@ -1,0 +1,20 @@
+---
+title: "고전 장론"
+number-sections: true
+number-depth: 2
+crossref:
+  chapters: true
+  
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+고전 장론에 대해 설명한다.
+
+### 참고문헌
+::: {#refs}
+
+@Landau1975classical
+
+
+:::

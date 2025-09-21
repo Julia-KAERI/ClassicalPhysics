@@ -1,7 +1,0 @@
----
-title: "변분 역학"
-number-sections: true
-number-depth: 2
-crossref:
-  chapters: true
----

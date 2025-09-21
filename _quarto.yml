@@ -39,6 +39,10 @@ book:
       chapters:
       - src/Relativity/01_introduction_to_special_relativity.qmd
       - src/Relativity/02_introduction_to_classical_field.qmd
+    
+    - part: src/ClassicalFieldTheory/00_index.qmd
+      chapters:
+      - src/ClassicalFieldTheory/01_principle_of_relativity.qmd
 
     # - part: src/Lanczos/Lanczos.qmd
     #   chapters:

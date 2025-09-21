@@ -14,7 +14,7 @@
     "href": "src/ClassicalMechanics/00_index.html",
     "title": "고전역학",
     "section": "",
-    "text": "% %\n%\n\\[\n\\DeclarePairedDelimiters{\\set}{\\{}{\\}}\n\\DeclareMathOperator*{\\argmax}{argmax}\n\\]\n\n고전역학의 기본원리에 대해 설명한다.\n\n참고문헌\n\n\nArfken, G. B., G. B. Arfken, H. J. Weber, and F. E. Harris. 2013.\nMathematical Methods for Physicists: A Comprehensive Guide. 7th\ned. Elsevier Science. https://books.google.co.kr/books?id=qLFo_Z-PoGIC.\n\n\nArnold, V. I., K. Vogtmann, and A. Weinstein. 2013. Mathematical\nMethods of Classical Mechanics. Graduate Texts in Mathematics.\nSpringer New York. https://books.google.co.kr/books?id=UOQlBQAAQBAJ.\n\n\nGoldstein, H. 1980. Classical Mechanics. 2nd ed. Addison-Wesley\nSeries in Physics. Addison-Wesley Publishing Company. https://books.google.co.kr/books?id=9M8QAQAAIAAJ.\n\n\nHelliwell, T. M., and V. V. Sahakian. 2020. Modern Classical\nMechanics. Cambridge University Press.\n\n\nJackson, John David. 1999. Classical Electrodynamics. 3rd ed.\nNew York, NY: Wiley. http://cdsweb.cern.ch/record/490457.\n\n\nLandau, L. D., and E. M. Lifshitz. 1976. Mechanics, Third Edition:\nVolume 1 (Course of Theoretical Physics). 3rd ed. Paperback;\nButterworth-Heinemann. http://www.worldcat.org/isbn/0750628960.\n\n\nPurcell, E. M. 2013. Electricity and Magnetism. Electricity and\nMagnetism. Cambridge University Press. https://books.google.co.kr/books?id=A2rS5vlSFq0C.\n\n\nSymon, K. R. 1971. Mechanics. Addison-Wesley Series in Physics.\nAddison-Wesley Publishing Company. https://books.google.co.kr/books?id=JVk_4udwNtkC.\n\n\nThornton, S. T., and J. B. Marion. 2004. Classical Dynamics of\nParticles and Systems. Brooks/Cole. https://books.google.co.kr/books?id=HOqLQgAACAAJ.\n\n\nZia, R. K. P., Edward F. Redish, and Susan R. McKay. 2009. “Making\nSense of the Legendre Transform.” American Journal of\nPhysics 77 (7): 614–22. https://doi.org/10.1119/1.3119512.",
+    "text": "% %\n%\n\\[\n\\DeclarePairedDelimiters{\\set}{\\{}{\\}}\n\\DeclareMathOperator*{\\argmax}{argmax}\n\\]\n\n고전역학의 기본원리에 대해 설명한다.\n\n참고문헌\n\n\nArfken, G. B., G. B. Arfken, H. J. Weber, and F. E. Harris. 2013.\nMathematical Methods for Physicists: A Comprehensive Guide. 7th\ned. Elsevier Science. https://books.google.co.kr/books?id=qLFo_Z-PoGIC.\n\n\nArnold, V. I., K. Vogtmann, and A. Weinstein. 2013. Mathematical\nMethods of Classical Mechanics. Graduate Texts in Mathematics.\nSpringer New York. https://books.google.co.kr/books?id=UOQlBQAAQBAJ.\n\n\nGoldstein, H. 1980. Classical Mechanics. 2nd ed. Addison-Wesley\nSeries in Physics. Addison-Wesley Publishing Company. https://books.google.co.kr/books?id=9M8QAQAAIAAJ.\n\n\nHelliwell, T. M., and V. V. Sahakian. 2020. Modern Classical\nMechanics. Cambridge University Press.\n\n\nJackson, John David. 1999. Classical Electrodynamics. 3rd ed.\nNew York, NY: Wiley. http://cdsweb.cern.ch/record/490457.\n\n\nLandau, L. D., and E. M. Lifshitz. 1976. Mechanics, Third Edition:\nVolume 1 (Course of Theoretical Physics). 3rd ed. Paperback;\nButterworth-Heinemann. http://www.worldcat.org/isbn/0750628960.\n\n\nLandau, L. D., Л. Д. Ландау, Е. М. Лифшиц, and E. M. Lifshit︠s︡. 1975.\nThe Classical Theory of Fields: Volume 2. Course of Theoretical\nPhysics. Elsevier Science. https://books.google.co.kr/books?id=X18PF4oKyrUC.\n\n\nPurcell, E. M. 2013. Electricity and Magnetism. Electricity and\nMagnetism. Cambridge University Press. https://books.google.co.kr/books?id=A2rS5vlSFq0C.\n\n\nSymon, K. R. 1971. Mechanics. Addison-Wesley Series in Physics.\nAddison-Wesley Publishing Company. https://books.google.co.kr/books?id=JVk_4udwNtkC.\n\n\nThornton, S. T., and J. B. Marion. 2004. Classical Dynamics of\nParticles and Systems. Brooks/Cole. https://books.google.co.kr/books?id=HOqLQgAACAAJ.\n\n\nZia, R. K. P., Edward F. Redish, and Susan R. McKay. 2009. “Making\nSense of the Legendre Transform.” American Journal of\nPhysics 77 (7): 614–22. https://doi.org/10.1119/1.3119512.",
     "crumbs": [
       "고전역학"
     ]
@@ -810,6 +810,27 @@
     ]
   },
   {
+    "objectID": "src/ClassicalFieldTheory/00_index.html",
+    "href": "src/ClassicalFieldTheory/00_index.html",
+    "title": "고전 장론",
+    "section": "",
+    "text": "% %\n%\n\\[\n\\DeclarePairedDelimiters{\\set}{\\{}{\\}}\n\\DeclareMathOperator*{\\argmax}{argmax}\n\\]\n\n고전 장론에 대해 설명한다.\n\n참고문헌\n\nLandau et al. (1975)\n\nLandau, L. D., Л. Д. Ландау, Е. М. Лифшиц, and E. M. Lifshit︠s︡. 1975. The Classical Theory of Fields: Volume 2. Course of Theoretical Physics. Elsevier Science. https://books.google.co.kr/books?id=X18PF4oKyrUC.",
+    "crumbs": [
+      "고전 장론"
+    ]
+  },
+  {
+    "objectID": "src/ClassicalFieldTheory/01_principle_of_relativity.html",
+    "href": "src/ClassicalFieldTheory/01_principle_of_relativity.html",
+    "title": "16  상대성 원리",
+    "section": "",
+    "text": "16.1 상호작용의 전파 속도",
+    "crumbs": [
+      "고전 장론",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>상대성 원리</span>"
+    ]
+  },
+  {
     "objectID": "src/topics/Topics.html",
     "href": "src/topics/Topics.html",
     "title": "별도의 주제들",
@@ -822,23 +843,45 @@
   {
     "objectID": "src/topics/mathematical.html",
     "href": "src/topics/mathematical.html",
-    "title": "16  수학적 자료",
+    "title": "17  수학적 자료",
     "section": "",
-    "text": "16.1 르장드르 변환\n함수 \\(f: \\mathbb{R}\\to \\mathbb{R}\\) 가 \\(t\\in [0,\\,1]\\) 에 대해\n\\[\nf(tx) + f((1-t)y) \\ge tf(x)+ (1-t)f(y)\n\\]\n일 때 \\(f\\) 를 convex 라고 한다. \\(f\\in C^2\\) 라면 이것은 \\(\\dfrac{d^2 f}{dx^2} \\ge 0\\) 과 동치이다. \\(\\dfrac{d^2g}{dx^2} \\le 0\\) 인 함수를 conclave 라고 하며 이 경우 \\(f=-g\\) 는 convex 이다. 만약 \\(\\dfrac{d^2f}{dx^2} &gt; 0\\) 라면 이를 strictly convex 라고 한다. \\(f\\) 가 strictly convex 이면 \\(f'(x)\\) 는 전단사이며 이는 \\(f'(x)\\) 의 역함수가 존재함을 의미한다. \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) 이며 \\(\\partial^2_x f &gt;0\\) 이면 \\(x\\) 에 대해 strictly convex 라고 한다.",
+    "text": "17.1 르장드르 변환\n함수 \\(f: \\mathbb{R}\\to \\mathbb{R}\\) 가 \\(t\\in [0,\\,1]\\) 에 대해\n\\[\nf(tx) + f((1-t)y) \\ge tf(x)+ (1-t)f(y)\n\\]\n일 때 \\(f\\) 를 convex 라고 한다. \\(f\\in C^2\\) 라면 이것은 \\(\\dfrac{d^2 f}{dx^2} \\ge 0\\) 과 동치이다. \\(\\dfrac{d^2g}{dx^2} \\le 0\\) 인 함수를 conclave 라고 하며 이 경우 \\(f=-g\\) 는 convex 이다. 만약 \\(\\dfrac{d^2f}{dx^2} &gt; 0\\) 라면 이를 strictly convex 라고 한다. \\(f\\) 가 strictly convex 이면 \\(f'(x)\\) 는 전단사이며 이는 \\(f'(x)\\) 의 역함수가 존재함을 의미한다. \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) 이며 \\(\\partial^2_x f &gt;0\\) 이면 \\(x\\) 에 대해 strictly convex 라고 한다.",
     "crumbs": [
       "별도의 주제들",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>수학적 자료</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>수학적 자료</span>"
     ]
   },
   {
     "objectID": "src/topics/mathematical.html#sec-legencre_transform",
     "href": "src/topics/mathematical.html#sec-legencre_transform",
-    "title": "16  수학적 자료",
+    "title": "17  수학적 자료",
     "section": "",
     "text": "1변수 함수의 경우\n\\(f:\\mathbb{R}\\to\\mathbb{R}\\) 이 \\(C^2\\) 함수라고 하자. \\(f\\) 가 strictly convext 이면 \\(\\dfrac{d^2f}{dx^2} &gt;0\\) 이다. \\(u = f'(x)\\) 라 하면 \\(f'\\) 이 전단사이므로 \\(x\\) 를 \\(u\\) 의 함수로 표현 할 수 있다. 즉 \\(x=x(u)\\) 가 된다. 이 때 \\(g = f-ux\\) 로 놓으면, \\(dg = df-udx - xdu = -xdu\\) 이다. 즉, \\(\\dfrac{dg}{du} = x\\) 가 되도록 하는 \\(u\\) 에 대한 함수 \\(g\\) 가 자연스럽게 나온다. 이 때\n\n\n\n2변수 함수의 경우\n\\(f\\) 가 \\(x,\\,y\\) 의 함수라고 하자. \\(df = (\\partial_x f) dx + (\\partial_y f) dy\\) 이며 \\(u=\\partial_x f,\\, v = \\partial_y f\\) 라고 놓으면,\n\\[\ndf = u\\, dx+v\\, dy\n\\]\n가 된다. \\(f\\) 가 \\(x\\) 에 대해 strictly convex 라고 하자. 이때 \\(g= f-ux\\) 로 놓으면,\n\\[\ndg = df - x\\, du - u \\, dx = - x\\, du + v\\, dy\n\\]\n이다. 즉 \\(g=g(u, y)\\) 이며 \\(\\dfrac{\\partial g}{\\partial u} = -x,\\, \\dfrac{\\partial g}{\\partial y} = v\\) 이다.\n\n\n\nLagrangian 의 convexity\n이 포스트 를 참고하라.\n\\[\nL = \\sum A_{ij}\\dot{q}_i \\dot{q}_j + \\sum B_j \\dot{q}_j + f(\\{q_i\\})\n\\]\n일",
     "crumbs": [
       "별도의 주제들",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>수학적 자료</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>수학적 자료</span>"
+    ]
+  },
+  {
+    "objectID": "src/ClassicalFieldTheory/01_principle_of_relativity.html#상호작용의-전파-속도",
+    "href": "src/ClassicalFieldTheory/01_principle_of_relativity.html#상호작용의-전파-속도",
+    "title": "16  상대성 원리",
+    "section": "",
+    "text": "16.1.1 배경 지식\n\n기준틀 (system of reference)\n\n좌표계 (system of coordinate) : 공간상의 입자의 위치\n좌표계의 고유한 시계\n\n관성좌표계 (inertial frame of reference) : 외부로부터 힘을 받지 않는 물체는 등속으로 운동을 하는 기준틀.\n두 기준틀이 서로 등속 운동을 할 때 한 기준틀이 관성좌표계이면 다른 좌표계 역시 관성좌표계이다.\n상대성 원리 (principle of relativity): 자연법칙은 모든 관성좌표계에서 동일하다. 즉 운동방정식은 모든 관성좌표계에서 동일하다.\n\n\n\n\n16.1.2 빛의 속도\n\n고전역학에서 물질의 입자간 상호작용은 입자의 위치의 함수인 포텐셜 에너지로 기술된다. 이것은 상호작용의 전달 속도가 무한대임을 의미한다. 즉 상호작용하는 입자의 위치가 변경될 경우 그 영향은 즉각 반영된다. 그러나 실험은 이런 즉각적인 상호작용은 자연에서 존재하지 않음을 보였다.\n어느 정도 떨어진 두 입자에서 한 입자에 변화가 있을 때 다른 입자가 그 영향을 느끼는 시간차와 두 입자 사이의 거리를 통해 상호작용의 전달 속도(velocity of propagation of the interaction)를 측정 할 수 있다.\n엄밀하게 말하면 앞의 속도는 상호작용의 최대전달속도(maximum velocity of propagation of interaction) 이다.\n물체의 속도가 이 속도보다 크다면 상호작용이 전달되지 않는다. 따라서 물체의 속도가 이 상호작용의 최대전달속도보다 클 수 없다.\n한 입자에서 다른 입자로의 상호작용의 전달을 신호 (signal) 라고 한다. 상호작용의 전달속도를 신호 속도(signal velocity) 라고 한다.\n상대성 원리는 모든 상호작용의 전달속도는 관성좌표계에서 일정함을 가정한다. 즉 이 신호 전달속도는 우주상수이다. 상호작용의 전달속도는 빛의 속도 \\(c\\) 이다.\n\n\\[\nc=2.99792458 \\times 10^8 \\text{ m}/\\text{sec}\n\\]\n\n\n\n16.1.3 상대성 이론\n\n아인슈타인의 상대성 원리는 두 원리의 결합이다.\n\n상대성 원리.\n상호작용의 전달속도의 보편성.\n\n뉴턴 역학, 즉 고전역학은 상대성 원리의 \\(c\\to \\infty\\) 극한이다.\n\n\n\n고전역학에서의 시간과 공간 그리고 동시성\n공간상의 거리는 고전역학에서도 상대적이다. 한 관성좌표계에서 정지해 있는 물체는 다른 관성좌표계에서는 일정한 속도로 이동한다. 그러나 시간은 고전역학에서 절대적이다. 모든 관성좌표계가 동일한 시계를 공유한다. 즉 한 기준틀에서 같은 시간에 일어난 두 사건은 다른 기준틀에서도 동시에 일어난다. 또한 동시에 일어나지 않은 두 사건의 시간간격은 모든 기준틀에서 동일하다.\n그러나 이것은 상대성 이론에 어긋나는데 한 좌표계에서의 빛의 속도는 이 좌표계에 대해 \\(v\\) 의 속도로 움직이는 좌표계에서 \\(c+v &gt;c\\) 가 될 수 있기 때문이다.\n마이켈슨의 실험에서 빛의 속도는 방향과 무관하게 동일하다는 것을 보였다. 그러나 고전역학에 따르면 빛의 속도는 지구의 진행방향에서 가장 작아야 한다.\n두 관성좌표계 \\(\\Sigma,\\,\\Sigma'\\) 을 생각하자. \\(\\Sigma\\) 의 좌표축 \\(X,\\,Y,\\,Z\\) 와 \\(\\Sigma'\\) 의 좌표축 \\(X',\\,Y',\\,Z'\\) 을 생각하자. \\(\\Sigma'\\) 은 \\(\\Sigma\\) 에 대해 \\(X(X')\\) 방향으로 움직인다고 하자. \\(X'\\) 축상의 점 \\(A\\) 에 대해 같은 거리, 반대 방향으로 역시 \\(X'\\) 축 상에 \\(B,\\,C\\) 를 놓자. \\(A\\) 에서 동시에 \\(B,\\,C\\) 방향으로 빛을 쏜다면 \\(\\Sigma'\\) 에서는 동시에 \\(B,\\,C\\) 에 도달한다. 그러나 밫의 속도가 일정하다는 것을 가정하면 \\(\\Sigma\\) 기준틀에서는 서로 다른 시간에 도착한다.",
+    "crumbs": [
+      "고전 장론",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>상대성 원리</span>"
+    ]
+  },
+  {
+    "objectID": "src/ClassicalFieldTheory/01_principle_of_relativity.html#sec-CFT_interval",
+    "href": "src/ClassicalFieldTheory/01_principle_of_relativity.html#sec-CFT_interval",
+    "title": "16  상대성 원리",
+    "section": "16.2 4차원 시공간과 시간 간격",
+    "text": "16.2 4차원 시공간과 시간 간격\n\n16.2.1 4차원 시공간, 사건, 세계선\n3차원 공간과 1차원의 시간을 합쳐 4차원 시공간을 생각 할 수 있다. 물리적으로 어떤 사건(event) 가 벌여졌을 때 이 사건의 공간과 시간상의 좌표는 이 4차원 시공간상의 한 점이다. 이 점을 세계점(world point) 라고 한다. 입자의 운동은 이 4차원 시공간상에서 궤적을 갖는데 이 궤적을 세계선(world line) 이라고 한다. 기준틀에서 등속 운동을 하는 입자의 세계선은 직선이다.",
+    "crumbs": [
+      "고전 장론",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>상대성 원리</span>"
     ]
   }
 ]
