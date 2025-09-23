@@ -853,6 +853,28 @@
     ]
   },
   {
+    "objectID": "src/ClassicalFieldTheory/01_principle_of_relativity.html#고유-시간",
+    "href": "src/ClassicalFieldTheory/01_principle_of_relativity.html#고유-시간",
+    "title": "16  상대성 원리",
+    "section": "16.3 고유 시간",
+    "text": "16.3 고유 시간\n\n16.3.1 고유 시간\n어떤 기준틀 \\(\\Sigma\\) 에서 자유롭게 움직이는 시계를 관찰한다고 생각해보자. 각각의 시간마다 이 움직임은 국소적으로 등속운동으로 생각 할 수 있으며, 따라서 각 순간마다 움직이는 시계에 고정된 관성 기준틀을 생각 할 수 있다. 즉 \\(dt\\) 의 시간 간격에 \\(\\|d\\boldsymbol{x}\\|^2\\) 만큼의 거리를 움직인다고 생각 할 수 있다. 시계에 고정된 기준틀 \\(\\Sigma'\\) 에서는 \\(d\\boldsymbol{x}=0\\) 이므로 시공간 간격의 불변을 생각하면\n\\[\nc^2 dt^2 - \\|d\\boldsymbol{x}\\|^2 = c^2dt'^2\n\\]\n이며, 이로부터\n\\[\ndt' = dt \\sqrt{1-\\dfrac{\\|d\\boldsymbol{x}\\|^2}{c^2(dt)^2}}\n\\]\n그런데\n\\[\n\\dfrac{\\|d\\boldsymbol{x}\\|}{dt} = \\dfrac{\\sqrt{dx^2+dy^2+dz^2}}{dt} = v\n\\]\n이므로\n\\[\ndt' = dt\\sqrt{1-\\dfrac{v^2}{c^2}}\n\\]\n이며, 이것을 기준틀 \\(\\Sigma\\) 의 시간에 대해 적분하면 시계에 고정된 기준틀에서의 시간 간격을 얻는다. 어떤 움직이는 물체에서 그 물체에 고정되어 움직이는 시계에서 측정한 시간 간격과 그 물체의 속도를 측정하는 기준틀에서의 시간 간격의 관계로 이 때 움직이는 물체의 시간 간격을 고유 시간 (proper time) 이라고 하며 \\(\\Delta \\tau\\) 로 표기한다.\n\\[\n\\Delta \\tau : = t'_2-t'_1 = \\int_{t_1}^{t_2} \\sqrt{1-\\dfrac{v^2}{c^2}} \\, dt.\n\\tag{16.4}\\]\n\\(v \\le c\\) 이므로 \\(\\Delta \\tau = t'_2-t'_1 \\le t_2-t_1\\) 임을 안다. 즉 움직이는 기준틀에서의 시간 간격은 정지된 기준틀에서의 시간 간격보다 항상 작다.\n\n\n\n16.3.2 두 좌표계의 고유시간\n… to be fiiled…",
+    "crumbs": [
+      "고전 장론",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>상대성 원리</span>"
+    ]
+  },
+  {
+    "objectID": "src/ClassicalFieldTheory/01_principle_of_relativity.html#로렌츠-변환",
+    "href": "src/ClassicalFieldTheory/01_principle_of_relativity.html#로렌츠-변환",
+    "title": "16  상대성 원리",
+    "section": "16.4 로렌츠 변환",
+    "text": "16.4 로렌츠 변환",
+    "crumbs": [
+      "고전 장론",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>상대성 원리</span>"
+    ]
+  },
+  {
     "objectID": "src/topics/Topics.html",
     "href": "src/topics/Topics.html",
     "title": "별도의 주제들",
@@ -883,6 +905,7 @@
       "별도의 주제들",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>수학적 자료</span>"
     ]
+<<<<<<< HEAD
   },
   {
     "objectID": "src/ClassicalFieldTheory/01_principle_of_relativity.html#sec-CFT-proper_time",
@@ -938,5 +961,7 @@
       "고전 장론",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>상대성 원리</span>"
     ]
+=======
+>>>>>>> 2cce0ecb7596ac194a92fd2a3eb505da6cfab0fc
   }
 ]
