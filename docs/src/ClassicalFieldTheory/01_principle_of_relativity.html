@@ -359,7 +359,14 @@ window.Quarto = {
   <li><a href="#sec-CFT_proper_time" id="toc-sec-CFT_proper_time" class="nav-link" data-scroll-target="#sec-CFT_proper_time"><span class="header-section-number">16.3.1</span> 고유 시간</a></li>
   <li><a href="#sec-CFT_proper_time_in_different_frame" id="toc-sec-CFT_proper_time_in_different_frame" class="nav-link" data-scroll-target="#sec-CFT_proper_time_in_different_frame"><span class="header-section-number">16.3.2</span> 두 좌표계의 고유시간</a></li>
   </ul></li>
-  <li><a href="#로렌츠-변환" id="toc-로렌츠-변환" class="nav-link" data-scroll-target="#로렌츠-변환"><span class="header-section-number">16.4</span> 로렌츠 변환</a></li>
+  <li><a href="#로런츠-변환" id="toc-로런츠-변환" class="nav-link" data-scroll-target="#로런츠-변환"><span class="header-section-number">16.4</span> 로런츠 변환</a>
+  <ul class="collapse">
+  <li><a href="#sec-CFT-lorentz_transform_in_1d_space" id="toc-sec-CFT-lorentz_transform_in_1d_space" class="nav-link" data-scroll-target="#sec-CFT-lorentz_transform_in_1d_space"><span class="header-section-number">16.4.1</span> 1차원 공간에서의 로런츠 변환</a></li>
+  <li><a href="#sec-CFT_proper_length_and_lorentz_contraction" id="toc-sec-CFT_proper_length_and_lorentz_contraction" class="nav-link" data-scroll-target="#sec-CFT_proper_length_and_lorentz_contraction"><span class="header-section-number">16.4.2</span> 고유길이와 로렌츠 수축</a></li>
+  <li><a href="#sec-CFT_proper_time_by_lorentz_transform" id="toc-sec-CFT_proper_time_by_lorentz_transform" class="nav-link" data-scroll-target="#sec-CFT_proper_time_by_lorentz_transform"><span class="header-section-number">16.4.3</span> 로런츠 변환으로 본 고유시간</a></li>
+  <li><a href="#sec-CFT_lorentz_tranfrom_of_velocity" id="toc-sec-CFT_lorentz_tranfrom_of_velocity" class="nav-link" data-scroll-target="#sec-CFT_lorentz_tranfrom_of_velocity"><span class="header-section-number">16.4.4</span> 속도의 로렌츠 변환</a></li>
+  </ul></li>
+  <li><a href="#벡터" id="toc-벡터" class="nav-link" data-scroll-target="#벡터"><span class="header-section-number">16.5</span> 4-벡터</a></li>
   </ul>
 </nav>
     </div>
@@ -540,8 +547,98 @@ dt' = dt\sqrt{1-\dfrac{v^2}{c^2}}
 <p><br></p>
 </section>
 </section>
-<section id="로렌츠-변환" class="level2" data-number="16.4">
-<h2 data-number="16.4" class="anchored" data-anchor-id="로렌츠-변환"><span class="header-section-number">16.4</span> 로렌츠 변환</h2>
+<section id="로런츠-변환" class="level2" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="로런츠-변환"><span class="header-section-number">16.4</span> 로런츠 변환</h2>
+<p>고전역학과는 달리 상대성 이론에서 보존하는 것은 거리가 아니라 시공간 간격이다. 4차원 시공간 간격을 보존하는 변환을 로렌츠 변환이라고 한다. 두 기준틀 사이에 시공간 간격을 보존시키는 변환을 <strong>로렌츠 변환 (Lorentz transformation)</strong> 이라고 한다.</p>
+<p><br></p>
+<section id="sec-CFT-lorentz_transform_in_1d_space" class="level3" data-number="16.4.1">
+<h3 data-number="16.4.1" class="anchored" data-anchor-id="sec-CFT-lorentz_transform_in_1d_space"><span class="header-section-number">16.4.1</span> 1차원 공간에서의 로런츠 변환</h3>
+<p>두 기준틀 <span class="math inline">\(\Sigma,\, \Sigma'\)</span> 에서 <span class="math inline">\(tx,\, tx'\)</span> 상에서만의 변환을 생각하자. 이 경우 원점과의 간격은 각각 <span class="math inline">\(ct^2-x^2,\, ct'^2-x'^2\)</span> 이다. 3차원 공간상에서 거리를 보존하는 변환을 회전 이라고 하듯이 4차원 시공간상에서 원점과의 간격을 거리로 생각하여 보존시키는 변환을 회전이라고 하기도 한다. 이 때</p>
+<p><span id="eq-CFT_lorent_transform_in_1d_0"><span class="math display">\[
+x = x' \cosh \psi + ct' \sinh \psi ,\qquad ct = x' \sinh \psi + ct' \cosh \psi
+\tag{16.5}\]</span></span></p>
+<p>일 경우 간격을 보존한다. 여기서 당연히 <span class="math inline">\(\psi\)</span> 는 두 기준틀의 상대속도 <span class="math inline">\(V\)</span> 의 함수이다.</p>
+<p><span class="math inline">\(\Sigma'\)</span> 이 <span class="math inline">\(\Sigma\)</span> 에 대해 <span class="math inline">\(V\hat{\boldsymbol{x}}\)</span> 의 속도로 움직인다고 할 때 <span class="math inline">\(\Sigma'\)</span> 의 원점의 운동을 생각해보자. 즉 <span class="math inline">\(x'=0\)</span> 일 경우</p>
+<p><span class="math display">\[
+x=ct'\sinh \psi,\qquad ct = ct' \cosh \psi
+\]</span></p>
+<p>이며</p>
+<p><span class="math display">\[
+\dfrac{x}{ct}= \tanh \psi = \dfrac{V}{c}
+\]</span></p>
+<p>이다. 이로부터,</p>
+<p><span class="math display">\[
+\sinh \psi = \dfrac{V/c}{1-V^2/c^2},\qquad \cosh \psi = \dfrac{1}{\sqrt{1-V^2/c^2}}
+\]</span></p>
+<p>을 얻는다. 이를 <a href="#eq-CFT_lorent_transform_in_1d_0" class="quarto-xref">식&nbsp;<span>16.5</span></a> 에 대입하면 다음을 얻는다.</p>
+<p><span id="eq-CFT_lorent_transform_in_1d"><span class="math display">\[
+x = \dfrac{x'+Vt'}{\sqrt{1-V^2/c^2}},\quad y=y',\quad z=z',\quad t=\dfrac{t'+V/c^2 x'}{\sqrt{1-V^2/c^2}}.
+\tag{16.6}\]</span></span></p>
+<p><span class="math inline">\(c\to \infty\)</span> 극한에서 우리는 갈릴레이 변환을 얻는다는 것을 확인 할 수 있다. <span class="math inline">\(V&gt;c\)</span> 에서 <span class="math inline">\(x,\,t\)</span> 가 허수가 되는데 이는 물리적으로 무의미하며 따라서 속도 <span class="math inline">\(V\le c\)</span> 인 조건을 확인 할 수 있다.</p>
+<p><br></p>
+</section>
+<section id="sec-CFT_proper_length_and_lorentz_contraction" class="level3" data-number="16.4.2">
+<h3 data-number="16.4.2" class="anchored" data-anchor-id="sec-CFT_proper_length_and_lorentz_contraction"><span class="header-section-number">16.4.2</span> 고유길이와 로렌츠 수축</h3>
+<p>막대기가 <span class="math inline">\(\Sigma\)</span> 기준틀의 <span class="math inline">\(X\)</span> 축상에 위치한다고 하자. 이 때 그 길이 <span class="math inline">\(L=\Delta x = x_2-x_1\)</span> 이라고 하자. 앞서와 마찬가지로 <span class="math inline">\(\Sigma\)</span> 에 대해 <span class="math inline">\(V\hat{\boldsymbol{x}}\)</span> 의 속도로 움직이는 <span class="math inline">\(\Sigma'\)</span> 기준틀에서 <span class="math inline">\(t'\)</span> 일 때의 위치를 <span class="math inline">\(x'_1,\,x'_2\)</span> 라고 하면</p>
+<p><span class="math display">\[
+x_1 = \dfrac{x_1'+Vt'}{\sqrt{1-V^2/c^2}},\qquad x_2=\dfrac{x_2'+Vt'}{\sqrt{1-V^2/c^2}}
+\]</span></p>
+<p>이므로 <span class="math inline">\(L'=\Delta x' = x'_2-x'_1\)</span> 에 대해 다음을 얻는다.</p>
+<p><span class="math display">\[
+L = \dfrac{L'}{\sqrt{1-V^2/c^2}}&gt; L'
+\]</span></p>
+<p>즉 움직이는 기준틀에서의 길이는 정지된 좌표계에 비해 짧아지며 이를 <strong>로런츠 수축 (Lorentz contration)</strong> 이라고 한다. 그리고 정지된 좌표계에서 측정한 길이를 <strong>고유 길이 (proper length)</strong> 라고 한다.</p>
+<p><br></p>
+</section>
+<section id="sec-CFT_proper_time_by_lorentz_transform" class="level3" data-number="16.4.3">
+<h3 data-number="16.4.3" class="anchored" data-anchor-id="sec-CFT_proper_time_by_lorentz_transform"><span class="header-section-number">16.4.3</span> 로런츠 변환으로 본 고유시간</h3>
+<p><a href="#eq-CFT_lorent_transform_in_1d" class="quarto-xref">식&nbsp;<span>16.6</span></a> 을 생각하자. 역시 정지된 <span class="math inline">\(\Sigma\)</span> 에 대해 <span class="math inline">\(V\hat{\boldsymbol{x}}\)</span> 의 속도로 움직이는 <span class="math inline">\(\Sigma'\)</span> 기준틀을 생각하자. 로런츠 변환에 의해</p>
+<p><span class="math display">\[
+t_1 = \dfrac{t_1' + Vx'/c^2}{\sqrt{1-V^2/c^2}},\qquad t_2 = \dfrac{t_2' + Vx'/c^2}{\sqrt{1-V^2-c^2}}
+\]</span></p>
+<p>이며, 따라서</p>
+<p><span class="math display">\[
+\Delta \tau = \Delta t'z = \Delta t {\sqrt{1-\dfrac{V^2}{c^2}}}
+\]</span></p>
+<p>이다.</p>
+<p><br></p>
+</section>
+<section id="sec-CFT_lorentz_tranfrom_of_velocity" class="level3" data-number="16.4.4">
+<h3 data-number="16.4.4" class="anchored" data-anchor-id="sec-CFT_lorentz_tranfrom_of_velocity"><span class="header-section-number">16.4.4</span> 속도의 로렌츠 변환</h3>
+<p>역시 정지된 <span class="math inline">\(\Sigma\)</span> 에 대해 <span class="math inline">\(V\hat{\boldsymbol{x}}\)</span> 의 속도로 움직이는 <span class="math inline">\(\Sigma'\)</span> 기준틀을 생각하자. <span class="math inline">\(\Sigma\)</span> 기준틀에서의 속도가 <span class="math inline">\(\Sigma'\)</span> 기준틀에서 어떻게 변화하는지 알아보자. <a href="#eq-CFT_lorent_transform_in_1d" class="quarto-xref">식&nbsp;<span>16.6</span></a> 로부터</p>
+<p><span class="math display">\[
+dx = \dfrac{dx'+Vdt'}{\sqrt{1-V^2/c^2}} ,\quad dy=dy',\quad dz=dz',\quad dt = \dfrac{dt'+Vdx'/c^2}{\sqrt{1-V^2/c^2}}
+\]</span></p>
+<p>이며 <span class="math inline">\(\boldsymbol{v}=\dfrac{d\boldsymbol{x}}{dt},\, \boldsymbol{v}'=\dfrac{d\boldsymbol{x}'}{dt'}\)</span> 을 구하면 다음을 얻는다.</p>
+<p><span id="eq-CFT_lorentz_transform_of_velocity_along_x_axis"><span class="math display">\[
+v_x = \dfrac{v_x' + V}{1+ v_x'\dfrac{V}{c^2}},\quad v_y = \dfrac{v_y'\sqrt{1-\dfrac{V^2}{c^2}}}{1+ v_x'\dfrac{V^2}{c^2}}\quad v_z = \dfrac{v_z'\sqrt{1-\dfrac{V^2}{c^2}}}{1+ v_x'\dfrac{V^2}{c^2}}
+\tag{16.7}\]</span></span></p>
+<p>역시 <span class="math inline">\(c\to \infty\)</span> 극한에서 <span class="math inline">\(v_x = v_x'+V,\, v_y=v_y',\, v_z=v_z'\)</span> 을 얻으며 이는 갈릴레이 변환과 동일하다.</p>
+<p>이제 2차원 평면상의 운동을 생각하자. <span class="math inline">\(v_z=v'_z=0\)</span> 이며 <span class="math inline">\(x\)</span> 와 <span class="math inline">\(x'\)</span> 축에 대해 움직이는 각도 <span class="math inline">\(\theta,\,\theta'\)</span> 을 생각하면 <span class="math inline">\(v_x = v\cos \theta,\, v_y = v \sin \theta\)</span>, <span class="math inline">\(v'_x = v'\cos\theta',\, v'_y=v'\sin\theta\)</span> 이다. <a href="#eq-CFT_lorentz_transform_of_velocity_along_x_axis" class="quarto-xref">식&nbsp;<span>16.7</span></a> 로 부터</p>
+<p><span id="eq-CFT-aberration_of_mass"><span class="math display">\[
+\begin{aligned}
+\tan \theta &amp;= \dfrac{v_y}{v_x} = \dfrac{v' \sin \theta' \sqrt{1-V^2/c^2}} {v'\cos \theta' + V}
+\end{aligned}
+\tag{16.8}\]</span></span></p>
+<p>이다. 그런데 <span class="math inline">\(v'=c\)</span> 인 경우, 즉 빛인 경우</p>
+<p><span id="eq-CFT-aberration_of_light"><span class="math display">\[
+\tan\theta = \dfrac{\sqrt{1-V^2/c^2}}{\cos \theta' + V/c}
+\tag{16.9}\]</span></span></p>
+<p>를 얻는다. 이렇게 빛에 대해 기준틀에 따라 빛의 방향이 바뀌는 것을 <strong>광행차 (aberration of light)</strong> 라고 한다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="벡터" class="level2" data-number="16.5">
+<h2 data-number="16.5" class="anchored" data-anchor-id="벡터"><span class="header-section-number">16.5</span> 4-벡터</h2>
+<p>사건 <span class="math inline">\((ct,\,x,\,y,\,z)\)</span> 는 4차원 시공간에서의 반경 벡터로 생각 할 수 있다. 이 벡터를 기술하는데</p>
+<p><span class="math display">\[
+x^0=ct,\quad x^1=x,\quad x^2=y,\quad x^3=z
+\]</span></p>
+<p>로 놓고 <span class="math inline">\((x^0,\,x^1,\,x^2,\,x^3)\)</span> 와 같이 표기하도록 하자. 그리고 이 4 벡터의 길이는 아래와 같이 정한다.</p>
+<p><span class="math display">\[
+\left(x^0\right)^2 - \left(x^1\right)^2 -\left(x^2\right)^2 - \left(x^3\right)^2.
+\]</span></p>
+<p>이 길이는 로렌츠 변환에 대해 불변이다.</p>
 
 
 </section>
