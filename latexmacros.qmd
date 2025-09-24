@@ -19,6 +19,8 @@ format: html
 \newcommand{\A}{\mathbb{A}}
 \newcommand{\im}{\operatorname{im}}
 \newcommand{\rank}{\operatorname{rank}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\sgn}{\operatorname{sgn}}
 
 
 
