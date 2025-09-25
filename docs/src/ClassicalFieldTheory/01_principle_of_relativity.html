@@ -370,7 +370,8 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#sec-CFT_4_vector" id="toc-sec-CFT_4_vector" class="nav-link" data-scroll-target="#sec-CFT_4_vector"><span class="header-section-number">16.5.1</span> 4-벡터와 4-스칼라</a></li>
   <li><a href="#sec-CFT_4_tensor" id="toc-sec-CFT_4_tensor" class="nav-link" data-scroll-target="#sec-CFT_4_tensor"><span class="header-section-number">16.5.2</span> 4-텐서</a></li>
-  <li><a href="#쌍대-텐서" id="toc-쌍대-텐서" class="nav-link" data-scroll-target="#쌍대-텐서"><span class="header-section-number">16.5.3</span> 쌍대 텐서</a></li>
+  <li><a href="#sec-CFT_psedoscala_and_pseudo_vector" id="toc-sec-CFT_psedoscala_and_pseudo_vector" class="nav-link" data-scroll-target="#sec-CFT_psedoscala_and_pseudo_vector"><span class="header-section-number">16.5.3</span> 유사 스칼라와 유사 벡터</a></li>
+  <li><a href="#쌍대-텐서" id="toc-쌍대-텐서" class="nav-link" data-scroll-target="#쌍대-텐서"><span class="header-section-number">16.5.4</span> 쌍대 텐서</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -789,9 +790,26 @@ A^iA_i = g_{ij}A^iA^j = g^{ij}A_iA_j.
 <p><br></p>
 </section>
 </section>
-<section id="쌍대-텐서" class="level3" data-number="16.5.3">
-<h3 data-number="16.5.3" class="anchored" data-anchor-id="쌍대-텐서"><span class="header-section-number">16.5.3</span> 쌍대 텐서</h3>
+<section id="sec-CFT_psedoscala_and_pseudo_vector" class="level3" data-number="16.5.3">
+<h3 data-number="16.5.3" class="anchored" data-anchor-id="sec-CFT_psedoscala_and_pseudo_vector"><span class="header-section-number">16.5.3</span> 유사 스칼라와 유사 벡터</h3>
+<p>3차원 좌표계에서 원점 대칭 변환에 대해 그 부호가 일반적인 스칼라 혹은 벡터와 다를 때 이 스칼라와 벡터를 <strong>유사 스칼라 (pseudo scalar)</strong>, <strong>유사 벡터(pseudo vector)</strong> 라고 한다. 유사 벡터는 <strong>축벡터 (axial vector)</strong> 라고도 한다. 3차원 공간에서 스칼라는 거울반사애 대해 부호가 바뀌지 않으며, 벡터는 부호가 바뀌지만 유사 스칼라는 부호가 바뀌며 유사벡터는 부호가 바뀌지 않는다. 대표적인 유사 스칼라는 세 벡터에 대해 <span class="math inline">\(\boldsymbol{a\cdot}(\boldsymbol{b}\times \boldsymbol{c})\)</span> 가 있으며 유사벡터는 각운동량 벡터 <span class="math inline">\(\boldsymbol{L}=\boldsymbol{r}\times \boldsymbol{v}\)</span> 가 있다.</p>
+<p><br></p>
+</section>
+<section id="쌍대-텐서" class="level3" data-number="16.5.4">
+<h3 data-number="16.5.4" class="anchored" data-anchor-id="쌍대-텐서"><span class="header-section-number">16.5.4</span> 쌍대 텐서</h3>
 <p><span class="math inline">\(A^{ij}\)</span> 가 반대칭 텐서 일 때 <span class="math inline">\(A^{ij}\)</span> 와 <span class="math inline">\(A^{\ast ij}:=\frac{1}{2} \varepsilon^{ijkl}A_{kl}\)</span> 은 서로에 대한 <strong>쌍대 텐서 (dual tensor)</strong> 라고 한다. 같은 방식으로 <span class="math inline">\(A^j\)</span> 에 대해 <span class="math inline">\(A^{\ast i} = \varepsilon^{ijkl}A_m\)</span> 은 쌍대 텐서이다.</p>
+<p>반대칭 4-텐서 <span class="math inline">\(A^{ij}\)</span> 는 아래의 형태를 갖는다.</p>
+<p><span id="eq-CFT_matrix_representation_of_antisymmetric_tensor"><span class="math display">\[
+\left[A^{ij}\right] = \left[\,\begin{array}{rrrr} 0 &amp; p_x &amp; p_y &amp; p_z \\ -p_x &amp; 0 &amp; -a_z &amp; a_y \\ -p_y &amp; a_z &amp; 0 &amp; -a_x \\ -p_z &amp; -a_y &amp; a_x &amp; 0\end{array} \,\right].
+\tag{16.28}\]</span></span></p>
+<p>이에 대해 텐서의 인덱스 규칙을 사용하면 공변텐서는 아래와 같다.</p>
+<p><span id="eq-CFT_matrix_representation_of_antisymmetric_tensor"><span class="math display">\[
+\left[A_{ij}\right] = \left[\,\begin{array}{rrrr} 0 &amp; -p_x &amp; -p_y &amp; -p_z \\ p_x &amp; 0 &amp; -a_z &amp; a_y \\ p_y &amp; a_z &amp; 0 &amp; -a_x \\ p_z &amp; -a_y &amp; a_x &amp; 0\end{array} \,\right].
+\tag{16.29}\]</span></span></p>
+<p>그렇다면,</p>
+<p><span id="eq-CFT_matrix_representation_of_antisymmetric_tensor"><span class="math display">\[
+\left[A^{\ast ij}\right] = \left[\,\begin{array}{rrrr} 0 &amp; -a_x &amp; -a_y &amp; -a_z \\ a_x &amp; 0 &amp; -p_z &amp; p_y \\ a_y &amp; p_z &amp; 0 &amp; -p_x \\ a_z &amp; -p_y &amp; p_x &amp; 0\end{array} \,\right].
+\tag{16.30}\]</span></span></p>
 
 
 </section>
