@@ -1,0 +1,43 @@
+\documentclass[border=3pt,tikz]{standalone}
+% \usepackage[margin=0.25in]{geometry}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+\usepackage{amsmath}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta} % for arrow size
+\pgfplotsset{
+    axis line origin/.style args={#1,#2}{
+        x filter/.append code={ % Check for empty or filtered out numbers
+                \ifx\pgfmathresult\empty\else\pgfmathparse{\pgfmathresult-#1}\fi
+            },
+        y filter/.append code={
+                \ifx\pgfmathresult\empty\else\pgfmathparse{\pgfmathresult-#2}\fi
+            },
+        xticklabel=\pgfmathparse{\tick+#1}\pgfmathprintnumber{\pgfmathresult},
+        yticklabel=\pgfmathparse{\tick+#2}\pgfmathprintnumber{\pgfmathresult},
+        every axis/.append style={line width=1.3pt}
+
+    }
+}
+\begin{document}
+\begin{tikzpicture}[scale=1, rotate=0]
+    \begin{axis}[
+    axis lines=middle,
+    xmin = -0.5, 
+    xmax = 5,
+    ymin = -2,
+    ymax = 5,
+    domain = 0.3:4.7,
+    samples = 100,
+    ytick = \empty,
+    xtick = {1},
+    xticklabels = {$2b/a$},
+    x label style={at={(current axis.right of origin)},anchor=west},
+    y label style={at={(current axis.above origin)},anchor=south},
+    ylabel={$V(r)$ },
+    xlabel={$r$}
+    ]
+    \addplot [blue, line width=1.2]{-2.0/x + 1.0/x^2};
+    \end{axis}
+    \end{tikzpicture}
+\end{document}

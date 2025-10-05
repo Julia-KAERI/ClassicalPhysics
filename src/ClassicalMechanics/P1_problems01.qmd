@@ -1,0 +1,248 @@
+---
+title: "문제 모음"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
+## David Tong's Dynamics and Relativity Example
+
+### Example Sheet 01
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_tong_dynamics_and_relativity_exsheet_1_1}
+
+#### Dr. Tong's Dynamics and Relativity 1.1
+
+1차원 공간에서 두 기준틀 $S$ 와 $S'$ 은 각각 $(x,\,t)$, $(x',\,t')$ 의 좌표계를 가진다. 두 좌표계는 아래의 관계로 연관된된다.
+
+$$
+t'=t,\qquad x'=f(x,\,t).
+$$
+
+$S$ 기준틀에서의 입자의 경로가 $x=x(t)$ 이며 속도와 가속도는 각각 $v=\dot{x},\,a=\ddot{x}$ 이다. $S'$ 기준틀에서는 $x'=f(x(t),\,t)$ 이다. Chain rule 을 사용하여 $S'$ 기준틀에서의 속도와 가속도가 아래와 같다는 것을 보여라.
+
+$$
+\begin{aligned}
+\dfrac{dx'}{dt'} &= v\dfrac{\partial f}{\partial x} + \dfrac{\partial f}{\partial t} \\[0.3em]
+\dfrac{d^2x'}{dt^2} &= a \dfrac{\partial f}{\partial x} + v^2 \dfrac{\partial^2 f}{\partial x^2} + 2v \dfrac{\partial^2 f}{\partial x \partial t} + \dfrac{\partial^2 f}{\partial t^2}.
+\end{aligned}
+$$
+
+두 기준틀 $S,\,S'$ 이 모두 관성 기준틀이라면 $f$ 가 $\partial^2f /\partial x^2 = \partial^2 f/\partial x \partial t = \partial^2 f/\partial t^2. = 0$ 이어야 하는 이유를 설명하라. 이 성질을 가지는 가장 일반적인 $f$ 의 형태는 무엇인가? 이 결과를 해석하라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$t'=t$ 임을 생각하자. $S'$ 기준틀에서의 속도와 가속도는
+
+$$
+\begin{aligned}
+\dfrac{d x'}{d t'} &= \dfrac{d f(x,\,t)}{dt} = \dfrac{\partial f}{\partial x}\dfrac{dx}{dt} + \dfrac{\partial f}{\partial t} = v\dfrac{\partial f}{\partial x} + \dfrac{\partial f}{\partial t}. \\[0.3em]
+\dfrac{d^2 x'}{dt'^2} &= \dfrac{d}{dt}\left(\dfrac{dx'}{dt}\right) = a\dfrac{\partial f}{\partial x} + v \dfrac{d}{dt}\left(\dfrac{\partial f}{\partial x}\right) + \dfrac{d}{dt}\left(\dfrac{\partial f}{\partial t}\right) \\[0.3em]
+&= a \dfrac{\partial f}{\partial x} + v\dfrac{\partial^2 f}{\partial x^2}\dfrac{dx}{dt} + v\dfrac{\partial^2 f}{\partial x\partial t} + \dfrac{\partial^2 f}{\partial x \partial t}\dfrac{dx}{dt} + \dfrac{\partial^2 f}{\partial t^2} \\[0.3em]
+&= a \dfrac{\partial f}{\partial x} + v^2 \dfrac{\partial^2 f}{\partial x^2} + 2v \dfrac{\partial^2 f}{\partial x \partial t} + \dfrac{\partial^2 f}{\partial t^2}.
+\end{aligned}
+$$
+
+이 두 좌표계가 모두 관성좌표계이려면 $a=0$ 일 때 $a'=\ddot{x}'=0$ 이어야 하며 이것은 $v$ 에 무관해야 하므로 $\partial^2f /\partial x^2 = \partial^2 f/\partial x \partial t = \partial^2 f/\partial t^2. = 0$ 이어야 한다. 
+
+이것이 성립하기 위한 가장 일반적인 형태는 $f$ 가 $x,\,t$ 각각에 대해 1차식인, 즉 $f(x,\,t) = c_1 x + c_2 t + c_0$ 형태일 때 이다. 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_tong_dynamics_and_relativity_exsheet_1_2}
+
+#### Dr. Tong's Dynamics and Relativity 1.2
+
+입자에 가해지는 힘 $\bf{F}$ 가 아래와 같다.
+
+$$
+\bf{F} = \left(- \dfrac{a}{r^2}  + \dfrac{2b}{r^3}\right)\hat{\bf{r}}.
+$$
+
+여기서 $a>0,\,b>0$ 이다. $\bf{F}=-\nabla V$ 인 포텐셜 $V(r)$ 을 구하여 $\bf{F}$ 가 보존력임을 보여라.
+
+포텐셜 $V(r)$ 을 그리고 서로 다른 시작 위치와 시작 속도를 고려하여 가능한 운동을 기술하라. 만약 입자가 $r=2b/a$ 위치에서 시작했다면 무한대로 탈출할 수 있기 위한 최소한의 속도는 얼마인가?
+
+:::
+
+</div>
+
+::: {.solution}
+
+포텐셜 $V(r)$ 은
+
+$$
+V(r) = - \dfrac{a}{r} + \dfrac{b}{r^2}
+$$
+
+이며 아래와 같다.
+
+![$V(x)](images/Tong_Dynamics_and_Relativity_Example/potential.png){#fig-CM_tong_exercise_1_1_1 width=300}
+
+나머지는 trivial.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_tong_dynamics_and_relativity_exsheet_1_4}
+
+#### Dr. Tong's Dynamics and Relativity 1.4
+
+오랜 옛날 멀리 떨어진 은하계에 데스 스타가 건설되었으며, 데스스타(Death star) 로부터 $\bf{r}$ 만큼 떨어진 입자가 느끼는 힘에 의한 가속도는 상수 $\lambda$ 에 대해 다음과 같다.
+
+$$
+\ddot{\bf{r}} = \lambda \bf{r} \times \dot{\bf{r}}.
+$$
+
+이 입자는 동일한 속력으로 움직이며, 가속도의 크기가 상수임을 보여라.
+
+($a$) 데스스타로부터의 거리 $\bf{r}=R\hat{\bf{r}}$ 에서 방사상으로 속력 $v$ 로 발사된 입자의 경로가 다음과 같음을 보여라.
+
+$$
+\bf{r} = (vt + R)\hat{\bf{r}}.
+$$
+
+($b$) $\bf{r\cdot r}$ 의 이차 미분을 고려하여, 데스스타에 의한 역장에 의해 움직이는 모든 입자는 데스 스타의 중심으로부터의 거리가 아래와 같이 주어짐을 보여라.
+
+$$
+r^2 = v^2 (t-t_0) + r_0^2.
+$$
+
+여기서 $t_0,\,r_0$ 는 상수이다. $\bf{r\cdot}\dot{\bf{r}}$ 에 대한 식을 얻고 $\|\ddot{\bf{r}}\| = \lambda v r_0$ 임을 보여라.
+
+:::
+
+</div>
+
+::: {.proof}
+
+주어진 식으로부터 $\ddot{\bf{r}}\bf{\cdot}\dot{\bf{r}}= \lambda (\bf{r}\times \dot{\bf{r}})\bf{\cdot}\dot{\bf{r}}=0$ 이며 $\ddot{\bf{r}}\bf{\cdot}\dot{\bf{r}} = \frac{1}{2} \frac{d}{dt}\|\dot{\bf{r}}\|^2 = \frac{1}{2}\frac{dv^2}{dt}=0$ 이므로 $v=\|\dot{\bf{r}}\|$ 은 상수이다. 또한
+
+$$
+\begin{aligned}
+\dfrac{d\|\ddot{\bf{r}}\|^2}{dt} = \dfrac{d}{dt}(\ddot{\bf{r}}\bf{\cdot}\ddot{\bf{r}}) &=2\lambda \ddot{\bf{r}}\bf{\cdot}(\dot{\bf{r}}\times \ddot{\bf{r}})=0
+\end{aligned}
+$$
+
+이므로 가속도의 크기도 상수이다.
+
+($a$) $t=0$ 에서 $\ddot{\bf{r}} = \lambda R\hat{\bf{r}} \times v\hat{\bf{r}}=\bf{0}$ 이므로 속도와 방향이 모두 $\hat{\bf{r}}$ 방향으로 유지된다. 따라서 가속도가 $0$ 이므로 $\hat{\bf{r}}$ 방향 등속 운동이다. 
+
+($b$) 주어진 조건으부터 
+
+$$
+\begin{aligned}
+\dfrac{dr^2}{dt} = \dfrac{d|\bf{r}\|^2}{dt} &= 2\bf{r \cdot}\dot{\bf{r}}, \\[0.3em]
+\dfrac{d^2r^2}{dt^2} = \dfrac{d^2\|\bf{r}\|^2}{dt^2} &= 2v^2 + 2\bf{r \cdot} \ddot{\bf{r}} = 2v^2
+\end{aligned}
+$$
+
+이다. 위 식의 두번째 식은 $r^2$ 에 대한 2차 미분방정식이며 $v$ 가 운동상수이므로 
+
+$$
+r^2 = v^2(t-t_0)^2 + r_0^2
+$$
+
+이다. $\bf{r\cdot}\dot{\bf{r}} = \dfrac{1}{2}\dfrac{dr^2}{dt} = v^2(t-t_0)$ 이며 
+
+$$
+\begin{aligned}
+\|\ddot{\bf{r}}\|^2 &= \lambda^2(\bf{r} \times \dot{\bf{r}}) \bf\cdot(\bf{r} \times \dot{\bf{r}}) = \lambda^2 (\dot{\bf{r}} \times (\bf{r} \times \dot{\bf{r}})) \bf\cdot \bf{r} \\[0.3em]
+&=\lambda^2 \left[ v^2 \bf{r} - (\bf{r}\bf\cdot \dot{\bf{r}}) \dot{\bf{r}}\right] \bf\cdot \bf{r} \\[0.3em]
+&= \lambda^2 (v^2r^2 - v^4(t-t_0)^2) = \lambda^2v^2r_0^2
+\end{aligned}
+$$
+
+이다. 따라서 $\|\ddot{\bf{r}}\| = \lambda v r_0$.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_tong_dynamics_and_relativity_exsheet_1_5}
+
+#### Dr. Tong's Dynamics and Relativity 1.5
+
+질량 $m$, 전하 $q$, 위치 $\bf{x}$ 인 입자가 수평방향의 균일한 자기장 $\bf{B}$ 에서 움직인다. 이 입자는 당연히 중력 $\bf{g}$ 의 영향도 수직 아래 방향으로 받는다. 운동방정식을 쓰고 $\bf{x} \mapsto \bf{x}+\bf{x}_0$ 병진에 대해 불변임을 보여라. 이로부터 아래의 식을 얻어라.
+
+$$
+\dot{\bf{x}} = \alpha \bf{x} \times \bf{n} + \bf{g}t + \bf{a}.
+$$
+
+여기서 $\alpha = qB/m$ 이며 $\bf{n}$ 은 $\bf{B}$ 방향의 단위벡터이고 $\bf{a}$ 는 상수벡터이다. 적당한 원점을 잡아 $\bf{a} = a\bf{n}$ 이 될 수 있음을 보여라.
+
+적당한 좌표축을 잡으면 입자가 수평방향으로 일정한 속도로 움직이는 나선 운동을 함을 보여라. 
+
+적당햔 상수 전기장 $\bf{E}$ 를 가하면 나선 운동을 원운동으로 바꿀 수 있다. $\bf{E}$ 의 크기와 방향을 구하라.
+
+
+:::
+
+</div>
+
+::: {.proof}
+
+운동방정식은 아래와 같다.
+
+$$
+\ddot{\bf{x}} = \bf{g} + \dfrac{qB}{m}\dot{\bf{x}}\times \bf{n}
+$$
+
+$\bf{x}' = \bf{x} + \bf{x}_0$ 인 병진운동을 생각하면 $\dot{\bf{x}}'=\dot{\bf{x}}$,  $\ddot{\bf{x}}'=\ddot{\bf{x}}$ 이므로 운동방정식이 불변이다. 이 식을 $t$ 에 대해 적분하면
+
+$$
+\dot{\bf{x}}(t) = \bf{g}t + \underbrace{\dfrac{qB}{m}}_{\Large =\alpha} \bf{x}(t)\times \bf{n} + \underbrace{\dot{\bf{x}}(0)- \bf{g}t_0 - \dfrac{qB}{m} \bf{x}(0)\times \bf{n}}_{\Large =\bf{a}}
+$$
+
+를 얻는다. $\dot{\bf{x}}(0)$ 를 $\bf{n}$ 성분 $a$ 와 $\bf{n}$ 에 수직인 성분 $b$ 로 분리하고 $a,\,b\bf{n}_\perp$ 를 아래와 같이 정하자.
+
+$$
+\bf{a} = (\underbrace{\bf{n}\cdot \dot{\bf{x}}(0)}_{\Large = a})\bf{n}  + \underbrace{[\dot{\bf{x}}(0)-(\bf{n}\cdot \dot{\bf{x}}(0))\bf{n}] - \bf{g}t_0 - \dfrac{qB}{m} \bf{x}(0)\times \bf{n}}_{\Large = b\bf{n}_\perp}.
+$$
+
+$a$, $b$ 는 상수이며, 운동방정식은
+
+$$
+\dot{\bf{x}} = \bf{g}t + \alpha \bf{x} \times \bf{n} + a\bf{n} + b\bf{n}_\perp
+$$
+
+이다. $\bf{x} \mapsto \bf{x} + \bf{c}$ 변환을 생각하자. 
+
+$$
+\dot{\bf{x}'} = \bf{g}t + \alpha \bf{x}' \times \bf{n} + a\bf{n} - \alpha \bf{c} \times \bf{n} + b\bf{n}_\perp
+$$
+
+이며 여기서 $- \alpha \bf{c} \times \bf{n} + b\bf{n}_\perp = \bf{0}$ 이 되도록 $\bf{c}$ 를 정하면 된다. 
+
+
+... to be continued.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_tong_dynamics_and_relativity_exsheet_1_6}
+
+#### Dr. Tong's Dynamics and Relativity 1.6
+
+
+
+
+:::
+
+</div>

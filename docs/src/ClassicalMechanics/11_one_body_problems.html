@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/ClassicalMechanics/04_canonical_transform.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -140,7 +141,9 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">고전 역학과 전자기학</a> 
     </div>
@@ -209,6 +212,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -223,13 +232,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -246,25 +255,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/01_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">필요한 수학적 사실들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">필요한 수학적 사실들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/electrostatics_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">전기장과 쿨롱힘</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">전기장과 쿨롱힘</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/electrostatics_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">전기 포텐셜</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">전기 포텐셜</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/electrostatics_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">도체와 전기장</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">도체와 전기장</span></span></a>
   </div>
 </li>
       </ul>
@@ -281,13 +290,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -304,7 +313,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -331,9 +340,9 @@ window.Quarto = {
   </ul></li>
   <li><a href="#차원-조화진동자" id="toc-차원-조화진동자" class="nav-link" data-scroll-target="#차원-조화진동자"><span class="header-section-number">5.2</span> 1차원 조화진동자</a>
   <ul class="collapse">
-  <li><a href="#단순조화진동자" id="toc-단순조화진동자" class="nav-link" data-scroll-target="#단순조화진동자"><span class="header-section-number">5.2.1</span> 단순조화진동자</a></li>
-  <li><a href="#감쇠-조화-진동자damped-harmonic-osciilator" id="toc-감쇠-조화-진동자damped-harmonic-osciilator" class="nav-link" data-scroll-target="#감쇠-조화-진동자damped-harmonic-osciilator"><span class="header-section-number">5.2.2</span> 감쇠 조화 진동자(Damped harmonic osciilator)</a></li>
-  <li><a href="#강제-조화-진동자" id="toc-강제-조화-진동자" class="nav-link" data-scroll-target="#강제-조화-진동자"><span class="header-section-number">5.2.3</span> 강제 조화 진동자</a></li>
+  <li><a href="#sec-CM_1d_sho" id="toc-sec-CM_1d_sho" class="nav-link" data-scroll-target="#sec-CM_1d_sho"><span class="header-section-number">5.2.1</span> 단순조화진동자</a></li>
+  <li><a href="#sec-CM_1d_dsho" id="toc-sec-CM_1d_dsho" class="nav-link" data-scroll-target="#sec-CM_1d_dsho"><span class="header-section-number">5.2.2</span> 감쇠 조화 진동자</a></li>
+  <li><a href="#sec-CM_forced_dsho" id="toc-sec-CM_forced_dsho" class="nav-link" data-scroll-target="#sec-CM_forced_dsho"><span class="header-section-number">5.2.3</span> 강제 조화 진동자</a></li>
   <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1"><span class="header-section-number">5.2.4</span> 연습문제</a></li>
   </ul></li>
   <li><a href="#sec-1d_motion_under_potential" id="toc-sec-1d_motion_under_potential" class="nav-link" data-scroll-target="#sec-1d_motion_under_potential"><span class="header-section-number">5.3</span> 일차원 포텐셜에서의 일차원 운동</a></li>
@@ -487,13 +496,12 @@ t \approx  \dfrac{v_T}{g} \ln (2 e^{gh/{v_T}^2}) = \dfrac{v_T}{g}\ln (2) + \dfra
 </section>
 <section id="차원-조화진동자" class="level2 page-columns page-full" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="차원-조화진동자"><span class="header-section-number">5.2</span> 1차원 조화진동자</h2>
-<section id="단순조화진동자" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="단순조화진동자"><span class="header-section-number">5.2.1</span> 단순조화진동자</h3>
-<p>1차원 단순조화진동자(simple harmonic osciilator, 이하 SHO)의 경우 운동방정식이 <span class="math inline">\(m\ddot{x} = -kx\)</span> 이 며 그 해는 진동자의 <strong>고유 진동수(natural frequency)</strong> <span class="math inline">\(\omega_0 :=\sqrt{\dfrac{k}{m}}\)</span> 에 대해 <span class="math inline">\(x(t) = A\cos (\omega_0 t+\phi_0)\)</span> 라는 것을 안다. <span class="math inline">\(A\)</span> 와 <span class="math inline">\(\phi_0\)</span> 는 초기조건 <span class="math inline">\(x(t_0),\, v(t_0)\)</span> 에 의해 정해지는 상수이다.</p>
-<p><br></p>
+<section id="sec-CM_1d_sho" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="sec-CM_1d_sho"><span class="header-section-number">5.2.1</span> 단순조화진동자</h3>
+<p>1차원 단순조화진동자(simple harmonic osciilator, 이하 SHO)의 경우 운동방정식이 <span class="math inline">\(m\ddot{x} = -kx\)</span> 이 며 그 해는 진동자의 <strong>고유 진동수(natural frequency)</strong> <span class="math inline">\(\omega_0 :=\sqrt{k/m}\)</span> 에 대해 <span class="math inline">\(x(t) = A\cos (\omega_0 t+\phi_0)\)</span> 라는 것을 안다. <span class="math inline">\(A\)</span> 와 <span class="math inline">\(\phi_0\)</span> 는 초기조건 <span class="math inline">\(x(t_0),\, v(t_0)\)</span> 에 의해 정해지는 상수이다.</p>
 </section>
-<section id="감쇠-조화-진동자damped-harmonic-osciilator" class="level3 page-columns page-full" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="감쇠-조화-진동자damped-harmonic-osciilator"><span class="header-section-number">5.2.2</span> 감쇠 조화 진동자(Damped harmonic osciilator)</h3>
+<section id="sec-CM_1d_dsho" class="level3 page-columns page-full" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="sec-CM_1d_dsho"><span class="header-section-number">5.2.2</span> 감쇠 조화 진동자</h3>
 <p>이제 앞서의 viscouse drag 처럼 속도에 비례하는(하지만 방향은 반대힌) 힘이 작용한다고 하자. 앞으로의 계산의 편의를 위해 앞의 경우와는 달리 비례상수를 <span class="math inline">\(2m\beta\)</span> 로 놓는다. 그렇다면 운동방정식은</p>
 <p><span class="math display">\[
 \ddot{x} + 2\beta \dot{x} + \omega_0^2 x = 0
@@ -526,8 +534,8 @@ x(t) = (A_1+A_2t)e^{-\beta t}
 <p>이다. 세가지 경우 모두 <span class="math inline">\(A_1,\,A_2\)</span> 는 초기조건 의해 정해진다.</p>
 <p><br></p>
 </section>
-<section id="강제-조화-진동자" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="강제-조화-진동자"><span class="header-section-number">5.2.3</span> 강제 조화 진동자</h3>
+<section id="sec-CM_forced_dsho" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="sec-CM_forced_dsho"><span class="header-section-number">5.2.3</span> 강제 조화 진동자</h3>
 <p>DHO 에 어떤 시간에 의존하는 힘 <span class="math inline">\(F(t)\)</span> 가 계속 가해진다고 하자. 이 경우 운동방정식은</p>
 <p><span id="eq-CM_ddho_emo0"><span class="math display">\[
 m\ddot{x} = -2m\beta \dot{x} -k x + F(t)
@@ -1199,13 +1207,14 @@ a(t) = c_1 e^{\sqrt{\Lambda/3} t} + c_2 e^{-\sqrt{\Lambda/3}t}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

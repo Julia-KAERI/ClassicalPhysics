@@ -21,7 +21,8 @@ book:
       - src/ClassicalMechanics/12_two_or_three_bodies_problems.qmd
 
       - src/ClassicalMechanics/A_proofs.qmd
-    
+
+      - src/ClassicalMechanics/P1_problems01.qmd    
     - part: src/Mechanics_and_Symmetry/00_index.qmd
       chapters:
       - src/Mechanics_and_Symmetry/01_experimental_facts.qmd

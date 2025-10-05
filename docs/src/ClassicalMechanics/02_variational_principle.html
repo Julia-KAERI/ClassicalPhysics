@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -54,14 +54,15 @@ div.csl-indent {
 <link href="../../src/ClassicalMechanics/01_basic_principles.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +105,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -160,7 +161,9 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">고전 역학과 전자기학</a> 
     </div>
@@ -229,6 +232,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -243,13 +252,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -266,25 +275,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/01_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">필요한 수학적 사실들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">필요한 수학적 사실들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/electrostatics_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">전기장과 쿨롱힘</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">전기장과 쿨롱힘</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/electrostatics_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">전기 포텐셜</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">전기 포텐셜</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/electrostatics_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">도체와 전기장</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">도체와 전기장</span></span></a>
   </div>
 </li>
       </ul>
@@ -301,13 +310,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -324,7 +333,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -622,7 +631,7 @@ y(1+\dot{y}^2) = \dfrac{1}{2gc^2} = 2a=\text{constant}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-해밀턴의 원리 (최소 작용의 원리)
+<span class="screen-reader-only">중요</span>해밀턴의 원리 (최소 작용의 원리)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -651,8 +660,8 @@ S := \int_{t_1}^{t_2} L(\boldsymbol{q},\, \dot{\boldsymbol{q}}, t)\, dt
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="nonholonomic-구속계-과-holonomic-구속계"><span class="header-section-number">2.3.1</span> Nonholonomic 구속계 과 holonomic 구속계</h3>
 <p>Nonholonomic system 을 다룰 때 holonomic system 과의 차이점.</p>
 <ul>
-<li><p>해밀턴의 원리를 이용해서든 달랑베르 원리(D’Alembert’s principle)을 이용해서든 holonomic 구속 조건에서 라그랑쥬 방정식을 얻을 때, holonomic 구속 조건은 맨 마지막에 가서 변수들의 variation 이 독립적이라는 것을 가정 할 때 나온다. Holonomic 구속 조건이 부여된 시스템에서는 당장의 일반화된 좌표가 독립적이지 않더라도 <span class="math inline">\(f(q_1,\ldots,\,q_n,\,t)=0\)</span> 꼴의 구속 조건에 대한 방정식을 통해 독립적인 일반화된 좌표계를 구성 할 수 있는데, nonholonomic 구속조건에서는 일반적으로 이것이 불가능하다.</p></li>
-<li><p>변동 경로는 <span class="math inline">\(y_i (x,\,\alpha) = y_i (x,\,0)+\alpha \eta_i (x)\)</span> 형태로 표현된다. 그리고 <span class="math inline">\(\delta y_i\)</span> 는 실제 경로와 이웃의 가상 경로의 가상 변위를 의미한다. 독립적인 일반화된 좌표계 조건에서는 마지막 최종 변경 후의 점(points) 만 중요하지만 좌표계가 독립적이지 않으면 변위가 구속조건을 따르며 변화했는지 여부가 매우 중요하다.</p></li>
+<li><p>해밀턴의 원리를 이용해서든 달랑베르 원리(D’Alembert’s principle)을 이용해서든 holonomic 구속 조건에서 라그랑쥬 방정식을 얻을 때, holonomic 구속 조건은 맨 마지막에 가서 변수들의 variation 이 독립적이라는 것을 가정 할 때 나온다. Holonomic 구속 조건이 부여된 시스템에서는 당장의 일반화된 좌표가 독립적이지 않더라도 <span class="math inline">\(f(q_1,\ldots,\,q_n,\,t)=0\)</span> 꼴의 구속 조건에 대한 방정식을 통해 독립적인 일반화된 기준틀을 구성 할 수 있는데, nonholonomic 구속조건에서는 일반적으로 이것이 불가능하다.</p></li>
+<li><p>변동 경로는 <span class="math inline">\(y_i (x,\,\alpha) = y_i (x,\,0)+\alpha \eta_i (x)\)</span> 형태로 표현된다. 그리고 <span class="math inline">\(\delta y_i\)</span> 는 실제 경로와 이웃의 가상 경로의 가상 변위를 의미한다. 독립적인 일반화된 기준틀 조건에서는 마지막 최종 변경 후의 점(points) 만 중요하지만 변수들이 독립적이지 않으면 변위가 구속조건을 따르며 변화했는지 여부가 매우 중요하다.</p></li>
 </ul>
 <p>위의 두가지 경우를 고려하면 일반적으로 non-holonomic 구속계를 다루기가 매후 힘들다는 것을 예상 할 수 있다. 그러나 그 가운데 특별한 경우는 어느정도 다룰 수 있는데 그것을 이제 확인해 보자.</p>
 <p><br></p>
@@ -761,7 +770,7 @@ r\dot{\theta} = \dot{x}
 <section id="변분-방법의-장점" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="변분-방법의-장점"><span class="header-section-number">2.4</span> 변분 방법의 장점</h2>
 <p>우리는 역학을 기술하는 세가지 방법, 즉 (<span class="math inline">\(1\)</span>) 뉴턴의 3 원리에 의한 뉴턴 역학, (<span class="math inline">\(2\)</span>) 달랑베르 원리에 따른 달랑베르 역학, (<span class="math inline">\(3\)</span>) 해밀턴의 원리와 변분법을 이용한 변분 역학 에 대해 알아보았다.</p>
-<p>앞서 변분 역학을 non-holonomic 구속 조건을 포함하도록 확장했지만 변분 역학의 가장 큰 장점은 monogenic 조건과 holonomic 구속 조건에서 독립적인 일반화된 좌표를 사용할 때 드러난다. 변분 역학은 간결하고 우아할 뿐만 아니라 특정한 일반화된 좌표계에 구애되지 않고 운동에너지와 포텐셜 에너지라는 물리량만을 이용한다는 장점이 있다. 여기서 나온 식들은 좌표의 변환에 대해 불변이다. 즉 <span class="math inline">\(\boldsymbol{q} = (x,\,y,\,z)\)</span> 이든 <span class="math inline">\(\boldsymbol{q} = (r,\,\theta,\, \varphi)\)</span> 이든 오일러-라그랑쥬 방정식의 형태는 동일하다.</p>
+<p>앞서 변분 역학을 non-holonomic 구속 조건을 포함하도록 확장했지만 변분 역학의 가장 큰 장점은 monogenic 조건과 holonomic 구속 조건에서 독립적인 일반화된 좌표를 사용할 때 드러난다. 변분 역학은 간결하고 우아할 뿐만 아니라 특정한 일반화된 기준틀에 구애되지 않고 운동에너지와 포텐셜 에너지라는 물리량만을 이용한다는 장점이 있다. 여기서 나온 식들은 좌표의 변환에 대해 불변이다. 즉 <span class="math inline">\(\boldsymbol{q} = (x,\,y,\,z)\)</span> 이든 <span class="math inline">\(\boldsymbol{q} = (r,\,\theta,\, \varphi)\)</span> 이든 오일러-라그랑쥬 방정식의 형태는 동일하다.</p>
 <p>변분 역학의 장점 가운데 하나는 라그랑지안 형식이 역학이 아닌 시스템에까지 확장 될 수 있다는 것이다. 이 확장은 전기장, 전자기장, 기본입자의 장의 성질까지 확장된다. 이 확장된 영역에서 이미 풀어놓은 시스템이 있다면 자연스럽게 변분역학에 적용 될 수 있다.</p>
 <p><br></p>
 </section>
@@ -787,7 +796,6 @@ p_j = \dfrac{\partial L}{\partial \dot{q}_j}. }
 </div>
 </div>
 </div>
-<p><br></p>
 <p>자유도가 <span class="math inline">\(n\)</span> 개인 시스템은 시간에 대한 2차 미분방정식 <span class="math inline">\(n\)</span> 개로 표현되며, <span class="math inline">\(2n\)</span> 개의 적분상수를 필요로 한다. 이들은 대개 초기조건으로부터 얻어지며 보통 시간 <span class="math inline">\(t=t_0\)</span> 에 대해 각각 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(q_j(t_0)\)</span> 와 <span class="math inline">\(\dot{q}_j(t_0)\)</span> 값이다. 그러나 상당수의 경우 (아마도 대부분의 경우) 이것들이 정확하게 풀리지 않는다. 하지만 완전한 해가 얻어질 수 없더라도 중요한 물리를 얻을 수 있는 경우가 있다. 이 때 중요한 것이 소위 제일적분이다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -796,16 +804,17 @@ p_j = \dfrac{\partial L}{\partial \dot{q}_j}. }
 </div>
 <div class="callout-body-container">
 <div id="def-CM_first_integral_and_constant_of_motion" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.3 (제일적분 과 운동 상수)</strong></span> 미분방정식으로 기술되는 물리계에서 그 경로 전체에 대해 어떤 위상의 좌표 즉 일반화된 좌표와 운동량, 그리고 시간에 대한 함수가 그 값이 일정할 때 이를 <strong>제일적분(first integral)</strong> 라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 2.3 (제일적분 과 운동 상수)</strong></span> 미분방정식으로 기술되는 물리계에서 그 경로 전체에 대해 어떤 위상의 좌표 즉 일반화된 좌표와 운동량, 그리고 시간에 대한 함수 <span class="math inline">\(f = f(\boldsymbol{q},\,\dot{\boldsymbol{q}},\,t)\)</span> 에 대해 <span class="math inline">\(\dfrac{df}{dt}=0\)</span> 일 때 <span class="math inline">\(f\)</span> 를 이 계의 <strong>제일적분(first integral)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
 </div>
-<p>따라서 제일적분은 아래 <span class="math inline">\(f\)</span> 와 같은 형태의 함수이다.</p>
+<p>즉 제일적분 <span class="math inline">\(f\)</span> 는 다음을 만족한다.</p>
 <p><span class="math display">\[
-f(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t) = \text{constant}.
+\dfrac{d f(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)}{dt} = \sum_i \left(\dfrac{\partial f}{\partial t}\dot{q}_i + \dfrac{\partial f}{\partial \dot{q}_i}\ddot{q}_i \right) + \dfrac{\partial f}{\partial t} = 0.
 \]</span></p>
-<p><br></p>
+<section id="전자기장에서의-정준운동량" class="level4">
+<h4 class="anchored" data-anchor-id="전자기장에서의-정준운동량"><strong>전자기장에서의 정준운동량</strong></h4>
 <p>일반화된 좌표에 대한 정준운동량 <span class="math inline">\(p_j\)</span> 는 선형 운동량의 차원이 아닌 다른 차원을 가질 수 있다. 또한 속도-의존적 포텐셜을 가진 시스템 에서는 소위 역학적 운동량(<span class="math inline">\(m\boldsymbol{v}\)</span>)과 다른 값을 가진다. 예를 들어 전자기장 에서의 입자계의 라그랑지안은 다음과 같이 주어진다. (아래의 <span class="math inline">\(e_i\)</span> 는 <span class="math inline">\(i\)</span> 번째 입자의 전하(charge) 이다.)</p>
 <p><span class="math display">\[
 L = \sum_i \dfrac{1}{2} m_i {\dot{r}_i}^2 - \sum_i e_i \phi(x_i) + \sum_i {e_i} \boldsymbol{A}(x_i) \cdot \dot{\boldsymbol{r}}_i\;.
@@ -814,11 +823,14 @@ L = \sum_i \dfrac{1}{2} m_i {\dot{r}_i}^2 - \sum_i e_i \phi(x_i) + \sum_i {e_i} 
 <p><span class="math display">\[
 p_{ix} = \dfrac{\partial L}{\partial \dot{x}_i}= m_i \dot{x}_i + \dfrac{e_i A_x}{c}
 \]</span></p>
+</section>
+<section id="순환-좌표" class="level4">
+<h4 class="anchored" data-anchor-id="순환-좌표"><strong>순환 좌표</strong></h4>
+<p>또 하나 흥미로운 경우는 일반화된 기준틀에서 표현된 라그랑지안이 어떤 일반화된 좌표 <span class="math inline">\(q_i\)</span> 에 대해 의존성이 없을 경우, 즉 <span class="math inline">\(\dfrac{\partial L}{\partial q_i}=0\)</span> 일 경우이다. 이 때 <span class="math inline">\(\dfrac{\partial L}{\partial \dot{q_j}}=p_j = \text{const.}\)</span> 이며 이때의 <span class="math inline">\(p_j\)</span> 를 <strong>순환 좌표(cyclic coordinate)</strong> 라고 한다. 즉 순환좌표에 <span class="math inline">\(q_j\)</span> 에 대한 정준 운동량 <span class="math inline">\(p_j\)</span> 는 보존된다. 이렇게 보존되는 <span class="math inline">\(p_j\)</span> 는 라그랑지안에서 제일적분이다.</p>
 <p><br></p>
-<p>또 하나 흥미로운 경우는 일반화된 좌표계에서 표현된 라그랑지안이 어떤 일반화된 좌표 <span class="math inline">\(q_i\)</span> 에 대해 의존성이 없을 경우, 즉 <span class="math inline">\(\dfrac{\partial L}{\partial q_i}=0\)</span> 일 경우이다. 이 때 <span class="math inline">\(\dfrac{\partial L}{\partial \dot{q_j}}=p_j = \text{const.}\)</span> 이며 이때의 <span class="math inline">\(p_j\)</span> 를 <strong>순환 좌표(cyclic coordinate)</strong> 라고 한다. 즉 순환좌표에 <span class="math inline">\(q_j\)</span> 에 대한 정준 운동량 <span class="math inline">\(p_j\)</span> 는 보존된다. 이렇게 보존되는 <span class="math inline">\(p_j\)</span> 는 라그랑지안에서 제일적분이다.</p>
+<p>이렇게 일반화된 운동량 보존은 우리가 알고 있는 선형 운동량 보존이나 각운동량 보존보다 일반적이다. 예를 들어 전자기장에서의 하전 입자의 운동에서 보존되는것은 전자기장에서의 일반화된 운동량이다.</p>
 <p><br></p>
-<p>일반화된 운동량 보존은 우리가 알고 있는 선형 운동량 보존이나 각운동량 보존보다 일반적이다. 예를 들어 전자기장에서의 하전 입자의 운동에서 보존되는것은 전자기장에서의 일반화된 운동량이다.</p>
-<p><br></p>
+</section>
 </section>
 <section id="sec-CM_variation_translational_symmetry" class="level3" data-number="2.5.2">
 <h3 data-number="2.5.2" class="anchored" data-anchor-id="sec-CM_variation_translational_symmetry"><span class="header-section-number">2.5.2</span> 병진 대칭</h3>
@@ -901,6 +913,55 @@ h(q,\, \dot{q},\,t) = \sum_j \dot{q}_j \dfrac{\partial L}{\partial \dot{q}_j} - 
 \dfrac{dh}{dt} = -\dfrac{\partial L}{\partial t}
 \]</span></p>
 <p>이므로 라그랑지안에 명시적인 시간 의존성이 없다면, 즉 <span class="math inline">\(\dfrac{\partial L}{\partial t}=0\)</span> 이라면 <span class="math inline">\(h\)</span> 는 보존된다.</p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-CM_bead_on_a_rotating_hoop" class="theorem example">
+<p><span class="theorem-title"><strong>예제 2.5 (회전하는 굴렁쇠에의 구슬)</strong></span> 반지름 <span class="math inline">\(a\)</span> 인 굴렁쇠가 아래 <a href="#fig-CM_bead_on_a_rotating_hoop" class="quarto-xref">그림&nbsp;<span>2.5</span></a> 와 같이 일정한 각속도 <span class="math inline">\(\omega\)</span> 로 회전한다고 하자. 회전하는 굴렁쇠 테 위에서 마찰 없이 움직이는 질량 <span class="math inline">\(m\)</span> 의 구슬을 생각하자.</p>
+<div id="fig-CM_bead_on_a_rotating_hoop" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-CM_bead_on_a_rotating_hoop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/beads_on_a_rotating_hoop/beads.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_bead_on_a_rotating_hoop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;2.5: 회전하는 굴러오시에서의 구슬
+</figcaption>
+</figure>
+</div>
+<p>데카르트 좌표계에서 위치 <span class="math inline">\(x,\,y,\,z\)</span> 는 아래와 같다.</p>
+<p><span class="math display">\[
+x = a \sin \psi \cos \omega t,\qquad y = a \sin \psi \sin \omega t,\qquad z= a(1-\cos\psi).
+\]</span></p>
+<p>독립 변수는 <span class="math inline">\(\psi\)</span> 뿐이며 라그랑지안 <span class="math inline">\(L(\psi)\)</span> 는 다음과 같다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+L &amp;= \dfrac{m}{2}(\dot{x}^2+\dot{y}^2+\dot{z}^2) - mgz \\[0.3em]
+&amp;=\dfrac{m}{2}[a\dot{\psi}^2 +  \omega^2 \sin^2 \psi]  + mag\cos \psi - mag.
+\end{aligned}
+\]</span></p>
+<p>상수항 <span class="math inline">\(-mag\)</span> 는 라그랑지안에서 의미가 없으며 유표 포텐설 <span class="math inline">\(V_\text{eff}\)</span> 을</p>
+<p><span class="math display">\[
+V_\text{eff}(\psi) = - mag \cos \psi - \dfrac{m\omega^2 \sin^2\psi}{2}
+\]</span></p>
+<p>라고 하면 라그링지안을 아래와 같이 쓸 수 있다.</p>
+<p><span class="math display">\[
+L = \dfrac{ma^2\dot{\psi}^2}{2} - V_\text{eff}(\psi)
+\]</span></p>
+<p>그렇다면 이 라그랑지안에 대한 오일러-라그랑쥬 방정식은 다음과 같다.</p>
+<p><span class="math display">\[
+\ddot{\psi} = -\dfrac{\partial V_\text{eff}}{\partial \psi} = -mag \sin \psi + m\omega^2 \sin\psi \cos \psi.
+\]</span></p>
+<p>아래 그림은 이 시스템의 유효 표텐셜 <span class="math inline">\(V_\text{eff}\)</span> 를 세가지 경우로 나누어 표현했다. 이로부터 굴렁쇠가 충분히 빠르게 회전한다면, 즉 <span class="math inline">\(\omega^2 &gt; g/a\)</span> 라면 <span class="math inline">\(\psi\)</span> 에 대한 안정점은 <span class="math inline">\(\psi\ne 0\)</span> 이 아닌 위치에서 형성된다.</p>
+<div id="fig-CM_effective_potential_for_bead_on_a_rotating_hoop" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-CM_effective_potential_for_bead_on_a_rotating_hoop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/beads_on_a_rotating_hoop/effective_potential.png" class="img-fluid figure-img" width="500">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_effective_potential_for_bead_on_a_rotating_hoop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;2.6: 유효 포텐셜
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="연습문제-1" class="level2 unnumbered">
@@ -975,7 +1036,7 @@ l=\int \| d\boldsymbol{r} \| = \int r \sqrt{1+ \sin^2 \!\theta \left(\dfrac{d\va
 <img src="images/great_circle/great_circle.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_great_circle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.5: 3챠원 상의 대원
+그림&nbsp;2.7: 3챠원 상의 대원
 </figcaption>
 </figure>
 </div>
@@ -1000,7 +1061,7 @@ l=\int \| d\boldsymbol{r} \| = \int r \sqrt{1+ \sin^2 \!\theta \left(\dfrac{d\va
 <img src="images/goldstein_exr_2_5/fig.png" class="img-fluid figure-img" width="250">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_goldstein_2_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.6: …
+그림&nbsp;2.8: …
 </figcaption>
 </figure>
 </div>
@@ -1157,13 +1218,14 @@ Goldstein, H. 1980. <em>Classical Mechanics</em>. 2nd ed. Addison-Wesley Series 
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/ClassicalMechanics/00_index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -140,7 +141,9 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">고전 역학과 전자기학</a> 
     </div>
@@ -209,6 +212,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -223,13 +232,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -246,25 +255,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/01_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">필요한 수학적 사실들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">필요한 수학적 사실들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/electrostatics_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">전기장과 쿨롱힘</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">전기장과 쿨롱힘</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/electrostatics_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">전기 포텐셜</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">전기 포텐셜</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/electrostatics_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">도체와 전기장</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">도체와 전기장</span></span></a>
   </div>
 </li>
       </ul>
@@ -281,13 +290,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -304,7 +313,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -328,7 +337,7 @@ window.Quarto = {
   <li><a href="#뉴턴의-세가지-운동법칙" id="toc-뉴턴의-세가지-운동법칙" class="nav-link active" data-scroll-target="#뉴턴의-세가지-운동법칙"><span class="header-section-number">1.1</span> 뉴턴의 세가지 운동법칙</a>
   <ul class="collapse">
   <li><a href="#sec-CM_particle_space_time_reference_frame" id="toc-sec-CM_particle_space_time_reference_frame" class="nav-link" data-scroll-target="#sec-CM_particle_space_time_reference_frame"><span class="header-section-number">1.1.1</span> 입자, 공간, 시간, 좌표계</a></li>
-  <li><a href="#sec-CM_1st_law_of_newton" id="toc-sec-CM_1st_law_of_newton" class="nav-link" data-scroll-target="#sec-CM_1st_law_of_newton"><span class="header-section-number">1.1.2</span> 뉴턴의 제 1 운동법칙, 관성좌표계와 갈릴레이 변환</a></li>
+  <li><a href="#sec-CM_1st_law_of_newton" id="toc-sec-CM_1st_law_of_newton" class="nav-link" data-scroll-target="#sec-CM_1st_law_of_newton"><span class="header-section-number">1.1.2</span> 뉴턴의 제 1 운동법칙</a></li>
   <li><a href="#sec-CM_the_1st_law_of_newton" id="toc-sec-CM_the_1st_law_of_newton" class="nav-link" data-scroll-target="#sec-CM_the_1st_law_of_newton"><span class="header-section-number">1.1.3</span> 뉴튼의 제2 운동법칙과 운동량</a></li>
   <li><a href="#sec-CM_the_3rd_law_of_newton" id="toc-sec-CM_the_3rd_law_of_newton" class="nav-link" data-scroll-target="#sec-CM_the_3rd_law_of_newton"><span class="header-section-number">1.1.4</span> 뉴튼의 제3 운동법칙</a></li>
   </ul></li>
@@ -385,7 +394,7 @@ window.Quarto = {
 <h2 data-number="1.1" class="anchored" data-anchor-id="뉴턴의-세가지-운동법칙"><span class="header-section-number">1.1</span> 뉴턴의 세가지 운동법칙</h2>
 <section id="sec-CM_particle_space_time_reference_frame" class="level3" data-number="1.1.1">
 <h3 data-number="1.1.1" class="anchored" data-anchor-id="sec-CM_particle_space_time_reference_frame"><span class="header-section-number">1.1.1</span> 입자, 공간, 시간, 좌표계</h3>
-<p>고전역학에서 <strong>입자(particle)</strong> 는 질량을 가지고 있지만 부피가 없는, 혹은 그 부피란 것이 우리가 측정하고자 하는 양에 대해 무시할만한 어떤 추상적인 대상이다. 입자는 3차원 공간상에 존재하며 시간의 변화에 따라 공간상에서 움직일 수 있다. 입자의 시간에 따른 위치를 <strong>경로(path 혹은 trajectory)</strong> 라고 한다. 입자의 경로를 기술하기 위해 공간상에서의 위치의 기준이 되는 원점 <span class="math inline">\(\mathcal{O}\)</span> 을 설정하며, 이 원점에 대한 변위를 <strong>위치 벡터(position vector)</strong> 혹은 <strong>반경 벡터(radius vector)</strong> 라고 한다. 원점은 임의로 정할 수 있다. 고전역학에서 다루는 공간은 3차원 유클리드 공간이며, 원점 <span class="math inline">\(\mathcal{O}\)</span> 에 대해 임의의 표준 기저 <span class="math inline">\(\hat{\boldsymbol{e}}_1,\,\hat{\boldsymbol{e}}_2,\,\hat{\boldsymbol{e}}_3\)</span>, 혹은 <span class="math inline">\(\hat{\boldsymbol{x}},\, \hat{\boldsymbol{y}},\, \hat{\boldsymbol{z}}\)</span> 를 관례적으로 <span class="math inline">\(\hat{\boldsymbol{e}}_3 = \hat{\boldsymbol{e}}_1 \times \hat{\boldsymbol{e}}_2\)</span> 가 되도록 잡아 위치벡터 <span class="math inline">\(\boldsymbol{r}\)</span> 을 이 표준기저에 대한 좌표로 표현한다. 즉 <span class="math inline">\(\boldsymbol{r}(t) = x(t)\hat{\boldsymbol{e}}_1 + y(t) \hat{\boldsymbol{e}}_2 + z(t)\hat{\boldsymbol{e}}_3\)</span> 일 때 <span class="math inline">\(\boldsymbol{r}(t)\)</span> 을 <span class="math inline">\((x(t),\,y(t),\,z(t))\)</span> 혹은 <span class="math inline">\(\begin{bmatrix} x(t) &amp; y(t) &amp; z(t)\end{bmatrix}^T\)</span> 로 표현하며 이를 <strong>좌표(coordinate)</strong> 라고 한다.</p>
+<p>고전역학에서 <strong>입자(particle)</strong> 는 질량을 가지고 있지만 부피가 없는, 혹은 그 부피란 것이 우리가 측정하고자 하는 양에 대해 무시할만한 어떤 추상적인 대상이다. 입자는 3차원 공간상에 존재하며 시간의 변화에 따라 공간상에서 움직일 수 있다. 입자의 시간에 따른 위치를 <strong>경로(path 혹은 trajectory)</strong> 라고 한다. 입자의 경로를 기술하기 위해 공간상에서의 위치의 기준이 되는 원점 <span class="math inline">\(\mathcal{O}\)</span> 을 설정하며, 이 원점에 대한 변위를 <strong>위치 벡터(position vector)</strong> 혹은 <strong>반경 벡터(radius vector)</strong> 라고 한다. 원점은 임의로 정할 수 있다. 고전역학에서 다루는 공간은 3차원 유클리드 공간이며, 원점 <span class="math inline">\(\mathcal{O}\)</span> 에 대해 임의의 표준 기저 <span class="math inline">\(\hat{\boldsymbol{e}}_1,\,\hat{\boldsymbol{e}}_2,\,\hat{\boldsymbol{e}}_3\)</span> (혹은 <span class="math inline">\(\hat{\boldsymbol{x}},\, \hat{\boldsymbol{y}},\, \hat{\boldsymbol{z}}\)</span>) 를 관례적으로 <span class="math inline">\(\hat{\boldsymbol{e}}_3 = \hat{\boldsymbol{e}}_1 \times \hat{\boldsymbol{e}}_2\)</span> 가 되도록 잡아 위치벡터 <span class="math inline">\(\boldsymbol{r}\)</span> 을 이 표준기저에 대한 좌표로 표현한다. 즉 <span class="math inline">\(\boldsymbol{r}(t) = x(t)\hat{\boldsymbol{e}}_1 + y(t) \hat{\boldsymbol{e}}_2 + z(t)\hat{\boldsymbol{e}}_3\)</span> 일 때 <span class="math inline">\(\boldsymbol{r}(t)\)</span> 을 <span class="math inline">\((x(t),\,y(t),\,z(t))\)</span> 혹은 <span class="math inline">\(\begin{bmatrix} x(t) &amp; y(t) &amp; z(t)\end{bmatrix}^T\)</span> 로 표현하며 이를 시간 <span class="math inline">\(t\)</span> 에서의 <strong>좌표(coordinate)</strong> 라고 한다.</p>
 <div id="fig-reference_frames" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-reference_frames-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -402,10 +411,10 @@ window.Quarto = {
 <p><br></p>
 </section>
 <section id="sec-CM_1st_law_of_newton" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="sec-CM_1st_law_of_newton"><span class="header-section-number">1.1.2</span> 뉴턴의 제 1 운동법칙, 관성좌표계와 갈릴레이 변환</h3>
-<p>속도 <span class="math inline">\(\boldsymbol{v}\)</span> 는 정해진 원점에 대한 위치벡터 <span class="math inline">\(\boldsymbol{r}\)</span> 에 대해 아래와 같이 정의된다.</p>
-<p><span id="eq-CM_definition_of_velocity"><span class="math display">\[
-\boldsymbol{v} := \dfrac{d\boldsymbol{r}}{dt}.
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="sec-CM_1st_law_of_newton"><span class="header-section-number">1.1.2</span> 뉴턴의 제 1 운동법칙</h3>
+<p>속도 <span class="math inline">\(\boldsymbol{v}\)</span> 와 가속도 <span class="math inline">\(\boldsymbol{a}\)</span> 는 정해진 원점에 대한 위치벡터 <span class="math inline">\(\boldsymbol{r}\)</span> 에 대해 아래와 같이 정의된다.</p>
+<p><span id="eq-CM_definition_of_velocity_and_acceleration"><span class="math display">\[
+\boldsymbol{v} := \dfrac{d\boldsymbol{r}}{dt},\qquad \boldsymbol{a} :=\dfrac{d\boldsymbol{v}}{dt} = \dfrac{d^2 \boldsymbol{r}}{dt^2}.
 \tag{1.1}\]</span></span></p>
 <p>뉴튼의 제 1 운동법칙은 좌표계 중에 기준이 되는 좌표계를 정하도록 한다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
@@ -414,7 +423,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-뉴튼의 제 1 운동법칙
+<span class="screen-reader-only">중요</span>뉴튼의 제 1 운동법칙
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -422,16 +431,24 @@ window.Quarto = {
 <p>외부의 힘이 없다면, 모든 물체는 정지 상태나 직선으로 균일한 운동 상태를 유지한다.</p>
 </div>
 </div>
-<p>우주에 입자(particle) 하나만 존재하며 당신은 이 입자에 영항을 끼치지 않으면서 위치와 속도를 잴 수 있는 존재라고 하자. 이 입자의 운동에 어떤 영향도 끼치는 존재가 없을 때 그 입자는 정지상태나 직선으로 균일한 운동상태, 즉 등속운동상태를 유지하는 좌표계가 존재한다는 말이며, 이것을 <strong>관성좌표계(inertial frame)</strong> 이라고 한다. 어떤 관성좌표계 <span class="math inline">\(\mathcal{O}\)</span> 에 대해 다른 좌표계의 원점 <span class="math inline">\(\mathcal{O}'\)</span> 이 <span class="math inline">\(\boldsymbol{V} = (V_x,\,V_y,\,V_z)\)</span> 의 일정한 속도로 움직인다고 하자. 처음의 좌표계의 위치벡터 <span class="math inline">\(\boldsymbol{r} = (x,\,y,\,z)\)</span> 라고 하고, 뒤의 좌표계의 위치 벡터 <span class="math inline">\(\boldsymbol{r}'=(x',\,y',\, z')\)</span> 라고 하면,</p>
-<p><span class="math display">\[
-\boldsymbol{r}' = \boldsymbol{r}-\boldsymbol{V}t
-\]</span></p>
-<p>이므로, <span class="math inline">\(x'=x-V_xt,\, y' = y-V_yt,\, z'=z-V_zt\)</span> 이며,</p>
-<p><span class="math display">\[
-\dfrac{dx'}{dt}= \dfrac{dx}{dt}-V_x,\, \dfrac{dy'}{dt}= \dfrac{dy}{dt}-V_y,\, \dfrac{dz'}{dt}= \dfrac{dz}{dt}-V_z
-\]</span></p>
-<p>가 된다. 즉 <span class="math inline">\(\mathcal{O}\)</span> 에서의 등속운동은 <span class="math inline">\(\mathcal{O}'\)</span> 에서의 등속운동이다. 이렇게 한 좌표계에 대해 등속을 하는 다른 좌표계로 변환하는 것을 <strong>갈릴레이 변환(Galilean transformation)</strong> 이라고 하며, 관성좌표계에 대한 갈릴레이 변환은 다른 관성좌표계가 된다.</p>
+<p>우주에 입자(particle) 하나만 존재하며 당신은 이 입자에 영항을 끼치지 않으면서 위치와 속도를 잴 수 있는 존재라고 하자. 이 입자의 운동에 어떤 영향도 끼치는 존재가 없을 때 그 입자는 정지상태나 직선으로 균일한 운동상태, 즉 등속운동상태를 유지하는 좌표계가 존재한다는 말이며, 이것을 <strong>관성기준틀(inertial frame)</strong> 이라고 한다. 즉 뉴튼의 제 1 법칙은 관성기준틀의 존재를 선언하는 명제라고 볼 수 있다.</p>
 <p><br></p>
+<section id="갈릴레이-변환" class="level4">
+<h4 class="anchored" data-anchor-id="갈릴레이-변환"><strong>갈릴레이 변환</strong></h4>
+<p>어떤 관성기준틀 <span class="math inline">\(\mathcal{O}\)</span> 의 위치가 <span class="math inline">\(\boldsymbol{r}=(x,\,y,\,z)\)</span> 로 기술되며 다른 기준틀 <span class="math inline">\(\mathcal{O}'\)</span> 의 위치가 <span class="math inline">\(\boldsymbol{r}'=(x',\,y',\,z')\)</span> 으로 기술된다고 하자. 이 두 기준틀 사이에 가능한 네가지 변환을 생각하자.</p>
+<p> (<span class="math inline">\(1\)</span>) 위치 병진 : <span class="math inline">\(\boldsymbol{r}'= \boldsymbol{r} + \boldsymbol{a}\)</span>,</p>
+<p> (<span class="math inline">\(2\)</span>) 회전 : <span class="math inline">\(3\times 3\)</span> 직교행렬 <span class="math inline">\(\boldsymbol{R}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{r}' = \boldsymbol{Rr}\)</span>,</p>
+<p> (<span class="math inline">\(3\)</span>) Boost : <span class="math inline">\(\boldsymbol{r}'= \boldsymbol{r}+ \boldsymbol{V}t\)</span>, for constant <span class="math inline">\(\boldsymbol{V}\in \mathbb{R}^3\)</span>.</p>
+<p> (<span class="math inline">\(4\)</span>) 시간 병진 : <span class="math inline">\(t' = t + s\)</span></p>
+<p>이 네가지 경우에 있어 <span class="math inline">\(\mathcal{O}\)</span> 에서의 등속운동은 <span class="math inline">\(\mathcal{O}'\)</span> 에서의 등속운동이며 따라서 <span class="math inline">\(\mathcal{O}\)</span> 가 관성기준틀이라면 <span class="math inline">\(\mathcal{O}'\)</span> 역시 관성기준틀이다. 이렇게 한 관성기준틀을 다른 관성기준틀로 변환시키는 것을 <strong>갈릴레이 변환(Galilean transformation)</strong>, 혹은 <strong>갈릴레이 사상 (Galilean map)</strong> 이라고 하며 갈릴레이 사상의 집합을 <strong>갈릴레이 군 (Galilean group)</strong> 이라고 한다.</p>
+<p>각각의 세가지 변환이 갈릴레이 변환이라는 것으로부터 우리는 다음을 알 수 있다.</p>
+<p> (<span class="math inline">\(1\)</span>) 모든 위치는 동등하다.</p>
+<p> (<span class="math inline">\(2\)</span>) 모든 방향은 동등하다.</p>
+<p> (<span class="math inline">\(3\)</span>) 모든 속도는 동등하다.</p>
+<p> (<span class="math inline">\(3\)</span>) 모든 시간은 균일하다. 즉 <span class="math inline">\(\Delta t' = \Delta t\)</span>.</p>
+<p>고전역학에서는 네가지 모두 성립하지만 실제로 우리는 모든 속도가 동등하지 않다는 것을 알고 있다. 빛의 속도 <span class="math inline">\(c\)</span> 는 특별하며 이것은 상대성 이론에서 밝혀지며, 고전역학에서는 그렇지 않다.</p>
+<p><br></p>
+</section>
 </section>
 <section id="sec-CM_the_1st_law_of_newton" class="level3 page-columns page-full" data-number="1.1.3">
 <h3 data-number="1.1.3" class="anchored" data-anchor-id="sec-CM_the_1st_law_of_newton"><span class="header-section-number">1.1.3</span> 뉴튼의 제2 운동법칙과 운동량</h3>
@@ -441,7 +458,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-뉴튼의 제 2 운동법칙
+<span class="screen-reader-only">중요</span>뉴튼의 제 2 운동법칙
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -465,7 +482,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>우리는 앞서 관성좌표계를 정의했다. 만약 입자가 정지를 포함한 등속운동 상태이지 않으면 무언가가 입자에 영향을 준다는 의미이며 그것을 <strong>힘(force)</strong> 라고 하고 정량적으로는 운동량 <span class="math inline">\(\boldsymbol{p}\)</span> 의 시간에 대한 변화량으로 정의한다. 영어 표현의 <code>motion</code> 은 현재 우리가 운동량 으로 부르는 값이다. 즉 외부에서 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 가 가해질 때 뉴튼의 제2 운동법칙은 다음을 말한다.</p>
+<p>우리는 앞서 관성기준틀을 정의했다. 만약 입자가 정지를 포함한 등속운동 상태이지 않으면 무언가가 입자에 영향을 준다는 의미이며 그것을 <strong>힘(force)</strong> 라고 하고 정량적으로는 운동량 <span class="math inline">\(\boldsymbol{p}\)</span> 의 시간에 대한 변화량으로 정의한다. 영어 표현의 <code>motion</code> 은 현재 우리가 운동량 으로 부르는 값이다. 즉 외부에서 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 가 가해질 때 뉴튼의 제2 운동법칙은 다음을 말한다.</p>
 <p><span class="math display">\[
 \dfrac{d\boldsymbol{p}}{dt} = \dfrac{d}{dt}(m\boldsymbol{v})= \boldsymbol{F}.
 \]</span></p>
@@ -474,17 +491,27 @@ window.Quarto = {
 \boldsymbol{a} = \dfrac{1}{m}\boldsymbol{F}.
 \]</span></p>
 <div class="page-columns page-full"><p>이때의 <span class="math inline">\(m\)</span> 을 <strong>관성질량(inerital mass)</strong><span class="math inline">\(^\dagger\)</span> 이라고 한다. <span class="math inline">\(\boldsymbol{F}=\boldsymbol{0}\)</span> 일 경우 운동량 <span class="math inline">\(\boldsymbol{p}\)</span> 는 일정하게 유지된다. 이것을 <strong>운동량 보존</strong> 이라고 한다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^\dagger\)</span> 관성질량과 비교되는 값은 중력질량이다. 이것은 만유인력을 다룰 때 설명한다.</span></div></div>
-<p><br></p>
-<p>두 좌표계 <span class="math inline">\(S\)</span> 와 <span class="math inline">\(S'\)</span> 을 생각하자. <span class="math inline">\(S'\)</span> 이 <span class="math inline">\(S\)</span> 에 대해 일정한 속도 <span class="math inline">\(\boldsymbol{V}\)</span> 로 움직인다고 하자. 또 <span class="math inline">\(t=0\)</span> 에서 두 좌표게의 원점이 일치했다고 하자. 그렇다면 <span class="math inline">\(S\)</span> 에서의 위치 벡터 <span class="math inline">\(\boldsymbol{r}\)</span> 과 <span class="math inline">\(S'\)</span> 에서의 위치 벡터 <span class="math inline">\(\boldsymbol{r}'\)</span> 사이에 다음의 관계가 존재한다.</p>
+<section id="갈릴레이-변환과-힘" class="level4">
+<h4 class="anchored" data-anchor-id="갈릴레이-변환과-힘"><strong>갈릴레이 변환과 힘</strong></h4>
+<p>두 관성기준틀 <span class="math inline">\(\mathcal{O},\, \mathcal{O}'\)</span> 을 생각하자. 앞서 알아본 세가지 갈릴레이 변환과 시간의 균일성을 통해 <span class="math inline">\(\boldsymbol{r} = (x_1,\,x_2,\,x_3)\)</span> 와 <span class="math inline">\(\boldsymbol{r}'=(x_1',\,x_2',\,x_3')\)</span> 사이에 아래와 같은 관계가 성립한다는 것을 안다.</p>
 <p><span class="math display">\[
-\boldsymbol{r}= \boldsymbol{r}'+\boldsymbol{V}t
+x_i' = \sum_j R_{ij}x_j + a_j + V_j t.
 \]</span></p>
-<p>그렇다면 <span class="math inline">\(S\)</span> 에서 느끼는 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 와 <span class="math inline">\(S'\)</span> 에서 느끼는 힘 <span class="math inline">\(\boldsymbol{F}'\)</span> 사이의 관계는 다음과 같다.</p>
+<p>이 때 <span class="math inline">\(R_{ij}\)</span> 는 직교행렬 <span class="math inline">\(\boldsymbol{R}\)</span> 의 성분이다. <span class="math inline">\(\mathcal{O}\)</span> 에서 <span class="math inline">\(m\ddot{x}_j = F_j\)</span> 가 성립한다고 하자. <span class="math inline">\(F'_i = \sum_j R_{ij}F_j\)</span> 이며, <span class="math inline">\(\ddot{x}'_i = \sum_j R_{ij}x_j\)</span> 이므로</p>
 <p><span class="math display">\[
-\boldsymbol{F} = \dfrac{d\boldsymbol{p}}{dt} = \dfrac{d}{dt}\left[m\left(\dfrac{d\boldsymbol{r}}{dt}\right)\right]= \dfrac{d}{dt} \left[ m \dfrac{{d(\boldsymbol{r}'+\boldsymbol{V}t)}}{dt}\right] = \dfrac{d}{dt}\left[m \dfrac{d\boldsymbol{r}'}{dt}\right]=\dfrac{d\boldsymbol{p}'}{dt}
+F'_i = \sum_j R_{ij}F_j = \sum_j R_{ij}m\ddot{x}_j = m\ddot{x}'_i
 \]</span></p>
-<p>즉 관성 좌표계에서 운동방정식은 동일하다. 이를 <strong>갈릴레이의 상대성 원리 (Galilean relativity)</strong> 라고 한다.</p>
+<p>이다. <span class="math inline">\(\mathbf{F}' = \dot{\boldsymbol{p}}'\)</span> 이므로 운동방정식은 걸릴레이 변환에 대해 불변이다.</p>
+</section>
+<section id="이차미분방정식" class="level4">
+<h4 class="anchored" data-anchor-id="이차미분방정식"><strong>이차미분방정식</strong></h4>
+<p>일반적으로 우리가 아는 한 근본적인 힘은 <span class="math inline">\(\boldsymbol{r}\)</span> 와 <span class="math inline">\(\dot{\boldsymbol{r}}\)</span>, 그리고 시간 <span class="math inline">\(t\)</span> 의 함수이다. 즉 <span class="math inline">\(\boldsymbol{F}= \boldsymbol{F}(\boldsymbol{r},\,\boldsymbol{r}',\,t)\)</span> 이다. 그렇다면 입자의 운동방정식은</p>
+<p><span class="math display">\[
+\dfrac{d^2\boldsymbol{r}}{d t^2} = \dfrac{\boldsymbol{F}(\boldsymbol{r},\,\boldsymbol{r}',\,t)}{m}
+\]</span></p>
+<p>으로 2차 미분방정식이다. 우리는 미분방정식의 일반이론으로부터 이차 미분방정식을 풀기 위해서는 위치와 속도에 대한 초기조건이 주어져야 한다는 것을 안다.</p>
 <p><br></p>
+</section>
 </section>
 <section id="sec-CM_the_3rd_law_of_newton" class="level3 page-columns page-full" data-number="1.1.4">
 <h3 data-number="1.1.4" class="anchored" data-anchor-id="sec-CM_the_3rd_law_of_newton"><span class="header-section-number">1.1.4</span> 뉴튼의 제3 운동법칙</h3>
@@ -494,7 +521,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-뉴튼의 제 3 운동법칙
+<span class="screen-reader-only">중요</span>뉴튼의 제 3 운동법칙
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -502,7 +529,7 @@ window.Quarto = {
 <p>모든 <em>action</em> 에 대해 크기가 같고 방향이 반대인 <em>reaction</em> 이 존재한다. 즉 두 물체 사이의 상호 <em>action</em> 은 항상 크기가 같고 방향이 반대이다.</p>
 </div>
 </div>
-<div class="page-columns page-full"><p>여기서의 <em>action</em><span class="math inline">\({}^\ast\)</span>  은 한 물체에서 다른 물체에 대해 힘을 가하는 것을 말한다. 즉 두 물체 사이 <span class="math inline">\(A\)</span> 와 <span class="math inline">\(B\)</span> 사이에 힘이 작용할 때 <span class="math inline">\(A\)</span> 가 <span class="math inline">\(B\)</span> 의 존재로 인해 받는 힘 <span class="math inline">\(\boldsymbol{F}_{BA}\)</span> 와 <span class="math inline">\(B\)</span> 가 <span class="math inline">\(A\)</span> 의 존재로 인해 받는 힘 <span class="math inline">\(\boldsymbol{F}_{AB}\)</span> 사이에는 <span class="math inline">\(\boldsymbol{F}_{BA}=-\boldsymbol{F}_{AB}\)</span> 의 관계가 성립한다는 의미이다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^\ast\)</span> 고전역학에서 action 은 뒤에 나올 라그랑지안의 시간 적분을 의미하기도 하며, 여기를 제외한 다른 부분에서는 주로 이 의미로 사용하겠다. 별도의 언급 없이 action-reaction 의 의미에서 사용하는 것은 여기 뿐이다.</span></div></div>
+<div class="page-columns page-full"><p>여기서의 <em>action</em><span class="math inline">\({}^\ast\)</span>  은 한 물체의 존재로 인해 다른 물체에 가해지는 힘을 말한다. 즉 두 물체 사이 <span class="math inline">\(A\)</span> 와 <span class="math inline">\(B\)</span> 사이에 힘이 작용할 때 <span class="math inline">\(B\)</span> 의 존재로 인해 <span class="math inline">\(A\)</span> 가 받는 힘 <span class="math inline">\(\boldsymbol{F}_{BA}\)</span> 와 <span class="math inline">\(A\)</span> 의 존재로 인해 <span class="math inline">\(B\)</span> 가 받는 힘 <span class="math inline">\(\boldsymbol{F}_{AB}\)</span> 사이에는 <span class="math inline">\(\boldsymbol{F}_{BA}=-\boldsymbol{F}_{AB}\)</span> 의 관계가 성립한다는 의미이다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^\ast\)</span> 고전역학에서 action 은 뒤에 나올 라그랑지안의 시간 적분을 의미하기도 하며, 여기를 제외한 다른 부분에서는 주로 이 의미로 사용하겠다. 별도의 언급 없이 action-reaction 의 의미에서 사용하는 것은 여기 뿐이다.</span></div></div>
 <p><br></p>
 </section>
 </section>
@@ -633,7 +660,7 @@ M\dfrac{d^2\boldsymbol{R}}{dt^2} =\boldsymbol{F}^{(e)}\;.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>작용 반작용의 강한 조건과 약한 조건</strong>
+<span class="screen-reader-only">중요</span><strong>작용 반작용의 강한 조건과 약한 조건</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1078,13 +1105,14 @@ q_i = q_i (s_1,\ldots,\,s_n,\,t)
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

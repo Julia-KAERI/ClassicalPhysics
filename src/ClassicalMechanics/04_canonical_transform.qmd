@@ -25,7 +25,7 @@ crossref:
 독립적인 일반화된 좌표 $\bf{q}$ 에서 다른 독립적인 일반화된 좌표 $\bf{Q}$ 로의 아래와 같은 형태의 변환을 **점변환 (point transformation)** 이라고 한다. 
 
 $$
-Q_i =Q(\bf{q},\,t).
+Q_i =Q_i(\bf{q},\,t).
 $$ {#eq-CM_point_transformation}
 
 

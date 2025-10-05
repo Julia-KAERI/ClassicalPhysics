@@ -204,13 +204,11 @@ $$
 
 ## 1차원 조화진동자
 
-### 단순조화진동자
+### 단순조화진동자 {#sec-CM_1d_sho}
 
-1차원 단순조화진동자(simple harmonic osciilator, 이하 SHO)의 경우 운동방정식이 $m\ddot{x} = -kx$ 이 며 그 해는 진동자의 **고유 진동수(natural frequency)** $\omega_0 :=\sqrt{\dfrac{k}{m}}$ 에 대해 $x(t) = A\cos (\omega_0 t+\phi_0)$ 라는 것을 안다. $A$ 와 $\phi_0$ 는 초기조건 $x(t_0),\, v(t_0)$ 에 의해 정해지는 상수이다. 
+1차원 단순조화진동자(simple harmonic osciilator, 이하 SHO)의 경우 운동방정식이 $m\ddot{x} = -kx$ 이 며 그 해는 진동자의 **고유 진동수(natural frequency)** $\omega_0 :=\sqrt{k/m}$ 에 대해 $x(t) = A\cos (\omega_0 t+\phi_0)$ 라는 것을 안다. $A$ 와 $\phi_0$ 는 초기조건 $x(t_0),\, v(t_0)$ 에 의해 정해지는 상수이다. 
 
-</br>
-
-### 감쇠 조화 진동자(Damped harmonic osciilator)
+### 감쇠 조화 진동자 {#sec-CM_1d_dsho}
 
 이제 앞서의 viscouse drag 처럼 속도에 비례하는(하지만 방향은 반대힌) 힘이 작용한다고 하자. 앞으로의 계산의 편의를 위해 앞의 경우와는 달리 비례상수를 $2m\beta$ 로 놓는다. 그렇다면 운동방정식은 
 
@@ -260,7 +258,7 @@ $${#eq-CM_characteristic_solution_of_dho_for_criticallly_damped}
 
 </br>
 
-### 강제 조화 진동자 
+### 강제 조화 진동자 {#sec-CM_forced_dsho}
 
 DHO 에 어떤 시간에 의존하는 힘 $F(t)$ 가 계속 가해진다고 하자. 이 경우 운동방정식은
 

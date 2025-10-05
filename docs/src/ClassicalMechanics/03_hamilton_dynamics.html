@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -54,14 +54,15 @@ div.csl-indent {
 <link href="../../src/ClassicalMechanics/02_variational_principle.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +105,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -160,7 +161,9 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">고전 역학과 전자기학</a> 
     </div>
@@ -229,6 +232,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -243,13 +252,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -266,25 +275,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/01_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">필요한 수학적 사실들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">필요한 수학적 사실들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/electrostatics_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">전기장과 쿨롱힘</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">전기장과 쿨롱힘</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/electrostatics_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">전기 포텐셜</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">전기 포텐셜</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electromagnetism/electrostatics_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">도체와 전기장</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">도체와 전기장</span></span></a>
   </div>
 </li>
       </ul>
@@ -301,13 +310,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -324,7 +333,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -393,7 +402,7 @@ window.Quarto = {
 <p>이 방정식의 해를 구하기 위해서는 <span class="math inline">\(2n\)</span> 개의 초기값이 필요하며 (<span class="math inline">\(1\)</span>) 특정 시간 <span class="math inline">\(t\)</span> 에 대해 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(q_i(t)\)</span> 와 역시 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(\dot{q}(t_i)\)</span> 이거나 (<span class="math inline">\(2\)</span>) 두 시간 <span class="math inline">\(t_1,\,t_2\)</span> 에 대해 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(q_i(t_1)\)</span> 과 <span class="math inline">\(q_i(t_2)\)</span> 이다. 즉 <span class="math inline">\(n\)</span> 개의 독립 변수 <span class="math inline">\(\{q_i\}\)</span> 와 시간에 대한 미분 <span class="math inline">\(\{\dot{q}_i\}\)</span> 에 관한 문제이다. 라그랑지안은 각각의 일반화된 좌표로 이루어진 <span class="math inline">\(n\)</span> 차원 짜임새 공간에서 표현된다.</p>
 <p>이에 반해 <span class="math inline">\(n\)</span>-자유도 시스템의 해밀토니안 역학은 <span class="math inline">\(2n\)</span> 개의 독립변수에 대한 <span class="math inline">\(2n\)</span> 개의 1차 이분방정식으로 기술된다. 필요한 초기조건은 라그랑지안과 동일한 <span class="math inline">\(2n\)</span> 개이며, <span class="math inline">\(2n\)</span> 차원의 위상 공간에서 표현된다. 이 <span class="math inline">\(2n\)</span> 개의 독립변수는 <span class="math inline">\(n\)</span> 개의 일반화된 변수 <span class="math inline">\(\{q_i\}\)</span> 와 <span class="math inline">\(n\)</span> 개의 정준 운동량 <span class="math inline">\(\{p_i\}\)</span> 이며 <span class="math inline">\((\boldsymbol{q},\, \boldsymbol{p})\)</span> 를 <strong>정준 변수 (canonical variables)</strong> 라고 한다.</p>
 <p><span id="eq-CM_canonical_momentum"><span class="math display">\[
-\boxed{p_i := \dfrac{\partial L(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)}{\partial \dot{q}_i}.}
+\boxed{\boldsymbol{p} := \dfrac{\partial L(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)}{\partial \dot{\boldsymbol{q}}},\qquad \text{or}\qquad  p_i = \dfrac{\partial L(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)}{\partial \dot{q}_i}. }
 \tag{3.1}\]</span></span></p>
 <p><br></p>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
@@ -402,12 +411,12 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-표기법에 대해
+<span class="screen-reader-only">주의</span>표기법에 대해
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>특별한 언급이 없는 한 이 장에서 <span class="math inline">\(p_i\)</span> 는 일반화된 좌표 <span class="math inline">\(q_i\)</span> 에 대한 정준운동량을 의미하며 질량에 속도를 곱한 선형 운동량과는 다르다. 일반화된 좌표를 <span class="math inline">\(Q\)</span> 나 <span class="math inline">\(Q_i\)</span> 와 같이 쓸 때의 정준운동량은 <span class="math inline">\(P\)</span> 나 <span class="math inline">\(P_i\)</span> 로 표기하기로 한다.</p>
-<p>또한 다변수 함수의 편미분에 대해 <a href="../Mechanics_and_Symmetry/01_experimental_facts.html#def-MS_derivative_to_vector" class="quarto-xref">정의&nbsp;<span>8.5</span></a> 의 표기법을 사용한다.</p>
+<p>또한 다변수 함수의 편미분에 대해 <a href="../Mechanics_and_Symmetry/01_experimental_facts.html#def-MS_derivative_to_vector" class="quarto-xref">정의&nbsp;<span>9.5</span></a> 의 표기법을 사용한다.</p>
 </div>
 </div>
 <p><br></p>
@@ -517,7 +526,7 @@ L = T-U = \dfrac{1}{2}mv^2 -q\phi + q \boldsymbol{A\cdot v}
 \]</span></p>
 <p>이다. 따라서 정준운동량 <span class="math inline">\(\boldsymbol{p}\)</span> 는</p>
 <p><span class="math display">\[
-\boldsymbol{p} = \nabla_\boldsymbol{v}L = m\boldsymbol{v} + q\boldsymbol{A}
+\boldsymbol{p} = \dfrac{\partial L}{\partial \boldsymbol{v}} = m\boldsymbol{v} + q\boldsymbol{A}
 \]</span></p>
 <p>이므로,</p>
 <p><span id="eq-CM_hamiltonian_of_charged_particle"><span class="math display">\[
@@ -643,9 +652,9 @@ S_H = \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - H(\boldsymbol{p},\, \bolds
 <p>(<span class="math inline">\(1\)</span>) 변형된 해밀톤의 원리는 해밀턴의 원리와 동일한지 아니면 다른 추가적인 물리적인 의미를 가지고 있는지에 대해 의문을 가질 수 있다. Goldstein 에 의하면 이 질문은 irrelevant 하다(<span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="00_index.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span> pp.&nbsp;363, 3판의 경우는 pp.&nbsp;354-355). 해밀턴의 원리가 정당한 것은 해밀턴의 원리의 결과가 라그랑쥬 방정식이기 때문이다. 변형된 해밀턴의 원리가 정당한 것은 그 결과가 해밀턴 운동방정식이기 때문이다.</p>
 <p>(<span class="math inline">\(2\)</span>) 해밀턴의 원리와 변분원리에서는 양 끝점에서의 변화가 <span class="math inline">\(0\)</span> 임을 가정하였으나 변형된 해밀토니안의 원리에 이를 적용한다면 운동량에 대해서도 <span class="math inline">\(\delta p_i(t_1)= \delta p_i(t_2)=0\)</span> 임을 가정해야 할 것 같다. 그런데 이 가정은 필요가 없는 것이, <a href="02_variational_principle.html#exr-CM_variational_devivation_of_euler_lagrange_eq" class="quarto-xref">연습문제&nbsp;<span>2.1</span></a> 에서 보았듯이 <span class="math inline">\(\delta p_i = 0\)</span> 이 필요한 것은 부분적분에서</p>
 <p><span class="math display">\[
-\left.\dfrac{\partial F}{\partial \dot{p}_i} \dfrac{\partial p}{\partial \alpha} \right|_{t_1}^{t_2}
+\left.\dfrac{\partial F}{\partial \dot{p}_i} \dfrac{\partial p_i}{\partial \alpha} \right|_{t_1}^{t_2}
 \]</span></p>
-<p>인 부분이다. 그런데 <span class="math inline">\(F\)</span> 는 <span class="math inline">\(\boldsymbol{\dot{p}}\)</span> 에 명시적인 의존성이 없기 때문에 위의 항은 항상 <span class="math inline">\(0\)</span> 이다. 즉 변형된 해밀톤의 원리에로부터 해밀턴 운동방정식을 유도할 때 <span class="math inline">\(\delta \boldsymbol{p}=0\)</span> 의 조건은 필요하지 않다. 해밀턴의 원리와 변형된 해밀턴의 원리는 동일한 경계조건을 사용한다.</p>
+<p>인 부분이다. 그런데 <span class="math inline">\(F\)</span> 는 <span class="math inline">\(\boldsymbol{\dot{p}}\)</span> 에 명시적인 의존성이 없기 때문에 위의 항은 항상 <span class="math inline">\(0\)</span> 이다. 즉 변형된 해밀톤의 원리에로부터 해밀턴 운동방정식을 유도할 때 <span class="math inline">\(\delta \boldsymbol{p}=0\)</span> 의 조건은 필요하지 않다. <u>즉 해밀턴의 원리와 변형된 해밀턴의 원리는 동일한 경계조건을 사용한다.</u></p>
 <p><br></p>
 </section>
 </section>
@@ -715,13 +724,14 @@ Zia, R. K. P., Edward F. Redish, and Susan R. McKay. 2009. <span>“Making Sense
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

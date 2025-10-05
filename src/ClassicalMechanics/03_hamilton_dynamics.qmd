@@ -31,7 +31,7 @@ $$
 이에 반해 $n$-자유도 시스템의 해밀토니안 역학은 $2n$ 개의 독립변수에 대한 $2n$ 개의 1차 이분방정식으로 기술된다. 필요한 초기조건은 라그랑지안과 동일한 $2n$ 개이며, $2n$ 차원의 위상 공간에서 표현된다. 이 $2n$ 개의 독립변수는 $n$ 개의 일반화된 변수 $\{q_i\}$ 와 $n$ 개의 정준 운동량 $\{p_i\}$ 이며 $(\bf{q},\, \bf{p})$ 를 **정준 변수 (canonical variables)** 라고 한다. 
 
 $$
-\boxed{p_i := \dfrac{\partial L(\bf{q},\, \dot{\bf{q}},\,t)}{\partial \dot{q}_i}.}
+\boxed{\bf{p} := \dfrac{\partial L(\bf{q},\, \dot{\bf{q}},\,t)}{\partial \dot{\bf{q}}},\qquad \text{or}\qquad  p_i = \dfrac{\partial L(\bf{q},\, \dot{\bf{q}},\,t)}{\partial \dot{q}_i}. }
 $$ {#eq-CM_canonical_momentum}
 
 </br>
@@ -196,7 +196,7 @@ $$
 이다. 따라서 정준운동량 $\bf{p}$ 는
 
 $$
-\bf{p} = \nabla_\bf{v}L = m\bf{v} + q\bf{A}
+\bf{p} = \dfrac{\partial L}{\partial \bf{v}} = m\bf{v} + q\bf{A}
 $$
 
 이므로, 
@@ -374,10 +374,10 @@ $$
 ($2$) 해밀턴의 원리와 변분원리에서는 양 끝점에서의 변화가 $0$ 임을 가정하였으나 변형된 해밀토니안의 원리에 이를 적용한다면 운동량에 대해서도 $\delta p_i(t_1)= \delta p_i(t_2)=0$ 임을 가정해야 할 것 같다. 그런데 이 가정은 필요가 없는 것이, @exr-CM_variational_devivation_of_euler_lagrange_eq 에서 보았듯이 $\delta p_i = 0$ 이 필요한 것은 부분적분에서 
 
 $$
-\left.\dfrac{\partial F}{\partial \dot{p}_i} \dfrac{\partial p}{\partial \alpha} \right|_{t_1}^{t_2}
+\left.\dfrac{\partial F}{\partial \dot{p}_i} \dfrac{\partial p_i}{\partial \alpha} \right|_{t_1}^{t_2}
 $$
 
-인 부분이다. 그런데 $F$ 는 $\bf{\dot{p}}$ 에 명시적인 의존성이 없기 때문에 위의 항은 항상 $0$ 이다. 즉 변형된 해밀톤의 원리에로부터 해밀턴 운동방정식을 유도할 때 $\delta \bf{p}=0$ 의 조건은 필요하지 않다. 해밀턴의 원리와 변형된 해밀턴의 원리는 동일한 경계조건을 사용한다.
+인 부분이다. 그런데 $F$ 는 $\bf{\dot{p}}$ 에 명시적인 의존성이 없기 때문에 위의 항은 항상 $0$ 이다. 즉 변형된 해밀톤의 원리에로부터 해밀턴 운동방정식을 유도할 때 $\delta \bf{p}=0$ 의 조건은 필요하지 않다. <u>즉 해밀턴의 원리와 변형된 해밀턴의 원리는 동일한 경계조건을 사용한다.</u>
 
 
 
