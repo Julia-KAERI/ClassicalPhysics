@@ -1,0 +1,18 @@
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta} % for arrow size
+\begin{document}
+\begin{tikzpicture}[scale=1.4, rotate=0]
+    \draw[thick, ->] (0, 0) -- (-2, -1.5) node [left] {$\hat{x}$};
+    \draw[thick, ->] (0, 0) -- (3, 0) node [above] {$\hat{y}$};
+    \draw[thick, ->] (0, -2.5) -- (0, 2.5) node [above] {$\hat{z}$};
+    \draw[thick, teal] (0,0) ellipse (2 and 0.5);
+    \node[above] at(-1, 0) {$R$};
+    \draw[red, {Stealth[length=2mm]}-{Stealth[length=2mm]}] (0, 0) -- (-2, 0);
+    % \draw[black,fill=black] (0,2.5) circle (1pt) node [left] {$z$};
+    \draw[very thick, blue, -{Stealth[length=3mm]}] (0,0) -- (0, 1) node[right] {$\boldsymbol{E}$};
+    \draw[thick, teal] (-2,0) arc (180:360:2);
+    \node at (1, -1) {$\sigma$};
+  \end{tikzpicture}
+\end{document}
