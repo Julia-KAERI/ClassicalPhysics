@@ -1,0 +1,70 @@
+---
+title: "정전기"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+여기서는 어떤 기준틀에서 $\rho(\bf{x},\,t)$ 가 상수인 경우를 다룬다. 이 기준틀에서 전하의 위치는 고정되어 있으며 움직이지 않는다. $\bf{J}(\bf{x},\,t)=0$ 이며 이 때 $\bf{B}=\bf{0}$ 으로 놓을 수 있다. 그렇다면 우리가 가진 멕스웰 방정식은 아래의 두개이다.
+
+$$
+\nabla \bf{\cdot E}= \dfrac{\rho}{\epsilon_0},\qquad \nabla \times \bf{E}=\bf{0}
+$$
+
+</br>
+
+## 가우스 법칙과 쿨롱힘 {#sec-ED_gauss_law_and_coulomb_force}
+
+가우스 법칙과 발산 정리를 통해 부피 $V$ 에 대해 
+
+$$
+\int_V \nabla \bf{\cdot E} \, d^3 x = \int_S \bf{E\cdot}d\bf{S} = \dfrac{1}{\epsilon_0}\int_V \rho(\bf{x})\,d^3 x = \dfrac{Q}{\epsilon_0}
+$$
+
+이다. 여기서 $Q$ 는 부피 $V$ 에 포함된 총 전하량이다. 이로부터 우리는 아래의 가우스 법칙의 적분형태를 얻는다.
+
+$$
+\int_S \bf{E\cdot}d\bf{S} = \dfrac{Q}{\epsilon_0}.
+$$ {#eq-ED_integral_form_of_gauss_law}
+
+
+원점에 놓인 점전하 $q'=q'\,\delta(\bf{x})$ 을 생각하자. 원점을 중심으로 반지름 $r$ 인 구를 적분하는 부피로 잡으면 이 부피 안에 전하는 $q$ 이다. 또한 구면좌표계에서 $d\bf{S} = r^2 \sin\theta d\varphi d\theta\hat{\bf{r}}$ 이며 $\bf{E}$ 는 대칭에 의해 표면에서 그 크기가 같고 $\hat{r}$ 방향이어야 하므로 $\bf{E}=E(r)\hat{\bf{r}}$ 로 놓을 수 있다. 그렇다면 
+
+$$
+\dfrac{q'}{\epsilon_0} = \int_S \bf{E\cdot}d\bf{S} = 4\pi r^2 E(r)
+$$
+
+이므로 
+
+$$
+\bf{E}(\bf{r}) = \dfrac{1}{4\pi\epsilon_0}\dfrac{q'}{r^3}\bf{r}
+$$ {#eq-ED_electric_field_by_point_charge}
+
+이며 로런츠 힘을 생각하면 위치 $\bf{r}$ 의 전하 $q$ 가 받는 힘은
+
+$$
+\bf{F} = \dfrac{1}{4\pi \epsilon_0}\dfrac{qq'}{r^3}\bf{r}
+$$ {#eq-ED_coulomb_force_by_point_charge_at_origin}
+
+이다. 이 $\bf{F}$ 는 원점에 위치한 점전하 $q'$ 에 의해 $\bf{r}$ 에 위치한 $q$ 가 받는 힘을 의미하며 이런 점전하에 희한 힘을 **쿨롱힘(Coulomb force)** 이라고 한다. 
+
+
+$\bf{r}'$ 에 위치한 점전하 $q'$ 에 의해 생성되는 전기장과 $\bf{r}$ 에 위치한 점전하 $q$ 가 받는 힘은 다음과 같다는 것을 알 수 있다.
+
+$$
+\bf{E}(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \dfrac{q'(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3},
+$${#eq-ED_electric_field_by_point_charge_at_rprime}
+
+$$
+\bf{F} = \dfrac{1}{4\pi\epsilon_0} \dfrac{qq'(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3}.
+$${#eq-ED_coulomb_force_by_point_charge_at_rprime}
+
+또한 점전하가 아니라 전하분포 $\rho(\bf{r}')$ 에 의해 성성되는 전기장은 다음과 같다는 것을 알 수 있다.
+
+$$
+\bf{E}(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\bf{r}')(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3} \,d^3\bf{r},
+$${#eq-ED_electric_field_by_point_charge_distribution}
+

@@ -674,7 +674,7 @@ $$ {#eq-CM_orbit_for_kepler_problem}
 
 </br>
 
-#### 라플라스-룽게-렌츠 벡터
+#### **라플라스-룽게-렌츠 벡터** {#sec-CM_laplace_runge_lentz_vector}
 
 Kepler 문제에서 운동 상수는 에너지 $E$ 와 각운동량 $\boldsymbol{L}$ 이 있었다. 그리고 또 하나의 운동 상수가 존재하는데 아래와 같이 정의된 라플라스-룽게-렌츠 벡터(Laplace-Runge-Lenz vector, 이하 LRL-벡터) $\boldsymbol{A}$ 이다.
 
@@ -684,7 +684,7 @@ $$ {#eq-definition_of_laplace_runge_lentz_vector}
 
 </br>
 
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-CM_properties_of_RLR_vector}
 

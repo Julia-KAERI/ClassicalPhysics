@@ -32,7 +32,7 @@ $$ {#eq-CM_point_transformation}
 :::
 :::
 
-해밀토니안이 구성되는 위상공간에서는 좌표와 운동량이 독립적인 좌표이다. 따라서 좌표 뿐만 아니라 운동량도 @eq-CM_point_transformation 와 같은 형태로 변해야 한다. 그렇다면 위상공간에서 아래와 같이 변환된다.
+해밀토니안이 구성되는 위상공간에서는 좌표와 운동량이 독립적인 좌표이다. 따라서 좌표 뿐만 아니라 운동량도 @eq-CM_point_transformation 와 같은 형태로 변해야 한다.
 
 $$
 \begin{aligned}
@@ -41,7 +41,7 @@ P_i = P_i (\bf{q},\, \bf{p},\, t),
 \end{aligned}
 $$ {#eq-CM_transformation_in_phase_space}
 
-일 것이다. 우리가 원하는 것은 이 변환에 대해 @eq-CM_canonical_equation_of_hamiltonian 와 같은 정준방정식이 만족되는 것이다. 어떤 함수 $\overline{H}=\overline{H}(\bf{Q},\, \bf{P},\,t)$ 에 대해
+우리가 원하는 것은 이 변환에 대해 @eq-CM_canonical_equation_of_hamiltonian 와 같은 정준방정식이 만족되는 것이다. 어떤 함수 $\overline{H}=\overline{H}(\bf{Q},\, \bf{P},\,t)$ 에 대해
 
 $$
 \dot{Q}_i = \dfrac{\partial \overline{H}}{\partial P_i}, \qquad \dot{P}_i = - \dfrac{\partial \overline{H}}{\partial Q_i}
@@ -72,7 +72,7 @@ $$ {#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0}
 
 </br>
 
-### 정준변환의 분류 {#sec-CM_sorts_of_canonical_transformation}
+### 정준변환의 분류 {#sec-CM_grouping_of_canonical_transformation}
 
 위상공간의 점변환을 상수 $\mu,\, \nu$ 에 대해 $\bf{Q} = \mu \bf{q},\, \bf{P} = \nu \bf{p}$ 로 놓자. 그렇다면 $\overline{H}(\bf{Q},\, \bf{P}) = \mu\nu H(\bf{q},\, \bf{p})$ 에 대해 @eq-CM_hamilton_equation_of_motion_after_point_transformation 이 성립하며
 
@@ -89,7 +89,7 @@ $$ {#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero}
 
 </br>
 
-### 변환 생성 함수 {#sec-CM_generating_function_of_the_transformation}
+### 변환 생성 함수 {#sec-CM_generating_function_of_the_canonical_transformation}
 
 @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero 의 마지막 항 $\dfrac{dG}{dt}$ 은 action $S_H$ 의 계산을 위한 적분에서 양 끝점에 대해서만 기여한다. 따라서 $G$ 가 $(\bf{q},\, \bf{p},\,t)$ 의 함수이거나 $(\bf{Q},\, \bf{P},\, t)$ 의 함수라면 $\delta S_H$ 에 기여하지 않는다. 더우기 위상공간에서의 좌표변환(@eq-CM_transformation_in_phase_space) 과 그 역변환을 통해 $G$ 는 $(\bf{q},\, \bf{p},\,t)$ 와 $(\bf{Q},\, \bf{P},\, t)$ 의 혼합으로 표현 될 수 있다. 이 $G$ 함수는 이 두 쌍의 정준 변수 사이의 가교역할을 수행할 수 있으며 이때문에 **변환 생성 함수 (generating function of the transformation)** 라고 불린다. 여기서는 변환생성함수에 대해 좀 더 분명히 알아보자. 이 절 전체에서 $n$-자유도 시스템을 가정하며, 4가지 종류와 생성함수와 정준변환의 관계에 대해 알아보기로 하자. 
 
@@ -514,3 +514,207 @@ $$
 
 
 :::
+
+</br>
+
+## 리우빌 정리
+
+$n$ 자유도 시스템에서 라그랑쥬 역학에서는 운동방정식이 $n$ 개의 2차 미분방정식이지만 해밀톤 역학에서는 $2n$ 개의 1차 미분방정식이다. 
+
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-CM_liouville_theorem}
+
+#### 리우빌의 정리
+
+
+
+:::
+
+</div>
+
+
+</br>
+
+## 푸아송 괄호
+
+### 푸아송 괄호 {#sec-CM_poisoon_bracket}
+
+::: {.callout-note appearance="minimal"}
+::: {#def-CM_poisson_bracket}
+
+#### 푸아송 괄호
+
+$f(\bf{q},\,\bf{q})$ 와 $g(\bf{p},\,\bf{q})$ 가 위상공간에서 정의된 두 함수일 때 **푸아송 괄호 (Poisson bracket)** $\{f,\,g\}$ 는 다음과 같이 정의된다.
+
+$$
+\{f,\,g\} := \sum_i \left[\dfrac{\partial f}{\partial q_i}\dfrac{\partial g}{\partial p_i} - \dfrac{\partial f}{\partial p_i}\dfrac{\partial g}{\partial q_i}\right]
+$$ {#eq-CM_definition_of_poission_bracket}
+
+:::
+:::
+
+
+아래의 명제는 푸아송 괄호의 순전히 수학적인 성질에 대한 것이다. 증명은 생략한다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-CM_basic_properties_of_poisson_bracket}
+
+푸아송 괄호에 대해 다음이 성립한다.
+
+&emsp;($1$) $\{f,\,g\}=-\{g,\,f\}$, 
+
+&emsp;($2$) $a,\,b\in \R$ 일 때 $\{af+bg,\,h\} = a\{f,\,h\} + b\{g,\,h\}$,
+
+&emsp;($3$) $\{fg,\,h\} = f\{g,\,h\} + \{f,\,h\}g$,
+
+&emsp;($4$) (**야코비 향등식**) $\{f,\,\{g,\,h\}\} + \{g,\, \{h,\,f\}\} + \{h,\,\{f,\,g\}\}=0$.
+
+:::
+
+</div></br>
+
+푸아송 괄호는 위상공간에서 정의되며 아래의 성질은 위상공간에서의 기본적 성질에 대한 것이다. 증명은 생략한다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-CM_properties_of_poisson_bracket}
+
+푸아송 괄호에 대해 다음이 성립한다.
+
+&emsp;($1$) $\{q_i,\,q_j\} = \{p_i,\,p_j\} = 0$, 
+
+&emsp;($2$) $\{q_i,\,p_j\} = \delta_{ij}$.
+
+:::
+
+</div></br>
+
+아래의 수학적 성질은 푸아송 괄호와 해밀토니안, 그리고 시간의 밀접한 연관성을 보여준다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-CM_time_derivative_and_poisson_brackeet}
+
+임의의 함수 $f(\bf{q},\bf{p},\,t)$ 에 대해 다음이 성립한다.
+
+$$
+\dfrac{df}{dt} = \{f,\, H\} + \dfrac{\partial f}{\partial t}.
+$$ {#eq-CM_time_derivative_and_poisson_bracket}
+
+:::
+
+</div>
+
+::: {.proof}
+
+$$
+\begin{aligned}
+\dfrac{df}{dt} &= \sum_i \left(\dfrac{\partial f}{\partial q_i}\dot{q}_i + \dfrac{\partial f}{\partial p_i}\dot{p}_i\right) + \dfrac{\partial f}{\partial t} \\[0.3em]
+&= \sum_i \left(\dfrac{\partial f}{\partial q_i}\dfrac{\partial H}{\partial p_i} - \dfrac{\partial f}{\partial p_i} \dfrac{\partial H}{\partial q_i}\right) + \dfrac{\partial f}{\partial t} = \{f,\,H\}+ \dfrac{\partial f}{\partial t}. \quad \square
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+위의 정리로부터 만약 $f=f(\bf{p},\,\bf{q})$ 라면 $\dot{f} = \{f,\, H\}$ 임을 알 수 있다. 즉 시간에 명시적으로 의존하지 않는 물리량 $f$ 가 $\{f,\,H\}=0$ 이면 $f$ 는 운동상수이다.
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-CM_poissog_bracket_of_constant_of_motion}
+
+$f=f(\bf{q},\, \bf{p}),\, g=g(\bf{q},\, \bf{p})$ 가 운동상수이면 $\{f,\,g\}$ 역시 운동상수이다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+$\{f,\,H\}= \{g,\,H\}=0$ 이며 야코비 항등식(@prp-CM_basic_properties_of_poisson_bracket ($4$)) 를 이용한다.
+
+$$
+\begin{aligned}
+\{\{f,\,g\},\,H\} &= \{f,\, \{g,\,H\}\} - \{g,\,\{f,\,H\} \} = 0. \quad \square
+\end{aligned}
+$$
+
+:::
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-CM_poisong_bracket_and_angular_momentum}
+
+#### 각운동량과 푸아송 괄호
+
+$L_i = \varepsilon_{ijk}x_jp_k$ 이다. 이로부터
+
+$$
+\begin{aligned}
+\{L_i,\,L_j\} &= \sum_{l, m, s, t}\varepsilon_{ilm}\varepsilon_{jst}\{x_lp_m,\, x_sp_t\} \\[0.3em]
+&=  \sum_{l, m, s, t}\varepsilon_{ilm}\varepsilon_{jst}(\delta_{lt}p_mx_s - \delta_{sm}x_lp_t) \\[0.3em]
+&= \sum_{l, m, s} \varepsilon_{ilm}\varepsilon_{jsl}x_sp_m  + \sum_{l,m,t} \varepsilon_{ilm}\varepsilon_{jmt}x_lp_t \\[0.3em]
+&= \sum_{m, s} (\delta_{mj}\delta_{is} - \delta_{ms}\delta_{ji})x_sp_m  + \sum_{l,m,t} (\delta_{it}\delta_{jl}- \delta_{ij}\delta_{lt})x_lp_t \\[0.3em]
+&= x_ip_j - x_jp_i = \varepsilon_{ijk}L_k
+\end{aligned}
+$$
+
+이며, 정해진 $i$ 에 대해 
+
+$$
+\begin{aligned}
+\{L^2,\, L_i\} &= \sum_j \{L_j^2,\,L_i\}= \sum_j L_j \{L_j,\,L_i\} + \{L_j,\,L_i\}L_j \\[0.3em]
+&= \sum_j \varepsilon_{kji}L_jL_k + L_kL_j = 0. 
+\end{aligned}
+$$
+
+:::
+
+</div></br>
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-CM_poisong_bracket_and_runge_lentz_vector}
+
+#### 라플라스-룽게-렌츠 벡터와 푸아송 괄호
+
+@sec-CM_laplace_runge_lentz_vector 을 보라. @eq-definition_of_laplace_runge_lentz_vector 로 정의된 라플라스-룽게-렌츠 벡터가 운동상수인 것을 @prp-CM_properties_of_RLR_vector 에서 보였다. 여기서는 푸아송 괄오를 이용해 보이자. 여기서 라플라스-룽게-렌츠 벡터와 해밀토니안은
+
+$$
+\bf{A} = \bf{p}\times \bf{L} - mK\hat{\bf{r}},\qquad H = \dfrac{p^2}{2m} + \dfrac{K}{r}
+$$
+
+이며 이로부터 다음을 안다.
+
+$$
+\bf{A\cdot L} = 0.
+$$
+
+$$
+\begin{aligned}
+A_i &= p^2x_i - (\bf{p\cdot x})p_i - \dfrac{mKx_i}{r^2}
+\end{aligned}
+$$
+
+이로부터
+$$
+\begin{aligned}
+\{L_i,\,A_j\} = \varepsilon_{ijk}A_k,\qquad \{A_i,\,A_j\} = -2mH\varepsilon_{ijk}L_k
+\end{aligned}
+$$
+
+을 얻는다. (*to be checked*) 이로부터 다음을 얻을 수 있다.
+
+$$
+\{H,\,A_i\} = 0
+$$
+
+:::
+
+</div></br>

@@ -34,7 +34,11 @@ book:
       - src/Electromagnetism/electrostatics_1.qmd
       - src/Electromagnetism/electrostatics_2.qmd
       - src/Electromagnetism/electrostatics_3.qmd
-
+    
+    - part: src/Electrodynamics/00_index.qmd
+      chapters:
+      - src/Electrodynamics/01_introduction.qmd
+      - src/Electrodynamics/02_electrostatics.qmd
       
     - part: src/Relativity/00_index.qmd
       chapters:

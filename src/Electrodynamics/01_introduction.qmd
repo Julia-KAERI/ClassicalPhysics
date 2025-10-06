@@ -1,0 +1,101 @@
+---
+title: "들어가며"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+## 전하와 전류
+
+### 전하와 전류 {#sec-ED_charge_and_current}
+
+근본적으로는 전하는 양자화 되어 있으며, 여기서 사용하는 SI 단위계에서는 쿨롱(Coulomb, $C$) 단위를 사용한다. 기본 전자 단위로는 전자의 전하량 $-e$ 을 사용하며 
+
+$$
+e = 1.60217657 \times 10^{−19} C
+$$
+
+이다. 점입자가 아닌 전하 분포를 사용할 경우는 전하 밀도, 즉 단위 부피당 전하량를 사용하며 $\rho(\bf{x},\,t)$ 라고 표기한다. 공간 $V$ 를 점유하는 총 전하량 $Q=\int_V \rho (\bf{x},\,t) d^3\bf{x}$ 이다. 때때로 점전하를 표현할 경우 디랙 델타 함수를 사용하여 $\rho = q \delta(\bf{x}-\bf{r}(t))$ 와 같이 쓴다. 
+
+많은 경우 전하는 움직이며 이것을 수학적으로 표현해야 한다. 특정 위치 $\bf{x}$, 시간 $t$ 에서의 전하 밀도가 $\rho$ 이고 이 전하가 $\bf{v}$ 의 속도로 움직일 때 **전류 밀도 (current density)** $\bf{J}$ 는 아래와 같이 정의된다.
+
+$$
+\bf{J} := \rho \bf{v}.
+$$ {#eq-ED_definition_of_current_density}
+
+전하의 경우와 마찬가지로 점전하가 속도 $\bf{v}$ 로 움직일 경우 전류밀도는 $\bf{J} = \rho\,\delta(\bf{x}-\bf{r}(t))\bf{v}$ 이다. 
+
+많은 경우 특정 표면 $S$ 에 대해 이 표면을 통과하는 전하의 흐름이 중요하다. 이 값을 **전류 (electric current)** 라고 하며 관례적으로 $I$ 로 표기하고 아래와 같이 정의된다.
+
+$$
+I := \int_S \bf{J \cdot} d\bf{S}.
+$$ {#eq-ED_definition_of_electric_current}
+
+$q$ 의 전하를 가진 입자가 $S$ 의 표면을 단위면적당 $n$ 개가 $\bf{v}$ 의 속도로 통과한다고 하자. 그렇다면 $\bf{J}=nq\bf{v}$ 이고 $I = nqvS$ 이다. 
+
+</br>
+
+### 전하 보존 법칙 {#sec-ED_charge_conservartion_law}
+
+$$
+\dfrac{\partial \rho}{\partial t} + \nabla \bf{\cdot J} = 0.
+$$ {#eq-ED_charge_conservation_law}
+
+</bf>
+
+## 힘과 장 
+
+### 전기장, 자기장과 로런츠 힘 {#sec-ED_force_and_field}
+
+전기장 $\bf{E}(\bf{x},\,t)$ 와 자기장 $\bf{B}(\bf{x},\,t)$ 에 대해 $\bf{r}(t)$ 에 위치한 전하 $q$ 는 아래의 힘을 받으미 이 힘을 **로런츠 힘(Lorentz force)** 라고 한다.
+
+$$
+\bf{F}=q(\bf{E} + \dot{\bf{r}}\times \bf{B}).
+$$ {#eq-ED_lorentz_force}
+
+이 로런츠 힘을 전하 분포 $\rho$ 와 전류 밀도 $\bf{J}$ 에 대해 아래와 같이 쓸 수 있다.
+
+$$
+\bf{f} = \rho \bf{E} + \bf{J}\times \bf{B}.
+$$ {#eq-ED_force_density}
+
+여기서 $\bf{f}$ 는 $\bf{x}$ 에 위치한 작은 부피의 전하 $\rho$ 가 $\rho(\bf{x},\,t)$ 와 $\bf{J}(\bf{x},\,t)$ 에 의해 받는 단위 부피당 힘이다. 
+
+</br>
+
+### 맥스웰 방정식 {#sec-ED_maxwell_equation}
+
+로런츠 힘은 주어진 전기장과 자기장에 대해 전하 및 전하의 흐름에 의해 생성되는 힘을 표현한다. 전기장과 자기장은 어떻게 생성될지를 말하는 식이 멕스웰 방정식이다. 멕스웰 방정식은 아래의 네 식이다.
+
+$$
+\nabla \bf{\cdot E} = \dfrac{\rho}{\epsilon_0},
+$$ {#eq-ED_maxwell_eq_1}
+
+$$
+\nabla \bf{\cdot B} = 0,
+$$ {#eq-ED_maxwell_eq_2}
+
+$$
+\nabla \times \bf{E} + \dfrac{\partial \bf{B}}{\partial t} = 0,
+$$ {#eq-ED_maxwell_eq_3}
+
+$$
+\nabla \times B - \mu_0\epsilon_0 \dfrac{\partial \bf{E}}{\partial t} = \mu_0 \bf{J}.
+$${#eq-ED_maxwell_eq_4}
+
+여기서 $\epsilon_0$ 는 진공 유전율로 
+
+$$
+\epsilon_0 \approx 8.85 \times 10^{-12} \;\text{m}^{-3}\,\text{Kg}^{-1}\,\text{s}^2\,\text{C}^2
+$$
+
+이며 $\mu_0$ 는 진공 자화율로
+
+$$
+\mu_0 :=4\pi \times 10^{-7}\; \text{m}\,\text{Kg}\,\text{C}^{-2} \approx 1.25 \times 10^{-6} \; \text{m}\,\text{Kg}\,\text{C}^{-2}
+$$
+
+이다. 
