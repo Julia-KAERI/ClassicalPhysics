@@ -1,0 +1,270 @@
+---
+title: "정자기"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+여기서는 전하 밀도 $\rho = 0$ 이며 전류 밀도 $\bf{J}\ne 0$ 인 경우에 대해 다룬다. $\rho = 0$ 이므로 $\bf{E}=\bf{0}$ 이며 이제 우리가 다뤄야 할 멕스웰 방정식은 2개이다.
+
+$$
+\nabla \bf{\cdot B} = 0,
+$$ {#eq-ED_magnetostatics_eq1}
+
+$$
+\nabla \times \bf{B} = \mu_0 \bf{J}
+$$ {#eq-ED_magnetostatics_eq2}
+
+또한 전하 보존의 법칙 @eq-ED_charge_conservation_law 에서 $\rho = 0$ 이므로
+
+$$
+\nabla \bf{\cdot J} = 0
+$$ {#eq-ED_magnetostatics_eq3}
+
+이다. 참고로 이것은 $\nabla \cdot (\nabla \times \bf{B})=0$ 인 것과 일치한다. 
+
+</br>
+
+## 앙페르 법칙
+
+### 앙페르의 법칙과 비오-사바르의 법칙 {#sec-ED_ampere_law_and_biot_savart_law}
+@eq-ED_magnetostatics_eq2 를 **앙페르 법칙(Ampère's law)** 이라고 한다. 어떤 열린 표면 $S$ 와 $S$ 의 경계 $C=\partial S$ 에 대해 스토크스 정리를 적용하면 다음과 같다.
+
+$$
+\int_S (\nabla \times \bf{B}) \bf{\cdot}d\bf{S} = \oint_C \bf{B \cdot}d\bf{s} =\mu_0 \int_S  \bf{J \cdot} d\bf{S}
+$$
+
+
+표면 $S$ 에 대해 경계를 따르는 경로 $C$ 의 방향은 두가지가 가능하다. 표면에 대해 직교 벡터 $\hat{\bf{n}}_S$ 역시 두가지가 가능한데 한쪽을 잡고 경로는 오른손 법칙을 따르도록 잡는다. 여기서 전류 $I := \int_S \bf{J\cdot}d\bf{S}$ 를 생각하면 아래 식을 얻는다.
+
+$$
+\oint_C \bf{B \cdot}d\bf{s} = \mu_0 I.
+$$ {#eq-ED_amprer_law_for_current}
+
+
+
+[헬름홀츠 정리](#sec-ED_Helmholtz_theorem) 에 의해, 그리고 항등식 $\nabla \times (f\bf{A}) = (\nabla f) \times \bf{A} + f(\nabla \times \bf{A})$) 를 이용하면,
+
+$$
+\begin{aligned}
+\bf{B}(\bf{r}) &= \nabla \times \dfrac{\mu_0}{4\pi} \int \dfrac{\bf{J}(\bf{r}')}{\|\bf{r}-\bf{r}'\|} \,d^3\bf{r}' \\[0.3em]
+&=\dfrac{\mu_0}{4\pi} \int \dfrac{\nabla \times \bf{J}(\bf{r}')}{\|\bf{r}-\bf{r}'\|} \,d^3\bf{r}' + \dfrac{\mu_0}{4\pi} \int \dfrac{\bf{J}(\bf{r}')\times (\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3} \, d^3\bf{r}
+\end{aligned}
+$$
+
+이다. 여기서 $\bf{J}(\bf{r}')$ 은 $\bf{r}$ 에 대한 함수가 아니므로 $\nabla \times \bf{J}(\bf{r}') = \bf{0}$ 이다. 특정 전선으로 전류 $I$ 가 흐른다고 하자. 이 경로를 $C$ 라고 하면 이 전류에 의한 자기장은 아래와 같다. 이 식을 **비오-사바르의 법칙 (Biot-Savart's law)** 라고 한다. 
+
+$$
+\bf{B}(\bf{r}) = \dfrac{\mu_0 I}{4\pi} \int_C \dfrac{d\bf{l}\times (\bf{r}-\bf{l})}{\|\bf{r}-\bf{l}\|^3}.
+$$ {#eq-ED_biot_savart_law}
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-ED_magnetic_field_due_to_uniform_current}
+
+#### 균일한 전류가 흐르는 무한 도선
+
+![무한 도선의 전류와 자기장](figures/magnetostatics/current_along_wire/current_along_wire.png){#fig-ED_current_along_wire width=300}
+
+$+z$ 방향으로 흐르는 무한히 긴 도선을 흐르는 전류 $I$ 를 생각하자. 원통좌표계 $(r,\, \varphi,\, z)$ 에서 생각한다. @eq-ED_biot_savart_law 에서 도선이 $\bf{l} = (0,\,0,\,z)$ 에 위치해 있다고 하고 $\bf{r}= (r,\, \varphi,\,0)$ 으로 놓을 수 있다. 그렇다면 
+$$
+d\bf{l}\times (\bf{r}-\bf{l})= r \hat{\bf{\varphi}}dz
+$$
+
+이며 $\|\bf{r}-\bf{l}\| = \sqrt{r^2+z^2}$ 이므로 
+$$
+\bf{B}(\bf{r}) = \dfrac{\mu_0 I\hat{\bf{\varphi}}}{4\pi} \int_{-\infty}^\infty \dfrac{r\,dz}{(r^2+z^2)^{3/2}} = \dfrac{\mu_0 I}{2\pi r}\hat{\bf{\varphi}}.
+$$
+
+:::
+</div>
+
+</br>
+
+### 표면 전류 밀도와 자기장의 불연속 {#sec-ED_surface_current_density_and_discontinuity_of_magnetic_field}
+
+![표면전류밀도 $\bf{K}$ 와 자기장 $\bf{B}$, 그리고 적분 경로 $C$](figures/magnetostatics/surface_current/surface_current.png){#fig-ED_surface_current_density width=600}
+
+위의 그림과 같이 표면전류밀도 $\bf{K}=K\hat{\bf{x}}$ 를 생각하자. @exm-ED_magnetic_field_due_to_uniform_current 를 생각하면 그림의 $\bf{B}$ 가 자기장의 방향을 가리킨다는 것을 이해 할 수 있다. 표면전류 밀도가 흐르는 영역에 대해 충분히 작게 경로 $C$ 를 잡으면 이 경로에서 자기장은 $\pm \hat{\bf{y}}$ 방향이며 그 크기는 $z$ 에만 의존할 것임을 알 수 있다. 또한 $\bf{B}(z) = - \bf{B}(-z)$ 임도 알 수 있다. 
+
+$$
+\oint_C \bf{B\cdot}\,d\bf{s} = B(z)L - B(-z)L = \mu_0 LK
+$$
+
+이므로 아래와 같이 자기장을 구할 수 있다.
+
+$$
+\bf{B}(z>0) = \dfrac{\mu_0 K}{2}\hat{\bf{y}},\qquad \bf{B}(z<0) = - \dfrac{\mu_0 K}{2}\hat{\bf{y}}
+$$
+
+표면 전하가 있을때의 전기장과 같이 표면 전류가 있을때의 자기장도 불연속성이 존재한다. 즉
+
+$$
+\bf{B}(z=0^+) - \bf{B}(z=0^-)= \mu_0 \bf{K}
+$$
+
+이다. 이것은 평면의 수직방향 단위벡터 $\hat{\bf{n}}$ 에 대해 다음과 같이 쓸 수 있다.
+
+$$
+\bf{B}(0^+) - \bf{B}(0^-) = \mu_0 \bf{K} \times \hat{\bf{n}}
+$$
+
+@exm-ED_charge_distribution_plane 의 경우와 같은 가우스 면을 생각하되 전하 대신 평면에서의 임의의 방향으로 표면전류가 흐른다고 생각하자. $\nabla \bf{\cdot B}=0$ 이므로
+
+$$
+\hat{\bf{n}}\bf{\cdot B}(0^+) = \hat{\bf{n}}\bf{\cdot B}(0^-) 
+$$
+
+이다. 즉 평면에 수직방향으로의 자기장은 연속이다.
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-ED_magnetic_field_due_to_solenoid}
+
+#### 솔레노이드
+
+![솔레노이드](figures/magnetostatics/solenoid/solenoid.png){#fig-ED_solenoid width=200}
+
+위의 그림과 같이 배치된 솔레노이드를 생각하자. 원통좌표계 $(r,\,\varphi,\,z)$ 에서 생각하자. $\pm z$ 양쪽으로 아주 길다고 생각한다. 대칭에 의해 자기장은 $r$ 에만 의존하며 방향은 $\hat{z}$ 이다. 즉 $\bf{B}(\bf{r}) = B(r)\hat{\bf{z}}$ 이다. 초록색으로 표현된 경로 $C_1,\,C_2,\,C_3$ 를 생각하자. 이 가운데 $C_1,\,C_3$ 경로에 대한 적분으로부터
+
+$$
+\int_{C_1}\bf{B}\cdot d\bf{s} = 0,\qquad \int_{C_3} \bf{B}\cdot d\bf{s}=0
+$$
+
+이므로 내부와 외부에서 각각 자기장은 상수이다. 각각 $B_{\text{in}}(r),\, B_{\text{out}}(r)$ 이라고 하자. 
+
+
+$C_2$ 경로에 대한 적분으로부터
+
+$$
+B_\text{in}(r) - B_\text{out}(r) = N\mu_0 I
+$$
+
+을 얻는다. 그런데 $B_\text{out}(r\to\infty) = 0$ 이어야 하므로 외부 자기장은 $0$ 이며 솔레노이드 내부의 자기장은
+
+$$
+\bf{B}_{\text{in}}(r) = N\mu_0 I \hat{\bf{z}}
+$$
+
+이다.
+
+:::
+</div>
+
+</br>
+
+## 벡터 포텐셜 
+
+### 벡터 포텐셜 {#sec-ED_vector_potential}
+
+[헬름홀츠 정리](#sec-ED_Helmholtz_theorem) 와 $\nabla \bf{\cdot} \bf{B}=0$ 으로부터
+
+$$
+\bf{B} = \nabla \times \bf{A}
+$$ {#eq-ED_vector_potential}
+
+인 벡터장 $\bf{A}$ 가 존재한다는 것을 안다. 이 벡터장 $\bf{A}$ 를 **벡터 포텐셜 (vector potential)** 이라고 한다. $\nabla \times \bf{B} = \mu_0 \bf{J}$ 이므로 $\nabla \times \bf{B}= \nabla \times (\nabla \times \bf{A})$ 로부터 다음을 얻는다.
+
+$$
+\nabla (\nabla \bf{\cdot A}) - \nabla^2 \bf{A} = \mu_0 \bf{J}
+$$ {#eq-ED_vector_potential_and_current_density}
+
+</br>
+
+### 게이지 변환 {#sec-ED_gauge_transform_in_vector_potential}
+
+예를 들어 $\bf{A}$ 대신에 임의의 스칼라 함수 $\chi$ 를 더하여 $\bf{A}'=\bf{A}+\nabla \chi$ 라고 하더라도
+
+$$
+\bf{B} = \nabla \times \bf{A} = \nabla \times \bf{A}'
+$$
+
+이다. 즉 $\bf{B}$ 를 결정하는 벡터포텐셜은 유일하지 않으며 이렇게 유일하지 않은 벡터포텐셜 사이의 변환을 **게이지 변환 (gauge transformation)** 이라고 한다. 게이지 변환이란 용어는 전기장에 대해서도 사용되며 이는 이후 살펴보기로 한다. 
+
+이 게이지 변환 가운데 유용한 것중의 하나가 **쿨롱 게이지 (Coulomb gauge)** 이다. 
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-ED_existance_of_coulomb_gauge}
+
+#### 쿨롱 게이지의 존재
+
+벡터 포텐셜 $\bf{A}$ 에 대해 어떤 게이지 변환 $\bf{A}'= \bf{A}+ \chi$ 이 존재하여 $\nabla \bf{\cdot A}' = 0$ 이다. 이 게이지 $\chi$ 를 쿨롱 게이지 라고 한다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+$\nabla \bf{\cdot A} = \psi(\bf{x})$ 라고 하자. 그렇다면
+
+$$
+\nabla \bf{\cdot A}' = \nabla \bf{\cdot A} + \nabla^2 \chi = \psi  + \nabla^2 \chi
+$$
+
+이므로 $\nabla^2\chi = -\psi$ 를 만족하는 $\chi$ 를 찾을 수 있다면 쿨롱게이지가 존재한다. 이 때
+
+$$
+\chi(\bf{r}) = \dfrac{1}{4\pi} \int_V \dfrac{\psi(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}'
+$$
+
+가 $\nabla^2\chi = -\psi$ 를 만족하므로 쿨롱게이지는 항상 존재한다. $\square$
+
+:::
+
+</br>
+
+이제 쿨롱 게이지를 사용하여 $\nabla \bf{\cdot A}=0$ 인 벡터포텐셜을 사용했다고 하자. 그렇다면 @eq-ED_vector_potential_and_current_density 은
+
+$$
+\nabla^2 \bf{A} = -\mu_0 \bf{J}
+$$
+
+이며, 따라서 다음이 성립한다.
+
+$$
+A_i(\bf{r}) = \dfrac{\mu_0}{4\pi} \int_V \dfrac{J_i(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}'
+$$ {#eq-ED_vector_potential_from_current_density_within_coulomb_gauge}
+
+
+</br>
+
+## 자기 쌍극자 
+
+### 전류 고리와 자기 쌍극자 {#sec-ED_magnetic_dipole_due_to_current_loop}
+
+
+![전기 고리](figures/magnetostatics/current_loop/current_loop.png){#fig-ED_current_loop width=240}
+
+위의 그림과 같이 $xy$ 평면상에서 원점을 중심으로 하는 반지름 $a$ 인 원형 도선에서 반시계 방향으로 전류 $I$ 가 흐른다고 하자. 이때 이 전류에 의해 발생하는 자기장을 계산하기 위해 우선 벡터포텐셜을 계산해 보자. @eq-ED_vector_potential_from_current_density_within_coulomb_gauge 에 의해 벡터포텬셜은 아래와 같이 주어진다. 
+
+$$
+\begin{aligned}
+\bf{A}(\bf{r}) &= \dfrac{\mu_0}{4\pi} \int_V \dfrac{\bf{J}(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\, d^3\bf{r}' \\[0.3em]
+&=\dfrac{\mu_0 I}{4\pi}\oint_C \left(\dfrac{1}{r} + \dfrac{\bf{r \cdot  r}'}{r^3} + \cdots\right)\,d\bf{r}'
+\end{aligned}
+$$
+
+첫번째 항은 닫힌 경로에 대한 적분이므로 $0$ 이다. 이제 두번째 항을 생각해보자 두번째 항은 다음과 같이 쓸 수 있다. (다시 $\bf{r}^3$ 에 대한 적분으로 돌아온다.)
+
+$$
+A_k (\bf{r}) = \sum_{j=1}^3 \dfrac{\mu_0}{4\pi} \dfrac{x_j}{r^3}\int x'_j J_k d^3\bf{r}'
+$$
+
+이제 두 식을 이용한다. 
+$$
+\begin{aligned}
+\nabla' \bf{\cdot}\left[(x'_jx'_k) \bf{J}\right] &= \sum_{i} \dfrac{x'_j x'_k J_i}{\partial x_i} = x'_k J_j + x'_j J_k + x'_j x'_k \underbrace{\nabla' \bf{\cdot J}}_{\Large = 0} \\[0.3em]
+&= x'_k J_j + x'_j J_k,
+\end{aligned}
+$$ {#eq-ED_current_circuit_vector_potential_1}
+
+$$
+[\nabla \times (\bf{r}'\times \bf{J})]_i = \varepsilon_{ikj} (x'_k J_j - x'_j J_k)
+$${#eq-ED_current_circuit_vector_potential_2}
