@@ -851,13 +851,11 @@ $$
 
 :::
 
-</div>
+</div></br>
 
-</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+### 축전지 {#sec-ED_capacitor}
 
-::: {#exm-ED_capacitor}
-
-#### 축전지
+#### **평행판 축전지**
 
 ![도체 구 껍질 내부의 가우스 면](figures/electrostatics/capacitor/capacitor_3d.png){#fig-ED_capacitor_3d width=300}
 
@@ -887,9 +885,15 @@ $$
 
 로 축전지의 기하학적인 형태에 의해 정해지는 값이다. 즉 축전지의 기하학적인 형태에 의해 $C$ 가 정해지며 이 $C$ 값에 대해 양쪽에 $V$ 의 전위차를 가하면 $Q=CV$ 의 전하가 한쪽에 $-Q$ 의 전하가 반대쪽에 모이게 된다.
 
-:::
+이제 이 축전지에 저장되는 전기에너지를 알아보자. 
 
-</div></br>
+$$
+U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\bf{E}\|^2\,d^3\bf{r} = \dfrac{A\epsilon_0}{2}\int_0^d \left(\dfrac{\sigma}{\epsilon_0}\right)^2\,dz=\dfrac{Q^2}{2C}
+$$
+
+
+
+</br>
 
 ### 톰슨 정리
 

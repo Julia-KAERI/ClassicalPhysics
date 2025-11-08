@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -59,7 +59,7 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -407,7 +407,8 @@ window.Quarto = {
   <li><a href="#도체" id="toc-도체" class="nav-link" data-scroll-target="#도체"><span class="header-section-number">16.4</span> 도체</a>
   <ul class="collapse">
   <li><a href="#sec-ED_conductor" id="toc-sec-ED_conductor" class="nav-link" data-scroll-target="#sec-ED_conductor"><span class="header-section-number">16.4.1</span> 도체의 기본적 성질</a></li>
-  <li><a href="#톰슨-정리" id="toc-톰슨-정리" class="nav-link" data-scroll-target="#톰슨-정리"><span class="header-section-number">16.4.2</span> 톰슨 정리</a></li>
+  <li><a href="#sec-ED_capacitor" id="toc-sec-ED_capacitor" class="nav-link" data-scroll-target="#sec-ED_capacitor"><span class="header-section-number">16.4.2</span> 축전지</a></li>
+  <li><a href="#톰슨-정리" id="toc-톰슨-정리" class="nav-link" data-scroll-target="#톰슨-정리"><span class="header-section-number">16.4.3</span> 톰슨 정리</a></li>
   </ul></li>
   <li><a href="#경계값-문제" id="toc-경계값-문제" class="nav-link" data-scroll-target="#경계값-문제"><span class="header-section-number">16.5</span> 경계값 문제</a></li>
   </ul>
@@ -1077,10 +1078,13 @@ U = \dfrac{1}{2}\sum_{i,\,j=1,\,i\ne j}^N \dfrac{1}{8\pi\epsilon_0}\left(\dfrac{
 <p>좀 더 일반적으로 구형이 아닌, 어떤 전하를 내부에 포함하는 임의의 도체 껍질을 생각하자. 중요한 것은 도체 껍질 내부의 가우스 면의 전기장이 <span class="math inline">\(0\)</span> 이기 때문에 도체 껍질 외부의 전기장 혹은 포텐셜은 전하의 위치와는 무관하게 도체 껍질 내부의 전하를 무시하고 그 전하가 도체 껍질 외부에 분포하고 있을 때의 전기장 혹은 포텐셜만 생각하면 된다는 것이다.</p>
 </div>
 </div>
-<br>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-ED_capacitor" class="theorem example">
-<p><span class="theorem-title"><strong>예제 16.13 (축전지)</strong></span> &nbsp;</p>
+<p><br></p>
+</section>
+</section>
+<section id="sec-ED_capacitor" class="level3" data-number="16.4.2">
+<h3 data-number="16.4.2" class="anchored" data-anchor-id="sec-ED_capacitor"><span class="header-section-number">16.4.2</span> 축전지</h3>
+<section id="평행판-축전지" class="level4">
+<h4 class="anchored" data-anchor-id="평행판-축전지"><strong>평행판 축전지</strong></h4>
 <div id="fig-ED_capacitor_3d" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ED_capacitor_3d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1108,13 +1112,15 @@ C:=\dfrac{Q}{V}
 C=\dfrac{Q}{V}= \dfrac{\sigma A}{Ed} = \dfrac{A\epsilon_0}{d}
 \]</span></p>
 <p>로 축전지의 기하학적인 형태에 의해 정해지는 값이다. 즉 축전지의 기하학적인 형태에 의해 <span class="math inline">\(C\)</span> 가 정해지며 이 <span class="math inline">\(C\)</span> 값에 대해 양쪽에 <span class="math inline">\(V\)</span> 의 전위차를 가하면 <span class="math inline">\(Q=CV\)</span> 의 전하가 한쪽에 <span class="math inline">\(-Q\)</span> 의 전하가 반대쪽에 모이게 된다.</p>
-</div>
-</div>
+<p>이제 이 축전지에 저장되는 전기에너지를 알아보자.</p>
+<p><span class="math display">\[
+U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\boldsymbol{E}\|^2\,d^3\boldsymbol{r} = \dfrac{A\epsilon_0}{2}\int_0^d \left(\dfrac{\sigma}{\epsilon_0}\right)^2\,dz=\dfrac{Q^2}{2C}
+\]</span></p>
 <p><br></p>
 </section>
 </section>
-<section id="톰슨-정리" class="level3" data-number="16.4.2">
-<h3 data-number="16.4.2" class="anchored" data-anchor-id="톰슨-정리"><span class="header-section-number">16.4.2</span> 톰슨 정리</h3>
+<section id="톰슨-정리" class="level3" data-number="16.4.3">
+<h3 data-number="16.4.3" class="anchored" data-anchor-id="톰슨-정리"><span class="header-section-number">16.4.3</span> 톰슨 정리</h3>
 <p>모든 물리적 계(system)는 역학적 평형 상태에서 총 에너지를 최소화하도록 전하 밀도를 배열한다. 양자역학적 에너지 기여도와 정전기적 에너지 기여도가 경쟁하여 전하 배열을 결정하는 정도에 따라 다를 뿐이다.</p>
 <p>도체는 총 에너지에서 양자역학적 기여가 무시할 정도로 작은 계(단, 물체의 크기와 형상을 결정하는 역할은 예외)이다. 이는 정전 유도의 근본적인 기원과 도체의 차폐 및 스크리닝(screening) 특성이 오직 고전적 정전기적 에너지를 최소화하는 것에서 비롯된다는 것을 의미한다. 이러한 내용이 톰슨(Thomson)의 정전기학 정리(theorem of electrostatics)이며, 이는 샘플의 총 전하, 형상 및 부피를 유지하는 조건하에서 전하 밀도 <span class="math inline">\(\rho(\boldsymbol{r})\)</span> 에 대해 정전기적 에너지를 최소화하는 원리이다.</p>
 <br>
