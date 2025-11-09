@@ -38,7 +38,8 @@ book:
     - part: src/Electrodynamics/00_index.qmd
       chapters:
       - src/Electrodynamics/01_introduction.qmd
-      - src/Electrodynamics/02_electrostatics.qmd
+      - src/Electrodynamics/02_1_electrostatics1.qmd
+      - src/Electrodynamics/02_2_electrostatics2.qmd
       - src/Electrodynamics/03_magnetostatics.qmd
       - src/Electrodynamics/A1_mathematics.qmd
      

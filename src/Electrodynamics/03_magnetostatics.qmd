@@ -55,11 +55,18 @@ $$
 \end{aligned}
 $$
 
-이다. 여기서 $\bf{J}(\bf{r}')$ 은 $\bf{r}$ 에 대한 함수가 아니므로 $\nabla \times \bf{J}(\bf{r}') = \bf{0}$ 이다. 특정 전선으로 전류 $I$ 가 흐른다고 하자. 이 경로를 $C$ 라고 하면 이 전류에 의한 자기장은 아래와 같다. 이 식을 **비오-사바르의 법칙 (Biot-Savart's law)** 라고 한다. 
+이다. 여기서 $\bf{J}(\bf{r}')$ 은 $\bf{r}$ 에 대한 함수가 아니므로 $\nabla \times \bf{J}(\bf{r}') = \bf{0}$ 이므로
+
+$$
+\bf{B}(\bf{r}) = \dfrac{\mu_0}{4\pi} \int \dfrac{\bf{J}(\bf{r}')\times (\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3} \, d^3\bf{r}
+$$ {#eq-ED_biot_savart_law}
+
+이며 이를 **비오-사바르의 법칙 (Biot-Savart's law)** 이라고 한다. 
+특정 전선으로 전류 $I$ 가 흐른다고 하자. 이 경로를 $C$ 라고 하면 이 전류에 의한 자기장은 아래와 같다. 
 
 $$
 \bf{B}(\bf{r}) = \dfrac{\mu_0 I}{4\pi} \int_C \dfrac{d\bf{l}\times (\bf{r}-\bf{l})}{\|\bf{r}-\bf{l}\|^3}.
-$$ {#eq-ED_biot_savart_law}
+$$ {#eq-ED_biot_savart_law_for_current}
 
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
@@ -70,7 +77,7 @@ $$ {#eq-ED_biot_savart_law}
 
 ![무한 도선의 전류와 자기장](figures/magnetostatics/current_along_wire/current_along_wire.png){#fig-ED_current_along_wire width=300}
 
-$+z$ 방향으로 흐르는 무한히 긴 도선을 흐르는 전류 $I$ 를 생각하자. 원통좌표계 $(r,\, \theta,\, z)$ 에서 생각한다. @eq-ED_biot_savart_law 에서 도선을 $z$ 축 선상에 위치시키면 $\bf{l} = (0,\,0,\,z)$ 로 놓을 수 있으며
+$+z$ 방향으로 흐르는 무한히 긴 도선을 흐르는 전류 $I$ 를 생각하자. 원통좌표계 $(r,\, \theta,\, z)$ 에서 생각한다. @eq-ED_biot_savart_law_for_current 에서 도선을 $z$ 축 선상에 위치시키면 $\bf{l} = (0,\,0,\,z)$ 로 놓을 수 있으며
 $$
 d\bf{l}\times (\bf{r}-\bf{l})= r \hat{\bf{\theta}}dz
 $$
@@ -78,7 +85,7 @@ $$
 이다. $\|\bf{r}-\bf{l}\| = \sqrt{r^2+z^2}$ 이므로 
 $$
 \bf{B}(\bf{r}) = \dfrac{\mu_0 I\hat{\bf{\theta}}}{4\pi} \int_{-\infty}^\infty \dfrac{r\,dz}{(r^2+z^2)^{3/2}} = \dfrac{\mu_0 I}{2\pi r}\hat{\bf{\theta}}.
-$$
+$$ {#eq-ED_magnetic_field_due_to_infinite_straight_current}
 
 :::
 </div>
@@ -305,7 +312,7 @@ $$
 \boxed{\bf{A} = \dfrac{\mu_0}{4\pi}\dfrac{\bf{m}\times \bf{r}}{\|\bf{r}\|^3}.}
 $$ {#eq-ED_vector_potential_due_to_localized_magnetic_moment}
 
-이로부터 자기장을 계산하면 아래와 같다.
+이로부터 자기장을 계산하면 아래와 같다. 여기서 $\hat{\bf{r}} = \bf{r}/\|\bf{r}\|$ 이다.
 
 $$
 \boxed{
@@ -396,5 +403,142 @@ $$
 
 이므로 @eq-ED_magnetic_field_due_to_localized_magnetic_moment 이성립한다.
 
+:::
+
+</br>
+
+## 자기력
+
+우리는 이제 전류가 자기장을 생성한다는 것을 안다. 또한 전류는 움직이는 전하이다. 그리고 로런츠 힘 $\bf{F}=q\bf{v}\times \bf{B}$ 로 부터 자기장 속에서 움직이는 전하가 받는 힘을 안다. 그렇다면 두개의 전류가 있다면 서로 힘을 주고 받을것이다. 
+
+</br>
+
+### 평행하게 흐르는 두 전류 사이의 힘 {#sec-ED_force_between_two_currents}
+
+![두 전류](figures/magnetostatics/two_currents/two_currents.png){#fig-ED_two_current width=240}
+
+위의 그림과 같이 서로 거리 $d$ 만큼 떨어져 평행하게 흐르는 두 전류 $I_1$, $I_2$ 를 생각하자. $I_1$ 에 의해 생성되는 자기장 $\bf{B}_1$ 은 @eq-ED_magnetic_field_due_to_infinite_straight_current 과 같으며, 따라서 $I_2$ 를 흐르는 속도 $\bf{v}$ 인 전하 $q$ 가 받는 힘은
+
+$$
+\bf{f}=qv\hat{\bf{z}} \times \dfrac{\mu_0 I_1}{2\pi d}\hat{\bf{y}} = - \dfrac{\mu_0 I_1 qv}{2\pi d}\hat{\bf{x}}
+$$
+
+이다. 도선 $I_2$ 의 단면적을 $A_2$ 라고 하면 $I_2$ 의 전류 밀도 $J_2 = I_2/A_2$ 이며 $A_2$ 를 통과하는 전하의 밀도를 $n_2$ 이라고 하면 $J_2 = n_2qv$ 이다. 또한 $\bf{f}$ 는 전하 1개가 받는 힘이므로 전류 $I_2$ 가 받는 전체 힘 $\bf{F}_2=n_2A_2 \bf{f}$ 이므로 $I_2$ 가 받는 힘 $\bf{F}_2$ 는 아래와 같다.
+
+$$
+\bf{F}_2 = - \dfrac{\mu_0 I_1 I_2}{2\pi d}\hat{\bf{x}}.
+$$ {#eq-ED_force_between_two_parallel_currents}
+
+반대로 $I_2$ 에 의해 $I_1$ 이 받는 힘 $\bf{F}_1=-\bf{F}_2$ 임은 쉽게 알 수 있다. 여기서 $I_1,\,I_2$ 가 같은 방향이라면 두 전류 사이에 인력이 작용하며, $I_1,\,I_2$ 가 다른 방향일 때 두 전류 사이에 척력이 작용한다.
+
+</br>
+
+### 전류 사이의 힘 {#sec-ED_general_force_between_current}
+
+$I_1$ 의 전류에 의해 생성되는 자기장 $\bf{B}_1$ 의 영항으로 전류밀도 $\bf{J}_2$ 가 받는 전체 로렌츠 힘은
+
+$$
+\bf{F}_2 = \int \bf{J}_2(\bf{r}_2) \times \bf{B}_1(\bf{r}_2)\,d^3\bf{r}_2
+$$
+
+이며 $\bf{J}_1,\,\bf{J}_2$ 가 각각 폐곡선 $C_1,\,C_2$ 에서 닫힌 전류 회로를 이루며 각각의 전류가 $I_1,\,I_2$ 일 때 $I_2$ 가 받는 힘은 아래와 같이 계산 할 수 있다.
+
+$$
+\begin{aligned}
+\bf{F}_2 &= I_2 \oint_{C_2} d\bf{r}_2 \times \bf{B}_1(\bf{r}_2)\\[0.3em] 
+&= I_2 \oint_{C_2} d\bf{r}_2 \times \left[I_1 \oint_{C_1} \dfrac{d\bf{r}_1 \times (\bf{r}_2-\bf{r}_1)}{\|\bf{r}_2-\bf{r}_1\|}\right] \\[0.3em]
+&= I_1I_2 \oint_{C_1}\oint_{C_2} \dfrac{d\bf{r}_2 \times d\bf{r}_1 \times (\bf{r}_2-\bf{r}_1)}{\|\bf{r}_2-\bf{r}_1\|}.
+\end{aligned}
+$$
+
+수식이 보여주듯이 대부분의 상황에서 위 식을 계산하는 것은 쉽지 않다.
+
+</br>
+
+### 쌍극자의 힘과 에너지 {#sec-ED_force_and_energy_of_magnetic_dipole}
+
+이제 두 전류 흐름이 아닌 자기장 안의 전류흐름에 대해 알아보자. 앞서 보았듯이 자기장 $\bf{B}(\bf{r})$ 이 주어졌을 때 전류 밀도 $\bf{J}(\bf{r})$ 이 받는 총 힘은 아래와 같다.
+
+$$
+\bf{F} = \int_V \bf{J}(\bf{r})\times \bf{B}(\bf{r})\,d^3\bf{r}.
+$$
+
+이제 전류 밀도가 공간에서 원점 $\bf{0}$ 근처에서 국소화 되어 있으며 회로를 이루고 있다고 하자. $\bf{B}(\bf{r})$ 을 $\bf{0}$ 을 중심으로 테일러 전개하면
+
+$$
+\bf{B}(\bf{r}) = \bf{B}(\bf{0}) + (\bf{r\cdot} \nabla)\bf{B}(\bf{0}) + \cdots
+$$
+
+이며 힘은
+
+$$
+\bf{F} = - \bf{B}(\bf{0}) \times \int_V \bf{J}(\bf{r})\,d^3\bf{r} + \int_V \bf{J}(\bf{r}) \times \left[(\bf{r\cdot}\nabla)\bf{B}(\bf{0})\right] + \cdots
+$$
+
+이다. 여기서 첫째 항은 전류밀도가 닫힌 경로를 따라 흐르므로 $0$ 이다. 이제 두번째 항을 좀 조작하자. $(\bf{r\cdot}\nabla)\bf{B}(\bf{0})$ 은 실제로 
+
+$$
+(\bf{r\cdot}\nabla)\bf{B}(\bf{0}) = \sum_j \hat{\bf{x}}_j\sum_i \left.x_i\dfrac{\partial B_j(\bf{r})}{\partial x_i}\right|_{\bf{r}=\bf{0}}
+$$
+
+
+임을 생각하자. 이 식은 다음과 같이 써도 전혀 차이가 없다.
+
+$$
+(\bf{r\cdot}\nabla)\bf{B}(\bf{0}) = \sum_j \hat{\bf{x}}_j\sum_i \left.x'_i\dfrac{\partial B_j(\bf{r}')}{\partial x'_i}\right|_{\bf{r}'=\bf{0}} = (\bf{r\cdot}\nabla')\bf{B}(\bf{r}'){\huge |}_{\bf{r}'=\bf{0}}\; .
+$$
+
+그렇다면 이제 우리가 구하고자 하는 힘은 아래와 같다.
+
+$$
+\bf{F}=\int_V \bf{J}(\bf{r}) \times \left[(\bf{r\cdot}\nabla')\bf{B}(\bf{r}')\right]{\huge |}_{\bf{r}'=\bf{0}} 
+$$
+
+이제 다음의 식을 이용한다. (증명은 @exr-ED_for_magnetic_force_from_dipole)
+
+$$
+\bf{J}(\bf{r}) \times \left[(\bf{r\cdot}\nabla')\bf{B}(\bf{r}')\right] = -\nabla' \times \left[(\bf{r\cdot B}(\bf{r}'))\bf{J}(\bf{r})\right]
+$$ {#eq-ED_for_magnetic_force_from_dipole}
+
+
+
+</br>
+
+### 연습문제 {.unnumbered}
+
+
+<div class="border" style="background-color:#F0FFFF;padding:5px;margin-bottom:5px">
+
+::: {#exr-ED_for_magnetic_force_from_dipole}
+
+@eq-ED_for_magnetic_force_from_dipole 를 증명하라.
 
 :::
+</div>
+<div class="border" style="background-color:#FAFAFA;padding:5px;border-radius:20px">
+
+::: {.solution}
+
+@eq-ED_for_magnetic_force_from_dipole 의 우변에서 $\nabla'$ 의 영향을 받는 것은 $\bf{B}(\bf{r}')$ 뿐임을 생각하자. 그렇다면 @eq-ED_for_magnetic_force_from_dipole 의 $i$ 번째 성분의 좌변과 우변은 각각 아래와 같다.
+
+$$
+\begin{aligned}
+\text{[l.h.s]} &= \varepsilon_{ijk} J_j r_l \partial'_l B_k,\\[0.3em]
+\text{[r.h.s]} &= \varepsilon_{ijk} J_j r_l \partial'_k B_l.
+\end{aligned}
+$$
+
+그렇다면
+
+$$
+\begin{aligned}
+\text{[l.h.s]} -\text{[r.h.s]} &= \varepsilon_{ijk} J_j r_l (\partial'_l B_k - \partial'_k B_l) \\[0.3em]
+&= \varepsilon_{ijk} \left[J_j r_i (\partial'_i B_k - \partial'_k B_i)  + J_j r_j (\partial'_j B_k - \partial'_k B_j)\right] \\[0.3em]
+&= -\varepsilon_{ijk} \left[J_jr_i (\nabla' \times B)_j + J_j r_j(\nabla' \times B)_i\right]
+\end{aligned}
+$$
+
+이다. 여기서 우리가 관심 있는 영역은 전류밀도가 $0$ 인 영역이므로 $\nabla' \times \bf{B}=0$ 이며 따라서 @eq-ED_for_magnetic_force_from_dipole 이 성립함을 보였다.
+
+:::
+</div>

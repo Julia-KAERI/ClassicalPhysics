@@ -1,5 +1,5 @@
 ---
-title: "정전기"
+title: "정전기 I"
 number-sections: true
 number-depth: 3
 crossref:
@@ -102,7 +102,7 @@ $${#eq-ED_electric_field_due_to_line_charge}
 
 $$
 \begin{aligned}
-E_z(0,\,0,\,0) =\dfrac{1}{4\pi\epsilon_0}\int_0^{2\pi} \int_{\pi/2}^\pi \dfrac{\sigma R^2 \sin\theta \cos\theta \,d\theta d\phi\theta}{R^2} = \dfrac{\sigma}{4\epsilon_0}
+E_z(0,\,0,\,0) =\dfrac{1}{4\pi\epsilon_0}\int_0^{2\pi} \int_{\pi/2}^\pi \dfrac{\sigma R^2 \sin\theta \cos\theta \,d\theta d\Phi\theta}{R^2} = \dfrac{\sigma}{4\epsilon_0}
 \end{aligned}
 $${#eq-ED_electric_field_due_to_charged_hemisphere_shell}
 
@@ -122,7 +122,7 @@ $${#eq-ED_electric_field_due_to_charged_hemisphere_shell}
 
 $$
 \begin{aligned}
-E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^R\int_0^{2\pi}  \int_{\pi/2}^\pi \dfrac{\rho r^2 \sin\theta \cos\theta \,dr d\theta d\phi\theta}{r^2} = \dfrac{\rho R}{4\epsilon_0}
+E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^R\int_0^{2\pi}  \int_{\pi/2}^\pi \dfrac{\rho r^2 \sin\theta \cos\theta \,dr d\theta d\Phi\theta}{r^2} = \dfrac{\rho R}{4\epsilon_0}
 \end{aligned}
 $${#eq-ED_electric_field_due_to_charged_hemisphere}
 
@@ -286,43 +286,43 @@ $$
 이다. 이로부터 $\bf{E}$ 를 임의의 경로 $C_1$ 을 따라 $P_1$ 에서 $P_2$ 까지 적분할 때 어떤 경로를 취하든 그 값이 같다는 것을 안다. 이 때
 
 $$
-\phi_{12} := -\int_{P_1}^{P_2} \bf{E\cdot}d\bf{s}
+\Phi_{12} := -\int_{P_1}^{P_2} \bf{E\cdot}d\bf{s}
 $$ {#eq-ED_potential_between_two_points}
 
-를 $P_2$ 와 $P_1$ 사이의 전위라고 한다. 또한 일반적으로 $\displaystyle \lim_{\|\bf{r}\| \to \infty} \bf{E}(\bf{r})=\bf{0}$ 의 경계 조건에서 전위 $\phi(\bf{r})$ 은 다음과 같이 정의된다.
+를 $P_2$ 와 $P_1$ 사이의 전위라고 한다. 또한 일반적으로 $\displaystyle \lim_{\|\bf{r}\| \to \infty} \bf{E}(\bf{r})=\bf{0}$ 의 경계 조건에서 전위 $\Phi(\bf{r})$ 은 다음과 같이 정의된다.
 
 $$
-\phi(\bf{r}) := -\lim_{\|\bf{r}_0\|\to \infty} \int_{\bf{r}_0}^{\bf{r}} \bf{E\cdot}\,d\bf{s}
+\Phi(\bf{r}) := -\lim_{\|\bf{r}_0\|\to \infty} \int_{\bf{r}_0}^{\bf{r}} \bf{E\cdot}\,d\bf{s}
 $$
 
 그렇다면 
 
 $$
-\bf{E}(\bf{r}) = - \nabla \phi (\bf{r}) 
+\bf{E}(\bf{r}) = - \nabla \Phi (\bf{r}) 
 $$
 
 이며, $\nabla \bf{\cdot E}(\bf{r}) = \rho/\epsilon_0$ 로부터
 
 $$
-\nabla^2 \phi = -\dfrac{\rho}{\epsilon_0}
+\nabla^2 \Phi = -\dfrac{\rho}{\epsilon_0}
 $$ {#eq-ED_poisson_equation}
 
-이다. 위의 미분방정식을 **푸아송 방정식(Poisson equation)** 이라고 한다. 전하 밀도가 $0$ 인 곳에서는 $\phi(\bf{r})$ 는 아래와 같은 **라플라스 방정식(Laplace equation)** 을 만족한다. 
+이다. 위의 미분방정식을 **푸아송 방정식(Poisson equation)** 이라고 한다. 전하 밀도가 $0$ 인 곳에서는 $\Phi(\bf{r})$ 는 아래와 같은 **라플라스 방정식(Laplace equation)** 을 만족한다. 
 
 $$
-\nabla^2\phi = 0.
+\nabla^2\Phi = 0.
 $$ {#eq-ED_laplace_equation}
 
 
 #### **경계조건**
 
-$\phi(\bf{r})$ 에 어떤 상수를 더하더라도 물리에는 변화가 없다. 일반적으로 $\displaystyle \lim_{|\bf{r}\|\to \infty} \phi(\bf{r})=0$ 이라는 일종의 경계조건을 사용한다. 
+$\Phi(\bf{r})$ 에 어떤 상수를 더하더라도 물리에는 변화가 없다. 일반적으로 $\displaystyle \lim_{|\bf{r}\|\to \infty} \Phi(\bf{r})=0$ 이라는 일종의 경계조건을 사용한다. 
 
 </br>
 
 #### **중첩의 원리**
 
-푸아송 방정식을 보자. 전하 밀도 $\rho_1$ 에 대해 포텐셜 $\phi_1$ 을 얻고 $\rho_2$ 에 대해 포텐셜 $\phi_2$ 를 얻었다면 $\nabla^2 (\phi_1+ \phi_2) = (\rho_1+\rho_2)/\epsilon_0$ 이다. 이것은 전기장 $\bf{E}_1,\,\bf{E}_2$ 에 대해서도 마찬가지이다. 이를 **중첩 원리 (principle of superposition)** 라고 한다.
+푸아송 방정식을 보자. 전하 밀도 $\rho_1$ 에 대해 포텐셜 $\Phi_1$ 을 얻고 $\rho_2$ 에 대해 포텐셜 $\Phi_2$ 를 얻었다면 $\nabla^2 (\Phi_1+ \Phi_2) = (\rho_1+\rho_2)/\epsilon_0$ 이다. 이것은 전기장 $\bf{E}_1,\,\bf{E}_2$ 에 대해서도 마찬가지이다. 이를 **중첩 원리 (principle of superposition)** 라고 한다.
 
 </br>
 
@@ -331,13 +331,13 @@ $\phi(\bf{r})$ 에 어떤 상수를 더하더라도 물리에는 변화가 없�
 원점에 위치한 점전하 $q$ 에 의한 포텐셜은 @eq-ED_potential_between_two_points 를 이용하여 계산하면 아래와 같다.
 
 $$
-\phi(\bf{r}) = -\int_{\infty}^{\bf{r}} \dfrac{1}{4\pi\epsilon_0}\dfrac{q\bf{r\cdot}\,d^3\bf{r}}{r^3} = -\dfrac{q}{4\pi\epsilon_0} \int_{\infty}^r \dfrac{dr}{r^2} = \dfrac{q}{4\pi\epsilon_0 r}
+\Phi(\bf{r}) = -\int_{\infty}^{\bf{r}} \dfrac{1}{4\pi\epsilon_0}\dfrac{q\bf{r\cdot}\,d^3\bf{r}}{r^3} = -\dfrac{q}{4\pi\epsilon_0} \int_{\infty}^r \dfrac{dr}{r^2} = \dfrac{q}{4\pi\epsilon_0 r}
 $$ 
 
-즉, $\bf{r}'$ 에 위치한 점전하 $q$ 에 의해 발생하는 $\bf{r}$ 에서의 포텐셜 $\phi(\bf{r})$ 은 다음과 같다. 
+즉, $\bf{r}'$ 에 위치한 점전하 $q$ 에 의해 발생하는 $\bf{r}$ 에서의 포텐셜 $\Phi(\bf{r})$ 은 다음과 같다. 
 
 $$
-\phi(\bf{r})= \dfrac{1}{4\pi\epsilon_0}\dfrac{1}{\|\bf{r}-\bf{r}'\|}.
+\Phi(\bf{r})= \dfrac{1}{4\pi\epsilon_0}\dfrac{1}{\|\bf{r}-\bf{r}'\|}.
 $${#eq-ED_potential_by_point_charge}
 
 </br>
@@ -346,17 +346,17 @@ $${#eq-ED_potential_by_point_charge}
 
 ::: {#exm-ED_potential_of_uniform_sphere_charge_distribution}
 
-@exm-ED_charge_distribution_uniform_sphere 의 상황에서 무한히 멀리 떨어진 곳으로부터 구의 외부 혹은 내부의 한 지점까지 전위차를 구해보자. 우선 구의 중심을 원점으로 놓고, 원점으로부터 $r>R$ 까지의 전위차 $\phi_{\text{out}}(r)$ 은
+@exm-ED_charge_distribution_uniform_sphere 의 상황에서 무한히 멀리 떨어진 곳으로부터 구의 외부 혹은 내부의 한 지점까지 전위차를 구해보자. 우선 구의 중심을 원점으로 놓고, 원점으로부터 $r>R$ 까지의 전위차 $\Phi_{\text{out}}(r)$ 은
 
 $$
-\phi_{\text{out}}(r) = - \int_{-\infty}^{r} E(r')\,dr' = -\int_{-\infty}^{r} \dfrac{\rho R^3}{3\epsilon_0 r'^2}\, dr' = \dfrac{\rho R^3}{3\epsilon_0 r}
+\Phi_{\text{out}}(r) = - \int_{-\infty}^{r} E(r')\,dr' = -\int_{-\infty}^{r} \dfrac{\rho R^3}{3\epsilon_0 r'^2}\, dr' = \dfrac{\rho R^3}{3\epsilon_0 r}
 $$
 
-이며 $r \le R$ 까지의 전위차 $\phi_{\text{in}}(r)$ 은
+이며 $r \le R$ 까지의 전위차 $\Phi_{\text{in}}(r)$ 은
 
 $$
 \begin{aligned}
-\phi_{\text{in}}(r) &= -\int_{-\infty}^R E(r')\,dr' -\int_{R}^r E(r')\, dr' \\
+\Phi_{\text{in}}(r) &= -\int_{-\infty}^R E(r')\,dr' -\int_{R}^r E(r')\, dr' \\
 &= -\int_{-\infty}^R \dfrac{\rho R^3}{3\epsilon_0 r'^2}\, dr' - \int_{R}^r \dfrac{\rho r'}{3\epsilon_0} dr' \\
 &= \dfrac{\rho R^2}{2\epsilon_0} - \dfrac{\rho r^2}{6\epsilon_0}
 \end{aligned}
@@ -378,7 +378,7 @@ $$
 @exm-ED_charge_distribution_line_charge 에서 임의의 $\bf{r}_0$ 로부터의 전위차를 구해보자.
 
 $$
-\phi(\bf{r}) = -\int_{\bf{r}_0}^{\bf{r}} \dfrac{\lambda}{2\pi\epsilon_o r'}dr' = -\dfrac{\lambda}{2\pi\epsilon_0} \left(\ln \|\bf{r}\| - \ln \|\bf{r}_0\|\right).
+\Phi(\bf{r}) = -\int_{\bf{r}_0}^{\bf{r}} \dfrac{\lambda}{2\pi\epsilon_o r'}dr' = -\dfrac{\lambda}{2\pi\epsilon_0} \left(\ln \|\bf{r}\| - \ln \|\bf{r}_0\|\right).
 $$
 
 
@@ -393,16 +393,16 @@ $$
 
 #### 균일하게 대전된 디스크로부터의 전위
 
-$xy$ 평면상에 원점을 중심으로 반지름 $R$, 면 전하 밀도 $\sigma$ 의 디스크가 위치한다고 하자. $z$ 축 위의 점 $(0,\,0,\,z)$ 에서의 전위 $\phi(z)$ 는
+$xy$ 평면상에 원점을 중심으로 반지름 $R$, 면 전하 밀도 $\sigma$ 의 디스크가 위치한다고 하자. $z$ 축 위의 점 $(0,\,0,\,z)$ 에서의 전위 $\Phi(z)$ 는
 
 $$
-\phi (z) = \dfrac{1}{4\pi\epsilon_0}\int_{0}^R \int_0^{2\pi} \dfrac{\sigma\, r\,dr\,d\theta}{\sqrt{z^2+r^2}} = \dfrac{\sigma}{2\epsilon_0} \left[\sqrt{z^2+R^2}-|z|\right]
+\Phi (z) = \dfrac{1}{4\pi\epsilon_0}\int_{0}^R \int_0^{2\pi} \dfrac{\sigma\, r\,dr\,d\theta}{\sqrt{z^2+r^2}} = \dfrac{\sigma}{2\epsilon_0} \left[\sqrt{z^2+R^2}-|z|\right]
 $$
 
 이다. $|z| \gg R$ 인 근사에서 $Q=\sigma \pi R^2$ 을 생각하면 
 
 $$
-\phi(z) = \dfrac{\sigma}{2\epsilon_0}\left[|z|\sqrt{1+\left(\dfrac{R}{z}\right)^2} -1\right] \approx \dfrac{\sigma |z|}{2\epsilon_0} \dfrac{R^2}{2z^2} = \dfrac{Q}{4\pi \epsilon_0|z|}
+\Phi(z) = \dfrac{\sigma}{2\epsilon_0}\left[|z|\sqrt{1+\left(\dfrac{R}{z}\right)^2} -1\right] \approx \dfrac{\sigma |z|}{2\epsilon_0} \dfrac{R^2}{2z^2} = \dfrac{Q}{4\pi \epsilon_0|z|}
 $$
 
 로 점전하 $|Q|$ 에 의한 전위와 같다는 것을 알 수 있다. 
@@ -411,7 +411,7 @@ $$
 이제 전위로부터 전기장을 계산해 보자. $z>0$ 인 경우
 
 $$
-E_z(z) = - \dfrac{d\phi (z)}{dz} = \dfrac{\sigma}{2\epsilon_0} \left[1-\dfrac{z}{\sqrt{z^2+R^2}}\right]
+E_z(z) = - \dfrac{d\Phi (z)}{dz} = \dfrac{\sigma}{2\epsilon_0} \left[1-\dfrac{z}{\sqrt{z^2+R^2}}\right]
 $$
 
 이며 $z \to 0$ 극한에서 $E_z(z=0^+) = \dfrac{\sigma}{2\epsilon_0}$ 로 무한 대전 평면에서의 전기장과 같다. 마찬가지로 $E_z(z=0^-)= - \dfrac{\sigma}{2\epsilon_0}$ 이다. 
@@ -428,10 +428,10 @@ $$
 ![전기 쌍극자](figures/electrostatics/electric_dipole/electric_dipole.png){#fig-ED_electric_dipole width=200}
 
 
-전하 $+q$ 와 $-q$ 가 위의 그림과 같이 $d$ 의 거리만큼 떨어져 있다고 하고 원점을 두 전하의 중앙에 두자. 그리고 $+q$ 로부터의 변위를 $\bf{r}_1$, $-q$ 로부터의 변위를 $\bf{r}_2$ 라고 하고 원점으로부터의 변위를 $\bf{r}$ 라고 하자. 그리고 $-q$ 전하의 위치로부터 $+q$ 전하의 위치까지의 변위를 $\bf{d}$ 라고 하자. 이 때의 전기 포텐셜 $\phi (\bf{r})$ 은 $r=\|\bf{r}\|$ 이라고 할 때 $r>d$ 의 조건과 @eq-ED_legendre_expansion 와 @eq-ED_parity_of_legendre_polynomial 로부터 다음을 얻는다.
+전하 $+q$ 와 $-q$ 가 위의 그림과 같이 $d$ 의 거리만큼 떨어져 있다고 하고 원점을 두 전하의 중앙에 두자. 그리고 $+q$ 로부터의 변위를 $\bf{r}_1$, $-q$ 로부터의 변위를 $\bf{r}_2$ 라고 하고 원점으로부터의 변위를 $\bf{r}$ 라고 하자. 그리고 $-q$ 전하의 위치로부터 $+q$ 전하의 위치까지의 변위를 $\bf{d}$ 라고 하자. 이 때의 전기 포텐셜 $\Phi (\bf{r})$ 은 $r=\|\bf{r}\|$ 이라고 할 때 $r>d$ 의 조건과 @eq-ED_legendre_expansion 와 @eq-ED_parity_of_legendre_polynomial 로부터 다음을 얻는다.
 $$
 \begin{aligned}
-\phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{q}{\|\bf{r}_1\|} - \dfrac{q}{\|\bf{r}_2\|}\right] = \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{1}{\|\bf{r}-\bf{d}/2\|} - \dfrac{1}{\|\bf{r}+\bf{d}/2\|}\right] \\[0.3em]
+\Phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{q}{\|\bf{r}_1\|} - \dfrac{q}{\|\bf{r}_2\|}\right] = \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{1}{\|\bf{r}-\bf{d}/2\|} - \dfrac{1}{\|\bf{r}+\bf{d}/2\|}\right] \\[0.3em]
 &= \dfrac{q}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{d^k}{2^kr^{k+1}} \left[P_k(\cos\theta)- P_k (-\cos\theta)\right] \\
 &=\dfrac{q}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{2d^{2k+1}}{2^{2k+1}r^{2k+2}} P_{2k+1}(\cos\theta) \\
 &= \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{d\cos\theta}{r^2} + \dfrac{d^3(5\cos^3\theta - 3\cos \theta) }{8r^4} + \cdots \right] \approx\dfrac{1}{4\pi\epsilon_0} \dfrac{qd\cos\theta}{r^2}
@@ -445,15 +445,15 @@ $$
 \bf{p}:=q\bf{d}
 $$ {#eq-ED_electric_dipole_moment}
 
-로 정의하면 전기 쌍극자 모멘트에 의한 전기 포텐셜 $\phi_d(\bf{r})$ 은 다음과 같다. 
+로 정의하면 전기 쌍극자 모멘트에 의한 전기 포텐셜 $\Phi_d(\bf{r})$ 은 다음과 같다. 
 $$
-\phi_d (\bf{r})= \dfrac{1}{4\pi\epsilon_0} \dfrac{\bf{p\cdot r}}{r^3}
+\Phi_d (\bf{r})= \dfrac{1}{4\pi\epsilon_0} \dfrac{\bf{p\cdot r}}{r^3}
 $$ {#eq-ED_electric_potential_dipole_2}
 
 이로부터 쌍극자 모멘트에 의한 전기장 $\bf{E}_d(\bf{r})$ 을 구하면 아래와 같다.
 
 $$
-\bf{E}_d(\bf{r}) = -\nabla \phi_d(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \left(\dfrac{3(\bf{p\cdot \hat{\bf{r}}})\hat{\bf{r}}-\bf{p}}{r^3}\right)
+\bf{E}_d(\bf{r}) = -\nabla \Phi_d(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \left(\dfrac{3(\bf{p\cdot \hat{\bf{r}}})\hat{\bf{r}}-\bf{p}}{r^3}\right)
 $$ {#eq-ED_electric_field_dipole}
 
 
@@ -465,7 +465,7 @@ $$ {#eq-ED_electric_field_dipole}
 
 $$
 \begin{aligned}
-\phi(\bf{r}) &=\dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}' \\[0.3em]
+\Phi(\bf{r}) &=\dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}' \\[0.3em]
 &= \dfrac{1}{4\pi\epsilon_0}\sum_{k=0}^\infty \dfrac{1}{\|\bf{r}\|^{k+1}} \int_V \|\bf{r}'\|^k P_k(\cos\theta')\,\rho(\bf{r}')\,d^3\bf{r'} \\[0.3em]
 &= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{1}{r}\int_V \rho(\bf{r}')\, d^3\bf{r}' + \dfrac{1}{r^2}\int_V r'\cos \gamma \, \rho(\bf{r}')\,d^3\bf{r}'  \right.\\[0.3em]
 &\qquad \qquad + \left.\int_V r'^2\left(\dfrac{3}{2}\cos^2 \gamma' - \dfrac{1}{2}\right)\rho(\bf{r}') \, d^3\bf{r}' + \cdots \right]
@@ -480,7 +480,7 @@ $$ {#eq-ED_electric_multipole_moment}
 
 에 대해 전기 포텐셜을 다음과 같이 쓸 수 있다.
 $$
-\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Q_k}{r^{k+1}}
+\Phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Q_k}{r^{k+1}}
 $$ {#eq-ED_multipole_expansion}
 
 여기서 전기 쌍극자 모멘트 $Q_1$ 은
@@ -497,7 +497,7 @@ $$
 
 $$
 \begin{aligned}
-\phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1}\dfrac{Y_l^m (\theta,\, \varphi) }{r^{l+1}} \int_V (r')^l {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\theta',\, \varphi') \, d^3\bf{r}' 
+\Phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1}\dfrac{Y_l^m (\theta,\, \varphi) }{r^{l+1}} \int_V (r')^l {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\theta',\, \varphi') \, d^3\bf{r}' 
 \end{aligned}
 $$ {#eq-ED_electrostatics_multpile_expansion_using_spherical_harmonics}
 
@@ -513,7 +513,7 @@ $$ {#eq-ED-electrostatics_moltiple_moment_2}
 이라고 하면
 
 $$
-\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1}\dfrac{Y_l^m (\theta,\, \varphi) }{r^{l+1}} Q_{lm}
+\Phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1}\dfrac{Y_l^m (\theta,\, \varphi) }{r^{l+1}} Q_{lm}
 $${#eq-ED_electrostatics_multpile_expansion_using_spherical_harmonics_2}
 
 이다.
@@ -542,7 +542,7 @@ $$
 이므로 
 
 $$
-\phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \dfrac{4\pi q}{r} Y_0^0(\theta,\, \varphi){Y_0^0}^\ast(0,\,0)=\dfrac{1}{4\pi\epsilon_0} \dfrac{q}{r}
+\Phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \dfrac{4\pi q}{r} Y_0^0(\theta,\, \varphi){Y_0^0}^\ast(0,\,0)=\dfrac{1}{4\pi\epsilon_0} \dfrac{q}{r}
 $$
 
 이다.
@@ -570,7 +570,7 @@ $$
 이다. $l$ 이 홀수일 때만 $Q_{lm}\ne 0$ 이므로 전기 포텐셜은
 $$
 \begin{aligned}
-\phi(\bf{r}) &= \dfrac{2q}{4\pi\epsilon_0} \sum_{l=1,\,l=\text{odd}}^\infty \sqrt{\dfrac{4\pi}{2l+1}}\dfrac{Y_{l}^0(\theta,\,\varphi)}{r^{l+1}} \left(\dfrac{d}{2}\right)^{l} \\
+\Phi(\bf{r}) &= \dfrac{2q}{4\pi\epsilon_0} \sum_{l=1,\,l=\text{odd}}^\infty \sqrt{\dfrac{4\pi}{2l+1}}\dfrac{Y_{l}^0(\theta,\,\varphi)}{r^{l+1}} \left(\dfrac{d}{2}\right)^{l} \\
 &= \dfrac{2q}{4\pi\epsilon_0} \left[\sqrt{\dfrac{4\pi}{3}} \dfrac{Y_{1}^0(\theta,\varphi)}{r^2}\left(\dfrac{d}{2}\right) + \sqrt{\dfrac{4\pi}{7}} \dfrac{Y_3^0(\theta,\, \varphi)}{r^4}\left(\dfrac{d}{2}\right)^{3}  + \cdots\right] \\[0.3em]
 &= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{qd \cos \theta}{r^2} + \dfrac{qd^3(5\cos^3\theta - 3 \cos \theta)}{8r^4} + \cdots \right] 
 \end{aligned}
@@ -587,7 +587,7 @@ $$
 
 평형이란 어떤 시스템의 모든 입자에 대해 가해지는 힘이 $0$ 인 상태이다. 정전기적 안정평형상태, 즉 전하들이 정지된 상태에서 각 전하에 가해지는 힘이 $0$ 이며 또한 미소 변화에 대해 복원력이 작용하는 전하 분포가 존재할까? 여기서는 서로 겹치지 않는 이산적인 점전하의 분포에서 가능한지 여부를 알아보자. 예를 들어 붙어있는 양전하와 음전하는 안정평형상태라고 볼 수 있다. 
 
-$\bf{r}$ 에 위치한 전하 $q$ 에 가해지는 힘 $\bf{F} = q\bf{E} = -q\nabla \phi$ 이다. 정전기 평형상태이려면 $\bf{F}=0$ 이어야 하므로 $\nabla \phi(\bf{r}) = 0$ 이어야 한다. 또한 $q\nabla^2\phi >0$ 이어야 한다. 하지만 우리는 전하 분포가 없는 공간에서 $\nabla^2 \phi = 0$ 임을 안다. 즉 이산적 전하분포에서 정전기적 안정평형상태는 존재하지 않는다.
+$\bf{r}$ 에 위치한 전하 $q$ 에 가해지는 힘 $\bf{F} = q\bf{E} = -q\nabla \Phi$ 이다. 정전기 평형상태이려면 $\bf{F}=0$ 이어야 하므로 $\nabla \Phi(\bf{r}) = 0$ 이어야 한다. 또한 $q\nabla^2\Phi >0$ 이어야 한다. 하지만 우리는 전하 분포가 없는 공간에서 $\nabla^2 \Phi = 0$ 임을 안다. 즉 이산적 전하분포에서 정전기적 안정평형상태는 존재하지 않는다.
 
 우리는 이것에 대해 좀 더 수학적으로 알아보자.
 
@@ -595,10 +595,10 @@ $\bf{r}$ 에 위치한 전하 $q$ 에 가해지는 힘 $\bf{F} = q\bf{E} = -q\na
 
 ::: {#thm-ED_electrostatics_laplacian_1}
 
-$\phi(\bf{r})$ 이 라플라스 방정식의 해라면 전하가 없는 공간상의 임의의 구 $V$ 의 표면 $S$ 에 대한 적분값의 평균은 구의 중심에서의 함수값과 같다. 즉 구의 중심 $\bf{r}_0$ 에 대해 다음이 성립한다.
+$\Phi(\bf{r})$ 이 라플라스 방정식의 해라면 전하가 없는 공간상의 임의의 구 $V$ 의 표면 $S$ 에 대한 적분값의 평균은 구의 중심에서의 함수값과 같다. 즉 구의 중심 $\bf{r}_0$ 에 대해 다음이 성립한다.
 
 $$
-\dfrac{1}{\text{area of }S} \oint_S \phi (\bf{r})\, dS = \phi (\bf{r}_0)
+\dfrac{1}{\text{area of }S} \oint_S \Phi (\bf{r})\, dS = \Phi (\bf{r}_0)
 $$
 
 :::
@@ -607,12 +607,12 @@ $$
 
 ::: {.proof}
 
-$\bf{r}_0$ 를 원점으로 잡고 원점을 중심으로 반지름 $R$ 인 구의 표면 $S$ 를 생각하자. $\overline{\phi}$ 를 $S$ 에서의 포텐셜의 평균값이라고 하면
+$\bf{r}_0$ 를 원점으로 잡고 원점을 중심으로 반지름 $R$ 인 구의 표면 $S$ 를 생각하자. $\overline{\Phi}$ 를 $S$ 에서의 포텐셜의 평균값이라고 하면
 
 $$
 \begin{aligned}
-\overline{\phi} &= \dfrac{1}{4\pi R^2}\oint_S \phi(\bf{r}) dS = \dfrac{1}{4\pi}\int \phi(\bf{r}) R^2 d\Omega = \dfrac{1}{4\pi} \int \phi(\bf{r})d\Omega \\[0.3em]
-&= \dfrac{1}{4\pi} \int \phi(R,\,\theta,\,\varphi) d\Omega
+\overline{\Phi} &= \dfrac{1}{4\pi R^2}\oint_S \Phi(\bf{r}) dS = \dfrac{1}{4\pi}\int \Phi(\bf{r}) R^2 d\Omega = \dfrac{1}{4\pi} \int \Phi(\bf{r})d\Omega \\[0.3em]
+&= \dfrac{1}{4\pi} \int \Phi(R,\,\theta,\,\varphi) d\Omega
 \end{aligned}
 $$
 
@@ -620,12 +620,12 @@ $$
 
 $$
 \begin{aligned}
-\dfrac{d\overline{\phi}}{dR} &= \dfrac{1}{4\pi} \int \dfrac{\partial \phi}{\partial R}\, d\Omega = \dfrac{1}{4\pi} \int\dfrac{\partial \phi}{\partial R}\hat{\bf{R}}\cdot \hat{\bf{R}} \, d\Omega \\
-&= \dfrac{1}{4\pi R^2} \int \nabla \phi \cdot d\bf{a} = \dfrac{1}{4\pi R^2}\int_V \nabla^2 \phi \,dV = 0
+\dfrac{d\overline{\Phi}}{dR} &= \dfrac{1}{4\pi} \int \dfrac{\partial \Phi}{\partial R}\, d\Omega = \dfrac{1}{4\pi} \int\dfrac{\partial \Phi}{\partial R}\hat{\bf{R}}\cdot \hat{\bf{R}} \, d\Omega \\
+&= \dfrac{1}{4\pi R^2} \int \nabla \Phi \cdot d\bf{a} = \dfrac{1}{4\pi R^2}\int_V \nabla^2 \Phi \,dV = 0
 \end{aligned}
 $$
 
-이므로 $\overline{\phi}=\text{const}$ 이다. 즉 임의의 구 표면에 대한 평균값은 항상 일정하며 반지름 $R\to 0$ 극한에서의 평균값은 중앙값일 것이므로 $\overline{\phi} = \phi (\bf{0})$ 이다. $\square$
+이므로 $\overline{\Phi}=\text{const}$ 이다. 즉 임의의 구 표면에 대한 평균값은 항상 일정하며 반지름 $R\to 0$ 극한에서의 평균값은 중앙값일 것이므로 $\overline{\Phi} = \Phi (\bf{0})$ 이다. $\square$
 
 :::
 
@@ -637,7 +637,7 @@ $$
 
 #### Earnshaw 정리
 
-유한하고 전하가 존재하지 않는 공간 $R$ 에서의 전기 포텐셜 $\phi(\bf{r})$ 의 극점은 $R$ 의 경계에서만 존재한다.
+유한하고 전하가 존재하지 않는 공간 $R$ 에서의 전기 포텐셜 $\Phi(\bf{r})$ 의 극점은 $R$ 의 경계에서만 존재한다.
 
 :::
 
@@ -645,19 +645,19 @@ $$
 
 ::: {.proof}
 
-$R$ 내부의 점 $\bf{r}_0$ 이 $\phi(\bf{r})$ 의 극소점이라고 하자. 그렇다면 $\bf{r}_0$ 를 중심으로 하는 작은 구 의 표면 $S_0$ 에 대해 $\bf{r}\in S\implies \phi (\bf{r}) > \phi(\bf{r}_0)$ 이며, 따라서 구의 normal vector $\hat{\bf{n}}$ 에 대해 $\hat{\bf{n}}\bf{\cdot} \nabla \phi (\bf{r})>0$ 이고,
+$R$ 내부의 점 $\bf{r}_0$ 이 $\Phi(\bf{r})$ 의 극소점이라고 하자. 그렇다면 $\bf{r}_0$ 를 중심으로 하는 작은 구 의 표면 $S_0$ 에 대해 $\bf{r}\in S\implies \Phi (\bf{r}) > \Phi(\bf{r}_0)$ 이며, 따라서 구의 normal vector $\hat{\bf{n}}$ 에 대해 $\hat{\bf{n}}\bf{\cdot} \nabla \Phi (\bf{r})>0$ 이고,
 
 $$
-\int_S\hat{\bf{n}}\bf{\cdot}\nabla \phi \,da >0
+\int_S\hat{\bf{n}}\bf{\cdot}\nabla \Phi \,da >0
 $$
 
 이다. 이로부터
 
 $$
-0 < \int_S \hat{\bf{n}}\bf{\cdot} \nabla \phi  \, da = - \int_S \hat{\bf{n}}\bf{\cdot}\bf{E}\,da = -\int_R \nabla \cdot E \, d^3\bf{r} = - \int_R \dfrac{\rho(\bf{r})}{\epsilon_0}\, d^3\bf{r} = 0
+0 < \int_S \hat{\bf{n}}\bf{\cdot} \nabla \Phi  \, da = - \int_S \hat{\bf{n}}\bf{\cdot}\bf{E}\,da = -\int_R \nabla \cdot E \, d^3\bf{r} = - \int_R \dfrac{\rho(\bf{r})}{\epsilon_0}\, d^3\bf{r} = 0
 $$
 
-이므로 모순이다. $\bf{r}_0$ 가 극대점일 경우 $\hat{\bf{n}}\bf{\cdot}\nabla \phi <0$ 이므로 위의 식의 부호가 반대가 되어 역시 모순이 된다. $\square$
+이므로 모순이다. $\bf{r}_0$ 가 극대점일 경우 $\hat{\bf{n}}\bf{\cdot}\nabla \Phi <0$ 이므로 위의 식의 부호가 반대가 되어 역시 모순이 된다. $\square$
 
 :::
 
@@ -670,10 +670,10 @@ $$
 정전기 에너지는 역학적 포텐셜 에너지와 같이 무한히 먼 지점에서 특정 지점까지 전하 $q$ 를 움직이는데 해준 일을 의미한다. 즉 정전기 에너지 $U(\bf{r})$ 는 다음과 같다.
 
 $$
-U(\bf{r}) = -\int_{\infty}^\bf{r} \bf{F\cdot}\, d\bf{s} = q\int_{\infty}^\bf{r} \nabla \phi \bf{\cdot}\,d\bf{s} = q\phi(\bf{r}).
+U(\bf{r}) = -\int_{\infty}^\bf{r} \bf{F\cdot}\, d\bf{s} = q\int_{\infty}^\bf{r} \nabla \Phi \bf{\cdot}\,d\bf{s} = q\Phi(\bf{r}).
 $$ {#eq-ED_electrostatic_energy_for_single_paticle_over_potential}
 
-여기서 $\phi(\infty) = 0$ 이라는 경계조건을 사용하였다. 
+여기서 $\Phi(\infty) = 0$ 이라는 경계조건을 사용하였다. 
 
 </br>
 
@@ -697,7 +697,7 @@ $$
 이다. 즉 이 시스템의 정전기 에너지 $U(\bf{r})$ 은 $W_\text{tot}$ 와 같으므로 
 
 $$
-U(\bf{r}) = \dfrac{1}{2} \sum_{i,\,j=1,\, i\ne j}^N \dfrac{q_iq_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2} \sum_{i=1}^N q_i \phi(\bf{r_i})
+U(\bf{r}) = \dfrac{1}{2} \sum_{i,\,j=1,\, i\ne j}^N \dfrac{q_iq_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2} \sum_{i=1}^N q_i \Phi(\bf{r_i})
 $$ {#eq-ED_total_electrostatic_energy_for_N_point_charges_system}
 
 임을 알 수 있다. 
@@ -709,19 +709,19 @@ $$ {#eq-ED_total_electrostatic_energy_for_N_point_charges_system}
 이제 점전하가 아니라 전하가 연속적인 분포를 이룰 경우에 대해 생각해보자. 전하의 분포가 특정 영역에 한정되어 있다고 가정한다. 그렇다면 @eq-ED_total_electrostatic_energy_for_N_point_charges_system 은 아래와 같이 변경 될 수 있을 것이다.
 
 $$
-U = \dfrac{1}{2} \int \rho (\bf{r})\,\phi (\bf{r})\,d^3\bf{r}
+U = \dfrac{1}{2} \int \rho (\bf{r})\,\Phi (\bf{r})\,d^3\bf{r}
 $$
 
 이 식은 아래와 같이 변경 될 수 있다.
 
 $$
 \begin{aligned}
-U &= \dfrac{1}{2} \int \epsilon_0 (\nabla \bf{\cdot E}) \phi \,d^3\bf{r} = \dfrac{\epsilon_0}{2} \int \left[\nabla \bf{\cdot} (\bf{E}\phi) - \bf{E\cdot} \nabla \phi\right]\,d^3\bf{r} \\[0.3em]
-&= \dfrac{\epsilon_0}{2}\int_S \phi \bf{E \cdot} d\bf{S} + \dfrac{1}{2}\int \epsilon_0\|\bf{E}\|^2 \,d^3\bf{r}
+U &= \dfrac{1}{2} \int \epsilon_0 (\nabla \bf{\cdot E}) \Phi \,d^3\bf{r} = \dfrac{\epsilon_0}{2} \int \left[\nabla \bf{\cdot} (\bf{E}\Phi) - \bf{E\cdot} \nabla \Phi\right]\,d^3\bf{r} \\[0.3em]
+&= \dfrac{\epsilon_0}{2}\int_S \Phi \bf{E \cdot} d\bf{S} + \dfrac{1}{2}\int \epsilon_0\|\bf{E}\|^2 \,d^3\bf{r}
 \end{aligned}
 $$
 
-만약 우리가 전체 공간에 대해 적분을 한다고 생각해보자. 그렇다면 첫번째 항은 $\phi(r\to \infty) = 0$ 조건에 의해 $0$ 이 될 것이며, 따라서 다음을 얻게 된다.
+만약 우리가 전체 공간에 대해 적분을 한다고 생각해보자. 그렇다면 첫번째 항은 $\Phi(r\to \infty) = 0$ 조건에 의해 $0$ 이 될 것이며, 따라서 다음을 얻게 된다.
 
 $$
 U = \dfrac{\epsilon_0}{2} \int_{\text{Universe}} \|\bf{E}\|^2\,d^3\bf{r}
@@ -733,7 +733,7 @@ $$ {#eq-ED_total_electrostatic_energy_for_charge_distribution}
 
 자 이제 @eq-ED_total_electrostatic_energy_for_2_point_charge 와 @eq-ED_total_electrostatic_energy_for_charge_distribution 을 피교해보자. $e,\,-e$ 의 전하를 가진 두 입자가 떨어져 있다면 그 전기 포텐셜 에너지는 @eq-ED_total_electrostatic_energy_for_2_point_charge 에 의하면 음수이고 @eq-ED_total_electrostatic_energy_for_charge_distribution 에 의하면 양수이다. 이 차이는 어디서 왔을까?
 
-우선 우리의 유도 과정을 살펴보자 우리는 @eq-ED_total_electrostatic_energy_for_N_point_charges_system 에서 $q_i \phi(\bf{r}_i)$ 를 $\rho(\bf{r})\phi(\bf{r})$ 로 바꾸어 @eq-ED_total_electrostatic_energy_for_charge_distribution 을 얻었다. @eq-ED_total_electrostatic_energy_for_N_point_charges_system 에서는 각각의 전하 $q_i$ 가 이미 조립된 상태로 존재하지만 @eq-ED_total_electrostatic_energy_for_charge_distribution 에서는 그렇지 않다는 것이다. 예를 들어 전하 $q=-e$ 를 가진 전자에 의한 정전기 에너지를 계산해 보자. 이 때 전자의 반경을 $r_e$ 라고 하고 @eq-ED_total_electrostatic_energy_for_charge_distribution 를 사용하면
+우선 우리의 유도 과정을 살펴보자 우리는 @eq-ED_total_electrostatic_energy_for_N_point_charges_system 에서 $q_i \Phi(\bf{r}_i)$ 를 $\rho(\bf{r})\Phi(\bf{r})$ 로 바꾸어 @eq-ED_total_electrostatic_energy_for_charge_distribution 을 얻었다. @eq-ED_total_electrostatic_energy_for_N_point_charges_system 에서는 각각의 전하 $q_i$ 가 이미 조립된 상태로 존재하지만 @eq-ED_total_electrostatic_energy_for_charge_distribution 에서는 그렇지 않다는 것이다. 예를 들어 전하 $q=-e$ 를 가진 전자에 의한 정전기 에너지를 계산해 보자. 이 때 전자의 반경을 $r_e$ 라고 하고 @eq-ED_total_electrostatic_energy_for_charge_distribution 를 사용하면
 
 $$
 U = \dfrac{\epsilon_0}{2} \int \dfrac{e^2}{4^2\pi^2 \epsilon_0^2 r^4}r^2 d\Omega = \dfrac{e^2}{8\pi \epsilon_0 r_e}
@@ -749,7 +749,7 @@ $$
 
 $$
 \begin{aligned}
-U &= \dfrac{q}{2}\left[\phi\left(\bf{r}+\dfrac{\bf{d}}{2}\right)-\phi\left(\bf{r}-\dfrac{\bf{d}}{2}\right)\right] =  \dfrac{q}{2} \bf{d \cdot } \nabla \phi (\bf{r}) \\[0.3em]
+U &= \dfrac{q}{2}\left[\Phi\left(\bf{r}+\dfrac{\bf{d}}{2}\right)-\Phi\left(\bf{r}-\dfrac{\bf{d}}{2}\right)\right] =  \dfrac{q}{2} \bf{d \cdot } \nabla \Phi (\bf{r}) \\[0.3em]
 &= \dfrac{q}{8\pi\epsilon_0} \left(\dfrac{\bf{d\cdot p}_1}{r^3} - \dfrac{3(\bf{p}_1\bf{\cdot r})(\bf{d\cdot r})}{r^5}\right) \\[0.3em]
 &= \dfrac{1}{8\pi\epsilon_0}\left(\dfrac{\bf{p}_1\bf{\cdot p}_2}{r^3} - \dfrac{3(\bf{p}_1 \bf{\cdot r})(\bf{p}_2 \bf{\cdot r})}{r^5}\right).
 \end{aligned} 
@@ -762,213 +762,3 @@ $$
 U = \dfrac{1}{2}\sum_{i,\,j=1,\,i\ne j}^N \dfrac{1}{8\pi\epsilon_0}\left(\dfrac{\bf{p}_1\bf{\cdot p}_2}{\|\bf{r}_i-\bf{r}_j\|^3} - \dfrac{3(\bf{p}_i \bf{\cdot}(\bf{r}_i-\bf{r}_j))(\bf{p}_j \bf{\cdot}(\bf{r}_i-\bf{r}_j))}{\|\bf{r}_i-\bf{r}_j\|^5}\right).
 $$ {#eq-ED_electrostatic_energy_for_electric_dipole_system}
 
-
-</br>
-
-## 도체
-
-### 도체의 기본적 성질 {#sec-ED_conductor}
-
-**도체 (conductor)** 는 전자가 자유롭게 움직 일 수 있는 공간적인 영역을 의미한다. 또한 자유롭게 움직일 수 있는 전자가 충분히 많다는 것을 가정한다. 일반적으로 도체는 금속을 의미하며 금속은 보통 원자당 하나 이상의 자유전자를 가지므로 거시적인 시스템에서 도체의 자유전자의 개수는 $10^{23}$ 이상으로 충분히 많다. 이 짧은 정의로부터 우리는 아래와 같은 사실을 유추할 수 있다.
-
-
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#thm-ED_basic_properties_of_conductor}
-
-#### 도체의 기본적인 성질
-도체 내부에서 받는 힘 $\bf{F}=0$ 이며, 따라서 다음이 성립한다.
-
-&emsp;($1$) 도체 내부에서 전기장 $\bf{E}=\bf{0}$ 이다. 
-
-&emsp;($2$) 도체 내부에서 정전기 포텐셜 $\phi$ 는 상수이다.
-
-&emsp;($3$) 도체 내부에서 전하 밀도 $\rho = 0$ 이다.
-
-&emsp;($4$) 도체가 포함하는 전하의 합이 $0$ 이 아닐 때 그 여분의 전하는 도체 표면에 존재한다.
-
-&emsp;($5$) 도체 표면의 전기장은 표면에 대해 수직방향이다.
-
-&emsp;($6$) 도체 표면의 전하밀도가 $\sigma$ 일 때 도체 표면 바로 바깥의 전기장의 크기는 $\dfrac{\sigma}{\epsilon_0}$ 이다.
-
-:::
-
-</div>
-
-::: {.proof}
-
-($1$) $\bf{F}=0$ 으로부터 $\bf{E}=0$ 이다.
-
-($2$) $\bf{E}= \nabla \phi$ 로부터 자명하다.
-
-($3$) $\bf{E} =\rho/\epsilon_0$ 로부터 자명하다.
-
-($4$) ($3$) 으로부터 도체 내부에서 $\rho=0$ 이므로 유일하게 남은 가능성은 이것뿐이다.
-
-($5$) 도체 내부에서 $\phi$ 가 상수이고 $\phi$ 는 연속이므로 도체 포면에서 $\nabla \phi$ 는 표면에 수직방향이다.
-
-($6$) 가우스법칙과 $\bf{E}_{\text{in}} = 0$ 으로부터 $\bf{E}_{\text{out}} = \sigma/\epsilon_0 \hat{\bf{n}}$ 이다. 여기서 $\hat{\bf{n}}$ 은 도체 표면에 수직방향인 단위벡터이다. $\square$ 
-
-
-:::
-
-</br>
-
-#### **유도 전하**
-
-![외부 전기장에 대해 ($a$) 전기적으로 중성인 부도체의 경우, ($b$) 도체의 경우 내부의 전하가 이동하기 시작하며 ($c$) 도체 표면의 전하 분포로 인해 내부 전기장이 사라진 경우 (출처 @Purcell2013electricity)](figures/electrostatics/conductor/conductor.png){#fig-ED_electrostatics_conductor_in_field width=600}
-
-외부의 전기장에 대해 도체 내의 자유롭게 움직일 수 없는 전하들이 움직이며, 위의 그림 ($c$) 에서 보듯이 이동한 전하들에 의한 전기장은 외부의 전기장을 상쇄하는 방향으로 이루어진다. 도체 내에서 자유롭게 움직일 수 있는 전하가 아주 많기 때문에 이 과정은 도체 내부의 전기장이 $0$ 이 될 때 까지 이루어진다. 전하가 도체 바깥으로 탈출할 수 없다고 가정하면 당연히 이렇게 움직인 전하는 표면에 모여 있을 수 밖에 없다. 이렇게 외부 전기장에 의해 표면에 나타나는 전하를 **유도 전하 (induced charge)** 라고 한다.
-
-</br>
-
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-
-::: {#exm-ED_field_of_spherical_shell}
-
-#### 구 대칭 전기장
-
-반지름 $R$ 인 도체의 구 껍질을 생각하자. 구의 내부에 전하 $q$ 가 있을 때의 구 외부의 전기장은 전하 $q$ 가 구의 중심에 있고 구 껍질이 사라졌을 때의 전기장과 같는 것을 보이자. 구 껍질은 안쪽 면과 바깥쪽 면이 존재하며 안쪽 면과 바깥쪽 면 사이의 도체 부분에 아래 그림과 같은 가우스 면을 생각하자.
-
-![도체 구 껍질 내부의 가우스 면](figures/electrostatics/conductor/conductor2.png){#fig-ED_electrostatics_conductor_in_field_2 width=200}
-
-도체 내부의 전기장은 $\bf{0}$ 이기 때문에 가우스 면에 가우스 법칙을 적용하면
-
-$$
-\dfrac{Q_{in}}{\epsilon_0} =  \int \bf{E\cdot}d\bf{a} = \pi R_{\text{in}}^2 E = 0
-$$
-
-이다. 즉 구 내부의 전하 $q$ 에 대해 구 껍질의 안쪽 면에 $-q$ 의 유도 전하가 발생하며 따라서 구 껍질의 바깥족 면에는 $+q$ 의 유도 전하가 발생하게 된다. $q$ 의 전하가 구의 중심에 있지 않다면 구 껍찔 안쪽 면의 유도전하는 균일하지 않다. 그러나 일단 구 껍질 내부 유도전하가 $q$ 의 전하를 구 내부 껍찔 외부에서 가리기 때문에 구 껍질 외부의 포텐셜 혹은 전기장을 결정하는 것은 구 껍찔 바깥쪽 면에 유도되는 유도전하의 분포이다.
-
-그렇다면 이제 구 껍질 바깥쪽의 유도 전하를 보자. 일단 구 껍질 바깥쪽의 전하들은 자기 자신들에 의해 발생하는 전기장 이외의 전기장을 느낄 수 없으며, 따라서 균일하게 분포 할 수 밖에 없다. 즉 구 껍찔 바깥족 면은 균일한 면 전하 밀도 $\dfrac{q}{4\pi R^2}$ 를 가지며, 따라서 구 껍질 외부에서의 포텐셜은 가우스 법칙에 따라
-
-$$
-\phi (r>R)= \dfrac{1}{4\pi\epsilon_0}\dfrac{q}{r}
-$$
-
-이다. 
-
-좀 더 일반적으로 구형이 아닌, 어떤 전하를 내부에 포함하는 임의의 도체 껍질을 생각하자. 중요한 것은 도체 껍질 내부의 가우스 면의 전기장이 $0$ 이기 때문에 도체 껍질 외부의 전기장 혹은 포텐셜은 전하의 위치와는 무관하게 도체 껍질 내부의 전하를 무시하고 그 전하가 도체 껍질 외부에 분포하고 있을 때의 전기장 혹은 포텐셜만 생각하면 된다는 것이다.
-
-:::
-
-</div></br>
-
-### 축전지 {#sec-ED_capacitor}
-
-#### **평행판 축전지**
-
-![도체 구 껍질 내부의 가우스 면](figures/electrostatics/capacitor/capacitor_3d.png){#fig-ED_capacitor_3d width=300}
-
-위의 그림과 같이 놓여진 면적이 $A$ 인 두 금속 판이 각각 $+Q$ 와 $-Q$ 의 전하를 포함한다고 하자. 두 판은 평행하며 거리는 $d\hat{a}$ 만큼 떨어져 있다. 각 판은 면적이 $A$ 인 정사각형이며 $d\ll A$ 임을 가정하자. 그렇다면 각 판에서의 표면전하밀도는 $\pm Q/A$ 이다. 여기서 $\sigma = Q/A$ 라고 하자. 가우스의 법칙에 의해 두 판 사이의 전기장 $\bf{E}$ 은
-
-$$
-\bf{E}= \dfrac{\sigma}{\epsilon_0}\hat{\bf{z}}
-$$
-
-로 일정하다. $E=\|\bf{E}\|$ 라고 하자. 포텐셜 $\phi$ 는 상수 $\phi_0$ 에 대해
-
-$$
-\phi(z) = -Ez + \phi_0
-$$
-
-이다. 두 판에서의 포텐셜의 차이를 $V$ 라고 하면 $V=Ed$ 이다. 축전지의 **용량 (capacitance)** $C$ 를 아래와 같이 정의하자.
-
-$$
-C:=\dfrac{Q}{V}
-$$
-
-그렇다면 
-
-$$
-C=\dfrac{Q}{V}= \dfrac{\sigma A}{Ed} = \dfrac{A\epsilon_0}{d}
-$$
-
-로 축전지의 기하학적인 형태에 의해 정해지는 값이다. 즉 축전지의 기하학적인 형태에 의해 $C$ 가 정해지며 이 $C$ 값에 대해 양쪽에 $V$ 의 전위차를 가하면 $Q=CV$ 의 전하가 한쪽에 $-Q$ 의 전하가 반대쪽에 모이게 된다.
-
-이제 이 축전지에 저장되는 전기에너지를 알아보자. 
-
-$$
-U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\bf{E}\|^2\,d^3\bf{r} = \dfrac{A\epsilon_0}{2}\int_0^d \left(\dfrac{\sigma}{\epsilon_0}\right)^2\,dz=\dfrac{Q^2}{2C}
-$$
-
-
-
-</br>
-
-### 톰슨 정리
-
-모든 물리적 계(system)는 역학적 평형 상태에서 총 에너지를 최소화하도록 전하 밀도를 배열한다. 양자역학적 에너지 기여도와 정전기적 에너지 기여도가 경쟁하여 전하 배열을 결정하는 정도에 따라 다를 뿐이다.
-
-도체는 총 에너지에서 양자역학적 기여가 무시할 정도로 작은 계(단, 물체의 크기와 형상을 결정하는 역할은 예외)이다. 이는 정전 유도의 근본적인 기원과 도체의 차폐 및 스크리닝(screening) 특성이 오직 고전적 정전기적 에너지를 최소화하는 것에서 비롯된다는 것을 의미한다. 이러한 내용이 톰슨(Thomson)의 정전기학 정리(theorem of electrostatics)이며, 이는 샘플의 총 전하, 형상 및 부피를 유지하는 조건하에서 전하 밀도 $\rho(\bf{r})$ 에 대해 정전기적 에너지를 최소화하는 원리이다.
-
-</br>
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-
-::: {#thm-ED_electrostatics_thompson_theorem}
-
-#### 톰슨의 정전기 정리
-
-정해진 크기와 모양을 가진 물체가 전하 $Q$ 를 포함한다고 하자. 이 때 정전기 에너지가 최소화 되는 상태는 물체 전체에 걸쳐 포텐셜이 일정하도록 전하 $Q$ 가 분포되는 경우이다.
-
-:::
-
-</div>
-
-::: {.proof}
-
-물체의 부피가 $V$ 이며  물체 내의 전하 분포를 $\rho(\bf{r})$ 이라고 하자. 물체 바깥의 전하 분포에 의한 포텐셜을 $\phi_e(\bf{r})$ 이라고 하자. 물체의 정전기 에너지는 
-
-$$
-U[\rho] = \dfrac{1}{8\pi\epsilon_0} \int_V \int_V \dfrac{\rho(\bf{r})\, \rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\, d^3\bf{r}\,d^3\bf{r}' + \int_V d^3{\bf{r}} \rho(\bf{r})\,\phi_e(\bf{r})
-$$
-
-이다. 여기에 $Q = \int_v \rho(\bf{r})\,d^3\bf{r}$ 이라는 제한이 존재한다. 라그랑쥬 승수법을 이용한다. 즉
-
-$$
-I[\rho] = U_E[\rho] + \lambda \left[Q-\int_V \rho(\bf{r})\,d^3\bf{r}\right]
-$$
-
-이라고 하자. 여기에 대해 
-
-$$
-\delta I = I[\rho + \delta \rho] - I[\rho]=0
-$$
-
-가 $0$ 이 되는 $\rho$ 를 찾자. 
-
-$$
-\begin{aligned}
-\delta I &= \dfrac{1}{8\pi\epsilon_0} \int_V \int_V d^3\bf{r}\, d^3\bf{r}' \left[\dfrac{\delta \rho(\bf{r}) \rho(\bf{r}') + \delta \rho(\bf{r}')\,\rho(\bf{r})}{\|\bf{r}-\bf{r}'\|}\right] + \int_V d^3\bf{r} \delta \rho (\bf{r})\,\phi_e(\bf{r}) \\[0.3em]
-&\qquad - \lambda \int_V d^3 \bf{r} \delta \rho(\bf{r}) \\[0.3em]
-\end{aligned}
-$$
-
-이다. 여기서 위 식의 좌변의 첫번째 항은
-
-$$
-\int_V \int_V d^3\bf{r}\, d^3\bf{r}' \left[\dfrac{\delta \rho(\bf{r}) \rho(\bf{r}') + \delta \rho(\bf{r}')\,\rho(\bf{r})}{\|\bf{r}-\bf{r}'\|}\right] = 2\int_V \int_V d^3\bf{r}\, d^3\bf{r}' \left[\dfrac{\delta \rho(\bf{r})\,\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\right]
-$$
-
-를 이용하여 줄일 수 있다. 그렇다면
-
-$$
-\begin{aligned}
-\delta I &= \int_V \, d^3\bf{r} \delta \rho(\bf{r}) \left[\int_V d^3\bf{r}'\dfrac{1}{4\pi\epsilon_0} \dfrac{ \rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}+ \phi_e(\bf{r}) - \lambda \right]=0
-\end{aligned}
-$$
-
-이어야 하므로,
-
-$$
-\lambda = \int_V d^3\bf{r}'\dfrac{1}{4\pi\epsilon_0} \dfrac{ \rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}+ \phi_e(\bf{r}) 
-$$
-
-이다. 여기서 첫번째 항은 $\rho$ 에 의한 포텐셜이므로 이를 $\phi_\rho$ 라고 표기하면 $\lambda = \phi_\rho + \phi_e = \phi_\text{tot}$, 즉 시스템 전체에 결처 포텐셜이 일정한 경우이다. $\square$ 
-
-:::
-
-</br>
-
-## 경계값 문제
-
-... to be done
