@@ -501,7 +501,6 @@ $$
 $$ {#eq-ED_for_magnetic_force_from_dipole}
 
 
-
 </br>
 
 ### 연습문제 {.unnumbered}
