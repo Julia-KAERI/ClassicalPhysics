@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/Electrodynamics/01_introduction.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -140,7 +141,9 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">고전 역학과 전자기학</a> 
     </div>
@@ -310,8 +313,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A1_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
   </div>
 </li>
       </ul>
@@ -328,13 +337,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -351,7 +360,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -381,10 +390,10 @@ window.Quarto = {
   </ul></li>
   <li><a href="#정전기-에너지" id="toc-정전기-에너지" class="nav-link" data-scroll-target="#정전기-에너지"><span class="header-section-number">16.3</span> 정전기 에너지</a>
   <ul class="collapse">
-  <li><a href="#sec-ED_electrostatic_energy" id="toc-sec-ED_electrostatic_energy" class="nav-link" data-scroll-target="#sec-ED_electrostatic_energy"><span class="header-section-number">16.3.1</span> 정전기 에너지</a></li>
+  <li><a href="#sec-ED_meaning_of_electrostatic_energy" id="toc-sec-ED_meaning_of_electrostatic_energy" class="nav-link" data-scroll-target="#sec-ED_meaning_of_electrostatic_energy"><span class="header-section-number">16.3.1</span> 정전기 에너지의 의미</a></li>
   <li><a href="#sec-ED_electrostatic_energy_for_point_charges" id="toc-sec-ED_electrostatic_energy_for_point_charges" class="nav-link" data-scroll-target="#sec-ED_electrostatic_energy_for_point_charges"><span class="header-section-number">16.3.2</span> 점전하 시스템의 정전기 에너지</a></li>
   <li><a href="#sec-ED_electrostatic_energy_for_charge_distribution" id="toc-sec-ED_electrostatic_energy_for_charge_distribution" class="nav-link" data-scroll-target="#sec-ED_electrostatic_energy_for_charge_distribution"><span class="header-section-number">16.3.3</span> 전하 분포의 정전기 에너지</a></li>
-  <li><a href="#정전기-에너지-1" id="toc-정전기-에너지-1" class="nav-link" data-scroll-target="#정전기-에너지-1"><span class="header-section-number">16.3.4</span> 정전기 에너지</a></li>
+  <li><a href="#sec-ED_comparison_of_electrostatic_energy" id="toc-sec-ED_comparison_of_electrostatic_energy" class="nav-link" data-scroll-target="#sec-ED_comparison_of_electrostatic_energy"><span class="header-section-number">16.3.4</span> 정전기 에너지 비교</a></li>
   <li><a href="#sec-ED_force_between_electric_dipoles" id="toc-sec-ED_force_between_electric_dipoles" class="nav-link" data-scroll-target="#sec-ED_force_between_electric_dipoles"><span class="header-section-number">16.3.5</span> 전기쌍극자 사이의 상호작용</a></li>
   </ul></li>
   </ul>
@@ -742,7 +751,7 @@ E_z(z) = - \dfrac{d\Phi (z)}{dz} = \dfrac{\sigma}{2\epsilon_0} \left[1-\dfrac{z}
 </figcaption>
 </figure>
 </div>
-<p>전하 <span class="math inline">\(+q\)</span> 와 <span class="math inline">\(-q\)</span> 가 위의 그림과 같이 <span class="math inline">\(d\)</span> 의 거리만큼 떨어져 있다고 하고 원점을 두 전하의 중앙에 두자. 그리고 <span class="math inline">\(+q\)</span> 로부터의 변위를 <span class="math inline">\(\boldsymbol{r}_1\)</span>, <span class="math inline">\(-q\)</span> 로부터의 변위를 <span class="math inline">\(\boldsymbol{r}_2\)</span> 라고 하고 원점으로부터의 변위를 <span class="math inline">\(\boldsymbol{r}\)</span> 라고 하자. 그리고 <span class="math inline">\(-q\)</span> 전하의 위치로부터 <span class="math inline">\(+q\)</span> 전하의 위치까지의 변위를 <span class="math inline">\(\boldsymbol{d}\)</span> 라고 하자. 이 때의 전기 포텐셜 <span class="math inline">\(\Phi (\boldsymbol{r})\)</span> 은 <span class="math inline">\(r=\|\boldsymbol{r}\|\)</span> 이라고 할 때 <span class="math inline">\(r&gt;d\)</span> 의 조건과 <a href="A1_mathematics.html#eq-ED_legendre_expansion" class="quarto-xref">식&nbsp;<span>19.4</span></a> 와 <a href="A1_mathematics.html#eq-ED_parity_of_legendre_polynomial" class="quarto-xref">식&nbsp;<span>19.6</span></a> 로부터 다음을 얻는다. <span id="eq-ED_electric_potential_dipole_1"><span class="math display">\[
+<p>전하 <span class="math inline">\(+q\)</span> 와 <span class="math inline">\(-q\)</span> 가 위의 그림과 같이 <span class="math inline">\(d\)</span> 의 거리만큼 떨어져 있다고 하고 원점을 두 전하의 중앙에 두자. 그리고 <span class="math inline">\(+q\)</span> 로부터의 변위를 <span class="math inline">\(\boldsymbol{r}_1\)</span>, <span class="math inline">\(-q\)</span> 로부터의 변위를 <span class="math inline">\(\boldsymbol{r}_2\)</span> 라고 하고 원점으로부터의 변위를 <span class="math inline">\(\boldsymbol{r}\)</span> 라고 하자. 그리고 <span class="math inline">\(-q\)</span> 전하의 위치로부터 <span class="math inline">\(+q\)</span> 전하의 위치까지의 변위를 <span class="math inline">\(\boldsymbol{d}\)</span> 라고 하자. 이 때의 전기 포텐셜 <span class="math inline">\(\Phi (\boldsymbol{r})\)</span> 은 <span class="math inline">\(r=\|\boldsymbol{r}\|\)</span> 이라고 할 때 <span class="math inline">\(r&gt;d\)</span> 의 조건과 <a href="A1_mathematics.html#eq-ED_legendre_expansion" class="quarto-xref">식&nbsp;<span>20.4</span></a> 와 <a href="A1_mathematics.html#eq-ED_parity_of_legendre_polynomial" class="quarto-xref">식&nbsp;<span>20.6</span></a> 로부터 다음을 얻는다. <span id="eq-ED_electric_potential_dipole_1"><span class="math display">\[
 \begin{aligned}
 \Phi(\boldsymbol{r}) &amp;= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{q}{\|\boldsymbol{r}_1\|} - \dfrac{q}{\|\boldsymbol{r}_2\|}\right] = \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{1}{\|\boldsymbol{r}-\boldsymbol{d}/2\|} - \dfrac{1}{\|\boldsymbol{r}+\boldsymbol{d}/2\|}\right] \\[0.3em]
 &amp;= \dfrac{q}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{d^k}{2^kr^{k+1}} \left[P_k(\cos\theta)- P_k (-\cos\theta)\right] \\
@@ -765,7 +774,7 @@ E_z(z) = - \dfrac{d\Phi (z)}{dz} = \dfrac{\sigma}{2\epsilon_0} \left[1-\dfrac{z}
 </section>
 <section id="다중극-전개" class="level4">
 <h4 class="anchored" data-anchor-id="다중극-전개"><strong>다중극 전개</strong></h4>
-<p><a href="A1_mathematics.html#eq-ED_legendre_expansion" class="quarto-xref">식&nbsp;<span>19.4</span></a> 를 사용하여 전하 분포 <span class="math inline">\(\rho(\boldsymbol{r}')\)</span> 에 대해 <span class="math inline">\(\|\boldsymbol{r}\| &gt; \|\boldsymbol{r}'\|\)</span> 일 때의 전기 포텐셜을 계산하면</p>
+<p><a href="A1_mathematics.html#eq-ED_legendre_expansion" class="quarto-xref">식&nbsp;<span>20.4</span></a> 를 사용하여 전하 분포 <span class="math inline">\(\rho(\boldsymbol{r}')\)</span> 에 대해 <span class="math inline">\(\|\boldsymbol{r}\| &gt; \|\boldsymbol{r}'\|\)</span> 일 때의 전기 포텐셜을 계산하면</p>
 <p><span class="math display">\[
 \begin{aligned}
 \Phi(\boldsymbol{r}) &amp;=\dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\,d^3\boldsymbol{r}' \\[0.3em]
@@ -787,7 +796,7 @@ Q_1 = \int_V r' \cos \gamma \rho(\boldsymbol{r}')\, d^3\boldsymbol{r}'
 \]</span></p>
 <p>이며 <a href="#fig-ED_electric_dipole" class="quarto-xref">그림&nbsp;<span>16.8</span></a> 의 전하 분포 <span class="math inline">\(\rho(\boldsymbol{r}') = q\delta(\boldsymbol{r}'-\boldsymbol{d}/2) -q\delta(\boldsymbol{r}'+\boldsymbol{d}/2)\)</span> 및 <span class="math inline">\(\boldsymbol{p}= q\boldsymbol{d}\)</span> 를 대입하면 <span class="math inline">\(Q_1 = qd\cos \gamma\)</span> 이고 <a href="#eq-ED_electric_potential_dipole_2" class="quarto-xref">식&nbsp;<span>16.22</span></a> 의 결과를 얻는다.</p>
 <p><br></p>
-<p>르장드르 다항식을 이용한 다중극 전개는 위치 벡터 <span class="math inline">\(\boldsymbol{r}\)</span> 을 중심으로 전개하지만 <a href="A1_mathematics.html#eq-ED_spherical_haromics_expansion_of_inverse_vector_difference" class="quarto-xref">식&nbsp;<span>19.19</span></a> 를 이용하여 구면조화함수를 사용하면 정해진 좌표계에서 표현 할 수 있다. 즉</p>
+<p>르장드르 다항식을 이용한 다중극 전개는 위치 벡터 <span class="math inline">\(\boldsymbol{r}\)</span> 을 중심으로 전개하지만 <a href="A1_mathematics.html#eq-ED_spherical_haromics_expansion_of_inverse_vector_difference" class="quarto-xref">식&nbsp;<span>20.19</span></a> 를 이용하여 구면조화함수를 사용하면 정해진 좌표계에서 표현 할 수 있다. 즉</p>
 <p><span id="eq-ED_electrostatics_multpile_expansion_using_spherical_harmonics"><span class="math display">\[
 \begin{aligned}
 \Phi(\boldsymbol{r}) &amp;= \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1}\dfrac{Y_l^m (\theta,\, \varphi) }{r^{l+1}} \int_V (r')^l {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\theta',\, \varphi') \, d^3\boldsymbol{r}'
@@ -841,7 +850,7 @@ Q_{lm} &amp;= q\int_{V} (r')^{l} {Y_{l}^{m}}^\ast (\theta',\, \varphi') \delta (
 <p><span class="math display">\[
 Q_{lm} = q\left(\dfrac{d}{2}\right)^{l}\left[{Y_{l}^m}^\ast (0, 0) - {Y_l^m}^\ast(\pi,0)\right]
 \]</span></p>
-<p>이다. <a href="A1_mathematics.html#eq-ED_conjugate_of_spherical_harmonics" class="quarto-xref">식&nbsp;<span>19.15</span></a> 의 두번째 식으로 부터</p>
+<p>이다. <a href="A1_mathematics.html#eq-ED_conjugate_of_spherical_harmonics" class="quarto-xref">식&nbsp;<span>20.15</span></a> 의 두번째 식으로 부터</p>
 <p><span class="math display">\[
 \begin{aligned}
 Q_{lm}&amp;= q\left(\dfrac{d}{2}\right)^{l} \left(1-(-1)^l\right) {Y_{l}^m}^{\ast}(0, 0) \\[0.3em]
@@ -914,8 +923,8 @@ Q_{lm}&amp;= q\left(\dfrac{d}{2}\right)^{l} \left(1-(-1)^l\right) {Y_{l}^m}^{\as
 </section>
 <section id="정전기-에너지" class="level2" data-number="16.3">
 <h2 data-number="16.3" class="anchored" data-anchor-id="정전기-에너지"><span class="header-section-number">16.3</span> 정전기 에너지</h2>
-<section id="sec-ED_electrostatic_energy" class="level3" data-number="16.3.1">
-<h3 data-number="16.3.1" class="anchored" data-anchor-id="sec-ED_electrostatic_energy"><span class="header-section-number">16.3.1</span> 정전기 에너지</h3>
+<section id="sec-ED_meaning_of_electrostatic_energy" class="level3" data-number="16.3.1">
+<h3 data-number="16.3.1" class="anchored" data-anchor-id="sec-ED_meaning_of_electrostatic_energy"><span class="header-section-number">16.3.1</span> 정전기 에너지의 의미</h3>
 <p>정전기 에너지는 역학적 포텐셜 에너지와 같이 무한히 먼 지점에서 특정 지점까지 전하 <span class="math inline">\(q\)</span> 를 움직이는데 해준 일을 의미한다. 즉 정전기 에너지 <span class="math inline">\(U(\boldsymbol{r})\)</span> 는 다음과 같다.</p>
 <p><span id="eq-ED_electrostatic_energy_for_single_paticle_over_potential"><span class="math display">\[
 U(\boldsymbol{r}) = -\int_{\infty}^\boldsymbol{r} \boldsymbol{F\cdot}\, d\boldsymbol{s} = q\int_{\infty}^\boldsymbol{r} \nabla \Phi \boldsymbol{\cdot}\,d\boldsymbol{s} = q\Phi(\boldsymbol{r}).
@@ -962,9 +971,9 @@ U = \dfrac{\epsilon_0}{2} \int_{\text{Universe}} \|\boldsymbol{E}\|^2\,d^3\bolds
 \tag{16.32}\]</span></span></p>
 <p><br></p>
 </section>
-<section id="정전기-에너지-1" class="level3" data-number="16.3.4">
-<h3 data-number="16.3.4" class="anchored" data-anchor-id="정전기-에너지-1"><span class="header-section-number">16.3.4</span> 정전기 에너지</h3>
-<p>자 이제 <a href="#eq-ED_total_electrostatic_energy_for_2_point_charge" class="quarto-xref">식&nbsp;<span>16.30</span></a> 와 <a href="#eq-ED_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>16.32</span></a> 을 피교해보자. <span class="math inline">\(e,\,-e\)</span> 의 전하를 가진 두 입자가 떨어져 있다면 그 전기 포텐셜 에너지는 <a href="#eq-ED_total_electrostatic_energy_for_2_point_charge" class="quarto-xref">식&nbsp;<span>16.30</span></a> 에 의하면 음수이고 <a href="#eq-ED_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>16.32</span></a> 에 의하면 양수이다. 이 차이는 어디서 왔을까?</p>
+<section id="sec-ED_comparison_of_electrostatic_energy" class="level3" data-number="16.3.4">
+<h3 data-number="16.3.4" class="anchored" data-anchor-id="sec-ED_comparison_of_electrostatic_energy"><span class="header-section-number">16.3.4</span> 정전기 에너지 비교</h3>
+<p>자 이제 <a href="#eq-ED_total_electrostatic_energy_for_2_point_charge" class="quarto-xref">식&nbsp;<span>16.30</span></a> 와 <a href="#eq-ED_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>16.32</span></a> 을 비교해보자. <span class="math inline">\(e,\,-e\)</span> 의 전하를 가진 두 입자가 떨어져 있다면 그 전기 포텐셜 에너지는 <a href="#eq-ED_total_electrostatic_energy_for_2_point_charge" class="quarto-xref">식&nbsp;<span>16.30</span></a> 에 의하면 음수이고 <a href="#eq-ED_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>16.32</span></a> 에 의하면 양수이다. 이 차이는 어디서 왔을까?</p>
 <p>우선 우리의 유도 과정을 살펴보자 우리는 <a href="#eq-ED_total_electrostatic_energy_for_N_point_charges_system" class="quarto-xref">식&nbsp;<span>16.31</span></a> 에서 <span class="math inline">\(q_i \Phi(\boldsymbol{r}_i)\)</span> 를 <span class="math inline">\(\rho(\boldsymbol{r})\Phi(\boldsymbol{r})\)</span> 로 바꾸어 <a href="#eq-ED_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>16.32</span></a> 을 얻었다. <a href="#eq-ED_total_electrostatic_energy_for_N_point_charges_system" class="quarto-xref">식&nbsp;<span>16.31</span></a> 에서는 각각의 전하 <span class="math inline">\(q_i\)</span> 가 이미 조립된 상태로 존재하지만 <a href="#eq-ED_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>16.32</span></a> 에서는 그렇지 않다는 것이다. 예를 들어 전하 <span class="math inline">\(q=-e\)</span> 를 가진 전자에 의한 정전기 에너지를 계산해 보자. 이 때 전자의 반경을 <span class="math inline">\(r_e\)</span> 라고 하고 <a href="#eq-ED_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>16.32</span></a> 를 사용하면</p>
 <p><span class="math display">\[
 U = \dfrac{\epsilon_0}{2} \int \dfrac{e^2}{4^2\pi^2 \epsilon_0^2 r^4}r^2 d\Omega = \dfrac{e^2}{8\pi \epsilon_0 r_e}
@@ -1043,13 +1052,14 @@ U = \dfrac{1}{2}\sum_{i,\,j=1,\,i\ne j}^N \dfrac{1}{8\pi\epsilon_0}\left(\dfrac{
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

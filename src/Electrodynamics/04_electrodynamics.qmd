@@ -1,0 +1,263 @@
+---
+title: "전기동력학"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+
+## 패러데이 법칙 
+
+### 기전력과 자기선속 {#sec-ED_electromotive_force_and_magnetic_flux}
+
+세번째 멕스웰 방정실인 페러데이의 법칙은 다음과 같다.
+
+$$
+\boxed{
+\nabla \times \bf{E} = - \dfrac{\partial \bf{B}}{\partial t}.
+}
+$$ {#eq-ED_faraday_law}
+
+
+도선이 닫힌 경로 $C$ 를 이루며 $C$ 를 경계로 하는 평면 $S$ 에 대해 스토크스 정리를 적용하면
+
+$$
+\oint_C \bf{E \cdot}\,d\bf{l} = - \int_S \dfrac{\partial \bf{B}}{\partial t}\bf{\cdot} d\bf{S} = - \dfrac{d}{dt} \int_S \bf{B \cdot}\,d\bf{S}
+$$
+
+이다. 여기서 편미분이 전미분으로 바뀌는 것은 $C$, 즉 $S$ 가 시간에 대해 바뀌지 않을 때 이다. 여기서 우리는 **기전력 (electromotive force, emf)** $\mathcal{E}$ 를 아래와 같이 정의한다.
+
+$$
+\boxed{\mathcal{E} := \oint_C \bf{E \cdot} \,d\bf{l}.} 
+$$ {#eq-ED_definiton_of_electromotive_force}
+
+기전력은 이름에 *force* 가 붙었지만 $\bf{F}=\dot{\bf{p}}$ 의 힘은 아니며 식에서 보듯이 단위 전하가 경로의 접선 방향으로 받는 힘의 적분으로 전하가 닫힌 경로 $C$ 를 한번 순회하며 하는 일이다. 또한
+
+$$
+F := \int_S \bf{B \cdot}\,d\bf{S}
+$$
+
+를 **자기선속(magnetic flux)** 라고 하며 이로부터
+
+$$
+\mathcal{E} = - \dfrac{d F}{dt}
+$$ {#eq-ED_second_faraday_law}
+
+를 얻는다.
+
+</br>
+
+아래 @fig-ED_lenz_law_0 와 같이 평면상의 원형 도선에 자기장 $\bf{B} = B\hat{\bf{z}}$ 가 통과한다고 하자. 
+
+![렌츠의 법칙](figures/electrodynamics/lenz_law_0.png){#fig-ED_lenz_law_0 width=300}
+
+$\bf{B}$ 에 의한 자기선속이 감소한다고 하면, 즉 $dB/dt < 0$ 이라면 기전력이 발생하며 반시계 방향의 전류 $I$ 가 흐른다. 그런데 $I$ 에 의한 자기장이 생기며 이렇게 전류 $I$ 에 의해 유도된 자기장은 $\hat{\bf{z}}$ 방향이므로 $\bf{B}$ 의 감소를 억제하는 방향으로 발생한다. 이를 **렌츠의 법칙 (Lenz's law)** 라고 한다. 
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-ED_induced_current_and_lenz_law_by_moving_wire}
+
+#### 자기장속의 움직이는 도선
+
+![움직이는 회로](figures/electrodynamics/moving_circuit.png){#fig-ED_moving_wire width=300}
+
+정적인 자기장에 위의 그림과 같이 직사각형을 이루는 도선이 배치되었으며 한 도선이 위의 그림과 같이 속도 $\bf{v}=-v\hat{\bf{x}}$ 로 움직인다고 하자. 도선은 $xy$ -평면상에 베치되어 있으며 $\bf{B}=B\hat{\bf{z}}$ 이다. 도선의 $x$ 방향 폭을 $d$ 라고 하면 패러데이의 법칙에 따라
+
+$$
+\mathcal{E}=vBd
+$$
+
+만큼의 기전력에 의헤 반시계 방향으로 전류가 흐르게 된다. 이것을 로렌츠 힘의 관점에서 보기로 하자. 움직이는 도선의 전하 $q$ 가 받는 로렌츠힘 $\bf{F}_q = q(-v\hat{\bf{x}}\times B\hat{\bf{z}}) = qvB\hat{\bf{y}}$ 이므로 단위 전하가 받는 에너지는 $F_q\cdot d/q = vdB = \mathcal{E}$ 이다.
+
+이제 회로에 전류가 흐르는 것을 안다. 그런데 이렇게 생긴 전류에 의해 자기장이 발생하며 이 자기장은 움직이는 도선의 닫힌 경로 부분에서 $\hat{\bf{z}}$ 방향으로 $dF/dt$ 를 증가시키게 되며 이는 $-\hat{\bf{y}}$ 방향의 운동을 방해하는 방향으로, 즉 $v$ 를 감소시키도록 작용한다. (렌츠의 법칙)
+
+:::
+</div>
+
+</br>
+
+### 일반적인 경우
+
+
+![시간에 대해 움직이는 회로](figures/electrodynamics/moving_circuit2.png){#fig-ED_moving_wire2 width=300}
+
+회로가 이루는 닫힌 경로 $C$ 가 시간에 대해 자유롭게 움직이며 또한 $B(t)$ 역시 변하는 경우를 생각하자. 작은 시간 $\delta t$ 에 대해 자기 선속의 변화랑을 보면
+
+$$
+\begin{aligned}
+\delta F = F(t+\delta t) - F(t) &= \int_{S(t+\delta t)} \bf{B}(t+\delta t)\bf{\cdot}d\bf{S} - \int_{S(t)} \bf{B}(t)\bf{\cdot}d\bf{S} \\[0.3em]
+&= (\delta t)\int_{S(t)} \dfrac{\partial \bf{B}}{\partial t}\bf{\cdot}d\bf{S} + \left[\int_{S(t+\delta t)} - \int_{S(t)}\right] \bf{B}(t)\bf{\cdot}d\bf{S} + \mathcal{O}(\delta t^2)
+\end{aligned}
+$$
+
+이다. 여기서 $S(t)$ 에서 $S(t+\delta t)$ 로 변하면서 생기는 부피의 경계면을 생각하자. $S(t)$ 와 $S(t+\delta t)$ 를 제외한 경계먼을 $S_c$ 라고 하고 $\nabla \bf{\cdot B}=0$ 임을 생각하면 
+
+$$
+\delta F = (\delta t)\int_{S(t)} \dfrac{\partial \bf{B}}{\partial t}\bf{\cdot}d\bf{S} - \int_{S_C} \bf{B}(t)\bf{\cdot}d\bf{S} + \mathcal{O}(\delta t^2)
+$$
+
+또한 $S_C$ 의 면적 성분 $d\bf{S}$ 는 $C(t)$ 경로를 따르는 $d\bf{l}$ 에 대해 $d\bf{S} = (d\bf{l}\times \bf{v})\delta t$ 로 쓸 수 있으므로
+
+$$
+\delta F = (\delta t)\int_{S(t)} \dfrac{\partial \bf{B}}{\partial t}\bf{\cdot}d\bf{S} - (\delta t)\int_{C(t)} (\bf{v}\times \bf{B})\bf{\cdot}d\bf{l} + \mathcal{O}(\delta t^2)
+$$
+
+이다. 따라서
+
+$$
+\begin{aligned}
+\dfrac{dF}{dt} &= \int_{S(t)} \dfrac{\partial \bf{B}}{\partial t}\bf{\cdot} d\bf{S} - \int_{C(t)} (\bf{v}\times \bf{B})\bf{\cdot} d\bf{l} \\[0.3em]
+&= -\int_{S(t)}\nabla \times \bf{E} \bf{\cdot} d\bf{S} - \int_{C(t)} (\bf{v}\times \bf{B})\bf{\cdot} d\bf{l} \\[0.3em]
+&= -\int_{C(t)} (\bf{E} + \bf{v}\times \bf{B})\bf{\cdot} d\bf{l}
+\end{aligned}
+$$
+
+이다. 그리고 이제 로렌츠 힘을 받았을 때의 기전력을 생각하면 위 식은 $-\mathcal{E}$ 와 같음을 안다. 즉
+
+$$
+\mathcal{E} = - \dfrac{dF}{dt}
+$$
+
+이다.
+
+</br>
+
+### 인덕턴스와 자기에너지 {#sec-ED_inductance_and_magnetic_energy}
+
+@sec-ED_electrostatic_energy_for_charge_distribution 에서 우리는 전하로 이루어진 정전기 시스템을 구성하는데 필요하는 에너지를 계산하였다. 그러나 아직까지 자기장에 대해서는 비슷한 작업을 하지 않았는데 이는 전류들의 모임에 대해 기전력에 대해 아는 것이 필요했기 때문에다. 그리고 이를 위해서는 몇가지 개념이 필요하다.
+
+#### **Inductance**
+
+곡선 $C$ 를 흐르는 전류 $I$ 가 자기 선속 $F=\int_S \bf{B\cdot}d\bf{S}$ 를 발생시킬 때 인덕턴스 $L$ 은 다음과 같이 정의된다.
+
+$$
+\boxed{L = \dfrac{F}{I}.}
+$$ {#eq-ED_defintion_of_inductance}
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-ED_inductance_for_solenoid}
+
+#### 솔레노이드의 인덕턴스
+
+![솔레노이드](figures/electrodynamics/solenoid.png){#fig-ED_inductance_for_solenoid width=100}
+
+길이 $h$, 단면적 $A$ 로 이루어진 위의 그림과 같은 솔레노이드를 생각하자. $h \gg \sqrt{A}$ 를 가정하여 솔레노이드의 양 끝에서 발생하는 효과를 무시하자. 단위 길이당 감은 횟수 $N$ 에 전류 $I$ 가 흐른다면 @exm-ED_magnetic_field_due_to_solenoid 에서 보았듯이 솔레노이드 내부의 자기장 $B = \mu_0 N I$ 이며 총 $Nh$ 개의 원형 회로가 있는 것으로 생각 할 수 있으므로 자기 선속 $F = \mu_0 N^2 IAh = \mu_0 N^2 IV_S$ 이다. 여기서 $V_S = Ah$ 는 솔레노이드의 부피이다. 그렇다면 솔레노이드에 의한 인덕턴스 $L = \mu_0 N^2 V_S$ 이다.
+
+:::
+
+</div></br>
+
+### 정자기 에너지 {#sec-ED_magnetistatic_energy}
+
+닫힌회로 $C$ 에 시간에 따라 변하는 전류 $I(t)$ 가 흐른다고 하자. 그렇다면 기전력은
+
+$$
+\mathcal{E} = - \dfrac{dF}{dt} = -L \dfrac{dI}{dt}
+$$
+
+이다. 기전력은 단위 전하가 회로를 한번 순활할 때 얻는 에너지 이다. 시간 $\delta t$ 동안 $I\delta t$ 의 전하가 회로를 흐르므로 $\delta t$ 시간동안 이 회로에 해준 일 $\delta W$ 는
+
+$$
+\delta W = \mathcal{E}I\delta t = -LI \dfrac{dI}{dt}\delta t
+$$
+
+이며, 이를 이용하면
+
+$$
+\dfrac{dW}{dt}= - LI\dfrac{dI}{dt}= \dfrac{d}{dt}\left(-\dfrac{LI^2}{2} \right)
+$$
+
+임을 알 수 있다. 즉 이 시스템의 에너지 증가는
+
+$$
+W =  \dfrac{LI^2}{2} = \dfrac{FI}{2}
+$$
+
+이다. 이로부터
+
+$$
+U = \dfrac{I}{2}\int_S \bf{B \cdot}d\bf{S} = \dfrac{I}{2}\int_S (\nabla \times \bf{A})\bf{\cdot}\,d\bf{S} = \dfrac{I}{2} \oint_C \bf{A \cdot}d\bf{l} = \dfrac{1}{2}\int_V \bf{J \cdot A}\,d^3\bf{r}
+$$
+
+여기서 $\nabla \times \bf{B} = \mu_0 \bf{J}$ 와 벡터 항등식 $\nabla \bf{\cdot}(\bf{B}\times \bf{A}) = (\nabla \times \bf{B})\bf{\cdot A} - (\nabla \times \bf{A})\bf{\cdot B}$ 를 사용하면 
+
+$$
+\begin{aligned}
+U &= \dfrac{1}{2\mu_0} \int \left[(\nabla \times \bf{B}) \bf{\cdot A}\right]\,d^3\bf{r} \\[0.3em]
+&= \dfrac{1}{2\mu_0} \left[\int \nabla \bf{\cdot}(\bf{B}\times \bf{A}) \, d^3\bf{r} + \int (\nabla \times \bf{A})\bf{\cdot B} \,d^3\bf{r}\right] \\[0.3em]
+&=\dfrac{1}{2\mu_0} \oint_S (\bf{B}\times  \bf{A})\bf{\cdot}d\bf{S} + \dfrac{1}{2\mu_0} \int \|\bf{B}\|^2\,d^3\bf{r}
+\end{aligned}
+$$
+
+을 얻는다. 여기서 $\|\bf{B} \times \bf{A}\|$ 는 $1/r^2$ 보다 빠르게 감소하므로 우주 전체에 대해 적분하면  $\oint_S (\bf{B}\times  \bf{A})\bf{\cdot}d\bf{S} =0$ 이며 따라서
+
+$$
+U = \dfrac{1}{2\mu_0}\int \|\bf{B}\|^2\,d^3\bf{r}
+$$
+
+이다. 이를 @eq-ED_total_electrostatic_energy_for_charge_distribution 와 함께 생각하면
+
+$$
+U = \int \left(\dfrac{\epsilon_0 \|\bf{E}\|^2}{2} + \dfrac{\|\bf{B}\|^2}{2\mu_0}\right)\,d^3\bf{r}
+$$
+
+이 된다. 여기에 몇가지 생각할 것이 있다.
+
+($1$) 전기장의 에너지를 논할때와 마찬가지로 우리는 전하와 전류의 시스템을 구성하는데 필요한 에너지가 아닌 일종의 전기장과 자기장에 축적된 에너지를 계산하였다. 이것은 뒤에 논하기로 하자.
+ 
+($2$) 위 식은 전기장에 의한 에너지와 자기장에 의한 에너지의 단순합이며 가능한 $\bf{E \cdot B}$ 혹은 유사한 전기장, 자기장에 동시에 의존하는 항을 무시하였다. 그러나 이런 항은 없으며 위의 식이 전체 에너지임을 이후에 보일것이다.
+
+</br>
+
+### 저항 {#sec-ED_resistance}
+
+지금까지는 기전력 $\mathcal{E}$ 에 의해 전류 $I$ 가 흐른다는 것을 가정했다. 기전력은 앞서 말했듯이 단위 전하당 축적되는 역학적 에너지로 전하는 가속을 받게 되며 따라서 전류는 증가해야 한다. 전하가 가속을 받았을 때 벌어지는 일에 대해서는 차후에 다루기로 하고, 전하가 속도를 가지고 실제 물체를 이동하게 되면 다양한 요인에 의해 가속이 억제되며 결국은 어떤 속도를 유지하게 된다. 즉 전류가 일정해진다. 많은 경우 이 효과를 **저항(resistance)** $R$ 로 정량화 하며 아래의 **옴의 법칙 (Ohm's law)** 을 따른다.
+
+$$
+\boxed{\mathcal{E} = IR.}
+$$ {#eq-ED_ohm_law}
+
+저항은 단면적 ($A$) 에 반비례하며 길이 ($L$) 에 비례한다. 이때 비례상수 $\rho_R$ 은 $R=\rho_R L/A$ 이며 $\rho_R$ 을 **비저항 (resistivity)** 라고 하고 역수 $\sigma = 1/\rho_R$ 을 **전도율 (conductivity)** 라고 한다. 이 때 비저항 즉 전도율은 물질의 고유한 특성이다. 단면적 $A$, 길이 $L$ 인 원통에 전기장 $\bf{E}$, 전류밀도 $\bf{J}$ 가 균일하게 존재한다고 하면 
+
+$$
+\mathcal{E}=\int_0^L \bf{E}\,dx = R\int_A \bf{J}dS = IR
+$$
+
+이며 
+
+$$
+\boxed{\bf{J}= \sigma \bf{E}}
+$$ {#eq-ED_generalized_ohm_law}
+
+를 얻는다. 위 식은 **일반화된 옴의 법칙 (generalized Ohm's law) **이라고 한다. 옴의 법칙은 멕스웰 방정식과 같은 근본 법칙이 아니라 일종의 실험적 일반화이며 모든 물질이 옴의 법칙을 따르는 것도 아니다.
+
+</br>
+
+## 변위전류
+
+### 변위전류의 도입 {#sec-ED_introduction_to_displacement_current}
+
+앙페르의 법칙은 $\nabla \times \bf{B} = \mu_0 \bf{J}$ 이며 관련된 멕스웰 방정식은
+
+$$
+\nabla \times \bf{B} = \mu_0 \left(\bf{J} + \epsilon_0 \dfrac{\partial \bf{E}}{\partial t}\right)
+$$ {#eq-ED_maxwell_4th_equation}
+
+이다. 여기서 $\epsilon_0 \partial_t \bf{E}$ 는 전류밀도와 같은 지위를 차지하고 있는, 실제 전하의 흐름과 무관한 어떤 값으로 **변위전류 (displacement current)** 라고 한다.
+
+멕스웰의 4 방정식에서 앙페르 법칙을 제외한 세 방정식과 변위전류가 없는 형태는 많은 물리학자의 노력으로 실험적으로 잘 정립된 상태였다. 멕스웰이 기존의 전자기 방정식을 종합하여 멕스웰 방정식을 만들 때 대부분의 노력은 변위전류 부분에 소모되었다. 이제 그 이유를 살펴보자. 변위전류가 없는 앙페르 법칙으로부터 다음을 얻는다.
+
+$$
+\mu_0 \nabla \bf{\cdot J} = \nabla \bf{\cdot}(\nabla \times \bf{B}) = 0.
+$$
+
+$\nabla \bf{\cdot J}=0$ 은 어떤 부피로 유입되는 전류의 합은 $0$ 이라는 것을 의미한다. 하지만 실제로 그렇지 않다!. 아래와 같은 간단한 회로를 생각하자.
+
+![간단한 회로](figures/electrodynamics/for_displacement_current_1.png){#eq-ED_for_displacement_current_1 width=200}
+

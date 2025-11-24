@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>22&nbsp; 고전 장론 입문 – 고전 역학과 전자기학</title>
+<title>19&nbsp; 전기동력학 – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/topics/Topics.html" rel="next">
-<link href="../../src/Relativity/01_introduction_to_special_relativity.html" rel="prev">
+<link href="../../src/Electrodynamics/A1_mathematics.html" rel="next">
+<link href="../../src/Electrodynamics/03_magnetostatics.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -112,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Relativity/00_index.html">상대론</a></li><li class="breadcrumb-item"><a href="../../src/Relativity/02_introduction_to_classical_field.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electrodynamics/00_index.html">전기자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electrodynamics/04_electrodynamics.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,8 +124,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Relativity/00_index.html">상대론</a></li><li class="breadcrumb-item"><a href="../../src/Relativity/02_introduction_to_classical_field.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></a></li></ol></nav>
-      <h1 class="title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electrodynamics/00_index.html">전기자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electrodynamics/04_electrodynamics.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></h1>
                       </div>
   </div>
     
@@ -313,7 +313,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
   </div>
 </li>
@@ -342,7 +342,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
@@ -381,15 +381,18 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#스칼라장" id="toc-스칼라장" class="nav-link active" data-scroll-target="#스칼라장"><span class="header-section-number">22.1</span> 스칼라장</a>
+  <li><a href="#패러데이-법칙" id="toc-패러데이-법칙" class="nav-link active" data-scroll-target="#패러데이-법칙"><span class="header-section-number">19.1</span> 패러데이 법칙</a>
   <ul class="collapse">
-  <li><a href="#비상대론적-입자를-기술하는-입장에서" id="toc-비상대론적-입자를-기술하는-입장에서" class="nav-link" data-scroll-target="#비상대론적-입자를-기술하는-입장에서"><span class="header-section-number">22.1.1</span> 비상대론적 입자를 기술하는 입장에서</a></li>
-  <li><a href="#장론의-원리" id="toc-장론의-원리" class="nav-link" data-scroll-target="#장론의-원리"><span class="header-section-number">22.1.2</span> 장론의 원리</a></li>
-  <li><a href="#라그랑지안-밀도의-형태" id="toc-라그랑지안-밀도의-형태" class="nav-link" data-scroll-target="#라그랑지안-밀도의-형태"><span class="header-section-number">22.1.3</span> 라그랑지안 밀도의 형태</a></li>
-  <li><a href="#상대론에서의-장" id="toc-상대론에서의-장" class="nav-link" data-scroll-target="#상대론에서의-장"><span class="header-section-number">22.1.4</span> 상대론에서의 장</a></li>
-  <li><a href="#공변벡터와-반변벡터" id="toc-공변벡터와-반변벡터" class="nav-link" data-scroll-target="#공변벡터와-반변벡터"><span class="header-section-number">22.1.5</span> 공변벡터와 반변벡터</a></li>
+  <li><a href="#sec-ED_electromotive_force_and_magnetic_flux" id="toc-sec-ED_electromotive_force_and_magnetic_flux" class="nav-link" data-scroll-target="#sec-ED_electromotive_force_and_magnetic_flux"><span class="header-section-number">19.1.1</span> 기전력과 자기선속</a></li>
+  <li><a href="#일반적인-경우" id="toc-일반적인-경우" class="nav-link" data-scroll-target="#일반적인-경우"><span class="header-section-number">19.1.2</span> 일반적인 경우</a></li>
+  <li><a href="#sec-ED_inductance_and_magnetic_energy" id="toc-sec-ED_inductance_and_magnetic_energy" class="nav-link" data-scroll-target="#sec-ED_inductance_and_magnetic_energy"><span class="header-section-number">19.1.3</span> 인덕턴스와 자기에너지</a></li>
+  <li><a href="#sec-ED_magnetistatic_energy" id="toc-sec-ED_magnetistatic_energy" class="nav-link" data-scroll-target="#sec-ED_magnetistatic_energy"><span class="header-section-number">19.1.4</span> 정자기 에너지</a></li>
+  <li><a href="#sec-ED_resistance" id="toc-sec-ED_resistance" class="nav-link" data-scroll-target="#sec-ED_resistance"><span class="header-section-number">19.1.5</span> 저항</a></li>
   </ul></li>
-  <li><a href="#입자와-장" id="toc-입자와-장" class="nav-link" data-scroll-target="#입자와-장"><span class="header-section-number">22.2</span> 입자와 장</a></li>
+  <li><a href="#변위전류" id="toc-변위전류" class="nav-link" data-scroll-target="#변위전류"><span class="header-section-number">19.2</span> 변위전류</a>
+  <ul class="collapse">
+  <li><a href="#sec-ED_introduction_to_displacement_current" id="toc-sec-ED_introduction_to_displacement_current" class="nav-link" data-scroll-target="#sec-ED_introduction_to_displacement_current"><span class="header-section-number">19.2.1</span> 변위전류의 도입</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -400,154 +403,233 @@ window.Quarto = {
 
 
 
-<section id="스칼라장" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="스칼라장"><span class="header-section-number">22.1</span> 스칼라장</h2>
-<p><span class="math inline">\(n\)</span> 차원 공간과 <span class="math inline">\(1\)</span> 차원의 시간을 합친 시공간에 대해 <span class="math inline">\(\phi : \mathbb{R} \otimes \mathbb{R}^n \to \mathbb{R}\)</span> 을 <strong>스칼라장(scalar field)</strong>이라고 하며 <span class="math inline">\(\boldsymbol{A}: \mathbb{R} \otimes \mathbb{R}^n \to \mathbb{R}^n\)</span> 을 <span class="math inline">\(n\)</span> 차원 <strong>벡터장(vector field)</strong>이라고 한다.</p>
-<p>입자에 대한 이론에서 자유도는 위치, 즉 좌표였다. 장론에서의 자유도는 장(field) 이다. 즉 물리 현상은 장에 의해 기술된다.</p>
-<p><br></p>
-<section id="비상대론적-입자를-기술하는-입장에서" class="level3" data-number="22.1.1">
-<h3 data-number="22.1.1" class="anchored" data-anchor-id="비상대론적-입자를-기술하는-입장에서"><span class="header-section-number">22.1.1</span> 비상대론적 입자를 기술하는 입장에서</h3>
-<p><span class="math inline">\(x\)</span> 축을 따라 움직이는 입자의 움직임을 기술한다고 생각해 보자. 우리는 이 입자의 운동을 <span class="math inline">\(x(t)\)</span> 가 아닌 <span class="math inline">\(\phi(t)\)</span> 로 기술해 보자. <span class="math inline">\(\phi(t)\)</span> 는 <span class="math inline">\(0\)</span> 차원 공간과 <span class="math inline">\(1\)</span> 차원 시간에 대한 스칼라장이라고 볼 수 있다.</p>
-<p>이제 action <span class="math inline">\(S\)</span> 를 생각하자 비상대론적 입자에 대해서는 장론에서는 라그랑지안을 <span class="math inline">\(\mathcal{L}\)</span> 로 기술한다.</p>
+<div class="hidden">
+<p>% %</p>
+%
 <p><span class="math display">\[
-S = \int_a^b \mathcal{L}\, dt
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
-<p>이며 운동에너지는 <span class="math inline">\(\dfrac{m\dot{\phi}^2}{2}\)</span> 이다. <span class="math inline">\(m=1\)</span> 로 놓아 식을 단순화시켜보자. 포텐셜 에너지는 위치만의 함수이므로 <span class="math inline">\(V(\phi)\)</span> 로 쓸 수 있다. 즉</p>
+</div>
+<section id="패러데이-법칙" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="패러데이-법칙"><span class="header-section-number">19.1</span> 패러데이 법칙</h2>
+<section id="sec-ED_electromotive_force_and_magnetic_flux" class="level3" data-number="19.1.1">
+<h3 data-number="19.1.1" class="anchored" data-anchor-id="sec-ED_electromotive_force_and_magnetic_flux"><span class="header-section-number">19.1.1</span> 기전력과 자기선속</h3>
+<p>세번째 멕스웰 방정실인 페러데이의 법칙은 다음과 같다.</p>
+<p><span id="eq-ED_faraday_law"><span class="math display">\[
+\boxed{
+\nabla \times \boldsymbol{E} = - \dfrac{\partial \boldsymbol{B}}{\partial t}.
+}
+\tag{19.1}\]</span></span></p>
+<p>도선이 닫힌 경로 <span class="math inline">\(C\)</span> 를 이루며 <span class="math inline">\(C\)</span> 를 경계로 하는 평면 <span class="math inline">\(S\)</span> 에 대해 스토크스 정리를 적용하면</p>
 <p><span class="math display">\[
-\mathcal{L}= \dfrac{1}{2}\left(\dfrac{d\phi}{dt}\right)^2 + V(\phi)
+\oint_C \boldsymbol{E \cdot}\,d\boldsymbol{l} = - \int_S \dfrac{\partial \boldsymbol{B}}{\partial t}\boldsymbol{\cdot} d\boldsymbol{S} = - \dfrac{d}{dt} \int_S \boldsymbol{B \cdot}\,d\boldsymbol{S}
 \]</span></p>
-<p>이며,</p>
+<p>이다. 여기서 편미분이 전미분으로 바뀌는 것은 <span class="math inline">\(C\)</span>, 즉 <span class="math inline">\(S\)</span> 가 시간에 대해 바뀌지 않을 때 이다. 여기서 우리는 <strong>기전력 (electromotive force, emf)</strong> <span class="math inline">\(\mathcal{E}\)</span> 를 아래와 같이 정의한다.</p>
+<p><span id="eq-ED_definiton_of_electromotive_force"><span class="math display">\[
+\boxed{\mathcal{E} := \oint_C \boldsymbol{E \cdot} \,d\boldsymbol{l}.}
+\tag{19.2}\]</span></span></p>
+<p>기전력은 이름에 <em>force</em> 가 붙었지만 <span class="math inline">\(\boldsymbol{F}=\dot{\boldsymbol{p}}\)</span> 의 힘은 아니며 식에서 보듯이 단위 전하가 경로의 접선 방향으로 받는 힘의 적분으로 전하가 닫힌 경로 <span class="math inline">\(C\)</span> 를 한번 순회하며 하는 일이다. 또한</p>
 <p><span class="math display">\[
-S = \int_a^b \left[ \dfrac{1}{2}\left(\dfrac{d\phi}{dt}\right)^2 + V(\phi)\right]\, dt
+F := \int_S \boldsymbol{B \cdot}\,d\boldsymbol{S}
 \]</span></p>
-<p>이고, <span class="math inline">\(S\)</span> 를 최소화 하는 오일러-라그랑쥬 방정식은</p>
-<p><span class="math display">\[
-\dfrac{d}{dt}\left(\dfrac{\partial\mathcal{L}}{\partial \dot{\phi}}\right) - \dfrac{\partial\mathcal{L}}{\partial\phi}=0
-\]</span></p>
-<p>이 된다. 이를 통해 우리는 운동방정식</p>
-<p><span class="math display">\[
-\dfrac{d^2\phi}{dt^2} = -\dfrac{\partial V(\phi)}{\partial \phi}
-\]</span></p>
+<p>를 <strong>자기선속(magnetic flux)</strong> 라고 하며 이로부터</p>
+<p><span id="eq-ED_second_faraday_law"><span class="math display">\[
+\mathcal{E} = - \dfrac{d F}{dt}
+\tag{19.3}\]</span></span></p>
 <p>를 얻는다.</p>
 <p><br></p>
-</section>
-<section id="장론의-원리" class="level3" data-number="22.1.2">
-<h3 data-number="22.1.2" class="anchored" data-anchor-id="장론의-원리"><span class="header-section-number">22.1.2</span> 장론의 원리</h3>
-<section id="작용-원리" class="level4">
-<h4 class="anchored" data-anchor-id="작용-원리">작용 원리</h4>
-<p>이제 3차원 공간에 대해 생각해보자. 아직 정해지지 않은 장에 대한 함수인 라그랑지안 <span class="math inline">\(\mathcal{L}\)</span> 에 대해 action <span class="math inline">\(S\)</span> 가 다음과 같이 정의된다.</p>
+<p>아래 <a href="#fig-ED_lenz_law_0" class="quarto-xref">그림&nbsp;<span>19.1</span></a> 와 같이 평면상의 원형 도선에 자기장 <span class="math inline">\(\boldsymbol{B} = B\hat{\boldsymbol{z}}\)</span> 가 통과한다고 하자.</p>
+<div id="fig-ED_lenz_law_0" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ED_lenz_law_0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/electrodynamics/lenz_law_0.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_lenz_law_0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;19.1: 렌츠의 법칙
+</figcaption>
+</figure>
+</div>
+<p><span class="math inline">\(\boldsymbol{B}\)</span> 에 의한 자기선속이 감소한다고 하면, 즉 <span class="math inline">\(dB/dt &lt; 0\)</span> 이라면 기전력이 발생하며 반시계 방향의 전류 <span class="math inline">\(I\)</span> 가 흐른다. 그런데 <span class="math inline">\(I\)</span> 에 의한 자기장이 생기며 이렇게 전류 <span class="math inline">\(I\)</span> 에 의해 유도된 자기장은 <span class="math inline">\(\hat{\boldsymbol{z}}\)</span> 방향이므로 <span class="math inline">\(\boldsymbol{B}\)</span> 의 감소를 억제하는 방향으로 발생한다. 이를 <strong>렌츠의 법칙 (Lenz’s law)</strong> 라고 한다.</p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-ED_induced_current_and_lenz_law_by_moving_wire" class="theorem example">
+<p><span class="theorem-title"><strong>예제 19.1 (자기장속의 움직이는 도선)</strong></span> &nbsp;</p>
+<div id="fig-ED_moving_wire" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ED_moving_wire-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/electrodynamics/moving_circuit.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_moving_wire-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;19.2: 움직이는 회로
+</figcaption>
+</figure>
+</div>
+<p>정적인 자기장에 위의 그림과 같이 직사각형을 이루는 도선이 배치되었으며 한 도선이 위의 그림과 같이 속도 <span class="math inline">\(\boldsymbol{v}=-v\hat{\boldsymbol{x}}\)</span> 로 움직인다고 하자. 도선은 <span class="math inline">\(xy\)</span> -평면상에 베치되어 있으며 <span class="math inline">\(\boldsymbol{B}=B\hat{\boldsymbol{z}}\)</span> 이다. 도선의 <span class="math inline">\(x\)</span> 방향 폭을 <span class="math inline">\(d\)</span> 라고 하면 패러데이의 법칙에 따라</p>
 <p><span class="math display">\[
-S=\int \mathcal{L}\, dtd^3\boldsymbol{r}.
+\mathcal{E}=vBd
 \]</span></p>
-<p>우리가 관심있는 민코프스키 공간에 대해서는 작용이</p>
-<p><span class="math display">\[
-S=\int \mathcal{L}\,d^4x
-\]</span></p>
-<p>로 정의된다. 여기서 <span class="math inline">\(\mathcal{L}\)</span> 은 공간에 대해서도 적분하기 때문에 단순히 라그랑지안이 아닌 <strong>라그랑지안 밀도(Lagrangian density)</strong> 라고 불린다.</p>
+<p>만큼의 기전력에 의헤 반시계 방향으로 전류가 흐르게 된다. 이것을 로렌츠 힘의 관점에서 보기로 하자. 움직이는 도선의 전하 <span class="math inline">\(q\)</span> 가 받는 로렌츠힘 <span class="math inline">\(\boldsymbol{F}_q = q(-v\hat{\boldsymbol{x}}\times B\hat{\boldsymbol{z}}) = qvB\hat{\boldsymbol{y}}\)</span> 이므로 단위 전하가 받는 에너지는 <span class="math inline">\(F_q\cdot d/q = vdB = \mathcal{E}\)</span> 이다.</p>
+<p>이제 회로에 전류가 흐르는 것을 안다. 그런데 이렇게 생긴 전류에 의해 자기장이 발생하며 이 자기장은 움직이는 도선의 닫힌 경로 부분에서 <span class="math inline">\(\hat{\boldsymbol{z}}\)</span> 방향으로 <span class="math inline">\(dF/dt\)</span> 를 증가시키게 되며 이는 <span class="math inline">\(-\hat{\boldsymbol{y}}\)</span> 방향의 운동을 방해하는 방향으로, 즉 <span class="math inline">\(v\)</span> 를 감소시키도록 작용한다. (렌츠의 법칙)</p>
+</div>
+</div>
 <p><br></p>
 </section>
-<section id="정지-작용-원리-stationary-action-principle" class="level4">
-<h4 class="anchored" data-anchor-id="정지-작용-원리-stationary-action-principle">정지 작용 원리 (Stationary action principle)</h4>
-<p>우리가 이미 알고 있는 입자에 대한 라그랑지안 <span class="math inline">\(L\)</span> 은 입자의 좌표와 속도에 의존한다. 라그랑지안 밀도 <span class="math inline">\(\mathcal{L}\)</span> 는 장에 대해 정의된다. 앞서 말했다시피 장론의 자유도는 장(field) 이다. 만약 <span class="math inline">\(\mathcal{L}\)</span> 의 자유도가 <span class="math inline">\(\phi\)</span> 뿐이라면 <span class="math inline">\(\mathcal{L}\)</span> 은 <span class="math inline">\(\phi\)</span> 와 <span class="math inline">\(X^\mu\)</span> 그리고 <span class="math inline">\(\partial_\mu \phi= \dfrac{\partial \phi}{\partial X^\mu}\)</span> 에 의존한다고 생각 할 수 있다. 즉,</p>
+<section id="일반적인-경우" class="level3" data-number="19.1.2">
+<h3 data-number="19.1.2" class="anchored" data-anchor-id="일반적인-경우"><span class="header-section-number">19.1.2</span> 일반적인 경우</h3>
+<div id="fig-ED_moving_wire2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ED_moving_wire2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/electrodynamics/moving_circuit2.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_moving_wire2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;19.3: 시간에 대해 움직이는 회로
+</figcaption>
+</figure>
+</div>
+<p>회로가 이루는 닫힌 경로 <span class="math inline">\(C\)</span> 가 시간에 대해 자유롭게 움직이며 또한 <span class="math inline">\(B(t)\)</span> 역시 변하는 경우를 생각하자. 작은 시간 <span class="math inline">\(\delta t\)</span> 에 대해 자기 선속의 변화랑을 보면</p>
 <p><span class="math display">\[
-S = \int \mathcal{L} (\phi,\, X^\mu,\, \partial_\mu \phi)\, d^4x
+\begin{aligned}
+\delta F = F(t+\delta t) - F(t) &amp;= \int_{S(t+\delta t)} \boldsymbol{B}(t+\delta t)\boldsymbol{\cdot}d\boldsymbol{S} - \int_{S(t)} \boldsymbol{B}(t)\boldsymbol{\cdot}d\boldsymbol{S} \\[0.3em]
+&amp;= (\delta t)\int_{S(t)} \dfrac{\partial \boldsymbol{B}}{\partial t}\boldsymbol{\cdot}d\boldsymbol{S} + \left[\int_{S(t+\delta t)} - \int_{S(t)}\right] \boldsymbol{B}(t)\boldsymbol{\cdot}d\boldsymbol{S} + \mathcal{O}(\delta t^2)
+\end{aligned}
 \]</span></p>
-<p>이다. 고전역학에서의 라그랑지안 <span class="math inline">\(L\)</span> 을 생각해보자. <span class="math inline">\(L\)</span> 이 <span class="math inline">\(t\)</span> 에 대한 명시적인 의존성이 없을 경우 보존계, 즉 에너지가 보존되는 시스템이었다. 마찬가지로 장에 대해 <span class="math inline">\(X^\mu\)</span> 에 대해 명시적인 의존성이 없을 경우 에너지와 운동량이 보존되는 보존계이다. 즉 많은 경우 <span class="math inline">\(\mathcal{L}= \mathcal{L}(\phi,\, \partial_\mu \phi)\)</span> 이다.</p>
-<p>장에 대한 오일러 라그랑주 방정식은 다음과 같은 형태가 된다.</p>
-<p><span id="eq-classical_field_euler_lagrange_eq_for_field"><span class="math display">\[
-\sum_\mu \dfrac{\partial}{\partial X^\mu} \dfrac{\partial \mathcal{L}}{\partial \left(\dfrac{\partial \phi}{\partial X^\mu}\right)} - \dfrac{\partial \mathcal{L}}{\partial \phi} = 0.
-\tag{22.1}\]</span></span></p>
-<p>만약 어떤 시스템에 2개의 스칼라장 <span class="math inline">\(\phi,\, \chi\)</span> 이 존재한다면 <a href="#eq-classical_field_euler_lagrange_eq_for_field" class="quarto-xref">식&nbsp;<span>22.1</span></a> 이외에 <span class="math inline">\(\chi\)</span> 에 대한 오일러-라그랑쥬 방정식</p>
+<p>이다. 여기서 <span class="math inline">\(S(t)\)</span> 에서 <span class="math inline">\(S(t+\delta t)\)</span> 로 변하면서 생기는 부피의 경계면을 생각하자. <span class="math inline">\(S(t)\)</span> 와 <span class="math inline">\(S(t+\delta t)\)</span> 를 제외한 경계먼을 <span class="math inline">\(S_c\)</span> 라고 하고 <span class="math inline">\(\nabla \boldsymbol{\cdot B}=0\)</span> 임을 생각하면</p>
 <p><span class="math display">\[
-\sum_\mu \dfrac{\partial}{\partial X^\mu} \dfrac{\partial \mathcal{L}}{\partial \left(\dfrac{\partial \chi}{\partial X^\mu}\right)} - \dfrac{\partial \mathcal{L}}{\partial \chi} = 0.
+\delta F = (\delta t)\int_{S(t)} \dfrac{\partial \boldsymbol{B}}{\partial t}\boldsymbol{\cdot}d\boldsymbol{S} - \int_{S_C} \boldsymbol{B}(t)\boldsymbol{\cdot}d\boldsymbol{S} + \mathcal{O}(\delta t^2)
 \]</span></p>
-<p>도 존재해야 할 것이다.</p>
+<p>또한 <span class="math inline">\(S_C\)</span> 의 면적 성분 <span class="math inline">\(d\boldsymbol{S}\)</span> 는 <span class="math inline">\(C(t)\)</span> 경로를 따르는 <span class="math inline">\(d\boldsymbol{l}\)</span> 에 대해 <span class="math inline">\(d\boldsymbol{S} = (d\boldsymbol{l}\times \boldsymbol{v})\delta t\)</span> 로 쓸 수 있으므로</p>
+<p><span class="math display">\[
+\delta F = (\delta t)\int_{S(t)} \dfrac{\partial \boldsymbol{B}}{\partial t}\boldsymbol{\cdot}d\boldsymbol{S} - (\delta t)\int_{C(t)} (\boldsymbol{v}\times \boldsymbol{B})\boldsymbol{\cdot}d\boldsymbol{l} + \mathcal{O}(\delta t^2)
+\]</span></p>
+<p>이다. 따라서</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac{dF}{dt} &amp;= \int_{S(t)} \dfrac{\partial \boldsymbol{B}}{\partial t}\boldsymbol{\cdot} d\boldsymbol{S} - \int_{C(t)} (\boldsymbol{v}\times \boldsymbol{B})\boldsymbol{\cdot} d\boldsymbol{l} \\[0.3em]
+&amp;= -\int_{S(t)}\nabla \times \boldsymbol{E} \boldsymbol{\cdot} d\boldsymbol{S} - \int_{C(t)} (\boldsymbol{v}\times \boldsymbol{B})\boldsymbol{\cdot} d\boldsymbol{l} \\[0.3em]
+&amp;= -\int_{C(t)} (\boldsymbol{E} + \boldsymbol{v}\times \boldsymbol{B})\boldsymbol{\cdot} d\boldsymbol{l}
+\end{aligned}
+\]</span></p>
+<p>이다. 그리고 이제 로렌츠 힘을 받았을 때의 기전력을 생각하면 위 식은 <span class="math inline">\(-\mathcal{E}\)</span> 와 같음을 안다. 즉</p>
+<p><span class="math display">\[
+\mathcal{E} = - \dfrac{dF}{dt}
+\]</span></p>
+<p>이다.</p>
 <p><br></p>
 </section>
-</section>
-<section id="라그랑지안-밀도의-형태" class="level3" data-number="22.1.3">
-<h3 data-number="22.1.3" class="anchored" data-anchor-id="라그랑지안-밀도의-형태"><span class="header-section-number">22.1.3</span> 라그랑지안 밀도의 형태</h3>
-<p>라그랑지안의 운동에너지 항을 생각하면 라그랑지안 밀도에 <span class="math inline">\(\partial_\mu \phi\)</span> 의 제곱의 합이 들어가야 할 것 같다. 그러나 <span class="math inline">\(\sum_\mu (\partial_\mu \phi)^2\)</span> 는 너무 대칭적이다. 우리는 나중에</p>
-<p><span class="math display">\[
-(\partial_0 \phi)^2 - (\partial_1 \phi)^2 - (\partial_2 \phi)^2 - (\partial_3 \phi)^2
-\]</span></p>
-<p>가 로런츠 불변량을 정의한다는 것을 보게 될 것이다. 이를 이용하여 수정된 라그랑지안 밀도</p>
-<p><span id="eq-classical_field_lagrangian_density"><span class="math display">\[
-\mathcal{L} = \dfrac{1}{2} \left[(\partial_0 \phi)^2 - (\partial_1 \phi)^2 - (\partial_2 \phi)^2 - (\partial_3 \phi)^2\right] - V(\phi)
-\tag{22.2}\]</span></span></p>
-<p>를 우리의 장론에 대한 라그랑지안 밀도로 취급하려 한다. 이 때 <span class="math inline">\(V(\phi)\)</span> 를 <strong>장 포텐셜(field potential)</strong> 이라고 한다. 이제 <a href="#eq-classical_field_lagrangian_density" class="quarto-xref">식&nbsp;<span>22.2</span></a> 에 대한 오일러-라그랑쥬 방정식은 다음과 같다.</p>
-<p><span id="eq-classical_field_euler_lagrange_eq_for_lagrangian_density"><span class="math display">\[
-\dfrac{1}{c^2}\dfrac{\partial^2 \phi}{\partial t^2} - \dfrac{\partial^2 \phi}{\partial x^2} - \dfrac{\partial^2 \phi}{\partial y^2} - \dfrac{\partial^2 \phi}{\partial z^2} + \dfrac{\partial V}{\partial \phi}=0.
-\tag{22.3}\]</span></span></p>
-<p><br></p>
-<section id="파동방정식" class="level4">
-<h4 class="anchored" data-anchor-id="파동방정식">파동방정식</h4>
-<p>자유로운 상태 즉 <span class="math inline">\(V(\phi)=0\)</span> 인 경우를 생각하자. <a href="#eq-classical_field_euler_lagrange_eq_for_lagrangian_density" class="quarto-xref">식&nbsp;<span>22.3</span></a> 에서 무엇이 생각나는가? 바로 파동방정식이다. 이 방정식의 일반해는 다음과 같다.</p>
-<p><span class="math display">\[
-\phi (t,\,\boldsymbol{r}) = A \sin (\boldsymbol{k \cdot r}+kct) + B \sin \sin (\boldsymbol{k \cdot r}-kct),\qquad \text{where }k=\|\boldsymbol{k}\|
-\]</span></p>
-<p><br></p>
-</section>
-</section>
-<section id="상대론에서의-장" class="level3" data-number="22.1.4">
-<h3 data-number="22.1.4" class="anchored" data-anchor-id="상대론에서의-장"><span class="header-section-number">22.1.4</span> 상대론에서의 장</h3>
-<p>여기서는 장론에서의 로런츠 불변성에 대해 다룬다.</p>
-<p>두 관성좌표계 <span class="math inline">\(\Sigma,\, \Sigma'\)</span> 에 대해 어떤 장 <span class="math inline">\(\phi\)</span> 가 로런츠 변환 <span class="math inline">\(X'^{\mu'} = \Lambda_\mu^{\mu'}X^\mu\)</span> 에 대해</p>
-<p><span class="math display">\[
-\phi (X^\mu) = \phi'(X'^{\mu'})
-\]</span></p>
-<p>일 때 <span class="math inline">\(\phi\)</span> 를 스칼라장이라고 한다. 이 때 <span class="math inline">\(\phi\)</span> 는 <span class="math inline">\(\Sigma\)</span> 좌표계에서, <span class="math inline">\(\phi'\)</span> 은 <span class="math inline">\(\Sigma'\)</span> 좌표계에서 측정한 장의 양이다. 이제 4-벡터장을 정의 할 수 있다. 역시 로런츠 변환 <span class="math inline">\(X'^{\mu'} = \Lambda_\mu^{\mu'}X^\mu\)</span> 에 대해 4-벡터값 <span class="math inline">\(U^\nu\)</span> 가</p>
-<p><span class="math display">\[
-U'^{\nu'} (X^{\mu'}) = \Lambda_{\nu}^{\nu'}U^\nu(\Lambda_\mu^{\mu'}X^\mu)
-\]</span></p>
-<p>일 때 <span class="math inline">\(U^\mu\)</span> 를 4-벡터장이라고 한다.</p>
-<p>자 여기서 더 나가기 전에 수학적으로 좀 더 알야야 할 것이 있다.</p>
-<p><br></p>
-</section>
-<section id="공변벡터와-반변벡터" class="level3" data-number="22.1.5">
-<h3 data-number="22.1.5" class="anchored" data-anchor-id="공변벡터와-반변벡터"><span class="header-section-number">22.1.5</span> 공변벡터와 반변벡터</h3>
-<p>두 좌표계 <span class="math inline">\(X^\mu\)</span> 와 <span class="math inline">\(X'^\mu\)</span> 에 의해 표현되는 공간을 생각하자. 또 <span class="math inline">\(dX^\mu\)</span> 와 <span class="math inline">\(d(X')^\mu\)</span> 에 의해 표현되는 무한소 간격을 생각하자. 여기에 다음과 같은 관계가 성립한다. (아인슈타인 합규칙에 따라 <span class="math inline">\(\sum_\nu\)</span> 를 제외한다.)</p>
-<p><span class="math display">\[
-d(X')^\mu = \dfrac{\partial (X')^\mu}{\partial X^\nu} dX^\nu
-\]</span></p>
-<p><span class="math inline">\(X^\mu\)</span> 와 <span class="math inline">\(X'^\mu\)</span> 의 관계가 로런츠 변환이라면 <span class="math inline">\(\dfrac{\partial (X')^\mu}{\partial X^\nu} = \Lambda^\mu_\nu\)</span> 일 것이다. 4-벡터의 경우</p>
-<p><span id="eq-classical_field_transform_of_contravariant_vector"><span class="math display">\[
-A'^\mu = \dfrac{\partial (X')^\mu}{\partial X^\nu}A^\nu
-\tag{22.4}\]</span></span></p>
-<p>와 같이 변환된다.</p>
-<p>이제 어떤 좌표 <span class="math inline">\(X\)</span> 에 대한 함수 <span class="math inline">\(\phi (X)\)</span> 를 생각하자. <span class="math inline">\(X'\)</span> 에 대한 <span class="math inline">\(\phi\)</span> 의 도함수는 미적분학의 연쇄규칙에 따라</p>
-<p><span class="math display">\[
-\partial'_\nu \phi := \dfrac{\partial \phi}{\partial (X')^\nu} = \dfrac{\partial X^\mu}{\partial (X')^\nu}\dfrac{\partial \phi}{\partial X^\mu} = \dfrac{\partial X^\mu}{\partial (X')^\nu}\partial_\mu \phi
-\]</span></p>
-<p>임을 안다. 이제 <span class="math inline">\(A_\nu = \partial'\phi\)</span> 라고 하면</p>
-<p><span id="eq-classical_field_transform_of_covariant_vector"><span class="math display">\[
-A'_{\nu} = \dfrac{\partial X^\mu}{\partial (X')^\nu}A_\mu
-\tag{22.5}\]</span></span></p>
-<p>이다. <a href="#eq-classical_field_transform_of_contravariant_vector" class="quarto-xref">식&nbsp;<span>22.4</span></a> 와 비교해보면 두 벡터의 차이가 나타난다.</p>
-<p><span class="math display">\[
-A'^\mu = \dfrac{\partial (X')^\mu}{\partial X^\nu}A^\nu, \qquad A'_{\nu} = \dfrac{\partial X^\mu}{\partial (X')^\nu}A_\mu
-\]</span></p>
-<p><span class="math inline">\(A^\nu \to A'^\mu\)</span> 변환에서는 <span class="math inline">\(X\)</span> 에 대한 <span class="math inline">\(X'\)</span> 의 도함수가 사용되었으며 <span class="math inline">\(A_\mu \to A'_\nu\)</span> 변환에서는 <span class="math inline">\(X'\)</span> 에 대한 <span class="math inline">\(X\)</span> 의 도함수가 사용되었다. 이는 <span class="math inline">\(A^\nu\)</span> 로 표현되는 벡터와 <span class="math inline">\(A_\mu\)</span> 로 표현되는 벡터가 다른 벡터라는 것을 의미한다. <a href="#eq-classical_field_transform_of_contravariant_vector" class="quarto-xref">식&nbsp;<span>22.4</span></a> 와 같이 변화하는 윗첨자료 표현되는 벡터를 <strong>반변 벡터(contravariant vector)</strong>, <a href="#eq-classical_field_transform_of_covariant_vector" class="quarto-xref">식&nbsp;<span>22.5</span></a> 와 같이 변화하는 아래첨자로 표현되는 벡터를 <strong>공변 벡터(covariant vector)</strong> 라고 한다.</p>
-<p>만약 이 변환이 로렌츠 변환이라면 <a href="#eq-classical_field_transform_of_contravariant_vector" class="quarto-xref">식&nbsp;<span>22.4</span></a> 와 <a href="#eq-classical_field_transform_of_covariant_vector" class="quarto-xref">식&nbsp;<span>22.5</span></a> 의 차이는 두 관성계의 상대속도가 서로 <span class="math inline">\(\boldsymbol{V}\)</span> 와 <span class="math inline">\(-\boldsymbol{V}\)</span> 인 것 뿐이라는 것을 쉽게 알 수 있다. <span class="math inline">\(\Sigma\)</span> 에 대해 <span class="math inline">\(\Sigma'\)</span> 이 <span class="math inline">\(\boldsymbol{V}\)</span> 로 움직인다면 <span class="math inline">\(\Sigma'\)</span> 에 대해서 <span class="math inline">\(\Sigma\)</span> 는 <span class="math inline">\(-\boldsymbol{V}\)</span> 로 움직이는게 당연하다.</p>
-<p>4-벡터, 즉 로렌츠 변환으로 변환되는 벡터에 대해 <span class="math inline">\(A_\mu A^\mu\)</span> 는 스칼라이다. <a href="#eq-classical_field_transform_of_contravariant_vector" class="quarto-xref">식&nbsp;<span>22.4</span></a> 와 <a href="#eq-classical_field_transform_of_covariant_vector" class="quarto-xref">식&nbsp;<span>22.5</span></a> 로 부터</p>
-<p><span class="math display">\[
-(A')_\nu(A')^\nu = \dfrac{\partial X^\mu}{\partial (X')^\nu} A_\mu \dfrac{\partial (X')^\nu}{\partial X^\mu}A^\mu = \left(\dfrac{\partial X^\mu}{\partial (X')^\nu} \dfrac{\partial (X')^\nu}{\partial X^\mu}\right)A_\mu A^\mu = A_\mu A^\mu
-\]</span></p>
-<p>임을 안다.</p>
-<p>자 우리는 앞서 <a href="01_introduction_to_special_relativity.html#sec-special_relativity_4_vectors_and_lorentz_invariants" class="quarto-xref"><span> 21.3.1</span></a> 에서 메트릭 텐서를 알아보았다. 반변벡터 <span class="math inline">\(A^\mu\)</span> 에 대해 공변벡터 <span class="math inline">\(A_\nu\)</span> 는</p>
-<p><span class="math display">\[
-A_\nu = \eta_{\nu \mu}A^\mu
-\]</span></p>
-<p>와 같다. 즉 <span class="math inline">\(X^\mu = (ct,\,x,\,y,\,z)\)</span> 에 대해 <span class="math inline">\(X_\mu = (ct,\, -x,\,-y,\,-z)\)</span> 이다.</p>
+<section id="sec-ED_inductance_and_magnetic_energy" class="level3" data-number="19.1.3">
+<h3 data-number="19.1.3" class="anchored" data-anchor-id="sec-ED_inductance_and_magnetic_energy"><span class="header-section-number">19.1.3</span> 인덕턴스와 자기에너지</h3>
+<p><a href="02_1_electrostatics1.html#sec-ED_electrostatic_energy_for_charge_distribution" class="quarto-xref"><span> 16.3.3</span></a> 에서 우리는 전하로 이루어진 정전기 시스템을 구성하는데 필요하는 에너지를 계산하였다. 그러나 아직까지 자기장에 대해서는 비슷한 작업을 하지 않았는데 이는 전류들의 모임에 대해 기전력에 대해 아는 것이 필요했기 때문에다. 그리고 이를 위해서는 몇가지 개념이 필요하다.</p>
+<section id="inductance" class="level4">
+<h4 class="anchored" data-anchor-id="inductance"><strong>Inductance</strong></h4>
+<p>곡선 <span class="math inline">\(C\)</span> 를 흐르는 전류 <span class="math inline">\(I\)</span> 가 자기 선속 <span class="math inline">\(F=\int_S \boldsymbol{B\cdot}d\boldsymbol{S}\)</span> 를 발생시킬 때 인덕턴스 <span class="math inline">\(L\)</span> 은 다음과 같이 정의된다.</p>
+<p><span id="eq-ED_defintion_of_inductance"><span class="math display">\[
+\boxed{L = \dfrac{F}{I}.}
+\tag{19.4}\]</span></span></p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-ED_inductance_for_solenoid" class="theorem example">
+<p><span class="theorem-title"><strong>예제 19.2 (솔레노이드의 인덕턴스)</strong></span> &nbsp;</p>
+<div id="fig-ED_inductance_for_solenoid" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ED_inductance_for_solenoid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/electrodynamics/solenoid.png" class="img-fluid figure-img" width="100">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_inductance_for_solenoid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;19.4: 솔레노이드
+</figcaption>
+</figure>
+</div>
+<p>길이 <span class="math inline">\(h\)</span>, 단면적 <span class="math inline">\(A\)</span> 로 이루어진 위의 그림과 같은 솔레노이드를 생각하자. <span class="math inline">\(h \gg \sqrt{A}\)</span> 를 가정하여 솔레노이드의 양 끝에서 발생하는 효과를 무시하자. 단위 길이당 감은 횟수 <span class="math inline">\(N\)</span> 에 전류 <span class="math inline">\(I\)</span> 가 흐른다면 <a href="03_magnetostatics.html#exm-ED_magnetic_field_due_to_solenoid" class="quarto-xref">예제&nbsp;<span>18.2</span></a> 에서 보았듯이 솔레노이드 내부의 자기장 <span class="math inline">\(B = \mu_0 N I\)</span> 이며 총 <span class="math inline">\(Nh\)</span> 개의 원형 회로가 있는 것으로 생각 할 수 있으므로 자기 선속 <span class="math inline">\(F = \mu_0 N^2 IAh = \mu_0 N^2 IV_S\)</span> 이다. 여기서 <span class="math inline">\(V_S = Ah\)</span> 는 솔레노이드의 부피이다. 그렇다면 솔레노이드에 의한 인덕턴스 <span class="math inline">\(L = \mu_0 N^2 V_S\)</span> 이다.</p>
+</div>
+</div>
 <p><br></p>
 </section>
 </section>
-<section id="입자와-장" class="level2" data-number="22.2">
-<h2 data-number="22.2" class="anchored" data-anchor-id="입자와-장"><span class="header-section-number">22.2</span> 입자와 장</h2>
-<p>양자역학에서는 장과 입자가 동일하지만 고전 장론에서는 장과 입자는 구별된다. 지금까지는 고전 장론에서 장과 장이 가져야할 성질에 대해 알아보았다. 고전 장론에서는 장과 입자가 모두 라그랑지안에 포함되어야 하며, 이 라그랑지안은 로렌츠 불변이어야 한다.</p>
-<p>우리는 입자에 대한 라그랑지안이 <span class="math inline">\(-m\sqrt{1-v^2/c^2}\)</span> 임을 안다. 이것을 <span class="math inline">\(\mathcal{L}_\textrm{ptl}=-m\sqrt{1-v^2}\)</span> 로 표기하자. 그러</p>
+<section id="sec-ED_magnetistatic_energy" class="level3" data-number="19.1.4">
+<h3 data-number="19.1.4" class="anchored" data-anchor-id="sec-ED_magnetistatic_energy"><span class="header-section-number">19.1.4</span> 정자기 에너지</h3>
+<p>닫힌회로 <span class="math inline">\(C\)</span> 에 시간에 따라 변하는 전류 <span class="math inline">\(I(t)\)</span> 가 흐른다고 하자. 그렇다면 기전력은</p>
+<p><span class="math display">\[
+\mathcal{E} = - \dfrac{dF}{dt} = -L \dfrac{dI}{dt}
+\]</span></p>
+<p>이다. 기전력은 단위 전하가 회로를 한번 순활할 때 얻는 에너지 이다. 시간 <span class="math inline">\(\delta t\)</span> 동안 <span class="math inline">\(I\delta t\)</span> 의 전하가 회로를 흐르므로 <span class="math inline">\(\delta t\)</span> 시간동안 이 회로에 해준 일 <span class="math inline">\(\delta W\)</span> 는</p>
+<p><span class="math display">\[
+\delta W = \mathcal{E}I\delta t = -LI \dfrac{dI}{dt}\delta t
+\]</span></p>
+<p>이며, 이를 이용하면</p>
+<p><span class="math display">\[
+\dfrac{dW}{dt}= - LI\dfrac{dI}{dt}= \dfrac{d}{dt}\left(-\dfrac{LI^2}{2} \right)
+\]</span></p>
+<p>임을 알 수 있다. 즉 이 시스템의 에너지 증가는</p>
+<p><span class="math display">\[
+W =  \dfrac{LI^2}{2} = \dfrac{FI}{2}
+\]</span></p>
+<p>이다. 이로부터</p>
+<p><span class="math display">\[
+U = \dfrac{I}{2}\int_S \boldsymbol{B \cdot}d\boldsymbol{S} = \dfrac{I}{2}\int_S (\nabla \times \boldsymbol{A})\boldsymbol{\cdot}\,d\boldsymbol{S} = \dfrac{I}{2} \oint_C \boldsymbol{A \cdot}d\boldsymbol{l} = \dfrac{1}{2}\int_V \boldsymbol{J \cdot A}\,d^3\boldsymbol{r}
+\]</span></p>
+<p>여기서 <span class="math inline">\(\nabla \times \boldsymbol{B} = \mu_0 \boldsymbol{J}\)</span> 와 벡터 항등식 <span class="math inline">\(\nabla \boldsymbol{\cdot}(\boldsymbol{B}\times \boldsymbol{A}) = (\nabla \times \boldsymbol{B})\boldsymbol{\cdot A} - (\nabla \times \boldsymbol{A})\boldsymbol{\cdot B}\)</span> 를 사용하면</p>
+<p><span class="math display">\[
+\begin{aligned}
+U &amp;= \dfrac{1}{2\mu_0} \int \left[(\nabla \times \boldsymbol{B}) \boldsymbol{\cdot A}\right]\,d^3\boldsymbol{r} \\[0.3em]
+&amp;= \dfrac{1}{2\mu_0} \left[\int \nabla \boldsymbol{\cdot}(\boldsymbol{B}\times \boldsymbol{A}) \, d^3\boldsymbol{r} + \int (\nabla \times \boldsymbol{A})\boldsymbol{\cdot B} \,d^3\boldsymbol{r}\right] \\[0.3em]
+&amp;=\dfrac{1}{2\mu_0} \oint_S (\boldsymbol{B}\times  \boldsymbol{A})\boldsymbol{\cdot}d\boldsymbol{S} + \dfrac{1}{2\mu_0} \int \|\boldsymbol{B}\|^2\,d^3\boldsymbol{r}
+\end{aligned}
+\]</span></p>
+<p>을 얻는다. 여기서 <span class="math inline">\(\|\boldsymbol{B} \times \boldsymbol{A}\|\)</span> 는 <span class="math inline">\(1/r^2\)</span> 보다 빠르게 감소하므로 우주 전체에 대해 적분하면 <span class="math inline">\(\oint_S (\boldsymbol{B}\times  \boldsymbol{A})\boldsymbol{\cdot}d\boldsymbol{S} =0\)</span> 이며 따라서</p>
+<p><span class="math display">\[
+U = \dfrac{1}{2\mu_0}\int \|\boldsymbol{B}\|^2\,d^3\boldsymbol{r}
+\]</span></p>
+<p>이다. 이를 <a href="02_1_electrostatics1.html#eq-ED_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>16.32</span></a> 와 함께 생각하면</p>
+<p><span class="math display">\[
+U = \int \left(\dfrac{\epsilon_0 \|\boldsymbol{E}\|^2}{2} + \dfrac{\|\boldsymbol{B}\|^2}{2\mu_0}\right)\,d^3\boldsymbol{r}
+\]</span></p>
+<p>이 된다. 여기에 몇가지 생각할 것이 있다.</p>
+<p>(<span class="math inline">\(1\)</span>) 전기장의 에너지를 논할때와 마찬가지로 우리는 전하와 전류의 시스템을 구성하는데 필요한 에너지가 아닌 일종의 전기장과 자기장에 축적된 에너지를 계산하였다. 이것은 뒤에 논하기로 하자.</p>
+<p>(<span class="math inline">\(2\)</span>) 위 식은 전기장에 의한 에너지와 자기장에 의한 에너지의 단순합이며 가능한 <span class="math inline">\(\boldsymbol{E \cdot B}\)</span> 혹은 유사한 전기장, 자기장에 동시에 의존하는 항을 무시하였다. 그러나 이런 항은 없으며 위의 식이 전체 에너지임을 이후에 보일것이다.</p>
+<p><br></p>
+</section>
+<section id="sec-ED_resistance" class="level3" data-number="19.1.5">
+<h3 data-number="19.1.5" class="anchored" data-anchor-id="sec-ED_resistance"><span class="header-section-number">19.1.5</span> 저항</h3>
+<p>지금까지는 기전력 <span class="math inline">\(\mathcal{E}\)</span> 에 의해 전류 <span class="math inline">\(I\)</span> 가 흐른다는 것을 가정했다. 기전력은 앞서 말했듯이 단위 전하당 축적되는 역학적 에너지로 전하는 가속을 받게 되며 따라서 전류는 증가해야 한다. 전하가 가속을 받았을 때 벌어지는 일에 대해서는 차후에 다루기로 하고, 전하가 속도를 가지고 실제 물체를 이동하게 되면 다양한 요인에 의해 가속이 억제되며 결국은 어떤 속도를 유지하게 된다. 즉 전류가 일정해진다. 많은 경우 이 효과를 <strong>저항(resistance)</strong> <span class="math inline">\(R\)</span> 로 정량화 하며 아래의 <strong>옴의 법칙 (Ohm’s law)</strong> 을 따른다.</p>
+<p><span id="eq-ED_ohm_law"><span class="math display">\[
+\boxed{\mathcal{E} = IR.}
+\tag{19.5}\]</span></span></p>
+<p>저항은 단면적 (<span class="math inline">\(A\)</span>) 에 반비례하며 길이 (<span class="math inline">\(L\)</span>) 에 비례한다. 이때 비례상수 <span class="math inline">\(\rho_R\)</span> 은 <span class="math inline">\(R=\rho_R L/A\)</span> 이며 <span class="math inline">\(\rho_R\)</span> 을 <strong>비저항 (resistivity)</strong> 라고 하고 역수 <span class="math inline">\(\sigma = 1/\rho_R\)</span> 을 <strong>전도율 (conductivity)</strong> 라고 한다. 이 때 비저항 즉 전도율은 물질의 고유한 특성이다. 단면적 <span class="math inline">\(A\)</span>, 길이 <span class="math inline">\(L\)</span> 인 원통에 전기장 <span class="math inline">\(\boldsymbol{E}\)</span>, 전류밀도 <span class="math inline">\(\boldsymbol{J}\)</span> 가 균일하게 존재한다고 하면</p>
+<p><span class="math display">\[
+\mathcal{E}=\int_0^L \boldsymbol{E}\,dx = R\int_A \boldsymbol{J}dS = IR
+\]</span></p>
+<p>이며</p>
+<p><span id="eq-ED_generalized_ohm_law"><span class="math display">\[
+\boxed{\boldsymbol{J}= \sigma \boldsymbol{E}}
+\tag{19.6}\]</span></span></p>
+<p>를 얻는다. 위 식은 <strong>일반화된 옴의 법칙 (generalized Ohm’s law) </strong>이라고 한다. 옴의 법칙은 멕스웰 방정식과 같은 근본 법칙이 아니라 일종의 실험적 일반화이며 모든 물질이 옴의 법칙을 따르는 것도 아니다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="변위전류" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="변위전류"><span class="header-section-number">19.2</span> 변위전류</h2>
+<section id="sec-ED_introduction_to_displacement_current" class="level3" data-number="19.2.1">
+<h3 data-number="19.2.1" class="anchored" data-anchor-id="sec-ED_introduction_to_displacement_current"><span class="header-section-number">19.2.1</span> 변위전류의 도입</h3>
+<p>앙페르의 법칙은 <span class="math inline">\(\nabla \times \boldsymbol{B} = \mu_0 \boldsymbol{J}\)</span> 이며 관련된 멕스웰 방정식은</p>
+<p><span id="eq-ED_maxwell_4th_equation"><span class="math display">\[
+\nabla \times \boldsymbol{B} = \mu_0 \left(\boldsymbol{J} + \epsilon_0 \dfrac{\partial \boldsymbol{E}}{\partial t}\right)
+\tag{19.7}\]</span></span></p>
+<p>이다. 여기서 <span class="math inline">\(\epsilon_0 \partial_t \boldsymbol{E}\)</span> 는 전류밀도와 같은 지위를 차지하고 있는, 실제 전하의 흐름과 무관한 어떤 값으로 <strong>변위전류 (displacement current)</strong> 라고 한다.</p>
+<p>멕스웰의 4 방정식에서 앙페르 법칙을 제외한 세 방정식과 변위전류가 없는 형태는 많은 물리학자의 노력으로 실험적으로 잘 정립된 상태였다. 멕스웰이 기존의 전자기 방정식을 종합하여 멕스웰 방정식을 만들 때 대부분의 노력은 변위전류 부분에 소모되었다. 이제 그 이유를 살펴보자. 변위전류가 없는 앙페르 법칙으로부터 다음을 얻는다.</p>
+<p><span class="math display">\[
+\mu_0 \nabla \boldsymbol{\cdot J} = \nabla \boldsymbol{\cdot}(\nabla \times \boldsymbol{B}) = 0.
+\]</span></p>
+<p><span class="math inline">\(\nabla \boldsymbol{\cdot J}=0\)</span> 은 어떤 부피로 유입되는 전류의 합은 <span class="math inline">\(0\)</span> 이라는 것을 의미한다. 하지만 실제로 그렇지 않다!. 아래와 같은 간단한 회로를 생각하자.</p>
+<div id="eq-ED_for_displacement_current_1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/electrodynamics/for_displacement_current_1.png" class="img-fluid figure-img" width="200"></p>
+<figcaption>간단한 회로</figcaption>
+</figure>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -953,13 +1035,13 @@ A_\nu = \eta_{\nu \mu}A^\mu
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="pagination-link" aria-label="특수 상대론의 기초">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span>
+      <a href="../../src/Electrodynamics/03_magnetostatics.html" class="pagination-link" aria-label="정자기">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정자기</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/topics/Topics.html" class="pagination-link" aria-label="별도의 주제들">
-        <span class="nav-page-text">별도의 주제들</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/Electrodynamics/A1_mathematics.html" class="pagination-link" aria-label="부록 A. 수학">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -665,7 +665,7 @@ $$
 
 ## 정전기 에너지
 
-### 정전기 에너지 {#sec-ED_electrostatic_energy}
+### 정전기 에너지의 의미 {#sec-ED_meaning_of_electrostatic_energy}
 
 정전기 에너지는 역학적 포텐셜 에너지와 같이 무한히 먼 지점에서 특정 지점까지 전하 $q$ 를 움직이는데 해준 일을 의미한다. 즉 정전기 에너지 $U(\bf{r})$ 는 다음과 같다.
 
@@ -729,9 +729,9 @@ $$ {#eq-ED_total_electrostatic_energy_for_charge_distribution}
 
 </br>
 
-### 정전기 에너지
+### 정전기 에너지 비교 {#sec-ED_comparison_of_electrostatic_energy}
 
-자 이제 @eq-ED_total_electrostatic_energy_for_2_point_charge 와 @eq-ED_total_electrostatic_energy_for_charge_distribution 을 피교해보자. $e,\,-e$ 의 전하를 가진 두 입자가 떨어져 있다면 그 전기 포텐셜 에너지는 @eq-ED_total_electrostatic_energy_for_2_point_charge 에 의하면 음수이고 @eq-ED_total_electrostatic_energy_for_charge_distribution 에 의하면 양수이다. 이 차이는 어디서 왔을까?
+자 이제 @eq-ED_total_electrostatic_energy_for_2_point_charge 와 @eq-ED_total_electrostatic_energy_for_charge_distribution 을 비교해보자. $e,\,-e$ 의 전하를 가진 두 입자가 떨어져 있다면 그 전기 포텐셜 에너지는 @eq-ED_total_electrostatic_energy_for_2_point_charge 에 의하면 음수이고 @eq-ED_total_electrostatic_energy_for_charge_distribution 에 의하면 양수이다. 이 차이는 어디서 왔을까?
 
 우선 우리의 유도 과정을 살펴보자 우리는 @eq-ED_total_electrostatic_energy_for_N_point_charges_system 에서 $q_i \Phi(\bf{r}_i)$ 를 $\rho(\bf{r})\Phi(\bf{r})$ 로 바꾸어 @eq-ED_total_electrostatic_energy_for_charge_distribution 을 얻었다. @eq-ED_total_electrostatic_energy_for_N_point_charges_system 에서는 각각의 전하 $q_i$ 가 이미 조립된 상태로 존재하지만 @eq-ED_total_electrostatic_energy_for_charge_distribution 에서는 그렇지 않다는 것이다. 예를 들어 전하 $q=-e$ 를 가진 전자에 의한 정전기 에너지를 계산해 보자. 이 때 전자의 반경을 $r_e$ 라고 하고 @eq-ED_total_electrostatic_energy_for_charge_distribution 를 사용하면
 

@@ -41,6 +41,7 @@ book:
       - src/Electrodynamics/02_1_electrostatics1.qmd
       - src/Electrodynamics/02_2_electrostatics2.qmd
       - src/Electrodynamics/03_magnetostatics.qmd
+      - src/Electrodynamics/04_electrodynamics.qmd
       - src/Electrodynamics/A1_mathematics.qmd
      
       
