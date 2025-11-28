@@ -8,7 +8,7 @@ format: html
 %\renewcommand{\P}{\mathrm{P}}
 
 %\newcommand{\bf}[1]{\boldsymbol{#1}}
-
+\newcommand{\bftilde}[1]{\bf{\widetilde{{#1}}}}
 
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\R}{\mathbb{R}}
@@ -21,6 +21,7 @@ format: html
 \newcommand{\rank}{\operatorname{rank}}
 \newcommand{\tr}{\operatorname{tr}}
 \newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\bfhat}{\bf{}}
 
 
 

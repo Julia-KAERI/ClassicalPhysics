@@ -21,19 +21,19 @@ book:
       - src/ClassicalMechanics/12_two_or_three_bodies_problems.qmd
 
       - src/ClassicalMechanics/A_proofs.qmd
-
       - src/ClassicalMechanics/P1_problems01.qmd    
+    
     - part: src/Mechanics_and_Symmetry/00_index.qmd
       chapters:
       - src/Mechanics_and_Symmetry/01_experimental_facts.qmd
       - src/Mechanics_and_Symmetry/02_equations_of_motion.qmd
 
-    - part: src/Electromagnetism/00_index.qmd
-      chapters:
-      - src/Electromagnetism/01_mathematics.qmd
-      - src/Electromagnetism/electrostatics_1.qmd
-      - src/Electromagnetism/electrostatics_2.qmd
-      - src/Electromagnetism/electrostatics_3.qmd
+    # - part: src/Electromagnetism/00_index.qmd
+    #   chapters:
+    #   - src/Electromagnetism/01_mathematics.qmd
+    #   - src/Electromagnetism/electrostatics_1.qmd
+    #   - src/Electromagnetism/electrostatics_2.qmd
+    #   - src/Electromagnetism/electrostatics_3.qmd
     
     - part: src/Electrodynamics/00_index.qmd
       chapters:
@@ -43,6 +43,7 @@ book:
       - src/Electrodynamics/03_magnetostatics.qmd
       - src/Electrodynamics/04_electrodynamics.qmd
       - src/Electrodynamics/A1_mathematics.qmd
+      - src/Electrodynamics/A2_waves.qmd
      
       
     - part: src/Relativity/00_index.qmd

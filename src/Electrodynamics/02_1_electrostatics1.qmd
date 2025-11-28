@@ -16,38 +16,38 @@ $$
 
 </br>
 
-## 가우스 법칙과 쿨롱힘 {#sec-ED_gauss_law_and_coulomb_force}
+## 가우스 법칙과 쿨롱힘 {#sec-ED_ES_gauss_law_and_coulomb_force}
 
 가우스 법칙과 발산 정리를 통해 부피 $V$ 에 대해 
 
 $$
-\int_V \nabla \bf{\cdot E} \, d^3 x = \int_S \bf{E\cdot}d\bf{S} = \dfrac{1}{\epsilon_0}\int_V \rho(\bf{x})\,d^3 x = \dfrac{Q}{\epsilon_0}
+\int_V \nabla \bf{\cdot E} \, d^3 \bf{r} = \int_S \bf{E\cdot}d\bf{a} = \dfrac{1}{\epsilon_0}\int_V \rho(\bf{x})\,d^3 \bf{r} = \dfrac{Q}{\epsilon_0}
 $$
 
 이다. 여기서 $Q$ 는 부피 $V$ 에 포함된 총 전하량이다. 이로부터 우리는 아래의 가우스 법칙의 적분형태를 얻는다.
 
 $$
-\int_S \bf{E\cdot}d\bf{S} = \dfrac{Q}{\epsilon_0}.
-$$ {#eq-ED_integral_form_of_gauss_law}
+\int_S \bf{E\cdot}d\bf{a} = \dfrac{Q}{\epsilon_0}.
+$$ {#eq-ED_ES_integral_form_of_gauss_law}
 
 
-원점에 놓인 점전하 $q'=q'\,\delta(\bf{x})$ 을 생각하자. 원점을 중심으로 반지름 $r$ 인 구를 적분하는 부피로 잡으면 이 부피 안에 전하는 $q$ 이다. 또한 구면좌표계에서 $d\bf{S} = r^2 \sin\theta d\varphi d\theta\hat{\bf{r}}$ 이며 $\bf{E}$ 는 대칭에 의해 표면에서 그 크기가 같고 $\hat{r}$ 방향이어야 하므로 $\bf{E}=E(r)\hat{\bf{r}}$ 로 놓을 수 있다. 그렇다면 
+원점에 놓인 점전하 $q'=q'\,\delta(\bf{x})$ 을 생각하자. 원점을 중심으로 반지름 $r$ 인 구를 적분하는 부피로 잡으면 이 부피 안에 전하는 $q$ 이다. 또한 구면좌표계에서 $d\bf{a} = r^2 \sin\theta \,d\varphi d\theta\hat{\bf{r}}$ 이며 $\bf{E}$ 는 대칭에 의해 표면에서 그 크기가 같고 $\hat{r}$ 방향이어야 하므로 $\bf{E}=E(r)\hat{\bf{r}}$ 로 놓을 수 있다. 그렇다면 
 
 $$
-\dfrac{q'}{\epsilon_0} = \int_S \bf{E\cdot}d\bf{S} = 4\pi r^2 E(r)
+\dfrac{q'}{\epsilon_0} = \int_S \bf{E\cdot}d\bf{a} = 4\pi r^2 E(r)
 $$
 
 이므로 
 
 $$
 \bf{E}(\bf{r}) = \dfrac{1}{4\pi\epsilon_0}\dfrac{q'}{r^3}\bf{r}
-$$ {#eq-ED_electric_field_by_point_charge}
+$$ {#eq-ED_ES_electric_field_by_point_charge}
 
 이며 로런츠 힘을 생각하면 위치 $\bf{r}$ 의 전하 $q$ 가 받는 힘은
 
 $$
 \bf{F} = \dfrac{1}{4\pi \epsilon_0}\dfrac{qq'}{r^3}\bf{r}
-$$ {#eq-ED_coulomb_force_by_point_charge_at_origin}
+$$ {#eq-ED_ES_coulomb_force_by_point_charge_at_origin}
 
 이다. 이 $\bf{F}$ 는 원점에 위치한 점전하 $q'$ 에 의해 $\bf{r}$ 에 위치한 $q$ 가 받는 힘을 의미하며 이런 점전하에 희한 힘을 **쿨롱힘(Coulomb force)** 이라고 한다. 
 
@@ -56,25 +56,25 @@ $\bf{r}'$ 에 위치한 점전하 $q'$ 에 의해 생성되는 전기장과 $\bf
 
 $$
 \bf{E}(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \dfrac{q'(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3},
-$${#eq-ED_electric_field_by_point_charge_at_rprime}
+$${#eq-ED_ES_electric_field_by_point_charge_at_rprime}
 
 $$
 \bf{F} = \dfrac{1}{4\pi\epsilon_0} \dfrac{qq'(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3}.
-$${#eq-ED_coulomb_force_by_point_charge_at_rprime}
+$${#eq-ED_ES_coulomb_force_by_point_charge_at_rprime}
 
 또한 점전하가 아니라 전하분포 $\rho(\bf{r}')$ 에 의해 성성되는 전기장은 다음과 같다는 것을 알 수 있다.
 
 $$
 \bf{E}(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\bf{r}')(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3} \,d^3\bf{r},
-$${#eq-ED_electric_field_by_point_charge_distribution}
+$${#eq-ED_ES_electric_field_by_point_charge_distribution}
 
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_charge_distribution_circular_charge}
+::: {#exm-ED_ES_charge_distribution_circular_charge}
 #### 균일하게 대전된 고리에 의한 전기장
 
-![원형 전하 분포](figures/electrostatics/electrostatics_ring/ring.png){#fig-ED_ring width=300}
+![원형 전하 분포](figures/electrostatics/electrostatics_ring/ring.png){#fig-ED_ES_ring width=300}
 
 반경 $R$ 인 원형 선이 선전하 밀도 $\lambda$ 로 $xy$ 평면상에 원점을 중심으로 위치한다고 하자. 이 때 $(0,\,0,\,z)$ 에서의 전기장 $\bf{E}(0,\,0,\,z)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,z)=E_y(0,\,0,\,z)=0$ 이며
 
@@ -82,7 +82,7 @@ $$
 \begin{aligned}
 E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^{2\pi} \dfrac{\lambda Rz\,d\theta}{(R^2+z^2)^{3/2}} = \dfrac{\lambda Rz}{2\epsilon_0(R^2+z^2)^{3/2}}
 \end{aligned}
-$${#eq-ED_electric_field_due_to_line_charge}
+$${#eq-ED_ES_electric_field_due_to_line_charge}
 
 이다.
 
@@ -92,11 +92,11 @@ $${#eq-ED_electric_field_due_to_line_charge}
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_charge_distribution_hemisphere_shell}
+::: {#exm-ED_ES_charge_distribution_hemisphere_shell}
 
 #### 반구 shell 의 전하 분포
 
-![반구 전하 분포](figures/electrostatics/electrostatics_hemisphere/hemisphere.png){#fig-ED_hemisphere width=300}
+![반구 전하 분포](figures/electrostatics/electrostatics_hemisphere/hemisphere.png){#fig-ED_ES_hemisphere width=300}
 
 반경 $R$ 인 반구형 셸의 면전하밀도가 $\sigma$ 로 $xy$ 평면상에 원점을 중심으로 그림과 같이 아래로 위치한다고 하자. 이 때 $(0,\,0,\,0)$ 에서의 전기장 $\bf{E}(0,\,0,\,0)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,0)=E_y(0,\,0,\,0)=0$ 이며 구면좌표계에서
 
@@ -104,7 +104,7 @@ $$
 \begin{aligned}
 E_z(0,\,0,\,0) =\dfrac{1}{4\pi\epsilon_0}\int_0^{2\pi} \int_{\pi/2}^\pi \dfrac{\sigma R^2 \sin\theta \cos\theta \,d\theta d\Phi\theta}{R^2} = \dfrac{\sigma}{4\epsilon_0}
 \end{aligned}
-$${#eq-ED_electric_field_due_to_charged_hemisphere_shell}
+$${#eq-ED_ES_electric_field_due_to_charged_hemisphere_shell}
 
 이다.
 
@@ -114,29 +114,27 @@ $${#eq-ED_electric_field_due_to_charged_hemisphere_shell}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_charge_distribution_hemisphere}
+::: {#exm-ED_ES_charge_distribution_hemisphere}
 
 #### 반구의 전하 분포
 
-@fig-ED_hemisphere 에서 shell 이 아닌 반구 전체이며 전하밀도가 $\rho$ 라고 하자. 이 때 $(0,\,0,\,0)$ 에서의 전기장 $\bf{E}(0,\,0,\,z)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,z)=E_y(0,\,0,\,z)=0$ 이며 구면좌표계에서
+@fig-ED_ES_hemisphere 에서 shell 이 아닌 반구 전체이며 전하밀도가 $\rho$ 라고 하자. 이 때 $(0,\,0,\,0)$ 에서의 전기장 $\bf{E}(0,\,0,\,z)$ 을 생각해보자. 대칭성을 생각하면 $E_x(0,\,0,\,z)=E_y(0,\,0,\,z)=0$ 이며 구면좌표계에서
 
 $$
 \begin{aligned}
 E_z(0,\,0,\,z) =\dfrac{1}{4\pi\epsilon_0}\int_0^R\int_0^{2\pi}  \int_{\pi/2}^\pi \dfrac{\rho r^2 \sin\theta \cos\theta \,dr d\theta d\Phi\theta}{r^2} = \dfrac{\rho R}{4\epsilon_0}
 \end{aligned}
-$${#eq-ED_electric_field_due_to_charged_hemisphere}
+$${#eq-ED_ES_electric_field_due_to_charged_hemisphere}
 
 이다.
 
 :::
 
-</div>
-
-</br>
+</div></br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_charge_distribution_spherical_symmetry}
+::: {#exm-ED_ES_charge_distribution_spherical_symmetry}
 
 #### 구 대칭 전하 분포
 
@@ -156,7 +154,7 @@ $$
 
 $$
 \bf{E}(\bf{r}) = \dfrac{1}{4\pi \epsilon_0}\dfrac{Q_r}{r^2}\hat{\bf{r}}
-$$ {#eq-ED_electric_field_due_to_radial-distribution}
+$$ {#eq-ED_ES_electric_field_due_to_radial-distribution}
 
 이다. 
 
@@ -166,25 +164,25 @@ $$ {#eq-ED_electric_field_due_to_radial-distribution}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_charge_distribution_uniform_sphere}
+::: {#exm-ED_ES_charge_distribution_uniform_sphere}
 
 #### 균일한 구형 전하분포
 
-@exm-ED_charge_distribution_spherical_symmetry 로부터 $0\le r<R$ 일 때 $\rho(r)=\rho_0$ 이고 $r\ge 0$ 일 때 $\rho(r)=0$ 인 경우를 보자. $0\le r<R$ 일 경우의 전기장 $\bf{E}_{\text{in}}(r)$ 은
+@exm-ED_ES_charge_distribution_spherical_symmetry 로부터 $0\le r<R$ 일 때 $\rho(r)=\rho_0$ 이고 $r\ge 0$ 일 때 $\rho(r)=0$ 인 경우를 보자. $0\le r<R$ 일 경우의 전기장 $\bf{E}_{\text{in}}(r)$ 은
 
 $$
 \bf{E}_{\text{in}}(r)= \dfrac{1}{4\pi\epsilon_0}\dfrac{\rho_0 4\pi r^3/3}{r^2}\hat{\bf{r}}= \dfrac{\rho_0 r}{3\epsilon_0}\hat{\bf{r}}
-$$ {#eq-ED_electric_field_inside_of_uniformly_charged_sphere}
+$$ {#eq-ED_ES_electric_field_inside_of_uniformly_charged_sphere}
 
 이며 $r\ge R$ 일 경우의 전기장 $\bf{E}_{\text{out}}(r)$ 은
 
 $$
 \bf{E}_{\text{out}}(r) = \dfrac{1}{4\pi\epsilon_0}\dfrac{\rho_0 4\pi R^3 /3}{r^2}\hat{\bf{r}} = \dfrac{\rho_0R^3}{3\epsilon_0 r^2} \hat{\bf{r}}
-$${#eq-ED_electric_field_outside_of_uniformly_charged_sphere}
+$${#eq-ED_ES_electric_field_outside_of_uniformly_charged_sphere}
 
 이다. 이 분포의 총 전하량 $Q=\dfrac{4\pi \rho_0 R^3}{3}$ 을 생각하면 $\bf{E}_{\text{out}}(r)= \dfrac{Q}{4\pi \epsilon_0 r^2}\hat{\bf{r}}$ 이므로 모든 전하가 중심에 모여있을 때의 전기장과 같다. 전기장의 세기 $E(r)$ 을 그래프로 그리면 아래와 같다.
 
-![균일한 구형 전하 분포에서의 전기장](figures/electrostatics/electrostatics_uniform_sphere/efield.png){#fig-ED_electrostatics_uniform_sphere width=350}
+![균일한 구형 전하 분포에서의 전기장](figures/electrostatics/electrostatics_uniform_sphere/efield.png){#fig-ED_ES_electrostatics_uniform_sphere width=350}
 
 :::
 
@@ -194,11 +192,11 @@ $${#eq-ED_electric_field_outside_of_uniformly_charged_sphere}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_charge_distribution_line_charge}
+::: {#exm-ED_ES_charge_distribution_line_charge}
 
 #### 무한히 긴 선 전하
 
-![무한히 긴 선 전하](figures/electrostatics/electrostatics_long_line_charge/image.png){#fig-ED_electrostatics_line_charge width=300}
+![무한히 긴 선 전하](figures/electrostatics/electrostatics_long_line_charge/image.png){#fig-ED_ES_electrostatics_line_charge width=300}
 
 위의 그림과 같이 배치된 선 전하 밀도 $\lambda$ 의 무한히 긴 전하선에 의한 전기장을 구해보자. 그림에서는 $P$ 가 $y$ 축 위에 선전하와 $d$ 만큼의 거리를 두고 위치한다. $x$ 방향의 전기장은 무한히 긴 전하밀도에 의해 상쇄되기 때문에 $y$ 방향의 전기장만이 남는다. 
 
@@ -218,13 +216,13 @@ $$
 
 $$
 \bf{E}(r,\,\theta,\,z)= \dfrac{\lambda}{2\pi \epsilon_0 r}\hat{\bf{r}}
-$$ {#eq-ED_electric_field_due_to_infinite_line_charge_1}
+$$ {#eq-ED_ES_electric_field_due_to_infinite_line_charge_1}
 
 이다. 
 
 이것을 가우스 법칙을 이용해 구해보자. 아래와 같은 높이 $L$, 반지름 $r$ 인 실린더 모양의 가우스 면을 생각하자.
 
-![무한히 긴 선 전하의 가우스 면](figures/electrostatics/electrostatics_long_line_charge/gauss_surface.png){#fig-ED_electrostatics_line_charge width=300}
+![무한히 긴 선 전하의 가우스 면](figures/electrostatics/electrostatics_long_line_charge/gauss_surface.png){#fig-ED_ES_electrostatics_line_charge width=300}
 
 양쪽의 원으로는 전기장이 존재하지 않으며 원통좌표계에서 $\hat{\bf{r}}$ 방향으로만 전기장이 존재할것이라는 것을 알 수 있다. 따라서
 
@@ -236,7 +234,7 @@ $$
 
 $$
 \bf{E}(r,\,\theta,\,z)= \dfrac{\lambda}{2\pi \epsilon_0 r}\hat{\bf{r}}
-$${#eq-ED_electric_field_due_to_infinite_line_charge_2}
+$${#eq-ED_ES_electric_field_due_to_infinite_line_charge_2}
 
 을 얻으며 앞서 직접 적분에 의해 얻은 값과 같다.
 :::
@@ -245,11 +243,11 @@ $${#eq-ED_electric_field_due_to_infinite_line_charge_2}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_charge_distribution_plane}
+::: {#exm-ED_ES_charge_distribution_plane}
 
 #### 무한 대전 평면
 
-![균일하게 대전된 무한 평면](figures/electrostatics/electrostatics_infinite_charged_plane/figure.png){#fig-ED_infinite_charged_plane width=400}
+![균일하게 대전된 무한 평면](figures/electrostatics/electrostatics_infinite_charged_plane/figure.png){#fig-ED_ES_infinite_charged_plane width=400}
 
 균일한 면 전하 밀도 $\sigma$ 를 갖는 무한 평면을 생각하자. 그리고 위의 그림과 같이 이 평면의 일부를 관통하는 직육면체를 생각한다. 대칭성을 고려하면 당연히 평면에 수직한 성분을 제외한 성분의 전기장은 $0$ 이다. 이 전기장의 세기를 $E$ 라고 하고 가우스의 법칙윽 적용하면
 
@@ -263,36 +261,34 @@ $$
 
 $$
 \bf{E}(z>0)= \dfrac{\sigma}{2\epsilon_0}\hat{\bf{z}},\qquad \bf{E}(z<0)= - \dfrac{\sigma}{2\epsilon_0}\hat{\bf{z}}
-$$ {#eq-ED_electric_field_due_to_infinitly_charged_plain}
+$$ {#eq-ED_ES_electric_field_due_to_infinitly_charged_plain}
 
 로 $\bf{E}$ 는 $z=0$ 에서 $\Delta \bf{E}(z\approx 0) = \bf{E}(z=0^+)-\bf{E}(z=0^-)= \dfrac{\sigma}{\epsilon_0}$ 불연속성을 보여준다. 
 
 :::
 
-</div>
-
-</br>
+</div></br>
 
 ## 전위 
 
-### 전위 {#sec-ED_electrostatic_potential}
+### 전위 {#sec-ED_ES_electrostatic_potential}
 
 $\nabla \times \bf{E} = \bf{0}$ 일 때 스토크스의 정리에 따라 임의의 닫힌 경로 $C$ 와 이 경로에 의해 생기는 면 $S$ 에 대해
 
 $$
-\int_S (\nabla \times \bf{E}) \bf{\cdot} d\bf{a} = \oint_{C} \bf{E\cdot} d\bf{s} = 0
+\int_S (\nabla \times \bf{E}) \bf{\cdot} d\bf{a} = \oint_{C} \bf{E\cdot} d\bf{l} = 0
 $$
 
 이다. 이로부터 $\bf{E}$ 를 임의의 경로 $C_1$ 을 따라 $P_1$ 에서 $P_2$ 까지 적분할 때 어떤 경로를 취하든 그 값이 같다는 것을 안다. 이 때
 
 $$
-\Phi_{12} := -\int_{P_1}^{P_2} \bf{E\cdot}d\bf{s}
-$$ {#eq-ED_potential_between_two_points}
+\Phi_{12} := -\int_{P_1}^{P_2} \bf{E\cdot}d\bf{l}
+$$ {#eq-ED_ES_potential_between_two_points}
 
 를 $P_2$ 와 $P_1$ 사이의 전위라고 한다. 또한 일반적으로 $\displaystyle \lim_{\|\bf{r}\| \to \infty} \bf{E}(\bf{r})=\bf{0}$ 의 경계 조건에서 전위 $\Phi(\bf{r})$ 은 다음과 같이 정의된다.
 
 $$
-\Phi(\bf{r}) := -\lim_{\|\bf{r}_0\|\to \infty} \int_{\bf{r}_0}^{\bf{r}} \bf{E\cdot}\,d\bf{s}
+\Phi(\bf{r}) := -\lim_{\|\bf{r}_0\|\to \infty} \int_{\bf{r}_0}^{\bf{r}} \bf{E\cdot}\,d\bf{l}
 $$
 
 그렇다면 
@@ -305,13 +301,13 @@ $$
 
 $$
 \nabla^2 \Phi = -\dfrac{\rho}{\epsilon_0}
-$$ {#eq-ED_poisson_equation}
+$$ {#eq-ED_ES_poisson_equation}
 
 이다. 위의 미분방정식을 **푸아송 방정식(Poisson equation)** 이라고 한다. 전하 밀도가 $0$ 인 곳에서는 $\Phi(\bf{r})$ 는 아래와 같은 **라플라스 방정식(Laplace equation)** 을 만족한다. 
 
 $$
 \nabla^2\Phi = 0.
-$$ {#eq-ED_laplace_equation}
+$$ {#eq-ED_ES_laplace_equation}
 
 
 #### **경계조건**
@@ -328,25 +324,25 @@ $\Phi(\bf{r})$ 에 어떤 상수를 더하더라도 물리에는 변화가 없�
 
 #### **점전하에 의한 포텐셜**
 
-원점에 위치한 점전하 $q$ 에 의한 포텐셜은 @eq-ED_potential_between_two_points 를 이용하여 계산하면 아래와 같다.
+원점에 위치한 점전하 $q$ 에 의한 포텐셜은 @eq-ED_ES_potential_between_two_points 를 이용하여 계산하면 아래와 같다.
 
 $$
-\Phi(\bf{r}) = -\int_{\infty}^{\bf{r}} \dfrac{1}{4\pi\epsilon_0}\dfrac{q\bf{r\cdot}\,d^3\bf{r}}{r^3} = -\dfrac{q}{4\pi\epsilon_0} \int_{\infty}^r \dfrac{dr}{r^2} = \dfrac{q}{4\pi\epsilon_0 r}
+\Phi(\bf{r}) = -\int_{\infty}^{\bf{r}} \dfrac{1}{4\pi\epsilon_0}\dfrac{q\bf{r'\cdot}\,d^3\bf{r'}}{r'^3} = -\dfrac{q}{4\pi\epsilon_0} \int_{\infty}^r \dfrac{dr'}{r'^2} = \dfrac{q}{4\pi\epsilon_0 r}
 $$ 
 
 즉, $\bf{r}'$ 에 위치한 점전하 $q$ 에 의해 발생하는 $\bf{r}$ 에서의 포텐셜 $\Phi(\bf{r})$ 은 다음과 같다. 
 
 $$
 \Phi(\bf{r})= \dfrac{1}{4\pi\epsilon_0}\dfrac{1}{\|\bf{r}-\bf{r}'\|}.
-$${#eq-ED_potential_by_point_charge}
+$${#eq-ED_ES_potential_by_point_charge}
 
 </br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_potential_of_uniform_sphere_charge_distribution}
+::: {#exm-ED_ES_potential_of_uniform_sphere_charge_distribution}
 
-@exm-ED_charge_distribution_uniform_sphere 의 상황에서 무한히 멀리 떨어진 곳으로부터 구의 외부 혹은 내부의 한 지점까지 전위차를 구해보자. 우선 구의 중심을 원점으로 놓고, 원점으로부터 $r>R$ 까지의 전위차 $\Phi_{\text{out}}(r)$ 은
+@exm-ED_ES_charge_distribution_uniform_sphere 의 상황에서 무한히 멀리 떨어진 곳으로부터 구의 외부 혹은 내부의 한 지점까지 전위차를 구해보자. 우선 구의 중심을 원점으로 놓고, 원점으로부터 $r>R$ 까지의 전위차 $\Phi_{\text{out}}(r)$ 은
 
 $$
 \Phi_{\text{out}}(r) = - \int_{-\infty}^{r} E(r')\,dr' = -\int_{-\infty}^{r} \dfrac{\rho R^3}{3\epsilon_0 r'^2}\, dr' = \dfrac{\rho R^3}{3\epsilon_0 r}
@@ -362,7 +358,7 @@ $$
 \end{aligned}
 $$
 
-![균일한 전하 밀도를 가진 구에서의 전위차](figures/electrostatics/electrostatics_potential_uniform_sphere/electrostatics_potential_uniform_sphere.png){#fig-ED_electrosttics_potential_uniform_sphere width=450}
+![균일한 전하 밀도를 가진 구에서의 전위차](figures/electrostatics/electrostatics_potential_uniform_sphere/electrostatics_potential_uniform_sphere.png){#fig-ED_ES_electrosttics_potential_uniform_sphere width=450}
 
 
 :::
@@ -371,11 +367,11 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_potential_from_infinite_line_charge}
+::: {#exm-ED_ES_potential_from_infinite_line_charge}
 
 #### 무한한 선 전하에 의한 전위
 
-@exm-ED_charge_distribution_line_charge 에서 임의의 $\bf{r}_0$ 로부터의 전위차를 구해보자.
+@exm-ED_ES_charge_distribution_line_charge 에서 임의의 $\bf{r}_0$ 로부터의 전위차를 구해보자.
 
 $$
 \Phi(\bf{r}) = -\int_{\bf{r}_0}^{\bf{r}} \dfrac{\lambda}{2\pi\epsilon_o r'}dr' = -\dfrac{\lambda}{2\pi\epsilon_0} \left(\ln \|\bf{r}\| - \ln \|\bf{r}_0\|\right).
@@ -383,13 +379,11 @@ $$
 
 
 :::
-</div>
-
-</br>
+</div></br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_potential_from_uniformly_charged_disk}
+::: {#exm-ED_ES_potential_from_uniformly_charged_disk}
 
 #### 균일하게 대전된 디스크로부터의 전위
 
@@ -420,15 +414,15 @@ $$
 
 </div></br>
 
-### 다중극 전개 {#sec-ED_multipole_expansion}
+### 다중극 전개 {#sec-ED_ES_multipole_expansion}
 
 #### **쌍극자 모멘트** {#sec-EM_electric_dipole_moment}
 
 
-![전기 쌍극자](figures/electrostatics/electric_dipole/electric_dipole.png){#fig-ED_electric_dipole width=200}
+![전기 쌍극자](figures/electrostatics/electric_dipole/electric_dipole.png){#fig-ED_ES_electric_dipole width=200}
 
 
-전하 $+q$ 와 $-q$ 가 위의 그림과 같이 $d$ 의 거리만큼 떨어져 있다고 하고 원점을 두 전하의 중앙에 두자. 그리고 $+q$ 로부터의 변위를 $\bf{r}_1$, $-q$ 로부터의 변위를 $\bf{r}_2$ 라고 하고 원점으로부터의 변위를 $\bf{r}$ 라고 하자. 그리고 $-q$ 전하의 위치로부터 $+q$ 전하의 위치까지의 변위를 $\bf{d}$ 라고 하자. 이 때의 전기 포텐셜 $\Phi (\bf{r})$ 은 $r=\|\bf{r}\|$ 이라고 할 때 $r>d$ 의 조건과 @eq-ED_legendre_expansion 와 @eq-ED_parity_of_legendre_polynomial 로부터 다음을 얻는다.
+전하 $+q$ 와 $-q$ 가 위의 그림과 같이 $d$ 의 거리만큼 떨어져 있다고 하고 원점을 두 전하의 중앙에 두자. 그리고 $+q$ 로부터의 변위를 $\bf{r}_1$, $-q$ 로부터의 변위를 $\bf{r}_2$ 라고 하고 원점으로부터의 변위를 $\bf{r}$ 라고 하자. 그리고 $-q$ 전하의 위치로부터 $+q$ 전하의 위치까지의 변위를 $\bf{d}$ 라고 하자. 이 때의 전기 포텐셜 $\Phi (\bf{r})$ 은 $r=\|\bf{r}\|$ 이라고 할 때 $r>d$ 의 조건과 @eq-ED_MT_legendre_expansion 와 @eq-ED_MT_parity_of_legendre_polynomial 로부터 다음을 얻는다.
 $$
 \begin{aligned}
 \Phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{q}{\|\bf{r}_1\|} - \dfrac{q}{\|\bf{r}_2\|}\right] = \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{1}{\|\bf{r}-\bf{d}/2\|} - \dfrac{1}{\|\bf{r}+\bf{d}/2\|}\right] \\[0.3em]
@@ -436,32 +430,32 @@ $$
 &=\dfrac{q}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{2d^{2k+1}}{2^{2k+1}r^{2k+2}} P_{2k+1}(\cos\theta) \\
 &= \dfrac{q}{4\pi\epsilon_0} \left[\dfrac{d\cos\theta}{r^2} + \dfrac{d^3(5\cos^3\theta - 3\cos \theta) }{8r^4} + \cdots \right] \approx\dfrac{1}{4\pi\epsilon_0} \dfrac{qd\cos\theta}{r^2}
 \end{aligned}
-$$ {#eq-ED_electric_potential_dipole_1}
+$$ {#eq-ED_ES_electric_potential_dipole_1}
 
 
-위의 경우는 총 전하량이 $0$ 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 $\|\bf{r}\|^{-2}$ 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 $0$ 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다. @eq-ED_electric_potential_dipole_1 에서 $1/r^2$ 에 비례하는 부분에 대해 **전기 쌍극자 모멘트(electric dipole moment)** $\bf{p}$ 를
+위의 경우는 총 전하량이 $0$ 이지만 양의 전하와 음의 전하가 분리되어 그 변위의 차이로 인해 $\|\bf{r}\|^{-2}$ 에 비례하는 전기장이 존재하는 경우이다. 이렇게 전하 분포가 균일하지 않으면 전체 전하의 합이 $0$ 이더라도 그 불균일성으로 인해 전위가, 따라서 전기장이 존재 할 수 있다. @eq-ED_ES_electric_potential_dipole_1 에서 $1/r^2$ 에 비례하는 부분에 대해 **전기 쌍극자 모멘트(electric dipole moment)** $\bf{p}$ 를
 
 $$
 \bf{p}:=q\bf{d}
-$$ {#eq-ED_electric_dipole_moment}
+$$ {#eq-ED_ES_electric_dipole_moment}
 
 로 정의하면 전기 쌍극자 모멘트에 의한 전기 포텐셜 $\Phi_d(\bf{r})$ 은 다음과 같다. 
 $$
 \Phi_d (\bf{r})= \dfrac{1}{4\pi\epsilon_0} \dfrac{\bf{p\cdot r}}{r^3}
-$$ {#eq-ED_electric_potential_dipole_2}
+$$ {#eq-ED_ES_electric_potential_dipole_2}
 
 이로부터 쌍극자 모멘트에 의한 전기장 $\bf{E}_d(\bf{r})$ 을 구하면 아래와 같다.
 
 $$
 \bf{E}_d(\bf{r}) = -\nabla \Phi_d(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \left(\dfrac{3(\bf{p\cdot \hat{\bf{r}}})\hat{\bf{r}}-\bf{p}}{r^3}\right)
-$$ {#eq-ED_electric_field_dipole}
+$$ {#eq-ED_ES_electric_field_dipole}
 
 
 </br>
 
 #### **다중극 전개**
 
-@eq-ED_legendre_expansion 를 사용하여 전하 분포 $\rho(\bf{r}')$ 에 대해 $\|\bf{r}\| > \|\bf{r}'\|$ 일 때의 전기 포텐셜을 계산하면
+@eq-ED_MT_legendre_expansion 를 사용하여 전하 분포 $\rho(\bf{r}')$ 에 대해 $\|\bf{r}\| > \|\bf{r}'\|$ 일 때의 전기 포텐셜을 계산하면
 
 $$
 \begin{aligned}
@@ -476,12 +470,12 @@ $$
 
 $$
 Q_k := \int_V (r')^k P_k(\cos\gamma)\,\rho(\bf{r}')\,d^3\bf{r'}
-$$ {#eq-ED_electric_multipole_moment}
+$$ {#eq-ED_ES_electric_multipole_moment}
 
 에 대해 전기 포텐셜을 다음과 같이 쓸 수 있다.
 $$
 \Phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{k=0}^\infty \dfrac{Q_k}{r^{k+1}}
-$$ {#eq-ED_multipole_expansion}
+$$ {#eq-ED_ES_multipole_expansion}
 
 여기서 전기 쌍극자 모멘트 $Q_1$ 은
 
@@ -489,17 +483,17 @@ $$
 Q_1 = \int_V r' \cos \gamma \rho(\bf{r}')\, d^3\bf{r}'
 $$
 
-이며 @fig-ED_electric_dipole 의 전하 분포 $\rho(\bf{r}') = q\delta(\bf{r}'-\bf{d}/2) -q\delta(\bf{r}'+\bf{d}/2)$ 및 $\bf{p}= q\bf{d}$ 를 대입하면 $Q_1 = qd\cos \gamma$ 이고 @eq-ED_electric_potential_dipole_2 의 결과를 얻는다. 
+이며 @fig-ED_ES_electric_dipole 의 전하 분포 $\rho(\bf{r}') = q\delta(\bf{r}'-\bf{d}/2) -q\delta(\bf{r}'+\bf{d}/2)$ 및 $\bf{p}= q\bf{d}$ 를 대입하면 $Q_1 = qd\cos \gamma$ 이고 @eq-ED_ES_electric_potential_dipole_2 의 결과를 얻는다. 
 
 </br>
 
-르장드르 다항식을 이용한 다중극 전개는 위치 벡터 $\bf{r}$ 을 중심으로 전개하지만 @eq-ED_spherical_haromics_expansion_of_inverse_vector_difference 를 이용하여 구면조화함수를 사용하면 정해진 좌표계에서 표현 할 수 있다. 즉
+르장드르 다항식을 이용한 다중극 전개는 위치 벡터 $\bf{r}$ 을 중심으로 전개하지만 @eq-ED_MT_spherical_haromics_expansion_of_inverse_vector_difference 를 이용하여 구면조화함수를 사용하면 정해진 좌표계에서 표현 할 수 있다. 즉
 
 $$
 \begin{aligned}
 \Phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1}\dfrac{Y_l^m (\theta,\, \varphi) }{r^{l+1}} \int_V (r')^l {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\theta',\, \varphi') \, d^3\bf{r}' 
 \end{aligned}
-$$ {#eq-ED_electrostatics_multpile_expansion_using_spherical_harmonics}
+$$ {#eq-ED_ES_electrostatics_multpile_expansion_using_spherical_harmonics}
 
 이다. 여기서 구면좌표계에서 $d^3\bf{r}' = r'^2 \sin \theta' \, dr'd\theta'd\varphi'$ 임을 알며 
 
@@ -514,19 +508,16 @@ $$ {#eq-ED-electrostatics_moltiple_moment_2}
 
 $$
 \Phi(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1}\dfrac{Y_l^m (\theta,\, \varphi) }{r^{l+1}} Q_{lm}
-$${#eq-ED_electrostatics_multpile_expansion_using_spherical_harmonics_2}
+$${#eq-ED_ES_electrostatics_multpile_expansion_using_spherical_harmonics_2}
 
 이다.
 
-
-</br>
-
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-EM_multipole_expansion_of_potentials_monopoe_dipole_cases}
-@eq-ED_electrostatics_multpile_expansion_using_spherical_harmonics_2 을 이용하여 아래 그림의 다중극 상태를 보자.
+@eq-ED_ES_electrostatics_multpile_expansion_using_spherical_harmonics_2 을 이용하여 아래 그림의 다중극 상태를 보자.
 
-![다중극](figures/electrostatics/electric_manypole/manypoles.png){#fig-ED_electrostatics_manipoles width=600}
+![다중극](figures/electrostatics/electric_manypole/manypoles.png){#fig-ED_ES_electrostatics_manipoles width=600}
 
 #### **Monopole**
 
@@ -557,7 +548,7 @@ $$
 Q_{lm} = q\left(\dfrac{d}{2}\right)^{l}\left[{Y_{l}^m}^\ast (0, 0) - {Y_l^m}^\ast(\pi,0)\right]
 $$
 
-이다. @eq-ED_conjugate_of_spherical_harmonics 의 두번째 식으로 부터 
+이다. @eq-ED_MT_conjugate_of_spherical_harmonics 의 두번째 식으로 부터 
 
 
 $$
@@ -576,14 +567,14 @@ $$
 \end{aligned}
 $$
 
-전기 포텐셜의 첫번째 항은 @eq-ED_electric_potential_dipole_2 와 같음을 알 수 있다.
+전기 포텐셜의 첫번째 항은 @eq-ED_ES_electric_potential_dipole_2 와 같음을 알 수 있다.
 :::
 
 </div>
 
 </br>
 
-### 정전기적 안정평형상태 {#sec-ED_electrostatic_stable_equilibrium}
+### 정전기적 안정평형상태 {#sec-ED_ES_electrostatic_stable_equilibrium}
 
 평형이란 어떤 시스템의 모든 입자에 대해 가해지는 힘이 $0$ 인 상태이다. 정전기적 안정평형상태, 즉 전하들이 정지된 상태에서 각 전하에 가해지는 힘이 $0$ 이며 또한 미소 변화에 대해 복원력이 작용하는 전하 분포가 존재할까? 여기서는 서로 겹치지 않는 이산적인 점전하의 분포에서 가능한지 여부를 알아보자. 예를 들어 붙어있는 양전하와 음전하는 안정평형상태라고 볼 수 있다. 
 
@@ -593,7 +584,7 @@ $\bf{r}$ 에 위치한 전하 $q$ 에 가해지는 힘 $\bf{F} = q\bf{E} = -q\na
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-ED_electrostatics_laplacian_1}
+::: {#thm-ED_ES_electrostatics_laplacian_1}
 
 $\Phi(\bf{r})$ 이 라플라스 방정식의 해라면 전하가 없는 공간상의 임의의 구 $V$ 의 표면 $S$ 에 대한 적분값의 평균은 구의 중심에서의 함수값과 같다. 즉 구의 중심 $\bf{r}_0$ 에 대해 다음이 성립한다.
 
@@ -621,7 +612,7 @@ $$
 $$
 \begin{aligned}
 \dfrac{d\overline{\Phi}}{dR} &= \dfrac{1}{4\pi} \int \dfrac{\partial \Phi}{\partial R}\, d\Omega = \dfrac{1}{4\pi} \int\dfrac{\partial \Phi}{\partial R}\hat{\bf{R}}\cdot \hat{\bf{R}} \, d\Omega \\
-&= \dfrac{1}{4\pi R^2} \int \nabla \Phi \cdot d\bf{a} = \dfrac{1}{4\pi R^2}\int_V \nabla^2 \Phi \,dV = 0
+&= \dfrac{1}{4\pi R^2} \int \nabla \Phi \cdot d\bf{s} = \dfrac{1}{4\pi R^2}\int_V \nabla^2 \Phi \,dV = 0
 \end{aligned}
 $$
 
@@ -633,7 +624,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-ED_electrostatics_Earnshaw_principle}
+::: {#thm-ED_ES_electrostatics_Earnshaw_principle}
 
 #### Earnshaw 정리
 
@@ -648,13 +639,13 @@ $$
 $R$ 내부의 점 $\bf{r}_0$ 이 $\Phi(\bf{r})$ 의 극소점이라고 하자. 그렇다면 $\bf{r}_0$ 를 중심으로 하는 작은 구 의 표면 $S_0$ 에 대해 $\bf{r}\in S\implies \Phi (\bf{r}) > \Phi(\bf{r}_0)$ 이며, 따라서 구의 normal vector $\hat{\bf{n}}$ 에 대해 $\hat{\bf{n}}\bf{\cdot} \nabla \Phi (\bf{r})>0$ 이고,
 
 $$
-\int_S\hat{\bf{n}}\bf{\cdot}\nabla \Phi \,da >0
+\int_S\hat{\bf{n}}\bf{\cdot}\nabla \Phi \,dS >0
 $$
 
 이다. 이로부터
 
 $$
-0 < \int_S \hat{\bf{n}}\bf{\cdot} \nabla \Phi  \, da = - \int_S \hat{\bf{n}}\bf{\cdot}\bf{E}\,da = -\int_R \nabla \cdot E \, d^3\bf{r} = - \int_R \dfrac{\rho(\bf{r})}{\epsilon_0}\, d^3\bf{r} = 0
+0 < \int_S \hat{\bf{n}}\bf{\cdot} \nabla \Phi  \, dS = - \int_S \hat{\bf{n}}\bf{\cdot}\bf{E}\,dS = -\int_R \nabla \cdot E \, d^3\bf{r} = - \int_R \dfrac{\rho(\bf{r})}{\epsilon_0}\, d^3\bf{r} = 0
 $$
 
 이므로 모순이다. $\bf{r}_0$ 가 극대점일 경우 $\hat{\bf{n}}\bf{\cdot}\nabla \Phi <0$ 이므로 위의 식의 부호가 반대가 되어 역시 모순이 된다. $\square$
@@ -665,25 +656,25 @@ $$
 
 ## 정전기 에너지
 
-### 정전기 에너지의 의미 {#sec-ED_meaning_of_electrostatic_energy}
+### 정전기 에너지의 의미 {#sec-ED_ES_meaning_of_electrostatic_energy}
 
 정전기 에너지는 역학적 포텐셜 에너지와 같이 무한히 먼 지점에서 특정 지점까지 전하 $q$ 를 움직이는데 해준 일을 의미한다. 즉 정전기 에너지 $U(\bf{r})$ 는 다음과 같다.
 
 $$
-U(\bf{r}) = -\int_{\infty}^\bf{r} \bf{F\cdot}\, d\bf{s} = q\int_{\infty}^\bf{r} \nabla \Phi \bf{\cdot}\,d\bf{s} = q\Phi(\bf{r}).
-$$ {#eq-ED_electrostatic_energy_for_single_paticle_over_potential}
+U(\bf{r}) = -\int_{\infty}^\bf{r} \bf{F\cdot}\, d\bf{l} = q\int_{\infty}^\bf{r} \nabla \Phi \bf{\cdot}\,d\bf{l} = q\Phi(\bf{r}).
+$$ {#eq-ED_ES_electrostatic_energy_for_single_paticle_over_potential}
 
 여기서 $\Phi(\infty) = 0$ 이라는 경계조건을 사용하였다. 
 
 </br>
 
-### 점전하 시스템의 정전기 에너지 {#sec-ED_electrostatic_energy_for_point_charges}
+### 점전하 시스템의 정전기 에너지 {#sec-ED_ES_electrostatic_energy_for_point_charges}
 
 이제 전하 $q_1,\ldots,\,q_N$ 을 각각 순서대로 $\bf{r}_1,\ldots,\,\bf{r}_N$ 에 위치시키는데 필요한 일을 알아보자. $1\le i < j\le N$ 에 대해 $W_{ij}$ 를 이미 $\bf{r}_i$ 에 위치한 전하 $q_i$ 가 존재할 때 $q_j$ 를 $\infty$ 에서 $\bf{r}_j$ 까지 이동시키는 데 필요한 일이라고 하면,
 
 $$
 W_{ij} = \dfrac{q_iq_j}{4\pi\epsilon_0r_{ij}}
-$$ {#eq-ED_total_electrostatic_energy_for_2_point_charge}
+$$ {#eq-ED_ES_total_electrostatic_energy_for_2_point_charge}
 
 이다. 여기서 $r_{ij} = \|\bf{r}_i-\bf{r}_j\|$ 이다. 그렇다면 이 전하를 배치하는데 필요한 일 $W_{\text{tot}}$ 는
 
@@ -698,15 +689,15 @@ $$
 
 $$
 U(\bf{r}) = \dfrac{1}{2} \sum_{i,\,j=1,\, i\ne j}^N \dfrac{q_iq_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2} \sum_{i=1}^N q_i \Phi(\bf{r_i})
-$$ {#eq-ED_total_electrostatic_energy_for_N_point_charges_system}
+$$ {#eq-ED_ES_total_electrostatic_energy_for_N_point_charges_system}
 
 임을 알 수 있다. 
 
 </br>
 
-### 전하 분포의 정전기 에너지 {#sec-ED_electrostatic_energy_for_charge_distribution}
+### 전하 분포의 정전기 에너지 {#sec-ED_ES_electrostatic_energy_for_charge_distribution}
 
-이제 점전하가 아니라 전하가 연속적인 분포를 이룰 경우에 대해 생각해보자. 전하의 분포가 특정 영역에 한정되어 있다고 가정한다. 그렇다면 @eq-ED_total_electrostatic_energy_for_N_point_charges_system 은 아래와 같이 변경 될 수 있을 것이다.
+이제 점전하가 아니라 전하가 연속적인 분포를 이룰 경우에 대해 생각해보자. 전하의 분포가 특정 영역에 한정되어 있다고 가정한다. 그렇다면 @eq-ED_ES_total_electrostatic_energy_for_N_point_charges_system 은 아래와 같이 변경 될 수 있을 것이다.
 
 $$
 U = \dfrac{1}{2} \int \rho (\bf{r})\,\Phi (\bf{r})\,d^3\bf{r}
@@ -717,7 +708,7 @@ $$
 $$
 \begin{aligned}
 U &= \dfrac{1}{2} \int \epsilon_0 (\nabla \bf{\cdot E}) \Phi \,d^3\bf{r} = \dfrac{\epsilon_0}{2} \int \left[\nabla \bf{\cdot} (\bf{E}\Phi) - \bf{E\cdot} \nabla \Phi\right]\,d^3\bf{r} \\[0.3em]
-&= \dfrac{\epsilon_0}{2}\int_S \Phi \bf{E \cdot} d\bf{S} + \dfrac{1}{2}\int \epsilon_0\|\bf{E}\|^2 \,d^3\bf{r}
+&= \dfrac{\epsilon_0}{2}\int_S \Phi \bf{E \cdot} d\bf{a} + \dfrac{1}{2}\int \epsilon_0\|\bf{E}\|^2 \,d^3\bf{r}
 \end{aligned}
 $$
 
@@ -725,27 +716,27 @@ $$
 
 $$
 U = \dfrac{\epsilon_0}{2} \int_{\text{Universe}} \|\bf{E}\|^2\,d^3\bf{r}
-$$ {#eq-ED_total_electrostatic_energy_for_charge_distribution}
+$$ {#eq-ED_ES_total_electrostatic_energy_for_charge_distribution}
 
 </br>
 
-### 정전기 에너지 비교 {#sec-ED_comparison_of_electrostatic_energy}
+### 정전기 에너지 비교 {#sec-ED_ES_comparison_of_electrostatic_energy}
 
-자 이제 @eq-ED_total_electrostatic_energy_for_2_point_charge 와 @eq-ED_total_electrostatic_energy_for_charge_distribution 을 비교해보자. $e,\,-e$ 의 전하를 가진 두 입자가 떨어져 있다면 그 전기 포텐셜 에너지는 @eq-ED_total_electrostatic_energy_for_2_point_charge 에 의하면 음수이고 @eq-ED_total_electrostatic_energy_for_charge_distribution 에 의하면 양수이다. 이 차이는 어디서 왔을까?
+자 이제 @eq-ED_ES_total_electrostatic_energy_for_2_point_charge 와 @eq-ED_ES_total_electrostatic_energy_for_charge_distribution 을 비교해보자. $e,\,-e$ 의 전하를 가진 두 입자가 떨어져 있다면 그 전기 포텐셜 에너지는 @eq-ED_ES_total_electrostatic_energy_for_2_point_charge 에 의하면 음수이고 @eq-ED_ES_total_electrostatic_energy_for_charge_distribution 에 의하면 양수이다. 이 차이는 어디서 왔을까?
 
-우선 우리의 유도 과정을 살펴보자 우리는 @eq-ED_total_electrostatic_energy_for_N_point_charges_system 에서 $q_i \Phi(\bf{r}_i)$ 를 $\rho(\bf{r})\Phi(\bf{r})$ 로 바꾸어 @eq-ED_total_electrostatic_energy_for_charge_distribution 을 얻었다. @eq-ED_total_electrostatic_energy_for_N_point_charges_system 에서는 각각의 전하 $q_i$ 가 이미 조립된 상태로 존재하지만 @eq-ED_total_electrostatic_energy_for_charge_distribution 에서는 그렇지 않다는 것이다. 예를 들어 전하 $q=-e$ 를 가진 전자에 의한 정전기 에너지를 계산해 보자. 이 때 전자의 반경을 $r_e$ 라고 하고 @eq-ED_total_electrostatic_energy_for_charge_distribution 를 사용하면
+우선 우리의 유도 과정을 살펴보자 우리는 @eq-ED_ES_total_electrostatic_energy_for_N_point_charges_system 에서 $q_i \Phi(\bf{r}_i)$ 를 $\rho(\bf{r})\Phi(\bf{r})$ 로 바꾸어 @eq-ED_ES_total_electrostatic_energy_for_charge_distribution 을 얻었다. @eq-ED_ES_total_electrostatic_energy_for_N_point_charges_system 에서는 각각의 전하 $q_i$ 가 이미 조립된 상태로 존재하지만 @eq-ED_ES_total_electrostatic_energy_for_charge_distribution 에서는 그렇지 않다는 것이다. 예를 들어 전하 $q=-e$ 를 가진 전자에 의한 정전기 에너지를 계산해 보자. 이 때 전자의 반경을 $r_e$ 라고 하고 @eq-ED_ES_total_electrostatic_energy_for_charge_distribution 를 사용하면
 
 $$
 U = \dfrac{\epsilon_0}{2} \int \dfrac{e^2}{4^2\pi^2 \epsilon_0^2 r^4}r^2 d\Omega = \dfrac{e^2}{8\pi \epsilon_0 r_e}
 $$
 
-이며 $r_e\to 0$ 극한에서 발산한다. 물론 점전하가 아니라 연속적인 전하분포에서는 발산하지 않지만 정전기 에너지에 큰 양의 기여를 하기때문에 @eq-ED_total_electrostatic_energy_for_charge_distribution 가 양수인 것을 설명 할 수 있다. 여기에 대해 더 정확하게 이해하기 위해서는 여기의 범위를 벗어나는 양자전기역학이 필요하다.
+이며 $r_e\to 0$ 극한에서 발산한다. 물론 점전하가 아니라 연속적인 전하분포에서는 발산하지 않지만 정전기 에너지에 큰 양의 기여를 하기때문에 @eq-ED_ES_total_electrostatic_energy_for_charge_distribution 가 양수인 것을 설명 할 수 있다. 여기에 대해 더 정확하게 이해하기 위해서는 여기의 범위를 벗어나는 양자전기역학이 필요하다.
 
 </br>
 
-### 전기쌍극자 사이의 상호작용 {#sec-ED_force_between_electric_dipoles}
+### 전기쌍극자 사이의 상호작용 {#sec-ED_ES_force_between_electric_dipoles}
 
-@eq-ED_electric_potential_dipole_2 은 전기 쌍극자에 의한 포텐셜이다. 두 쌍극자 $\bf{p}_1,\, \bf{p}_2$ 에 의한 정전기 에너지를 생각하자. $\bf{p}_2=q\bf{d}_2$ 라고 하자. 전하 $q$ 가 $\bf{r}+\dfrac{\bf{d}}{2}$ 에, 전하 $-q$ 가 $\bf{r}-\dfrac{\bf{d}}{2}$ 에 위치한다고 하고 $r \gg d$ 라고 하자. 두 쌍극자에 의한 정전기 에너지 $U$ 는 다음과 같다. 
+@eq-ED_ES_electric_potential_dipole_2 은 전기 쌍극자에 의한 포텐셜이다. 두 쌍극자 $\bf{p}_1,\, \bf{p}_2$ 에 의한 정전기 에너지를 생각하자. $\bf{p}_2=q\bf{d}_2$ 라고 하자. 전하 $q$ 가 $\bf{r}+\dfrac{\bf{d}}{2}$ 에, 전하 $-q$ 가 $\bf{r}-\dfrac{\bf{d}}{2}$ 에 위치한다고 하고 $r \gg d$ 라고 하자. 두 쌍극자에 의한 정전기 에너지 $U$ 는 다음과 같다. 
 
 $$
 \begin{aligned}
@@ -760,5 +751,5 @@ $$
 
 $$
 U = \dfrac{1}{2}\sum_{i,\,j=1,\,i\ne j}^N \dfrac{1}{8\pi\epsilon_0}\left(\dfrac{\bf{p}_1\bf{\cdot p}_2}{\|\bf{r}_i-\bf{r}_j\|^3} - \dfrac{3(\bf{p}_i \bf{\cdot}(\bf{r}_i-\bf{r}_j))(\bf{p}_j \bf{\cdot}(\bf{r}_i-\bf{r}_j))}{\|\bf{r}_i-\bf{r}_j\|^5}\right).
-$$ {#eq-ED_electrostatic_energy_for_electric_dipole_system}
+$$ {#eq-ED_ES_electrostatic_energy_for_electric_dipole_system}
 

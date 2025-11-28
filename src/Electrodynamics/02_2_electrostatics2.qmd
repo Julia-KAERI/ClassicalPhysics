@@ -11,13 +11,13 @@ crossref:
 
 ## 도체
 
-### 도체의 기본적 성질 {#sec-ED_conductor}
+### 도체의 기본적 성질 {#sec-ED_ES_conductor}
 
 **도체 (conductor)** 는 전자가 자유롭게 움직 일 수 있는 공간적인 영역을 의미한다. 또한 자유롭게 움직일 수 있는 전자가 충분히 많다는 것을 가정한다. 일반적으로 도체는 금속을 의미하며 금속은 보통 원자당 하나 이상의 자유전자를 가지므로 거시적인 시스템에서 도체의 자유전자의 개수는 $10^{23}$ 이상으로 충분히 많다. 이 짧은 정의로부터 우리는 아래와 같은 사실을 유추할 수 있다.
 
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#thm-ED_basic_properties_of_conductor}
+::: {#thm-ED_ES_basic_properties_of_conductor}
 
 #### 도체의 기본적인 성질
 도체 내부에서 받는 힘 $\bf{F}=0$ 이며, 따라서 다음이 성립한다.
@@ -59,7 +59,7 @@ crossref:
 
 #### **유도 전하**
 
-![외부 전기장에 대해 ($a$) 전기적으로 중성인 부도체의 경우, ($b$) 도체의 경우 내부의 전하가 이동하기 시작하며 ($c$) 도체 표면의 전하 분포로 인해 내부 전기장이 사라진 경우 (출처 @Purcell2013electricity)](figures/electrostatics/conductor/conductor.png){#fig-ED_electrostatics_conductor_in_field width=600}
+![외부 전기장에 대해 ($a$) 전기적으로 중성인 부도체의 경우, ($b$) 도체의 경우 내부의 전하가 이동하기 시작하며 ($c$) 도체 표면의 전하 분포로 인해 내부 전기장이 사라진 경우 (출처 @Purcell2013electricity)](figures/electrostatics/conductor/conductor.png){#fig-ED_ES_electrostatics_conductor_in_field width=600}
 
 외부의 전기장에 대해 도체 내의 자유롭게 움직일 수 없는 전하들이 움직이며, 위의 그림 ($c$) 에서 보듯이 이동한 전하들에 의한 전기장은 외부의 전기장을 상쇄하는 방향으로 이루어진다. 도체 내에서 자유롭게 움직일 수 있는 전하가 아주 많기 때문에 이 과정은 도체 내부의 전기장이 $0$ 이 될 때 까지 이루어진다. 전하가 도체 바깥으로 탈출할 수 없다고 가정하면 당연히 이렇게 움직인 전하는 표면에 모여 있을 수 밖에 없다. 이렇게 외부 전기장에 의해 표면에 나타나는 전하를 **유도 전하 (induced charge)** 라고 한다.
 
@@ -67,13 +67,13 @@ crossref:
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_field_of_spherical_shell}
+::: {#exm-ED_ES_field_of_spherical_shell}
 
 #### 구 대칭 전기장
 
 반지름 $R$ 인 도체의 구 껍질을 생각하자. 구의 내부에 전하 $q$ 가 있을 때의 구 외부의 전기장은 전하 $q$ 가 구의 중심에 있고 구 껍질이 사라졌을 때의 전기장과 같는 것을 보이자. 구 껍질은 안쪽 면과 바깥쪽 면이 존재하며 안쪽 면과 바깥쪽 면 사이의 도체 부분에 아래 그림과 같은 가우스 면을 생각하자.
 
-![도체 구 껍질 내부의 가우스 면](figures/electrostatics/conductor/conductor2.png){#fig-ED_electrostatics_conductor_in_field_2 width=200}
+![도체 구 껍질 내부의 가우스 면](figures/electrostatics/conductor/conductor2.png){#fig-ED_ES_electrostatics_conductor_in_field_2 width=200}
 
 도체 내부의 전기장은 $\bf{0}$ 이기 때문에 가우스 면에 가우스 법칙을 적용하면
 
@@ -106,7 +106,7 @@ $$
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-ED_electrostatics_thompson_theorem}
+::: {#thm-ED_ES_electrostatics_thompson_theorem}
 
 #### 톰슨의 정전기 정리
 
@@ -171,11 +171,11 @@ $$
 
 </br>
 
-### 축전지 {#sec-ED_capacitor}
+### 축전지 {#sec-ED_ES_capacitor}
 
 #### **평행판 축전지**
 
-![도체 구 껍질 내부의 가우스 면](figures/electrostatics/capacitor/capacitor_3d.png){#fig-ED_capacitor_3d width=300}
+![도체 구 껍질 내부의 가우스 면](figures/electrostatics/capacitor/capacitor_3d.png){#fig-ED_ES_capacitor_3d width=300}
 
 위의 그림과 같이 놓여진 면적이 $A$ 인 두 금속 판이 각각 $+Q$ 와 $-Q$ 의 전하를 포함한다고 하자. 두 판은 평행하며 거리는 $d\hat{a}$ 만큼 떨어져 있다. 각 판은 면적이 $A$ 인 정사각형이며 $d\ll A$ 임을 가정하자. 그렇다면 각 판에서의 표면전하밀도는 $\pm Q/A$ 이다. 여기서 $\sigma = Q/A$ 라고 하자. 가우스의 법칙에 의해 두 판 사이의 전기장 $\bf{E}$ 은
 
@@ -213,7 +213,7 @@ $$
 
 #### **같은 중심을 가진 두 구 껍질에 의한 축전지**
 
-![같은 중심을 가진 두 구 껍질에 의한 축전지](figures/electrostatics/concentric_sphere_capacitor/figure.png){#fig-ED_concentric_sphere_capacitor width=150}
+![같은 중심을 가진 두 구 껍질에 의한 축전지](figures/electrostatics/concentric_sphere_capacitor/figure.png){#fig-ED_ES_concentric_sphere_capacitor width=150}
 
 위의 그림과 같이 중심이 같은 두 구 껍질로 이루어진 축전지를 생각하자. 두 구 껍질 사이의 전기장은
 
@@ -231,7 +231,7 @@ $$
 
 </br>
 
-### 도체에서의 경계값 문제 {#sec-ED_boundary_value_problem_in_conductors}
+### 도체에서의 경계값 문제 {#sec-ED_ES_boundary_value_problem_in_conductors}
 
 ::: {.callout-important icon="false"}
 
@@ -255,7 +255,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-ED_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition}
+::: {#thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition}
 
 도체들의 표면 $S_i$ 에 대해 디리클레 경계조건 혹은 노이만 경계조건이 정해진 경우 라플라스 방정식의 해가 존재한다면 그 해는 유일하다.
 
@@ -273,7 +273,7 @@ $$
 이며 또한 발산정리에 따라 다음이 성립한다.
 
 $$
-\int_V \nabla \bf{\cdot} (f\nabla f)\,d^3\bf{r} = \sum_i\int_{S_i} f\nabla f\,d\bf{S} = \sum_i \int_{S_i}  f (\nabla f \cdot \hat{\bf{n}})dS.
+\int_V \nabla \bf{\cdot} (f\nabla f)\,d^3\bf{r} = \sum_i\int_{S_i} f\nabla f\,d\bf{a} = \sum_i \int_{S_i}  f (\nabla f \cdot \hat{\bf{n}})da.
 $$
 
 $S_i$ 에서 $f=0$ 이거나 $\nabla f\bf{\cdot} \hat{\bf{n}}=0$ 이므로 $\nabla f = 0$ 이다. 즉 $\Phi_1-\Phi_2=\text{const}$ 이다. 최소한 하나의 디리클레 경계조건이 있다면 $\Phi_1-\Phi_2=0$ 이므로 전위는 유일하게 정해진다. 모두 노이만 경계조건이라면 $\Phi_1-\Phi-2$ 는 항상 일정한데 이는 물리적으로 의미가 없는 차이이다. $\square$
@@ -285,19 +285,19 @@ $S_i$ 에서 $f=0$ 이거나 $\nabla f\bf{\cdot} \hat{\bf{n}}=0$ 이므로 $\nab
 
 #### **거울 영상법**
 
-@thm-ED_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition 는 일단 경계조건을 만족하는 포텐셜을 구하기만 한다면 그 포텐셜은 유일하다는 것을 의미한다. 이것을 이용하는 방법중의 하나가 **거울영상볍 (method of images)** 이다. 관심 있는 영역에 대한 포텐셜을 구할 때 이 영역이 아닌 다른 영역에 가상의 전하를 배치하여 경계조건을 만족하게 하여 포텐셜을 구하는 방법이다. 일단 가장 간단한 예시를 보자.
+@thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition 는 일단 경계조건을 만족하는 포텐셜을 구하기만 한다면 그 포텐셜은 유일하다는 것을 의미한다. 이것을 이용하는 방법중의 하나가 **거울영상볍 (method of images)** 이다. 관심 있는 영역에 대한 포텐셜을 구할 때 이 영역이 아닌 다른 영역에 가상의 전하를 배치하여 경계조건을 만족하게 하여 포텐셜을 구하는 방법이다. 일단 가장 간단한 예시를 보자.
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_image_method_plane}
+::: {#exm-ED_ES_image_method_plane}
 
 #### 도체 평면 근처의 전하
 
-::: {#fig-ED_image_method_plane layout-ncol=2}
+::: {#fig-ED_ES_image_method_plane layout-ncol=2}
 
-![$+q$ 의 전하가 위치했을 때 $-q$ 거울 전하의 위치](figures/electrostatics/image_method_plaine/fig1.png){#fig-ED_image_method_plane_config}
+![$+q$ 의 전하가 위치했을 때 $-q$ 거울 전하의 위치](figures/electrostatics/image_method_plaine/fig1.png){#fig-ED_ES_image_method_plane_config}
 
-![도체 평면과 전하에 의한 전기장](figures/electrostatics/image_method_plaine/fig2.png){#fig-ED_image_method_plane_field}
+![도체 평면과 전하에 의한 전기장](figures/electrostatics/image_method_plaine/fig2.png){#fig-ED_ES_image_method_plane_field}
 
 도체 평면 근처의 전하와 거울 전하
 :::
