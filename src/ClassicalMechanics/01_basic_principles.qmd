@@ -1,5 +1,5 @@
 ---
-title: "뉴튼역학의 기본 원리"
+title: "뉴튼역학의 기본 원리와 달랑베르 원리"
 number-sections: true
 number-depth: 3
 crossref:
@@ -473,20 +473,20 @@ $N$-입자계를 생각하자. 구속조건이 없다면 $3N$ 개의 독립적�
 
 #### 가상변위
 
-시스템의 **가상 번위 (virtual displacement)** 는 주어진 시간 $t$ 에서 주어진 힘과 구속조건에서 가능한 좌표의 미소 변화(infinitesimal change of the coordinate) $\delta \bf{r}_i$ 에 의한 짜임새 공간(configuration space) 상의 미소 변화를 의미한다. 가상(virtual)이란 이름이 붙은 이유는 물리적으로 실제의 변위는 특정 시간 간격에서 발생하지만 가상변위는 시간 $t$ 가 고정되어 있기 때문이다.
+시스템의 **가상 번위 (virtual displacement)** 는 주어진 시간 $t$ 에서 주어진 힘과 구속조건에서 반경벡터의 가능한 미소 변화(infinitesimal change of the coordinate) $\delta \bf{r}_i$ 에 의한 짜임새 공간(configuration space) 상의 미소 변화를 의미한다. 가상(virtual)이란 이름이 붙은 이유는 물리적으로 실제의 변위는 특정 시간 간격에서 발생하지만 가상변위는 시간 $t$ 가 고정되어 있기 때문이다.
 
 :::
 
 :::
 
-시스템이 평형생태일 경우를 가정하자. 각 입자에 작용하는 힘 $\bf{F}_i = 0$ 이며 따라서 $\bf{F}_i \cdot \delta \bf{r}_i=0$ 이다. 또한 $\sum\limits_i \bf{F}_i \cdot \delta \bf{r}_i = 0$ 임은 자명하다. $\bf{F}_i$ 를 applied force $\bf{F}^{(a)}_i$ 와 구속력 $\bf{f}_i$ 로 분리 할 수 있다. 즉 $\bf{F}_i = \bf{F}^{(a)}_i + \bf{f}_i$ 이며 따라서 다음이 성립한다.
+시스템이 평형상태일 경우를 가정하자. 각 입자에 작용하는 힘 $\bf{F}_i = 0$ 이며 따라서 $\bf{F}_i \cdot \delta \bf{r}_i=0$ 이다. 또한 $\sum\limits_i \bf{F}_i \cdot \delta \bf{r}_i = 0$ 임은 자명하다. $\bf{F}_i$ 를 applied force $\bf{F}^{(a)}_i$ 와 구속력 $\bf{f}_i$ 로 분리 할 수 있다. 즉 $\bf{F}_i = \bf{F}^{(a)}_i + \bf{f}_i$ 이며 따라서 다음이 성립한다.
 
 $$
 \sum_i \bf{F}_i \cdot \delta \bf{r}_i = \sum_i \bf{F}^{(a)}_i \cdot \delta \bf{r}_i + \sum_i \bf{f}_i \cdot \delta \bf{r}_i = 0\;.
 $$
 
 
-이제 구속력에 의한  **가상 일(virtual work)** 이 $0$ 인 시스템, 즉 $\sum_i \bf{f}_i \cdot \delta \bf{r}_i=0$ 인 시스템으로 제한해보자. 이 조건은 강체를 비롯한 많은 다른 제약 조건에 대해서도 유효하다는 것을 안다. 예를 들어 입자가 표면 위를 움직이도록 제약되어 있다면, 가상힘은 표면에 수직이며, 가상 변위는 표면에 접선이어야 하므로 가상 일은 $0$ 이다. 하지만 미끌어지는(sliding) 마찰력이 존재할 경우 가상 일이 $0$ 이 아니게 되는데 이런 시스템은 지금은 생각하지 않기로 하자. 이 제한은 마찰이 본질적으로 거시적인 현상이라는 것을 고려하면 우리의 물리를 해치지 않는다. 반면에 구르는(rolling) 구속조건은 이 조건을 위반하지 않는다. 왜냐하면 잠시 멈춘 지점에 작용하는 힘은 구속조건에 부합하는 변위에 대해 가상 일 이 $0$ 이기 때문이다. 또한 입자가 시간에 따라 움직이는 표면에 제약되어 있는 경우, 구속력은 각 순간마다 표면에 수직이며, 가상 일 은 $0$ 이지만 실제 시간 $dt$ 동안의 실제 변위에 의한 일은 $0$ 이 아닐 수 있다.
+이제 구속력에 의한  **가상 일(virtual work)** 이 $0$ 인 시스템, 즉 $\sum_i \bf{f}_i \cdot \delta \bf{r}_i=0$ 인 시스템으로 제한해보자. 이 조건은 강체를 비롯한 많은 다른 제약 조건에 대해서도 유효하다는 것을 안다. 예를 들어 입자가 표면 위를 움직이도록 제약되어 있다면, 구속력은 표면에 수직이며, 가상 변위는 표면에 접선이어야 하므로 가상 일은 $0$ 이다. 하지만 미끌어지는(sliding) 마찰력이 존재할 경우 가상 일이 $0$ 이 아니게 되는데 이런 시스템은 지금은 생각하지 않기로 하자. 이 제한은 마찰이 본질적으로 거시적인 현상이라는 것을 고려하면 우리의 물리를 해치지 않는다. 반면에 구르는(rolling) 구속조건은 이 조건을 위반하지 않는다. 왜냐하면 잠시 멈춘 지점에 작용하는 힘은 구속조건에 부합하는 변위에 대해 가상 일 이 $0$ 이기 때문이다. 또한 입자가 시간에 따라 움직이는 표면에 제약되어 있는 경우, 구속력은 각 순간마다 표면에 수직이며, 가상 일 은 $0$ 이지만 실제 시간 $dt$ 동안의 실제 변위에 의한 일은 $0$ 이 아닐 수 있다.
 
 따라서 우리는 applied forces에 의한 가상 일이 $0$ 이 되는 계의 평행 조건을 얻게 된다. 즉
 $$
@@ -496,13 +496,13 @@ $$ {#eq-CM_principle_of_virtual_work}
 의 조건을 얻게 되며, 위의 @eq-CM_principle_of_virtual_work 은 **가상 일의 원리(the principle of virtual work)** 이라 불린다. $\delta \bf{r}_i$ 들은 서로 구속조건에 묶여 있기 때문에 서로 독립이 아니며 따라서 그 계수인 $\bf{F}^{(a)}_i$ 도 모두 $0$ 이 아니어도 된다(선형대수학을 생각하라). 즉 일반적으로 $\bf{F}^{(a)}_i \ne \bf{0}$ 이다.  
 
 
-이렇게 되면 각각의 $i$ 번째 입자에 대해 $\bf{F}^{(a)}_i$ 가 $0$ 인 조건이 아니게 되며, 따라서 $\delta \bf{r}_i$ 는 서로 독립적이지 않게 되고 위의 @eq-CM_principle_of_virtual_work 가 하나의 구속조건이며 따라서 일반화된 좌표계에 대한 가상 변외로 변환해야 한다. @eq-CM_principle_of_virtual_work 는 구속력 $\bf{f}_i$ 를 포함하지 않는다는 측면에서 우리가 원하는 것이지만 단지 정적인 경우만을 다룬다는 점에서 부족하다. 우리는 이것으로 부터 우리가 원하는 운동방정식을 얻고자 한다.
+이렇게 되면 각각의 $i$ 번째 입자에 대해 $\bf{F}^{(a)}_i$ 가 $0$ 인 조건이 아니게 되며, 따라서 $\delta \bf{r}_i$ 는 서로 독립적이지 않게 되고 위의 @eq-CM_principle_of_virtual_work 가 하나의 구속조건이며 따라서 일반화된 좌표계에 대한 가상 변위로 변환해야 한다. @eq-CM_principle_of_virtual_work 는 구속력 $\bf{f}_i$ 를 포함하지 않는다는 측면에서 우리가 원하는 것이지만 단지 정적인 경우만을 다룬다는 점에서 부족하다. 우리는 이것으로 부터 우리가 원하는 운동방정식을 얻고자 한다.
 
 </br>
 
 ### 달랑베르 원리(D'Alembert's principle) {#sec-CM_dlambert_principle}
 
-운동방정식 $\bf{F}_i = \dot{\bf{p}}_i$ 로부터 시작하자. $\bf{F}_i - \dot{\bf{p}}_i=\bf{0}$ 이며 이것은 시스템의 입자들이 실제 힘 $\bf{F}$ 와 소위 *reversed effecvive force* $-\dot{\bf{p}}_i$ 의 합에 의해 평행상태에 있게 된다는 의미이다. 여기에 가상변위를 적용하면
+운동방정식 $\bf{F}_i = \dot{\bf{p}}_i$ 로부터 시작하자. $\bf{F}_i - \dot{\bf{p}}_i=\bf{0}$ 이며 이것은 시스템의 입자들이 실제 힘 $\bf{F}$ 와 소위 *reversed effecvive force* 인 $-\dot{\bf{p}}_i$ 의 합에 의해 평행상태에 있게 된다는 의미이다. 여기에 가상변위를 적용하면
 
 $$
 \sum_i \left( \bf{F}_i - \dot{\bf{p}}_i \right) \cdot \delta \bf{r}_i = 0
@@ -539,7 +539,7 @@ $$
 \boxed{\dfrac{\partial \bf{v}_i}{\partial \dot{q}_k} = \dfrac{\partial \bf{r}_i}{\partial q_k}}
 $$ {#eq-CM_dlambert_1}
 
-가 됨을 알 수 있다. 가상 변위 $\delta \bf{r}_i$ 는 정의에 의해 시간 $t$ 에 대한 편미분 항이 없으며 다음과 같다.
+임을 알 수 있다. 가상 변위 $\delta \bf{r}_i$ 는 정의에 의해 시간 $t$ 에 대한 편미분 항이 없으며 다음과 같다.
 
 $$
 \boxed{\delta \bf{r}_i = \sum_j\dfrac{\partial \bf{r}_i}{\partial q_j} \delta q_j.}
