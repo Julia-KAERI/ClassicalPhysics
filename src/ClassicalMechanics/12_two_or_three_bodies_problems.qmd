@@ -1,5 +1,5 @@
 ---
-title: "고전역학의 다체 문제"
+title: "고전역학의 다체 문제 - 충돌과 산란"
 number-sections: true
 number-depth: 3
 crossref:
@@ -10,23 +10,23 @@ crossref:
 
 </br>
 
-## 충돌과 산란
+## 자발적 붕괴 (Spontaneous disintegration)
 
-### 자발적 붕괴 (Spontaneous disintegration)
+### 질량중심 좌표계에서의 자발적 붕괴 {#sec-CM_spontaneous_disintegration_in_com_frame}
 
-가장 간단한 경우로 질량이 $m$ 인 한 입자가 질량이 각각 $m_1,\,m_2$ 인 두개의 부분으로 붕괴되는 경우를 살펴보자. 이 경우 붕괴된 두 입자가 각각 독립적으로, 즉 상호작용없이 움직인다고 가정한다. 이 시스템을 설명하기 가장 편한 좌표계는 붕괴전 입자가 정지해있도록 하는 좌표계이다. 이를 **질량중심 좌표계(center-of-mass reference frame)** 라고 하자. 질량중심 좌표계에서 붕괴 후 입자 각각의 운동량을 $\boldsymbol{p}_1,\, \boldsymbol{p}_2$ 라고 하면 운동량 보존에 의해 $\boldsymbol{p}_1 + \boldsymbol{p}_2= \boldsymbol{0}$ 이 된다. 이제 $p_0 = \|\boldsymbol{p}_1\| = \|\boldsymbol{p}_2\|$ 라고 하고, 붕괴 이전의 내부에너지를 $E_i$, 붕괴 이후의 내부에너지를 각각 $E_{1i},\, E_{2i}$ 라고 하면 에너지 보존에 의해 
+가장 간단한 경우로 질량이 $m$ 인 한 입자가 질량이 각각 $m_1,\,m_2$ 인 두개의 부분으로 자발적으로 붕괴되는 경우를 살펴보자. 이 경우 붕괴된 두 입자가 각각 독립적으로, 즉 상호작용없이 움직인다고 가정한다. 이 시스템을 설명하기 가장 편한 좌표계는 붕괴전 입자가 정지해있도록 하는 좌표계이며 이는 **질량중심 좌표계(center-of-mass reference frame)** 이다. 질량중심 좌표계에서 붕괴 후 입자 각각의 운동량을 $\bf{p}_1,\, \bf{p}_2$ 라고 하면 운동량 보존에 의해 $\bf{p}_1 + \bf{p}_2= \bf{0}$ 이 된다. 이제 $p_0 = \|\bf{p}_1\| = \|\bf{p}_2\|$ 라고 하고, 붕괴 이전의 내부에너지를 $E_i$, 붕괴 이후의 내부에너지를 각각 $E_{1i},\, E_{2i}$ 라고 하면 에너지 보존에 의해 
 
 $$
 E_i = E_{1i} + \dfrac{{p_0}^2}{2m_1} + E_{2i} + \dfrac{{p_0}^2}{2m_2}
 $$ {#eq-CM_energy_conservation_for_spantaneous_disintegration}
 
-가 성립한다. 이 때 붕괴 전후의 내부에너지의 차이
+가 성립한다. 이 때 붕괴 전후의 내부에너지의 차이를 붕괴에너지(disintegration energy) 라고 한다.
 
 $$
-\Delta E_i = E_i - (E_{1i} + E_{2i})
+\Delta E_i = E_i - (E_{1i} + E_{2i}).
 $$
 
-를 붕괴에너지(disintegration energy) 라고 한다. **reduced mass** $m:= \left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right)$ 에 대해 
+붕괴에너지는 **환산 질량 (reduced mass)** $m:= \left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right)$ 에 대해 
 
 $$
 \Delta E_i = \dfrac{{p_0}^2}{2}\left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right) = \dfrac{{p_0}^2}{2m} > 0 \qquad 
@@ -34,14 +34,17 @@ $$
 
 이다. 잘량중심 좌표계애서의 속도는 각각 $v_{10}=p_0/m_1,\, v_{20}=p_0/m_2$ 이다. 
 
-입자 $m$ 이 $\boldsymbol{V}$ 로 움직이는 좌표계를 생각하자. 일반적으로 우리가 실험적으로 자발적 붕괴를 관측할 때에 실험자에 대해 입자는 정지해 있는 경우보다 어느 속도로 움직이는 경우가 대부분이다. 따라서 이를 **실험실 좌표계(laboratory reference frame)** 라고 하자. 보통 산란 실험은 실험실 좌표계로 나오고 이것을 분석하여 물리적 의미를 따지는 것은 잘량중심 좌표계에서 한다. 즉 실험실 좌표계의 값을 잘량중심 좌표계로 변환하는 것이 중요하다. 
+</br>
 
+### 실험실 좌표계에서의 자발적 붕괴 {#sec-CM_spontaneous_disintegration_in_lab_frame}
+
+입자 $m$ 이 $\bf{V}$ 로 움직이는 좌표계를 생각하자. 일반적으로 우리가 실험적으로 자발적 붕괴를 관측할 때에 실험자에 대해 입자는 정지해 있는 경우보다 어느 속도로 움직이는 경우가 대부분이다. 따라서 이를 **실험실 좌표계(laboratory reference frame)** 라고 하자. 보통 산란 실험은 실험실 좌표계로 나오고 이것을 분석하여 물리적 의미를 따지는 것은 잘량중심 좌표계에서 한다. 즉 실험실 좌표계의 값을 잘량중심 좌표계로 변환하는 것이 중요하다. 
 
 
 ![실험실 좌표계](images/frame_and_scattering/frame_and_scattering.png){#fig-CM_reference_system_scattering width=500}
 
 
-$\boldsymbol{v}_{01}$ 이나 $\boldsymbol{v}_{02}$ 가 실험실 좌표계에서 속도가 어떻게 변하는지 살펴 보자. @fig-CM_reference_system_scattering 을 보자. 입자 인덱스 $1,\,2$ 를 떼어 놓으면 실험실 좌표계에서의 속도 $\boldsymbol{v}= \boldsymbol{V} + \boldsymbol{v}_0$ 이다. $\boldsymbol{V}$ 와 $\boldsymbol{v}$ 가 $\theta$ 의 사잇각을 갖는다면 
+$\bf{v}_{01}$ 이나 $\bf{v}_{02}$ 가 실험실 좌표계에서 속도가 어떻게 변하는지 살펴 보자. @fig-CM_reference_system_scattering 을 보자. 입자 인덱스 $1,\,2$ 를 떼어 놓으면 실험실 좌표계에서의 속도 $\bf{v}= \bf{V} + \bf{v}_0$ 이다. $\bf{V}$ 와 $\bf{v}$ 가 $\theta$ 의 사잇각을 갖는다면 
 
 $$
 v^2 + V^2 - 2 vV\cos \theta = {v_0}^2
@@ -68,12 +71,16 @@ $$ {#eq-CM_angle_transform_from_stationary_to_lab}
 
 $v_0>V$ 라면, 즉 @fig-CM_reference_system_scattering ($a$) 의 경우라면 $\theta_0$ 와 $\theta$ 가 전단사이다. 그러나 $v_0<V$ 라면, 즉 @fig-CM_reference_system_scattering ($b$) 의 경우라면 그렇지 않으며, 그림에서 보듯이 $\overrightarrow{AB}$ 와 $\overrightarrow{AC}$ 의 두가지 경우가 가능하다.  
 
+</br>
 
-일반적으로 자발적 붕괴 실험은 하나의 입자의 붕괴가 아니라 다수의 입자의 붕괴를 통계적으로 다룬다. 그리고 자발적 붕괴의 분포는 완전히 임의적이기 때문에 질량중심 좌표계에서의 고체각(solid angle) $d\Omega$ 로 입사되는 붕괴된 입자의 갯수는 $d\Omega$ 에 비례한다. 즉 $N$ 개의 입자가 붕괴되었을때 $d\Omega$ 의 고체각에 입사되는 입자의 갯수 $N_{d\Omega}$ 는
+### 자발적 붕괴와 고체각 분포 {#sec-CM_sponteneous_disintegration_and_solid_angle_distribution}
+
+
+일반적으로 자발적 붕괴 실험은 하나의 입자의 붕괴가 아니라 다수의 입자의 붕괴를 통계적으로 다룬다. 그리고 자발적 붕괴의 분포는 완전히 임의적이기 때문에 질량중심 좌표계에서의 고체각(solid angle) $d\Omega$ 로 입사되는 붕괴된 입자의 갯수는 $d\Omega$ 에 비례한다. 즉 $N$ 개의 입자로 붕괴되었을때 $d\Omega$ 의 고체각에 입사되는 입자의 갯수 $N_{d\Omega}$ 는
 
 $$
 N_{d\Omega}= N\dfrac{d\Omega}{4\pi}
-$$
+$$ {#eq-CM_distribution_of_distilated_particles_in_C_system}
 
 이며, 따라서 $\theta_0$ 의 각도를 갖고 붕괴하는 분포는 $\theta_0$ 에 대한 고체각 $d\Omega = 2\pi \sin \theta_0 d\theta_0$ 을 생각하면, 
 
@@ -81,26 +88,49 @@ $$
 N_{\theta_0} = N\dfrac{1}{2}\sin \theta_0 d\theta_0
 $$
 
-이다. 
+이다. 실험실 좌표계에서는 적절한 변환을 통해 분포를 얻을 수 있다. $\bf{v} = \bf{v}_0+\bf{V}$ 이므로
 
--- to be filled , Landau mechanics --
+$$
+v^2 = {v_0}^2 + V^2 + 2v_0V \cos \theta_0
+$$
+
+이며, 따라서 $T=mv^2/2$ 에 대해 
+
+$$
+N_{d\Omega}=N\sin \theta_0 d\theta_0 = Nd(\cos \theta_0) = N\dfrac{d(v^2)}{2v_0V} = N\dfrac{dT}{2mv_0 V}
+$${#eq-CM_distribution_of_distilated_particles_in_L_system}
+
+이다. 실험실 좌표계에서의 속력 $v$ 는 $|v_0-V|$ 에서 $v_0+V$ 값을 가질 수 있으므로 붕과는 모든 방향으로 균등하게 발생한다는 것을 알 수 있다.
 
 </br>
 
-### 탄성 충돌
+### 다입자 붕괴와 최대 운동 에너지 {#sec-CM_maximum_kinetic_energy_in_many_particles_disintegration}
+
+질량 $M$ 인 입자가 자발적 붕괴를 통해 여러 입자로 붕괴된다고 하자. 붕괴된 입자가 가질 수 있는 에너지에는 상한이 존재한다. 이 붕괴된 입자들 가운데 질량 $m_1$ 인 입자를 생각하자. 원래 입자 $M$ 의 에너지를 $E_i$ 라 하고 $m_1$ 을 제외한 나머지 붕괴된 입자들의 에너지를 $E_i'$ 라고 하자. $m_1$ 의 에너지를 $E_1$ 이라고 하면
+
+$$
+T_{10} = \dfrac{{p_0}^2}{2m_1} = \dfrac{M-m_1}{M}(E_i - E_{1i} - E_i') 
+$$
+
+
+
+
+</br>
+
+## 탄성 충돌
 
 두 입자가 충돌 전 후에 내부 상태에 차이가 없다면 이 충돌을 **탄성 충돌(elastic scattering)** 이라고 한다. 즉 두 입자의 충돌 전의 내부 에너지 $E_{1i},\, E_{2i}$ 와 충돌 후의 내부에너지 $E_{1f},\, E_{2f}$ 에 대해 탄성 충돌 후에는 $E_{1i}=E_{1f}$, $E_{2i}=E_{2f}$ 이다. 두 입자의 충돌은 질량중심 좌표계에서 기술하는 것이 보통 가장 편하다. 
 
-충돌 전의 실험실 좌표계에서의 두 입자의 속도 $\boldsymbol{v}_1,\, \boldsymbol{v}_2$ 를 질량중심 좌표계에서의 두 입자의 속도 $\boldsymbol{v}_{10},\, \boldsymbol{v}_{20}$ 로 변환하면, $\boldsymbol{v} = \boldsymbol{v}_1-\boldsymbol{v}_2$ 에 대해
+충돌 전의 실험실 좌표계에서의 두 입자의 속도 $\bf{v}_1,\, \bf{v}_2$ 를 질량중심 좌표계에서의 두 입자의 속도 $\bf{v}_{10},\, \bf{v}_{20}$ 로 변환하면, $\bf{v} = \bf{v}_1-\bf{v}_2$ 에 대해
 
 $$
-\boldsymbol{v}_{10} = \dfrac{m_2\boldsymbol{v}}{m_1+m_2} ,\qquad \boldsymbol{v}_{20} = -\dfrac{m_1\boldsymbol{v}}{m_1+m_2}
+\bf{v}_{10} = \dfrac{m_2\bf{v}}{m_1+m_2} ,\qquad \bf{v}_{20} = -\dfrac{m_1\bf{v}}{m_1+m_2}
 $$
 
-이다. 질량중심 좌표계에서의 충돌 전후의 운동량을 각각 $\boldsymbol{p}_{10},\, \boldsymbol{p}_{20},\, \boldsymbol{p}_{10}',\, \boldsymbol{p}_{20}'$ 이라 하면 두 입자의 선운동량의 합이 $\boldsymbol{0}$ 이다. 즉, 
+이다. 질량중심 좌표계에서의 충돌 전후의 운동량을 각각 $\bf{p}_{10},\, \bf{p}_{20},\, \bf{p}_{10}',\, \bf{p}_{20}'$ 이라 하면 두 입자의 선운동량의 합이 $\bf{0}$ 이다. 즉, 
 
 $$
-\boldsymbol{p}_{10} + \boldsymbol{p}_{20} = \boldsymbol{p}'_{10} + \boldsymbol{p}'_{20} =\boldsymbol{0}
+\bf{p}_{10} + \bf{p}_{20} = \bf{p}'_{10} + \bf{p}'_{20} =\bf{0}
 $$
 
 이다. 또한 탄성충돌이므로 
@@ -115,24 +145,24 @@ $$
 p_{10}= p_{20} = p'_{10}= p'_{20}
 $$
 
-이다. 즉 탄성충돌은 질량중심 좌표계에서 운동량의 회전을 의미한다. $\hat{\boldsymbol{n}}_0$ 를 $\boldsymbol{v}'_{10}$ 방향의 단위벡터라고 하면,
+이다. 즉 탄성충돌은 질량중심 좌표계에서 운동량의 회전을 의미한다. $\hat{\bf{n}}_0$ 를 $\bf{v}'_{10}$ 방향의 단위벡터라고 하면,
 
 $$
-\boldsymbol{v}'_{10} = \dfrac{m_2v\hat{\boldsymbol{n}}_0}{m_1+m_2},\qquad \boldsymbol{v}'_{20} = -\dfrac{m_1v\hat{\boldsymbol{n}}_0}{m_1+m_2}
+\bf{v}'_{10} = \dfrac{m_2v\hat{\bf{n}}_0}{m_1+m_2},\qquad \bf{v}'_{20} = -\dfrac{m_1v\hat{\bf{n}}_0}{m_1+m_2}
 $$
 
-이다. $\hat{\boldsymbol{n}}_0$ 는 두 입자의 상호작용과, 충돌시 위치에 의해 결정된다. 이제 실험실 좌표계에서 생각하자. 질량중심의 속도 $\boldsymbol{V}= \dfrac{m_1\boldsymbol{v}_1 + m_2\boldsymbol{v}_2}{m_1+m_2}$ 에 대해 실험실 좌표계의 충돌 이후의 속도 $\boldsymbol{v}'_1,\, \boldsymbol{v}'_2$ 는
+이다. $\hat{\bf{n}}_0$ 는 두 입자의 상호작용과, 충돌시 위치에 의해 결정된다. 이제 실험실 좌표계에서 생각하자. 질량중심의 속도 $\bf{V}= \dfrac{m_1\bf{v}_1 + m_2\bf{v}_2}{m_1+m_2}$ 에 대해 실험실 좌표계의 충돌 이후의 속도 $\bf{v}'_1,\, \bf{v}'_2$ 는
 
 $$
-\boldsymbol{v}'_1 = \boldsymbol{v}'_{10} + \boldsymbol{V},\qquad \boldsymbol{v}'_2 = \boldsymbol{v}'_{20} + \boldsymbol{V}
+\bf{v}'_1 = \bf{v}'_{10} + \bf{V},\qquad \bf{v}'_2 = \bf{v}'_{20} + \bf{V}
 $$
 
 이며 운동량은 환산 질량 $m=\dfrac{m_1m_2}{1/m_1+1/m_2}$ 에 대해 
 
 $$
 \begin{aligned}
-\boldsymbol{p}'_1 &= m_1 \boldsymbol{v}'_1 = m v \hat{\boldsymbol{n}}_0 + \dfrac{m_1(\boldsymbol{p}_1 + \boldsymbol{p_2})}{m_1+m_2}, \\
-\boldsymbol{p}'_2 &= m_2 \boldsymbol{v}'_2 = -m v \hat{\boldsymbol{n}}_0 + \dfrac{m_2(\boldsymbol{p}_1 + \boldsymbol{p_2})}{m_1+m_2}
+\bf{p}'_1 &= m_1 \bf{v}'_1 = m v \hat{\bf{n}}_0 + \dfrac{m_1(\bf{p}_1 + \bf{p_2})}{m_1+m_2}, \\
+\bf{p}'_2 &= m_2 \bf{v}'_2 = -m v \hat{\bf{n}}_0 + \dfrac{m_2(\bf{p}_1 + \bf{p_2})}{m_1+m_2}
 \end{aligned}
 $$
 
@@ -144,14 +174,14 @@ $$
 위 그림에서 
 
 $$
-\overrightarrow{OC} = mv,\quad\overrightarrow{AO} = \dfrac{m_1}{m_1+m_2}(\boldsymbol{p}_1+ \boldsymbol{p}_2), \quad \overrightarrow{OB} = \dfrac{m_2}{m_1+m_2}(\boldsymbol{p}_1+ \boldsymbol{p}_2)
+\overrightarrow{OC} = mv,\quad\overrightarrow{AO} = \dfrac{m_1}{m_1+m_2}(\bf{p}_1+ \bf{p}_2), \quad \overrightarrow{OB} = \dfrac{m_2}{m_1+m_2}(\bf{p}_1+ \bf{p}_2)
 $$ 
 
 임을 알 수 있다. 
 
 
 
-많은 경우 충돌실험은 정지해 있는 한 입자에 대해 다른 입자를 충돌시킨다. 여기서 $m_2$ 입자가 충돌 전에 정지해 있다고 하자. 즉 $\boldsymbol{v}_2=\boldsymbol{0}$ 이며 $\boldsymbol{v}=\boldsymbol{v}_1$ 이다. $\overrightarrow{OB}=mv$ 이며, 따라서 $\overrightarrow{AB}= \boldsymbol{p}_1$ 이 된다 @fig-CM_elastic_scattering_angles_ss 는 $m_2$ 가 정지해 있을 때의 실험실 좌표계에서의 운동량에 관련된 도식이다.
+많은 경우 충돌실험은 정지해 있는 한 입자에 대해 다른 입자를 충돌시킨다. 여기서 $m_2$ 입자가 충돌 전에 정지해 있다고 하자. 즉 $\bf{v}_2=\bf{0}$ 이며 $\bf{v}=\bf{v}_1$ 이다. $\overrightarrow{OB}=mv$ 이며, 따라서 $\overrightarrow{AB}= \bf{p}_1$ 이 된다 @fig-CM_elastic_scattering_angles_ss 는 $m_2$ 가 정지해 있을 때의 실험실 좌표계에서의 운동량에 관련된 도식이다.
 
 ![$m_2$ 가 정지해 있을 때의 실험실 좌표계](images/elastic_scattering_angles/elastic_scatteiing_angles.png){#fig-CM_elastic_scattering_angles_ss width=560}
 
@@ -181,7 +211,7 @@ $$ {#eq-CM_elastic_scattering_velocity_in_lab_frame}
 두 입자가 충돌 후 같은 방향 혹은 반대 방향을 향하는 것을 **정면 충돌(head-on collison)** 이라고 한다. 즉 $\Theta = \pi$ 가 된다. 정면충돌의 경우 충돌 후의 속도는 @eq-CM_elastic_scattering_velocity_in_lab_frame 으로부터 알 수 있으며,
 
 $$
-\boldsymbol{v}_1' = \dfrac{m_1-m_2}{m_1+m_2}\boldsymbol{v},\qquad \boldsymbol{v}_2' = \dfrac{2m_1}{m_1+m_2}\boldsymbol{v}
+\bf{v}_1' = \dfrac{m_1-m_2}{m_1+m_2}\bf{v},\qquad \bf{v}_2' = \dfrac{2m_1}{m_1+m_2}\bf{v}
 $$ {#eq-final_velocity_for_head_on_scattering}
 
 이다. 이 경우 두번째 입자는 가질 수 있는 최대의 운동에너지 $T'_{2,\max}$ 를 갖게 된다. $m_1$ 의 입사 에너지 $E_1= \dfrac{1}{2}m_1v^2$ 에 대해 다음과 같다. 
@@ -200,11 +230,11 @@ $$
 $$
 
 
-$m_1=m_2$ 인 경우에는 $\boldsymbol{p}'_1 \cdot \boldsymbol{p}'_2 = 0$ 이 된다. 즉 $A,\,B,\,C$ 가 반경 $mv$ 인 원에 위치한다.
+$m_1=m_2$ 인 경우에는 $\bf{p}'_1 \cdot \bf{p}'_2 = 0$ 이 된다. 즉 $A,\,B,\,C$ 가 반경 $mv$ 인 원에 위치한다.
 
 </br>
 
-### 산란
+## 산란
 
 ![러더퍼드 산란](images/rutherford_scattering/rutherford_scattering.png){#fig-CM_rutherford_scattering width=370}
 
@@ -214,8 +244,8 @@ $$
 \theta_0 = \int_{r_{\min}}^\infty \dfrac{l/r^2}{\sqrt{2m(E-V(r)) - l^2/r^2}}\, dr
 $$ {#eq-CM_rutherford_1}
 
-이며, $r_\min$ 은 적분 분모의 $\sqrt{\cdots}$ 를 $0$ 으로 한다는 것을 기억하자. $V(r\to \infty) = 0$ 이며 따라서 이때의 속도를 $\boldsymbol{v}_0$ 라고 하자. **충격 변수(impact parameter)** $\rho$ 를 
-@fig-CM_rutherford_scattering 와 같이 정의하자. 그렇다면 $m$ 의 에너지 $E$ 와 각운동량 $l=\|\boldsymbol{L}\|$ 은 
+이며, $r_\min$ 은 적분 분모의 $\sqrt{\cdots}$ 를 $0$ 으로 한다는 것을 기억하자. $V(r\to \infty) = 0$ 이며 따라서 이때의 속도를 $\bf{v}_0$ 라고 하자. **충격 변수(impact parameter)** $\rho$ 를 
+@fig-CM_rutherford_scattering 와 같이 정의하자. 그렇다면 $m$ 의 에너지 $E$ 와 각운동량 $l=\|\bf{L}\|$ 은 
 
 $$
 E= \dfrac{1}{2}m{v_{0}}^2,\qquad l = m \rho v_0
@@ -239,7 +269,7 @@ $${#eq-CM_rutherford_3}
 ![산란 실험](images/cross_section/cross_section.png){#fig-CM_scattering_cross_section width=500}
 
 
-물리학에서 많이 이루어지는 산란 실험은 동일한 초기 속도 $\boldsymbol{v}_0$ 를 갖는 공간적으로 균일한 분포를 가진 다수의 입자를 입사시키며, 이 균일한 입자들이 $\boldsymbol{v}_0$ 와 수직한 방향으로 $A$ 만큼의 면적을 갖고 있다고 하자. $N$ 개의 입자가 입사되었을 때 산란각 $\Theta$ 와 $\Theta + d\Theta$ 사이로 산란되는 입자의 갯수를 $dN(\Theta)$ 이라고 하자. 입사 입자가 우리는 산란단면적 $d\sigma$ 를 다음과 같이 정의 할 수 있다.
+물리학에서 많이 이루어지는 산란 실험은 동일한 초기 속도 $\bf{v}_0$ 를 갖는 공간적으로 균일한 분포를 가진 다수의 입자를 입사시키며, 이 균일한 입자들이 $\bf{v}_0$ 와 수직한 방향으로 $A$ 만큼의 면적을 갖고 있다고 하자. $N$ 개의 입자가 입사되었을 때 산란각 $\Theta$ 와 $\Theta + d\Theta$ 사이로 산란되는 입자의 갯수를 $dN(\Theta)$ 이라고 하자. 입사 입자가 우리는 산란단면적 $d\sigma$ 를 다음과 같이 정의 할 수 있다.
 
 $$
 \dfrac{d \sigma}{A} := \dfrac{dN(\Theta)}{N}.
@@ -335,7 +365,8 @@ $$
 \theta_0 &= \int_{r_{\min}}^\infty  \dfrac{\rho/r^2}{\sqrt{1-(\rho^2/r^2) - 2K/r(m{v_0}^2)}}\, dr & &; s=1/r \\
 &= \int_{0}^{s_{\max}} \dfrac{ds}{\sqrt{1/\rho^2 + K^2/(m^2{v_0}^4 \rho^4) -[ s + K/(m{v_0}^2\rho^2)]^2}} & &;s_0 =  K/(m{v_0}^2\rho^2)\\
 &= \int_{0}^{s_{\max}} \dfrac{ds}{\sqrt{1/\rho^2 + K^2/(m^2{v_0}^4 \rho^4) -[ s + s_0]^2}} & &;\alpha^2 = \dfrac{1}{\rho^2} + \dfrac{K^2}{m^2{v_0}^4\rho^4},\\
-&= \int_0^{s_{\max}} \dfrac{ds}{\sqrt{\alpha^2 - [s+s_0]^2}} = \cos^{-1}\left(\dfrac{s_0}{\alpha}\right) - \cos^{-1}\left(\dfrac{s_0 + s_{\max}}{\alpha}\right)
+&= \int_0^{s_{\max}} \dfrac{ds}{\sqrt{\alpha^2 - [s+s_0]^2}} \\[0.3em]
+&= \cos^{-1}\left(\dfrac{s_0}{\alpha}\right) - \cos^{-1}\left(\dfrac{s_0 + s_{\max}}{\alpha}\right)
 \end{aligned}
 $$
 

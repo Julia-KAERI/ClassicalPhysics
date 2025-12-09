@@ -1,0 +1,37 @@
+\documentclass[border=5pt,tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{calc}
+\usetikzlibrary{math}
+\usetikzlibrary {shapes.geometric} % for star
+\usetikzlibrary{bending} % for arrow head angle
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+\usetikzlibrary{arrows.meta} % for arrow size
+
+
+\usetikzlibrary {arrows}
+\usetikzlibrary{shapes.geometric}
+\begin{document}
+\begin{tikzpicture} %[=>stealth]
+    \def\R1{3};
+    \def\R2{3};
+    \def\theta1{30};
+    \def\theta2{40};
+
+    \coordinate (O) at (0, 0);  
+    \coordinate (P1) at ({3*sin(30)}, {-3*cos(30)});
+    \coordinate (P2) at ({3*sin(30) + 4*sin(40)}, {-3*cos(30)- 4 * sin(40)});
+    \draw[dashed] (-0.5, 0) -- (4, 0) node [right] {$x$};
+    \draw[dashed] (0, 0) -- (0, -6) node [below] {$y$};
+    \draw[dashed] (P1) -- ({3*sin(30)}, -6);
+    \draw[very thick, red] (0, 0) -- node[right]{$l_1$} (P1);
+    % \node[above right] at (P1) {$m_1$};
+    \fill[red] (P1) circle (0.1cm) node[right] {$m_1$};
+    \draw[very thick, red] (P1)-- node[right] {$l_2$} (P2);
+    \draw[thick, blue, ->] (0, -1) arc (270:300:1) node [below, xshift=-3, yshift = -2]
+    {$\phi_1$};
+    \draw[thick, blue, ->] ({3*sin(30)}, {-3*cos(30)-1}) arc (270:310:1) node [below, xshift=-4, yshift = -3]
+    {$\phi_2$};
+    \fill[red] (P2) circle (0.1cm) node[right] {$m_2$};
+    
+\end{tikzpicture}
+\end{document}
