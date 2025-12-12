@@ -573,7 +573,15 @@ $$
 
 ![Translational Symmetry](images/translational_symmetry/translational_symmetry.png){#fig-CM_variation_translational_symmetry width=50%}
 
-일반화된 좌표 $q_j$ 에 대해 $q_j \to q_j + \delta q_j$ 변환이 시스템의 전체 입자를 특정한 방향으로 병진 이동(translation) 시키는 변환이라고 하자. 예를 들면 데카르트 좌표계에서의 시스템의 질량중심. 운동에너지 $T$ 는 원점에 영향을 받지 않으므로, $\partial T/\partial q_j=0$ 일 것이다. 또한 보존계이며 포텐셜 에너지 $V$ 가 속도에 의존하지 않는다고 가정하자. 이 때의 라그랑쥬 방정식은 다음과 같다.
+
+
+일반화된 좌표 $q_j$ 에 대해 $q_j \to q_j + \delta q_j$ 변환이 시스템의 전체 입자를 특정한 방향으로 병진 이동(translation) 시키는 변환이라고 하자. 즉 시스템의 모든 입자에 대해
+
+$$
+\dfrac{\partial \bf{r}_a}{\partial q_j} = \bf{n}
+$$
+
+이다. 운동에너지 $T$ 는 원점에 영향을 받지 않으므로, $\partial T/\partial q_j=0$ 일 것이다. 또한 보존계이며 포텐셜 에너지 $V$ 가 속도에 의존하지 않는다고 가정하자. 이 때의 라그랑쥬 방정식은 다음과 같다.
 
 $$
 \dot{p}_j \equiv \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_j} \right) = -\dfrac{\partial V}{\partial q_j} \equiv Q_j \;.
@@ -582,21 +590,21 @@ $$
 우리는 이것이 총 선형 운동량에 대한 운동방정식임을 안다. $Q_j$ 는 총 힘 $\bf{F}$ 의 $q_j$ 에 의한 병진 방향 성분으로 아래와 같이 표현 할 수 있다.(@eq-CM_generalized_force)
 
 $$
-Q_j = \sum_i \bf{F}_i \bf{\cdot} \dfrac{\partial \bf{r}_i}{\partial q_j}= \sum_i \bf{F\cdot n}, \quad \text{where }\bf{n} := \dfrac{\partial \bf{r}_i}{\partial q_j}
+Q_j = \sum_a \bf{F}_a \bf{\cdot} \dfrac{\partial \bf{r}_a}{\partial q_j}= \sum_i \bf{F\cdot n}.
 $$
 
-여기서 $\bf{n}$ 은 병진 벡터 이므로 개개의 입자들의 위치 벡터 $\bf{r}_i$ 에 독립적임에 유의하자. 따라서,
+여기서 $\bf{n}$ 은 병진 벡터 이므로 개개의 입자들의 위치 벡터 $\bf{r}_a$ 에 독립적임에 유의하자. 따라서,
 
 $$
-Q_j = -\dfrac{\partial V}{\partial q_j} = \sum_i \bf{F}_i \cdot \dfrac{\partial \bf{r}_i}{\partial q_j}= \bf{n} \cdot \sum_i \bf{F}_i = \bf{n\cdot F}
+Q_j = -\dfrac{\partial V}{\partial q_j} = \sum_a \bf{F}_a \cdot \dfrac{\partial \bf{r}_a}{\partial q_j}= \bf{n} \cdot \sum_i \bf{F}_a = \bf{n\cdot F}
 $$
 
 이다. 이제 $q_j$ 에 대한 정준운동량 $p_j$ 는 (@eq-CM_dlambert_1 를 이용하였다.)
 
 $$
 \begin{aligned}
-p_j &= \dfrac{\partial T}{\partial \dot{q}_j} = \dfrac{\partial}{\partial \dot{q}_j}\left( \dfrac{1}{2} \sum_i m_i {\dot{\bf{r}}_i}^2 \right) = \sum_i m_i \bf{v}_i \cdot \dfrac{\partial \dot{\bf{r}}_i}{\partial \dot{q}_j} =\sum_i m_i \bf{v}_i \cdot \dfrac{\partial \bf{r}_i}{\partial q_j} \\[0.3em]
-&= \bf{n \cdot} \left( \sum_i m_i \bf{v}_i \right)
+p_j &= \dfrac{\partial T}{\partial \dot{q}_j} = \dfrac{\partial}{\partial \dot{q}_j}\left( \dfrac{1}{2} \sum_a m_a {\dot{\bf{r}}_a}^2 \right) = \sum_a m_a \bf{v}_a \cdot \dfrac{\partial \dot{\bf{r}}_a}{\partial \dot{q}_j} =\sum_i m_a \bf{v}_a \cdot \dfrac{\partial \bf{r}_a}{\partial q_j} \\[0.3em]
+&= \bf{n \cdot} \left( \sum_a m_a \bf{v}_a \right)
 \end{aligned}
 $$
 
@@ -606,10 +614,10 @@ $$
 
 ### 회전 대칭 {#sec-CM_variation_rotational_symmetry}
 
-마찬가지로 $q_j \mapsto q_j+dq_j$ 변환이 어떤 축에 대한 전체 입자 각각의 위치 벡터 $\bf{r}_i$ 의 미소회전(infinitesimal rotation) 변환이며 $\hat{\bf{n}}$ 을 그 회전축의 단위벡터라고 하자 (@fig-CM_variation_rotational_symmetry). 그렇다면, $|d\bf{r}_i| = r_i \sin \theta \, dq_j$ 이다. 이로부터, $\bf{r}_i$의 $q_j$ 에 대한 편미분은 $\bf{r}_i$ 와 $\bf{n}$ 모두와 직교할 것이므로, 아래와 같은 꼴을 가질 것임을 알 수 있다.
+마찬가지로 $q_j \mapsto q_j+dq_j$ 변환이 어떤 축에 대한 전체 입자 각각의 위치 벡터 $\bf{r}_a$ 의 미소회전(infinitesimal rotation) 변환이며 $\hat{\bf{n}}$ 을 그 회전축의 단위벡터라고 하자 (@fig-CM_variation_rotational_symmetry). 그렇다면, $|d\bf{r}_a| = r_a \sin \theta \, dq_j$ 이다. 이로부터, $\bf{r}_a$의 $q_j$ 에 대한 편미분은 $\bf{r}_a$ 와 $\bf{n}$ 모두와 직교할 것이므로, 아래와 같은 꼴을 가질 것임을 알 수 있다.
 
 $$
-\dfrac{\partial \bf{r}_i}{\partial q_j} = \hat{\bf{n}}\times \bf{r}_i
+\dfrac{\partial \bf{r}_a}{\partial q_j} = \hat{\bf{n}}\times \bf{r}_a
 $$
 
 ![Rotational Symmetry](images/rotation_of_vector/rotation_of_vector.png){#fig-CM_variation_rotational_symmetry width=350}
@@ -617,13 +625,15 @@ $$
 그렇다면 일반화된 힘 $Q_j$ 는
 
 $$
-Q_j = \sum_i \bf{F}_i \cdot (\hat{\bf{n}} \times \bf{r}_i) = \hat{\bf{n}} \cdot \left(\sum_i \bf{r}_i \times \bf{F}_i \right) = \hat{\bf{n}} \cdot \bf{N}
+Q_j = \sum_a \bf{F}_a \cdot (\hat{\bf{n}} \times \bf{r}_a) = \hat{\bf{n}} \cdot \left(\sum_a \bf{r}_a \times \bf{F}_a \right) = \hat{\bf{n}} \cdot \bf{N}
 $$
 
 으로 쓸 수 있다. 정준 운동량 $p_j$ 는 다음과 같다.
 
 $$
-p_j = \dfrac{\partial T}{\partial \dot{q}_j} = \sum_i m_i \bf{v}_i \cdot \dfrac{\partial \bf{r}_i}{\partial q_j} = \sum_i \bf{n} \cdot (\bf{r}_i \times m_i \bf{v}_i) = \bf{n}\cdot \sum_i \bf{L}_i = \bf{n} \cdot \bf{L}\;.
+\begin{aligned}
+p_j = \dfrac{\partial T}{\partial \dot{q}_j} = \sum_a m_a \bf{v}_a \cdot \dfrac{\partial \bf{r}_a}{\partial q_j} = \sum_a \bf{n} \cdot (\bf{r}_a \times m_i \bf{v}_a) = \bf{n}\cdot \sum_a \bf{L}_a = \bf{n} \cdot \bf{L}\;.
+\end{aligned}
 $$
 
 $q_j$ 가 순환좌표일 경우 $Q_j=0$ 이며, 따라서 $\bf{n} \cdot \bf{L}=\text{constant}$ 이다. 즉 각운동량 보존.
@@ -1050,7 +1060,7 @@ $$
 \begin{aligned}
 T_2 &= \dfrac{m_2}{2}\left[(\dot{x}_1+l\dot{\phi}\cos \phi)^2 + l^2 \dot{\phi}^2\sin^2\phi\right] \\[0.3em]
 &=\dfrac{m_2}{2}\left[{\dot{x}_1}^2 + l^2\dot{\phi}^2 + 2\dot{x}_1l\dot{\phi}\cos\phi\right]\\[0.3em]
-U_2 &= m_2gl \cos \phi
+U_2 &= -m_2gl \cos \phi
 \end{aligned}
 $$
 

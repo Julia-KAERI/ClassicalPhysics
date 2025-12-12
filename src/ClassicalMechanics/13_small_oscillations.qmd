@@ -1,0 +1,145 @@
+---
+title: "작은 진동"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
+## 1차원 조화진동자 Review 
+
+### 1차원 단순조화진동자의 라그랑지안 기술 {#sec-CM_lagrangian_description_of_1d_sho}
+[1차원 조화진동자](11_one_body_problems.qmd#차원-조화진동자) 의 단순조화진동자를 라그랑지한 형태는 아래와 같다.
+
+$$
+L = \dfrac{m\dot{x}^2}{2} - \dfrac{kx^2}{2} = \dfrac{m\dot{x}^2}{2} - \dfrac{m\omega_0^2x^2}{2},\qquad \omega_0 = \sqrt{\dfrac{k}{m}}.
+$$
+
+역학적 시스템이 안정평형상태일 때는 시스템의 전체 포텐셜 에너지가 최소인 상태이다. 1차원 시스템에서 포텐셜 에너지 $U(q)$ 를 생각하고 최소인 위치는 $q=q_0$ 일 때 라고 하자. 이 평형상태에서 작게 벗어난다면 포텐셜 에너지는 아래와 같이 근사시킬 수 있다.
+
+$$
+U(q) \approx U(q_0) + \dfrac{1}{2}\left.\dfrac{d^2U}{dq^2}\right|_{q=q_0} (q-q_0)^2 .
+$$
+
+이 때
+
+$$
+\omega_0 = \sqrt{\dfrac{1}{m}\left.\dfrac{d^2U}{dq^2}\right|_{q=q_0} }
+$$
+
+이다.
+
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_landau_21_2}
+
+#### L&L Mechanics 21.2
+
+서로 다른 두 동위원소들로 이루어진 이원자 분자를 생각하자. 하나는 질량이 $m_1,\,m_2$ 인 동위원소의 이원자 분자이고 다른 하나는 $m_1',\,m_2'$ 인 이원자 분자이다 ($m_1$ 과 $m_1'$ 이 동위원소이고 $m_2$ 와 $m_2'$ 이 동위원소이다.). 이 때 각각의 진동수 $\omega,\,\omega'$ 의 비율을 구하라. 
+
+:::
+
+</div>
+
+::: {.solution}
+
+우선 $m_1,\,m_2$ 로 이루어진 이원자 분자의 라그랑지안 
+$$
+L = \dfrac{m_1\dot{x}_1^2}{2} + \dfrac{m_2 \dot{x}_2^2}{2} - \dfrac{k}{2}(x_1-x_2)^2
+$$
+
+로 기술 될 수 있다. 여기서 질량중심 $R$ 과 상대적인 변화 $x=x_1-x_2$ 를 도입하면 환산질량 $\mu = m_1m_2/(m_1+m_2)$ 에 대해
+
+$$
+L = \dfrac{\mu\dot{x}^2}{2} + \dfrac{(m_1+m_2)\dot{R}^2}{2}+ \dfrac{k}{2}x^2
+$$
+
+이므로 진동수 $\omega_0 = \sqrt{k/\mu}=\sqrt{k(m_1+m_2)/(m_1m_2)}$ 이다. 동위원소간에 화학적 성질이 일정하다고 가정하면 $m_1',\,m_2'$ 으로 이루어진 분자에서도 같은 용수철 상수 값을 가진다고 볼 수 있다. 따라서
+
+$$
+\dfrac{\omega_0}{\omega_0'} = \sqrt{\dfrac{(m_1+m_2)}{(m_1'+m_2')}\dfrac{(m_1' m_2')}{(m_1 m_2)}}
+$$.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_landau_21_3}
+
+#### L&L Mechanics 21.3
+
+아래 그림과 같이 한쪽 끝이 $A$ 에 고정되었으며 직선상에서 움직이는 단순조화진동자의 진동수를 구하라. $A$ 와 직선의 거리는 $l$ 이며 용수철을 $l$ 만큼 늘이는 데는 힘 $F$ 가 필요하다.
+
+![그림](images/landau_pr_21_3/landau_pr_21_3.png){#fig-CM_exr_landau_21_3 width=200}
+:::
+
+</div>
+
+::: {.solution}
+
+$|x|\ll l$ 조건에서 $\delta l = \sqrt{l^2+x^2}-l = \dfrac{x^2}{2l}$ 이다. 용수철에 의한 포텐셜 에너지 $U = F\delta x = \dfrac{Fx^2}{2l}$ 이므로 각진동수 $\omega = \sqrt{F/ml}$.
+
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_landau_21_4}
+
+#### L&L Mechanics 21.4
+
+질량 $m$ 인 입자가 반지름 $r$ 이니 원주에서 움직이는것을 제외하면 @exr-CM_landau_21_4 과 같은 문제이다 진동수를 구하라.
+
+![그림](images/landau_pr_21_4/landau_pr_21_4.png){#fig-CM_exr_landau_21_4 width=200}
+:::
+
+</div>
+
+::: {.solution}
+$|\phi| \ll 1$ 이라는 조건에서 구한다. $\cos \phi \approx 1-\phi^2/2$ 임을 생각하자.
+
+$$
+\begin{aligned}
+\delta l &= \sqrt{r^2 \sin^2\phi + (l+r(1-\cos \phi))^2} -l \\[0.3em]
+&= \sqrt{(l+r)^2+r^2 -2r(l+r)\cos \phi}-l \\[0.3em]
+&\approx \sqrt{l^2 + r(l+r)\phi^2} -l = \dfrac{r(l+r)\phi^2}{2}
+\end{aligned}
+$$
+
+이며 $U=F\delta l = Fr(l+r) \phi^2/2$ 이다. 운동에너지 $T=mr^2\dot{\phi}^2/2$ 이므로 $\omega = \sqrt{F(r+l)/mrl}$ 이다.
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_landau_21_5}
+
+#### L&L Mechanics 21.5
+
+@exr-landau_cm_5_2 에서의 각진동수를 구하라.
+:::
+
+</div>
+
+::: {.solution}
+
+라그랑지안을 쓰면 아래와 같다.
+
+$$
+\begin{aligned}
+L &= \dfrac{m_1\dot{x}_1^2}{2}+\dfrac{m_2\left[\dot{x}_1^2 + l^2\dot{\phi}^2 + 2\dot{x}_1 l \dot{\phi} \cos \phi \right]}{2} + m_2gl\cos \phi \\[0.3em]
+&= \dfrac{(m_1+m_2) \dot{x}_1^2}{2} + \dfrac{m_2 (l^2\dot{\phi}^2 + 2\dot{x}_1 l \cos \phi)}{2} + m_2gl \cos \phi
+\end{aligned}
+$$
+
+$|\phi|\ll 1$ 조건에서 
+
+
+:::

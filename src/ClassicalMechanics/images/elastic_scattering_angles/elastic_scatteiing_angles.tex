@@ -10,9 +10,9 @@
     \coordinate (C) at (0.309, 0.951);
     
     \draw[fill=none, blue, thick](0,0) circle (1);
-    \draw[thick,  -{Stealth[length=2mm]}] (0, 0) node [below, scale=0.8] {$O$} -- (C) node [above, scale=0.8] {$C$};
+    \draw[dashed, thick,  -{Stealth[length=2mm]}] (0, 0) node [below, scale=0.8] {$O$} -- (C) node [above, scale=0.8] {$C$};
     \draw[thick, red,  -{Stealth[length=2mm]}] (A) node [below, black, scale=0.8] {$A$} -- (C);
-    \draw[thick, teal,  -{Stealth[length=2mm]}] (C) -- (B) node [below, black, scale=0.8] {$B$} ;
+    \draw[thick, teal,  -{Stealth[length=2mm]}] (C) -- (B) node [right, black, scale=0.8] {$B$} ;
     \draw[thick, black,-{Stealth[length=2mm]}] (A) -- (B);
     \node[below, scale=0.8] at (0.5, 0) {$\boldsymbol{p}_1$};
     
@@ -26,7 +26,7 @@
     \node [scale=0.8] at (-0.3, 0.15) {$\theta_1$};
     
     \node[above,scale=0.8] at ($0.5*(A) + 0.5*(C)$ ){$\boldsymbol{p}'_1$};
-    \node[ right,scale=0.8] at ($0.5*(B) + 0.5*(C)$ ){$\boldsymbol{p}'_2$};
+    \node[left,scale=0.8] at ($0.5*(B) + 0.5*(C)$ ){$\boldsymbol{p}'_2$};
     \node[scale=0.8] at (0.0, -1.2) {$(a)\, m_1<m_2$};
     
     %\node [below, scale=0.8] at ($0.5*(A)$) {$\boldsymbol{p}_A$};
@@ -39,9 +39,9 @@
     \coordinate (C) at (0.309, 0.951);
     
     \draw[fill=none, blue, thick](0,0) circle (1);
-    \draw[thick,  -{Stealth[length=2mm]}] (0, 0) node [below, scale=0.8] {$O$} -- (C) node [above, scale=0.8] {$C$};
+    \draw[dashed, thick,  -{Stealth[length=2mm]}] (0, 0) node [below, scale=0.8] {$O$} -- (C) node [above, scale=0.8] {$C$};
     \draw[thick, red,  -{Stealth[length=2mm]}] (A) node [below, black, scale=0.8] {$A$} -- (C);
-    \draw[thick, teal,  -{Stealth[length=2mm]}] (C) -- (B) node [below, black, scale=0.8] {$B$} ;
+    \draw[thick, teal,  -{Stealth[length=2mm]}] (C) -- (B) node [right, black, scale=0.8] {$B$} ;
     \draw[thick, black,-{Stealth[length=2mm]}] (A) -- (B);
     \node[below, scale=0.8] at (-0.3, 0) {$\boldsymbol{p}_1$};
     
@@ -58,7 +58,7 @@
     \node [scale=0.8] at (-0.70, 0.15) {$\theta_{\textrm{max}}$};
     
     \node[above,scale=0.8] at ($0.3*(A) + 0.7*(C)$ ){$\boldsymbol{p}'_1$};
-    \node[ right,scale=0.8] at ($0.5*(B) + 0.5*(C)$ ){$\boldsymbol{p}'_2$};
+    \node[left,scale=0.8] at ($0.5*(B) + 0.5*(C)$ ){$\boldsymbol{p}'_2$};
     
     \node[scale=0.8] at (0.0, -1.2) {$(b)\, m_1>m_2$};
     \end{scope}

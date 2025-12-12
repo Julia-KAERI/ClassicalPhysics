@@ -82,7 +82,7 @@ $$
 </br>
 
 
-### 연습문제
+### 연습문제 {.unnumbered}
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -202,7 +202,7 @@ $$
 
 </br>
 
-## 1차원 조화진동자
+## 1차원 조화진동자 {#sec-CM_1D_SHO}
 
 ### 단순조화진동자 {#sec-CM_1d_sho}
 
@@ -738,13 +738,14 @@ $$ {#eq-CM_magnitude_of_RLR_vector}
 ## 연습문제 {.unnumbered}
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-proof_of_kepler_orbit}
 
 @eq-CM_reduced_to_1d_theta 로부터 @eq-CM_orbit_for_kepler_problem 를 얻어라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -788,8 +789,7 @@ $$
 
 :::
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-proof_of_laplace_runge_lenz}
 
@@ -797,7 +797,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -831,8 +831,85 @@ $$
 ($3$) $\boldsymbol{A}$ 는 constant of motion 이므로 $\boldsymbol{r}=\boldsymbol{r}_{\min}$ 일 때의 값이 항상 유지된다. $\boldsymbol{r}=\boldsymbol{r}_{\textrm{min}}$ 일 때의 속도를 $\boldsymbol{v}_{\boldsymbol{r}_\textrm{min}}$ 이라고 하면 $\boldsymbol{v}_{\boldsymbol{r}_{\textrm{min}}} \cdot \boldsymbol{r}_{\text{min}} = \boldsymbol{0}$ 이므로 이때의 $(\boldsymbol{p}\times \boldsymbol{L})$ 는 $\boldsymbol{r}_{\textrm{min}}$ 과 평행하다. 즉 $\boldsymbol{A}$ 는 $\boldsymbol{r}_{\min}$ 에 평행하다. 
 :::
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-landau_cm_14_3}
+
+#### L&L Mechanics 14.3
+
+@exr-landau_cm_5_2 에서 $m_2$ 에 대한 운동방정식을 구하라. $m_1$ 은 수평방향으로 자유롭게 움직이며 이 수평방향은 $m_2$ 가 움직이는 평면상에 존재한다.
+
+:::
+
+</div>
+
+::: {.solution}
+라그랑지안을 쓰면 아래와 같다.
+
+$$
+\begin{aligned}
+L &= \dfrac{m_1\dot{x}_1^2}{2}+\dfrac{m_2\left[\dot{x}_1^2 + l^2\dot{\phi}^2 + 2\dot{x}_1 l \dot{\phi} \cos \phi \right]}{2} + m_2gl\cos \phi \\[0.3em]
+&= \dfrac{(m_1+m_2) \dot{x}_1^2}{2} + \dfrac{m_2 (l^2\dot{\phi}^2 + 2\dot{x}_1 l \dot{\phi}\cos \phi)}{2} + m_2gl \cos \phi.
+\end{aligned}
+$$
+
+$L$ 이 $x_1$ 에 의존하지 않으므로 순환 좌표이다. $m_1$ 과 관련된 일반화된 운동량 $P_1$ 은 상수이다.
+
+$$
+P_1 = \dfrac{\partial L}{\partial \dot{x}_1} = (m_1 + m_2)\dot{x}_1 + m_2l\dot{\phi} \cos \phi = \text{constant}.
+$$
+
+이제 수평방향의 무게중심을 생각해보자.
+
+$$
+R_x = \dfrac{m_1x_1 + m_2(x_1+l\sin \phi)}{m_1+m_2}
+$$
+
+수평방향의 무게중심이 움직이지 않는 좌표계를 항상 선택 할 수 있으며 이로부터
+
+$$
+(m_1+m_2)\dot{R}_x = 0 = P_1
+$$
+
+을 얻는다. 그렇다면
+
+$$
+\dot{x}_1 = -\dfrac{m_2l\dot{\phi}\cos\phi}{m_1+m_2}
+$$
+
+이다. 이를 이용하여 에너지 $E$ 를 구하면
+$$
+\begin{aligned}
+E &= \dot{x}_1P_1 + \dot{\phi}\dfrac{\partial L}{\partial \dot{\phi}} - L \\[0.3em]
+&= \dfrac{m_2l^2\dot{\phi}^2}{2} - \dfrac{(m_1+m_2)\dot{x}^2}{2} - m_2gl\cos\phi \\[0.3em]
+&= \dfrac{m_2l^2\dot{\phi}^2}{2} - \dfrac{m_2^2 l^2\dot{\phi^2}\cos^2\phi}{2(m_1+m_2)} - m_2gl\cos\phi \\[0.3em]
+&= \dfrac{m_2l^2\dot{\phi}^2}{2}\left[1- \dfrac{m_2 \cos^2\phi}{m_1+m_2}\right] - m_2gl\cos \phi
+\end{aligned}
+$$
+
+이다. 이로부터
+
+$$
+\begin{aligned}
+\dfrac{d\phi}{dt} &= \sqrt{\dfrac{2}{m_2l^2}\dfrac{m_1+m_2}{m_1+m_2(1-\cos^2\phi)}\left[E+m_2gl\cos\phi\right]} \\[0.3em]
+&= \sqrt{\dfrac{2}{m_2l^2}\dfrac{(m_1+m_2)(E+m_2gl\cos\phi)}{m_1+m_2\sin^2\phi}}
+\end{aligned}
+$$
+
+이므로 
+
+$$
+t = l\sqrt{\dfrac{m_2}{2(m_1+m_2)}} \int \sqrt{\dfrac{m_1+m_2\sin^2\phi}{(E+m_2gl\cos\phi)}}\, d\phi
+$$
+
+을 얻는다.
+
+:::
+
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-helliwell_1_41}
 
 #### Helliwell 1.41

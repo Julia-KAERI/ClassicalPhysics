@@ -19,6 +19,7 @@ book:
       - src/ClassicalMechanics/04_canonical_transform.qmd
       - src/ClassicalMechanics/11_one_body_problems.qmd
       - src/ClassicalMechanics/12_two_or_three_bodies_problems.qmd
+      - src/ClassicalMechanics/13_small_oscillations.qmd
 
       - src/ClassicalMechanics/A_proofs.qmd
       - src/ClassicalMechanics/P1_problems01.qmd    

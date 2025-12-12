@@ -24,13 +24,13 @@ $$ {#eq-CM_energy_conservation_for_spantaneous_disintegration}
 
 $$
 \Delta E_i = E_i - (E_{1i} + E_{2i}).
-$$
+$$ {#eq-CM_disintegration_energy_for_spontaneous_disintegration_into_two_particls_1}
 
-붕괴에너지는 **환산 질량 (reduced mass)** $m:= \left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right)$ 에 대해 
+붕괴에너지는 **환산 질량 (reduced mass)** $\mu:= \left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right)$ 에 대해 
 
 $$
-\Delta E_i = \dfrac{{p_0}^2}{2}\left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right) = \dfrac{{p_0}^2}{2m} > 0 \qquad 
-$$
+\Delta E_i = \dfrac{{p_0}^2}{2}\left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right) = \dfrac{{p_0}^2}{2\mu} > 0 \qquad 
+$${#eq-CM_disintegration_energy_for_spontaneous_disintegration_into_two_particls_2}
 
 이다. 잘량중심 좌표계애서의 속도는 각각 $v_{10}=p_0/m_1,\, v_{20}=p_0/m_2$ 이다. 
 
@@ -75,7 +75,6 @@ $v_0>V$ 라면, 즉 @fig-CM_reference_system_scattering ($a$) 의 경우라면 $
 
 ### 자발적 붕괴와 고체각 분포 {#sec-CM_sponteneous_disintegration_and_solid_angle_distribution}
 
-
 일반적으로 자발적 붕괴 실험은 하나의 입자의 붕괴가 아니라 다수의 입자의 붕괴를 통계적으로 다룬다. 그리고 자발적 붕괴의 분포는 완전히 임의적이기 때문에 질량중심 좌표계에서의 고체각(solid angle) $d\Omega$ 로 입사되는 붕괴된 입자의 갯수는 $d\Omega$ 에 비례한다. 즉 $N$ 개의 입자로 붕괴되었을때 $d\Omega$ 의 고체각에 입사되는 입자의 갯수 $N_{d\Omega}$ 는
 
 $$
@@ -106,18 +105,78 @@ $${#eq-CM_distribution_of_distilated_particles_in_L_system}
 
 ### 다입자 붕괴와 최대 운동 에너지 {#sec-CM_maximum_kinetic_energy_in_many_particles_disintegration}
 
-질량 $M$ 인 입자가 자발적 붕괴를 통해 여러 입자로 붕괴된다고 하자. 붕괴된 입자가 가질 수 있는 에너지에는 상한이 존재한다. 이 붕괴된 입자들 가운데 질량 $m_1$ 인 입자를 생각하자. 원래 입자 $M$ 의 에너지를 $E_i$ 라 하고 $m_1$ 을 제외한 나머지 붕괴된 입자들의 에너지를 $E_i'$ 라고 하자. $m_1$ 의 에너지를 $E_1$ 이라고 하면
+질량 $M$ 인 입자가 자발적 붕괴를 통해 여러 입자로 붕괴된다고 하자. 붕괴된 입자가 가질 수 있는 운동에너지에는 상한이 존재한다. 이 붕괴된 입자들 가운데 질량 $m_1$ 인 입자를 생각하자. 원래 입자 $M$ 의 에너지를 $E_i$ 라 하고 $m_1$ 을 제외한 나머지 붕괴된 입자들을 하나의 시스템으로 생각하여 그 내부에너지를 $E_i'$ 라고 하자. $m_1$ 의 에너지를 $E_1$ 이라고 하면 $m_1$ 입자가 가질 수 있는 운동에너지는 @eq-CM_disintegration_energy_for_spontaneous_disintegration_into_two_particls_1 과 @eq-CM_disintegration_energy_for_spontaneous_disintegration_into_two_particls_2 에 의해 아래와 같이 결정된다.
 
 $$
-T_{10} = \dfrac{{p_0}^2}{2m_1} = \dfrac{M-m_1}{M}(E_i - E_{1i} - E_i') 
+T_{10} = \dfrac{{p_0}^2}{2m_1} = \dfrac{M-m_1}{M}(E_i - E_{1i} - E_i') .
+$$
+
+정해진 $E_i,\,E_{1i}$ 에 대해 $E_i'$ 이 최소가 될 때 $T_{10}$ 가 최대가 되며 이것은 $m_1$ 을 제외한 다른 입자들이 모두 같은 질량과 같은 속도로 움직일 때 이다. 이 경우 $E'_i$ 는 각각의 입자의 내부에너지의 단순합이 된다$^\dagger$. (@exr-CM_spontaneous_disintegration) [$^\dagger$ @Landau1975classical 에는 같은 질량이란 말은 빠져 있다]{.aside}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_spontaneous_disintegration}
+
+위 문장을 증명하라.
+
+:::
+</div>
+
+::: {.solution}
+
+위 식은 상당해 혼란을 줄 수 있다. 우선 $M$ 의 입자가 $m_1,\ldots,\,m_N$ 입자로 붕괴되었다고 하자. 그렇다면 에너지 보존과 운동량 보존에 의해
+
+$$
+\begin{aligned}
+E_i&= E_{1i}+\dfrac{{p_0}^2}{2m_1} +  \sum_{j=2}^N \left(E_{ji} + \dfrac{{p_j}^2}{2m_i}\right),\qquad \bf{p}_0 = -\sum_{j=2}^N \bf{p}_j.
+\end{aligned}
+$$
+
+이다. 여기서 
+
+$$
+ \sum_{j=2}^N \left(E_{ji} + \dfrac{{p_j}^2}{2m_j }\right) = E_i' + \dfrac{{p_0}^2}{2(M-m_1)}
 $$
 
 
+이며
 
+$$
+E_i' =  \sum_{j=2}^N \left(E_{ji} + \dfrac{{p_j}^2}{2m_j}\right) - \dfrac{{p_0}^2}{2(M-m_1)}
+$$
+
+이다. 정해진 운동량의 합에 대해 운동에너지를 최소화 하는 것은 $\bf{p}_j$ 가 모두 한 방향을 향할때이다. 이 때 $\bf{m}= (m_2,\ldots,\,m_N)$, $\bf{u} = ({v_2}^2,\ldots,\,{v_N}^2)$ 이라고 하면 코시 슈바르츠 부등식에 의해
+
+$$
+\sum_{j=2}^N \dfrac{{p_j}^2}{2m_j} = \dfrac{1}{2}\sum_{j=2}^N m_j v_j^2 = \dfrac{1}{2}\bf{m \cdot u} \le \dfrac{1}{2}\|\bf{m}\|\cdot \|\bf{u}\|
+$$
+
+이며 최대값은 $\bf{m}$ 과 $\bf{u}$ 가 평행할 때 이다. 즉 $v_j \propto \sqrt{m_j}$ 이어야 한다. $v_j = l\sqrt{m_j}$ 라고 하면
+
+$$
+\sum_{j=2}^N \dfrac{{p_j}^2}{2m_j} \le k ({m_2}^2+ \cdots + {m_N}^2)
+$$
+
+이며 역시 코시-슈바르츠 부등식에 의해 $m_2 = \cdots = m_N$ 일 때 최소가 됨을 안다. 따라서 모든 $m_1$ 을 제외한 모든 분해되는 입자의 질량이 같고 속도도 같을 때 운동에너지가 최대가 된다. $p_j = p_0/(N-1)$ 이며
+
+$$
+\sum_{j=2}^N \dfrac{{p_j}^2}{2m_j} = (N-1)\dfrac{{p_0}^2/(N-1)^2}{(M-m_1)/(N-1)} = \dfrac{{p_0}^2}{M-m_1}
+$$
+
+이므로
+$$
+E'_i = \sum_{j=2}^N E_{ji} 
+$$
+
+이다.
+
+:::
 
 </br>
 
 ## 탄성 충돌
+
+### 질량 중심 좌표계에서의 탄성 충돌 {#sec-CM_elastic_collition_in_C_frame}
 
 두 입자가 충돌 전 후에 내부 상태에 차이가 없다면 이 충돌을 **탄성 충돌(elastic scattering)** 이라고 한다. 즉 두 입자의 충돌 전의 내부 에너지 $E_{1i},\, E_{2i}$ 와 충돌 후의 내부에너지 $E_{1f},\, E_{2f}$ 에 대해 탄성 충돌 후에는 $E_{1i}=E_{1f}$, $E_{2i}=E_{2f}$ 이다. 두 입자의 충돌은 질량중심 좌표계에서 기술하는 것이 보통 가장 편하다. 
 
@@ -139,7 +198,7 @@ $$
 \dfrac{{p_{10}}^2}{2m_1} + \dfrac{{p_{20}}^2}{2m_2} = \dfrac{{p'_{10}}^2}{2m_1} + \dfrac{{p'_{20}}^2}{2m_2}
 $$
 
-이며 $p_{10} = p_{20}$, $p'_{10} + p'_{20}$ 이므로
+이며 $p_{10} = p_{20}$, $p'_{10} = p'_{20}$ 이므로
 
 $$
 p_{10}= p_{20} = p'_{10}= p'_{20}
@@ -151,18 +210,24 @@ $$
 \bf{v}'_{10} = \dfrac{m_2v\hat{\bf{n}}_0}{m_1+m_2},\qquad \bf{v}'_{20} = -\dfrac{m_1v\hat{\bf{n}}_0}{m_1+m_2}
 $$
 
-이다. $\hat{\bf{n}}_0$ 는 두 입자의 상호작용과, 충돌시 위치에 의해 결정된다. 이제 실험실 좌표계에서 생각하자. 질량중심의 속도 $\bf{V}= \dfrac{m_1\bf{v}_1 + m_2\bf{v}_2}{m_1+m_2}$ 에 대해 실험실 좌표계의 충돌 이후의 속도 $\bf{v}'_1,\, \bf{v}'_2$ 는
+이다. $\hat{\bf{n}}_0$ 는 두 입자의 상호작용과, 충돌시 위치에 의해 결정된다. 
+
+</br>
+
+### 실험실 좌표계에서의 탄성 충돌 {#sec-CM_elastic_collition_in_L_frame}
+
+이제 실험실 좌표계에서 생각하자. 질량중심의 속도 $\bf{V}= \dfrac{m_1\bf{v}_1 + m_2\bf{v}_2}{m_1+m_2}$ 에 대해 실험실 좌표계의 충돌 이후의 속도 $\bf{v}'_1,\, \bf{v}'_2$ 는
 
 $$
 \bf{v}'_1 = \bf{v}'_{10} + \bf{V},\qquad \bf{v}'_2 = \bf{v}'_{20} + \bf{V}
 $$
 
-이며 운동량은 환산 질량 $m=\dfrac{m_1m_2}{1/m_1+1/m_2}$ 에 대해 
+이며 운동량은 환산 질량 $\mu=\dfrac{m_1m_2}{m_1+m_2}$ 에 대해 
 
 $$
 \begin{aligned}
-\bf{p}'_1 &= m_1 \bf{v}'_1 = m v \hat{\bf{n}}_0 + \dfrac{m_1(\bf{p}_1 + \bf{p_2})}{m_1+m_2}, \\
-\bf{p}'_2 &= m_2 \bf{v}'_2 = -m v \hat{\bf{n}}_0 + \dfrac{m_2(\bf{p}_1 + \bf{p_2})}{m_1+m_2}
+\bf{p}'_1 &= m_1 \bf{v}'_1 = \mu v \hat{\bf{n}}_0 + \dfrac{m_1(\bf{p}_1 + \bf{p_2})}{m_1+m_2}, \\
+\bf{p}'_2 &= m_2 \bf{v}'_2 = -\mu v \hat{\bf{n}}_0 + \dfrac{m_2(\bf{p}_1 + \bf{p_2})}{m_1+m_2}
 \end{aligned}
 $$
 
@@ -171,25 +236,28 @@ $$
 ![탄성 충돌 후 실험실 좌표계에서의 운동량 벡터](images/momentum_in_lab_frame/momentum_in_lab_frame.png){#fig-CM_elastic_scattering width=220}
 
 
-위 그림에서 
+위 그림에서 $\overrightarrow{OC},\, \overrightarrow{AO},\,\overrightarrow{OB}$ 는 아래와 같다.
 
 $$
-\overrightarrow{OC} = mv,\quad\overrightarrow{AO} = \dfrac{m_1}{m_1+m_2}(\bf{p}_1+ \bf{p}_2), \quad \overrightarrow{OB} = \dfrac{m_2}{m_1+m_2}(\bf{p}_1+ \bf{p}_2)
+\overrightarrow{OC} = \mu\bf{v},\quad\overrightarrow{AO} = \dfrac{m_1}{m_1+m_2}(\bf{p}_1+ \bf{p}_2), \quad \overrightarrow{OB} = \dfrac{m_2}{m_1+m_2}(\bf{p}_1+ \bf{p}_2).
 $$ 
 
-임을 알 수 있다. 
-
-
-
-많은 경우 충돌실험은 정지해 있는 한 입자에 대해 다른 입자를 충돌시킨다. 여기서 $m_2$ 입자가 충돌 전에 정지해 있다고 하자. 즉 $\bf{v}_2=\bf{0}$ 이며 $\bf{v}=\bf{v}_1$ 이다. $\overrightarrow{OB}=mv$ 이며, 따라서 $\overrightarrow{AB}= \bf{p}_1$ 이 된다 @fig-CM_elastic_scattering_angles_ss 는 $m_2$ 가 정지해 있을 때의 실험실 좌표계에서의 운동량에 관련된 도식이다.
+많은 경우 충돌실험은 정지해 있는 한 입자에 대해 다른 입자를 충돌시킨다. 여기서 $m_2$ 입자가 충돌 전에 정지해 있다고 하자. 즉 $\bf{v}_2=\bf{0}$ 이며 $\bf{v}=\bf{v}_1$ 이다. $\overrightarrow{OB}=\mu \bf{v}$ 이며, 따라서 $\overrightarrow{AB}= \bf{p}_1$ 이 된다 @fig-CM_elastic_scattering_angles_ss 는 $m_2$ 가 정지해 있을 때의 실험실 좌표계에서의 운동량에 관련된 도식이다.
 
 ![$m_2$ 가 정지해 있을 때의 실험실 좌표계](images/elastic_scattering_angles/elastic_scatteiing_angles.png){#fig-CM_elastic_scattering_angles_ss width=560}
 
-$m_1<m_2$ 일 때는 $AO < mv$ 이며 $m_1>m_2$ 일 때는 $AO > mv$ 이다. $\theta_1,\,\theta_2$ 는 충돌 이후 $m_1$ 과 $m_2$ 의 이동 각도이다. 이제 질량중심좌표계에서의 산란각 $\Theta$ 와 $\theta_1,\,\theta_2$ 의 관계는 @fig-CM_elastic_scattering_angles_ss 로 부터 다음과 같음을 쉽게 계산 할 수 있다. 
+$m_1<m_2$ 일 때는 $AO < \mu v$ 이며 $m_1>m_2$ 일 때는 $AO > \mu v$ 이다. $\theta_1,\,\theta_2$ 는 충돌 이후 $m_1$ 과 $m_2$ 의 이동 각도이다. 
+
+</br>
+
+### 실험실 좌표계와 질량중심 좌표계의 비교 {#sec-CM_comparison_of_scattering_angle_between_C_frame_and_L_frame}
+
+이제 질량중심좌표계에서의 산란각 $\Theta$ 와 $\theta_1,\,\theta_2$ 의 관계는 @fig-CM_elastic_scattering_angles_ss 로 부터 다음과 같음을 쉽게 계산 할 수 있다. 
 
 $$
 \begin{aligned}
-\tan \theta_1 &= \dfrac{|OC| \sin \Theta}{|AO| + |OC|\cos \Theta} = \dfrac{mv \sin \Theta}{\dfrac{m_1^2}{m_1+m_2}v + mv\sin \Theta} = \dfrac{m_2 \sin \Theta}{m_1 + m_2 \sin \Theta}, \\
+\tan \theta_1 &= \dfrac{|OC| \sin \Theta}{|AO| + |OC|\cos \Theta} = \dfrac{\mu v \sin \Theta}{\dfrac{m_1^2}{m_1+m_2}v + \mu v\cos \Theta} \\[0.3em]
+&= \dfrac{m_2 \sin \Theta}{m_1 + m_2 \cos \Theta}, \\[0.3em]
 \theta_2 &= \dfrac{1}{2}(\pi - \Theta).
 \end{aligned}
 $$ {#eq-CM_elastic_scattering_scaterring_angle}
@@ -230,15 +298,63 @@ $$
 $$
 
 
-$m_1=m_2$ 인 경우에는 $\bf{p}'_1 \cdot \bf{p}'_2 = 0$ 이 된다. 즉 $A,\,B,\,C$ 가 반경 $mv$ 인 원에 위치한다.
+$m_1=m_2$ 인 경우에는 $\bf{p}'_1 \cdot \bf{p}'_2 = 0$ 이 된다. 즉 $A,\,B,\,C$ 가 반경 $\mu v$ 인 원에 위치한다.
+
+</br>
+
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-landau_17_1}
+
+움직이는 질량 $m_1$ 입자와 정지된 $m_2$ 입자의 충돌 후 속도를 실험실 좌표계에서의 운동방향으로 표현하라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+@fig-CM_elastic_scattering_angles_ss 에서 $p_2' = 2OB\cos \theta_2,\, p_2' = m_2v_2',\, OB = \mu v$ 이므로
+
+$$
+v_2' = \dfrac{2\mu v}{m_2}
+$$
+
+이다. $p_1' = AC$ 와 $OC^2 = AO^2 + {p_1'}^2 + 2 AO \cdot p_1' \cos \theta_1$ 으로부터
+
+$$
+\begin{aligned}
+{}&(\mu v)^2 = \left(\dfrac{m_1}{m_2} \mu v\right)^2 + (m_1 v_1')^2 - 2 \dfrac{{m_1}^2}{m_2}mvv_1' \cos \theta_1  \\[0.3em]
+\implies & \left[\left(\dfrac{m_1}{m_2}\right)^2-1\right]\mu^2v^2 + m_1^2 v_1'^2 - 2 \dfrac{{m_1}^2}{m_2}\mu vv'_1 \cos \theta_1 = 0\\[0.3em]
+\implies & \dfrac{(m_1-m_2)m_1^2}{m_1+m_2} v^2 + m_1^2 {v'_1}^2 - 2\dfrac{{m_1}^2}{m_2} \mu  vv'_1 \cos \theta_1 = 0 \\[0.3em]
+\implies & \dfrac{m_1-m_2}{m_1+m_2} + \dfrac{{v'_1}^2}{v^2} - \dfrac{2m_1}{m_1+m_2} \dfrac{v'_1}{v} \cos \theta_1  =0.
+\end{aligned}
+$$
+
+
+따라서
+
+$$
+\dfrac{v'_1}{v} = \dfrac{m_1}{m_1+m_2}\cos \theta_1 \pm \dfrac{\sqrt{m_2^2  - m_1^2 \sin^2 \theta_1}}{m_1+m_2}.
+$$
+
+$v'_1/v>0$ 이어야 하므로 $m_1 > m_2$ 이면 $\pm$ 값을 모두 가질 수 있지만 $m_1<m_2$ 이면 $+$ 인 한 값만을 가질 수 있다.
+
+
+:::
 
 </br>
 
 ## 산란
 
+두 입자가 충돌 할 때 정확한 결과를 위해서는 두 입자의 상호작용을 고려해야 한다. 여기서는 같은 유형의 문제인 입자의 산란을 생각해보기로 하자.
+
+
 ![러더퍼드 산란](images/rutherford_scattering/rutherford_scattering.png){#fig-CM_rutherford_scattering width=370}
 
-원점 $O$ 로부터의 포텐셜 $V(r)$ 의 영향을 받는 질량 $m$ 인 입자의 운동을 생각해보자. 이것은 기본적으로 1체문제이며 @sec-CM_central_force 에서 다루었다. @eq-CM_reduced_to_1d_theta 로 부터
+원점에 정지해 있는 입자로부터의 거리 $r$ 에 대해 포텐셜 $V(r)$ 의 영향을 받는 질량 $m$ 인 입자가 원점 방향으로 위의 그림과 같이 입사된다고 하자. 이것은 기본적으로 1체문제이며 @sec-CM_central_force 에서 다루었다. @eq-CM_reduced_to_1d_theta 로 부터
 
 $$
 \theta_0 = \int_{r_{\min}}^\infty \dfrac{l/r^2}{\sqrt{2m(E-V(r)) - l^2/r^2}}\, dr
@@ -252,7 +368,7 @@ E= \dfrac{1}{2}m{v_{0}}^2,\qquad l = m \rho v_0
 $$
 
 
-이다. 
+이며 이를 이용하여 @eq-CM_rutherford_1 을 다시 쓰면 아래와 같다.
 
 $$
 \theta_0 = \int_{r_{\min}}^\infty  \dfrac{\rho/r^2}{\sqrt{1-(\rho^2/r^2) - 2V(r)/(m{v_0}^2)}}\, dr
@@ -269,14 +385,14 @@ $${#eq-CM_rutherford_3}
 ![산란 실험](images/cross_section/cross_section.png){#fig-CM_scattering_cross_section width=500}
 
 
-물리학에서 많이 이루어지는 산란 실험은 동일한 초기 속도 $\bf{v}_0$ 를 갖는 공간적으로 균일한 분포를 가진 다수의 입자를 입사시키며, 이 균일한 입자들이 $\bf{v}_0$ 와 수직한 방향으로 $A$ 만큼의 면적을 갖고 있다고 하자. $N$ 개의 입자가 입사되었을 때 산란각 $\Theta$ 와 $\Theta + d\Theta$ 사이로 산란되는 입자의 갯수를 $dN(\Theta)$ 이라고 하자. 입사 입자가 우리는 산란단면적 $d\sigma$ 를 다음과 같이 정의 할 수 있다.
+물리학에서 많이 이루어지는 산란 실험은 동일한 초기 속도 $\bf{v}_0$ 를 갖는 공간적으로 균일한 분포를 가진 다수의 입자를 입사시키며, 이 균일한 입자들이 $\bf{v}_0$ 와 수직한 방향으로 $A$ 만큼의 면적을 갖고 있다고 하자. $N$ 개의 입자가 입사되었을 때 산란각 $\Theta$ 와 $\Theta + d\Theta$ 사이로 산란되는 입자의 갯수를 $dN(\Theta)$ 이라고 하자. 입사 입자가 균일할 때 산란단면적 $d\sigma$ 를 다음과 같이 정의 할 수 있다.
 
 $$
 \dfrac{d \sigma}{A} := \dfrac{dN(\Theta)}{N}.
 $$ {#eq-CM_cross_section}
 
 
-$\rho$ 와 $\Theta$ 사이에 전단사 관계가 존재한다고 하자. 그렇다면 우리는 $\rho(\Theta)$ 를 생각 할 수 있다. 문제를 바꾸어 $\rho(\Theta)$ 와 $\rho(\Theta ) + d\rho(\Theta)$ 에 입사되는 빔의 비율을 $d\sigma$ 라고 하면, 
+$\rho$ 와 $\Theta$ 사이에 전단사 관계 $\rho(\Theta)$ 가 존재한다고 하자. 문제를 바꾸어 $\rho(\Theta)$ 와 $\rho(\Theta ) + d\rho(\Theta)$ 에 입사되는 빔의 비율을 $d\sigma$ 라고 하면, 
 
 $$
 d \sigma = A \dfrac{2 \pi \rho d\rho}{A} = 2\pi \rho \left|\dfrac{d\rho}{d\Theta}\right|d \Theta
@@ -298,7 +414,7 @@ $$
 d\sigma = \left(\dfrac{K}{2m{v_0}^2}\right)^2\dfrac{d\Omega}{\sin^4(\Theta/2)}.
 $$ {#eq-CM_rutherford_formular}
 
-러더포드 산란단면적은 $K$ 가 양수인지 음수인지, 즉 포텐셜이 서로 끄는지 밀어내는지와 무관하며 그 절대값에만 관련이 있다는 것을 알 수 있다. 
+러더포드 산란단면적은 $K$ 가 양수인지 음수인지, 즉 포텐셜에 의해 인력이 작용하는지 척력이 작용하는지 여부와 무관하게 그 절대값에만 관련이 있다는 것을 알 수 있다. 
 
 </br>
 
@@ -306,7 +422,9 @@ $$ {#eq-CM_rutherford_formular}
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-landau_18_1}
+::: {#exr-CM_landau_mechanics_18_1}
+
+#### L&L Mechanics 18.1
 
 반지름 $R$ 인 완벽한 딱딱한 공을 생각하자(@fig-CM_perfect_rigid_sphere). 즉 포텐셜은 다음과 같다.
 
@@ -345,8 +463,19 @@ $$
 
 :::
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_landau_mechanics_18_2}
+
+#### L&L Mechanics 18.2
+
+@exr-CM_landau_mechanics_18_1 의 유효산란단면적
+
+:::
+
+</div>
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-rutherford_cross_section}
 
