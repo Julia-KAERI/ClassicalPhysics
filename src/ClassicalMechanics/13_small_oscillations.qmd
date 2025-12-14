@@ -10,6 +10,10 @@ crossref:
 
 </br>
 
+많은 경우 일반화된 변수 $q$ 의 움직임이 작을 경우 진동(osciilation) 으로 기술된다. 여기서는 우선 앞서 다루었던 진동을 다시 다루며, 특히 특정한 상황에 대해서는 변수의 폭이 매우 작아 근사(approximation) 를 이용하여 진동으로 다룰 수 있는 경우를 생각하기로 한다. 
+
+</br>
+
 ## 1차원 조화진동자 Review 
 
 ### 1차원 단순조화진동자의 라그랑지안 기술 {#sec-CM_lagrangian_description_of_1d_sho}
@@ -31,7 +35,14 @@ $$
 \omega_0 = \sqrt{\dfrac{1}{m}\left.\dfrac{d^2U}{dq^2}\right|_{q=q_0} }
 $$
 
-이다.
+이다. 일반적으로 라그랑지안이 어떤 일반화된 좌표 $q$ 에 대해
+
+$$
+L = \dfrac{a\dot{q}^2}{2} - \dfrac{bq^2}{2}
+$$
+
+라면 이 시스템은 각진동수 $\omega = \sqrt{b}{a}$ 인 단순조화진동 운동으로 기술할 수 있다.
+
 
 ### 연습문제 {.unnumbered}
 
@@ -116,12 +127,11 @@ $$
 
 :::
 
-
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-CM_landau_21_5}
+::: {#exr-CM_landau_21_6}
 
-#### L&L Mechanics 21.5
+#### L&L Mechanics 21.6
 
 @exr-landau_cm_5_2 에서의 각진동수를 구하라.
 :::
@@ -130,16 +140,231 @@ $$
 
 ::: {.solution}
 
-라그랑지안을 쓰면 아래와 같다.
+@exr-landau_cm_14_3 역시 생각한다. 라그랑지안 $L$ 은 $|\phi|\ll 1$ 조건에서
 
 $$
 \begin{aligned}
-L &= \dfrac{m_1\dot{x}_1^2}{2}+\dfrac{m_2\left[\dot{x}_1^2 + l^2\dot{\phi}^2 + 2\dot{x}_1 l \dot{\phi} \cos \phi \right]}{2} + m_2gl\cos \phi \\[0.3em]
-&= \dfrac{(m_1+m_2) \dot{x}_1^2}{2} + \dfrac{m_2 (l^2\dot{\phi}^2 + 2\dot{x}_1 l \cos \phi)}{2} + m_2gl \cos \phi
+L &= \dfrac{m_2l^2\dot{\phi}^2}{2}\left[1- \dfrac{m_2 \cos^2\phi}{m_1+m_2}\right] + m_2gl\cos \phi \\[0.3em]
+&\approx \dfrac{m_1m_2l^2 \dot{\phi}^2}{2(m_1+m_2)} + mgl - \dfrac{m_2gl\phi^2}{2}
 \end{aligned}
 $$
 
-$|\phi|\ll 1$ 조건에서 
+이므로 각진동수 $\omega$ 는 다음과 같다.
+
+$$
+\omega = \sqrt{\dfrac{g(m_1+m_2)}{m_1l}}.
+$$
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_landau_21_6}
+
+#### L&L Mechanics 21.6
+
+Determine the form of a curve such that the frequency of oscillations of a particle on it under the force of gravity is independent of the amplitude.
+
+:::
+
+</div>
+
+</br>
 
 
+## 강제 진동
+
+### 감쇠 없는 강제 진동 {#sec-CM_forced_osillation_without_damping}
+
+앞서 다루었듯이 외력이 작용하는 경우를 강제 진동이라고 한다. 이런 시스템은 $kx^2/2$ 형태의 포텐설 에너지 이외에 추가적인 포텐셜 에너지 $U_e(x,\,t)$ 도 고려해야 한다. $|x|$ 가 매우 작을 때 $U_e$ 는 아래와 같이 근사 될 수 있다.
+
+$$
+U_e(x,\,t) \approx U_e(0,\,t) + \left.\dfrac{\partial U_e(x,\,t)}{\partial x}\right|_{x=0}x.
+$$
+
+첫번째항은 시간에만 의존하는 항인데 이 경우 어떤 함수의 시간에 대한 전미분 형태가 될 수 있으므로 라그랑지안에서 제외 할 수 있다. 두번째항의 경우 평형 위치에서 작용하는 힘이므로 $-F(t)x$ 로 쓸 수 있다. 즉 이 시스템의 라그랑지안은 아래와 같이 쓸 수 있다.
+
+$$
+L = \dfrac{1}{2}m\dot{x}^2 - \dfrac{1}{2}kx^2 + xF(t).
+$$
+
+또한 운동방정식은 $\omega_0 = \sqrt{k/m}$ 에 대해 다음과 같다.
+
+$$
+\ddot{x} + {\omega_0}^2x = \dfrac{F(t)}{m}
+$$ {#eq-CM_LL_forced_sho_eom}
+
+[@sec-CM_forced_dsho 강제 조화 진동자](#sec-CM_forced_dsho) 에서 보았듯이 위 미분방정식의 해는 동차미분방정식의 해인 일반해와 비동차 방정식의 해인 특수해의 합이다.
+
+
+$F=\overline{f}_0 e^{i\omega t}$ 라고 놓고 복소수 영역에서 위 방정식의 일반해를 구하면 (@sec-CM_forced_dsho 에서 $\beta=0$ 일 때)
+
+$$
+\overline{x}(t) = \overline{a} e^{i\omega_0 t} + \dfrac{\overline{f}_0}{m(\omega_0^2-\omega^2)}e^{i\omega t} 
+$${#eq-CM_LL_complex_solution_of_forced_sho}
+
+이며 이를 실수에서 표현하면
+
+$$
+x (t) = a\cos (\omega_0 t + \theta_0) + \dfrac{f_0\cos (\omega t + \phi_0)}{m (\omega_0^2 - \omega^2)}
+$$ {#eq-CM_LL_real_solution_of_forced_sho}
+
+이다. 
+
+</br>
+
+### 공명 근처에서 {#sec-CM_forced_oscillation_near_resonance}
+
+당연하게도 $\omega \to \omega_0$ 일 때 $x$ 의 진폭이 무한대로 증가하는 공명을 볼 수 있다. 이 식을 $\omega \ne \omega_0$ 에서 아래와 같이 고쳐보자.
+
+$$
+x(t) = b \cos (\omega_0 t +\theta_0) + \dfrac{f_0 \left[\cos (\omega t + \phi_0) - \cos (\omega_0 t + \phi_0)\right]}{m(\omega_0^2 - \omega^2)}
+$$
+
+$\omega \to \omega_0$ 근사에서 두번째 항을 로피탈의 정리를 이용하면
+
+$$
+x(t) = b \cos (\omega_0 t +\theta_0) + \dfrac{f_0t \sin(\omega t + \phi_0) }{2m\omega}
+$$
+
+이다. 즉 진폭은 공명 근처에서 선형적으로 증가한다.
+
+이제 공명 근처에서의 작은 진동에 대해 생각해보자. $\omega = \omega_0 + \epsilon$ 이라고 하면 복소수 영역에서 ($\overline{x}$ 를 그냥 $x$ 로 표기한다.)
+
+$$
+x= ae^{i\omega_0 t} + be^{i(\omega_0 + \epsilon)t} = (a+be^{i\epsilon t})e^{i\omega_0 t}
+$$
+
+이다. $|\epsilon| \ll |\omega|$ 이므로 $x$ $ab+be^{i\epsilon t}$ 는 $e^{i\omega t}$ 에 비해 훨씬 천천히 변한다. 이 때 진폭 $C=|a+b^{i\epsilon t}|$ 이며 이런 현상을 **맥놀이 (beats)** 라고 한다.
+
+![Beats](images/beats/beats.png){#fig-CM_beats width=300}
+
+</br>
+
+### 복소수 영역에서의 미분방정식의 처리
+
+@eq-CM_LL_forced_sho_eom 은 $\xi := \dot{x}+i\omega x$ 에 대해서 
+
+$$
+\dfrac{d\xi}{dt} - i\omega_0 \xi = \dfrac{F(t)}{m}
+$${#eq-CM_LL_forced_sho_eom_complex_form}
+
+으로 쓸 수 있다. 상수 $h$ 에 대해 $\xi = he^{i\omega_0 t}$ 는 위 방정식의 제차 형태에 대한 일반해이며, 우리는 $\xi = h(t) e^{i\omega_0 t}$ 형태의 특수해가 존재하는지 확인해보자. @eq-CM_LL_forced_sho_eom_complex_form 에 대입하면
+
+$$
+\dot{h}e^{i\omega_0 t}  = \dfrac{F(t)}{m}
+$$
+
+이므로
+
+$$
+h(t) = \int^t \dfrac{F(t')e^{-i\omega_0 t'}}{m}\,dt'
+$$
+
+이므로 $\xi(t)$ 는 아래와 같다.
+
+$$
+\xi (t) = e^{i \omega t} \left[\int_0^t \dfrac{F(t')e^{-i\omega_0 t'}}{m}\,dt' + \xi_0\right].
+$$ {#eq-CM_LL_forced_sho_eom_complex_form_solution_1}
+
+외력이 작용하기 때문에 에너지는 보존되지 않는다. 이제 모든 시간동안에 조화진동자에 전달되는 에너지를 구해보자. @eq-CM_LL_forced_sho_eom_complex_form_solution_1 에서 적분상수 $\xi_0$ 를 없에고 적분 구간을 $(-\infty,\, \infty)$ 로 잡으면
+
+$$
+|\xi_\infty|^2 = \dfrac{1}{m^2} \left|\int_{-\infty}^\infty F(t')e^{-i\omega_0 t'}\,dt'\right|^2
+$$
+
+이다. 또한 
+
+$$
+E=\dfrac{m(\dot{x}^2)+ \omega_0^2x^2}{2} = \dfrac{m|\xi|^2}{2}
+$$
+
+이므로 전달된 에너지는
+
+$$
+E=\dfrac{1}{2m} \left|\int_{-\infty}^\infty F(t')e^{-i\omega_0 t'}\,dt'\right|^2
+$$
+
+이다. 즉 $F(t)$ 의 푸리에 변환의 절대갑 제곱에 비례한다. 여기서 특별히 힘이 $1/\omega_0$ 에 비해 아주 짧은 시간 동안만 작용했다면 $e^{-i\omega_0 t}$ 에 의한 변화는 무시 할 있으므로
+
+$$
+E = \dfrac{1}{2m} \left|\int_{-\infty}^\infty F(t')\,dt'\right|^2
+$$
+
+이다. 
+
+</br>
+
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-CM_landau_22_1}
+
+#### L&L Mechanics 22.1
+
+초기조건dl $x(t)=0,\, \dot{x}=0$ 으로 주어졌다고 하자. 힘이 아래의 경우로 주어졌을 때 강제 조화 진동의 운동을 결정하라. ($a$) $F=F_0$, ($b$) $F=F_0t$, ($c$) $F=F_0 e^{-\alpha t}$, ($d$) $F=F_0 e^{-\alpha t}\cos \beta t$.
+
+
+:::
+
+</div>
+
+::: {.solution}
+
+@eq-CM_LL_real_solution_of_forced_sho 을 이용한다.
+
+($a$) $x (t) = a\cos (\omega_0 t + \theta_0) + \dfrac{F_0 }{m \omega_0^2}$ 이며 초기조건으로부터 $a\cos \theta_0 + \dfrac{F_0 }{m\omega_0^2} =0$, $-a\omega_0 \sin \theta_0 = 0$ 이므로 $\theta_0 = 0$, $a = - \dfrac{F_0\phi_0}{m\omega_0^2}$ 이다. 즉
+
+$$
+x(t) = \dfrac{F_0}{m\omega_0^2}(1-\cos \omega_0 t).
+$$
+
+($b$) $x (t) = a\cos (\omega_0 t + \theta_0) + \dfrac{F_0t }{m \omega_0^2}$ 이며 초기조건으로부터 $a\cos (\theta_0) = 0$, $-a\omega_0 \sin\theta_0 + F_0/(m\omega_0^2)=0$ 이다. $\theta_0 = \pi/2$, $a=F_0/(m\omega_0^3)$ 이므로
+
+$$
+x(t) = \dfrac{F_0}{m\omega_0^3}\left[\omega_0 t-\sin \omega_0 t\right] 
+$$
+
+
+($c$) $x$ 는 일반해 $x_h = a \cos (\omega_0 t + \theta_0)$ 와 특수해 $x_p$ 의 합이다. $F=F_0 e^{-\alpha t}$ 로부터 $x_p = be^{-\alpha t}$ 로 놓고 $b$ 를 구하면
+
+$$
+(\alpha^2+\omega_0^2) b = \dfrac{F_0}{m}
+$$
+
+이므로 
+
+$$
+x_p = \dfrac{F_0}{m(\omega_0^2+\alpha^2)}e^{-\alpha t}
+$$
+
+임을 안다.
+
+$$
+x(t) = a\cos (\omega_0 t +\theta_0) + \dfrac{F_0}{m(\omega_0^2 + \alpha^2)}e^{-\alpha t}
+$$
+
+의 초기조건 $x(0) =0,\, \dot{x}(0) = 0$ 으로부터
+
+$$
+\begin{gather}
+a \cos \theta_0 + \dfrac{F_0}{m(\omega_0^2 +\alpha^2)} =0, \\[0.3em]
+\omega_0 a \sin \theta_0 + \dfrac{\alpha F_0}{m (\omega_0^2 + \alpha^2)} = 0,
+\end{gather}
+$$
+
+이며 이로부터
+
+$$
+a= \dfrac{F_0}{m\omega_0 \sqrt{\omega_0^2 + \alpha^2}}
+$$
+
+암을 안다. 이를 정리하면 다음과 같다.
+
+$$
+x(t) = \dfrac{F_0}{m \omega_0 (\omega_0^2+\alpha^2)}\left[e^{-\alpha t} - \cos \omega_0 t + \left(\dfrac{\alpha}{\omega} \right)\sin \omega_0 t\right]
+$$
+
+($d$)
 :::

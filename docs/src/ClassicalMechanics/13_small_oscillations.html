@@ -361,6 +361,13 @@ window.Quarto = {
   <li><a href="#sec-CM_lagrangian_description_of_1d_sho" id="toc-sec-CM_lagrangian_description_of_1d_sho" class="nav-link" data-scroll-target="#sec-CM_lagrangian_description_of_1d_sho"><span class="header-section-number">7.1.1</span> 1차원 단순조화진동자의 라그랑지안 기술</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
+  <li><a href="#강제-진동" id="toc-강제-진동" class="nav-link" data-scroll-target="#강제-진동"><span class="header-section-number">7.2</span> 강제 진동</a>
+  <ul class="collapse">
+  <li><a href="#sec-CM_forced_osillation_without_damping" id="toc-sec-CM_forced_osillation_without_damping" class="nav-link" data-scroll-target="#sec-CM_forced_osillation_without_damping"><span class="header-section-number">7.2.1</span> 감쇠 없는 강제 진동</a></li>
+  <li><a href="#sec-CM_forced_oscillation_near_resonance" id="toc-sec-CM_forced_oscillation_near_resonance" class="nav-link" data-scroll-target="#sec-CM_forced_oscillation_near_resonance"><span class="header-section-number">7.2.2</span> 공명 근처에서</a></li>
+  <li><a href="#복소수-영역에서의-미분방정식의-처리" id="toc-복소수-영역에서의-미분방정식의-처리" class="nav-link" data-scroll-target="#복소수-영역에서의-미분방정식의-처리"><span class="header-section-number">7.2.3</span> 복소수 영역에서의 미분방정식의 처리</a></li>
+  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -380,6 +387,8 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p><br></p>
+<p>많은 경우 일반화된 변수 <span class="math inline">\(q\)</span> 의 움직임이 작을 경우 진동(osciilation) 으로 기술된다. 여기서는 우선 앞서 다루었던 진동을 다시 다루며, 특히 특정한 상황에 대해서는 변수의 폭이 매우 작아 근사(approximation) 를 이용하여 진동으로 다룰 수 있는 경우를 생각하기로 한다.</p>
+<p><br></p>
 <section id="차원-조화진동자-review" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="차원-조화진동자-review"><span class="header-section-number">7.1</span> 1차원 조화진동자 Review</h2>
 <section id="sec-CM_lagrangian_description_of_1d_sho" class="level3" data-number="7.1.1">
@@ -396,7 +405,11 @@ U(q) \approx U(q_0) + \dfrac{1}{2}\left.\dfrac{d^2U}{dq^2}\right|_{q=q_0} (q-q_0
 <p><span class="math display">\[
 \omega_0 = \sqrt{\dfrac{1}{m}\left.\dfrac{d^2U}{dq^2}\right|_{q=q_0} }
 \]</span></p>
-<p>이다.</p>
+<p>이다. 일반적으로 라그랑지안이 어떤 일반화된 좌표 <span class="math inline">\(q\)</span> 에 대해</p>
+<p><span class="math display">\[
+L = \dfrac{a\dot{q}^2}{2} - \dfrac{bq^2}{2}
+\]</span></p>
+<p>라면 이 시스템은 각진동수 <span class="math inline">\(\omega = \sqrt{b}{a}\)</span> 인 단순조화진동 운동으로 기술할 수 있다.</p>
 </section>
 <section id="연습문제" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
@@ -466,19 +479,170 @@ L = \dfrac{\mu\dot{x}^2}{2} + \dfrac{(m_1+m_2)\dot{R}^2}{2}+ \dfrac{k}{2}x^2
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-CM_landau_21_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.4 (L&amp;L Mechanics 21.5)</strong></span> <a href="02_variational_principle.html#exr-landau_cm_5_2" class="quarto-xref">연습문제&nbsp;<span>2.8</span></a> 에서의 각진동수를 구하라.</p>
+<div id="exr-CM_landau_21_6" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.4 (L&amp;L Mechanics 21.6)</strong></span> <a href="02_variational_principle.html#exr-landau_cm_5_2" class="quarto-xref">연습문제&nbsp;<span>2.8</span></a> 에서의 각진동수를 구하라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>라그랑지안을 쓰면 아래와 같다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="11_one_body_problems.html#exr-landau_cm_14_3" class="quarto-xref">연습문제&nbsp;<span>5.8</span></a> 역시 생각한다. 라그랑지안 <span class="math inline">\(L\)</span> 은 <span class="math inline">\(|\phi|\ll 1\)</span> 조건에서</p>
 <p><span class="math display">\[
 \begin{aligned}
-L &amp;= \dfrac{m_1\dot{x}_1^2}{2}+\dfrac{m_2\left[\dot{x}_1^2 + l^2\dot{\phi}^2 + 2\dot{x}_1 l \dot{\phi} \cos \phi \right]}{2} + m_2gl\cos \phi \\[0.3em]
-&amp;= \dfrac{(m_1+m_2) \dot{x}_1^2}{2} + \dfrac{m_2 (l^2\dot{\phi}^2 + 2\dot{x}_1 l \cos \phi)}{2} + m_2gl \cos \phi
+L &amp;= \dfrac{m_2l^2\dot{\phi}^2}{2}\left[1- \dfrac{m_2 \cos^2\phi}{m_1+m_2}\right] + m_2gl\cos \phi \\[0.3em]
+&amp;\approx \dfrac{m_1m_2l^2 \dot{\phi}^2}{2(m_1+m_2)} + mgl - \dfrac{m_2gl\phi^2}{2}
 \end{aligned}
 \]</span></p>
-<p><span class="math inline">\(|\phi|\ll 1\)</span> 조건에서</p>
+<p>이므로 각진동수 <span class="math inline">\(\omega\)</span> 는 다음과 같다.</p>
+<p><span class="math display">\[
+\omega = \sqrt{\dfrac{g(m_1+m_2)}{m_1l}}.
+\]</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-CM_landau_21_6" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.5 (L&amp;L Mechanics 21.6)</strong></span> Determine the form of a curve such that the frequency of oscillations of a particle on it under the force of gravity is independent of the amplitude.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="강제-진동" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="강제-진동"><span class="header-section-number">7.2</span> 강제 진동</h2>
+<section id="sec-CM_forced_osillation_without_damping" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="sec-CM_forced_osillation_without_damping"><span class="header-section-number">7.2.1</span> 감쇠 없는 강제 진동</h3>
+<p>앞서 다루었듯이 외력이 작용하는 경우를 강제 진동이라고 한다. 이런 시스템은 <span class="math inline">\(kx^2/2\)</span> 형태의 포텐설 에너지 이외에 추가적인 포텐셜 에너지 <span class="math inline">\(U_e(x,\,t)\)</span> 도 고려해야 한다. <span class="math inline">\(|x|\)</span> 가 매우 작을 때 <span class="math inline">\(U_e\)</span> 는 아래와 같이 근사 될 수 있다.</p>
+<p><span class="math display">\[
+U_e(x,\,t) \approx U_e(0,\,t) + \left.\dfrac{\partial U_e(x,\,t)}{\partial x}\right|_{x=0}x.
+\]</span></p>
+<p>첫번째항은 시간에만 의존하는 항인데 이 경우 어떤 함수의 시간에 대한 전미분 형태가 될 수 있으므로 라그랑지안에서 제외 할 수 있다. 두번째항의 경우 평형 위치에서 작용하는 힘이므로 <span class="math inline">\(-F(t)x\)</span> 로 쓸 수 있다. 즉 이 시스템의 라그랑지안은 아래와 같이 쓸 수 있다.</p>
+<p><span class="math display">\[
+L = \dfrac{1}{2}m\dot{x}^2 - \dfrac{1}{2}kx^2 + xF(t).
+\]</span></p>
+<p>또한 운동방정식은 <span class="math inline">\(\omega_0 = \sqrt{k/m}\)</span> 에 대해 다음과 같다.</p>
+<p><span id="eq-CM_LL_forced_sho_eom"><span class="math display">\[
+\ddot{x} + {\omega_0}^2x = \dfrac{F(t)}{m}
+\tag{7.1}\]</span></span></p>
+<p><a href="11_one_body_problems.html#sec-CM_forced_dsho"><span class="quarto-xref"><span> 5.2.3</span></span> 강제 조화 진동자</a> 에서 보았듯이 위 미분방정식의 해는 동차미분방정식의 해인 일반해와 비동차 방정식의 해인 특수해의 합이다.</p>
+<p><span class="math inline">\(F=\overline{f}_0 e^{i\omega t}\)</span> 라고 놓고 복소수 영역에서 위 방정식의 일반해를 구하면 (<a href="11_one_body_problems.html#sec-CM_forced_dsho" class="quarto-xref"><span> 5.2.3</span></a> 에서 <span class="math inline">\(\beta=0\)</span> 일 때)</p>
+<p><span id="eq-CM_LL_complex_solution_of_forced_sho"><span class="math display">\[
+\overline{x}(t) = \overline{a} e^{i\omega_0 t} + \dfrac{\overline{f}_0}{m(\omega_0^2-\omega^2)}e^{i\omega t}
+\tag{7.2}\]</span></span></p>
+<p>이며 이를 실수에서 표현하면</p>
+<p><span id="eq-CM_LL_real_solution_of_forced_sho"><span class="math display">\[
+x (t) = a\cos (\omega_0 t + \theta_0) + \dfrac{f_0\cos (\omega t + \phi_0)}{m (\omega_0^2 - \omega^2)}
+\tag{7.3}\]</span></span></p>
+<p>이다.</p>
+<p><br></p>
+</section>
+<section id="sec-CM_forced_oscillation_near_resonance" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="sec-CM_forced_oscillation_near_resonance"><span class="header-section-number">7.2.2</span> 공명 근처에서</h3>
+<p>당연하게도 <span class="math inline">\(\omega \to \omega_0\)</span> 일 때 <span class="math inline">\(x\)</span> 의 진폭이 무한대로 증가하는 공명을 볼 수 있다. 이 식을 <span class="math inline">\(\omega \ne \omega_0\)</span> 에서 아래와 같이 고쳐보자.</p>
+<p><span class="math display">\[
+x(t) = b \cos (\omega_0 t +\theta_0) + \dfrac{f_0 \left[\cos (\omega t + \phi_0) - \cos (\omega_0 t + \phi_0)\right]}{m(\omega_0^2 - \omega^2)}
+\]</span></p>
+<p><span class="math inline">\(\omega \to \omega_0\)</span> 근사에서 두번째 항을 로피탈의 정리를 이용하면</p>
+<p><span class="math display">\[
+x(t) = b \cos (\omega_0 t +\theta_0) + \dfrac{f_0t \sin(\omega t + \phi_0) }{2m\omega}
+\]</span></p>
+<p>이다. 즉 진폭은 공명 근처에서 선형적으로 증가한다.</p>
+<p>이제 공명 근처에서의 작은 진동에 대해 생각해보자. <span class="math inline">\(\omega = \omega_0 + \epsilon\)</span> 이라고 하면 복소수 영역에서 (<span class="math inline">\(\overline{x}\)</span> 를 그냥 <span class="math inline">\(x\)</span> 로 표기한다.)</p>
+<p><span class="math display">\[
+x= ae^{i\omega_0 t} + be^{i(\omega_0 + \epsilon)t} = (a+be^{i\epsilon t})e^{i\omega_0 t}
+\]</span></p>
+<p>이다. <span class="math inline">\(|\epsilon| \ll |\omega|\)</span> 이므로 <span class="math inline">\(x\)</span> <span class="math inline">\(ab+be^{i\epsilon t}\)</span> 는 <span class="math inline">\(e^{i\omega t}\)</span> 에 비해 훨씬 천천히 변한다. 이 때 진폭 <span class="math inline">\(C=|a+b^{i\epsilon t}|\)</span> 이며 이런 현상을 <strong>맥놀이 (beats)</strong> 라고 한다.</p>
+<div id="fig-CM_beats" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-CM_beats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/beats/beats.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_beats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;7.3: Beats
+</figcaption>
+</figure>
+</div>
+<p><br></p>
+</section>
+<section id="복소수-영역에서의-미분방정식의-처리" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="복소수-영역에서의-미분방정식의-처리"><span class="header-section-number">7.2.3</span> 복소수 영역에서의 미분방정식의 처리</h3>
+<p><a href="#eq-CM_LL_forced_sho_eom" class="quarto-xref">식&nbsp;<span>7.1</span></a> 은 <span class="math inline">\(\xi := \dot{x}+i\omega x\)</span> 에 대해서</p>
+<p><span id="eq-CM_LL_forced_sho_eom_complex_form"><span class="math display">\[
+\dfrac{d\xi}{dt} - i\omega_0 \xi = \dfrac{F(t)}{m}
+\tag{7.4}\]</span></span></p>
+<p>으로 쓸 수 있다. 상수 <span class="math inline">\(h\)</span> 에 대해 <span class="math inline">\(\xi = he^{i\omega_0 t}\)</span> 는 위 방정식의 제차 형태에 대한 일반해이며, 우리는 <span class="math inline">\(\xi = h(t) e^{i\omega_0 t}\)</span> 형태의 특수해가 존재하는지 확인해보자. <a href="#eq-CM_LL_forced_sho_eom_complex_form" class="quarto-xref">식&nbsp;<span>7.4</span></a> 에 대입하면</p>
+<p><span class="math display">\[
+\dot{h}e^{i\omega_0 t}  = \dfrac{F(t)}{m}
+\]</span></p>
+<p>이므로</p>
+<p><span class="math display">\[
+h(t) = \int^t \dfrac{F(t')e^{-i\omega_0 t'}}{m}\,dt'
+\]</span></p>
+<p>이므로 <span class="math inline">\(\xi(t)\)</span> 는 아래와 같다.</p>
+<p><span id="eq-CM_LL_forced_sho_eom_complex_form_solution_1"><span class="math display">\[
+\xi (t) = e^{i \omega t} \left[\int_0^t \dfrac{F(t')e^{-i\omega_0 t'}}{m}\,dt' + \xi_0\right].
+\tag{7.5}\]</span></span></p>
+<p>외력이 작용하기 때문에 에너지는 보존되지 않는다. 이제 모든 시간동안에 조화진동자에 전달되는 에너지를 구해보자. <a href="#eq-CM_LL_forced_sho_eom_complex_form_solution_1" class="quarto-xref">식&nbsp;<span>7.5</span></a> 에서 적분상수 <span class="math inline">\(\xi_0\)</span> 를 없에고 적분 구간을 <span class="math inline">\((-\infty,\, \infty)\)</span> 로 잡으면</p>
+<p><span class="math display">\[
+|\xi_\infty|^2 = \dfrac{1}{m^2} \left|\int_{-\infty}^\infty F(t')e^{-i\omega_0 t'}\,dt'\right|^2
+\]</span></p>
+<p>이다. 또한</p>
+<p><span class="math display">\[
+E=\dfrac{m(\dot{x}^2)+ \omega_0^2x^2}{2} = \dfrac{m|\xi|^2}{2}
+\]</span></p>
+<p>이므로 전달된 에너지는</p>
+<p><span class="math display">\[
+E=\dfrac{1}{2m} \left|\int_{-\infty}^\infty F(t')e^{-i\omega_0 t'}\,dt'\right|^2
+\]</span></p>
+<p>이다. 즉 <span class="math inline">\(F(t)\)</span> 의 푸리에 변환의 절대갑 제곱에 비례한다. 여기서 특별히 힘이 <span class="math inline">\(1/\omega_0\)</span> 에 비해 아주 짧은 시간 동안만 작용했다면 <span class="math inline">\(e^{-i\omega_0 t}\)</span> 에 의한 변화는 무시 할 있으므로</p>
+<p><span class="math display">\[
+E = \dfrac{1}{2m} \left|\int_{-\infty}^\infty F(t')\,dt'\right|^2
+\]</span></p>
+<p>이다.</p>
+<p><br></p>
+</section>
+<section id="연습문제-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-CM_landau_22_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.6 (L&amp;L Mechanics 22.1)</strong></span> 초기조건dl <span class="math inline">\(x(t)=0,\, \dot{x}=0\)</span> 으로 주어졌다고 하자. 힘이 아래의 경우로 주어졌을 때 강제 조화 진동의 운동을 결정하라. (<span class="math inline">\(a\)</span>) <span class="math inline">\(F=F_0\)</span>, (<span class="math inline">\(b\)</span>) <span class="math inline">\(F=F_0t\)</span>, (<span class="math inline">\(c\)</span>) <span class="math inline">\(F=F_0 e^{-\alpha t}\)</span>, (<span class="math inline">\(d\)</span>) <span class="math inline">\(F=F_0 e^{-\alpha t}\cos \beta t\)</span>.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-CM_LL_real_solution_of_forced_sho" class="quarto-xref">식&nbsp;<span>7.3</span></a> 을 이용한다.</p>
+<p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(x (t) = a\cos (\omega_0 t + \theta_0) + \dfrac{F_0 }{m \omega_0^2}\)</span> 이며 초기조건으로부터 <span class="math inline">\(a\cos \theta_0 + \dfrac{F_0 }{m\omega_0^2} =0\)</span>, <span class="math inline">\(-a\omega_0 \sin \theta_0 = 0\)</span> 이므로 <span class="math inline">\(\theta_0 = 0\)</span>, <span class="math inline">\(a = - \dfrac{F_0\phi_0}{m\omega_0^2}\)</span> 이다. 즉</p>
+<p><span class="math display">\[
+x(t) = \dfrac{F_0}{m\omega_0^2}(1-\cos \omega_0 t).
+\]</span></p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(x (t) = a\cos (\omega_0 t + \theta_0) + \dfrac{F_0t }{m \omega_0^2}\)</span> 이며 초기조건으로부터 <span class="math inline">\(a\cos (\theta_0) = 0\)</span>, <span class="math inline">\(-a\omega_0 \sin\theta_0 + F_0/(m\omega_0^2)=0\)</span> 이다. <span class="math inline">\(\theta_0 = \pi/2\)</span>, <span class="math inline">\(a=F_0/(m\omega_0^3)\)</span> 이므로</p>
+<p><span class="math display">\[
+x(t) = \dfrac{F_0}{m\omega_0^3}\left[\omega_0 t-\sin \omega_0 t\right]
+\]</span></p>
+<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(x\)</span> 는 일반해 <span class="math inline">\(x_h = a \cos (\omega_0 t + \theta_0)\)</span> 와 특수해 <span class="math inline">\(x_p\)</span> 의 합이다. <span class="math inline">\(F=F_0 e^{-\alpha t}\)</span> 로부터 <span class="math inline">\(x_p = be^{-\alpha t}\)</span> 로 놓고 <span class="math inline">\(b\)</span> 를 구하면</p>
+<p><span class="math display">\[
+(\alpha^2+\omega_0^2) b = \dfrac{F_0}{m}
+\]</span></p>
+<p>이므로</p>
+<p><span class="math display">\[
+x_p = \dfrac{F_0}{m(\omega_0^2+\alpha^2)}e^{-\alpha t}
+\]</span></p>
+<p>임을 안다.</p>
+<p><span class="math display">\[
+x(t) = a\cos (\omega_0 t +\theta_0) + \dfrac{F_0}{m(\omega_0^2 + \alpha^2)}e^{-\alpha t}
+\]</span></p>
+<p>의 초기조건 <span class="math inline">\(x(0) =0,\, \dot{x}(0) = 0\)</span> 으로부터</p>
+<p><span class="math display">\[
+\begin{gather}
+a \cos \theta_0 + \dfrac{F_0}{m(\omega_0^2 +\alpha^2)} =0, \\[0.3em]
+\omega_0 a \sin \theta_0 + \dfrac{\alpha F_0}{m (\omega_0^2 + \alpha^2)} = 0,
+\end{gather}
+\]</span></p>
+<p>이며 이로부터</p>
+<p><span class="math display">\[
+a= \dfrac{F_0}{m\omega_0 \sqrt{\omega_0^2 + \alpha^2}}
+\]</span></p>
+<p>암을 안다. 이를 정리하면 다음과 같다.</p>
+<p><span class="math display">\[
+x(t) = \dfrac{F_0}{m \omega_0 (\omega_0^2+\alpha^2)}\left[e^{-\alpha t} - \cos \omega_0 t + \left(\dfrac{\alpha}{\omega} \right)\sin \omega_0 t\right]
+\]</span></p>
+<p>(<span class="math inline">\(d\)</span>)</p>
 </div>
 
 
