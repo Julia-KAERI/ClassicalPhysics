@@ -1,0 +1,21 @@
+---
+title: "열역학"
+number-sections: true
+number-depth: 2
+crossref:
+  chapters: true
+  
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+열역학의 기본원리에 대해 설명한다.
+
+@Fermi1956ThermodynamicsDover
+
+### 참고문헌
+::: {#refs}
+
+@Fermi1956ThermodynamicsDover
+
+:::
