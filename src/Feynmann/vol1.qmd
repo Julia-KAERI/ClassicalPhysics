@@ -1,0 +1,99 @@
+---
+title: "파인만 물리학 강의 I"
+number-sections: true
+number-depth: 1
+crossref:
+  chapters: true
+---
+
+
+{{< include ../../latexmacros.qmd >}}
+
+## 39. The Kinetic Theory of Gases
+
+### 39-4 온도와 운동에너지
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-TD_feynmann_1}
+
+#### 두 종류의 기체분자
+
+![파인만 물리학 강의 I. 그림 39-4](figures/feynmann_1_fig_39_4.png)
+
+두 종류의 기체가 컨테이너 안에서 셖여 있다고 하자. 기체 분자의 질량은 각각 $m_1,\,m_2$ 이며 속도를 각각 $\bf{v}_1,\,\bf{v}_2$ 라고 하자. 기체 분자의 충돌은 탄성 충돌이라고 가정한다. 
+
+이 때 질량중심죄표계에서 보면 ([질량중심 좌표계에서의 탄성 충돌](#sec-CM_elastic_collition_in_C_frame) 을 참고하라) 이 충돌은 두 입자는 속도는 일정하며 방향만 바뀌는 충돌이며 질량중심 좌표계에서 이 방향의 분포는 균일하다. 
+
+이제 실제 상황에서 보자. 서로 다른 두 분자의 충돌의 질량 중심 속도 $\bf{V}$ 와 상대속도 $\bf{v}$ 를 아래와 같이 정한다. 
+
+$$
+\bf{V}=\dfrac{m_1\bf{v}_1+m_2\bf{v}_2}{m_1+m_2},\qquad \bf{v} = \bf{v}_1-\bf{v}_2
+$$
+
+충돌 후에 원자의 분포는 어떻게 될까? 일단 우리는 충돌 전후 질량중심의 속도 $\bf{V}$ 가 변하지 않는다는 것을 안다. 또한 $\bf{V}$ 의 방향이 완전이 임의적이라는 데 동의 할 수 있을 것이다. 즉 $\bf{V\cdot v}$ 의 평균값은 $0$ 이다. 또한 $\bf{v}_1\bf{\cdot v}_2$ 의 평균값도 $0$ 이라는 데 동의 할 수 있다. 여기서
+
+$$
+\bf{V\cdot v} = \dfrac{(\bf{v}_1-\bf{v}_2) \bf{\cdot} (m_1\bf{v}_1 + m_2 \bf{v}_2)}{m_1+m+2} = \dfrac{(m_1v_1^2 - m_2v_2^2) + (m_2-m_1)(\bf{v}_1\bf{\cdot v}_2)}{m_1+m_2}
+$$
+
+이므로
+
+$$
+\left\langle \dfrac{m_1v_1^2}{2}\right\rangle = \left\langle \dfrac{m_2v_2^2}{2}\right\rangle
+$$
+
+이다. 즉 두 기체 분자의 평균 운동 에너지는 같아진다.
+
+::: 
+
+</div>
+
+</br>
+
+## 40. The Principle of Statistical Mechanics
+
+### 40.1 지수적 대기
+
+
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-TD_feynmann_1}
+
+#### 높이에 따른 압력의 변화
+
+![파인만 물리학 강의 I. 그림 40-1](figures/feynmann_1_fig_40_1.png){width=300}
+
+위의 그림과 같은 실험장치를 생각하자. 피스톤의 위의 공기와 아래의 공기는 열평형 상태인데 이는 위와 아래의 공기의 출입은 막으면서 열만을 전달해주는 메카니즘이 존재하기 때문이다. 온도 $T$, 압력 $P$, 부피 $V$, 볼츠만 상수 $k_B$, 공기 분자 개수 $N$ 에 대해 $PV=Nk_BT$ 이며 단위 부피당 분자 개수 $n=N/V$ 이다. 이로부터 $P=nk_BT$ 임을 알며 $T$ 가 일정하므로 $P \propto n$ 이다. 여기에 중력가속도 $g$ 에 의한 중력이 작용한다고 하자. 
+
+위의 그림과 같이 높이 $h$ 와 $h+dh$ 에 의해 이루어진 얇은 층에 대해 위에서 누르는 힘과 아래에서 누르는 힘이 평행을 이루어야 한다. 즉 압력이 같아야 한다. 기체 분자의 질량이 $m$ 이라면
+
+$$
+P_{h+dh}-P_h = dP = -mgn\,dh
+$$
+
+임을 안다. $P = nk_BT$ 이며 주어진 조건으로부터 $dP = dnk_B T$ 임을 안다. 따라서
+
+$$
+\dfrac{dn}{dh}= - \dfrac{mg}{k_B T}n
+$$
+
+이며 이 미분방정식의 해는
+
+$$
+n(h) = n_0 e^{-mgh/k_BT}
+$$
+
+임을 안다. 
+
+
+::: 
+
+</div> </br>
+
+## 40-2 볼츠만 법칙
+
+$$
+n = n_0 e^{-\text{P.E.}/k_BT}
+$$

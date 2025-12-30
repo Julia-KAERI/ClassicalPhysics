@@ -29,13 +29,6 @@ book:
       - src/Mechanics_and_Symmetry/01_experimental_facts.qmd
       - src/Mechanics_and_Symmetry/02_equations_of_motion.qmd
 
-    # - part: src/Electromagnetism/00_index.qmd
-    #   chapters:
-    #   - src/Electromagnetism/01_mathematics.qmd
-    #   - src/Electromagnetism/electrostatics_1.qmd
-    #   - src/Electromagnetism/electrostatics_2.qmd
-    #   - src/Electromagnetism/electrostatics_3.qmd
-    
     - part: src/Electrodynamics/00_index.qmd
       chapters:
       - src/Electrodynamics/01_introduction.qmd
@@ -46,7 +39,6 @@ book:
       - src/Electrodynamics/A1_mathematics.qmd
       - src/Electrodynamics/A2_waves.qmd
      
-      
     - part: src/Relativity/00_index.qmd
       chapters:
       - src/Relativity/01_introduction_to_special_relativity.qmd
@@ -55,20 +47,18 @@ book:
     - part: src/ThermalPhysics/00_index.qmd
       chapters:
       - src/ThermalPhysics/01_thermodynamic_systems.qmd
+      - src/ThermalPhysics/02_entropy.qmd
+      - src/ThermalPhysics/0A_mathematics.qmd
+
+    - part: src/Feynmann/00_index.qmd    
+      chapters: 
+        - src/Feynmann/vol1.qmd
+        - src/Feynmann/feynmann_trans.qmd
     
-
-    # - part: src/ClassicalFieldTheory/00_index.qmd
-    #   chapters:
-    #   - src/ClassicalFieldTheory/01_principle_of_relativity.qmd
-
-    # - part: src/Lanczos/Lanczos.qmd
-    #   chapters:
-    #   - src/Lanczos/00_01.qmd
-    #   - src/Lanczos/01_01.qmd
-    #   - src/Lanczos/02_01.qmd
     - part: src/topics/Topics.qmd
       chapters:
         - src/topics/mathematical.qmd
+
     # - part: src/images/images.qmd
     #   chapters:
     #   - src/images/images_classical_mechanics_01.qmd

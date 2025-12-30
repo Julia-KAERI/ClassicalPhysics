@@ -1,5 +1,5 @@
 ---
-title: "열역학 계 와 열역학 제 1 법칙"
+title: "열역학 계 와 열역학 법칙"
 number-sections: true
 number-depth: 3
 crossref:
@@ -62,7 +62,7 @@ crossref:
 
 - 열역학적 상태를 아는것은 동역학적 상태를 결정하기에는 부족하다. 예를 들어 균일한 유체로 이루어진 계에서 주어진 온도와 부피에 대해 (압력도 따라서 정해진다) 무한에 가까운 분자 운동 상태가 존재한다. 시간이 흐름에 따라 계는 이 가능한 무한한 상태를 순회한다. 이 관점으로는 열역학적 상태는 분자 운동의 결과로 이 계가 순회하는 모든 동역학적 상태의 **앙상블 (enssemble)** 이라고 볼 수 있다.
 - **평형상태 (states of equillibrium)** 는 외부의 조건이 변화하지 않았을 때 계의 성질이 변화하지 않는 상태를 의미한다.
-- 많은 경우 우리는 계가 초기상테애서 최종상태까지 중간 무수한 상태를 거쳐 연속적으로 변환되는 것을 생각한다. 이것을 **열역학적 과정(thermondynamic process)** 혹은 줄여서 **과정 (process)** 이라고 한다. 만약 상태가 $(V,\,p)$ 도식에 의해 표현 될 수 있다면 이 변환은 초기상태를 의미하는 점과 최종상태를 의미하는 점을 잇는 곡선으로 표현된다.
+- 많은 경우 우리는 계가 초기상테애서 최종상태까지 중간의 무수한 상태를 거쳐 연속적으로 전행되는 것을 생각한다. 이것을 **열역학적 과정(thermondynamic process)** 혹은 줄여서 **과정 (process)** 이라고 한다. 만약 상태가 $(V,\,p)$ 도식에 의해 표현 될 수 있다면 이 변환은 초기상태를 의미하는 점과 최종상태를 의미하는 점을 잇는 곡선으로 표현된다.
 - 이 변환에서 거치는 모든 상태가 평형상태와 단지 아주 조금의 차이밖에 없다면 이 과정을 **가역과정(reversible process)** 이라고 한다. 따라서 가역과정의 초기상태와 최종상태는 평형상태 이어야 한다.
 - 가역과정은 실제적으로 외부 조건을 매우 느리게 변화시켜 계가 각각의 단계에서 변화된 조건에 적응하게 하여 구현한다.
 - 초기상태 $A$ 에서 최종상태 $B$ 까지 가역변환 되었다면 이 과정을 역으로 수행하면 $B$ 에서 $A$ 까지 변환될 수 있다. 
@@ -141,7 +141,7 @@ $$
 - 열역학 제 1 법칙은 열역학 계에서의 에너지 보존 법칙이다. 계의 에너지의 변화량과 외부에서 받은 에너지의 합은 항상 $0$ 이다.
 - 위의 서술에서 *계의 에너지* 와 *외부에서 받은 에너지* 에 대해 명확히 정의해야 한다.
 
-### 계의 에너지와 외부에서 받은 에너지
+### 계의 에너지와 에너지 보존 {#sec-TD_energy_of_system_and_conservation_of_energy}
 
 - 역학적 보존계에서 에너지는 포텐셜 에너지와 운동에너지의 합이며 따라서 계의 동력학 변수의 함수이다. 따라서 외부에서 힘이작용하지 않으면 이 계의 에너지는 일정하다. 즉 이 계가 고립계이고 $A,\,B$ 가 이 계의 연속적인 상태이며 $U_A,\,U_B$ 가 각각의 상태에서의 에너지라면 $U_A=U_B$ 이다.
 - 이 계가 고립계가 아니며 외부에서 $-W$ 만큼이 전달되었다면 ($+W$ 는 이 계가 외부에 한 일) 다음이 성립한다.
@@ -150,7 +150,606 @@ $$
   $$ {#eq-TD_work_and_internal_energy}
 - 이 계의 수많은 입자들 사이의 상호작용에 대해 우리가 알지 못한다면, 우리는 주어진 동역학적 상태의 에너지를 계산 할 수 없다. 그러나 @eq-TD_work_and_internal_energy 을 이용하여 계의 에너지에 대한 실험적 정의를 할 수 있다.
 - 계의 임의의 상태 $O$ 를 정한 후 그 에너지를 $0$ 으로 놓는다. 즉 $U_O=0$. 앞으로 이 상태를 *표준 상태(standard state)* 라고 한다. 이제 외부에서 힘을 가하여 상태를 $A$ 로 변환하였다고 하자. 이 때 외부에서 이 시스템에 해준 일을 $-W_A$ 라고 하자. 그렇다면 $A$ 상태의 에너지 $U_A = -W_A$ 이며 이 값이 $A$ 상태에 대한 실험적 정의값이라고 할 수 있다.
-- 위의 실험적 정의가 의미가 있으려면 $-W_A$ 가 단지 상태 $O$ 와 상태 $A$ 에만 의존하며 $O\to A$ 변환의 경로에 의존하면 안된다. 경로에 의존하지 않는 성질은 @eq-TD_work_and_internal_energy 으로부터 온다. 즉 만약 이 경로 독립성이 성립하지 않는다면 우리 계에서는 에너지 보존이 성립하지 않는다는 의미이며, 역학적 일 이외의 에너지 전달 수단을 고려해야 한다는 의미이다.
-- 당분간은 우리 계가 해 준 일은 과정, 혹은 경로에 무관하게 초기상태와 최종상태에만 의존함을 가정한다.
 - 이제 두 상태 $A$, $B$ 를 생각하자. $A\to B$ 과정은 $A\to O \to B$ 과정으로 생각할 수 있으며 $W=-W_A + W_B$ 이므로 $U_B-U_A = -W$ 이다. 이제 우리는 @eq-TD_work_and_internal_energy 를 얻었다.
 - 실험적으로 정의된 내부 에너지는 표준상태 $O$ 에 따라 다르다는 것은 자명하다. 
+
+</br>
+
+### 에너지 보존과 열 {#sec-TD_heat_the_another_form_of_energy}
+
+- 위의 실험적 정의가 의미가 있으려면 $-W_A$ 가 단지 상태 $O$ 와 상태 $A$ 에만 의존하며 $O\to A$ 변환의 경로에 의존하면 안된다. 경로에 의존하지 않는 성질은 @eq-TD_work_and_internal_energy 으로부터 온다. 즉 만약 이 경로 독립성이 성립하지 않는다면 우리 계에서는 (지금까지의) 에너지 보존이 성립하지 않는다는 의미이며, 에너지 보존을 포기하지 않으려면 역학적 일 이외의 에너지 전달 수단을 인정해야 한다는 의미이다.
+- 예를 들면 ($1$) 외부에서 열을 가한다면 계의 온도는 올라가지만 이 계가 일을 하거나 받지 않을 수 있다. ($2$) [줄의 실험](https://en.wikipedia.org/wiki/Mechanical_equivalent_of_heat) 은 명백히 역학적 일($V$ 가 변하는) 없이도 내부의 온도를 상승시킬 수 있음을 보여준다.
+- 이로부터 우리는 열(heat) 이라는 비 역학적인(non mechanical) 형태로 에너지가 전달되는 것을 인정 할 수 밖에 없다. 즉 열은 에너지이다. 
+
+</br>
+
+### 열역학 제 1 법칙
+
+- 계 와 환경이 열적으로 분리된 경우, 즉 계가 단열체로 둘러쌓인 경우를 생각해보자. 이 경우 계와 환경 사이에 열교환은 없으며 서로 역학적 일을 주고받을수 있을 뿐이다. 이 경우 계가 해준 혹은 받은 일은 초기상태와 최종상태에 의해 결정된다. 또한 계의 에너지 변화 역시 초기상태와 나중상태에 의해 결정된다.
+- 계가 $A\to B$ 과정을 겪었을 때 에너지 변화 $\Delta U = U_B-U_A$ 라고 하자. 계가 단열되었으므로 $\Delta U + W=0$ 이다.
+- 이제 계가 환경과 단열되지 않았다고 하자. 그렇다면 $\Delta U + W \ne 0$ 이며 열의 형태로 에너지가 전달될 수 있다. 즉 더 일반적인 형태로 아래와 같이 쓸 수 있다. 이를 열역학 제 1 법칙 이라고 한다.
+$$
+\Delta U + W = Q.
+$$ {#eq-TD_energy_conservation_including_heat}
+- 위 식에서 $Q$ 는 역학적 에너지($dV\ne 0$) 의 형태가 아닌 다른 형태로 전달되는 에너지 전체이다.
+- 순환 과정일 경우 $\Delta U = 0$ 이므로 $W=Q$ 이다. 
+
+</br>
+
+## 이상기체와 열역학 제 1 법칙
+
+### 상태가 $(V,\,p)$ 도식으로 표현되는 계에서의 열역학 제 1 법칙
+
+- 동일한 유체로 이루어진 계와 같이 상태가 $V,\,p,\,T$ 가운데 두개로 정의 될 수 있는 계를 생각하자. 여기서 독립변수가 무엇인지를 정하기 위해 예를들어 아래와 같은 표기는 $V$ 가 일정한 상태에서의 $\partial U/\partial T$ 는 아래와 같이 표기한다.
+
+$$
+\left(\dfrac{\partial U}{\partial T}\right)_V.
+$$
+
+- 내부에너지 $U$, 일 $W$, 열 $Q$ 의 미소 변화를 보자. 여기서 주의할것은 $U$ 는 물질의 상태에만 의존하는 **상태 함수(state function)** 이지만 일이나 열은 상태에 도달하기까지의 과정에 의존하는 **경로 함수(path function)** 이라는 것이다. 이를 구분하기 위해 $dU$ 나 $\dbar W$ 와 같이 다른 기호를 사용한다. 열역학 제 1 법칙에 의해 다음이 성립한다.
+
+$$
+dU + \dbar W = \dbar Q.
+$$ {#eq-TD_dU_in_form_1}
+
+- $\dbar W = pdV$ 이므로 다음과 같다.
+  
+  $$
+  dU + pdV = \dbar Q
+  $$ {#eq-TD_dU_in_form_2}
+
+</br>
+
+### 열용량과 비열 {#sec-TD_heat_capapcity}
+
+- $T,\,V$ 를 독립변수로 정하면
+
+  $$
+  dU = \left(\dfrac{\partial U}{\partial T}\right)_V\,dT + \left(\dfrac{\partial U}{\partial V}\right)_T\, dV
+  $$
+  
+  이며 @eq-TD_dU_in_form_2 는 아래와 같이 쓸 수 있다.
+  $$
+  \left(\dfrac{\partial U}{\partial T}\right)_V\,dT + \left[p + \left(\dfrac{\partial U}{\partial V}\right)_T\right] \,dV = \dbar Q.
+  $$ {#eq-TD_1st_thermodynamic_raw_in_TV_variables}
+
+- $T,\,p$ 를 독립변수로 정하면 아래와 같은 식을 얻는다.
+  $$
+  \left[\left(\dfrac{\partial U}{\partial T}\right)_p + p\left(\dfrac{\partial V}{\partial T}\right)_V\right]\,dT + \left[\left(\dfrac{\partial U}{\partial p}_T\right) + p\left(\dfrac{\partial V}{\partial p}\right)_T\right]\,dp = Q.
+  $${#eq-TD_1st_thermodynamic_raw_in_Tp_variables}
+- $V,\,p$ 를 독립변수로 정하면 아래와 같은 식을 얻는다.
+  $$
+  \left(\dfrac{\partial U}{\partial p}\right)_V\,dp + \left[p + \left(\dfrac{\partial U}{\partial V}\right)_p\right] \,dV = \dbar Q.
+  $$ {#eq-TD_1st_thermodynamic_raw_in_Vp_variables}
+
+
+::: {.callout-note icon="false"}
+
+#### **정적열용량과 정압열용량**
+
+::: {#def-CM_specific_heat}
+
+부피가 일정할 때 단위 온도만큼 온도를 올리기 위해 필요한 열량 $C_V$ 를 **정적 열용량 (heat capacity at constant volumn)** 이라고 하고 압력이 일정할 때 단위 온도만큼 온도를 올리기 위해 필요한 열량 $C_p$ 를 **정압 열용량 (heat capacity at constant pressure)** 이라고 한다. 즉
+
+$$
+C_V := \left(\dfrac{\dbar Q}{dT}\right)_V,\qquad   C_p := \left(\dfrac{\dbar Q}{dT}\right)_p
+$$ {#eq-TD_definiton_of_heat_capacity}
+
+이다.
+:::
+:::
+
+- @eq-TD_1st_thermodynamic_raw_in_TV_variables 로부터 정적열용량과 정압열용량은 다음과 같다.
+  $$
+  \begin{aligned}
+  C_V &= \left(\dfrac{\dbar Q}{dT}\right)_V = \left(\dfrac{\partial U}{\partial T}\right)_V, \\[0.3em]
+  C_p &= \left(\dfrac{\dbar Q}{dT}\right)_p = \left(\dfrac{\partial U}{\partial T}\right)_p + p\left(\dfrac{\partial V}{\partial T}\right)_V,
+  \end{aligned}
+  $$
+
+- 단위 질량당의 열용량을 **비열 (specific heat capacity)** 이라고 한다. 정적 비열 $c_V$ 와 정압 비열 $c_p$ 는 $C_V,\,C_p$ 를 각각 질량으로 나눈 값이다.
+
+</br>
+
+### 이상기체의 열용량
+
+독립변수로 $T,\,V$ 를 선택할 때 이상기체의 에너지 $U=U(T)$ 이며 $V$ 와는 독립적임이라는 것은 우선 Joule 에 의해 실험적으로 확인되었으며, 이론적으로는 열역학 제 2 법칙을 통해 보일 수 있다. Joule 의 실험은 아래와 같은 장치에서 이루어졌다.
+
+![빨간색-밸브, 파란색-온도계](figures/joule_exp/joule_exp.png){#fig-TD_joule_exp width=300}
+
+두개의 챔버 $A,\,B$ 로 이루어진 콘테이너가 그림과 같이 열량계 속에 잠겨 있다. $A,\,B$ 는 벨브로 연결되어 있다. $A$ 는 가스로 차 있고 $B$ 는 진공상태에서 밸브는 잠겨 있다. 열평형 상태에 도달한 후 온도 $T_1$ 을 재고 밸브를 열고 나서 평형상태에 도달한 후 온도 $T_2$ 를 쟀을 때 Joule 은 $T_1$ 과 $T_2$ 가 거의 차이가 없음을 확인하였다. 이상기체의 경우 $T_1=T_2$ 일 것이다.
+
+$T_1=T_2$ 이므로 외부로부터의 열 전달이 없고 따라서 $\Delta U + W=0$ 인데 $A$ 와 $B$ 로 이루어진 계의 부피는 변화가 없으므로 $W=0$ 이다. 따라서 $\Delta U=0$ 이다. 즉 $U_A = U_{A+B}$ 이므로 우리는 이상기체의 에너지가 온도에만 관계가 있으며 부피와는 무관하다는 것을 알 수 있다. 즉 이상기체의 에너지 $U=U(T)$ 이다. 
+
+이제 이 함수를 알아보자. 우리는 실험적으로 이상기체의 정적 열용량 $C_V$ 는 온도에만 약간 의존한다는 것을 안다. 여기서는 이상기체의 정적 열용량이 우리가 관심있는 온도 영역에서 상수라고 가정하자. $U= U(T)$ 이므로
+
+$$
+C_V = \dfrac{dU}{dT}
+$$ {#eq-TD_heat_capacity_at_constant_volume_for_ideal_gas}
+
+이며, 따라서
+
+$$
+U = C_V T + U_0
+$${#eq-TD_integration_of_heat_capacity_at_constant_volume_for_ideal_gas}
+
+이다. 여기서 $U_0$ 는 $0\,K$ 에서의 이상기체의 에너지이다. @eq-TD_dU_in_form_2 로부터
+
+$$
+C_V dT + pdV = \dbar Q
+$$
+
+임을 안다. 이상기체 상태 방정식 @eq-TD_equation_of_state_for_perfect_gas 에서 $\nu = m/M$ 라 놓으면 ($\nu$ 는 기체의 몰수가 된다)
+
+$$
+pdV + vdp = \nu R dT 
+$$
+
+을 얻는다. 이로부터
+
+$$
+(C_V + \nu R)dT -v\,dp= \dbar Q
+$$
+
+이므로 이상기체의 정압 열용량을 아래와 같이 얻을 수 있다.
+
+$$
+C_p = \left(\dfrac{\dbar Q}{dT}\right)_p = C_V + \nu R.
+$$ {#eq-TD_heat_capacity_at_constant_pressure_for_ideal_gas}
+
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-ED_ES_charge_distribution_circular_charge}
+
+우리는 이상기체에 대해 다음이 성립함을 보일 수 있다.
+$$
+\left(\dfrac{\partial U}{\partial T}\right)_p = \dfrac{dU}{dT} = C_V, \qquad \left(\dfrac{\partial V}{\partial T}\right)_p = \dfrac{\nu R}{p}
+$$ {#eq-TD_partial_U_partial_T_at_constant_p}
+
+@eq-TD_integration_of_heat_capacity_at_constant_volume_for_ideal_gas 으로부터
+
+$$
+\left(\dfrac{\partial U}{\partial T}\right)_p = C_V + \left(\dfrac{\partial U_0}{\partial T}\right)_p = C_V = \dfrac{dU}{dT}
+$$
+
+임을 안다. 또한 이상기체 상태방정식 @eq-TD_equation_of_state_for_perfect_gas 으로부터 $V=\nu RT/p$ 이므로
+
+$$
+\left(\dfrac{\partial V}{\partial T}\right)_p = \left(\dfrac{\partial (\nu RT/p)}{\partial T}\right)_p = \dfrac{\nu R}{p}.
+$$
+
+::: 
+
+</div></br>
+
+이후에 계산하겠지만 하나의 원자로 이루어진 기체 분자의 경우 $C_V=\frac{3}{2}R$, $C_p = \frac{5}{2}R$ 이며 두개의 원자로 이루어진 기체 분자의 경우 $C_V=\frac{5}{2}R$, $C_p = \frac{7}{2}R$ 이다.
+
+여기서 
+
+$$
+\gamma := \dfrac{C_p}{C_V}
+$$
+
+를 **비열비 (specific heat ratio)** 혹은 **adiabatic index** 라고 한다. 이상기체의 경우 아래와 같다.
+
+$$
+\gamma = \dfrac{C_p}{C_V}=1+ \dfrac{\nu R}{C_V}
+$$
+
+</br>
+
+### 이상기체의 단열 가역 과정
+
+**단열과정 (adiabatic process)** 는 $\dbar Q=0$ 인 과정을 말한다. @fig-TD_simple_system 에서 실린더 벽과 피스톤이 모두 열을 전달하지 않는 재질로 되어 있으며 피스톤이 매우 느리게 움직이는 경우가 해당된다. 피스톤이 위로(혹은 실린더 바깥쪽으로) 움직이면 $\dbar W>0$ 이며 아래로(혹은 실린더 안쪽으로) 움직이면 $\dbar W<0$ 이다. $\dbar Q=0$ 이므로 $dU$ 의 부호는 $\dbar W$ 의 부호와 반대이다. 
+
+$$
+C_V dT + pdV=0 \implies C_V dT + \dfrac{\nu RT}{V}\,dV =0
+$$
+
+이므로
+
+$$
+\dfrac{dT}{T}+ \dfrac{\nu R}{C_V}\dfrac{dV}{V}=0
+$$
+
+이며, 이로부터 다음 관계를 얻는다.
+
+$$
+\ln T + \dfrac{\nu R}{C_V}\ln V=\text{constant.},\qquad TV^{\nu R/C_V}= TV^{\gamma -1} =\text{constant.}
+$$ {#eq-TD_relations_1_in_adiabatic_revirsible_process_of_ideal_gas}
+
+또한 이상기체 상태방정식을 통해 아래 관계를 얻을 수 있다.
+
+$$
+pV^\gamma= \text{constant.},\qquad Tp^{(1-\gamma)/\gamma}=\text{constant.}
+$${#eq-TD_relations_2_in_adiabatic_revirsible_process_of_ideal_gas}
+
+단열 가역과정이 아닌 등온과정에서는 $pV=\text{constant}$ 가 성립한다는 것을 안다. 
+
+![단열과정과 등온과정](figures/adiabatic_process/adiabatic.png){#fig-TD_adiabatic_and_isothermal_process width=350}
+
+</br>
+
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_blundell_12_2}
+
+#### Blundell 12.2
+
+이상기체의 경우 $pV=f(T)$ 로 주어진다. 이것은 다음을 의미함을 보여라.
+
+$$
+\left(\dfrac{\partial p}{\partial T}\right)_V = \dfrac{1}{V}\dfrac{df}{dT},\qquad \left(\dfrac{\partial V}{\partial T}\right)_p = \dfrac{1}{p}\dfrac{df}{dT}.
+$${#eq-exr-TD_blundell_12_2_1}
+
+또한 다음이 성립함을 보여라.
+
+$$
+\left(\dfrac{\partial Q}{\partial V}\right)_p = C_p \left(\dfrac{\partial T}{\partial V}\right)_p,\qquad \left(\dfrac{\partial Q}{\partial p}\right)_V = C_V \left(\dfrac{\partial T}{\partial p}\right)_V.
+$${#eq-exr-TD_blundell_12_2_2}
+
+단열 과정에서 다음이 성립함한다.
+
+$$
+\dbar Q = \left(\dfrac{\partial Q}{\partial p}\right)_V \, dp + \left(\dfrac{\partial Q}{\partial V}\right)_p \, dV = 0.
+$${#eq-exr-TD_blundell_12_2_3}
+
+이 때 $pV^\gamma$ 가 상수임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+@eq-exr-TD_blundell_12_2_1 는 자명하다. Blundell 에서는 일단 $U=U(T,\,V)$ 임을 가정한다. 
+
+$$
+dU = \left(\dfrac{\partial U}{\partial T}\right)_V dT + \left(\dfrac{\partial U}{\partial V}\right)_T \, dV
+$$ {#eq-exr-TD_blundell_12_2_4}
+
+이므로
+
+$$
+\begin{aligned}
+dQ &= dU + pdV = \left(\dfrac{\partial U}{\partial T}\right)_V dT + \left[\left(\dfrac{\partial U}{\partial V}\right)_T + p \right] \, dV
+\end{aligned}
+$$
+
+이다. 이로부터,
+
+$$
+\begin{aligned}
+C_p &= \left(\dfrac{\partial Q}{\partial T}\right)_p = \left(\dfrac{\partial U}{\partial T}\right)_V +  \left[\left(\dfrac{\partial U}{\partial V}\right)_T + p \right] \, \left(\dfrac{\partial V}{\partial T}\right)_p, \\[0.3em]
+\left(\dfrac{\partial Q}{\partial V}\right)_p &= \left(\dfrac{\partial U}{\partial T}\right)_V \left(\dfrac{\partial T}{\partial V}\right)_p + \left(\dfrac{\partial U}{\partial V}\right)_T + p 
+\end{aligned}
+$$
+
+@cor-TD_reciprocity_relation_of_partial_derivative 에 따라 
+
+$$
+\left(\dfrac{\partial V}{\partial T}\right)_p \left(\dfrac{\partial T}{\partial V}\right)_p =1
+$$
+
+이므로 
+
+$$
+\left(\dfrac{\partial Q}{\partial V}\right)_p = C_p\left(\dfrac{\partial T}{\partial V}\right)_p 
+$$
+
+이다. 또한 @eq-exr-TD_blundell_12_2_4 로부터 
+
+$$
+\left(\dfrac{\partial Q}{\partial p}\right)_V = \left(\dfrac{\partial U}{\partial T}\right)_V \left(\dfrac{\partial T}{\partial p}\right)_V 
+$$
+
+이며
+
+$$
+C_V = \left(\dfrac{\partial Q}{\partial T}\right)_V= \left(\dfrac{\partial U}{\partial T}\right)_V
+$$
+
+이므로
+
+$$
+\left(\dfrac{\partial Q}{\partial p}\right)_V = C_V \left(\dfrac{\partial T}{\partial p}\right)_V
+$$
+
+이다. 단열 과정에서 @eq-exr-TD_blundell_12_2_3 이 성림하므로
+
+$$
+\begin{aligned}
+0 = \dbar Q &= C_V \left(\dfrac{\partial T}{\partial p}\right)_V dp + C_p \left(\dfrac{\partial T}{\partial V}\right)_p dV
+\end{aligned}
+$$
+
+이다. @cor-TD_reciprocity_relation_of_partial_derivative 와 @eq-exr-TD_blundell_12_2_1 로부터
+
+$$
+\left(\dfrac{\partial T}{\partial p}\right)_V =\dfrac{V}{df/dT}, \quad \left(\dfrac{\partial T}{\partial V}\right)_p = \dfrac{p}{df/dT}
+$$
+
+임을 안다. 또한 $C_p = \gamma C_V$ 이므로
+
+$$
+\begin{aligned}
+&0 = \dfrac{V}{df/dT} dp + \dfrac{\gamma p}{df/dT} dV \\[0.3em]
+\implies &\gamma \dfrac{dV}{V} + \dfrac{dp}{p} = 0 \\[0.3em]
+\implies & pV^\gamma = \text{constant.}
+\end{aligned}
+$$
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_blundell_12_3}
+
+#### Blundell 12.3
+
+상수 $A,\,B$ 에 대해 다음과 같이 쓸 수 있는 이유를 설명하라.
+
+$$
+\begin{aligned}
+\dbar Q &= C_p dT + A\,dp \\[0.3em]
+\dbar Q &= C_V dT + B\,dV.
+\end{aligned}
+$$ {#eq-exr-TD_blundell_12_3_1}
+
+위 두식을 빼서 다음이 성립함을 보여라.
+
+$$
+(C_p-C_V)\,dT = B dV - Adp.
+$$ {#eq-exr-TD_blundell_12_3_2}
+
+또한 온도가 일정할 때 다음이 성립함을 보여라.
+
+$$
+\left(\dfrac{\partial p}{\partial V}\right)_T = \dfrac{B}{A}.
+$${#eq-exr-TD_blundell_12_3_3}
+
+단열 과정에서 다음이 성립함을 보여라.
+
+$$
+\begin{aligned}
+dp &= -(C_p/A)\,dT,\\[0.3em]
+dV &= -(C_V/B) \,dT.
+\end{aligned}
+$${#eq-exr-TD_blundell_12_3_4}
+
+이로부터 단열 과정에서 다음이 성립함을 보여라.
+
+$$
+\begin{aligned}
+\left(\dfrac{\partial p}{\partial V}\right)_\text{adiabatic} &= \gamma \left(\dfrac{\partial p}{\partial V}\right)_T, \\[0.3em]
+\left(\dfrac{\partial V}{\partial T}\right)_\text{adiabatic} &= \dfrac{1}{1-\gamma} \left(\dfrac{\partial V}{\partial T}\right)_p,\\[0.3em]
+\left(\dfrac{\partial p}{\partial T}\right)_\text{adiabatic} &= \dfrac{\gamma}{\gamma -1}\left(\dfrac{\partial p}{\partial T}\right)_V.
+\end{aligned}
+$${#eq-exr-TD_blundell_12_3_5}
+
+:::
+
+</div>
+
+::: {.solution}
+
+이상기체에서 $p,\,T,\,V$ 가운데 두 변수로 $dU,\, \dbar Q,\, \dbar W$ 를 기술 할 수 있다는 것을 안다. @eq-exr-TD_blundell_12_3_1 에서 첫번째 식은 $(T,\,p)$, 두번째 식은 $(T,\,V)$ 로 기술한 것이다. 두 식을 빼면 @eq-exr-TD_blundell_12_3_2 를 얻으며 $dT=0$ 에 대해 @eq-exr-TD_blundell_12_3_3 을 얻는다. 단열과정은 $\dbar Q=0$ 이므로 @eq-exr-TD_blundell_12_3_4 를 얻는다. 
+
+@eq-exr-TD_blundell_12_3_4 으로부터
+
+$$
+dp = -\left(\dfrac{C_p}{A}\right)dT = \left(\dfrac{C_p}{A}\right)\left(\dfrac{B}{C_V}\right)dV
+$$
+
+이므로
+
+$$
+\left(\dfrac{\partial p}{\partial V}\right)_\text{adiabatic} = \dfrac{C_p}{C_V}\dfrac{B}{A} = \gamma \left(\dfrac{\partial p}{\partial V}\right)_T
+$$
+
+이며, @eq-exr-TD_blundell_12_3_2 에서 $dp=0$ 일 때 $\dfrac{1}{B} = \dfrac{1}{C_p-C_V}\left(\dfrac{\partial V}{\partial T} \right)_p$ 이므로 
+
+$$
+\left(\dfrac{\partial V}{\partial T}\right)_\text{adiabatic} = - \dfrac{C_V}{B} = - \dfrac{C_V}{C_p-C_V}\left(\dfrac{dV}{dT}\right)_p = \dfrac{1}{1-\gamma}\left(\dfrac{dV}{dT}\right)_p 
+$$
+
+이다. 또한 @eq-exr-TD_blundell_12_3_2 에서 $dV=0$ 일 때 $\dfrac{1}{A} = - \dfrac{1}{C_p-C_V} \left(\dfrac{\partial p}{\partial T}\right)_V$ 이므로 
+
+$$
+\left(\dfrac{\partial p}{\partial T}\right)_\text{adiabatic} = - \dfrac{C_p}{A} = \dfrac{C_p}{C_p-C_V} \left(\dfrac{\partial p}{\partial T}\right)_V = \dfrac{\gamma}{\gamma-1} \left(\dfrac{\partial p}{\partial T}\right)_V 
+$$
+
+이다. 
+
+:::
+
+
+</br>
+
+## 열역학 제 2 법칙
+
+### 열원과 기관 {#sec-TD_heat_source_and_engine}
+
+열역학 제 1 법칙은 에너지를 생산하는 기계를 만들 수 없으며 단지 에너지를 변환할 뿐이라는 것을 한다.그러나 제 1 법칙은 에너지 사이의 변환에 대해서는 어떤 제약도 말하지 않는다. 따라서 이 법칙에 따르면 열은 일로, 일은 열로 자유롭게 변환 될 수 있다.
+
+일을 열로 변환시키는 경우는 항상 가능한 듯이 보인다. 마찰, 혹은 전기 저항을 통해 역학적/전기적 에너지를 열로 변환시킬수 있다는 것을 안다. 그러나 반대의 경우, 즉 열을 일로 바꾸는 것에는 명확한 제한이 존재한다. 만약 제한이 존재하지 않는다면 우리는 환경이 아무리 온도가 낮더라도 이 환경의 온도를 더 낮추어 일로 바꿀 수 있게 된다. 그리고 열역학 제 2 법칙에 의하면 이것은 불가능하다.
+
+이것을 살펴보기 위해 우리는 우선 **열원 (heat source)** 과 **기관 (engine)** 을 정의하자. 주변과 열만을 주고받으며 일은 주고받지 않으면서 정해진 온도 $T$ 를 유지하는 물리적 대상을 **온도 $T$ 의 열원** 이라고 한다. 또한 순환 과정을 통해 열을 일로 바꾸는 계(system)를 **열기관(heat engine)** 혹은 **기관** 이라고 한다. 
+
+</br>
+
+### 열역학 제 2 법칙 {#sec-TD_the_second_law_of_thermodynamics}
+
+열역학 제 2 법칙은 아래와 같이 두가지로 표현 될 수 있다.
+
+::: {.callout-important icon="false"}
+
+#### **캘빈의 열역학 제 2 법칙**
+
+온도 $T$ 상태에서 같은 온도의 열원으로부터 추출한 열을 일로 변환시키는 유일한 최종결과를 갖는 과정은 불가능하다. 
+
+:::
+
+::: {.callout-important icon="false"}
+
+#### **클라우시우스의 열역학 제 2 법칙**
+
+낮은 온도의 물체의 열을 높은 온도를 가진 물체로 전달하는 유일한 최종결과를 갖는 과정은 불가능하다 
+
+:::
+
+
+이제 두가지 열역학 법칙은 동등하다는 것을 증명하고자 한다. 즉 하나가 참이면 다른 하나는 반드시 참이다. 우선 캘빈의 명제가 틀리다고 가정하자. 즉 온도 $T$ 인 열원으로부터 추출한 열을 일 $W$ 로 변환시켰다고 하자. 마찰을 통해 우리는 이 일 $W$ 를 열로 변환할 수 있고 이를 통해 다른 물체의 온도를 높일 수 있다. 이 때 다른 물체의 온도가 $T$ 보다 높은지 낮은지와는 무관하므로 캘빈경의 명제가 틀리다면 클라우시우스의 명제도 틀리다. 
+
+클라우시우스의 명제가 틀렸을 때 캘빈경의 명제가 틀리다는 것을 보이기 위해서는 조금 해야할 것이 있다.
+
+</br>
+
+## 카르노 순환
+
+### 두가지 열역학 제 2 법칙의 동등성 {#sec-TD_equivalence_of_two_versions_of_2nd_principle_of_thermodynamics}
+
+![카르노 순환](figures/adiabatic_process/carnot_cycle.png){#fig-TD_carnot_cycle width=600}
+
+$T_h$ 과 $T_l$ $(T_h>T_l)$ 의 두 열원이 있다고 하자. 그리고 위의 그림과 같은 $ABCDA$ 과정을 생각하자. 여기서 $AB$ 과정과 $CD$ 과정은 등온과정이고 $BC$, $DA$ 과정은 단열 과정이다. 이 이 전체 과정이 가역과정일 때 **카르노 순환 (Carnot cycle)** 이라고 한다. 
+
+- $AB$ 과정은 등온과정이며 부피가 증가하므로 $W_{AB}>0$ 의 일을 외부에 해 주게 되며, 따라서 $Q_{h}=W_{AB}$ 만큼의 열을 흡수한다. 
+- $BC$ 과정은 단열과정이고 $W_{BC}$ 만큼의 일을 하므로 내부에너지는 $W_{BC}$ 만큼 감소한다.
+- $CD$ 과정은 등온과정이며 부피가 감소하므로 $-W_{CD}<0$ 의 일을 외부로부터 받게 되며 따라서 $Q_{l}=-W_{CD}$ 만큼의 열을 외부로 방출한다.
+- $DA$ 과정은 단열과정으로 $-W_{DA}$ 만큼의 일을 외부에서 하므로 내부에너지는 $W_{DA}$ 만큼 증가한다.
+
+이 과정에서 외부에 한 일 $W >0$ 는 $ABCD$ 로 닫힌 곡선의 면적이다. 순환이므로 순환을 한 번 거쳤을 때 내부에너지는 변화가 없다. 따라서
+
+$$
+W = Q_{h}- Q_{l}
+$$
+
+이다. 두개의 열원, 열과 일의 흐름을 아래와 같이 도식화 시킬 수 있다.
+
+![카르노 엔진](figures/adiabatic_process/carnot_engine.png){#fig-TD_carnot_engine width=250}
+
+위의 방정식과 그림은 높은 온도의 열원으로부터 받은 열 $Q_h$ 의 일부만 일로 변환되며 $Q_l$ 만큼의 열은 낮은 에너지의 열원으로 방출된다는 것을 보여준다. 여기서 우리는 카르노 순환의 효율을 $\eta$ 를 다음과 같이 정의 할 수 있다.
+
+$$
+\eta := \dfrac{W}{Q_{h}}= \dfrac{Q_{h}-Q_{l}}{Q_{h}}= 1- \dfrac{Q_{h}}{Q_{l}}.
+$$
+
+이 과정은 가역과정이므로 역순인 $A\to D\to C\to B \to A$ 의 과정을 생각 할 수 있다. 즉 이 과정은 $W$ 만큼의 일을 받으면서 온도 $T_l$ 일 때 $Q_{l}$ 의 열을 받고 $T_h$ 일 때 $Q_{h}$ 의 열을 방출 할 수 있으며 이를 통해 최종 결과는 외부로부터 $-W$ 만큼의 일을 받는 것이다.
+
+클라우시우스의 제 2 법칙을 부정하면 온도가 $T_l$ 일때 열원으로부터 $Q_h$ 의 열을 받아 이것을 같은 상태에서 $T_h$ 의 열원에 전달하며 최종적으로 계의 상태에 변화가 없는 것이 가능하다. 카르노 기관으로부터 우리는 $Q_h$ 의 열을 받으며 $W$ 만큼의 일을 한다. $T_h$ 의 열원의 입장에서는 $Q_h-W$ 만큼의 열을 받으며, 계의 입장에서는 변화가 없는데 이것은 캘빈의 열역학 제 2 법칙에 위배된다. 즉 클라우시우스의 제 2 법칙의 부정은 캘빈의 제 2 법칙의 부정이다.
+
+</br>
+
+### 카르노의 정리 {#sec-TD_carnot_theorem}
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-TD_carnot_theorem}
+
+주어진 두 열원에서 작동하는 기관가운데 카르노 기관보다 효율이 높은 기관은 존재하지 않는다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+카르노 기관보다 효율이 높은 기관 $X$ 를 생각하자. 카르노 기관의 열효율을 $\eta_C$ 라고 하고 이 기관 $X$ 의 열효율을 $\eta_X$ 라고 하자. 카르노 기관은 가역이므로 아래 그림과 같이 $X$ 와 카르노 기관을 연결할 수 있다.
+
+![가상의 기관 $X$ 과 역방향으로 가동되는 카르노 기관의 연결](figures/adiabatic_process/efficient_engine.png){#fig-TD_more_efficient_engine width=350}
+
+$\eta_X > \eta_C$ 이므로
+
+$$
+\dfrac{W}{Q'_h} > \dfrac{W}{Q_h}
+$$
+
+이며 따라서 $Q_h > Q'_h$ 이다. 열역학 제 1 법칙에 의해 
+
+$$
+W = Q_h'-Q_l' = Q_h-Q_l
+$$
+
+이므로 $Q_l > Q_l'$ 이다. 열원 $T_h$ 과 $T_l$ 을 보면 $T_l$ 에서 열을 빼서 $T_h$ 에 열을 공급하게 되며 이는 클라우시우스의 열역학 제 2 법칙에 위배된다. 따라서 카르노 열기관보다 더 효율이 높은 열기관은 존재하지 않는다. $\square$
+
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#cor-TD_carnot_theorem}
+
+두 온도의 열원에 대해 작동하는 모든 가역 기관은 카르노 기관과 같은 효율을 가진다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+가역 기관 $Y$ 의 효율 $\eta_Y \le \eta_C$ 이다. 아래 그림과 같이 카르노 기관과 $Y$ 를 연결했다고 하자.
+
+![카르노 기관과 가역 기관 $Y$ 의 연결](figures/adiabatic_process/efficient_revisible_engine.png){#fig-TD_revisible_efficient_engine width=350}
+
+클라우시우스의 열역학 제 2 법칙에 의해 $Q_h'-Q_h > Q_l'-Q_l$  이어야 한다. 그런데 에너지 보존에 의해 $Q_h-Q_l = W = Q'_h - Q'_l$ 이므로 $Q_h'-Q_h = Q_l'-Q_l$ 이다. 
+
+:::
+
+</br>
+
+### 카르노 기관과 이상기체
+
+@fig-TD_carnot_cycle 을 보자. 이상기체가 열을 주거나 받으며 일을 한다고 하자. 
+
+**1. $A\to B$ 과정** : 등온과정이므로 $dU=0$ 이며 따라서 $\dbar Q=\dbar W$ 이다. 다음이 성립한다.
+
+$$
+Q_h = \int_{V_A}^{V_B} p\,dV = \nu RT_h \ln \left(\dfrac{V_B}{V_A}\right).
+$$ {#eq-TD_carnot_cycle_of_ideal_gas_AB_process}
+
+**2. $B\to C$ 과정** : 단열과정이며 @eq-TD_relations_1_in_adiabatic_revirsible_process_of_ideal_gas 에 의해 다음이 성립한다.
+
+$$
+\left(\dfrac{T_h}{T_l}\right) = \left(\dfrac{V_C}{V_B}\right)^{\gamma -1}.
+$${#eq-TD_carnot_cycle_of_ideal_gas_BC_process}
+
+**3. $C\to D$ 과정** : $Q_l$ 은 방출하는 열량임을 고려하자. 등온과정이므로 $A\to B$ 과정과 같이 다음이 성립한다. 
+
+$$
+Q_l = -\int_{V_C}^{V_D} p\,dV = -\nu RT_l \ln \left(\dfrac{V_D}{V_C}\right).
+$$ {#eq-TD_carnot_cycle_of_ideal_gas_CD_process}
+
+**4. $D\to A$ 과정** : 단열과정이므로 $A\to B$ 과정과 비슷하게 아래가 성립한다.
+$$
+\left(\dfrac{T_l}{T_h}\right) = \left(\dfrac{V_A}{V_D}\right)^{\gamma -1}.
+$${#eq-TD_carnot_cycle_of_ideal_gas_DA_process}
+
+</br>
+
+@eq-TD_carnot_cycle_of_ideal_gas_BC_process 와 @eq-TD_carnot_cycle_of_ideal_gas_DA_process 로부터 $V_C/V_B = V_D/V_A$ 임을 안다. 즉 $V_B/V_A=V_C/V_D$ 이다. 그렇다면
+
+$$
+\dfrac{Q_h}{Q_l}= -\dfrac{T_h \ln (V_B/V_A)}{T_l \ln (V_D/V_C)}= \dfrac{T_h}{T_l}
+$${#eq-TD_relation_of_heat_and_temperature_of_carnot_engine_using_ideal_gas}
+
+이다. 즉 이상기체를 사용한 카르노 기관의 효율 $\eta_C$ 는 아래와 같다.
+
+$$
+\eta_C = \dfrac{Q_h-Q_l}{Q_h}= 1- \dfrac{T_l}{T_h}
+$$ {#eq-TD_efficiency_of_carnot_engine_using_ideal_gas}
+
+
+</br>
+
+### 열역학적 절대온도
+
+카르노 순환은 정방향 순환의 경우 $T_h$ 인 열원으로부터 $Q_h$ 의 열을 받아 $W$ 만큼의 일을 하고 $T_l$ 인 열원에게 $Q_l$ 만큼의 열을 방출한다. 이 경우 $Q_h>0$, $Q_l>0$ 이며 $Q_l<0$ 이라면 $T_l$ 열원으로 부터 열을 받는것이 된다. 이제 $Q_l<0$ 인 순환이 불가능하다는 것을 알아보자.
+
+순환의 과정에서 $T_l$ 열원이 $Q_l$ 만큼의 열을 방출하므로 주변으로부터 $Q_l$ 만큼의 열을 받아야 시작상태로 복귀 할 수 있다. 
+
+
+... to be filled
+
+
+

@@ -1,0 +1,29 @@
+---
+title: "엔트로피와 열역학적 포텐셜"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+## 엔트로피
+
+$n$ 개의 $T_i$ 열원 ($i=1,\ldots,\,n$)을 생각하자. 그리고 $T_i$ 열원에서 주고받는 열을 각각 $Q_i (i=1,\ldots,\,n)$ 이라고 하자. $Q_i>0$ 이면 열원으로 부터 열을 받으며, $Q_i<0$ 이면 열을 방출한고 하자. 그리고 전체 과정이 순환이라고 하자. 우리는 다음을 보일 것이다.
+
+$$
+\sum_{i=1}^n \dfrac{Q_i}{T_i} \le 0.
+$$ {#eq-TD_primitive_form_of_entropy}
+
+이 때 등호는 전체 과정, 즉 순환이 가역일 때 성립한다. 이 계를 $\Sigma$ 라고 하자.
+
+유사한 계 $\Sigma'$ 을 다음과 같이 구성한다. $\Sigma$ 의 $n$ 개의 열원 이외에 $T_0$ 의 온도를 갖는 $T_0$ 열원을 추가한다. 그리고 $T_i$ 의 온도와 $T_0$ 의 온도에서 작동하는 카르노 기관 $C_i$ 를 생각하자. $\Sigma'$ 의 한 순환은 각각의 $C_i$ 의 한 순환의 연속이다. 여기서  @eq-TD_relation_of_heat_and_temperature_of_carnot_engine_using_ideal_gas 로 부터 
+
+$$
+Q_{i,\,0}= \dfrac{T_0}{T_i} Q_i
+$$
+
+임을 안다. 
+
+이제 $\Sigma$ 의 한 순환과 $\Sigma'$ 의 한 순환을 비교한다.   

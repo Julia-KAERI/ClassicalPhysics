@@ -1,0 +1,52 @@
+\documentclass[border=5pt,tikz]{standalone}
+\usepackage{amsmath} % for \dfrac
+\usepackage{physics}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+%\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{hobby}
+\usepgfplotslibrary{fillbetween}
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \begin{axis} [
+  	axis lines=center,
+    xlabel=$V$,
+    ylabel=$p$,
+    ticks=none,
+    ymin = -1,
+    ymax = 10,
+    xmin = -1,
+    xmax = 20.0,
+    every axis x label/.style={at={(current axis.right of origin)},anchor=west},
+    every axis y label/.style={at={(current axis.above origin)},above=0.5mm},
+    ]
+    \addplot [domain=0.6:19, samples = 100, thick, red] ({x}, {6/x});
+    \addplot [domain=0.3:19, samples = 100, thick, teal, dashed] ({x}, {10/(x^1.7)});
+    \addplot [domain=1:19, samples = 100, thick, red] ({x}, {25/x});
+    \addplot [domain=0.3:19, samples = 100, thick, teal, dashed] ({x}, {55/(x^1.4)});
+    \legend{Isothermal, Adiabatic, ,};
+  \end{axis}
+%   \begin{axis} [ % added this
+%     rotate around={40:(axis cs: 2, 1)},
+%     anchor= origin,
+%     hide axis,
+%     ymin = -0.5,
+%     ymax = 2,
+%     xmin = -0.3,
+%     xmax = 5.0,
+%     ]
+%     \addplot [name path = A, domain=150:60, samples=400, smooth, thick, ->] ( { 1.3*cos(x)+3}, {0.6*sin(x)+1}) node [xshift=3, yshift=10] {$B$};
+%     \addplot [name path = B, domain=60:-30, samples=400, smooth, thick, ->] ({ 1.3*cos(x)+3}, {0.6*sin(x)+1}) node [right] {$C$};
+%     \addplot [name path = C, domain=-30:-120, samples=400, smooth, thick, ->] ({ 1.3*cos(x)+3}, {0.6*sin(x)+1}) node[below] {$D$};
+%     \addplot [name path = D, domain=-120:-210, samples=400, smooth, thick, ->] ({ 1.3*cos(x)+3}, {0.6*sin(x)+1}) node[left] {$A$};
+	
+%   \end{axis}
+\end{tikzpicture}
+
+\end{document}

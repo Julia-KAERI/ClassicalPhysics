@@ -1,0 +1,89 @@
+---
+title: "Appendix"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}
+
+## 편미분에서의 상호 관계 (Reciprocity Relation)
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-TD_reciprocity_relation_of_partial_derivative}
+
+세 변수 $x,\,y,\,z$ 가 $f(x,\,y,\,z)=0$ 을 만족 할 때 다음이 성립한다.
+
+$$
+\left(\dfrac{\partial x}{\partial y}\right)_z \left(\dfrac{\partial y}{\partial z}\right)_x \left(\dfrac{\partial z}{\partial x}\right)_y = -1.
+$$ {#eq-TD_Math_reciprocity_relation}
+
+:::
+
+</div>
+
+::: {.proof}
+
+관계식 $f(x,y,z) = 0$ 의 전미분은:
+
+$$
+df = \dfrac{\partial f}{\partial x}dx + \dfrac{\partial f}{\partial y}dy + \dfrac{\partial f}{\partial z}dz = 0
+$$
+
+이다. 이 때 $z$ 를 고정하면:
+
+$$
+\dfrac{\partial f}{\partial x}dx + \dfrac{\partial f}{\partial y}dy = 0
+$$ 
+
+이로부터
+
+$$
+\left(\dfrac{\partial x}{\partial y}\right)_z = -\dfrac{\partial f/\partial y}{\partial f/\partial x}
+$${#eq-thm-TD_reciprocity_relation_of_partial_derivative_1}
+
+를 얻는다. 같은 방법으로 $x,\,y$ 각각의 고정에 대해 
+
+
+$$
+\left(\dfrac{\partial y}{\partial z}\right)_x = -\dfrac{\partial f/\partial z}{\partial f/\partial y},\qquad \left(\dfrac{\partial z}{\partial x}\right)_y = -\dfrac{\partial f/\partial x}{\partial f/\partial z}
+$$
+
+를 얻는다. 위의 세 결과를 곱하면:
+
+$$
+\begin{aligned}
+\left(\dfrac{\partial x}{\partial y}\right)_z \left(\dfrac{\partial y}{\partial z}\right)_x \left(\dfrac{\partial z}{\partial x}\right)_y &= \left(-\dfrac{\partial f/\partial y}{\partial f/\partial x}\right)\left(-\dfrac{\partial f/\partial z}{\partial f/\partial y}\right)\left(-\dfrac{\partial f/\partial x}{\partial f/\partial z}\right) \\[0.3em]
+&= -\dfrac{\partial f/\partial y}{\partial f/\partial x} \cdot \dfrac{\partial f/\partial z}{\partial f/\partial y} \cdot \dfrac{\partial f/\partial x}{\partial f/\partial z} = -1. \quad \square
+\end{aligned}
+$$
+
+:::
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#cor-TD_reciprocity_relation_of_partial_derivative}
+
+세 변수 $x,\,y,\,z$ 가 $f(x,\,y,\,z)=0$ 을 만족 할 때 다음이 성립한다.
+
+$$
+\left(\dfrac{\partial x}{\partial y}\right)_z \left(\dfrac{\partial y}{\partial x}\right)_z = 1.
+$$ {#eq-TD_Math_reprocity_relation_inverse_rule}
+
+:::
+
+</div>
+
+::: {.proof}
+
+@thm-TD_reciprocity_relation_of_partial_derivative 증명에서 @eq-thm-TD_reciprocity_relation_of_partial_derivative_1 로부터
+
+$$
+\left(\dfrac{\partial x}{\partial y}\right)_z \left(\dfrac{\partial y}{\partial x}\right)_z = \dfrac{\partial f/\partial y}{\partial f/\partial x} \dfrac{\partial f/\partial x}{\partial f/\partial y} = 1. \quad \square
+$$
+
+
+:::

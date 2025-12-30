@@ -10,6 +10,11 @@ format: html
 %\newcommand{\bf}[1]{\boldsymbol{#1}}
 \newcommand{\bftilde}[1]{\bf{\widetilde{{#1}}}}
 
+\newcommand{\dbar}{{d\hspace{-0.08em}\bar{}\hspace{0.1em}}}
+
+
+
+
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
