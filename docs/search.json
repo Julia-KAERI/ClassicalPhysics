@@ -1109,7 +1109,29 @@
     "href": "src/Feynmann/vol1.html",
     "title": "24  파인만 물리학 강의 I",
     "section": "",
-    "text": "39. The Kinetic Theory of Gases",
+    "text": "15. 특수 상대성 이론",
+    "crumbs": [
+      "전기자기학",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>파인만 물리학 강의 I</span>"
+    ]
+  },
+  {
+    "objectID": "src/Feynmann/vol1.html#특수-상대성-이론",
+    "href": "src/Feynmann/vol1.html#특수-상대성-이론",
+    "title": "24  파인만 물리학 강의 I",
+    "section": "",
+    "text": "15-1 상대성 이론\n\n정지 질량과 상대론적 질량 (현대적인 상대론에서는 상대론적인 질량이란 개념을 사용하지 않는다.)\n뉴턴의 상대성 이론, 즉 갈릴레이의 상대성 이론\n멕스웰 방정식은 갈릴레이 상대성 이론과 일치하지 않는다. 즉 멕스웰 방정식이 갈릴레이 변환에 대해 불변이 아님.\n멕스웰 방정식을 이용하여 절대적인 속도를 얻기 위한 노력이 있었으나 무산됨 (예:마이켈슨-몰리 실험)\n\n\n\n15-2 로렌츠 변환\n\n멕스웰 방정식과 갈릴레이 상대성 이론을 조화시키려는 노력, 그리고 실패\n로런츠 변환의 등장\n\n\n\n\n\n\n중요갈릴레이 변환과 로런츠 변환\n\n\n\n한 기준틀 \\(S' = (t',\\,x',\\,y',\\,z')\\) 이 다른 기준틀 \\(S=(t,\\,x,\\,y,\\,z)\\) 에 대해 \\(\\boldsymbol{u}=u\\hat{\\boldsymbol{x}}\\) 의 속도로 움직일 때 아래의 관계를 갈릴레이 변환 (Galilean transformation) 이라고 한다.\n\\[\nx' = x-ut,\\quad y'=y,\\quad z'=z,\\quad t'=t.\n\\tag{24.1}\\]\n이에 대해 아래의 관계를 로런츠 변환 (Lorentz transformation) 이라고 한다.\n\\[\nx'=\\dfrac{x-ut}{\\sqrt{1-u^2/c^2}},\\quad y'=y,\\quad z'=z,\\quad t' = \\dfrac{t-ux/c^2}{\\sqrt{1-u^2/c^2}}\n\\tag{24.2}\\]\n\n\n푸앙카레의 주장\n\n\n\n\n\n\n중요푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료\n\n\n\n\nHenri Poincaré (1905), Sur la dynamique de l’électron\n\n로렌츠 변환을 변환군(로렌츠 군)으로 다루고, 물리 방정식의 형태가 그 변환 아래에서 유지되는 구조를 논의함. 푸앵카레가 로렌츠 변환을 단순한 “요령”이 아니라 대칭(군)으로 명확히 인식했다는 점에서 가장 직접적인 1차 자료임.\n\nHenri Poincaré (1904), St. Louis 강연\n\n(보통 The Principles of Mathematical Physics로 알려진 텍스트로 전해짐)\n“상대성 원리(관성계에서 물리 법칙 동일)”를 일반 원리로 언급하고, 전자기학/로렌츠 이론 맥락에서 로렌츠 변환이 중요하다는 흐름으로 연결됨. (참고로, “상대성 원리”를 더 넓게 전개한 저술)\n\nHenri Poincaré (1902), La Science et l’Hypothèse\n\n엄밀히 “로렌츠 불변성”을 공식처럼 딱 박는 텍스트라기보단, 절대운동의 비가시성과 상대성 원리를 강하게 밀어주는 철학적/물리적 논지로 도움이 됨.\n\n\n(from ChatGPT, need to be checked)\n\n\n아인슈타인의 특수상대성 이론의 등장\n\n\n\n15-3 마이켈슨-몰리 실험\n\n\n\n파인만 물리학 강의 I. 그림 15-2\n\n\n실험 장비가 \\(u\\) 의 속도로 움직이고 있다고 하자. 정지한 좌표계에서 빛이 \\(A-E'\\) 으로 진행하는데 걸린 시간 \\(t_1\\) 은 \\(ct_1 = L+ut_1\\) 로부터 계산 할 수 있고 \\(E'\\) 에서 반사되어 \\(E'-B'\\) 경로를 진행하는데 걸린 시간 \\(t_2\\) 는 \\(ct_2 =L-ut_2\\) 로부터 계산 할 수 있다. 여기서 빛이 \\(B\\) 로부터 진행하여 \\(B'\\) 으로 돌아오는데 걸린 시간 \\(t_1+t_2\\) 는 아래와 같다.\n\\[\nt_1+t_2 = \\dfrac{L}{c-u}+ \\dfrac{L}{c+u} = \\dfrac{2L/c}{1-u^2/c^2}.\n\\tag{24.3}\\]\n이제 빛이 \\(B\\) 로 부터 \\(C'\\) 을 거쳐 \\(B'\\) 으로 돌아오는데 걸린 시간 \\(2t_3\\) 는 \\(L^2+(ut_3)^2 = (ct_3)^3\\) 으로 부터 구할 수 있다. 즉\n\\[\n2t_3 = \\dfrac{2L/c}{\\sqrt{1-u^2/c^2}}\n\\tag{24.4}\\]\n이다. 마이켈슨-몰리 실험의 결과는 \\(t_1+t_2 = 2t_3\\) 인 것이며 이는 식 24.3 과 식 24.4 가운데 오류가 있다는 것을 의미한다. 로런츠는 로런츠 변환에서 움직인는 물체의 길이는 움직이는 방향으로 수축된다고 주장하였으며 그 수축된 길이 \\(L_\\parallel = L\\sqrt{1-u^2/c^2}\\) 이다. 이를 적용하면\n\\[\nt_1+t_2 = \\dfrac{L_\\parallel}{c-u}+ \\dfrac{L_\\parallel}{c+u} = \\dfrac{2L/c}{\\sqrt{1-u^2/c^2}} = 2t_3.\n\\tag{24.5}\\]\n이다.\n\n\n15-4 시간의 변환\n15-3 마이켈슨 몰리 실험 은 지구와 같이 움직이는 관찰자가 아닌 정지한 관찰자의 입장에서 \\(t_1,\\,t_2,\\,t_3\\) 를 측정하고 계산한 실험이다. 이제 지구와 같이 움직이는 관찰자의 입장에서 보자. 구별하기 위해 \\(\\overline{t}_1,\\,\\overline{t}_2,\\,\\overline{t}_3\\) 라고 하면\n\\[\n\\overline{t}_1 = \\overline{t}_2 = \\overline{t}_3 = L/c\n\\]\n이다. \\(\\overline{t}_1+\\overline{t}_2=2\\overline{t}_3\\) 의 관계는 만족하지만\n\\[\nt_3 = \\dfrac{L/c}{\\sqrt{1-u^2/c^2}} &gt; \\dfrac{L}{c}= \\overline{t}_3\n\\]\n이다. 예를 들어 \\(t_3=1,\\,\\overline{t}_3=0.7\\) 이라고 하자. 즉 정지한 좌표계에서 움직이는 좌표계의 모든 사건은 느리게 발생한다.\n\n\n15-5 로런츠 수축\n\n마이켈슨-몰리 실험은 두 경로 (\\(BCB\\), \\(BEB\\)) 의 두 빛이 위상차를 전혀 갖지 않는다는 것을 보여준다. \\(BC\\) 의 길이는 두 좌표계 \\(S,\\,S'\\) 에서 변하지 않는다는 것을 안다.\n이것으로부터 \\(BE\\) 의 길이가 \\(L\\sqrt{1-u^2/c^2}\\) 만큼 줄어들었을 때 실험 결과를 잘 성명한다는 것도 알게 되었다. 그렇다면 \\(S\\) 에서의 측정과 \\(S'\\) 에서의 \\(BE\\) 의 길이 측정에 무슨 차이가 존재할까?\n\n기타..\n\n\n15-6 동시성\n\n로런츠 변환 식 24.2 의 시간의 변환식을 보자. 여기서 \\(-ux/c^2\\) 는 무슨 의미인가?\n\\(S\\) 기준틀에서 \\(x_1,\\,x_2 (x_1\\ne x_2)\\) 에서 \\(t_1=t_2\\) 에 어떤 사건이 발생했다고 하자. \\(S'\\) 기준틀에서 아래 식이 성립한다. \\[\nt'_2-t'_1 = \\dfrac{(t_2-ux_2/c^2)-(t_1-ux_1/c^2)}{\\sqrt{1-u^2/c^2}} = \\dfrac{u(x_1-x_2)/c^2}{\\sqrt{1-u^2/c^2}}\n\\]\n즉 \\(S\\) 기준틀에서 동시인 사건은 \\(S'\\) 기준틀에서 같은 위치에서 발생하지 않았다면 동시인 사건이 아니다.\n\n\n\n15-7 4-벡터\n3차원 좌표공간에서 회전 변환 \\(R\\) 에 의해 거리가 보존되며 \\(\\boldsymbol{x}'=R\\boldsymbol{x}\\) 에 대해 \\(\\|\\boldsymbol{x}'\\|=\\|\\boldsymbol{x}\\|\\) 이다. 로런츠 변환에 대해서는\n\\[\n(ct')^2 - x'^2 - y'^2 - z'^2 = ct^2 - x^2 - y^2 - z^2\n\\]\n이 성립한다. 이제 4차원 벡터 \\(X=(ct,\\,x,\\,y,\\,z)\\) 에 대해 \\(\\|X\\| = \\sqrt{ct^2 - x^2 - y^2 - z^2}\\) 라고 정의하면 로런츠 변환에 대해 \\(\\|X'\\| = \\|X\\|\\) 이다. \\(X=(ct,\\,x,\\,y,\\,z)\\) 형식의 벡터를 4-벡터 라고 한다.\n\n\n15-8 상대론적 동역학\n뉴턴의 운동방정식은 \\(\\boldsymbol{p}=m\\boldsymbol{v}\\) 에 대해\n\\[\n\\boldsymbol{F}=\\dfrac{d\\boldsymbol{p}}{dt},\n\\]\n이다. 상대성 이론에서는 운동량이 아래와 같이 정의된다. 이것은 아인슈타인에 의해 정의되었다.\n\\[\n\\boldsymbol{p}= \\dfrac{m\\boldsymbol{v}}{\\sqrt{1-v^2/c^2}}.\n\\tag{24.6}\\]\n작용-반작용이 최종적으로 서로 같다면 위와 같이 정의된 운동량은 보존된다.\n\n\n\n\n\n\n힌트최종적으로…\n\n\n\n상대론적 역학에서 힘과 반력(작용-반작용)이 고전역학처럼 항상 정확히 동시에 크기가 같고 반대 방향으로 작용하지 않을 수 있다는 뜻이다. 왜냐면 특수상대성 이론에서는 “동시성” 자체가 관성계에 따라 다르니까. 예를 들어, 두 입자가 서로 멀리 떨어져 있는데 전자기력으로 상호작용한다고 해보자. 한 입자가 다른 입자를 밀면, 그 힘은 빛의 속도로 전달되며, 그래서 한 기준틀에서는 A가 B를 민 직후에 B의 반작용이 나타나 보이지만, 다른 움직이는 기준틀에서는 시간 순서가 조금 뒤바뀌어 보일 수 있어. 즉, 순간 순간(in detail) 작용과 반작용이 정확히 균형을 이루지 않는 것처럼 보일 수 있다는 의미이다.\n“최종적으로(in the long run)”는 결국 전체 시스템을 보면, 에너지와 운동량이 보존되는 방식으로 힘들이 균형을 이룬다는 뜻이다. 자기장과 전기장이 서로 에너지와 운동량을 주고받으면서, 입자들만 보면 순간적으로 운동량이 보존되지 않는 것처럼 보여도, 장(field)까지 포함한 전체 시스템에서는 여전히 운동량이 보존된다.\n\n\n일정한 힘이 계속 작용하고 있다고 하자. \\(\\boldsymbol{F}=F_0\\hat{\\boldsymbol{x}}\\) 라고 하자. 일반성을 잃지 않고 \\(\\boldsymbol{v}=v\\hat{\\boldsymbol{x}}\\) 라고 할 수 있다.\n\\[\n\\dfrac{d}{dt}\\left(\\dfrac{mv}{\\sqrt{1-v^2/c^2}}\\right) = F_0 \\implies \\dfrac{mv}{\\sqrt{1-v^2/c^2}} = F_0 t + C\n\\]\n이며 \\(t=0\\) 일 때 \\(v=0\\) 으로 놓으면 \\(C=0\\) 이다. 이로부터\n\\[\nv(t)= \\dfrac{Ft/m}{\\sqrt {1+ \\left(Ft/mc\\right)^2}}\n\\]\n이다. \\(t\\to infty\\) 극한에서 \\(v(t) \\to c\\) 임을 안다. 이것은 뉴턴역학과 다른 결과인데 뉴턴역학에서는 일정한 힘을 계속 가할 수 있다면 \\(v&gt;c\\) 가 가능하다.\n\n\n15-9 질량과 에너지의 동등함\n아인슈타인은 에너지를 아래와 같이 정의했다.\n\\[\nE:= \\dfrac{mv^2}{\\sqrt{1-v^2/c^2}}.\n\\tag{24.7}\\]\n이를 테일러 전개 하면\n\\[\nE=mc^2 + \\dfrac{mv^2}{2} + \\cdots\n\\]\n이며 \\(v\\ll c\\) 일 때 근사적으로 에너지는 정지에너지 \\(mc^2\\) 과 뉴턴 운동에너지 \\(mv^2/2\\) 의 합으로 나타낼 수 있다는 것을 안다.",
+    "crumbs": [
+      "전기자기학",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>파인만 물리학 강의 I</span>"
+    ]
+  },
+  {
+    "objectID": "src/Feynmann/vol1.html#quantum-behavior",
+    "href": "src/Feynmann/vol1.html#quantum-behavior",
+    "title": "24  파인만 물리학 강의 I",
+    "section": "37. Quantum Behavior",
+    "text": "37. Quantum Behavior\n\n37-1 Atomic mechanics",
     "crumbs": [
       "전기자기학",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>파인만 물리학 강의 I</span>"
@@ -1119,8 +1141,8 @@
     "objectID": "src/Feynmann/vol1.html#the-kinetic-theory-of-gases",
     "href": "src/Feynmann/vol1.html#the-kinetic-theory-of-gases",
     "title": "24  파인만 물리학 강의 I",
-    "section": "",
-    "text": "39-4 온도와 운동에너지\n\n\n예제 24.1 (두 종류의 기체분자)  \n\n\n\n파인만 물리학 강의 I. 그림 39-4\n\n\n두 종류의 기체가 컨테이너 안에서 셖여 있다고 하자. 기체 분자의 질량은 각각 \\(m_1,\\,m_2\\) 이며 속도를 각각 \\(\\boldsymbol{v}_1,\\,\\boldsymbol{v}_2\\) 라고 하자. 기체 분자의 충돌은 탄성 충돌이라고 가정한다.\n이 때 질량중심죄표계에서 보면 (질량중심 좌표계에서의 탄성 충돌 을 참고하라) 이 충돌은 두 입자는 속도는 일정하며 방향만 바뀌는 충돌이며 질량중심 좌표계에서 이 방향의 분포는 균일하다.\n이제 실제 상황에서 보자. 서로 다른 두 분자의 충돌의 질량 중심 속도 \\(\\boldsymbol{V}\\) 와 상대속도 \\(\\boldsymbol{v}\\) 를 아래와 같이 정한다.\n\\[\n\\boldsymbol{V}=\\dfrac{m_1\\boldsymbol{v}_1+m_2\\boldsymbol{v}_2}{m_1+m_2},\\qquad \\boldsymbol{v} = \\boldsymbol{v}_1-\\boldsymbol{v}_2\n\\]\n충돌 후에 원자의 분포는 어떻게 될까? 일단 우리는 충돌 전후 질량중심의 속도 \\(\\boldsymbol{V}\\) 가 변하지 않는다는 것을 안다. 또한 \\(\\boldsymbol{V}\\) 의 방향이 완전이 임의적이라는 데 동의 할 수 있을 것이다. 즉 \\(\\boldsymbol{V\\cdot v}\\) 의 평균값은 \\(0\\) 이다. 또한 \\(\\boldsymbol{v}_1\\boldsymbol{\\cdot v}_2\\) 의 평균값도 \\(0\\) 이라는 데 동의 할 수 있다. 여기서\n\\[\n\\boldsymbol{V\\cdot v} = \\dfrac{(\\boldsymbol{v}_1-\\boldsymbol{v}_2) \\boldsymbol{\\cdot} (m_1\\boldsymbol{v}_1 + m_2 \\boldsymbol{v}_2)}{m_1+m+2} = \\dfrac{(m_1v_1^2 - m_2v_2^2) + (m_2-m_1)(\\boldsymbol{v}_1\\boldsymbol{\\cdot v}_2)}{m_1+m_2}\n\\]\n이므로\n\\[\n\\left\\langle \\dfrac{m_1v_1^2}{2}\\right\\rangle = \\left\\langle \\dfrac{m_2v_2^2}{2}\\right\\rangle\n\\]\n이다. 즉 두 기체 분자의 평균 운동 에너지는 같아진다.",
+    "section": "39. The Kinetic Theory of Gases",
+    "text": "39. The Kinetic Theory of Gases\n\n39-4 온도와 운동에너지\n\n\n예제 24.1 (두 종류의 기체분자)  \n\n\n\n파인만 물리학 강의 I. 그림 39-4\n\n\n두 종류의 기체가 컨테이너 안에서 셖여 있다고 하자. 기체 분자의 질량은 각각 \\(m_1,\\,m_2\\) 이며 속도를 각각 \\(\\boldsymbol{v}_1,\\,\\boldsymbol{v}_2\\) 라고 하자. 기체 분자의 충돌은 탄성 충돌이라고 가정한다.\n이 때 질량중심죄표계에서 보면 (질량중심 좌표계에서의 탄성 충돌 을 참고하라) 이 충돌은 두 입자는 속도는 일정하며 방향만 바뀌는 충돌이며 질량중심 좌표계에서 이 방향의 분포는 균일하다.\n이제 실제 상황에서 보자. 서로 다른 두 분자의 충돌의 질량 중심 속도 \\(\\boldsymbol{V}\\) 와 상대속도 \\(\\boldsymbol{v}\\) 를 아래와 같이 정한다.\n\\[\n\\boldsymbol{V}=\\dfrac{m_1\\boldsymbol{v}_1+m_2\\boldsymbol{v}_2}{m_1+m_2},\\qquad \\boldsymbol{v} = \\boldsymbol{v}_1-\\boldsymbol{v}_2\n\\]\n충돌 후에 원자의 분포는 어떻게 될까? 일단 우리는 충돌 전후 질량중심의 속도 \\(\\boldsymbol{V}\\) 가 변하지 않는다는 것을 안다. 또한 \\(\\boldsymbol{V}\\) 의 방향이 완전이 임의적이라는 데 동의 할 수 있을 것이다. 즉 \\(\\boldsymbol{V\\cdot v}\\) 의 평균값은 \\(0\\) 이다. 또한 \\(\\boldsymbol{v}_1\\boldsymbol{\\cdot v}_2\\) 의 평균값도 \\(0\\) 이라는 데 동의 할 수 있다. 여기서\n\\[\n\\boldsymbol{V\\cdot v} = \\dfrac{(\\boldsymbol{v}_1-\\boldsymbol{v}_2) \\boldsymbol{\\cdot} (m_1\\boldsymbol{v}_1 + m_2 \\boldsymbol{v}_2)}{m_1+m+2} = \\dfrac{(m_1v_1^2 - m_2v_2^2) + (m_2-m_1)(\\boldsymbol{v}_1\\boldsymbol{\\cdot v}_2)}{m_1+m_2}\n\\]\n이므로\n\\[\n\\left\\langle \\dfrac{m_1v_1^2}{2}\\right\\rangle = \\left\\langle \\dfrac{m_2v_2^2}{2}\\right\\rangle\n\\]\n이다. 즉 두 기체 분자의 평균 운동 에너지는 같아진다.",
     "crumbs": [
       "전기자기학",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>파인만 물리학 강의 I</span>"
@@ -1132,6 +1154,39 @@
     "title": "24  파인만 물리학 강의 I",
     "section": "40. The Principle of Statistical Mechanics",
     "text": "40. The Principle of Statistical Mechanics\n\n40.1 지수적 대기\n\n\n예제 24.2 (높이에 따른 압력의 변화)  \n\n\n\n파인만 물리학 강의 I. 그림 40-1\n\n\n위의 그림과 같은 실험장치를 생각하자. 피스톤의 위의 공기와 아래의 공기는 열평형 상태인데 이는 위와 아래의 공기의 출입은 막으면서 열만을 전달해주는 메카니즘이 존재하기 때문이다. 온도 \\(T\\), 압력 \\(P\\), 부피 \\(V\\), 볼츠만 상수 \\(k_B\\), 공기 분자 개수 \\(N\\) 에 대해 \\(PV=Nk_BT\\) 이며 단위 부피당 분자 개수 \\(n=N/V\\) 이다. 이로부터 \\(P=nk_BT\\) 임을 알며 \\(T\\) 가 일정하므로 \\(P \\propto n\\) 이다. 여기에 중력가속도 \\(g\\) 에 의한 중력이 작용한다고 하자.\n위의 그림과 같이 높이 \\(h\\) 와 \\(h+dh\\) 에 의해 이루어진 얇은 층에 대해 위에서 누르는 힘과 아래에서 누르는 힘이 평행을 이루어야 한다. 즉 압력이 같아야 한다. 기체 분자의 질량이 \\(m\\) 이라면\n\\[\nP_{h+dh}-P_h = dP = -mgn\\,dh\n\\]\n임을 안다. \\(P = nk_BT\\) 이며 주어진 조건으로부터 \\(dP = dnk_B T\\) 임을 안다. 따라서\n\\[\n\\dfrac{dn}{dh}= - \\dfrac{mg}{k_B T}n\n\\]\n이며 이 미분방정식의 해는\n\\[\nn(h) = n_0 e^{-mgh/k_BT}\n\\]\n임을 안다.",
+    "crumbs": [
+      "전기자기학",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>파인만 물리학 강의 I</span>"
+    ]
+  },
+  {
+    "objectID": "src/Feynmann/vol1.html#볼츠만-법칙",
+    "href": "src/Feynmann/vol1.html#볼츠만-법칙",
+    "title": "24  파인만 물리학 강의 I",
+    "section": "40-2 볼츠만 법칙",
+    "text": "40-2 볼츠만 법칙\n\\[\nn = n_0 e^{-\\text{P.E.}/k_BT}\n\\]",
+    "crumbs": [
+      "전기자기학",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>파인만 물리학 강의 I</span>"
+    ]
+  },
+  {
+    "objectID": "src/Feynmann/vol1.html#액체의-증발",
+    "href": "src/Feynmann/vol1.html#액체의-증발",
+    "title": "24  파인만 물리학 강의 I",
+    "section": "40-3 액체의 증발",
+    "text": "40-3 액체의 증발\n분자들의 집합을 생각하자. 이 분자들 사이에는 쌍마다 서로의 거리만 의존하는 상호작용, 즉 포텐셜 에너지가 존재한다. 이 때 두 분자 사이의 거리 \\(r\\) 에 따른 포텐셜 \\(V(r)\\) 은 일반적으로 아래 그림과 같은 형태이며 \\(r&lt;r_0\\) 일 때는 척력이 \\(r&gt;r_0\\) 일 때는 인력이 작용한다.\n\n\n\n파인만 물리학 강의 I 그림 40-3(redraw)\n\n\n이런 기체 분자로 차 있는 상자를 생각하자. 이 기체들 사이의 포텐셜은 각 개별 쌍의 포텐셜의 합이라고 가정하자. (세개 이상에 대한 상호작용도 존재한다-Three-body force 를 참고하라.) 그렇다면 볼츠만의 법칙에 따라 분자 쌍이 \\(r_{ij}\\) 만큼의 거리를 두고 존재할 확률은 다음에 비례한다.\n\\[\n\\exp \\left[-\\sum_{i,j} V(r_{ij})/k_BT\\right].\n\\]",
+    "crumbs": [
+      "전기자기학",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>파인만 물리학 강의 I</span>"
+    ]
+  },
+  {
+    "objectID": "src/Feynmann/vol1.html#분자-속력의-분포",
+    "href": "src/Feynmann/vol1.html#분자-속력의-분포",
+    "title": "24  파인만 물리학 강의 I",
+    "section": "40-4 분자 속력의 분포",
+    "text": "40-4 분자 속력의 분포",
     "crumbs": [
       "전기자기학",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>파인만 물리학 강의 I</span>"
@@ -1192,11 +1247,11 @@
     ]
   },
   {
-    "objectID": "src/Feynmann/vol1.html#볼츠만-법칙",
-    "href": "src/Feynmann/vol1.html#볼츠만-법칙",
+    "objectID": "src/Feynmann/vol1.html#상대론적-에너지와-운동량",
+    "href": "src/Feynmann/vol1.html#상대론적-에너지와-운동량",
     "title": "24  파인만 물리학 강의 I",
-    "section": "40-2 볼츠만 법칙",
-    "text": "40-2 볼츠만 법칙\n\\[\nn = n_0 e^{-\\text{P.E.}/k_BT}\n\\]",
+    "section": "16. 상대론적 에너지와 운동량",
+    "text": "16. 상대론적 에너지와 운동량\n\n16-1 상대론과 철학",
     "crumbs": [
       "전기자기학",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>파인만 물리학 강의 I</span>"

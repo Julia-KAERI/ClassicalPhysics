@@ -408,7 +408,27 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#the-kinetic-theory-of-gases" id="toc-the-kinetic-theory-of-gases" class="nav-link active" data-scroll-target="#the-kinetic-theory-of-gases">39. The Kinetic Theory of Gases</a>
+  <li><a href="#특수-상대성-이론" id="toc-특수-상대성-이론" class="nav-link active" data-scroll-target="#특수-상대성-이론">15. 특수 상대성 이론</a>
+  <ul class="collapse">
+  <li><a href="#상대성-이론" id="toc-상대성-이론" class="nav-link" data-scroll-target="#상대성-이론">15-1 상대성 이론</a></li>
+  <li><a href="#로렌츠-변환" id="toc-로렌츠-변환" class="nav-link" data-scroll-target="#로렌츠-변환">15-2 로렌츠 변환</a></li>
+  <li><a href="#sec-FLP_15_3" id="toc-sec-FLP_15_3" class="nav-link" data-scroll-target="#sec-FLP_15_3">15-3 마이켈슨-몰리 실험</a></li>
+  <li><a href="#시간의-변환" id="toc-시간의-변환" class="nav-link" data-scroll-target="#시간의-변환">15-4 시간의 변환</a></li>
+  <li><a href="#로런츠-수축" id="toc-로런츠-수축" class="nav-link" data-scroll-target="#로런츠-수축">15-5 로런츠 수축</a></li>
+  <li><a href="#동시성" id="toc-동시성" class="nav-link" data-scroll-target="#동시성">15-6 동시성</a></li>
+  <li><a href="#벡터" id="toc-벡터" class="nav-link" data-scroll-target="#벡터">15-7 4-벡터</a></li>
+  <li><a href="#상대론적-동역학" id="toc-상대론적-동역학" class="nav-link" data-scroll-target="#상대론적-동역학">15-8 상대론적 동역학</a></li>
+  <li><a href="#질량과-에너지의-동등함" id="toc-질량과-에너지의-동등함" class="nav-link" data-scroll-target="#질량과-에너지의-동등함">15-9 질량과 에너지의 동등함</a></li>
+  </ul></li>
+  <li><a href="#상대론적-에너지와-운동량" id="toc-상대론적-에너지와-운동량" class="nav-link" data-scroll-target="#상대론적-에너지와-운동량">16. 상대론적 에너지와 운동량</a>
+  <ul class="collapse">
+  <li><a href="#상대론과-철학" id="toc-상대론과-철학" class="nav-link" data-scroll-target="#상대론과-철학">16-1 상대론과 철학</a></li>
+  </ul></li>
+  <li><a href="#quantum-behavior" id="toc-quantum-behavior" class="nav-link" data-scroll-target="#quantum-behavior">37. Quantum Behavior</a>
+  <ul class="collapse">
+  <li><a href="#atomic-mechanics" id="toc-atomic-mechanics" class="nav-link" data-scroll-target="#atomic-mechanics">37-1 Atomic mechanics</a></li>
+  </ul></li>
+  <li><a href="#the-kinetic-theory-of-gases" id="toc-the-kinetic-theory-of-gases" class="nav-link" data-scroll-target="#the-kinetic-theory-of-gases">39. The Kinetic Theory of Gases</a>
   <ul class="collapse">
   <li><a href="#온도와-운동에너지" id="toc-온도와-운동에너지" class="nav-link" data-scroll-target="#온도와-운동에너지">39-4 온도와 운동에너지</a></li>
   </ul></li>
@@ -417,6 +437,8 @@ window.Quarto = {
   <li><a href="#지수적-대기" id="toc-지수적-대기" class="nav-link" data-scroll-target="#지수적-대기">40.1 지수적 대기</a></li>
   </ul></li>
   <li><a href="#볼츠만-법칙" id="toc-볼츠만-법칙" class="nav-link" data-scroll-target="#볼츠만-법칙">40-2 볼츠만 법칙</a></li>
+  <li><a href="#액체의-증발" id="toc-액체의-증발" class="nav-link" data-scroll-target="#액체의-증발">40-3 액체의 증발</a></li>
+  <li><a href="#분자-속력의-분포" id="toc-분자-속력의-분포" class="nav-link" data-scroll-target="#분자-속력의-분포">40-4 분자 속력의 분포</a></li>
   </ul>
 </nav>
     </div>
@@ -435,6 +457,197 @@ window.Quarto = {
 \DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
 </div>
+<section id="특수-상대성-이론" class="level2">
+<h2 class="anchored" data-anchor-id="특수-상대성-이론">15. 특수 상대성 이론</h2>
+<section id="상대성-이론" class="level3">
+<h3 class="anchored" data-anchor-id="상대성-이론">15-1 상대성 이론</h3>
+<ul>
+<li>정지 질량과 상대론적 질량 (현대적인 상대론에서는 상대론적인 질량이란 개념을 사용하지 않는다.)</li>
+<li>뉴턴의 상대성 이론, 즉 갈릴레이의 상대성 이론</li>
+<li>멕스웰 방정식은 갈릴레이 상대성 이론과 일치하지 않는다. 즉 멕스웰 방정식이 갈릴레이 변환에 대해 불변이 아님.</li>
+<li>멕스웰 방정식을 이용하여 절대적인 속도를 얻기 위한 노력이 있었으나 무산됨 (예:마이켈슨-몰리 실험)</li>
+</ul>
+</section>
+<section id="로렌츠-변환" class="level3">
+<h3 class="anchored" data-anchor-id="로렌츠-변환">15-2 로렌츠 변환</h3>
+<ul>
+<li><p>멕스웰 방정식과 갈릴레이 상대성 이론을 조화시키려는 노력, 그리고 실패</p></li>
+<li><p>로런츠 변환의 등장</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span><strong>갈릴레이 변환과 로런츠 변환</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>한 기준틀 <span class="math inline">\(S' = (t',\,x',\,y',\,z')\)</span> 이 다른 기준틀 <span class="math inline">\(S=(t,\,x,\,y,\,z)\)</span> 에 대해 <span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{x}}\)</span> 의 속도로 움직일 때 아래의 관계를 <strong>갈릴레이 변환 (Galilean transformation)</strong> 이라고 한다.</p>
+<p><span id="eq-FLP_1_15_2"><span class="math display">\[
+x' = x-ut,\quad y'=y,\quad z'=z,\quad t'=t.
+\tag{24.1}\]</span></span></p>
+<p>이에 대해 아래의 관계를 <strong>로런츠 변환 (Lorentz transformation)</strong> 이라고 한다.</p>
+<p><span id="eq-FLP_1_15_3"><span class="math display">\[
+x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c^2}{\sqrt{1-u^2/c^2}}
+\tag{24.2}\]</span></span></p>
+</div>
+</div></li>
+<li><p>푸앙카레의 주장</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Henri Poincaré (1905), Sur la dynamique de l’électron
+<ul>
+<li>로렌츠 변환을 <strong>변환군(로렌츠 군)</strong>으로 다루고, 물리 방정식의 형태가 그 변환 아래에서 유지되는 구조를 논의함. 푸앵카레가 로렌츠 변환을 단순한 “요령”이 아니라 <strong>대칭(군)</strong>으로 명확히 인식했다는 점에서 가장 직접적인 1차 자료임.</li>
+</ul></li>
+<li>Henri Poincaré (1904), St.&nbsp;Louis 강연
+<ul>
+<li>(보통 The Principles of Mathematical Physics로 알려진 텍스트로 전해짐)</li>
+<li>“상대성 원리(관성계에서 물리 법칙 동일)”를 일반 원리로 언급하고, 전자기학/로렌츠 이론 맥락에서 로렌츠 변환이 중요하다는 흐름으로 연결됨. (참고로, “상대성 원리”를 더 넓게 전개한 저술)</li>
+</ul></li>
+<li>Henri Poincaré (1902), La Science et l’Hypothèse
+<ul>
+<li>엄밀히 “로렌츠 불변성”을 공식처럼 딱 박는 텍스트라기보단, 절대운동의 비가시성과 상대성 원리를 강하게 밀어주는 철학적/물리적 논지로 도움이 됨.</li>
+</ul></li>
+</ul>
+<p>(from ChatGPT, need to be checked)</p>
+</div>
+</div></li>
+<li><p>아인슈타인의 특수상대성 이론의 등장</p></li>
+</ul>
+</section>
+<section id="sec-FLP_15_3" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_15_3">15-3 마이켈슨-몰리 실험</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/michelson-morley_experiment/feynmann_fig_15_2.png" class="img-fluid figure-img" width="500"></p>
+<figcaption>파인만 물리학 강의 I. 그림 15-2</figcaption>
+</figure>
+</div>
+<p>실험 장비가 <span class="math inline">\(u\)</span> 의 속도로 움직이고 있다고 하자. 정지한 좌표계에서 빛이 <span class="math inline">\(A-E'\)</span> 으로 진행하는데 걸린 시간 <span class="math inline">\(t_1\)</span> 은 <span class="math inline">\(ct_1 = L+ut_1\)</span> 로부터 계산 할 수 있고 <span class="math inline">\(E'\)</span> 에서 반사되어 <span class="math inline">\(E'-B'\)</span> 경로를 진행하는데 걸린 시간 <span class="math inline">\(t_2\)</span> 는 <span class="math inline">\(ct_2 =L-ut_2\)</span> 로부터 계산 할 수 있다. 여기서 빛이 <span class="math inline">\(B\)</span> 로부터 진행하여 <span class="math inline">\(B'\)</span> 으로 돌아오는데 걸린 시간 <span class="math inline">\(t_1+t_2\)</span> 는 아래와 같다.</p>
+<p><span id="eq-FLP_1_15_4"><span class="math display">\[
+t_1+t_2 = \dfrac{L}{c-u}+ \dfrac{L}{c+u} = \dfrac{2L/c}{1-u^2/c^2}.
+\tag{24.3}\]</span></span></p>
+<p>이제 빛이 <span class="math inline">\(B\)</span> 로 부터 <span class="math inline">\(C'\)</span> 을 거쳐 <span class="math inline">\(B'\)</span> 으로 돌아오는데 걸린 시간 <span class="math inline">\(2t_3\)</span> 는 <span class="math inline">\(L^2+(ut_3)^2 = (ct_3)^3\)</span> 으로 부터 구할 수 있다. 즉</p>
+<p><span id="eq-FLP_1_15_5"><span class="math display">\[
+2t_3 = \dfrac{2L/c}{\sqrt{1-u^2/c^2}}
+\tag{24.4}\]</span></span></p>
+<p>이다. 마이켈슨-몰리 실험의 결과는 <span class="math inline">\(t_1+t_2 = 2t_3\)</span> 인 것이며 이는 <a href="#eq-FLP_1_15_4" class="quarto-xref">식&nbsp;<span>24.3</span></a> 과 <a href="#eq-FLP_1_15_5" class="quarto-xref">식&nbsp;<span>24.4</span></a> 가운데 오류가 있다는 것을 의미한다. 로런츠는 로런츠 변환에서 움직인는 물체의 길이는 움직이는 방향으로 수축된다고 주장하였으며 그 수축된 길이 <span class="math inline">\(L_\parallel = L\sqrt{1-u^2/c^2}\)</span> 이다. 이를 적용하면</p>
+<p><span id="eq-FLP_1_15_7"><span class="math display">\[
+t_1+t_2 = \dfrac{L_\parallel}{c-u}+ \dfrac{L_\parallel}{c+u} = \dfrac{2L/c}{\sqrt{1-u^2/c^2}} = 2t_3.
+\tag{24.5}\]</span></span></p>
+<p>이다.</p>
+</section>
+<section id="시간의-변환" class="level3">
+<h3 class="anchored" data-anchor-id="시간의-변환">15-4 시간의 변환</h3>
+<p><a href="#sec-FLP_15_3">15-3 마이켈슨 몰리 실험</a> 은 지구와 같이 움직이는 관찰자가 아닌 정지한 관찰자의 입장에서 <span class="math inline">\(t_1,\,t_2,\,t_3\)</span> 를 측정하고 계산한 실험이다. 이제 지구와 같이 움직이는 관찰자의 입장에서 보자. 구별하기 위해 <span class="math inline">\(\overline{t}_1,\,\overline{t}_2,\,\overline{t}_3\)</span> 라고 하면</p>
+<p><span class="math display">\[
+\overline{t}_1 = \overline{t}_2 = \overline{t}_3 = L/c
+\]</span></p>
+<p>이다. <span class="math inline">\(\overline{t}_1+\overline{t}_2=2\overline{t}_3\)</span> 의 관계는 만족하지만</p>
+<p><span class="math display">\[
+t_3 = \dfrac{L/c}{\sqrt{1-u^2/c^2}} &gt; \dfrac{L}{c}= \overline{t}_3
+\]</span></p>
+<p>이다. 예를 들어 <span class="math inline">\(t_3=1,\,\overline{t}_3=0.7\)</span> 이라고 하자. 즉 정지한 좌표계에서 움직이는 좌표계의 모든 사건은 느리게 발생한다.</p>
+</section>
+<section id="로런츠-수축" class="level3">
+<h3 class="anchored" data-anchor-id="로런츠-수축">15-5 로런츠 수축</h3>
+<ul>
+<li>마이켈슨-몰리 실험은 두 경로 (<span class="math inline">\(BCB\)</span>, <span class="math inline">\(BEB\)</span>) 의 두 빛이 위상차를 전혀 갖지 않는다는 것을 보여준다. <span class="math inline">\(BC\)</span> 의 길이는 두 좌표계 <span class="math inline">\(S,\,S'\)</span> 에서 변하지 않는다는 것을 안다.</li>
+<li>이것으로부터 <span class="math inline">\(BE\)</span> 의 길이가 <span class="math inline">\(L\sqrt{1-u^2/c^2}\)</span> 만큼 줄어들었을 때 실험 결과를 잘 성명한다는 것도 알게 되었다. 그렇다면 <span class="math inline">\(S\)</span> 에서의 측정과 <span class="math inline">\(S'\)</span> 에서의 <span class="math inline">\(BE\)</span> 의 길이 측정에 무슨 차이가 존재할까?</li>
+</ul>
+<p>기타..</p>
+</section>
+<section id="동시성" class="level3">
+<h3 class="anchored" data-anchor-id="동시성">15-6 동시성</h3>
+<ul>
+<li><p>로런츠 변환 <a href="#eq-FLP_1_15_3" class="quarto-xref">식&nbsp;<span>24.2</span></a> 의 시간의 변환식을 보자. 여기서 <span class="math inline">\(-ux/c^2\)</span> 는 무슨 의미인가?</p></li>
+<li><p><span class="math inline">\(S\)</span> 기준틀에서 <span class="math inline">\(x_1,\,x_2 (x_1\ne x_2)\)</span> 에서 <span class="math inline">\(t_1=t_2\)</span> 에 어떤 사건이 발생했다고 하자. <span class="math inline">\(S'\)</span> 기준틀에서 아래 식이 성립한다. <span class="math display">\[
+t'_2-t'_1 = \dfrac{(t_2-ux_2/c^2)-(t_1-ux_1/c^2)}{\sqrt{1-u^2/c^2}} = \dfrac{u(x_1-x_2)/c^2}{\sqrt{1-u^2/c^2}}
+\]</span></p>
+<p>즉 <span class="math inline">\(S\)</span> 기준틀에서 동시인 사건은 <span class="math inline">\(S'\)</span> 기준틀에서 같은 위치에서 발생하지 않았다면 동시인 사건이 아니다.</p></li>
+</ul>
+</section>
+<section id="벡터" class="level3">
+<h3 class="anchored" data-anchor-id="벡터">15-7 4-벡터</h3>
+<p>3차원 좌표공간에서 회전 변환 <span class="math inline">\(R\)</span> 에 의해 거리가 보존되며 <span class="math inline">\(\boldsymbol{x}'=R\boldsymbol{x}\)</span> 에 대해 <span class="math inline">\(\|\boldsymbol{x}'\|=\|\boldsymbol{x}\|\)</span> 이다. 로런츠 변환에 대해서는</p>
+<p><span class="math display">\[
+(ct')^2 - x'^2 - y'^2 - z'^2 = ct^2 - x^2 - y^2 - z^2
+\]</span></p>
+<p>이 성립한다. 이제 4차원 벡터 <span class="math inline">\(X=(ct,\,x,\,y,\,z)\)</span> 에 대해 <span class="math inline">\(\|X\| = \sqrt{ct^2 - x^2 - y^2 - z^2}\)</span> 라고 정의하면 로런츠 변환에 대해 <span class="math inline">\(\|X'\| = \|X\|\)</span> 이다. <span class="math inline">\(X=(ct,\,x,\,y,\,z)\)</span> 형식의 벡터를 4-벡터 라고 한다.</p>
+</section>
+<section id="상대론적-동역학" class="level3">
+<h3 class="anchored" data-anchor-id="상대론적-동역학">15-8 상대론적 동역학</h3>
+<p>뉴턴의 운동방정식은 <span class="math inline">\(\boldsymbol{p}=m\boldsymbol{v}\)</span> 에 대해</p>
+<p><span class="math display">\[
+\boldsymbol{F}=\dfrac{d\boldsymbol{p}}{dt},
+\]</span></p>
+<p>이다. 상대성 이론에서는 운동량이 아래와 같이 정의된다. 이것은 아인슈타인에 의해 정의되었다.</p>
+<p><span id="eq-FLP_1_15_10"><span class="math display">\[
+\boldsymbol{p}= \dfrac{m\boldsymbol{v}}{\sqrt{1-v^2/c^2}}.
+\tag{24.6}\]</span></span></p>
+<p>작용-반작용이 <u>최종적으로</u> 서로 같다면 위와 같이 정의된 운동량은 보존된다.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span><strong>최종적으로…</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>상대론적 역학에서 힘과 반력(작용-반작용)이 고전역학처럼 항상 정확히 동시에 크기가 같고 반대 방향으로 작용하지 않을 수 있다는 뜻이다. 왜냐면 특수상대성 이론에서는 “동시성” 자체가 관성계에 따라 다르니까. 예를 들어, 두 입자가 서로 멀리 떨어져 있는데 전자기력으로 상호작용한다고 해보자. 한 입자가 다른 입자를 밀면, 그 힘은 빛의 속도로 전달되며, 그래서 한 기준틀에서는 A가 B를 민 직후에 B의 반작용이 나타나 보이지만, 다른 움직이는 기준틀에서는 시간 순서가 조금 뒤바뀌어 보일 수 있어. 즉, 순간 순간(in detail) 작용과 반작용이 정확히 균형을 이루지 않는 것처럼 보일 수 있다는 의미이다.</p>
+<p>“최종적으로(in the long run)”는 결국 전체 시스템을 보면, 에너지와 운동량이 보존되는 방식으로 힘들이 균형을 이룬다는 뜻이다. 자기장과 전기장이 서로 에너지와 운동량을 주고받으면서, 입자들만 보면 순간적으로 운동량이 보존되지 않는 것처럼 보여도, 장(field)까지 포함한 전체 시스템에서는 여전히 운동량이 보존된다.</p>
+</div>
+</div>
+<p>일정한 힘이 계속 작용하고 있다고 하자. <span class="math inline">\(\boldsymbol{F}=F_0\hat{\boldsymbol{x}}\)</span> 라고 하자. 일반성을 잃지 않고 <span class="math inline">\(\boldsymbol{v}=v\hat{\boldsymbol{x}}\)</span> 라고 할 수 있다.</p>
+<p><span class="math display">\[
+\dfrac{d}{dt}\left(\dfrac{mv}{\sqrt{1-v^2/c^2}}\right) = F_0 \implies \dfrac{mv}{\sqrt{1-v^2/c^2}} = F_0 t + C
+\]</span></p>
+<p>이며 <span class="math inline">\(t=0\)</span> 일 때 <span class="math inline">\(v=0\)</span> 으로 놓으면 <span class="math inline">\(C=0\)</span> 이다. 이로부터</p>
+<p><span class="math display">\[
+v(t)= \dfrac{Ft/m}{\sqrt {1+ \left(Ft/mc\right)^2}}
+\]</span></p>
+<p>이다. <span class="math inline">\(t\to infty\)</span> 극한에서 <span class="math inline">\(v(t) \to c\)</span> 임을 안다. 이것은 뉴턴역학과 다른 결과인데 뉴턴역학에서는 일정한 힘을 계속 가할 수 있다면 <span class="math inline">\(v&gt;c\)</span> 가 가능하다.</p>
+</section>
+<section id="질량과-에너지의-동등함" class="level3">
+<h3 class="anchored" data-anchor-id="질량과-에너지의-동등함">15-9 질량과 에너지의 동등함</h3>
+<p>아인슈타인은 에너지를 아래와 같이 정의했다.</p>
+<p><span id="eq-FLP_1_relativistic_energy"><span class="math display">\[
+E:= \dfrac{mv^2}{\sqrt{1-v^2/c^2}}.
+\tag{24.7}\]</span></span></p>
+<p>이를 테일러 전개 하면</p>
+<p><span class="math display">\[
+E=mc^2 + \dfrac{mv^2}{2} + \cdots
+\]</span></p>
+<p>이며 <span class="math inline">\(v\ll c\)</span> 일 때 근사적으로 에너지는 정지에너지 <span class="math inline">\(mc^2\)</span> 과 뉴턴 운동에너지 <span class="math inline">\(mv^2/2\)</span> 의 합으로 나타낼 수 있다는 것을 안다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="상대론적-에너지와-운동량" class="level2">
+<h2 class="anchored" data-anchor-id="상대론적-에너지와-운동량">16. 상대론적 에너지와 운동량</h2>
+<section id="상대론과-철학" class="level3">
+<h3 class="anchored" data-anchor-id="상대론과-철학">16-1 상대론과 철학</h3>
+<p><br></p>
+</section>
+</section>
+<section id="quantum-behavior" class="level2">
+<h2 class="anchored" data-anchor-id="quantum-behavior">37. Quantum Behavior</h2>
+<section id="atomic-mechanics" class="level3">
+<h3 class="anchored" data-anchor-id="atomic-mechanics">37-1 Atomic mechanics</h3>
+<p><br></p>
+</section>
+</section>
 <section id="the-kinetic-theory-of-gases" class="level2">
 <h2 class="anchored" data-anchor-id="the-kinetic-theory-of-gases">39. The Kinetic Theory of Gases</h2>
 <section id="온도와-운동에너지" class="level3">
@@ -505,6 +718,25 @@ n(h) = n_0 e^{-mgh/k_BT}
 <p><span class="math display">\[
 n = n_0 e^{-\text{P.E.}/k_BT}
 \]</span></p>
+<p><br></p>
+</section>
+<section id="액체의-증발" class="level2">
+<h2 class="anchored" data-anchor-id="액체의-증발">40-3 액체의 증발</h2>
+<p>분자들의 집합을 생각하자. 이 분자들 사이에는 쌍마다 서로의 거리만 의존하는 상호작용, 즉 포텐셜 에너지가 존재한다. 이 때 두 분자 사이의 거리 <span class="math inline">\(r\)</span> 에 따른 포텐셜 <span class="math inline">\(V(r)\)</span> 은 일반적으로 아래 그림과 같은 형태이며 <span class="math inline">\(r&lt;r_0\)</span> 일 때는 척력이 <span class="math inline">\(r&gt;r_0\)</span> 일 때는 인력이 작용한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig40-3/fig40-3.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>파인만 물리학 강의 I 그림 40-3(redraw)</figcaption>
+</figure>
+</div>
+<p>이런 기체 분자로 차 있는 상자를 생각하자. 이 기체들 사이의 포텐셜은 각 개별 쌍의 포텐셜의 합이라고 가정하자. (세개 이상에 대한 상호작용도 존재한다-<a href="https://en.wikipedia.org/wiki/Three-body_force">Three-body force</a> 를 참고하라.) 그렇다면 볼츠만의 법칙에 따라 분자 쌍이 <span class="math inline">\(r_{ij}\)</span> 만큼의 거리를 두고 존재할 확률은 다음에 비례한다.</p>
+<p><span class="math display">\[
+\exp \left[-\sum_{i,j} V(r_{ij})/k_BT\right].
+\]</span></p>
+<p><br></p>
+</section>
+<section id="분자-속력의-분포" class="level2">
+<h2 class="anchored" data-anchor-id="분자-속력의-분포">40-4 분자 속력의 분포</h2>
 
 
 </section>
