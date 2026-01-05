@@ -11,6 +11,12 @@ book:
   
   chapters:
     - index.qmd
+
+    - part: src/Feynmann/00_index.qmd    
+      chapters: 
+        - src/Feynmann/vol1.qmd
+        - src/Feynmann/feynmann_trans.qmd
+  
     - part: src/ClassicalMechanics/00_index.qmd
       chapters:
       - src/ClassicalMechanics/01_basic_principles.qmd
@@ -50,10 +56,6 @@ book:
       - src/ThermalPhysics/02_entropy.qmd
       - src/ThermalPhysics/0A_mathematics.qmd
 
-    - part: src/Feynmann/00_index.qmd    
-      chapters: 
-        - src/Feynmann/vol1.qmd
-        - src/Feynmann/feynmann_trans.qmd
     
     - part: src/topics/Topics.qmd
       chapters:
