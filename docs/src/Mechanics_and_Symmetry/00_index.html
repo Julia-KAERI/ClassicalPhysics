@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -54,14 +54,15 @@ div.csl-indent {
 <link href="../../src/ClassicalMechanics/P1_problems01.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +105,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -181,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Feynmann/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">전기자기학</span></a>
+ <span class="menu-text">파인만의 물리학 강의</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -446,16 +447,16 @@ window.Quarto = {
 \DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
 </div>
-<p>여기서는 <span class="citation" data-cites="Arnold2013mathematical">Arnold, Vogtmann, and Weinstein (<a href="../Feynmann/00_index.html#ref-Arnold2013mathematical" role="doc-biblioref">2013</a>)</span> 를 바탕으로 고전역학을 처음부터 다시 재구성하도록 한다.</p>
+<p>여기서는 <span class="citation" data-cites="Arnold2013mathematical">Arnold, Vogtmann, and Weinstein (<a href="../ClassicalMechanics/00_index.html#ref-Arnold2013mathematical" role="doc-biblioref">2013</a>)</span> 를 바탕으로 고전역학을 처음부터 다시 재구성하도록 한다.</p>
 <section id="참고문헌" class="level3">
 <h3 class="anchored" data-anchor-id="참고문헌">참고문헌</h3>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<p><span class="citation" data-cites="Helliwell_Sahakian_2020">Helliwell and Sahakian (<a href="../Feynmann/00_index.html#ref-Helliwell_Sahakian_2020" role="doc-biblioref">2020</a>)</span></p>
-<p><span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="../Feynmann/00_index.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span></p>
-<p><span class="citation" data-cites="Landau1976Mechanics">Landau and Lifshitz (<a href="../Feynmann/00_index.html#ref-Landau1976Mechanics" role="doc-biblioref">1976</a>)</span></p>
-<p><span class="citation" data-cites="Symon1971mechanics">Symon (<a href="../Feynmann/00_index.html#ref-Symon1971mechanics" role="doc-biblioref">1971</a>)</span></p>
-<p><span class="citation" data-cites="Arnold2013mathematical">Arnold, Vogtmann, and Weinstein (<a href="../Feynmann/00_index.html#ref-Arnold2013mathematical" role="doc-biblioref">2013</a>)</span></p>
-<p><span class="citation" data-cites="Marion2004classical">Thornton and Marion (<a href="../Feynmann/00_index.html#ref-Marion2004classical" role="doc-biblioref">2004</a>)</span></p>
+<p><span class="citation" data-cites="Helliwell_Sahakian_2020">Helliwell and Sahakian (<a href="../ClassicalMechanics/00_index.html#ref-Helliwell_Sahakian_2020" role="doc-biblioref">2020</a>)</span></p>
+<p><span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="../ClassicalMechanics/00_index.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span></p>
+<p><span class="citation" data-cites="Landau1976Mechanics">Landau and Lifshitz (<a href="../ClassicalMechanics/00_index.html#ref-Landau1976Mechanics" role="doc-biblioref">1976</a>)</span></p>
+<p><span class="citation" data-cites="Symon1971mechanics">Symon (<a href="../ClassicalMechanics/00_index.html#ref-Symon1971mechanics" role="doc-biblioref">1971</a>)</span></p>
+<p><span class="citation" data-cites="Arnold2013mathematical">Arnold, Vogtmann, and Weinstein (<a href="../ClassicalMechanics/00_index.html#ref-Arnold2013mathematical" role="doc-biblioref">2013</a>)</span></p>
+<p><span class="citation" data-cites="Marion2004classical">Thornton and Marion (<a href="../ClassicalMechanics/00_index.html#ref-Marion2004classical" role="doc-biblioref">2004</a>)</span></p>
 <div id="ref-Arnold2013mathematical" class="csl-entry" role="listitem">
 Arnold, V. I., K. Vogtmann, and A. Weinstein. 2013. <em>Mathematical Methods of Classical Mechanics</em>. Graduate Texts in Mathematics. Springer New York. <a href="https://books.google.co.kr/books?id=UOQlBQAAQBAJ">https://books.google.co.kr/books?id=UOQlBQAAQBAJ</a>.
 </div>
@@ -531,13 +532,14 @@ Thornton, S. T., and J. B. Marion. 2004. <em>Classical Dynamics of Particles and
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

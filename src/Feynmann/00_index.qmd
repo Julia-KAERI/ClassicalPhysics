@@ -1,5 +1,5 @@
 ---
-title: "전기자기학"
+title: "파인만의 물리학 강의"
 number-sections: true
 number-depth: 2
 crossref:
@@ -7,18 +7,4 @@ crossref:
   
 ---
 
-{{< include ../../latexmacros.qmd >}}
-
-전기자기학에 대해 설명한다.
-
-### 참고문헌
-::: {#refs}
-
-@TongElectromagnetism
-
-@Purcell2013electricity
-
-@Jackson1999Classical
-
-
-:::
+파인만의 물리학 강의 I, II, III 권에 대한 메모와 노트

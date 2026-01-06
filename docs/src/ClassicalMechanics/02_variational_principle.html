@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -54,14 +54,15 @@ div.csl-indent {
 <link href="../../src/ClassicalMechanics/01_basic_principles.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +105,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -181,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Feynmann/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">전기자기학</span></a>
+ <span class="menu-text">파인만의 물리학 강의</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -691,7 +692,7 @@ y(1+\dot{y}^2) = \dfrac{1}{2gc^2} = 2a=\text{constant}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Monogenic 과 multigenic
+<span class="screen-reader-only">노트</span>Monogenic 과 multigenic
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -707,7 +708,7 @@ Monogenic 과 multigenic
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-해밀턴의 원리 (최소 작용의 원리)
+<span class="screen-reader-only">중요</span>해밀턴의 원리 (최소 작용의 원리)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -861,7 +862,7 @@ r\dot{\theta} = \dot{x}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-정준운동량과 위상공간
+<span class="screen-reader-only">노트</span>정준운동량과 위상공간
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -882,7 +883,7 @@ p_j = \dfrac{\partial L}{\partial \dot{q}_j}. }
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-운동상수와 제일적분
+<span class="screen-reader-only">노트</span>운동상수와 제일적분
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1151,7 +1152,7 @@ l=\int \| d\boldsymbol{r} \| = \int r \sqrt{1+ \sin^2 \!\theta \left(\dfrac{d\va
 </figcaption>
 </figure>
 </div>
-<p><span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="../Feynmann/00_index.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span> 에는 <span class="math inline">\(y\)</span> 축을 중심으로 한 회전체를 다뤘지만 여기서는 주어진 조건을 따르기 위해서는 <span class="math inline">\(x\)</span> 축을 중심으로 하는 회전을 생각해야 한다. 따라서, <span class="math inline">\(y = a \cosh \left(\dfrac{x-b}{a}\right)\)</span> 꼴이어야 하며 <span class="math inline">\(y_2=y_1\)</span>, <span class="math inline">\(x_2=-x_1\)</span> 조건으로 부터 <span class="math inline">\(b=0\)</span> 이므로, <span class="math display">\[
+<p><span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="00_index.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span> 에는 <span class="math inline">\(y\)</span> 축을 중심으로 한 회전체를 다뤘지만 여기서는 주어진 조건을 따르기 위해서는 <span class="math inline">\(x\)</span> 축을 중심으로 하는 회전을 생각해야 한다. 따라서, <span class="math inline">\(y = a \cosh \left(\dfrac{x-b}{a}\right)\)</span> 꼴이어야 하며 <span class="math inline">\(y_2=y_1\)</span>, <span class="math inline">\(x_2=-x_1\)</span> 조건으로 부터 <span class="math inline">\(b=0\)</span> 이므로, <span class="math display">\[
 y = a \cosh \left(\dfrac{x}{a}\right)
 \]</span></p>
 <p>이며 <span class="math inline">\(y_1= y_2 = a \cosh (x_2/a) = a \cosh k\)</span> 이다. <span class="math inline">\(\alpha =y_2/x_2\)</span>, <span class="math inline">\(k=x_2/a\)</span> 로 놓으면, <span class="math inline">\(\alpha\)</span> 는 <span class="math inline">\(k\)</span> 의 함수이며 다음과 같다.</p>
@@ -1196,7 +1197,7 @@ L = -\dfrac{m}{2} q\ddot{q} - \dfrac{k}{2}q^2\;.
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="../Feynmann/00_index.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span> 의 과정을 그대로 따라가기로 하자. 경로 <span class="math inline">\(q (t,\,\alpha)\)</span> 를 아래와같이 놓자.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="00_index.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span> 의 과정을 그대로 따라가기로 하자. 경로 <span class="math inline">\(q (t,\,\alpha)\)</span> 를 아래와같이 놓자.</p>
 <p><span class="math display">\[\tag{1}
 q(t,\,\alpha) = q(t,\,0)+ \alpha \eta (t)\;.
 \]</span></p>
@@ -1371,13 +1372,14 @@ Goldstein, H. 1980. <em>Classical Mechanics</em>. 2nd ed. Addison-Wesley Series 
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

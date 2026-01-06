@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -54,14 +54,15 @@ div.csl-indent {
 <link href="../../src/ClassicalMechanics/02_variational_principle.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +105,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -181,7 +182,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Feynmann/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">전기자기학</span></a>
+ <span class="menu-text">파인만의 물리학 강의</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -484,7 +485,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-표기법에 대해
+<span class="screen-reader-only">주의</span>표기법에 대해
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -497,7 +498,7 @@ window.Quarto = {
 <section id="sec-CM_legendre_transformation" class="level3" data-number="5.1.2">
 <h3 data-number="5.1.2" class="anchored" data-anchor-id="sec-CM_legendre_transformation"><span class="header-section-number">5.1.2</span> 르장드르 변환</h3>
 <ul>
-<li>참고자료 : <span class="citation" data-cites="Zia2009">Zia, Redish, and McKay (<a href="../Feynmann/00_index.html#ref-Zia2009" role="doc-biblioref">2009</a>)</span></li>
+<li>참고자료 : <span class="citation" data-cites="Zia2009">Zia, Redish, and McKay (<a href="00_index.html#ref-Zia2009" role="doc-biblioref">2009</a>)</span></li>
 </ul>
 <p><span class="math inline">\(\boldsymbol{x},\, \boldsymbol{y}\in \mathbb{R}^n\)</span> 이며 <span class="math inline">\(F:\mathbb{R}^{2n} \to \mathbb{R}\)</span> 이라고 하자. <span class="math inline">\(F\)</span> 가 미분가능하다면</p>
 <p><span class="math display">\[
@@ -722,7 +723,7 @@ S_H = \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - H(\boldsymbol{p},\, \bolds
 \dot{q}_i = \dfrac{\partial H}{\partial q_i}
 \]</span></p>
 <p>를 얻는다. 즉 우리는 변형된 해밀턴의 원리로부터 해밀턴의 운동방정식을 얻었다. 여기서 몇가지를 정리해 보기로 하자.</p>
-<p>(<span class="math inline">\(1\)</span>) 변형된 해밀톤의 원리는 해밀턴의 원리와 동일한지 아니면 다른 추가적인 물리적인 의미를 가지고 있는지에 대해 의문을 가질 수 있다. Goldstein 에 의하면 이 질문은 irrelevant 하다(<span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="../Feynmann/00_index.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span> pp.&nbsp;363, 3판의 경우는 pp.&nbsp;354-355). 해밀턴의 원리가 정당한 것은 해밀턴의 원리의 결과가 라그랑쥬 방정식이기 때문이다. 변형된 해밀턴의 원리가 정당한 것은 그 결과가 해밀턴 운동방정식이기 때문이다.</p>
+<p>(<span class="math inline">\(1\)</span>) 변형된 해밀톤의 원리는 해밀턴의 원리와 동일한지 아니면 다른 추가적인 물리적인 의미를 가지고 있는지에 대해 의문을 가질 수 있다. Goldstein 에 의하면 이 질문은 irrelevant 하다(<span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="00_index.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span> pp.&nbsp;363, 3판의 경우는 pp.&nbsp;354-355). 해밀턴의 원리가 정당한 것은 해밀턴의 원리의 결과가 라그랑쥬 방정식이기 때문이다. 변형된 해밀턴의 원리가 정당한 것은 그 결과가 해밀턴 운동방정식이기 때문이다.</p>
 <p>(<span class="math inline">\(2\)</span>) 해밀턴의 원리와 변분원리에서는 양 끝점에서의 변화가 <span class="math inline">\(0\)</span> 임을 가정하였으나 변형된 해밀토니안의 원리에 이를 적용한다면 운동량에 대해서도 <span class="math inline">\(\delta p_i(t_1)= \delta p_i(t_2)=0\)</span> 임을 가정해야 할 것 같다. 그런데 이 가정은 필요가 없는 것이, <a href="02_variational_principle.html#exr-CM_variational_devivation_of_euler_lagrange_eq" class="quarto-xref">연습문제&nbsp;<span>4.1</span></a> 에서 보았듯이 <span class="math inline">\(\delta p_i = 0\)</span> 이 필요한 것은 부분적분에서</p>
 <p><span class="math display">\[
 \left.\dfrac{\partial F}{\partial \dot{p}_i} \dfrac{\partial p_i}{\partial \alpha} \right|_{t_1}^{t_2}
@@ -797,13 +798,14 @@ Zia, R. K. P., Edward F. Redish, and Susan R. McKay. 2009. <span>“Making Sense
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
