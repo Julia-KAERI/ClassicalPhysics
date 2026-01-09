@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/Feynmann/00_index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -499,7 +500,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>갈릴레이 변환과 로런츠 변환</strong>
+<span class="screen-reader-only">중요</span><strong>갈릴레이 변환과 로런츠 변환</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -520,7 +521,7 @@ x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
+<span class="screen-reader-only">중요</span>푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -649,7 +650,7 @@ X^\mu = (ct,\,x,\,y,\,z),\qquad X_\mu = (ct,\,-x,\,-y,\,-z).
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>최종적으로…</strong>
+<span class="screen-reader-only">힌트</span><strong>최종적으로…</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -792,7 +793,7 @@ M = 2\gamma (w) m
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
+<span class="screen-reader-only">힌트</span><span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -961,7 +962,7 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>페르마의 최소시간의 원리</strong>
+<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1061,13 +1062,22 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
+<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>빛이 실제 진행하는 경로는 어떤 방식으로든 이 경로에서의 작은 변화에 대해 시간에 대한 1차 변화가 없고 2차 변화만 있는 경로이다. 즉 빛이 거의 같은 시간이 걸리는 다른 많은 경로가 근처에 있는 경로를 따른다.</p>
+<p>빛이 실제 진행하는 경로는 어떤 방식으로든 이 경로에서의 작은 변화에 대해 시간에 대한 1차 근사에는 변화가 없고 2차 근사에서의 변화만 있는 경로이다. 즉 빛이 거의 같은 시간이 걸리는 다른 많은 경로가 근처에 있는 경로를 따른다.</p>
 </div>
 </div>
+<p>우리는 스넬의 법칙을 통해 빛을 이해할 수 있다. 스넬의 법칙은 빛이 서로 다른 매질의 경계면에 어떤 이유로 그 경로가 꺾인다는 것을 말한다. 이 인과율의 연속으로 빛의 경로가 결정되는 것은 이해하기 쉽다. 그러나 최소 시간의 원리는 자연이 작동하는 방식에 대한 전혀 다른 철학이다. 원인과 결과의 연속이 아니라 상황이 정해지면 빛은 가장 시간이 적게 걸리는 경로를 찾아서 진행한다. 빛은 주변의 경로를 “냄새맡아 보고” 하나하나 비교하는가? 놀랍게도 답은 “그렇다” 에 가깝다. 이것은 기하광학에서 다루지 않았지만 “파장 (wavelength)” 이라는 개념과 관련되어 있다. 파장은 빛이 경로를 확인하기 위해 “냄새를 맡는” 범위 정도의 거리이다. 가시광선의 파장은 매우 짧기 때문에 빛으로 이것을 확인하는 것은 쉽지 않기 때문에 파장이 3 cm 인 라디오파를 생각하자.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig_1_26/fig_1_26_13.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>파인만 물리학 강의 I. Fig. 26-13. 좁은 슬릿을 통과하는 라디오파</figcaption>
+</figure>
+</div>
+<p><strong>슬릿의 폭이 충분히 넓은 경우</strong> : 빛은 직션경로를 따라 검출기 <span class="math inline">\(D\)</span> 에 도달한다. 우기라 검출기를 <span class="math inline">\(D'\)</span> 로 옮기면 빛은 주변 경로를 모두 확인한 다음에 “거기로 가면 안되. 우리들은 모두 다른 시간에 거기 도착하게되” 라고 소리치며 <span class="math inline">\(D'\)</span> 으로 향하지 않을 것이다.</p>
+<p><strong>슬릿의 폭이 매우 좁은 경우</strong> : 슬릿의 폭이 파장에 비해 매우 작다면 빛이 경로를 확인하는 것을 방해하게 되며</p>
 <p><br></p>
 </section>
 </section>
@@ -1223,13 +1233,14 @@ n = n_0 e^{-\text{P.E.}/k_BT}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
