@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,15 +34,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/Feynmann/00_index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,7 +84,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -438,11 +437,12 @@ window.Quarto = {
   </ul></li>
   <li><a href="#광학-최소-시간-원리" id="toc-광학-최소-시간-원리" class="nav-link" data-scroll-target="#광학-최소-시간-원리">26 광학 : 최소 시간 원리</a>
   <ul class="collapse">
-  <li><a href="#빛" id="toc-빛" class="nav-link" data-scroll-target="#빛">26-1 빛</a></li>
-  <li><a href="#반사와-굴절" id="toc-반사와-굴절" class="nav-link" data-scroll-target="#반사와-굴절">26-2 반사와 굴절</a></li>
-  <li><a href="#페르마의-최소시간-원리" id="toc-페르마의-최소시간-원리" class="nav-link" data-scroll-target="#페르마의-최소시간-원리">26-3 페르마의 최소시간 원리</a></li>
-  <li><a href="#페르마의-원리의-응용" id="toc-페르마의-원리의-응용" class="nav-link" data-scroll-target="#페르마의-원리의-응용">26-4 페르마의 원리의 응용</a></li>
-  <li><a href="#페르마의-원리의-좀-더-정확한-진술" id="toc-페르마의-원리의-좀-더-정확한-진술" class="nav-link" data-scroll-target="#페르마의-원리의-좀-더-정확한-진술">26-5 페르마의 원리의 좀 더 정확한 진술</a></li>
+  <li><a href="#sec-FLP_1_26_1" id="toc-sec-FLP_1_26_1" class="nav-link" data-scroll-target="#sec-FLP_1_26_1">26-1 빛</a></li>
+  <li><a href="#sec-FLP_1_26_2" id="toc-sec-FLP_1_26_2" class="nav-link" data-scroll-target="#sec-FLP_1_26_2">26-2 반사와 굴절</a></li>
+  <li><a href="#sec-FLP_1_26_3" id="toc-sec-FLP_1_26_3" class="nav-link" data-scroll-target="#sec-FLP_1_26_3">26-3 페르마의 최소시간 원리</a></li>
+  <li><a href="#sec-FLP_1_26_4" id="toc-sec-FLP_1_26_4" class="nav-link" data-scroll-target="#sec-FLP_1_26_4">26-4 페르마의 원리의 응용</a></li>
+  <li><a href="#sec-FLP_1_26_5" id="toc-sec-FLP_1_26_5" class="nav-link" data-scroll-target="#sec-FLP_1_26_5">26-5 페르마의 원리의 좀 더 정확한 진술</a></li>
+  <li><a href="#sec-FLP_1_26_6" id="toc-sec-FLP_1_26_6" class="nav-link" data-scroll-target="#sec-FLP_1_26_6">26-6 어떻게 작동하는가?</a></li>
   </ul></li>
   <li><a href="#quantum-behavior" id="toc-quantum-behavior" class="nav-link" data-scroll-target="#quantum-behavior">37. Quantum Behavior</a>
   <ul class="collapse">
@@ -500,7 +500,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>갈릴레이 변환과 로런츠 변환</strong>
+<strong>갈릴레이 변환과 로런츠 변환</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -521,7 +521,7 @@ x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
+푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -650,7 +650,7 @@ X^\mu = (ct,\,x,\,y,\,z),\qquad X_\mu = (ct,\,-x,\,-y,\,-z).
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">힌트</span><strong>최종적으로…</strong>
+<strong>최종적으로…</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -793,7 +793,7 @@ M = 2\gamma (w) m
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">힌트</span><span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
+<span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -924,8 +924,8 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 </section>
 <section id="광학-최소-시간-원리" class="level2">
 <h2 class="anchored" data-anchor-id="광학-최소-시간-원리">26 광학 : 최소 시간 원리</h2>
-<section id="빛" class="level3">
-<h3 class="anchored" data-anchor-id="빛">26-1 빛</h3>
+<section id="sec-FLP_1_26_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_26_1">26-1 빛</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.sciencing.com/sciencing/electromagnetic-spectrum-frequencies-wavelengths-w-diagrams-examples-13721432/6fe412c26d6b416684c4ce409d120caf.png.jpg" class="img-fluid figure-img"></p>
@@ -942,8 +942,8 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <p>기하 광학은 단지 근사이지만 기술적으로 매우 중요하고 역사적으로 흥미롭다. 다른 주제와는 다르게 역사적 맥락에서 설명하기로 한다. 이것이 어떤 물리학적 이론이나 아이디어의 발전에 대해 보여줄 수 있기 때문이다.</p>
 <p><br></p>
 </section>
-<section id="반사와-굴절" class="level3">
-<h3 class="anchored" data-anchor-id="반사와-굴절">26-2 반사와 굴절</h3>
+<section id="sec-FLP_1_26_2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_26_2">26-2 반사와 굴절</h3>
 <section id="거울-면에서의-반사" class="level4">
 <h4 class="anchored" data-anchor-id="거울-면에서의-반사"><strong>거울 면에서의 반사</strong></h4>
 <p>입사각과 반사각은 같다. 즉 <span class="math inline">\(\sin \theta_i = \sin \theta_r\)</span> 이다.</p>
@@ -954,15 +954,15 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <p><br></p>
 </section>
 </section>
-<section id="페르마의-최소시간-원리" class="level3">
-<h3 class="anchored" data-anchor-id="페르마의-최소시간-원리">26-3 페르마의 최소시간 원리</h3>
+<section id="sec-FLP_1_26_3" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_26_3">26-3 페르마의 최소시간 원리</h3>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리</strong>
+<strong>페르마의 최소시간의 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -973,10 +973,16 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <p><span id="eq-FLP_reflective_index_and_speed_of_light_in_the_medium"><span class="math display">\[
 nc_n = c
 \tag{1.22}\]</span></span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig_1_26/fig_1_26_3.png" class="img-fluid figure-img" width="300"></p>
+<figcaption>파인만 물리학 강의 I. Fig. 26-3</figcaption>
+</figure>
+</div>
 <p><br></p>
 </section>
-<section id="페르마의-원리의-응용" class="level3">
-<h3 class="anchored" data-anchor-id="페르마의-원리의-응용">26-4 페르마의 원리의 응용</h3>
+<section id="sec-FLP_1_26_4" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_26_4">26-4 페르마의 원리의 응용</h3>
 <section id="가역-원리-principle-of-reciprocity" class="level4">
 <h4 class="anchored" data-anchor-id="가역-원리-principle-of-reciprocity"><strong>가역 원리 (principle of reciprocity)</strong></h4>
 <p>빛이 최소 시간 원리에 따라 <span class="math inline">\(A\to B\)</span> 의 한 경로로 진행한다면 <span class="math inline">\(B\)</span> 에서 <span class="math inline">\(A\)</span> 로 진행하는 경로는 정확히 반대 경로이다.</p>
@@ -1054,15 +1060,15 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 <p><br></p>
 </section>
 </section>
-<section id="페르마의-원리의-좀-더-정확한-진술" class="level3">
-<h3 class="anchored" data-anchor-id="페르마의-원리의-좀-더-정확한-진술">26-5 페르마의 원리의 좀 더 정확한 진술</h3>
+<section id="sec-FLP_1_26_5" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_26_5">26-5 페르마의 원리의 좀 더 정확한 진술</h3>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
+<strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1077,7 +1083,12 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 </figure>
 </div>
 <p><strong>슬릿의 폭이 충분히 넓은 경우</strong> : 빛은 직션경로를 따라 검출기 <span class="math inline">\(D\)</span> 에 도달한다. 우기라 검출기를 <span class="math inline">\(D'\)</span> 로 옮기면 빛은 주변 경로를 모두 확인한 다음에 “거기로 가면 안되. 우리들은 모두 다른 시간에 거기 도착하게되” 라고 소리치며 <span class="math inline">\(D'\)</span> 으로 향하지 않을 것이다.</p>
-<p><strong>슬릿의 폭이 매우 좁은 경우</strong> : 슬릿의 폭이 파장에 비해 매우 작다면 빛이 경로를 확인하는 것을 방해하게 되며</p>
+<p><strong>슬릿의 폭이 매우 좁은 경우</strong> : 슬릿의 폭이 파장에 비해 매우 작다면 (파장 범위 내에서) 빛이 주위 경로를 확인하는 것을 방해하게 되며 … <em>이 부분은 좀 더 생각해 봐야 할 듯</em></p>
+<p><br></p>
+</section>
+<section id="sec-FLP_1_26_6" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_26_6">26-6 어떻게 작동하는가?</h3>
+<p>실제로 벌어지는 일에 대해 양자역학적인 관점에서 대략적으로 알아보자. <a href="#sec-FLP_1_26_3">Fig. 26-3</a> 에서의 빛의 경로는 전혀 파동 형태가 아니며 광자로 이루어진 것으로 보인다. 우리가 계산하고자 하는 것은 <span class="math inline">\(A\)</span> 에서 출발한 빛이 거울을 거쳐 <span class="math inline">\(B\)</span> 에 도달할 확률이다. 이제 빛의 경로에 따른 시간을 계산할 경로를 하나 선택하자. 그리고 <span class="math inline">\(\rho e^{\i\theta}\)</span> 라는 복소수를 생각하자. <span class="math inline">\(\theta\)</span> 는 시간에 비례한다. <span class="math inline">\(\theta\)</span> 가 몇바퀴를 도는지가 빛의 진동수이다. 다른 시간이 걸리는 경로를 다시 선택하며면 각도가 달라진다. 모든 가능한 경로에 대해서 이 복소수를 더하면 빛이 도달할 확률은 답은 최종 복소수의 제곱에 비례한다.</p>
 <p><br></p>
 </section>
 </section>
@@ -1233,14 +1244,13 @@ n = n_0 e^{-\text{P.E.}/k_BT}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
