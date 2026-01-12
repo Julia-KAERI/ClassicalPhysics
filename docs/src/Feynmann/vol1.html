@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/Feynmann/00_index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -444,6 +445,23 @@ window.Quarto = {
   <li><a href="#sec-FLP_1_26_5" id="toc-sec-FLP_1_26_5" class="nav-link" data-scroll-target="#sec-FLP_1_26_5">26-5 페르마의 원리의 좀 더 정확한 진술</a></li>
   <li><a href="#sec-FLP_1_26_6" id="toc-sec-FLP_1_26_6" class="nav-link" data-scroll-target="#sec-FLP_1_26_6">26-6 어떻게 작동하는가?</a></li>
   </ul></li>
+  <li><a href="#기하광학" id="toc-기하광학" class="nav-link" data-scroll-target="#기하광학">27 기하광학</a>
+  <ul class="collapse">
+  <li><a href="#sec-FLP_1_27_1" id="toc-sec-FLP_1_27_1" class="nav-link" data-scroll-target="#sec-FLP_1_27_1">27-1 소개</a></li>
+  <li><a href="#sec-FLP_1_27_2" id="toc-sec-FLP_1_27_2" class="nav-link" data-scroll-target="#sec-FLP_1_27_2">27-2 초점거리와 구면</a></li>
+  </ul></li>
+  <li><a href="#전자기-복사" id="toc-전자기-복사" class="nav-link" data-scroll-target="#전자기-복사">28 전자기 복사</a>
+  <ul class="collapse">
+  <li><a href="#sec-FLP-1_18_1" id="toc-sec-FLP-1_18_1" class="nav-link" data-scroll-target="#sec-FLP-1_18_1">28-1 전자기학</a></li>
+  <li><a href="#sec-FLP_1_28_2" id="toc-sec-FLP_1_28_2" class="nav-link" data-scroll-target="#sec-FLP_1_28_2">28-2 복사</a></li>
+  <li><a href="#sec-FLP_1_28_3" id="toc-sec-FLP_1_28_3" class="nav-link" data-scroll-target="#sec-FLP_1_28_3">28-3 쌍극자 복사체</a></li>
+  <li><a href="#sec-FLP_1_28_4" id="toc-sec-FLP_1_28_4" class="nav-link" data-scroll-target="#sec-FLP_1_28_4">28-4 간섭</a></li>
+  </ul></li>
+  <li><a href="#간섭" id="toc-간섭" class="nav-link" data-scroll-target="#간섭">29 간섭</a>
+  <ul class="collapse">
+  <li><a href="#sec-FLP_1_29_1" id="toc-sec-FLP_1_29_1" class="nav-link" data-scroll-target="#sec-FLP_1_29_1">29-1 전자기파</a></li>
+  <li><a href="#sec-FLP_1_29_2" id="toc-sec-FLP_1_29_2" class="nav-link" data-scroll-target="#sec-FLP_1_29_2">29-2 복사 에너지</a></li>
+  </ul></li>
   <li><a href="#quantum-behavior" id="toc-quantum-behavior" class="nav-link" data-scroll-target="#quantum-behavior">37. Quantum Behavior</a>
   <ul class="collapse">
   <li><a href="#atomic-mechanics" id="toc-atomic-mechanics" class="nav-link" data-scroll-target="#atomic-mechanics">37-1 Atomic mechanics</a></li>
@@ -500,7 +518,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>갈릴레이 변환과 로런츠 변환</strong>
+<span class="screen-reader-only">중요</span><strong>갈릴레이 변환과 로런츠 변환</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -521,7 +539,7 @@ x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
+<span class="screen-reader-only">중요</span>푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -549,10 +567,14 @@ x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c
 </section>
 <section id="sec-FLP_15_3" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_15_3">15-3 마이켈슨-몰리 실험</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/michelson-morley_experiment/feynmann_fig_15_2.png" class="img-fluid figure-img" width="500"></p>
-<figcaption>파인만 물리학 강의 I. 그림 15-2</figcaption>
+<div id="fig-FLP_Fig_1_15_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_Fig_1_15_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/michelson-morley_experiment/feynmann_fig_15_2.png" class="img-fluid figure-img" width="500">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_Fig_1_15_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.1: 파인만 물리학 강의 I. 그림 15-2
+</figcaption>
 </figure>
 </div>
 <p>실험 장비가 <span class="math inline">\(u\)</span> 의 속도로 움직이고 있다고 하자. 정지한 좌표계에서 빛이 <span class="math inline">\(A-E'\)</span> 으로 진행하는데 걸린 시간 <span class="math inline">\(t_1\)</span> 은 <span class="math inline">\(ct_1 = L+ut_1\)</span> 로부터 계산 할 수 있고 <span class="math inline">\(E'\)</span> 에서 반사되어 <span class="math inline">\(E'-B'\)</span> 경로를 진행하는데 걸린 시간 <span class="math inline">\(t_2\)</span> 는 <span class="math inline">\(ct_2 =L-ut_2\)</span> 로부터 계산 할 수 있다. 여기서 빛이 <span class="math inline">\(B\)</span> 로부터 진행하여 <span class="math inline">\(B'\)</span> 으로 돌아오는데 걸린 시간 <span class="math inline">\(t_1+t_2\)</span> 는 아래와 같다.</p>
@@ -582,10 +604,14 @@ t_3 = \dfrac{L/c}{\sqrt{1-u^2/c^2}} &gt; \dfrac{L}{c}= \overline{t}_3
 \]</span></p>
 <p>이다. 예를 들어 <span class="math inline">\(t_3=1,\,\overline{t}_3=0.7\)</span> 이라고 하자. 즉 정지한 좌표계에서 움직이는 좌표계의 모든 사건은 느리게 발생한다.</p>
 <p>움직이는 기준틀에서 시간이 느리게 가는 것을 좀 더 자세히 보자. 아래 그림과 같이 매우 간단한 광자시계를 생각하자. 광원으로부터 거리 <span class="math inline">\(D\)</span> 만큼 떨어진 곳에 거울을 놓고 거울에서 반사된 빛이 다시 되돌아 왔을 때를 단위 시간이라고 하자. (아래 그림의 (a))</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig1_15/fig1_15_3.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>파인만 물리학 강의 I. 그림 15-3. (a) <span class="math inline">\(S'\)</span> 기준틀에서 정지해 있는 광자시계. (b) <span class="math inline">\(S\)</span> 기준틀에서의 움직이는 광자시계. (c) 움직이는 광자시계의 광자의 사선 경로</figcaption>
+<div id="fig-FLP_1_15_3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_15_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig1_15/fig1_15_3.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_15_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.2: 파인만 물리학 강의 I. 그림 15-3. (a) <span class="math inline">\(S'\)</span> 기준틀에서 정지해 있는 광자시계. (b) <span class="math inline">\(S\)</span> 기준틀에서의 움직이는 광자시계. (c) 움직이는 광자시계의 광자의 사선 경로
+</figcaption>
 </figure>
 </div>
 <p>시계와 같이 움직이는 기준틀에서는 (a) 와 같이 보일 것이다. 그러나 정지한 기준틀에서는 (b) 와 같이 빛이 사선 경로를 따라 반사된다. 따라서 (a) 에서 흘러간 시간보다 (b) 에서 흘러간 시간이 길다. 즉 움직이는 기준틀의 시간은 정지한 기준틀의 시간보다 느리게 간다. 위 그림의 (c) 에서와 같이 같은 속도에 대해 지나가는 경로의 비율이 <span class="math inline">\(\sqrt{c^2-u^2}: c\)</span> 이며 시간은 속도에 반비례 하므로 시계와 같이 움직이는 좌표게에서 흐른 시간 <span class="math inline">\(\Delta t\)</span> 와 외부의 정지한 좌표계에서 흐른 시간 <span class="math inline">\(\Delta t_0\)</span> 는</p>
@@ -650,7 +676,7 @@ X^\mu = (ct,\,x,\,y,\,z),\qquad X_\mu = (ct,\,-x,\,-y,\,-z).
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>최종적으로…</strong>
+<span class="screen-reader-only">힌트</span><strong>최종적으로…</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -742,17 +768,25 @@ v_y = v_y'\sqrt{1-u^2/c^2}
 <li>운동량은 속도와 같은 방향을 갖는 벡터이며 속도의 함수이다.</li>
 </ol>
 <p>우리는 충돌하는 두 입자의 자세한 상호작용에는 관심이 없으며 상대론적 가정, 즉 모든 물리법칙은 관성기준틀에서 동일하다는 가정과 위의 두 가정만을 이용한다. 우리는 운동량이 속도와 질량의 곱이라고 가정하지 않으며 따라서 <span class="math inline">\(\boldsymbol{p}=\gamma(v) m\boldsymbol{v}\)</span> 와 같이 쓸 수 있다.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_16/fig_1_16_2.png" class="img-fluid figure-img" width="300"></p>
-<figcaption>파인만 물리학 강의 I. Fig 16-2. 탄성 충돌의 두가지 시점. 두 입자는 동일한 질량을 가지며 반대방향의 동일한 속도로 충돌한다.</figcaption>
+<div id="fig-FLO_1_16_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLO_1_16_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_16/fig_1_16_2.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLO_1_16_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.3: 파인만 물리학 강의 I. Fig 16-2. 탄성 충돌의 두가지 시점. 두 입자는 동일한 질량을 가지며 반대방향의 동일한 속도로 충돌한다.
+</figcaption>
 </figure>
 </div>
 <p>위의 그림에서와 같이 질량이 같은 두 입자가 서로 반대방향의 같은 크기의 속도를 가지고 충돌한다고 하자. 총 운동량은 <span class="math inline">\(0\)</span> 이므로 충돌 이후에도 반대 방향의 같은 속력을 가져야 한다. 이제 위의 그림의 표기를 이해 할 수 있다. 이제 우리는 1번 입자의 <span class="math inline">\(x\)</span> 방향 속력 으로 움직이는 기준틀에 있다고 하자. 그리고 2번 입자의 수평방향 속력을 <span class="math inline">\(u\)</span> 라고 하고 산란각을 <span class="math inline">\(\alpha\)</span> 라고 하자. 그렇다면 상황은 아래 그림의 (a) 처럼 보일 것이다. 이제 <span class="math inline">\(u\)</span> 의 속력으로 움직이는 좌표계에서 바라본다면 그림 (b) 처럼 보일 것이다.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_16/fig_1_16_3.png" class="img-fluid figure-img" width="300"></p>
-<figcaption>파인만 물리학 강의 I. Fig 16-3. 움직이는 두 기준틀에서의 시점</figcaption>
+<div id="fig-FLP_1_16_3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_16_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_16/fig_1_16_3.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_16_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.4: 파인만 물리학 강의 I. Fig 16-3. 움직이는 두 기준틀에서의 시점
+</figcaption>
 </figure>
 </div>
 <p>그렇다면 (a) <span class="math inline">\(\to\)</span> (b) 변환에서 <a href="#eq-FLP_1_16_7" class="quarto-xref">식&nbsp;<span>1.12</span></a> 로부터 <span class="math inline">\(u \tan \alpha = w\sqrt{1-u^2/c^2}\)</span> 임을 알 수 있다. 이 때 (b) 시점에서 2 입자의 수직방향 운동량의 변화 <span class="math inline">\(\Delta p_{b, 2}\)</span> 는 <span class="math inline">\(\Delta p_{b, 2} = 2\gamma(w) mw\)</span> 이며 1번 입자의 속력은 <span class="math inline">\(v\)</span> 이고 속력의 수직방향의 변화 <span class="math inline">\(\Delta p_{b, 1}\)</span> 는</p>
@@ -772,10 +806,14 @@ v_y = v_y'\sqrt{1-u^2/c^2}
 \gamma(v) = \dfrac{1}{\sqrt{1-v^2/c^2}}
 \]</span></p>
 <p>이다. 이제 운동량 보존을 받아들이고 난 뒤 우리가 내릴 수 있는 다른 결론을 알아보자. 소위 비탄성 충돌이라는 것으로 서로 같은 속력으로 반대방향에서 마주보며 다가오고 있는 두 입자가 합쳐졌을 때를 생각하자.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_16/fig_1_16_4.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>파인만 물리학 강의 I. Fig 16-4. 같은 질량은 가진 두 입자의 비탄성 충돌에 대한 두가지 시점</figcaption>
+<div id="fig-FLP_1_16_4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_16_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_16/fig_1_16_4.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_16_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.5: 파인만 물리학 강의 I. Fig 16-4. 같은 질량은 가진 두 입자의 비탄성 충돌에 대한 두가지 시점
+</figcaption>
 </figure>
 </div>
 <p>이 경우에 운동량 보존을 생각하면 <span class="math inline">\(0\)</span> 이므로 우리가 <span class="math inline">\(\boldsymbol{w}\)</span> 에 비해 아주 작은 속력으로 두 입자의 방향에 수직으로 움직이는 기준틀에 있다고 하자. 즉 <span class="math inline">\(\|\boldsymbol{u}\| \ll \|\boldsymbol{w}\|\)</span> 이다. 수직방향의 운동량 보존으로부터</p>
@@ -793,7 +831,7 @@ M = 2\gamma (w) m
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
+<span class="screen-reader-only">힌트</span><span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -833,10 +871,14 @@ x'=\gamma_u (x-\beta_u ct),\quad y'=y,\quad z'=z,\quad ct=\gamma_u(ct-\beta_u x)
 <p><span id="eq-FLP_1_17_2"><span class="math display">\[
 x'=x\cos\theta + y \sin \theta, \quad y'=-x\sin \theta + y \cos \theta,\quad z'=z.
 \tag{1.20}\]</span></span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_17/fig_1_17_1.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>파인만 물리학 강의 I. Fig 17-2 붕괘되는 입자에 대한 두 시점</figcaption>
+<div id="fig-FLP_1_17_1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_17_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_17/fig_1_17_1.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_17_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.6: 파인만 물리학 강의 I. Fig 17-2 붕괘되는 입자에 대한 두 시점
+</figcaption>
 </figure>
 </div>
 <p>회전변환은 공간에서의 선형변환이며 그중에 직교 변환(orthogonal transform) 으로 거리를 보존한다. 회전 변환은 공간상의 다른 방향에서 보는 것이라고 할 수 있다. 로런츠 변환은 4차원 시공간에서의 선형 변환으로 회전변환에 비유하자면 4차원 시공간의 다른 방향에서 보는 것이다. 그리고 이 방향은 <a href="#eq-FLP_1_17_1" class="quarto-xref">식&nbsp;<span>1.19</span></a> 의 <span class="math inline">\(u\)</span> 이다. 여기서 시공간상의 한 점 <span class="math inline">\((x,\,y,\,z,\,t)\)</span> 를 <strong>사건 (event)</strong> 라고 한다.</p>
@@ -854,10 +896,14 @@ c^2t'^2 -x'^2 - y'^2 - z'^2 = ct^2 - x^2 - y^2 - z^2
 </section>
 <section id="sec-FLP_1_17_3" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_17_3">17-3 과거, 현재 그리고 미래</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_17/fig_1_17_3.png" class="img-fluid figure-img" width="350"></p>
-<figcaption>파인만 물리학 강의 I. Fig 17.3 원점 주위의 시공간 영역</figcaption>
+<div id="fig-FLP_space_time_area_around_origin" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_space_time_area_around_origin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_17/fig_1_17_3.png" class="img-fluid figure-img" width="350">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_space_time_area_around_origin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.7: 파인만 물리학 강의 I. Fig 17.3 원점 주위의 시공간 영역
+</figcaption>
 </figure>
 </div>
 </section>
@@ -926,10 +972,14 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <h2 class="anchored" data-anchor-id="광학-최소-시간-원리">26 광학 : 최소 시간 원리</h2>
 <section id="sec-FLP_1_26_1" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_26_1">26-1 빛</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://www.sciencing.com/sciencing/electromagnetic-spectrum-frequencies-wavelengths-w-diagrams-examples-13721432/6fe412c26d6b416684c4ce409d120caf.png.jpg" class="img-fluid figure-img"></p>
-<figcaption>전자기파의 파장에 따른 이름. 출처 : https://www.sciencing.com/electromagnetic-spectrum-frequencies-wavelengths-w-diagrams-examples-13721432/</figcaption>
+<div id="fig-FLP_spectrum_of_flight" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_spectrum_of_flight-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://www.sciencing.com/sciencing/electromagnetic-spectrum-frequencies-wavelengths-w-diagrams-examples-13721432/6fe412c26d6b416684c4ce409d120caf.png.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_spectrum_of_flight-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.8: 전자기파의 파장에 따른 이름. 출처 : https://www.sciencing.com/electromagnetic-spectrum-frequencies-wavelengths-w-diagrams-examples-13721432/
+</figcaption>
 </figure>
 </div>
 <p>위와 같이 넓은 전자기파의 파장 영역에서 특별히 흥미로운 세가지 혹은 그 이상의 근사 영역이 존재한다.</p>
@@ -962,7 +1012,7 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>페르마의 최소시간의 원리</strong>
+<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -973,10 +1023,14 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <p><span id="eq-FLP_reflective_index_and_speed_of_light_in_the_medium"><span class="math display">\[
 nc_n = c
 \tag{1.22}\]</span></span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_26/fig_1_26_3.png" class="img-fluid figure-img" width="300"></p>
-<figcaption>파인만 물리학 강의 I. Fig. 26-3</figcaption>
+<div id="fig-FLP_1_26_3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_26_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_26/fig_1_26_3.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.9: 파인만 물리학 강의 I. Fig. 26-3
+</figcaption>
 </figure>
 </div>
 <p><br></p>
@@ -989,59 +1043,83 @@ nc_n = c
 </section>
 <section id="평행한-면을-지난-유리를-통과하는-빛" class="level4">
 <h4 class="anchored" data-anchor-id="평행한-면을-지난-유리를-통과하는-빛"><strong>평행한 면을 지난 유리를 통과하는 빛</strong></h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_26/fig_1_26_6.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>파인만 물리학 강의 I. Fig. 26-6. 투명한 블록을 지나는 빛의 경로</figcaption>
+<div id="fig-FLP_1_26_6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_26_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_26/fig_1_26_6.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.10: 파인만 물리학 강의 I. Fig. 26-6. 투명한 블록을 지나는 빛의 경로
+</figcaption>
 </figure>
 </div>
 <p>위의 그림과 같이 투명한 블록이 평행한 면을 가지고 있고 및이 두 면을 통과할 때 입사 전 후의 두 빛은 평행하다.</p>
 </section>
 <section id="일몰-시간" class="level4">
 <h4 class="anchored" data-anchor-id="일몰-시간"><strong>일몰 시간</strong></h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_26/fig_1_26_7.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>파인만 물리학 강의 I. Fig. 26-7. 투명한 블록을 지나는 빛의 경로</figcaption>
+<div id="fig-FLP_1_26_7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_26_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_26/fig_1_26_7.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.11: 파인만 물리학 강의 I. Fig. 26-7. 투명한 블록을 지나는 빛의 경로
+</figcaption>
 </figure>
 </div>
 <p>우리가 본 일몰은 실제 해가 지고 난 이후이다.</p>
 </section>
 <section id="신기루" class="level4">
 <h4 class="anchored" data-anchor-id="신기루"><strong>신기루</strong></h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_26/fig_1_26_8.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>파인만 물리학 강의 I. Fig. 26-8. 신기루</figcaption>
+<div id="fig-FLP_1_26_8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_26_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_26/fig_1_26_8.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.12: 파인만 물리학 강의 I. Fig. 26-8. 신기루
+</figcaption>
 </figure>
 </div>
 </section>
 <section id="수렴-렌즈" class="level4">
 <h4 class="anchored" data-anchor-id="수렴-렌즈"><strong>수렴 렌즈</strong></h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_26/fig_1_26_10.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>파인만 물리학 강의 I. Fig. 26-10. 수렴 렌즈</figcaption>
+<div id="fig-FLP_1_26_10" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_26_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_26/fig_1_26_10.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.13: 파인만 물리학 강의 I. Fig. 26-10. 수렴 렌즈
+</figcaption>
 </figure>
 </div>
 <p><span class="math inline">\(P\)</span> 를 지나는 빛이 <span class="math inline">\(P'\)</span> 을 지나도록 만든 렌즈. <span class="math inline">\(P\)</span> 와 <span class="math inline">\(P'\)</span> 을 <strong>초점(focus)</strong> 이라고 한다. 즉 <span class="math inline">\(P\)</span> 로부터 렌즈를 거쳐 <span class="math inline">\(P'\)</span> 으로 가는 모든 경로에서 걸리는 시간이 모두 같다.</p>
 </section>
 <section id="타원형-거울" class="level4">
 <h4 class="anchored" data-anchor-id="타원형-거울"><strong>타원형 거울</strong></h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_26/fig_1_26_11.png" class="img-fluid figure-img" width="300"></p>
-<figcaption>파인만 물리학 강의 I. Fig. 26-11. 타원형 거울</figcaption>
+<div id="fig-FLP_1_26_11" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_26_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_26/fig_1_26_11.png" class="img-fluid figure-img" width="240">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.14: 파인만 물리학 강의 I. Fig. 26-11. 타원형 거울
+</figcaption>
 </figure>
 </div>
 <p><span class="math inline">\(P\)</span> 에서 나온 빛은 모두 <span class="math inline">\(P'\)</span> 을 지난다.</p>
 </section>
 <section id="포물선-거울" class="level4">
 <h4 class="anchored" data-anchor-id="포물선-거울"><strong>포물선 거울</strong></h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_26/fig_1_26_12.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>파인만 물리학 강의 I. Fig. 26-12. 포물선형 거울</figcaption>
+<div id="fig-FLP_1_26_12" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_26_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_26/fig_1_26_12.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.15: 파인만 물리학 강의 I. Fig. 26-12. 포물선형 거울
+</figcaption>
 </figure>
 </div>
 <p>포물선의 대칭선에 평행하게 들어오는 빛은 모두 <span class="math inline">\(P'\)</span> 을 지난다. 위의 그림에서의 <span class="math inline">\(AA'\)</span> 형태의 경로를 따르는 빛은 모두 <span class="math inline">\(P'\)</span> 을 지난다. 하나의 예를 들자면 <span class="math inline">\(AA'+A'P'=DD'+D'P'\)</span>. 이런 포물선형 거울은 천체망원경에 사용된다.</p>
@@ -1068,7 +1146,7 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
+<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1076,10 +1154,14 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 </div>
 </div>
 <p>우리는 스넬의 법칙을 통해 빛을 이해할 수 있다. 스넬의 법칙은 빛이 서로 다른 매질의 경계면에 어떤 이유로 그 경로가 꺾인다는 것을 말한다. 이 인과율의 연속으로 빛의 경로가 결정되는 것은 이해하기 쉽다. 그러나 최소 시간의 원리는 자연이 작동하는 방식에 대한 전혀 다른 철학이다. 원인과 결과의 연속이 아니라 상황이 정해지면 빛은 가장 시간이 적게 걸리는 경로를 찾아서 진행한다. 빛은 주변의 경로를 “냄새맡아 보고” 하나하나 비교하는가? 놀랍게도 답은 “그렇다” 에 가깝다. 이것은 기하광학에서 다루지 않았지만 “파장 (wavelength)” 이라는 개념과 관련되어 있다. 파장은 빛이 경로를 확인하기 위해 “냄새를 맡는” 범위 정도의 거리이다. 가시광선의 파장은 매우 짧기 때문에 빛으로 이것을 확인하는 것은 쉽지 않기 때문에 파장이 3 cm 인 라디오파를 생각하자.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig_1_26/fig_1_26_13.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>파인만 물리학 강의 I. Fig. 26-13. 좁은 슬릿을 통과하는 라디오파</figcaption>
+<div id="fig-FLP_1_26_13" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_26_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_26/fig_1_26_13.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.16: 파인만 물리학 강의 I. Fig. 26-13. 좁은 슬릿을 통과하는 라디오파
+</figcaption>
 </figure>
 </div>
 <p><strong>슬릿의 폭이 충분히 넓은 경우</strong> : 빛은 직션경로를 따라 검출기 <span class="math inline">\(D\)</span> 에 도달한다. 우기라 검출기를 <span class="math inline">\(D'\)</span> 로 옮기면 빛은 주변 경로를 모두 확인한 다음에 “거기로 가면 안되. 우리들은 모두 다른 시간에 거기 도착하게되” 라고 소리치며 <span class="math inline">\(D'\)</span> 으로 향하지 않을 것이다.</p>
@@ -1088,7 +1170,157 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 </section>
 <section id="sec-FLP_1_26_6" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_26_6">26-6 어떻게 작동하는가?</h3>
-<p>실제로 벌어지는 일에 대해 양자역학적인 관점에서 대략적으로 알아보자. <a href="#sec-FLP_1_26_3">Fig. 26-3</a> 에서의 빛의 경로는 전혀 파동 형태가 아니며 광자로 이루어진 것으로 보인다. 우리가 계산하고자 하는 것은 <span class="math inline">\(A\)</span> 에서 출발한 빛이 거울을 거쳐 <span class="math inline">\(B\)</span> 에 도달할 확률이다. 이제 빛의 경로에 따른 시간을 계산할 경로를 하나 선택하자. 그리고 <span class="math inline">\(\rho e^{\i\theta}\)</span> 라는 복소수를 생각하자. <span class="math inline">\(\theta\)</span> 는 시간에 비례한다. <span class="math inline">\(\theta\)</span> 가 몇바퀴를 도는지가 빛의 진동수이다. 다른 시간이 걸리는 경로를 다시 선택하며면 각도가 달라진다. 모든 가능한 경로에 대해서 이 복소수를 더하면 빛이 도달할 확률은 답은 최종 복소수의 제곱에 비례한다.</p>
+<p>실제로 벌어지는 일에 대해 양자역학적인 관점에서 대략적으로 알아보자. <a href="#fig-FLP_1_26_3" class="quarto-xref">그림&nbsp;<span>1.9</span></a> 에서의 빛의 경로는 전혀 파동 형태가 아니며 광자로 이루어진 것으로 보인다. 빛의 세기는 단위시간당 도달하는 광자의 개수이다.</p>
+<p>우리가 계산하고자 하는 것은 <span class="math inline">\(A\)</span> 에서 출발한 빛이 거울을 거쳐 <span class="math inline">\(B\)</span> 에 도달할 확률이다. 경로 <span class="math inline">\(\alpha\)</span> 에 대해 확률은 복소수로 <span class="math inline">\(\rho_\alpha e^{i \theta_\alpha}\)</span> 로 표현되며 여기서 <span class="math inline">\(\theta_\alpha\)</span> 는 시간 도달 시간에 비례한다. 1초마다의 회전수가 빛의 진동수이다. 당연히 경로마다 <span class="math inline">\(\theta_\alpha\)</span> 다르다.</p>
+<p>이 때 빛이 <span class="math inline">\(B\)</span> 에 도달할 확률 <span class="math inline">\(P_B\)</span> 는 다음을 만족한다(는 것이 파인만 경로적분의 결론이다).</p>
+<p><span class="math display">\[
+P_B \propto  \left|\sum_{\alpha \in \text{all possible paths}} \rho_\alpha e^{i\theta_\alpha}\right|^2.
+\]</span></p>
+<p>이것과 거울에서의 (파인만 버젼의) 최소 시간의 원리의 연관을 알아보자.</p>
+<div id="fig-FLP_1_26_14" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_26_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_26/fig_1_26_14.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.17: 파인만 물리학 강의 I. Fig. 26-14. 많은 이웃하는 경로들에 대한 확률진폭의 합
+</figcaption>
+</figure>
+</div>
+<p><span class="math inline">\(C\)</span> 를 거치는 경로를 최소경로라고 하자. <span class="math inline">\(C\)</span> 를 거치는 경로에 가까운 경로들의 <span class="math inline">\(\rho_\alpha e^{i\theta_\alpha}\)</span> 는 <span class="math inline">\(\rho_C e^{i\theta_C}\)</span> 와 거의 차이가 나지 않는다는 것을 안다. (1차 근사항이 <span class="math inline">\(0\)</span> 이기 때문에 2차 근사항에서만 차이가 난다.) <span class="math inline">\(D\)</span> 를 거치는 경로나 <span class="math inline">\(E\)</span> 를 거치는 경로는 상대적으로 <span class="math inline">\(e^{i\theta_\alpha}\)</span> 에 큰 차이를 주기 때문에 확률에 크게 기여하지 않지만 <span class="math inline">\(C\)</span> 근처의 경로는 거의 차이가 없기 때문에 (<a href="#fig-FLP_1_26_14" class="quarto-xref">그림&nbsp;<span>1.17</span></a> 를 보라) 확률에 큰 기여를 한다. 또한 <span class="math inline">\(C\)</span> 에서 멀리 떨어진 거울상의 점을 지나는 경로도 <span class="math inline">\(D\)</span> 나 <span class="math inline">\(E\)</span> 와 마찬가지 이유로 확률에 크게 기여를 하지 않는다. 확률은 위 곡선의 시작점과 끝점의 거리의 제곱에 비례하며 여기에 가장 큰 기여를 하는 경로들은 <span class="math inline">\(C\)</span> 근처의 <span class="math inline">\(e^{i\theta_C}\)</span> 와 비슷한 값을 갖는 경로들이다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="기하광학" class="level2">
+<h2 class="anchored" data-anchor-id="기하광학">27 기하광학</h2>
+<section id="sec-FLP_1_27_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_27_1">27-1 소개</h3>
+<ul>
+<li><p>기하광학은 여기서 다루게 될 기초적인 기하광학이든 좀 더 복잡한 기하광학이든 앞으로 우리가 다룰 물리학의 분야와는 별 관련이 없다. 딱 한가지만 빼고.</p></li>
+<li><p>앞으로 다루게 될 기하광학에서 많이 사용하게 될 공식이 있다.</p></li>
+</ul>
+<div id="fig-FLP_1_27_1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_27_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_27/fig_1_27_1.png" class="img-fluid figure-img" width="250">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_27_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.18: 파인만 물리학 강의 I. Fig. 27-1
+</figcaption>
+</figure>
+</div>
+<p>위의 그림에서 <span class="math inline">\(\Delta = s-d = \sqrt{d^2-h^2}-d\)</span> 이므로 다음이 성립한다.</p>
+<p><span id="eq-FLP-1_27_1"><span class="math display">\[
+  \Delta  \approx \dfrac{h^2}{2s}
+   \tag{1.24}\]</span></span></p>
+<p><br></p>
+</section>
+<section id="sec-FLP_1_27_2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_27_2">27-2 초점거리와 구면</h3>
+<div id="fig-FLP_1_27_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_27_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_27/fig_1_27_2.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_27_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.19: 파인만 물리학 강의 I. Fig. 27-2
+</figcaption>
+</figure>
+</div>
+<p>위의 그림에서 공기중에서의 빛의 속도를 <span class="math inline">\(1\)</span>, 유리에서의 빛의 속도를 <span class="math inline">\(1/n\)</span> 이라고 하자. 즉 유리의 굴절률은 <span class="math inline">\(n\)</span> 이다. 정해진 두 점 <span class="math inline">\(O,\,O'\)</span> 에 대해 <span class="math inline">\(O\)</span> 를 지나는 모든 빛이 <span class="math inline">\(O'\)</span> 을 지나도록 하는 유리의 면을 구한다고 하자. 그렇다면 유리의 표면의 임의의 점 <span class="math inline">\(P\)</span> 에 대해 빛이 <span class="math inline">\(OP\)</span> 에서 걸린 시간과 <span class="math inline">\(PO'\)</span> 에서 걸린 시간의 합이 같아야 한다. 즉</p>
+<p><span class="math display">\[
+|OP| + n\cdot |PO'|= \text{constant}
+\]</span></p>
+<p>이어야 한다. 이것을 직접 풀면 꽤나 복잡한 4차 함수가 되는데 <span class="math inline">\(s\to \infty\)</span> 극한에서는 훨씬 간단한 2차 함수가 된다. 게다가 실용적으는 <span class="math inline">\(O\)</span> 를 지나는 모든 빛에 대해서가 아니라 <span class="math inline">\(OO'\)</span> 선 주위에 대해서만 성립해도 많은 경우에서 받아들일 수 있다.</p>
+<p>… to be done …</p>
+</section>
+</section>
+<section id="전자기-복사" class="level2">
+<h2 class="anchored" data-anchor-id="전자기-복사">28 전자기 복사</h2>
+<section id="sec-FLP-1_18_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP-1_18_1">28-1 전자기학</h3>
+<ul>
+<li><p><strong>전자기 복사 (electromagnetic radiation)</strong> : 전자의 빠른 진동으로 인해 발생하는 전자기파.</p></li>
+<li><p>19세기 말까지의 물리학적 지식</p>
+<ul>
+<li>뉴튼의 보편 중력 법칙 <span id="eq-FLP_1_28_1"><span class="math display">\[
+\boldsymbol{F} = \dfrac{GmM}{r^2}\boldsymbol{e}_r.
+\tag{1.25}\]</span></span></li>
+<li>주어진 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 와 자기장 <span class="math inline">\(\boldsymbol{E}\)</span> 에서의 로런츠 힘 <span id="eq-FLP_1_28_2"><span class="math display">\[
+\boldsymbol{F} = q(\boldsymbol{E}+ \boldsymbol{v}\times \boldsymbol{B}).
+\tag{1.26}\]</span></span></li>
+</ul></li>
+</ul>
+<p>여기서 <span class="math inline">\(\boldsymbol{E}\)</span> 와 <span class="math inline">\(\boldsymbol{B}\)</span> 는 개별적인 전하에 의해 생성되는 전기장과 자기장의 벡터합이며 이를 <strong>중첩 (superposition)</strong> 이라고 한다. 단일 전하에 의해 생성되는 전기장과 자기장은 장 방정식에 의해 기술되며 우선 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 는 아래와 같다.</p>
+<p><span id="eq-fLP_1_28_3"><span class="math display">\[
+\boldsymbol{E} = \dfrac{-q}{4\pi \epsilon_0} \left[\dfrac{\boldsymbol{e}_{r'}}{r'^2} + \dfrac{r'}{c} \dfrac{d}{dt}\left(\dfrac{\boldsymbol{e}_{r'}}{r'^2}\right) + \dfrac{1}{c^2} \dfrac{d^2 \boldsymbol{e}_{r'}}{dt^2}\right].
+\tag{1.27}\]</span></span></p>
+<ul>
+<li>첫번째 항은 쿨롱항이다 즉 <span class="math inline">\(\boldsymbol{E}_C = \dfrac{-q\boldsymbol{e}_{r'}}{4\pi \epsilon_0 r'^2}\)</span>. 여기서 <span class="math inline">\(r\)</span> 은 전하 <span class="math inline">\(q\)</span> 와 전기장이 측정되는 위치 <span class="math inline">\(P\)</span> 사이의 거리이다. 이미 19세기에 어떤 영향은 어떤 근본적인 상수로 정해지는 속도보다 빨리 전달 될 수 없다는 것이 발견되었다. 이 근본적인 속도가 빛의 속도 <span class="math inline">\(c\)</span> 이다.</li>
+<li>쿨롱의 법칙이 옳지 않은 것은 전하가 <em>지금</em> 어디있는지와 전하와의 거리가 <em>지금</em> 얼마인지를 알수 없을 뿐만 아니라 현재의 <span class="math inline">\(P\)</span> 점에서의 전기장에 영향을 주는것은 과거의 전하이기 때문이다. 얼마나 과거? <span class="math inline">\(r'/c\)</span> 만큼의 과거이며 이 차이를 <strong>지연 시간 (retarded time)</strong> 이라고 한다. <span class="math inline">\(r'\)</span> 은 <span class="math inline">\(q\)</span> 를 떠난 신호가 시간 <span class="math inline">\(t\)</span> 에 <span class="math inline">\(P\)</span> 에 도달했을 때의 거리이다. 따라서 <a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>1.27</span></a> 에 등장하는 방향은 <strong>지연 거리(retarded distance)</strong> <span class="math inline">\(r'\)</span> 에 대한 소위 <strong>지연 방향 (retarded direction)</strong> 인 <span class="math inline">\(\boldsymbol{e}_{r'}\)</span> 이 된다.</li>
+<li>두번째 항은 지연된 시간과 전기장의 시간에 대한 변화율을 곱한 값이다.</li>
+<li>세번째 항은 지연 방향의 시간에 대한 이차 미분이다.</li>
+</ul>
+<p>자기장의 방정식은 다음과 같다.</p>
+<p><span id="eq-FLP_1_28_4"><span class="math display">\[
+\boldsymbol{B} = - \dfrac{\boldsymbol{e}_{r'}\times \boldsymbol{E}}{c}.
+\tag{1.28}\]</span></span></p>
+<p><br></p>
+</section>
+<section id="sec-FLP_1_28_2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_28_2">28-2 복사</h3>
+<p><a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>1.27</span></a> 에는 거리의 제곱이 아니라 거리에 반비례하는 부분이 존재하며, 충분히 먼 거리에서는 이 항이 지배적이 된다. 구체적으로 찾아보는 것은 다음으로 미루기로 하고 일단 이것을 받아들이기로 하자. 정답은 세번째 항이다. 이제 우리는 당분간 다음을 받아들이자.</p>
+<p><span id="eq-FLP_1_28_5"><span class="math display">\[
+\boldsymbol{E}= -\dfrac{q}{4\pi \epsilon_0 c^2} \dfrac{d^2 \boldsymbol{e}_{r'}}{dt^2}.
+\tag{1.29}\]</span></span></p>
+<ul>
+<li><span class="math inline">\(\boldsymbol{e}_{r'}\)</span> 이 시간에 대한 이차 변화를 radial 방향과 transverse 방향으로 분해 할 수 있다. 이 때 radial 방향의 변화는 <span class="math inline">\(1/r'^2\)</span> 에 비례 하여 변하며 transverse 방향은 <span class="math inline">\(1/r'\)</span> 에 비례한다. 따라서 우리는 충분히 멀다면 transverse 방향만 고려해야 한다는 것을 알 수 있다.</li>
+<li><a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>1.27</span></a> 는 상대성 이론에 의한 효과까지 포함되어 있다.</li>
+</ul>
+<p>이제 좀 더 단순한 상황을 생각해보자. 전하의 움직임은 느리고 움직이는 범위는 작다. 그렇다면 지연 시간은 거의 상수 <span class="math inline">\(r/c\)</span> 이다. 이제 전하가 <span class="math inline">\(x\)</span> 방향으로만 움직인다고 가정한다. 그렇다면</p>
+<p><span class="math display">\[
+\dfrac{d^2 \boldsymbol{e}_{r'}}{dt^2} = \dfrac{d^2 \left(\boldsymbol{e}_{r'}\right)_\text{transverse}}{dt^2} \approx \dfrac{d^2}{dt^2}\left(\dfrac{x}{r'}\right)\hat{\boldsymbol{x}} \approx \dfrac{a_x(t-r/c)}{r}\hat{\boldsymbol{x}}
+\]</span></p>
+<p>이다. 따라서 전기장은 대부븐 <span class="math inline">\(E_x\)</span> 이며 다음과 같다. <span id="eq-FLP_1_28_6"><span class="math display">\[
+E_x (t)= - \dfrac{q}{4\pi \epsilon_0 c^2 r} a_x\left(t-\dfrac{r}{c}\right)
+\tag{1.30}\]</span></span></p>
+<p><br></p>
+</section>
+<section id="sec-FLP_1_28_3" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_28_3">28-3 쌍극자 복사체</h3>
+<p>우리는 <a href="#eq-FLP_1_28_6" class="quarto-xref">식&nbsp;<span>1.30</span></a> 를 (1) 우리가 보는 방향에 대해 직각 방향으로 (2) 천천히 움직이는(non-relativistic) (3) 멀리 떨어져 있는 전자기 복사에 대한 기본 법칙으로 (당분간) 간주한다. 이 식의 가속도는 <span class="math inline">\(r/c\)</span> 만큼의 시간 이전의 가속도이다. 이 장에서는 이 식의 물리적 의미에 대해 다루며 이후에는 빛과 전파의 전달에 대한 모든 현상-반사, 굴절, 간섭, 회절, 산란 과 같은-을 설명하는데 사용할 것이다.</p>
+<p>… 발전기를 이용한 쌍극자 복사체와 일종의 안테나에 대한 설명들…</p>
+<p><br></p>
+</section>
+<section id="sec-FLP_1_28_4" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_28_4">28-4 간섭</h3>
+<p>두개의 전자기파 원이 있을 때 외부에서의 전기장은 각각의 전자기파 원에서의 전자기장의 벡터합으로서 상쇄 혹은 보강이 있을 수 있다…. 는 것에 대한 내용들. 이것을 <strong>간섭 (interference)</strong> 라고 한다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="간섭" class="level2">
+<h2 class="anchored" data-anchor-id="간섭">29 간섭</h2>
+<section id="sec-FLP_1_29_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_29_1">29-1 전자기파</h3>
+<div id="fig-FLP_1_29_1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_29_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_29/fig_1_29_1/fig_1_29_1.png" class="img-fluid figure-img" width="450">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.20: 파인만 물리학 강의 I. Fig. 29-1. 지연 가속도가 <span class="math inline">\(\boldsymbol{a}'\)</span> 인 양전하에 의한 전기장 <span class="math inline">\(\boldsymbol{E}\)</span>
+</figcaption>
+</figure>
+</div>
+<p>위의 그림과 같은 상황에서 전기장은 아래와 같다.</p>
+<p><span id="eq-FLP_1_29_1"><span class="math display">\[
+E(t) = - \dfrac{qa(t-r/c) \sin \theta}{4\pi \epsilon_0 c^2r}.
+\tag{1.31}\]</span></span></p>
+<p>여기서 <span class="math inline">\(a(t-r/c)\)</span> 는 시간이 <span class="math inline">\(t-r/c\)</span> 일 때의 가속도로 <strong>지연 가속도(retarded acceleration)</strong> 이라고 한다.</p>
+<p><br></p>
+</section>
+<section id="sec-FLP_1_29_2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_29_2">29-2 복사 에너지</h3>
 <p><br></p>
 </section>
 </section>
@@ -1244,13 +1476,14 @@ n = n_0 e^{-\text{P.E.}/k_BT}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
