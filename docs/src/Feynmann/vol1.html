@@ -461,6 +461,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#sec-FLP_1_29_1" id="toc-sec-FLP_1_29_1" class="nav-link" data-scroll-target="#sec-FLP_1_29_1">29-1 전자기파</a></li>
   <li><a href="#sec-FLP_1_29_2" id="toc-sec-FLP_1_29_2" class="nav-link" data-scroll-target="#sec-FLP_1_29_2">29-2 복사 에너지</a></li>
+  <li><a href="#sec-FLP_1_29_3" id="toc-sec-FLP_1_29_3" class="nav-link" data-scroll-target="#sec-FLP_1_29_3">29-3 사인파</a></li>
   </ul></li>
   <li><a href="#quantum-behavior" id="toc-quantum-behavior" class="nav-link" data-scroll-target="#quantum-behavior">37. Quantum Behavior</a>
   <ul class="collapse">
@@ -1318,9 +1319,46 @@ E(t) = - \dfrac{qa(t-r/c) \sin \theta}{4\pi \epsilon_0 c^2r}.
 \tag{1.31}\]</span></span></p>
 <p>여기서 <span class="math inline">\(a(t-r/c)\)</span> 는 시간이 <span class="math inline">\(t-r/c\)</span> 일 때의 가속도로 <strong>지연 가속도(retarded acceleration)</strong> 이라고 한다.</p>
 <p><br></p>
+<div id="fig-FLP_1_29_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_29_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_29/fig_1_29_2.png" class="img-fluid figure-img" width="450">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.21: 파인만 물리학 강의 I. Fig. 29-2, Fig. 29-3. 공명자 안의 전하의 가속도의 변화에 대한 전기장의 변화
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>시간이 지남에 따라 장은 source 로부터 퍼져나가는 파동처럼 움직인다.</p></li>
+<li><p>특별이 전하 <span class="math inline">\(q\)</span> 가 <span class="math inline">\(x=x_0 \cos \omega t\)</span> 와 같이 움직일 경우 가속도는</p>
+<p><span id="eq-FLP_1_29_2"><span class="math display">\[
+a=-\omega^2 x_0 \cos \omega t = a_0 \cos \omega t
+\tag{1.32}\]</span></span></p>
+<p>와 같고 전기장은 <a href="#eq-FLP_1_29_1" class="quarto-xref">식&nbsp;<span>1.31</span></a> 에 의해 아래와 같다.</p>
+<p><span id="eq-FLP_1-20_3"><span class="math display">\[
+E= - q \sin \theta \dfrac{a_0 \cos \omega (t-r/c)}{4\pi \epsilon_0 rc^2}.
+\tag{1.33}\]</span></span> <br></p></li>
+</ul>
 </section>
 <section id="sec-FLP_1_29_2" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_29_2">29-2 복사 에너지</h3>
+<ul>
+<li><p>진동자가 전기장에서 움직인다고 하자. 즉 전기장이 사인파이며 <span class="math inline">\(F=qE = ma\)</span> 로부터 속도, 가속도, 최대 변위 모두 전기장에 비례한다. 그리고 운동에너지는 <span class="math inline">\(E^2\)</span> 에 비례한다. 이로부터 장이 전달하는 에너지는 <span class="math inline">\(E^2\)</span> 에 비례할 것이라는 것을 안다.</p></li>
+<li><p>따라서 radiation 에 의해 전기장은 <span class="math inline">\(E \propto 1/r\)</span>, 에너지 <span class="math inline">\(\mathcal{E} \propto E^2 \propto 1/r^2\)</span></p></li>
+</ul>
+<p><br></p>
+</section>
+<section id="sec-FLP_1_29_3" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_29_3">29-3 사인파</h3>
+<ul>
+<li><p>각진동수 <span class="math inline">\(\omega\)</span> 에 대해 파수(wave number) <span class="math inline">\(k\)</span> 를 단위 거리당 변경되는 파동의 위상으로 정의하자. <a href="#eq-FLP_1-20_3" class="quarto-xref">식&nbsp;<span>1.33</span></a> 에서 위상 <span class="math inline">\(\phi = \omega (t-r/c)\)</span> 이므로 <span id="eq-FLP_1_29_4"><span class="math display">\[
+k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
+\tag{1.34}\]</span></span></p>
+<p>이다. 참고로 빛이 아닌 경우 각진동수와 파수 사이에는 위와 같은 간단한 관계가 일반적으로 성립하지 않는다.</p></li>
+<li><p>이제 위상을 파수와 각진동수에 대해 <span class="math inline">\(\phi = \omega t - k x\)</span> 와 같이 쓸 수 있다.</p></li>
+<li><p>실제로 전기장은 <span class="math inline">\(1/r\)</span> 항 이외에 <span class="math inline">\(n&gt;1\)</span> 에 대한 <span class="math inline">\(1/r^n\)</span> 항이 존재한다. <span class="math inline">\(r\)</span> 이 충분히 크면 <span class="math inline">\(1/r^n\)</span> 항을 무시할 수 있는데</p></li>
+</ul>
 <p><br></p>
 </section>
 </section>
