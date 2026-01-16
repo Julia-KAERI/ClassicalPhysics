@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,15 +34,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/Feynmann/00_index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,7 +84,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -462,6 +461,7 @@ window.Quarto = {
   <li><a href="#sec-FLP_1_29_1" id="toc-sec-FLP_1_29_1" class="nav-link" data-scroll-target="#sec-FLP_1_29_1">29-1 전자기파</a></li>
   <li><a href="#sec-FLP_1_29_2" id="toc-sec-FLP_1_29_2" class="nav-link" data-scroll-target="#sec-FLP_1_29_2">29-2 복사 에너지</a></li>
   <li><a href="#sec-FLP_1_29_3" id="toc-sec-FLP_1_29_3" class="nav-link" data-scroll-target="#sec-FLP_1_29_3">29-3 사인파</a></li>
+  <li><a href="#sec-FLP_1_29_4" id="toc-sec-FLP_1_29_4" class="nav-link" data-scroll-target="#sec-FLP_1_29_4">두 쌍극자 복사자</a></li>
   </ul></li>
   <li><a href="#quantum-behavior" id="toc-quantum-behavior" class="nav-link" data-scroll-target="#quantum-behavior">37. Quantum Behavior</a>
   <ul class="collapse">
@@ -519,7 +519,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>갈릴레이 변환과 로런츠 변환</strong>
+<strong>갈릴레이 변환과 로런츠 변환</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -540,7 +540,7 @@ x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
+푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -677,7 +677,7 @@ X^\mu = (ct,\,x,\,y,\,z),\qquad X_\mu = (ct,\,-x,\,-y,\,-z).
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">힌트</span><strong>최종적으로…</strong>
+<strong>최종적으로…</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -832,7 +832,7 @@ M = 2\gamma (w) m
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">힌트</span><span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
+<span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1013,7 +1013,7 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리</strong>
+<strong>페르마의 최소시간의 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1147,7 +1147,7 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
+<strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1357,8 +1357,35 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 \tag{1.34}\]</span></span></p>
 <p>이다. 참고로 빛이 아닌 경우 각진동수와 파수 사이에는 위와 같은 간단한 관계가 일반적으로 성립하지 않는다.</p></li>
 <li><p>이제 위상을 파수와 각진동수에 대해 <span class="math inline">\(\phi = \omega t - k x\)</span> 와 같이 쓸 수 있다.</p></li>
-<li><p>실제로 전기장은 <span class="math inline">\(1/r\)</span> 항 이외에 <span class="math inline">\(n&gt;1\)</span> 에 대한 <span class="math inline">\(1/r^n\)</span> 항이 존재한다. <span class="math inline">\(r\)</span> 이 충분히 크면 <span class="math inline">\(1/r^n\)</span> 항을 무시할 수 있는데</p></li>
+<li><p>실제로 전기장은 <span class="math inline">\(1/r\)</span> 항 이외에 <span class="math inline">\(n&gt;1\)</span> 에 대한 <span class="math inline">\(1/r^n\)</span> 항이 존재한다. <span class="math inline">\(r\)</span> 이 충분히 크면 <span class="math inline">\(1/r^n\)</span> 항을 무시할 수 있다. 정성적으로 <span class="math inline">\(1/r^n\)</span> 항에서 <span class="math inline">\(r &gt; n \lambda\)</span> 보다 크면 무시 할 수 있다.</p></li>
 </ul>
+<p><br></p>
+</section>
+<section id="sec-FLP_1_29_4" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_29_4">두 쌍극자 복사자</h3>
+<p>두 진동자의 중심이 평면상에 있으며 이 평면에 대해 수직으로 진동한다고 하자.</p>
+<div id="fig-FLP_1_29_5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_29_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_29/fig_1_29_5.png" class="img-fluid figure-img" width="350">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.22: 파인만 물리학 강의 I. Fig. 29-5. 파장의 반만큼 떨어져 있는 쌍극 진동자에 의한 에너지 Intensity. (a) 두 진동자가 같은 위상으로 진동할 때. (b) 두 진동자가 주기의 반만큼의 위상차로 진동할 때
+</figcaption>
+</figure>
+</div>
+<p>위의 그림은 위에서 본 두 진동자의 전기장의 세기를 보여준다. 그림의 설명을 읽어보자. 에너지 intensity 는 단취 시간당 전달되는 에너지를 말하며 여기서는 당연히 전기장의 제곱의 시간에 대한 평균에 비례한다. 위의 그림에서 보듯이 우리는 우리가 전기장에 의한 신호를 보내고자 하는 방향과 반대방향으로 에 강한 신호를 보낼 수 있다. 이것을 약간 더 조합해보자. 아래 그림과 같이 <span class="math inline">\(\lambda/4\)</span> 만큼 떨어진 두 쌍극자가 <span class="math inline">\(\pi/2\)</span> 만큼의 위상차로 진동한다고 하자.</p>
+<div id="fig-FLP_1_29_6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_29_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_29/fig_1_29_6.png" class="img-fluid figure-img" width="200">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.23: 파인만 물리학 강의 I. Fig. 29-6
+</figcaption>
+</figure>
+</div>
+<p>그렇다면 위의 그림과 같이 북쪽 방향으로 가장 강한 신호가 전달되며 반대방향으로는 거의 신호가 전달되지 않는다.</p>
 <p><br></p>
 </section>
 </section>
@@ -1514,14 +1541,13 @@ n = n_0 e^{-\text{P.E.}/k_BT}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
