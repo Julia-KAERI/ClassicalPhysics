@@ -7,7 +7,7 @@ crossref:
 ---
 
 
-{{< include ../../latexmacros.qmd >}}
+{{< include ../../../latexmacros.qmd >}} 
 
 ## 15. 특수 상대성 이론
 
@@ -834,7 +834,7 @@ $${#eq-FLP_1_29_1}
 
 </br>
 
-### 두 쌍극자 복사자 {#sec-FLP_1_29_4}
+### 29.4 두 쌍극자 복사자 {#sec-FLP_1_29_4}
 
 두 진동자의 중심이 평면상에 있으며 이 평면에 대해 수직으로 진동한다고 하자. 
 
@@ -853,6 +853,75 @@ $${#eq-FLP_1_29_1}
 아래 그림은 $2\lambda$ 만큼씩 떨여지 있는 6개의 쌍극 진동자에 의한 intensity 이다.
 
 ![파인만 물리학 강의 I. Fig. 29-8](figures/fig_1_29/fig_1_29_8.png){#fig-FLP_1_29_8 width=400}
+
+</br>
+
+### 29.5 간섭의 수학 {#sec-FLP_1_29_5}
+
+벡터 혹은 복소수를 이용한 두 파동의 합.
+
+
+</br>
+
+## 30. 회절
+
+### 30-1 $n$ 개의 동일한 진동자에 의한 최종 진폭
+
+- 간섭(interference)과 회절(diffreraction) 의 구분 : 명확한 구분은 없지만 source 가 적으면 간섭, source 가 많으면 회절 이라고 하자.
+
+같은 간격으로 별려 위치한 동일한 $n$ 개의 진동자를 생각하자. 각각의 진동자의 진폭은 같지만 위상은 다르다. 위상 차이는 실제적인 두 진동자의 위상 차이일 수도 있고 각 진동자로부터의 거리차이로 인한 위상차 일 수 있다. $i$ 번째 진동자와 $i+1$ 번째 진동자의 위상차가 $\phi$ 일 때 이 진동자에 의한 진폭을 합친 최종 진폭(resultant amplitude) $R$ 은 아래와 같다.
+
+$$
+R = A\left[\cos (\omega t) + \cos (\omega t+ \phi) + \cdots + \cos (\omega t + (n-1) \phi)\right].
+$$ {#eq-FLP_1_30_1}
+
+여기서 $\phi = \alpha + 2\pi d \sin \theta/\lambda$ 인 경우를 생각해보자. 
+
+$$
+\begin{aligned}
+R &= \dfrac{1}{2} \left[\sum_{j=0}^{n-1} Ae^{i(\omega t + j\phi)} + (\text{complex conjugate}) \right] \\[0.3em]
+&= \dfrac{1}{2}\left[Ae^{i\omega t}\dfrac{e^{i n \phi /2}}{e^{i\phi /2}}\dfrac{\sin(n\phi /2)}{\sin{\phi/2}}   + (\text{complex conjugate})\right] \\[0.3em]
+&= A \cos \left(\omega t + \dfrac{(n-1)\phi}{2}\right) \dfrac{\sin (n\phi/2)}{\sin(\phi/2)}.
+\end{aligned}
+$$
+
+따라서 최종 진폭 $A_R$ 은
+
+$$
+A_R = A \dfrac{\sin (n \phi/2)}{\sin (\phi/2)}
+$$ {#eq-FLP_1_30_2}
+
+이며 최종 intensity 는
+
+$$
+I = I_0 \dfrac{\sin^2 (n\phi/2)}{\sin^2 (\phi/2)}
+$$ {#eq-FLP_1_30_3}
+
+이다.
+
+우리는 $\phi \sim 0$ 에서 $I=n^2I_0$ 임을 알 수 있다. 즉 $n$ 개의 동일한 진동자에 의해 발생되는 에너지는 가장 큰 방향으로는 $n^2$ 에 비례하여 발생한다. (같은 위상의, $\lambda$ 만큼씩 떨여져 있는 $n$ 개의 진동자의 경우와 같다.) 위의 식을 통해 아래의 그림을 그릴 수 있다. $n\phi = 2m\pi$ 인 정수 $m$ 이 존재할 때 $I=0$ 이다. 또한 아래 그래프에서 전체 영역에 대한 적분은 $2\pi n I_0$ 임을 안다.
+
+![파인만 물리학 강의 I. Fig. 30-2. 같은 강도를 갖는 다수의 진동자의 intensity 를 위상에 대한 함수로 표현함](figures/fig_1_30/fig_1_30_2.png){#fig-FLP_1_30_2 width=400}
+
+
+이제 아래 @fig-FLP_1_30_3 같은 진동자 배치를 생각하자. 직선상에, 인접한 진동자와 $d$ 만큼 떨여진 $n$ 개의 진동자가 위치한다. $i$ 번째 진동자는 $i-1$ 번째 진동자에 대해 $\alpha$ 만큼 더 큰 위상(phase) 를 가진다. 이 진동자가 가 위치한 직선에 수직인 방향으로 $\theta$ 만큼의 각을 가진 위치에서 측정한다고 하자.
+
+![파인만 물리학 강의 I. Fig. 30-3. 같은 강도를 갖는 $n$ 개의 진동자를 직선상에 배치함. $s$ 번째 진동자의 위상 $\alpha_s = s\alpha$.](figures/fig_1_30/fig_1_30_3/fig_1_30_3.png){#fig-FLP_1_30_3 width=400}
+
+측정하는 위치에서는 진동자 자체의 위상과 시간 지연에 의한 위상이 합쳐진 위상으로 느끼므로 측정하는 위치에서의 인접한 진동자의 위상차 $\phi$ 는 아래와 같다.
+$$
+\phi = \alpha + 2\pi d \sin \theta/\lambda = \alpha + kd\sin \theta.
+$$ {#eq-FLP_1_30_4}
+
+우선 $\alpha=0$ 인 경우는 @eq-FLP_1_30_3 의 경우와 같다. 이 때 첫번째 극소점은 $\phi = 2\pi/n$ 일 때이며 이는 
+$$
+\lambda = nd\sin \theta
+$$ {#eq-FLP_1_30_5}
+
+를 의미한다. @fig-FLP_1_30_3 에서 $\Delta = L\sin\theta = nd\sin\theta$ 이며 따라서 첫번째 극소점은 $\Delta =\lambda$ 일 경우이다.
+
+
+
 
 
 </br>
