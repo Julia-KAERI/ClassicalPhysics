@@ -1,5 +1,5 @@
 ---
-title: "파인만 물리학 강의 I"
+title: "I-2: 특수상대성이론과 광학"
 number-sections: true
 number-depth: 1
 crossref:
@@ -8,6 +8,7 @@ crossref:
 
 
 {{< include ../../../latexmacros.qmd >}} 
+
 
 ## 15. 특수 상대성 이론
 
@@ -869,7 +870,7 @@ $${#eq-FLP_1_29_1}
 
 - 간섭(interference)과 회절(diffreraction) 의 구분 : 명확한 구분은 없지만 source 가 적으면 간섭, source 가 많으면 회절 이라고 하자.
 
-같은 간격으로 별려 위치한 동일한 $n$ 개의 진동자를 생각하자. 각각의 진동자의 진폭은 같지만 위상은 다르다. 위상 차이는 실제적인 두 진동자의 위상 차이일 수도 있고 각 진동자로부터의 거리차이로 인한 위상차 일 수 있다. $i$ 번째 진동자와 $i+1$ 번째 진동자의 위상차가 $\phi$ 일 때 이 진동자에 의한 진폭을 합친 최종 진폭(resultant amplitude) $R$ 은 아래와 같다.
+같은 간격으로 직선상에 위치한 동일한 $n$ 개의 진동자를 생각하자. 각각의 진동자의 진폭은 같지만 위상은 다르다. 위상 차이는 실제적인 두 진동자의 위상 차이일 수도 있고 각 진동자로부터의 거리차이로 인한 위상차 일 수 있다. $i$ 번째 진동자와 $i+1$ 번째 진동자의 위상차가 $\phi$ 일 때 이 진동자에 의한 진폭을 합친 최종 진폭(resultant amplitude) $R$ 은 아래와 같다.
 
 $$
 R = A\left[\cos (\omega t) + \cos (\omega t+ \phi) + \cdots + \cos (\omega t + (n-1) \phi)\right].
@@ -899,10 +900,11 @@ $$ {#eq-FLP_1_30_3}
 
 이다.
 
-우리는 $\phi \sim 0$ 에서 $I=n^2I_0$ 임을 알 수 있다. 즉 $n$ 개의 동일한 진동자에 의해 발생되는 에너지는 가장 큰 방향으로는 $n^2$ 에 비례하여 발생한다. (같은 위상의, $\lambda$ 만큼씩 떨여져 있는 $n$ 개의 진동자의 경우와 같다.) 위의 식을 통해 아래의 그림을 그릴 수 있다. $n\phi = 2m\pi$ 인 정수 $m$ 이 존재할 때 $I=0$ 이다. 또한 아래 그래프에서 전체 영역에 대한 적분은 $2\pi n I_0$ 임을 안다.
+우리는 $\phi \sim 0$ 에서 $I=n^2I_0$ 임을 알 수 있다. 즉 $n$ 개의 동일한 진동자에 의해 발생되는 에너지는 가장 큰 방향으로는 $n^2$ 에 비례하여 발생한다. (같은 위상의, $\lambda$ 만큼씩 떨여져 있는 $n$ 개의 진동자의 경우와 같다.) 위의 식을 통해 아래의 그림을 그릴 수 있다. $n\phi = 2m\pi$ 인 정수 $m$ 이 존재할 때 $I=0$ 이다. 또한 아래 그래프에서 전체 영역에 대한 적분은 $2\pi n I_0$ 임을 계산 할 수 있다.
 
 ![파인만 물리학 강의 I. Fig. 30-2. 같은 강도를 갖는 다수의 진동자의 intensity 를 위상에 대한 함수로 표현함](figures/fig_1_30/fig_1_30_2.png){#fig-FLP_1_30_2 width=400}
 
+![@fig-FLP_1_30_2 를 $n=7$ 일때 $\phi$ 에 대해 확장하여 그림](figures/fig_1_30/tfig1/tfig2.png){#fig-FLP_tfig2 width=400}
 
 이제 아래 @fig-FLP_1_30_3 같은 진동자 배치를 생각하자. 직선상에, 인접한 진동자와 $d$ 만큼 떨여진 $n$ 개의 진동자가 위치한다. $i$ 번째 진동자는 $i-1$ 번째 진동자에 대해 $\alpha$ 만큼 더 큰 위상(phase) 를 가진다. 이 진동자가 가 위치한 직선에 수직인 방향으로 $\theta$ 만큼의 각을 가진 위치에서 측정한다고 하자.
 
@@ -920,20 +922,20 @@ $$ {#eq-FLP_1_30_5}
 
 를 의미한다. @fig-FLP_1_30_3 에서 $\Delta = L\sin\theta = nd\sin\theta$ 이며 따라서 첫번째 극소점은 $\Delta =\lambda$ 일 경우이다.
 
-@eq-FLP_1_30_3 에서 알 수 있는 하나 중요한 사실은 정수 $m$ 에 대해 $\phi = 2 m\pi$ 일 때 최대값이 등장한다는 것이다. 즉 $3\pi d \sin \theta/\lambda = 2\pi m$ 조건이며 이로부터
+@eq-FLP_1_30_3 에서 알 수 있는 하나 중요한 사실은 정수 $m$ 에 대해 $\phi = 2 m\pi$ 일 때 최대값이 등장한다는 것이다. 즉 $2\pi d \sin \theta/\lambda = 2\pi m$ 조건이며 이로부터
 
 $$
 d\sin\theta = m\lambda
 $$ {#eq-FLP_1_30_6}
 
-을 얻는다. @eq-FLP_1_30_5 와 비슷하지만 완전히 다른 의미임을 명심하라. 
+을 얻는다. @fig-FLP_tfig2 에서 $2\pi$ 주기로 나타나는 큰 픽을을 의미하며 @eq-FLP_1_30_5 와 비슷하지만 완전히 다른 의미임을 명심하라. 여기서 $m$ 값에 따라 $0$-차 빔(zero-order beam), $1$-차 빔(first-order beam), $2$-차 빔(second-order beam) ... 이라고 한다.
 
 
 @eq-FLP_1_30_6 에서 기억해야 할 것 하나는 $d\le \lambda$ 이면 가능한 해는 $m=0$ 일 때 뿐이다. 따라서 강한 신호를 보내려면 간격 $d$ 를 파장보다 크게 잡아야 한다.
 
 </br>
 
-### 30-2 회졀 격자 {#sec-FLP_1_3_20}
+### 30-2 회절 격자 {#sec-FLP_1_3_20}
 
 
 - (파장이 긴 라디오파를 다루는 경우) 안테나와 전선을 다룰 때 모든 작은 진동자, 혹은 안테나의 위상을 동일하게 맞출 수 있다. 그렇다면 빛의 경우는? 빛의 파장은 매우 짧기 때문에 (파인만 당시에는) 불가능하다. 그러나 다른 방법으로 같은 일을 할 수 있다.
@@ -948,131 +950,51 @@ $$ {#eq-FLP_1_30_6}
 - 유리판에 일렬로 작은 흠을 파서 흠(notch)이 파이지 않은 다른 부분과 다소 다르게 산란되도록 한다. 흠 사이의 간격은 매우 일정하며 빛의 파장보다는 크다.  
 - 여기에 빛을 비추면 일부의 빛은 유리를 통과하지만 각각의 흠이 광원의 역할을 하며 특정한 각도로 강한 빛이 나온다. 이 각도는 틈의 간격과 관련이 있다. 이를 **회적 격자 (diffraction grating)** 라고 한다.
 - 여러 파장의 빛이 섞여 있을 경우 @eq-FLP_1_30_6 를 보면 알 수 있듯이 강한 빛이 나오는 각도가 빛의 진동수(파장, 에너지...) 에 따라 다르다. 
-- 지금까지는 광원에서의 위상이 모두 같은 경우를 생각했다. 인접한 광원 사이에 동일한 위상차 $\alpha$ 가 존재한다고 하자. 
 
 
+지금까지는 광원에서의 위상이 모두 같은 경우를 생각했다. 회절 격자를 이용해 임의의 위상차를 주는 방법을 알아보자. 아래 그림과 같이 $d$ 의 간격을 갖는 회절격자에 $\theta_\text{in}$ 의 입사각으로 빛을 쐬어준다고 하자. 그리고 $\theta_{\text{out}}$ 만큼의 산란각을 갖는다고 하자.
 
+![파인만 물리학 강의 I. Fig. 30-4. 회절격자의 인접함 선에 대한 경로 차이는 $d\sin\theta_\text{out} - d\sin\theta_\text{in}$ 이다.](figures/fig_1_30/fig_1_30_4.png){#fig-FLP_1_30_4 width=400}
+
+그렇다면 회절격자의 인접한 두 선에서 발생하는 경로차 $\phi$ 는
+
+$$
+\phi = \dfrac{2\pi d \sin \theta_\text{out}}{\lambda} - \dfrac{2 \pi d \sin \theta_\text{in}}{\lambda} = \dfrac{2\pi d}{\lambda}(\sin \theta_{\text{out}}- \sin \theta_\text{in}).
+$$ {#eq-FLP_1_30_7}
+
+강한 intensity 를 얻으려면 $\phi$ 가 $2\pi$ 의 정수배 이어야 한다. 즉 $\phi = 2\pi m$.
+
+1. $d<\lambda/2$ 일 경우 $\phi < \pi (\sin \theta_{\text{out}}- \sin \theta_\text{in}) < 2\pi$ 이다. 따라서 $\theta_\text{out} = \theta_\text{in}$. 여기서 산란된 빛은 입사된 빛이 아니라 scattering 과정에서 발생한 빛이며 단지 입사각과 산란각이 같을 뿐이다.
+
+2. There is another solution for this same case: $\theta_\text{out}$ may equal $\theta_\text{in}$. So not only do we get a beam in the same direction as the incoming beam but also one in another direction, such that the angle of incidence is equal to the angle of scattering. This we call the reflected beam.
+
+3. *반사 (reflection)* 이란 입사된 빛이 반사체의 원자들을 여기(excite) 시키고, 이 반사체의 원자들이 입사각과 같은 방향으로 새로운 파동을 발생시킨다.
+
+4. $d$ 가 매우 작은 상황을 생각하자. @eq-FLP_1_30_7 에서 $\phi$ 역시 매우 작아진다. 안테나에서 간격 $d$ 가 매우 작은 대신에 더 많은 진동자를 넣어 총 위상차, 즉 처음과 마지막의 위상차가 동일한 경우를 생각해보자. @eq-FLP_1_30_3 에서 $\Phi = n\phi$ 라고 놓자. $\phi \approx 0$ 이며 최대 intensity $I_M = n^2I_0$ 를 생각하면 아래 식을 얻는다.
+  $$
+  I=I_M \dfrac{\sin^2 (\Phi/2)}{n^2 \sin^2(\phi/2)} \approx 4 I_M \dfrac{\sin ^2 (\Phi/2)}{\Phi^2}.
+  $$ {#eq-FLP_1_30_8}
+  위의 식을 그래프로 그리면 아래와 같다. @eq-FLP_1_30_3 에서는 $\phi = 2m\pi$ 일 때 $m=0$ 일 때와 같이 $I_M$ 의 intenstiry 를 얻지만 이 경우에는 그런 양상이 사라진다. 
+
+  ![@eq-FLP_1_30_8 의 그래프](figures/fig_1_30/tfig1/tfig1.png){#fig-FLP_1_30_tfig1 width=300}
 
 
 </br>
 
-## 37. Quantum Behavior
+### 30-3 회절격자의 분해능 {#sec-FLP_1_30_3}
 
-### 37-1 Atomic mechanics
+앞서 언급했듯이 회절격자는 파장에 따라 산란각이 달라지기 때문에 파장별로 분리하는데 사용 할 수 있다. 두개의 유사한 파장을 가진 광원에서 오는 빛을 파장별로 분리 할 수 있는 능력을 **분해능 (resolving power)** 이라고 한다. 일반적으로 레일리 기준을 사용한다.
 
+#### **레일리 기준(Rayleigh's criteria)**
 
+파장 $\lambda'$ 인 빛에 대해 경로차 $\Delta$ (@fig-FLP_1_30_3) 가 $n\lambda'$ 과 같을 때 intensity maximum peak 이며 $m$-th order beam 에 대해서는 $\Delta = mn\lambda'$ 이어야 한다. $\lambda'$ 과 약간 차이가 나는 파장 $\lambda$ 에 대해서 역시 $\Delta = mn\lambda + \lambda = mn\lambda'$ 이 되도록 하자. $\Delta \lambda = \lambda'-\lambda$ 라고 하면
 
+$$
+\dfrac{\Delta \lambda}{\lambda} = \dfrac{1}{mn}
+$$ {#eq-FLP_1_30_9}
+
+이며 이 때 $\lambda/\Delta \lambda$ 를 **회절격자의 분해능 (resolving power of grating)** 이라고 한다. 
 
 </br>
 
-
-## 39. The Kinetic Theory of Gases
-
-### 39-4 온도와 운동에너지
-
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-
-::: {#exm-TD_feynmann_1}
-
-#### 두 종류의 기체분자
-
-![파인만 물리학 강의 I. 그림 39-4](figures/feynmann_1_fig_39_4.png)
-
-두 종류의 기체가 컨테이너 안에서 셖여 있다고 하자. 기체 분자의 질량은 각각 $m_1,\,m_2$ 이며 속도를 각각 $\bf{v}_1,\,\bf{v}_2$ 라고 하자. 기체 분자의 충돌은 탄성 충돌이라고 가정한다. 
-
-이 때 질량중심죄표계에서 보면 ([질량중심 좌표계에서의 탄성 충돌](#sec-CM_elastic_collition_in_C_frame) 을 참고하라) 이 충돌은 두 입자는 속도는 일정하며 방향만 바뀌는 충돌이며 질량중심 좌표계에서 이 방향의 분포는 균일하다. 
-
-이제 실제 상황에서 보자. 서로 다른 두 분자의 충돌의 질량 중심 속도 $\bf{V}$ 와 상대속도 $\bf{v}$ 를 아래와 같이 정한다. 
-
-$$
-\bf{V}=\dfrac{m_1\bf{v}_1+m_2\bf{v}_2}{m_1+m_2},\qquad \bf{v} = \bf{v}_1-\bf{v}_2
-$$
-
-충돌 후에 원자의 분포는 어떻게 될까? 일단 우리는 충돌 전후 질량중심의 속도 $\bf{V}$ 가 변하지 않는다는 것을 안다. 또한 $\bf{V}$ 의 방향이 완전이 임의적이라는 데 동의 할 수 있을 것이다. 즉 $\bf{V\cdot v}$ 의 평균값은 $0$ 이다. 또한 $\bf{v}_1\bf{\cdot v}_2$ 의 평균값도 $0$ 이라는 데 동의 할 수 있다. 여기서
-
-$$
-\bf{V\cdot v} = \dfrac{(\bf{v}_1-\bf{v}_2) \bf{\cdot} (m_1\bf{v}_1 + m_2 \bf{v}_2)}{m_1+m+2} = \dfrac{(m_1v_1^2 - m_2v_2^2) + (m_2-m_1)(\bf{v}_1\bf{\cdot v}_2)}{m_1+m_2}
-$$
-
-이므로
-
-$$
-\left\langle \dfrac{m_1v_1^2}{2}\right\rangle = \left\langle \dfrac{m_2v_2^2}{2}\right\rangle
-$$
-
-이다. 즉 두 기체 분자의 평균 운동 에너지는 같아진다.
-
-::: 
-
-</div>
-
-</br>
-
-## 40. The Principle of Statistical Mechanics
-
-### 40.1 지수적 대기
-
-
-
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-
-::: {#exm-TD_feynmann_1}
-
-#### 높이에 따른 압력의 변화
-
-![파인만 물리학 강의 I. 그림 40-1](figures/feynmann_1_fig_40_1.png){width=300}
-
-위의 그림과 같은 실험장치를 생각하자. 피스톤의 위의 공기와 아래의 공기는 열평형 상태인데 이는 위와 아래의 공기의 출입은 막으면서 열만을 전달해주는 메카니즘이 존재하기 때문이다. 온도 $T$, 압력 $P$, 부피 $V$, 볼츠만 상수 $k_B$, 공기 분자 개수 $N$ 에 대해 $PV=Nk_BT$ 이며 단위 부피당 분자 개수 $n=N/V$ 이다. 이로부터 $P=nk_BT$ 임을 알며 $T$ 가 일정하므로 $P \propto n$ 이다. 여기에 중력가속도 $g$ 에 의한 중력이 작용한다고 하자. 
-
-위의 그림과 같이 높이 $h$ 와 $h+dh$ 에 의해 이루어진 얇은 층에 대해 위에서 누르는 힘과 아래에서 누르는 힘이 평행을 이루어야 한다. 즉 압력이 같아야 한다. 기체 분자의 질량이 $m$ 이라면
-
-$$
-P_{h+dh}-P_h = dP = -mgn\,dh
-$$
-
-임을 안다. $P = nk_BT$ 이며 주어진 조건으로부터 $dP = dnk_B T$ 임을 안다. 따라서
-
-$$
-\dfrac{dn}{dh}= - \dfrac{mg}{k_B T}n
-$$
-
-이며 이 미분방정식의 해는
-
-$$
-n(h) = n_0 e^{-mgh/k_BT}
-$$
-
-임을 안다. 
-
-
-::: 
-
-</div> </br>
-
-## 40-2 볼츠만 법칙
-
-$$
-n = n_0 e^{-\text{P.E.}/k_BT}
-$$
-
-</br>
-
-## 40-3 액체의 증발
-
-분자들의 집합을 생각하자. 이 분자들 사이에는 쌍마다 서로의 거리만 의존하는 상호작용, 즉 포텐셜 에너지가 존재한다. 이 때 두 분자 사이의 거리 $r$ 에 따른 포텐셜 $V(r)$ 은 일반적으로 아래 그림과 같은 형태이며 $r<r_0$ 일 때는 척력이 $r>r_0$ 일 때는 인력이 작용한다. 
-
-![파인만 물리학 강의 I 그림 40-3(redraw)](figures/fig40-3/fig40-3.png){width=400}
-
-이런 기체 분자로 차 있는 상자를 생각하자. 이 기체들 사이의 포텐셜은 각 개별 쌍의 포텐셜의 합이라고 가정하자. (세개 이상에 대한 상호작용도 존재한다-[Three-body force](https://en.wikipedia.org/wiki/Three-body_force) 를 참고하라.) 그렇다면 볼츠만의 법칙에 따라 분자 쌍이 $r_{ij}$ 만큼의 거리를 두고 존재할 확률은 다음에 비례한다.
-
-$$
-\exp \left[-\sum_{i,j} V(r_{ij})/k_BT\right].
-$$ 
-
-
-
-</br>
-
-## 40-4 분자 속력의 분포
-
-
+### 30-4 포물선형 안테나 {#sec-FLP_1_30_4}

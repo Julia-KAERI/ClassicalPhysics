@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; 파인만 물리학 강의 I – 고전 역학과 전자기학</title>
+<title>2&nbsp; I-2: 특수상대성이론과 광학 – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,19 +30,18 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../src/Feynmann/feynmann_trans.html" rel="next">
-<link href="../../../src/Feynmann/00_index.html" rel="prev">
+<link href="../../../src/Feynmann/vol1/vol1_3.html" rel="next">
+<link href="../../../src/Feynmann/vol1/vol1_1.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,7 +84,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -112,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynmann/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynmann/vol1/vol1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 I</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynmann/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynmann/vol1/vol1_2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,8 +123,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynmann/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynmann/vol1/vol1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 I</span></a></li></ol></nav>
-      <h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 I</span></h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynmann/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynmann/vol1/vol1_2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></h1>
                       </div>
   </div>
     
@@ -170,14 +169,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../src/Feynmann/vol1/vol1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 I</span></span></a>
+  <a href="../../../src/Feynmann/vol1/vol1_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">I-1 : 고전역학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../src/Feynmann/feynmann_trans.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 번역서를 읽을 때 주의할 것</span></span></a>
+  <a href="../../../src/Feynmann/vol1/vol1_2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../src/Feynmann/vol1/vol1_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -194,55 +199,55 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/02_variational_principle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/03_hamilton_dynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/04_canonical_transform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/11_one_body_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/A_proofs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
   </div>
 </li>
       </ul>
@@ -259,13 +264,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -282,43 +287,43 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/02_1_electrostatics1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/02_2_electrostatics2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/03_magnetostatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/A1_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/A2_waves.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
   </div>
 </li>
       </ul>
@@ -335,13 +340,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -358,19 +363,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ThermalPhysics/02_entropy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ThermalPhysics/0A_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
   </div>
 </li>
       </ul>
@@ -387,7 +392,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -468,23 +473,10 @@ window.Quarto = {
   <li><a href="#회절" id="toc-회절" class="nav-link" data-scroll-target="#회절">30. 회절</a>
   <ul class="collapse">
   <li><a href="#n-개의-동일한-진동자에-의한-최종-진폭" id="toc-n-개의-동일한-진동자에-의한-최종-진폭" class="nav-link" data-scroll-target="#n-개의-동일한-진동자에-의한-최종-진폭">30-1 <span class="math inline">\(n\)</span> 개의 동일한 진동자에 의한 최종 진폭</a></li>
-  <li><a href="#sec-FLP_1_3_20" id="toc-sec-FLP_1_3_20" class="nav-link" data-scroll-target="#sec-FLP_1_3_20">30-2 회졀 격자</a></li>
+  <li><a href="#sec-FLP_1_3_20" id="toc-sec-FLP_1_3_20" class="nav-link" data-scroll-target="#sec-FLP_1_3_20">30-2 회절 격자</a></li>
+  <li><a href="#sec-FLP_1_30_3" id="toc-sec-FLP_1_30_3" class="nav-link" data-scroll-target="#sec-FLP_1_30_3">30-3 회절격자의 분해능</a></li>
+  <li><a href="#sec-FLP_1_30_4" id="toc-sec-FLP_1_30_4" class="nav-link" data-scroll-target="#sec-FLP_1_30_4">30-4 포물선형 안테나</a></li>
   </ul></li>
-  <li><a href="#quantum-behavior" id="toc-quantum-behavior" class="nav-link" data-scroll-target="#quantum-behavior">37. Quantum Behavior</a>
-  <ul class="collapse">
-  <li><a href="#atomic-mechanics" id="toc-atomic-mechanics" class="nav-link" data-scroll-target="#atomic-mechanics">37-1 Atomic mechanics</a></li>
-  </ul></li>
-  <li><a href="#the-kinetic-theory-of-gases" id="toc-the-kinetic-theory-of-gases" class="nav-link" data-scroll-target="#the-kinetic-theory-of-gases">39. The Kinetic Theory of Gases</a>
-  <ul class="collapse">
-  <li><a href="#온도와-운동에너지" id="toc-온도와-운동에너지" class="nav-link" data-scroll-target="#온도와-운동에너지">39-4 온도와 운동에너지</a></li>
-  </ul></li>
-  <li><a href="#the-principle-of-statistical-mechanics" id="toc-the-principle-of-statistical-mechanics" class="nav-link" data-scroll-target="#the-principle-of-statistical-mechanics">40. The Principle of Statistical Mechanics</a>
-  <ul class="collapse">
-  <li><a href="#지수적-대기" id="toc-지수적-대기" class="nav-link" data-scroll-target="#지수적-대기">40.1 지수적 대기</a></li>
-  </ul></li>
-  <li><a href="#볼츠만-법칙" id="toc-볼츠만-법칙" class="nav-link" data-scroll-target="#볼츠만-법칙">40-2 볼츠만 법칙</a></li>
-  <li><a href="#액체의-증발" id="toc-액체의-증발" class="nav-link" data-scroll-target="#액체의-증발">40-3 액체의 증발</a></li>
-  <li><a href="#분자-속력의-분포" id="toc-분자-속력의-분포" class="nav-link" data-scroll-target="#분자-속력의-분포">40-4 분자 속력의 분포</a></li>
   </ul>
 </nav>
     </div>
@@ -526,18 +518,18 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>갈릴레이 변환과 로런츠 변환</strong>
+<strong>갈릴레이 변환과 로런츠 변환</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>한 기준틀 <span class="math inline">\(S' = (t',\,x',\,y',\,z')\)</span> 이 다른 기준틀 <span class="math inline">\(S=(t,\,x,\,y,\,z)\)</span> 에 대해 <span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{x}}\)</span> 의 속도로 움직일 때 아래의 관계를 <strong>갈릴레이 변환 (Galilean transformation)</strong> 이라고 한다.</p>
 <p><span id="eq-FLP_1_15_2"><span class="math display">\[
 x' = x-ut,\quad y'=y,\quad z'=z,\quad t'=t.
-\tag{1.1}\]</span></span></p>
+\tag{2.1}\]</span></span></p>
 <p>이에 대해 아래의 관계를 <strong>로런츠 변환 (Lorentz transformation)</strong> 이라고 한다.</p>
 <p><span id="eq-FLP_1_15_3"><span class="math display">\[
 x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c^2}{\sqrt{1-u^2/c^2}}
-\tag{1.2}\]</span></span></p>
+\tag{2.2}\]</span></span></p>
 </div>
 </div></li>
 <li><p>푸앙카레의 주장</p>
@@ -547,7 +539,7 @@ x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
+푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -581,22 +573,22 @@ x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c
 <img src="figures/michelson-morley_experiment/feynmann_fig_15_2.png" class="img-fluid figure-img" width="500">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_Fig_1_15_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.1: 파인만 물리학 강의 I. 그림 15-2
+그림&nbsp;2.1: 파인만 물리학 강의 I. 그림 15-2
 </figcaption>
 </figure>
 </div>
 <p>실험 장비가 <span class="math inline">\(u\)</span> 의 속도로 움직이고 있다고 하자. 정지한 좌표계에서 빛이 <span class="math inline">\(A-E'\)</span> 으로 진행하는데 걸린 시간 <span class="math inline">\(t_1\)</span> 은 <span class="math inline">\(ct_1 = L+ut_1\)</span> 로부터 계산 할 수 있고 <span class="math inline">\(E'\)</span> 에서 반사되어 <span class="math inline">\(E'-B'\)</span> 경로를 진행하는데 걸린 시간 <span class="math inline">\(t_2\)</span> 는 <span class="math inline">\(ct_2 =L-ut_2\)</span> 로부터 계산 할 수 있다. 여기서 빛이 <span class="math inline">\(B\)</span> 로부터 진행하여 <span class="math inline">\(B'\)</span> 으로 돌아오는데 걸린 시간 <span class="math inline">\(t_1+t_2\)</span> 는 아래와 같다.</p>
 <p><span id="eq-FLP_1_15_4"><span class="math display">\[
 t_1+t_2 = \dfrac{L}{c-u}+ \dfrac{L}{c+u} = \dfrac{2L/c}{1-u^2/c^2}.
-\tag{1.3}\]</span></span></p>
+\tag{2.3}\]</span></span></p>
 <p>이제 빛이 <span class="math inline">\(B\)</span> 로 부터 <span class="math inline">\(C'\)</span> 을 거쳐 <span class="math inline">\(B'\)</span> 으로 돌아오는데 걸린 시간 <span class="math inline">\(2t_3\)</span> 는 <span class="math inline">\(L^2+(ut_3)^2 = (ct_3)^3\)</span> 으로 부터 구할 수 있다. 즉</p>
 <p><span id="eq-FLP_1_15_5"><span class="math display">\[
 2t_3 = \dfrac{2L/c}{\sqrt{1-u^2/c^2}}
-\tag{1.4}\]</span></span></p>
-<p>이다. 마이켈슨-몰리 실험의 결과는 <span class="math inline">\(t_1+t_2 = 2t_3\)</span> 인 것이며 이는 <a href="#eq-FLP_1_15_4" class="quarto-xref">식&nbsp;<span>1.3</span></a> 과 <a href="#eq-FLP_1_15_5" class="quarto-xref">식&nbsp;<span>1.4</span></a> 가운데 오류가 있다는 것을 의미한다. 로런츠는 로런츠 변환에서 움직인는 물체의 길이는 움직이는 방향으로 수축된다고 주장하였으며 그 수축된 길이 <span class="math inline">\(L_\parallel = L\sqrt{1-u^2/c^2}\)</span> 이다. 이를 적용하면</p>
+\tag{2.4}\]</span></span></p>
+<p>이다. 마이켈슨-몰리 실험의 결과는 <span class="math inline">\(t_1+t_2 = 2t_3\)</span> 인 것이며 이는 <a href="#eq-FLP_1_15_4" class="quarto-xref">식&nbsp;<span>2.3</span></a> 과 <a href="#eq-FLP_1_15_5" class="quarto-xref">식&nbsp;<span>2.4</span></a> 가운데 오류가 있다는 것을 의미한다. 로런츠는 로런츠 변환에서 움직인는 물체의 길이는 움직이는 방향으로 수축된다고 주장하였으며 그 수축된 길이 <span class="math inline">\(L_\parallel = L\sqrt{1-u^2/c^2}\)</span> 이다. 이를 적용하면</p>
 <p><span id="eq-FLP_1_15_7"><span class="math display">\[
 t_1+t_2 = \dfrac{L_\parallel}{c-u}+ \dfrac{L_\parallel}{c+u} = \dfrac{2L/c}{\sqrt{1-u^2/c^2}} = 2t_3.
-\tag{1.5}\]</span></span></p>
+\tag{2.5}\]</span></span></p>
 <p>이다.</p>
 <p><br></p>
 </section>
@@ -618,7 +610,7 @@ t_3 = \dfrac{L/c}{\sqrt{1-u^2/c^2}} &gt; \dfrac{L}{c}= \overline{t}_3
 <img src="figures/fig1_15/fig1_15_3.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_15_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.2: 파인만 물리학 강의 I. 그림 15-3. (a) <span class="math inline">\(S'\)</span> 기준틀에서 정지해 있는 광자시계. (b) <span class="math inline">\(S\)</span> 기준틀에서의 움직이는 광자시계. (c) 움직이는 광자시계의 광자의 사선 경로
+그림&nbsp;2.2: 파인만 물리학 강의 I. 그림 15-3. (a) <span class="math inline">\(S'\)</span> 기준틀에서 정지해 있는 광자시계. (b) <span class="math inline">\(S\)</span> 기준틀에서의 움직이는 광자시계. (c) 움직이는 광자시계의 광자의 사선 경로
 </figcaption>
 </figure>
 </div>
@@ -629,7 +621,7 @@ t_3 = \dfrac{L/c}{\sqrt{1-u^2/c^2}} &gt; \dfrac{L}{c}= \overline{t}_3
 <p>이므로</p>
 <p><span id="eq-FLP_time_dilation"><span class="math display">\[
 \Delta t_0 = \dfrac{\Delta t}{\sqrt{1-u^2/c^2}} &gt; \Delta t
-\tag{1.6}\]</span></span></p>
+\tag{2.6}\]</span></span></p>
 <p>이다.</p>
 <p><br></p>
 </section>
@@ -645,7 +637,7 @@ t_3 = \dfrac{L/c}{\sqrt{1-u^2/c^2}} &gt; \dfrac{L}{c}= \overline{t}_3
 <section id="sec-FLP_15_6" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_15_6">15-6 동시성</h3>
 <ul>
-<li><p>로런츠 변환 <a href="#eq-FLP_1_15_3" class="quarto-xref">식&nbsp;<span>1.2</span></a> 의 시간의 변환식을 보자. 여기서 <span class="math inline">\(-ux/c^2\)</span> 는 무슨 의미인가?</p></li>
+<li><p>로런츠 변환 <a href="#eq-FLP_1_15_3" class="quarto-xref">식&nbsp;<span>2.2</span></a> 의 시간의 변환식을 보자. 여기서 <span class="math inline">\(-ux/c^2\)</span> 는 무슨 의미인가?</p></li>
 <li><p><span class="math inline">\(S\)</span> 기준틀에서 <span class="math inline">\(x_1,\,x_2 (x_1\ne x_2)\)</span> 에서 <span class="math inline">\(t_1=t_2\)</span> 에 어떤 사건이 발생했다고 하자. <span class="math inline">\(S'\)</span> 기준틀에서 아래 식이 성립한다. <span class="math display">\[
 t'_2-t'_1 = \dfrac{(t_2-ux_2/c^2)-(t_1-ux_1/c^2)}{\sqrt{1-u^2/c^2}} = \dfrac{u(x_1-x_2)/c^2}{\sqrt{1-u^2/c^2}}
 \]</span></p>
@@ -676,7 +668,7 @@ X^\mu = (ct,\,x,\,y,\,z),\qquad X_\mu = (ct,\,-x,\,-y,\,-z).
 <p>이다. 상대성 이론에서는 운동량이 아래와 같이 정의된다. 이것은 아인슈타인에 의해 정의되었다.</p>
 <p><span id="eq-FLP_1_15_10"><span class="math display">\[
 \boldsymbol{p}= \dfrac{m\boldsymbol{v}}{\sqrt{1-v^2/c^2}}.
-\tag{1.7}\]</span></span></p>
+\tag{2.7}\]</span></span></p>
 <p>작용-반작용이 <u>최종적으로</u> 서로 같다면 위와 같이 정의된 운동량은 보존된다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -684,7 +676,7 @@ X^\mu = (ct,\,x,\,y,\,z),\qquad X_\mu = (ct,\,-x,\,-y,\,-z).
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">힌트</span><strong>최종적으로…</strong>
+<strong>최종적으로…</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -708,7 +700,7 @@ v(t)= \dfrac{Ft/m}{\sqrt {1+ \left(Ft/mc\right)^2}}
 <p>아인슈타인은 에너지를 아래와 같이 정의했다.</p>
 <p><span id="eq-FLP_1_relativistic_energy"><span class="math display">\[
 E:= \dfrac{mc^2}{\sqrt{1-v^2/c^2}}.
-\tag{1.8}\]</span></span></p>
+\tag{2.8}\]</span></span></p>
 <p>이를 테일러 전개 하면</p>
 <p><span class="math display">\[
 E=mc^2 + \dfrac{mv^2}{2} + \cdots
@@ -740,7 +732,7 @@ E=mc^2 + \dfrac{mv^2}{2} + \cdots
 <p>두 기준틀 <span class="math inline">\(S,\,S'\)</span> 이 <span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{x}}\)</span> 의 상대적인 운동을 하고 있을 때 두 기준틀 사이의 로런츠 변환은 다음과 같다.</p>
 <p><span id="eq-FLP_lorent_transform_in_16_3"><span class="math display">\[
 \begin{array}{rl} x'&amp;= \dfrac{x-ut}{\sqrt{1-u^2/c^2}},\\[0.3em] y'&amp;=y, \\[0.3em]z'&amp;=z, \\ t'&amp;=\dfrac{t-ux/c^2}{\sqrt{1-u^2/c^2}}\dots\end{array} \quad \iff \quad \begin{array}{rl} x&amp;= \dfrac{x'+ut'}{\sqrt{1-u^2/c^2}},\\[0.3em] y&amp;=y', \\[0.3em] z&amp;=z', \\ t&amp;=\dfrac{t'+ux'/c^2}{\sqrt{1-u^2/c^2}}.\end{array}
-\tag{1.9}\]</span></span></p>
+\tag{2.9}\]</span></span></p>
 <p>여기서 <span class="math inline">\(S'\)</span> 기준틀에서 <span class="math inline">\(v_{x'}\)</span> 의 속도로 일정하게 움직이는 입자를 생각하자. <span class="math inline">\(x'=v_{x'}t\)</span> 이므로</p>
 <p><span class="math display">\[
 x=\dfrac{v_{x'}t' + ut'}{\sqrt{1-u^2/c^2}},\qquad t = \dfrac{t'+uv_{x'}t/c^2}{\sqrt{1-u^2/c^2}}
@@ -748,7 +740,7 @@ x=\dfrac{v_{x'}t' + ut'}{\sqrt{1-u^2/c^2}},\qquad t = \dfrac{t'+uv_{x'}t/c^2}{\s
 <p>이며, 따라서 <span class="math inline">\(S\)</span> 기준틀에서의 속도 <span class="math inline">\(\boldsymbol{v} = (v_x,\,v_y,\,v_z)\)</span> 는 아래와 같다.</p>
 <p><span id="eq-FLP_1_16_6"><span class="math display">\[
 v_x = \dfrac{x}{t}=\dfrac{v_{x'}+u}{1+uv_{x'}/c^2},\qquad v_y = 0,\qquad v_z = 0 .
-\tag{1.10}\]</span></span></p>
+\tag{2.10}\]</span></span></p>
 <p>여기서 <span class="math inline">\(v_{x'}=c\)</span> 라면, 즉 기준틀 <span class="math inline">\(S'\)</span> 에서 광속으로 움직인다면</p>
 <p><span class="math display">\[
 v_x = \dfrac{c+u}{1+u/c}= c
@@ -757,12 +749,12 @@ v_x = \dfrac{c+u}{1+u/c}= c
 <p>이제 <span class="math inline">\(S'\)</span> 의 기준틀에의 속도가 <span class="math inline">\((v_{x'},\,v_{y'})\)</span> 으로 주어지는 경우를 생각해보자. <span class="math inline">\(y'=v_{y'}t'\)</span> 이므로 <span class="math inline">\(v_y\)</span> 는 아래와 같다.</p>
 <p><span id="eq-FLP_1_16_7_0"><span class="math display">\[
 v_y = \dfrac{y}{t} = \dfrac{v_{y'}t'}{\dfrac{t'+uv_{x'}t'/c^2}{\sqrt{1-u^2/c^2}}} = \dfrac{v_{y'}}{1+uv_{x'}/c^2}\sqrt{1-u^2/c^2}
-\tag{1.11}\]</span></span></p>
+\tag{2.11}\]</span></span></p>
 <p>주의할 것은 <span class="math inline">\(v_y\)</span> 는 <span class="math inline">\(u,\,v_{y'}\)</span> 뿐만 아니라 <span class="math inline">\(v_{x'}\)</span> 에도 의존한다는 것이다. 물론 <span class="math inline">\(v_x'=0\)</span> 인 경우</p>
 <p><span id="eq-FLP_1_16_7"><span class="math display">\[
 v_y = v_y'\sqrt{1-u^2/c^2}
-\tag{1.12}\]</span></span></p>
-<p>이다. 이 식을 상대성 이론의 기본 원리로부터 직접 구해보자. 우리는 앞서 <a href="#sec-FLP_15_4">15-4 시간의 변환</a> 에서 정지한 기준트로가 움직이는 기준틀에서의 시간이 다르게 흐른다는 것을 알았다. 속도는 시간에 반비례하며 그 비율이 <span class="math inline">\(\sqrt{1-u^2/c^2}\)</span> 이므로 우리는 <a href="#eq-FLP_1_16_7" class="quarto-xref">식&nbsp;<span>1.12</span></a> 을 얻을 수 있다.</p>
+\tag{2.12}\]</span></span></p>
+<p>이다. 이 식을 상대성 이론의 기본 원리로부터 직접 구해보자. 우리는 앞서 <a href="#sec-FLP_15_4">15-4 시간의 변환</a> 에서 정지한 기준트로가 움직이는 기준틀에서의 시간이 다르게 흐른다는 것을 알았다. 속도는 시간에 반비례하며 그 비율이 <span class="math inline">\(\sqrt{1-u^2/c^2}\)</span> 이므로 우리는 <a href="#eq-FLP_1_16_7" class="quarto-xref">식&nbsp;<span>2.12</span></a> 을 얻을 수 있다.</p>
 <p><br></p>
 </section>
 <section id="sec-FLP_16_4" class="level3">
@@ -782,7 +774,7 @@ v_y = v_y'\sqrt{1-u^2/c^2}
 <img src="figures/fig_1_16/fig_1_16_2.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLO_1_16_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.3: 파인만 물리학 강의 I. Fig 16-2. 탄성 충돌의 두가지 시점. 두 입자는 동일한 질량을 가지며 반대방향의 동일한 속도로 충돌한다.
+그림&nbsp;2.3: 파인만 물리학 강의 I. Fig 16-2. 탄성 충돌의 두가지 시점. 두 입자는 동일한 질량을 가지며 반대방향의 동일한 속도로 충돌한다.
 </figcaption>
 </figure>
 </div>
@@ -793,22 +785,22 @@ v_y = v_y'\sqrt{1-u^2/c^2}
 <img src="figures/fig_1_16/fig_1_16_3.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_16_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.4: 파인만 물리학 강의 I. Fig 16-3. 움직이는 두 기준틀에서의 시점
+그림&nbsp;2.4: 파인만 물리학 강의 I. Fig 16-3. 움직이는 두 기준틀에서의 시점
 </figcaption>
 </figure>
 </div>
-<p>그렇다면 (a) <span class="math inline">\(\to\)</span> (b) 변환에서 <a href="#eq-FLP_1_16_7" class="quarto-xref">식&nbsp;<span>1.12</span></a> 로부터 <span class="math inline">\(u \tan \alpha = w\sqrt{1-u^2/c^2}\)</span> 임을 알 수 있다. 이 때 (b) 시점에서 2 입자의 수직방향 운동량의 변화 <span class="math inline">\(\Delta p_{b, 2}\)</span> 는 <span class="math inline">\(\Delta p_{b, 2} = 2\gamma(w) mw\)</span> 이며 1번 입자의 속력은 <span class="math inline">\(v\)</span> 이고 속력의 수직방향의 변화 <span class="math inline">\(\Delta p_{b, 1}\)</span> 는</p>
+<p>그렇다면 (a) <span class="math inline">\(\to\)</span> (b) 변환에서 <a href="#eq-FLP_1_16_7" class="quarto-xref">식&nbsp;<span>2.12</span></a> 로부터 <span class="math inline">\(u \tan \alpha = w\sqrt{1-u^2/c^2}\)</span> 임을 알 수 있다. 이 때 (b) 시점에서 2 입자의 수직방향 운동량의 변화 <span class="math inline">\(\Delta p_{b, 2}\)</span> 는 <span class="math inline">\(\Delta p_{b, 2} = 2\gamma(w) mw\)</span> 이며 1번 입자의 속력은 <span class="math inline">\(v\)</span> 이고 속력의 수직방향의 변화 <span class="math inline">\(\Delta p_{b, 1}\)</span> 는</p>
 <p><span class="math display">\[
 \Delta p_{b, 1} = 2 \gamma(v) u\tan \alpha = 2 \gamma(v) w \sqrt{1-u^2/c^2}
 \]</span></p>
 <p>이다. <span class="math inline">\(\Delta p_{b, 2}= \Delta p_{b, 1}\)</span> 이어야 하므로</p>
 <p><span id="eq-FLP_1_16_9_modified"><span class="math display">\[
 \dfrac{\gamma(w)}{\gamma (v)} = \sqrt{1-u^2/c^2}
-\tag{1.13}\]</span></span></p>
+\tag{2.13}\]</span></span></p>
 <p>이다. 이제 <span class="math inline">\(w\to 0\)</span> 인 극한에서 생각해보자. 이 극한에서 <span class="math inline">\(v \to u\)</span> 이며 따라서 다음과 같다.</p>
 <p><span id="eq-FLP_1_16_10_modified"><span class="math display">\[
 \gamma(v) = \dfrac{\gamma(0)}{\sqrt{1-v^2/c^2}}
-\tag{1.14}\]</span></span></p>
+\tag{2.14}\]</span></span></p>
 <p><span class="math inline">\(\boldsymbol{p}=\gamma(v)m\boldsymbol{v}\)</span> 임을 생각하자. <span class="math inline">\(v\to 0\)</span> 인 극한에서 뉴튼의 운동량과 일치시키려면 <span class="math inline">\(\gamma(0)=1\)</span> 로 놓을 수 있다. 즉</p>
 <p><span class="math display">\[
 \gamma(v) = \dfrac{1}{\sqrt{1-v^2/c^2}}
@@ -820,7 +812,7 @@ v_y = v_y'\sqrt{1-u^2/c^2}
 <img src="figures/fig_1_16/fig_1_16_4.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_16_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.5: 파인만 물리학 강의 I. Fig 16-4. 같은 질량은 가진 두 입자의 비탄성 충돌에 대한 두가지 시점
+그림&nbsp;2.5: 파인만 물리학 강의 I. Fig 16-4. 같은 질량은 가진 두 입자의 비탄성 충돌에 대한 두가지 시점
 </figcaption>
 </figure>
 </div>
@@ -831,7 +823,7 @@ v_y = v_y'\sqrt{1-u^2/c^2}
 <p>임을 안다. <span class="math inline">\(u\to 0\)</span> 극한에 대해</p>
 <p><span id="eq-FLP_1_16_11_modified"><span class="math display">\[
 M = 2\gamma (w) m
-\tag{1.15}\]</span></span></p>
+\tag{2.15}\]</span></span></p>
 <p>임을 안다. 즉 질량 <span class="math inline">\(m\)</span> 인 두 입자가 합쳐졌을 때의 질량이 두 입자의 질량의 합이 아니게 된다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -839,11 +831,11 @@ M = 2\gamma (w) m
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">힌트</span><span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
+<span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>참고로 <span class="math inline">\(\gamma(v) := 1/\sqrt{1-v^2/c^2}\)</span> 는 상대론에서 아주 많이 사용되며, 필요하다면 속도 <span class="math inline">\(v\)</span> 를 명시적으로 표기하지 않고 단지 <span class="math inline">\(\gamma\)</span> 라고 표기하거나 아래첨자로 <span class="math inline">\(\gamma_v\)</span> 형태로 많이 사용한다. 또한 <span class="math inline">\(\beta := v/c\)</span> 혹은 <span class="math inline">\(\beta_v\)</span> 역시 많이 사용된다. 따라서 <a href="#eq-FLP_1_relativistic_energy" class="quarto-xref">식&nbsp;<span>1.8</span></a> 의 상대론적 에너지 <span class="math inline">\(E=\gamma mc^2\)</span> 이며 운동량 <span class="math inline">\(\boldsymbol{p}=\gamma m\boldsymbol{v}\)</span> 이다. 또한 <span class="math inline">\(\gamma_v = 1/\sqrt{1-{\beta_v}^2}\)</span> 의 관계가 성립한다.</p>
+<p>참고로 <span class="math inline">\(\gamma(v) := 1/\sqrt{1-v^2/c^2}\)</span> 는 상대론에서 아주 많이 사용되며, 필요하다면 속도 <span class="math inline">\(v\)</span> 를 명시적으로 표기하지 않고 단지 <span class="math inline">\(\gamma\)</span> 라고 표기하거나 아래첨자로 <span class="math inline">\(\gamma_v\)</span> 형태로 많이 사용한다. 또한 <span class="math inline">\(\beta := v/c\)</span> 혹은 <span class="math inline">\(\beta_v\)</span> 역시 많이 사용된다. 따라서 <a href="#eq-FLP_1_relativistic_energy" class="quarto-xref">식&nbsp;<span>2.8</span></a> 의 상대론적 에너지 <span class="math inline">\(E=\gamma mc^2\)</span> 이며 운동량 <span class="math inline">\(\boldsymbol{p}=\gamma m\boldsymbol{v}\)</span> 이다. 또한 <span class="math inline">\(\gamma_v = 1/\sqrt{1-{\beta_v}^2}\)</span> 의 관계가 성립한다.</p>
 </div>
 </div>
 <p><br></p>
@@ -853,17 +845,17 @@ M = 2\gamma (w) m
 <p>입자에 일을 해 주었을 때의 운동에너지의 변화는 다음과 같다.</p>
 <p><span id="eq-FLP_1_16_12"><span class="math display">\[
 \Delta T = \dfrac{mc^2}{\sqrt{1-v^2/c^2}}-mc^2 = \gamma mc^2-mc^2
-\tag{1.16}\]</span></span></p>
+\tag{2.16}\]</span></span></p>
 <p>여기서 더 나아가서 입자의 에너지가 <span class="math inline">\(\gamma mc^2\)</span> 이라고 추측할 수도 있다.</p>
 <p>우리가 앞서 다룬 두 입자가 합쳐저서 하나의 정지한 입자를 생성하는 경우를 살펴보자. 앞서 보았듯이 생성된 입자의 질량은 두 입자의 질량의 합보다 크다. 그렇다면 그 차이는 어디로 갔는가? 양성자와 중성자가 합쳐지는 경우 각각은 <span class="math inline">\(M\)</span> 내부에서 움직이며 각각의 정지질량과 합쳐진 질량의 차이는 합쳐진 양성자와 중성자와 중성자가 내부에서 움직이는 에너지 만큼이다. 이것은 에너지가 관성(inertia) 가 있음을 의미한다.</p>
-<p>만약 두 입자가 합쳐저서 하나의 입자가 되면서 포텐셜 에너지나 다른 형태의 애너지가 생성됬다면 그 에너지는 <span class="math inline">\(E=Mc^2\)</span> 속에 포함된다. 즉 질량 <span class="math inline">\(M\)</span> 에 포함된다. 즉 질량은 단순히 부분 질량의 합이 아니라 내부에서 이루어지는 모든 에너지적인 활동의 총합이다. 이런 의미에서 상대성 이론에서는 뉴턴 역학에서의 비탄성 충돌이 존재하지 않는다. 예를 들어 앞서의 동일한 입자가 충돌하여 합쳐지는 경우 충돌 전 후의 에너지가 같다고 놓으면 <a href="#eq-FLP_1_16_11_modified" class="quarto-xref">식&nbsp;<span>1.15</span></a> 를 그대로 얻는다.</p>
+<p>만약 두 입자가 합쳐저서 하나의 입자가 되면서 포텐셜 에너지나 다른 형태의 애너지가 생성됬다면 그 에너지는 <span class="math inline">\(E=Mc^2\)</span> 속에 포함된다. 즉 질량 <span class="math inline">\(M\)</span> 에 포함된다. 즉 질량은 단순히 부분 질량의 합이 아니라 내부에서 이루어지는 모든 에너지적인 활동의 총합이다. 이런 의미에서 상대성 이론에서는 뉴턴 역학에서의 비탄성 충돌이 존재하지 않는다. 예를 들어 앞서의 동일한 입자가 충돌하여 합쳐지는 경우 충돌 전 후의 에너지가 같다고 놓으면 <a href="#eq-FLP_1_16_11_modified" class="quarto-xref">식&nbsp;<span>2.15</span></a> 를 그대로 얻는다.</p>
 <p>마지막으로 속도 <span class="math inline">\(\boldsymbol{v}\)</span> 와 운동량 <span class="math inline">\(\boldsymbol{p}\)</span>, 그리고 에너지 <span class="math inline">\(E\)</span> 와 질량 <span class="math inline">\(m\)</span> 사이에는 아래와 같은 간단한 관계식이 존재한다.</p>
 <p><span id="eq-FLP_1_16_13"><span class="math display">\[
 E^2 - p^2c^2 = m^2c^4,
-\tag{1.17}\]</span></span></p>
+\tag{2.17}\]</span></span></p>
 <p><span id="eq-FLP_1_16_14"><span class="math display">\[
 \boldsymbol{p}= \dfrac{E}{c^2}\boldsymbol{v}.
-\tag{1.18}\]</span></span></p>
+\tag{2.18}\]</span></span></p>
 <p><br></p>
 </section>
 </section>
@@ -871,25 +863,25 @@ E^2 - p^2c^2 = m^2c^4,
 <h2 class="anchored" data-anchor-id="시공간">17. 시공간</h2>
 <section id="sec-FLP_1_17_1" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_17_1">17-1 시공간의 기하학</h3>
-<p><span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{x}}\)</span> 로 병진운동하는 두 기준틀에 대해 앞서 로런츠 변환 <a href="#eq-FLP_lorent_transform_in_16_3" class="quarto-xref">식&nbsp;<span>1.9</span></a> 을 <span class="math inline">\(\gamma=1/\sqrt{1-u^2/c^2}\)</span> 와 <span class="math inline">\(\beta = u/c\)</span> 를 사용하여 기술하면 아래와 같다.</p>
+<p><span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{x}}\)</span> 로 병진운동하는 두 기준틀에 대해 앞서 로런츠 변환 <a href="#eq-FLP_lorent_transform_in_16_3" class="quarto-xref">식&nbsp;<span>2.9</span></a> 을 <span class="math inline">\(\gamma=1/\sqrt{1-u^2/c^2}\)</span> 와 <span class="math inline">\(\beta = u/c\)</span> 를 사용하여 기술하면 아래와 같다.</p>
 <p><span id="eq-FLP_1_17_1"><span class="math display">\[
 x'=\gamma_u (x-\beta_u ct),\quad y'=y,\quad z'=z,\quad ct=\gamma_u(ct-\beta_u x).
-\tag{1.19}\]</span></span></p>
+\tag{2.19}\]</span></span></p>
 <p>이것을 회전 변환과 비교해 보자.</p>
 <p><span id="eq-FLP_1_17_2"><span class="math display">\[
 x'=x\cos\theta + y \sin \theta, \quad y'=-x\sin \theta + y \cos \theta,\quad z'=z.
-\tag{1.20}\]</span></span></p>
+\tag{2.20}\]</span></span></p>
 <div id="fig-FLP_1_17_1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_1_17_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig_1_17/fig_1_17_1.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_17_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.6: 파인만 물리학 강의 I. Fig 17-2 붕괘되는 입자에 대한 두 시점
+그림&nbsp;2.6: 파인만 물리학 강의 I. Fig 17-2 붕괘되는 입자에 대한 두 시점
 </figcaption>
 </figure>
 </div>
-<p>회전변환은 공간에서의 선형변환이며 그중에 직교 변환(orthogonal transform) 으로 거리를 보존한다. 회전 변환은 공간상의 다른 방향에서 보는 것이라고 할 수 있다. 로런츠 변환은 4차원 시공간에서의 선형 변환으로 회전변환에 비유하자면 4차원 시공간의 다른 방향에서 보는 것이다. 그리고 이 방향은 <a href="#eq-FLP_1_17_1" class="quarto-xref">식&nbsp;<span>1.19</span></a> 의 <span class="math inline">\(u\)</span> 이다. 여기서 시공간상의 한 점 <span class="math inline">\((x,\,y,\,z,\,t)\)</span> 를 <strong>사건 (event)</strong> 라고 한다.</p>
+<p>회전변환은 공간에서의 선형변환이며 그중에 직교 변환(orthogonal transform) 으로 거리를 보존한다. 회전 변환은 공간상의 다른 방향에서 보는 것이라고 할 수 있다. 로런츠 변환은 4차원 시공간에서의 선형 변환으로 회전변환에 비유하자면 4차원 시공간의 다른 방향에서 보는 것이다. 그리고 이 방향은 <a href="#eq-FLP_1_17_1" class="quarto-xref">식&nbsp;<span>2.19</span></a> 의 <span class="math inline">\(u\)</span> 이다. 여기서 시공간상의 한 점 <span class="math inline">\((x,\,y,\,z,\,t)\)</span> 를 <strong>사건 (event)</strong> 라고 한다.</p>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_17_2" class="level3">
@@ -897,7 +889,7 @@ x'=x\cos\theta + y \sin \theta, \quad y'=-x\sin \theta + y \cos \theta,\quad z'=
 <p>4-벡터로 표현된 사건 <span class="math inline">\(X=(ct,\,x,\,y,\,z)\)</span> 과 <span class="math inline">\(X\)</span> 를 로렌츠 변환 시킨 <span class="math inline">\(X'=(ct',\,x',\,y',\,z')\)</span> 를 생각하자. 이 때</p>
 <p><span id="eq-FLP_1_17_3"><span class="math display">\[
 c^2t'^2 -x'^2 - y'^2 - z'^2 = ct^2 - x^2 - y^2 - z^2
-\tag{1.21}\]</span></span></p>
+\tag{2.21}\]</span></span></p>
 <p>이며 이것은 앞서 <a href="#sec-FLP_15_7">4-벡터</a> 에서 다룬 바에 의해 <span class="math inline">\(\|X\| = \|X'\|\)</span> 이다. 이 때 <span class="math inline">\(\|X\|\)</span> 를 원점과 사건 <span class="math inline">\(X\)</span> 의 <strong>시공간 간격 (space-time interval)</strong> 혹은 줄여서 <strong>간격(interval)</strong> 이라고 한다.</p>
 <p>시공간과 일반적인 공간 사이에는 흥미로운 차이가 존재한다. 예를 들어 <span class="math inline">\(X=(ct,\,x,\,y,\,z)\)</span> 에서 <span class="math inline">\(t=0\)</span> 일 때 <span class="math inline">\(\|X\|\)</span> 는 허수이며 이 때 두 점-원점 <span class="math inline">\(\mathcal{O}\)</span> 와 <span class="math inline">\(X\)</span> 의 간격을 <strong>공간적 간격 (space-like interval)</strong> 이라고 한다. 반대로 <span class="math inline">\(\|X\|\)</span> 기 실수이면 <strong>시간적 간격 (time-like interval)</strong> 이라고 한다.</p>
 <p><br></p>
@@ -910,7 +902,7 @@ c^2t'^2 -x'^2 - y'^2 - z'^2 = ct^2 - x^2 - y^2 - z^2
 <img src="figures/fig_1_17/fig_1_17_3.png" class="img-fluid figure-img" width="350">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_space_time_area_around_origin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.7: 파인만 물리학 강의 I. Fig 17.3 원점 주위의 시공간 영역
+그림&nbsp;2.7: 파인만 물리학 강의 I. Fig 17.3 원점 주위의 시공간 영역
 </figcaption>
 </figure>
 </div>
@@ -918,7 +910,7 @@ c^2t'^2 -x'^2 - y'^2 - z'^2 = ct^2 - x^2 - y^2 - z^2
 <section id="sec-FLP_1_17_4" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_17_4">17-4 4-벡터에 더하여</h3>
 <p>수학적으로 4차원 시공간에서의 선형변환 <span class="math inline">\(\Lambda\)</span> 가 임의의 4-벡터 <span class="math inline">\(X\)</span> 에 대해 <span class="math inline">\(\|\Lambda X\|=\|X\|\)</span> 이며 <span class="math inline">\(\det \Lambda = 1\)</span> 일 때 <span class="math inline">\(\Lambda\)</span> 를 로렌츠 변환이라고 하며, 우리가 이미 알고 있는 로렌츠 변환과 동일하다. 여기서 4차원 시공간에서 정의된 벡터의 좌표변환이 로렌츠 변환에 의해 정의될 때 즉 <span class="math inline">\(A=(A^0,\,A^1,\,A^2,\,A^3)\)</span> 의 좌표변환이 <span class="math inline">\(A'=\Lambda A\)</span> 를 따를 때 이 <span class="math inline">\(A\)</span> 를 4-벡터 라고 한다. 이제 시공간에서의 위치 벡터 이외의 4-벡터가 존재함을 보이자.</p>
-<p>우리는 이전에 에너지와 운동량을 <span class="math inline">\(E=\gamma_v mc^2\)</span>, <span class="math inline">\(\boldsymbol{p}=\gamma_v m\boldsymbol{v}\)</span> 로 정의하였으며 <span class="math inline">\(E^2-p^2c^2 = m^2c^4\)</span> 임을 안다. 이것이 기술된 <span class="math inline">\(S\)</span> 기준틀에 대해 <span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{x}}\)</span> 의 속도로 움직이는 <span class="math inline">\(S'\)</span> 기준틀을 생각하자. 그렇다면 <a href="#eq-FLP_1_16_6" class="quarto-xref">식&nbsp;<span>1.10</span></a>, <a href="#eq-FLP_1_16_7" class="quarto-xref">식&nbsp;<span>1.12</span></a> 에 의해</p>
+<p>우리는 이전에 에너지와 운동량을 <span class="math inline">\(E=\gamma_v mc^2\)</span>, <span class="math inline">\(\boldsymbol{p}=\gamma_v m\boldsymbol{v}\)</span> 로 정의하였으며 <span class="math inline">\(E^2-p^2c^2 = m^2c^4\)</span> 임을 안다. 이것이 기술된 <span class="math inline">\(S\)</span> 기준틀에 대해 <span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{x}}\)</span> 의 속도로 움직이는 <span class="math inline">\(S'\)</span> 기준틀을 생각하자. 그렇다면 <a href="#eq-FLP_1_16_6" class="quarto-xref">식&nbsp;<span>2.10</span></a>, <a href="#eq-FLP_1_16_7" class="quarto-xref">식&nbsp;<span>2.12</span></a> 에 의해</p>
 <p><span class="math display">\[
 v'_x = \dfrac{v_x-u}{1-uv_x/c^2},\quad v'_y = v_y/\gamma_u,\qquad v'_z = v_z/ \gamma_u
 \]</span></p>
@@ -986,7 +978,7 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <img src="https://www.sciencing.com/sciencing/electromagnetic-spectrum-frequencies-wavelengths-w-diagrams-examples-13721432/6fe412c26d6b416684c4ce409d120caf.png.jpg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_spectrum_of_flight-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.8: 전자기파의 파장에 따른 이름. 출처 : https://www.sciencing.com/electromagnetic-spectrum-frequencies-wavelengths-w-diagrams-examples-13721432/
+그림&nbsp;2.8: 전자기파의 파장에 따른 이름. 출처 : https://www.sciencing.com/electromagnetic-spectrum-frequencies-wavelengths-w-diagrams-examples-13721432/
 </figcaption>
 </figure>
 </div>
@@ -1020,7 +1012,7 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리</strong>
+<strong>페르마의 최소시간의 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1030,14 +1022,14 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <p>페르마의 최소시간 원리로부터 스넬의 법칙을 유도 할 수 있으며 굴절률 <span class="math inline">\(n\)</span> 과 매질에서의 빛의 속도 <span class="math inline">\(c_n\)</span> 그리고 진공중에서의 빛의 속도 <span class="math inline">\(c\)</span> 사이에는 다음의 관계가 성립함을 안다.</p>
 <p><span id="eq-FLP_reflective_index_and_speed_of_light_in_the_medium"><span class="math display">\[
 nc_n = c
-\tag{1.22}\]</span></span></p>
+\tag{2.22}\]</span></span></p>
 <div id="fig-FLP_1_26_3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_1_26_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig_1_26/fig_1_26_3.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.9: 파인만 물리학 강의 I. Fig. 26-3
+그림&nbsp;2.9: 파인만 물리학 강의 I. Fig. 26-3
 </figcaption>
 </figure>
 </div>
@@ -1057,7 +1049,7 @@ nc_n = c
 <img src="figures/fig_1_26/fig_1_26_6.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.10: 파인만 물리학 강의 I. Fig. 26-6. 투명한 블록을 지나는 빛의 경로
+그림&nbsp;2.10: 파인만 물리학 강의 I. Fig. 26-6. 투명한 블록을 지나는 빛의 경로
 </figcaption>
 </figure>
 </div>
@@ -1071,7 +1063,7 @@ nc_n = c
 <img src="figures/fig_1_26/fig_1_26_7.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.11: 파인만 물리학 강의 I. Fig. 26-7. 투명한 블록을 지나는 빛의 경로
+그림&nbsp;2.11: 파인만 물리학 강의 I. Fig. 26-7. 투명한 블록을 지나는 빛의 경로
 </figcaption>
 </figure>
 </div>
@@ -1085,7 +1077,7 @@ nc_n = c
 <img src="figures/fig_1_26/fig_1_26_8.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.12: 파인만 물리학 강의 I. Fig. 26-8. 신기루
+그림&nbsp;2.12: 파인만 물리학 강의 I. Fig. 26-8. 신기루
 </figcaption>
 </figure>
 </div>
@@ -1098,7 +1090,7 @@ nc_n = c
 <img src="figures/fig_1_26/fig_1_26_10.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.13: 파인만 물리학 강의 I. Fig. 26-10. 수렴 렌즈
+그림&nbsp;2.13: 파인만 물리학 강의 I. Fig. 26-10. 수렴 렌즈
 </figcaption>
 </figure>
 </div>
@@ -1112,7 +1104,7 @@ nc_n = c
 <img src="figures/fig_1_26/fig_1_26_11.png" class="img-fluid figure-img" width="240">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.14: 파인만 물리학 강의 I. Fig. 26-11. 타원형 거울
+그림&nbsp;2.14: 파인만 물리학 강의 I. Fig. 26-11. 타원형 거울
 </figcaption>
 </figure>
 </div>
@@ -1126,7 +1118,7 @@ nc_n = c
 <img src="figures/fig_1_26/fig_1_26_12.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.15: 파인만 물리학 강의 I. Fig. 26-12. 포물선형 거울
+그림&nbsp;2.15: 파인만 물리학 강의 I. Fig. 26-12. 포물선형 거울
 </figcaption>
 </figure>
 </div>
@@ -1137,7 +1129,7 @@ nc_n = c
 <p>빛이 매질 <span class="math inline">\(1\)</span> 에서 매질 <span class="math inline">\(2\)</span> 로 들어갈 때 <span class="math inline">\(\sin \theta_1 = n_{12}\sin \theta_2\)</span> 의 관계가 성립한다고 하자. 또한 빛이 매질 <span class="math inline">\(2\)</span> 에서 매질 <span class="math inline">\(3\)</span> 으로 들어갈 때 <span class="math inline">\(\sin \theta_2 = n_{23}\sin \theta_3\)</span> 의 관계가 성립한다고 하자. 이 때 빛이 매질 <span class="math inline">\(1\)</span> 에서 매질 <span class="math inline">\(3\)</span> 으로 들어갈 때 <span class="math inline">\(\sin \theta_1 = n_{13}\sin \theta_3\)</span> 를 만족하는 <span class="math inline">\(n_{13}\)</span> 는 아래와 같이 구할 수 있다.</p>
 <p><span id="eq-FLP_1_26_5"><span class="math display">\[
 n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{12}}.
-\tag{1.23}\]</span></span></p>
+\tag{2.23}\]</span></span></p>
 <p>스넬의 법칙 단독으로는 위의 규칙을 얻을 수 없다.</p>
 </section>
 <section id="매질에서의-빛의-속도" class="level4">
@@ -1154,7 +1146,7 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
+<strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1168,7 +1160,7 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 <img src="figures/fig_1_26/fig_1_26_13.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.16: 파인만 물리학 강의 I. Fig. 26-13. 좁은 슬릿을 통과하는 라디오파
+그림&nbsp;2.16: 파인만 물리학 강의 I. Fig. 26-13. 좁은 슬릿을 통과하는 라디오파
 </figcaption>
 </figure>
 </div>
@@ -1178,7 +1170,7 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 </section>
 <section id="sec-FLP_1_26_6" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_26_6">26-6 어떻게 작동하는가?</h3>
-<p>실제로 벌어지는 일에 대해 양자역학적인 관점에서 대략적으로 알아보자. <a href="#fig-FLP_1_26_3" class="quarto-xref">그림&nbsp;<span>1.9</span></a> 에서의 빛의 경로는 전혀 파동 형태가 아니며 광자로 이루어진 것으로 보인다. 빛의 세기는 단위시간당 도달하는 광자의 개수이다.</p>
+<p>실제로 벌어지는 일에 대해 양자역학적인 관점에서 대략적으로 알아보자. <a href="#fig-FLP_1_26_3" class="quarto-xref">그림&nbsp;<span>2.9</span></a> 에서의 빛의 경로는 전혀 파동 형태가 아니며 광자로 이루어진 것으로 보인다. 빛의 세기는 단위시간당 도달하는 광자의 개수이다.</p>
 <p>우리가 계산하고자 하는 것은 <span class="math inline">\(A\)</span> 에서 출발한 빛이 거울을 거쳐 <span class="math inline">\(B\)</span> 에 도달할 확률이다. 경로 <span class="math inline">\(\alpha\)</span> 에 대해 확률은 복소수로 <span class="math inline">\(\rho_\alpha e^{i \theta_\alpha}\)</span> 로 표현되며 여기서 <span class="math inline">\(\theta_\alpha\)</span> 는 시간 도달 시간에 비례한다. 1초마다의 회전수가 빛의 진동수이다. 당연히 경로마다 <span class="math inline">\(\theta_\alpha\)</span> 다르다.</p>
 <p>이 때 빛이 <span class="math inline">\(B\)</span> 에 도달할 확률 <span class="math inline">\(P_B\)</span> 는 다음을 만족한다(는 것이 파인만 경로적분의 결론이다).</p>
 <p><span class="math display">\[
@@ -1191,11 +1183,11 @@ P_B \propto  \left|\sum_{\alpha \in \text{all possible paths}} \rho_\alpha e^{i\
 <img src="figures/fig_1_26/fig_1_26_14.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_26_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.17: 파인만 물리학 강의 I. Fig. 26-14. 많은 이웃하는 경로들에 대한 확률진폭의 합
+그림&nbsp;2.17: 파인만 물리학 강의 I. Fig. 26-14. 많은 이웃하는 경로들에 대한 확률진폭의 합
 </figcaption>
 </figure>
 </div>
-<p><span class="math inline">\(C\)</span> 를 거치는 경로를 최소경로라고 하자. <span class="math inline">\(C\)</span> 를 거치는 경로에 가까운 경로들의 <span class="math inline">\(\rho_\alpha e^{i\theta_\alpha}\)</span> 는 <span class="math inline">\(\rho_C e^{i\theta_C}\)</span> 와 거의 차이가 나지 않는다는 것을 안다. (1차 근사항이 <span class="math inline">\(0\)</span> 이기 때문에 2차 근사항에서만 차이가 난다.) <span class="math inline">\(D\)</span> 를 거치는 경로나 <span class="math inline">\(E\)</span> 를 거치는 경로는 상대적으로 <span class="math inline">\(e^{i\theta_\alpha}\)</span> 에 큰 차이를 주기 때문에 확률에 크게 기여하지 않지만 <span class="math inline">\(C\)</span> 근처의 경로는 거의 차이가 없기 때문에 (<a href="#fig-FLP_1_26_14" class="quarto-xref">그림&nbsp;<span>1.17</span></a> 를 보라) 확률에 큰 기여를 한다. 또한 <span class="math inline">\(C\)</span> 에서 멀리 떨어진 거울상의 점을 지나는 경로도 <span class="math inline">\(D\)</span> 나 <span class="math inline">\(E\)</span> 와 마찬가지 이유로 확률에 크게 기여를 하지 않는다. 확률은 위 곡선의 시작점과 끝점의 거리의 제곱에 비례하며 여기에 가장 큰 기여를 하는 경로들은 <span class="math inline">\(C\)</span> 근처의 <span class="math inline">\(e^{i\theta_C}\)</span> 와 비슷한 값을 갖는 경로들이다.</p>
+<p><span class="math inline">\(C\)</span> 를 거치는 경로를 최소경로라고 하자. <span class="math inline">\(C\)</span> 를 거치는 경로에 가까운 경로들의 <span class="math inline">\(\rho_\alpha e^{i\theta_\alpha}\)</span> 는 <span class="math inline">\(\rho_C e^{i\theta_C}\)</span> 와 거의 차이가 나지 않는다는 것을 안다. (1차 근사항이 <span class="math inline">\(0\)</span> 이기 때문에 2차 근사항에서만 차이가 난다.) <span class="math inline">\(D\)</span> 를 거치는 경로나 <span class="math inline">\(E\)</span> 를 거치는 경로는 상대적으로 <span class="math inline">\(e^{i\theta_\alpha}\)</span> 에 큰 차이를 주기 때문에 확률에 크게 기여하지 않지만 <span class="math inline">\(C\)</span> 근처의 경로는 거의 차이가 없기 때문에 (<a href="#fig-FLP_1_26_14" class="quarto-xref">그림&nbsp;<span>2.17</span></a> 를 보라) 확률에 큰 기여를 한다. 또한 <span class="math inline">\(C\)</span> 에서 멀리 떨어진 거울상의 점을 지나는 경로도 <span class="math inline">\(D\)</span> 나 <span class="math inline">\(E\)</span> 와 마찬가지 이유로 확률에 크게 기여를 하지 않는다. 확률은 위 곡선의 시작점과 끝점의 거리의 제곱에 비례하며 여기에 가장 큰 기여를 하는 경로들은 <span class="math inline">\(C\)</span> 근처의 <span class="math inline">\(e^{i\theta_C}\)</span> 와 비슷한 값을 갖는 경로들이다.</p>
 <p><br></p>
 </section>
 </section>
@@ -1213,14 +1205,14 @@ P_B \propto  \left|\sum_{\alpha \in \text{all possible paths}} \rho_\alpha e^{i\
 <img src="figures/fig_1_27/fig_1_27_1.png" class="img-fluid figure-img" width="250">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_27_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.18: 파인만 물리학 강의 I. Fig. 27-1
+그림&nbsp;2.18: 파인만 물리학 강의 I. Fig. 27-1
 </figcaption>
 </figure>
 </div>
 <p>위의 그림에서 <span class="math inline">\(\Delta = s-d = \sqrt{d^2-h^2}-d\)</span> 이므로 다음이 성립한다.</p>
 <p><span id="eq-FLP-1_27_1"><span class="math display">\[
   \Delta  \approx \dfrac{h^2}{2s}
-   \tag{1.24}\]</span></span></p>
+   \tag{2.24}\]</span></span></p>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_27_2" class="level3">
@@ -1231,7 +1223,7 @@ P_B \propto  \left|\sum_{\alpha \in \text{all possible paths}} \rho_\alpha e^{i\
 <img src="figures/fig_1_27/fig_1_27_2.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_27_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.19: 파인만 물리학 강의 I. Fig. 27-2
+그림&nbsp;2.19: 파인만 물리학 강의 I. Fig. 27-2
 </figcaption>
 </figure>
 </div>
@@ -1253,37 +1245,37 @@ P_B \propto  \left|\sum_{\alpha \in \text{all possible paths}} \rho_\alpha e^{i\
 <ul>
 <li>뉴튼의 보편 중력 법칙 <span id="eq-FLP_1_28_1"><span class="math display">\[
 \boldsymbol{F} = \dfrac{GmM}{r^2}\boldsymbol{e}_r.
-\tag{1.25}\]</span></span></li>
+\tag{2.25}\]</span></span></li>
 <li>주어진 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 와 자기장 <span class="math inline">\(\boldsymbol{E}\)</span> 에서의 로런츠 힘 <span id="eq-FLP_1_28_2"><span class="math display">\[
 \boldsymbol{F} = q(\boldsymbol{E}+ \boldsymbol{v}\times \boldsymbol{B}).
-\tag{1.26}\]</span></span></li>
+\tag{2.26}\]</span></span></li>
 </ul></li>
 </ul>
 <p>여기서 <span class="math inline">\(\boldsymbol{E}\)</span> 와 <span class="math inline">\(\boldsymbol{B}\)</span> 는 개별적인 전하에 의해 생성되는 전기장과 자기장의 벡터합이며 이를 <strong>중첩 (superposition)</strong> 이라고 한다. 단일 전하에 의해 생성되는 전기장과 자기장은 장 방정식에 의해 기술되며 우선 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 는 아래와 같다.</p>
 <p><span id="eq-fLP_1_28_3"><span class="math display">\[
 \boldsymbol{E} = \dfrac{-q}{4\pi \epsilon_0} \left[\dfrac{\boldsymbol{e}_{r'}}{r'^2} + \dfrac{r'}{c} \dfrac{d}{dt}\left(\dfrac{\boldsymbol{e}_{r'}}{r'^2}\right) + \dfrac{1}{c^2} \dfrac{d^2 \boldsymbol{e}_{r'}}{dt^2}\right].
-\tag{1.27}\]</span></span></p>
+\tag{2.27}\]</span></span></p>
 <ul>
 <li>첫번째 항은 쿨롱항이다 즉 <span class="math inline">\(\boldsymbol{E}_C = \dfrac{-q\boldsymbol{e}_{r'}}{4\pi \epsilon_0 r'^2}\)</span>. 여기서 <span class="math inline">\(r\)</span> 은 전하 <span class="math inline">\(q\)</span> 와 전기장이 측정되는 위치 <span class="math inline">\(P\)</span> 사이의 거리이다. 이미 19세기에 어떤 영향은 어떤 근본적인 상수로 정해지는 속도보다 빨리 전달 될 수 없다는 것이 발견되었다. 이 근본적인 속도가 빛의 속도 <span class="math inline">\(c\)</span> 이다.</li>
-<li>쿨롱의 법칙이 옳지 않은 것은 전하가 <em>지금</em> 어디있는지와 전하와의 거리가 <em>지금</em> 얼마인지를 알수 없을 뿐만 아니라 현재의 <span class="math inline">\(P\)</span> 점에서의 전기장에 영향을 주는것은 과거의 전하이기 때문이다. 얼마나 과거? <span class="math inline">\(r'/c\)</span> 만큼의 과거이며 이 차이를 <strong>지연 시간 (retarded time)</strong> 이라고 한다. <span class="math inline">\(r'\)</span> 은 <span class="math inline">\(q\)</span> 를 떠난 신호가 시간 <span class="math inline">\(t\)</span> 에 <span class="math inline">\(P\)</span> 에 도달했을 때의 거리이다. 따라서 <a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>1.27</span></a> 에 등장하는 방향은 <strong>지연 거리(retarded distance)</strong> <span class="math inline">\(r'\)</span> 에 대한 소위 <strong>지연 방향 (retarded direction)</strong> 인 <span class="math inline">\(\boldsymbol{e}_{r'}\)</span> 이 된다.</li>
+<li>쿨롱의 법칙이 옳지 않은 것은 전하가 <em>지금</em> 어디있는지와 전하와의 거리가 <em>지금</em> 얼마인지를 알수 없을 뿐만 아니라 현재의 <span class="math inline">\(P\)</span> 점에서의 전기장에 영향을 주는것은 과거의 전하이기 때문이다. 얼마나 과거? <span class="math inline">\(r'/c\)</span> 만큼의 과거이며 이 차이를 <strong>지연 시간 (retarded time)</strong> 이라고 한다. <span class="math inline">\(r'\)</span> 은 <span class="math inline">\(q\)</span> 를 떠난 신호가 시간 <span class="math inline">\(t\)</span> 에 <span class="math inline">\(P\)</span> 에 도달했을 때의 거리이다. 따라서 <a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>2.27</span></a> 에 등장하는 방향은 <strong>지연 거리(retarded distance)</strong> <span class="math inline">\(r'\)</span> 에 대한 소위 <strong>지연 방향 (retarded direction)</strong> 인 <span class="math inline">\(\boldsymbol{e}_{r'}\)</span> 이 된다.</li>
 <li>두번째 항은 지연된 시간과 전기장의 시간에 대한 변화율을 곱한 값이다.</li>
 <li>세번째 항은 지연 방향의 시간에 대한 이차 미분이다.</li>
 </ul>
 <p>자기장의 방정식은 다음과 같다.</p>
 <p><span id="eq-FLP_1_28_4"><span class="math display">\[
 \boldsymbol{B} = - \dfrac{\boldsymbol{e}_{r'}\times \boldsymbol{E}}{c}.
-\tag{1.28}\]</span></span></p>
+\tag{2.28}\]</span></span></p>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_28_2" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_28_2">28-2 복사</h3>
-<p><a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>1.27</span></a> 에는 거리의 제곱이 아니라 거리에 반비례하는 부분이 존재하며, 충분히 먼 거리에서는 이 항이 지배적이 된다. 구체적으로 찾아보는 것은 다음으로 미루기로 하고 일단 이것을 받아들이기로 하자. 정답은 세번째 항이다. 이제 우리는 당분간 다음을 받아들이자.</p>
+<p><a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>2.27</span></a> 에는 거리의 제곱이 아니라 거리에 반비례하는 부분이 존재하며, 충분히 먼 거리에서는 이 항이 지배적이 된다. 구체적으로 찾아보는 것은 다음으로 미루기로 하고 일단 이것을 받아들이기로 하자. 정답은 세번째 항이다. 이제 우리는 당분간 다음을 받아들이자.</p>
 <p><span id="eq-FLP_1_28_5"><span class="math display">\[
 \boldsymbol{E}= -\dfrac{q}{4\pi \epsilon_0 c^2} \dfrac{d^2 \boldsymbol{e}_{r'}}{dt^2}.
-\tag{1.29}\]</span></span></p>
+\tag{2.29}\]</span></span></p>
 <ul>
 <li><span class="math inline">\(\boldsymbol{e}_{r'}\)</span> 이 시간에 대한 이차 변화를 radial 방향과 transverse 방향으로 분해 할 수 있다. 이 때 radial 방향의 변화는 <span class="math inline">\(1/r'^2\)</span> 에 비례 하여 변하며 transverse 방향은 <span class="math inline">\(1/r'\)</span> 에 비례한다. 따라서 우리는 충분히 멀다면 transverse 방향만 고려해야 한다는 것을 알 수 있다.</li>
-<li><a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>1.27</span></a> 는 상대성 이론에 의한 효과까지 포함되어 있다.</li>
+<li><a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>2.27</span></a> 는 상대성 이론에 의한 효과까지 포함되어 있다.</li>
 </ul>
 <p>이제 좀 더 단순한 상황을 생각해보자. 전하의 움직임은 느리고 움직이는 범위는 작다. 그렇다면 지연 시간은 거의 상수 <span class="math inline">\(r/c\)</span> 이다. 이제 전하가 <span class="math inline">\(x\)</span> 방향으로만 움직인다고 가정한다. 그렇다면</p>
 <p><span class="math display">\[
@@ -1291,12 +1283,12 @@ P_B \propto  \left|\sum_{\alpha \in \text{all possible paths}} \rho_\alpha e^{i\
 \]</span></p>
 <p>이다. 따라서 전기장은 대부븐 <span class="math inline">\(E_x\)</span> 이며 다음과 같다. <span id="eq-FLP_1_28_6"><span class="math display">\[
 E_x (t)= - \dfrac{q}{4\pi \epsilon_0 c^2 r} a_x\left(t-\dfrac{r}{c}\right)
-\tag{1.30}\]</span></span></p>
+\tag{2.30}\]</span></span></p>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_28_3" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_28_3">28-3 쌍극자 복사체</h3>
-<p>우리는 <a href="#eq-FLP_1_28_6" class="quarto-xref">식&nbsp;<span>1.30</span></a> 를 (1) 우리가 보는 방향에 대해 직각 방향으로 (2) 천천히 움직이는(non-relativistic) (3) 멀리 떨어져 있는 전자기 복사에 대한 기본 법칙으로 (당분간) 간주한다. 이 식의 가속도는 <span class="math inline">\(r/c\)</span> 만큼의 시간 이전의 가속도이다. 이 장에서는 이 식의 물리적 의미에 대해 다루며 이후에는 빛과 전파의 전달에 대한 모든 현상-반사, 굴절, 간섭, 회절, 산란 과 같은-을 설명하는데 사용할 것이다.</p>
+<p>우리는 <a href="#eq-FLP_1_28_6" class="quarto-xref">식&nbsp;<span>2.30</span></a> 를 (1) 우리가 보는 방향에 대해 직각 방향으로 (2) 천천히 움직이는(non-relativistic) (3) 멀리 떨어져 있는 전자기 복사에 대한 기본 법칙으로 (당분간) 간주한다. 이 식의 가속도는 <span class="math inline">\(r/c\)</span> 만큼의 시간 이전의 가속도이다. 이 장에서는 이 식의 물리적 의미에 대해 다루며 이후에는 빛과 전파의 전달에 대한 모든 현상-반사, 굴절, 간섭, 회절, 산란 과 같은-을 설명하는데 사용할 것이다.</p>
 <p>… 발전기를 이용한 쌍극자 복사체와 일종의 안테나에 대한 설명들…</p>
 <p><br></p>
 </section>
@@ -1316,14 +1308,14 @@ E_x (t)= - \dfrac{q}{4\pi \epsilon_0 c^2 r} a_x\left(t-\dfrac{r}{c}\right)
 <img src="figures/fig_1_29/fig_1_29_1/fig_1_29_1.png" class="img-fluid figure-img" width="450">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.20: 파인만 물리학 강의 I. Fig. 29-1. 지연 가속도가 <span class="math inline">\(\boldsymbol{a}'\)</span> 인 양전하에 의한 전기장 <span class="math inline">\(\boldsymbol{E}\)</span>
+그림&nbsp;2.20: 파인만 물리학 강의 I. Fig. 29-1. 지연 가속도가 <span class="math inline">\(\boldsymbol{a}'\)</span> 인 양전하에 의한 전기장 <span class="math inline">\(\boldsymbol{E}\)</span>
 </figcaption>
 </figure>
 </div>
 <p>위의 그림과 같은 상황에서 전기장은 아래와 같다.</p>
 <p><span id="eq-FLP_1_29_1"><span class="math display">\[
 E(t) = - \dfrac{qa(t-r/c) \sin \theta}{4\pi \epsilon_0 c^2r}.
-\tag{1.31}\]</span></span></p>
+\tag{2.31}\]</span></span></p>
 <p>여기서 <span class="math inline">\(a(t-r/c)\)</span> 는 시간이 <span class="math inline">\(t-r/c\)</span> 일 때의 가속도로 <strong>지연 가속도(retarded acceleration)</strong> 이라고 한다.</p>
 <p><br></p>
 <div id="fig-FLP_1_29_2" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1332,7 +1324,7 @@ E(t) = - \dfrac{qa(t-r/c) \sin \theta}{4\pi \epsilon_0 c^2r}.
 <img src="figures/fig_1_29/fig_1_29_2.png" class="img-fluid figure-img" width="450">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.21: 파인만 물리학 강의 I. Fig. 29-2, Fig. 29-3. 공명자 안의 전하의 가속도의 변화에 대한 전기장의 변화
+그림&nbsp;2.21: 파인만 물리학 강의 I. Fig. 29-2, Fig. 29-3. 공명자 안의 전하의 가속도의 변화에 대한 전기장의 변화
 </figcaption>
 </figure>
 </div>
@@ -1341,11 +1333,11 @@ E(t) = - \dfrac{qa(t-r/c) \sin \theta}{4\pi \epsilon_0 c^2r}.
 <li><p>특별이 전하 <span class="math inline">\(q\)</span> 가 <span class="math inline">\(x=x_0 \cos \omega t\)</span> 와 같이 움직일 경우 가속도는</p>
 <p><span id="eq-FLP_1_29_2"><span class="math display">\[
 a=-\omega^2 x_0 \cos \omega t = a_0 \cos \omega t
-\tag{1.32}\]</span></span></p>
-<p>와 같고 전기장은 <a href="#eq-FLP_1_29_1" class="quarto-xref">식&nbsp;<span>1.31</span></a> 에 의해 아래와 같다.</p>
+\tag{2.32}\]</span></span></p>
+<p>와 같고 전기장은 <a href="#eq-FLP_1_29_1" class="quarto-xref">식&nbsp;<span>2.31</span></a> 에 의해 아래와 같다.</p>
 <p><span id="eq-FLP_1-20_3"><span class="math display">\[
 E= - q \sin \theta \dfrac{a_0 \cos \omega (t-r/c)}{4\pi \epsilon_0 rc^2}.
-\tag{1.33}\]</span></span> <br></p></li>
+\tag{2.33}\]</span></span> <br></p></li>
 </ul>
 </section>
 <section id="sec-FLP_1_29_2" class="level3">
@@ -1359,9 +1351,9 @@ E= - q \sin \theta \dfrac{a_0 \cos \omega (t-r/c)}{4\pi \epsilon_0 rc^2}.
 <section id="sec-FLP_1_29_3" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_29_3">29-3 사인파</h3>
 <ul>
-<li><p>각진동수 <span class="math inline">\(\omega\)</span> 에 대해 파수(wave number) <span class="math inline">\(k\)</span> 를 단위 거리당 변경되는 파동의 위상으로 정의하자. <a href="#eq-FLP_1-20_3" class="quarto-xref">식&nbsp;<span>1.33</span></a> 에서 위상 <span class="math inline">\(\phi = \omega (t-r/c)\)</span> 이므로 <span id="eq-FLP_1_29_4"><span class="math display">\[
+<li><p>각진동수 <span class="math inline">\(\omega\)</span> 에 대해 파수(wave number) <span class="math inline">\(k\)</span> 를 단위 거리당 변경되는 파동의 위상으로 정의하자. <a href="#eq-FLP_1-20_3" class="quarto-xref">식&nbsp;<span>2.33</span></a> 에서 위상 <span class="math inline">\(\phi = \omega (t-r/c)\)</span> 이므로 <span id="eq-FLP_1_29_4"><span class="math display">\[
 k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
-\tag{1.34}\]</span></span></p>
+\tag{2.34}\]</span></span></p>
 <p>이다. 참고로 빛이 아닌 경우 각진동수와 파수 사이에는 위와 같은 간단한 관계가 일반적으로 성립하지 않는다.</p></li>
 <li><p>이제 위상을 파수와 각진동수에 대해 <span class="math inline">\(\phi = \omega t - k x\)</span> 와 같이 쓸 수 있다.</p></li>
 <li><p>실제로 전기장은 <span class="math inline">\(1/r\)</span> 항 이외에 <span class="math inline">\(n&gt;1\)</span> 에 대한 <span class="math inline">\(1/r^n\)</span> 항이 존재한다. <span class="math inline">\(r\)</span> 이 충분히 크면 <span class="math inline">\(1/r^n\)</span> 항을 무시할 수 있다. 정성적으로 <span class="math inline">\(1/r^n\)</span> 항에서 <span class="math inline">\(r &gt; n \lambda\)</span> 보다 크면 무시 할 수 있다.</p></li>
@@ -1377,7 +1369,7 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 <img src="figures/fig_1_29/fig_1_29_5.png" class="img-fluid figure-img" width="350">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.22: 파인만 물리학 강의 I. Fig. 29-5. 파장의 반만큼 떨어져 있는 쌍극 진동자에 의한 에너지 Intensity. (a) 두 진동자가 같은 위상으로 진동할 때. (b) 두 진동자가 주기의 반만큼의 위상차로 진동할 때
+그림&nbsp;2.22: 파인만 물리학 강의 I. Fig. 29-5. 파장의 반만큼 떨어져 있는 쌍극 진동자에 의한 에너지 Intensity. (a) 두 진동자가 같은 위상으로 진동할 때. (b) 두 진동자가 주기의 반만큼의 위상차로 진동할 때
 </figcaption>
 </figure>
 </div>
@@ -1388,7 +1380,7 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 <img src="figures/fig_1_29/fig_1_29_6.png" class="img-fluid figure-img" width="200">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.23: 파인만 물리학 강의 I. Fig. 29-6
+그림&nbsp;2.23: 파인만 물리학 강의 I. Fig. 29-6
 </figcaption>
 </figure>
 </div>
@@ -1400,7 +1392,7 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 <img src="figures/fig_1_29/fig_1_29_7.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.24: 파인만 물리학 강의 I. Fig. 29-7
+그림&nbsp;2.24: 파인만 물리학 강의 I. Fig. 29-7
 </figcaption>
 </figure>
 </div>
@@ -1411,7 +1403,7 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 <img src="figures/fig_1_29/fig_1_29_8.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.25: 파인만 물리학 강의 I. Fig. 29-8
+그림&nbsp;2.25: 파인만 물리학 강의 I. Fig. 29-8
 </figcaption>
 </figure>
 </div>
@@ -1430,10 +1422,10 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 <ul>
 <li>간섭(interference)과 회절(diffreraction) 의 구분 : 명확한 구분은 없지만 source 가 적으면 간섭, source 가 많으면 회절 이라고 하자.</li>
 </ul>
-<p>같은 간격으로 별려 위치한 동일한 <span class="math inline">\(n\)</span> 개의 진동자를 생각하자. 각각의 진동자의 진폭은 같지만 위상은 다르다. 위상 차이는 실제적인 두 진동자의 위상 차이일 수도 있고 각 진동자로부터의 거리차이로 인한 위상차 일 수 있다. <span class="math inline">\(i\)</span> 번째 진동자와 <span class="math inline">\(i+1\)</span> 번째 진동자의 위상차가 <span class="math inline">\(\phi\)</span> 일 때 이 진동자에 의한 진폭을 합친 최종 진폭(resultant amplitude) <span class="math inline">\(R\)</span> 은 아래와 같다.</p>
+<p>같은 간격으로 직선상에 위치한 동일한 <span class="math inline">\(n\)</span> 개의 진동자를 생각하자. 각각의 진동자의 진폭은 같지만 위상은 다르다. 위상 차이는 실제적인 두 진동자의 위상 차이일 수도 있고 각 진동자로부터의 거리차이로 인한 위상차 일 수 있다. <span class="math inline">\(i\)</span> 번째 진동자와 <span class="math inline">\(i+1\)</span> 번째 진동자의 위상차가 <span class="math inline">\(\phi\)</span> 일 때 이 진동자에 의한 진폭을 합친 최종 진폭(resultant amplitude) <span class="math inline">\(R\)</span> 은 아래와 같다.</p>
 <p><span id="eq-FLP_1_30_1"><span class="math display">\[
 R = A\left[\cos (\omega t) + \cos (\omega t+ \phi) + \cdots + \cos (\omega t + (n-1) \phi)\right].
-\tag{1.35}\]</span></span></p>
+\tag{2.35}\]</span></span></p>
 <p>여기서 <span class="math inline">\(\phi = \alpha + 2\pi d \sin \theta/\lambda\)</span> 인 경우를 생각해보자.</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1445,51 +1437,61 @@ R &amp;= \dfrac{1}{2} \left[\sum_{j=0}^{n-1} Ae^{i(\omega t + j\phi)} + (\text{c
 <p>따라서 최종 진폭 <span class="math inline">\(A_R\)</span> 은</p>
 <p><span id="eq-FLP_1_30_2"><span class="math display">\[
 A_R = A \dfrac{\sin (n \phi/2)}{\sin (\phi/2)}
-\tag{1.36}\]</span></span></p>
+\tag{2.36}\]</span></span></p>
 <p>이며 최종 intensity 는</p>
 <p><span id="eq-FLP_1_30_3"><span class="math display">\[
 I = I_0 \dfrac{\sin^2 (n\phi/2)}{\sin^2 (\phi/2)}
-\tag{1.37}\]</span></span></p>
+\tag{2.37}\]</span></span></p>
 <p>이다.</p>
-<p>우리는 <span class="math inline">\(\phi \sim 0\)</span> 에서 <span class="math inline">\(I=n^2I_0\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(n\)</span> 개의 동일한 진동자에 의해 발생되는 에너지는 가장 큰 방향으로는 <span class="math inline">\(n^2\)</span> 에 비례하여 발생한다. (같은 위상의, <span class="math inline">\(\lambda\)</span> 만큼씩 떨여져 있는 <span class="math inline">\(n\)</span> 개의 진동자의 경우와 같다.) 위의 식을 통해 아래의 그림을 그릴 수 있다. <span class="math inline">\(n\phi = 2m\pi\)</span> 인 정수 <span class="math inline">\(m\)</span> 이 존재할 때 <span class="math inline">\(I=0\)</span> 이다. 또한 아래 그래프에서 전체 영역에 대한 적분은 <span class="math inline">\(2\pi n I_0\)</span> 임을 안다.</p>
+<p>우리는 <span class="math inline">\(\phi \sim 0\)</span> 에서 <span class="math inline">\(I=n^2I_0\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(n\)</span> 개의 동일한 진동자에 의해 발생되는 에너지는 가장 큰 방향으로는 <span class="math inline">\(n^2\)</span> 에 비례하여 발생한다. (같은 위상의, <span class="math inline">\(\lambda\)</span> 만큼씩 떨여져 있는 <span class="math inline">\(n\)</span> 개의 진동자의 경우와 같다.) 위의 식을 통해 아래의 그림을 그릴 수 있다. <span class="math inline">\(n\phi = 2m\pi\)</span> 인 정수 <span class="math inline">\(m\)</span> 이 존재할 때 <span class="math inline">\(I=0\)</span> 이다. 또한 아래 그래프에서 전체 영역에 대한 적분은 <span class="math inline">\(2\pi n I_0\)</span> 임을 계산 할 수 있다.</p>
 <div id="fig-FLP_1_30_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_1_30_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig_1_30/fig_1_30_2.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_30_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.26: 파인만 물리학 강의 I. Fig. 30-2. 같은 강도를 갖는 다수의 진동자의 intensity 를 위상에 대한 함수로 표현함
+그림&nbsp;2.26: 파인만 물리학 강의 I. Fig. 30-2. 같은 강도를 갖는 다수의 진동자의 intensity 를 위상에 대한 함수로 표현함
 </figcaption>
 </figure>
 </div>
-<p>이제 아래 <a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>1.27</span></a> 같은 진동자 배치를 생각하자. 직선상에, 인접한 진동자와 <span class="math inline">\(d\)</span> 만큼 떨여진 <span class="math inline">\(n\)</span> 개의 진동자가 위치한다. <span class="math inline">\(i\)</span> 번째 진동자는 <span class="math inline">\(i-1\)</span> 번째 진동자에 대해 <span class="math inline">\(\alpha\)</span> 만큼 더 큰 위상(phase) 를 가진다. 이 진동자가 가 위치한 직선에 수직인 방향으로 <span class="math inline">\(\theta\)</span> 만큼의 각을 가진 위치에서 측정한다고 하자.</p>
+<div id="fig-FLP_tfig2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_tfig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_30/tfig1/tfig2.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_tfig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;2.27: <a href="#fig-FLP_1_30_2" class="quarto-xref">그림&nbsp;<span>2.26</span></a> 를 <span class="math inline">\(n=7\)</span> 일때 <span class="math inline">\(\phi\)</span> 에 대해 확장하여 그림
+</figcaption>
+</figure>
+</div>
+<p>이제 아래 <a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>2.28</span></a> 같은 진동자 배치를 생각하자. 직선상에, 인접한 진동자와 <span class="math inline">\(d\)</span> 만큼 떨여진 <span class="math inline">\(n\)</span> 개의 진동자가 위치한다. <span class="math inline">\(i\)</span> 번째 진동자는 <span class="math inline">\(i-1\)</span> 번째 진동자에 대해 <span class="math inline">\(\alpha\)</span> 만큼 더 큰 위상(phase) 를 가진다. 이 진동자가 가 위치한 직선에 수직인 방향으로 <span class="math inline">\(\theta\)</span> 만큼의 각을 가진 위치에서 측정한다고 하자.</p>
 <div id="fig-FLP_1_30_3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_1_30_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig_1_30/fig_1_30_3/fig_1_30_3.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_30_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1.27: 파인만 물리학 강의 I. Fig. 30-3. 같은 강도를 갖는 <span class="math inline">\(n\)</span> 개의 진동자를 직선상에 배치함. <span class="math inline">\(s\)</span> 번째 진동자의 위상 <span class="math inline">\(\alpha_s = s\alpha\)</span>.
+그림&nbsp;2.28: 파인만 물리학 강의 I. Fig. 30-3. 같은 강도를 갖는 <span class="math inline">\(n\)</span> 개의 진동자를 직선상에 배치함. <span class="math inline">\(s\)</span> 번째 진동자의 위상 <span class="math inline">\(\alpha_s = s\alpha\)</span>.
 </figcaption>
 </figure>
 </div>
 <p>측정하는 위치에서는 진동자 자체의 위상과 시간 지연에 의한 위상이 합쳐진 위상으로 느끼므로 측정하는 위치에서의 인접한 진동자의 위상차 <span class="math inline">\(\phi\)</span> 는 아래와 같다. <span id="eq-FLP_1_30_4"><span class="math display">\[
 \phi = \alpha + 2\pi d \sin \theta/\lambda = \alpha + kd\sin \theta.
-\tag{1.38}\]</span></span></p>
-<p>우선 <span class="math inline">\(\alpha=0\)</span> 인 경우는 <a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>1.37</span></a> 의 경우와 같다. 이 때 첫번째 극소점은 <span class="math inline">\(\phi = 2\pi/n\)</span> 일 때이며 이는 <span id="eq-FLP_1_30_5"><span class="math display">\[
+\tag{2.38}\]</span></span></p>
+<p>우선 <span class="math inline">\(\alpha=0\)</span> 인 경우는 <a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.37</span></a> 의 경우와 같다. 이 때 첫번째 극소점은 <span class="math inline">\(\phi = 2\pi/n\)</span> 일 때이며 이는 <span id="eq-FLP_1_30_5"><span class="math display">\[
 \lambda = nd\sin \theta
-\tag{1.39}\]</span></span></p>
-<p>를 의미한다. <a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>1.27</span></a> 에서 <span class="math inline">\(\Delta = L\sin\theta = nd\sin\theta\)</span> 이며 따라서 첫번째 극소점은 <span class="math inline">\(\Delta =\lambda\)</span> 일 경우이다.</p>
-<p><a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>1.37</span></a> 에서 알 수 있는 하나 중요한 사실은 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(\phi = 2 m\pi\)</span> 일 때 최대값이 등장한다는 것이다. 즉 <span class="math inline">\(3\pi d \sin \theta/\lambda = 2\pi m\)</span> 조건이며 이로부터</p>
+\tag{2.39}\]</span></span></p>
+<p>를 의미한다. <a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>2.28</span></a> 에서 <span class="math inline">\(\Delta = L\sin\theta = nd\sin\theta\)</span> 이며 따라서 첫번째 극소점은 <span class="math inline">\(\Delta =\lambda\)</span> 일 경우이다.</p>
+<p><a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.37</span></a> 에서 알 수 있는 하나 중요한 사실은 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(\phi = 2 m\pi\)</span> 일 때 최대값이 등장한다는 것이다. 즉 <span class="math inline">\(2\pi d \sin \theta/\lambda = 2\pi m\)</span> 조건이며 이로부터</p>
 <p><span id="eq-FLP_1_30_6"><span class="math display">\[
 d\sin\theta = m\lambda
-\tag{1.40}\]</span></span></p>
-<p>을 얻는다. <a href="#eq-FLP_1_30_5" class="quarto-xref">식&nbsp;<span>1.39</span></a> 와 비슷하지만 완전히 다른 의미임을 명심하라.</p>
-<p><a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>1.40</span></a> 에서 기억해야 할 것 하나는 <span class="math inline">\(d\le \lambda\)</span> 이면 가능한 해는 <span class="math inline">\(m=0\)</span> 일 때 뿐이다. 따라서 강한 신호를 보내려면 간격 <span class="math inline">\(d\)</span> 를 파장보다 크게 잡아야 한다.</p>
+\tag{2.40}\]</span></span></p>
+<p>을 얻는다. <a href="#fig-FLP_tfig2" class="quarto-xref">그림&nbsp;<span>2.27</span></a> 에서 <span class="math inline">\(2\pi\)</span> 주기로 나타나는 큰 픽을을 의미하며 <a href="#eq-FLP_1_30_5" class="quarto-xref">식&nbsp;<span>2.39</span></a> 와 비슷하지만 완전히 다른 의미임을 명심하라. 여기서 <span class="math inline">\(m\)</span> 값에 따라 <span class="math inline">\(0\)</span>-차 빔(zero-order beam), <span class="math inline">\(1\)</span>-차 빔(first-order beam), <span class="math inline">\(2\)</span>-차 빔(second-order beam) … 이라고 한다.</p>
+<p><a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>2.40</span></a> 에서 기억해야 할 것 하나는 <span class="math inline">\(d\le \lambda\)</span> 이면 가능한 해는 <span class="math inline">\(m=0\)</span> 일 때 뿐이다. 따라서 강한 신호를 보내려면 간격 <span class="math inline">\(d\)</span> 를 파장보다 크게 잡아야 한다.</p>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_3_20" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_3_20">30-2 회졀 격자</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_3_20">30-2 회절 격자</h3>
 <ul>
 <li>(파장이 긴 라디오파를 다루는 경우) 안테나와 전선을 다룰 때 모든 작은 진동자, 혹은 안테나의 위상을 동일하게 맞출 수 있다. 그렇다면 빛의 경우는? 빛의 파장은 매우 짧기 때문에 (파인만 당시에는) 불가능하다. 그러나 다른 방법으로 같은 일을 할 수 있다.</li>
 </ul>
@@ -1497,7 +1499,7 @@ d\sin\theta = m\lambda
 <h4 class="anchored" data-anchor-id="산란"><strong>산란</strong></h4>
 <ul>
 <li>서로 <span class="math inline">\(d\)</span> 만큼 떨어진 평행한 전선과 아주 멀리 떨어진(실용적으로 무한대만큼 떨여졌다고 볼 수 있는) 라디오파 발생장치를 생각하자. 각각의 전선에 도달하는 라디오파는 같은 위상을 가졌다고 간주 할 수 있다. 전달된 전자기장에 의해 도선의 전하는 진동하며 따라서 새로운 전자기파 발생장치로 볼 수 있다. 이 현상을 <strong>산란 (scattering)</strong> 이라고 한다.</li>
-<li>라디오 발상장치에서의 라디오파가 전선들이 이루는 평면에 수직하게 입사된다면, 그리고 전선의 간격이 파장보다 크다면 이 평먼에 수직한 방향과 <a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>1.40</span></a> 에 의해 정해지는 방향으로 강력한 전자기파가 발생한다.</li>
+<li>라디오 발상장치에서의 라디오파가 전선들이 이루는 평면에 수직하게 입사된다면, 그리고 전선의 간격이 파장보다 크다면 이 평먼에 수직한 방향과 <a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>2.40</span></a> 에 의해 정해지는 방향으로 강력한 전자기파가 발생한다.</li>
 </ul>
 </section>
 <section id="회절-격자" class="level4">
@@ -1506,111 +1508,63 @@ d\sin\theta = m\lambda
 <li>유리판에 일렬로 작은 흠을 파서 흠(notch)이 파이지 않은 다른 부분과 다소 다르게 산란되도록 한다. 흠 사이의 간격은 매우 일정하며 빛의 파장보다는 크다.<br>
 </li>
 <li>여기에 빛을 비추면 일부의 빛은 유리를 통과하지만 각각의 흠이 광원의 역할을 하며 특정한 각도로 강한 빛이 나온다. 이 각도는 틈의 간격과 관련이 있다. 이를 <strong>회적 격자 (diffraction grating)</strong> 라고 한다.</li>
-<li>여러 파장의 빛이 섞여 있을 경우 <a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>1.40</span></a> 를 보면 알 수 있듯이 강한 빛이 나오는 각도가 빛의 진동수(파장, 에너지…) 에 따라 다르다.</li>
-<li>지금까지는 광원에서의 위상이 모두 같은 경우를 생각했다. 인접한 광원 사이에 동일한 위상차 <span class="math inline">\(\alpha\)</span> 가 존재한다고 하자.</li>
+<li>여러 파장의 빛이 섞여 있을 경우 <a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>2.40</span></a> 를 보면 알 수 있듯이 강한 빛이 나오는 각도가 빛의 진동수(파장, 에너지…) 에 따라 다르다.</li>
 </ul>
-<p><br></p>
-</section>
-</section>
-</section>
-<section id="quantum-behavior" class="level2">
-<h2 class="anchored" data-anchor-id="quantum-behavior">37. Quantum Behavior</h2>
-<section id="atomic-mechanics" class="level3">
-<h3 class="anchored" data-anchor-id="atomic-mechanics">37-1 Atomic mechanics</h3>
-<p><br></p>
-</section>
-</section>
-<section id="the-kinetic-theory-of-gases" class="level2">
-<h2 class="anchored" data-anchor-id="the-kinetic-theory-of-gases">39. The Kinetic Theory of Gases</h2>
-<section id="온도와-운동에너지" class="level3">
-<h3 class="anchored" data-anchor-id="온도와-운동에너지">39-4 온도와 운동에너지</h3>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-TD_feynmann_1" class="theorem example">
-<p><span class="theorem-title"><strong>예제 1.1 (두 종류의 기체분자)</strong></span> &nbsp;</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/feynmann_1_fig_39_4.png" class="img-fluid figure-img"></p>
-<figcaption>파인만 물리학 강의 I. 그림 39-4</figcaption>
+<p>지금까지는 광원에서의 위상이 모두 같은 경우를 생각했다. 회절 격자를 이용해 임의의 위상차를 주는 방법을 알아보자. 아래 그림과 같이 <span class="math inline">\(d\)</span> 의 간격을 갖는 회절격자에 <span class="math inline">\(\theta_\text{in}\)</span> 의 입사각으로 빛을 쐬어준다고 하자. 그리고 <span class="math inline">\(\theta_{\text{out}}\)</span> 만큼의 산란각을 갖는다고 하자.</p>
+<div id="fig-FLP_1_30_4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_30_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_30/fig_1_30_4.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_30_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;2.29: 파인만 물리학 강의 I. Fig. 30-4. 회절격자의 인접함 선에 대한 경로 차이는 <span class="math inline">\(d\sin\theta_\text{out} - d\sin\theta_\text{in}\)</span> 이다.
+</figcaption>
 </figure>
 </div>
-<p>두 종류의 기체가 컨테이너 안에서 셖여 있다고 하자. 기체 분자의 질량은 각각 <span class="math inline">\(m_1,\,m_2\)</span> 이며 속도를 각각 <span class="math inline">\(\boldsymbol{v}_1,\,\boldsymbol{v}_2\)</span> 라고 하자. 기체 분자의 충돌은 탄성 충돌이라고 가정한다.</p>
-<p>이 때 질량중심죄표계에서 보면 (<a href="../../ClassicalMechanics/12_two_or_three_bodies_problems.html#sec-CM_elastic_collition_in_C_frame">질량중심 좌표계에서의 탄성 충돌</a> 을 참고하라) 이 충돌은 두 입자는 속도는 일정하며 방향만 바뀌는 충돌이며 질량중심 좌표계에서 이 방향의 분포는 균일하다.</p>
-<p>이제 실제 상황에서 보자. 서로 다른 두 분자의 충돌의 질량 중심 속도 <span class="math inline">\(\boldsymbol{V}\)</span> 와 상대속도 <span class="math inline">\(\boldsymbol{v}\)</span> 를 아래와 같이 정한다.</p>
-<p><span class="math display">\[
-\boldsymbol{V}=\dfrac{m_1\boldsymbol{v}_1+m_2\boldsymbol{v}_2}{m_1+m_2},\qquad \boldsymbol{v} = \boldsymbol{v}_1-\boldsymbol{v}_2
-\]</span></p>
-<p>충돌 후에 원자의 분포는 어떻게 될까? 일단 우리는 충돌 전후 질량중심의 속도 <span class="math inline">\(\boldsymbol{V}\)</span> 가 변하지 않는다는 것을 안다. 또한 <span class="math inline">\(\boldsymbol{V}\)</span> 의 방향이 완전이 임의적이라는 데 동의 할 수 있을 것이다. 즉 <span class="math inline">\(\boldsymbol{V\cdot v}\)</span> 의 평균값은 <span class="math inline">\(0\)</span> 이다. 또한 <span class="math inline">\(\boldsymbol{v}_1\boldsymbol{\cdot v}_2\)</span> 의 평균값도 <span class="math inline">\(0\)</span> 이라는 데 동의 할 수 있다. 여기서</p>
-<p><span class="math display">\[
-\boldsymbol{V\cdot v} = \dfrac{(\boldsymbol{v}_1-\boldsymbol{v}_2) \boldsymbol{\cdot} (m_1\boldsymbol{v}_1 + m_2 \boldsymbol{v}_2)}{m_1+m+2} = \dfrac{(m_1v_1^2 - m_2v_2^2) + (m_2-m_1)(\boldsymbol{v}_1\boldsymbol{\cdot v}_2)}{m_1+m_2}
-\]</span></p>
-<p>이므로</p>
-<p><span class="math display">\[
-\left\langle \dfrac{m_1v_1^2}{2}\right\rangle = \left\langle \dfrac{m_2v_2^2}{2}\right\rangle
-\]</span></p>
-<p>이다. 즉 두 기체 분자의 평균 운동 에너지는 같아진다.</p>
+<p>그렇다면 회절격자의 인접한 두 선에서 발생하는 경로차 <span class="math inline">\(\phi\)</span> 는</p>
+<p><span id="eq-FLP_1_30_7"><span class="math display">\[
+\phi = \dfrac{2\pi d \sin \theta_\text{out}}{\lambda} - \dfrac{2 \pi d \sin \theta_\text{in}}{\lambda} = \dfrac{2\pi d}{\lambda}(\sin \theta_{\text{out}}- \sin \theta_\text{in}).
+\tag{2.41}\]</span></span></p>
+<p>강한 intensity 를 얻으려면 <span class="math inline">\(\phi\)</span> 가 <span class="math inline">\(2\pi\)</span> 의 정수배 이어야 한다. 즉 <span class="math inline">\(\phi = 2\pi m\)</span>.</p>
+<ol type="1">
+<li><p><span class="math inline">\(d&lt;\lambda/2\)</span> 일 경우 <span class="math inline">\(\phi &lt; \pi (\sin \theta_{\text{out}}- \sin \theta_\text{in}) &lt; 2\pi\)</span> 이다. 따라서 <span class="math inline">\(\theta_\text{out} = \theta_\text{in}\)</span>. 여기서 산란된 빛은 입사된 빛이 아니라 scattering 과정에서 발생한 빛이며 단지 입사각과 산란각이 같을 뿐이다.</p></li>
+<li><p>There is another solution for this same case: <span class="math inline">\(\theta_\text{out}\)</span> may equal <span class="math inline">\(\theta_\text{in}\)</span>. So not only do we get a beam in the same direction as the incoming beam but also one in another direction, such that the angle of incidence is equal to the angle of scattering. This we call the reflected beam.</p></li>
+<li><p><em>반사 (reflection)</em> 이란 입사된 빛이 반사체의 원자들을 여기(excite) 시키고, 이 반사체의 원자들이 입사각과 같은 방향으로 새로운 파동을 발생시킨다.</p></li>
+<li><p><span class="math inline">\(d\)</span> 가 매우 작은 상황을 생각하자. <a href="#eq-FLP_1_30_7" class="quarto-xref">식&nbsp;<span>2.41</span></a> 에서 <span class="math inline">\(\phi\)</span> 역시 매우 작아진다. 안테나에서 간격 <span class="math inline">\(d\)</span> 가 매우 작은 대신에 더 많은 진동자를 넣어 총 위상차, 즉 처음과 마지막의 위상차가 동일한 경우를 생각해보자. <a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.37</span></a> 에서 <span class="math inline">\(\Phi = n\phi\)</span> 라고 놓자. <span class="math inline">\(\phi \approx 0\)</span> 이며 최대 intensity <span class="math inline">\(I_M = n^2I_0\)</span> 를 생각하면 아래 식을 얻는다. <span id="eq-FLP_1_30_8"><span class="math display">\[
+  I=I_M \dfrac{\sin^2 (\Phi/2)}{n^2 \sin^2(\phi/2)} \approx 4 I_M \dfrac{\sin ^2 (\Phi/2)}{\Phi^2}.
+   \tag{2.42}\]</span></span> 위의 식을 그래프로 그리면 아래와 같다. <a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.37</span></a> 에서는 <span class="math inline">\(\phi = 2m\pi\)</span> 일 때 <span class="math inline">\(m=0\)</span> 일 때와 같이 <span class="math inline">\(I_M\)</span> 의 intenstiry 를 얻지만 이 경우에는 그런 양상이 사라진다.</p></li>
+</ol>
+<div id="fig-FLP_1_30_tfig1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_30_tfig1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_30/tfig1/tfig1.png" class="img-fluid figure-img" width="300">
 </div>
-</div>
-<p><br></p>
-</section>
-</section>
-<section id="the-principle-of-statistical-mechanics" class="level2">
-<h2 class="anchored" data-anchor-id="the-principle-of-statistical-mechanics">40. The Principle of Statistical Mechanics</h2>
-<section id="지수적-대기" class="level3">
-<h3 class="anchored" data-anchor-id="지수적-대기">40.1 지수적 대기</h3>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-TD_feynmann_1" class="theorem example">
-<p><span class="theorem-title"><strong>예제 1.2 (높이에 따른 압력의 변화)</strong></span> &nbsp;</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/feynmann_1_fig_40_1.png" class="img-fluid figure-img" width="300"></p>
-<figcaption>파인만 물리학 강의 I. 그림 40-1</figcaption>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_30_tfig1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;2.30: <a href="#eq-FLP_1_30_8" class="quarto-xref">식&nbsp;<span>2.42</span></a> 의 그래프
+</figcaption>
 </figure>
 </div>
-<p>위의 그림과 같은 실험장치를 생각하자. 피스톤의 위의 공기와 아래의 공기는 열평형 상태인데 이는 위와 아래의 공기의 출입은 막으면서 열만을 전달해주는 메카니즘이 존재하기 때문이다. 온도 <span class="math inline">\(T\)</span>, 압력 <span class="math inline">\(P\)</span>, 부피 <span class="math inline">\(V\)</span>, 볼츠만 상수 <span class="math inline">\(k_B\)</span>, 공기 분자 개수 <span class="math inline">\(N\)</span> 에 대해 <span class="math inline">\(PV=Nk_BT\)</span> 이며 단위 부피당 분자 개수 <span class="math inline">\(n=N/V\)</span> 이다. 이로부터 <span class="math inline">\(P=nk_BT\)</span> 임을 알며 <span class="math inline">\(T\)</span> 가 일정하므로 <span class="math inline">\(P \propto n\)</span> 이다. 여기에 중력가속도 <span class="math inline">\(g\)</span> 에 의한 중력이 작용한다고 하자.</p>
-<p>위의 그림과 같이 높이 <span class="math inline">\(h\)</span> 와 <span class="math inline">\(h+dh\)</span> 에 의해 이루어진 얇은 층에 대해 위에서 누르는 힘과 아래에서 누르는 힘이 평행을 이루어야 한다. 즉 압력이 같아야 한다. 기체 분자의 질량이 <span class="math inline">\(m\)</span> 이라면</p>
-<p><span class="math display">\[
-P_{h+dh}-P_h = dP = -mgn\,dh
-\]</span></p>
-<p>임을 안다. <span class="math inline">\(P = nk_BT\)</span> 이며 주어진 조건으로부터 <span class="math inline">\(dP = dnk_B T\)</span> 임을 안다. 따라서</p>
-<p><span class="math display">\[
-\dfrac{dn}{dh}= - \dfrac{mg}{k_B T}n
-\]</span></p>
-<p>이며 이 미분방정식의 해는</p>
-<p><span class="math display">\[
-n(h) = n_0 e^{-mgh/k_BT}
-\]</span></p>
-<p>임을 안다.</p>
-</div>
-</div>
 <p><br></p>
 </section>
 </section>
-<section id="볼츠만-법칙" class="level2">
-<h2 class="anchored" data-anchor-id="볼츠만-법칙">40-2 볼츠만 법칙</h2>
-<p><span class="math display">\[
-n = n_0 e^{-\text{P.E.}/k_BT}
-\]</span></p>
+<section id="sec-FLP_1_30_3" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_30_3">30-3 회절격자의 분해능</h3>
+<p>앞서 언급했듯이 회절격자는 파장에 따라 산란각이 달라지기 때문에 파장별로 분리하는데 사용 할 수 있다. 두개의 유사한 파장을 가진 광원에서 오는 빛을 파장별로 분리 할 수 있는 능력을 <strong>분해능 (resolving power)</strong> 이라고 한다. 일반적으로 레일리 기준을 사용한다.</p>
+<section id="레일리-기준rayleighs-criteria" class="level4">
+<h4 class="anchored" data-anchor-id="레일리-기준rayleighs-criteria"><strong>레일리 기준(Rayleigh’s criteria)</strong></h4>
+<p>파장 <span class="math inline">\(\lambda'\)</span> 인 빛에 대해 경로차 <span class="math inline">\(\Delta\)</span> (<a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>2.28</span></a>) 가 <span class="math inline">\(n\lambda'\)</span> 과 같을 때 intensity maximum peak 이며 <span class="math inline">\(m\)</span>-th order beam 에 대해서는 <span class="math inline">\(\Delta = mn\lambda'\)</span> 이어야 한다. <span class="math inline">\(\lambda'\)</span> 과 약간 차이가 나는 파장 <span class="math inline">\(\lambda\)</span> 에 대해서 역시 <span class="math inline">\(\Delta = mn\lambda + \lambda = mn\lambda'\)</span> 이 되도록 하자. <span class="math inline">\(\Delta \lambda = \lambda'-\lambda\)</span> 라고 하면</p>
+<p><span id="eq-FLP_1_30_9"><span class="math display">\[
+\dfrac{\Delta \lambda}{\lambda} = \dfrac{1}{mn}
+\tag{2.43}\]</span></span></p>
+<p>이며 이 때 <span class="math inline">\(\lambda/\Delta \lambda\)</span> 를 <strong>회절격자의 분해능 (resolving power of grating)</strong> 이라고 한다.</p>
 <p><br></p>
 </section>
-<section id="액체의-증발" class="level2">
-<h2 class="anchored" data-anchor-id="액체의-증발">40-3 액체의 증발</h2>
-<p>분자들의 집합을 생각하자. 이 분자들 사이에는 쌍마다 서로의 거리만 의존하는 상호작용, 즉 포텐셜 에너지가 존재한다. 이 때 두 분자 사이의 거리 <span class="math inline">\(r\)</span> 에 따른 포텐셜 <span class="math inline">\(V(r)\)</span> 은 일반적으로 아래 그림과 같은 형태이며 <span class="math inline">\(r&lt;r_0\)</span> 일 때는 척력이 <span class="math inline">\(r&gt;r_0\)</span> 일 때는 인력이 작용한다.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig40-3/fig40-3.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>파인만 물리학 강의 I 그림 40-3(redraw)</figcaption>
-</figure>
-</div>
-<p>이런 기체 분자로 차 있는 상자를 생각하자. 이 기체들 사이의 포텐셜은 각 개별 쌍의 포텐셜의 합이라고 가정하자. (세개 이상에 대한 상호작용도 존재한다-<a href="https://en.wikipedia.org/wiki/Three-body_force">Three-body force</a> 를 참고하라.) 그렇다면 볼츠만의 법칙에 따라 분자 쌍이 <span class="math inline">\(r_{ij}\)</span> 만큼의 거리를 두고 존재할 확률은 다음에 비례한다.</p>
-<p><span class="math display">\[
-\exp \left[-\sum_{i,j} V(r_{ij})/k_BT\right].
-\]</span></p>
-<p><br></p>
 </section>
-<section id="분자-속력의-분포" class="level2">
-<h2 class="anchored" data-anchor-id="분자-속력의-분포">40-4 분자 속력의 분포</h2>
+<section id="sec-FLP_1_30_4" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_30_4">30-4 포물선형 안테나</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1665,14 +1619,13 @@ n = n_0 e^{-\text{P.E.}/k_BT}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -2016,13 +1969,13 @@ n = n_0 e^{-\text{P.E.}/k_BT}
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../src/Feynmann/00_index.html" class="pagination-link" aria-label="파인만의 물리학 강의">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">파인만의 물리학 강의</span>
+      <a href="../../../src/Feynmann/vol1/vol1_1.html" class="pagination-link" aria-label="I-1 : 고전역학">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">I-1 : 고전역학</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../src/Feynmann/feynmann_trans.html" class="pagination-link" aria-label="파인만 물리학 강의 번역서를 읽을 때 주의할 것">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 번역서를 읽을 때 주의할 것</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../src/Feynmann/vol1/vol1_3.html" class="pagination-link" aria-label="I-3 : 열역학과 양자 입문">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

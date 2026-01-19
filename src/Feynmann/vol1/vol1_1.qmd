@@ -1,0 +1,10 @@
+---
+title: "I-1 : 고전역학"
+number-sections: true
+number-depth: 1
+crossref:
+  chapters: true
+---
+
+
+{{< include ../../../latexmacros.qmd >}} 

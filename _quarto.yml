@@ -14,8 +14,10 @@ book:
 
     - part: src/Feynmann/00_index.qmd    
       chapters: 
-        - src/Feynmann/vol1/vol1.qmd
-        - src/Feynmann/feynmann_trans.qmd
+        - src/Feynmann/vol1/vol1_1.qmd
+        - src/Feynmann/vol1/vol1_2.qmd
+        - src/Feynmann/vol1/vol1_3.qmd
+        # - src/Feynmann/feynmann_trans.qmd
   
     - part: src/ClassicalMechanics/00_index.qmd
       chapters:
