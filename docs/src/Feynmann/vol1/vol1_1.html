@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; 파인만 물리학 강의 I-1 : 고전역학 – 고전 역학과 전자기학</title>
+<title>1&nbsp; I-1 : 고전역학 – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynmann/00_index.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -111,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynmann/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynmann/vol1/vol1_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 I-1 : 고전역학</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynmann/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynmann/vol1/vol1_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">I-1 : 고전역학</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -123,8 +124,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynmann/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynmann/vol1/vol1_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 I-1 : 고전역학</span></a></li></ol></nav>
-      <h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 I-1 : 고전역학</span></h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynmann/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynmann/vol1/vol1_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">I-1 : 고전역학</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">I-1 : 고전역학</span></h1>
                       </div>
   </div>
     
@@ -170,19 +171,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Feynmann/vol1/vol1_1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 I-1 : 고전역학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">I-1 : 고전역학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Feynmann/vol1/vol1_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 I-2: 특수상대성이론과 광학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Feynmann/vol1/vol1_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 I-3 : 열역학과 양자 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -408,8 +409,22 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#기본적인-물리" id="toc-기본적인-물리" class="nav-link active" data-scroll-target="#기본적인-물리">2. 기본적인 물리</a>
+  <ul class="collapse">
+  <li><a href="#sec-FLP_1_2_1" id="toc-sec-FLP_1_2_1" class="nav-link" data-scroll-target="#sec-FLP_1_2_1">2.1 소개</a></li>
+  <li><a href="#sec-FLP_1_2_2" id="toc-sec-FLP_1_2_2" class="nav-link" data-scroll-target="#sec-FLP_1_2_2">2.2 1920 년 이전의 물리학</a></li>
+  </ul></li>
+  <li><a href="#뉴턴의-동역학-법칙" id="toc-뉴턴의-동역학-법칙" class="nav-link" data-scroll-target="#뉴턴의-동역학-법칙">9. 뉴턴의 동역학 법칙</a>
+  <ul class="collapse">
+  <li><a href="#sec-FLP_1_9_1" id="toc-sec-FLP_1_9_1" class="nav-link" data-scroll-target="#sec-FLP_1_9_1">9.1 운동량과 힘</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -426,8 +441,70 @@ window.Quarto = {
 \DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
 </div>
+<section id="기본적인-물리" class="level2">
+<h2 class="anchored" data-anchor-id="기본적인-물리">2. 기본적인 물리</h2>
+<section id="sec-FLP_1_2_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_2_1">2.1 소개</h3>
+<p><br></p>
+</section>
+<section id="sec-FLP_1_2_2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_2_2">2.2 1920 년 이전의 물리학</h3>
+<ul>
+<li>1920 년 이전의 우리의 세계관
+<ul>
+<li>우주가 펼쳐지는 무대는 3차원 공간이며 시간이라는 매개체 속에서 사물이 변화한다.</li>
+<li>이 무대의 elements 는 입자(예를 들면 원자) 이며 다음과 같은 성질을 가진다.
+<ol type="1">
+<li></li>
+</ol></li>
+</ul></li>
+</ul>
+<p><br></p>
+</section>
+</section>
+<section id="뉴턴의-동역학-법칙" class="level2">
+<h2 class="anchored" data-anchor-id="뉴턴의-동역학-법칙">9. 뉴턴의 동역학 법칙</h2>
+<section id="sec-FLP_1_9_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_9_1">9.1 운동량과 힘</h3>
+<section id="갈릴레오의-관성의-법칙" class="level4">
+<h4 class="anchored" data-anchor-id="갈릴레오의-관성의-법칙"><strong>갈릴레오의 관성의 법칙</strong></h4>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span><strong>갈릴레오의 관성의 법칙</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>물체 하나만 존재한다면(if an object is left alone), 운동하고 있는 물제는 직선상의 등속운동을 하고 정지해 있는 물체는 정지해 있다.</p>
+</div>
+</div>
+</section>
+<section id="뉴턴의-운동법칙" class="level4">
+<h4 class="anchored" data-anchor-id="뉴턴의-운동법칙"><strong>뉴턴의 운동법칙</strong></h4>
+<p>뉴턴의 제 1 법칙은 갈릴레오의 관성의 법칙과 실질적으로 동일하다.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span><strong>뉴턴의 제 2 법칙</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>운동량 <span class="math inline">\(\boldsymbol{p}=m\boldsymbol{v}\)</span> 의 시간에 대한 변화량이 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 이다. <span id="eq-FLP_newton_2nd_law"><span class="math display">\[
+\boldsymbol{F}=\dfrac{d\boldsymbol{p}}{dt} = \dfrac{d}{dt}(m\boldsymbol{v}).
+\tag{1.1}\]</span></span></p>
+</div>
+</div>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -481,13 +558,14 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -836,8 +914,8 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../src/Feynmann/vol1/vol1_2.html" class="pagination-link" aria-label="파인만 물리학 강의 I-2: 특수상대성이론과 광학">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">파인만 물리학 강의 I-2: 특수상대성이론과 광학</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../src/Feynmann/vol1/vol1_2.html" class="pagination-link" aria-label="I-2: 특수상대성이론과 광학">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
