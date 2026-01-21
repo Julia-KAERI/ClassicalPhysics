@@ -1328,7 +1328,7 @@
     "href": "src/Feynmann/vol1/vol1_1.html#뉴턴의-동역학-법칙",
     "title": "1  I-1 : 고전역학",
     "section": "9. 뉴턴의 동역학 법칙",
-    "text": "9. 뉴턴의 동역학 법칙\n\n9.1 운동량과 힘\n\n갈릴레오의 관성의 법칙\n\n\n\n\n\n\n중요갈릴레오의 관성의 법칙\n\n\n\n물체 하나만 존재한다면(if an object is left alone), 운동하고 있는 물제는 직선상의 등속운동을 하고 정지해 있는 물체는 정지해 있다.\n\n\n\n\n뉴턴의 운동법칙\n뉴턴의 제 1 법칙은 갈릴레오의 관성의 법칙과 실질적으로 동일하다.\n\n\n\n\n\n\n중요뉴턴의 제 2 법칙\n\n\n\n운동량 \\(\\boldsymbol{p}=m\\boldsymbol{v}\\) 의 시간에 대한 변화량이 힘 \\(\\boldsymbol{F}\\) 이다. \\[\n\\boldsymbol{F}=\\dfrac{d\\boldsymbol{p}}{dt} = \\dfrac{d}{dt}(m\\boldsymbol{v}).\n\\tag{1.1}\\]",
+    "text": "9. 뉴턴의 동역학 법칙\n\n\n\n\n\n\n중요갈릴레오의 관성의 법칙 혹은 뉴턴의 제 1 운동법칙\n\n\n\n물체 하나만 존재한다면(if an object is left alone), 운동하고 있는 물제는 직선상의 등속운동을 하고 정지해 있는 물체는 정지해 있다. 이러한 성질을 관성(inertia) 라고 한다.\n\n\n\n\n\n\n\n\n노트운동량\n\n\n\n운동량 \\(\\boldsymbol{p}\\) 는 질량 \\(m\\) 과 속도 \\(\\boldsymbol{v}\\) 의 곱으로 정의된다.\n\\[\n\\boldsymbol{p}:=m\\boldsymbol{v}.\n\\tag{1.1}\\]\n\n\n\n\n\n\n\n\n중요뉴턴의 제 2 운동법칙\n\n\n\n운동량 \\(\\boldsymbol{p}=m\\boldsymbol{v}\\) 의 시간에 대한 변화량이 힘 \\(\\boldsymbol{F}\\) 이다. \\[\n\\boldsymbol{F}=\\dfrac{d\\boldsymbol{p}}{dt} = \\dfrac{d}{dt}(m\\boldsymbol{v}).\n\\tag{1.2}\\]\n\n\n\n\n\n\n\n\n노트보편 중력\n\n\n\n각각의 질량이 \\(m,\\,M\\) 인 두 입자가 각각 \\(\\boldsymbol{r}_1,\\,\\boldsymbol{r}_2\\) 에 위치했을 때 \\(m\\) 인 입자가 느끼는 힘 \\(\\boldsymbol{F}_m\\) 은 다음과 같다.\n\\[\n\\boldsymbol{F}_m = \\dfrac{GmM \\hat{\\boldsymbol{r}}}{r^3} = \\dfrac{GmM(\\boldsymbol{r}_2-\\boldsymbol{r}_1)}{\\|\\boldsymbol{r}_2-\\boldsymbol{r}_1\\|^3}.\n\\]\n여기서 \\(\\boldsymbol{r}=\\boldsymbol{r}_2-\\boldsymbol{r}_1,\\,r=\\|\\boldsymbol{r}\\|,\\, \\hat{\\boldsymbol{r}}=\\boldsymbol{r}/r\\) 이다.",
     "crumbs": [
       "파인만의 물리학 강의",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>I-1 : 고전역학</span>"
@@ -1339,7 +1339,18 @@
     "href": "src/Feynmann/vol1/vol1_1.html#기본적인-물리",
     "title": "1  I-1 : 고전역학",
     "section": "",
-    "text": "2.1 소개\n\n\n\n2.2 1920 년 이전의 물리학\n\n1920 년 이전의 우리의 세계관\n\n우주가 펼쳐지는 무대는 3차원 공간이며 시간이라는 매개체 속에서 사물이 변화한다.\n이 무대의 elements 는 입자(예를 들면 원자) 이며 다음과 같은 성질을 가진다.\n\n관성 : 힘이 작용하지 않는다면 입자는 하던 운동을 계속한다.",
+    "text": "2.1 소개\n\n\n\n2.2 1920 년 이전의 물리학\n\n1920 년 이전의 우리의 세계관\n\n우주가 펼쳐지는 무대는 3차원 공간이며 시간이라는 매개체 속에서 사물이 변화한다.\n이 무대의 elements 는 입자(예를 들면 원자) 이며 두가지 성질을 가진다.\n\n입자의 두가지 성질\n\n관성 : 힘이 작용하지 않는다면 입자는 하던 운동을 계속한다.\n힘 :\n\n여러 원자들의 복잡하고 상이한 조합을 유지하는 상호작용.\n중력",
+    "crumbs": [
+      "파인만의 물리학 강의",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>I-1 : 고전역학</span>"
+    ]
+  },
+  {
+    "objectID": "src/Feynmann/vol1/vol1_1.html#운동량-보존",
+    "href": "src/Feynmann/vol1/vol1_1.html#운동량-보존",
+    "title": "1  I-1 : 고전역학",
+    "section": "10. 운동량 보존",
+    "text": "10. 운동량 보존\n\n10-1 뉴턴의 제 3 운동법칙\n\n뉴턴이 자신의 물리법칙을 발표했을 때 보편중력에 대한 정확한 식을 알고 있었으며, 보편 중력 이외의 다른 힘에 대해서는 정확한 식을 알고 있지는 않았다. 그러나 모든 힘이 따라야 할 하나의 규칙을 알고 있었으며 이것을 운동법칙으로 표현한다.\n\n\n\n\n\n\n\n중요뉴턴의 제 3 운동법칙\n\n\n\n한 입자 \\(A\\) 의 존재에 의해 다른 입자 \\(B\\) 에 힘 \\(\\boldsymbol{F}\\) 가 가해질 때(작용) \\(B\\) 의 존재에 의해 \\(A\\) 에 \\(-\\boldsymbol{F}\\) 의 힘이 가해진다.\n\n\n\n뉴턴은 작용과 반작용이 같은 직선상에 존재한다고 생각했지만(작용-반작용의 강한 조건), 같은 직선상에 존재하지 않는다는 것이 밝혀 졌다. 다만 \\(\\boldsymbol{F}\\) 와 \\(-\\boldsymbol{F}\\) 의 관계인 것은 유지된다(작용-반작용의 약한 조건).\n\n\n\n\n10-2 운동량 보존",
     "crumbs": [
       "파인만의 물리학 강의",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>I-1 : 고전역학</span>"
