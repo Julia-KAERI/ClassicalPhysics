@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>파인만의 물리학 강의 – 고전 역학과 전자기학</title>
+<title>3&nbsp; I-3 : 열역학과 양자 입문 – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +23,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../src/Feynmann/vol1/vol1_1.html" rel="next">
-<link href="../../index.html" rel="prev">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../src/ClassicalMechanics/00_index.html" rel="next">
+<link href="../../../src/Feynman/vol1/vol1_2.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -83,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Feynmann/00_index.html">파인만의 물리학 강의</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynman/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynman/vol1/vol1_3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -95,8 +124,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">파인만의 물리학 강의</h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynman/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynman/vol1/vol1_3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></h1>
                       </div>
   </div>
     
@@ -114,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../">고전 역학과 전자기학</a> 
+      <a href="../../../">고전 역학과 전자기학</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -126,13 +155,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../src/Feynmann/00_index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../../src/Feynman/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">파인만의 물리학 강의</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -141,19 +170,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Feynmann/vol1/vol1_1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Feynman/vol1/vol1_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">I-1 : 고전역학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Feynmann/vol1/vol1_2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Feynman/vol1/vol1_2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Feynmann/vol1/vol1_3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Feynman/vol1/vol1_3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></span></a>
   </div>
 </li>
@@ -161,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../src/ClassicalMechanics/00_index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../src/ClassicalMechanics/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">고전역학</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -170,55 +199,55 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ClassicalMechanics/02_variational_principle.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/ClassicalMechanics/02_variational_principle.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/ClassicalMechanics/03_hamilton_dynamics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ClassicalMechanics/04_canonical_transform.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/ClassicalMechanics/04_canonical_transform.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ClassicalMechanics/11_one_body_problems.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/ClassicalMechanics/11_one_body_problems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ClassicalMechanics/A_proofs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/ClassicalMechanics/A_proofs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
   </div>
 </li>
@@ -226,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../src/Mechanics_and_Symmetry/00_index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../src/Mechanics_and_Symmetry/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">고전역학과 대칭</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -235,13 +264,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
@@ -249,7 +278,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../src/Electrodynamics/00_index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../src/Electrodynamics/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">전기자기학</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -258,43 +287,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Electrodynamics/02_1_electrostatics1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Electrodynamics/02_1_electrostatics1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Electrodynamics/02_2_electrostatics2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Electrodynamics/02_2_electrostatics2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Electrodynamics/03_magnetostatics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Electrodynamics/03_magnetostatics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Electrodynamics/A1_mathematics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Electrodynamics/A1_mathematics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Electrodynamics/A2_waves.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Electrodynamics/A2_waves.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
   </div>
 </li>
@@ -302,7 +331,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">상대론</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -311,13 +340,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
@@ -325,7 +354,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../src/ThermalPhysics/00_index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../src/ThermalPhysics/00_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">열역학</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -334,19 +363,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ThermalPhysics/02_entropy.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/ThermalPhysics/02_entropy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ThermalPhysics/0A_mathematics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/ThermalPhysics/0A_mathematics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
   </div>
 </li>
@@ -354,7 +383,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../src/topics/Topics.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../src/topics/Topics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">별도의 주제들</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -363,7 +392,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
@@ -371,7 +400,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../references.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -380,8 +409,28 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#quantum-behavior" id="toc-quantum-behavior" class="nav-link active" data-scroll-target="#quantum-behavior">37. Quantum Behavior</a>
+  <ul class="collapse">
+  <li><a href="#atomic-mechanics" id="toc-atomic-mechanics" class="nav-link" data-scroll-target="#atomic-mechanics">37-1 Atomic mechanics</a></li>
+  </ul></li>
+  <li><a href="#the-kinetic-theory-of-gases" id="toc-the-kinetic-theory-of-gases" class="nav-link" data-scroll-target="#the-kinetic-theory-of-gases">39. The Kinetic Theory of Gases</a>
+  <ul class="collapse">
+  <li><a href="#온도와-운동에너지" id="toc-온도와-운동에너지" class="nav-link" data-scroll-target="#온도와-운동에너지">39-4 온도와 운동에너지</a></li>
+  </ul></li>
+  <li><a href="#the-principle-of-statistical-mechanics" id="toc-the-principle-of-statistical-mechanics" class="nav-link" data-scroll-target="#the-principle-of-statistical-mechanics">40. The Principle of Statistical Mechanics</a>
+  <ul class="collapse">
+  <li><a href="#지수적-대기" id="toc-지수적-대기" class="nav-link" data-scroll-target="#지수적-대기">40.1 지수적 대기</a></li>
+  </ul></li>
+  <li><a href="#볼츠만-법칙" id="toc-볼츠만-법칙" class="nav-link" data-scroll-target="#볼츠만-법칙">40-2 볼츠만 법칙</a></li>
+  <li><a href="#액체의-증발" id="toc-액체의-증발" class="nav-link" data-scroll-target="#액체의-증발">40-3 액체의 증발</a></li>
+  <li><a href="#분자-속력의-분포" id="toc-분자-속력의-분포" class="nav-link" data-scroll-target="#분자-속력의-분포">40-4 분자 속력의 분포</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -390,9 +439,113 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>파인만의 물리학 강의 I, II, III 권에 대한 메모와 노트</p>
+<div class="hidden">
+<p>% %</p>
+%
+<p><span class="math display">\[
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
+\]</span></p>
+</div>
+<section id="quantum-behavior" class="level2">
+<h2 class="anchored" data-anchor-id="quantum-behavior">37. Quantum Behavior</h2>
+<section id="atomic-mechanics" class="level3">
+<h3 class="anchored" data-anchor-id="atomic-mechanics">37-1 Atomic mechanics</h3>
+<p><br></p>
+</section>
+</section>
+<section id="the-kinetic-theory-of-gases" class="level2">
+<h2 class="anchored" data-anchor-id="the-kinetic-theory-of-gases">39. The Kinetic Theory of Gases</h2>
+<section id="온도와-운동에너지" class="level3">
+<h3 class="anchored" data-anchor-id="온도와-운동에너지">39-4 온도와 운동에너지</h3>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-TD_feynmann_1" class="theorem example">
+<p><span class="theorem-title"><strong>예제 3.1 (두 종류의 기체분자)</strong></span> &nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/feynmann_1_fig_39_4.png" class="img-fluid figure-img"></p>
+<figcaption>파인만 물리학 강의 I. 그림 39-4</figcaption>
+</figure>
+</div>
+<p>두 종류의 기체가 컨테이너 안에서 셖여 있다고 하자. 기체 분자의 질량은 각각 <span class="math inline">\(m_1,\,m_2\)</span> 이며 속도를 각각 <span class="math inline">\(\boldsymbol{v}_1,\,\boldsymbol{v}_2\)</span> 라고 하자. 기체 분자의 충돌은 탄성 충돌이라고 가정한다.</p>
+<p>이 때 질량중심죄표계에서 보면 (<a href="../../ClassicalMechanics/12_two_or_three_bodies_problems.html#sec-CM_elastic_collition_in_C_frame">질량중심 좌표계에서의 탄성 충돌</a> 을 참고하라) 이 충돌은 두 입자는 속도는 일정하며 방향만 바뀌는 충돌이며 질량중심 좌표계에서 이 방향의 분포는 균일하다.</p>
+<p>이제 실제 상황에서 보자. 서로 다른 두 분자의 충돌의 질량 중심 속도 <span class="math inline">\(\boldsymbol{V}\)</span> 와 상대속도 <span class="math inline">\(\boldsymbol{v}\)</span> 를 아래와 같이 정한다.</p>
+<p><span class="math display">\[
+\boldsymbol{V}=\dfrac{m_1\boldsymbol{v}_1+m_2\boldsymbol{v}_2}{m_1+m_2},\qquad \boldsymbol{v} = \boldsymbol{v}_1-\boldsymbol{v}_2
+\]</span></p>
+<p>충돌 후에 원자의 분포는 어떻게 될까? 일단 우리는 충돌 전후 질량중심의 속도 <span class="math inline">\(\boldsymbol{V}\)</span> 가 변하지 않는다는 것을 안다. 또한 <span class="math inline">\(\boldsymbol{V}\)</span> 의 방향이 완전이 임의적이라는 데 동의 할 수 있을 것이다. 즉 <span class="math inline">\(\boldsymbol{V\cdot v}\)</span> 의 평균값은 <span class="math inline">\(0\)</span> 이다. 또한 <span class="math inline">\(\boldsymbol{v}_1\boldsymbol{\cdot v}_2\)</span> 의 평균값도 <span class="math inline">\(0\)</span> 이라는 데 동의 할 수 있다. 여기서</p>
+<p><span class="math display">\[
+\boldsymbol{V\cdot v} = \dfrac{(\boldsymbol{v}_1-\boldsymbol{v}_2) \boldsymbol{\cdot} (m_1\boldsymbol{v}_1 + m_2 \boldsymbol{v}_2)}{m_1+m+2} = \dfrac{(m_1v_1^2 - m_2v_2^2) + (m_2-m_1)(\boldsymbol{v}_1\boldsymbol{\cdot v}_2)}{m_1+m_2}
+\]</span></p>
+<p>이므로</p>
+<p><span class="math display">\[
+\left\langle \dfrac{m_1v_1^2}{2}\right\rangle = \left\langle \dfrac{m_2v_2^2}{2}\right\rangle
+\]</span></p>
+<p>이다. 즉 두 기체 분자의 평균 운동 에너지는 같아진다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="the-principle-of-statistical-mechanics" class="level2">
+<h2 class="anchored" data-anchor-id="the-principle-of-statistical-mechanics">40. The Principle of Statistical Mechanics</h2>
+<section id="지수적-대기" class="level3">
+<h3 class="anchored" data-anchor-id="지수적-대기">40.1 지수적 대기</h3>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-TD_feynmann_1" class="theorem example">
+<p><span class="theorem-title"><strong>예제 3.2 (높이에 따른 압력의 변화)</strong></span> &nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/feynmann_1_fig_40_1.png" class="img-fluid figure-img" width="300"></p>
+<figcaption>파인만 물리학 강의 I. 그림 40-1</figcaption>
+</figure>
+</div>
+<p>위의 그림과 같은 실험장치를 생각하자. 피스톤의 위의 공기와 아래의 공기는 열평형 상태인데 이는 위와 아래의 공기의 출입은 막으면서 열만을 전달해주는 메카니즘이 존재하기 때문이다. 온도 <span class="math inline">\(T\)</span>, 압력 <span class="math inline">\(P\)</span>, 부피 <span class="math inline">\(V\)</span>, 볼츠만 상수 <span class="math inline">\(k_B\)</span>, 공기 분자 개수 <span class="math inline">\(N\)</span> 에 대해 <span class="math inline">\(PV=Nk_BT\)</span> 이며 단위 부피당 분자 개수 <span class="math inline">\(n=N/V\)</span> 이다. 이로부터 <span class="math inline">\(P=nk_BT\)</span> 임을 알며 <span class="math inline">\(T\)</span> 가 일정하므로 <span class="math inline">\(P \propto n\)</span> 이다. 여기에 중력가속도 <span class="math inline">\(g\)</span> 에 의한 중력이 작용한다고 하자.</p>
+<p>위의 그림과 같이 높이 <span class="math inline">\(h\)</span> 와 <span class="math inline">\(h+dh\)</span> 에 의해 이루어진 얇은 층에 대해 위에서 누르는 힘과 아래에서 누르는 힘이 평행을 이루어야 한다. 즉 압력이 같아야 한다. 기체 분자의 질량이 <span class="math inline">\(m\)</span> 이라면</p>
+<p><span class="math display">\[
+P_{h+dh}-P_h = dP = -mgn\,dh
+\]</span></p>
+<p>임을 안다. <span class="math inline">\(P = nk_BT\)</span> 이며 주어진 조건으로부터 <span class="math inline">\(dP = dnk_B T\)</span> 임을 안다. 따라서</p>
+<p><span class="math display">\[
+\dfrac{dn}{dh}= - \dfrac{mg}{k_B T}n
+\]</span></p>
+<p>이며 이 미분방정식의 해는</p>
+<p><span class="math display">\[
+n(h) = n_0 e^{-mgh/k_BT}
+\]</span></p>
+<p>임을 안다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="볼츠만-법칙" class="level2">
+<h2 class="anchored" data-anchor-id="볼츠만-법칙">40-2 볼츠만 법칙</h2>
+<p><span class="math display">\[
+n = n_0 e^{-\text{P.E.}/k_BT}
+\]</span></p>
+<p><br></p>
+</section>
+<section id="액체의-증발" class="level2">
+<h2 class="anchored" data-anchor-id="액체의-증발">40-3 액체의 증발</h2>
+<p>분자들의 집합을 생각하자. 이 분자들 사이에는 쌍마다 서로의 거리만 의존하는 상호작용, 즉 포텐셜 에너지가 존재한다. 이 때 두 분자 사이의 거리 <span class="math inline">\(r\)</span> 에 따른 포텐셜 <span class="math inline">\(V(r)\)</span> 은 일반적으로 아래 그림과 같은 형태이며 <span class="math inline">\(r&lt;r_0\)</span> 일 때는 척력이 <span class="math inline">\(r&gt;r_0\)</span> 일 때는 인력이 작용한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig40-3/fig40-3.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>파인만 물리학 강의 I 그림 40-3(redraw)</figcaption>
+</figure>
+</div>
+<p>이런 기체 분자로 차 있는 상자를 생각하자. 이 기체들 사이의 포텐셜은 각 개별 쌍의 포텐셜의 합이라고 가정하자. (세개 이상에 대한 상호작용도 존재한다-<a href="https://en.wikipedia.org/wiki/Three-body_force">Three-body force</a> 를 참고하라.) 그렇다면 볼츠만의 법칙에 따라 분자 쌍이 <span class="math inline">\(r_{ij}\)</span> 만큼의 거리를 두고 존재할 확률은 다음에 비례한다.</p>
+<p><span class="math display">\[
+\exp \left[-\sum_{i,j} V(r_{ij})/k_BT\right].
+\]</span></p>
+<p><br></p>
+</section>
+<section id="분자-속력의-분포" class="level2">
+<h2 class="anchored" data-anchor-id="분자-속력의-분포">40-4 분자 속력의 분포</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -797,13 +950,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../../../src/Feynman/vol1/vol1_2.html" class="pagination-link" aria-label="I-2: 특수상대성이론과 광학">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/Feynmann/vol1/vol1_1.html" class="pagination-link" aria-label="I-1 : 고전역학">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">I-1 : 고전역학</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../src/ClassicalMechanics/00_index.html" class="pagination-link" aria-label="고전역학">
+        <span class="nav-page-text">고전역학</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -53,9 +53,6 @@ crossref:
 $$
 \bf{p}:=m\bf{v}.
 $$ {#eq-FLP_1_definition_of_momentum}
-
-
-
 :::
 
 ::: {.callout-important icon="false"}
@@ -262,16 +259,59 @@ $$ {#eq-FLP_1_10_8}
 
 ### 13-1 자유낙하하는 물체의 에너지 {#sec-FLP_1_13_1}
 
+::: {.callout-note icon="false"}
+
+#### **운동에너지**
+
+질량 $m$ 인 입자의 속도가 $\bf{v}$ 일 때 
+
+$$
+\dfrac{1}{2}m\|\bf{v}\|^2
+$$ {#eq-FLP_definition_of_kinetic_energy}
+
+를 입자의 **운동에너지 (kinetic energy)** 라고 한다.
+
+:::
+
 운동에너지 $T=mv^2/2$ 의 시간에 대한 변화량은 다음과 같다. 
 
 $$
 \dfrac{dT}{dt} = m\bf{v \cdot}\dfrac{d\bf{v}}{dt} = \bf{F \cdot v}
-$$
+$$ {#eq-FLP_1_13_7}
 
-이 물체가 $[t_1,\,t_2]$ 의 시간 간격동안 $\bf{s}(t)$ 의 경로로 이동했다고 하자. $\bf{v} = d\bf{s}/\dt$ 이므로
+::: {.callout-note icon="false"}
+
+#### **일률**
+
+외부에서 힘 $\bf{F}$ 가 속도 $\bf{v}$ 인 입자에 가해질 때 $\bf{F\cdot v}$ 를 **일률 (power)** 라고 한다.
+:::
+
+즉 @eq-FLOP_1_13_9 은 운동에너지의 변화율은 외부에서 가하지는 힘에 의한 일률과 같음을 의미한다. 이제 이 물체가 $[t_1,\,t_2]$ 의 시간 간격동안 $\bf{s}(t)$ 의 경로로 이동했다고 하자. $\bf{v} = d\bf{s}/dt$ 이므로
 
 $$
 \Delta T = \int_{t_1}^{t_2}\left(\dfrac{dT}{dt}\right)\,dt = \int_{t_1}^{t_2}\bf{F\cdot v}\,dt  = \int_{s_1}^{s_2}\bf{F\cdot }d\bf{s}
 $$ {#eq-FLOP_1_13_9}
 
 이다. 
+
+::: {.callout-note icon="false"}
+
+#### **일**
+
+외부에서 힘 $\bf{F}$ 가 가해지며 물체가 어떤 경로 $\bf{s}$ 로 움직였을 때 
+
+$$
+\int_{\bf{s}_1}^{\bf{s}_2} \bf{F\cdot} d\bf{s}
+$$ {#eq-FLP_definition_of_work}
+
+를 외부에서 물체에 해준 **일 (work)** 이라고 한다.
+
+:::
+
+@eq-FLOP_1_13_9 는 물체의 운동에너지의 변화량은 외부의 힘이 해준 일과 같다는 것을 의미한다.
+
+</br>
+
+### 13-2 중력에 의한 일 {#sec-FLP_1_13_2}
+
+
