@@ -500,6 +500,7 @@ $$ {#eq-FLP_1_18_5}
 
 ### 18-2 강체의 회전
 
+#### **강체의 회전과 각속도, 각가속도**
 
 ::: {.callout-note icon="false"}
 
@@ -517,9 +518,70 @@ $$
 \omega := \dfrac{d\theta}{dt},\qquad \alpha = \dfrac{d^2\theta}{dt^2}.
 $$ {#eq-FLP_definition_of_angular_velocity_and_angular_acceleration}
 
+![파인만 물리학 강의 I. Fig. 18-1. 2차원 회전](figures/fig_1_18/fig_1_18_1.png){#fig-FLP_1_18_1 width=260}
+
+위의 그림과 같은 2차원 회전을 생각하자. 점 $P$ 가 $O$ 를 중심으로 $\Delta t$ 동안 $\Delta \theta$ 만큼 회전했다고 하자. $P$ 의 좌표를 $(x,\,y)$ 라고 하자. 그렇다면
+
+$$
+\Delta x = - PQ\sin \theta = - r\Delta \theta \cdot (y/r) = -y \Delta \theta
+$$ {#eq-FLP_1_18_6}
+
+이며 같은 방법으로
+
+$$
+\Delta y = + x\Delta \theta 
+$$ {#eq-FLP_1_18_7}
+
+임을 안다. 위의 두 식을 $\Delta t$ 로 나누어주면
+
+$$
+v_x = -\omega y,\qquad v_y = +\omega x
+$$ {#eq-FLP_1_18_8}
+
+이며 따라서 아래와 같은 속도와 각속도의 관계를 얻는다.
+
+$$
+v=\sqrt{v_x^2+v_y^2} = \omega r.
+$$ {#eq-FLP_1_18_9}
+
+#### **토크**
+
+속도-각속도, 가속도-각가속도의 관계와 같이 선형 이동과 회전 이동 사이의 유사성이 힘에도 존재한다. 힘 $\bf{F}$ 에 의해 작은 회전에 의한 위치 변화 $\Delta x,\, \Delta y$ 가 생겼다고 하자. 이 때 힘이 한 일 $\Delta W$ 는
+
+$$
+\Delta W = F_x \Delta x + F_y \Delta y
+$$ {#eq-FLP_1_18_10}
+
+이다. $\Delta x,\, \Delta y$ 에 @eq-FLP_1_18_6, @eq-FLP_1_18_7 을 대입하면
+
+$$
+\Delta W = (xF_y - yF_x)\Delta \theta
+$$ {#eq-FLP_1_18_11}
+
+이다. 
+
+::: {.callout-note icon="false"}
+
+#### **토크**
+
+@eq-FLP_1_18_11 에서 $\tau = xF_y - yF_x$ 를 **토크 (torque)** 라고 한다. 
+
+:::
+
+- 여러 힘이 동시에 작용할 때 @eq-FLP_1_18_10 과 @eq-FLP_1_18_11 로부터 유추 할 수 있듯이 전체 토크는 각각의 힘에에 의한 토크의 합이다. 
+- 토크는 회전축에 대해 정해진다. 회전축이 바뀐다면 당연히 토크도 바뀐다.
+
+::: {.callout-note icon="false"}
+
+#### **역학적 평형 상태**
+
+물체가 평형상태에 있다는 것은 모든 작은 변위에 대해 일이 $0$ 이다. 즉 물체가 역학적 평형 상태에 있다는 것은 물체에 작용하는 힘과 토크가 모두 $0$ 이라는 의미이다. 
+
+:::
 
 
 
+![파인만 물리학 강의 I. Fig. 18-2. 힘에 의한 토크](figures/fig_1_18/fig_1_18_2.png){#fig-FLP_1_18_2 width=360}
 
 
 
