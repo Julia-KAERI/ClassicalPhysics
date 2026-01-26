@@ -1,7 +1,7 @@
 ---
-title: "I-1 : 고전역학"
+title: "$I$-1 : 고전역학"
 number-sections: true
-number-depth: 1
+number-depth: 0
 crossref:
   chapters: true
 ---
@@ -28,12 +28,9 @@ crossref:
      1. 여러 원자들의 복잡하고 상이한 조합을 유지하는 상호작용.
      2. 중력 
 
-
-
 </br>
 
 ## 9. 뉴턴의 동역학 법칙
-
 
 ::: {.callout-important icon="false"}
 
@@ -200,7 +197,6 @@ $$ {#eq-FLP_1_10_8}
 
 ### 12-3 분자들 사이의 힘 {#sec-FLP_1_12_3}
 
-
 ![파인만 물리학 강의 I. Fig. 12-2. 두 원자 사이에 작용하는 힘 $F$ 와 거리 $r$ 의 관계](figures/fig_1_12/fig_1_12_2.png){#fig-FLP_1_12_2 width=400}
 
 - 실험적으로 두 원자 사이의 힘과 거리의 관계는 대략 @fig-FLP_1_12_2 와 같다. 
@@ -255,7 +251,7 @@ $$ {#eq-FLP_1_10_8}
 
 </br>
 
-## 13. 일과 포텐셜 에너지
+## 13. 일과 포텐셜 에너지 (A)
 
 ### 13-1 자유낙하하는 물체의 에너지 {#sec-FLP_1_13_1}
 
@@ -314,4 +310,218 @@ $$ {#eq-FLP_definition_of_work}
 
 ### 13-2 중력에 의한 일 {#sec-FLP_1_13_2}
 
+질량이 $m$ 인 물체가 질량이 $M$ 인 물체가 있다. $\bf{r}=\bf{r}_m - \bf{r}_M$ 이라고 하자. 의한 중력의 영향으로 $\bf{r}_1$ 에서 $\bf{r}_2$ 로 움직였다고 하자. $\bf{r}_1$ 과 $\bf{r}_2$ 에서의 운동에너지를 각각 $T_1,\,T_2$ 라고 하면 @eq-FLOP_1_13_9 에 의해
 
+$$
+T_2-T_1 = - \int_{\bf{r}_1}^{\bf{r}_2} \dfrac{GMm}{r^2} \hat{\bf{r}}\bf{\cdot}d\bf{r} = GMn\left(\dfrac{1}{r_2} - \dfrac{1}{r_1}\right)
+$$
+
+이다. $r_1=r_2 \implies T_2=T_1$. 즉 중력에 의해 움직이는 물체에서 거리가 같아진다면 운동에너지도 같다. 
+
+
+::: {.callout-note icon="false"}
+
+#### **보존력** 과 **포텐셜 에너지**
+
+힘 $\bf{F}$ 가 어떤 스칼라장의 미분이라면 즉 어떤 스칼라장 $U$ 에 대해
+
+$$
+\bf{F} = - \nabla U
+$$
+
+일 때 $\bf{F}$ 를 **보존력 (conservative force)** 라고 하고 $U$ 를 힘 $\bf{F}$ 에 대한 **포텐셜 에너지 (potential energy)** 라고 한다.
+
+:::
+
+
+우리는 다음을 보일 수 있다.
+
+::: {.callout-important icon="false"}
+
+#### **포텐셜의 성질**
+
+**1.** 힘이 $kr^{2}\hat{\bf{r}}$ 형태이면 포텐셜 에너지가 존재한다.
+
+$$
+\dfrac{\bf{r}}{r^{3}} = -\nabla \left(\dfrac{1}{r}\right).
+$$
+
+**2.** 포텐셜 에너지가 존재한다면 일은 경로와 무관한 위치만의 함수이다.
+
+$$
+W = \int_1^2 \bf{F\cdot}d\bf{s} = -\int_1^2 (\nabla U) \bf{\cdot}d\bf{s} = U(\bf{r}_1)- U(\bf{r}_2)
+$$
+
+**3.** 힘에 대한 포텐셜 에너지가 존재할 때 운동에너지와 포텐셜 에너지의 합은 항상 일정하다. 
+
+$$
+T_2-T_1 = W = U_1-U_2 \implies T_2+U_2 = T_1+U_1
+$$
+
+**4.** 보존력의 합은 보존력이다. 
+
+:::
+
+이로부터 중력 $\bf{F}=-\dfrac{GmM\hat{\bf{r}}}{r^2}$ 에 대한 포텐셜 $U(r)= - \dfrac{GMm}{r}$ 임을 안다.
+
+
+</br>
+
+### 13-3 에너지의 합 {#sec-FLP_1_13_3}
+
+
+$N$ 개의 입자 사이에 보존력이 작용하는 계를 생각하자. 나머지 입자 전체에 의해 $i$ 번째 입자가 받는 힘을 $\bf{F}_i$ 라고 하면 $\bf{F}_i = -\nabla U_i$ 인 스칼라장 $U_i$ 가 존재한다. 시간 $t_1,\,t_2$ 에서의 이 계의 총 운동에너지 $T_\text{tot} = \sum_i \frac{1}{2}m_iv_i^2$ 의 변화량은 다음과 같다.
+$$
+\begin{aligned}
+\Delta T_\text{tot} &= \int_{t_1}^{t_2}\dfrac{dT_\text{tot}}{dt} = \int_{t_1}^{t_2}\left[\dfrac{d}{dt}\left(\sum_{i=1}^N \dfrac{m_iv_i^2}{2}\right) \right]\,dt  \\[0.3em]
+&= \sum_{i=1}^N \int_{t_1}^{t_2} \left(m\dfrac{d\bf{v}_i}{dt}\bf{\cdot v}_i\right) dt = \sum_i^N \int_{t_1}^{t_2} \bf{F}_i\bf{\cdot v}_i dt \\[0.3em]
+&= \sum_i U_i(t_2) - U_i(t_1) 
+\end{aligned}
+$$
+
+$U = \sum_i U_i$ 라고 하면
+
+$$
+T_\text{tot}(t) + U(t) = \text{constant}.
+$$
+
+이다. 즉 운동에너지와 포텐셜 에너지의 합이 항상 일정하다. 
+
+
+</br>
+
+### 13-4 큰 물체에 의한 중력장 {#sec-FLP_1_13_4}
+
+반지름이 $a$ 이고 총 질량이 $M$ 인 구를 생각하자. 이 때 밀도 $\rho = \dfrac{3M}{4\pi a^3}$ 이며 구 바깥에서 구의 중심으로부터 거리 $R(>a)$ 만큼 떨어진 위치에서의 중력포텐셜을 구의 중심을 원점으로 하고 포텐설을 측정하는 위치를 $z$ 축으로 삼아 구면좌표계에서 구하면
+
+$$
+\begin{aligned}
+U(R>a) &= -\int_V \dfrac{G \rho d^3\bf{r}}{\sqrt{R^2+r^2-2rR\cos \theta}}\,d^3\bf{r} \\[0.3em]
+&= -G\rho \int_0^a \int_0^\pi \int_0^{2\pi} \dfrac{r^2 \sin \theta d\varphi d\theta dr}{\sqrt{R^2+r^2-2rR\cos\theta}} \\[0.3em]
+&= -\dfrac{GMm}{R}
+\end{aligned}
+$$
+
+이다. 즉 중력포텐셜은 구의 질량이 모두 구의 중심에 모여있다고 가정하고 계산했을 때와 같다. 이제 구의 내부에서 구의 중심으로부터의 거리가 $R<a$ 일 경우에는 
+
+$$
+U(R<a)= - \dfrac{GMm}{a}
+$$
+
+이다.
+
+## 14. 일과 포텐셜 에너지 (결론)
+
+### 14-1 일 {#sec-FLP_1_14_1}
+
+</br>
+
+### 14-2 구속된 운동 {#sec-FLP_1_14_2}
+
+- fixed, frictionless constaints 의 경우 constraint force 는 운동방향에 수직방향으로 항상 작용하기 때문에 constraint force 에 의한 일은 0 이다.
+
+</br>
+
+### 14-3 보존력 {#sec-FLP_1_14_3}
+
+
+</br>
+
+### 14-4 비보존력 {#sec-FLP_1_14_4}
+
+- 자연계의 힘들은 현재까지는 보존력으로 간주된다. 뉴턴 자신은 힘이 보존력이 마찰력과 같이 힘이 보존력이 아닐 수도 있다는 것을 알고 있었다.
+
+</br>
+
+### 14-5 포텐셜과 장 {#sec-FLP_1_14_5}
+
+
+::: {.callout-note icon="false"}
+
+#### **포텐셜**
+
+벡터장 $\bf{C}$ 에 대해 어떤 스칼라장 $\Psi$ 가 존재하여 $\bf{C}= -\nabla \Psi$ 일 때 $\Psi$ 를 장 $\bf{C}$ 에 대한 **포텐셜 (potential)** 이라고 한다.
+
+:::
+
+$m_1,\ldots,\,m_N$ 를 각각의 질량으로 갖는 $N$ 개의 입자가 각각 $\bf{r}_1,\ldots,\,\bf{r}_N$ 에 위치해 있다. 이 $N$ 개의 입자에 의한 $\bf{r}$ 에서의 중력장 $\bf{C}(\bf{r})$ 는
+
+$$
+\bf{C}(\bf{r}) = -\sum_{i=1}^N \dfrac{Gm_i(\bf{r}-\bf{r}_i)}{\|\bf{r}-\bf{r}_i\|^3}
+$$
+
+이며 이 중력장 $G$ 에 대한 중력포텐셜 $\Psi$ 는 아래와 같다.
+
+$$
+\Psi(\bf{r}) = -\sum_{i=1}^N \dfrac{Gm_i}{\|\bf{r}-\bf{r}_i\|}.
+$$ {#eq-FLP_1_14_8}
+
+포텐셜 역시 각각의 source 에 대한 기여의 합이다. 
+
+</br>
+
+## 18. 2차원 회전
+
+### 18-1 질량 중심
+
+이제 단순한 입자가 아닌 이러한 입자가 결합된, 좀 더 복잡한 물체에 대해 다루기로 하자. 우리는 입자의 중력장 하에서의 운동이 포물선임을 알고 있다. 이런 질문을 던져보자: 여러 입자가 결합된, 예를 들면 돌을 던질 때 정확히 포물선을 따라 가는 것은 무엇일까?
+
+$N(\sim 10^{23})$ 개의 입자로 이루어진 물체의 $i$ 번째 입자에 가해지는 힘을 $\bf{F}_i$ 라고 하면 운동방정식은 다음과 같다.
+
+$$
+\bf{F}_i = m_i \dfrac{d^2\bf{r}_i}{dt^2}.
+$$
+
+물체에 가해지는 힘은 각각의 입자에 가해지는 힘의 합이며 이를 $\bf{F}$ 라고 하면
+
+$$
+\bf{F}=\sum_i \bf{F}_i = \sum_i \dfrac{d^2 \left(m_i\bf{r}_i\right)}{dt^2}
+$$ {#eq-FLP_1_18_3}
+
+이다. 여기서 중요한 것은 물체 내에서 벌어지는 상호작용은 뉴튼의 3법칙에 의해 $\bf{F} = \sum_i \bf{F}_i$ 에서 상쇄된다는 것이다. 따라서 $\bf{F}$ 는 내부에서 주고 받는 힘이 아닌 순수한 외부에서 작용하는 힘만 남게된다. 이제 **질량중심 (center of mass)** $\bf{R}$ 을 아래와 같이 정의한다.
+
+$$
+\bf{R} := \dfrac{\sum_i m_i\bf{r}_i}{\sum_i m_i} = \dfrac{1}{M}\sum_i m_i\bf{r_i},\qquad \text{where } M = \sum_i m_i.
+$$ {#eq-FLP_1_18_4}
+
+
+그렇다면 @eq-FLP_1_18_3 은 다음과 같이 쓸 수 있다.
+
+$$
+\bf{F} = M\dfrac{d^2 \bf{R}}{dt^2}.
+$$ {#eq-FLP_1_18_5}
+
+이제 우리는 답을 알게 되었다. 돌을 던졌을 때 포물선을 따라가는 것은 돌의 질량중심이다. 그리고 @eq-FLP_1_18_5 에 대해 다음과 같은 것을 알 수 있다.
+
+1. 외력이 없다면 물체의 질량중심은 정지하거나 등속 직선운동을 한다.
+2. 물체의 질량중심은 물체 내부의 복잡한 상호작용과 분리하여 처리 될 수 있다.
+
+</br>
+
+### 18-2 강체의 회전
+
+
+::: {.callout-note icon="false"}
+
+#### **강체**
+
+물질 내의 입자들 간의 힘이 매우 강하여 입자간의 상대적인 위치가 바뀌지 않는 가상의 물체.
+
+:::
+
+문제를 단순화하기 위해 강체의 회전을 생각한다. 그리고 강체 안에 고정된 직선이 있어 이 직선을 중심으로 강체가 회전한다고 하자. 이 고정된 직선이 회전축이다. 강체 안의 회전축상에 있지 않은 한 점을 특정하고, 회전 운동 후 이 점이 어디있는지 안다면 물체가 어디에 있는 지 알 수 있다. 회전각은 두 시점에서 물체가 얼마나 회전했는지에 대한 값이다. 
+
+직선상의 운동에서 정의된 속도, 가속도와 마찬가지로 각에 대해서 각속도와 각가속도를 정의 할 수 있다. 시간에 대한 회전각을 $\theta = \theta(t)$ 라고 하면 **각속도 (angular velocity)** $\omega$ 와 **각가속도 (angular acceleration)** $\alpha$ 는 다음과 같이 정의된다.
+
+$$
+\omega := \dfrac{d\theta}{dt},\qquad \alpha = \dfrac{d^2\theta}{dt^2}.
+$$ {#eq-FLP_definition_of_angular_velocity_and_angular_acceleration}
+
+
+
+
+
+
+
+
+ 
