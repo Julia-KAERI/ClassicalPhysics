@@ -455,6 +455,8 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#질량-중심" id="toc-질량-중심" class="nav-link" data-scroll-target="#질량-중심">18-1 질량 중심</a></li>
   <li><a href="#강체의-회전" id="toc-강체의-회전" class="nav-link" data-scroll-target="#강체의-회전">18-2 강체의 회전</a></li>
+  <li><a href="#각운동량" id="toc-각운동량" class="nav-link" data-scroll-target="#각운동량">18-3 각운동량</a></li>
+  <li><a href="#sec-FLP_1_18_4" id="toc-sec-FLP_1_18_4" class="nav-link" data-scroll-target="#sec-FLP_1_18_4">18-4 각운동량 보존</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -959,14 +961,27 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <p><span class="math display">\[
 \boldsymbol{F}_i = m_i \dfrac{d^2\boldsymbol{r}_i}{dt^2}.
 \]</span></p>
-<p>물체에 가해지는 힘은 각각의 입자에 가해지는 힘의 합이며 이를 <span class="math inline">\(\boldsymbol{F}\)</span> 라고 하면</p>
+<p>각각의 입자에 가해지는 힘의 합을 <span class="math inline">\(\boldsymbol{F}\)</span> 라고 하면</p>
 <p><span id="eq-FLP_1_18_3"><span class="math display">\[
 \boldsymbol{F}=\sum_i \boldsymbol{F}_i = \sum_i \dfrac{d^2 \left(m_i\boldsymbol{r}_i\right)}{dt^2}
 \tag{1.13}\]</span></span></p>
-<p>이다. 여기서 중요한 것은 물체 내에서 벌어지는 상호작용은 뉴튼의 3법칙에 의해 <span class="math inline">\(\boldsymbol{F} = \sum_i \boldsymbol{F}_i\)</span> 에서 상쇄된다는 것이다. 따라서 <span class="math inline">\(\boldsymbol{F}\)</span> 는 내부에서 주고 받는 힘이 아닌 순수한 외부에서 작용하는 힘만 남게된다. 이제 <strong>질량중심 (center of mass)</strong> <span class="math inline">\(\boldsymbol{R}\)</span> 을 아래와 같이 정의한다.</p>
+<p>이다. 여기서 중요한 것은 물체 내에서 벌어지는 상호작용에 의한 힘은 뉴튼의 제 3 운동법칙에 의해 <span class="math inline">\(\boldsymbol{F} = \sum_i \boldsymbol{F}_i\)</span> 에서 상쇄된다는 것이다. 따라서 <span class="math inline">\(\boldsymbol{F}\)</span> 는 내부에서 주고 받는 힘이 아닌 순수한 외부에서 작용하는 힘만 남게된다.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>질량 중심</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>질량중심 (center of mass)</strong> <span class="math inline">\(\boldsymbol{R}\)</span> 은 아래와 같이 정의된다.</p>
 <p><span id="eq-FLP_1_18_4"><span class="math display">\[
 \boldsymbol{R} := \dfrac{\sum_i m_i\boldsymbol{r}_i}{\sum_i m_i} = \dfrac{1}{M}\sum_i m_i\boldsymbol{r_i},\qquad \text{where } M = \sum_i m_i.
 \tag{1.14}\]</span></span></p>
+</div>
+</div>
 <p>그렇다면 <a href="#eq-FLP_1_18_3" class="quarto-xref">식&nbsp;<span>1.13</span></a> 은 다음과 같이 쓸 수 있다.</p>
 <p><span id="eq-FLP_1_18_5"><span class="math display">\[
 \boldsymbol{F} = M\dfrac{d^2 \boldsymbol{R}}{dt^2}.
@@ -1078,6 +1093,82 @@ v=\sqrt{v_x^2+v_y^2} = \omega r.
 </figcaption>
 </figure>
 </div>
+<p>위의 그림과 같이 <span class="math inline">\(\boldsymbol{r}\)</span> 에 위치한 점 <span class="math inline">\(P\)</span> 에 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 가 작용하고 있다고 있으며 이 힘에 의해 <span class="math inline">\(O\)</span> 를 중심으로 <span class="math inline">\(\Delta \theta\)</span> 만큼 움직였다고 하자. <span class="math inline">\(\boldsymbol{F}\)</span> 는 회전에 대한 접선 방향의 <span class="math inline">\(\boldsymbol{F}\)</span> 와 수직방향의 <span class="math inline">\(\boldsymbol{F}_r\)</span> 로 분해 할 수 있으며 <span class="math inline">\(\boldsymbol{F}_r\)</span> 은 운동방향에 수직방향이므로 일을 하지 않는다. 즉 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 에 의한 일은</p>
+<p><span class="math display">\[
+W = \|\boldsymbol{F}_t \| \, r \Delta \theta
+\]</span></p>
+<p>이다. 이로부터 노크는 가해지는 힘의 회전에 대한 접선 방향 성분에 회전 반경을 곱한 값이라는 것을 알 수 있다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="각운동량" class="level3">
+<h3 class="anchored" data-anchor-id="각운동량">18-3 각운동량</h3>
+<section id="각운동량-1" class="level4">
+<h4 class="anchored" data-anchor-id="각운동량-1"><strong>각운동량</strong></h4>
+<p>지금까지 강체라는 특수한 경우만을 고려했지만 토크의 특성과 그 수학적 관계는 물체가 강체가 아니더라도 적용할 수 있다. 힘 <span class="math inline">\(F\)</span> 가 <span class="math inline">\(F=dp/dt\)</span> 인 것처럼 토크 <span class="math inline">\(\tau\)</span> 는 각운동량이라고 부르는 양 <span class="math inline">\(L\)</span> 에 대해 <span class="math inline">\(\tau = dL/dt\)</span> 임을 보이자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tau &amp;= xF_y - y F_x = mx \dfrac{d^2y}{dt^2} - my \dfrac{d^2x}{dt^2} \\[0.3em]
+&amp;= mx \dfrac{d^2y}{dt^2} + m \dfrac{dx}{dt}\dfrac{dy}{dt} - m\dfrac{dx}{dt}\dfrac{dy}{dt} - my \dfrac{d^2x}{dt^2} \\[0.3em]
+&amp;= \dfrac{d}{dt}\left[m x \dfrac{dy}{dt} - m y\dfrac{dx}{dt}\right].
+\end{aligned}
+\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>각운동량</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>2차원 회전에서 각운동량 <span class="math inline">\(L\)</span> 은 다음과 같이 정의된다.</p>
+<p><span id="eq-FLP_1_18_16"><span class="math display">\[
+L := mx\dfrac{dy}{dt} - my\dfrac{dx}{dt} = xp_y - yp_x.
+\tag{1.23}\]</span></span></p>
+</div>
+</div>
+<p>즉 토크(<span class="math inline">\(\tau\)</span>) 는 각운동량(<span class="math inline">\(L\)</span>) 의 시간에 대한 변화량이다.</p>
+<p><span class="math display">\[
+\tau = \dfrac{dL}{dt}.
+\]</span></p>
+</section>
+<section id="행성의-운동의-각운동량" class="level4">
+<h4 class="anchored" data-anchor-id="행성의-운동의-각운동량"><strong>행성의 운동의 각운동량</strong></h4>
+<p>중력에 의한 태양과 행성의 운동을 살펴보자. 중력은 항상 두 행성을 잇는 직선방향을 따라 작용한다. 즉 운동의 접선방향으로 작용하는 힘이 없기 때문에 중력에 의한 토크는 <span class="math inline">\(0\)</span> 이다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="sec-FLP_1_18_4" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_18_4">18-4 각운동량 보존</h3>
+<section id="각운동량-보존" class="level4">
+<h4 class="anchored" data-anchor-id="각운동량-보존"><strong>각운동량 보존</strong></h4>
+<p>많은 입자로 이루어진 시스템에서 입자들은 상호작용하며 외부에서 힘이 작용할 수도 있다. 이 경우 어떤 고정축에 대한 <span class="math inline">\(i\)</span> 번째 입자에 작용하는 토크는 <span class="math inline">\(i\)</span> 번째 입자의 각운동량의 시간에 대한 미분이며, 전체 토크는 개별 입자의 토크의 합이므로 전체 각운동량은 개별 각운동량의 합이라는 것을 알 수 있다. 즉 <span class="math inline">\(L=\sum_i L_i\)</span> 라고 하면,</p>
+<p><span id="eq-FLP_1_18_18"><span class="math display">\[
+\tau = \sum_i \tau_i = \sum_i \dfrac{dL_i}{dt}= \dfrac{dL}{dt}
+\tag{1.24}\]</span></span></p>
+<p>이다. 이제 작용-반작용의 강한 조건, 즉 입자들 사이의 상호작용에 의한 힘은 두 입자를 잇는 직선상에서 작용한다는 조건이 부여된다고 하자. 그렇다면 두 입자 사이의 상호작용에 의한 두 입장의 토크는 상쇠된다. 따라서 힘에서와 같이 내부의 상호작용에 의한 토크의 합은 <span class="math inline">\(0\)</span> 이다. 즉 입자계에서의 토크의 합은 외부의 힘에 의한 토크이다. 이제 우리는 다음과 같은 수학적 정리를 얻게 된다.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>각운동량 보존</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>외부에서 작용하는 힘에 의한 토크가 <span class="math inline">\(0\)</span> 이면 입자들의 총 각운동량은 보존된다.</p>
+</div>
+</div>
+</section>
+<section id="관성-모먼트" class="level4">
+<h4 class="anchored" data-anchor-id="관성-모먼트"><strong>관성 모먼트</strong></h4>
+<p><span class="math inline">\(N\)</span> 개의 입자로 이루어진 강체가 정해진 회전축에 대해 각속도 <span class="math inline">\(\omega\)</span> 로 회전한다고 하자. <span class="math inline">\(i\)</span> 번째 입자의 질량, 회전축에서의 거리, 속도가 각각 <span class="math inline">\(m_i,\,r_i,\,v_i\)</span> 라고 하자. 이때 총 각운동량 <span class="math inline">\(L\)</span> 은 다음과 같다.</p>
+<p><span id="eq-FLP_1_18_20"><span class="math display">\[
+L=\sum_{i} L_i = \sum_i m_i r_i v_i = \left(\sum_i m_i r_i^2\right) \omega
+\tag{1.25}\]</span></span></p>
 
 
 </section>
