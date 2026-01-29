@@ -458,6 +458,10 @@ window.Quarto = {
   <li><a href="#각운동량" id="toc-각운동량" class="nav-link" data-scroll-target="#각운동량">18-3 각운동량</a></li>
   <li><a href="#sec-FLP_1_18_4" id="toc-sec-FLP_1_18_4" class="nav-link" data-scroll-target="#sec-FLP_1_18_4">18-4 각운동량 보존</a></li>
   </ul></li>
+  <li><a href="#질량-중심과-관성-모멘트" id="toc-질량-중심과-관성-모멘트" class="nav-link" data-scroll-target="#질량-중심과-관성-모멘트">19. 질량 중심과 관성 모멘트</a>
+  <ul class="collapse">
+  <li><a href="#sec-FLP_1_19_1" id="toc-sec-FLP_1_19_1" class="nav-link" data-scroll-target="#sec-FLP_1_19_1">19-1 질량 중심의 성질</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -976,15 +980,15 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>질량중심 (center of mass)</strong> <span class="math inline">\(\boldsymbol{R}\)</span> 은 아래와 같이 정의된다.</p>
+<p><strong>질량중심 (center of mass)</strong> <span class="math inline">\(\boldsymbol{R}_\text{CM}\)</span> 은 아래와 같이 정의된다.</p>
 <p><span id="eq-FLP_1_18_4"><span class="math display">\[
-\boldsymbol{R} := \dfrac{\sum_i m_i\boldsymbol{r}_i}{\sum_i m_i} = \dfrac{1}{M}\sum_i m_i\boldsymbol{r_i},\qquad \text{where } M = \sum_i m_i.
+\boldsymbol{R}_\text{CM} := \dfrac{\sum_i m_i\boldsymbol{r}_i}{\sum_i m_i} = \dfrac{1}{M}\sum_i m_i\boldsymbol{r_i},\qquad \text{where } M = \sum_i m_i.
 \tag{1.14}\]</span></span></p>
 </div>
 </div>
 <p>그렇다면 <a href="#eq-FLP_1_18_3" class="quarto-xref">식&nbsp;<span>1.13</span></a> 은 다음과 같이 쓸 수 있다.</p>
 <p><span id="eq-FLP_1_18_5"><span class="math display">\[
-\boldsymbol{F} = M\dfrac{d^2 \boldsymbol{R}}{dt^2}.
+\boldsymbol{F} = M\dfrac{d^2 \boldsymbol{R}_\text{CM}}{dt^2}.
 \tag{1.15}\]</span></span></p>
 <p>이제 우리는 답을 알게 되었다. 돌을 던졌을 때 포물선을 따라가는 것은 돌의 질량중심이다. 그리고 <a href="#eq-FLP_1_18_5" class="quarto-xref">식&nbsp;<span>1.15</span></a> 에 대해 다음과 같은 것을 알 수 있다.</p>
 <ol type="1">
@@ -1163,15 +1167,65 @@ L := mx\dfrac{dy}{dt} - my\dfrac{dx}{dt} = xp_y - yp_x.
 </div>
 </div>
 </section>
-<section id="관성-모먼트" class="level4">
-<h4 class="anchored" data-anchor-id="관성-모먼트"><strong>관성 모먼트</strong></h4>
+<section id="관성-모멘트" class="level4">
+<h4 class="anchored" data-anchor-id="관성-모멘트"><strong>관성 모멘트</strong></h4>
 <p><span class="math inline">\(N\)</span> 개의 입자로 이루어진 강체가 정해진 회전축에 대해 각속도 <span class="math inline">\(\omega\)</span> 로 회전한다고 하자. <span class="math inline">\(i\)</span> 번째 입자의 질량, 회전축에서의 거리, 속도가 각각 <span class="math inline">\(m_i,\,r_i,\,v_i\)</span> 라고 하자. 이때 총 각운동량 <span class="math inline">\(L\)</span> 은 다음과 같다.</p>
 <p><span id="eq-FLP_1_18_20"><span class="math display">\[
 L=\sum_{i} L_i = \sum_i m_i r_i v_i = \left(\sum_i m_i r_i^2\right) \omega
 \tag{1.25}\]</span></span></p>
-
-
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>관성 모멘트</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>강체가 회전할 때 아래와 같이 <strong>관성 모멘트(moment of inertia)</strong> <span class="math inline">\(I\)</span> 를 정의 할 수 있다.</p>
+<p><span id="eq-FLP_1_18_22"><span class="math display">\[
+I := \sum_i m_i r_i^2.
+\tag{1.26}\]</span></span></p>
+</div>
+</div>
+<p>위와같이 정의된 관성 모멘트 <span class="math inline">\(I\)</span> 에 대해 각운동량 <span class="math inline">\(L\)</span> 은 다음과 같다.</p>
+<p><span id="eq-FLP_1_18_21"><span class="math display">\[
+L = I\omega.
+\tag{1.27}\]</span></span></p>
+<p><br></p>
 </section>
+</section>
+</section>
+<section id="질량-중심과-관성-모멘트" class="level2">
+<h2 class="anchored" data-anchor-id="질량-중심과-관성-모멘트">19. 질량 중심과 관성 모멘트</h2>
+<section id="sec-FLP_1_19_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_19_1">19-1 질량 중심의 성질</h3>
+<p>다양한 질량의 물체가 합쳐진 복잡한 물체에 작용하는 많은 힘에 대해, 그것이 강체인지 여부와 관계 없이, 모든 외부에서 작용하는 힘의 합과 질량중심 <span class="math inline">\(\boldsymbol{R}_\text{CM}\)</span> 에 대한 운동방정식을 얻었다(<a href="#eq-FLP_1_18_5" class="quarto-xref">식&nbsp;<span>1.15</span></a>). 이 운동방정식이 의미하는 것은 물채 전체를 대표하는 질량중심 <span class="math inline">\(\boldsymbol{R}_\text{CM}\)</span> 이 존재하여 이 물체에 작용하는 모든 외부의 힘이 마치 물체의 질량이 이 점에 집중되어 있는 것과 같이 이 점의 가속도를 결정한다는 것이다. 그리고 이 질량중심의 성질은 아래와 같이 정리 할 수 있다.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+질량 중심의 성질
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>1.</strong> 어떤 면을 중심으로 대칭이 있을 경우 질량중심은 대칭면상에 위치한다.</p>
+<p><strong>2.</strong> 물체를 여러 부분으로 나눌 경우 전체의 질량중심은 각 부분별 질량중심의 질량중심이다. 예를 들어 전체 물체를 <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> 두 부분으로 나누며 각각의 질량의 합이 <span class="math inline">\(M_A,\,M_B\)</span> 이고 각각의 질량중심의 반경벡터가 <span class="math inline">\(\boldsymbol{r}_A,\,\boldsymbol{r}_B\)</span> 라면 전체의 질량중심 <span class="math inline">\(\boldsymbol{R}_\text{CM}\)</span> 은 다음과 같다.</p>
+<p><span class="math display">\[
+\boldsymbol{R}_{CM} = \dfrac{M_A\boldsymbol{r}_A+M_B\boldsymbol{r}_B}{M_A+M_B}.
+\]</span></p>
+<p><strong>3.</strong> 중력이 균일할 경우 질량 중심을 <strong>중력 중심 (center of gravity)</strong> 라고 한다. 중력이 <span class="math inline">\(\boldsymbol{g}\)</span> 로 균일하다면 물체에 작용하는 토크 <span class="math inline">\(\tau\)</span> 는 아래와 같다.</p>
+<p><span class="math display">\[
+\boldsymbol{\tau} = \sum_i m_i \boldsymbol{r}_i \times \boldsymbol{g} = \left(\sum_i m_i\right) \boldsymbol{R}_\text{CM}\times \boldsymbol{g}.
+\]</span></p>
+<p>중력이 균일하지 않다면 질량 중심과 중력 중심은 일치하지 않는다.</p>
+</div>
+</div>
+
+
 </section>
 </section>
 
