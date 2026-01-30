@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/00_index.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -461,6 +462,8 @@ window.Quarto = {
   <li><a href="#질량-중심과-관성-모멘트" id="toc-질량-중심과-관성-모멘트" class="nav-link" data-scroll-target="#질량-중심과-관성-모멘트">19. 질량 중심과 관성 모멘트</a>
   <ul class="collapse">
   <li><a href="#sec-FLP_1_19_1" id="toc-sec-FLP_1_19_1" class="nav-link" data-scroll-target="#sec-FLP_1_19_1">19-1 질량 중심의 성질</a></li>
+  <li><a href="#sec-FLP_1_19_2" id="toc-sec-FLP_1_19_2" class="nav-link" data-scroll-target="#sec-FLP_1_19_2">19-2 질량 중심의 계산</a></li>
+  <li><a href="#sec-FLP_1_19_3" id="toc-sec-FLP_1_19_3" class="nav-link" data-scroll-target="#sec-FLP_1_19_3">19-3 관성 모먼트의 계산</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -515,7 +518,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>갈릴레오의 관성의 법칙</strong> 혹은 <strong>뉴턴의 제 1 운동법칙</strong>
+<span class="screen-reader-only">중요</span><strong>갈릴레오의 관성의 법칙</strong> 혹은 <strong>뉴턴의 제 1 운동법칙</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -528,7 +531,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>운동량</strong>
+<span class="screen-reader-only">노트</span><strong>운동량</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -544,7 +547,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>뉴턴의 제 2 운동법칙</strong>
+<span class="screen-reader-only">중요</span><strong>뉴턴의 제 2 운동법칙</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -559,7 +562,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>보편 중력</strong>
+<span class="screen-reader-only">노트</span><strong>보편 중력</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -585,7 +588,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>뉴턴의 제 3 운동법칙</strong>
+<span class="screen-reader-only">중요</span><strong>뉴턴의 제 3 운동법칙</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -622,7 +625,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>갈릴레이 상대성 원리</strong>
+<span class="screen-reader-only">중요</span><strong>갈릴레이 상대성 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -766,7 +769,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>운동에너지</strong>
+<span class="screen-reader-only">노트</span><strong>운동에너지</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -787,7 +790,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>일률</strong>
+<span class="screen-reader-only">노트</span><strong>일률</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -805,7 +808,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>일</strong>
+<span class="screen-reader-only">노트</span><strong>일</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -832,7 +835,7 @@ T_2-T_1 = - \int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \dfrac{GMm}{r^2} \hat{\bo
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>보존력</strong> 과 <strong>포텐셜 에너지</strong>
+<span class="screen-reader-only">노트</span><strong>보존력</strong> 과 <strong>포텐셜 에너지</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -850,7 +853,7 @@ T_2-T_1 = - \int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \dfrac{GMm}{r^2} \hat{\bo
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>포텐셜의 성질</strong>
+<span class="screen-reader-only">중요</span><strong>포텐셜의 성질</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -937,7 +940,7 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>포텐셜</strong>
+<span class="screen-reader-only">노트</span><strong>포텐셜</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -976,7 +979,7 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>질량 중심</strong>
+<span class="screen-reader-only">노트</span><strong>질량 중심</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1007,7 +1010,7 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>강체</strong>
+<span class="screen-reader-only">노트</span><strong>강체</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1063,7 +1066,7 @@ v=\sqrt{v_x^2+v_y^2} = \omega r.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>토크</strong>
+<span class="screen-reader-only">노트</span><strong>토크</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1080,7 +1083,7 @@ v=\sqrt{v_x^2+v_y^2} = \omega r.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>역학적 평형 상태</strong>
+<span class="screen-reader-only">노트</span><strong>역학적 평형 상태</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1123,7 +1126,7 @@ W = \|\boldsymbol{F}_t \| \, r \Delta \theta
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>각운동량</strong>
+<span class="screen-reader-only">노트</span><strong>각운동량</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1159,7 +1162,7 @@ L := mx\dfrac{dy}{dt} - my\dfrac{dx}{dt} = xp_y - yp_x.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>각운동량 보존</strong>
+<span class="screen-reader-only">중요</span><strong>각운동량 보존</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1179,7 +1182,7 @@ L=\sum_{i} L_i = \sum_i m_i r_i v_i = \left(\sum_i m_i r_i^2\right) \omega
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>관성 모멘트</strong>
+<span class="screen-reader-only">노트</span><strong>관성 모멘트</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1208,7 +1211,7 @@ L = I\omega.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-질량 중심의 성질
+<span class="screen-reader-only">힌트</span>질량 중심의 성질
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1217,11 +1220,60 @@ L = I\omega.
 <p><span class="math display">\[
 \boldsymbol{R}_{CM} = \dfrac{M_A\boldsymbol{r}_A+M_B\boldsymbol{r}_B}{M_A+M_B}.
 \]</span></p>
-<p><strong>3.</strong> 중력이 균일할 경우 질량 중심을 <strong>중력 중심 (center of gravity)</strong> 라고 한다. 중력이 <span class="math inline">\(\boldsymbol{g}\)</span> 로 균일하다면 물체에 작용하는 토크 <span class="math inline">\(\tau\)</span> 는 아래와 같다.</p>
+<p><strong>3.</strong> 중력이 균일할 경우 질량 중심은 <a href="#sec-FLP_center_of_gravity"><strong>중력 중심 (center of gravity)</strong></a> 과 같다. 중력이 <span class="math inline">\(\boldsymbol{g}\)</span> 로 균일하다면 물체에 작용하는 토크의 합 <span class="math inline">\(\boldsymbol{\tau}\)</span> 는 아래와 같다.</p>
 <p><span class="math display">\[
 \boldsymbol{\tau} = \sum_i m_i \boldsymbol{r}_i \times \boldsymbol{g} = \left(\sum_i m_i\right) \boldsymbol{R}_\text{CM}\times \boldsymbol{g}.
 \]</span></p>
-<p>중력이 균일하지 않다면 질량 중심과 중력 중심은 일치하지 않는다.</p>
+<p>따라서 <span class="math inline">\(\boldsymbol{\tau}=0\)</span> 이려면 <span class="math inline">\(\boldsymbol{R}_{\text{CM}}=0\)</span> 이어야 한다. 즉 균일한 중력장에서 질량 중심이 회전축상에 있을 때 토크는 <span class="math inline">\(0\)</span> 이다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>중력 중심</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(N\)</span> 개의 입자의 총 질량이 <span class="math inline">\(M\)</span> 이라고 하자. <span class="math inline">\(i\)</span> 번째 입자의 질량과 반경벡터를 각각 <span class="math inline">\(m_i\)</span>, <span class="math inline">\(\boldsymbol{r}_i\)</span> 라고 하자. 위치 <span class="math inline">\(\boldsymbol{r}\)</span> 에서의 중력장을 <span class="math inline">\(\boldsymbol{G}(\boldsymbol{r})\)</span> 이라고 할 때 <strong>중력 중심 (center of gravity)</strong> <span class="math inline">\(\boldsymbol{R}_\text{gr}\)</span> 은 다음과 같이 정의된다.</p>
+<p><span id="eq-FLP_definition_of_center_of_gravity"><span class="math display">\[
+\boldsymbol{R}_\text{gr} := \dfrac{\sum_i \boldsymbol{r}_i m_i\boldsymbol{G}(\boldsymbol{r}_i)}{\sum_i  m_i\boldsymbol{G}(\boldsymbol{r}_i)}.
+\tag{1.28}\]</span></span></p>
+</div>
+</div>
+<section id="질량중심과-관성력" class="level4">
+<h4 class="anchored" data-anchor-id="질량중심과-관성력"><strong>질량중심과 관성력</strong></h4>
+<p><a href="#sec-FLP_properties_of_center_of_mass">질량 중심의 성질</a> 3. 은 질량 중심을 떠받치고 있으며 중력이 균일하다면 토크가 발생하지 않는다는 것을 말해준다.</p>
+<p>이제 중력 대신 가속도에 의한 관셩력이 작용한다고 하자. 관셩력은 물체 전체에 균일한 힘을 가하기 때문에 질량 중심을 떠받치고 있다면 균일한 중력과 마찬가지로 토크가 발생하지 않는다. 이로부터 흥미로운 결론을 내릴 수 있다. 관성기준틀에서 토크는 항상 각운동량의 시간에 대한 변화량이다. 물체가 가속운동을 하는 경우에도 질량중심이 회전축이라면 토크가 각운동량의 시간에 대한 변화량이라는 것은 변하지 않는다. 즉 (1) 관성기준틀에서의 임의의 축에대한 회전과 (2) 비관성 기준틀에서의 질량중심을 지나는 축에 대한 회전에 대해 <span class="math inline">\(\boldsymbol{\tau} = d\boldsymbol{L}/dt\)</span> 이다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="sec-FLP_1_19_2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_19_2">19-2 질량 중심의 계산</h3>
+<p><a href="https://en.wikipedia.org/wiki/Pappus's_centroid_theorem">파푸스의 무게중심 정리</a> 를 이용한 질량 중심 계산.</p>
+<p><br></p>
+</section>
+<section id="sec-FLP_1_19_3" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_19_3">19-3 관성 모먼트의 계산</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>관성모먼트</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(z\)</span> 축을 화전축으로 할 경우 관성모먼트 <span class="math inline">\(I\)</span> 는 질량 분포가 이산적인 경우와 연속인 경우(이 때 밀도를 <span class="math inline">\(\rho(x,\,y,\,z)\)</span> 라고 하자) 에 각각 다음과 같다.</p>
+<p><span id="eq-FLP_1_19_4"><span class="math display">\[
+\begin{aligned}
+I &amp;= \sum_i m_i \left(x_i^2+y_i^2\right), \\[0.3em]
+I &amp;= \int (x^2+y^2)\,dm = \int (x^2+y^2)\, \rho(x,\,y,\,z)\, dxdydz.
+\end{aligned}
+\tag{1.29}\]</span></span></p>
 </div>
 </div>
 
@@ -1281,13 +1333,14 @@ L = I\omega.
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

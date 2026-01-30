@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/vol1/vol1_1.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -518,7 +519,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>갈릴레이 변환과 로런츠 변환</strong>
+<span class="screen-reader-only">중요</span><strong>갈릴레이 변환과 로런츠 변환</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -539,7 +540,7 @@ x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
+<span class="screen-reader-only">중요</span>푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -676,7 +677,7 @@ X^\mu = (ct,\,x,\,y,\,z),\qquad X_\mu = (ct,\,-x,\,-y,\,-z).
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>최종적으로…</strong>
+<span class="screen-reader-only">힌트</span><strong>최종적으로…</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -831,7 +832,7 @@ M = 2\gamma (w) m
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
+<span class="screen-reader-only">힌트</span><span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1012,7 +1013,7 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>페르마의 최소시간의 원리</strong>
+<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1146,7 +1147,7 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
+<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1619,13 +1620,14 @@ d\sin\theta = m\lambda
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
