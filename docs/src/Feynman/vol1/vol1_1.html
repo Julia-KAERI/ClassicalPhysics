@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,15 +34,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/00_index.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,7 +84,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -464,6 +463,12 @@ window.Quarto = {
   <li><a href="#sec-FLP_1_19_1" id="toc-sec-FLP_1_19_1" class="nav-link" data-scroll-target="#sec-FLP_1_19_1">19-1 질량 중심의 성질</a></li>
   <li><a href="#sec-FLP_1_19_2" id="toc-sec-FLP_1_19_2" class="nav-link" data-scroll-target="#sec-FLP_1_19_2">19-2 질량 중심의 계산</a></li>
   <li><a href="#sec-FLP_1_19_3" id="toc-sec-FLP_1_19_3" class="nav-link" data-scroll-target="#sec-FLP_1_19_3">19-3 관성 모먼트의 계산</a></li>
+  <li><a href="#sec-FLP_1_19_4" id="toc-sec-FLP_1_19_4" class="nav-link" data-scroll-target="#sec-FLP_1_19_4">19-4 회전 운동 에너지</a></li>
+  </ul></li>
+  <li><a href="#공간에서의-회전" id="toc-공간에서의-회전" class="nav-link" data-scroll-target="#공간에서의-회전">20. 공간에서의 회전</a>
+  <ul class="collapse">
+  <li><a href="#sec-FLP-1_20_1" id="toc-sec-FLP-1_20_1" class="nav-link" data-scroll-target="#sec-FLP-1_20_1">20-1 3차원 토크</a></li>
+  <li><a href="#외적과-회전-방정식" id="toc-외적과-회전-방정식" class="nav-link" data-scroll-target="#외적과-회전-방정식">20-2 외적과 회전 방정식</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -518,7 +523,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>갈릴레오의 관성의 법칙</strong> 혹은 <strong>뉴턴의 제 1 운동법칙</strong>
+<strong>갈릴레오의 관성의 법칙</strong> 혹은 <strong>뉴턴의 제 1 운동법칙</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -531,7 +536,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>운동량</strong>
+<strong>운동량</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -547,7 +552,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>뉴턴의 제 2 운동법칙</strong>
+<strong>뉴턴의 제 2 운동법칙</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -562,7 +567,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>보편 중력</strong>
+<strong>보편 중력</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -588,7 +593,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>뉴턴의 제 3 운동법칙</strong>
+<strong>뉴턴의 제 3 운동법칙</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -625,7 +630,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>갈릴레이 상대성 원리</strong>
+<strong>갈릴레이 상대성 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -769,7 +774,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>운동에너지</strong>
+<strong>운동에너지</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -790,7 +795,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>일률</strong>
+<strong>일률</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -808,7 +813,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>일</strong>
+<strong>일</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -835,7 +840,7 @@ T_2-T_1 = - \int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \dfrac{GMm}{r^2} \hat{\bo
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>보존력</strong> 과 <strong>포텐셜 에너지</strong>
+<strong>보존력</strong> 과 <strong>포텐셜 에너지</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -853,7 +858,7 @@ T_2-T_1 = - \int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \dfrac{GMm}{r^2} \hat{\bo
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>포텐셜의 성질</strong>
+<strong>포텐셜의 성질</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -940,7 +945,7 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>포텐셜</strong>
+<strong>포텐셜</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -979,7 +984,7 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>질량 중심</strong>
+<strong>질량 중심</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1010,7 +1015,7 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>강체</strong>
+<strong>강체</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1066,7 +1071,7 @@ v=\sqrt{v_x^2+v_y^2} = \omega r.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>토크</strong>
+<strong>토크</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1083,7 +1088,7 @@ v=\sqrt{v_x^2+v_y^2} = \omega r.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>역학적 평형 상태</strong>
+<strong>역학적 평형 상태</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1126,7 +1131,7 @@ W = \|\boldsymbol{F}_t \| \, r \Delta \theta
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>각운동량</strong>
+<strong>각운동량</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1162,7 +1167,7 @@ L := mx\dfrac{dy}{dt} - my\dfrac{dx}{dt} = xp_y - yp_x.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>각운동량 보존</strong>
+<strong>각운동량 보존</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1182,7 +1187,7 @@ L=\sum_{i} L_i = \sum_i m_i r_i v_i = \left(\sum_i m_i r_i^2\right) \omega
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>관성 모멘트</strong>
+<strong>관성 모멘트</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1211,7 +1216,7 @@ L = I\omega.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">힌트</span>질량 중심의 성질
+질량 중심의 성질
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1233,7 +1238,7 @@ L = I\omega.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>중력 중심</strong>
+<strong>중력 중심</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1263,19 +1268,93 @@ L = I\omega.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>관성모먼트</strong>
+<strong>관성모멘트</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(z\)</span> 축을 화전축으로 할 경우 관성모먼트 <span class="math inline">\(I\)</span> 는 질량 분포가 이산적인 경우와 연속인 경우(이 때 밀도를 <span class="math inline">\(\rho(x,\,y,\,z)\)</span> 라고 하자) 에 각각 다음과 같다.</p>
+<p><span class="math inline">\(z\)</span> 축을 회전축으로 할 경우 관성모먼트 <span class="math inline">\(I\)</span> 는 질량 분포가 이산적인 경우와 연속인 경우(이 때 밀도를 <span class="math inline">\(\rho(\boldsymbol{r})\)</span> 라고 하자) 에 각각 다음과 같다.</p>
 <p><span id="eq-FLP_1_19_4"><span class="math display">\[
 \begin{aligned}
 I &amp;= \sum_i m_i \left(x_i^2+y_i^2\right), \\[0.3em]
-I &amp;= \int (x^2+y^2)\,dm = \int (x^2+y^2)\, \rho(x,\,y,\,z)\, dxdydz.
+I &amp;= \int (x^2+y^2)\,dm = \int (x^2+y^2)\, \rho(\boldsymbol{r})\, d^3\boldsymbol{r}.
 \end{aligned}
 \tag{1.29}\]</span></span></p>
 </div>
 </div>
+<p>이를 이용하여 기본적인 도형의 관성 모멘트를 계산하면 아래와 같다.</p>
+<div id="fig-FLP_1_19_moment_of_inertia" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_19_moment_of_inertia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_19/moment_of_inertias/moment_of_inertia.png" class="img-fluid figure-img" width="460">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_19_moment_of_inertia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1.4: 다양한 물체의 관성 모멘트
+</figcaption>
+</figure>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-FLP-parallel_axis_theorem" class="theorem">
+<p><span class="theorem-title"><strong>정리 1.1 (평행축 정리)</strong></span> 질량이 <span class="math inline">\(M\)</span> 인 물체의 무게중심을 지나는 회전축 대한 관성모먼트가 <span class="math inline">\(I_\text{CM}\)</span> 일 때 이 축과 <span class="math inline">\(h\)</span> 만큼 떨어진 평행한 다른 축에 대한 관성모멘트 <span class="math inline">\(I\)</span> 는 다음과 같다.</p>
+<p><span id="eq-FLP_paralle_axis_theorem"><span class="math display">\[
+I = I_\text{CM} + Mh^2.
+\tag{1.30}\]</span></span></p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>일반석을 잃지 않고 회전축이 <span class="math inline">\(z\)</span> 축과 평행하다고 할 수 있다. 질량 중심의 위치를 원점으로 잠고 새로운 축의 위치를 <span class="math inline">\((a,\,b)\)</span> 라고 하면 <span class="math inline">\(h=\sqrt{a^2+b^2}\)</span> 이며 <span class="math display">\[
+\begin{aligned}
+I &amp;= \sum_i ((x_i-a)^2+(y_i-b)^2)m_i \\[0.3em]
+&amp;= \underbrace{\sum_i \left(x_i^2+y_i^2\right)m_i}_{=I_\text{CM}} - 2a\underbrace{\sum_i x_im_i}_{=x_\text{cm}=0} -2b\underbrace{\sum_i y_i m_i}_{y_{\text{cm}}=0} +  + \sum_i \underbrace{(a^2+b^2)}_{=h^2}m_i \\[0.3em]
+&amp;= I_\text{CM} + Mh^2
+\end{aligned}
+\]</span></p>
+<p>이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+</section>
+<section id="sec-FLP_1_19_4" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_19_4">19-4 회전 운동 에너지</h3>
+<p><span class="math inline">\(\omega\)</span> 의 각속도 회전하는 강체의 운동에너지를 계산해 보자. <span class="math inline">\(i\)</span> 번째 입자의 회전축으로부터의 거리를 <span class="math inline">\(r_i\)</span> 라고 하면 회전 속도 <span class="math inline">\(v_i = r_i \omega_i\)</span> 이므로 그 운동에너지 <span class="math inline">\(T\)</span> 는 다음과 같다.</p>
+<p><span id="eq-FLP_1_19_8"><span class="math display">\[
+T=\dfrac{1}{2}\sum_i m_i v_i^2 = \dfrac{1}{2}\sum_i m_i (r_i \omega)^2 = \dfrac{1}{2}I\omega^2
+\tag{1.31}\]</span></span></p>
+<p><br></p>
+</section>
+</section>
+<section id="공간에서의-회전" class="level2">
+<h2 class="anchored" data-anchor-id="공간에서의-회전">20. 공간에서의 회전</h2>
+<section id="sec-FLP-1_20_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP-1_20_1">20-1 3차원 토크</h3>
+<p><em>3차원 벡터 외적에 대한 설명들</em></p>
+<p></p>
+</section>
+<section id="외적과-회전-방정식" class="level3">
+<h3 class="anchored" data-anchor-id="외적과-회전-방정식">20-2 외적과 회전 방정식</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>각운동량과 토크</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>3차원에서의 각운동량 <span class="math inline">\(\boldsymbol{L}\)</span> 은 아래와 같이 정의된다.</p>
+<p><span id="eq-FLP_1_20_12"><span class="math display">\[
+\boldsymbol{L}:= \boldsymbol{r}\times \boldsymbol{p}.
+\tag{1.32}\]</span></span></p>
+<p>3차원에서의 토크는 아래와 같이 정의된다.</p>
+<p><span id="eq-FLP_1_20_11"><span class="math display">\[
+\boldsymbol{\tau} := \boldsymbol{r}\times \boldsymbol{F}
+\tag{1.33}\]</span></span></p>
+</div>
+</div>
+<p><span class="math inline">\(\boldsymbol{F}=d\boldsymbol{p}/dt\)</span> 와 같이 토크와 각운동량은 아래의 관계를 갖는다.</p>
+<p><span id="eq-FLP_1_20_13"><span class="math display">\[
+\boldsymbol{\tau} = \dfrac{d\boldsymbol{L}}{dt}
+\tag{1.34}\]</span></span></p>
 
 
 </section>
@@ -1333,14 +1412,13 @@ I &amp;= \int (x^2+y^2)\,dm = \int (x^2+y^2)\, \rho(x,\,y,\,z)\, dxdydz.
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

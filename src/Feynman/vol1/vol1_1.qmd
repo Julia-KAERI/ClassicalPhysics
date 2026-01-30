@@ -748,15 +748,98 @@ $$ {#eq-FLP_definition_of_center_of_gravity}
 
 ::: {.callout-note icon="false"}
 
-#### **관성모먼트** 
+#### **관성모멘트** 
 
-$z$ 축을 화전축으로 할 경우 관성모먼트 $I$ 는 질량 분포가 이산적인 경우와 연속인 경우(이 때 밀도를 $\rho(x,\,y,\,z)$ 라고 하자) 에 각각 다음과 같다.
+$z$ 축을 회전축으로 할 경우 관성모먼트 $I$ 는 질량 분포가 이산적인 경우와 연속인 경우(이 때 밀도를 $\rho(\bf{r})$ 라고 하자) 에 각각 다음과 같다.
 
 $$
 \begin{aligned}
 I &= \sum_i m_i \left(x_i^2+y_i^2\right), \\[0.3em]
-I &= \int (x^2+y^2)\,dm = \int (x^2+y^2)\, \rho(x,\,y,\,z)\, dxdydz.
+I &= \int (x^2+y^2)\,dm = \int (x^2+y^2)\, \rho(\bf{r})\, d^3\bf{r}.
 \end{aligned}
 $$ {#eq-FLP_1_19_4}
 :::
+
+
+이를 이용하여 기본적인 도형의 관성 모멘트를 계산하면 아래와 같다.
+
+![다양한 물체의 관성 모멘트](figures/fig_1_19/moment_of_inertias/moment_of_inertia.png){#fig-FLP_1_19_moment_of_inertia width=460}
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-FLP-parallel_axis_theorem}
+
+#### 평행축 정리 
+
+질량이 $M$ 인 물체의 무게중심을 지나는 회전축 대한 관성모먼트가 $I_\text{CM}$ 일 때 이 축과 $h$ 만큼 떨어진 평행한 다른 축에 대한 관성모멘트 $I$ 는 다음과 같다.
+
+$$
+I = I_\text{CM} + Mh^2.
+$$ {#eq-FLP_paralle_axis_theorem}
+
+:::
+
+</div>
+
+::: {.proof}
+
+일반석을 잃지 않고 회전축이 $z$ 축과 평행하다고 할 수 있다. 질량 중심의 위치를 원점으로 잠고 새로운 축의 위치를 $(a,\,b)$ 라고 하면 $h=\sqrt{a^2+b^2}$ 이며
+$$
+\begin{aligned}
+I &= \sum_i ((x_i-a)^2+(y_i-b)^2)m_i \\[0.3em]
+&= \underbrace{\sum_i \left(x_i^2+y_i^2\right)m_i}_{=I_\text{CM}} - 2a\underbrace{\sum_i x_im_i}_{=x_\text{cm}=0} -2b\underbrace{\sum_i y_i m_i}_{y_{\text{cm}}=0} +  + \sum_i \underbrace{(a^2+b^2)}_{=h^2}m_i \\[0.3em]
+&= I_\text{CM} + Mh^2
+\end{aligned}
+$$
+
+이다. $\square$
+:::
+
+</br>
+
+### 19-4 회전 운동 에너지 {#sec-FLP_1_19_4}
+
+$\omega$ 의 각속도 회전하는 강체의 운동에너지를 계산해 보자. $i$ 번째 입자의 회전축으로부터의 거리를 $r_i$ 라고 하면 회전 속도 $v_i = r_i \omega_i$ 이므로 그 운동에너지 $T$ 는 다음과 같다.
+
+$$
+T=\dfrac{1}{2}\sum_i m_i v_i^2 = \dfrac{1}{2}\sum_i m_i (r_i \omega)^2 = \dfrac{1}{2}I\omega^2
+$$ {#eq-FLP_1_19_8}
+
+
+</br>
+
+## 20. 공간에서의 회전
+
+### 20-1 3차원 토크 {#sec-FLP-1_20_1}
+
+*3차원 벡터 외적에 대한 설명들*
+
+</brt>
+
+### 20-2 외적과 회전 방정식
+
+::: {.callout-note icon="false"}
+
+#### **각운동량과 토크** 
+
+3차원에서의 각운동량 $\bf{L}$ 은 아래와 같이 정의된다.
+
+$$
+\bf{L}:= \bf{r}\times \bf{p}.
+$$ {#eq-FLP_1_20_12}
+
+3차원에서의 토크는 아래와 같이 정의된다.
+
+$$
+\bf{\tau} := \bf{r}\times \bf{F}
+$$ {#eq-FLP_1_20_11}
+
+:::
+
+$\bf{F}=d\bf{p}/dt$ 와 같이 토크와 각운동량은 아래의 관계를 갖는다.
+
+$$
+\bf{\tau} = \dfrac{d\bf{L}}{dt}
+$$ {#eq-FLP_1_20_13}
+
 
