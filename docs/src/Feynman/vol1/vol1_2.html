@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/vol1/vol1_1.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -111,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynman/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynman/vol1/vol1_2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynman/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynman/vol1/vol1_2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-2: 특수상대성이론과 광학</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -123,8 +124,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynman/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynman/vol1/vol1_2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></a></li></ol></nav>
-      <h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../src/Feynman/00_index.html">파인만의 물리학 강의</a></li><li class="breadcrumb-item"><a href="../../../src/Feynman/vol1/vol1_2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-2: 특수상대성이론과 광학</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-2: 특수상대성이론과 광학</span></h1>
                       </div>
   </div>
     
@@ -176,13 +177,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Feynman/vol1/vol1_2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-2: 특수상대성이론과 광학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Feynman/vol1/vol1_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-3 : 열역학과 양자 입문</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../src/Feynman/vol2/vol2_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><span class="math inline">\(II\)</span>-1 : 정전기와 정자기</span></span></a>
   </div>
 </li>
       </ul>
@@ -199,55 +206,55 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/02_variational_principle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/03_hamilton_dynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/04_canonical_transform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/11_one_body_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/A_proofs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
   </div>
 </li>
       </ul>
@@ -264,13 +271,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -287,43 +294,43 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/02_1_electrostatics1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/02_2_electrostatics2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/03_magnetostatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/A1_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/A2_waves.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
   </div>
 </li>
       </ul>
@@ -340,13 +347,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -363,19 +370,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ThermalPhysics/02_entropy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ThermalPhysics/0A_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
   </div>
 </li>
       </ul>
@@ -392,7 +399,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -413,69 +420,69 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#특수-상대성-이론" id="toc-특수-상대성-이론" class="nav-link active" data-scroll-target="#특수-상대성-이론">15. 특수 상대성 이론</a>
+  <li><a href="#i.15.-특수-상대성-이론" id="toc-i.15.-특수-상대성-이론" class="nav-link active" data-scroll-target="#i.15.-특수-상대성-이론">I.15. 특수 상대성 이론</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP_15_1" id="toc-sec-FLP_15_1" class="nav-link" data-scroll-target="#sec-FLP_15_1">15-1 상대성 이론</a></li>
-  <li><a href="#sec-FLP_15_2" id="toc-sec-FLP_15_2" class="nav-link" data-scroll-target="#sec-FLP_15_2">15-2 로렌츠 변환</a></li>
-  <li><a href="#sec-FLP_15_3" id="toc-sec-FLP_15_3" class="nav-link" data-scroll-target="#sec-FLP_15_3">15-3 마이켈슨-몰리 실험</a></li>
-  <li><a href="#sec-FLP_15_4" id="toc-sec-FLP_15_4" class="nav-link" data-scroll-target="#sec-FLP_15_4">15-4 시간의 변환</a></li>
-  <li><a href="#sec-FLP_15_5" id="toc-sec-FLP_15_5" class="nav-link" data-scroll-target="#sec-FLP_15_5">15-5 로런츠 수축</a></li>
-  <li><a href="#sec-FLP_15_6" id="toc-sec-FLP_15_6" class="nav-link" data-scroll-target="#sec-FLP_15_6">15-6 동시성</a></li>
-  <li><a href="#sec-FLP_15_7" id="toc-sec-FLP_15_7" class="nav-link" data-scroll-target="#sec-FLP_15_7">15-7 4-벡터</a></li>
-  <li><a href="#sec-FLP_15_8" id="toc-sec-FLP_15_8" class="nav-link" data-scroll-target="#sec-FLP_15_8">15-8 상대론적 동역학</a></li>
-  <li><a href="#sec-FLP_15_9" id="toc-sec-FLP_15_9" class="nav-link" data-scroll-target="#sec-FLP_15_9">15-9 질량과 에너지의 동등함</a></li>
+  <li><a href="#sec-FLP_1_15_1" id="toc-sec-FLP_1_15_1" class="nav-link" data-scroll-target="#sec-FLP_1_15_1">I.15-1 상대성 이론</a></li>
+  <li><a href="#sec-FLP_1_15_2" id="toc-sec-FLP_1_15_2" class="nav-link" data-scroll-target="#sec-FLP_1_15_2">I.15-2 로렌츠 변환</a></li>
+  <li><a href="#sec-FLP_1_15_3" id="toc-sec-FLP_1_15_3" class="nav-link" data-scroll-target="#sec-FLP_1_15_3">I.15-3 마이켈슨-몰리 실험</a></li>
+  <li><a href="#sec-FLP_1_15_4" id="toc-sec-FLP_1_15_4" class="nav-link" data-scroll-target="#sec-FLP_1_15_4">I.15-4 시간의 변환</a></li>
+  <li><a href="#sec-FLP_1_15_5" id="toc-sec-FLP_1_15_5" class="nav-link" data-scroll-target="#sec-FLP_1_15_5">I.15-5 로런츠 수축</a></li>
+  <li><a href="#sec-FLP_1_15_6" id="toc-sec-FLP_1_15_6" class="nav-link" data-scroll-target="#sec-FLP_1_15_6">I.15-6 동시성</a></li>
+  <li><a href="#sec-FLP_1_15_7" id="toc-sec-FLP_1_15_7" class="nav-link" data-scroll-target="#sec-FLP_1_15_7">I.15-7 4-벡터</a></li>
+  <li><a href="#sec-FLP_1_15_8" id="toc-sec-FLP_1_15_8" class="nav-link" data-scroll-target="#sec-FLP_1_15_8">I.15-8 상대론적 동역학</a></li>
+  <li><a href="#sec-FLP_1_15_9" id="toc-sec-FLP_1_15_9" class="nav-link" data-scroll-target="#sec-FLP_1_15_9">I.15-9 질량과 에너지의 동등함</a></li>
   </ul></li>
-  <li><a href="#상대론적-에너지와-운동량" id="toc-상대론적-에너지와-운동량" class="nav-link" data-scroll-target="#상대론적-에너지와-운동량">16. 상대론적 에너지와 운동량</a>
+  <li><a href="#i.16.-상대론적-에너지와-운동량" id="toc-i.16.-상대론적-에너지와-운동량" class="nav-link" data-scroll-target="#i.16.-상대론적-에너지와-운동량">I.16. 상대론적 에너지와 운동량</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP_16_1" id="toc-sec-FLP_16_1" class="nav-link" data-scroll-target="#sec-FLP_16_1">16-1 상대론과 철학자들</a></li>
-  <li><a href="#sec-FLP_16_2" id="toc-sec-FLP_16_2" class="nav-link" data-scroll-target="#sec-FLP_16_2">16-2 쌍동이 역설</a></li>
-  <li><a href="#sec-FLP_16_3" id="toc-sec-FLP_16_3" class="nav-link" data-scroll-target="#sec-FLP_16_3">16-3 속도의 변환</a></li>
-  <li><a href="#sec-FLP_16_4" id="toc-sec-FLP_16_4" class="nav-link" data-scroll-target="#sec-FLP_16_4">16-4 상대론적 질량</a></li>
-  <li><a href="#sec-FLP_16_5" id="toc-sec-FLP_16_5" class="nav-link" data-scroll-target="#sec-FLP_16_5">16-5 상대론적 에너지</a></li>
+  <li><a href="#sec-FLP_1_16_1" id="toc-sec-FLP_1_16_1" class="nav-link" data-scroll-target="#sec-FLP_1_16_1">I.16-1 상대론과 철학자들</a></li>
+  <li><a href="#sec-FLP_1_16_2" id="toc-sec-FLP_1_16_2" class="nav-link" data-scroll-target="#sec-FLP_1_16_2">I.16-2 쌍동이 역설</a></li>
+  <li><a href="#sec-FLP_1_16_3" id="toc-sec-FLP_1_16_3" class="nav-link" data-scroll-target="#sec-FLP_1_16_3">I.16-3 속도의 변환</a></li>
+  <li><a href="#sec-FLP_1_16_4" id="toc-sec-FLP_1_16_4" class="nav-link" data-scroll-target="#sec-FLP_1_16_4">I.16-4 상대론적 질량</a></li>
+  <li><a href="#sec-FLP_I_16_5" id="toc-sec-FLP_I_16_5" class="nav-link" data-scroll-target="#sec-FLP_I_16_5">I.16-5 상대론적 에너지</a></li>
   </ul></li>
-  <li><a href="#시공간" id="toc-시공간" class="nav-link" data-scroll-target="#시공간">17. 시공간</a>
+  <li><a href="#i.17.-시공간" id="toc-i.17.-시공간" class="nav-link" data-scroll-target="#i.17.-시공간">I.17. 시공간</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP_1_17_1" id="toc-sec-FLP_1_17_1" class="nav-link" data-scroll-target="#sec-FLP_1_17_1">17-1 시공간의 기하학</a></li>
-  <li><a href="#sec-FLP_1_17_2" id="toc-sec-FLP_1_17_2" class="nav-link" data-scroll-target="#sec-FLP_1_17_2">17-2 시공간 간격</a></li>
-  <li><a href="#sec-FLP_1_17_3" id="toc-sec-FLP_1_17_3" class="nav-link" data-scroll-target="#sec-FLP_1_17_3">17-3 과거, 현재 그리고 미래</a></li>
-  <li><a href="#sec-FLP_1_17_4" id="toc-sec-FLP_1_17_4" class="nav-link" data-scroll-target="#sec-FLP_1_17_4">17-4 4-벡터에 더하여</a></li>
-  <li><a href="#벡터-대수" id="toc-벡터-대수" class="nav-link" data-scroll-target="#벡터-대수">17-5 4-벡터 대수</a></li>
+  <li><a href="#sec-FLP_1_17_1" id="toc-sec-FLP_1_17_1" class="nav-link" data-scroll-target="#sec-FLP_1_17_1">I.17-1 시공간의 기하학</a></li>
+  <li><a href="#sec-FLP_1_17_2" id="toc-sec-FLP_1_17_2" class="nav-link" data-scroll-target="#sec-FLP_1_17_2">I.17-2 시공간 간격</a></li>
+  <li><a href="#sec-FLP_1_17_3" id="toc-sec-FLP_1_17_3" class="nav-link" data-scroll-target="#sec-FLP_1_17_3">I.17-3 과거, 현재 그리고 미래</a></li>
+  <li><a href="#sec-FLP_1_17_4" id="toc-sec-FLP_1_17_4" class="nav-link" data-scroll-target="#sec-FLP_1_17_4">I.17-4 4-벡터에 더하여</a></li>
+  <li><a href="#sec-FLP_1_17_5" id="toc-sec-FLP_1_17_5" class="nav-link" data-scroll-target="#sec-FLP_1_17_5">I.17-5 4-벡터 대수</a></li>
   </ul></li>
-  <li><a href="#광학-최소-시간-원리" id="toc-광학-최소-시간-원리" class="nav-link" data-scroll-target="#광학-최소-시간-원리">26 광학 : 최소 시간 원리</a>
+  <li><a href="#i.26-광학-최소-시간-원리" id="toc-i.26-광학-최소-시간-원리" class="nav-link" data-scroll-target="#i.26-광학-최소-시간-원리">I.26 광학 : 최소 시간 원리</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP_1_26_1" id="toc-sec-FLP_1_26_1" class="nav-link" data-scroll-target="#sec-FLP_1_26_1">26-1 빛</a></li>
-  <li><a href="#sec-FLP_1_26_2" id="toc-sec-FLP_1_26_2" class="nav-link" data-scroll-target="#sec-FLP_1_26_2">26-2 반사와 굴절</a></li>
-  <li><a href="#sec-FLP_1_26_3" id="toc-sec-FLP_1_26_3" class="nav-link" data-scroll-target="#sec-FLP_1_26_3">26-3 페르마의 최소시간 원리</a></li>
-  <li><a href="#sec-FLP_1_26_4" id="toc-sec-FLP_1_26_4" class="nav-link" data-scroll-target="#sec-FLP_1_26_4">26-4 페르마의 원리의 응용</a></li>
-  <li><a href="#sec-FLP_1_26_5" id="toc-sec-FLP_1_26_5" class="nav-link" data-scroll-target="#sec-FLP_1_26_5">26-5 페르마의 원리의 좀 더 정확한 진술</a></li>
-  <li><a href="#sec-FLP_1_26_6" id="toc-sec-FLP_1_26_6" class="nav-link" data-scroll-target="#sec-FLP_1_26_6">26-6 어떻게 작동하는가?</a></li>
+  <li><a href="#sec-FLP_1_26_1" id="toc-sec-FLP_1_26_1" class="nav-link" data-scroll-target="#sec-FLP_1_26_1">I.26-1 빛</a></li>
+  <li><a href="#sec-FLP_1_26_2" id="toc-sec-FLP_1_26_2" class="nav-link" data-scroll-target="#sec-FLP_1_26_2">I.26-2 반사와 굴절</a></li>
+  <li><a href="#sec-FLP_1_26_3" id="toc-sec-FLP_1_26_3" class="nav-link" data-scroll-target="#sec-FLP_1_26_3">I.26-3 페르마의 최소시간 원리</a></li>
+  <li><a href="#sec-FLP_1_26_4" id="toc-sec-FLP_1_26_4" class="nav-link" data-scroll-target="#sec-FLP_1_26_4">I.26-4 페르마의 원리의 응용</a></li>
+  <li><a href="#sec-FLP_1_26_5" id="toc-sec-FLP_1_26_5" class="nav-link" data-scroll-target="#sec-FLP_1_26_5">I.26-5 페르마의 원리의 좀 더 정확한 진술</a></li>
+  <li><a href="#sec-FLP_1_26_6" id="toc-sec-FLP_1_26_6" class="nav-link" data-scroll-target="#sec-FLP_1_26_6">I.26-6 어떻게 작동하는가?</a></li>
   </ul></li>
-  <li><a href="#기하광학" id="toc-기하광학" class="nav-link" data-scroll-target="#기하광학">27 기하광학</a>
+  <li><a href="#i.27-기하광학" id="toc-i.27-기하광학" class="nav-link" data-scroll-target="#i.27-기하광학">I.27 기하광학</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP_1_27_1" id="toc-sec-FLP_1_27_1" class="nav-link" data-scroll-target="#sec-FLP_1_27_1">27-1 소개</a></li>
-  <li><a href="#sec-FLP_1_27_2" id="toc-sec-FLP_1_27_2" class="nav-link" data-scroll-target="#sec-FLP_1_27_2">27-2 초점거리와 구면</a></li>
+  <li><a href="#sec-FLP_1_27_1" id="toc-sec-FLP_1_27_1" class="nav-link" data-scroll-target="#sec-FLP_1_27_1">I.27-1 소개</a></li>
+  <li><a href="#sec-FLP_1_27_2" id="toc-sec-FLP_1_27_2" class="nav-link" data-scroll-target="#sec-FLP_1_27_2">I.27-2 초점거리와 구면</a></li>
   </ul></li>
-  <li><a href="#전자기-복사" id="toc-전자기-복사" class="nav-link" data-scroll-target="#전자기-복사">28 전자기 복사</a>
+  <li><a href="#i.28-전자기-복사" id="toc-i.28-전자기-복사" class="nav-link" data-scroll-target="#i.28-전자기-복사">I.28 전자기 복사</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP-1_18_1" id="toc-sec-FLP-1_18_1" class="nav-link" data-scroll-target="#sec-FLP-1_18_1">28-1 전자기학</a></li>
-  <li><a href="#sec-FLP_1_28_2" id="toc-sec-FLP_1_28_2" class="nav-link" data-scroll-target="#sec-FLP_1_28_2">28-2 복사</a></li>
-  <li><a href="#sec-FLP_1_28_3" id="toc-sec-FLP_1_28_3" class="nav-link" data-scroll-target="#sec-FLP_1_28_3">28-3 쌍극자 복사체</a></li>
-  <li><a href="#sec-FLP_1_28_4" id="toc-sec-FLP_1_28_4" class="nav-link" data-scroll-target="#sec-FLP_1_28_4">28-4 간섭</a></li>
+  <li><a href="#sec-FLP-1_18_1" id="toc-sec-FLP-1_18_1" class="nav-link" data-scroll-target="#sec-FLP-1_18_1">I.28-1 전자기학</a></li>
+  <li><a href="#sec-FLP_1_28_2" id="toc-sec-FLP_1_28_2" class="nav-link" data-scroll-target="#sec-FLP_1_28_2">I.28-2 복사</a></li>
+  <li><a href="#sec-FLP_1_28_3" id="toc-sec-FLP_1_28_3" class="nav-link" data-scroll-target="#sec-FLP_1_28_3">I.28-3 쌍극자 복사체</a></li>
+  <li><a href="#sec-FLP_1_28_4" id="toc-sec-FLP_1_28_4" class="nav-link" data-scroll-target="#sec-FLP_1_28_4">I.28-4 간섭</a></li>
   </ul></li>
-  <li><a href="#간섭" id="toc-간섭" class="nav-link" data-scroll-target="#간섭">29 간섭</a>
+  <li><a href="#i.29-간섭" id="toc-i.29-간섭" class="nav-link" data-scroll-target="#i.29-간섭">I.29 간섭</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP_1_29_1" id="toc-sec-FLP_1_29_1" class="nav-link" data-scroll-target="#sec-FLP_1_29_1">29-1 전자기파</a></li>
-  <li><a href="#sec-FLP_1_29_2" id="toc-sec-FLP_1_29_2" class="nav-link" data-scroll-target="#sec-FLP_1_29_2">29-2 복사 에너지</a></li>
-  <li><a href="#sec-FLP_1_29_3" id="toc-sec-FLP_1_29_3" class="nav-link" data-scroll-target="#sec-FLP_1_29_3">29-3 사인파</a></li>
-  <li><a href="#sec-FLP_1_29_4" id="toc-sec-FLP_1_29_4" class="nav-link" data-scroll-target="#sec-FLP_1_29_4">29.4 두 쌍극자 복사자</a></li>
-  <li><a href="#sec-FLP_1_29_5" id="toc-sec-FLP_1_29_5" class="nav-link" data-scroll-target="#sec-FLP_1_29_5">29.5 간섭의 수학</a></li>
+  <li><a href="#sec-FLP_1_29_1" id="toc-sec-FLP_1_29_1" class="nav-link" data-scroll-target="#sec-FLP_1_29_1">I.29-1 전자기파</a></li>
+  <li><a href="#sec-FLP_1_29_2" id="toc-sec-FLP_1_29_2" class="nav-link" data-scroll-target="#sec-FLP_1_29_2">I.29-2 복사 에너지</a></li>
+  <li><a href="#sec-FLP_1_29_3" id="toc-sec-FLP_1_29_3" class="nav-link" data-scroll-target="#sec-FLP_1_29_3">I.29-3 사인파</a></li>
+  <li><a href="#sec-FLP_1_29_4" id="toc-sec-FLP_1_29_4" class="nav-link" data-scroll-target="#sec-FLP_1_29_4">I.29.4 두 쌍극자 복사자</a></li>
+  <li><a href="#sec-FLP_1_29_5" id="toc-sec-FLP_1_29_5" class="nav-link" data-scroll-target="#sec-FLP_1_29_5">I.29.5 간섭의 수학</a></li>
   </ul></li>
-  <li><a href="#회절" id="toc-회절" class="nav-link" data-scroll-target="#회절">30. 회절</a>
+  <li><a href="#i.30.-회절" id="toc-i.30.-회절" class="nav-link" data-scroll-target="#i.30.-회절">I.30. 회절</a>
   <ul class="collapse">
-  <li><a href="#n-개의-동일한-진동자에-의한-최종-진폭" id="toc-n-개의-동일한-진동자에-의한-최종-진폭" class="nav-link" data-scroll-target="#n-개의-동일한-진동자에-의한-최종-진폭">30-1 <span class="math inline">\(n\)</span> 개의 동일한 진동자에 의한 최종 진폭</a></li>
-  <li><a href="#sec-FLP_1_3_20" id="toc-sec-FLP_1_3_20" class="nav-link" data-scroll-target="#sec-FLP_1_3_20">30-2 회절 격자</a></li>
-  <li><a href="#sec-FLP_1_30_3" id="toc-sec-FLP_1_30_3" class="nav-link" data-scroll-target="#sec-FLP_1_30_3">30-3 회절격자의 분해능</a></li>
-  <li><a href="#sec-FLP_1_30_4" id="toc-sec-FLP_1_30_4" class="nav-link" data-scroll-target="#sec-FLP_1_30_4">30-4 포물선형 안테나</a></li>
+  <li><a href="#sec-FLP_1_30_1" id="toc-sec-FLP_1_30_1" class="nav-link" data-scroll-target="#sec-FLP_1_30_1">I.30-1 <span class="math inline">\(n\)</span> 개의 동일한 진동자에 의한 최종 진폭</a></li>
+  <li><a href="#sec-FLP_1_3_20" id="toc-sec-FLP_1_3_20" class="nav-link" data-scroll-target="#sec-FLP_1_3_20">I.30-2 회절 격자</a></li>
+  <li><a href="#sec-FLP_1_30_3" id="toc-sec-FLP_1_30_3" class="nav-link" data-scroll-target="#sec-FLP_1_30_3">I.30-3 회절격자의 분해능</a></li>
+  <li><a href="#sec-FLP_1_30_4" id="toc-sec-FLP_1_30_4" class="nav-link" data-scroll-target="#sec-FLP_1_30_4">I.30-4 포물선형 안테나</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -495,10 +502,10 @@ window.Quarto = {
 \DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
 </div>
-<section id="특수-상대성-이론" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="특수-상대성-이론">15. 특수 상대성 이론</h2>
-<section id="sec-FLP_15_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_15_1">15-1 상대성 이론</h3>
+<section id="i.15.-특수-상대성-이론" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="i.15.-특수-상대성-이론">I.15. 특수 상대성 이론</h2>
+<section id="sec-FLP_1_15_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_15_1">I.15-1 상대성 이론</h3>
 <ul>
 <li>정지 질량과 상대론적 질량 (현대적인 상대론에서는 상대론적인 질량이란 개념을 사용하지 않는다.)</li>
 <li>뉴턴의 상대성 이론, 즉 갈릴레이의 상대성 이론</li>
@@ -507,8 +514,8 @@ window.Quarto = {
 </ul>
 <p><br></p>
 </section>
-<section id="sec-FLP_15_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_15_2">15-2 로렌츠 변환</h3>
+<section id="sec-FLP_1_15_2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_15_2">I.15-2 로렌츠 변환</h3>
 <ul>
 <li><p>멕스웰 방정식과 갈릴레이 상대성 이론을 조화시키려는 노력, 그리고 실패</p></li>
 <li><p>로런츠 변환의 등장</p>
@@ -518,7 +525,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>갈릴레이 변환과 로런츠 변환</strong>
+<span class="screen-reader-only">중요</span><strong>갈릴레이 변환과 로런츠 변환</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -539,7 +546,7 @@ x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
+<span class="screen-reader-only">중요</span>푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -565,8 +572,8 @@ x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c
 </ul>
 <p><br></p>
 </section>
-<section id="sec-FLP_15_3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_15_3">15-3 마이켈슨-몰리 실험</h3>
+<section id="sec-FLP_1_15_3" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_15_3">I.15-3 마이켈슨-몰리 실험</h3>
 <div id="fig-FLP_Fig_1_15_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_Fig_1_15_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -592,8 +599,8 @@ t_1+t_2 = \dfrac{L_\parallel}{c-u}+ \dfrac{L_\parallel}{c+u} = \dfrac{2L/c}{\sqr
 <p>이다.</p>
 <p><br></p>
 </section>
-<section id="sec-FLP_15_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_15_4">15-4 시간의 변환</h3>
+<section id="sec-FLP_1_15_4" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_15_4">I.15-4 시간의 변환</h3>
 <p><a href="#sec-FLP_15_3">15-3 마이켈슨 몰리 실험</a> 은 지구와 같이 움직이는 관찰자가 아닌 정지한 관찰자의 입장에서 <span class="math inline">\(t_1,\,t_2,\,t_3\)</span> 를 측정하고 계산한 실험이다. 이제 지구와 같이 움직이는 관찰자의 입장에서 보자. 구별하기 위해 <span class="math inline">\(\overline{t}_1,\,\overline{t}_2,\,\overline{t}_3\)</span> 라고 하면</p>
 <p><span class="math display">\[
 \overline{t}_1 = \overline{t}_2 = \overline{t}_3 = L/c
@@ -625,8 +632,8 @@ t_3 = \dfrac{L/c}{\sqrt{1-u^2/c^2}} &gt; \dfrac{L}{c}= \overline{t}_3
 <p>이다.</p>
 <p><br></p>
 </section>
-<section id="sec-FLP_15_5" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_15_5">15-5 로런츠 수축</h3>
+<section id="sec-FLP_1_15_5" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_15_5">I.15-5 로런츠 수축</h3>
 <ul>
 <li>마이켈슨-몰리 실험은 두 경로 (<span class="math inline">\(BCB\)</span>, <span class="math inline">\(BEB\)</span>) 의 두 빛이 위상차를 전혀 갖지 않는다는 것을 보여준다. <span class="math inline">\(BC\)</span> 의 길이는 두 좌표계 <span class="math inline">\(S,\,S'\)</span> 에서 변하지 않는다는 것을 안다.</li>
 <li>이것으로부터 <span class="math inline">\(BE\)</span> 의 길이가 <span class="math inline">\(L\sqrt{1-u^2/c^2}\)</span> 만큼 줄어들었을 때 실험 결과를 잘 성명한다는 것도 알게 되었다. 그렇다면 <span class="math inline">\(S\)</span> 에서의 측정과 <span class="math inline">\(S'\)</span> 에서의 <span class="math inline">\(BE\)</span> 의 길이 측정에 무슨 차이가 존재할까?</li>
@@ -634,8 +641,8 @@ t_3 = \dfrac{L/c}{\sqrt{1-u^2/c^2}} &gt; \dfrac{L}{c}= \overline{t}_3
 <p>기타..</p>
 <p><br></p>
 </section>
-<section id="sec-FLP_15_6" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_15_6">15-6 동시성</h3>
+<section id="sec-FLP_1_15_6" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_15_6">I.15-6 동시성</h3>
 <ul>
 <li><p>로런츠 변환 <a href="#eq-FLP_1_15_3" class="quarto-xref">식&nbsp;<span>2.2</span></a> 의 시간의 변환식을 보자. 여기서 <span class="math inline">\(-ux/c^2\)</span> 는 무슨 의미인가?</p></li>
 <li><p><span class="math inline">\(S\)</span> 기준틀에서 <span class="math inline">\(x_1,\,x_2 (x_1\ne x_2)\)</span> 에서 <span class="math inline">\(t_1=t_2\)</span> 에 어떤 사건이 발생했다고 하자. <span class="math inline">\(S'\)</span> 기준틀에서 아래 식이 성립한다. <span class="math display">\[
@@ -645,8 +652,8 @@ t'_2-t'_1 = \dfrac{(t_2-ux_2/c^2)-(t_1-ux_1/c^2)}{\sqrt{1-u^2/c^2}} = \dfrac{u(x
 </ul>
 <p><br></p>
 </section>
-<section id="sec-FLP_15_7" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="sec-FLP_15_7">15-7 4-벡터</h3>
+<section id="sec-FLP_1_15_7" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_15_7">I.15-7 4-벡터</h3>
 <p>3차원 좌표공간에서 회전 변환 <span class="math inline">\(R\)</span> 에 의해 거리가 보존되며 <span class="math inline">\(\boldsymbol{x}'=R\boldsymbol{x}\)</span> 에 대해 <span class="math inline">\(\|\boldsymbol{x}'\|=\|\boldsymbol{x}\|\)</span> 이다. 로런츠 변환에 대해서는</p>
 <p><span class="math display">\[
 (ct')^2 - x'^2 - y'^2 - z'^2 = ct^2 - x^2 - y^2 - z^2
@@ -659,8 +666,8 @@ X^\mu = (ct,\,x,\,y,\,z),\qquad X_\mu = (ct,\,-x,\,-y,\,-z).
 <p>즉 <span class="math inline">\(X^0 = ct,\, X^1=x\)</span> 이며 <span class="math inline">\(X_0=ct,\, X_2=-y\)</span> 이다. 위첨자가 붙는 백터를 <strong>반변 벡터(covariant vector)</strong> 라고 하고 아래첨자가 부튼 벡터를 <strong>공변 벡터(covariant vector)</strong> 라고 한다.</p>
 <p><br></p>
 </section>
-<section id="sec-FLP_15_8" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_15_8">15-8 상대론적 동역학</h3>
+<section id="sec-FLP_1_15_8" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_15_8">I.15-8 상대론적 동역학</h3>
 <p>뉴턴의 운동방정식은 <span class="math inline">\(\boldsymbol{p}=m\boldsymbol{v}\)</span> 에 대해</p>
 <p><span class="math display">\[
 \boldsymbol{F}=\dfrac{d\boldsymbol{p}}{dt},
@@ -676,7 +683,7 @@ X^\mu = (ct,\,x,\,y,\,z),\qquad X_\mu = (ct,\,-x,\,-y,\,-z).
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>최종적으로…</strong>
+<span class="screen-reader-only">힌트</span><strong>최종적으로…</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -695,8 +702,8 @@ v(t)= \dfrac{Ft/m}{\sqrt {1+ \left(Ft/mc\right)^2}}
 <p>이다. <span class="math inline">\(t\to infty\)</span> 극한에서 <span class="math inline">\(v(t) \to c\)</span> 임을 안다. 이것은 뉴턴역학과 다른 결과인데 뉴턴역학에서는 일정한 힘을 계속 가할 수 있다면 <span class="math inline">\(v&gt;c\)</span> 가 가능하다.</p>
 <p><br></p>
 </section>
-<section id="sec-FLP_15_9" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_15_9">15-9 질량과 에너지의 동등함</h3>
+<section id="sec-FLP_1_15_9" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_15_9">I.15-9 질량과 에너지의 동등함</h3>
 <p>아인슈타인은 에너지를 아래와 같이 정의했다.</p>
 <p><span id="eq-FLP_1_relativistic_energy"><span class="math display">\[
 E:= \dfrac{mc^2}{\sqrt{1-v^2/c^2}}.
@@ -709,10 +716,10 @@ E=mc^2 + \dfrac{mv^2}{2} + \cdots
 <p><br></p>
 </section>
 </section>
-<section id="상대론적-에너지와-운동량" class="level2">
-<h2 class="anchored" data-anchor-id="상대론적-에너지와-운동량">16. 상대론적 에너지와 운동량</h2>
-<section id="sec-FLP_16_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_16_1">16-1 상대론과 철학자들</h3>
+<section id="i.16.-상대론적-에너지와-운동량" class="level2">
+<h2 class="anchored" data-anchor-id="i.16.-상대론적-에너지와-운동량">I.16. 상대론적 에너지와 운동량</h2>
+<section id="sec-FLP_1_16_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_16_1">I.16-1 상대론과 철학자들</h3>
 <ul>
 <li><p>푸앵카레는 상대성 원리를 다음과 같이 진술하였으며, 많은 소위 철학자들에게 오해를 받았다.</p>
 <blockquote class="blockquote">
@@ -723,12 +730,12 @@ E=mc^2 + \dfrac{mv^2}{2} + \cdots
 </ul>
 <p><br></p>
 </section>
-<section id="sec-FLP_16_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_16_2">16-2 쌍동이 역설</h3>
+<section id="sec-FLP_1_16_2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_16_2">I.16-2 쌍동이 역설</h3>
 <p><br></p>
 </section>
-<section id="sec-FLP_16_3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_16_3">16-3 속도의 변환</h3>
+<section id="sec-FLP_1_16_3" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_16_3">I.16-3 속도의 변환</h3>
 <p>두 기준틀 <span class="math inline">\(S,\,S'\)</span> 이 <span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{x}}\)</span> 의 상대적인 운동을 하고 있을 때 두 기준틀 사이의 로런츠 변환은 다음과 같다.</p>
 <p><span id="eq-FLP_lorent_transform_in_16_3"><span class="math display">\[
 \begin{array}{rl} x'&amp;= \dfrac{x-ut}{\sqrt{1-u^2/c^2}},\\[0.3em] y'&amp;=y, \\[0.3em]z'&amp;=z, \\ t'&amp;=\dfrac{t-ux/c^2}{\sqrt{1-u^2/c^2}}\dots\end{array} \quad \iff \quad \begin{array}{rl} x&amp;= \dfrac{x'+ut'}{\sqrt{1-u^2/c^2}},\\[0.3em] y&amp;=y', \\[0.3em] z&amp;=z', \\ t&amp;=\dfrac{t'+ux'/c^2}{\sqrt{1-u^2/c^2}}.\end{array}
@@ -757,8 +764,8 @@ v_y = v_y'\sqrt{1-u^2/c^2}
 <p>이다. 이 식을 상대성 이론의 기본 원리로부터 직접 구해보자. 우리는 앞서 <a href="#sec-FLP_15_4">15-4 시간의 변환</a> 에서 정지한 기준트로가 움직이는 기준틀에서의 시간이 다르게 흐른다는 것을 알았다. 속도는 시간에 반비례하며 그 비율이 <span class="math inline">\(\sqrt{1-u^2/c^2}\)</span> 이므로 우리는 <a href="#eq-FLP_1_16_7" class="quarto-xref">식&nbsp;<span>2.12</span></a> 을 얻을 수 있다.</p>
 <p><br></p>
 </section>
-<section id="sec-FLP_16_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_16_4">16-4 상대론적 질량</h3>
+<section id="sec-FLP_1_16_4" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_16_4">I.16-4 상대론적 질량</h3>
 <ul>
 <li>앞서 말했듯이 파인만 당시에는 상대론적 효과에 의해 질량이 증가하는 것으로 접근했지만 현대에서는 정지질량만을 다루며 질량이 증가한다고 보지 않는다. 하지만 파인만의 제목은 그대로 두기로 한다.</li>
 </ul>
@@ -831,7 +838,7 @@ M = 2\gamma (w) m
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
+<span class="screen-reader-only">힌트</span><span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -840,8 +847,8 @@ M = 2\gamma (w) m
 </div>
 <p><br></p>
 </section>
-<section id="sec-FLP_16_5" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_16_5">16-5 상대론적 에너지</h3>
+<section id="sec-FLP_I_16_5" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_I_16_5">I.16-5 상대론적 에너지</h3>
 <p>입자에 일을 해 주었을 때의 운동에너지의 변화는 다음과 같다.</p>
 <p><span id="eq-FLP_1_16_12"><span class="math display">\[
 \Delta T = \dfrac{mc^2}{\sqrt{1-v^2/c^2}}-mc^2 = \gamma mc^2-mc^2
@@ -859,10 +866,10 @@ E^2 - p^2c^2 = m^2c^4,
 <p><br></p>
 </section>
 </section>
-<section id="시공간" class="level2">
-<h2 class="anchored" data-anchor-id="시공간">17. 시공간</h2>
+<section id="i.17.-시공간" class="level2">
+<h2 class="anchored" data-anchor-id="i.17.-시공간">I.17. 시공간</h2>
 <section id="sec-FLP_1_17_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_17_1">17-1 시공간의 기하학</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_17_1">I.17-1 시공간의 기하학</h3>
 <p><span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{x}}\)</span> 로 병진운동하는 두 기준틀에 대해 앞서 로런츠 변환 <a href="#eq-FLP_lorent_transform_in_16_3" class="quarto-xref">식&nbsp;<span>2.9</span></a> 을 <span class="math inline">\(\gamma=1/\sqrt{1-u^2/c^2}\)</span> 와 <span class="math inline">\(\beta = u/c\)</span> 를 사용하여 기술하면 아래와 같다.</p>
 <p><span id="eq-FLP_1_17_1"><span class="math display">\[
 x'=\gamma_u (x-\beta_u ct),\quad y'=y,\quad z'=z,\quad ct=\gamma_u(ct-\beta_u x).
@@ -885,7 +892,7 @@ x'=x\cos\theta + y \sin \theta, \quad y'=-x\sin \theta + y \cos \theta,\quad z'=
 <p><br></p>
 </section>
 <section id="sec-FLP_1_17_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_17_2">17-2 시공간 간격</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_17_2">I.17-2 시공간 간격</h3>
 <p>4-벡터로 표현된 사건 <span class="math inline">\(X=(ct,\,x,\,y,\,z)\)</span> 과 <span class="math inline">\(X\)</span> 를 로렌츠 변환 시킨 <span class="math inline">\(X'=(ct',\,x',\,y',\,z')\)</span> 를 생각하자. 이 때</p>
 <p><span id="eq-FLP_1_17_3"><span class="math display">\[
 c^2t'^2 -x'^2 - y'^2 - z'^2 = ct^2 - x^2 - y^2 - z^2
@@ -895,7 +902,7 @@ c^2t'^2 -x'^2 - y'^2 - z'^2 = ct^2 - x^2 - y^2 - z^2
 <p><br></p>
 </section>
 <section id="sec-FLP_1_17_3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_17_3">17-3 과거, 현재 그리고 미래</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_17_3">I.17-3 과거, 현재 그리고 미래</h3>
 <div id="fig-FLP_space_time_area_around_origin" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_space_time_area_around_origin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -908,7 +915,7 @@ c^2t'^2 -x'^2 - y'^2 - z'^2 = ct^2 - x^2 - y^2 - z^2
 </div>
 </section>
 <section id="sec-FLP_1_17_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_17_4">17-4 4-벡터에 더하여</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_17_4">I.17-4 4-벡터에 더하여</h3>
 <p>수학적으로 4차원 시공간에서의 선형변환 <span class="math inline">\(\Lambda\)</span> 가 임의의 4-벡터 <span class="math inline">\(X\)</span> 에 대해 <span class="math inline">\(\|\Lambda X\|=\|X\|\)</span> 이며 <span class="math inline">\(\det \Lambda = 1\)</span> 일 때 <span class="math inline">\(\Lambda\)</span> 를 로렌츠 변환이라고 하며, 우리가 이미 알고 있는 로렌츠 변환과 동일하다. 여기서 4차원 시공간에서 정의된 벡터의 좌표변환이 로렌츠 변환에 의해 정의될 때 즉 <span class="math inline">\(A=(A^0,\,A^1,\,A^2,\,A^3)\)</span> 의 좌표변환이 <span class="math inline">\(A'=\Lambda A\)</span> 를 따를 때 이 <span class="math inline">\(A\)</span> 를 4-벡터 라고 한다. 이제 시공간에서의 위치 벡터 이외의 4-벡터가 존재함을 보이자.</p>
 <p>우리는 이전에 에너지와 운동량을 <span class="math inline">\(E=\gamma_v mc^2\)</span>, <span class="math inline">\(\boldsymbol{p}=\gamma_v m\boldsymbol{v}\)</span> 로 정의하였으며 <span class="math inline">\(E^2-p^2c^2 = m^2c^4\)</span> 임을 안다. 이것이 기술된 <span class="math inline">\(S\)</span> 기준틀에 대해 <span class="math inline">\(\boldsymbol{u}=u\hat{\boldsymbol{x}}\)</span> 의 속도로 움직이는 <span class="math inline">\(S'\)</span> 기준틀을 생각하자. 그렇다면 <a href="#eq-FLP_1_16_6" class="quarto-xref">식&nbsp;<span>2.10</span></a>, <a href="#eq-FLP_1_16_7" class="quarto-xref">식&nbsp;<span>2.12</span></a> 에 의해</p>
 <p><span class="math display">\[
@@ -958,8 +965,8 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 \]</span></p>
 <p>임을 안다.</p>
 </section>
-<section id="벡터-대수" class="level3">
-<h3 class="anchored" data-anchor-id="벡터-대수">17-5 4-벡터 대수</h3>
+<section id="sec-FLP_1_17_5" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_17_5">I.17-5 4-벡터 대수</h3>
 <p>4 벡터 <span class="math inline">\(A^\mu\)</span> 와 <span class="math inline">\(A_\mu\)</span> 에 대해</p>
 <p><span class="math display">\[
 \sum_{\mu=0}^3 A^\mu A_\mu = \sum_{\mu=0}^3 A_\mu A^\mu = (A^0)^2 - (A^1)^2 - (A^2)^2 - (A^3)^3
@@ -968,10 +975,10 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <p><br></p>
 </section>
 </section>
-<section id="광학-최소-시간-원리" class="level2">
-<h2 class="anchored" data-anchor-id="광학-최소-시간-원리">26 광학 : 최소 시간 원리</h2>
+<section id="i.26-광학-최소-시간-원리" class="level2">
+<h2 class="anchored" data-anchor-id="i.26-광학-최소-시간-원리">I.26 광학 : 최소 시간 원리</h2>
 <section id="sec-FLP_1_26_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_26_1">26-1 빛</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_26_1">I.26-1 빛</h3>
 <div id="fig-FLP_spectrum_of_flight" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_spectrum_of_flight-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -993,7 +1000,7 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <p><br></p>
 </section>
 <section id="sec-FLP_1_26_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_26_2">26-2 반사와 굴절</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_26_2">I.26-2 반사와 굴절</h3>
 <section id="거울-면에서의-반사" class="level4">
 <h4 class="anchored" data-anchor-id="거울-면에서의-반사"><strong>거울 면에서의 반사</strong></h4>
 <p>입사각과 반사각은 같다. 즉 <span class="math inline">\(\sin \theta_i = \sin \theta_r\)</span> 이다.</p>
@@ -1005,14 +1012,14 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 </section>
 </section>
 <section id="sec-FLP_1_26_3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_26_3">26-3 페르마의 최소시간 원리</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_26_3">I.26-3 페르마의 최소시간 원리</h3>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>페르마의 최소시간의 원리</strong>
+<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1036,7 +1043,7 @@ nc_n = c
 <p><br></p>
 </section>
 <section id="sec-FLP_1_26_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_26_4">26-4 페르마의 원리의 응용</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_26_4">I.26-4 페르마의 원리의 응용</h3>
 <section id="가역-원리-principle-of-reciprocity" class="level4">
 <h4 class="anchored" data-anchor-id="가역-원리-principle-of-reciprocity"><strong>가역 원리 (principle of reciprocity)</strong></h4>
 <p>빛이 최소 시간 원리에 따라 <span class="math inline">\(A\to B\)</span> 의 한 경로로 진행한다면 <span class="math inline">\(B\)</span> 에서 <span class="math inline">\(A\)</span> 로 진행하는 경로는 정확히 반대 경로이다.</p>
@@ -1139,14 +1146,14 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 </section>
 </section>
 <section id="sec-FLP_1_26_5" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_26_5">26-5 페르마의 원리의 좀 더 정확한 진술</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_26_5">I.26-5 페르마의 원리의 좀 더 정확한 진술</h3>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
+<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1169,7 +1176,7 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 <p><br></p>
 </section>
 <section id="sec-FLP_1_26_6" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_26_6">26-6 어떻게 작동하는가?</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_26_6">I.26-6 어떻게 작동하는가?</h3>
 <p>실제로 벌어지는 일에 대해 양자역학적인 관점에서 대략적으로 알아보자. <a href="#fig-FLP_1_26_3" class="quarto-xref">그림&nbsp;<span>2.9</span></a> 에서의 빛의 경로는 전혀 파동 형태가 아니며 광자로 이루어진 것으로 보인다. 빛의 세기는 단위시간당 도달하는 광자의 개수이다.</p>
 <p>우리가 계산하고자 하는 것은 <span class="math inline">\(A\)</span> 에서 출발한 빛이 거울을 거쳐 <span class="math inline">\(B\)</span> 에 도달할 확률이다. 경로 <span class="math inline">\(\alpha\)</span> 에 대해 확률은 복소수로 <span class="math inline">\(\rho_\alpha e^{i \theta_\alpha}\)</span> 로 표현되며 여기서 <span class="math inline">\(\theta_\alpha\)</span> 는 시간 도달 시간에 비례한다. 1초마다의 회전수가 빛의 진동수이다. 당연히 경로마다 <span class="math inline">\(\theta_\alpha\)</span> 다르다.</p>
 <p>이 때 빛이 <span class="math inline">\(B\)</span> 에 도달할 확률 <span class="math inline">\(P_B\)</span> 는 다음을 만족한다(는 것이 파인만 경로적분의 결론이다).</p>
@@ -1191,10 +1198,10 @@ P_B \propto  \left|\sum_{\alpha \in \text{all possible paths}} \rho_\alpha e^{i\
 <p><br></p>
 </section>
 </section>
-<section id="기하광학" class="level2">
-<h2 class="anchored" data-anchor-id="기하광학">27 기하광학</h2>
+<section id="i.27-기하광학" class="level2">
+<h2 class="anchored" data-anchor-id="i.27-기하광학">I.27 기하광학</h2>
 <section id="sec-FLP_1_27_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_27_1">27-1 소개</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_27_1">I.27-1 소개</h3>
 <ul>
 <li><p>기하광학은 여기서 다루게 될 기초적인 기하광학이든 좀 더 복잡한 기하광학이든 앞으로 우리가 다룰 물리학의 분야와는 별 관련이 없다. 딱 한가지만 빼고.</p></li>
 <li><p>앞으로 다루게 될 기하광학에서 많이 사용하게 될 공식이 있다.</p></li>
@@ -1216,7 +1223,7 @@ P_B \propto  \left|\sum_{\alpha \in \text{all possible paths}} \rho_\alpha e^{i\
 <p><br></p>
 </section>
 <section id="sec-FLP_1_27_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_27_2">27-2 초점거리와 구면</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_27_2">I.27-2 초점거리와 구면</h3>
 <div id="fig-FLP_1_27_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_1_27_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1235,10 +1242,10 @@ P_B \propto  \left|\sum_{\alpha \in \text{all possible paths}} \rho_\alpha e^{i\
 <p>… to be done …</p>
 </section>
 </section>
-<section id="전자기-복사" class="level2">
-<h2 class="anchored" data-anchor-id="전자기-복사">28 전자기 복사</h2>
+<section id="i.28-전자기-복사" class="level2">
+<h2 class="anchored" data-anchor-id="i.28-전자기-복사">I.28 전자기 복사</h2>
 <section id="sec-FLP-1_18_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP-1_18_1">28-1 전자기학</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP-1_18_1">I.28-1 전자기학</h3>
 <ul>
 <li><p><strong>전자기 복사 (electromagnetic radiation)</strong> : 전자의 빠른 진동으로 인해 발생하는 전자기파.</p></li>
 <li><p>19세기 말까지의 물리학적 지식</p>
@@ -1268,7 +1275,7 @@ P_B \propto  \left|\sum_{\alpha \in \text{all possible paths}} \rho_\alpha e^{i\
 <p><br></p>
 </section>
 <section id="sec-FLP_1_28_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_28_2">28-2 복사</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_28_2">I.28-2 복사</h3>
 <p><a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>2.27</span></a> 에는 거리의 제곱이 아니라 거리에 반비례하는 부분이 존재하며, 충분히 먼 거리에서는 이 항이 지배적이 된다. 구체적으로 찾아보는 것은 다음으로 미루기로 하고 일단 이것을 받아들이기로 하자. 정답은 세번째 항이다. 이제 우리는 당분간 다음을 받아들이자.</p>
 <p><span id="eq-FLP_1_28_5"><span class="math display">\[
 \boldsymbol{E}= -\dfrac{q}{4\pi \epsilon_0 c^2} \dfrac{d^2 \boldsymbol{e}_{r'}}{dt^2}.
@@ -1287,21 +1294,21 @@ E_x (t)= - \dfrac{q}{4\pi \epsilon_0 c^2 r} a_x\left(t-\dfrac{r}{c}\right)
 <p><br></p>
 </section>
 <section id="sec-FLP_1_28_3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_28_3">28-3 쌍극자 복사체</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_28_3">I.28-3 쌍극자 복사체</h3>
 <p>우리는 <a href="#eq-FLP_1_28_6" class="quarto-xref">식&nbsp;<span>2.30</span></a> 를 (1) 우리가 보는 방향에 대해 직각 방향으로 (2) 천천히 움직이는(non-relativistic) (3) 멀리 떨어져 있는 전자기 복사에 대한 기본 법칙으로 (당분간) 간주한다. 이 식의 가속도는 <span class="math inline">\(r/c\)</span> 만큼의 시간 이전의 가속도이다. 이 장에서는 이 식의 물리적 의미에 대해 다루며 이후에는 빛과 전파의 전달에 대한 모든 현상-반사, 굴절, 간섭, 회절, 산란 과 같은-을 설명하는데 사용할 것이다.</p>
 <p>… 발전기를 이용한 쌍극자 복사체와 일종의 안테나에 대한 설명들…</p>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_28_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_28_4">28-4 간섭</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_28_4">I.28-4 간섭</h3>
 <p>두개의 전자기파 원이 있을 때 외부에서의 전기장은 각각의 전자기파 원에서의 전자기장의 벡터합으로서 상쇄 혹은 보강이 있을 수 있다…. 는 것에 대한 내용들. 이것을 <strong>간섭 (interference)</strong> 라고 한다.</p>
 <p><br></p>
 </section>
 </section>
-<section id="간섭" class="level2">
-<h2 class="anchored" data-anchor-id="간섭">29 간섭</h2>
+<section id="i.29-간섭" class="level2">
+<h2 class="anchored" data-anchor-id="i.29-간섭">I.29 간섭</h2>
 <section id="sec-FLP_1_29_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_29_1">29-1 전자기파</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_29_1">I.29-1 전자기파</h3>
 <div id="fig-FLP_1_29_1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_1_29_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1341,7 +1348,7 @@ E= - q \sin \theta \dfrac{a_0 \cos \omega (t-r/c)}{4\pi \epsilon_0 rc^2}.
 </ul>
 </section>
 <section id="sec-FLP_1_29_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_29_2">29-2 복사 에너지</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_29_2">I.29-2 복사 에너지</h3>
 <ul>
 <li><p>진동자가 전기장에서 움직인다고 하자. 즉 전기장이 사인파이며 <span class="math inline">\(F=qE = ma\)</span> 로부터 속도, 가속도, 최대 변위 모두 전기장에 비례한다. 그리고 운동에너지는 <span class="math inline">\(E^2\)</span> 에 비례한다. 이로부터 장이 전달하는 에너지는 <span class="math inline">\(E^2\)</span> 에 비례할 것이라는 것을 안다.</p></li>
 <li><p>따라서 radiation 에 의해 전기장은 <span class="math inline">\(E \propto 1/r\)</span>, 에너지 <span class="math inline">\(\mathcal{E} \propto E^2 \propto 1/r^2\)</span></p></li>
@@ -1349,7 +1356,7 @@ E= - q \sin \theta \dfrac{a_0 \cos \omega (t-r/c)}{4\pi \epsilon_0 rc^2}.
 <p><br></p>
 </section>
 <section id="sec-FLP_1_29_3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_29_3">29-3 사인파</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_29_3">I.29-3 사인파</h3>
 <ul>
 <li><p>각진동수 <span class="math inline">\(\omega\)</span> 에 대해 파수(wave number) <span class="math inline">\(k\)</span> 를 단위 거리당 변경되는 파동의 위상으로 정의하자. <a href="#eq-FLP_1-20_3" class="quarto-xref">식&nbsp;<span>2.33</span></a> 에서 위상 <span class="math inline">\(\phi = \omega (t-r/c)\)</span> 이므로 <span id="eq-FLP_1_29_4"><span class="math display">\[
 k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
@@ -1361,7 +1368,7 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 <p><br></p>
 </section>
 <section id="sec-FLP_1_29_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_29_4">29.4 두 쌍극자 복사자</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_29_4">I.29.4 두 쌍극자 복사자</h3>
 <p>두 진동자의 중심이 평면상에 있으며 이 평면에 대해 수직으로 진동한다고 하자.</p>
 <div id="fig-FLP_1_29_5" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1410,15 +1417,15 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 <p><br></p>
 </section>
 <section id="sec-FLP_1_29_5" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_29_5">29.5 간섭의 수학</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_29_5">I.29.5 간섭의 수학</h3>
 <p>벡터 혹은 복소수를 이용한 두 파동의 합.</p>
 <p><br></p>
 </section>
 </section>
-<section id="회절" class="level2">
-<h2 class="anchored" data-anchor-id="회절">30. 회절</h2>
-<section id="n-개의-동일한-진동자에-의한-최종-진폭" class="level3">
-<h3 class="anchored" data-anchor-id="n-개의-동일한-진동자에-의한-최종-진폭">30-1 <span class="math inline">\(n\)</span> 개의 동일한 진동자에 의한 최종 진폭</h3>
+<section id="i.30.-회절" class="level2">
+<h2 class="anchored" data-anchor-id="i.30.-회절">I.30. 회절</h2>
+<section id="sec-FLP_1_30_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_30_1">I.30-1 <span class="math inline">\(n\)</span> 개의 동일한 진동자에 의한 최종 진폭</h3>
 <ul>
 <li>간섭(interference)과 회절(diffreraction) 의 구분 : 명확한 구분은 없지만 source 가 적으면 간섭, source 가 많으면 회절 이라고 하자.</li>
 </ul>
@@ -1491,7 +1498,7 @@ d\sin\theta = m\lambda
 <p><br></p>
 </section>
 <section id="sec-FLP_1_3_20" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_3_20">30-2 회절 격자</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_3_20">I.30-2 회절 격자</h3>
 <ul>
 <li>(파장이 긴 라디오파를 다루는 경우) 안테나와 전선을 다룰 때 모든 작은 진동자, 혹은 안테나의 위상을 동일하게 맞출 수 있다. 그렇다면 빛의 경우는? 빛의 파장은 매우 짧기 때문에 (파인만 당시에는) 불가능하다. 그러나 다른 방법으로 같은 일을 할 수 있다.</li>
 </ul>
@@ -1548,7 +1555,7 @@ d\sin\theta = m\lambda
 </section>
 </section>
 <section id="sec-FLP_1_30_3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_30_3">30-3 회절격자의 분해능</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_30_3">I.30-3 회절격자의 분해능</h3>
 <p>앞서 언급했듯이 회절격자는 파장에 따라 산란각이 달라지기 때문에 파장별로 분리하는데 사용 할 수 있다. 두개의 유사한 파장을 가진 광원에서 오는 빛을 파장별로 분리 할 수 있는 능력을 <strong>분해능 (resolving power)</strong> 이라고 한다. 일반적으로 레일리 기준을 사용한다.</p>
 <section id="레일리-기준rayleighs-criteria" class="level4">
 <h4 class="anchored" data-anchor-id="레일리-기준rayleighs-criteria"><strong>레일리 기준(Rayleigh’s criteria)</strong></h4>
@@ -1561,7 +1568,7 @@ d\sin\theta = m\lambda
 </section>
 </section>
 <section id="sec-FLP_1_30_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_30_4">30-4 포물선형 안테나</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_30_4">I.30-4 포물선형 안테나</h3>
 
 
 </section>
@@ -1619,13 +1626,14 @@ d\sin\theta = m\lambda
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1974,8 +1982,8 @@ d\sin\theta = m\lambda
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../src/Feynman/vol1/vol1_3.html" class="pagination-link" aria-label="I-3 : 열역학과 양자 입문">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../src/Feynman/vol1/vol1_3.html" class="pagination-link" aria-label="$I$-3 : 열역학과 양자 입문">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-3 : 열역학과 양자 입문</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/00_index.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -176,13 +177,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Feynman/vol1/vol1_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-2: 특수상대성이론과 광학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Feynman/vol1/vol1_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-3 : 열역학과 양자 입문</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../src/Feynman/vol2/vol2_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><span class="math inline">\(II\)</span>-1 : 정전기와 정자기</span></span></a>
   </div>
 </li>
       </ul>
@@ -199,55 +206,55 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/02_variational_principle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/03_hamilton_dynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/04_canonical_transform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/11_one_body_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/A_proofs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
   </div>
 </li>
       </ul>
@@ -264,13 +271,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -287,43 +294,43 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/02_1_electrostatics1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/02_2_electrostatics2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/03_magnetostatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/A1_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Electrodynamics/A2_waves.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
   </div>
 </li>
       </ul>
@@ -340,13 +347,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -363,19 +370,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ThermalPhysics/02_entropy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/ThermalPhysics/0A_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
   </div>
 </li>
       </ul>
@@ -392,7 +399,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -413,62 +420,62 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#기본적인-물리" id="toc-기본적인-물리" class="nav-link active" data-scroll-target="#기본적인-물리">2. 기본적인 물리</a>
+  <li><a href="#i.2.-기본적인-물리" id="toc-i.2.-기본적인-물리" class="nav-link active" data-scroll-target="#i.2.-기본적인-물리">I.2. 기본적인 물리</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP_1_2_1" id="toc-sec-FLP_1_2_1" class="nav-link" data-scroll-target="#sec-FLP_1_2_1">2.1 소개</a></li>
-  <li><a href="#sec-FLP_1_2_2" id="toc-sec-FLP_1_2_2" class="nav-link" data-scroll-target="#sec-FLP_1_2_2">2.2 1920 년 이전의 물리학</a></li>
+  <li><a href="#sec-FLP_1_2_1" id="toc-sec-FLP_1_2_1" class="nav-link" data-scroll-target="#sec-FLP_1_2_1">I.2.1 소개</a></li>
+  <li><a href="#sec-FLP_1_2_2" id="toc-sec-FLP_1_2_2" class="nav-link" data-scroll-target="#sec-FLP_1_2_2">I.2.2 1920 년 이전의 물리학</a></li>
   </ul></li>
-  <li><a href="#뉴턴의-동역학-법칙" id="toc-뉴턴의-동역학-법칙" class="nav-link" data-scroll-target="#뉴턴의-동역학-법칙">9. 뉴턴의 동역학 법칙</a></li>
-  <li><a href="#운동량-보존" id="toc-운동량-보존" class="nav-link" data-scroll-target="#운동량-보존">10. 운동량 보존</a>
+  <li><a href="#i.9.-뉴턴의-동역학-법칙" id="toc-i.9.-뉴턴의-동역학-법칙" class="nav-link" data-scroll-target="#i.9.-뉴턴의-동역학-법칙">I.9. 뉴턴의 동역학 법칙</a></li>
+  <li><a href="#i.10.-운동량-보존" id="toc-i.10.-운동량-보존" class="nav-link" data-scroll-target="#i.10.-운동량-보존">I.10. 운동량 보존</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP_1_10_1" id="toc-sec-FLP_1_10_1" class="nav-link" data-scroll-target="#sec-FLP_1_10_1">10-1 뉴턴의 제 3 운동법칙</a></li>
-  <li><a href="#sec-FLP_1_10_2" id="toc-sec-FLP_1_10_2" class="nav-link" data-scroll-target="#sec-FLP_1_10_2">10-2 운동량 보존</a></li>
-  <li><a href="#sec-FLP_1_30_3" id="toc-sec-FLP_1_30_3" class="nav-link" data-scroll-target="#sec-FLP_1_30_3">10-3 운동량은 보존된다!</a></li>
-  <li><a href="#sec-FLP_1_30_4" id="toc-sec-FLP_1_30_4" class="nav-link" data-scroll-target="#sec-FLP_1_30_4">10-4 운동량과 에너지</a></li>
-  <li><a href="#sec-FLP_1_10_5" id="toc-sec-FLP_1_10_5" class="nav-link" data-scroll-target="#sec-FLP_1_10_5">10-5 상대론적 운동량</a></li>
+  <li><a href="#sec-FLP_1_10_1" id="toc-sec-FLP_1_10_1" class="nav-link" data-scroll-target="#sec-FLP_1_10_1">I.10-1 뉴턴의 제 3 운동법칙</a></li>
+  <li><a href="#sec-FLP_1_10_2" id="toc-sec-FLP_1_10_2" class="nav-link" data-scroll-target="#sec-FLP_1_10_2">I.10-2 운동량 보존</a></li>
+  <li><a href="#sec-FLP_1_30_3" id="toc-sec-FLP_1_30_3" class="nav-link" data-scroll-target="#sec-FLP_1_30_3">I.10-3 운동량은 보존된다!</a></li>
+  <li><a href="#sec-FLP_1_30_4" id="toc-sec-FLP_1_30_4" class="nav-link" data-scroll-target="#sec-FLP_1_30_4">I.10-4 운동량과 에너지</a></li>
+  <li><a href="#sec-FLP_1_10_5" id="toc-sec-FLP_1_10_5" class="nav-link" data-scroll-target="#sec-FLP_1_10_5">I.10-5 상대론적 운동량</a></li>
   </ul></li>
-  <li><a href="#힘의-성질" id="toc-힘의-성질" class="nav-link" data-scroll-target="#힘의-성질">12 힘의 성질</a>
+  <li><a href="#i.12-힘의-성질" id="toc-i.12-힘의-성질" class="nav-link" data-scroll-target="#i.12-힘의-성질">I.12 힘의 성질</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP_1_12_1" id="toc-sec-FLP_1_12_1" class="nav-link" data-scroll-target="#sec-FLP_1_12_1">12-1 힘이란 무엇인가?</a></li>
-  <li><a href="#sec-FLP_1_12_2" id="toc-sec-FLP_1_12_2" class="nav-link" data-scroll-target="#sec-FLP_1_12_2">12-2 마찰력</a></li>
-  <li><a href="#sec-FLP_1_12_3" id="toc-sec-FLP_1_12_3" class="nav-link" data-scroll-target="#sec-FLP_1_12_3">12-3 분자들 사이의 힘</a></li>
-  <li><a href="#sec-FLP_1_12_4" id="toc-sec-FLP_1_12_4" class="nav-link" data-scroll-target="#sec-FLP_1_12_4">12-4 근본적인 힘과 장</a></li>
-  <li><a href="#sec-FLP_1_12_5" id="toc-sec-FLP_1_12_5" class="nav-link" data-scroll-target="#sec-FLP_1_12_5">12-5 관성력 또는 가짜힘</a></li>
-  <li><a href="#sec-FLP_1_12_6" id="toc-sec-FLP_1_12_6" class="nav-link" data-scroll-target="#sec-FLP_1_12_6">12-6 핵력</a></li>
+  <li><a href="#sec-FLP_1_12_1" id="toc-sec-FLP_1_12_1" class="nav-link" data-scroll-target="#sec-FLP_1_12_1">I.12-1 힘이란 무엇인가?</a></li>
+  <li><a href="#sec-FLP_1_12_2" id="toc-sec-FLP_1_12_2" class="nav-link" data-scroll-target="#sec-FLP_1_12_2">I.12-2 마찰력</a></li>
+  <li><a href="#sec-FLP_1_12_3" id="toc-sec-FLP_1_12_3" class="nav-link" data-scroll-target="#sec-FLP_1_12_3">I.12-3 분자들 사이의 힘</a></li>
+  <li><a href="#sec-FLP_1_12_4" id="toc-sec-FLP_1_12_4" class="nav-link" data-scroll-target="#sec-FLP_1_12_4">I.12-4 근본적인 힘과 장</a></li>
+  <li><a href="#sec-FLP_1_12_5" id="toc-sec-FLP_1_12_5" class="nav-link" data-scroll-target="#sec-FLP_1_12_5">I.12-5 관성력 또는 가짜힘</a></li>
+  <li><a href="#sec-FLP_1_12_6" id="toc-sec-FLP_1_12_6" class="nav-link" data-scroll-target="#sec-FLP_1_12_6">I.12-6 핵력</a></li>
   </ul></li>
-  <li><a href="#일과-포텐셜-에너지-a" id="toc-일과-포텐셜-에너지-a" class="nav-link" data-scroll-target="#일과-포텐셜-에너지-a">13. 일과 포텐셜 에너지 (A)</a>
+  <li><a href="#i.13.-일과-포텐셜-에너지-a" id="toc-i.13.-일과-포텐셜-에너지-a" class="nav-link" data-scroll-target="#i.13.-일과-포텐셜-에너지-a">I.13. 일과 포텐셜 에너지 (A)</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP_1_13_1" id="toc-sec-FLP_1_13_1" class="nav-link" data-scroll-target="#sec-FLP_1_13_1">13-1 자유낙하하는 물체의 에너지</a></li>
-  <li><a href="#sec-FLP_1_13_2" id="toc-sec-FLP_1_13_2" class="nav-link" data-scroll-target="#sec-FLP_1_13_2">13-2 중력에 의한 일</a></li>
-  <li><a href="#sec-FLP_1_13_3" id="toc-sec-FLP_1_13_3" class="nav-link" data-scroll-target="#sec-FLP_1_13_3">13-3 에너지의 합</a></li>
-  <li><a href="#sec-FLP_1_13_4" id="toc-sec-FLP_1_13_4" class="nav-link" data-scroll-target="#sec-FLP_1_13_4">13-4 큰 물체에 의한 중력장</a></li>
+  <li><a href="#sec-FLP_1_13_1" id="toc-sec-FLP_1_13_1" class="nav-link" data-scroll-target="#sec-FLP_1_13_1">I.13-1 자유낙하하는 물체의 에너지</a></li>
+  <li><a href="#sec-FLP_1_13_2" id="toc-sec-FLP_1_13_2" class="nav-link" data-scroll-target="#sec-FLP_1_13_2">I.13-2 중력에 의한 일</a></li>
+  <li><a href="#sec-FLP_1_13_3" id="toc-sec-FLP_1_13_3" class="nav-link" data-scroll-target="#sec-FLP_1_13_3">I.13-3 에너지의 합</a></li>
+  <li><a href="#sec-FLP_1_13_4" id="toc-sec-FLP_1_13_4" class="nav-link" data-scroll-target="#sec-FLP_1_13_4">I.13-4 큰 물체에 의한 중력장</a></li>
   </ul></li>
-  <li><a href="#일과-포텐셜-에너지-결론" id="toc-일과-포텐셜-에너지-결론" class="nav-link" data-scroll-target="#일과-포텐셜-에너지-결론">14. 일과 포텐셜 에너지 (결론)</a>
+  <li><a href="#i.14.-일과-포텐셜-에너지-결론" id="toc-i.14.-일과-포텐셜-에너지-결론" class="nav-link" data-scroll-target="#i.14.-일과-포텐셜-에너지-결론">I.14. 일과 포텐셜 에너지 (결론)</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP_1_14_1" id="toc-sec-FLP_1_14_1" class="nav-link" data-scroll-target="#sec-FLP_1_14_1">14-1 일</a></li>
-  <li><a href="#sec-FLP_1_14_2" id="toc-sec-FLP_1_14_2" class="nav-link" data-scroll-target="#sec-FLP_1_14_2">14-2 구속된 운동</a></li>
-  <li><a href="#sec-FLP_1_14_3" id="toc-sec-FLP_1_14_3" class="nav-link" data-scroll-target="#sec-FLP_1_14_3">14-3 보존력</a></li>
-  <li><a href="#sec-FLP_1_14_4" id="toc-sec-FLP_1_14_4" class="nav-link" data-scroll-target="#sec-FLP_1_14_4">14-4 비보존력</a></li>
-  <li><a href="#sec-FLP_1_14_5" id="toc-sec-FLP_1_14_5" class="nav-link" data-scroll-target="#sec-FLP_1_14_5">14-5 포텐셜과 장</a></li>
+  <li><a href="#sec-FLP_1_14_1" id="toc-sec-FLP_1_14_1" class="nav-link" data-scroll-target="#sec-FLP_1_14_1">I.14-1 일</a></li>
+  <li><a href="#sec-FLP_1_14_2" id="toc-sec-FLP_1_14_2" class="nav-link" data-scroll-target="#sec-FLP_1_14_2">I.14-2 구속된 운동</a></li>
+  <li><a href="#sec-FLP_1_14_3" id="toc-sec-FLP_1_14_3" class="nav-link" data-scroll-target="#sec-FLP_1_14_3">I.14-3 보존력</a></li>
+  <li><a href="#sec-FLP_1_14_4" id="toc-sec-FLP_1_14_4" class="nav-link" data-scroll-target="#sec-FLP_1_14_4">I.14-4 비보존력</a></li>
+  <li><a href="#sec-FLP_1_14_5" id="toc-sec-FLP_1_14_5" class="nav-link" data-scroll-target="#sec-FLP_1_14_5">I.14-5 포텐셜과 장</a></li>
   </ul></li>
-  <li><a href="#차원-회전" id="toc-차원-회전" class="nav-link" data-scroll-target="#차원-회전">18. 2차원 회전</a>
+  <li><a href="#i.18.-2차원-회전" id="toc-i.18.-2차원-회전" class="nav-link" data-scroll-target="#i.18.-2차원-회전">I.18. 2차원 회전</a>
   <ul class="collapse">
-  <li><a href="#질량-중심" id="toc-질량-중심" class="nav-link" data-scroll-target="#질량-중심">18-1 질량 중심</a></li>
-  <li><a href="#강체의-회전" id="toc-강체의-회전" class="nav-link" data-scroll-target="#강체의-회전">18-2 강체의 회전</a></li>
-  <li><a href="#각운동량" id="toc-각운동량" class="nav-link" data-scroll-target="#각운동량">18-3 각운동량</a></li>
-  <li><a href="#sec-FLP_1_18_4" id="toc-sec-FLP_1_18_4" class="nav-link" data-scroll-target="#sec-FLP_1_18_4">18-4 각운동량 보존</a></li>
+  <li><a href="#i.18-1-질량-중심" id="toc-i.18-1-질량-중심" class="nav-link" data-scroll-target="#i.18-1-질량-중심">I.18-1 질량 중심</a></li>
+  <li><a href="#i.18-2-강체의-회전" id="toc-i.18-2-강체의-회전" class="nav-link" data-scroll-target="#i.18-2-강체의-회전">I.18-2 강체의 회전</a></li>
+  <li><a href="#i.18-3-각운동량" id="toc-i.18-3-각운동량" class="nav-link" data-scroll-target="#i.18-3-각운동량">I.18-3 각운동량</a></li>
+  <li><a href="#sec-FLP_1_18_4" id="toc-sec-FLP_1_18_4" class="nav-link" data-scroll-target="#sec-FLP_1_18_4">I.18-4 각운동량 보존</a></li>
   </ul></li>
-  <li><a href="#질량-중심과-관성-모멘트" id="toc-질량-중심과-관성-모멘트" class="nav-link" data-scroll-target="#질량-중심과-관성-모멘트">19. 질량 중심과 관성 모멘트</a>
+  <li><a href="#i.19.-질량-중심과-관성-모멘트" id="toc-i.19.-질량-중심과-관성-모멘트" class="nav-link" data-scroll-target="#i.19.-질량-중심과-관성-모멘트">I.19. 질량 중심과 관성 모멘트</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP_1_19_1" id="toc-sec-FLP_1_19_1" class="nav-link" data-scroll-target="#sec-FLP_1_19_1">19-1 질량 중심의 성질</a></li>
-  <li><a href="#sec-FLP_1_19_2" id="toc-sec-FLP_1_19_2" class="nav-link" data-scroll-target="#sec-FLP_1_19_2">19-2 질량 중심의 계산</a></li>
-  <li><a href="#sec-FLP_1_19_3" id="toc-sec-FLP_1_19_3" class="nav-link" data-scroll-target="#sec-FLP_1_19_3">19-3 관성 모먼트의 계산</a></li>
-  <li><a href="#sec-FLP_1_19_4" id="toc-sec-FLP_1_19_4" class="nav-link" data-scroll-target="#sec-FLP_1_19_4">19-4 회전 운동 에너지</a></li>
+  <li><a href="#sec-FLP_1_19_1" id="toc-sec-FLP_1_19_1" class="nav-link" data-scroll-target="#sec-FLP_1_19_1">I.19-1 질량 중심의 성질</a></li>
+  <li><a href="#sec-FLP_1_19_2" id="toc-sec-FLP_1_19_2" class="nav-link" data-scroll-target="#sec-FLP_1_19_2">I.19-2 질량 중심의 계산</a></li>
+  <li><a href="#sec-FLP_1_19_3" id="toc-sec-FLP_1_19_3" class="nav-link" data-scroll-target="#sec-FLP_1_19_3">I.19-3 관성 모먼트의 계산</a></li>
+  <li><a href="#sec-FLP_1_19_4" id="toc-sec-FLP_1_19_4" class="nav-link" data-scroll-target="#sec-FLP_1_19_4">I.19-4 회전 운동 에너지</a></li>
   </ul></li>
-  <li><a href="#공간에서의-회전" id="toc-공간에서의-회전" class="nav-link" data-scroll-target="#공간에서의-회전">20. 공간에서의 회전</a>
+  <li><a href="#i.20.-공간에서의-회전" id="toc-i.20.-공간에서의-회전" class="nav-link" data-scroll-target="#i.20.-공간에서의-회전">I.20. 공간에서의 회전</a>
   <ul class="collapse">
-  <li><a href="#sec-FLP-1_20_1" id="toc-sec-FLP-1_20_1" class="nav-link" data-scroll-target="#sec-FLP-1_20_1">20-1 3차원 토크</a></li>
-  <li><a href="#외적과-회전-방정식" id="toc-외적과-회전-방정식" class="nav-link" data-scroll-target="#외적과-회전-방정식">20-2 외적과 회전 방정식</a></li>
+  <li><a href="#sec-FLP-1_20_1" id="toc-sec-FLP-1_20_1" class="nav-link" data-scroll-target="#sec-FLP-1_20_1">I.20-1 3차원 토크</a></li>
+  <li><a href="#i.20-2-외적과-회전-방정식" id="toc-i.20-2-외적과-회전-방정식" class="nav-link" data-scroll-target="#i.20-2-외적과-회전-방정식">I.20-2 외적과 회전 방정식</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -488,14 +495,14 @@ window.Quarto = {
 \DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
 </div>
-<section id="기본적인-물리" class="level2">
-<h2 class="anchored" data-anchor-id="기본적인-물리">2. 기본적인 물리</h2>
+<section id="i.2.-기본적인-물리" class="level2">
+<h2 class="anchored" data-anchor-id="i.2.-기본적인-물리">I.2. 기본적인 물리</h2>
 <section id="sec-FLP_1_2_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_2_1">2.1 소개</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_2_1">I.2.1 소개</h3>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_2_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_2_2">2.2 1920 년 이전의 물리학</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_2_2">I.2.2 1920 년 이전의 물리학</h3>
 <ul>
 <li>1920 년 이전의 우리의 세계관
 <ul>
@@ -515,15 +522,15 @@ window.Quarto = {
 <p><br></p>
 </section>
 </section>
-<section id="뉴턴의-동역학-법칙" class="level2">
-<h2 class="anchored" data-anchor-id="뉴턴의-동역학-법칙">9. 뉴턴의 동역학 법칙</h2>
+<section id="i.9.-뉴턴의-동역학-법칙" class="level2">
+<h2 class="anchored" data-anchor-id="i.9.-뉴턴의-동역학-법칙">I.9. 뉴턴의 동역학 법칙</h2>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>갈릴레오의 관성의 법칙</strong> 혹은 <strong>뉴턴의 제 1 운동법칙</strong>
+<span class="screen-reader-only">중요</span><strong>갈릴레오의 관성의 법칙</strong> 혹은 <strong>뉴턴의 제 1 운동법칙</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -536,7 +543,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>운동량</strong>
+<span class="screen-reader-only">노트</span><strong>운동량</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -552,7 +559,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>뉴턴의 제 2 운동법칙</strong>
+<span class="screen-reader-only">중요</span><strong>뉴턴의 제 2 운동법칙</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -567,7 +574,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>보편 중력</strong>
+<span class="screen-reader-only">노트</span><strong>보편 중력</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -580,10 +587,10 @@ window.Quarto = {
 </div>
 <p><br></p>
 </section>
-<section id="운동량-보존" class="level2">
-<h2 class="anchored" data-anchor-id="운동량-보존">10. 운동량 보존</h2>
+<section id="i.10.-운동량-보존" class="level2">
+<h2 class="anchored" data-anchor-id="i.10.-운동량-보존">I.10. 운동량 보존</h2>
 <section id="sec-FLP_1_10_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_10_1">10-1 뉴턴의 제 3 운동법칙</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_10_1">I.10-1 뉴턴의 제 3 운동법칙</h3>
 <ul>
 <li>뉴턴이 자신의 물리법칙을 발표했을 때 보편중력에 대한 정확한 식을 알고 있었으며, 보편 중력 이외의 다른 힘에 대해서는 정확한 식을 알고 있지는 않았다. 그러나 모든 힘이 따라야 할 하나의 규칙을 알고 있었으며 이것을 운동법칙으로 표현한다.</li>
 </ul>
@@ -593,7 +600,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>뉴턴의 제 3 운동법칙</strong>
+<span class="screen-reader-only">중요</span><strong>뉴턴의 제 3 운동법칙</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -606,7 +613,7 @@ window.Quarto = {
 <p><br></p>
 </section>
 <section id="sec-FLP_1_10_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_10_2">10-2 운동량 보존</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_10_2">I.10-2 운동량 보존</h3>
 <p><span class="math inline">\(N\)</span> 개의 입자의 경우를 생각하자. <span class="math inline">\(i\)</span> 입자에 의해 <span class="math inline">\(j\)</span> 입자가 받는 힘을 <span class="math inline">\(\boldsymbol{F}_{ij}\)</span> 라고 하고 <span class="math inline">\(i\)</span> 번째 입자의 운동량을 <span class="math inline">\(\boldsymbol{p}_i\)</span> 라고 하자. 그리고 이 <span class="math inline">\(N\)</span> 개의 입자의 상호작용 이외의 힘은 작용하지 않는다고 하자. 뉴튼의 제 2 운동법칙에 의해</p>
 <p><span id="eq-FLP_1_10_1"><span class="math display">\[
 \dfrac{d\boldsymbol{p}_i}{dt} = \sum_{j=1,\, j\ne i}^N \boldsymbol{F}_{ji}
@@ -630,7 +637,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>갈릴레이 상대성 원리</strong>
+<span class="screen-reader-only">중요</span><strong>갈릴레이 상대성 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -640,11 +647,11 @@ window.Quarto = {
 <p><br></p>
 </section>
 <section id="sec-FLP_1_30_3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_30_3">10-3 운동량은 보존된다!</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_30_3">I.10-3 운동량은 보존된다!</h3>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_30_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_30_4">10-4 운동량과 에너지</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_30_4">I.10-4 운동량과 에너지</h3>
 <ul>
 <li>운동량 보존</li>
 <li>운동에너지가 보존되는 충돌은 탄성 충돌.</li>
@@ -653,7 +660,7 @@ window.Quarto = {
 <p><br></p>
 </section>
 <section id="sec-FLP_1_10_5" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_10_5">10-5 상대론적 운동량</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_10_5">I.10-5 상대론적 운동량</h3>
 <p>상대성 이론에서의 운동량 <span class="math inline">\(\boldsymbol{p}_\text{rel}\)</span> 은 아래와 같이 정의된다.</p>
 <p><span id="eq-FLP_1_10_8"><span class="math display">\[
 \boldsymbol{p}_\text{rel} := \dfrac{m\boldsymbol{v}}{\sqrt{1-\|\boldsymbol{v}\|^2/c^2}}.
@@ -666,10 +673,10 @@ window.Quarto = {
 <p><br></p>
 </section>
 </section>
-<section id="힘의-성질" class="level2">
-<h2 class="anchored" data-anchor-id="힘의-성질">12 힘의 성질</h2>
+<section id="i.12-힘의-성질" class="level2">
+<h2 class="anchored" data-anchor-id="i.12-힘의-성질">I.12 힘의 성질</h2>
 <section id="sec-FLP_1_12_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_12_1">12-1 힘이란 무엇인가?</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_12_1">I.12-1 힘이란 무엇인가?</h3>
 <ul>
 <li><p>힘의 본질에 대한 질문</p></li>
 <li><p>뉴턴의 제 2 법칙 <span class="math inline">\(\boldsymbol{F}=m\boldsymbol{a}= d\boldsymbol{p}/dt\)</span> 에서 일단 우리는 질량, 속도, 가속도와 운동량에 대해 알고 있다. 그렇다면 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 는?</p>
@@ -683,7 +690,7 @@ window.Quarto = {
 <p><br></p>
 </section>
 <section id="sec-FLP_1_12_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_12_2">12-2 마찰력</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_12_2">I.12-2 마찰력</h3>
 <ul>
 <li>다양한 형태의 마찰력
 <ul>
@@ -700,7 +707,7 @@ F=\mu N.
 <p></p>
 </section>
 <section id="sec-FLP_1_12_3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_12_3">12-3 분자들 사이의 힘</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_12_3">I.12-3 분자들 사이의 힘</h3>
 <div id="fig-FLP_1_12_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_1_12_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -720,7 +727,7 @@ F=\mu N.
 <p><br></p>
 </section>
 <section id="sec-FLP_1_12_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_12_4">12-4 근본적인 힘과 장</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_12_4">I.12-4 근본적인 힘과 장</h3>
 <ul>
 <li><p>쿨롱 힘 : <span class="math inline">\(\boldsymbol{F}=\dfrac{1}{4\pi\epsilon_0}\dfrac{q_1q_2\hat{\boldsymbol{r}}}{r^2}\)</span></p></li>
 <li><p>전기장 <span class="math inline">\(\boldsymbol{E}(\boldsymbol{r},\,t)\)</span> : 시간 <span class="math inline">\(t\)</span>, 위치 <span class="math inline">\(\boldsymbol{r}\)</span> 에 단위전하가 받는 힘.</p></li>
@@ -744,7 +751,7 @@ F=\mu N.
 <p><br></p>
 </section>
 <section id="sec-FLP_1_12_5" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_12_5">12-5 관성력 또는 가짜힘</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_12_5">I.12-5 관성력 또는 가짜힘</h3>
 <ul>
 <li><p>비관성 기준틀에서 발생하는 가짜 힘.</p></li>
 <li><p>의사 힘은 항상 질량에 비례한다. <span class="math inline">\(\boldsymbol{a}\)</span> 의 가속도로 움직이는 비관성좌표계에서의 운동방정식은 아래와 같으며 여기서 <span class="math inline">\(-m\boldsymbol{a}\)</span> 가 관성력이다. <span class="math display">\[
@@ -755,7 +762,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <p><br></p>
 </section>
 <section id="sec-FLP_1_12_6" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_12_6">12-6 핵력</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_12_6">I.12-6 핵력</h3>
 <ul>
 <li>핵력의 범위 : ~ 10<sup>-15</sup> m.</li>
 <li>양자역학에서 다루는 영역에 들어가며 따라서 힘 보다는 상호작용으로 다루게 된다.</li>
@@ -764,17 +771,17 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <p><br></p>
 </section>
 </section>
-<section id="일과-포텐셜-에너지-a" class="level2">
-<h2 class="anchored" data-anchor-id="일과-포텐셜-에너지-a">13. 일과 포텐셜 에너지 (A)</h2>
+<section id="i.13.-일과-포텐셜-에너지-a" class="level2">
+<h2 class="anchored" data-anchor-id="i.13.-일과-포텐셜-에너지-a">I.13. 일과 포텐셜 에너지 (A)</h2>
 <section id="sec-FLP_1_13_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_13_1">13-1 자유낙하하는 물체의 에너지</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_13_1">I.13-1 자유낙하하는 물체의 에너지</h3>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>운동에너지</strong>
+<span class="screen-reader-only">노트</span><strong>운동에너지</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -795,7 +802,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>일률</strong>
+<span class="screen-reader-only">노트</span><strong>일률</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -813,7 +820,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>일</strong>
+<span class="screen-reader-only">노트</span><strong>일</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -828,7 +835,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <p><br></p>
 </section>
 <section id="sec-FLP_1_13_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_13_2">13-2 중력에 의한 일</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_13_2">I.13-2 중력에 의한 일</h3>
 <p>질량이 <span class="math inline">\(m\)</span> 인 물체가 질량이 <span class="math inline">\(M\)</span> 인 물체가 있다. <span class="math inline">\(\boldsymbol{r}=\boldsymbol{r}_m - \boldsymbol{r}_M\)</span> 이라고 하자. 의한 중력의 영향으로 <span class="math inline">\(\boldsymbol{r}_1\)</span> 에서 <span class="math inline">\(\boldsymbol{r}_2\)</span> 로 움직였다고 하자. <span class="math inline">\(\boldsymbol{r}_1\)</span> 과 <span class="math inline">\(\boldsymbol{r}_2\)</span> 에서의 운동에너지를 각각 <span class="math inline">\(T_1,\,T_2\)</span> 라고 하면 <a href="#eq-FLOP_1_13_9" class="quarto-xref">식&nbsp;<span>1.10</span></a> 에 의해</p>
 <p><span class="math display">\[
 T_2-T_1 = - \int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \dfrac{GMm}{r^2} \hat{\boldsymbol{r}}\boldsymbol{\cdot}d\boldsymbol{r} = GMn\left(\dfrac{1}{r_2} - \dfrac{1}{r_1}\right)
@@ -840,7 +847,7 @@ T_2-T_1 = - \int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \dfrac{GMm}{r^2} \hat{\bo
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>보존력</strong> 과 <strong>포텐셜 에너지</strong>
+<span class="screen-reader-only">노트</span><strong>보존력</strong> 과 <strong>포텐셜 에너지</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -858,7 +865,7 @@ T_2-T_1 = - \int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \dfrac{GMm}{r^2} \hat{\bo
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>포텐셜의 성질</strong>
+<span class="screen-reader-only">중요</span><strong>포텐셜의 성질</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -881,7 +888,7 @@ T_2-T_1 = W = U_1-U_2 \implies T_2+U_2 = T_1+U_1
 <p><br></p>
 </section>
 <section id="sec-FLP_1_13_3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_13_3">13-3 에너지의 합</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_13_3">I.13-3 에너지의 합</h3>
 <p><span class="math inline">\(N\)</span> 개의 입자 사이에 보존력이 작용하는 계를 생각하자. 나머지 입자 전체에 의해 <span class="math inline">\(i\)</span> 번째 입자가 받는 힘을 <span class="math inline">\(\boldsymbol{F}_i\)</span> 라고 하면 <span class="math inline">\(\boldsymbol{F}_i = -\nabla U_i\)</span> 인 스칼라장 <span class="math inline">\(U_i\)</span> 가 존재한다. 시간 <span class="math inline">\(t_1,\,t_2\)</span> 에서의 이 계의 총 운동에너지 <span class="math inline">\(T_\text{tot} = \sum_i \frac{1}{2}m_iv_i^2\)</span> 의 변화량은 다음과 같다. <span class="math display">\[
 \begin{aligned}
 \Delta T_\text{tot} &amp;= \int_{t_1}^{t_2}\dfrac{dT_\text{tot}}{dt} = \int_{t_1}^{t_2}\left[\dfrac{d}{dt}\left(\sum_{i=1}^N \dfrac{m_iv_i^2}{2}\right) \right]\,dt  \\[0.3em]
@@ -897,7 +904,7 @@ T_\text{tot}(t) + U(t) = \text{constant}.
 <p><br></p>
 </section>
 <section id="sec-FLP_1_13_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_13_4">13-4 큰 물체에 의한 중력장</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_13_4">I.13-4 큰 물체에 의한 중력장</h3>
 <p>반지름이 <span class="math inline">\(a\)</span> 이고 총 질량이 <span class="math inline">\(M\)</span> 인 구를 생각하자. 이 때 밀도 <span class="math inline">\(\rho = \dfrac{3M}{4\pi a^3}\)</span> 이며 구 바깥에서 구의 중심으로부터 거리 <span class="math inline">\(R(&gt;a)\)</span> 만큼 떨어진 위치에서의 중력포텐셜을 구의 중심을 원점으로 하고 포텐설을 측정하는 위치를 <span class="math inline">\(z\)</span> 축으로 삼아 구면좌표계에서 구하면</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -913,39 +920,39 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <p>이다.</p>
 </section>
 </section>
-<section id="일과-포텐셜-에너지-결론" class="level2">
-<h2 class="anchored" data-anchor-id="일과-포텐셜-에너지-결론">14. 일과 포텐셜 에너지 (결론)</h2>
+<section id="i.14.-일과-포텐셜-에너지-결론" class="level2">
+<h2 class="anchored" data-anchor-id="i.14.-일과-포텐셜-에너지-결론">I.14. 일과 포텐셜 에너지 (결론)</h2>
 <section id="sec-FLP_1_14_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_14_1">14-1 일</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_14_1">I.14-1 일</h3>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_14_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_14_2">14-2 구속된 운동</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_14_2">I.14-2 구속된 운동</h3>
 <ul>
 <li>fixed, frictionless constaints 의 경우 constraint force 는 운동방향에 수직방향으로 항상 작용하기 때문에 constraint force 에 의한 일은 0 이다.</li>
 </ul>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_14_3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_14_3">14-3 보존력</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_14_3">I.14-3 보존력</h3>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_14_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_14_4">14-4 비보존력</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_14_4">I.14-4 비보존력</h3>
 <ul>
 <li>자연계의 힘들은 현재까지는 보존력으로 간주된다. 뉴턴 자신은 힘이 보존력이 마찰력과 같이 힘이 보존력이 아닐 수도 있다는 것을 알고 있었다.</li>
 </ul>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_14_5" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_14_5">14-5 포텐셜과 장</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_14_5">I.14-5 포텐셜과 장</h3>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>포텐셜</strong>
+<span class="screen-reader-only">노트</span><strong>포텐셜</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -964,10 +971,10 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <p><br></p>
 </section>
 </section>
-<section id="차원-회전" class="level2">
-<h2 class="anchored" data-anchor-id="차원-회전">18. 2차원 회전</h2>
-<section id="질량-중심" class="level3">
-<h3 class="anchored" data-anchor-id="질량-중심">18-1 질량 중심</h3>
+<section id="i.18.-2차원-회전" class="level2">
+<h2 class="anchored" data-anchor-id="i.18.-2차원-회전">I.18. 2차원 회전</h2>
+<section id="i.18-1-질량-중심" class="level3">
+<h3 class="anchored" data-anchor-id="i.18-1-질량-중심">I.18-1 질량 중심</h3>
 <p>이제 단순한 입자가 아닌 이러한 입자가 결합된, 좀 더 복잡한 물체에 대해 다루기로 하자. 우리는 입자의 중력장 하에서의 운동이 포물선임을 알고 있다. 이런 질문을 던져보자: 여러 입자가 결합된, 예를 들면 돌을 던질 때 정확히 포물선을 따라 가는 것은 무엇일까?</p>
 <p><span class="math inline">\(N(\sim 10^{23})\)</span> 개의 입자로 이루어진 물체의 <span class="math inline">\(i\)</span> 번째 입자에 가해지는 힘을 <span class="math inline">\(\boldsymbol{F}_i\)</span> 라고 하면 운동방정식은 다음과 같다.</p>
 <p><span class="math display">\[
@@ -984,7 +991,7 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>질량 중심</strong>
+<span class="screen-reader-only">노트</span><strong>질량 중심</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1005,8 +1012,8 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 </ol>
 <p><br></p>
 </section>
-<section id="강체의-회전" class="level3">
-<h3 class="anchored" data-anchor-id="강체의-회전">18-2 강체의 회전</h3>
+<section id="i.18-2-강체의-회전" class="level3">
+<h3 class="anchored" data-anchor-id="i.18-2-강체의-회전">I.18-2 강체의 회전</h3>
 <section id="강체의-회전과-각속도-각가속도" class="level4">
 <h4 class="anchored" data-anchor-id="강체의-회전과-각속도-각가속도"><strong>강체의 회전과 각속도, 각가속도</strong></h4>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
@@ -1015,7 +1022,7 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>강체</strong>
+<span class="screen-reader-only">노트</span><strong>강체</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1071,7 +1078,7 @@ v=\sqrt{v_x^2+v_y^2} = \omega r.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>토크</strong>
+<span class="screen-reader-only">노트</span><strong>토크</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1088,7 +1095,7 @@ v=\sqrt{v_x^2+v_y^2} = \omega r.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>역학적 평형 상태</strong>
+<span class="screen-reader-only">노트</span><strong>역학적 평형 상태</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1113,10 +1120,10 @@ W = \|\boldsymbol{F}_t \| \, r \Delta \theta
 <p><br></p>
 </section>
 </section>
-<section id="각운동량" class="level3">
-<h3 class="anchored" data-anchor-id="각운동량">18-3 각운동량</h3>
-<section id="각운동량-1" class="level4">
-<h4 class="anchored" data-anchor-id="각운동량-1"><strong>각운동량</strong></h4>
+<section id="i.18-3-각운동량" class="level3">
+<h3 class="anchored" data-anchor-id="i.18-3-각운동량">I.18-3 각운동량</h3>
+<section id="각운동량" class="level4">
+<h4 class="anchored" data-anchor-id="각운동량"><strong>각운동량</strong></h4>
 <p>지금까지 강체라는 특수한 경우만을 고려했지만 토크의 특성과 그 수학적 관계는 물체가 강체가 아니더라도 적용할 수 있다. 힘 <span class="math inline">\(F\)</span> 가 <span class="math inline">\(F=dp/dt\)</span> 인 것처럼 토크 <span class="math inline">\(\tau\)</span> 는 각운동량이라고 부르는 양 <span class="math inline">\(L\)</span> 에 대해 <span class="math inline">\(\tau = dL/dt\)</span> 임을 보이자.</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1131,7 +1138,7 @@ W = \|\boldsymbol{F}_t \| \, r \Delta \theta
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>각운동량</strong>
+<span class="screen-reader-only">노트</span><strong>각운동량</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1153,7 +1160,7 @@ L := mx\dfrac{dy}{dt} - my\dfrac{dx}{dt} = xp_y - yp_x.
 </section>
 </section>
 <section id="sec-FLP_1_18_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_18_4">18-4 각운동량 보존</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_18_4">I.18-4 각운동량 보존</h3>
 <section id="각운동량-보존" class="level4">
 <h4 class="anchored" data-anchor-id="각운동량-보존"><strong>각운동량 보존</strong></h4>
 <p>많은 입자로 이루어진 시스템에서 입자들은 상호작용하며 외부에서 힘이 작용할 수도 있다. 이 경우 어떤 고정축에 대한 <span class="math inline">\(i\)</span> 번째 입자에 작용하는 토크는 <span class="math inline">\(i\)</span> 번째 입자의 각운동량의 시간에 대한 미분이며, 전체 토크는 개별 입자의 토크의 합이므로 전체 각운동량은 개별 각운동량의 합이라는 것을 알 수 있다. 즉 <span class="math inline">\(L=\sum_i L_i\)</span> 라고 하면,</p>
@@ -1167,7 +1174,7 @@ L := mx\dfrac{dy}{dt} - my\dfrac{dx}{dt} = xp_y - yp_x.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>각운동량 보존</strong>
+<span class="screen-reader-only">중요</span><strong>각운동량 보존</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1187,7 +1194,7 @@ L=\sum_{i} L_i = \sum_i m_i r_i v_i = \left(\sum_i m_i r_i^2\right) \omega
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>관성 모멘트</strong>
+<span class="screen-reader-only">노트</span><strong>관성 모멘트</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1205,10 +1212,10 @@ L = I\omega.
 </section>
 </section>
 </section>
-<section id="질량-중심과-관성-모멘트" class="level2">
-<h2 class="anchored" data-anchor-id="질량-중심과-관성-모멘트">19. 질량 중심과 관성 모멘트</h2>
+<section id="i.19.-질량-중심과-관성-모멘트" class="level2">
+<h2 class="anchored" data-anchor-id="i.19.-질량-중심과-관성-모멘트">I.19. 질량 중심과 관성 모멘트</h2>
 <section id="sec-FLP_1_19_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_19_1">19-1 질량 중심의 성질</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_19_1">I.19-1 질량 중심의 성질</h3>
 <p>다양한 질량의 물체가 합쳐진 복잡한 물체에 작용하는 많은 힘에 대해, 그것이 강체인지 여부와 관계 없이, 모든 외부에서 작용하는 힘의 합과 질량중심 <span class="math inline">\(\boldsymbol{R}_\text{CM}\)</span> 에 대한 운동방정식을 얻었다(<a href="#eq-FLP_1_18_5" class="quarto-xref">식&nbsp;<span>1.15</span></a>). 이 운동방정식이 의미하는 것은 물채 전체를 대표하는 질량중심 <span class="math inline">\(\boldsymbol{R}_\text{CM}\)</span> 이 존재하여 이 물체에 작용하는 모든 외부의 힘이 마치 물체의 질량이 이 점에 집중되어 있는 것과 같이 이 점의 가속도를 결정한다는 것이다. 그리고 이 질량중심의 성질은 아래와 같이 정리 할 수 있다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1216,7 +1223,7 @@ L = I\omega.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-질량 중심의 성질
+<span class="screen-reader-only">힌트</span>질량 중심의 성질
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1238,7 +1245,7 @@ L = I\omega.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>중력 중심</strong>
+<span class="screen-reader-only">노트</span><strong>중력 중심</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1256,19 +1263,19 @@ L = I\omega.
 </section>
 </section>
 <section id="sec-FLP_1_19_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_19_2">19-2 질량 중심의 계산</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_19_2">I.19-2 질량 중심의 계산</h3>
 <p><a href="https://en.wikipedia.org/wiki/Pappus's_centroid_theorem">파푸스의 무게중심 정리</a> 를 이용한 질량 중심 계산.</p>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_19_3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_19_3">19-3 관성 모먼트의 계산</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_19_3">I.19-3 관성 모먼트의 계산</h3>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>관성모멘트</strong>
+<span class="screen-reader-only">노트</span><strong>관성모멘트</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1314,7 +1321,7 @@ I &amp;= \sum_i ((x_i-a)^2+(y_i-b)^2)m_i \\[0.3em]
 <p><br></p>
 </section>
 <section id="sec-FLP_1_19_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_1_19_4">19-4 회전 운동 에너지</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_1_19_4">I.19-4 회전 운동 에너지</h3>
 <p><span class="math inline">\(\omega\)</span> 의 각속도 회전하는 강체의 운동에너지를 계산해 보자. <span class="math inline">\(i\)</span> 번째 입자의 회전축으로부터의 거리를 <span class="math inline">\(r_i\)</span> 라고 하면 회전 속도 <span class="math inline">\(v_i = r_i \omega_i\)</span> 이므로 그 운동에너지 <span class="math inline">\(T\)</span> 는 다음과 같다.</p>
 <p><span id="eq-FLP_1_19_8"><span class="math display">\[
 T=\dfrac{1}{2}\sum_i m_i v_i^2 = \dfrac{1}{2}\sum_i m_i (r_i \omega)^2 = \dfrac{1}{2}I\omega^2
@@ -1322,22 +1329,22 @@ T=\dfrac{1}{2}\sum_i m_i v_i^2 = \dfrac{1}{2}\sum_i m_i (r_i \omega)^2 = \dfrac{
 <p><br></p>
 </section>
 </section>
-<section id="공간에서의-회전" class="level2">
-<h2 class="anchored" data-anchor-id="공간에서의-회전">20. 공간에서의 회전</h2>
+<section id="i.20.-공간에서의-회전" class="level2">
+<h2 class="anchored" data-anchor-id="i.20.-공간에서의-회전">I.20. 공간에서의 회전</h2>
 <section id="sec-FLP-1_20_1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP-1_20_1">20-1 3차원 토크</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP-1_20_1">I.20-1 3차원 토크</h3>
 <p><em>3차원 벡터 외적에 대한 설명들</em></p>
 <p></p>
 </section>
-<section id="외적과-회전-방정식" class="level3">
-<h3 class="anchored" data-anchor-id="외적과-회전-방정식">20-2 외적과 회전 방정식</h3>
+<section id="i.20-2-외적과-회전-방정식" class="level3">
+<h3 class="anchored" data-anchor-id="i.20-2-외적과-회전-방정식">I.20-2 외적과 회전 방정식</h3>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>각운동량과 토크</strong>
+<span class="screen-reader-only">노트</span><strong>각운동량과 토크</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1412,13 +1419,14 @@ T=\dfrac{1}{2}\sum_i m_i v_i^2 = \dfrac{1}{2}\sum_i m_i (r_i \omega)^2 = \dfrac{
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1767,8 +1775,8 @@ T=\dfrac{1}{2}\sum_i m_i v_i^2 = \dfrac{1}{2}\sum_i m_i (r_i \omega)^2 = \dfrac{
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../src/Feynman/vol1/vol1_2.html" class="pagination-link" aria-label="I-2: 특수상대성이론과 광학">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../src/Feynman/vol1/vol1_2.html" class="pagination-link" aria-label="$I$-2: 특수상대성이론과 광학">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-2: 특수상대성이론과 광학</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

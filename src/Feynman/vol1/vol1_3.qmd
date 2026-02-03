@@ -1,7 +1,7 @@
 ---
-title: "I-3 : 열역학과 양자 입문"
+title: "$I$-3 : 열역학과 양자 입문"
 number-sections: true
-number-depth: 1
+number-depth: 0
 crossref:
   chapters: true
 ---
@@ -11,17 +11,17 @@ crossref:
 
 
 
-## 37. Quantum Behavior
+## I.37. Quantum Behavior
 
-### 37-1 Atomic mechanics
+### I.37-1 Atomic mechanics {#sec-FLP_1_37_1}
 
 
 </br>
 
 
-## 39. The Kinetic Theory of Gases
+## I.39. The Kinetic Theory of Gases 
 
-### 39-4 온도와 운동에너지
+### I.39-4 온도와 운동에너지 {#sec-FLP_1_39_4}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
@@ -61,11 +61,9 @@ $$
 
 </br>
 
-## 40. The Principle of Statistical Mechanics
+## I.40. The Principle of Statistical Mechanics
 
-### 40.1 지수적 대기
-
-
+### I.40.1 지수적 대기 {#sec-FLP_1_40_1}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
@@ -102,7 +100,7 @@ $$
 
 </div> </br>
 
-## 40-2 볼츠만 법칙
+### I.40-2 볼츠만 법칙 {#sec-FLP_1_40_2}
 
 $$
 n = n_0 e^{-\text{P.E.}/k_BT}
@@ -110,7 +108,7 @@ $$
 
 </br>
 
-## 40-3 액체의 증발
+## I.40-3 액체의 증발 {#sec-FLP_1_40_3}
 
 분자들의 집합을 생각하자. 이 분자들 사이에는 쌍마다 서로의 거리만 의존하는 상호작용, 즉 포텐셜 에너지가 존재한다. 이 때 두 분자 사이의 거리 $r$ 에 따른 포텐셜 $V(r)$ 은 일반적으로 아래 그림과 같은 형태이며 $r<r_0$ 일 때는 척력이 $r>r_0$ 일 때는 인력이 작용한다. 
 
@@ -122,10 +120,8 @@ $$
 \exp \left[-\sum_{i,j} V(r_{ij})/k_BT\right].
 $$ 
 
-
-
 </br>
 
-## 40-4 분자 속력의 분포
+### I.40-4 분자 속력의 분포 {#sec-FLP_1_40_4}
 
-
+</br>

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; 작은 진동 – 고전 역학과 전자기학</title>
+<title>11&nbsp; 작은 진동 – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -111,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/13_small_oscillations.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/13_small_oscillations.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">작은 진동</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -123,8 +124,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/13_small_oscillations.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></a></li></ol></nav>
-      <h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/13_small_oscillations.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">작은 진동</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">작은 진동</span></h1>
                       </div>
   </div>
     
@@ -176,13 +177,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Feynman/vol1/vol1_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-2: 특수상대성이론과 광학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Feynman/vol1/vol1_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-3 : 열역학과 양자 입문</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/Feynman/vol2/vol2_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><span class="math inline">\(II\)</span>-1 : 정전기와 정자기</span></span></a>
   </div>
 </li>
       </ul>
@@ -199,55 +206,55 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/02_variational_principle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/04_canonical_transform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/11_one_body_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/A_proofs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
   </div>
 </li>
       </ul>
@@ -264,13 +271,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -287,43 +294,43 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/02_1_electrostatics1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/02_2_electrostatics2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/03_magnetostatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A1_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A2_waves.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
   </div>
 </li>
       </ul>
@@ -340,13 +347,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -363,19 +370,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/02_entropy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/0A_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
   </div>
 </li>
       </ul>
@@ -392,7 +399,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -413,16 +420,16 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#차원-조화진동자-review" id="toc-차원-조화진동자-review" class="nav-link active" data-scroll-target="#차원-조화진동자-review"><span class="header-section-number">10.1</span> 1차원 조화진동자 Review</a>
+  <li><a href="#차원-조화진동자-review" id="toc-차원-조화진동자-review" class="nav-link active" data-scroll-target="#차원-조화진동자-review"><span class="header-section-number">11.1</span> 1차원 조화진동자 Review</a>
   <ul class="collapse">
-  <li><a href="#sec-CM_lagrangian_description_of_1d_sho" id="toc-sec-CM_lagrangian_description_of_1d_sho" class="nav-link" data-scroll-target="#sec-CM_lagrangian_description_of_1d_sho"><span class="header-section-number">10.1.1</span> 1차원 단순조화진동자의 라그랑지안 기술</a></li>
+  <li><a href="#sec-CM_lagrangian_description_of_1d_sho" id="toc-sec-CM_lagrangian_description_of_1d_sho" class="nav-link" data-scroll-target="#sec-CM_lagrangian_description_of_1d_sho"><span class="header-section-number">11.1.1</span> 1차원 단순조화진동자의 라그랑지안 기술</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
-  <li><a href="#강제-진동" id="toc-강제-진동" class="nav-link" data-scroll-target="#강제-진동"><span class="header-section-number">10.2</span> 강제 진동</a>
+  <li><a href="#강제-진동" id="toc-강제-진동" class="nav-link" data-scroll-target="#강제-진동"><span class="header-section-number">11.2</span> 강제 진동</a>
   <ul class="collapse">
-  <li><a href="#sec-CM_forced_osillation_without_damping" id="toc-sec-CM_forced_osillation_without_damping" class="nav-link" data-scroll-target="#sec-CM_forced_osillation_without_damping"><span class="header-section-number">10.2.1</span> 감쇠 없는 강제 진동</a></li>
-  <li><a href="#sec-CM_forced_oscillation_near_resonance" id="toc-sec-CM_forced_oscillation_near_resonance" class="nav-link" data-scroll-target="#sec-CM_forced_oscillation_near_resonance"><span class="header-section-number">10.2.2</span> 공명 근처에서</a></li>
-  <li><a href="#복소수-영역에서의-미분방정식의-처리" id="toc-복소수-영역에서의-미분방정식의-처리" class="nav-link" data-scroll-target="#복소수-영역에서의-미분방정식의-처리"><span class="header-section-number">10.2.3</span> 복소수 영역에서의 미분방정식의 처리</a></li>
+  <li><a href="#sec-CM_forced_osillation_without_damping" id="toc-sec-CM_forced_osillation_without_damping" class="nav-link" data-scroll-target="#sec-CM_forced_osillation_without_damping"><span class="header-section-number">11.2.1</span> 감쇠 없는 강제 진동</a></li>
+  <li><a href="#sec-CM_forced_oscillation_near_resonance" id="toc-sec-CM_forced_oscillation_near_resonance" class="nav-link" data-scroll-target="#sec-CM_forced_oscillation_near_resonance"><span class="header-section-number">11.2.2</span> 공명 근처에서</a></li>
+  <li><a href="#복소수-영역에서의-미분방정식의-처리" id="toc-복소수-영역에서의-미분방정식의-처리" class="nav-link" data-scroll-target="#복소수-영역에서의-미분방정식의-처리"><span class="header-section-number">11.2.3</span> 복소수 영역에서의 미분방정식의 처리</a></li>
   <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul></li>
   </ul>
@@ -446,10 +453,10 @@ window.Quarto = {
 <p><br></p>
 <p>많은 경우 일반화된 변수 <span class="math inline">\(q\)</span> 의 움직임이 작을 경우 진동(osciilation) 으로 기술된다. 여기서는 우선 앞서 다루었던 진동을 다시 다루며, 특히 특정한 상황에 대해서는 변수의 폭이 매우 작아 근사(approximation) 를 이용하여 진동으로 다룰 수 있는 경우를 생각하기로 한다.</p>
 <p><br></p>
-<section id="차원-조화진동자-review" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="차원-조화진동자-review"><span class="header-section-number">10.1</span> 1차원 조화진동자 Review</h2>
-<section id="sec-CM_lagrangian_description_of_1d_sho" class="level3" data-number="10.1.1">
-<h3 data-number="10.1.1" class="anchored" data-anchor-id="sec-CM_lagrangian_description_of_1d_sho"><span class="header-section-number">10.1.1</span> 1차원 단순조화진동자의 라그랑지안 기술</h3>
+<section id="차원-조화진동자-review" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="차원-조화진동자-review"><span class="header-section-number">11.1</span> 1차원 조화진동자 Review</h2>
+<section id="sec-CM_lagrangian_description_of_1d_sho" class="level3" data-number="11.1.1">
+<h3 data-number="11.1.1" class="anchored" data-anchor-id="sec-CM_lagrangian_description_of_1d_sho"><span class="header-section-number">11.1.1</span> 1차원 단순조화진동자의 라그랑지안 기술</h3>
 <p><a href="../../src/ClassicalMechanics/11_one_body_problems.html#차원-조화진동자">1차원 조화진동자</a> 의 단순조화진동자를 라그랑지한 형태는 아래와 같다.</p>
 <p><span class="math display">\[
 L = \dfrac{m\dot{x}^2}{2} - \dfrac{kx^2}{2} = \dfrac{m\dot{x}^2}{2} - \dfrac{m\omega_0^2x^2}{2},\qquad \omega_0 = \sqrt{\dfrac{k}{m}}.
@@ -472,7 +479,7 @@ L = \dfrac{a\dot{q}^2}{2} - \dfrac{bq^2}{2}
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_landau_21_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 10.1 (L&amp;L Mechanics 21.2)</strong></span> 서로 다른 두 동위원소들로 이루어진 이원자 분자를 생각하자. 하나는 질량이 <span class="math inline">\(m_1,\,m_2\)</span> 인 동위원소의 이원자 분자이고 다른 하나는 <span class="math inline">\(m_1',\,m_2'\)</span> 인 이원자 분자이다 (<span class="math inline">\(m_1\)</span> 과 <span class="math inline">\(m_1'\)</span> 이 동위원소이고 <span class="math inline">\(m_2\)</span> 와 <span class="math inline">\(m_2'\)</span> 이 동위원소이다.). 이 때 각각의 진동수 <span class="math inline">\(\omega,\,\omega'\)</span> 의 비율을 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 11.1 (L&amp;L Mechanics 21.2)</strong></span> 서로 다른 두 동위원소들로 이루어진 이원자 분자를 생각하자. 하나는 질량이 <span class="math inline">\(m_1,\,m_2\)</span> 인 동위원소의 이원자 분자이고 다른 하나는 <span class="math inline">\(m_1',\,m_2'\)</span> 인 이원자 분자이다 (<span class="math inline">\(m_1\)</span> 과 <span class="math inline">\(m_1'\)</span> 이 동위원소이고 <span class="math inline">\(m_2\)</span> 와 <span class="math inline">\(m_2'\)</span> 이 동위원소이다.). 이 때 각각의 진동수 <span class="math inline">\(\omega,\,\omega'\)</span> 의 비율을 구하라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -491,14 +498,14 @@ L = \dfrac{\mu\dot{x}^2}{2} + \dfrac{(m_1+m_2)\dot{R}^2}{2}+ \dfrac{k}{2}x^2
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_landau_21_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 10.2 (L&amp;L Mechanics 21.3)</strong></span> 아래 그림과 같이 한쪽 끝이 <span class="math inline">\(A\)</span> 에 고정되었으며 직선상에서 움직이는 단순조화진동자의 진동수를 구하라. <span class="math inline">\(A\)</span> 와 직선의 거리는 <span class="math inline">\(l\)</span> 이며 용수철을 <span class="math inline">\(l\)</span> 만큼 늘이는 데는 힘 <span class="math inline">\(F\)</span> 가 필요하다.</p>
+<p><span class="theorem-title"><strong>연습문제 11.2 (L&amp;L Mechanics 21.3)</strong></span> 아래 그림과 같이 한쪽 끝이 <span class="math inline">\(A\)</span> 에 고정되었으며 직선상에서 움직이는 단순조화진동자의 진동수를 구하라. <span class="math inline">\(A\)</span> 와 직선의 거리는 <span class="math inline">\(l\)</span> 이며 용수철을 <span class="math inline">\(l\)</span> 만큼 늘이는 데는 힘 <span class="math inline">\(F\)</span> 가 필요하다.</p>
 <div id="fig-CM_exr_landau_21_3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-CM_exr_landau_21_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/landau_pr_21_3/landau_pr_21_3.png" class="img-fluid figure-img" width="200">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_exr_landau_21_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;10.1: 그림
+그림&nbsp;11.1: 그림
 </figcaption>
 </figure>
 </div>
@@ -510,14 +517,14 @@ L = \dfrac{\mu\dot{x}^2}{2} + \dfrac{(m_1+m_2)\dot{R}^2}{2}+ \dfrac{k}{2}x^2
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_landau_21_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 10.3 (L&amp;L Mechanics 21.4)</strong></span> 질량 <span class="math inline">\(m\)</span> 인 입자가 반지름 <span class="math inline">\(r\)</span> 이니 원주에서 움직이는것을 제외하면 <a href="#exr-CM_landau_21_4" class="quarto-xref">연습문제&nbsp;<span>10.3</span></a> 과 같은 문제이다 진동수를 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 11.3 (L&amp;L Mechanics 21.4)</strong></span> 질량 <span class="math inline">\(m\)</span> 인 입자가 반지름 <span class="math inline">\(r\)</span> 이니 원주에서 움직이는것을 제외하면 <a href="#exr-CM_landau_21_4" class="quarto-xref">연습문제&nbsp;<span>11.3</span></a> 과 같은 문제이다 진동수를 구하라.</p>
 <div id="fig-CM_exr_landau_21_4" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-CM_exr_landau_21_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/landau_pr_21_4/landau_pr_21_4.png" class="img-fluid figure-img" width="200">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_exr_landau_21_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;10.2: 그림
+그림&nbsp;11.2: 그림
 </figcaption>
 </figure>
 </div>
@@ -537,11 +544,11 @@ L = \dfrac{\mu\dot{x}^2}{2} + \dfrac{(m_1+m_2)\dot{R}^2}{2}+ \dfrac{k}{2}x^2
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_landau_21_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 10.4 (L&amp;L Mechanics 21.6)</strong></span> <a href="02_variational_principle.html#exr-landau_cm_5_2" class="quarto-xref">연습문제&nbsp;<span>5.8</span></a> 에서의 각진동수를 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 11.4 (L&amp;L Mechanics 21.6)</strong></span> <a href="02_variational_principle.html#exr-landau_cm_5_2" class="quarto-xref">연습문제&nbsp;<span>6.8</span></a> 에서의 각진동수를 구하라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="11_one_body_problems.html#exr-landau_cm_14_3" class="quarto-xref">연습문제&nbsp;<span>8.8</span></a> 역시 생각한다. 라그랑지안 <span class="math inline">\(L\)</span> 은 <span class="math inline">\(|\phi|\ll 1\)</span> 조건에서</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="11_one_body_problems.html#exr-landau_cm_14_3" class="quarto-xref">연습문제&nbsp;<span>9.8</span></a> 역시 생각한다. 라그랑지안 <span class="math inline">\(L\)</span> 은 <span class="math inline">\(|\phi|\ll 1\)</span> 조건에서</p>
 <p><span class="math display">\[
 \begin{aligned}
 L &amp;= \dfrac{m_2l^2\dot{\phi}^2}{2}\left[1- \dfrac{m_2 \cos^2\phi}{m_1+m_2}\right] + m_2gl\cos \phi \\[0.3em]
@@ -556,16 +563,16 @@ L &amp;= \dfrac{m_2l^2\dot{\phi}^2}{2}\left[1- \dfrac{m_2 \cos^2\phi}{m_1+m_2}\r
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_landau_21_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 10.5 (L&amp;L Mechanics 21.6)</strong></span> Determine the form of a curve such that the frequency of oscillations of a particle on it under the force of gravity is independent of the amplitude.</p>
+<p><span class="theorem-title"><strong>연습문제 11.5 (L&amp;L Mechanics 21.6)</strong></span> Determine the form of a curve such that the frequency of oscillations of a particle on it under the force of gravity is independent of the amplitude.</p>
 </div>
 </div>
 <p><br></p>
 </section>
 </section>
-<section id="강제-진동" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="강제-진동"><span class="header-section-number">10.2</span> 강제 진동</h2>
-<section id="sec-CM_forced_osillation_without_damping" class="level3" data-number="10.2.1">
-<h3 data-number="10.2.1" class="anchored" data-anchor-id="sec-CM_forced_osillation_without_damping"><span class="header-section-number">10.2.1</span> 감쇠 없는 강제 진동</h3>
+<section id="강제-진동" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="강제-진동"><span class="header-section-number">11.2</span> 강제 진동</h2>
+<section id="sec-CM_forced_osillation_without_damping" class="level3" data-number="11.2.1">
+<h3 data-number="11.2.1" class="anchored" data-anchor-id="sec-CM_forced_osillation_without_damping"><span class="header-section-number">11.2.1</span> 감쇠 없는 강제 진동</h3>
 <p>앞서 다루었듯이 외력이 작용하는 경우를 강제 진동이라고 한다. 이런 시스템은 <span class="math inline">\(kx^2/2\)</span> 형태의 포텐설 에너지 이외에 추가적인 포텐셜 에너지 <span class="math inline">\(U_e(x,\,t)\)</span> 도 고려해야 한다. <span class="math inline">\(|x|\)</span> 가 매우 작을 때 <span class="math inline">\(U_e\)</span> 는 아래와 같이 근사 될 수 있다.</p>
 <p><span class="math display">\[
 U_e(x,\,t) \approx U_e(0,\,t) + \left.\dfrac{\partial U_e(x,\,t)}{\partial x}\right|_{x=0}x.
@@ -577,21 +584,21 @@ L = \dfrac{1}{2}m\dot{x}^2 - \dfrac{1}{2}kx^2 + xF(t).
 <p>또한 운동방정식은 <span class="math inline">\(\omega_0 = \sqrt{k/m}\)</span> 에 대해 다음과 같다.</p>
 <p><span id="eq-CM_LL_forced_sho_eom"><span class="math display">\[
 \ddot{x} + {\omega_0}^2x = \dfrac{F(t)}{m}
-\tag{10.1}\]</span></span></p>
-<p><a href="11_one_body_problems.html#sec-CM_forced_dsho"><span class="quarto-xref"><span> 8.2.3</span></span> 강제 조화 진동자</a> 에서 보았듯이 위 미분방정식의 해는 동차미분방정식의 해인 일반해와 비동차 방정식의 해인 특수해의 합이다.</p>
-<p><span class="math inline">\(F=\overline{f}_0 e^{i\omega t}\)</span> 라고 놓고 복소수 영역에서 위 방정식의 일반해를 구하면 (<a href="11_one_body_problems.html#sec-CM_forced_dsho" class="quarto-xref"><span> 8.2.3</span></a> 에서 <span class="math inline">\(\beta=0\)</span> 일 때)</p>
+\tag{11.1}\]</span></span></p>
+<p><a href="11_one_body_problems.html#sec-CM_forced_dsho"><span class="quarto-xref"><span> 9.2.3</span></span> 강제 조화 진동자</a> 에서 보았듯이 위 미분방정식의 해는 동차미분방정식의 해인 일반해와 비동차 방정식의 해인 특수해의 합이다.</p>
+<p><span class="math inline">\(F=\overline{f}_0 e^{i\omega t}\)</span> 라고 놓고 복소수 영역에서 위 방정식의 일반해를 구하면 (<a href="11_one_body_problems.html#sec-CM_forced_dsho" class="quarto-xref"><span> 9.2.3</span></a> 에서 <span class="math inline">\(\beta=0\)</span> 일 때)</p>
 <p><span id="eq-CM_LL_complex_solution_of_forced_sho"><span class="math display">\[
 \overline{x}(t) = \overline{a} e^{i\omega_0 t} + \dfrac{\overline{f}_0}{m(\omega_0^2-\omega^2)}e^{i\omega t}
-\tag{10.2}\]</span></span></p>
+\tag{11.2}\]</span></span></p>
 <p>이며 이를 실수에서 표현하면</p>
 <p><span id="eq-CM_LL_real_solution_of_forced_sho"><span class="math display">\[
 x (t) = a\cos (\omega_0 t + \theta_0) + \dfrac{f_0\cos (\omega t + \phi_0)}{m (\omega_0^2 - \omega^2)}
-\tag{10.3}\]</span></span></p>
+\tag{11.3}\]</span></span></p>
 <p>이다.</p>
 <p><br></p>
 </section>
-<section id="sec-CM_forced_oscillation_near_resonance" class="level3" data-number="10.2.2">
-<h3 data-number="10.2.2" class="anchored" data-anchor-id="sec-CM_forced_oscillation_near_resonance"><span class="header-section-number">10.2.2</span> 공명 근처에서</h3>
+<section id="sec-CM_forced_oscillation_near_resonance" class="level3" data-number="11.2.2">
+<h3 data-number="11.2.2" class="anchored" data-anchor-id="sec-CM_forced_oscillation_near_resonance"><span class="header-section-number">11.2.2</span> 공명 근처에서</h3>
 <p>당연하게도 <span class="math inline">\(\omega \to \omega_0\)</span> 일 때 <span class="math inline">\(x\)</span> 의 진폭이 무한대로 증가하는 공명을 볼 수 있다. 이 식을 <span class="math inline">\(\omega \ne \omega_0\)</span> 에서 아래와 같이 고쳐보자.</p>
 <p><span class="math display">\[
 x(t) = b \cos (\omega_0 t +\theta_0) + \dfrac{f_0 \left[\cos (\omega t + \phi_0) - \cos (\omega_0 t + \phi_0)\right]}{m(\omega_0^2 - \omega^2)}
@@ -612,19 +619,19 @@ x= ae^{i\omega_0 t} + be^{i(\omega_0 + \epsilon)t} = (a+be^{i\epsilon t})e^{i\om
 <img src="images/beats/beats.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_beats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;10.3: Beats
+그림&nbsp;11.3: Beats
 </figcaption>
 </figure>
 </div>
 <p><br></p>
 </section>
-<section id="복소수-영역에서의-미분방정식의-처리" class="level3" data-number="10.2.3">
-<h3 data-number="10.2.3" class="anchored" data-anchor-id="복소수-영역에서의-미분방정식의-처리"><span class="header-section-number">10.2.3</span> 복소수 영역에서의 미분방정식의 처리</h3>
-<p><a href="#eq-CM_LL_forced_sho_eom" class="quarto-xref">식&nbsp;<span>10.1</span></a> 은 <span class="math inline">\(\xi := \dot{x}+i\omega x\)</span> 에 대해서</p>
+<section id="복소수-영역에서의-미분방정식의-처리" class="level3" data-number="11.2.3">
+<h3 data-number="11.2.3" class="anchored" data-anchor-id="복소수-영역에서의-미분방정식의-처리"><span class="header-section-number">11.2.3</span> 복소수 영역에서의 미분방정식의 처리</h3>
+<p><a href="#eq-CM_LL_forced_sho_eom" class="quarto-xref">식&nbsp;<span>11.1</span></a> 은 <span class="math inline">\(\xi := \dot{x}+i\omega x\)</span> 에 대해서</p>
 <p><span id="eq-CM_LL_forced_sho_eom_complex_form"><span class="math display">\[
 \dfrac{d\xi}{dt} - i\omega_0 \xi = \dfrac{F(t)}{m}
-\tag{10.4}\]</span></span></p>
-<p>으로 쓸 수 있다. 상수 <span class="math inline">\(h\)</span> 에 대해 <span class="math inline">\(\xi = he^{i\omega_0 t}\)</span> 는 위 방정식의 제차 형태에 대한 일반해이며, 우리는 <span class="math inline">\(\xi = h(t) e^{i\omega_0 t}\)</span> 형태의 특수해가 존재하는지 확인해보자. <a href="#eq-CM_LL_forced_sho_eom_complex_form" class="quarto-xref">식&nbsp;<span>10.4</span></a> 에 대입하면</p>
+\tag{11.4}\]</span></span></p>
+<p>으로 쓸 수 있다. 상수 <span class="math inline">\(h\)</span> 에 대해 <span class="math inline">\(\xi = he^{i\omega_0 t}\)</span> 는 위 방정식의 제차 형태에 대한 일반해이며, 우리는 <span class="math inline">\(\xi = h(t) e^{i\omega_0 t}\)</span> 형태의 특수해가 존재하는지 확인해보자. <a href="#eq-CM_LL_forced_sho_eom_complex_form" class="quarto-xref">식&nbsp;<span>11.4</span></a> 에 대입하면</p>
 <p><span class="math display">\[
 \dot{h}e^{i\omega_0 t}  = \dfrac{F(t)}{m}
 \]</span></p>
@@ -635,8 +642,8 @@ h(t) = \int^t \dfrac{F(t')e^{-i\omega_0 t'}}{m}\,dt'
 <p>이므로 <span class="math inline">\(\xi(t)\)</span> 는 아래와 같다.</p>
 <p><span id="eq-CM_LL_forced_sho_eom_complex_form_solution_1"><span class="math display">\[
 \xi (t) = e^{i \omega t} \left[\int_0^t \dfrac{F(t')e^{-i\omega_0 t'}}{m}\,dt' + \xi_0\right].
-\tag{10.5}\]</span></span></p>
-<p>외력이 작용하기 때문에 에너지는 보존되지 않는다. 이제 모든 시간동안에 조화진동자에 전달되는 에너지를 구해보자. <a href="#eq-CM_LL_forced_sho_eom_complex_form_solution_1" class="quarto-xref">식&nbsp;<span>10.5</span></a> 에서 적분상수 <span class="math inline">\(\xi_0\)</span> 를 없에고 적분 구간을 <span class="math inline">\((-\infty,\, \infty)\)</span> 로 잡으면</p>
+\tag{11.5}\]</span></span></p>
+<p>외력이 작용하기 때문에 에너지는 보존되지 않는다. 이제 모든 시간동안에 조화진동자에 전달되는 에너지를 구해보자. <a href="#eq-CM_LL_forced_sho_eom_complex_form_solution_1" class="quarto-xref">식&nbsp;<span>11.5</span></a> 에서 적분상수 <span class="math inline">\(\xi_0\)</span> 를 없에고 적분 구간을 <span class="math inline">\((-\infty,\, \infty)\)</span> 로 잡으면</p>
 <p><span class="math display">\[
 |\xi_\infty|^2 = \dfrac{1}{m^2} \left|\int_{-\infty}^\infty F(t')e^{-i\omega_0 t'}\,dt'\right|^2
 \]</span></p>
@@ -659,11 +666,11 @@ E = \dfrac{1}{2m} \left|\int_{-\infty}^\infty F(t')\,dt'\right|^2
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_landau_22_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 10.6 (L&amp;L Mechanics 22.1)</strong></span> 초기조건dl <span class="math inline">\(x(t)=0,\, \dot{x}=0\)</span> 으로 주어졌다고 하자. 힘이 아래의 경우로 주어졌을 때 강제 조화 진동의 운동을 결정하라. (<span class="math inline">\(a\)</span>) <span class="math inline">\(F=F_0\)</span>, (<span class="math inline">\(b\)</span>) <span class="math inline">\(F=F_0t\)</span>, (<span class="math inline">\(c\)</span>) <span class="math inline">\(F=F_0 e^{-\alpha t}\)</span>, (<span class="math inline">\(d\)</span>) <span class="math inline">\(F=F_0 e^{-\alpha t}\cos \beta t\)</span>.</p>
+<p><span class="theorem-title"><strong>연습문제 11.6 (L&amp;L Mechanics 22.1)</strong></span> 초기조건dl <span class="math inline">\(x(t)=0,\, \dot{x}=0\)</span> 으로 주어졌다고 하자. 힘이 아래의 경우로 주어졌을 때 강제 조화 진동의 운동을 결정하라. (<span class="math inline">\(a\)</span>) <span class="math inline">\(F=F_0\)</span>, (<span class="math inline">\(b\)</span>) <span class="math inline">\(F=F_0t\)</span>, (<span class="math inline">\(c\)</span>) <span class="math inline">\(F=F_0 e^{-\alpha t}\)</span>, (<span class="math inline">\(d\)</span>) <span class="math inline">\(F=F_0 e^{-\alpha t}\cos \beta t\)</span>.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-CM_LL_real_solution_of_forced_sho" class="quarto-xref">식&nbsp;<span>10.3</span></a> 을 이용한다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-CM_LL_real_solution_of_forced_sho" class="quarto-xref">식&nbsp;<span>11.3</span></a> 을 이용한다.</p>
 <p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(x (t) = a\cos (\omega_0 t + \theta_0) + \dfrac{F_0 }{m \omega_0^2}\)</span> 이며 초기조건으로부터 <span class="math inline">\(a\cos \theta_0 + \dfrac{F_0 }{m\omega_0^2} =0\)</span>, <span class="math inline">\(-a\omega_0 \sin \theta_0 = 0\)</span> 이므로 <span class="math inline">\(\theta_0 = 0\)</span>, <span class="math inline">\(a = - \dfrac{F_0\phi_0}{m\omega_0^2}\)</span> 이다. 즉</p>
 <p><span class="math display">\[
 x(t) = \dfrac{F_0}{m\omega_0^2}(1-\cos \omega_0 t).
@@ -758,13 +765,14 @@ x(t) = \dfrac{F_0}{m \omega_0 (\omega_0^2+\alpha^2)}\left[e^{-\alpha t} - \cos \
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1109,12 +1117,12 @@ x(t) = \dfrac{F_0}{m \omega_0 (\omega_0^2+\alpha^2)}\left[e^{-\alpha t} - \cos \
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="pagination-link" aria-label="고전역학의 다체 문제 - 충돌과 산란">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../src/ClassicalMechanics/A_proofs.html" class="pagination-link" aria-label="증명들">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">증명들</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">증명들</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

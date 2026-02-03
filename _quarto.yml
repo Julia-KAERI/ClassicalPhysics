@@ -17,6 +17,7 @@ book:
         - src/Feynman/vol1/vol1_1.qmd
         - src/Feynman/vol1/vol1_2.qmd
         - src/Feynman/vol1/vol1_3.qmd
+        - src/Feynman/vol2/vol2_1.qmd
         # - src/Feynmann/feynmann_trans.qmd
   
     - part: src/ClassicalMechanics/00_index.qmd

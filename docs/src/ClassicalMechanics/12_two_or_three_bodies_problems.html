@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; 고전역학의 다체 문제 - 충돌과 산란 – 고전 역학과 전자기학</title>
+<title>10&nbsp; 고전역학의 다체 문제 - 충돌과 산란 – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,14 +54,15 @@ div.csl-indent {
 <link href="../../src/ClassicalMechanics/11_one_body_problems.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +105,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -131,7 +132,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -143,8 +144,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></a></li></ol></nav>
-      <h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></h1>
                       </div>
   </div>
     
@@ -196,13 +197,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Feynman/vol1/vol1_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-2: 특수상대성이론과 광학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Feynman/vol1/vol1_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-3 : 열역학과 양자 입문</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/Feynman/vol2/vol2_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><span class="math inline">\(II\)</span>-1 : 정전기와 정자기</span></span></a>
   </div>
 </li>
       </ul>
@@ -219,55 +226,55 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/02_variational_principle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/04_canonical_transform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/11_one_body_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/A_proofs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
   </div>
 </li>
       </ul>
@@ -284,13 +291,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -307,43 +314,43 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/02_1_electrostatics1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/02_2_electrostatics2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/03_magnetostatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A1_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A2_waves.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
   </div>
 </li>
       </ul>
@@ -360,13 +367,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -383,19 +390,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/02_entropy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/0A_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
   </div>
 </li>
       </ul>
@@ -412,7 +419,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -433,21 +440,21 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#자발적-붕괴-spontaneous-disintegration" id="toc-자발적-붕괴-spontaneous-disintegration" class="nav-link active" data-scroll-target="#자발적-붕괴-spontaneous-disintegration"><span class="header-section-number">9.1</span> 자발적 붕괴 (Spontaneous disintegration)</a>
+  <li><a href="#자발적-붕괴-spontaneous-disintegration" id="toc-자발적-붕괴-spontaneous-disintegration" class="nav-link active" data-scroll-target="#자발적-붕괴-spontaneous-disintegration"><span class="header-section-number">10.1</span> 자발적 붕괴 (Spontaneous disintegration)</a>
   <ul class="collapse">
-  <li><a href="#sec-CM_spontaneous_disintegration_in_com_frame" id="toc-sec-CM_spontaneous_disintegration_in_com_frame" class="nav-link" data-scroll-target="#sec-CM_spontaneous_disintegration_in_com_frame"><span class="header-section-number">9.1.1</span> 질량중심 좌표계에서의 자발적 붕괴</a></li>
-  <li><a href="#sec-CM_spontaneous_disintegration_in_lab_frame" id="toc-sec-CM_spontaneous_disintegration_in_lab_frame" class="nav-link" data-scroll-target="#sec-CM_spontaneous_disintegration_in_lab_frame"><span class="header-section-number">9.1.2</span> 실험실 좌표계에서의 자발적 붕괴</a></li>
-  <li><a href="#sec-CM_sponteneous_disintegration_and_solid_angle_distribution" id="toc-sec-CM_sponteneous_disintegration_and_solid_angle_distribution" class="nav-link" data-scroll-target="#sec-CM_sponteneous_disintegration_and_solid_angle_distribution"><span class="header-section-number">9.1.3</span> 자발적 붕괴와 고체각 분포</a></li>
-  <li><a href="#sec-CM_maximum_kinetic_energy_in_many_particles_disintegration" id="toc-sec-CM_maximum_kinetic_energy_in_many_particles_disintegration" class="nav-link" data-scroll-target="#sec-CM_maximum_kinetic_energy_in_many_particles_disintegration"><span class="header-section-number">9.1.4</span> 다입자 붕괴와 최대 운동 에너지</a></li>
+  <li><a href="#sec-CM_spontaneous_disintegration_in_com_frame" id="toc-sec-CM_spontaneous_disintegration_in_com_frame" class="nav-link" data-scroll-target="#sec-CM_spontaneous_disintegration_in_com_frame"><span class="header-section-number">10.1.1</span> 질량중심 좌표계에서의 자발적 붕괴</a></li>
+  <li><a href="#sec-CM_spontaneous_disintegration_in_lab_frame" id="toc-sec-CM_spontaneous_disintegration_in_lab_frame" class="nav-link" data-scroll-target="#sec-CM_spontaneous_disintegration_in_lab_frame"><span class="header-section-number">10.1.2</span> 실험실 좌표계에서의 자발적 붕괴</a></li>
+  <li><a href="#sec-CM_sponteneous_disintegration_and_solid_angle_distribution" id="toc-sec-CM_sponteneous_disintegration_and_solid_angle_distribution" class="nav-link" data-scroll-target="#sec-CM_sponteneous_disintegration_and_solid_angle_distribution"><span class="header-section-number">10.1.3</span> 자발적 붕괴와 고체각 분포</a></li>
+  <li><a href="#sec-CM_maximum_kinetic_energy_in_many_particles_disintegration" id="toc-sec-CM_maximum_kinetic_energy_in_many_particles_disintegration" class="nav-link" data-scroll-target="#sec-CM_maximum_kinetic_energy_in_many_particles_disintegration"><span class="header-section-number">10.1.4</span> 다입자 붕괴와 최대 운동 에너지</a></li>
   </ul></li>
-  <li><a href="#탄성-충돌" id="toc-탄성-충돌" class="nav-link" data-scroll-target="#탄성-충돌"><span class="header-section-number">9.2</span> 탄성 충돌</a>
+  <li><a href="#탄성-충돌" id="toc-탄성-충돌" class="nav-link" data-scroll-target="#탄성-충돌"><span class="header-section-number">10.2</span> 탄성 충돌</a>
   <ul class="collapse">
-  <li><a href="#sec-CM_elastic_collition_in_C_frame" id="toc-sec-CM_elastic_collition_in_C_frame" class="nav-link" data-scroll-target="#sec-CM_elastic_collition_in_C_frame"><span class="header-section-number">9.2.1</span> 질량중심 좌표계에서의 탄성 충돌</a></li>
-  <li><a href="#sec-CM_elastic_collition_in_L_frame" id="toc-sec-CM_elastic_collition_in_L_frame" class="nav-link" data-scroll-target="#sec-CM_elastic_collition_in_L_frame"><span class="header-section-number">9.2.2</span> 실험실 좌표계에서의 탄성 충돌</a></li>
-  <li><a href="#sec-CM_comparison_of_scattering_angle_between_C_frame_and_L_frame" id="toc-sec-CM_comparison_of_scattering_angle_between_C_frame_and_L_frame" class="nav-link" data-scroll-target="#sec-CM_comparison_of_scattering_angle_between_C_frame_and_L_frame"><span class="header-section-number">9.2.3</span> 실험실 좌표계와 질량중심 좌표계의 비교</a></li>
+  <li><a href="#sec-CM_elastic_collition_in_C_frame" id="toc-sec-CM_elastic_collition_in_C_frame" class="nav-link" data-scroll-target="#sec-CM_elastic_collition_in_C_frame"><span class="header-section-number">10.2.1</span> 질량중심 좌표계에서의 탄성 충돌</a></li>
+  <li><a href="#sec-CM_elastic_collition_in_L_frame" id="toc-sec-CM_elastic_collition_in_L_frame" class="nav-link" data-scroll-target="#sec-CM_elastic_collition_in_L_frame"><span class="header-section-number">10.2.2</span> 실험실 좌표계에서의 탄성 충돌</a></li>
+  <li><a href="#sec-CM_comparison_of_scattering_angle_between_C_frame_and_L_frame" id="toc-sec-CM_comparison_of_scattering_angle_between_C_frame_and_L_frame" class="nav-link" data-scroll-target="#sec-CM_comparison_of_scattering_angle_between_C_frame_and_L_frame"><span class="header-section-number">10.2.3</span> 실험실 좌표계와 질량중심 좌표계의 비교</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
-  <li><a href="#산란" id="toc-산란" class="nav-link" data-scroll-target="#산란"><span class="header-section-number">9.3</span> 산란</a></li>
+  <li><a href="#산란" id="toc-산란" class="nav-link" data-scroll-target="#산란"><span class="header-section-number">10.3</span> 산란</a></li>
   <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul>
 </nav>
@@ -468,27 +475,27 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p><br></p>
-<section id="자발적-붕괴-spontaneous-disintegration" class="level2 page-columns page-full" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="자발적-붕괴-spontaneous-disintegration"><span class="header-section-number">9.1</span> 자발적 붕괴 (Spontaneous disintegration)</h2>
-<section id="sec-CM_spontaneous_disintegration_in_com_frame" class="level3" data-number="9.1.1">
-<h3 data-number="9.1.1" class="anchored" data-anchor-id="sec-CM_spontaneous_disintegration_in_com_frame"><span class="header-section-number">9.1.1</span> 질량중심 좌표계에서의 자발적 붕괴</h3>
+<section id="자발적-붕괴-spontaneous-disintegration" class="level2 page-columns page-full" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="자발적-붕괴-spontaneous-disintegration"><span class="header-section-number">10.1</span> 자발적 붕괴 (Spontaneous disintegration)</h2>
+<section id="sec-CM_spontaneous_disintegration_in_com_frame" class="level3" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="sec-CM_spontaneous_disintegration_in_com_frame"><span class="header-section-number">10.1.1</span> 질량중심 좌표계에서의 자발적 붕괴</h3>
 <p>가장 간단한 경우로 질량이 <span class="math inline">\(m\)</span> 인 한 입자가 질량이 각각 <span class="math inline">\(m_1,\,m_2\)</span> 인 두개의 부분으로 자발적으로 붕괴되는 경우를 살펴보자. 이 경우 붕괴된 두 입자가 각각 독립적으로, 즉 상호작용없이 움직인다고 가정한다. 이 시스템을 설명하기 가장 편한 좌표계는 붕괴전 입자가 정지해있도록 하는 좌표계이며 이는 <strong>질량중심 좌표계(center-of-mass reference frame)</strong> 이다. 질량중심 좌표계에서 붕괴 후 입자 각각의 운동량을 <span class="math inline">\(\boldsymbol{p}_1,\, \boldsymbol{p}_2\)</span> 라고 하면 운동량 보존에 의해 <span class="math inline">\(\boldsymbol{p}_1 + \boldsymbol{p}_2= \boldsymbol{0}\)</span> 이 된다. 이제 <span class="math inline">\(p_0 = \|\boldsymbol{p}_1\| = \|\boldsymbol{p}_2\|\)</span> 라고 하고, 붕괴 이전의 내부에너지를 <span class="math inline">\(E_i\)</span>, 붕괴 이후의 내부에너지를 각각 <span class="math inline">\(E_{1i},\, E_{2i}\)</span> 라고 하면 에너지 보존에 의해</p>
 <p><span id="eq-CM_energy_conservation_for_spantaneous_disintegration"><span class="math display">\[
 E_i = E_{1i} + \dfrac{{p_0}^2}{2m_1} + E_{2i} + \dfrac{{p_0}^2}{2m_2}
-\tag{9.1}\]</span></span></p>
+\tag{10.1}\]</span></span></p>
 <p>가 성립한다. 이 때 붕괴 전후의 내부에너지의 차이를 붕괴에너지(disintegration energy) 라고 한다.</p>
 <p><span id="eq-CM_disintegration_energy_for_spontaneous_disintegration_into_two_particls_1"><span class="math display">\[
 \Delta E_i = E_i - (E_{1i} + E_{2i}).
-\tag{9.2}\]</span></span></p>
+\tag{10.2}\]</span></span></p>
 <p>붕괴에너지는 <strong>환산 질량 (reduced mass)</strong> <span class="math inline">\(\mu:= \left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right)\)</span> 에 대해</p>
 <p><span id="eq-CM_disintegration_energy_for_spontaneous_disintegration_into_two_particls_2"><span class="math display">\[
 \Delta E_i = \dfrac{{p_0}^2}{2}\left(\dfrac{1}{m_1}+\dfrac{1}{m_2}\right) = \dfrac{{p_0}^2}{2\mu} &gt; 0 \qquad
-\tag{9.3}\]</span></span></p>
+\tag{10.3}\]</span></span></p>
 <p>이다. 잘량중심 좌표계애서의 속도는 각각 <span class="math inline">\(v_{10}=p_0/m_1,\, v_{20}=p_0/m_2\)</span> 이다.</p>
 <p><br></p>
 </section>
-<section id="sec-CM_spontaneous_disintegration_in_lab_frame" class="level3" data-number="9.1.2">
-<h3 data-number="9.1.2" class="anchored" data-anchor-id="sec-CM_spontaneous_disintegration_in_lab_frame"><span class="header-section-number">9.1.2</span> 실험실 좌표계에서의 자발적 붕괴</h3>
+<section id="sec-CM_spontaneous_disintegration_in_lab_frame" class="level3" data-number="10.1.2">
+<h3 data-number="10.1.2" class="anchored" data-anchor-id="sec-CM_spontaneous_disintegration_in_lab_frame"><span class="header-section-number">10.1.2</span> 실험실 좌표계에서의 자발적 붕괴</h3>
 <p>입자 <span class="math inline">\(m\)</span> 이 <span class="math inline">\(\boldsymbol{V}\)</span> 로 움직이는 좌표계를 생각하자. 일반적으로 우리가 실험적으로 자발적 붕괴를 관측할 때에 실험자에 대해 입자는 정지해 있는 경우보다 어느 속도로 움직이는 경우가 대부분이다. 따라서 이를 <strong>실험실 좌표계(laboratory reference frame)</strong> 라고 하자. 보통 산란 실험은 실험실 좌표계로 나오고 이것을 분석하여 물리적 의미를 따지는 것은 잘량중심 좌표계에서 한다. 즉 실험실 좌표계의 값을 잘량중심 좌표계로 변환하는 것이 중요하다.</p>
 <div id="fig-CM_reference_system_scattering" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -496,14 +503,14 @@ E_i = E_{1i} + \dfrac{{p_0}^2}{2m_1} + E_{2i} + \dfrac{{p_0}^2}{2m_2}
 <img src="images/frame_and_scattering/frame_and_scattering.png" class="img-fluid figure-img" width="500">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_reference_system_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;9.1: 실험실 좌표계
+그림&nbsp;10.1: 실험실 좌표계
 </figcaption>
 </figure>
 </div>
-<p><span class="math inline">\(\boldsymbol{v}_{01}\)</span> 이나 <span class="math inline">\(\boldsymbol{v}_{02}\)</span> 가 실험실 좌표계에서 속도가 어떻게 변하는지 살펴 보자. <a href="#fig-CM_reference_system_scattering" class="quarto-xref">그림&nbsp;<span>9.1</span></a> 을 보자. 입자 인덱스 <span class="math inline">\(1,\,2\)</span> 를 떼어 놓으면 실험실 좌표계에서의 속도 <span class="math inline">\(\boldsymbol{v}= \boldsymbol{V} + \boldsymbol{v}_0\)</span> 이다. <span class="math inline">\(\boldsymbol{V}\)</span> 와 <span class="math inline">\(\boldsymbol{v}\)</span> 가 <span class="math inline">\(\theta\)</span> 의 사잇각을 갖는다면</p>
+<p><span class="math inline">\(\boldsymbol{v}_{01}\)</span> 이나 <span class="math inline">\(\boldsymbol{v}_{02}\)</span> 가 실험실 좌표계에서 속도가 어떻게 변하는지 살펴 보자. <a href="#fig-CM_reference_system_scattering" class="quarto-xref">그림&nbsp;<span>10.1</span></a> 을 보자. 입자 인덱스 <span class="math inline">\(1,\,2\)</span> 를 떼어 놓으면 실험실 좌표계에서의 속도 <span class="math inline">\(\boldsymbol{v}= \boldsymbol{V} + \boldsymbol{v}_0\)</span> 이다. <span class="math inline">\(\boldsymbol{V}\)</span> 와 <span class="math inline">\(\boldsymbol{v}\)</span> 가 <span class="math inline">\(\theta\)</span> 의 사잇각을 갖는다면</p>
 <p><span id="eq-CM_scattering_1"><span class="math display">\[
 v^2 + V^2 - 2 vV\cos \theta = {v_0}^2
-\tag{9.4}\]</span></span></p>
+\tag{10.4}\]</span></span></p>
 <p>이다. <span class="math inline">\(V &gt; v_0\)</span> 라면 <span class="math inline">\(\theta\)</span> 는 다음과 같이 정해지는 <span class="math inline">\(\theta_\textrm{max}\)</span> 보다 클수 없다. 즉</p>
 <p><span class="math display">\[
 \theta \le \theta_{\textrm{max}} = \sin^{-1}(v_0/V)
@@ -511,20 +518,20 @@ v^2 + V^2 - 2 vV\cos \theta = {v_0}^2
 <p>질량중심 좌표계와 실험실 좌표계의 각도 <span class="math inline">\(\theta\)</span> 와 <span class="math inline">\(\theta_0\)</span> 의 관계는 다음과 같다.</p>
 <p><span id="eq-CM_angle_transform_from_lab_to_stationary"><span class="math display">\[
 \tan \theta = \dfrac{v_0 \sin \theta_0}{v_0 \cos \theta_0 + V}.
-\tag{9.5}\]</span></span></p>
+\tag{10.5}\]</span></span></p>
 <p>혹은 우리가 잘량중심 좌표계에서 계산한 것을 실험실 좌표계에서의 값과 직접 맞춰보고 싶을 때도 있다. 이 경우</p>
 <p><span id="eq-CM_angle_transform_from_stationary_to_lab"><span class="math display">\[
 \cos \theta_0 = - \dfrac{V}{v_0} \sin^2 \theta \pm \cos \theta \sqrt{1 - \dfrac{V^2}{{v_0}^2} \sin^2 \theta  }
-\tag{9.6}\]</span></span></p>
-<p><span class="math inline">\(v_0&gt;V\)</span> 라면, 즉 <a href="#fig-CM_reference_system_scattering" class="quarto-xref">그림&nbsp;<span>9.1</span></a> (<span class="math inline">\(a\)</span>) 의 경우라면 <span class="math inline">\(\theta_0\)</span> 와 <span class="math inline">\(\theta\)</span> 가 전단사이다. 그러나 <span class="math inline">\(v_0&lt;V\)</span> 라면, 즉 <a href="#fig-CM_reference_system_scattering" class="quarto-xref">그림&nbsp;<span>9.1</span></a> (<span class="math inline">\(b\)</span>) 의 경우라면 그렇지 않으며, 그림에서 보듯이 <span class="math inline">\(\overrightarrow{AB}\)</span> 와 <span class="math inline">\(\overrightarrow{AC}\)</span> 의 두가지 경우가 가능하다.</p>
+\tag{10.6}\]</span></span></p>
+<p><span class="math inline">\(v_0&gt;V\)</span> 라면, 즉 <a href="#fig-CM_reference_system_scattering" class="quarto-xref">그림&nbsp;<span>10.1</span></a> (<span class="math inline">\(a\)</span>) 의 경우라면 <span class="math inline">\(\theta_0\)</span> 와 <span class="math inline">\(\theta\)</span> 가 전단사이다. 그러나 <span class="math inline">\(v_0&lt;V\)</span> 라면, 즉 <a href="#fig-CM_reference_system_scattering" class="quarto-xref">그림&nbsp;<span>10.1</span></a> (<span class="math inline">\(b\)</span>) 의 경우라면 그렇지 않으며, 그림에서 보듯이 <span class="math inline">\(\overrightarrow{AB}\)</span> 와 <span class="math inline">\(\overrightarrow{AC}\)</span> 의 두가지 경우가 가능하다.</p>
 <p><br></p>
 </section>
-<section id="sec-CM_sponteneous_disintegration_and_solid_angle_distribution" class="level3" data-number="9.1.3">
-<h3 data-number="9.1.3" class="anchored" data-anchor-id="sec-CM_sponteneous_disintegration_and_solid_angle_distribution"><span class="header-section-number">9.1.3</span> 자발적 붕괴와 고체각 분포</h3>
+<section id="sec-CM_sponteneous_disintegration_and_solid_angle_distribution" class="level3" data-number="10.1.3">
+<h3 data-number="10.1.3" class="anchored" data-anchor-id="sec-CM_sponteneous_disintegration_and_solid_angle_distribution"><span class="header-section-number">10.1.3</span> 자발적 붕괴와 고체각 분포</h3>
 <p>일반적으로 자발적 붕괴 실험은 하나의 입자의 붕괴가 아니라 다수의 입자의 붕괴를 통계적으로 다룬다. 그리고 자발적 붕괴의 분포는 완전히 임의적이기 때문에 질량중심 좌표계에서의 고체각(solid angle) <span class="math inline">\(d\Omega\)</span> 로 입사되는 붕괴된 입자의 갯수는 <span class="math inline">\(d\Omega\)</span> 에 비례한다. 즉 <span class="math inline">\(N\)</span> 개의 입자로 붕괴되었을때 <span class="math inline">\(d\Omega\)</span> 의 고체각에 입사되는 입자의 갯수 <span class="math inline">\(N_{d\Omega}\)</span> 는</p>
 <p><span id="eq-CM_distribution_of_distilated_particles_in_C_system"><span class="math display">\[
 N_{d\Omega}= N\dfrac{d\Omega}{4\pi}
-\tag{9.7}\]</span></span></p>
+\tag{10.7}\]</span></span></p>
 <p>이며, 따라서 <span class="math inline">\(\theta_0\)</span> 의 각도를 갖고 붕괴하는 분포는 <span class="math inline">\(\theta_0\)</span> 에 대한 고체각 <span class="math inline">\(d\Omega = 2\pi \sin \theta_0 d\theta_0\)</span> 을 생각하면,</p>
 <p><span class="math display">\[
 N_{\theta_0} = N\dfrac{1}{2}\sin \theta_0 d\theta_0
@@ -536,20 +543,20 @@ v^2 = {v_0}^2 + V^2 + 2v_0V \cos \theta_0
 <p>이며, 따라서 <span class="math inline">\(T=mv^2/2\)</span> 에 대해</p>
 <p><span id="eq-CM_distribution_of_distilated_particles_in_L_system"><span class="math display">\[
 N_{d\Omega}=N\sin \theta_0 d\theta_0 = Nd(\cos \theta_0) = N\dfrac{d(v^2)}{2v_0V} = N\dfrac{dT}{2mv_0 V}
-\tag{9.8}\]</span></span></p>
+\tag{10.8}\]</span></span></p>
 <p>이다. 실험실 좌표계에서의 속력 <span class="math inline">\(v\)</span> 는 <span class="math inline">\(|v_0-V|\)</span> 에서 <span class="math inline">\(v_0+V\)</span> 값을 가질 수 있으므로 붕과는 모든 방향으로 균등하게 발생한다는 것을 알 수 있다.</p>
 <p><br></p>
 </section>
-<section id="sec-CM_maximum_kinetic_energy_in_many_particles_disintegration" class="level3 page-columns page-full" data-number="9.1.4">
-<h3 data-number="9.1.4" class="anchored" data-anchor-id="sec-CM_maximum_kinetic_energy_in_many_particles_disintegration"><span class="header-section-number">9.1.4</span> 다입자 붕괴와 최대 운동 에너지</h3>
-<p>질량 <span class="math inline">\(M\)</span> 인 입자가 자발적 붕괴를 통해 여러 입자로 붕괴된다고 하자. 붕괴된 입자가 가질 수 있는 운동에너지에는 상한이 존재한다. 이 붕괴된 입자들 가운데 질량 <span class="math inline">\(m_1\)</span> 인 입자를 생각하자. 원래 입자 <span class="math inline">\(M\)</span> 의 에너지를 <span class="math inline">\(E_i\)</span> 라 하고 <span class="math inline">\(m_1\)</span> 을 제외한 나머지 붕괴된 입자들을 하나의 시스템으로 생각하여 그 내부에너지를 <span class="math inline">\(E_i'\)</span> 라고 하자. <span class="math inline">\(m_1\)</span> 의 에너지를 <span class="math inline">\(E_1\)</span> 이라고 하면 <span class="math inline">\(m_1\)</span> 입자가 가질 수 있는 운동에너지는 <a href="#eq-CM_disintegration_energy_for_spontaneous_disintegration_into_two_particls_1" class="quarto-xref">식&nbsp;<span>9.2</span></a> 과 <a href="#eq-CM_disintegration_energy_for_spontaneous_disintegration_into_two_particls_2" class="quarto-xref">식&nbsp;<span>9.3</span></a> 에 의해 아래와 같이 결정된다.</p>
+<section id="sec-CM_maximum_kinetic_energy_in_many_particles_disintegration" class="level3 page-columns page-full" data-number="10.1.4">
+<h3 data-number="10.1.4" class="anchored" data-anchor-id="sec-CM_maximum_kinetic_energy_in_many_particles_disintegration"><span class="header-section-number">10.1.4</span> 다입자 붕괴와 최대 운동 에너지</h3>
+<p>질량 <span class="math inline">\(M\)</span> 인 입자가 자발적 붕괴를 통해 여러 입자로 붕괴된다고 하자. 붕괴된 입자가 가질 수 있는 운동에너지에는 상한이 존재한다. 이 붕괴된 입자들 가운데 질량 <span class="math inline">\(m_1\)</span> 인 입자를 생각하자. 원래 입자 <span class="math inline">\(M\)</span> 의 에너지를 <span class="math inline">\(E_i\)</span> 라 하고 <span class="math inline">\(m_1\)</span> 을 제외한 나머지 붕괴된 입자들을 하나의 시스템으로 생각하여 그 내부에너지를 <span class="math inline">\(E_i'\)</span> 라고 하자. <span class="math inline">\(m_1\)</span> 의 에너지를 <span class="math inline">\(E_1\)</span> 이라고 하면 <span class="math inline">\(m_1\)</span> 입자가 가질 수 있는 운동에너지는 <a href="#eq-CM_disintegration_energy_for_spontaneous_disintegration_into_two_particls_1" class="quarto-xref">식&nbsp;<span>10.2</span></a> 과 <a href="#eq-CM_disintegration_energy_for_spontaneous_disintegration_into_two_particls_2" class="quarto-xref">식&nbsp;<span>10.3</span></a> 에 의해 아래와 같이 결정된다.</p>
 <p><span class="math display">\[
 T_{10} = \dfrac{{p_0}^2}{2m_1} = \dfrac{M-m_1}{M}(E_i - E_{1i} - E_i') .
 \]</span></p>
-<div class="page-columns page-full"><p>정해진 <span class="math inline">\(E_i,\,E_{1i}\)</span> 에 대해 <span class="math inline">\(E_i'\)</span> 이 최소가 될 때 <span class="math inline">\(T_{10}\)</span> 가 최대가 되며 이것은 <span class="math inline">\(m_1\)</span> 을 제외한 다른 입자들이 모두 같은 질량과 같은 속도로 움직일 때 이다. 이 경우 <span class="math inline">\(E'_i\)</span> 는 각각의 입자의 내부에너지의 단순합이 된다<span class="math inline">\(^\dagger\)</span>. (<a href="#exr-CM_spontaneous_disintegration" class="quarto-xref">연습문제&nbsp;<span>9.1</span></a>) </p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^\dagger\)</span> <span class="citation" data-cites="Landau1975classical">Landau et al. (<a href="00_index.html#ref-Landau1975classical" role="doc-biblioref">1975</a>)</span> 에는 같은 질량이란 말은 빠져 있다</span></div></div>
+<div class="page-columns page-full"><p>정해진 <span class="math inline">\(E_i,\,E_{1i}\)</span> 에 대해 <span class="math inline">\(E_i'\)</span> 이 최소가 될 때 <span class="math inline">\(T_{10}\)</span> 가 최대가 되며 이것은 <span class="math inline">\(m_1\)</span> 을 제외한 다른 입자들이 모두 같은 질량과 같은 속도로 움직일 때 이다. 이 경우 <span class="math inline">\(E'_i\)</span> 는 각각의 입자의 내부에너지의 단순합이 된다<span class="math inline">\(^\dagger\)</span>. (<a href="#exr-CM_spontaneous_disintegration" class="quarto-xref">연습문제&nbsp;<span>10.1</span></a>) </p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^\dagger\)</span> <span class="citation" data-cites="Landau1975classical">Landau et al. (<a href="00_index.html#ref-Landau1975classical" role="doc-biblioref">1975</a>)</span> 에는 같은 질량이란 말은 빠져 있다</span></div></div>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_spontaneous_disintegration" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.1</strong></span> 위 문장을 증명하라.</p>
+<p><span class="theorem-title"><strong>연습문제 10.1</strong></span> 위 문장을 증명하라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -587,10 +594,10 @@ E'_i = \sum_{j=2}^N E_{ji}
 <p><br></p>
 </section>
 </section>
-<section id="탄성-충돌" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="탄성-충돌"><span class="header-section-number">9.2</span> 탄성 충돌</h2>
-<section id="sec-CM_elastic_collition_in_C_frame" class="level3" data-number="9.2.1">
-<h3 data-number="9.2.1" class="anchored" data-anchor-id="sec-CM_elastic_collition_in_C_frame"><span class="header-section-number">9.2.1</span> 질량중심 좌표계에서의 탄성 충돌</h3>
+<section id="탄성-충돌" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="탄성-충돌"><span class="header-section-number">10.2</span> 탄성 충돌</h2>
+<section id="sec-CM_elastic_collition_in_C_frame" class="level3" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="sec-CM_elastic_collition_in_C_frame"><span class="header-section-number">10.2.1</span> 질량중심 좌표계에서의 탄성 충돌</h3>
 <p>두 입자가 충돌 전 후에 내부 상태에 차이가 없다면 이 충돌을 <strong>탄성 충돌(elastic scattering)</strong> 이라고 한다. 즉 두 입자의 충돌 전의 내부 에너지 <span class="math inline">\(E_{1i},\, E_{2i}\)</span> 와 충돌 후의 내부에너지 <span class="math inline">\(E_{1f},\, E_{2f}\)</span> 에 대해 탄성 충돌 후에는 <span class="math inline">\(E_{1i}=E_{1f}\)</span>, <span class="math inline">\(E_{2i}=E_{2f}\)</span> 이다. 두 입자의 충돌은 질량중심 좌표계에서 기술하는 것이 보통 가장 편하다.</p>
 <p>충돌 전의 실험실 좌표계에서의 두 입자의 속도 <span class="math inline">\(\boldsymbol{v}_1,\, \boldsymbol{v}_2\)</span> 를 질량중심 좌표계에서의 두 입자의 속도 <span class="math inline">\(\boldsymbol{v}_{10},\, \boldsymbol{v}_{20}\)</span> 로 변환하면, <span class="math inline">\(\boldsymbol{v} = \boldsymbol{v}_1-\boldsymbol{v}_2\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -615,8 +622,8 @@ p_{10}= p_{20} = p'_{10}= p'_{20}
 <p>이다. <span class="math inline">\(\hat{\boldsymbol{n}}_0\)</span> 는 두 입자의 상호작용과, 충돌시 위치에 의해 결정된다.</p>
 <p><br></p>
 </section>
-<section id="sec-CM_elastic_collition_in_L_frame" class="level3" data-number="9.2.2">
-<h3 data-number="9.2.2" class="anchored" data-anchor-id="sec-CM_elastic_collition_in_L_frame"><span class="header-section-number">9.2.2</span> 실험실 좌표계에서의 탄성 충돌</h3>
+<section id="sec-CM_elastic_collition_in_L_frame" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="sec-CM_elastic_collition_in_L_frame"><span class="header-section-number">10.2.2</span> 실험실 좌표계에서의 탄성 충돌</h3>
 <p>이제 실험실 좌표계에서 생각하자. 질량중심의 속도 <span class="math inline">\(\boldsymbol{V}= \dfrac{m_1\boldsymbol{v}_1 + m_2\boldsymbol{v}_2}{m_1+m_2}\)</span> 에 대해 실험실 좌표계의 충돌 이후의 속도 <span class="math inline">\(\boldsymbol{v}'_1,\, \boldsymbol{v}'_2\)</span> 는</p>
 <p><span class="math display">\[
 \boldsymbol{v}'_1 = \boldsymbol{v}'_{10} + \boldsymbol{V},\qquad \boldsymbol{v}'_2 = \boldsymbol{v}'_{20} + \boldsymbol{V}
@@ -628,14 +635,14 @@ p_{10}= p_{20} = p'_{10}= p'_{20}
 \boldsymbol{p}'_2 &amp;= m_2 \boldsymbol{v}'_2 = -\mu v \hat{\boldsymbol{n}}_0 + \dfrac{m_2(\boldsymbol{p}_1 + \boldsymbol{p_2})}{m_1+m_2}
 \end{aligned}
 \]</span></p>
-<p>이다. 이것을 그림으로 그리면 아래 <a href="#fig-CM_elastic_scattering" class="quarto-xref">그림&nbsp;<span>9.2</span></a> 와 같다. 그림에서 원은 반지름이 <span class="math inline">\(mv\)</span> 이다.</p>
+<p>이다. 이것을 그림으로 그리면 아래 <a href="#fig-CM_elastic_scattering" class="quarto-xref">그림&nbsp;<span>10.2</span></a> 와 같다. 그림에서 원은 반지름이 <span class="math inline">\(mv\)</span> 이다.</p>
 <div id="fig-CM_elastic_scattering" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-CM_elastic_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/momentum_in_lab_frame/momentum_in_lab_frame.png" class="img-fluid figure-img" width="220">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_elastic_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;9.2: 탄성 충돌 후 실험실 좌표계에서의 운동량 벡터
+그림&nbsp;10.2: 탄성 충돌 후 실험실 좌표계에서의 운동량 벡터
 </figcaption>
 </figure>
 </div>
@@ -643,30 +650,30 @@ p_{10}= p_{20} = p'_{10}= p'_{20}
 <p><span class="math display">\[
 \overrightarrow{OC} = \mu\boldsymbol{v},\quad\overrightarrow{AO} = \dfrac{m_1}{m_1+m_2}(\boldsymbol{p}_1+ \boldsymbol{p}_2), \quad \overrightarrow{OB} = \dfrac{m_2}{m_1+m_2}(\boldsymbol{p}_1+ \boldsymbol{p}_2).
 \]</span></p>
-<p>많은 경우 충돌실험은 정지해 있는 한 입자에 대해 다른 입자를 충돌시킨다. 여기서 <span class="math inline">\(m_2\)</span> 입자가 충돌 전에 정지해 있다고 하자. 즉 <span class="math inline">\(\boldsymbol{v}_2=\boldsymbol{0}\)</span> 이며 <span class="math inline">\(\boldsymbol{v}=\boldsymbol{v}_1\)</span> 이다. <span class="math inline">\(\overrightarrow{OB}=\mu \boldsymbol{v}\)</span> 이며, 따라서 <span class="math inline">\(\overrightarrow{AB}= \boldsymbol{p}_1\)</span> 이 된다 <a href="#fig-CM_elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>9.3</span></a> 는 <span class="math inline">\(m_2\)</span> 가 정지해 있을 때의 실험실 좌표계에서의 운동량에 관련된 도식이다.</p>
+<p>많은 경우 충돌실험은 정지해 있는 한 입자에 대해 다른 입자를 충돌시킨다. 여기서 <span class="math inline">\(m_2\)</span> 입자가 충돌 전에 정지해 있다고 하자. 즉 <span class="math inline">\(\boldsymbol{v}_2=\boldsymbol{0}\)</span> 이며 <span class="math inline">\(\boldsymbol{v}=\boldsymbol{v}_1\)</span> 이다. <span class="math inline">\(\overrightarrow{OB}=\mu \boldsymbol{v}\)</span> 이며, 따라서 <span class="math inline">\(\overrightarrow{AB}= \boldsymbol{p}_1\)</span> 이 된다 <a href="#fig-CM_elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>10.3</span></a> 는 <span class="math inline">\(m_2\)</span> 가 정지해 있을 때의 실험실 좌표계에서의 운동량에 관련된 도식이다.</p>
 <div id="fig-CM_elastic_scattering_angles_ss" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-CM_elastic_scattering_angles_ss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/elastic_scattering_angles/elastic_scatteiing_angles.png" class="img-fluid figure-img" width="560">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_elastic_scattering_angles_ss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;9.3: <span class="math inline">\(m_2\)</span> 가 정지해 있을 때의 실험실 좌표계
+그림&nbsp;10.3: <span class="math inline">\(m_2\)</span> 가 정지해 있을 때의 실험실 좌표계
 </figcaption>
 </figure>
 </div>
 <p><span class="math inline">\(m_1&lt;m_2\)</span> 일 때는 <span class="math inline">\(AO &lt; \mu v\)</span> 이며 <span class="math inline">\(m_1&gt;m_2\)</span> 일 때는 <span class="math inline">\(AO &gt; \mu v\)</span> 이다. <span class="math inline">\(\theta_1,\,\theta_2\)</span> 는 충돌 이후 <span class="math inline">\(m_1\)</span> 과 <span class="math inline">\(m_2\)</span> 의 이동 각도이다.</p>
 <p><br></p>
 </section>
-<section id="sec-CM_comparison_of_scattering_angle_between_C_frame_and_L_frame" class="level3" data-number="9.2.3">
-<h3 data-number="9.2.3" class="anchored" data-anchor-id="sec-CM_comparison_of_scattering_angle_between_C_frame_and_L_frame"><span class="header-section-number">9.2.3</span> 실험실 좌표계와 질량중심 좌표계의 비교</h3>
-<p>이제 질량중심좌표계에서의 산란각 <span class="math inline">\(\Theta\)</span> 와 <span class="math inline">\(\theta_1,\,\theta_2\)</span> 의 관계는 <a href="#fig-CM_elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>9.3</span></a> 로 부터 다음과 같음을 쉽게 계산 할 수 있다.</p>
+<section id="sec-CM_comparison_of_scattering_angle_between_C_frame_and_L_frame" class="level3" data-number="10.2.3">
+<h3 data-number="10.2.3" class="anchored" data-anchor-id="sec-CM_comparison_of_scattering_angle_between_C_frame_and_L_frame"><span class="header-section-number">10.2.3</span> 실험실 좌표계와 질량중심 좌표계의 비교</h3>
+<p>이제 질량중심좌표계에서의 산란각 <span class="math inline">\(\Theta\)</span> 와 <span class="math inline">\(\theta_1,\,\theta_2\)</span> 의 관계는 <a href="#fig-CM_elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>10.3</span></a> 로 부터 다음과 같음을 쉽게 계산 할 수 있다.</p>
 <p><span id="eq-CM_elastic_scattering_scaterring_angle"><span class="math display">\[
 \begin{aligned}
 \tan \theta_1 &amp;= \dfrac{|OC| \sin \Theta}{|AO| + |OC|\cos \Theta} = \dfrac{\mu v \sin \Theta}{\dfrac{m_1^2}{m_1+m_2}v + \mu v\cos \Theta} \\[0.3em]
 &amp;= \dfrac{m_2 \sin \Theta}{m_1 + m_2 \cos \Theta}, \\[0.3em]
 \theta_2 &amp;= \dfrac{1}{2}(\pi - \Theta).
 \end{aligned}
-\tag{9.9}\]</span></span></p>
+\tag{10.9}\]</span></span></p>
 <p>또한 <span class="math inline">\(v_1',\,v_2'\)</span> 을 계산해보면 다음과 같다.</p>
 <p><span id="eq-CM_elastic_scattering_velocity_in_lab_frame"><span class="math display">\[
 \begin{aligned}
@@ -675,18 +682,18 @@ v_1' &amp;= \dfrac{p_1'}{m_1} = \dfrac{\sqrt{|AO|^2 + |OC|^2 - 2|AO||OC| \cos (\
 v_2' &amp;= \dfrac{p_2'}{m_2} = \dfrac{\sqrt{|OC|^2+|OB|^2-2|OC||OB|\cos \Theta}}{m_2} \\
 &amp;= \dfrac{2m_1v}{m_1+m_2} \sin \left(\frac{1}{2}\Theta\right).
 \end{aligned}
-\tag{9.10}\]</span></span></p>
+\tag{10.10}\]</span></span></p>
 <p><br></p>
-<p>두 입자가 충돌 후 같은 방향 혹은 반대 방향을 향하는 것을 <strong>정면 충돌(head-on collison)</strong> 이라고 한다. 즉 <span class="math inline">\(\Theta = \pi\)</span> 가 된다. 정면충돌의 경우 충돌 후의 속도는 <a href="#eq-CM_elastic_scattering_velocity_in_lab_frame" class="quarto-xref">식&nbsp;<span>9.10</span></a> 으로부터 알 수 있으며,</p>
+<p>두 입자가 충돌 후 같은 방향 혹은 반대 방향을 향하는 것을 <strong>정면 충돌(head-on collison)</strong> 이라고 한다. 즉 <span class="math inline">\(\Theta = \pi\)</span> 가 된다. 정면충돌의 경우 충돌 후의 속도는 <a href="#eq-CM_elastic_scattering_velocity_in_lab_frame" class="quarto-xref">식&nbsp;<span>10.10</span></a> 으로부터 알 수 있으며,</p>
 <p><span id="eq-final_velocity_for_head_on_scattering"><span class="math display">\[
 \boldsymbol{v}_1' = \dfrac{m_1-m_2}{m_1+m_2}\boldsymbol{v},\qquad \boldsymbol{v}_2' = \dfrac{2m_1}{m_1+m_2}\boldsymbol{v}
-\tag{9.11}\]</span></span></p>
+\tag{10.11}\]</span></span></p>
 <p>이다. 이 경우 두번째 입자는 가질 수 있는 최대의 운동에너지 <span class="math inline">\(T'_{2,\max}\)</span> 를 갖게 된다. <span class="math inline">\(m_1\)</span> 의 입사 에너지 <span class="math inline">\(E_1= \dfrac{1}{2}m_1v^2\)</span> 에 대해 다음과 같다.</p>
 <p><span class="math display">\[
 E'_{2,\max} = \dfrac{1}{2}m_2 {v'_2}^2 = \dfrac{4m_1m_2}{(m_1 + m_2)^2}\left(\dfrac{1}{2}m_1 v^2\right) = \dfrac{4m_1m_2}{(m_1 + m_2)^2}E_1.
 \]</span></p>
 <p><br></p>
-<p><a href="#fig-CM_elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>9.3</span></a> 에서 볼 수 있듯이 <span class="math inline">\(m_1&lt;m_2\)</span> 일 때 <span class="math inline">\(m_1\)</span> 은 어떤 방향이든지 가능하지만 <span class="math inline">\(m_1&gt;m_2\)</span> 일 때는 <span class="math inline">\(m_1\)</span> 의 방향은 <span class="math inline">\(\theta_{\max}\)</span> 이하의 산란각만 가능하다. <span class="math inline">\(\theta_\max\)</span> 는 다음과 같다.</p>
+<p><a href="#fig-CM_elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>10.3</span></a> 에서 볼 수 있듯이 <span class="math inline">\(m_1&lt;m_2\)</span> 일 때 <span class="math inline">\(m_1\)</span> 은 어떤 방향이든지 가능하지만 <span class="math inline">\(m_1&gt;m_2\)</span> 일 때는 <span class="math inline">\(m_1\)</span> 의 방향은 <span class="math inline">\(\theta_{\max}\)</span> 이하의 산란각만 가능하다. <span class="math inline">\(\theta_\max\)</span> 는 다음과 같다.</p>
 <p><span class="math display">\[
 \sin \theta_\max = \dfrac{|OC|}{|OA|} = \dfrac{m_2}{m_1} .
 \]</span></p>
@@ -697,11 +704,11 @@ E'_{2,\max} = \dfrac{1}{2}m_2 {v'_2}^2 = \dfrac{4m_1m_2}{(m_1 + m_2)^2}\left(\df
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-landau_17_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.2</strong></span> 움직이는 질량 <span class="math inline">\(m_1\)</span> 입자와 정지된 <span class="math inline">\(m_2\)</span> 입자의 충돌 후 속도를 실험실 좌표계에서의 운동방향으로 표현하라.</p>
+<p><span class="theorem-title"><strong>연습문제 10.2</strong></span> 움직이는 질량 <span class="math inline">\(m_1\)</span> 입자와 정지된 <span class="math inline">\(m_2\)</span> 입자의 충돌 후 속도를 실험실 좌표계에서의 운동방향으로 표현하라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#fig-CM_elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>9.3</span></a> 에서 <span class="math inline">\(p_2' = 2OB\cos \theta_2,\, p_2' = m_2v_2',\, OB = \mu v\)</span> 이므로</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#fig-CM_elastic_scattering_angles_ss" class="quarto-xref">그림&nbsp;<span>10.3</span></a> 에서 <span class="math inline">\(p_2' = 2OB\cos \theta_2,\, p_2' = m_2v_2',\, OB = \mu v\)</span> 이므로</p>
 <p><span class="math display">\[
 v_2' = \dfrac{2\mu v}{m_2}
 \]</span></p>
@@ -723,8 +730,8 @@ v_2' = \dfrac{2\mu v}{m_2}
 <p><br></p>
 </section>
 </section>
-<section id="산란" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="산란"><span class="header-section-number">9.3</span> 산란</h2>
+<section id="산란" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="산란"><span class="header-section-number">10.3</span> 산란</h2>
 <p>두 입자가 충돌 할 때 정확한 결과를 위해서는 두 입자의 상호작용을 고려해야 한다. 여기서는 같은 유형의 문제인 입자의 산란을 생각해보기로 하자.</p>
 <div id="fig-CM_rutherford_scattering" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -732,26 +739,26 @@ v_2' = \dfrac{2\mu v}{m_2}
 <img src="images/rutherford_scattering/rutherford_scattering.png" class="img-fluid figure-img" width="370">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_rutherford_scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;9.4: 러더퍼드 산란
+그림&nbsp;10.4: 러더퍼드 산란
 </figcaption>
 </figure>
 </div>
-<p>원점에 정지해 있는 입자로부터의 거리 <span class="math inline">\(r\)</span> 에 대해 포텐셜 <span class="math inline">\(V(r)\)</span> 의 영향을 받는 질량 <span class="math inline">\(m\)</span> 인 입자가 원점 방향으로 위의 그림과 같이 입사된다고 하자. 이것은 기본적으로 1체문제이며 <a href="11_one_body_problems.html#sec-CM_central_force" class="quarto-xref"><span> 8.4</span></a> 에서 다루었다. <a href="11_one_body_problems.html#eq-CM_reduced_to_1d_theta" class="quarto-xref">식&nbsp;<span>8.19</span></a> 로 부터</p>
+<p>원점에 정지해 있는 입자로부터의 거리 <span class="math inline">\(r\)</span> 에 대해 포텐셜 <span class="math inline">\(V(r)\)</span> 의 영향을 받는 질량 <span class="math inline">\(m\)</span> 인 입자가 원점 방향으로 위의 그림과 같이 입사된다고 하자. 이것은 기본적으로 1체문제이며 <a href="11_one_body_problems.html#sec-CM_central_force" class="quarto-xref"><span> 9.4</span></a> 에서 다루었다. <a href="11_one_body_problems.html#eq-CM_reduced_to_1d_theta" class="quarto-xref">식&nbsp;<span>9.19</span></a> 로 부터</p>
 <p><span id="eq-CM_rutherford_1"><span class="math display">\[
 \theta_0 = \int_{r_{\min}}^\infty \dfrac{l/r^2}{\sqrt{2m(E-V(r)) - l^2/r^2}}\, dr
-\tag{9.12}\]</span></span></p>
-<p>이며, <span class="math inline">\(r_\min\)</span> 은 적분 분모의 <span class="math inline">\(\sqrt{\cdots}\)</span> 를 <span class="math inline">\(0\)</span> 으로 한다는 것을 기억하자. <span class="math inline">\(V(r\to \infty) = 0\)</span> 이며 따라서 이때의 속도를 <span class="math inline">\(\boldsymbol{v}_0\)</span> 라고 하자. <strong>충격 변수(impact parameter)</strong> <span class="math inline">\(\rho\)</span> 를 <a href="#fig-CM_rutherford_scattering" class="quarto-xref">그림&nbsp;<span>9.4</span></a> 와 같이 정의하자. 그렇다면 <span class="math inline">\(m\)</span> 의 에너지 <span class="math inline">\(E\)</span> 와 각운동량 <span class="math inline">\(l=\|\boldsymbol{L}\|\)</span> 은</p>
+\tag{10.12}\]</span></span></p>
+<p>이며, <span class="math inline">\(r_\min\)</span> 은 적분 분모의 <span class="math inline">\(\sqrt{\cdots}\)</span> 를 <span class="math inline">\(0\)</span> 으로 한다는 것을 기억하자. <span class="math inline">\(V(r\to \infty) = 0\)</span> 이며 따라서 이때의 속도를 <span class="math inline">\(\boldsymbol{v}_0\)</span> 라고 하자. <strong>충격 변수(impact parameter)</strong> <span class="math inline">\(\rho\)</span> 를 <a href="#fig-CM_rutherford_scattering" class="quarto-xref">그림&nbsp;<span>10.4</span></a> 와 같이 정의하자. 그렇다면 <span class="math inline">\(m\)</span> 의 에너지 <span class="math inline">\(E\)</span> 와 각운동량 <span class="math inline">\(l=\|\boldsymbol{L}\|\)</span> 은</p>
 <p><span class="math display">\[
 E= \dfrac{1}{2}m{v_{0}}^2,\qquad l = m \rho v_0
 \]</span></p>
-<p>이며 이를 이용하여 <a href="#eq-CM_rutherford_1" class="quarto-xref">식&nbsp;<span>9.12</span></a> 을 다시 쓰면 아래와 같다.</p>
+<p>이며 이를 이용하여 <a href="#eq-CM_rutherford_1" class="quarto-xref">식&nbsp;<span>10.12</span></a> 을 다시 쓰면 아래와 같다.</p>
 <p><span id="eq-CM_rutherford_2"><span class="math display">\[
 \theta_0 = \int_{r_{\min}}^\infty  \dfrac{\rho/r^2}{\sqrt{1-(\rho^2/r^2) - 2V(r)/(m{v_0}^2)}}\, dr
-\tag{9.13}\]</span></span></p>
-<p>보통 우리가 측정하는 것은 <span class="math inline">\(\theta_0\)</span> 가 아닌 <span class="math inline">\(\Theta\)</span> 이다. <span class="math inline">\(\Theta = |\pi - 2 \theta_0|\)</span> 이므로 <a href="#eq-CM_rutherford_1" class="quarto-xref">식&nbsp;<span>9.12</span></a> 을 <span class="math inline">\(\Theta\)</span> 와 <span class="math inline">\(\rho\)</span> 에 대패 표현하면,</p>
+\tag{10.13}\]</span></span></p>
+<p>보통 우리가 측정하는 것은 <span class="math inline">\(\theta_0\)</span> 가 아닌 <span class="math inline">\(\Theta\)</span> 이다. <span class="math inline">\(\Theta = |\pi - 2 \theta_0|\)</span> 이므로 <a href="#eq-CM_rutherford_1" class="quarto-xref">식&nbsp;<span>10.12</span></a> 을 <span class="math inline">\(\Theta\)</span> 와 <span class="math inline">\(\rho\)</span> 에 대패 표현하면,</p>
 <p><span id="eq-CM_rutherford_3"><span class="math display">\[
 \Theta  = \left|\pi - 2\int_{r_{\min}}^\infty  \dfrac{\rho/r^2}{\sqrt{1-(\rho^2/r^2) - 2V(r)/(m{v_0}^2)}}\, dr\right|
-\tag{9.14}\]</span></span></p>
+\tag{10.14}\]</span></span></p>
 <p>이다.</p>
 <div id="fig-CM_scattering_cross_section" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -759,14 +766,14 @@ E= \dfrac{1}{2}m{v_{0}}^2,\qquad l = m \rho v_0
 <img src="images/cross_section/cross_section.png" class="img-fluid figure-img" width="500">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_scattering_cross_section-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;9.5: 산란 실험
+그림&nbsp;10.5: 산란 실험
 </figcaption>
 </figure>
 </div>
 <p>물리학에서 많이 이루어지는 산란 실험은 동일한 초기 속도 <span class="math inline">\(\boldsymbol{v}_0\)</span> 를 갖는 공간적으로 균일한 분포를 가진 다수의 입자를 입사시키며, 이 균일한 입자들이 <span class="math inline">\(\boldsymbol{v}_0\)</span> 와 수직한 방향으로 <span class="math inline">\(A\)</span> 만큼의 면적을 갖고 있다고 하자. <span class="math inline">\(N\)</span> 개의 입자가 입사되었을 때 산란각 <span class="math inline">\(\Theta\)</span> 와 <span class="math inline">\(\Theta + d\Theta\)</span> 사이로 산란되는 입자의 갯수를 <span class="math inline">\(dN(\Theta)\)</span> 이라고 하자. 입사 입자가 균일할 때 산란단면적 <span class="math inline">\(d\sigma\)</span> 를 다음과 같이 정의 할 수 있다.</p>
 <p><span id="eq-CM_cross_section"><span class="math display">\[
 \dfrac{d \sigma}{A} := \dfrac{dN(\Theta)}{N}.
-\tag{9.15}\]</span></span></p>
+\tag{10.15}\]</span></span></p>
 <p><span class="math inline">\(\rho\)</span> 와 <span class="math inline">\(\Theta\)</span> 사이에 전단사 관계 <span class="math inline">\(\rho(\Theta)\)</span> 가 존재한다고 하자. 문제를 바꾸어 <span class="math inline">\(\rho(\Theta)\)</span> 와 <span class="math inline">\(\rho(\Theta ) + d\rho(\Theta)\)</span> 에 입사되는 빔의 비율을 <span class="math inline">\(d\sigma\)</span> 라고 하면,</p>
 <p><span class="math display">\[
 d \sigma = A \dfrac{2 \pi \rho d\rho}{A} = 2\pi \rho \left|\dfrac{d\rho}{d\Theta}\right|d \Theta
@@ -774,13 +781,13 @@ d \sigma = A \dfrac{2 \pi \rho d\rho}{A} = 2\pi \rho \left|\dfrac{d\rho}{d\Theta
 <p>이다. 고체각 <span class="math inline">\(\Omega= 2\pi \sin \Theta d\Theta\)</span> 를 생각하면,</p>
 <p><span id="eq-CM_cross_section_2"><span class="math display">\[
 d\sigma = \dfrac{\rho (\Theta)}{\sin \Theta}\left|\dfrac{d\rho}{d\Theta}\right|d\Omega
-\tag{9.16}\]</span></span></p>
+\tag{10.16}\]</span></span></p>
 <p>이다.</p>
 <p><br></p>
-<p>이제 중요한 <span class="math inline">\(V(r) = - \dfrac{K}{r}\)</span> 인 경우를 살펴보자. 이 경우를 러더포드 산란(Rutherford scattering) 이라고 하며 산란단면적은 다음과 같다. (증명은 <a href="#exr-rutherford_cross_section" class="quarto-xref">연습문제&nbsp;<span>9.5</span></a>)</p>
+<p>이제 중요한 <span class="math inline">\(V(r) = - \dfrac{K}{r}\)</span> 인 경우를 살펴보자. 이 경우를 러더포드 산란(Rutherford scattering) 이라고 하며 산란단면적은 다음과 같다. (증명은 <a href="#exr-rutherford_cross_section" class="quarto-xref">연습문제&nbsp;<span>10.5</span></a>)</p>
 <p><span id="eq-CM_rutherford_formular"><span class="math display">\[
 d\sigma = \left(\dfrac{K}{2m{v_0}^2}\right)^2\dfrac{d\Omega}{\sin^4(\Theta/2)}.
-\tag{9.17}\]</span></span></p>
+\tag{10.17}\]</span></span></p>
 <p>러더포드 산란단면적은 <span class="math inline">\(K\)</span> 가 양수인지 음수인지, 즉 포텐셜에 의해 인력이 작용하는지 척력이 작용하는지 여부와 무관하게 그 절대값에만 관련이 있다는 것을 알 수 있다.</p>
 <p><br></p>
 </section>
@@ -788,7 +795,7 @@ d\sigma = \left(\dfrac{K}{2m{v_0}^2}\right)^2\dfrac{d\Omega}{\sin^4(\Theta/2)}.
 <h2 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h2>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_landau_mechanics_18_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.3 (L&amp;L Mechanics 18.1)</strong></span> 반지름 <span class="math inline">\(R\)</span> 인 완벽한 딱딱한 공을 생각하자(<a href="#fig-CM_perfect_rigid_sphere" class="quarto-xref">그림&nbsp;<span>9.6</span></a>). 즉 포텐셜은 다음과 같다.</p>
+<p><span class="theorem-title"><strong>연습문제 10.3 (L&amp;L Mechanics 18.1)</strong></span> 반지름 <span class="math inline">\(R\)</span> 인 완벽한 딱딱한 공을 생각하자(<a href="#fig-CM_perfect_rigid_sphere" class="quarto-xref">그림&nbsp;<span>10.6</span></a>). 즉 포텐셜은 다음과 같다.</p>
 <p><span class="math display">\[
 V(r) = \left\{\begin{array}{ll}0 \qquad &amp;\text{if } r&gt;R, \\  +\infty &amp;\text{if } r\le R.\end{array}\right.
 \]</span></p>
@@ -798,7 +805,7 @@ V(r) = \left\{\begin{array}{ll}0 \qquad &amp;\text{if } r&gt;R, \\  +\infty &amp
 <img src="images/potential_wall/potential_wall.png" class="img-fluid figure-img" width="350">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_perfect_rigid_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;9.6: Perpect regid sphere
+그림&nbsp;10.6: Perpect regid sphere
 </figcaption>
 </figure>
 </div>
@@ -823,18 +830,18 @@ d\sigma = \dfrac{R\cos (\Theta/2)}{\sin \Theta} \dfrac{R}{2}\sin (\Theta/2) d\Om
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_landau_mechanics_18_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.4 (L&amp;L Mechanics 18.2)</strong></span> <a href="#exr-CM_landau_mechanics_18_1" class="quarto-xref">연습문제&nbsp;<span>9.3</span></a> 의 유효산란단면적</p>
+<p><span class="theorem-title"><strong>연습문제 10.4 (L&amp;L Mechanics 18.2)</strong></span> <a href="#exr-CM_landau_mechanics_18_1" class="quarto-xref">연습문제&nbsp;<span>10.3</span></a> 의 유효산란단면적</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-rutherford_cross_section" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.5</strong></span> 러더포드 산란단면적 <a href="#eq-CM_rutherford_formular" class="quarto-xref">식&nbsp;<span>9.17</span></a> 을 증명하라.</p>
+<p><span class="theorem-title"><strong>연습문제 10.5</strong></span> 러더포드 산란단면적 <a href="#eq-CM_rutherford_formular" class="quarto-xref">식&nbsp;<span>10.17</span></a> 을 증명하라.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-CM_rutherford_2" class="quarto-xref">식&nbsp;<span>9.13</span></a> 로부터</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-CM_rutherford_2" class="quarto-xref">식&nbsp;<span>10.13</span></a> 로부터</p>
 <p><span class="math display">\[
 \begin{aligned}
 \theta_0 &amp;= \int_{r_{\min}}^\infty  \dfrac{\rho/r^2}{\sqrt{1-(\rho^2/r^2) - 2K/r(m{v_0}^2)}}\, dr &amp; &amp;; s=1/r \\
@@ -860,7 +867,7 @@ d\sigma = \dfrac{R\cos (\Theta/2)}{\sin \Theta} \dfrac{R}{2}\sin (\Theta/2) d\Om
 <p><span class="math display">\[
 \dfrac{d\rho}{d\Theta} =  \left(\dfrac{|K|}{m{v_0}^2}\right) \dfrac{1}{2\sin^2 (\Theta/2)}
 \]</span></p>
-<p><a href="#eq-CM_cross_section_2" class="quarto-xref">식&nbsp;<span>9.16</span></a> 로부터,</p>
+<p><a href="#eq-CM_cross_section_2" class="quarto-xref">식&nbsp;<span>10.16</span></a> 로부터,</p>
 <p><span class="math display">\[
 d\sigma = \left(\dfrac{K}{m{v_0}^2}\right)^2 \dfrac{\cot(\Theta/2)}{2\sin^2(\Theta/2) \sin (\Theta)}d\Omega =  \left(\dfrac{K}{2m{v_0}^2}\right)^2\dfrac{d\Omega}{\sin^4(\Theta/2)}
 \]</span></p>
@@ -927,13 +934,14 @@ Landau, L. D., Л. Д. Ландау, Е. М. Лифшиц, and E. M. Lifshit︠s
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1278,12 +1286,12 @@ Landau, L. D., Л. Д. Ландау, Е. М. Лифшиц, and E. M. Lifshit︠s
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/ClassicalMechanics/11_one_body_problems.html" class="pagination-link" aria-label="고전역학의 1체 문제">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../src/ClassicalMechanics/13_small_oscillations.html" class="pagination-link" aria-label="작은 진동">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">작은 진동</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

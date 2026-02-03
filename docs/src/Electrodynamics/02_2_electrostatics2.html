@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>17&nbsp; 정전기 II – 고전 역학과 전자기학</title>
+<title>18&nbsp; 정전기 II – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,14 +54,15 @@ div.csl-indent {
 <link href="../../src/Electrodynamics/02_1_electrostatics1.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +105,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -131,7 +132,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electrodynamics/00_index.html">전기자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electrodynamics/02_2_electrostatics2.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 II</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electrodynamics/00_index.html">전기자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electrodynamics/02_2_electrostatics2.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정전기 II</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -143,8 +144,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electrodynamics/00_index.html">전기자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electrodynamics/02_2_electrostatics2.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 II</span></a></li></ol></nav>
-      <h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 II</span></h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electrodynamics/00_index.html">전기자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electrodynamics/02_2_electrostatics2.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정전기 II</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정전기 II</span></h1>
                       </div>
   </div>
     
@@ -196,13 +197,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Feynman/vol1/vol1_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-2: 특수상대성이론과 광학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Feynman/vol1/vol1_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-3 : 열역학과 양자 입문</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/Feynman/vol2/vol2_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><span class="math inline">\(II\)</span>-1 : 정전기와 정자기</span></span></a>
   </div>
 </li>
       </ul>
@@ -219,55 +226,55 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/02_variational_principle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/04_canonical_transform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/11_one_body_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/A_proofs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
   </div>
 </li>
       </ul>
@@ -284,13 +291,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -307,43 +314,43 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/02_1_electrostatics1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/02_2_electrostatics2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/03_magnetostatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A1_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A2_waves.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
   </div>
 </li>
       </ul>
@@ -360,13 +367,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -383,19 +390,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/02_entropy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/0A_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
   </div>
 </li>
       </ul>
@@ -412,7 +419,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -433,12 +440,12 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#도체" id="toc-도체" class="nav-link active" data-scroll-target="#도체"><span class="header-section-number">17.1</span> 도체</a>
+  <li><a href="#도체" id="toc-도체" class="nav-link active" data-scroll-target="#도체"><span class="header-section-number">18.1</span> 도체</a>
   <ul class="collapse">
-  <li><a href="#sec-ED_ES_conductor" id="toc-sec-ED_ES_conductor" class="nav-link" data-scroll-target="#sec-ED_ES_conductor"><span class="header-section-number">17.1.1</span> 도체의 기본적 성질</a></li>
-  <li><a href="#톰슨-정리" id="toc-톰슨-정리" class="nav-link" data-scroll-target="#톰슨-정리"><span class="header-section-number">17.1.2</span> 톰슨 정리</a></li>
-  <li><a href="#sec-ED_ES_capacitor" id="toc-sec-ED_ES_capacitor" class="nav-link" data-scroll-target="#sec-ED_ES_capacitor"><span class="header-section-number">17.1.3</span> 축전지</a></li>
-  <li><a href="#sec-ED_ES_boundary_value_problem_in_conductors" id="toc-sec-ED_ES_boundary_value_problem_in_conductors" class="nav-link" data-scroll-target="#sec-ED_ES_boundary_value_problem_in_conductors"><span class="header-section-number">17.1.4</span> 도체에서의 경계값 문제</a></li>
+  <li><a href="#sec-ED_ES_conductor" id="toc-sec-ED_ES_conductor" class="nav-link" data-scroll-target="#sec-ED_ES_conductor"><span class="header-section-number">18.1.1</span> 도체의 기본적 성질</a></li>
+  <li><a href="#톰슨-정리" id="toc-톰슨-정리" class="nav-link" data-scroll-target="#톰슨-정리"><span class="header-section-number">18.1.2</span> 톰슨 정리</a></li>
+  <li><a href="#sec-ED_ES_capacitor" id="toc-sec-ED_ES_capacitor" class="nav-link" data-scroll-target="#sec-ED_ES_capacitor"><span class="header-section-number">18.1.3</span> 축전지</a></li>
+  <li><a href="#sec-ED_ES_boundary_value_problem_in_conductors" id="toc-sec-ED_ES_boundary_value_problem_in_conductors" class="nav-link" data-scroll-target="#sec-ED_ES_boundary_value_problem_in_conductors"><span class="header-section-number">18.1.4</span> 도체에서의 경계값 문제</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -458,14 +465,14 @@ window.Quarto = {
 \DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
 </div>
-<section id="도체" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="도체"><span class="header-section-number">17.1</span> 도체</h2>
-<section id="sec-ED_ES_conductor" class="level3" data-number="17.1.1">
-<h3 data-number="17.1.1" class="anchored" data-anchor-id="sec-ED_ES_conductor"><span class="header-section-number">17.1.1</span> 도체의 기본적 성질</h3>
+<section id="도체" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="도체"><span class="header-section-number">18.1</span> 도체</h2>
+<section id="sec-ED_ES_conductor" class="level3" data-number="18.1.1">
+<h3 data-number="18.1.1" class="anchored" data-anchor-id="sec-ED_ES_conductor"><span class="header-section-number">18.1.1</span> 도체의 기본적 성질</h3>
 <p><strong>도체 (conductor)</strong> 는 전자가 자유롭게 움직 일 수 있는 공간적인 영역을 의미한다. 또한 자유롭게 움직일 수 있는 전자가 충분히 많다는 것을 가정한다. 일반적으로 도체는 금속을 의미하며 금속은 보통 원자당 하나 이상의 자유전자를 가지므로 거시적인 시스템에서 도체의 자유전자의 개수는 <span class="math inline">\(10^{23}\)</span> 이상으로 충분히 많다. 이 짧은 정의로부터 우리는 아래와 같은 사실을 유추할 수 있다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-ED_ES_basic_properties_of_conductor" class="theorem">
-<p><span class="theorem-title"><strong>정리 17.1 (도체의 기본적인 성질)</strong></span> 도체 내부에서 받는 힘 <span class="math inline">\(\boldsymbol{F}=0\)</span> 이며, 따라서 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>정리 18.1 (도체의 기본적인 성질)</strong></span> 도체 내부에서 받는 힘 <span class="math inline">\(\boldsymbol{F}=0\)</span> 이며, 따라서 다음이 성립한다.</p>
 <p> (<span class="math inline">\(1\)</span>) 도체 내부에서 전기장 <span class="math inline">\(\boldsymbol{E}=\boldsymbol{0}\)</span> 이다.</p>
 <p> (<span class="math inline">\(2\)</span>) 도체 내부에서 정전기 포텐셜 <span class="math inline">\(\Phi\)</span> 는 상수이다.</p>
 <p> (<span class="math inline">\(3\)</span>) 도체 내부에서 전하 밀도 <span class="math inline">\(\rho = 0\)</span> 이다.</p>
@@ -491,7 +498,7 @@ window.Quarto = {
 <img src="figures/electrostatics/conductor/conductor.png" class="img-fluid figure-img" width="600">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_electrostatics_conductor_in_field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;17.1: 외부 전기장에 대해 (<span class="math inline">\(a\)</span>) 전기적으로 중성인 부도체의 경우, (<span class="math inline">\(b\)</span>) 도체의 경우 내부의 전하가 이동하기 시작하며 (<span class="math inline">\(c\)</span>) 도체 표면의 전하 분포로 인해 내부 전기장이 사라진 경우 (출처 <span class="citation" data-cites="Purcell2013electricity">Purcell (<a href="../ClassicalMechanics/00_index.html#ref-Purcell2013electricity" role="doc-biblioref">2013</a>)</span>)
+그림&nbsp;18.1: 외부 전기장에 대해 (<span class="math inline">\(a\)</span>) 전기적으로 중성인 부도체의 경우, (<span class="math inline">\(b\)</span>) 도체의 경우 내부의 전하가 이동하기 시작하며 (<span class="math inline">\(c\)</span>) 도체 표면의 전하 분포로 인해 내부 전기장이 사라진 경우 (출처 <span class="citation" data-cites="Purcell2013electricity">Purcell (<a href="../ClassicalMechanics/00_index.html#ref-Purcell2013electricity" role="doc-biblioref">2013</a>)</span>)
 </figcaption>
 </figure>
 </div>
@@ -499,14 +506,14 @@ window.Quarto = {
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-ED_ES_field_of_spherical_shell" class="theorem example">
-<p><span class="theorem-title"><strong>예제 17.1 (구 대칭 전기장)</strong></span> 반지름 <span class="math inline">\(R\)</span> 인 도체의 구 껍질을 생각하자. 구의 내부에 전하 <span class="math inline">\(q\)</span> 가 있을 때의 구 외부의 전기장은 전하 <span class="math inline">\(q\)</span> 가 구의 중심에 있고 구 껍질이 사라졌을 때의 전기장과 같는 것을 보이자. 구 껍질은 안쪽 면과 바깥쪽 면이 존재하며 안쪽 면과 바깥쪽 면 사이의 도체 부분에 아래 그림과 같은 가우스 면을 생각하자.</p>
+<p><span class="theorem-title"><strong>예제 18.1 (구 대칭 전기장)</strong></span> 반지름 <span class="math inline">\(R\)</span> 인 도체의 구 껍질을 생각하자. 구의 내부에 전하 <span class="math inline">\(q\)</span> 가 있을 때의 구 외부의 전기장은 전하 <span class="math inline">\(q\)</span> 가 구의 중심에 있고 구 껍질이 사라졌을 때의 전기장과 같는 것을 보이자. 구 껍질은 안쪽 면과 바깥쪽 면이 존재하며 안쪽 면과 바깥쪽 면 사이의 도체 부분에 아래 그림과 같은 가우스 면을 생각하자.</p>
 <div id="fig-ED_ES_electrostatics_conductor_in_field_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ED_ES_electrostatics_conductor_in_field_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/electrostatics/conductor/conductor2.png" class="img-fluid figure-img" width="200">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_electrostatics_conductor_in_field_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;17.2: 도체 구 껍질 내부의 가우스 면
+그림&nbsp;18.2: 도체 구 껍질 내부의 가우스 면
 </figcaption>
 </figure>
 </div>
@@ -526,14 +533,14 @@ window.Quarto = {
 <p><br></p>
 </section>
 </section>
-<section id="톰슨-정리" class="level3" data-number="17.1.2">
-<h3 data-number="17.1.2" class="anchored" data-anchor-id="톰슨-정리"><span class="header-section-number">17.1.2</span> 톰슨 정리</h3>
+<section id="톰슨-정리" class="level3" data-number="18.1.2">
+<h3 data-number="18.1.2" class="anchored" data-anchor-id="톰슨-정리"><span class="header-section-number">18.1.2</span> 톰슨 정리</h3>
 <p>모든 물리적 계(system)는 역학적 평형 상태에서 총 에너지를 최소화하도록 전하 밀도를 배열한다. 양자역학적 에너지 기여도와 정전기적 에너지 기여도가 경쟁하여 전하 배열을 결정하는 정도에 따라 다를 뿐이다.</p>
 <p>도체는 총 에너지에서 양자역학적 기여가 무시할 정도로 작은 계(단, 물체의 크기와 형상을 결정하는 역할은 예외)이다. 이는 정전 유도의 근본적인 기원과 도체의 차폐 및 스크리닝(screening) 특성이 오직 고전적 정전기적 에너지를 최소화하는 것에서 비롯된다는 것을 의미한다. 이러한 내용이 톰슨(Thomson)의 정전기학 정리(theorem of electrostatics)이며, 이는 샘플의 총 전하, 형상 및 부피를 유지하는 조건하에서 전하 밀도 <span class="math inline">\(\rho(\boldsymbol{r})\)</span> 에 대해 정전기적 에너지를 최소화하는 원리이다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-ED_ES_electrostatics_thompson_theorem" class="theorem">
-<p><span class="theorem-title"><strong>정리 17.2 (톰슨의 정전기 정리)</strong></span> 정해진 크기와 모양을 가진 물체가 전하 <span class="math inline">\(Q\)</span> 를 포함한다고 하자. 이 때 정전기 에너지가 최소화 되는 상태는 물체 전체에 걸쳐 포텐셜이 일정하도록 전하 <span class="math inline">\(Q\)</span> 가 분포되는 경우이다.</p>
+<p><span class="theorem-title"><strong>정리 18.2 (톰슨의 정전기 정리)</strong></span> 정해진 크기와 모양을 가진 물체가 전하 <span class="math inline">\(Q\)</span> 를 포함한다고 하자. 이 때 정전기 에너지가 최소화 되는 상태는 물체 전체에 걸쳐 포텐셜이 일정하도록 전하 <span class="math inline">\(Q\)</span> 가 분포되는 경우이다.</p>
 </div>
 </div>
 <div class="proof">
@@ -574,8 +581,8 @@ I[\rho] = U_E[\rho] + \lambda \left[Q-\int_V \rho(\boldsymbol{r})\,d^3\boldsymbo
 </div>
 <p><br></p>
 </section>
-<section id="sec-ED_ES_capacitor" class="level3" data-number="17.1.3">
-<h3 data-number="17.1.3" class="anchored" data-anchor-id="sec-ED_ES_capacitor"><span class="header-section-number">17.1.3</span> 축전지</h3>
+<section id="sec-ED_ES_capacitor" class="level3" data-number="18.1.3">
+<h3 data-number="18.1.3" class="anchored" data-anchor-id="sec-ED_ES_capacitor"><span class="header-section-number">18.1.3</span> 축전지</h3>
 <section id="평행판-축전지" class="level4">
 <h4 class="anchored" data-anchor-id="평행판-축전지"><strong>평행판 축전지</strong></h4>
 <div id="fig-ED_ES_capacitor_3d" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -584,7 +591,7 @@ I[\rho] = U_E[\rho] + \lambda \left[Q-\int_V \rho(\boldsymbol{r})\,d^3\boldsymbo
 <img src="figures/electrostatics/capacitor/capacitor_3d.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_capacitor_3d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;17.3: 도체 구 껍질 내부의 가우스 면
+그림&nbsp;18.3: 도체 구 껍질 내부의 가우스 면
 </figcaption>
 </figure>
 </div>
@@ -619,7 +626,7 @@ U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\boldsymbol{E}\|^2
 <img src="figures/electrostatics/concentric_sphere_capacitor/figure.png" class="img-fluid figure-img" width="150">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_concentric_sphere_capacitor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;17.4: 같은 중심을 가진 두 구 껍질에 의한 축전지
+그림&nbsp;18.4: 같은 중심을 가진 두 구 껍질에 의한 축전지
 </figcaption>
 </figure>
 </div>
@@ -635,15 +642,15 @@ U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\boldsymbol{E}\|^2
 <p><br></p>
 </section>
 </section>
-<section id="sec-ED_ES_boundary_value_problem_in_conductors" class="level3" data-number="17.1.4">
-<h3 data-number="17.1.4" class="anchored" data-anchor-id="sec-ED_ES_boundary_value_problem_in_conductors"><span class="header-section-number">17.1.4</span> 도체에서의 경계값 문제</h3>
+<section id="sec-ED_ES_boundary_value_problem_in_conductors" class="level3" data-number="18.1.4">
+<h3 data-number="18.1.4" class="anchored" data-anchor-id="sec-ED_ES_boundary_value_problem_in_conductors"><span class="header-section-number">18.1.4</span> 도체에서의 경계값 문제</h3>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-접지
+<span class="screen-reader-only">중요</span>접지
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -660,7 +667,7 @@ U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\boldsymbol{E}\|^2
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition" class="theorem">
-<p><span class="theorem-title"><strong>정리 17.3</strong></span> 도체들의 표면 <span class="math inline">\(S_i\)</span> 에 대해 디리클레 경계조건 혹은 노이만 경계조건이 정해진 경우 라플라스 방정식의 해가 존재한다면 그 해는 유일하다.</p>
+<p><span class="theorem-title"><strong>정리 18.3</strong></span> 도체들의 표면 <span class="math inline">\(S_i\)</span> 에 대해 디리클레 경계조건 혹은 노이만 경계조건이 정해진 경우 라플라스 방정식의 해가 존재한다면 그 해는 유일하다.</p>
 </div>
 </div>
 <div class="proof">
@@ -678,11 +685,11 @@ U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\boldsymbol{E}\|^2
 </section>
 <section id="거울-영상법" class="level4">
 <h4 class="anchored" data-anchor-id="거울-영상법"><strong>거울 영상법</strong></h4>
-<p><a href="#thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition" class="quarto-xref">정리&nbsp;<span>17.3</span></a> 는 일단 경계조건을 만족하는 포텐셜을 구하기만 한다면 그 포텐셜은 유일하다는 것을 의미한다. 이것을 이용하는 방법중의 하나가 <strong>거울영상볍 (method of images)</strong> 이다. 관심 있는 영역에 대한 포텐셜을 구할 때 이 영역이 아닌 다른 영역에 가상의 전하를 배치하여 경계조건을 만족하게 하여 포텐셜을 구하는 방법이다. 일단 가장 간단한 예시를 보자.</p>
+<p><a href="#thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition" class="quarto-xref">정리&nbsp;<span>18.3</span></a> 는 일단 경계조건을 만족하는 포텐셜을 구하기만 한다면 그 포텐셜은 유일하다는 것을 의미한다. 이것을 이용하는 방법중의 하나가 <strong>거울영상볍 (method of images)</strong> 이다. 관심 있는 영역에 대한 포텐셜을 구할 때 이 영역이 아닌 다른 영역에 가상의 전하를 배치하여 경계조건을 만족하게 하여 포텐셜을 구하는 방법이다. 일단 가장 간단한 예시를 보자.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-ED_ES_image_method_plane" class="theorem example">
-<p><span class="theorem-title"><strong>예제 17.2 (도체 평면 근처의 전하)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>예제 18.2 (도체 평면 근처의 전하)</strong></span> &nbsp;</p>
 <div id="fig-ED_ES_image_method_plane" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ED_ES_image_method_plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -714,7 +721,7 @@ U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\boldsymbol{E}\|^2
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_image_method_plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;17.5: 도체 평면 근처의 전하와 거울 전하
+그림&nbsp;18.5: 도체 평면 근처의 전하와 거울 전하
 </figcaption>
 </figure>
 </div>
@@ -803,13 +810,14 @@ Purcell, E. M. 2013. <em>Electricity and Magnetism</em>. Electricity and Magneti
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1154,12 +1162,12 @@ Purcell, E. M. 2013. <em>Electricity and Magnetism</em>. Electricity and Magneti
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/Electrodynamics/02_1_electrostatics1.html" class="pagination-link" aria-label="정전기 I">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">정전기 I</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 I</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../src/Electrodynamics/03_magnetostatics.html" class="pagination-link" aria-label="정자기">
-        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정자기</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">정자기</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

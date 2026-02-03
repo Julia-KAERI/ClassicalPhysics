@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; 증명들 – 고전 역학과 전자기학</title>
+<title>12&nbsp; 증명들 – 고전 역학과 전자기학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/ClassicalMechanics/13_small_oscillations.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -111,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/A_proofs.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">증명들</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/A_proofs.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">증명들</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -123,8 +124,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/A_proofs.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">증명들</span></a></li></ol></nav>
-      <h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">증명들</span></h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/A_proofs.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">증명들</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">증명들</span></h1>
                       </div>
   </div>
     
@@ -176,13 +177,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Feynman/vol1/vol1_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">I-2: 특수상대성이론과 광학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-2: 특수상대성이론과 광학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Feynman/vol1/vol1_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">I-3 : 열역학과 양자 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><span class="math inline">\(I\)</span>-3 : 열역학과 양자 입문</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/Feynman/vol2/vol2_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><span class="math inline">\(II\)</span>-1 : 정전기와 정자기</span></span></a>
   </div>
 </li>
       </ul>
@@ -199,55 +206,55 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">뉴튼역학의 기본 원리와 달랑베르 원리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/02_variational_principle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/04_canonical_transform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">정준 변환</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/11_one_body_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/A_proofs.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
   </div>
 </li>
       </ul>
@@ -264,13 +271,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -287,43 +294,43 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/02_1_electrostatics1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/02_2_electrostatics2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/03_magnetostatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A1_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A2_waves.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
   </div>
 </li>
       </ul>
@@ -340,13 +347,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -363,19 +370,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/02_entropy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">엔트로피와 열역학적 포텐셜</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/0A_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
   </div>
 </li>
       </ul>
@@ -392,7 +399,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -413,11 +420,11 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#sec-Bertrand_theorem" id="toc-sec-Bertrand_theorem" class="nav-link active" data-scroll-target="#sec-Bertrand_theorem"><span class="header-section-number">11.1</span> Bertrand’s theorem</a>
+  <li><a href="#sec-Bertrand_theorem" id="toc-sec-Bertrand_theorem" class="nav-link active" data-scroll-target="#sec-Bertrand_theorem"><span class="header-section-number">12.1</span> Bertrand’s theorem</a>
   <ul class="collapse">
-  <li><a href="#소개" id="toc-소개" class="nav-link" data-scroll-target="#소개"><span class="header-section-number">11.1.1</span> 소개</a></li>
-  <li><a href="#거의-원형-궤도인-경우" id="toc-거의-원형-궤도인-경우" class="nav-link" data-scroll-target="#거의-원형-궤도인-경우"><span class="header-section-number">11.1.2</span> 거의 원형 궤도인 경우</a></li>
-  <li><a href="#일반적인-경우" id="toc-일반적인-경우" class="nav-link" data-scroll-target="#일반적인-경우"><span class="header-section-number">11.1.3</span> 일반적인 경우</a></li>
+  <li><a href="#소개" id="toc-소개" class="nav-link" data-scroll-target="#소개"><span class="header-section-number">12.1.1</span> 소개</a></li>
+  <li><a href="#거의-원형-궤도인-경우" id="toc-거의-원형-궤도인-경우" class="nav-link" data-scroll-target="#거의-원형-궤도인-경우"><span class="header-section-number">12.1.2</span> 거의 원형 궤도인 경우</a></li>
+  <li><a href="#일반적인-경우" id="toc-일반적인-경우" class="nav-link" data-scroll-target="#일반적인-경우"><span class="header-section-number">12.1.3</span> 일반적인 경우</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -438,8 +445,8 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p><br></p>
-<section id="sec-Bertrand_theorem" class="level2 page-columns page-full" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="sec-Bertrand_theorem"><span class="header-section-number">11.1</span> Bertrand’s theorem</h2>
+<section id="sec-Bertrand_theorem" class="level2 page-columns page-full" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="sec-Bertrand_theorem"><span class="header-section-number">12.1</span> Bertrand’s theorem</h2>
 <p>Bertrand’s theorem 은 포텐셜이 <span class="math inline">\(V(\boldsymbol{r}) =  K\|\boldsymbol{r}\|^n\)</span> 으로 주어졌을 때 닫힌 경로를 갖는 경우는 <span class="math inline">\(n=-1,\,2\)</span> 인 두가지 경우 뿐이라는 것을 말한다. 여기서는 S.A. Chin, <em>A truly elementary proof of Bertrand’s theorem</em>, Am. J. Phys. 83, 320-323 (2015) 논문의 방식을 따라 증명하도록 한다.</p>
 <p>증명은 아래의 세 과정으로 이루어진다.</p>
 <ol type="1">
@@ -447,9 +454,9 @@ window.Quarto = {
 <li>거의 원형 궤도</li>
 </ol>
 <p><br></p>
-<section id="소개" class="level3" data-number="11.1.1">
-<h3 data-number="11.1.1" class="anchored" data-anchor-id="소개"><span class="header-section-number">11.1.1</span> 소개</h3>
-<p>많은 부분이 <a href="11_one_body_problems.html#sec-CM_central_force" class="quarto-xref"><span> 8.4</span></a> 로부터 이어진다. <span class="math inline">\(r=\|\boldsymbol{r}\|\)</span>, <span class="math inline">\(l = \|\boldsymbol{L}\|\)</span> 이라고 하자. 우리는 이미 다음의 방정식을 알고 있다.</p>
+<section id="소개" class="level3" data-number="12.1.1">
+<h3 data-number="12.1.1" class="anchored" data-anchor-id="소개"><span class="header-section-number">12.1.1</span> 소개</h3>
+<p>많은 부분이 <a href="11_one_body_problems.html#sec-CM_central_force" class="quarto-xref"><span> 9.4</span></a> 로부터 이어진다. <span class="math inline">\(r=\|\boldsymbol{r}\|\)</span>, <span class="math inline">\(l = \|\boldsymbol{L}\|\)</span> 이라고 하자. 우리는 이미 다음의 방정식을 알고 있다.</p>
 <p><span class="math display">\[
 \begin{aligned}
 \dfrac{dr}{dt} &amp;= \sqrt{\dfrac{2}{m} \left[E-V_\textrm{eff}(r)\right]}, \\
@@ -468,47 +475,47 @@ V_\textrm{eff} &amp;= \dfrac{l^2}{2mr^2} + V(r), \\
 <p>이다. 양변을 제곱하고 정리하면, 그리고 <span class="math inline">\(m^\ast = \dfrac{l^2}{m}\)</span> 으로 정의하면</p>
 <p><span id="eq-bertrand_1"><span class="math display">\[
 \dfrac{m^\ast}{2} \left(\dfrac{du}{d\theta}\right)^2 + V_\textrm{eff}\left(\dfrac{1}{u}\right) = E
-\tag{11.1}\]</span></span></p>
+\tag{12.1}\]</span></span></p>
 <p>이다. 이제 <span class="math inline">\(V_\textrm{eff}\)</span> 를 대체할 <span class="math inline">\(U(u)\)</span> 를 다음과 같이 정의하자.</p>
 <p><span id="eq-second_potential"><span class="math display">\[
 U(u) := V_\textrm{eff}\left(\dfrac{1}{u}\right) = \dfrac{l^2}{2mr^2}+ V\left(\dfrac{1}{u}\right) = \dfrac{m^\ast u^2}{2} +V\left(\dfrac{1}{u}\right)
-\tag{11.2}\]</span></span></p>
-<p>그렇다면 <a href="#eq-bertrand_1" class="quarto-xref">식&nbsp;<span>11.1</span></a> 은 다음과 같다.</p>
+\tag{12.2}\]</span></span></p>
+<p>그렇다면 <a href="#eq-bertrand_1" class="quarto-xref">식&nbsp;<span>12.1</span></a> 은 다음과 같다.</p>
 <p><span id="eq-betrand_2"><span class="math display">\[
 \dfrac{m^\ast}{2} \left(\dfrac{du}{d\theta}\right)^2 + \dfrac{m^\ast u^2}{2} + V\left(\dfrac{1}{u}\right)= \dfrac{m^\ast}{2} \left(\dfrac{du}{d\theta}\right)^2 + U(u) = E.
-\tag{11.3}\]</span></span></p>
+\tag{12.3}\]</span></span></p>
 <p><br></p>
 </section>
-<section id="거의-원형-궤도인-경우" class="level3" data-number="11.1.2">
-<h3 data-number="11.1.2" class="anchored" data-anchor-id="거의-원형-궤도인-경우"><span class="header-section-number">11.1.2</span> 거의 원형 궤도인 경우</h3>
+<section id="거의-원형-궤도인-경우" class="level3" data-number="12.1.2">
+<h3 data-number="12.1.2" class="anchored" data-anchor-id="거의-원형-궤도인-경우"><span class="header-section-number">12.1.2</span> 거의 원형 궤도인 경우</h3>
 <p><span class="math inline">\(u=u_0 = \text{const.}\)</span> 인 경우 <span class="math inline">\(U'(u_0)=0\)</span> 이므로,</p>
 <p><span id="eq-first_derivative_of_U"><span class="math display">\[
 m^\ast u_0 - \dfrac{1}{u_0^2}V'\left(\dfrac{1}{u_0}\right) = 0
-\tag{11.4}\]</span></span></p>
+\tag{12.4}\]</span></span></p>
 <p>이며 <span class="math inline">\(u(\theta)\)</span> 는 <span class="math inline">\(u_0\)</span> 근처에서</p>
 <p><span class="math display">\[
 u(\theta) = u_0 + \rho(\theta)
 \]</span></p>
-<p>로 기술 할 수 있다. 이를 이용하면 <a href="#eq-betrand_2" class="quarto-xref">식&nbsp;<span>11.3</span></a> 는</p>
+<p>로 기술 할 수 있다. 이를 이용하면 <a href="#eq-betrand_2" class="quarto-xref">식&nbsp;<span>12.3</span></a> 는</p>
 <p><span class="math display">\[
 \dfrac{m^\ast}{2} \left(\dfrac{d\rho}{d\theta}\right)^2 + \dfrac{1}{2}U''(u_0)u^2 = E-U(u_0) = E_0
 \]</span></p>
 <p>이다. <span class="math inline">\(U''(0) &gt; 0\)</span> 이므로 위 식은 조화진동자 문제이다. 따라서,</p>
 <p><span id="eq-u_theta"><span class="math display">\[
 u(\theta) = u_0 + a \cos (\omega (\theta-\theta_0)),\qquad \textrm{where }\omega = \sqrt{\dfrac{U''(u_0)}{m^\ast}}
-\tag{11.5}\]</span></span></p>
-<p>이다. <span class="math inline">\(\theta_0\)</span> 는 초기조건으로 부터 구해진다. 이제 <a href="#eq-second_potential" class="quarto-xref">식&nbsp;<span>11.2</span></a> 로부터,</p>
+\tag{12.5}\]</span></span></p>
+<p>이다. <span class="math inline">\(\theta_0\)</span> 는 초기조건으로 부터 구해진다. 이제 <a href="#eq-second_potential" class="quarto-xref">식&nbsp;<span>12.2</span></a> 로부터,</p>
 <p><span class="math display">\[
 U''(u_0) = m^\ast + \dfrac{2}{{u_0}^3}V' \left(\dfrac{1}{u_0}\right) + \dfrac{1}{{u_0}^4}V''\left(\dfrac{1}{u_0}\right)
 \]</span></p>
-<p>이다. 이 식과 <a href="#eq-first_derivative_of_U" class="quarto-xref">식&nbsp;<span>11.4</span></a> 를 사용하면,</p>
+<p>이다. 이 식과 <a href="#eq-first_derivative_of_U" class="quarto-xref">식&nbsp;<span>12.4</span></a> 를 사용하면,</p>
 <p><span class="math display">\[
 \omega = \sqrt{\dfrac{3V'(r_0) + r_0 V''(r_0)}{V'(r_0)}}
 \]</span></p>
-<p>를 얻는다. <a href="#eq-u_theta" class="quarto-xref">식&nbsp;<span>11.5</span></a> 에서 일반성을 잃지 않고 <span class="math inline">\(\theta_0=0,\, a&gt;0\)</span> 으로 놓을 수 있다. 그렇다면 <span class="math inline">\(u\)</span> 의 최대값과 최소값은 각각 <span class="math inline">\(u_{\textrm{max}}=u_0+a\)</span> 이며 <span class="math inline">\(u_{\textrm{min}} = u_0 -a\)</span> 이며 <span class="math inline">\(u=u_{\textrm{min}}\)</span> 일 때의 <span class="math inline">\(\theta\)</span> 를 <span class="math inline">\(\theta_m\)</span> 이라고 하면, <em>aspidal angle</em> 은 <span class="math inline">\(\theta_m\)</span> 이 되며 다음 값을 갖는다.</p>
+<p>를 얻는다. <a href="#eq-u_theta" class="quarto-xref">식&nbsp;<span>12.5</span></a> 에서 일반성을 잃지 않고 <span class="math inline">\(\theta_0=0,\, a&gt;0\)</span> 으로 놓을 수 있다. 그렇다면 <span class="math inline">\(u\)</span> 의 최대값과 최소값은 각각 <span class="math inline">\(u_{\textrm{max}}=u_0+a\)</span> 이며 <span class="math inline">\(u_{\textrm{min}} = u_0 -a\)</span> 이며 <span class="math inline">\(u=u_{\textrm{min}}\)</span> 일 때의 <span class="math inline">\(\theta\)</span> 를 <span class="math inline">\(\theta_m\)</span> 이라고 하면, <em>aspidal angle</em> 은 <span class="math inline">\(\theta_m\)</span> 이 되며 다음 값을 갖는다.</p>
 <p><span id="eq-aspidal_angle"><span class="math display">\[
 \theta _m = \dfrac{\pi}{\omega}
-\tag{11.6}\]</span></span></p>
+\tag{12.6}\]</span></span></p>
 <p>여기서 알 수 있듯이 aspidal angle 은 에너지(<span class="math inline">\(E\)</span>) 나 각운동량(<span class="math inline">\(\boldsymbol{L}\)</span>) 과는 무관하며 포텐셜에만 의존한다. <span class="math inline">\(u(\theta)\)</span> 가 안정적으로 oscillation 하기 위해서는</p>
 <p><span class="math display">\[
 \beta=\dfrac{3V'(r_0) + r_0 V''(r_0)}{V'(r_0)} &gt; 0
@@ -516,7 +523,7 @@ U''(u_0) = m^\ast + \dfrac{2}{{u_0}^3}V' \left(\dfrac{1}{u_0}\right) + \dfrac{1}
 <p>이어야 하며, 이 때,</p>
 <p><span id="eq-beta_and_omega"><span class="math display">\[
 \omega = \dfrac{\pi}{\sqrt{\beta}}
-\tag{11.7}\]</span></span></p>
+\tag{12.7}\]</span></span></p>
 <p>이다. <span class="math inline">\(u=u_0\)</span> 근처에서의 포텐셜에 대해</p>
 <p><span class="math display">\[
 \beta(r) :=\dfrac{3V'(r) + r V''(r)}{V'(r)}
@@ -532,13 +539,13 @@ W(r) = kr^{\beta-3}
 <p>이며</p>
 <p><span id="eq-bertrand_potential_1"><span class="math display">\[
 V(r) = \left\{\begin{array}{ll}\dfrac{k}{\beta-2}r^{\beta-2} \qquad &amp;\textrm{if } \beta \ne 2 \\ k \ln (r) &amp; \textrm{if } \beta = 2.\end{array}\right.
-\tag{11.8}\]</span></span></p>
+\tag{12.8}\]</span></span></p>
 <p><span class="math inline">\(\theta_m = \pi /\sqrt{\beta}\)</span> 이므로 <span class="math inline">\(\sqrt{\beta}\)</span> 는 유리수여야 한다.</p>
 <p><br></p>
 </section>
-<section id="일반적인-경우" class="level3 page-columns page-full" data-number="11.1.3">
-<h3 data-number="11.1.3" class="anchored" data-anchor-id="일반적인-경우"><span class="header-section-number">11.1.3</span> 일반적인 경우</h3>
-<p>Aspidal angle 이 <span class="math inline">\(E\)</span> 와 무관하기 때문에 우리는 편의적으로 <span class="math inline">\(E\)</span> 를 잡아도 된다. <span class="math inline">\(\beta &gt; 2\)</span> 인 경우는 V.I. Arnold 가 <em>Mathematical Methods of Classical Mechanics</em> 에서 제안했던 것처럼 <span class="math inline">\(E\to \infty\)</span> 극한에서 생각하는게 편하다. <span class="math inline">\(u\)</span> 의 최대값을 <span class="math inline">\(u_M\)</span> 이라고 하자. 이 경우 <a href="#eq-bertrand_1" class="quarto-xref">식&nbsp;<span>11.1</span></a>, <a href="#eq-second_potential" class="quarto-xref">식&nbsp;<span>11.2</span></a> 로부터 <span class="math inline">\(\dfrac{d u}{d\theta}(u_M)=0\)</span> 이며 <span class="math inline">\(V(r) \propto r^{\beta-2}\)</span> 이므로 <span class="math inline">\(V(1/u_M) \ll E\)</span> 가 된다. 따라서</p>
+<section id="일반적인-경우" class="level3 page-columns page-full" data-number="12.1.3">
+<h3 data-number="12.1.3" class="anchored" data-anchor-id="일반적인-경우"><span class="header-section-number">12.1.3</span> 일반적인 경우</h3>
+<p>Aspidal angle 이 <span class="math inline">\(E\)</span> 와 무관하기 때문에 우리는 편의적으로 <span class="math inline">\(E\)</span> 를 잡아도 된다. <span class="math inline">\(\beta &gt; 2\)</span> 인 경우는 V.I. Arnold 가 <em>Mathematical Methods of Classical Mechanics</em> 에서 제안했던 것처럼 <span class="math inline">\(E\to \infty\)</span> 극한에서 생각하는게 편하다. <span class="math inline">\(u\)</span> 의 최대값을 <span class="math inline">\(u_M\)</span> 이라고 하자. 이 경우 <a href="#eq-bertrand_1" class="quarto-xref">식&nbsp;<span>12.1</span></a>, <a href="#eq-second_potential" class="quarto-xref">식&nbsp;<span>12.2</span></a> 로부터 <span class="math inline">\(\dfrac{d u}{d\theta}(u_M)=0\)</span> 이며 <span class="math inline">\(V(r) \propto r^{\beta-2}\)</span> 이므로 <span class="math inline">\(V(1/u_M) \ll E\)</span> 가 된다. 따라서</p>
 <p><span class="math display">\[
 \dfrac{m^\ast}{2}(u_{M})^2 = E
 \]</span></p>
@@ -552,7 +559,7 @@ V(r) = \left\{\begin{array}{ll}\dfrac{k}{\beta-2}r^{\beta-2} \qquad &amp;\textrm
 <p>이다. <span class="math inline">\(|x|&lt;1\)</span> 이며 <span class="math inline">\(E\to\infty,\, \beta &gt; 2\)</span> 이므로 <span class="math inline">\([\cdots ]\)</span> 의 <span class="math inline">\(E^{-\beta/2} \to 0\)</span> 이다. <span class="math inline">\(x \approx 0\)</span> 이 아니라면 이 운동은 단순조화진동자라고 볼 수 있는데 <span class="math inline">\(x\approx 0\)</span> 은 <span class="math inline">\(r \to \infty\)</span> 를 의미하므로 우리는 무시해도 된다. 즉 <span class="math inline">\(E\to \infty\)</span> 가정에서는 모든 <span class="math inline">\(\beta&gt;0\)</span> 운동에 대한 aspidal angle 은 단순조화진동자에 대한 운동으로 생각 할 수 있다. 따라서,</p>
 <p><span id="eq-bertrand_3_1"><span class="math display">\[
 \dfrac{m^\ast}{2}\left(\dfrac{du}{d\theta}\right)^2 + \dfrac{m^\ast}{2} u^2 = E
-\tag{11.9}\]</span></span></p>
+\tag{12.9}\]</span></span></p>
 <div class="page-columns page-full"><p>이며 <span class="math inline">\(u\)</span> 의 각진동수 <span class="math inline">\(\omega = 1\)</span> 이다.<span class="math inline">\(^1\)</span>  <span class="math inline">\(\theta_m = \pi/\sqrt{\beta}\)</span> 이며 단순조화진동자의 경우 <span class="math inline">\(\beta = 4\)</span> 이므로 <span class="math inline">\(\theta_m = \dfrac{\pi}{2}\)</span> 이다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^1\)</span> <span class="math inline">\(\dfrac{mv^2}{2} + \dfrac{kx^2}{2} =E\)</span> 에 대한 각진동수 <span class="math inline">\(\omega = \sqrt{k/m}\)</span> 임을 생각하라.</span></div></div>
 <p>이제 <span class="math inline">\(\beta = 2\)</span> 인 경우를 생각하자. <span class="math inline">\(\theta_m = \pi/\sqrt{2}\)</span> 이므로 닫힌 궤도 일 수 가 없다.</p>
 <p>마지막으로 <span class="math inline">\(\beta &lt; 2\)</span> 인 경우를 생각하자. <span class="math inline">\(V_\textrm{eff} = \dfrac{m^\ast u^2}{2} + \dfrac{k}{\beta-2}u^{2-\beta}\)</span> 이며 <span class="math inline">\(\gamma := 2-\beta &gt;0\)</span> 이라고 하면,</p>
@@ -616,13 +623,14 @@ V_\textrm{eff} (u) = \dfrac{m^\ast u^2}{2} - \dfrac{k}{\gamma}u^\gamma
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -967,12 +975,12 @@ V_\textrm{eff} (u) = \dfrac{m^\ast u^2}{2} - \dfrac{k}{\gamma}u^\gamma
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/ClassicalMechanics/13_small_oscillations.html" class="pagination-link" aria-label="작은 진동">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">작은 진동</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">작은 진동</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../src/ClassicalMechanics/P1_problems01.html" class="pagination-link" aria-label="문제 모음">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">문제 모음</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">문제 모음</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
