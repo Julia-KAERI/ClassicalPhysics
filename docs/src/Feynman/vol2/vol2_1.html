@@ -456,6 +456,8 @@ window.Quarto = {
   <li><a href="#sec-FLP_2_6_5" id="toc-sec-FLP_2_6_5" class="nav-link" data-scroll-target="#sec-FLP_2_6_5">II.6-5 임의의 전하분포에 대한 쌍극자 근사</a></li>
   <li><a href="#sec-FLP_2_6_6" id="toc-sec-FLP_2_6_6" class="nav-link" data-scroll-target="#sec-FLP_2_6_6">II.6-6 대전된 도체에 의한 전기장</a></li>
   <li><a href="#sec-FLP_2_6_7" id="toc-sec-FLP_2_6_7" class="nav-link" data-scroll-target="#sec-FLP_2_6_7">II.6-7 영상법</a></li>
+  <li><a href="#sec-FLP_2_6_8" id="toc-sec-FLP_2_6_8" class="nav-link" data-scroll-target="#sec-FLP_2_6_8">II.6-8 도체 평면 근처의 점전하</a></li>
+  <li><a href="#sec-FLP_2_6_8" id="toc-sec-FLP_2_6_8" class="nav-link" data-scroll-target="#sec-FLP_2_6_8">II.6-9 대전된 구 근처의 점전하</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1172,8 +1174,117 @@ E=\dfrac{\sigma_0}{3\epsilon_0}
 </section>
 <section id="sec-FLP_2_6_7" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_2_6_7">II.6-7 영상법</h3>
+<div id="fig-FLP_2_6_8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_2_6_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_2_6/fig_2_6_8.png" class="img-fluid figure-img" width="350">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_2_6_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.13: 파인만 물리학 강의 <span class="math inline">\(II\)</span> Fig. 6-8. 두 점전하에 의한 전기장(실선)과 등전위면(파선)
+</figcaption>
+</figure>
+</div>
+<p>위 그림은 두 점전하에 의한 전기장과 등전위면을 보여준다. 등전위면 <span class="math inline">\(A\)</span> 를 생각하자. 등전위면 <span class="math inline">\(A\)</span> 와 같은 모양이 되도록 금속 박판을 가공하여 <span class="math inline">\(A\)</span> 의 위치에 맞추고 <span class="math inline">\(A\)</span> 에서의 전위와 같은 전위를 걸어준다고 하자. 동시에 오른쪽의 <span class="math inline">\(-\)</span> 전하를 제거한다. 그렇다면 금속 박판 외부의 상황은 금속 박판 설치 이전의 상황과 전혀 달라지는것이 없다. 수학적으로도 증명할 수 있는데 이는 <a href="../../Electrodynamics/02_2_electrostatics2.html#sec-ED_ES_boundary_value_problem_in_conductors">도체에서의 경계값 문제</a> 를 보라. 일단 경계값을 만족하는 포텐셜을 찾기만 하면 그것은 만족하는 라플라스 방정식의 해는 유일하다는 것이 보장된다.</p>
+</section>
+<section id="sec-FLP_2_6_8" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_6_8">II.6-8 도체 평면 근처의 점전하</h3>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-FLP_image_method_plane" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.9 (도체 평면 근처의 전하)</strong></span> &nbsp;</p>
+<div id="fig-FLP_image_method_plane" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_image_method_plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-FLP_image_method_plane" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-FLP_image_method_plane_config" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-FLP_image_method_plane_config-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_2_6/image_plane1.png" class="img-fluid figure-img" data-ref-parent="fig-FLP_image_method_plane">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-FLP_image_method_plane_config-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) <span class="math inline">\(+q\)</span> 의 전하가 위치했을 때 <span class="math inline">\(-q\)</span> 거울 전하의 위치
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-FLP_image_method_plane" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-FLP_image_method_plane_field" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-FLP_image_method_plane_field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_2_6/image_plane2.png" class="img-fluid figure-img" data-ref-parent="fig-FLP_image_method_plane">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-FLP_image_method_plane_field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) 도체 평면과 전하에 의한 전기장
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_image_method_plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.14: 도체 평면 근처의 전하와 거울 전하
+</figcaption>
+</figure>
+</div>
+<p>위의 그림 (<span class="math inline">\(a\)</span>) 와 같이 <span class="math inline">\((0,\,0,\,h)\)</span> 좌표에 <span class="math inline">\(+q\)</span> 의 전하가 <span class="math inline">\(xy\)</span> 평면상의 도체 평면과 함께 위치한다고 하자. 도체 평면은 접지되어 <span class="math inline">\(\Phi_{\text{conducting plane}}=0\)</span> 이다. 이 대 가상의 거울 전하 <span class="math inline">\(-q\)</span> 를 <span class="math inline">\((0,\,0,\,-h)\)</span> 에 위치시키고 도체 평면을 무시했을 때의 포텐셜은 아래와 같다.</p>
+<p><span class="math display">\[
+\Phi (x,\,y,\,z) = \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{+q}{\sqrt{x^2+y^2+(z-h)^2}} +\dfrac{-q}{\sqrt{x^2+y^2+(z+h)^2}} \right].
+\]</span></p>
+<p><span class="math inline">\(\Phi (x,\,y,\,z=0)=0\)</span> 이므로 도체 평면상의 경계조건을 만족한다. 다만 이것은 <span class="math inline">\(z\ge 0\)</span> 인 영역에 대해서만 성립하며 <span class="math inline">\(z\le 0\)</span> 인 영역에서는 성립하지 않는다. 도체 표면의 전하 분포를 계산해 보자. 우선</p>
+<p><span class="math display">\[
+E_z(x,\,y, z&gt;0) = -\dfrac{\partial \Phi}{\partial z}= \dfrac{q}{4\pi\epsilon_0}\left[\dfrac{z-h}{\|\boldsymbol{r}-h\hat{\boldsymbol{z}}\|^3}- \dfrac{z+h}{\|\boldsymbol{r}+h\hat{\boldsymbol{z}}\|^3}\right]
+\]</span></p>
+<p>이며 <span class="math inline">\(E_z(x,\,y,\,z=0^-) = 0\)</span> 이므로 도체 표면에 유도되는 표면 전하 <span class="math inline">\(\sigma\)</span> 는 아래와 같다.</p>
+<p><span class="math display">\[
+\sigma=\epsilon_0 E_z(x,\,y,\,z=0^+) = -\dfrac{q}{2\pi}\dfrac{h}{(x^2+y^2+h^2)^{3/2}}.
+\]</span></p>
+<p>이 전하 분포는 원점에서 가장 밀집되어 있으며 유도된 총 전하량은 다음과 같다. <span class="math display">\[
+Q_{\text{total induced}} = \int \sigma \,dxdy = -q.
+\]</span></p>
+<p>외부의 전하에 의해 도체에 유도되는 전하의 총합이 외부의 전하와 크기가 같다는 것은 모든 거울 영상법에서 공통적인 사실이다. 또한 전하 <span class="math inline">\(+q\)</span> 는 유도된 표면전하에 의해 원래의 전하 <span class="math inline">\(+q\)</span> 가 힘을 받으며 당연히 그 힘은 아래와 같다.</p>
+<p><span id="eq-FLP_2_6_30"><span class="math display">\[
+\boldsymbol{F} = -\dfrac{q^2}{4\pi\epsilon_0}\dfrac{}{4h^2}\hat{\boldsymbol{z}}
+\tag{4.37}\]</span></span></p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="sec-FLP_2_6_8" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_6_8">II.6-9 대전된 구 근처의 점전하</h3>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-FLP_image_method_sphere" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.10</strong></span> &nbsp;</p>
+<div id="fig-FLP_image_sphere" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_image_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_2_6/image_sphere/image_sphere.png" class="img-fluid figure-img" width="350">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_image_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.15: 접지된 반지름 <span class="math inline">\(a\)</span> 인 도체 구 밖에 점전하 <span class="math inline">\(q\)</span> 가 위치한 경우
+</figcaption>
+</figure>
+</div>
+<p>위의 그림과 같이 반지름 <span class="math inline">\(a\)</span> 인 접지된 도체 구 밖에 도체 구의 중심으로부터 거리가 <span class="math inline">\(b\)</span> 인 지점에 전하 <span class="math inline">\(q\)</span> 가 위치했을 때의 구 밖에서의 정전 포텐셜을 영상법을 이용하여 구할 수 있다. 우선 3차원에서 구는 두 점으로부터 거리의 비가 일정한 점들의 집합임을 보이자. 원점과 <span class="math inline">\((d,0,0)\)</span> 사이의 거리의 비가 <span class="math inline">\(1:c\)</span> 인 점의 집합은</p>
+<p><span class="math display">\[
+c^2(x^2+y^2+z^2) = (x-d)^2+y^2+z^2
+\]</span></p>
+<p>이며 이는</p>
+<p><span class="math display">\[
+\left(x- \dfrac{d}{c^2-1}\right)^2 + y^2+z^2 =  \dfrac{c^2d^2}{(c^2-1)^2}
+\]</span></p>
+<p>이므로 구의 방정식이다.</p>
+<p>점지되어 있으므로 표면에서의 전위가 0 이다. 이제 구의 중심과 외부 전하를 잇는 직선상에 가상전하 <span class="math inline">\(q'\)</span> 을 놓고 구의 중심으로부터의 정전 포텐셜을 계산해 보자.</p>
+<p><span class="math display">\[
+\Phi(P) = \dfrac{1}{4\pi\epsilon_0} \left(\dfrac{q}{r_1} + \dfrac{q'}{r_2}\right)
+\]</span></p>
+<p>구의 표면에서 포텐셜이 <span class="math inline">\(0\)</span> 이어야 한다. 이를 풀면 구의 중심으로부터 <span class="math inline">\(a^2/b\)</span> 의 위치에 <span class="math inline">\(q'=-q(a/b)\)</span> 의 전하를 놓으면 원점으로부터 반경 <span class="math inline">\(a\)</span> 인 구의 표면의 전위가 <span class="math inline">\(0\)</span> 이 됨을 알 수 있다. 이제 도체 표면에서의 정전 포텐셜이 <span class="math inline">\(0\)</span> 이 아닌 경우를 알아보자. 접지는 전위를 <span class="math inline">\(0\)</span> 으로 고정시므로 이 경우 도체 구는 접지되어 있지 않아야 한다.</p>
+<p><strong>1.</strong> 도체의 알짜 전하가 <span class="math inline">\(0\)</span> 이며 졀연되어 있는 경우</p>
+<p>도체의 총 알짜 전하가 <span class="math inline">\(0\)</span> 이어야 하므로 구의 중심에 <span class="math inline">\(q''=-q\)</span> 인 가상전하를 위치시키면 된다.</p>
+<p><strong>2.</strong></p>
+</div>
 
 
+</div>
 </section>
 </section>
 
