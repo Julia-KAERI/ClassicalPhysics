@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,15 +34,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/vol1/vol1_3.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,7 +84,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -458,6 +457,14 @@ window.Quarto = {
   <li><a href="#sec-FLP_2_6_7" id="toc-sec-FLP_2_6_7" class="nav-link" data-scroll-target="#sec-FLP_2_6_7">II.6-7 영상법</a></li>
   <li><a href="#sec-FLP_2_6_8" id="toc-sec-FLP_2_6_8" class="nav-link" data-scroll-target="#sec-FLP_2_6_8">II.6-8 도체 평면 근처의 점전하</a></li>
   <li><a href="#sec-FLP_2_6_8" id="toc-sec-FLP_2_6_8" class="nav-link" data-scroll-target="#sec-FLP_2_6_8">II.6-9 대전된 구 근처의 점전하</a></li>
+  <li><a href="#sec-FLP_2_6_10" id="toc-sec-FLP_2_6_10" class="nav-link" data-scroll-target="#sec-FLP_2_6_10">II.6-10 평행판 축전지</a></li>
+  <li><a href="#sec-FLP_2_6_11" id="toc-sec-FLP_2_6_11" class="nav-link" data-scroll-target="#sec-FLP_2_6_11">II.6-11 고전압 붕괘</a></li>
+  </ul></li>
+  <li><a href="#ii.7-다양한-상황에서의-전기장-2" id="toc-ii.7-다양한-상황에서의-전기장-2" class="nav-link" data-scroll-target="#ii.7-다양한-상황에서의-전기장-2">II.7 다양한 상황에서의 전기장 2</a>
+  <ul class="collapse">
+  <li><a href="#sec-FLP_2_7_1" id="toc-sec-FLP_2_7_1" class="nav-link" data-scroll-target="#sec-FLP_2_7_1">II.7-1 전기장을 계산하는 방법</a></li>
+  <li><a href="#sec-FLP_2_7_2" id="toc-sec-FLP_2_7_2" class="nav-link" data-scroll-target="#sec-FLP_2_7_2">II.7-2 2차원 장;복소 함수</a></li>
+  <li><a href="#sec-FLP_2_7_3" id="toc-sec-FLP_2_7_3" class="nav-link" data-scroll-target="#sec-FLP_2_7_3">II.7-3 플라즈마 진동</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -489,7 +496,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>로런츠 힘</strong>
+<strong>로런츠 힘</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -535,7 +542,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>맥스웰 방정식의 적분 형태
+맥스웰 방정식의 적분 형태
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -564,7 +571,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>변위전류</strong>
+<strong>변위전류</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -604,7 +611,7 @@ I_D:=\epsilon_0 \dfrac{d}{dt} \int_S \boldsymbol{E \cdot} d\boldsymbol{a}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>맥스웰 방정식의 미분형태
+맥스웰 방정식의 미분형태
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -629,7 +636,7 @@ I_D:=\epsilon_0 \dfrac{d}{dt} \int_S \boldsymbol{E \cdot} d\boldsymbol{a}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>정전기와 정자기에서의 맥스웰 방정식
+정전기와 정자기에서의 맥스웰 방정식
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -694,7 +701,7 @@ W(unit) = -\int_a^b \boldsymbol{E\cdot}d\boldsymbol{l}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>정전 포텐셜</strong>
+<strong>정전 포텐셜</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -733,7 +740,7 @@ W(unit) = -\int_a^b \boldsymbol{E\cdot}d\boldsymbol{l}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>정전기장과 안정평형상태</strong>
+<strong>정전기장과 안정평형상태</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -749,7 +756,7 @@ W(unit) = -\int_a^b \boldsymbol{E\cdot}d\boldsymbol{l}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>라플라스 방정식의 특성</strong>
+<strong>라플라스 방정식의 특성</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -991,7 +998,7 @@ E_{\text{condurctor surface}} = \dfrac{\sigma_\text{sufrace}}{\epsilon_0}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>라플라시안 연산자</strong> <span class="math inline">\(\nabla^2\)</span>
+<strong>라플라시안 연산자</strong> <span class="math inline">\(\nabla^2\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1044,7 +1051,7 @@ E_{\text{condurctor surface}} = \dfrac{\sigma_\text{sufrace}}{\epsilon_0}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>전기 쌍극자 모먼트</strong>
+<strong>전기 쌍극자 모먼트</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1277,14 +1284,160 @@ c^2(x^2+y^2+z^2) = (x-d)^2+y^2+z^2
 <p><span class="math display">\[
 \Phi(P) = \dfrac{1}{4\pi\epsilon_0} \left(\dfrac{q}{r_1} + \dfrac{q'}{r_2}\right)
 \]</span></p>
-<p>구의 표면에서 포텐셜이 <span class="math inline">\(0\)</span> 이어야 한다. 이를 풀면 구의 중심으로부터 <span class="math inline">\(a^2/b\)</span> 의 위치에 <span class="math inline">\(q'=-q(a/b)\)</span> 의 전하를 놓으면 원점으로부터 반경 <span class="math inline">\(a\)</span> 인 구의 표면의 전위가 <span class="math inline">\(0\)</span> 이 됨을 알 수 있다. 이제 도체 표면에서의 정전 포텐셜이 <span class="math inline">\(0\)</span> 이 아닌 경우를 알아보자. 접지는 전위를 <span class="math inline">\(0\)</span> 으로 고정시므로 이 경우 도체 구는 접지되어 있지 않아야 한다.</p>
-<p><strong>1.</strong> 도체의 알짜 전하가 <span class="math inline">\(0\)</span> 이며 졀연되어 있는 경우</p>
-<p>도체의 총 알짜 전하가 <span class="math inline">\(0\)</span> 이어야 하므로 구의 중심에 <span class="math inline">\(q''=-q\)</span> 인 가상전하를 위치시키면 된다.</p>
-<p><strong>2.</strong> 도체</p>
+<p>구의 표면에서 포텐셜이 <span class="math inline">\(0\)</span> 이어야 한다. 이를 풀면 구의 중심으로부터 <span class="math inline">\(a^2/b\)</span> 의 위치에 <span class="math inline">\(q'=-q(a/b)\)</span> 의 전하를 놓으면 원점으로부터 반경 <span class="math inline">\(a\)</span> 인 구의 표면의 전위가 <span class="math inline">\(0\)</span> 이 됨을 알 수 있다.</p>
+<p><strong>도체 표면에서의 정전 포텐셜이 <span class="math inline">\(0\)</span> 이 아닌 경우</strong> : 접지는 전위를 <span class="math inline">\(0\)</span> 으로 고정시므로 이 경우 도체 구는 접지되어 있지 않아야 한다. 그리고 도체의 총 알짜 전하가 <span class="math inline">\(0\)</span> 이어야 하므로 구의 중심에 <span class="math inline">\(q''=-q\)</span> 인 가상전하를 위치시키면 된다. 그렇게 되면 구와 점전하 <span class="math inline">\(q\)</span> 사이에 인력이 작용할 것임을 알 수 있다. 그 원인은 무엇일까? 양전하를 구에 접근시키면, 양전하는 음전하를 끌어당기고 먼 쪽 표면에는 양전하만 남는다. 이 음전하에 의한 인력이 양전하에 의한 반발보다 크기 때문에 전체적으로 인력이 존재한다. <span class="math inline">\(q'\)</span> 와 <span class="math inline">\(q''\)</span> 에 의해 생성된 장에서 <span class="math inline">\(q\)</span> 에 작용하는 힘을 계산함으로써 인력이 얼마나 큰지 알 수 있다. 알차힘은 거리 <span class="math inline">\(b−(a^2/b)\)</span>에서 <span class="math inline">\(q\)</span>와 전하 <span class="math inline">\(q'=−(a/b)q\)</span> 사이의 인력과 거리 <span class="math inline">\(b\)</span> 에서 전하 <span class="math inline">\(q'''=+(a/b)q\)</span> 사이의 반발력의 합이다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="sec-FLP_2_6_10" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_6_10">II.6-10 평행판 축전지</h3>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-FLP_parallel_plate_condensor" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.11</strong></span> &nbsp;</p>
+<div id="fig-FLP_fig_2_6_12" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_fig_2_6_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_2_6/fig_2_6_12.png" class="img-fluid figure-img" width="350">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_fig_2_6_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.16: 파인만 물리학 강의 <span class="math inline">\(II\)</span>. Fig. 6-12. 평행판 축전지
+</figcaption>
+</figure>
+</div>
+<p>이제 다른 종류의 문제를 풀어보자. 위의 그림과 같이 면적이 <span class="math inline">\(A\)</span> 인 넖은 도체 판 2개가 거리 <span class="math inline">\(d\)</span> 만큼 떨어져 평행하게 위치해 있고 각각의 판에 <span class="math inline">\(+\sigma,\,-\sigma\)</span> 의 표면전하밀도를 갖는다고 하자. 도체 판이 각각 <span class="math inline">\(\phi_+,\,\phi_-\)</span> 의 정전 포텐셜을 갖는다면 전위차 <span class="math inline">\(V = \phi_+-\phi_0\)</span> 를 생각 할 수있다. 두 판 사이에는 균일한 전기장 <span class="math inline">\(E\)</span> 가 존재하며</p>
+<p><span id="eq-FLP_6_33"><span class="math display">\[
+V=Ed=\dfrac{\sigma}{\epsilon_0}d = \dfrac{d}{\epsilon_0 A}Q
+\tag{4.38}\]</span></span></p>
+<p>여기서 <span class="math inline">\(Q\)</span> 양전하로 대전된 판의 총 전하량이며 따라서 <span class="math inline">\(-Q\)</span> 가 음전하로 대전된 판의 총 전하량이 된다.</p>
+</div>
+</div>
+<p><br></p>
+<p><a href="#eq-FLP_6_33" class="quarto-xref">식&nbsp;<span>4.38</span></a> 에서 <span class="math inline">\(V\)</span> 는 <span class="math inline">\(Q\)</span> 에 비례하는데 이는 떨어져 있으며 한쪽에 <span class="math inline">\(+Q\)</span> 다른 한쪽에 <span class="math inline">\(-Q\)</span> 만큼의 전하가 대전된 두 도체 사이에 존재하는 관계이다. 도체의 표면은 등전위면이므로 <span class="math inline">\(Q=CV\)</span> 의 관계가 성립한다. <span class="math inline">\(C\)</span> 여기서 <span class="math inline">\(C\)</span> 를 <strong>capacity</strong> 라고 한다. 즉 평행한 금속판의 capacity 는 <span class="math inline">\(\epsilon_0 A/d\)</span> 이다. 물론 이 식은 근사식인데 평행판의 끝단에서는 전기장이 균일하지 않기 때문이다.</p>
+<div id="fig-FLP_fig_2_6_13" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_fig_2_6_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_2_6/fig_2_6_13.png" class="img-fluid figure-img" width="350">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_fig_2_6_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.17: 파인만 물리학 강의 <span class="math inline">\(II\)</span>. Fig. 6-13. 평행판 축전지 모서리에서의 전기장
+</figcaption>
+</figure>
+</div>
+<p>도체에 전하가 분포할 때 위의 그림과 같이 뾰족한 부분이 있다면 그 근처에서 전하 밀도가 더 높게 나타난다.</p>
+<p><br></p>
+</section>
+<section id="sec-FLP_2_6_11" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_6_11">II.6-11 고전압 붕괘</h3>
+<div id="fig-FLP_fig_2_6_14" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_fig_2_6_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_2_6/fig_2_6_14.png" class="img-fluid figure-img" width="350">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_fig_2_6_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.18: 파인만 물리학 강의 <span class="math inline">\(II\)</span>. Fig. 6-14. 도체의 뾰족한 부분 근처의 전기장의 크기는 매우 크다.
+</figcaption>
+</figure>
+</div>
+<p><span class="math inline">\(\boldsymbol{E}=-\nabla \Phi(\boldsymbol{r})\)</span> 임을 생각하면 도체의 뾰족한 부분 근처에서의 전기장의 세기 <span class="math inline">\(\|\boldsymbol{E}\|\)</span> 가 그렇지 않은 부분보다 크다는 것을 알 수 있다. 가우스 법칙을 이용한다면 따라서 뾰족한 부분의 표면 전하 밀도가 더 높다는 것을 알 수 있다.</p>
+<p>이를 쉽게 확인할 수 있다. 아래와 같이 크기가 다른 두 금속공이 금속 실로 연결되어 있다고 하자.</p>
+<div id="fig-FLP_fig_2_6_15" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_fig_2_6_15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_2_6/fig_2_6_15.png" class="img-fluid figure-img" width="350">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_fig_2_6_15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.19: 파인만 물리학 강의 <span class="math inline">\(II\)</span>. Fig. 6-15. 같은 정전 포텐셜을 갖는 두 금속공
+</figcaption>
+</figure>
+</div>
+<p>실에 의한 효과는 두 금속공의 전위가 일치한다는 것을 제외하면 무시 할 수 있다. 우선 큰 공에 대전된 전하를 <span class="math inline">\(Q\)</span> 라고 하고 반지름을 <span class="math inline">\(a\)</span> 라고 하면 큰 공의 표면의 정전포텐셜 <span class="math inline">\(\phi_1 = (1/4\pi\epsilon_0)(Q/a)\)</span> 이며, 작은공에 대전된 전하를 <span class="math inline">\(q\)</span> 라고 하고 반지름을 <span class="math inline">\(b\)</span> 라고 하면 작은 공의 표면의 정전포텐셜 <span class="math inline">\(\phi_2 = (1/4\pi\epsilon_0)(q/b)\)</span> 이다. <span class="math inline">\(\phi_1=\phi_2\)</span> 이므로 <span class="math inline">\(Qb=qa\)</span> 의 관계를 얻는다.</p>
+<p>이제 큰 공의 바로 밖의 전기장 <span class="math inline">\(E_a\)</span> 와 작은공 바로 밖의 전기장 <span class="math inline">\(E_b\)</span> 는</p>
+<p><span id="eq-FLP_2_6_35"><span class="math display">\[
+\dfrac{E_a}{E_b}=\dfrac{Q/a^2}{Q/b^2} = \dfrac{b}{a}
+\tag{4.39}\]</span></span></p>
+<p>이다. 즉 <span class="math inline">\(E_a&lt; E_b\)</span> 이다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="ii.7-다양한-상황에서의-전기장-2" class="level2">
+<h2 class="anchored" data-anchor-id="ii.7-다양한-상황에서의-전기장-2">II.7 다양한 상황에서의 전기장 2</h2>
+<section id="sec-FLP_2_7_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_7_1">II.7-1 전기장을 계산하는 방법</h3>
+<p>우리는 6 장에서 다양한 상황에서의 전기장을 계산하는 법을 알았으며, 도체가 있을 때의 전하 분포를 알 수 없으므로 어렵다는 것을 알게되었다. 도체가 있을 경우 전하는 표면에만 분포하며 도체 표면이 등전위면을 이룬다는 사실만 알 수 있다. 이런 문제를 풀기 위해 영상법과 같은 간접적인 방법을 사용하기도 한다. 그러나 우리가 풀고자 하는 문제가 영상법과 같은 방식을 적용할 수 없다면 직접 풀어야 한다. 즉 주어진 경계 조건에서의 라플라스 방정식</p>
+<p><span id="eq-FLP_2_7_1"><span class="math display">\[
+\nabla^2 \Phi = 0
+\tag{4.40}\]</span></span></p>
+<p>을 풀어야 한다. 이 방정식은 오랬동안 연구되었지만 아주 간단한 몇가지 경우를 제외한다면 수치해석적으로 풀어야 한다. 경계값 문제는 물리적으로 유사한 대상에 대한 측정으로도 해결될 수 있다. 라플라스 방정식은 정상 상태의 열 흐름, 비회전성 유체 흐름, 확장된 매질에서의 전류 흐름, 그리고 탄성 막의 변형 등 다양한 물리적 상황에서 발생하므로 우리가 해결하고자 하는 전기 문제와 유사한 물리 모델을 자주 설정할 수 있다. 모델에 적절한 유사한 물리량을 측정함으로써, 관심 있는 문제에 대한 해를 얻을 수 있다. 예를 들면 정전기학에서 2차원 문제를 해결하기 위해 전해 탱크를 사용하는 것이다. 이것은 균일한 전도성 매질에서의 전위에 대한 미분 방정식이 진공의 경우와 동일하기 때문에 작동한다.</p>
+<p>만약 한 방향에 대해 물리적 장의 변화가 없거나 거의 없는 경우 문제를 2차원 문제로 바꿀 수 있으며, 2차원 문제는 일반적으로 3차원 문제보다 훨씬 쉽다.</p>
+<p><br></p>
+</section>
+<section id="sec-FLP_2_7_2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_7_2">II.7-2 2차원 장;복소 함수</h3>
+<p><span class="math inline">\(F:\mathbb{C}\to C\)</span> 함수는 함수의 값을 실수부와 허수부로 나누어 다음과 같이 표현 할 수 있다.</p>
+<p><span id="eq-FLP_2_7_4"><span class="math display">\[
+F(\zeta=x+iy) = U(x,\,y) + iV(x,\,y).
+\tag{4.41}\]</span></span></p>
+<p>여기서 <span class="math inline">\(U(x,\,y),\, V(x,\,y)\)</span> 는 실함수이다. 그리고 <span class="math inline">\(F\)</span> 가 미분가능하다는 것과 다음 조건은 동치이다.</p>
+<p><span id="eq-FLP_2_7_7"><span class="math display">\[
+\dfrac{\partial U}{\partial x} = \dfrac{\partial V}{\partial y},\qquad \dfrac{\partial V}{\partial x} = - \dfrac{\partial U}{\partial y}.
+\tag{4.42}\]</span></span></p>
+<p>즉</p>
+<p><span id="eq-FLP_2_7_7_ex"><span class="math display">\[
+(\nabla U) \boldsymbol{\cdot} (\nabla V)=0
+\tag{4.43}\]</span></span></p>
+<p>이다. 이로부터 <span class="math inline">\(U(x,\,y)=C\)</span> 와 <span class="math inline">\(V(x,\,y)=D\)</span> 에 대한 등위곡선(level curve) 가 만날 때 접점에서의 기울기는 서로 수직이라는 것을 알 수 있다. 또한 <span class="math inline">\(U,\,V\)</span> 가 2차원에서의 라플라스 방정식을 만족한다는 것을 알 수 있다.</p>
+<p><span id="eq-FLP_2_7_9"><span class="math display">\[
+\dfrac{\partial^2 U}{\partial x^2} + \dfrac{\partial^2 U}{\partial y^2} = \dfrac{\partial^2 V}{\partial x^2} + \dfrac{\partial^2 V}{\partial y^2} =0.
+\tag{4.44}\]</span></span></p>
+<p>현대 수학에서는 어떤 열린 집합에서 미분가능한 복소함수를 <strong>정칙 함수 (holomorphic)</strong> 라고 하고 전체 복소수에서 미분가능한 복소함수를 <strong>전해석 함수 (entire function)</strong> 이라고 한다. 예를 들어</p>
+<p><span class="math display">\[
+F(\zeta) = \zeta^2 = (x^2-y^2) + i(2xy)
+\]</span></p>
+<p>는 전해석 함수이다. 여기서 <span class="math inline">\(x^2+y^2=A,\, 2xy=B\)</span> 로 놓고 그린 등위 곡선은 아래 그림과 같다.</p>
+<div id="fig-FLP_2_7_1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_2_7_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_2_7/fig_2_7_1.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_2_7_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.20: 파인만 물리학 강의 <span class="math inline">\(II\)</span> Fig. 7-1.
+</figcaption>
+</figure>
+</div>
+<p><span class="math inline">\(A=0\)</span> 일 때는 <span class="math inline">\(y=x,\,y=-x\)</span> 이며 <span class="math inline">\(2xy=B\)</span> 는 각각의 <span class="math inline">\(B\)</span> 값에서 <span class="math inline">\(A=0\)</span> 인 곡선에 수직하다. 직각으로 꺾인 <span class="math inline">\(A=0\)</span> 인 모양의 금속판(<a href="#fig-FLP_2_7_2" class="quarto-xref">그림&nbsp;<span>4.21</span></a> 의 C 근처)에 대해 <span class="math inline">\(B\)</span> 는 금속판 근처에서의 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 의 흐름을 보여주며 <span class="math inline">\(A\ne 0\)</span> 은 등전위면의 모양을 보여준다.</p>
+<div id="fig-FLP_2_7_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_2_7_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_2_7/fig_2_7_2.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_2_7_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.21: 파인만 물리학 강의 <span class="math inline">\(II\)</span> Fig. 7-2.
+</figcaption>
+</figure>
+</div>
+<p>혹은 아래 그림(<a href="#fig-FLP_2_7_3" class="quarto-xref">그림&nbsp;<span>4.22</span></a>)과 같이 쌍곡선 모양의 금속판과 여기에 가해진 정전 포텐셜에 대해 전기장 흐름을 보여준다.</p>
+<div id="fig-FLP_2_7_3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_2_7_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_2_7/fig_2_7_3.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_2_7_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.22: 파인만 물리학 강의 <span class="math inline">\(II\)</span> Fig. 7-3.
+</figcaption>
+</figure>
+</div>
+<p><br></p>
+</section>
+<section id="sec-FLP_2_7_3" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_7_3">II.7-3 플라즈마 진동</h3>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-FLP_plasma_oscillation" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.12 (<strong>플라즈마 진동</strong>)</strong></span> 이온들과 전자들이 가스상태로 있는 것을 플라즈마라고 한다. 예를 들어 지구 상공 약 60~1,000 <span class="math inline">\(km\)</span> 에 위치한 전리층(이온층, Ionosphere)은 태양 복사 에너지에 의해 대기 기체가 이온화되어 양이온과 자유전자가 밀집된 플라즈마 상태이다. <span class="math inline">\(n_0\)</span> 가</p>
+</div>
 </div>
 
 
-</div>
 </section>
 </section>
 
@@ -1340,14 +1493,13 @@ c^2(x^2+y^2+z^2) = (x-d)^2+y^2+z^2
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
