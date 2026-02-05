@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,15 +34,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/vol1/vol1_3.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,7 +84,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -103,7 +102,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -457,21 +456,28 @@ window.Quarto = {
   <li><a href="#sec-FLP_2_6_6" id="toc-sec-FLP_2_6_6" class="nav-link" data-scroll-target="#sec-FLP_2_6_6">II.6-6 대전된 도체에 의한 전기장</a></li>
   <li><a href="#sec-FLP_2_6_7" id="toc-sec-FLP_2_6_7" class="nav-link" data-scroll-target="#sec-FLP_2_6_7">II.6-7 영상법</a></li>
   <li><a href="#sec-FLP_2_6_8" id="toc-sec-FLP_2_6_8" class="nav-link" data-scroll-target="#sec-FLP_2_6_8">II.6-8 도체 평면 근처의 점전하</a></li>
-  <li><a href="#sec-FLP_2_6_8" id="toc-sec-FLP_2_6_8" class="nav-link" data-scroll-target="#sec-FLP_2_6_8">II.6-9 대전된 구 근처의 점전하</a></li>
+  <li><a href="#sec-FLP_2_6_9" id="toc-sec-FLP_2_6_9" class="nav-link" data-scroll-target="#sec-FLP_2_6_9">II.6-9 대전된 구 근처의 점전하</a></li>
   <li><a href="#sec-FLP_2_6_10" id="toc-sec-FLP_2_6_10" class="nav-link" data-scroll-target="#sec-FLP_2_6_10">II.6-10 평행판 축전지</a></li>
-  <li><a href="#sec-FLP_2_6_11" id="toc-sec-FLP_2_6_11" class="nav-link" data-scroll-target="#sec-FLP_2_6_11">II.6-11 고전압 붕괘</a></li>
+  <li><a href="#sec-FLP_2_6_11" id="toc-sec-FLP_2_6_11" class="nav-link" data-scroll-target="#sec-FLP_2_6_11">II.6-11 고전압 붕괴</a></li>
   </ul></li>
   <li><a href="#ii.7-다양한-상황에서의-전기장-2" id="toc-ii.7-다양한-상황에서의-전기장-2" class="nav-link" data-scroll-target="#ii.7-다양한-상황에서의-전기장-2">II.7 다양한 상황에서의 전기장 2</a>
   <ul class="collapse">
   <li><a href="#sec-FLP_2_7_1" id="toc-sec-FLP_2_7_1" class="nav-link" data-scroll-target="#sec-FLP_2_7_1">II.7-1 전기장을 계산하는 방법</a></li>
   <li><a href="#sec-FLP_2_7_2" id="toc-sec-FLP_2_7_2" class="nav-link" data-scroll-target="#sec-FLP_2_7_2">II.7-2 2차원 장;복소 함수</a></li>
   <li><a href="#sec-FLP_2_7_3" id="toc-sec-FLP_2_7_3" class="nav-link" data-scroll-target="#sec-FLP_2_7_3">II.7-3 플라즈마 진동</a></li>
+  <li><a href="#sec-FLP_2_7_4" id="toc-sec-FLP_2_7_4" class="nav-link" data-scroll-target="#sec-FLP_2_7_4">II.7-4 전해질 안의 콜로이드 입자</a></li>
+  <li><a href="#sec-FLP_2_7_4" id="toc-sec-FLP_2_7_4" class="nav-link" data-scroll-target="#sec-FLP_2_7_4">II.7-5 격자의 정전기장</a></li>
+  </ul></li>
+  <li><a href="#ii.8-정전기-에너지" id="toc-ii.8-정전기-에너지" class="nav-link" data-scroll-target="#ii.8-정전기-에너지">II.8 정전기 에너지</a>
+  <ul class="collapse">
+  <li><a href="#sec-FLP_2_8_1" id="toc-sec-FLP_2_8_1" class="nav-link" data-scroll-target="#sec-FLP_2_8_1">II.8-1 전하의 정전기 에너지. 균일한 공</a></li>
+  <li><a href="#sec-FLP_2_8_2" id="toc-sec-FLP_2_8_2" class="nav-link" data-scroll-target="#sec-FLP_2_8_2">II.8-2 축전지의 에너지. 대전된 도체에 작용하는 힘</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -497,7 +503,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>로런츠 힘</strong>
+<strong>로런츠 힘</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -543,7 +549,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>맥스웰 방정식의 적분 형태
+맥스웰 방정식의 적분 형태
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -572,7 +578,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>변위전류</strong>
+<strong>변위전류</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -612,7 +618,7 @@ I_D:=\epsilon_0 \dfrac{d}{dt} \int_S \boldsymbol{E \cdot} d\boldsymbol{a}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>맥스웰 방정식의 미분형태
+맥스웰 방정식의 미분형태
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -637,7 +643,7 @@ I_D:=\epsilon_0 \dfrac{d}{dt} \int_S \boldsymbol{E \cdot} d\boldsymbol{a}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>정전기와 정자기에서의 맥스웰 방정식
+정전기와 정자기에서의 맥스웰 방정식
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -702,7 +708,7 @@ W(unit) = -\int_a^b \boldsymbol{E\cdot}d\boldsymbol{l}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>정전 포텐셜</strong>
+<strong>정전 포텐셜</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -741,7 +747,7 @@ W(unit) = -\int_a^b \boldsymbol{E\cdot}d\boldsymbol{l}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>정전기장과 안정평형상태</strong>
+<strong>정전기장과 안정평형상태</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -757,7 +763,7 @@ W(unit) = -\int_a^b \boldsymbol{E\cdot}d\boldsymbol{l}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>라플라스 방정식의 특성</strong>
+<strong>라플라스 방정식의 특성</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -999,7 +1005,7 @@ E_{\text{condurctor surface}} = \dfrac{\sigma_\text{sufrace}}{\epsilon_0}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>라플라시안 연산자</strong> <span class="math inline">\(\nabla^2\)</span>
+<strong>라플라시안 연산자</strong> <span class="math inline">\(\nabla^2\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1052,7 +1058,7 @@ E_{\text{condurctor surface}} = \dfrac{\sigma_\text{sufrace}}{\epsilon_0}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>전기 쌍극자 모먼트</strong>
+<strong>전기 쌍극자 모먼트</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1257,8 +1263,8 @@ Q_{\text{total induced}} = \int \sigma \,dxdy = -q.
 </div>
 <p><br></p>
 </section>
-<section id="sec-FLP_2_6_8" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_2_6_8">II.6-9 대전된 구 근처의 점전하</h3>
+<section id="sec-FLP_2_6_9" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_6_9">II.6-9 대전된 구 근처의 점전하</h3>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-FLP_image_method_sphere" class="theorem example">
 <p><span class="theorem-title"><strong>예제 4.10</strong></span> &nbsp;</p>
@@ -1329,7 +1335,7 @@ V=Ed=\dfrac{\sigma}{\epsilon_0}d = \dfrac{d}{\epsilon_0 A}Q
 <p><br></p>
 </section>
 <section id="sec-FLP_2_6_11" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_2_6_11">II.6-11 고전압 붕괘</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_2_6_11">II.6-11 고전압 붕괴</h3>
 <div id="fig-FLP_fig_2_6_14" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_fig_2_6_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1361,7 +1367,7 @@ V=Ed=\dfrac{\sigma}{\epsilon_0}d = \dfrac{d}{\epsilon_0 A}Q
 <p><br></p>
 </section>
 </section>
-<section id="ii.7-다양한-상황에서의-전기장-2" class="level2">
+<section id="ii.7-다양한-상황에서의-전기장-2" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="ii.7-다양한-상황에서의-전기장-2">II.7 다양한 상황에서의 전기장 2</h2>
 <section id="sec-FLP_2_7_1" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_2_7_1">II.7-1 전기장을 계산하는 방법</h3>
@@ -1421,7 +1427,7 @@ F(\zeta) = \zeta^2 = (x^2-y^2) + i(2xy)
 <div id="fig-FLP_2_7_3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_2_7_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/fig_2_7/fig_2_7_3.png" class="img-fluid figure-img" width="400">
+<img src="figures/fig_2_7/fig_2_7_3.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_2_7_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;4.22: 파인만 물리학 강의 <span class="math inline">\(II\)</span> Fig. 7-3.
@@ -1430,11 +1436,134 @@ F(\zeta) = \zeta^2 = (x^2-y^2) + i(2xy)
 </div>
 <p><br></p>
 </section>
-<section id="sec-FLP_2_7_3" class="level3">
+<section id="sec-FLP_2_7_3" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="sec-FLP_2_7_3">II.7-3 플라즈마 진동</h3>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-FLP_plasma_oscillation" class="theorem example">
-<p><span class="theorem-title"><strong>예제 4.12 (<strong>플라즈마 진동</strong>)</strong></span> 이온들과 전자들이 가스상태로 있는 것을 플라즈마라고 한다. 예를 들어 지구 상공 약 60~1,000 <span class="math inline">\(km\)</span> 에 위치한 전리층(이온층, Ionosphere)은 태양 복사 에너지에 의해 대기 기체가 이온화되어 양이온과 자유전자가 밀집된 플라즈마 상태이다. <span class="math inline">\(n_0\)</span> 가</p>
+<p><span class="theorem-title"><strong>예제 4.12 (<strong>1차원 플라즈마 진동</strong>)</strong></span> 이온들과 전자들이 가스상태로 있는 것을 플라즈마라고 한다. 예를 들어 지구 상공 약 60~1,000 <span class="math inline">\(km\)</span> 에 위치한 전리층(이온층, Ionosphere)은 태양 복사 에너지에 의해 대기 기체가 이온화되어 양이온과 자유전자가 밀집된 플라즈마 상태이다.</p>
+<p>전기적으로 중성인 플라즈마에서 평행상태일 때의 양전하 및 음전하의 밀도를 <span class="math inline">\(n_0\)</span> 라고 하자. 만약 한 지역의 전자밀도가 증가하면 그들이 서로 밀어내므로 원래의 위치로 돌아가려 하겠지만 원위치에서 운동에너지를 가지고 있기 때문에 평형 위치에 멈추지 않고 더 진행한다. 즉 이 전자들은 진동하게 된다. 상황은 음파(sound wave) 와 비슷하다.</p>
+<div id="fig-FLP_2_7_6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_2_7_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_2_7/fig_2_7_6.png" class="img-fluid figure-img" width="350">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_2_7_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.23: 파인만 물리학 강의 <span class="math inline">\(II\)</span> Fig. 7-4. 플라즈마 파의 운동. 평면 <span class="math inline">\(a\)</span> 의 전자들은 <span class="math inline">\(a'\)</span> 으로 이동하며 <span class="math inline">\(b\)</span> 의 전자들은 <span class="math inline">\(b'\)</span> 으로 이동한다.
+</figcaption>
+</figure>
+</div>
+<p>여기서는 1차원 플라즈마 진동에 대해서만 다루기로 하자. 전자가 <span class="math inline">\(x\)</span> 방향으로만 움직인다고 하자. 시간 <span class="math inline">\(t\)</span> 에서 전자들이 평형 위치인 <span class="math inline">\(x\)</span> 에 있다가 <span class="math inline">\(s(x,\,t)\)</span> 만큼 이동했다고 하자. 상황은 <a href="#fig-FLP_2_7_6" class="quarto-xref">그림&nbsp;<span>4.23</span></a> 와 같다.</p>
+<p><span class="math inline">\(a,\,b\)</span> 두 평면상에 위치한 전자가 <span class="math inline">\(a',\,b'\)</span> 평면상으로 움직였다고 하자. 평형상태의 전자의 1차원 밀도를 <span class="math inline">\(n_0\)</span> 라고 하면 전자의 갯수는 <span class="math inline">\(n_0\Delta x\)</span> 이며 이동한 상황에서의 전자 밀도는 다음과 같다.</p>
+<p><span id="eq-FLP_2_7_16"><span class="math display">\[
+n = \dfrac{n_0 \Delta x}{\Delta x + \Delta s} = \dfrac{n_0}{1+(\Delta s/\Delta x)}.
+\tag{4.45}\]</span></span></p>
+<p>이다. <span class="math inline">\(\Delta s\Delta x \ll 1\)</span> 이면 위식은 아래와 같이 근사 할 수 있다.</p>
+<p><span id="eq-FLP_2_7_17"><span class="math display">\[
+n=n_0 \left(1-\dfrac{\Delta s}{\Delta x}\right).
+\tag{4.46}\]</span></span></p>
+<p>여기서 양전하의 밀도는 <span class="math inline">\(n_0\)</span> 이며, 각각의 전자의 전하를 <span class="math inline">\(-q_e\)</span> 라고 하면 전하밀도는</p>
+<p><span id="eq-FLP_2_7_18"><span class="math display">\[
+\rho = -(n-n_0)q_e = n_0 q_e \dfrac{ds}{dx}
+\tag{4.47}\]</span></span></p>
+<p>이다. 멕스웰 방정식 <span class="math inline">\(\nabla \boldsymbol{\cdot E} = \rho/\epsilon_e\)</span> 에 의해</p>
+<p><span class="math display">\[
+\dfrac{\partial E_x}{\partial x} = \dfrac{n_0 q_e}{\epsilon_0}\dfrac{\partial s}{\partial x}
+\]</span></p>
+<p>이므로</p>
+<p><span class="math display">\[
+E_x = \dfrac{n_0 q_e}{\epsilon_0} s + K,\text{where }K=\text{constant.}
+\]</span></p>
+<p>이다. 여기서 <span class="math inline">\(s=0\)</span> 일 때 <span class="math inline">\(E_x=0\)</span> 이어야 하므로 <span class="math inline">\(K=0\)</span> 이다. 이 전기장에 의해 전자가 받는 힘은</p>
+<p><span class="math display">\[
+F_x = -\dfrac{n_0 q_e^2}{\epsilon_0}s
+\]</span></p>
+<p>이므로 전자는</p>
+<p><span id="eq-FLP_2_7_25"><span class="math display">\[
+\omega_p = \sqrt{\dfrac{n_0 q_e^2}{m_e\epsilon_0}}
+\tag{4.48}\]</span></span></p>
+<p>의 각진동수를 갖는 단순조화진동을 한다. 여기서 <span class="math inline">\(m_e\)</span> 는 전자의 질량이며 <span class="math inline">\(\omega_p\)</span> 를 <strong>플라즈마 진동수 (plasma frequency)</strong> 라고 한다. 즉 플라즈마의 교란이 전자의 평형 위치에 대해 각진동수 <span class="math inline">\(\omega_p\)</span> 인 자유 진동을 일으키며, 이는 전자 밀도의 제곱근에 비례한다. 플라즈마 전자는 <span class="math inline">\(I\)</span> 권 23 장에서 설명한 것과 같은 공명 시스템처럼 행동한다.</p>
+</div>
+</div>
+<section id="플라즈마의-공명의-효과" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="플라즈마의-공명의-효과"><strong>플라즈마의 공명의 효과</strong></h4>
+<p><strong>1</strong>. 전리층을 통해 전파를 보낼 때 그 주파수가 플라즈마 주파수보다 높을 때만 침투할 수 있다. 그렇지 않으면 신호가 다시 반사된다. 우주에서 위성과 통신하려면 고주파를 사용해야 하는 반면에, 지평선 너머의 라디오 방송국과 통신하고자 한다면, 신호가 지구로 반사되도록 플라즈마 주파수보다 낮은 주파수를 사용해야 한다.</p>
+<div class="page-columns page-full"><p><strong>2</strong>. 금속은 양이온과 자유 전자로 이루어진 플라즈마로 간주 할 수 있다. 밀도 <span class="math inline">\(n_0\)</span> 가 매우 높으므로 <span class="math inline">\(\omega_p\)</span> 도 매우 크지만 여전히 전자 진동을 관찰할 수 있어야 한다. 양자역학에 따르면, 자연 주파수 <span class="math inline">\(\omega_p\)</span> 를 가진 조화 진동자의 에너지 준위는 <span class="math inline">\(\hbar \omega_p\)</span> 만큼 간격이 있다. 그렇다면, 예를 들어 알루미늄 호일을 통해 전자를 발사하고 반대편의 전자 에너지를 매우 정밀하게 측정한다면, 전자가 때때로 플라즈마 진동에 <span class="math inline">\(\hbar \omega_p\)</span> 만큼의 에너지를 잃을것으로 예상되며 실제로도 그러하다. 1936년에 처음 실험적으로 관찰된 바에 따르면, 몇 백에서 몇 천 전자볼트의 에너지를 가진 전자는 얇은 금속 호일에서 산란하거나 통과할 때 점프하면서 에너지를 잃는 것으로 나타났습니다. 그 효과는 1953년까지 이해되지 않았으나 Bohm 과 Pines<span class="math inline">\(^1\)</span> 는 금속 내 플라즈마 진동의 양자 여기로 설명될 수 있음을 보여주었습니다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^1\)</span> For some recent work and a bibliography see C. J. Powell and J. B. Swann, Phys. Rev.&nbsp;<strong>115</strong>, 869 (1959).</span></div></div>
+<p><br></p>
+</section>
+</section>
+<section id="sec-FLP_2_7_4" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_7_4">II.7-4 전해질 안의 콜로이드 입자</h3>
+<p>콜로이드는 1 <span class="math inline">\(\text{nm}\)</span> ~ 1 <span class="math inline">\(\mathrm{\mu m}\)</span> 정도 크기의 입자로 용매에 퍼져 있는 것을 말한다. 전하를 띄지 않은 콜로이드는 큰 덩어리로 응집되는 경향이 있으며, 전하를 띈 콜로이드는 전하 때문에 서로 반발하여 응집되는 경향이 없다. 또한 물에 약간의 염분이 양이온과 음이온으로 분해되어 있는 용액을 전해질이라고 한다. 콜로이드 입자가 양전하를 띈다면 음이온은 콜로이드 입자에 끌리며 양이온은 반발한다.</p>
+<p>이제 전해질 속의 콜로이드를 생각하자. 문제를 단순하게 하기 위해 일차원적인 경우만 생각한다. 콜로이드 입자를 매우 큰 반경을 가진 구라고 생각한다면, 그 표면의 작은 부분을 평면으로 간주할 수 있다. 이온에 의한 전하 분포 <span class="math inline">\(\rho(x)\)</span> 를 생각하자. 1차원 정전 포텐셜 <span class="math inline">\(\Phi\)</span> 는</p>
+<p><span id="eq-FLP_2_7_28"><span class="math display">\[
+\dfrac{d^2\Phi}{dx^2} = - \dfrac{\rho}{\epsilon_0}
+\tag{4.49}\]</span></span></p>
+<p>를 만족한다.</p>
+<p>.. to be done …</p>
+<p><br></p>
+</section>
+<section id="sec-FLP_2_7_4" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_7_4">II.7-5 격자의 정전기장</h3>
+<p><br></p>
+</section>
+</section>
+<section id="ii.8-정전기-에너지" class="level2">
+<h2 class="anchored" data-anchor-id="ii.8-정전기-에너지">II.8 정전기 에너지</h2>
+<section id="sec-FLP_2_8_1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_8_1">II.8-1 전하의 정전기 에너지. 균일한 공</h3>
+<p>전하 <span class="math inline">\(q_1,\,q_2\)</span> 가 <span class="math inline">\(r_{12}\)</span> 만큼의 거리에 있도록 해줘야 하는 일은 다음과 같다는 것을 안다.</p>
+<p><span id="eq-FLP_2_8_1"><span class="math display">\[
+\dfrac{q_1q_2}{4\pi\epsilon_0 r_{12}}.
+\tag{4.50}\]</span></span></p>
+<p>이것을 두 전하의 분포에 대한 <strong>정전기 에너지 (electrostatic energy)</strong> 라고 한다. 이제 <span class="math inline">\(N\)</span> 개의 전하 <span class="math inline">\(q_1,\ldots,\,q_{N}\)</span> 으로 이루어진 시스템을 만들기 위해 해줘야 하는 일은 이 전하 분포에 대한 정전기 에너지 <span class="math inline">\(U\)</span> 라고 하면 <span class="math inline">\(U\)</span> 는 다음과 같다.</p>
+<p><span id="eq-FLOP_2_8_3"><span class="math display">\[
+U = \sum_{\text{all pairs}}\dfrac{q_iq_j}{4\pi\epsilon_0 r_{ij}}.
+\tag{4.51}\]</span></span></p>
+<p>만약 점전하가 아닌 전하 분포 <span class="math inline">\(\rho\)</span> 가 주어졌다면 <a href="#eq-FLOP_2_8_3" class="quarto-xref">식&nbsp;<span>4.51</span></a> 의 <span class="math inline">\(\sum\)</span> 은 적분으로 바뀐다.</p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-FLP_electrostatic_energy_of_uniformly_charged_sphere" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.13 (<strong>균일하게 대전된 구의 정전기 에너지</strong>)</strong></span> 균일하게 대전된 정전기 에너지를 얇은 구 껍질을 차근차근 쌓아가는 방식으로 계산하자. 균일한 전하 밀도를 <span class="math inline">\(\rho\)</span> 라고 하자. 반지름 <span class="math inline">\(r\)</span> 만큼의 구에 전하가 쌓였을 때 이 반지름을 <span class="math inline">\(r+dr\)</span> 만큼 늘리도록 쌓는데 필요한 에너지 <span class="math inline">\(dU\)</span> 는 다음과 같다.</p>
+<p><span id="eq-FLP_2_8_4"><span class="math display">\[
+dU = \dfrac{Q_r dQ}{4\pi\epsilon_0 r}.
+\tag{4.52}\]</span></span></p>
+<p>여기서 <span class="math inline">\(Q_r\)</span> 은 반지름 <span class="math inline">\(r\)</span> 인 구의 총 전하량으로</p>
+<p><span class="math display">\[
+Q_r = \rho \cdot \dfrac{4}{3}\pi r^3
+\]</span></p>
+<p>이며 <span class="math inline">\(dQ\)</span> 는 반지름을 <span class="math inline">\(dr\)</span> 만큼 늘리는데 필요한 총 전하로</p>
+<p><span class="math display">\[
+dQ = \rho \cdot 4\phi r^2 dr
+\]</span></p>
+<p>이므로</p>
+<p><span class="math display">\[
+dU = \dfrac{4\pi \rho^2 r^4\,dr}{3\epsilon_0}
+\]</span></p>
+<p>이며 이를 <span class="math inline">\(r=0\)</span> 부터 <span class="math inline">\(r=a\)</span> 까지 적분하면 다음과 같다.</p>
+<p><span id="eq-FLP_2_8_7"><span class="math display">\[
+U=\dfrac{4\pi\rho^2 a^5}{15\epsilon_0} = \dfrac{3}{5} \dfrac{Q^2}{4\pi\epsilon_0 a}
+\tag{4.53}\]</span></span></p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="sec-FLP_2_8_2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_8_2">II.8-2 축전지의 에너지. 대전된 도체에 작용하는 힘</h3>
+<p>이제 대전된 도체를 대전시키기 위해 필요한 에너지를 구해보자.</p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-FLP_electrostatic_energy_of_charged_conductor" class="theorem example">
+<p><span class="theorem-title"><strong>예제 4.14 (<strong>대전된 도체의 에너지</strong>)</strong></span> 대전된 두 도체, 즉 축전기를 생각하자. 도체 사이의 전위차 <span class="math inline">\(V\)</span> 와 전하 <span class="math inline">\(Q\)</span> 사이에는</p>
+<p><span id="eq-FLP_2_8_8"><span class="math display">\[
+V=\dfrac{Q}{C}
+\tag{4.54}\]</span></span></p>
+<p>의 관계가 성립한다. <span class="math inline">\(V\)</span> 의 전위차를 유지하며 한쪽 도체의 전하 <span class="math inline">\(dQ\)</span> 를 다른쪽 도체로 이동시키는데 필요한 에너지 <span class="math inline">\(dU = Vdq\)</span> 이다. <a href="#eq-FLP_2_8_8" class="quarto-xref">식&nbsp;<span>4.54</span></a> 로부터</p>
+<p><span class="math display">\[
+dU = \dfrac{QdQ}{C}
+\]</span></p>
+<p>이며 <span class="math inline">\(dQ\)</span> 를 <span class="math inline">\(0\)</span> 부터 최종 전하 <span class="math inline">\(Q\)</span> 까지 적분하면</p>
+<p><span id="eq-FLP_2_8_9"><span class="math display">\[
+U = \dfrac{1}{2}\dfrac{Q^2}{C} = \dfrac{1}{2}CV^2
+\tag{4.55}\]</span></span></p>
+<p>이다.</p>
 </div>
 </div>
 
@@ -1494,14 +1623,13 @@ F(\zeta) = \zeta^2 = (x^2-y^2) + i(2xy)
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
