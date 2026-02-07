@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/vol1/vol1_3.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -457,7 +458,7 @@ window.Quarto = {
   <li><a href="#sec-FLP_2_6_7" id="toc-sec-FLP_2_6_7" class="nav-link" data-scroll-target="#sec-FLP_2_6_7">II.6-7 영상법</a></li>
   <li><a href="#sec-FLP_2_6_8" id="toc-sec-FLP_2_6_8" class="nav-link" data-scroll-target="#sec-FLP_2_6_8">II.6-8 도체 평면 근처의 점전하</a></li>
   <li><a href="#sec-FLP_2_6_9" id="toc-sec-FLP_2_6_9" class="nav-link" data-scroll-target="#sec-FLP_2_6_9">II.6-9 대전된 구 근처의 점전하</a></li>
-  <li><a href="#sec-FLP_2_6_10" id="toc-sec-FLP_2_6_10" class="nav-link" data-scroll-target="#sec-FLP_2_6_10">II.6-10 평행판 축전지</a></li>
+  <li><a href="#sec-FLP_2_6_10" id="toc-sec-FLP_2_6_10" class="nav-link" data-scroll-target="#sec-FLP_2_6_10">II.6-10 평행판 축전기</a></li>
   <li><a href="#sec-FLP_2_6_11" id="toc-sec-FLP_2_6_11" class="nav-link" data-scroll-target="#sec-FLP_2_6_11">II.6-11 고전압 붕괴</a></li>
   </ul></li>
   <li><a href="#ii.7-다양한-상황에서의-전기장-2" id="toc-ii.7-다양한-상황에서의-전기장-2" class="nav-link" data-scroll-target="#ii.7-다양한-상황에서의-전기장-2">II.7 다양한 상황에서의 전기장 2</a>
@@ -466,12 +467,12 @@ window.Quarto = {
   <li><a href="#sec-FLP_2_7_2" id="toc-sec-FLP_2_7_2" class="nav-link" data-scroll-target="#sec-FLP_2_7_2">II.7-2 2차원 장;복소 함수</a></li>
   <li><a href="#sec-FLP_2_7_3" id="toc-sec-FLP_2_7_3" class="nav-link" data-scroll-target="#sec-FLP_2_7_3">II.7-3 플라즈마 진동</a></li>
   <li><a href="#sec-FLP_2_7_4" id="toc-sec-FLP_2_7_4" class="nav-link" data-scroll-target="#sec-FLP_2_7_4">II.7-4 전해질 안의 콜로이드 입자</a></li>
-  <li><a href="#sec-FLP_2_7_4" id="toc-sec-FLP_2_7_4" class="nav-link" data-scroll-target="#sec-FLP_2_7_4">II.7-5 격자의 정전기장</a></li>
+  <li><a href="#sec-FLP_2_7_5" id="toc-sec-FLP_2_7_5" class="nav-link" data-scroll-target="#sec-FLP_2_7_5">II.7-5 격자의 정전기장</a></li>
   </ul></li>
   <li><a href="#ii.8-정전기-에너지" id="toc-ii.8-정전기-에너지" class="nav-link" data-scroll-target="#ii.8-정전기-에너지">II.8 정전기 에너지</a>
   <ul class="collapse">
   <li><a href="#sec-FLP_2_8_1" id="toc-sec-FLP_2_8_1" class="nav-link" data-scroll-target="#sec-FLP_2_8_1">II.8-1 전하의 정전기 에너지. 균일한 공</a></li>
-  <li><a href="#sec-FLP_2_8_2" id="toc-sec-FLP_2_8_2" class="nav-link" data-scroll-target="#sec-FLP_2_8_2">II.8-2 축전지의 에너지. 대전된 도체에 작용하는 힘</a></li>
+  <li><a href="#sec-FLP_2_8_2" id="toc-sec-FLP_2_8_2" class="nav-link" data-scroll-target="#sec-FLP_2_8_2">II.8-2 축전기의 에너지. 대전된 도체에 작용하는 힘</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -503,7 +504,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>로런츠 힘</strong>
+<span class="screen-reader-only">중요</span><strong>로런츠 힘</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -549,7 +550,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-맥스웰 방정식의 적분 형태
+<span class="screen-reader-only">중요</span>맥스웰 방정식의 적분 형태
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -578,7 +579,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>변위전류</strong>
+<span class="screen-reader-only">노트</span><strong>변위전류</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -594,11 +595,11 @@ I_D:=\epsilon_0 \dfrac{d}{dt} \int_S \boldsymbol{E \cdot} d\boldsymbol{a}.
 <img src="figures/fig_2_1/displacememnt_current/displacement_current.png" class="img-fluid figure-img" width="500">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_2_displacement_current-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;4.1: (왼쪽) 축전지와 도선에서의 전기장 <span class="math inline">\(\boldsymbol{E}\)</span>, 도선 근처의 경로 <span class="math inline">\(C\)</span> 에 대한 표면 <span class="math inline">\(S_1\)</span>, <span class="math inline">\(S_2\)</span>, (오른쪽) 도선과 축전지 주위의 자기장 <span class="math inline">\(\boldsymbol{B}\)</span>
+그림&nbsp;4.1: (왼쪽) 축전기와 도선에서의 전기장 <span class="math inline">\(\boldsymbol{E}\)</span>, 도선 근처의 경로 <span class="math inline">\(C\)</span> 에 대한 표면 <span class="math inline">\(S_1\)</span>, <span class="math inline">\(S_2\)</span>, (오른쪽) 도선과 축전기 주위의 자기장 <span class="math inline">\(\boldsymbol{B}\)</span>
 </figcaption>
 </figure>
 </div>
-<p>위의 그림과 같은 축전지에 전류 <span class="math inline">\(I\)</span> 가 흐른다고 해 보자. 도선 주위에 오른쪽과 같은 경로 <span class="math inline">\(C\)</span> 를 잡고 경로 <span class="math inline">\(C\)</span> 에 의해 정해지는 표면 <span class="math inline">\(S_1\)</span> 을 생각하자. 그렇다면 <a href="#eq-FLP_2_1_9" class="quarto-xref">식&nbsp;<span>4.7</span></a> 의 우변이 결정된다. 이제 <a href="#eq-FLP_2_1_9" class="quarto-xref">식&nbsp;<span>4.7</span></a> 에서 변위전류항이 없다고 하자. 그리고 역시 <span class="math inline">\(C\)</span> 를 경계로 하는 표면 <span class="math inline">\(S_2\)</span> 를 생각하자. 분명히 <span class="math inline">\(S_2\)</span> 표면을 지나는 전류가 없으며 따라서 <a href="#eq-FLP_2_1_9" class="quarto-xref">식&nbsp;<span>4.7</span></a> 의 오른쪽은 <span class="math inline">\(0\)</span> 이 된다. 여기서 변위전류를 도입해야 할 필요가 존재한다. 전하가 대전된 도선 판 사이에는 전기장이 생성되며 이 전기장이 자기장에 기여한다. 이 전기장 기여가 변위 전류이다.</p>
+<p>위의 그림과 같은 축전기에 전류 <span class="math inline">\(I\)</span> 가 흐른다고 해 보자. 도선 주위에 오른쪽과 같은 경로 <span class="math inline">\(C\)</span> 를 잡고 경로 <span class="math inline">\(C\)</span> 에 의해 정해지는 표면 <span class="math inline">\(S_1\)</span> 을 생각하자. 그렇다면 <a href="#eq-FLP_2_1_9" class="quarto-xref">식&nbsp;<span>4.7</span></a> 의 우변이 결정된다. 이제 <a href="#eq-FLP_2_1_9" class="quarto-xref">식&nbsp;<span>4.7</span></a> 에서 변위전류항이 없다고 하자. 그리고 역시 <span class="math inline">\(C\)</span> 를 경계로 하는 표면 <span class="math inline">\(S_2\)</span> 를 생각하자. 분명히 <span class="math inline">\(S_2\)</span> 표면을 지나는 전류가 없으며 따라서 <a href="#eq-FLP_2_1_9" class="quarto-xref">식&nbsp;<span>4.7</span></a> 의 오른쪽은 <span class="math inline">\(0\)</span> 이 된다. 여기서 변위전류를 도입해야 할 필요가 존재한다. 전하가 대전된 도선 판 사이에는 전기장이 생성되며 이 전기장이 자기장에 기여한다. 이 전기장 기여가 변위 전류이다.</p>
 <p>변위전류는 실제 전류가 아니라 맥스웰 방정식에서 전류와 같은 역할을 하는 전기장의 시간에 대한 변화라는 것을 다시 한번 강조한다.</p>
 <p><br></p>
 </section>
@@ -618,7 +619,7 @@ I_D:=\epsilon_0 \dfrac{d}{dt} \int_S \boldsymbol{E \cdot} d\boldsymbol{a}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-맥스웰 방정식의 미분형태
+<span class="screen-reader-only">중요</span>맥스웰 방정식의 미분형태
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -643,7 +644,7 @@ I_D:=\epsilon_0 \dfrac{d}{dt} \int_S \boldsymbol{E \cdot} d\boldsymbol{a}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-정전기와 정자기에서의 맥스웰 방정식
+<span class="screen-reader-only">중요</span>정전기와 정자기에서의 맥스웰 방정식
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -708,7 +709,7 @@ W(unit) = -\int_a^b \boldsymbol{E\cdot}d\boldsymbol{l}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>정전 포텐셜</strong>
+<span class="screen-reader-only">노트</span><strong>정전 포텐셜</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -747,7 +748,7 @@ W(unit) = -\int_a^b \boldsymbol{E\cdot}d\boldsymbol{l}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>정전기장과 안정평형상태</strong>
+<span class="screen-reader-only">중요</span><strong>정전기장과 안정평형상태</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -763,7 +764,7 @@ W(unit) = -\int_a^b \boldsymbol{E\cdot}d\boldsymbol{l}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>라플라스 방정식의 특성</strong>
+<span class="screen-reader-only">중요</span><strong>라플라스 방정식의 특성</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1005,7 +1006,7 @@ E_{\text{condurctor surface}} = \dfrac{\sigma_\text{sufrace}}{\epsilon_0}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>라플라시안 연산자</strong> <span class="math inline">\(\nabla^2\)</span>
+<span class="screen-reader-only">노트</span><strong>라플라시안 연산자</strong> <span class="math inline">\(\nabla^2\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1058,7 +1059,7 @@ E_{\text{condurctor surface}} = \dfrac{\sigma_\text{sufrace}}{\epsilon_0}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>전기 쌍극자 모먼트</strong>
+<span class="screen-reader-only">노트</span><strong>전기 쌍극자 모먼트</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1298,7 +1299,7 @@ c^2(x^2+y^2+z^2) = (x-d)^2+y^2+z^2
 <p><br></p>
 </section>
 <section id="sec-FLP_2_6_10" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_2_6_10">II.6-10 평행판 축전지</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_2_6_10">II.6-10 평행판 축전기</h3>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-FLP_parallel_plate_condensor" class="theorem example">
 <p><span class="theorem-title"><strong>예제 4.11</strong></span> &nbsp;</p>
@@ -1308,7 +1309,7 @@ c^2(x^2+y^2+z^2) = (x-d)^2+y^2+z^2
 <img src="figures/fig_2_6/fig_2_6_12.png" class="img-fluid figure-img" width="350">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_fig_2_6_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;4.16: 파인만 물리학 강의 <span class="math inline">\(II\)</span>. Fig. 6-12. 평행판 축전지
+그림&nbsp;4.16: 파인만 물리학 강의 <span class="math inline">\(II\)</span>. Fig. 6-12. 평행판 축전기
 </figcaption>
 </figure>
 </div>
@@ -1327,7 +1328,7 @@ V=Ed=\dfrac{\sigma}{\epsilon_0}d = \dfrac{d}{\epsilon_0 A}Q
 <img src="figures/fig_2_6/fig_2_6_13.png" class="img-fluid figure-img" width="350">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_fig_2_6_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;4.17: 파인만 물리학 강의 <span class="math inline">\(II\)</span>. Fig. 6-13. 평행판 축전지 모서리에서의 전기장
+그림&nbsp;4.17: 파인만 물리학 강의 <span class="math inline">\(II\)</span>. Fig. 6-13. 평행판 축전기 모서리에서의 전기장
 </figcaption>
 </figure>
 </div>
@@ -1502,8 +1503,8 @@ F_x = -\dfrac{n_0 q_e^2}{\epsilon_0}s
 <p>.. to be done …</p>
 <p><br></p>
 </section>
-<section id="sec-FLP_2_7_4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_2_7_4">II.7-5 격자의 정전기장</h3>
+<section id="sec-FLP_2_7_5" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_2_7_5">II.7-5 격자의 정전기장</h3>
 <p><br></p>
 </section>
 </section>
@@ -1547,7 +1548,7 @@ U=\dfrac{4\pi\rho^2 a^5}{15\epsilon_0} = \dfrac{3}{5} \dfrac{Q^2}{4\pi\epsilon_0
 <p><br></p>
 </section>
 <section id="sec-FLP_2_8_2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-FLP_2_8_2">II.8-2 축전지의 에너지. 대전된 도체에 작용하는 힘</h3>
+<h3 class="anchored" data-anchor-id="sec-FLP_2_8_2">II.8-2 축전기의 에너지. 대전된 도체에 작용하는 힘</h3>
 <p>이제 대전된 도체를 대전시키기 위해 필요한 에너지를 구해보자.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-FLP_electrostatic_energy_of_charged_conductor" class="theorem example">
@@ -1623,13 +1624,14 @@ U = \dfrac{1}{2}\dfrac{Q^2}{C} = \dfrac{1}{2}CV^2
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

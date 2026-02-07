@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/ClassicalMechanics/04_canonical_transform.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -426,7 +427,7 @@ window.Quarto = {
   <li><a href="#sec-CM_1D_SHO" id="toc-sec-CM_1D_SHO" class="nav-link" data-scroll-target="#sec-CM_1D_SHO"><span class="header-section-number">9.2</span> 1차원 조화진동자</a>
   <ul class="collapse">
   <li><a href="#sec-CM_1d_sho" id="toc-sec-CM_1d_sho" class="nav-link" data-scroll-target="#sec-CM_1d_sho"><span class="header-section-number">9.2.1</span> 단순조화진동자</a></li>
-  <li><a href="#sec-CM_1d_dsho" id="toc-sec-CM_1d_dsho" class="nav-link" data-scroll-target="#sec-CM_1d_dsho"><span class="header-section-number">9.2.2</span> 감쇠 조화 진동자</a></li>
+  <li><a href="#sec-CM_1d_dsho" id="toc-sec-CM_1d_dsho" class="nav-link" data-scroll-target="#sec-CM_1d_dsho"><span class="header-section-number">9.2.2</span> 감쇄 조화 진동자</a></li>
   <li><a href="#sec-CM_forced_dsho" id="toc-sec-CM_forced_dsho" class="nav-link" data-scroll-target="#sec-CM_forced_dsho"><span class="header-section-number">9.2.3</span> 강제 조화 진동자</a></li>
   <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1"><span class="header-section-number">9.2.4</span> 연습문제</a></li>
   </ul></li>
@@ -586,7 +587,7 @@ t \approx  \dfrac{v_T}{g} \ln (2 e^{gh/{v_T}^2}) = \dfrac{v_T}{g}\ln (2) + \dfra
 <p>1차원 단순조화진동자(simple harmonic osciilator, 이하 SHO)의 경우 운동방정식이 <span class="math inline">\(m\ddot{x} = -kx\)</span> 이 며 그 해는 진동자의 <strong>고유 진동수(natural frequency)</strong> <span class="math inline">\(\omega_0 :=\sqrt{k/m}\)</span> 에 대해 <span class="math inline">\(x(t) = A\cos (\omega_0 t+\phi_0)\)</span> 라는 것을 안다. <span class="math inline">\(A\)</span> 와 <span class="math inline">\(\phi_0\)</span> 는 초기조건 <span class="math inline">\(x(t_0),\, v(t_0)\)</span> 에 의해 정해지는 상수이다.</p>
 </section>
 <section id="sec-CM_1d_dsho" class="level3 page-columns page-full" data-number="9.2.2">
-<h3 data-number="9.2.2" class="anchored" data-anchor-id="sec-CM_1d_dsho"><span class="header-section-number">9.2.2</span> 감쇠 조화 진동자</h3>
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="sec-CM_1d_dsho"><span class="header-section-number">9.2.2</span> 감쇄 조화 진동자</h3>
 <p>이제 앞서의 viscouse drag 처럼 속도에 비례하는(하지만 방향은 반대힌) 힘이 작용한다고 하자. 앞으로의 계산의 편의를 위해 앞의 경우와는 달리 비례상수를 <span class="math inline">\(2m\beta\)</span> 로 놓는다. 그렇다면 운동방정식은</p>
 <p><span class="math display">\[
 \ddot{x} + 2\beta \dot{x} + \omega_0^2 x = 0
@@ -722,7 +723,7 @@ Q= 2\pi\dfrac{E}{|\Delta E|}.
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 감쇠조화진동자(<span class="math inline">\(\ddot{x} - 2\beta \dot{x} + kx=0\)</span>) 의 해 <span class="math inline">\(x(t) = Ae^{-\beta t}\cos (\omega t + \phi_0)\)</span> 를 생각하자. 에너지 <span class="math inline">\(E(t) = m\omega^2 e^{-2\beta t}\cos^2 (\omega t + \phi_0)\)</span> 에 대해, <span class="math inline">\(\beta T \ll 1\)</span> 이라면</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 감쇄조화진동자(<span class="math inline">\(\ddot{x} - 2\beta \dot{x} + kx=0\)</span>) 의 해 <span class="math inline">\(x(t) = Ae^{-\beta t}\cos (\omega t + \phi_0)\)</span> 를 생각하자. 에너지 <span class="math inline">\(E(t) = m\omega^2 e^{-2\beta t}\cos^2 (\omega t + \phi_0)\)</span> 에 대해, <span class="math inline">\(\beta T \ll 1\)</span> 이라면</p>
 <p><span class="math display">\[
 Q = 2\pi \dfrac{m\omega^2}{m\omega^2 - m\omega^2 e^{-2\beta T}} \approx \dfrac{2\pi}{2\beta T} = \dfrac{\pi}{\beta T}.
 \]</span></p>
@@ -1342,13 +1343,14 @@ a(t) = c_1 e^{\sqrt{\Lambda/3} t} + c_2 e^{-\sqrt{\Lambda/3}t}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

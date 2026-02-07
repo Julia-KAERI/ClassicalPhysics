@@ -208,7 +208,7 @@ $$
 
 1차원 단순조화진동자(simple harmonic osciilator, 이하 SHO)의 경우 운동방정식이 $m\ddot{x} = -kx$ 이 며 그 해는 진동자의 **고유 진동수(natural frequency)** $\omega_0 :=\sqrt{k/m}$ 에 대해 $x(t) = A\cos (\omega_0 t+\phi_0)$ 라는 것을 안다. $A$ 와 $\phi_0$ 는 초기조건 $x(t_0),\, v(t_0)$ 에 의해 정해지는 상수이다. 
 
-### 감쇠 조화 진동자 {#sec-CM_1d_dsho}
+### 감쇄 조화 진동자 {#sec-CM_1d_dsho}
 
 이제 앞서의 viscouse drag 처럼 속도에 비례하는(하지만 방향은 반대힌) 힘이 작용한다고 하자. 앞으로의 계산의 편의를 위해 앞의 경우와는 달리 비례상수를 $2m\beta$ 로 놓는다. 그렇다면 운동방정식은 
 
@@ -402,7 +402,7 @@ $$
 
 ::: {.solution}
 
-($a$) 감쇠조화진동자($\ddot{x} - 2\beta \dot{x} + kx=0$) 의 해 $x(t) = Ae^{-\beta t}\cos (\omega t + \phi_0)$ 를 생각하자. 에너지 $E(t) = m\omega^2 e^{-2\beta t}\cos^2 (\omega t + \phi_0)$ 에 대해, $\beta T \ll 1$ 이라면
+($a$) 감쇄조화진동자($\ddot{x} - 2\beta \dot{x} + kx=0$) 의 해 $x(t) = Ae^{-\beta t}\cos (\omega t + \phi_0)$ 를 생각하자. 에너지 $E(t) = m\omega^2 e^{-2\beta t}\cos^2 (\omega t + \phi_0)$ 에 대해, $\beta T \ll 1$ 이라면
 
 $$
 Q = 2\pi \dfrac{m\omega^2}{m\omega^2 - m\omega^2 e^{-2\beta T}} \approx \dfrac{2\pi}{2\beta T} = \dfrac{\pi}{\beta T}.
