@@ -989,13 +989,13 @@ $$
 실제의 많은 경우 운동을 방해하는 마찰력이 작용한다. 이 마찰을 간단한 식으로 표현하는 것은 대부분 어렵지만 속도에 비례하는 마찰력이 수학적으로 비교적 다루기 쉬우며 실제에도 적용되는 경우가 많다. 이제 속도에 비례하는 마찰력을 @eq-FLP_1_23_2 에 도입하면 운동방정식은 다음과 같다.
 
 $$
-m\dfrac{d^2 x}{dt^2} + c\dfrac{dx}{dt} + k x = F.
+m\dfrac{d^2 x}{dt^2} + c\dfrac{dx}{dt} + k x = F(t).
 $$ {#eq-FLP_1_23_6}
 
 이제 $\gamma = c/m$, $\omega_0 = \sqrt{k/m}$ 을 도입하면 운동방정식은 다음과 같다.
 
 $$
-\dfrac{d^2x}{dt^2} + \gamma \dfrac{dx}{dt} + \omega_0^2 x = \dfrac{F}{m}.
+\dfrac{d^2x}{dt^2} + \gamma \dfrac{dx}{dt} + \omega_0^2 x = \dfrac{F(t)}{m}.
 $$ {#eq-FLP_1_23_6_a}
 
 여기서 $\beta$ 가 매우 작다고 가정하자. $\beta$ 값의 다양한 경우에 대해서는 [감쇄 조화 진동자](#sec-CM_1d_dsho) 를 참고하라. 외부의 힘 $F(t) = F\cos (\omega t -\phi_0)$ 이 작용한다고 하자. $x=\hat{x}e^{i\omega t}$, $F=\hat{F}e^{i\omega t}$ 로 놓고 풀면 아래의 식을 만족해야 함을 안다.
@@ -1079,3 +1079,134 @@ $$ {#eq-FLP_1_23_18}
 ## I.24 진동의 감쇄 {#sec-FLP_2_24}
 
 ### I.24-1 진동자의 에너지 {#sec-FLP_1_24_1}
+
+#### **강제 감쇄 진동자의 일률**
+
+진동자의 운동방정식 @eq-FLP_1_23_6 은 $\omega_0 = \sqrt{k/m},\, \gamma = c/m$ 을 도임하여 아래와 같이 쓸 수 있다.
+
+$$
+m \dfrac{d^2x}{dt^2} + \gamma m \dfrac{dx}{dt} + m \omega_0^2 x = F(t).
+$$ {#eq-FLP_1_24_1}
+
+이번 절에서는 $F(t)$ 는 $\cos$ 함수라고 가정한다. 외부에서 작용하는 힘 $F(t)$ 에 의한 일률(power) $P$ 는 다음과 같다.
+
+$$
+\begin{aligned}
+P = F\dfrac{dx}{dt} &= m \left[\left(\dfrac{dx}{dt}\right)\left(\dfrac{dx^2}{dt^2}\right) + \omega_0^2 x \left(\dfrac{dx}{dt}\right)\right] + \gamma m \left(\dfrac{dx}{dt}\right)^2 \\[0.3em]
+&=\dfrac{d}{dt} {\huge[}\underbrace{\dfrac{1}{2}m \left(\dfrac{dx}{dt} \right)^2}_{=T} + \underbrace{\dfrac{1}{2}m\omega_0^2 x^2}_{=U}{\huge ]}+ \gamma m \left(\dfrac{dx}{dt}\right)^2 \\[0.3em]
+\end{aligned}
+$$
+
+여기서 $T$ 는 질량 $m$ 의 운동에너지, $U$ 는 단진자의 포텐셜 에너지임을 안다. 이 $E=T+U$ 를 진동에 저장되는 에너지라고 볼 수 있다. 많은 주기가 지나면 이 저장되는 에너지의 시간에 대한 변화율은 $0$ 이 되며 결국은 감쇄 효과만 남는다. 한 주기에서의 물리량 $X$ 의 평균을 $\langle X\rangle$ 로 표기한다면 $\langle P\rangle$ 은 다음과 같다.
+
+$$
+\langle P \rangle = \left\langle \gamma m \left(\dfrac{dx}{dt}\right)^2\right \rangle.
+$${#eq-FLP_1_24_3}
+
+$x(t)=\hat{x}e^{i\omega t}$ 라면 $\dot{x}(t) = i\omega \hat{x}e^{i\omega t}$ 이며 실제 시스템을 기술하는 것은 $\text{Re}(x(t))$ 이므로
+
+$$
+\langle P \rangle = \dfrac{1}{2}\gamma m \omega^2 x_0^2
+$$ {#eq-FLP_1_24_4}
+
+이다.
+
+#### **저장되는 에너지**
+
+저장되는 에너지 $E=T+U$ 의 주기에 대한 평균 $\langle E\rangle$ 은
+
+$$
+\begin{aligned}
+\langle E\rangle &= \dfrac{1}{2}m \left\langle \left(\dfrac{dx}{dt}\right)^2\right\rangle + \dfrac{1}{2}m\omega_0^2 \langle x^2\rangle = \dfrac{1}{2}m(\omega_0^2 + \omega^2) \dfrac{1}{2}x_0^2
+\end{aligned}
+$$ {#eq-FLP_1_24_6}
+
+$\omega \approx \omega_0$ 이면 $x_0$ 가 매우 커지기 때문에 저장되는 에너지가 매우 커진다. 
+
+#### **$Q$ 인자**
+
+한 주기에서 강제 감쇄 조화진동자에 외부의 힘이 해주는 일과 저장되는 에너지 사이의 비율에 $2\pi$ 를 곱한 값을 $Q$ 값, 혹은 $Q$ 인자라고 한다. 
+
+$$
+Q := 2\pi \dfrac{\langle P\rangle}{\langle T+U\rangle} = \dfrac{\omega^2 + \omega_0^2}{2\gamma \omega}.
+$$ {#eq-FLP_1_24_7}
+
+$Q$ 값은 이 진동자가 얼마나 효율적인지에 대한 척도이다.
+
+</br>
+
+### II.24-2 감쇄 진동 {#sec-FLP_1_24_2}
+
+*파인만의 내용전개와 다르게...*
+
+#### **강제감쇄진동 미분방정식의 해**
+
+강제감쇄조화진동자의 운동방정식
+
+$$
+\ddot{x}+\gamma \dot{x} + \omega_0^2 x = F(t)/m
+$$ {#eq-FLP_FDHO_1}
+
+을 생각하자. 이 때 $F(t) = 0$ 으로 놓으면 선형 제차 미분방정식이며 그 해를 **과도해 (transient solution)** 라고 한다.$^2$[$^2$ 과도(過度) 가 아니라 과도(過渡) 이다.]{.aside} 과도해를 $x_h(t)$ 라고 하고 @eq-FLP_FDHO_1 의 과도해와 독립적인 해를 $x_p(t)$ 라고 하자. 그렇다면 $x_h(t) + x_p(t)$ 역시 @eq-FLP_FDHO_1 의 해이다. 우선 과도해를 구해보자.
+
+#### **강제감쇄진동 미분방정식의 과도해**
+
+이 방정식의 해를 구하는 방법은 $x(t) = e^{\lambda t}$ 로 놓고 위 의 미분방정식에 대입하면, 
+
+$$
+\lambda^2 + \gamma \lambda + \omega_0^2 = 0
+$$
+
+을 얻으며, $\lambda$ 에 대한 2차방정식의 해는
+
+$$
+\lambda = \dfrac{-\gamma \pm \sqrt{\gamma^2-4\omega_0^2}}{2}
+$$
+
+이다. $\gamma^2-4\omega_0^2$ 의 부호에 따라 해를 세가지로 분류 할 수 있다.
+
+**1. Overdamped** : $\gamma^2 > 4\omega_0^2$ 일 경우 
+
+$$
+\alpha_1 = \dfrac{-\gamma - \sqrt{\gamma^2-4\omega_0^2}}{2},\quad \alpha_2 = \dfrac{-\gamma + \sqrt{\gamma2-4\omega_0^2}}{2}
+$$ 
+
+는 실수이며 과도해는 
+
+$$
+x(t) = A_1 e^{-\alpha_1 t} + A_2 e^{-\alpha_2 t}
+$$ {#eq-FLP_FDHO_2}
+
+이다. 이 경우를 **overdamped** 라고 하며 진동 없이 시간에 따라 감소한다.
+
+**2. Underdamped** : 반대로 $\gamma^2<4\omega^2_0$ 일 경우 $\omega_\gamma =  \sqrt{\omega_0^2-\gamma^2/4}$ 에 대해 
+
+$$
+x(t) = e^{-\gamma t/2 }\text{Re}(A_1 e^{i\omega_\gamma t} + A_2 e^{-i \omega_\gamma t}) = A e^{-\gamma t/2} \cos (\omega_\gamma t + \theta_0)
+$$ {#eq-FLP_FDHO_3}
+
+를 얻는다.[$\operatorname{Re}(a)$ 는 복소수 $a$ 에 대해 실수부만을 취하는 함수이다.]{.aside} 이런 경우를 **underdamped** 라고 하며, overdamped 와는 달리 진동이 존재한다.
+
+**3. Critically dampled** : $\gamma ^2=4\omega_0^2$ 인 경우를 **critically damped** 라고 한다. 이 경우에는 $te^{-\gamma t/2}$ 도 해가 된다. $x(t) = te^{-\gamma t/2 }$ 에 대해
+
+$$
+\ddot{x} + \gamma \dot{x} + \omega_0^2 x =  0
+$$ 
+
+이다. 따라서 이 경우의 해는
+
+$$
+x(t) = (A_1+A_2t)e^{-\gamma t/2}
+$${#eq-FLP_FDHO_4}
+
+이다. 세가지 경우 모두 $A_1,\,A_2$ 는 초기조건 의해 정해진다. 
+
+#### **에너지 변화**
+
+과도해 $x_h(t)$ 에 가능한 모든 경우에서 
+
+$$
+\lim_{t\to +\infty} x_h(t) = \lim_{t \to +\infty} \dfrac{dx_h(t)}{dt} = 0
+$$ 
+
+이다. 즉 충분히 많은 시간이 지나면 과도해는 무시 할 수 있다. 

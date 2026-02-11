@@ -495,6 +495,7 @@ window.Quarto = {
   <li><a href="#sec-FLP_2_24" id="toc-sec-FLP_2_24" class="nav-link" data-scroll-target="#sec-FLP_2_24">I.24 진동의 감쇄</a>
   <ul class="collapse">
   <li><a href="#sec-FLP_1_24_1" id="toc-sec-FLP_1_24_1" class="nav-link" data-scroll-target="#sec-FLP_1_24_1">I.24-1 진동자의 에너지</a></li>
+  <li><a href="#sec-FLP_1_24_2" id="toc-sec-FLP_1_24_2" class="nav-link" data-scroll-target="#sec-FLP_1_24_2">II.24-2 감쇄 진동</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1486,11 +1487,11 @@ m \dfrac{d^2 x}{dt^2} + k x = \hat{F} e^{i\omega t}
 <h3 class="anchored" data-anchor-id="sec-FLP_1_23_2">I.23-2 강제 감쇄 조화진동</h3>
 <p>실제의 많은 경우 운동을 방해하는 마찰력이 작용한다. 이 마찰을 간단한 식으로 표현하는 것은 대부분 어렵지만 속도에 비례하는 마찰력이 수학적으로 비교적 다루기 쉬우며 실제에도 적용되는 경우가 많다. 이제 속도에 비례하는 마찰력을 <a href="#eq-FLP_1_23_2" class="quarto-xref">식&nbsp;<span>1.47</span></a> 에 도입하면 운동방정식은 다음과 같다.</p>
 <p><span id="eq-FLP_1_23_6"><span class="math display">\[
-m\dfrac{d^2 x}{dt^2} + c\dfrac{dx}{dt} + k x = F.
+m\dfrac{d^2 x}{dt^2} + c\dfrac{dx}{dt} + k x = F(t).
 \tag{1.45}\]</span></span></p>
 <p>이제 <span class="math inline">\(\gamma = c/m\)</span>, <span class="math inline">\(\omega_0 = \sqrt{k/m}\)</span> 을 도입하면 운동방정식은 다음과 같다.</p>
 <p><span id="eq-FLP_1_23_6_a"><span class="math display">\[
-\dfrac{d^2x}{dt^2} + \gamma \dfrac{dx}{dt} + \omega_0^2 x = \dfrac{F}{m}.
+\dfrac{d^2x}{dt^2} + \gamma \dfrac{dx}{dt} + \omega_0^2 x = \dfrac{F(t)}{m}.
 \tag{1.46}\]</span></span></p>
 <p>여기서 <span class="math inline">\(\beta\)</span> 가 매우 작다고 가정하자. <span class="math inline">\(\beta\)</span> 값의 다양한 경우에 대해서는 <a href="../../ClassicalMechanics/11_one_body_problems.html#sec-CM_1d_dsho">감쇄 조화 진동자</a> 를 참고하라. 외부의 힘 <span class="math inline">\(F(t) = F\cos (\omega t -\phi_0)\)</span> 이 작용한다고 하자. <span class="math inline">\(x=\hat{x}e^{i\omega t}\)</span>, <span class="math inline">\(F=\hat{F}e^{i\omega t}\)</span> 로 놓고 풀면 아래의 식을 만족해야 함을 안다.</p>
 <p><span id="eq-FLP_1_23_2"><span class="math display">\[
@@ -1572,12 +1573,109 @@ L \dfrac{d^2q}{dt} + R \dfrac{dq}{dt} + \dfrac{1}{C}q = V(t).
 <p><br></p>
 </section>
 </section>
-<section id="sec-FLP_2_24" class="level2">
+<section id="sec-FLP_2_24" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="sec-FLP_2_24">I.24 진동의 감쇄</h2>
 <section id="sec-FLP_1_24_1" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_24_1">I.24-1 진동자의 에너지</h3>
+<section id="강제-감쇄-진동자의-일률" class="level4">
+<h4 class="anchored" data-anchor-id="강제-감쇄-진동자의-일률"><strong>강제 감쇄 진동자의 일률</strong></h4>
+<p>진동자의 운동방정식 <a href="#eq-FLP_1_23_6" class="quarto-xref">식&nbsp;<span>1.51</span></a> 은 <span class="math inline">\(\omega_0 = \sqrt{k/m},\, \gamma = c/m\)</span> 을 도임하여 아래와 같이 쓸 수 있다.</p>
+<p><span id="eq-FLP_1_24_1"><span class="math display">\[
+m \dfrac{d^2x}{dt^2} + \gamma m \dfrac{dx}{dt} + m \omega_0^2 x = F(t).
+\tag{1.54}\]</span></span></p>
+<p>이번 절에서는 <span class="math inline">\(F(t)\)</span> 는 <span class="math inline">\(\cos\)</span> 함수라고 가정한다. 외부에서 작용하는 힘 <span class="math inline">\(F(t)\)</span> 에 의한 일률(power) <span class="math inline">\(P\)</span> 는 다음과 같다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+P = F\dfrac{dx}{dt} &amp;= m \left[\left(\dfrac{dx}{dt}\right)\left(\dfrac{dx^2}{dt^2}\right) + \omega_0^2 x \left(\dfrac{dx}{dt}\right)\right] + \gamma m \left(\dfrac{dx}{dt}\right)^2 \\[0.3em]
+&amp;=\dfrac{d}{dt} {\huge[}\underbrace{\dfrac{1}{2}m \left(\dfrac{dx}{dt} \right)^2}_{=T} + \underbrace{\dfrac{1}{2}m\omega_0^2 x^2}_{=U}{\huge ]}+ \gamma m \left(\dfrac{dx}{dt}\right)^2 \\[0.3em]
+\end{aligned}
+\]</span></p>
+<p>여기서 <span class="math inline">\(T\)</span> 는 질량 <span class="math inline">\(m\)</span> 의 운동에너지, <span class="math inline">\(U\)</span> 는 단진자의 포텐셜 에너지임을 안다. 이 <span class="math inline">\(E=T+U\)</span> 를 진동에 저장되는 에너지라고 볼 수 있다. 많은 주기가 지나면 이 저장되는 에너지의 시간에 대한 변화율은 <span class="math inline">\(0\)</span> 이 되며 결국은 감쇄 효과만 남는다. 한 주기에서의 물리량 <span class="math inline">\(X\)</span> 의 평균을 <span class="math inline">\(\langle X\rangle\)</span> 로 표기한다면 <span class="math inline">\(\langle P\rangle\)</span> 은 다음과 같다.</p>
+<p><span id="eq-FLP_1_24_3"><span class="math display">\[
+\langle P \rangle = \left\langle \gamma m \left(\dfrac{dx}{dt}\right)^2\right \rangle.
+\tag{1.55}\]</span></span></p>
+<p><span class="math inline">\(x(t)=\hat{x}e^{i\omega t}\)</span> 라면 <span class="math inline">\(\dot{x}(t) = i\omega \hat{x}e^{i\omega t}\)</span> 이며 실제 시스템을 기술하는 것은 <span class="math inline">\(\text{Re}(x(t))\)</span> 이므로</p>
+<p><span id="eq-FLP_1_24_4"><span class="math display">\[
+\langle P \rangle = \dfrac{1}{2}\gamma m \omega^2 x_0^2
+\tag{1.56}\]</span></span></p>
+<p>이다.</p>
+</section>
+<section id="저장되는-에너지" class="level4">
+<h4 class="anchored" data-anchor-id="저장되는-에너지"><strong>저장되는 에너지</strong></h4>
+<p>저장되는 에너지 <span class="math inline">\(E=T+U\)</span> 의 주기에 대한 평균 <span class="math inline">\(\langle E\rangle\)</span> 은</p>
+<p><span id="eq-FLP_1_24_6"><span class="math display">\[
+\begin{aligned}
+\langle E\rangle &amp;= \dfrac{1}{2}m \left\langle \left(\dfrac{dx}{dt}\right)^2\right\rangle + \dfrac{1}{2}m\omega_0^2 \langle x^2\rangle = \dfrac{1}{2}m(\omega_0^2 + \omega^2) \dfrac{1}{2}x_0^2
+\end{aligned}
+\tag{1.57}\]</span></span></p>
+<p><span class="math inline">\(\omega \approx \omega_0\)</span> 이면 <span class="math inline">\(x_0\)</span> 가 매우 커지기 때문에 저장되는 에너지가 매우 커진다.</p>
+</section>
+<section id="q-인자" class="level4">
+<h4 class="anchored" data-anchor-id="q-인자"><strong><span class="math inline">\(Q\)</span> 인자</strong></h4>
+<p>한 주기에서 강제 감쇄 조화진동자에 외부의 힘이 해주는 일과 저장되는 에너지 사이의 비율에 <span class="math inline">\(2\pi\)</span> 를 곱한 값을 <span class="math inline">\(Q\)</span> 값, 혹은 <span class="math inline">\(Q\)</span> 인자라고 한다.</p>
+<p><span id="eq-FLP_1_24_7"><span class="math display">\[
+Q := 2\pi \dfrac{\langle P\rangle}{\langle T+U\rangle} = \dfrac{\omega^2 + \omega_0^2}{2\gamma \omega}.
+\tag{1.58}\]</span></span></p>
+<p><span class="math inline">\(Q\)</span> 값은 이 진동자가 얼마나 효율적인지에 대한 척도이다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="sec-FLP_1_24_2" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_24_2">II.24-2 감쇄 진동</h3>
+<p><em>파인만의 내용전개와 다르게…</em></p>
+<section id="강제감쇄진동-미분방정식의-해" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="강제감쇄진동-미분방정식의-해"><strong>강제감쇄진동 미분방정식의 해</strong></h4>
+<p>강제감쇄조화진동자의 운동방정식</p>
+<p><span id="eq-FLP_FDHO_1"><span class="math display">\[
+\ddot{x}+\gamma \dot{x} + \omega_0^2 x = F(t)/m
+\tag{1.59}\]</span></span></p>
+<div class="page-columns page-full"><p>을 생각하자. 이 때 <span class="math inline">\(F(t) = 0\)</span> 으로 놓으면 선형 제차 미분방정식이며 그 해를 <strong>과도해 (transient solution)</strong> 라고 한다.<span class="math inline">\(^2\)</span> 과도해를 <span class="math inline">\(x_h(t)\)</span> 라고 하고 <a href="#eq-FLP_FDHO_1" class="quarto-xref">식&nbsp;<span>1.59</span></a> 의 과도해와 독립적인 해를 <span class="math inline">\(x_p(t)\)</span> 라고 하자. 그렇다면 <span class="math inline">\(x_h(t) + x_p(t)\)</span> 역시 <a href="#eq-FLP_FDHO_1" class="quarto-xref">식&nbsp;<span>1.59</span></a> 의 해이다. 우선 과도해를 구해보자.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^2\)</span> 과도(過度) 가 아니라 과도(過渡) 이다.</span></div></div>
+</section>
+<section id="강제감쇄진동-미분방정식의-과도해" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="강제감쇄진동-미분방정식의-과도해"><strong>강제감쇄진동 미분방정식의 과도해</strong></h4>
+<p>이 방정식의 해를 구하는 방법은 <span class="math inline">\(x(t) = e^{\lambda t}\)</span> 로 놓고 위 의 미분방정식에 대입하면,</p>
+<p><span class="math display">\[
+\lambda^2 + \gamma \lambda + \omega_0^2 = 0
+\]</span></p>
+<p>을 얻으며, <span class="math inline">\(\lambda\)</span> 에 대한 2차방정식의 해는</p>
+<p><span class="math display">\[
+\lambda = \dfrac{-\gamma \pm \sqrt{\gamma^2-4\omega_0^2}}{2}
+\]</span></p>
+<p>이다. <span class="math inline">\(\gamma^2-4\omega_0^2\)</span> 의 부호에 따라 해를 세가지로 분류 할 수 있다.</p>
+<p><strong>1. Overdamped</strong> : <span class="math inline">\(\gamma^2 &gt; 4\omega_0^2\)</span> 일 경우</p>
+<p><span class="math display">\[
+\alpha_1 = \dfrac{-\gamma - \sqrt{\gamma^2-4\omega_0^2}}{2},\quad \alpha_2 = \dfrac{-\gamma + \sqrt{\gamma2-4\omega_0^2}}{2}
+\]</span></p>
+<p>는 실수이며 과도해는</p>
+<p><span id="eq-FLP_FDHO_2"><span class="math display">\[
+x(t) = A_1 e^{-\alpha_1 t} + A_2 e^{-\alpha_2 t}
+\tag{1.60}\]</span></span></p>
+<p>이다. 이 경우를 <strong>overdamped</strong> 라고 하며 진동 없이 시간에 따라 감소한다.</p>
+<p><strong>2. Underdamped</strong> : 반대로 <span class="math inline">\(\gamma^2&lt;4\omega^2_0\)</span> 일 경우 <span class="math inline">\(\omega_\gamma =  \sqrt{\omega_0^2-\gamma^2/4}\)</span> 에 대해</p>
+<p><span id="eq-FLP_FDHO_3"><span class="math display">\[
+x(t) = e^{-\gamma t/2 }\text{Re}(A_1 e^{i\omega_\gamma t} + A_2 e^{-i \omega_\gamma t}) = A e^{-\gamma t/2} \cos (\omega_\gamma t + \theta_0)
+\tag{1.61}\]</span></span></p>
+<div class="page-columns page-full"><p>를 얻는다. 이런 경우를 <strong>underdamped</strong> 라고 하며, overdamped 와는 달리 진동이 존재한다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(\operatorname{Re}(a)\)</span> 는 복소수 <span class="math inline">\(a\)</span> 에 대해 실수부만을 취하는 함수이다.</span></div></div>
+<p><strong>3. Critically dampled</strong> : <span class="math inline">\(\gamma ^2=4\omega_0^2\)</span> 인 경우를 <strong>critically damped</strong> 라고 한다. 이 경우에는 <span class="math inline">\(te^{-\gamma t/2}\)</span> 도 해가 된다. <span class="math inline">\(x(t) = te^{-\gamma t/2 }\)</span> 에 대해</p>
+<p><span class="math display">\[
+\ddot{x} + \gamma \dot{x} + \omega_0^2 x =  0
+\]</span></p>
+<p>이다. 따라서 이 경우의 해는</p>
+<p><span id="eq-FLP_FDHO_4"><span class="math display">\[
+x(t) = (A_1+A_2t)e^{-\gamma t/2}
+\tag{1.62}\]</span></span></p>
+<p>이다. 세가지 경우 모두 <span class="math inline">\(A_1,\,A_2\)</span> 는 초기조건 의해 정해진다.</p>
+</section>
+<section id="에너지-변화" class="level4">
+<h4 class="anchored" data-anchor-id="에너지-변화"><strong>에너지 변화</strong></h4>
+<p>과도해 <span class="math inline">\(x_h(t)\)</span> 에 가능한 모든 경우에서</p>
+<p><span class="math display">\[
+\lim_{t\to +\infty} x_h(t) = \lim_{t \to +\infty} \dfrac{dx_h(t)}{dt} = 0
+\]</span></p>
+<p>이다. 즉 충분히 많은 시간이 지나면 과도해는 무시 할 수 있다.</p>
 
 
+</section>
 </section>
 </section>
 
