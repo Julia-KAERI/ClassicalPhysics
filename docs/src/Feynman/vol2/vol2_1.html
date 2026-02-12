@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,15 +34,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/vol1/vol1_3.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,7 +84,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -504,7 +503,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>로런츠 힘</strong>
+<strong>로런츠 힘</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -550,7 +549,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>맥스웰 방정식의 적분 형태
+맥스웰 방정식의 적분 형태
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -579,7 +578,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>변위전류</strong>
+<strong>변위전류</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -619,7 +618,7 @@ I_D:=\epsilon_0 \dfrac{d}{dt} \int_S \boldsymbol{E \cdot} d\boldsymbol{a}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>맥스웰 방정식의 미분형태
+맥스웰 방정식의 미분형태
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -644,7 +643,7 @@ I_D:=\epsilon_0 \dfrac{d}{dt} \int_S \boldsymbol{E \cdot} d\boldsymbol{a}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>정전기와 정자기에서의 맥스웰 방정식
+정전기와 정자기에서의 맥스웰 방정식
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -709,7 +708,7 @@ W(unit) = -\int_a^b \boldsymbol{E\cdot}d\boldsymbol{l}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>정전 포텐셜</strong>
+<strong>정전 포텐셜</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -748,7 +747,7 @@ W(unit) = -\int_a^b \boldsymbol{E\cdot}d\boldsymbol{l}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>정전기장과 안정평형상태</strong>
+<strong>정전기장과 안정평형상태</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -764,7 +763,7 @@ W(unit) = -\int_a^b \boldsymbol{E\cdot}d\boldsymbol{l}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>라플라스 방정식의 특성</strong>
+<strong>라플라스 방정식의 특성</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1006,7 +1005,7 @@ E_{\text{condurctor surface}} = \dfrac{\sigma_\text{sufrace}}{\epsilon_0}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>라플라시안 연산자</strong> <span class="math inline">\(\nabla^2\)</span>
+<strong>라플라시안 연산자</strong> <span class="math inline">\(\nabla^2\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1059,7 +1058,7 @@ E_{\text{condurctor surface}} = \dfrac{\sigma_\text{sufrace}}{\epsilon_0}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">노트</span><strong>전기 쌍극자 모먼트</strong>
+<strong>전기 쌍극자 모먼트</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1624,14 +1623,13 @@ U = \dfrac{1}{2}\dfrac{Q^2}{C} = \dfrac{1}{2}CV^2
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
