@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/vol1/vol1_1.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -524,7 +525,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>갈릴레이 변환과 로런츠 변환</strong>
+<span class="screen-reader-only">중요</span><strong>갈릴레이 변환과 로런츠 변환</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -545,7 +546,7 @@ x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
+<span class="screen-reader-only">중요</span>푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -682,7 +683,7 @@ X^\mu = (ct,\,x,\,y,\,z),\qquad X_\mu = (ct,\,-x,\,-y,\,-z).
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>최종적으로…</strong>
+<span class="screen-reader-only">힌트</span><strong>최종적으로…</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -837,7 +838,7 @@ M = 2\gamma (w) m
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
+<span class="screen-reader-only">힌트</span><span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1018,7 +1019,7 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>페르마의 최소시간의 원리</strong>
+<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1152,7 +1153,7 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
+<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1224,6 +1225,8 @@ P_B \propto  \left|\sum_{\alpha \in \text{all possible paths}} \rho_\alpha e^{i\
 </section>
 <section id="sec-FLP_1_27_2" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_27_2">I.27-2 초점거리와 구면</h3>
+<section id="초점거리" class="level4">
+<h4 class="anchored" data-anchor-id="초점거리"><strong>초점거리</strong></h4>
 <div id="fig-FLP_1_27_2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_1_27_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1263,8 +1266,16 @@ f'=s'(s\to \infty)=\dfrac{nR}{n-1}
 <p><span id="eq-FLP_1_27_5"><span class="math display">\[
 f=s(s'\to \infty) = \dfrac{R}{n-1}
 \tag{2.28}\]</span></span></p>
-<p>에 모이게 된다.</p>
+<p>에 모이게 된다. 이를 이용하면 <a href="#eq-FLP_1_27_3" class="quarto-xref">식&nbsp;<span>2.26</span></a> 을 아래와 같이 쓸 수 있다.</p>
+<p><span id="eq-FLP_1_27_6"><span class="math display">\[
+\dfrac{1}{s}+ \dfrac{n}{s'} = \dfrac{1}{f}.
+\tag{2.29}\]</span></span></p>
+<p><br></p>
+</section>
+<section id="실상과-허상" class="level4">
+<h4 class="anchored" data-anchor-id="실상과-허상"><strong>실상과 허상</strong></h4>
 <p>… to be done …</p>
+</section>
 </section>
 </section>
 <section id="i.28-전자기-복사" class="level2">
@@ -1277,37 +1288,37 @@ f=s(s'\to \infty) = \dfrac{R}{n-1}
 <ul>
 <li>뉴튼의 보편 중력 법칙 <span id="eq-FLP_1_28_1"><span class="math display">\[
 \boldsymbol{F} = \dfrac{GmM}{r^2}\boldsymbol{e}_r.
-\tag{2.29}\]</span></span></li>
+\tag{2.30}\]</span></span></li>
 <li>주어진 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 와 자기장 <span class="math inline">\(\boldsymbol{E}\)</span> 에서의 로런츠 힘 <span id="eq-FLP_1_28_2"><span class="math display">\[
 \boldsymbol{F} = q(\boldsymbol{E}+ \boldsymbol{v}\times \boldsymbol{B}).
-\tag{2.30}\]</span></span></li>
+\tag{2.31}\]</span></span></li>
 </ul></li>
 </ul>
 <p>여기서 <span class="math inline">\(\boldsymbol{E}\)</span> 와 <span class="math inline">\(\boldsymbol{B}\)</span> 는 개별적인 전하에 의해 생성되는 전기장과 자기장의 벡터합이며 이를 <strong>중첩 (superposition)</strong> 이라고 한다. 단일 전하에 의해 생성되는 전기장과 자기장은 장 방정식에 의해 기술되며 우선 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 는 아래와 같다.</p>
 <p><span id="eq-fLP_1_28_3"><span class="math display">\[
 \boldsymbol{E} = \dfrac{-q}{4\pi \epsilon_0} \left[\dfrac{\boldsymbol{e}_{r'}}{r'^2} + \dfrac{r'}{c} \dfrac{d}{dt}\left(\dfrac{\boldsymbol{e}_{r'}}{r'^2}\right) + \dfrac{1}{c^2} \dfrac{d^2 \boldsymbol{e}_{r'}}{dt^2}\right].
-\tag{2.31}\]</span></span></p>
+\tag{2.32}\]</span></span></p>
 <ul>
 <li>첫번째 항은 쿨롱항이다 즉 <span class="math inline">\(\boldsymbol{E}_C = \dfrac{-q\boldsymbol{e}_{r'}}{4\pi \epsilon_0 r'^2}\)</span>. 여기서 <span class="math inline">\(r\)</span> 은 전하 <span class="math inline">\(q\)</span> 와 전기장이 측정되는 위치 <span class="math inline">\(P\)</span> 사이의 거리이다. 이미 19세기에 어떤 영향은 어떤 근본적인 상수로 정해지는 속도보다 빨리 전달 될 수 없다는 것이 발견되었다. 이 근본적인 속도가 빛의 속도 <span class="math inline">\(c\)</span> 이다.</li>
-<li>쿨롱의 법칙이 옳지 않은 것은 전하가 <em>지금</em> 어디있는지와 전하와의 거리가 <em>지금</em> 얼마인지를 알수 없을 뿐만 아니라 현재의 <span class="math inline">\(P\)</span> 점에서의 전기장에 영향을 주는것은 과거의 전하이기 때문이다. 얼마나 과거? <span class="math inline">\(r'/c\)</span> 만큼의 과거이며 이 차이를 <strong>지연 시간 (retarded time)</strong> 이라고 한다. <span class="math inline">\(r'\)</span> 은 <span class="math inline">\(q\)</span> 를 떠난 신호가 시간 <span class="math inline">\(t\)</span> 에 <span class="math inline">\(P\)</span> 에 도달했을 때의 거리이다. 따라서 <a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>2.31</span></a> 에 등장하는 방향은 <strong>지연 거리(retarded distance)</strong> <span class="math inline">\(r'\)</span> 에 대한 소위 <strong>지연 방향 (retarded direction)</strong> 인 <span class="math inline">\(\boldsymbol{e}_{r'}\)</span> 이 된다.</li>
+<li>쿨롱의 법칙이 옳지 않은 것은 전하가 <em>지금</em> 어디있는지와 전하와의 거리가 <em>지금</em> 얼마인지를 알수 없을 뿐만 아니라 현재의 <span class="math inline">\(P\)</span> 점에서의 전기장에 영향을 주는것은 과거의 전하이기 때문이다. 얼마나 과거? <span class="math inline">\(r'/c\)</span> 만큼의 과거이며 이 차이를 <strong>지연 시간 (retarded time)</strong> 이라고 한다. <span class="math inline">\(r'\)</span> 은 <span class="math inline">\(q\)</span> 를 떠난 신호가 시간 <span class="math inline">\(t\)</span> 에 <span class="math inline">\(P\)</span> 에 도달했을 때의 거리이다. 따라서 <a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>2.32</span></a> 에 등장하는 방향은 <strong>지연 거리(retarded distance)</strong> <span class="math inline">\(r'\)</span> 에 대한 소위 <strong>지연 방향 (retarded direction)</strong> 인 <span class="math inline">\(\boldsymbol{e}_{r'}\)</span> 이 된다.</li>
 <li>두번째 항은 지연된 시간과 전기장의 시간에 대한 변화율을 곱한 값이다.</li>
 <li>세번째 항은 지연 방향의 시간에 대한 이차 미분이다.</li>
 </ul>
 <p>자기장의 방정식은 다음과 같다.</p>
 <p><span id="eq-FLP_1_28_4"><span class="math display">\[
 \boldsymbol{B} = - \dfrac{\boldsymbol{e}_{r'}\times \boldsymbol{E}}{c}.
-\tag{2.32}\]</span></span></p>
+\tag{2.33}\]</span></span></p>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_28_2" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_28_2">I.28-2 복사</h3>
-<p><a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>2.31</span></a> 에는 거리의 제곱이 아니라 거리에 반비례하는 부분이 존재하며, 충분히 먼 거리에서는 이 항이 지배적이 된다. 구체적으로 찾아보는 것은 다음으로 미루기로 하고 일단 이것을 받아들이기로 하자. 정답은 세번째 항이다. 이제 우리는 당분간 다음을 받아들이자.</p>
+<p><a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>2.32</span></a> 에는 거리의 제곱이 아니라 거리에 반비례하는 부분이 존재하며, 충분히 먼 거리에서는 이 항이 지배적이 된다. 구체적으로 찾아보는 것은 다음으로 미루기로 하고 일단 이것을 받아들이기로 하자. 정답은 세번째 항이다. 이제 우리는 당분간 다음을 받아들이자.</p>
 <p><span id="eq-FLP_1_28_5"><span class="math display">\[
 \boldsymbol{E}= -\dfrac{q}{4\pi \epsilon_0 c^2} \dfrac{d^2 \boldsymbol{e}_{r'}}{dt^2}.
-\tag{2.33}\]</span></span></p>
+\tag{2.34}\]</span></span></p>
 <ul>
 <li><span class="math inline">\(\boldsymbol{e}_{r'}\)</span> 이 시간에 대한 이차 변화를 radial 방향과 transverse 방향으로 분해 할 수 있다. 이 때 radial 방향의 변화는 <span class="math inline">\(1/r'^2\)</span> 에 비례 하여 변하며 transverse 방향은 <span class="math inline">\(1/r'\)</span> 에 비례한다. 따라서 우리는 충분히 멀다면 transverse 방향만 고려해야 한다는 것을 알 수 있다.</li>
-<li><a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>2.31</span></a> 는 상대성 이론에 의한 효과까지 포함되어 있다.</li>
+<li><a href="#eq-fLP_1_28_3" class="quarto-xref">식&nbsp;<span>2.32</span></a> 는 상대성 이론에 의한 효과까지 포함되어 있다.</li>
 </ul>
 <p>이제 좀 더 단순한 상황을 생각해보자. 전하의 움직임은 느리고 움직이는 범위는 작다. 그렇다면 지연 시간은 거의 상수 <span class="math inline">\(r/c\)</span> 이다. 이제 전하가 <span class="math inline">\(x\)</span> 방향으로만 움직인다고 가정한다. 그렇다면</p>
 <p><span class="math display">\[
@@ -1315,12 +1326,12 @@ f=s(s'\to \infty) = \dfrac{R}{n-1}
 \]</span></p>
 <p>이다. 따라서 전기장은 대부븐 <span class="math inline">\(E_x\)</span> 이며 다음과 같다. <span id="eq-FLP_1_28_6"><span class="math display">\[
 E_x (t)= - \dfrac{q}{4\pi \epsilon_0 c^2 r} a_x\left(t-\dfrac{r}{c}\right)
-\tag{2.34}\]</span></span></p>
+\tag{2.35}\]</span></span></p>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_28_3" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_28_3">I.28-3 쌍극자 복사체</h3>
-<p>우리는 <a href="#eq-FLP_1_28_6" class="quarto-xref">식&nbsp;<span>2.34</span></a> 를 (1) 우리가 보는 방향에 대해 직각 방향으로 (2) 천천히 움직이는(non-relativistic) (3) 멀리 떨어져 있는 전자기 복사에 대한 기본 법칙으로 (당분간) 간주한다. 이 식의 가속도는 <span class="math inline">\(r/c\)</span> 만큼의 시간 이전의 가속도이다. 이 장에서는 이 식의 물리적 의미에 대해 다루며 이후에는 빛과 전파의 전달에 대한 모든 현상-반사, 굴절, 간섭, 회절, 산란 과 같은-을 설명하는데 사용할 것이다.</p>
+<p>우리는 <a href="#eq-FLP_1_28_6" class="quarto-xref">식&nbsp;<span>2.35</span></a> 를 (1) 우리가 보는 방향에 대해 직각 방향으로 (2) 천천히 움직이는(non-relativistic) (3) 멀리 떨어져 있는 전자기 복사에 대한 기본 법칙으로 (당분간) 간주한다. 이 식의 가속도는 <span class="math inline">\(r/c\)</span> 만큼의 시간 이전의 가속도이다. 이 장에서는 이 식의 물리적 의미에 대해 다루며 이후에는 빛과 전파의 전달에 대한 모든 현상-반사, 굴절, 간섭, 회절, 산란 과 같은-을 설명하는데 사용할 것이다.</p>
 <p>… 발전기를 이용한 쌍극자 복사체와 일종의 안테나에 대한 설명들…</p>
 <p><br></p>
 </section>
@@ -1347,7 +1358,7 @@ E_x (t)= - \dfrac{q}{4\pi \epsilon_0 c^2 r} a_x\left(t-\dfrac{r}{c}\right)
 <p>위의 그림과 같은 상황에서 전기장은 아래와 같다.</p>
 <p><span id="eq-FLP_1_29_1"><span class="math display">\[
 E(t) = - \dfrac{qa(t-r/c) \sin \theta}{4\pi \epsilon_0 c^2r}.
-\tag{2.35}\]</span></span></p>
+\tag{2.36}\]</span></span></p>
 <p>여기서 <span class="math inline">\(a(t-r/c)\)</span> 는 시간이 <span class="math inline">\(t-r/c\)</span> 일 때의 가속도로 <strong>지연 가속도(retarded acceleration)</strong> 이라고 한다.</p>
 <p><br></p>
 <div id="fig-FLP_1_29_2" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1365,11 +1376,11 @@ E(t) = - \dfrac{qa(t-r/c) \sin \theta}{4\pi \epsilon_0 c^2r}.
 <li><p>특별이 전하 <span class="math inline">\(q\)</span> 가 <span class="math inline">\(x=x_0 \cos \omega t\)</span> 와 같이 움직일 경우 가속도는</p>
 <p><span id="eq-FLP_1_29_2"><span class="math display">\[
 a=-\omega^2 x_0 \cos \omega t = a_0 \cos \omega t
-\tag{2.36}\]</span></span></p>
-<p>와 같고 전기장은 <a href="#eq-FLP_1_29_1" class="quarto-xref">식&nbsp;<span>2.35</span></a> 에 의해 아래와 같다.</p>
+\tag{2.37}\]</span></span></p>
+<p>와 같고 전기장은 <a href="#eq-FLP_1_29_1" class="quarto-xref">식&nbsp;<span>2.36</span></a> 에 의해 아래와 같다.</p>
 <p><span id="eq-FLP_1-20_3"><span class="math display">\[
 E= - q \sin \theta \dfrac{a_0 \cos \omega (t-r/c)}{4\pi \epsilon_0 rc^2}.
-\tag{2.37}\]</span></span> <br></p></li>
+\tag{2.38}\]</span></span> <br></p></li>
 </ul>
 </section>
 <section id="sec-FLP_1_29_2" class="level3">
@@ -1383,9 +1394,9 @@ E= - q \sin \theta \dfrac{a_0 \cos \omega (t-r/c)}{4\pi \epsilon_0 rc^2}.
 <section id="sec-FLP_1_29_3" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_29_3">I.29-3 사인파</h3>
 <ul>
-<li><p>각진동수 <span class="math inline">\(\omega\)</span> 에 대해 파수(wave number) <span class="math inline">\(k\)</span> 를 단위 거리당 변경되는 파동의 위상으로 정의하자. <a href="#eq-FLP_1-20_3" class="quarto-xref">식&nbsp;<span>2.37</span></a> 에서 위상 <span class="math inline">\(\phi = \omega (t-r/c)\)</span> 이므로 <span id="eq-FLP_1_29_4"><span class="math display">\[
+<li><p>각진동수 <span class="math inline">\(\omega\)</span> 에 대해 파수(wave number) <span class="math inline">\(k\)</span> 를 단위 거리당 변경되는 파동의 위상으로 정의하자. <a href="#eq-FLP_1-20_3" class="quarto-xref">식&nbsp;<span>2.38</span></a> 에서 위상 <span class="math inline">\(\phi = \omega (t-r/c)\)</span> 이므로 <span id="eq-FLP_1_29_4"><span class="math display">\[
 k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
-\tag{2.38}\]</span></span></p>
+\tag{2.39}\]</span></span></p>
 <p>이다. 참고로 빛이 아닌 경우 각진동수와 파수 사이에는 위와 같은 간단한 관계가 일반적으로 성립하지 않는다.</p></li>
 <li><p>이제 위상을 파수와 각진동수에 대해 <span class="math inline">\(\phi = \omega t - k x\)</span> 와 같이 쓸 수 있다.</p></li>
 <li><p>실제로 전기장은 <span class="math inline">\(1/r\)</span> 항 이외에 <span class="math inline">\(n&gt;1\)</span> 에 대한 <span class="math inline">\(1/r^n\)</span> 항이 존재한다. <span class="math inline">\(r\)</span> 이 충분히 크면 <span class="math inline">\(1/r^n\)</span> 항을 무시할 수 있다. 정성적으로 <span class="math inline">\(1/r^n\)</span> 항에서 <span class="math inline">\(r &gt; n \lambda\)</span> 보다 크면 무시 할 수 있다.</p></li>
@@ -1457,7 +1468,7 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 <p>같은 간격으로 직선상에 위치한 동일한 <span class="math inline">\(n\)</span> 개의 진동자를 생각하자. 각각의 진동자의 진폭은 같지만 위상은 다르다. 위상 차이는 실제적인 두 진동자의 위상 차이일 수도 있고 각 진동자로부터의 거리차이로 인한 위상차 일 수 있다. <span class="math inline">\(i\)</span> 번째 진동자와 <span class="math inline">\(i+1\)</span> 번째 진동자의 위상차가 <span class="math inline">\(\phi\)</span> 일 때 이 진동자에 의한 진폭을 합친 최종 진폭(resultant amplitude) <span class="math inline">\(R\)</span> 은 아래와 같다.</p>
 <p><span id="eq-FLP_1_30_1"><span class="math display">\[
 R = A\left[\cos (\omega t) + \cos (\omega t+ \phi) + \cdots + \cos (\omega t + (n-1) \phi)\right].
-\tag{2.39}\]</span></span></p>
+\tag{2.40}\]</span></span></p>
 <p>여기서 <span class="math inline">\(\phi = \alpha + 2\pi d \sin \theta/\lambda\)</span> 인 경우를 생각해보자.</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1469,11 +1480,11 @@ R &amp;= \dfrac{1}{2} \left[\sum_{j=0}^{n-1} Ae^{i(\omega t + j\phi)} + (\text{c
 <p>따라서 최종 진폭 <span class="math inline">\(A_R\)</span> 은</p>
 <p><span id="eq-FLP_1_30_2"><span class="math display">\[
 A_R = A \dfrac{\sin (n \phi/2)}{\sin (\phi/2)}
-\tag{2.40}\]</span></span></p>
+\tag{2.41}\]</span></span></p>
 <p>이며 최종 intensity 는</p>
 <p><span id="eq-FLP_1_30_3"><span class="math display">\[
 I = I_0 \dfrac{\sin^2 (n\phi/2)}{\sin^2 (\phi/2)}
-\tag{2.41}\]</span></span></p>
+\tag{2.42}\]</span></span></p>
 <p>이다.</p>
 <p>우리는 <span class="math inline">\(\phi \sim 0\)</span> 에서 <span class="math inline">\(I=n^2I_0\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(n\)</span> 개의 동일한 진동자에 의해 발생되는 에너지는 가장 큰 방향으로는 <span class="math inline">\(n^2\)</span> 에 비례하여 발생한다. (같은 위상의, <span class="math inline">\(\lambda\)</span> 만큼씩 떨여져 있는 <span class="math inline">\(n\)</span> 개의 진동자의 경우와 같다.) 위의 식을 통해 아래의 그림을 그릴 수 있다. <span class="math inline">\(n\phi = 2m\pi\)</span> 인 정수 <span class="math inline">\(m\)</span> 이 존재할 때 <span class="math inline">\(I=0\)</span> 이다. 또한 아래 그래프에서 전체 영역에 대한 적분은 <span class="math inline">\(2\pi n I_0\)</span> 임을 계산 할 수 있다.</p>
 <div id="fig-FLP_1_30_2" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1509,17 +1520,17 @@ I = I_0 \dfrac{\sin^2 (n\phi/2)}{\sin^2 (\phi/2)}
 </div>
 <p>측정하는 위치에서는 진동자 자체의 위상과 시간 지연에 의한 위상이 합쳐진 위상으로 느끼므로 측정하는 위치에서의 인접한 진동자의 위상차 <span class="math inline">\(\phi\)</span> 는 아래와 같다. <span id="eq-FLP_1_30_4"><span class="math display">\[
 \phi = \alpha + 2\pi d \sin \theta/\lambda = \alpha + kd\sin \theta.
-\tag{2.42}\]</span></span></p>
-<p>우선 <span class="math inline">\(\alpha=0\)</span> 인 경우는 <a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.41</span></a> 의 경우와 같다. 이 때 첫번째 극소점은 <span class="math inline">\(\phi = 2\pi/n\)</span> 일 때이며 이는 <span id="eq-FLP_1_30_5"><span class="math display">\[
-\lambda = nd\sin \theta
 \tag{2.43}\]</span></span></p>
+<p>우선 <span class="math inline">\(\alpha=0\)</span> 인 경우는 <a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.42</span></a> 의 경우와 같다. 이 때 첫번째 극소점은 <span class="math inline">\(\phi = 2\pi/n\)</span> 일 때이며 이는 <span id="eq-FLP_1_30_5"><span class="math display">\[
+\lambda = nd\sin \theta
+\tag{2.44}\]</span></span></p>
 <p>를 의미한다. <a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>2.28</span></a> 에서 <span class="math inline">\(\Delta = L\sin\theta = nd\sin\theta\)</span> 이며 따라서 첫번째 극소점은 <span class="math inline">\(\Delta =\lambda\)</span> 일 경우이다.</p>
-<p><a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.41</span></a> 에서 알 수 있는 하나 중요한 사실은 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(\phi = 2 m\pi\)</span> 일 때 최대값이 등장한다는 것이다. 즉 <span class="math inline">\(2\pi d \sin \theta/\lambda = 2\pi m\)</span> 조건이며 이로부터</p>
+<p><a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.42</span></a> 에서 알 수 있는 하나 중요한 사실은 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(\phi = 2 m\pi\)</span> 일 때 최대값이 등장한다는 것이다. 즉 <span class="math inline">\(2\pi d \sin \theta/\lambda = 2\pi m\)</span> 조건이며 이로부터</p>
 <p><span id="eq-FLP_1_30_6"><span class="math display">\[
 d\sin\theta = m\lambda
-\tag{2.44}\]</span></span></p>
-<p>을 얻는다. <a href="#fig-FLP_tfig2" class="quarto-xref">그림&nbsp;<span>2.27</span></a> 에서 <span class="math inline">\(2\pi\)</span> 주기로 나타나는 큰 픽을을 의미하며 <a href="#eq-FLP_1_30_5" class="quarto-xref">식&nbsp;<span>2.43</span></a> 와 비슷하지만 완전히 다른 의미임을 명심하라. 여기서 <span class="math inline">\(m\)</span> 값에 따라 <span class="math inline">\(0\)</span>-차 빔(zero-order beam), <span class="math inline">\(1\)</span>-차 빔(first-order beam), <span class="math inline">\(2\)</span>-차 빔(second-order beam) … 이라고 한다.</p>
-<p><a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>2.44</span></a> 에서 기억해야 할 것 하나는 <span class="math inline">\(d\le \lambda\)</span> 이면 가능한 해는 <span class="math inline">\(m=0\)</span> 일 때 뿐이다. 따라서 강한 신호를 보내려면 간격 <span class="math inline">\(d\)</span> 를 파장보다 크게 잡아야 한다.</p>
+\tag{2.45}\]</span></span></p>
+<p>을 얻는다. <a href="#fig-FLP_tfig2" class="quarto-xref">그림&nbsp;<span>2.27</span></a> 에서 <span class="math inline">\(2\pi\)</span> 주기로 나타나는 큰 픽을을 의미하며 <a href="#eq-FLP_1_30_5" class="quarto-xref">식&nbsp;<span>2.44</span></a> 와 비슷하지만 완전히 다른 의미임을 명심하라. 여기서 <span class="math inline">\(m\)</span> 값에 따라 <span class="math inline">\(0\)</span>-차 빔(zero-order beam), <span class="math inline">\(1\)</span>-차 빔(first-order beam), <span class="math inline">\(2\)</span>-차 빔(second-order beam) … 이라고 한다.</p>
+<p><a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>2.45</span></a> 에서 기억해야 할 것 하나는 <span class="math inline">\(d\le \lambda\)</span> 이면 가능한 해는 <span class="math inline">\(m=0\)</span> 일 때 뿐이다. 따라서 강한 신호를 보내려면 간격 <span class="math inline">\(d\)</span> 를 파장보다 크게 잡아야 한다.</p>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_3_20" class="level3">
@@ -1531,7 +1542,7 @@ d\sin\theta = m\lambda
 <h4 class="anchored" data-anchor-id="산란"><strong>산란</strong></h4>
 <ul>
 <li>서로 <span class="math inline">\(d\)</span> 만큼 떨어진 평행한 전선과 아주 멀리 떨어진(실용적으로 무한대만큼 떨여졌다고 볼 수 있는) 라디오파 발생장치를 생각하자. 각각의 전선에 도달하는 라디오파는 같은 위상을 가졌다고 간주 할 수 있다. 전달된 전자기장에 의해 도선의 전하는 진동하며 따라서 새로운 전자기파 발생장치로 볼 수 있다. 이 현상을 <strong>산란 (scattering)</strong> 이라고 한다.</li>
-<li>라디오 발상장치에서의 라디오파가 전선들이 이루는 평면에 수직하게 입사된다면, 그리고 전선의 간격이 파장보다 크다면 이 평먼에 수직한 방향과 <a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>2.44</span></a> 에 의해 정해지는 방향으로 강력한 전자기파가 발생한다.</li>
+<li>라디오 발상장치에서의 라디오파가 전선들이 이루는 평면에 수직하게 입사된다면, 그리고 전선의 간격이 파장보다 크다면 이 평먼에 수직한 방향과 <a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>2.45</span></a> 에 의해 정해지는 방향으로 강력한 전자기파가 발생한다.</li>
 </ul>
 </section>
 <section id="회절-격자" class="level4">
@@ -1540,7 +1551,7 @@ d\sin\theta = m\lambda
 <li>유리판에 일렬로 작은 흠을 파서 흠(notch)이 파이지 않은 다른 부분과 다소 다르게 산란되도록 한다. 흠 사이의 간격은 매우 일정하며 빛의 파장보다는 크다.<br>
 </li>
 <li>여기에 빛을 비추면 일부의 빛은 유리를 통과하지만 각각의 흠이 광원의 역할을 하며 특정한 각도로 강한 빛이 나온다. 이 각도는 틈의 간격과 관련이 있다. 이를 <strong>회적 격자 (diffraction grating)</strong> 라고 한다.</li>
-<li>여러 파장의 빛이 섞여 있을 경우 <a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>2.44</span></a> 를 보면 알 수 있듯이 강한 빛이 나오는 각도가 빛의 진동수(파장, 에너지…) 에 따라 다르다.</li>
+<li>여러 파장의 빛이 섞여 있을 경우 <a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>2.45</span></a> 를 보면 알 수 있듯이 강한 빛이 나오는 각도가 빛의 진동수(파장, 에너지…) 에 따라 다르다.</li>
 </ul>
 <p>지금까지는 광원에서의 위상이 모두 같은 경우를 생각했다. 회절 격자를 이용해 임의의 위상차를 주는 방법을 알아보자. 아래 그림과 같이 <span class="math inline">\(d\)</span> 의 간격을 갖는 회절격자에 <span class="math inline">\(\theta_\text{in}\)</span> 의 입사각으로 빛을 쐬어준다고 하자. 그리고 <span class="math inline">\(\theta_{\text{out}}\)</span> 만큼의 산란각을 갖는다고 하자.</p>
 <div id="fig-FLP_1_30_4" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1556,15 +1567,15 @@ d\sin\theta = m\lambda
 <p>그렇다면 회절격자의 인접한 두 선에서 발생하는 경로차 <span class="math inline">\(\phi\)</span> 는</p>
 <p><span id="eq-FLP_1_30_7"><span class="math display">\[
 \phi = \dfrac{2\pi d \sin \theta_\text{out}}{\lambda} - \dfrac{2 \pi d \sin \theta_\text{in}}{\lambda} = \dfrac{2\pi d}{\lambda}(\sin \theta_{\text{out}}- \sin \theta_\text{in}).
-\tag{2.45}\]</span></span></p>
+\tag{2.46}\]</span></span></p>
 <p>강한 intensity 를 얻으려면 <span class="math inline">\(\phi\)</span> 가 <span class="math inline">\(2\pi\)</span> 의 정수배 이어야 한다. 즉 <span class="math inline">\(\phi = 2\pi m\)</span>.</p>
 <ol type="1">
 <li><p><span class="math inline">\(d&lt;\lambda/2\)</span> 일 경우 <span class="math inline">\(\phi &lt; \pi (\sin \theta_{\text{out}}- \sin \theta_\text{in}) &lt; 2\pi\)</span> 이다. 따라서 <span class="math inline">\(\theta_\text{out} = \theta_\text{in}\)</span>. 여기서 산란된 빛은 입사된 빛이 아니라 scattering 과정에서 발생한 빛이며 단지 입사각과 산란각이 같을 뿐이다.</p></li>
 <li><p>There is another solution for this same case: <span class="math inline">\(\theta_\text{out}\)</span> may equal <span class="math inline">\(\theta_\text{in}\)</span>. So not only do we get a beam in the same direction as the incoming beam but also one in another direction, such that the angle of incidence is equal to the angle of scattering. This we call the reflected beam.</p></li>
 <li><p><em>반사 (reflection)</em> 이란 입사된 빛이 반사체의 원자들을 여기(excite) 시키고, 이 반사체의 원자들이 입사각과 같은 방향으로 새로운 파동을 발생시킨다.</p></li>
-<li><p><span class="math inline">\(d\)</span> 가 매우 작은 상황을 생각하자. <a href="#eq-FLP_1_30_7" class="quarto-xref">식&nbsp;<span>2.45</span></a> 에서 <span class="math inline">\(\phi\)</span> 역시 매우 작아진다. 안테나에서 간격 <span class="math inline">\(d\)</span> 가 매우 작은 대신에 더 많은 진동자를 넣어 총 위상차, 즉 처음과 마지막의 위상차가 동일한 경우를 생각해보자. <a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.41</span></a> 에서 <span class="math inline">\(\Phi = n\phi\)</span> 라고 놓자. <span class="math inline">\(\phi \approx 0\)</span> 이며 최대 intensity <span class="math inline">\(I_M = n^2I_0\)</span> 를 생각하면 아래 식을 얻는다. <span id="eq-FLP_1_30_8"><span class="math display">\[
+<li><p><span class="math inline">\(d\)</span> 가 매우 작은 상황을 생각하자. <a href="#eq-FLP_1_30_7" class="quarto-xref">식&nbsp;<span>2.46</span></a> 에서 <span class="math inline">\(\phi\)</span> 역시 매우 작아진다. 안테나에서 간격 <span class="math inline">\(d\)</span> 가 매우 작은 대신에 더 많은 진동자를 넣어 총 위상차, 즉 처음과 마지막의 위상차가 동일한 경우를 생각해보자. <a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.42</span></a> 에서 <span class="math inline">\(\Phi = n\phi\)</span> 라고 놓자. <span class="math inline">\(\phi \approx 0\)</span> 이며 최대 intensity <span class="math inline">\(I_M = n^2I_0\)</span> 를 생각하면 아래 식을 얻는다. <span id="eq-FLP_1_30_8"><span class="math display">\[
   I=I_M \dfrac{\sin^2 (\Phi/2)}{n^2 \sin^2(\phi/2)} \approx 4 I_M \dfrac{\sin ^2 (\Phi/2)}{\Phi^2}.
-   \tag{2.46}\]</span></span> 위의 식을 그래프로 그리면 아래와 같다. <a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.41</span></a> 에서는 <span class="math inline">\(\phi = 2m\pi\)</span> 일 때 <span class="math inline">\(m=0\)</span> 일 때와 같이 <span class="math inline">\(I_M\)</span> 의 intenstiry 를 얻지만 이 경우에는 그런 양상이 사라진다.</p></li>
+   \tag{2.47}\]</span></span> 위의 식을 그래프로 그리면 아래와 같다. <a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.42</span></a> 에서는 <span class="math inline">\(\phi = 2m\pi\)</span> 일 때 <span class="math inline">\(m=0\)</span> 일 때와 같이 <span class="math inline">\(I_M\)</span> 의 intenstiry 를 얻지만 이 경우에는 그런 양상이 사라진다.</p></li>
 </ol>
 <div id="fig-FLP_1_30_tfig1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1572,7 +1583,7 @@ d\sin\theta = m\lambda
 <img src="figures/fig_1_30/tfig1/tfig1.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_30_tfig1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.30: <a href="#eq-FLP_1_30_8" class="quarto-xref">식&nbsp;<span>2.46</span></a> 의 그래프
+그림&nbsp;2.30: <a href="#eq-FLP_1_30_8" class="quarto-xref">식&nbsp;<span>2.47</span></a> 의 그래프
 </figcaption>
 </figure>
 </div>
@@ -1587,7 +1598,7 @@ d\sin\theta = m\lambda
 <p>파장 <span class="math inline">\(\lambda'\)</span> 인 빛에 대해 경로차 <span class="math inline">\(\Delta\)</span> (<a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>2.28</span></a>) 가 <span class="math inline">\(n\lambda'\)</span> 과 같을 때 intensity maximum peak 이며 <span class="math inline">\(m\)</span>-th order beam 에 대해서는 <span class="math inline">\(\Delta = mn\lambda'\)</span> 이어야 한다. <span class="math inline">\(\lambda'\)</span> 과 약간 차이가 나는 파장 <span class="math inline">\(\lambda\)</span> 에 대해서 역시 <span class="math inline">\(\Delta = mn\lambda + \lambda = mn\lambda'\)</span> 이 되도록 하자. <span class="math inline">\(\Delta \lambda = \lambda'-\lambda\)</span> 라고 하면</p>
 <p><span id="eq-FLP_1_30_9"><span class="math display">\[
 \dfrac{\Delta \lambda}{\lambda} = \dfrac{1}{mn}
-\tag{2.47}\]</span></span></p>
+\tag{2.48}\]</span></span></p>
 <p>이며 이 때 <span class="math inline">\(\lambda/\Delta \lambda\)</span> 를 <strong>회절격자의 분해능 (resolving power of grating)</strong> 이라고 한다.</p>
 <p><br></p>
 </section>
@@ -1651,13 +1662,14 @@ d\sin\theta = m\lambda
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
