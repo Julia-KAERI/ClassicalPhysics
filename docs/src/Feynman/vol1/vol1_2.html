@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/vol1/vol1_1.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -464,6 +465,7 @@ window.Quarto = {
   <li><a href="#sec-FLP_1_27_4" id="toc-sec-FLP_1_27_4" class="nav-link" data-scroll-target="#sec-FLP_1_27_4">I.27-4 확대</a></li>
   <li><a href="#sec-FLP_1_27_5" id="toc-sec-FLP_1_27_5" class="nav-link" data-scroll-target="#sec-FLP_1_27_5">I.27-5 복합렌즈</a></li>
   <li><a href="#sec-FLP_1_27_6" id="toc-sec-FLP_1_27_6" class="nav-link" data-scroll-target="#sec-FLP_1_27_6">I.27-6 수차 (Aberrations)</a></li>
+  <li><a href="#sec-FLP_1_27_7" id="toc-sec-FLP_1_27_7" class="nav-link" data-scroll-target="#sec-FLP_1_27_7">I.27-7 분해능</a></li>
   </ul></li>
   <li><a href="#i.28-전자기-복사" id="toc-i.28-전자기-복사" class="nav-link" data-scroll-target="#i.28-전자기-복사">I.28 전자기 복사</a>
   <ul class="collapse">
@@ -528,7 +530,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>갈릴레이 변환과 로런츠 변환</strong>
+<span class="screen-reader-only">중요</span><strong>갈릴레이 변환과 로런츠 변환</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -549,7 +551,7 @@ x'=\dfrac{x-ut}{\sqrt{1-u^2/c^2}},\quad y'=y,\quad z'=z,\quad t' = \dfrac{t-ux/c
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
+<span class="screen-reader-only">중요</span>푸앵카레가 ’물리 법칙의 로렌츠 불변성(혹은 로렌츠 변환/로렌츠 군)’을 말한 1차 자료
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -686,7 +688,7 @@ X^\mu = (ct,\,x,\,y,\,z),\qquad X_\mu = (ct,\,-x,\,-y,\,-z).
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>최종적으로…</strong>
+<span class="screen-reader-only">힌트</span><strong>최종적으로…</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -841,7 +843,7 @@ M = 2\gamma (w) m
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
+<span class="screen-reader-only">힌트</span><span class="math inline">\(\gamma\)</span> 와 <span class="math inline">\(\beta\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1022,7 +1024,7 @@ P^\mu=\left(E/c,\,p_x,\,p_y,\,p_z\right)
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>페르마의 최소시간의 원리</strong>
+<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1156,7 +1158,7 @@ n_{13}= \dfrac{n_3}{n_1}= \dfrac{n_3}{n_2}\dfrac{n_2}{n_1} = \dfrac{n_{23}}{n_{1
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
+<span class="screen-reader-only">중요</span><strong>페르마의 최소시간의 원리 (파인만 버젼)</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1416,6 +1418,21 @@ xx' = f^2
 <p><br></p>
 </section>
 </section>
+<section id="sec-FLP_1_27_7" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_27_7">I.27-7 분해능</h3>
+<p>예를 들어 우리가 양 끝에 점이 있는 박테리아를 확대하는 현미경을 개발한다면 현며경을 통해 이 두 점이 구별되기를 기대할 것이다. 필요할때마다 렌즈를 추가하여 구면수차와 색수차를 상쇄시킨다면 우리가 원하는 만큼 확대시키지 못할 이유는 무엇인가? 그러나 최소시간이 정확하지 않기 때문에 확대에는 한계가 있다. 현미경에서 두 점이 구분되어 보이기 위해 실제로 두 점 사이의 거리가 얼마가 되어야 하는지를 결정하는 아름다운 규칙을 알아보자.</p>
+<div id="fig-FLP_1_27_0" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_27_0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_27/fig_1_27_9.png" class="img-fluid figure-img" width="450">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_27_0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;2.25: 파인만 물리학 강의 I. Fig. 27-9. 광학 시스템의 분해능
+</figcaption>
+</figure>
+</div>
+<p><br></p>
+</section>
 </section>
 <section id="i.28-전자기-복사" class="level2">
 <h2 class="anchored" data-anchor-id="i.28-전자기-복사">I.28 전자기 복사</h2>
@@ -1490,7 +1507,7 @@ E_x (t)= - \dfrac{q}{4\pi \epsilon_0 c^2 r} a_x\left(t-\dfrac{r}{c}\right)
 <img src="figures/fig_1_29/fig_1_29_1/fig_1_29_1.png" class="img-fluid figure-img" width="450">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.25: 파인만 물리학 강의 I. Fig. 29-1. 지연 가속도가 <span class="math inline">\(\boldsymbol{a}'\)</span> 인 양전하에 의한 전기장 <span class="math inline">\(\boldsymbol{E}\)</span>
+그림&nbsp;2.26: 파인만 물리학 강의 I. Fig. 29-1. 지연 가속도가 <span class="math inline">\(\boldsymbol{a}'\)</span> 인 양전하에 의한 전기장 <span class="math inline">\(\boldsymbol{E}\)</span>
 </figcaption>
 </figure>
 </div>
@@ -1506,7 +1523,7 @@ E(t) = - \dfrac{qa(t-r/c) \sin \theta}{4\pi \epsilon_0 c^2r}.
 <img src="figures/fig_1_29/fig_1_29_2.png" class="img-fluid figure-img" width="450">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.26: 파인만 물리학 강의 I. Fig. 29-2, Fig. 29-3. 공명자 안의 전하의 가속도의 변화에 대한 전기장의 변화
+그림&nbsp;2.27: 파인만 물리학 강의 I. Fig. 29-2, Fig. 29-3. 공명자 안의 전하의 가속도의 변화에 대한 전기장의 변화
 </figcaption>
 </figure>
 </div>
@@ -1551,7 +1568,7 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 <img src="figures/fig_1_29/fig_1_29_5.png" class="img-fluid figure-img" width="350">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.27: 파인만 물리학 강의 I. Fig. 29-5. 파장의 반만큼 떨어져 있는 쌍극 진동자에 의한 에너지 Intensity. (a) 두 진동자가 같은 위상으로 진동할 때. (b) 두 진동자가 주기의 반만큼의 위상차로 진동할 때
+그림&nbsp;2.28: 파인만 물리학 강의 I. Fig. 29-5. 파장의 반만큼 떨어져 있는 쌍극 진동자에 의한 에너지 Intensity. (a) 두 진동자가 같은 위상으로 진동할 때. (b) 두 진동자가 주기의 반만큼의 위상차로 진동할 때
 </figcaption>
 </figure>
 </div>
@@ -1562,7 +1579,7 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 <img src="figures/fig_1_29/fig_1_29_6.png" class="img-fluid figure-img" width="200">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.28: 파인만 물리학 강의 I. Fig. 29-6
+그림&nbsp;2.29: 파인만 물리학 강의 I. Fig. 29-6
 </figcaption>
 </figure>
 </div>
@@ -1574,7 +1591,7 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 <img src="figures/fig_1_29/fig_1_29_7.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.29: 파인만 물리학 강의 I. Fig. 29-7
+그림&nbsp;2.30: 파인만 물리학 강의 I. Fig. 29-7
 </figcaption>
 </figure>
 </div>
@@ -1585,7 +1602,7 @@ k = \left|\dfrac{d\phi}{dr}\right| = \dfrac{\omega}{c}
 <img src="figures/fig_1_29/fig_1_29_8.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_29_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.30: 파인만 물리학 강의 I. Fig. 29-8
+그림&nbsp;2.31: 파인만 물리학 강의 I. Fig. 29-8
 </figcaption>
 </figure>
 </div>
@@ -1632,7 +1649,7 @@ I = I_0 \dfrac{\sin^2 (n\phi/2)}{\sin^2 (\phi/2)}
 <img src="figures/fig_1_30/fig_1_30_2.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_30_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.31: 파인만 물리학 강의 I. Fig. 30-2. 같은 강도를 갖는 다수의 진동자의 intensity 를 위상에 대한 함수로 표현함
+그림&nbsp;2.32: 파인만 물리학 강의 I. Fig. 30-2. 같은 강도를 갖는 다수의 진동자의 intensity 를 위상에 대한 함수로 표현함
 </figcaption>
 </figure>
 </div>
@@ -1642,18 +1659,18 @@ I = I_0 \dfrac{\sin^2 (n\phi/2)}{\sin^2 (\phi/2)}
 <img src="figures/fig_1_30/tfig1/tfig2.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_tfig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.32: <a href="#fig-FLP_1_30_2" class="quarto-xref">그림&nbsp;<span>2.31</span></a> 를 <span class="math inline">\(n=7\)</span> 일때 <span class="math inline">\(\phi\)</span> 에 대해 확장하여 그림
+그림&nbsp;2.33: <a href="#fig-FLP_1_30_2" class="quarto-xref">그림&nbsp;<span>2.32</span></a> 를 <span class="math inline">\(n=7\)</span> 일때 <span class="math inline">\(\phi\)</span> 에 대해 확장하여 그림
 </figcaption>
 </figure>
 </div>
-<p>이제 아래 <a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>2.33</span></a> 같은 진동자 배치를 생각하자. 직선상에, 인접한 진동자와 <span class="math inline">\(d\)</span> 만큼 떨여진 <span class="math inline">\(n\)</span> 개의 진동자가 위치한다. <span class="math inline">\(i\)</span> 번째 진동자는 <span class="math inline">\(i-1\)</span> 번째 진동자에 대해 <span class="math inline">\(\alpha\)</span> 만큼 더 큰 위상(phase) 를 가진다. 이 진동자가 가 위치한 직선에 수직인 방향으로 <span class="math inline">\(\theta\)</span> 만큼의 각을 가진 위치에서 측정한다고 하자.</p>
+<p>이제 아래 <a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>2.34</span></a> 같은 진동자 배치를 생각하자. 직선상에, 인접한 진동자와 <span class="math inline">\(d\)</span> 만큼 떨여진 <span class="math inline">\(n\)</span> 개의 진동자가 위치한다. <span class="math inline">\(i\)</span> 번째 진동자는 <span class="math inline">\(i-1\)</span> 번째 진동자에 대해 <span class="math inline">\(\alpha\)</span> 만큼 더 큰 위상(phase) 를 가진다. 이 진동자가 가 위치한 직선에 수직인 방향으로 <span class="math inline">\(\theta\)</span> 만큼의 각을 가진 위치에서 측정한다고 하자.</p>
 <div id="fig-FLP_1_30_3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_1_30_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/fig_1_30/fig_1_30_3/fig_1_30_3.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_30_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.33: 파인만 물리학 강의 I. Fig. 30-3. 같은 강도를 갖는 <span class="math inline">\(n\)</span> 개의 진동자를 직선상에 배치함. <span class="math inline">\(s\)</span> 번째 진동자의 위상 <span class="math inline">\(\alpha_s = s\alpha\)</span>.
+그림&nbsp;2.34: 파인만 물리학 강의 I. Fig. 30-3. 같은 강도를 갖는 <span class="math inline">\(n\)</span> 개의 진동자를 직선상에 배치함. <span class="math inline">\(s\)</span> 번째 진동자의 위상 <span class="math inline">\(\alpha_s = s\alpha\)</span>.
 </figcaption>
 </figure>
 </div>
@@ -1663,12 +1680,12 @@ I = I_0 \dfrac{\sin^2 (n\phi/2)}{\sin^2 (\phi/2)}
 <p>우선 <span class="math inline">\(\alpha=0\)</span> 인 경우는 <a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.50</span></a> 의 경우와 같다. 이 때 첫번째 극소점은 <span class="math inline">\(\phi = 2\pi/n\)</span> 일 때이며 이는 <span id="eq-FLP_1_30_5"><span class="math display">\[
 \lambda = nd\sin \theta
 \tag{2.52}\]</span></span></p>
-<p>를 의미한다. <a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>2.33</span></a> 에서 <span class="math inline">\(\Delta = L\sin\theta = nd\sin\theta\)</span> 이며 따라서 첫번째 극소점은 <span class="math inline">\(\Delta =\lambda\)</span> 일 경우이다.</p>
+<p>를 의미한다. <a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>2.34</span></a> 에서 <span class="math inline">\(\Delta = L\sin\theta = nd\sin\theta\)</span> 이며 따라서 첫번째 극소점은 <span class="math inline">\(\Delta =\lambda\)</span> 일 경우이다.</p>
 <p><a href="#eq-FLP_1_30_3" class="quarto-xref">식&nbsp;<span>2.50</span></a> 에서 알 수 있는 하나 중요한 사실은 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(\phi = 2 m\pi\)</span> 일 때 최대값이 등장한다는 것이다. 즉 <span class="math inline">\(2\pi d \sin \theta/\lambda = 2\pi m\)</span> 조건이며 이로부터</p>
 <p><span id="eq-FLP_1_30_6"><span class="math display">\[
 d\sin\theta = m\lambda
 \tag{2.53}\]</span></span></p>
-<p>을 얻는다. <a href="#fig-FLP_tfig2" class="quarto-xref">그림&nbsp;<span>2.32</span></a> 에서 <span class="math inline">\(2\pi\)</span> 주기로 나타나는 큰 픽을을 의미하며 <a href="#eq-FLP_1_30_5" class="quarto-xref">식&nbsp;<span>2.52</span></a> 와 비슷하지만 완전히 다른 의미임을 명심하라. 여기서 <span class="math inline">\(m\)</span> 값에 따라 <span class="math inline">\(0\)</span>-차 빔(zero-order beam), <span class="math inline">\(1\)</span>-차 빔(first-order beam), <span class="math inline">\(2\)</span>-차 빔(second-order beam) … 이라고 한다.</p>
+<p>을 얻는다. <a href="#fig-FLP_tfig2" class="quarto-xref">그림&nbsp;<span>2.33</span></a> 에서 <span class="math inline">\(2\pi\)</span> 주기로 나타나는 큰 픽을을 의미하며 <a href="#eq-FLP_1_30_5" class="quarto-xref">식&nbsp;<span>2.52</span></a> 와 비슷하지만 완전히 다른 의미임을 명심하라. 여기서 <span class="math inline">\(m\)</span> 값에 따라 <span class="math inline">\(0\)</span>-차 빔(zero-order beam), <span class="math inline">\(1\)</span>-차 빔(first-order beam), <span class="math inline">\(2\)</span>-차 빔(second-order beam) … 이라고 한다.</p>
 <p><a href="#eq-FLP_1_30_6" class="quarto-xref">식&nbsp;<span>2.53</span></a> 에서 기억해야 할 것 하나는 <span class="math inline">\(d\le \lambda\)</span> 이면 가능한 해는 <span class="math inline">\(m=0\)</span> 일 때 뿐이다. 따라서 강한 신호를 보내려면 간격 <span class="math inline">\(d\)</span> 를 파장보다 크게 잡아야 한다.</p>
 <p><br></p>
 </section>
@@ -1699,7 +1716,7 @@ d\sin\theta = m\lambda
 <img src="figures/fig_1_30/fig_1_30_4.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_30_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.34: 파인만 물리학 강의 I. Fig. 30-4. 회절격자의 인접함 선에 대한 경로 차이는 <span class="math inline">\(d\sin\theta_\text{out} - d\sin\theta_\text{in}\)</span> 이다.
+그림&nbsp;2.35: 파인만 물리학 강의 I. Fig. 30-4. 회절격자의 인접함 선에 대한 경로 차이는 <span class="math inline">\(d\sin\theta_\text{out} - d\sin\theta_\text{in}\)</span> 이다.
 </figcaption>
 </figure>
 </div>
@@ -1722,7 +1739,7 @@ d\sin\theta = m\lambda
 <img src="figures/fig_1_30/tfig1/tfig1.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_30_tfig1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2.35: <a href="#eq-FLP_1_30_8" class="quarto-xref">식&nbsp;<span>2.55</span></a> 의 그래프
+그림&nbsp;2.36: <a href="#eq-FLP_1_30_8" class="quarto-xref">식&nbsp;<span>2.55</span></a> 의 그래프
 </figcaption>
 </figure>
 </div>
@@ -1734,7 +1751,7 @@ d\sin\theta = m\lambda
 <p>앞서 언급했듯이 회절격자는 파장에 따라 산란각이 달라지기 때문에 파장별로 분리하는데 사용 할 수 있다. 두개의 유사한 파장을 가진 광원에서 오는 빛을 파장별로 분리 할 수 있는 능력을 <strong>분해능 (resolving power)</strong> 이라고 한다. 일반적으로 레일리 기준을 사용한다.</p>
 <section id="레일리-기준rayleighs-criteria" class="level4">
 <h4 class="anchored" data-anchor-id="레일리-기준rayleighs-criteria"><strong>레일리 기준(Rayleigh’s criteria)</strong></h4>
-<p>파장 <span class="math inline">\(\lambda'\)</span> 인 빛에 대해 경로차 <span class="math inline">\(\Delta\)</span> (<a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>2.33</span></a>) 가 <span class="math inline">\(n\lambda'\)</span> 과 같을 때 intensity maximum peak 이며 <span class="math inline">\(m\)</span>-th order beam 에 대해서는 <span class="math inline">\(\Delta = mn\lambda'\)</span> 이어야 한다. <span class="math inline">\(\lambda'\)</span> 과 약간 차이가 나는 파장 <span class="math inline">\(\lambda\)</span> 에 대해서 역시 <span class="math inline">\(\Delta = mn\lambda + \lambda = mn\lambda'\)</span> 이 되도록 하자. <span class="math inline">\(\Delta \lambda = \lambda'-\lambda\)</span> 라고 하면</p>
+<p>파장 <span class="math inline">\(\lambda'\)</span> 인 빛에 대해 경로차 <span class="math inline">\(\Delta\)</span> (<a href="#fig-FLP_1_30_3" class="quarto-xref">그림&nbsp;<span>2.34</span></a>) 가 <span class="math inline">\(n\lambda'\)</span> 과 같을 때 intensity maximum peak 이며 <span class="math inline">\(m\)</span>-th order beam 에 대해서는 <span class="math inline">\(\Delta = mn\lambda'\)</span> 이어야 한다. <span class="math inline">\(\lambda'\)</span> 과 약간 차이가 나는 파장 <span class="math inline">\(\lambda\)</span> 에 대해서 역시 <span class="math inline">\(\Delta = mn\lambda + \lambda = mn\lambda'\)</span> 이 되도록 하자. <span class="math inline">\(\Delta \lambda = \lambda'-\lambda\)</span> 라고 하면</p>
 <p><span id="eq-FLP_1_30_9"><span class="math display">\[
 \dfrac{\Delta \lambda}{\lambda} = \dfrac{1}{mn}
 \tag{2.56}\]</span></span></p>
@@ -1801,13 +1818,14 @@ d\sin\theta = m\lambda
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
