@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,15 +34,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/vol1/vol1_2.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,7 +84,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -607,7 +606,7 @@ P''_1 = P'_1=P_1,\qquad P''_2 = P'_2 = P_2,\qquad P''_{12} = P_{12} \ne P'_{12}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span><strong>요약</strong>
+<strong>요약</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -851,17 +850,17 @@ E_0 = \dfrac{\hbar^2}{2ma_0^2} - \dfrac{e^2}{4\pi\epsilon_0 a_0} = -13.6 \text{ 
 </figcaption>
 </figure>
 </div>
-<p>위의 그림과 같이 마찰이 이 움직일 수 있는 피스톤이 한 면을 차지하고 있는 상자에 기체 원자가 차 있다고 하자. 상자의 부피는 <span class="math inline">\(V\)</span> 이며 다양한 속도로 움직이는 기체 원자가 피스톤에 충돌한다. 만악 상자 외부가 진공이라면 기체 원자가 피스톤과 충돌하면 피스톤이 운동량을 얻게 되어 점차 밖으로 이동하게 된다. 피스톤이 밖으로 움직이는 것을 막기 위해서 힘 <span class="math inline">\(F\)</span> 를 가한다고 하자. 그리고 피스톤의 단면적을 <span class="math inline">\(A\)</span> 라고 하자. 그렇다면 힘은 <span class="math inline">\(A\)</span> 에 비례할 것이며 이 때 <span class="math inline">\(A\)</span> 에 곱해지는 값을 <strong>압력 (pressure)</strong> 라고 정의한다. 즉 압력 <span class="math inline">\(P\)</span> 는 다음과 같이 정의한다.</p>
+<p>위의 그림과 같이 마찰이 이 움직일 수 있는 피스톤이 한 면을 차지하고 있는 부피 <span class="math inline">\(V\)</span> 인 상자에 기체 원자가 차 있다고 하자. 다양한 속도로 움직이는 기체 원자가 피스톤에 충돌한다. 만악 상자 외부가 진공이라면 기체 원자가 피스톤과 충돌하면서 피스톤이 운동량을 얻게 되어 점차 밖으로 이동하게 된다. 피스톤이 밖으로 움직이는 것을 막기 위해서 힘 <span class="math inline">\(F\)</span> 를 가한다고 하자. 그리고 피스톤의 단면적을 <span class="math inline">\(A\)</span> 라고 하자. 그렇다면 힘은 <span class="math inline">\(A\)</span> 에 비례할 것이며 이 때 <span class="math inline">\(A\)</span> 에 곱해지는 값을 <strong>압력 (pressure)</strong> 라고 정의한다. 즉, 압력 <span class="math inline">\(P\)</span> 를 다음과 같이 정의한다.</p>
 <p><span id="eq-FLP_1_39_1"><span class="math display">\[
 P=\dfrac{F}{A}.
 \tag{3.14}\]</span></span></p>
-<div class="page-columns page-full"><p>또한 미소 일(differential work) <span class="math inline">\(dW\)</span> 를 피스톤이 <span class="math inline">\((-dx)\)</span> 만큼 움직였을 때 기체에 해준 일로 정의한다<span class="math inline">\(^2\)</span>.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^2\)</span> 많은 교제애서 반대로 일을 기체가 한 일로 정의할 수 있다. 여기서는 파인만의 정의를 따른다.</span></div></div>
+<div class="page-columns page-full"><p>또한 미소 일(differential work) <span class="math inline">\(dW\)</span> 를 피스톤이 <span class="math inline">\((-dx)\)</span> 만큼 움직였을 때 기체에 해준 일로 정의한다<span class="math inline">\(^2\)</span>.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^2\)</span> 많은 교제애서 반대로 일을 기체가 한 일로 정의하기도 한다. 여기서는 파인만의 정의를 따른다.</span></div></div>
 <p><span id="eq-FLP_1_39_2"><span class="math display">\[
 dW = F(-dx) = -PA\,dx = -PdV.
 \tag{3.15}\]</span></span></p>
-<p>공기 분자의 충돌로 피스톤에 운동량이 전달되며 우리가 피스톤이 움직이지 않기 위해 가해야 하는 힘을 알기 위해서는 단위 시간당 공기 분자의 충돌로 전딜되는 운동량을 계산해야 한다. <span class="math inline">\(F=dp/dt\)</span>. 우선 피스톤이 분자에 대한 완벽한 <em>반사체</em> 라고 가정하자. 그렇지 않다면 피스톤이 가열되기 시작하고 상황이 변하게 되지만, <u>결국 평형상태가 되면 최종 결과는 사실상 완전히 탄성충돌이 된다.</u></p>
-<p>초당 운동량은 두부분으로 나누어 계산한다. (1) 특정 분자가 피스톤과 충돌할 때 피스톤에 전달한 운동량을 구하고, (2) 거기에 분자가 벽과 초당 충돌한 횟수를 구한다. 그렇다면 힘은 이 두 요인의 곱이다.평균적으로, 충돌 전과 후의 입자의 에너지는 같다. 따라서 우리는 기체가 정적 상태(steady state)에 있다고 가정하며, 피스톤이 정지해 있기 때문에 피스톤에 에너지를 잃지 않을 것이다. 이러한 상황에서는 입자의 충돌 전 후의 속도가 같다.</p>
-<p>상자의 부피 <span class="math inline">\(V\)</span> 와 기체 분자의 개수 <span class="math inline">\(N\)</span> 을 생각하자. 그렇다면 단위 부피당 개수 <span class="math inline">\(n=N/V\)</span> 를 생각 할 수 있다. 그리고 피스톤이 움직이는 방향을 <span class="math inline">\(x\)</span> 방향이라고 하자. 그리고 모든 분자들이 같은 속력 <span class="math inline">\(v_x\)</span> 를 가진다고 하자. 이제 짧은 시간 <span class="math inline">\(dt\)</span> 동안 피스톤과 충돌하는 분자들은 피스톤으로부터의 거리가 <span class="math inline">\(v_x dt\)</span> 안에 있어야 하며 피스톤의 면적이 <span class="math inline">\(A\)</span> 이므로 피스톤과 충돌할 수 있는 분자들의 부피는 <span class="math inline">\(v_x A dt\)</span> 라고 생각 할 수 있다. 그러나 <span class="math inline">\(v_x\)</span> 의 속력을 가진 분자 가운데 반은 피스톤으로 멀어지는 속도를 가질 것이므로 <span class="math inline">\(dt\)</span> 의 시간동안 피스톤과 충돌하는 기체 분자의 개수는 <span class="math inline">\(nv_xA\,dt/2\)</span> 이다. 이제 속도가 <span class="math inline">\(v_x\)</span> 인 입자가 피스톤에 충돌하고 반사됬을 때의 운동량의 변화량은 <span class="math inline">\(2mv_x\)</span> 이며 <span class="math inline">\(dt\)</span> 의 시간동안의 충돌 횟수는 <span class="math inline">\(v_x A\,dt\)</span> 이므로 피스톤에 전달되는 힘 <span class="math inline">\(F\)</span> 는</p>
+<p>힘 <span class="math inline">\(F\)</span> 를 알기 위해서는 단위 시간당 공기 분자의 충돌로 전딜되는 운동량을 계산해야 한다. <span class="math inline">\(F=dp/dt\)</span>. 우선 피스톤이 분자에 대한 완벽한 <em>반사체</em> 라고 가정하자. 그렇지 않다면 피스톤이 가열되기 시작하고 상황이 변하게 되지만, <u>결국 평형상태가 되면 최종 결과는 사실상 완전히 탄성충돌이 된다.</u></p>
+<p>초당 운동량은 두부분으로 나누어 계산한다. (1) 특정 분자 하나가 피스톤과 충돌할 때 피스톤에 전달한 운동량을 구하고, (2) 거기에 분자가 벽과 초당 충돌한 횟수를 구한다. 그렇다면 힘은 이 두 요인의 곱이다. 평균적으로, 충돌 전과 후의 입자의 에너지는 같다. 따라서 우리는 기체가 정적 상태(steady state)에 있다고 가정하며, 피스톤이 정지해 있기 때문에 피스톤에 에너지를 잃지 않을 것이다. 이러한 상황에서는 입자의 충돌 전 후의 속도가 같다.</p>
+<p>상자의 부피 <span class="math inline">\(V\)</span> 와 기체 분자의 개수 <span class="math inline">\(N\)</span> 으로부터 단위 부피당 개수, 즉 개수 밀도 (number density) <span class="math inline">\(n=N/V\)</span> 를 생각 할 수 있다. 그리고 피스톤이 움직이는 방향을 <span class="math inline">\(x\)</span> 방향이라고 하자. 그리고 모든 분자들이 같은 속력 <span class="math inline">\(v_x\)</span> 를 가진다고 하자. 이제 짧은 시간 <span class="math inline">\(dt\)</span> 동안 피스톤과 충돌하는 분자들은 피스톤으로부터의 거리가 <span class="math inline">\(v_x dt\)</span> 안에 있어야 하며 피스톤의 면적이 <span class="math inline">\(A\)</span> 이므로 피스톤과 충돌할 수 있는 분자들의 부피는 <span class="math inline">\(v_x A dt\)</span> 라고 생각 할 수 있다. 그러나 <span class="math inline">\(v_x\)</span> 의 속력을 가진 분자 가운데 반은 피스톤으로 멀어지는 속도를 가지며 따라서 피스톤과 충돌하지 않기 때문에 <span class="math inline">\(dt\)</span> 의 시간동안 피스톤과 충돌하는 기체 분자의 개수는 <span class="math inline">\(nv_xA\,dt/2\)</span> 이다. 이제 속도가 <span class="math inline">\(v_x\)</span> 인 입자가 피스톤에 충돌하고 반사됬을 때의 운동량의 변화량은 <span class="math inline">\(2mv_x\)</span> 이며 <span class="math inline">\(dt\)</span> 의 시간동안의 충돌 횟수는 <span class="math inline">\(v_x A\,dt\)</span> 이므로 피스톤에 전달되는 힘 <span class="math inline">\(F\)</span> 는</p>
 <p><span id="eq-FLP_1_39_3"><span class="math display">\[
 F = \dfrac{1}{2}nmv_x A \cdot 2mv_x = nmAv_x^2
 \tag{3.16}\]</span></span></p>
@@ -889,7 +888,7 @@ P = \dfrac{2}{3} n \left\langle\dfrac{1}{2}mv^2\right\rangle .
 <p><span id="eq-FLP_1_39_9"><span class="math display">\[
 PV = \dfrac{2}{3}N\left\langle\dfrac{1}{2}mv^2\right\rangle
 \tag{3.22}\]</span></span></p>
-<p>임을 안다. 단원자 분자의 경우, 그리고 분자 내부의 들뜸이나 운동을 무시할 경우 분자의 에너지의 합 <span class="math inline">\(U\)</span> 는 운동에너지의 평균에 분자의 개수를 곱한 값이다. 즉</p>
+<p>임을 안다. 분자 내부의 들뜸이나 운동을 무시할 경우 질량중심의 운동에너지가 전체 에너지이다. 단원자 분자의 경우는 운동에너지가 전체 에너지이며 분자의 에너지의 합 <span class="math inline">\(U\)</span> 는 운동에너지의 평균에 분자의 개수를 곱한 값이므로 <a href="#eq-FLP_1_39_9" class="quarto-xref">식&nbsp;<span>3.22</span></a> 에 의해</p>
 <p><span id="eq-FLP_1_39_10"><span class="math display">\[
 PV = \dfrac{2}{3}U
 \tag{3.23}\]</span></span></p>
@@ -911,7 +910,7 @@ PV^\gamma = \text{constant}.
 </section>
 <section id="sec-FLP_1_39_3" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_39_3">I.39-3 복사의 압축</h3>
-<p>다수의 광자가 내부가 고온인 상자 안이 있다고 하자. 이 상자는 실제 고온의 별이다. 어느정도로 뜨겁냐면 내부애 원자는 무시할 만큼만 있을 정도이다. 태양은 이 기준으로는 충분히 뜨겁지 않다. 일단 광자가 운동량 <span class="math inline">\(\boldsymbol{p}\)</span> 를 가진다고 하자. 광자가 벽에 전달하는 운동량은 <span class="math inline">\(2p_x\)</span> 이고, <span class="math inline">\(dt\)</span> 의 시간 간격 동안 충돌을 발생시키는 광자의 개수는 <span class="math inline">\(nv_xA\,dt/2\)</span> 이므로 (2로 나누어 지는 것은 <span class="math inline">\(v_x\)</span> 가 벽으로 향하는 방향과 벽의 반대쪽으로 향하는 방향을 가질 수 있으며 이중 반만 충돌을 일으키기 때문이다.)</p>
+<p>다수의 광자가 내부가 고온인 상자 안이 있다고 하자. 이 상자는 실제 고온의 별이며 내부에 원자는 무시할 만큼만 있을 정도이다. 태양은 이 기준으로는 충분히 뜨겁지 않다. 일단 광자가 운동량 <span class="math inline">\(\boldsymbol{p}\)</span> 를 가진다고 하자. 광자가 벽에 전달하는 운동량은 <span class="math inline">\(2p_x\)</span> 이고, <span class="math inline">\(dt\)</span> 의 시간 간격 동안 충돌을 발생시키는 광자의 개수는 <span class="math inline">\(nv_xA\,dt/2\)</span> 이므로 (2로 나누어 지는 것은 <span class="math inline">\(v_x\)</span> 가 벽으로 향하는 방향과 벽의 반대쪽으로 향하는 방향을 가질 수 있으며 이중 반만 충돌을 일으키기 때문이다.)</p>
 <p><span id="eq-FLP_1_39_15"><span class="math display">\[
 PV = Np_xv_x
 \tag{3.27}\]</span></span></p>
@@ -932,7 +931,7 @@ PV^\text{4/3} = \text{constant.}
 </section>
 <section id="sec-FLP_1_39_4" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_39_4">I.39-4 온도와 운동에너지</h3>
-<p>지금까지 우리는 온도를 의도적으로 배재했다. 기체를 압축하면 분자의 에너지가 증가한며, 우리는 가스가 더 뜨거워진다고 말한다. 이것은 온도와 무슨 관련이 있을지 알아보자. 만약 우리가 실험을 단열 조건이 아닌 일정 온도 조건에서 수행하려고 한다면, 우리는 무엇을 하는 것인가? 기체 두 상자를 충분히 오래 나란히 두면 처음에 우리가 서로 다른 온도라고 부르는 상황에 있더라도 결국 같은 온도에 도달한다는 것을 알고 있다. 즉 우리가 그들을 충분히 오래 내버려 두면 온도가 같은 상황에 도달한다는 것이다. 즉 등온조건은 사물들이 서로 충분히 오래 방치되어 상호작용했을 때의 최종 조건이다.</p>
+<p>지금까지 우리는 온도를 의도적으로 배재했다. 기체를 압축하면 분자의 에너지가 증가한며, 우리는 가스가 더 뜨거워진다고 말한다. 이것은 온도와 무슨 관련이 있을지 알아보자. 만약 우리가 실험을 단열 조건이 아닌 일정 온도 조건에서 수행하려고 한다면, 우리는 무엇을 하는 것인가? 기체 두 상자를 충분히 오래 나란히 두면 처음에 우리가 서로 다른 온도라고 부르는 상황에 있더라도 결국 같은 온도에 도달한다는 것을 알고 있다. 즉 등온조건은 사물들이 서로 충분히 오래 방치되어 상호작용했을 때의 최종 조건이다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-FLP_1_39_4_1" class="theorem example">
 <p><span class="theorem-title"><strong>예제 3.4 (자유롭게 움직일 수 있는 피스톤으로 분리된 두종류의 기체 분자)</strong></span> &nbsp;</p>
@@ -946,11 +945,11 @@ PV^\text{4/3} = \text{constant.}
 </figcaption>
 </figure>
 </div>
-<p>위의 그림과 같이 상자 안에 자유롭게 움직일 수 있는 피스톤으로 분리된 두 기체가 차 있다고 생각하자. (1) 의 기체의 질량, 속도, 밀도는 각각 <span class="math inline">\(m_1\)</span>, <span class="math inline">\(v_1\)</span>, <span class="math inline">\(n_1\)</span> 이며 (2) 는 <span class="math inline">\(m_2\)</span>, <span class="math inline">\(v_2\)</span>, <span class="math inline">\(n_2\)</span> 라고 하자. 평형이 성랍하는 상황은 두 기체가 피스톤에 작용하는 힘이 동일할 조건이며 이는 압력이 동일할 조건이다. <a href="#eq-FLP_1_39_9" class="quarto-xref">식&nbsp;<span>3.22</span></a> 로부터</p>
+<p>위의 그림과 같이 상자 안에 자유롭게 움직일 수 있는 피스톤으로 분리된 두 단원자 기체가 차 있다고 생각하자. (1) 의 기체 분자의 질량, 속도, 개수 밀도는 각각 <span class="math inline">\(m_1\)</span>, <span class="math inline">\(v_1\)</span>, <span class="math inline">\(n_1\)</span> 이며 (2) 는 <span class="math inline">\(m_2\)</span>, <span class="math inline">\(v_2\)</span>, <span class="math inline">\(n_2\)</span> 라고 하자. 평형이 성랍하는 상황은 두 기체가 피스톤에 작용하는 힘이 동일할 조건이며 이는 압력이 동일할 조건이다. <a href="#eq-FLP_1_39_9" class="quarto-xref">식&nbsp;<span>3.22</span></a> 로부터</p>
 <p><span class="math display">\[
 n_1 \left\langle \dfrac{m_1v_1^2}{2} \right \rangle = n_2 \left\langle \dfrac{m_2v_2^2}{2} \right \rangle
 \]</span></p>
-<p>을 얻는다. 그러나 우리는 이것이 유일한 조건이 아니라는 것을 알아야 한다. 예를 들어 (1) 에는 밀도가 크고 평균 속도가 작은 기체가, (2) 에는 밀도가 작고 평균속도가 큰 기체가 있는 상태에서 위 조건을 만족 할 수 있다. 이 경우 (1) 번 기체는 피스톤 벽을 더 많이 치고 (2) 번 기체는 피스톤 벽을 적게 치는 대신어 더 세게 친다. 기체의 충돌은 연속적인 충돌이 아니라 불연속적이다. 이 불연속적인 충돌에 의해 피스톤은 끊임없이 흔들리며, 충돌은 정지한 피스톤과 움직이는 기체 분자 사이의 충돌이아닌 흔들리는 피스톤과 움직이는 기체 사이의 충돌이다. 이 와중에서 에너지의 전달이 일어난다. 이 시스템이 평형에 도달하는 것은 피스톤이 원자로부터 에너지를 흡수하고, 원자에 에너지를 다시 공급할 수 있는 평균제곱속도와 거의 동일한 속도로 움직일 때이다.</p>
+<p>을 얻는다. 그러나 우리는 이것이 유일한 조건이 아니라는 것을 알아야 한다. 예를 들어 (1) 에는 밀도가 크고 평균 속도가 작은 기체가, (2) 에는 밀도가 작고 평균속도가 큰 기체가 있는 상태에서 위 조건을 만족 할 수 있다. 이 경우 (1) 번 기체는 피스톤 벽을 더 많이 치고 (2) 번 기체는 피스톤 벽을 적게 치는 대신 더 세게 친다. 기체의 충돌은 일정하지 않고 불연속적이다. 이 불연속적인 충돌에 의해 피스톤은 끊임없이 흔들리며, 충돌은 정지한 피스톤과 움직이는 기체 분자 사이의 충돌이아닌 흔들리는 피스톤과 움직이는 기체 사이의 충돌이다. 이 와중에서 에너지의 전달이 일어난다. 이 시스템이 평형에 도달하는 것은 피스톤이 기체 원자로부터 에너지를 흡수하고, 원자에 에너지를 다시 공급할 수 있는 평균제곱속도로 움직일 때이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -975,6 +974,7 @@ n_1 \left\langle \dfrac{m_1v_1^2}{2} \right \rangle = n_2 \left\langle \dfrac{m_
 </div>
 </div>
 <p><br></p>
+<p>이제 두종류의 서로 다른 기체가 하나의 상자 안에 분리되어 있더라도 최종적으로 평형에 도달했을 때 평균 운동 에너지가 동일하다고 말하고자 한다.</p>
 <div id="fig-FLP_1_39_4" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_1_39_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -985,8 +985,7 @@ n_1 \left\langle \dfrac{m_1v_1^2}{2} \right \rangle = n_2 \left\langle \dfrac{m_
 </figcaption>
 </figure>
 </div>
-<p>이제 두종류의 서로 다른 기체가 하나의 상자 안에 분리되어 있더라도 최종적으로 평형에 도달했을 때 평균 운동 에너지가 동일하다고 말하고자 한다.</p>
-<p><strong>1. 고정된 구획에 한 분자만 통과할 수 있는 구멍이 있는 경우</strong> : <a href="#fig-FLP_1_39_4" class="quarto-xref">그림&nbsp;<span>3.11</span></a> 를 생각하자. 한 기체는 구멍을 통과할 수 있지만 다른 기체는 불가능하다고 하자. 혼합된 오른쪽 부분에서는 두 기체가 동일한 평균 운동에너지를 가지며 이중 통과 할 수 있는 일부는 운동 에너지 손실 없이 구멍을 통과하여 이동하며, 따라서 왼쪽의 기체의 평균 운동에너지도 동일하게 된다. 그러나 이 설명은 두 종류의 분자에 대해 한 종류를 다른 종류와 구분하는 구멍이 없을 수도 있기 때문에 만족스럽지 않다..</p>
+<p><strong>1. 고정된 구획에 한 분자만 통과할 수 있는 구멍이 있는 경우</strong> : <a href="#fig-FLP_1_39_4" class="quarto-xref">그림&nbsp;<span>3.11</span></a> 를 생각하자. 한 기체는 구멍을 통과할 수 있지만 다른 기체는 불가능하다고 하자. 혼합된 오른쪽 부분에서는 두 기체가 동일한 평균 운동에너지를 가진다(<a href="#exm-FLP_1_39_4_2" class="quarto-xref">예제&nbsp;<span>3.5</span></a>). 여기서 통과 할 수 있는 기체분자의 일부는 운동 에너지 손실 없이 구멍을 통과하여 이동하며, 따라서 왼쪽의 기체의 평균 운동에너지도 동일하게 된다. 그러나 이 설명은 두 종류의 분자에 대해 한 종류를 다른 종류와 구분하는 구멍이 없을 수도 있기 때문에 만족스럽지 않다..</p>
 <p><strong>2. 피스톤 문제 (<a href="#exm-FLP_1_39_4_1" class="quarto-xref">예제&nbsp;<span>3.4</span></a>)</strong> : 이 피스톤의 운동 에너지가 <span class="math inline">\(\frac{1}{2}m_2v^2_2\)</span> 임을 보이자. 피스톤의 운동은 수평운동이며 따라서 <span class="math inline">\(\frac{1}{2}m_2v^2_{2x}\)</span> 와 동일해야 한다. 마찬가지로, 반대편의 평형으로부터 우리는 피스톤의 운동 에너지가 <span class="math inline">\(\frac{1}{2}m_1v^2_{1x}\)</span> 임을 증명할 수 있다. 비록 이것이 기체의 중간이 아니라 한쪽에 위치하지만 피스톤과 가스 분자의 평균 운동 에너지가 모든 충돌의 결과로 동일하다는 것을 다소 어렵게나마 보일 수 있다. <u>(How ?) </u></p>
 <p><strong>3. 서로 섞이지 않지만 열적으로 연결된 경우</strong> : 이제 모든 면에서 타격할 수 있는 물체에 의해 평형상태에 도달하는 인위적인 예를 들 수 있다. 피스톤을 통해 각 끝에 볼이 삽입된 짧은 막대가 마찰 없는 슬라이딩 유니버설 조인트 위에 있다고 가정해 보자. 각 공은 분자 중 하나와 같이 둥글며, 모든 면에서 타격받을 수 있다. 이 물체의 총 질량을 <span class="math inline">\(m\)</span> 이라고 하고 이전과 같이 질량 <span class="math inline">\(m_1\)</span>, <span class="math inline">\(m_2\)</span> 인 가스 분자가 양쪽에 있다고 하자. 충돌의 결과 한쪽에 있는 분자와의 충돌로 인한 <span class="math inline">\(m\)</span> 의 운동 에너지는 평균 <span class="math inline">\(\frac{1}{2}m_1v^2_1\)</span> 이어야 한다. 마찬가지로, 반대편에 있는 분자와의 충돌 때문에 평균은 <span class="math inline">\(\frac{1}{2}m_2v^2_2\)</span> 이어야 한다. 따라서 양측은 열평형 상태에 있을 때 동일한 운동 에너지를 가져야 한다. 우리는 기체 혼합물에 대해서만 증명했지만, 같은 온도에서 서로 다른 두 개의 별개의 기체가 존재하는 경우에도 쉽게 확장됩니다.</p>
 <p>따라서 두 기체가 같은 온도에 있을 때, 질량중심 운동의 평균 운동 에너지는 동일합니다.</p>
@@ -1143,14 +1142,13 @@ n = n_0 e^{-\text{P.E.}/k_BT}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
