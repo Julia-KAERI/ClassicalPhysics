@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/vol1/vol1_2.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -606,7 +607,7 @@ P''_1 = P'_1=P_1,\qquad P''_2 = P'_2 = P_2,\qquad P''_{12} = P_{12} \ne P'_{12}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>요약</strong>
+<span class="screen-reader-only">중요</span><strong>요약</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -994,7 +995,7 @@ n_1 \left\langle \dfrac{m_1v_1^2}{2} \right \rangle = n_2 \left\langle \dfrac{m_
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>온도와 에너지</strong>
+<span class="screen-reader-only">중요</span><strong>온도와 에너지</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1010,6 +1011,8 @@ k_B = 1.380 649 \times 10^{−23} \text{ J}\cdot \text{K}^{-1}
 </section>
 <section id="sec-FLP_1_39_5" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_39_5">I.39-5 이상기체법칙</h3>
+<section id="단원자-분자의-이상기체법칙" class="level4">
+<h4 class="anchored" data-anchor-id="단원자-분자의-이상기체법칙"><strong>단원자 분자의 이상기체법칙</strong></h4>
 <p>앞서 말했듯이 분자의 평균 온동에너지가 <span class="math inline">\(\frac{3}{2}k_B T\)</span> 이므로 <a href="#eq-FLP_1_39_9" class="quarto-xref">식&nbsp;<span>3.22</span></a> 는 다음과 같다.</p>
 <p><span id="eq-FLP_1_39_22"><span class="math display">\[
 PV=Nk_BT.
@@ -1028,6 +1031,9 @@ PV = \nu RT
 \tag{3.34}\]</span></span></p>
 <p>이다.</p>
 <p>지금까지 단원자 기체의 원자들의 질량중심 운동만을 다루었다. 여기에 힘이 존재하면 어떻게 될까? 우선 피스톤이 수평 스프링에 의해 지지되고 그 위에 힘이 작용하는 경우를 생각해보자. 물론, 원자와 피스톤 사이의 흔들림 운동 교환은 피스톤의 위치에 따라 달라지지 않는다. 평형 조건은 동일하다. 피스톤이 어디에 있든, 그 운동 속도는 분자에 에너지를 정확히 전달하도록 해야 하며 따라서 스프링에 대해서는 차이가 없다. 피스톤이 이동해야 하는 속도는 평균적으로 동일하며 따라서 한 방향에서 운동 에너지의 평균값이 <span class="math inline">\(\frac{1}{2}k_BT\)</span> 라는 우리 정리는 힘이 존재하든 존재하지 않든 참이다.</p>
+</section>
+<section id="이원자-분자의-경우" class="level4">
+<h4 class="anchored" data-anchor-id="이원자-분자의-경우"><strong>이원자 분자의 경우</strong></h4>
 <p>이제 <span class="math inline">\(m_A\)</span> 와 <span class="math inline">\(m_B\)</span> 원자로 구성된 이원자 분자를 생각하자. <span class="math inline">\(A\)</span> 와 <span class="math inline">\(B\)</span> 의 질량중심 운동이 평형상태에서<br>
 <span class="math display">\[
 \left\langle \dfrac{1}{2}m_Av^2_A\right\rangle = \left\langle \dfrac{1}{2}m_B v^2_B\right\rangle =\dfrac{3}{2}k_BT
@@ -1062,7 +1068,10 @@ v^2_\text{CM} = \dfrac{m_A^2v_A^2 + 2m_Am_B \boldsymbol{v}_A\boldsymbol{\cdot v}
 \end{aligned}
 \]</span></p>
 <p>이며 우리는 <span class="math inline">\(\langle m_Av_A^2 \rangle = \langle m_B v_B^2\rangle\)</span> 임을 안다. 따라서 <span class="math inline">\(\boldsymbol{v}_A\boldsymbol{\cdot v}_B=0\)</span> 임을 알 수 있다. 즉 분자 하나를 하나의 입자로 간주해도 그 평균 운동에너지는 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 이다.</p>
+<p>또한 이로부터 이원자 분자의 내부 운동에 대한 평균 운동 에너지가 질량중심의 운동을 제외하고 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 임을 알 수 있다.예를 들어, 분자의 각 부분들의 총 운동 에너지는 <span class="math inline">\(\frac{1}{2}m_Av^2_A+\frac{1}{2}m_Bv^2_B\)</span> 이며, 평균은 <span class="math inline">\(\frac{3}{2}k_BT+\frac{3}{2}k_BT =3k_BT\)</span> 이다. 질량 중심 운동의 운동 에너지는 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 이므로, 분자 내부 두 원자의 회전 및 진동 운동 평균 운동 에너지 차이는 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 이다.</p>
+<p>질량 중심 운동의 평균 에너지에 관한 정리는 일반적이며, 전체로 고려될 때 힘이 있든 없든 모든 독립된 운동 방향에 대해 그 운동의 평균 운동 에너지는 <span class="math inline">\(\frac{1}{2}k_B T\)</span> 이다. 이러한 ‘독립적인 운동 방향’ 은 때때로 시스템의 <strong>자유도 (degree of freedom)</strong> 라고 불린다. <span class="math inline">\(r\)</span> 개의 원자로 구성된 분자의 자유도는 그 위치를 정의하기 위해 세 개의 좌표가 필요하기 때문 <span class="math inline">\(3r\)</span> 이다. 분자의 전체 운동 에너지는 개별 원자들의 운동 에너지의 합 혹은 CM 운동의 운동 에너지와 내부 운동의 운동 에너지의 합으로 표현될 수 있다. 후자는 때때로 분자의 회전 운동 에너지와 진동 에너지의 합으로 표현될 수 있지만, 이는 근사값이다. 우리의 정리는 <span class="math inline">\(r\)</span>-원자 분자에 적용된 것으로, 분자는 평균적으로 <span class="math inline">\(3rk_BT/2\)</span> 의 운동 에너지를 갖게 되며, 그 중 <span class="math inline">\(\frac{3}{2}k_B T\)</span> 는 전체 분자의 질량 중심 운동에 대한 운동 에너지이고, 나머지 <span class="math inline">\(\frac{3}{2}(r−1)k_B T\)</span> 는 내부 진동 및 회전 운동 에너지이다.</p>
 <p><br></p>
+</section>
 </section>
 </section>
 <section id="i.40.-통계역학의-원리" class="level2">
@@ -1074,7 +1083,7 @@ v^2_\text{CM} = \dfrac{m_A^2v_A^2 + 2m_Am_B \boldsymbol{v}_A\boldsymbol{\cdot v}
 <p><span class="theorem-title"><strong>예제 3.6 (높이에 따른 압력의 변화)</strong></span> &nbsp;</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/feynmann_1_fig_40_1.png" class="img-fluid figure-img" width="300"></p>
+<p><img src="figures/fig_1_40/fig_1_40_1.png" class="img-fluid figure-img" width="300"></p>
 <figcaption>파인만 물리학 강의 I. 그림 40-1</figcaption>
 </figure>
 </div>
@@ -1178,13 +1187,14 @@ n = n_0 e^{-\text{P.E.}/k_BT}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/Feynman/00_index.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -549,7 +550,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>갈릴레오의 관성의 법칙</strong> 혹은 <strong>뉴턴의 제 1 운동법칙</strong>
+<span class="screen-reader-only">중요</span><strong>갈릴레오의 관성의 법칙</strong> 혹은 <strong>뉴턴의 제 1 운동법칙</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -562,7 +563,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>운동량</strong>
+<span class="screen-reader-only">노트</span><strong>운동량</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -578,7 +579,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>뉴턴의 제 2 운동법칙</strong>
+<span class="screen-reader-only">중요</span><strong>뉴턴의 제 2 운동법칙</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -593,7 +594,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>보편 중력</strong>
+<span class="screen-reader-only">노트</span><strong>보편 중력</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -619,7 +620,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>뉴턴의 제 3 운동법칙</strong>
+<span class="screen-reader-only">중요</span><strong>뉴턴의 제 3 운동법칙</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -656,7 +657,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>갈릴레이 상대성 원리</strong>
+<span class="screen-reader-only">중요</span><strong>갈릴레이 상대성 원리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -800,7 +801,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>운동에너지</strong>
+<span class="screen-reader-only">노트</span><strong>운동에너지</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -821,7 +822,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>일률</strong>
+<span class="screen-reader-only">노트</span><strong>일률</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -839,7 +840,7 @@ m\dfrac{d^2\boldsymbol{x}}{dt^2} = \boldsymbol{F}-\underbrace{m\boldsymbol{a}}_{
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>일</strong>
+<span class="screen-reader-only">노트</span><strong>일</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -866,7 +867,7 @@ T_2-T_1 = - \int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \dfrac{GMm}{r^2} \hat{\bo
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>보존력</strong> 과 <strong>포텐셜 에너지</strong>
+<span class="screen-reader-only">노트</span><strong>보존력</strong> 과 <strong>포텐셜 에너지</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -884,7 +885,7 @@ T_2-T_1 = - \int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \dfrac{GMm}{r^2} \hat{\bo
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>포텐셜의 성질</strong>
+<span class="screen-reader-only">중요</span><strong>포텐셜의 성질</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -971,7 +972,7 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>포텐셜</strong>
+<span class="screen-reader-only">노트</span><strong>포텐셜</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1010,7 +1011,7 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>질량 중심</strong>
+<span class="screen-reader-only">노트</span><strong>질량 중심</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1041,7 +1042,7 @@ U(R&lt;a)= - \dfrac{GMm}{a}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>강체</strong>
+<span class="screen-reader-only">노트</span><strong>강체</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1097,7 +1098,7 @@ v=\sqrt{v_x^2+v_y^2} = \omega r.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>토크</strong>
+<span class="screen-reader-only">노트</span><strong>토크</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1114,7 +1115,7 @@ v=\sqrt{v_x^2+v_y^2} = \omega r.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>역학적 평형 상태</strong>
+<span class="screen-reader-only">노트</span><strong>역학적 평형 상태</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1157,7 +1158,7 @@ W = \|\boldsymbol{F}_t \| \, r \Delta \theta
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>각운동량</strong>
+<span class="screen-reader-only">노트</span><strong>각운동량</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1193,7 +1194,7 @@ L := mx\dfrac{dy}{dt} - my\dfrac{dx}{dt} = xp_y - yp_x.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>각운동량 보존</strong>
+<span class="screen-reader-only">중요</span><strong>각운동량 보존</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1213,7 +1214,7 @@ L=\sum_{i} L_i = \sum_i m_i r_i v_i = \left(\sum_i m_i r_i^2\right) \omega
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>관성 모멘트</strong>
+<span class="screen-reader-only">노트</span><strong>관성 모멘트</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1242,7 +1243,7 @@ L = I\omega.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-질량 중심의 성질
+<span class="screen-reader-only">힌트</span>질량 중심의 성질
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1264,7 +1265,7 @@ L = I\omega.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>중력 중심</strong>
+<span class="screen-reader-only">노트</span><strong>중력 중심</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1294,7 +1295,7 @@ L = I\omega.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>관성모멘트</strong>
+<span class="screen-reader-only">노트</span><strong>관성모멘트</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1363,7 +1364,7 @@ T=\dfrac{1}{2}\sum_i m_i v_i^2 = \dfrac{1}{2}\sum_i m_i (r_i \omega)^2 = \dfrac{
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>각운동량과 토크</strong>
+<span class="screen-reader-only">노트</span><strong>각운동량과 토크</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1730,13 +1731,14 @@ x(t) = (A_1+A_2t)e^{-\gamma t/2}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
