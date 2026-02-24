@@ -929,7 +929,7 @@ PV^\text{4/3} = \text{constant.}
 <p>이다.</p>
 <p><br></p>
 </section>
-<section id="sec-FLP_1_39_4" class="level3">
+<section id="sec-FLP_1_39_4" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_39_4">I.39-4 온도와 운동에너지</h3>
 <p>지금까지 우리는 온도를 의도적으로 배재했다. 기체를 압축하면 분자의 에너지가 증가한며, 우리는 가스가 더 뜨거워진다고 말한다. 이것은 온도와 무슨 관련이 있을지 알아보자. 만약 우리가 실험을 단열 조건이 아닌 일정 온도 조건에서 수행하려고 한다면, 우리는 무엇을 하는 것인가? 기체 두 상자를 충분히 오래 나란히 두면 처음에 우리가 서로 다른 온도라고 부르는 상황에 있더라도 결국 같은 온도에 도달한다는 것을 알고 있다. 즉 등온조건은 사물들이 서로 충분히 오래 방치되어 상호작용했을 때의 최종 조건이다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
@@ -960,11 +960,11 @@ n_1 \left\langle \dfrac{m_1v_1^2}{2} \right \rangle = n_2 \left\langle \dfrac{m_
 <p>이 때 질량중심죄표계에서 보면 (<a href="../../ClassicalMechanics/12_two_or_three_bodies_problems.html#sec-CM_elastic_collition_in_C_frame">질량중심 좌표계에서의 탄성 충돌</a> 을 참고하라) 이 충돌은 두 입자의 속도의 크기는 일정하며 방향만 바뀌는 충돌이며 질량중심 좌표계에서 이 방향의 분포는 균일하다.</p>
 <p>이제 실제 상황에서 보자. 서로 다른 두 분자의 충돌의 질량 중심 속도 <span class="math inline">\(\boldsymbol{V}\)</span> 와 상대속도 <span class="math inline">\(\boldsymbol{v}\)</span> 를 아래와 같이 정한다.</p>
 <p><span class="math display">\[
-\boldsymbol{V}=\dfrac{m_1\boldsymbol{v}_1+m_2\boldsymbol{v}_2}{m_1+m_2},\qquad \boldsymbol{v} = \boldsymbol{v}_1-\boldsymbol{v}_2
+\boldsymbol{v}_\text{CM}=\dfrac{m_1\boldsymbol{v}_1+m_2\boldsymbol{v}_2}{m_1+m_2},\qquad \boldsymbol{u} = \boldsymbol{v}_1-\boldsymbol{v}_2
 \]</span></p>
-<p>충돌 후에 원자의 분포는 어떻게 될까? 일단 우리는 충돌 전후 질량중심의 속도 <span class="math inline">\(\boldsymbol{V}\)</span> 가 변하지 않는다는 것을 안다. 또한 <span class="math inline">\(\boldsymbol{v}\)</span> 의 분포는 <span class="math inline">\(\boldsymbol{V}\)</span> 에 대해 완전히 임의적이다. 즉 <span class="math inline">\(\boldsymbol{V\cdot v}\)</span> 의 평균값은 <span class="math inline">\(0\)</span> 이다. 또한 <span class="math inline">\(\boldsymbol{v}_1\boldsymbol{\cdot v}_2\)</span> 의 평균값도 <span class="math inline">\(0\)</span> 이라는 데 동의 할 수 있다. 여기서</p>
+<p>충돌 후에 원자의 분포는 어떻게 될까? 일단 우리는 충돌 전후 질량중심의 속도 <span class="math inline">\(\boldsymbol{v}_\text{CM}\)</span> 이 변하지 않는다는 것을 안다. 또한 <span class="math inline">\(\boldsymbol{u}\)</span> 의 분포는 <span class="math inline">\(\boldsymbol{v}_\text{CM}\)</span> 에 대해 완전히 임의적이다. 즉 <span class="math inline">\(\boldsymbol{v}_\text{CM}\boldsymbol{\cdot u}\)</span> 의 평균값은 <span class="math inline">\(0\)</span> 이다. 또한 <span class="math inline">\(\boldsymbol{v}_1\boldsymbol{\cdot v}_2\)</span> 의 평균값도 <span class="math inline">\(0\)</span> 이라는 데 동의 할 수 있다. 여기서</p>
 <p><span class="math display">\[
-\boldsymbol{V\cdot v} = \dfrac{(\boldsymbol{v}_1-\boldsymbol{v}_2) \boldsymbol{\cdot} (m_1\boldsymbol{v}_1 + m_2 \boldsymbol{v}_2)}{m_1+m+2} = \dfrac{(m_1v_1^2 - m_2v_2^2) + (m_2-m_1)(\boldsymbol{v}_1\boldsymbol{\cdot v}_2)}{m_1+m_2}
+\boldsymbol{v}_\text{CM}\boldsymbol{\cdot u} = \dfrac{(\boldsymbol{v}_1-\boldsymbol{v}_2) \boldsymbol{\cdot} (m_1\boldsymbol{v}_1 + m_2 \boldsymbol{v}_2)}{m_1+m+2} = \dfrac{(m_1v_1^2 - m_2v_2^2) + (m_2-m_1)(\boldsymbol{v}_1\boldsymbol{\cdot v}_2)}{m_1+m_2}
 \]</span></p>
 <p>이므로</p>
 <p><span class="math display">\[
@@ -986,15 +986,26 @@ n_1 \left\langle \dfrac{m_1v_1^2}{2} \right \rangle = n_2 \left\langle \dfrac{m_
 </figure>
 </div>
 <p><strong>1. 고정된 구획에 한 분자만 통과할 수 있는 구멍이 있는 경우</strong> : <a href="#fig-FLP_1_39_4" class="quarto-xref">그림&nbsp;<span>3.11</span></a> 를 생각하자. 한 기체는 구멍을 통과할 수 있지만 다른 기체는 불가능하다고 하자. 혼합된 오른쪽 부분에서는 두 기체가 동일한 평균 운동에너지를 가진다(<a href="#exm-FLP_1_39_4_2" class="quarto-xref">예제&nbsp;<span>3.5</span></a>). 여기서 통과 할 수 있는 기체분자의 일부는 운동 에너지 손실 없이 구멍을 통과하여 이동하며, 따라서 왼쪽의 기체의 평균 운동에너지도 동일하게 된다. 그러나 이 설명은 두 종류의 분자에 대해 한 종류를 다른 종류와 구분하는 구멍이 없을 수도 있기 때문에 만족스럽지 않다..</p>
-<p><strong>2. 피스톤 문제 (<a href="#exm-FLP_1_39_4_1" class="quarto-xref">예제&nbsp;<span>3.4</span></a>)</strong> : 이 피스톤의 운동 에너지가 <span class="math inline">\(\frac{1}{2}m_2v^2_2\)</span> 임을 보이자. 피스톤의 운동은 수평운동이며 따라서 <span class="math inline">\(\frac{1}{2}m_2v^2_{2x}\)</span> 와 동일해야 한다. 마찬가지로, 반대편의 평형으로부터 우리는 피스톤의 운동 에너지가 <span class="math inline">\(\frac{1}{2}m_1v^2_{1x}\)</span> 임을 증명할 수 있다. 비록 이것이 기체의 중간이 아니라 한쪽에 위치하지만 피스톤과 가스 분자의 평균 운동 에너지가 모든 충돌의 결과로 동일하다는 것을 다소 어렵게나마 보일 수 있다. <u>(How ?) </u></p>
-<p><strong>3. 서로 섞이지 않지만 열적으로 연결된 경우</strong> : 이제 모든 면에서 타격할 수 있는 물체에 의해 평형상태에 도달하는 인위적인 예를 들 수 있다. 피스톤을 통해 각 끝에 볼이 삽입된 짧은 막대가 마찰 없는 슬라이딩 유니버설 조인트 위에 있다고 가정해 보자. 각 공은 분자 중 하나와 같이 둥글며, 모든 면에서 타격받을 수 있다. 이 물체의 총 질량을 <span class="math inline">\(m\)</span> 이라고 하고 이전과 같이 질량 <span class="math inline">\(m_1\)</span>, <span class="math inline">\(m_2\)</span> 인 가스 분자가 양쪽에 있다고 하자. 충돌의 결과 한쪽에 있는 분자와의 충돌로 인한 <span class="math inline">\(m\)</span> 의 운동 에너지는 평균 <span class="math inline">\(\frac{1}{2}m_1v^2_1\)</span> 이어야 한다. 마찬가지로, 반대편에 있는 분자와의 충돌 때문에 평균은 <span class="math inline">\(\frac{1}{2}m_2v^2_2\)</span> 이어야 한다. 따라서 양측은 열평형 상태에 있을 때 동일한 운동 에너지를 가져야 한다. 우리는 기체 혼합물에 대해서만 증명했지만, 같은 온도에서 서로 다른 두 개의 별개의 기체가 존재하는 경우에도 쉽게 확장됩니다.</p>
-<p>따라서 두 기체가 같은 온도에 있을 때, 질량중심 운동의 평균 운동 에너지는 동일합니다.</p>
-<p>평균 분자 운동 에너지는 오직 “온도” 의 속성일 뿐이며 기체의 속성이 아니기 때문에, 우리는 이를 온도의 정의로 사용할 수 있다. 따라서 분자의 평균 운동 에너지는 온도의 함수이다. 우리는 평균 에너지가 온도에 선형적으로 비례하도록 온도 스케일을 임의로 정의할 수 있다. 가장 좋은 방법은 평균 에너지 자체를 “온도”라고 부르는 것이며 그것은 가능한 가장 간단한 함수가 되겠지만 불행히도 온도 척도가 다르게 선택되어 직접 온도라고 부르는 대신, 분자의 에너지와 절대 온도 사이의 비례상수로 <strong>볼츠만 상수 (Boltzmann constant)</strong></p>
+<p><strong>2. 피스톤 문제 (<a href="#exm-FLP_1_39_4_1" class="quarto-xref">예제&nbsp;<span>3.4</span></a>)</strong> : <span class="math inline">\(m_1\)</span> 분자들과 피스톤의 평형을 생각하자. 피스톤의 운동은 수평운동이며 따라서 <span class="math inline">\(\frac{1}{2}m_2v^2_{2x}\)</span> 와 동일해야 한다. 마찬가지로, 반대편의 평형으로부터 우리는 피스톤의 운동 에너지가 <span class="math inline">\(\frac{1}{2}m_1v^2_{1x}\)</span> 임을 증명할 수 있다. 비록 이것이 기체의 중간이 아니라 한쪽에 위치하지만 피스톤과 가스 분자의 평균 운동 에너지가 모든 충돌의 결과로 동일하다는 것을 다소 어렵게나마 보일 수 있다. <u>(How ?) </u></p>
+<p><strong>3. 서로 섞이지 않지만 열적으로 연결된 경우</strong> : 이제 모든 면에서 타격할 수 있는 물체에 의해 평형상태에 도달하는 인위적인 예를 들 수 있다. 피스톤을 통해 각 끝에 볼이 삽입된 짧은 막대가 마찰 없는 슬라이딩 유니버설 조인트 위에 있다고 가정해 보자. 각 공은 분자 중 하나와 같이 둥글며, 모든 면에서 타격받을 수 있다. 이 물체의 총 질량을 <span class="math inline">\(m\)</span> 이라고 하고 이전과 같이 질량 <span class="math inline">\(m_1\)</span>, <span class="math inline">\(m_2\)</span> 인 가스 분자가 양쪽에 있다고 하자. 충돌의 결과 한쪽에 있는 분자와의 충돌로 인한 <span class="math inline">\(m\)</span> 의 운동 에너지는 평균 <span class="math inline">\(\frac{1}{2}m_1v^2_1\)</span> 이어야 한다. 마찬가지로, 반대편에 있는 분자와의 충돌 때문에 평균은 <span class="math inline">\(\frac{1}{2}m_2v^2_2\)</span> 이어야 한다. 따라서 양측은 열평형 상태에 있을 때 동일한 운동 에너지를 가져야 한다. <a href="#exm-FLP_1_39_4_2" class="quarto-xref">예제&nbsp;<span>3.5</span></a> 에서 기체 혼합물에 대해서만 증명했지만, 같은 온도에서 서로 다른 두 개의 별개의 기체가 존재하는 경우에도 쉽게 된다. 따라서 우리는 다음과 같은 결론을 내릴 수 있다.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>온도와 에너지</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>두 기체가 같은 온도에 있을 때, 질량중심 운동의 평균 운동 에너지는 동일하다.</p>
+</div>
+</div>
+<p>평균 분자 운동 에너지는 오직 “온도” 의 속성일 뿐이며 기체의 속성이 아니기 때문에, 우리는 이를 온도의 정의로 사용할 수 있다. 즉 분자의 평균 운동 에너지는 온도의 함수이다. 온도를 평균 에너지에 비례하도록 정하고 그 비례상수로 <strong>볼츠만 상수 (Boltzmann constant)</strong></p>
 <p><span id="eq-FLP_definition_of_boltzmann_constant"><span class="math display">\[
 k_B = 1.380 649 \times 10^{−23} \text{ J}\cdot \text{K}^{-1}
 \tag{3.31}\]</span></span></p>
-<p>를 사용한다. 따라서 <span class="math inline">\(T\)</span> 가 절대 온도라면, 우리의 정의에 따르면 평균 분자 운동 에너지는 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 이다.</p>
-<p>앞으로 배우겠지만 특정 방향으로의 운동 성분과 연관된 운동 에너지가 단지 <span class="math inline">\(\frac{1}{2}k_B T\)</span> 이며 우리는 세 방향의 독립적인 방향을 가지므로 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 이 된다.</p>
+<div class="page-columns page-full"><p>를 사용한다. 따라서 <span class="math inline">\(T\)</span> 가 절대 온도라면, 우리의 정의에 따르면 평균 분자 운동 에너지는 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 이다<span class="math inline">\(^3\)</span>.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^3\)</span> 앞으로 배우겠지만 특정 방향으로의 운동 성분과 연관된 운동 에너지가 단지 <span class="math inline">\(\frac{1}{2}k_B T\)</span> 임을 보일 수 있으며 이를 <strong>등분배 정리(equipartition theorem)</strong> 라고 한다. 세개의 독립적인 방향을 가지므로 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 이 된다.</span></div></div>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_39_5" class="level3">
@@ -1017,15 +1028,40 @@ PV = \nu RT
 \tag{3.34}\]</span></span></p>
 <p>이다.</p>
 <p>지금까지 단원자 기체의 원자들의 질량중심 운동만을 다루었다. 여기에 힘이 존재하면 어떻게 될까? 우선 피스톤이 수평 스프링에 의해 지지되고 그 위에 힘이 작용하는 경우를 생각해보자. 물론, 원자와 피스톤 사이의 흔들림 운동 교환은 피스톤의 위치에 따라 달라지지 않는다. 평형 조건은 동일하다. 피스톤이 어디에 있든, 그 운동 속도는 분자에 에너지를 정확히 전달하도록 해야 하며 따라서 스프링에 대해서는 차이가 없다. 피스톤이 이동해야 하는 속도는 평균적으로 동일하며 따라서 한 방향에서 운동 에너지의 평균값이 <span class="math inline">\(\frac{1}{2}k_BT\)</span> 라는 우리 정리는 힘이 존재하든 존재하지 않든 참이다.</p>
-<p>이제 <span class="math inline">\(m_A\)</span> 와 <span class="math inline">\(m_B\)</span> 원자로 구성된 이원자 분자를 생각하자. 우리가 증명한 바에 따르면, 파트 <span class="math inline">\(A\)</span> 와 파트 <span class="math inline">\(B\)</span> 의 질량중심 운동이 <span class="math display">\[
+<p>이제 <span class="math inline">\(m_A\)</span> 와 <span class="math inline">\(m_B\)</span> 원자로 구성된 이원자 분자를 생각하자. <span class="math inline">\(A\)</span> 와 <span class="math inline">\(B\)</span> 의 질량중심 운동이 평형상태에서<br>
+<span class="math display">\[
 \left\langle \dfrac{1}{2}m_Av^2_A\right\rangle = \left\langle \dfrac{1}{2}m_B v^2_B\right\rangle =\dfrac{3}{2}k_BT
 \]</span></p>
-<p>일 수 있습니다. 두 부분이 함께 유지된다면, 어떻게 이런 일이 가능합니까? 비록 그들이 서로 고정되어 있더라도, 그곳에서 지기 위체에서 돌거나 다른 위치를 중심으로 회전할 때, 무언가가 때려 에너지를 교환할 때, 중요한 것은 그들이 얼마나 빠르게 움직이는가이다. 그것만으로도 충돌에서 에너지를 교환하는 속도를 결정한다. 특정 상황에서는 힘은 필수적인 요인이 아니다. 따라서 같은 원리는 힘이 있을 때조차도 옳다.</p>
-<p>마지막으로, 기체 법칙이 내부 운동을 무시하는 것과도 일치한다는 것을 증명해보자. 우리는 이전에 내부 움직임을 포함하지 않았으며, 단지 단원자 기체를 다뤘다. 하지만 이제 우리는 전체 물체가 전체 질량 <span class="math inline">\(M\)</span> 인 단일 물체로 간주될 때, 질량 중심의 속도를 가지고 있음을 보일 것이다.</p>
+<p>이다. 이 둘이 서로 묶여있는데 어떻게 <span class="math inline">\(m_A\langle v_A^2\rangle = m_B \langle v_B^2\rangle\)</span> 이 가능할까? 비록 그들이 서로 고정되어 있더라도, 자기 위치에서 돌거나 다른 위치를 중심으로 회전할 때, 무언가와 충돌하여 에너지를 교환한다면 중요한 것은 그들이 얼마나 빠르게 움직이는가이다. 그것만으로도 충돌에서 에너지를 교환하는 속도를 결정한다. 특정 상황에서는 힘은 필수적인 요인이 아니다. 따라서 같은 원리는 힘이 있을 때조차도 옳다.</p>
+<p>마지막으로, 기체 법칙이 내부 운동과 무관하게 성립한다는 것을 증명해보자. 우리는 이전에 내부 움직임을 포함하지 않는 단원자 기체만을 다뤘다. 하지만 이제 우리는 전체 물체를 질량 <span class="math inline">\(M\)</span> 인 단일 물체로 간주하면 질량 중심 속도 <span class="math inline">\(\boldsymbol{v}_\text{CM}\)</span> 에 대해 다음을 만족한다.</p>
 <p><span id="eq-FLP_1_39_24"><span class="math display">\[
 \left\langle \dfrac{1}{2}Mv_{\text{CM}}^2 \right \rangle = \dfrac{3}{2}k_BT
 \tag{3.35}\]</span></span></p>
-<p>다시 말해, 우리는 개별 부분들을 고려하거나 전체를 고려할 수 있다! 그 이유를 살펴보자: 이원자 분자의 질량 <span class="math inline">\(M = m_A+m_B\)</span> 이며, 질량 중심의 속도는 $v_=(m_Av_A+m_Bv_B)/M과 같습니다. 이제 우리는 ⟨v2CM⟩가 필요합니다. vCM을 제곱하면, 우리는 얻는다</p>
+<p>다시 말해, 우리는 개별 부분들을 고려하거나 전체를 고려하건 간에 운동에너지의 평균은 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 이다.</p>
+<p>그 이유를 살펴보자: 이원자 분자의 질량 <span class="math inline">\(M = m_A+m_B\)</span>, 질량 중심의 속도 <span class="math inline">\(\boldsymbol{v}_\text{CM}=(m_A\boldsymbol{v}_A+m_B\boldsymbol{v}_B)/M\)</span> 에 대해 <span class="math inline">\(\left\langle \boldsymbol{v}_\text{CM}^2\right\rangle\)</span> 을 계산해 보자.</p>
+<p><span class="math display">\[
+v^2_\text{CM} = \dfrac{m_A^2v_A^2 + 2m_Am_B \boldsymbol{v}_A\boldsymbol{\cdot v}_B + m_B^2v_B^2}{M^2}
+\]</span></p>
+<p>이므로</p>
+<p><span class="math display">\[
+\begin{aligned}
+\left\langle \dfrac{1}{2}Mv^2_\text{CM}\right \rangle &amp;= \dfrac{1}{M}\left(m_A \left\langle \dfrac{1}{2}m_A v_A^2\right\rangle + m_B \left\langle \dfrac{1}{2}m_B v_B^2\right\rangle + m_Am_B\langle \boldsymbol{v}_A\boldsymbol{\cdot v}_B\rangle \right) \\[0.3em]
+&amp;= \dfrac{1}{M}\left(m_A \dfrac{3}{2}k_BT + m_B \dfrac{3}{2}k_B T + m_Am_B\langle \boldsymbol{v}_A\boldsymbol{\cdot v}_B\rangle \right) \\[0.3em]
+&amp;= \dfrac{3}{2}k_BT + \dfrac{m_Am_B\langle \boldsymbol{v}_A\boldsymbol{\cdot v}_B\rangle }{M}
+\end{aligned}
+\]</span></p>
+<p>이다. 이제 <span class="math inline">\(\langle \boldsymbol{v}_A\boldsymbol{\cdot v}_B\rangle=0\)</span> 임을 보이자. 상대속도 <span class="math inline">\(\boldsymbol{u}=\boldsymbol{v}_A-\boldsymbol{v}_B\)</span> 에 대해 <span class="math inline">\(\boldsymbol{u}\)</span> 는 특정 방향을 선호하지 않으므로</p>
+<p><span class="math display">\[
+\langle \boldsymbol{u \cdot v}_\text{CM}\rangle =0
+\]</span></p>
+<p>이다. 여기서</p>
+<p><span class="math display">\[
+\begin{aligned}
+\boldsymbol{u\cdot v}_\text{CM} &amp;= \dfrac{(\boldsymbol{v}_A-\boldsymbol{v}_B)\boldsymbol{\cdot}(m_A\boldsymbol{v}_A+ m_B\boldsymbol{v}_B)}{M} \\[0.3em]
+&amp;= \dfrac{m_Av_A^2 - m_B v_B^2 + (m_A-m_B)(\boldsymbol{v}_A\boldsymbol{\cdot v}_B)}{M}
+\end{aligned}
+\]</span></p>
+<p>이며 우리는 <span class="math inline">\(\langle m_Av_A^2 \rangle = \langle m_B v_B^2\rangle\)</span> 임을 안다. 따라서 <span class="math inline">\(\boldsymbol{v}_A\boldsymbol{\cdot v}_B=0\)</span> 임을 알 수 있다. 즉 분자 하나를 하나의 입자로 간주해도 그 평균 운동에너지는 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 이다.</p>
 <p><br></p>
 </section>
 </section>
