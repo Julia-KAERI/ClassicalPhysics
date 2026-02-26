@@ -3,7 +3,7 @@ project:
   output-dir : docs
 
 book:
-  title: "고전 역학과 전자기학"
+  title: "고전물리학"
   author: "Norah Jones"
   date: "2/11/2024"
   page-navigation: true
