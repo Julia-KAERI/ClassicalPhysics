@@ -454,6 +454,12 @@ window.Quarto = {
   <li><a href="#sec-FLP_1_40_2" id="toc-sec-FLP_1_40_2" class="nav-link" data-scroll-target="#sec-FLP_1_40_2">I.40-2 볼츠만 법칙</a></li>
   <li><a href="#sec-FLP_1_40_3" id="toc-sec-FLP_1_40_3" class="nav-link" data-scroll-target="#sec-FLP_1_40_3">I.40-3 액체의 증발</a></li>
   <li><a href="#sec-FLP_1_40_4" id="toc-sec-FLP_1_40_4" class="nav-link" data-scroll-target="#sec-FLP_1_40_4">I.40-4 분자 속력의 분포</a></li>
+  <li><a href="#sec-FLP_1_40_5" id="toc-sec-FLP_1_40_5" class="nav-link" data-scroll-target="#sec-FLP_1_40_5">I.40-5 기체의 비열</a></li>
+  <li><a href="#xec-FLP_1_40_6" id="toc-xec-FLP_1_40_6" class="nav-link" data-scroll-target="#xec-FLP_1_40_6">I.40-6 고전역학의 실패</a></li>
+  </ul></li>
+  <li><a href="#sec-FLP_1_41" id="toc-sec-FLP_1_41" class="nav-link" data-scroll-target="#sec-FLP_1_41">I.41. 브라운 운동</a>
+  <ul class="collapse">
+  <li><a href="#sec-FLP_1_41-1" id="toc-sec-FLP_1_41-1" class="nav-link" data-scroll-target="#sec-FLP_1_41-1">I.41-1 에너지의 등분배</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1127,27 +1133,233 @@ n\boldsymbol{F \cdot}d\boldsymbol{r} = dP = k_BT dn
 <p><span id="eq-FLP_1_40_3"><span class="math display">\[
 n = n_0 e^{-U/k_BT}
 \tag{3.37}\]</span></span></p>
-<p>이어야 한다. 위 식을 <strong>볼츠만 법칙 (Boltzmann’s law)</strong> 라고 한다. 약 <span class="math inline">\(\boldsymbol{F}\)</span> 가 보존력이 아니라면 <a href="#eq-FLP_1_40_3" class="quarto-xref">식&nbsp;<span>3.37</span></a> 는 더이상 해가 아니며 열역학적 평형에 도달 할 수 없다.</p>
+<p>이어야 한다. 여기서 <span class="math inline">\(\boldsymbol{F}\)</span> 가 보존력이 아니라면 <a href="#eq-FLP_1_40_3" class="quarto-xref">식&nbsp;<span>3.37</span></a> 는 더이상 해가 아니며 열역학적 평형에 도달 할 수 없다. <a href="#eq-FLP_1_40_3" class="quarto-xref">식&nbsp;<span>3.37</span></a> 을 <strong>볼츠만 법칙 (Boltzmann’s law)</strong> 라고 하며 이로부터 주어진 공간 배치에서 분자를 찾을 확률은 그 배치의 위치 에너지의 음수를 <span class="math inline">\(k_BT\)</span> 로 나눈 값에 따라 지수적으로 변한다는 것을 알 수 있다.</p>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_40_3" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_40_3">I.40-3 액체의 증발</h3>
 <p>분자들의 집합을 생각하자. 이 분자들 사이에는 쌍마다 서로의 거리만 의존하는 상호작용, 즉 포텐셜 에너지가 존재한다. 이 때 두 분자 사이의 거리 <span class="math inline">\(r\)</span> 에 따른 포텐셜 <span class="math inline">\(V(r)\)</span> 은 일반적으로 아래 그림과 같은 형태이며 <span class="math inline">\(r&lt;r_0\)</span> 일 때는 척력이 <span class="math inline">\(r&gt;r_0\)</span> 일 때는 인력이 작용한다.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig40-3/fig40-3.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>파인만 물리학 강의 I 그림 40-3(redraw)</figcaption>
+<div id="fig-FLP_1_40_3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_40_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_40/fig_1_40_3.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_40_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;3.12: 파인만 물리학 강의 I 그림 40-3(redraw)
+</figcaption>
 </figure>
 </div>
-<p>이런 기체 분자로 차 있는 상자를 생각하자. 이 기체들 사이의 포텐셜은 각 개별 쌍의 포텐셜의 합이라고 가정하자. (세개 이상에 대한 상호작용도 존재한다-<a href="https://en.wikipedia.org/wiki/Three-body_force">Three-body force</a> 를 참고하라.) 그렇다면 볼츠만의 법칙에 따라 분자 쌍이 <span class="math inline">\(r_{ij}\)</span> 만큼의 거리를 두고 존재할 확률은 다음에 비례한다.</p>
+<p>이런 기체 분자로 차 있는 상자를 생각하자. 이 기체 분자들 사이의 포텐셜은 각 개별 쌍의 포텐셜의 합이라고 가정하자. (세개 이상에 대한 상호작용도 존재한다(<a href="https://en.wikipedia.org/wiki/Three-body_force">Three-body force</a> 를 참고하라.) 그렇다면 볼츠만의 법칙에 따라 분자 쌍이 <span class="math inline">\(r_{ij}\)</span> 만큼의 거리를 두고 존재할 확률은 다음에 비례한다.</p>
 <p><span class="math display">\[
 \exp \left[-\sum_{i,j} V(r_{ij})/k_BT\right].
 \]</span></p>
+<ul>
+<li><span class="math inline">\(k_BT \gg |V(r_{0})|\)</span> 일 경우 위 값은 거의 모든 곳에서 <span class="math inline">\(1\)</span> 에 가깞다. 즉 온도가 매우 높을 경우 분자를 발견할 확률은 위치에 거의 무관하게 된다.</li>
+<li><span class="math inline">\(k_BT \ll |V(r_0)|\)</span> 인 경우 <span class="math inline">\(r=r_0\)</span> 주위에서 발견할 확률이 매우 크다.</li>
+</ul>
+<p>증발현상을 이해하려면 다음을 알아야 한다.</p>
+<ul>
+<li><p><span class="math inline">\(V(r)\)</span> 은 양자역학 혹은 실험을 통해 발견한다. 하지만 분자들 사이의 힘의 법칙을 고려하면 수십억 개의 분자가 무엇을 할지를 알아내는 것은 단지 함수 <span class="math inline">\(\exp (- \sum V_{ij}/k_BT)\)</span> 를 연구하는 것에 불과하다. 이는 매우 단순한 함수이자 매우 쉬운 아이디어이지만 변수의 수가 매우 많기 때문에 어렵다. 그러나 이 문제는 소위 “다체 문제” 의 한 예이며 매우 흥미로운 분야이다. 이 식에는 기체의 응고나 고체의 결정의 형태와 같은 모든 세부 사항이 포함되어야 하며, 사람들의 노력에도 불구하고 수학적으로 방대한 변수들을 다루는 것이 어렵다.</p></li>
+<li><p>이후 공간에서 입자들의 분포를 알아낸다. 그것은 고전 통계역학의 목표이다. 실제로 힘을 알면 원칙적으로 공간에서의 분포를 찾을 수 있고, 속도의 분포는 각각의 경우와 무관하게 한 번에 해결될 수 있다.</p></li>
+</ul>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_40_4" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_40_4">I.40-4 분자 속력의 분포</h3>
+<section id="지수적-대기의-경우" class="level4">
+<h4 class="anchored" data-anchor-id="지수적-대기의-경우"><strong>지수적 대기의 경우</strong></h4>
+<p>이제 속도의 분포에 대해 알아보자. 이를 위해 앞서 대기에서 발견한 사실들을 활용한다. 일단 대기의 기체를 이상기체로 간주한다. 따라서 원자들간의 상호작용은 일단 생각하지 않으며 중력에 의한 위치에너지만 생각하며 충돌을 무시하더라도 차이가 없다(잠시 후 다룬다). <a href="#eq-FLP_1_40_1" class="quarto-xref">식&nbsp;<span>3.36</span></a> 에 따르면 공기의 밀도는 올라갈수록 지수적으로 감소한다. 그리고 이로부터 주어진 높이 <span class="math inline">\(h_0\)</span> 를 오를 만큼 충분한 속도를 갖지 못한 분자의 분포를 알 수 있다.</p>
+<p>우선 <span class="math inline">\(h_0&gt;0\)</span> 을 정하자. 그리고 <span class="math inline">\(h=0\)</span> 에서 <span class="math inline">\(z\)</span> 방향의 속도를 가진 입자가 <span class="math inline">\(h_0\)</span> 에 간신히 도달할때의 속도를 <span class="math inline">\(u\)</span> 라고 하자. <span class="math inline">\(mgh_0 = \frac{1}{2}mu^2\)</span> 로부터 <span class="math inline">\(u\)</span> 를 알 수 있다. 그렇다면 평형상태에서</p>
+<p><span class="math display">\[
+\left[\begin{array}{c}h=0\text{ 인 평면을 } v_z&gt;u \\ \text{ 의 속도로 통과하는 입자의 개수} \end{array}\right]= \left[ \begin{array}{c} h=h_0\text{ 인 평면을 } v_z &gt;0 \\ \text{ 의 속도로 통과하는 입자의 개수} \end{array}\right]
+\]</span></p>
+<p>이 성립해야 한다. 또한 우리는 <span class="math inline">\(h=0\)</span> 을 <span class="math inline">\(v_z&gt;0\)</span> 으로 통과하는 분자의 개수가 <span class="math inline">\(h=h_0\)</span> 를 <span class="math inline">\(v_z&gt;0\)</span> 으로 통과하는 분자의 개수보다 많다는 것을 안다. 두 높이에서 온도가 동일하며 <a href="#eq-FLP_1_40_1" class="quarto-xref">식&nbsp;<span>3.36</span></a> 로부터 <span class="math inline">\(n(0) &gt; n(h_0)\)</span> 이기 때문이다. 이로부터 우리는 다음을 얻을 수 있다.</p>
+<p><span id="eq-FLP_velocity_distribution_of_exponential_air"><span class="math display">\[
+\dfrac{n_{v_z&gt;u}(0)}{n_{v_z&gt;0}(0)}=\dfrac{n(h_0)}{n(0)}=e^{-mgh_0/k_BT} = e^{-mu^2/2k_BT}.
+\tag{3.38}\]</span></span></p>
+<p>위 식은 임의로 선택된 높이 <span class="math inline">\(0\)</span> 뿐만 아니라 다른 높이에서도 참이며, 따라서 속도 분포는 모두 동일하며, 결과적으로 속도 분포를 제시하는 일반 명제이다. 가스 파이프 측면에 매우 작은 구멍을 뚫어 충돌 간격이 적고, 즉 구멍의 직경보다 더 멀리 떨어지게 하면, 나오는 입자들의 속도가 달라지지만, <span class="math inline">\(u\)</span> 보다 큰 속도로 나오는 입자의 비율은 <span class="math inline">\(e^{−mu^2/2k_BT}\)</span> 이다.</p>
+</section>
+<section id="충돌을-고려한다면" class="level4">
+<h4 class="anchored" data-anchor-id="충돌을-고려한다면"><strong>충돌을 고려한다면?</strong></h4>
+<p>충돌을 무시해도 차이가 없다는 것을 보이자. 이제 유한한 높이 <span class="math inline">\(h\)</span> 가 아니라 충돌의 여지가 거의 없는 무한소 높이 <span class="math inline">\(dh\)</span> 를 사용해도 동일한 결론이 난다. 우리가 생각할 것은 포텐셜 및 운동에너지와 에너지 보존, 충돌시 분자들 간의 에너지 교환이다. 하지만 에너지가 단지 다른 분자와 교환되는 경우 중요한 것은 동일한 분자를 추적하는 지가 아니라 분포이며 이 경우 결과에는 여전히 차이가 없다는 것이 밝혀졌다.</p>
+</section>
+<section id="확률분포표현" class="level4">
+<h4 class="anchored" data-anchor-id="확률분포표현"><strong>확률분포표현</strong></h4>
+<p><a href="#eq-FLP_velocity_distribution_of_exponential_air" class="quarto-xref">식&nbsp;<span>3.38</span></a> 와 속도의 분포는 순전히 온도에 의해 결정된다는 사실로부터 <span class="math inline">\(u\)</span> <u>보다 큰 속도로 정해진 높이의 평면을 통과하는 기체 분자의 밀도</u> <span class="math inline">\(n_{&gt;u}\)</span> 가 다음을 만족한다는 것을 안다.</p>
+<p><span id="eq-FLP_1_40_4"><span class="math display">\[
+n_{&gt;u} \propto e^{-mu^2/2k_BT}.
+\tag{3.39}\]</span></span></p>
+<p>이것을 수학적으로 더 다루기 쉽게 표현하는 방법은 확률분포함수를 사용하는 것이다. 속도 <span class="math inline">\(u\)</span> 에 대한 확률분포함수는</p>
+<p><span id="eq-FLP_1_40_5"><span class="math display">\[
+\int_{-\infty}^\infty f(u)\,du = 1
+\tag{3.40}\]</span></span></p>
+<p>를 만족하며 <a href="#eq-FLP_1_40_4" class="quarto-xref">식&nbsp;<span>3.39</span></a> 에 대해</p>
+<p><span id="eq-FLP_1_40_6"><span class="math display">\[
+\int_{u}^\infty uf(u)\,du =\text{const.} \cdot e^{-mu^2/2k_BT}
+\tag{3.41}\]</span></span></p>
+<p>이어야 한다. 적분인자가 왜 <span class="math inline">\(f(u)\)</span> 가 아닐까? 그것은 <span class="math inline">\(n_{&gt;u}\)</span> 가 어떤 높이의 속도 분포가 아니라 어떤 높이에서 정해진 평면을 통과하는 입자의 분포와 관련이 있기 때문에다. 즉 빠른 입자는 더 많이 통과한다. 정해진 <span class="math inline">\(dt\)</span> 동안 특정한 면을 통과하는 입자의 개수는 <span class="math inline">\(u\,dt\)</span> 에 비례한다는 것을 압력을 도입할 때 사용했다. <a href="#eq-FLP_1_40_6" class="quarto-xref">식&nbsp;<span>3.41</span></a> 와 <a href="#eq-FLP_1_40_5" class="quarto-xref">식&nbsp;<span>3.40</span></a> 로부터</p>
+<p><span id="eq-FLP_1_40_7"><span class="math display">\[
+f(u) \,du=\sqrt{\dfrac{m}{2\pi k_B T}}e^{-mu^2/2k_BT} \,du
+\tag{3.42}\]</span></span></p>
+<p>임을 알 수 있다.</p>
+<p>속도와 운동량이 비례하므로, 운동량의 분포도 단위 운동량 범위당 <span class="math inline">\(e^{−\text{K.E.}/k_BT}\)</span> 에 비례한다고 말할 수 있다. 상대성 이론에는 속도가 아니라 운동량에 대해서만 성립하므로 운동량 <span class="math inline">\(p\)</span> 를 이용하여 기억하는 것이 좋다.</p>
+<p><span id="eq-FLP_1_40_8"><span class="math display">\[
+f(p) \,dp = C e^{-\text{K.E.}/k_BT} \, dp.
+\tag{3.43}\]</span></span></p>
+<p>따라서 우리는 운동에너지 및 퍼텐셜 에너지에 대한 확률이 모두 <span class="math inline">\(e^{−\text{energy}/k_BT}\)</span> 로 주어진다는 것을 알게되었다.</p>
+</section>
+<section id="속도-분포" class="level4">
+<h4 class="anchored" data-anchor-id="속도-분포"><strong>속도 분포</strong></h4>
+<p>지금까지 우리는 지수적 대기로부터 속도의 분포를 유도하였으며 이는 특정 방향에 대한 속도 분포만을 생각했다는 의미이다. 당연히 다른 방향에 대한 분포, 그리고 속도의 크기의 분포에 관심이 있다. 후자의 경우 당연히 방향과 무관한 것이어야 하며 속도의 크기의 제곱에만 의존하는 함수여야 한다. <span class="math inline">\(v_z\)</span> 에 대한 분포로부터 속도의 분포함수 <span class="math inline">\(f(v_x,\,v_y,\,v_z)\)</span> 가 다음과 같다는 것을 이해 할 수 있다.</p>
+<p><span id="eq-FLP_1_40_9"><span class="math display">\[
+f(v_x,\,v_y,\,v_z)\,dv_x dv_y dv_z \propto e^{-(mv_x^2+mv_y^2+mv_z^2)/2k_BT} \,dv_x dv_y dv_z .
+\tag{3.44}\]</span></span></p>
 <p><br></p>
+</section>
+</section>
+<section id="sec-FLP_1_40_5" class="level3">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_40_5">I.40-5 기체의 비열</h3>
+<p>이제 우리는 이론을 검증하는 몇 가지 방법을 살펴보고, 가스에 대한 고전 이론이 얼마나 성공적인지 살펴보자.</p>
+<ul>
+<li>단원자 기체의 경우 <span class="math inline">\(PV\)</span> 는 원자들의 질량 중심 운동의 운동 에너지의 <span class="math inline">\(\frac{2}{3}\)</span> 과 동일하다는 것과 운동 에너지는 내부 에너지와 같다는 것을 안다. 따라서 <a href="#eq-FLP_1_39_11" class="quarto-xref">식&nbsp;<span>3.24</span></a> 에서 <span class="math inline">\(\gamma -1 =\frac{2}{3}\)</span> 임을 안다.</li>
+<li>보다 복잡한 분자라고 가정하면 회전 혹은 진동이 가능하다(고전 역학에 따르면 사실임이 밝혀졌다). 이 경우 내부 운동의 에너지도 <span class="math inline">\(k_BT\)</span> 에 비례한다고 가정해 보자. 그렇다면 주어진 온도에서 운동 에너지 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 외에 내부 진동 및 회전 에너지를 가지고 있으며 따라서 단원자 분자와는 다른 <span class="math inline">\(\gamma\)</span> 값을 생각해야 한다.</li>
+</ul>
+<p>기술적으로, <span class="math inline">\(\gamma\)</span> 를 측정하는 가장 좋은 방법은 비열을 측정하는 것이며, 이는 온도에 따른 에너지의 변화를 의미한다. 우리는 <span class="math inline">\(\gamma\)</span> 를 단열 압축시의 <a href="#eq-FLP_1_39_14" class="quarto-xref">식&nbsp;<span>3.26</span></a> 에서 실험적으로 구한다고 가정하자.</p>
+<p>일부 경우에 대해 <span class="math inline">\(γ\)</span> 를 계산해 보자. 우선 단원자 기체의 경우 <span class="math inline">\(\gamma = \frac{5}{3}\)</span> 임을 안다. 산소(O<sub>2</sub>), 요오드화수소(HI), 수소(H<sub>2</sub>) 와 같은 이원자 분자 기체의 경우 <a href="#fig-FLP_1_40_3" class="quarto-xref">그림&nbsp;<span>3.12</span></a> 와 같은 포텐셜이 존재한다고 가정할 수 있다. 이 경우 관심 있는 온도에서는 원자 쌍이 대부분 <span class="math inline">\(r_0\)</span> 만큼 분리된다. 이것이 성립하지 않는다면 원자로 존재하는 비율이 무시할수 없을 만큼 크다는 의미이다. 우리는 실제로 단일 산소 원자가 매우 적다는 것을 알고 있으며, 이는 <span class="math inline">\(|V(r_0)| \gg k_BT\)</span> 임을 의미한다. 따라서 포텐셜은 <span class="math inline">\(r_0\)</span> 근처의 2차함수로 근사할 수 있고 이는 조화 진동자를 의미한다. 실제로 산소 분자는 스프링으로 연결된 두 원자로 잘 근사된다.</p>
+<p>이제 온도 <span class="math inline">\(T\)</span> 에서 이 분자의 총 에너지를 구해보자. 두 원자 각각의 운동 에너지가 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 이므로 두 원자의 운동 에너지의 합은 <span class="math inline">\(3k_BT\)</span> 이다. 이를 다른 방식으로 표현하면 질량 중심의 운동 에너지 <span class="math inline">\(\frac{3}{2}k_BT\)</span>, 회전의 운동 에너지 <span class="math inline">\(\frac{2}{2}k_BT\)</span>, 그리고 진동의 운동 에너지 <span class="math inline">\(\frac{1}{2}k_BT\)</span> 로도 볼 수 있다. 진동의 운동 에너지는 하나의 차원에만 관여하며 따라서 <span class="math inline">\(\frac{1}{2}k_BT\)</span> 이다. 회전과 관련해서는 두 축 중 하나를 중심으로 회전할 수 있으므로 두 개의 독립적인 운동이 존재한다. 우리는 원자들이 일종의 점이며, 그것들을 연결하는 선을 중심으로 을 회전할 수 없다고 가정한다. 만약 불일치를 발견할 경우 이것이 문제일 수 있으므로 주의해야 한다. 여기에 진동의 포텐셜 에너지를 생각해야 한다. 조화 진동에서는 평균 운동 에너지와 평균 위치 에너지가 동일하므로, 진동의 위치 에너지도 <span class="math inline">\(\frac{1}{2}k_BT\)</span> 이다. 에너지의 총합은 <span class="math inline">\(U=\frac{7}{2}k_BT\)</span> 이며, <span class="math inline">\(k_BT\)</span>는 원자당 <span class="math inline">\(\frac{2}{7}U\)</span> 이다. 즉, <span class="math inline">\(\gamma\)</span> 는 <span class="math inline">\(\frac{5}{3}\)</span> 이 아니라 <span class="math inline">\(\frac{9}{7}\)</span>, 즉 <span class="math inline">\(\gamma=1.286\)</span> 이다.</p>
+<div style="margin-right: 100px; margin-bottom: 30px;margin-left: 100px;">
+<div class="center-table">
+<div id="tbl-FLP_1_40_1" class="striped hover quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-FLP_1_40_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.1: 여러 기체에서의 <span class="math inline">\(\gamma\)</span> 값
+</figcaption>
+<div aria-describedby="tbl-FLP_1_40_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-striped table-hover caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">기체</th>
+<th style="text-align: right;">온도 (<span class="math inline">\(^\circ\,\text{C}\)</span>)</th>
+<th style="text-align: right;"><span class="math inline">\(\gamma\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">He</td>
+<td style="text-align: right;">-180</td>
+<td style="text-align: right;">1.660</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Kr</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">1.68</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ar</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1.668</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">H<sub>2</sub></td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1.404</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">O<sub>2</sub></td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1.399</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">HI</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1.40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Br<sub>2</sub></td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">1.32</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">I<sub>2</sub></td>
+<td style="text-align: right;">185</td>
+<td style="text-align: right;">1.30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">NH<sub>3</sub></td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1.310</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">C<sub>2</sub>H<sub>6</sub></td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1.22</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="xec-FLP_1_40_6" class="level3">
+<h3 class="anchored" data-anchor-id="xec-FLP_1_40_6">I.40-6 고전역학의 실패</h3>
+<p>위의 불일치를 해결하기 위해 조화진동이 이외의 다른 힘의 법칙을 시도할 수도 있지만, 다른 어떤 것이든 <span class="math inline">\(U\)</span> 를 더 크게 만들 뿐이며 더 많은 형태의 에너지를 포함한다면, <span class="math inline">\(\gamma\)</span> 는 <span class="math inline">\(1\)</span> 에 더 가깝게 접근하게 되고 이는 사실과 모순된다. 생각할 수 있는 모든 고전 이론적 것들은 상황을 더욱 악화시킬 뿐이다. 실제로는 각 원자에 전자가 존재하고, 그들의 스펙트럼을 통해 내부 운동이 존재한다는 것을 알 수 있습니다; 각 전자는 최소 <span class="math inline">\(\frac{1}{2}k_BT\)</span> 의 운동 에너지를 가져야 하며, 이는 퍼텐셜 에너지에 해당하므로 이를 더하면 <span class="math inline">\(\gamma\)</span> 가 더욱 작아진다. 이것은 터무니없이 잘못되었다.</p>
+<p>기체의 동역학 이론에 관한 최초의 위대한 논문은 맥스웰의 1859 논문이다. 우리가 논의해 온 아이디어를 바탕으로, 그는 보일의 법칙, 확산 이론, 기체의 점도, 그리고 다음 장에서 논의할 내용 등 많은 알려진 관계들을 정확하게 설명할 수 있었다. 그는 최종 요약에 이러한 위대한 성공들을 모두 열거한 후, 마지막에 이렇게 말했다. “마침내 모든 입자들의 평행 이동과 회전 운동(그는 <span class="math inline">\(\frac{1}{2}k_BT\)</span> 정리) 사이의 필수적인 관계를 확립함으로써, 그러한 입자들의 시스템이 두 비열 사이의 알려진 관계를 만족시킬 수 없음을 증명했습니다.” 그는 <span class="math inline">\(\gamma\)</span> 를 언급하고 있으며(이는 비열을 측정하는 두 가지 방법과 관련이 있다), 그리고 정답을 얻을 수 없다는 것을 알고 있다고 말했다.</p>
+<p>10년 후 한 강연에서 멕스웰은 “이제 나는 분자 이론이 지금까지 겪은 가장 큰 어려움이라고 생각되는 것을 여러분 앞에 제시합니다.”라고 말했다. 이는 고전 물리학의 법칙이 잘못되었다는 최초의 표현이며 엄밀하게 증명된 정리가 실험과 일치하지 않았기 때문에 근본적으로 불가능한 것이 존재한다는 최초의 징표였다. 1905년경, 제임스 홉우드 진스 경과 레일리 경(존 윌리엄 스트럿)이 다시 이 퍼즐에 대해 이야기하기도 했다. 사람들은 종종 19세기 후반의 물리학자들이 모든 중요한 물리 법칙을 알고 있었으며, 소수점 자리수를 더 계산하기만 하면 된다고 생각했다는 말을 듣는다. 누군가가 한 번 그렇게 말했을 수도 있고, 다른 사람들은 그것을 베꼈다. 하지만 당시 문헌을 면밀히 읽어보면 그들은 모두 무언가에 대해 걱정하고 있었다. 진스 경은 이 퍼즐이 매우 신비로운 현상이며, 온도가 낮아질 때 특정 종류의 움직임이 “얼어붙는” 것처럼 보인다고 말했다.</p>
+<p>예를 들어 진동 운동이 저온에서는 존재하지 않고 고온에서도 존재했다고 가정한다면, 기체가 진동 운동이 일어나지 않을 정도로 충분히 낮은 온도에서 존재할 수 있다고 상상할 수 있으며, 따라서 진동이 존재하지 않는 낮은 온도에서는 <span class="math inline">\(\gamma=1.40\)</span> 이며 더 높은 온도에서 진동이 도입되면 <span class="math inline">\(\gamma\)</span> 가 낮아진다고 할 수 있다. 동일한 것이 회전에 대해서도 주장될 수 있다. 충분히 낮은 온도에서 회전이 사라져 “얼어붙는다”고 말할 수 있다면, 낮은 온도에서 수소의 <span class="math inline">\(\gamma\)</span> 가 <span class="math inline">\(1.66\)</span> 에 가까워진다는 사실을 이해할 수 있다. 물론 이러한 운동이 “얼어붙는” 것은 고전 역학으로는 이해될 수 없으며 양자역학을 통해 이해될 수 있었다.</p>
+<p>양자역학 이론의 통계역학 결과를 증명 없이 진술해보자. 양자역학에 따르면 포텐셜에 의해 구속된 시스템은 이산적인 에너지 준위, 즉 서로 다른 에너지 상태를 갖게 된다는 것을 기억하자. 이제 양자역학에 의해 통계역학은 어떻게 수정해야 하는가가 문제이다. 흥미롭게도, 대부분의 문제는 고전 역학보다 양자역학에서 더 어려운 반면, 통계역학의 문제는 양자 이론에서 훨씬 쉽다! 고전 역학에서 우리가 도출하는 간단한 결과인 <span class="math inline">\(n = n_0 e^{−\text{에너지/}k_BT}\)</span> 는 다음과 같은 매우 중요한 정리가 된다: 예를 들어, 분자 상태 집합의 에너지가 <span class="math inline">\(E_0\)</span>, <span class="math inline">\(E_1\)</span>, <span class="math inline">\(E_2\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(E_i\)</span>, <span class="math inline">\(\ldots\)</span> 라고 하면, 열평형 상태에서 에너지 <span class="math inline">\(E_i\)</span> 를 가진 특정 상태에 있는 분자를 찾을 확률은 <span class="math inline">\(e^{-E_i/k_BT}\)</span> 에 비례한다. 즉 상태 <span class="math inline">\(E_1\)</span> 에 있을 확률과 상태 <span class="math inline">\(E_0\)</span> 에 있을 확률에 대한 상대적인 확률은</p>
+<p><span id="eq-FLP_1_40_10"><span class="math display">\[
+\dfrac{P_1}{P_0} = \dfrac{e^{-E_1/k_BT}}{e^{-E_0/k_BT}},
+\tag{3.45}\]</span></span></p>
+<p>이며 이는 <span class="math inline">\(P_1 = n_1/N,\, P_0=n_0/N\)</span> 이므로 다음 식과 같다.</p>
+<p><span id="eq-FLP_1_40_11"><span class="math display">\[
+n_1=n_0e^{-(E_1-E_0)/k_BT}.
+\tag{3.46}\]</span></span></p>
+<p>이에 따르면 낮은 에너지 상태보다 높은 에너지 상태에 있을 가능성이 낮다.</p>
+<p>양자역학에 따르면 조화 진동자의 경우 에너지 레벨이 고르게 배치되어 있다. 가장 낮은 에너지 <span class="math inline">\(E_0=\frac{1}{2}\hbar \omega\)</span> 에 대해 <span class="math inline">\(k\)</span> 번째 들뜬 상태의 에너지 <span class="math inline">\(E_k\)</span> 는 다음과 같다.</p>
+<p><span id="eq-FLP_energy_level_of_quantum_mechanical_harmonic_oscillator"><span class="math display">\[
+E_k = \left(\dfrac{1}{2}+k\right)\hbar \omega.
+\tag{3.47}\]</span></span></p>
+<p>이제 무슨 일이 일어나는지 보자. 우리는 이원자 분자의 진동을 조화 진동자로 근사하여 연구한다. 상태 <span class="math inline">\(E_0\)</span> 가 아닌 상태 <span class="math inline">\(E_1\)</span> 에서 분자를 찾을 수 있는 상대적인 확률은 무엇일까? 답은 상태 <span class="math inline">\(E_1\)</span> 에서 그것을 찾을 확률이 상태 <span class="math inline">\(E_0\)</span> 에서 찾을 확률에 비해 <span class="math inline">\(e^{−\hbar \omega/k_BT}\)</span> 로 감소한다는 것이다. 이제 <span class="math inline">\(k_BT\)</span> 가 <span class="math inline">\(\hbar \omega\)</span> 보다 훨씬 작면, 즉 저온이라면 <span class="math inline">\(E_1\)</span> 상태에 있을 확률은 매우 낮으며 실질적으로 모든 원자는 <span class="math inline">\(E_0\)</span> 상태에 있다. 온도를 변화시키되 여전히 매우 작게 유지한다면, 그 상태가 <span class="math inline">\(E_1=\hbar \omega\)</span> 에 있을 확률은 무한히 작게 된다. 즉 진동자의 에너지는 거의 <span class="math inline">\(E_0\)</span> 에 가깝다. 온도가 <span class="math inline">\(\hbar \omega\)</span> 보다 훨씬 낮을 경우 온도에 따라 변하지 않습니다. 모든 진동자는 바닥 상태에 있으며, 그 움직임은 실질적으로 “동결” 되어 있고 비열에 기여하지 않는다. 따라서 <a href="#tbl-FLP_1_40_1" class="quarto-xref">표&nbsp;<span>3.1</span></a> 에서 우리는 100 <span class="math inline">\(^\circ \text{C}\)</span> 에서 <span class="math inline">\(k_BT\)</span> 가 산소 또는 수소 분자의 진동 에너지보다 훨씬 낮지만, 요오드 분자에서는 그렇지 않다는 것을 판단할 수 있다. 이 차이의 이유는 요오드 원자가 수소에 비해 매우 무겁기 때문이다. 요오드와 수소에서 힘이 비슷할 수 있지만 요오드 분자는 너무 무거워서 진동의 고유 주파수가 수소의 고유 주파수에 비해 매우 낮다. 수소의 경우 실온에서 <span class="math inline">\(\hbar \omega\)</span> 가 <span class="math inline">\(k_BT\)</span> 보다 높고, 요오드의 경우 낮으며, 오직 후자인 요오드만이 고전적인 진동 에너지를 나타낸다. 기체의 온도를 매우 낮은 <span class="math inline">\(T\)</span> 값부터 상승시키면, 분자들이 거의 모두 바닥상태에 있을 다가 점차 첫 번째 들뜬상태에 있을 확률이 크게 높아지고, 온도가 더 높아지면 더 높은 에너지의 상태에 있을 확률이 높아진다. 많은 상태에 대해 확률이 크게 나타날 때, 기체의 거동은 고전 물리학이 제시한 것에 근접하게 된다. 이는 양자화된 상태가 에너지 연속체와 거의 구별되지 않게 되며, 시스템은 거의 모든 에너지를 가질 수 있기 때문이다. 따라서 온도가 상승함에 따라 우리는 다시 고전 물리학의 결과를 얻어야 한다. 원자의 회전 상태도 양자화된다는 것을 같은 방식으로 보여줄 수 있지만, 이 상태들의 에너지 차이는 일반적으로 <span class="math inline">\(k_BT\)</span> 보다 작으며 따라서 시스템 내 회전 운동 에너지가 고전적인 방식으로 참여힌다. 실온에서 이것이 완전히 사실이 아닌 한 가지 예는 수소이다.</p>
+<p>이번이 우리가 실험과 비교하여 고전 물리학에 문제가 있음을 진정으로 추론한 첫 번째 경우이며, 우리는 실재 그랬던 것과 거의 동일한 방식으로 난관의 해결착을 양자역학에서 찾았다. 다음 난관 발견되기까지 30~40년이 걸렸으며, 역시 통계역학과 관련이 있었지만 이번에는 광자기체의 역학이었다. 그 문제는 20세기 초에 플랑크에 의해 해결되었다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="sec-FLP_1_41" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sec-FLP_1_41">I.41. 브라운 운동</h2>
+<section id="sec-FLP_1_41-1" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-FLP_1_41-1">I.41-1 에너지의 등분배</h3>
+<p>브라운 운동은 1827년에 식물학자 로버트 브라운에 의해 발견되었다. 그는 현미경으로 액체 안에서 식물 꽃가루의 작은 입자들이 흔들리는 것을 관찰했으며, 그것이 살아있는 것이 아니라 물속에서 움직이는 작은 먼지 조각에 불과하다는 것을 인식했다. 사실 그는 물을 가둔 석영 조각을 땅에서 얻었는데 이는 생명과 무관함을 입증하는 데 도움이 되었다. 그것은 수백만 년 동안 갇혀 있었던 것이 틀림없지만, 그 안에서 같은 움직임을 볼 수 있었다. 보이는 것은 매우 작은 입자들이 계속해서 흔들리고 있다는 것이었다.</p>
+<p>이는 나중에 분자 운동의 효과 중 하나임이 입증되었다. 우리는 이전 장에서 액체나 기체에 매달린 작은 입자가 분자에 비해 매우 무겁지만 그 평균 운동 에너지가 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 임을 알고 있다. 그것이 그것이 매우 무겁고, 따라서 속도가 비교적 느리더라도 그렇게 느리지 않다는 것이 밝혀졌다. 직경이 1~2 마이크론인 물체의 경우 <span class="math inline">\(1 \text{mm}/\text{sec}\)</span> 정도이다. 그런데 현미경에서도 이를 확인하기 매우 어려운데 이는 입자가 지속적으로 방향을 전환하여 어디에도 도달하지 않기 때문이다. 얼마나 진행되는지는 현재 장의 끝에서 논의하겠다. 이 문제는 20세기 초에 아인슈타인에 의해 처음 해결되었다.</p>
+<div class="page-columns page-full"><p>이 입자의 평균 운동 에너지가 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 라는 것은 운동 이론, 즉 뉴턴의 법칙에서 도출되었다. 우리는 동역학 이론으로부터 많은 놀라운 결론을 도출할 수 있다는 것을 확인하게 될 이다. 이렇게 매우 적은 것(뉴턴의 법칙이 “작다”는 뜻이 아니라, 우리가 많은 일을 하지 않을것이라는 의미에서)으로부터 많은 것을 얻을 수 있다는 점이 가장 흥미롭다. 이렇게 많은 결과를 얻을 수 있었던 것은 우리가 중요한 것-열역학 제 0 법칙-을 가정했기 때문이다<span class="math inline">\(^4\)</span>. </p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^4\)</span> 파인만은 명시적으로 열역학 제 0 법칙이라고 표현하지 않는다.</span></div></div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span><strong>열역학 제 0 법칙</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>한 계가 온도 <span class="math inline">\(T\)</span> 에서 열평형상태에 있다면 같은 온도 <span class="math inline">\(T\)</span> 인 다른 시스템과도 열평형 상태이다.</p>
+</div>
+</div>
+<p>한 입자(입자란 말이 많이 나오니 이 한 입자를 <span class="math inline">\(q\)</span>-입자 라고 하자)가 물과 실제로 충돌할 때 어떻게 움직이는지 확인하고 싶다면, 물과 상호작용하지 않고 “hard” 충돌을 할 뿐인 물과 다른 작은 미세 공 입자로 구성된 기체가 존재한다고 상상할 수 있다. <span class="math inline">\(q\)</span>-입자에 뿔이 튀어나와 있다고 가정하면, 미세 공 입자는 그 뿔을 때란다. 우리는 온도 <span class="math inline">\(T\)</span> 에서 이 가상의 미세 공 입자 기체에 대해 모두 알고 있다—이는 이상기체이다. 물은 복잡하지만, 이상기체는 간단하다. 이제 우리 <span class="math inline">\(q\)</span>-입자는 미세 공 입자 기체와 평형 상태에 있어야 하며 따라서 <span class="math inline">\(q\)</span>-입자의 평균 운동은 기체 충돌에서 얻어지는 것과 같아야 한다. 왜냐하면 입자가 물에 비해 적절한 속도로 이동하지 않고, 예를 들어 <span class="math inline">\(q\)</span>-입자가 더 빠르게 움직이고 있다면, 이는 미세 공 입자 기체가 그로부터 에너지를 흡수하여 물보다 더 뜨거워진다는 의미이기 때문이다. 하지만 우리는 그것들을 같은 온도에서 시작했으며, 사물이 한 번 평형 상태에 있으면 평형 상태를 유지한다고 가정한다. 한 부분이 뜨거워지면서 동시에 다른 부분이 차가워지는 현상은 발생하지 않는다.</p>
+<p>이 명제는 참이며 역학 법칙으로부터 증명될 수 있있지만 어려운 역학을 사용해야 하며 양자역학을 통해 증명하는 것이 훨씬 쉽다. 볼츠만에 의해 처음 증명되었으며 일단 사실로 받아들이자. 이에 따르면 입자가 물과 충돌하면서 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 의 에너지를 가진다면 물이 아니라 인위제걱인 미세 공 입자 기체와 충돌해서도 <span class="math inline">\(\frac{3}{2}k_BT\)</span> 를 가져야 한다. 이는 다소 이상한 논증이지만 완전히 타당하다.</p>
+<p>브라운 운동이 처음 발견된 콜로이드 입자의 운동 외에도, 실험실 및 기타 상황에서 브라운 운동을 볼 수 있는 다양한 현상이 존재한다. 가능한 가장 섬세한 장비를 만들려고 한다면, 예를 들어 <a href="#fig-FLP_1_41_1" class="quarto-xref">그림&nbsp;<span>3.13</span></a> 과 같은 매우 정밀한 탄도 갈바노미터를 위해 얇은 석영 섬유 위에 아주 작은 거울을 설치하면, 거울은 제자리에 머무르지 않고 계속 흔들어 빛을 비추며 그 지점의 위치를 확인할 때 거울이 항상 흔들리기 때문에 완벽한 기기가 아닌데 이 거울의 회전 평균 운동 에너지는 평균적으로 <span class="math inline">\(\frac{1}{2}k_BT\)</span> 이어야 하기 때문이다.</p>
+<div id="fig-FLP_1_41_1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FLP_1_41_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig_1_41/fig_1_41_1.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FLP_1_41_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;3.13: 파인만 물리학 강의 I. 그림 41-1. (a) 정밀 광선 갈바노미터. <span class="math inline">\(L\)</span> 로부터의 빛은 작은 거울에서 반사되어 자(scale) 로 향한다. (b) 시간에 따른 광선의 위치
+</figcaption>
+</figure>
+</div>
 
 
 </section>
