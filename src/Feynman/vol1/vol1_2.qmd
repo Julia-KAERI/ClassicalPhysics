@@ -1238,3 +1238,34 @@ $$
 </br>
 
 ### I.30-4 포물선형 안테나 {#sec-FLP_1_30_4}
+
+
+
+</br>
+
+## I.32 복사 감쇄와 광산란 {#sec-FLP_1_32}
+
+
+</br>
+
+### I.32_3 복사 감쇄 {#sec-FLP_1_32_3}
+
+
+$$
+Q = - \dfrac{\omega W}{dW/dt}.
+$$ {#eq-FLP_1_32_8}
+
+
+
+$$
+Q=\dfrac{3\lambda}{4\pi r_0} \approx 5 \times 10^7.
+$$ {#eq-FLP_1_32_12}
+
+
+</br>
+
+### I.32_5 광산란 {#sec-FLP_1_32_5}
+
+$$
+\sigma_s = \dfrac{8 \pi r_0^2}{3} \cdot \dfrac{\omega^4}{\left(\omega^2 - \omega_0^2\right)^2}
+$$ {#eq-FLP_1_32_19}
