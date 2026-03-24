@@ -1903,11 +1903,11 @@ P(t)=e^{−t/\tau}
 <div class="callout-body-container callout-body">
 <p>분자의 충돌에서 충돌 사이의 평균 시간이 <span class="math inline">\(\tau\)</span> 이고, 분자들의 평균 속력이 <span class="math inline">\(v\)</span> 일 때 충돌 사이의 평균 거리를 <strong>평균 자유 거리 (mean free path)</strong> 라고 한다.</p>
 <p><span id="eq-FLP_1_43_9"><span class="math display">\[
-\text{평균 자유 거리 } l=\tau v.
+\text{평균 자유 거리 } l := \tau v.
 \tag{3.91}\]</span></span></p>
 </div>
 </div>
-<p>분자가 짧은 시간 <span class="math inline">\(dt\)</span> 에서 충돌을 할 확률이 <span class="math inline">\(dt/\tau\)</span> 와 같듯이, 거리가 <span class="math inline">\(dx\)</span> 일 때 충돌할 확률도 <span class="math inline">\(dx/l\)</span> 이다. <a href="#sec-FLP_1_43_1">분자들의 충돌</a> 에서의 논의를 <span class="math inline">\(t\)</span> 에서 <span class="math inline">\(x\)</span> 로 바꾸면 충돌 없이 <span class="math inline">\(x\)</span> 만큼의 거리를 이동할 확률이 <span class="math inline">\(e^{−x/l}\)</span> 임을 보일 수 있다. 분자가 다른 분자와 충돌하기 전에 이동하는 평균 거리, 즉 평균 자유 거리는 주변에 존재하는 분자의 수와 그 분자들의 “크기”, 즉 그들이 나타내는 표적의 크기에 따라 달라진다. 충돌에서 목표물의 실제 “크기”는 보통 <strong>충돌단면적 (collision crosss section)</strong> 으로 설명하며, 이는 핵 물리학이나 빛 산란 문제에 사용되는 것과 동일한 개념이다.</p>
+<p>분자가 짧은 시간 <span class="math inline">\(dt\)</span> 에서 충돌을 할 확률이 <span class="math inline">\(dt/\tau\)</span> 와 같듯이, 거리가 <span class="math inline">\(dx\)</span> 일 때 충돌할 확률도 <span class="math inline">\(dx/l\)</span> 이다. <a href="#sec-FLP_1_43_1">분자들의 충돌</a> 에서의 논의를 <span class="math inline">\(t\)</span> 에서 <span class="math inline">\(x\)</span> 로 바꾸면 충돌 없이 <span class="math inline">\(x\)</span> 만큼의 거리를 이동할 확률이 <span class="math inline">\(e^{−x/l}\)</span> 임을 보일 수 있다. 분자가 다른 분자와 충돌하기 전에 이동하는 평균 거리, 즉 평균 자유 거리는 주변에 존재하는 분자의 수와 그 분자들의 “크기”, 즉 그들이 나타내는 표적의 크기에 따라 달라진다. 충돌에서 목표물의 실제 “크기”는 보통 <strong>충돌단면적 (collision cross section)</strong> 으로 설명하며, 이는 핵 물리학이나 빛 산란 문제에 사용되는 것과 동일한 개념이다.</p>
 <div id="fig-FLP_1_43_1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FLP_1_43_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1930,20 +1930,23 @@ dx \text{ 만큼 진행할 때의 충돌 확률}  =\sigma_c n_0 \, dx.
 <p><span id="eq-FLP_1_43_12"><span class="math display">\[
 \sigma_c n_0 l=1
 \tag{3.94}\]</span></span></p>
-<p>이다. 이 식은 전체 분자의 산란단면적에 대해 평균 이동 거리 <span class="math inline">\(l\)</span> 은 둘을 곱했을 때 단위부피가 되도록 정해진다는 의미이다. 평균 자유 거리 <span class="math inline">\(l\)</span> 을 측정하여 <span class="math inline">\(\sigma_c\)</span> 를 계산하고, 그 결과를 원자 구조에 대한 상세 이론에 기반한 계산과 비교할 수 있다. 하지만 그것은 다른 주제이다! 이제 비평형 상태 문제로 돌아가자.</p>
-<p><br></p>
+<p>이다. 이 식은 거리 <span class="math inline">\(l\)</span> 을 통과할 때 평균적으로 한 번의 충돌이 있다는 의미이다. 길이가 <span class="math inline">\(l\)</span> 이며 단위면적을 가진 원통 에는 <span class="math inline">\(n_0 l\)</span> 개의 산란체가 존재한다. 산란체 하나의 면적이 <span class="math inline">\(\sigma_c\)</span> 인 경우 전체 면적은 <span class="math inline">\(n_0 l \sigma_c\)</span> 이며 이는 단위면적, 즉 원통의 단면이다. 물론 일부 분자는 다른 분자 뒤에 부분적으로 숨겨져 있기 때문에 전체 면적이 덮여져 잇지 않고, 따라서 일부 분자는 충돌 없이 <span class="math inline">\(l\)</span> 보다 더 멀리 진행 할 수 있다. 평균 자유 거리 <span class="math inline">\(l\)</span> 을 측정하여 <span class="math inline">\(\sigma_c\)</span> 를 계산하고, 그 결과를 원자 구조에 대한 상세 이론에 기반한 계산과 비교할 수 있지만 그것은 다른 주제이다! 이제 비평형 상태 문제로 돌아가자.</p>
 </section>
 <section id="sec-FLP_1_43_3" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_43_3">I.43-3 표류 속도</h3>
-<p>우리는 기체의 대부분 분자와는 어느 정도 차이가 있는 하나 혹은 몇몇의 분자에서 일어나는 일을 설명하고자 한다. 여기서 대다수 분자를 <strong>배경 분자</strong> 라고 하고, 배경 분자와 다른 분자를 <strong>특수 분자</strong>, 혹은 <span class="math inline">\(S\)</span>-분자라고 하자. 이 분자는 배경 분자보다 무거거나. 다른 화학 물질이거나, 전하가 있을 수 있다. 질량이나 전하가 다르기 때문에 <span class="math inline">\(S\)</span>-분자에는 배경 분자에 작용하는 힘과 다른 힘이 작용할 수 있다. 이러한 <span class="math inline">\(S\)</span>-분자에 대해 어떤 일이 일어나는지를 고려함으로써, 우리는 다양한 현상에서 유사한 방식으로 작용하는 기본 효과를 이해할 수 있다. 예를 들면 가스 확산, 배터리 내 전류, 침전, 원심 분리 등.</p>
-<p>우리는 기본 과정에 집중함으로써 시작합니다: 배경 기체 내의 <span class="math inline">\(S\)</span>-분자에는 특정 힘 <span class="math inline">\(\boldsymbol{F}\)</span> (중력 혹은 전기력 등)에 의해 작용하며, 배경 분자와의 충돌로 인한 특정되지 않는 힘 역시 작용한다. <span class="math inline">\(S\)</span> 분자는 다른 분자와 반복적으로 충돌하면서 여기저기 어슬렁 거린다. 그러나 주의 깊게 관찰하면 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 방향으로 으로 어느 정도 진행한다는 것을 알 수 있다. 이것을 무작위 운동 위에서 <strong>표류 (drift)</strong> 한다고 말한다. 우리가 관심있는 것은 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 와 그 표류에 의한 <strong>표류 속도 (drift velocity)</strong> 이다.</p>
-<p>어떤 순간의 <span class="math inline">\(S\)</span>-분자는 일련의 충돌 사이 어딘가에 있다. 최종 충돌 후의 속도 뿐만 아니라 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 에 의한 속도도 갖게 된다. 평균적으로는 짧은 시간(시간 <span class="math inline">\(\tau\)</span>) 내에 충돌을 경험하고 새로운 경로 구간을 시작한다. 새로운 시작 속도와, <span class="math inline">\(\boldsymbol{F}\)</span> 에 의한 동일한 가속도를 갖는다. 문제를 간단하게 하기 위해 각 충돌 후에 <span class="math inline">\(S\)</span>-분자는 완전히 새로운 시작을 한다고 가정한다. 즉, <span class="math inline">\(\boldsymbol{F}\)</span> 에 의한 과거 가속도를 전혀 기억하지 않는다는 것이다. <span class="math inline">\(S\)</span>-분자가 배경 분자보다 훨씬 가볍다면 이는 합리적인 가정일 수 있지만, 일반적으로는 확실히 타당하지 않다. 나중에 개선된 가정에 대해 논의할 것이다.</p>
-<p><span class="math inline">\(S\)</span>-분자가 각각의 충돌 후 향하는 방향은 모든 방향에 대해 동일한 확률이라고 가정한다. 모든 방향에 대해 균등한 시작속도를 가정하므로 순운동(net motion)에 기여하지 않으며 따라서 충돌 후 초기 속도에 대해 더 이상 걱정할 필요가 없다. 이 무작위 움직임 외에, 각 <span class="math inline">\(S\)</span>-분자는 언제든지 마지막 충돌 이후 받아온 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 의 방향에 대한 추가 속도를 갖게 된다. 이 <span class="math inline">\(\boldsymbol{F}\)</span> 에 의한 속도의 평균값은 <span class="math inline">\(S\)</span>-분자의 질량 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(F/m\)</span> 에 마지막 충돌 이후 평균 시간 <span class="math inline">\(\tau\)</span> 을 곱한 값이며 이를 표류 속도라고 한다.</p>
+<section id="표류속도" class="level4">
+<h4 class="anchored" data-anchor-id="표류속도"><strong>표류속도</strong></h4>
+<p>우리는 기체의 대부분 분자와는 어느 정도 차이가 있는 하나 혹은 몇몇의 분자에서 일어나는 일을 설명하고자 한다. 여기서 대다수 분자를 <strong>배경 분자</strong> 라고 하고, 배경 분자와 다른 분자를 <strong>특수 분자</strong>, 혹은 <span class="math inline">\(S\)</span>-분자라고 하자. 이 분자는 배경 분자보다 무겁거나. 다른 화학 물질이거나, 전하가 있을 수 있다. 질량이나 전하가 다르기 때문에 <span class="math inline">\(S\)</span>-분자에는 배경 분자에 작용하는 힘과 다른 힘이 작용할 수 있다. 이러한 <span class="math inline">\(S\)</span>-분자에 대해 어떤 일이 일어나는지를 고려함으로써, 우리는 다양한 현상에서 유사한 방식으로 작용하는 기본 효과를 이해할 수 있다. 예를 들면 가스 확산, 배터리 내 전류, 침전, 원심 분리 등.</p>
+<p>기본 과정을 살펴보는 것으로 시작한다. 배경 기체 내의 <span class="math inline">\(S\)</span>-분자에는 중력 혹은 전기력과 같은 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 뿐만 아니라 배경 분자와의 충돌로 인한 특정되지 않는 힘 역시 작용한다. 우리는 <span class="math inline">\(S\)</span> 분자의 일반적인 행동을 기술하고자 한다. <span class="math inline">\(S\)</span> 분자는 다른 분자와 반복적으로 충돌하면서 여기저기 어슬렁 거린다. 그러나 주의 깊게 관찰하면 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 방향으로 으로 어느 정도 진행한다는 것을 알 수 있다. 이것을 무작위 운동 위에서 <strong>표류 (drift)</strong> 한다고 말한다. 우리가 관심있는 것은 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 와 그 표류에 의한 <strong>표류 속도 (drift velocity)</strong> 이다.</p>
+<p><span class="math inline">\(S\)</span>-분자는 일련의 충돌 사이 어딘가에 있다. 최종 충돌 후의 속도 뿐만 아니라 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 에 의한 속도도 갖게 된다. 평균적으로는 짧은 시간(시간 <span class="math inline">\(\tau\)</span>) 내에 충돌을 경험하고 새로운 경로 구간을 시작한다. 새로운 시작 속도와, <span class="math inline">\(\boldsymbol{F}\)</span> 에 의한 동일한 가속도를 갖는다. 문제를 간단하게 하기 위해 두가지를 가정한다.</p>
+<p><strong>가정-1</strong> : 각 충돌 후에 <span class="math inline">\(S\)</span>-분자는 완전히 새로운 시작을 한다고 가정한다. 즉, <span class="math inline">\(\boldsymbol{F}\)</span> 에 의한 과거 가속도를 전혀 기억하지 않는다는 것이다. <span class="math inline">\(S\)</span>-분자가 배경 분자보다 훨씬 가볍다면 이는 합리적인 가정일 수 있지만, 일반적으로는 확실히 타당하지 않다. 나중에 개선된 가정에 대해 논의할 것이다.</p>
+<p><strong>가정-2</strong> : <span class="math inline">\(S\)</span>-분자가 각각의 충돌 후 향하는 방향은 모든 방향에 대해 동일한 확률이라고 가정한다. 모든 방향에 대해 균등한 시작속도를 가정하므로 순운동(net motion)에 기여하지 않으며 따라서 충돌 후 초기 속도에 대해 더 이상 걱정할 필요가 없다.</p>
+<p>무작위 움직임에 더하여, 각 <span class="math inline">\(S\)</span>-분자는 언제든지 마지막 충돌 이후 받아온 힘 <span class="math inline">\(\boldsymbol{F}\)</span> 의 방향에 대한 추가 속도를 갖게 된다. 이 <span class="math inline">\(\boldsymbol{F}\)</span> 에 의한 속도의 평균값은 <span class="math inline">\(S\)</span>-분자의 질량 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(F/m\)</span> 에 마지막 충돌 이후 평균 시간 <span class="math inline">\(\tau\)</span> 을 곱한 값이며 이를 표류 속도 <span class="math inline">\(\boldsymbol{v}_\text{drift}\)</span> 라고 한다.</p>
 <p><span id="eq-FLP_1_43_13"><span class="math display">\[
 \boldsymbol{v}_\text{drift}=\dfrac{\boldsymbol{F}\tau}{m}.
 \tag{3.95}\]</span></span></p>
 <p>여기서 <span class="math inline">\(\tau\)</span> 를 결정하는 데 다소 어려움이 있을 수 있지만, 기본 과정은 위 식에 의해 정의된다.</p>
-<p>표류속도는 힘에 비례한다. 여기에서 비례상수에는 일반적인 명칭이 없고 힘 마다 다른 이름이 사용된다. 전기 문제에서 <span class="math inline">\(\boldsymbol{F}=q\boldsymbol{E}\)</span> 로 표현할 때 속도와 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 사이의 비례 상수를 보통 <strong>이동도 (mobility)</strong> 라고 한다. 혼란의 여지가 있지만 우리는 일단 비례상수를 이동도라고 부르자. 따라서 이동도 <span class="math inline">\(\mu\)</span> 에 대해 다음과 같이 쓸 수 있다.</p>
+<p>표류속도는 힘에 하는데 여기서 비례상수에는 일반적인 명칭이 없고 힘 마다 다른 이름이 사용된다. 전기 문제에서 <span class="math inline">\(\boldsymbol{F}=q\boldsymbol{E}\)</span> 이므로 속도와 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 사이의 비례 상수를 보통 <strong>이동도 (mobility)</strong> 라고 한다. 하지면 여기서는 전기력에 대한 비례상수를 이동도 라고 하자. 따라서 이동도 <span class="math inline">\(\mu\)</span> 에 대해 다음과 같이 쓸 수 있다.</p>
 <p><span id="eq-FLP_1_43_14"><span class="math display">\[
 \boldsymbol{v}_\text{drift} = \mu \boldsymbol{F}
 \tag{3.96}\]</span></span></p>
@@ -1952,9 +1955,14 @@ dx \text{ 만큼 진행할 때의 충돌 확률}  =\sigma_c n_0 \, dx.
 \mu=\dfrac{\tau}{m}.
 \tag{3.97}\]</span></span></p>
 <p>이다. <a href="#eq-FLP_1_43_13" class="quarto-xref">식&nbsp;<span>3.95</span></a> 은 정확하지만 정확한 약간의 주의가 필요하다. 혼동의 여지가 있음에도 불구하고 <a href="#eq-FLP_1_43_13" class="quarto-xref">식&nbsp;<span>3.95</span></a> 에 도달하는 합리적이지만 잘못된 방식을 알아보자(많은 교과서에서 찾아볼 수 있는 방식이기도 하다!).</p>
-<p>우리는 이렇게 말했을지도 모릅니다: 충돌 사이의 평균 시간은 <span class="math inline">\(\tau\)</span>. 충돌 후 입자는 무작위적인 속도로 시작하지만, 충돌 사이에 가속도에 시간을 곱한 것만큼 속도가 변한다. 다음 충돌에 도달하는 데 시간이 <span class="math inline">\(\tau\)</span> 이므로, <span class="math inline">\((F/m)\tau\)</span> 의 속도로 충돌한다. 충돌 직후 속도가 0 이므로 두 충돌 사이에는 평균적으로 최종 속도의 절반에 해당하는 를 가지며, 따라서 평균 표류 속도는 <span class="math inline">\(\frac{1}{2}F\tau/m\)</span> 이다. 그러나 이 결과는 틀렸으며, <a href="#eq-FLP_1_43_13" class="quarto-xref">식&nbsp;<span>3.95</span></a> 은 옳지만, 이 두 주장은 동등하게 만족스럽게 보일 수 있다. 두 번째 결과가 틀린 이유는 다소 미묘하며, 다음과 같다. 모든 충돌사이의 시간간격이 <span class="math inline">\(\tau\)</span> 인 것처럼 주장하지만 사실은 어떤 시간간격은 평균보다 짧고 다른 시간간격은 은 더 길다. 짧은 시간은 더 자주 발생하지만, 실제로 출발할 가능성이 적어 표류 속도에 대한 기여는 적다. 충돌 사이의 자유 시간 분포를 적절히 고려한다면, 두 번째 인수에서 도출된 계수 <span class="math inline">\(\frac{1}{2}\)</span> 가 존재해서는 안 된다는 것을 증명할 수 있다. 여기서의 오류는 단순한 논증을 통해 평균 최종 속도를 평균 속도 자체와 연결하려고 시도하면서 발생했습니다. 이 관계는 단순하지 않으므로, 원하는 것, 즉 평균 속도 자체에 집중하는 것이 최선이다. 우리가 제시한 첫 번째 논증은 평균 속도를 직접적으로, 그리고 정확하게 결정한다! 하지만 아마 이런 문제로 일반적으로 모든 올바른 수치 계수를 얻으려고 하지 않는 것일 것이다!</p>
+</section>
+<section id="eq-flp_1_43_15-를-유도하는-잘못된-방식" class="level4">
+<h4 class="anchored" data-anchor-id="eq-flp_1_43_15-를-유도하는-잘못된-방식"><strong><a href="#eq-FLP_1_43_15" class="quarto-xref">식&nbsp;<span>3.97</span></a> 를 유도하는 잘못된 방식</strong></h4>
+<p><strong>일단 틀린 논리</strong> : 충돌 사이의 평균 시간은 <span class="math inline">\(\tau\)</span>. 충돌 후 입자는 무작위적인 속도로 시작하지만, 충돌 사이에 가속도에 시간을 곱한 것만큼 속도가 변한다. 다음 충돌에 도달하는 데 시간이 <span class="math inline">\(\tau\)</span> 이므로, <span class="math inline">\(\tau\)</span> 의 시간 후에는 <span class="math inline">\((F/m)\tau\)</span> 의 속도로 충돌한다. 충돌 직후 속도가 0 이므로 두 충돌 사이에는 평균적으로 최종 속도의 절반에 해당하는 <span class="math inline">\(\frac{1}{2}F\tau/m\)</span> 가 평균속도이다.</p>
+<p><strong>틀린 이유</strong> : 위의 논리가 틀린 이유는 주의를 요한다. 모든 충돌사이의 시간간격이 <span class="math inline">\(\tau\)</span> 인 것처럼 주장하지만 사실은 어떤 시간간격은 평균보다 짧고 다른 시간간격은 은 더 길다. 짧은 시간은 더 자주 발생하지만, 실제로 출발할 가능성이 적어 표류 속도에 대한 기여는 적다. <strong>충돌 사이의 자유 시간 분포를 적절히 고려한다면</strong>, 틀린 논리에서의 <span class="math inline">\(\frac{1}{2}\)</span> 가 존재해서는 안 된다는 것을 증명할 수 있다. 여기서의 오류는 단순한 논증을 통해 평균 최종 속도를 평균 속도 자체와 연결하려고 시도하면서 발생했다. 이 관계는 단순하지 않으므로, 즉 평균 속도 자체에 집중하는 것이 최선이다. 우리가 제시한 맞는 논증은 평균 속도를 직접적으로, 그리고 정확하게 결정한다! 하지만 아마 이런 문제로 일반적으로 모든 올바른 수치 계수를 얻으려고 하지 않는 것일 것이다!</p>
 <p>이제 각 충돌이 과거 운동에 대한 모든 기억을 없애는 단순화된 가정으로 돌아가자. 즉 각 충돌 후에 새로운 시작이 이루어진다. <span class="math inline">\(S\)</span>-분자가 가벼운 배경 분자들 속의 무거운 물체라고 가정하자. 그렇다면 <span class="math inline">\(S\)</span>-분자는 각 충돌마다 “전방” 운동량을 잃지 않을 것이고 그 움직임이 다시 “무작위화” 되기까지 몇 차례의 충돌이 걸릴 것이다. 우리는 오히려 각 충돌마다 운동량의 일정 비율을 잃는다고 가정해야 한다. 세부적인 것을 다루지는 않겠지만 이 결과가 평균 충돌 시간인 <span class="math inline">\(\tau\)</span> 를 “잊는 시간”의 평균에 해당하는 새로운, 그리고 더 긴 <span class="math inline">\(\tau\)</span> 로 교체하는 것과 동등하다고 말할 수 있다. <span class="math inline">\(\tau\)</span> 는 평균 “망각 시간”, 즉 전진 운동량을 잊는 평균 시간을 의미한다. <span class="math inline">\(\tau\)</span> 에 대한 이러한 해석을 통해 우리는 처음 가정한 것만큼 단순하지 않은 상황에 대해 <a href="#eq-FLP_1_43_15" class="quarto-xref">식&nbsp;<span>3.97</span></a> 를 사용할 수 있다.</p>
 <p><br></p>
+</section>
 </section>
 <section id="sec-FLP_1_43_4" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_43_4">I.43-4 이온 전도도</h3>
@@ -1994,9 +2002,9 @@ I=\mu q^2 n_i \dfrac{A}{b}V.
 </section>
 <section id="sec-FLP_1_43_5" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_43_5">I.43-5 분자 확산</h3>
-<p>이제 확산 이론에 대해 알아보자. 열평형 상태에 있는 기체 용기가 있고, 그 용기의 어느 위치에 다른 종류의 기채를 소량 주입한다고 가정하자. 원래 기체를 <strong>배경 기체</strong> 라고 부르고, 주입되는 기체를 <strong>특별 기체</strong> 라고 하자. 특별 기체는 전체 용기에 퍼지기 시작하지만, 배경 기체가 존재하기 때문에 천천히 퍼질 것이다. 이 느리게 퍼지는 과정은 <strong>확산(diffusion)</strong> 이라고 한다. 확산은 주로 배경 기체 분자에 의해 휘둘려지는 특별 기체 분자에 의해 제어된다. 많은 충돌이 발생한 후에는 특별 분자들은 전체 부피에 걸쳐 대체로 고르게 퍼지게 된다. 우리는 기체의 확산과 대류에 의해 발생할 수 있는 대량의 이동을 혼동하지 않도록 주의해야 한다. 대부분의 경우 두 기체의 혼합은 대류와 확산의 결합에 의해 발생하며 우리는 현재 대류가 없는 경우에만 관심이 있다. 즉 기체는 오직 분자 운동, 즉 확산에 의해서만 퍼진다. 우리는 확산이 얼마나 빠르게 진행되는지 계산하고자 한다.</p>
-<p>이제 분자 운동으로 인해 특별 기체 분자의 순흐름을 계산하자. 분자가 어느정도 불균일하게 분포할때만 순 흐름이 존재하며, 그렇지 않다면 모든 분자 운동이 평균이 되어 순 흐름이 없게 된다. 먼저 <span class="math inline">\(x\)</span> 방향의 흐름을 생각해 보자. 흐름을 찾기 위해, 우리는 <span class="math inline">\(x\)</span> 축에 수직인 가상의 평면 표면을 고려하고, 그 평면을 가로지르는 특수 분자의 수를 센다. 순흐름을 얻기 위해서는 양의 <span class="math inline">\(x\)</span> 방향으로 교차하는 분자를 양수로 계산하고, 그 수에서 음의 <span class="math inline">\(x\)</span> 방향으로 교차하는 수를 빼야 한다. 우리가 여러 차례 보았듯이, 시간 <span class="math inline">\(\Delta T\)</span> 에서 표면적을 가로지르는 수는 평면으로부터 거리 <span class="math inline">\(v\Delta T\)</span> 까지 연장된 부피에서 구간 <span class="math inline">\(\Delta T\)</span> 를 시작하는 개수에 의해 주어집니다. 참고로, 여기서 <span class="math inline">\(v\)</span> 는 실제 분자 속도이며, 표류 속도가 아니다.</p>
-<p>관례를 따라 <span class="math inline">\(+x\)</span> 방향을 오른쪽으로, <span class="math inline">\(-x\)</span> 방향을 왼쪽이라고 하자. 왼쪽에서 오른쪽으로 이동하는 특수 분자의 수는 <span class="math inline">\(n_{−}v\Delta T\)</span> 이며, 여기서 <span class="math inline">\(n_{−}\)</span> 는 평면의 왼쪽에 있는 단위 부피당 특별 기체 분자의 개수 밀도이다.(약 2배 정도이지만, 우리는 이러한 요인을 무시하고 있습니다!). 오른쪽에서 왼쪽으로 교차하는 수는 마찬가지로 <span class="math inline">\(n_{-}v\Delta T\)</span> 이며, 여기서 <span class="math inline">\(n_{+}\)</span> 는 평면의 오른쪽에 있는 특수 분자들의 개수 밀도이다. 이는 단위 면적당 단위 시간당 분자의 순 흐름을 <span class="math inline">\(J\)</span> 라고 하면</p>
+<p>이제 확산 이론에 대해 알아보자. 열평형 상태에 있는 기체 용기가 있고, 그 용기의 어느 위치에 다른 종류의 기채를 소량 주입한다고 가정하자. 원래 기체를 <strong>배경 기체</strong> 라고 부르고, 주입되는 기체를 <strong>특별 기체</strong> 라고 하자. 특별 기체는 전체 용기에 퍼지기 시작하지만, 배경 기체가 존재하기 때문에 천천히 퍼질 것이다. 이 느리게 퍼지는 과정을 <strong>확산(diffusion)</strong> 이라고 한다. 확산은 주로 배경 기체 분자에 의해 휘둘려지는 특별 기체 분자에 의해 제어된다. 많은 충돌이 발생한 후에는 특별 분자들은 전체 부피에 걸쳐 대체로 고르게 퍼지게 된다. 우리는 기체의 확산과 대류에 의해 발생할 수 있는 대량의 이동을 혼동하지 않도록 주의해야 한다. 대부분의 경우 두 기체의 혼합은 대류와 확산의 결합에 의해 발생하며 우리는 현재 대류가 없는 경우에만 관심이 있다. 즉 여기서 기체는 오직 분자 운동, 즉 확산에 의해서만 퍼진다. 우리는 확산이 얼마나 빠르게 진행되는지 계산하고자 한다.</p>
+<p>이제 분자 운동으로 인한 특별 기체 분자의 순흐름을 계산하자. 분자가 어느정도 불균일하게 분포할때만 순 흐름이 존재하며, 그렇지 않다면 모든 분자 운동이 평균이 되어 순 흐름이 없게 된다. 먼저 <span class="math inline">\(x\)</span> 방향의 흐름을 생각해 보자. 흐름을 찾기 위해, 우리는 <span class="math inline">\(x\)</span> 축에 수직인 가상의 평면을 가로지르는 특수 분자의 수를 센다. 순흐름을 얻기 위해서는 양의 <span class="math inline">\(x\)</span> 방향으로 교차하는 분자를 양수로 계산하고, 그 수에서 음의 <span class="math inline">\(x\)</span> 방향으로 교차하는 수를 빼야 한다. 우리가 여러 차례 보았듯이, 시간 <span class="math inline">\(\Delta T\)</span> 에서 표면적을 가로지르는 수는 평면으로부터 거리 <span class="math inline">\(v\Delta T\)</span> 까지 연장된 부피에서 구간 <span class="math inline">\(\Delta T\)</span> 를 시작하는 개수이다. 참고로, 여기서 <span class="math inline">\(v\)</span> 는 실제 분자 속도이며, 표류 속도가 아니다.</p>
+<p>관례를 따라 <span class="math inline">\(+x\)</span> 방향을 오른쪽으로, <span class="math inline">\(-x\)</span> 방향을 왼쪽이라고 하자. 왼쪽에서 오른쪽으로 이동하는 특수 분자의 수는 <span class="math inline">\(n_{−}v\Delta T\)</span> 이며, 여기서 <span class="math inline">\(n_{−}\)</span> 는 평면의 왼쪽에 있는 단위 부피당 특별 기체 분자의 개수 밀도이다.(2배 정도이지만 일단 무시한다.). 오른쪽에서 왼쪽으로 교차하는 수는 마찬가지로 <span class="math inline">\(n_{+}v\Delta T\)</span> 이며, 여기서 <span class="math inline">\(n_{+}\)</span> 는 평면의 오른쪽에 있는 특수 분자들의 개수 밀도이다. 이는 단위 면적당 단위 시간당 분자의 순 흐름을 <span class="math inline">\(J\)</span> 라고 하면</p>
 <p><span id="eq-FLP-1_43_21"><span class="math display">\[
 J=\dfrac{n_{−}v\Delta T − n_{+}v \Delta T}{\Delta T},
 \tag{3.103}\]</span></span></p>
@@ -2005,7 +2013,7 @@ J=\dfrac{n_{−}v\Delta T − n_{+}v \Delta T}{\Delta T},
 J=(n_{−} −n_{+})v
 \tag{3.104}\]</span></span></p>
 <p>이다. 여기서 <span class="math inline">\(n_{−}\)</span> 와 <span class="math inline">\(n_{+}\)</span> 에 대해 어떤 값을 사용해야 할까? 평면 왼쪽의 밀도라고 말할 때 평면에서 얼마나 떨어진 왼쪽을 의미하나? 우리는 분자들이 “비행”을 시작한 장소의 밀도를 선택해야 한다. 왜냐하면 그러한 여행을 시작하는 개수는 그 장소에 존재하는 개수에 의해 결정되기 때문이다. 따라서 <span class="math inline">\(n_{−}\)</span> 는 평균 자유 거리 <span class="math inline">\(l\)</span> 에 해당하는 왼쪽의 개수 밀도를 의미하고, <span class="math inline">\(n_+\)</span> 는 우리 가상의 표면에서의 오른쪽으로 거리 <span class="math inline">\(l\)</span> 에서의 개수 밀도를 의미한다.</p>
-<p>특별 분자들의 개수 밀도 <span class="math inline">\(n_a (x,\,y,\,z)\)</span> 를 <span class="math inline">\(n_a\)</span> rk <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(z\)</span> 의 연속함수라고 가정 할 수 있다. <span class="math inline">\(n_a\)</span> 를 통해 <span class="math inline">\((n_+-n_0)\)</span> 를 다음과 같이 표현 할 수 있다.</p>
+<p>특별 분자들의 개수 밀도 <span class="math inline">\(n_a (x,\,y,\,z)\)</span> 를 <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(z\)</span> 의 연속함수라고 가정 할 수 있다. <span class="math inline">\(n_a\)</span> 를 통해 <span class="math inline">\((n_+-n_0)\)</span> 를 다음과 같이 표현 할 수 있다.</p>
 <p><span id="eq-FLP_1_43_23"><span class="math display">\[
 (n_+ −n_−)=\dfrac{dn_a}{dx}\Delta x = \dfrac{dn_a}{dx}\cdot 2l
 \tag{3.105}\]</span></span></p>
@@ -2014,18 +2022,18 @@ J=(n_{−} −n_{+})v
 J_x=−lv\dfrac{dn_a}{dx}.
 \tag{3.106}\]</span></span></p>
 <p>우리는 특별 분자들의 순 흐름이 밀도의 미분, 정확히는 그래디언트에 비례한다는 것을 발견했다.</p>
-<p>우리가 여러 개의 대략적인 근사값을 만든 것이 분명하다. 우리가 제외한 두 가지 요인 외에도, 우리는 <span class="math inline">\(v_x\)</span> 를 사용해야 할 곳에 <span class="math inline">\(v\)</span> 를 사용했으며, <span class="math inline">\(n_+\)</span> 와 <span class="math inline">\(n_−\)</span> 는 우리가 정한 평면으로부터 수직 거리 <span class="math inline">\(l\)</span> 에 있는 위치를 가리킨다고 가정했다. 반면 평면 요소에 수직으로 이동하지 않는 분자에 대해서는 <span class="math inline">\(l\)</span> 이 표면으로부터의 기울어진 거리와 대응해야 한다. 이런 사항들을 고려한 개선 결과는 <a href="#eq-FLP_1_43_24" class="quarto-xref">식&nbsp;<span>3.106</span></a> 에 <span class="math inline">\(1/3\)</span> 을 곱한 값이다. 즉,</p>
+<p>우리가 여러 개의 대략적인 근사값을 만든 것이 분명하다. 우리가 무시한 <span class="math inline">\(n_+,\,n_-\)</span> 의 2배 요인 이외에도, <span class="math inline">\(v_x\)</span> 를 사용해야 할 곳에 <span class="math inline">\(v\)</span> 를 사용했으며, <span class="math inline">\(n_+\)</span> 와 <span class="math inline">\(n_−\)</span> 는 우리가 정한 평면으로부터 수직 거리 <span class="math inline">\(l\)</span> 에 있는 위치를 가리킨다고 가정했다. 반면 평면 요소에 수직으로 이동하지 않는 분자에 대해서는 <span class="math inline">\(l\)</span> 이 표면으로부터의 기울어진 거리와 대응해야 한다. 이런 사항들을 고려한 개선 결과는 <a href="#eq-FLP_1_43_24" class="quarto-xref">식&nbsp;<span>3.106</span></a> 에 <span class="math inline">\(1/3\)</span> 을 곱한 값이다. 즉,</p>
 <p><span id="eq-FLP_1_43_25"><span class="math display">\[
-J_x=−\dfrac{lv}{3}\dfrac{dn_a}{dx}
+J_x=−\dfrac{lv}{3}\dfrac{d n_a}{dx}
 \tag{3.107}\]</span></span></p>
 <p>이다. 실제로 실험에서 얻는 <span class="math inline">\(D=lv/3\)</span> 값을 <strong>확산 계수 (diffusion coefficient)</strong> 라고 하며 3차원에서 아래의 미분방정식으로 표현된다.</p>
 <p><span id="eq-FLP_1_43_26"><span class="math display">\[
-\boldsymbol{J} = -D \nabla n_a ,\qquad D = \dfrac{1}{3}lv.
+J_x = -D \dfrac{d n_a}{dx} ,\qquad D = \dfrac{1}{3}lv.
 \tag{3.108}\]</span></span></p>
 <p>지금까지 이 장에서는 두 가지 뚜렷한 과정을 고려했다. 외부 힘에 의한 분자의 이동인 이동도(mobility)와 그리고 내부 힘, 즉 무작위 충돌에 의해서만 결정되는 확산(diffusion). 그러나 두 경우 모두 기본적으로 열운동에 의존하고, 평균 자유 거리 <span class="math inline">\(l\)</span> 이 두 값의 식에 나타난다.</p>
 <p>만약, <a href="#eq-FLP_1_43_25" class="quarto-xref">식&nbsp;<span>3.107</span></a> 에서 <span class="math inline">\(l=v\tau\)</span>, <span class="math inline">\(\tau = \mu m\)</span> 을 이용해서 치환하면</p>
 <p><span id="eq-FLP_1_43_28"><span class="math display">\[
-J_x=−\dfrac{1}{3}mv^2 \mu \dfrac{dn_a}{dx}
+J_x=−\dfrac{1}{3}mv^2 \mu \dfrac{d n_a}{dx}
 \tag{3.109}\]</span></span></p>
 <p>을 얻는다. 여기에 등분배 정리</p>
 <p><span class="math display">\[
@@ -2033,56 +2041,55 @@ J_x=−\dfrac{1}{3}mv^2 \mu \dfrac{dn_a}{dx}
 \]</span></p>
 <p>를 적용하면</p>
 <p><span id="eq-FLP_1_43_30"><span class="math display">\[
-J_x=−\mu k_B T \dfrac{dn_a}{dx}
+J_x=−\mu k_B T \dfrac{d n_a}{dx}
 \tag{3.110}\]</span></span></p>
 <p>을 얻는다. 즉 확산 계수는</p>
 <p><span id="eq-FLP_1_43_31"><span class="math display">\[
 D=\mu k_BT.
 \tag{3.111}\]</span></span></p>
-<p>그리고 <a href="#eq-FLP_1_43_31" class="quarto-xref">식&nbsp;<span>3.111</span></a> 의 계수가 정확히 맞다는 것이 밝혀졌습니다. 대략적인 가정들을 교정하기 위한 추가적인 요인을 생각하지 않아도 된다. 실제로 <a href="#eq-FLP_1_43_31" class="quarto-xref">식&nbsp;<span>3.111</span></a> 이 액체 안의 현탁액과 같은 복잡한 상황에서도 항상 정확해야 함을 보여줄 수 있다.</p>
+<p>그리고 <a href="#eq-FLP_1_43_31" class="quarto-xref">식&nbsp;<span>3.111</span></a> 의 계수가 정확히 맞다는 것이 밝혀졌다. 대략적인 가정들을 교정하기 위한 추가적인 요인을 생각하지 않아도 된다. 실제로 <a href="#eq-FLP_1_43_31" class="quarto-xref">식&nbsp;<span>3.111</span></a> 이 액체 안의 현탁액과 같은 복잡한 상황에서도 항상 정확해야 함을 보여줄 수 있다.</p>
 <p><a href="#eq-FLP_1_43_31" class="quarto-xref">식&nbsp;<span>3.111</span></a> 이 일반적으로 정확해야 함을 보여주기 위해, 우리는 통계역학의 기본 원칙만을 사용하여 다른 방식으로 유도 할 수 있다. 특별 분자들의 그래디언트가 존재하고, <a href="#eq-FLP_1_43_26" class="quarto-xref">식&nbsp;<span>3.108</span></a> 에 따라 확산 흐름이 존재하는 상황을 상상해 보자. 우리는 이제 <span class="math inline">\(x\)</span> 방향으로 역장(force field) 을 적용하여 각 특별 분자가 힘 <span class="math inline">\(F\)</span> 를 느끼게 한다. 이동도 <span class="math inline">\(\mu\)</span> 의 정의에 따르면, 표류 속도는 다음과 같이 주어진다.</p>
 <p><span id="eq-FLP_1_43_32"><span class="math display">\[
 v_\text{drift}= \mu F.
 \tag{3.112}\]</span></span></p>
 <p>또한 표류 전류(시간 단위에서 면적 단위를 통과하는 분자들의 순수)는</p>
 <p><span id="eq-FLP_1_43_33"><span class="math display">\[
-J_\text{drift}=n_av_\text{drift},
+J_\text{drift}=n_a v_\text{drift},
 \tag{3.113}\]</span></span></p>
 <p>혹은</p>
 <p><span id="eq-FLP_1_43_34"><span class="math display">\[
 J_\text{drift} = n_a \mu F
 \tag{3.114}\]</span></span></p>
-<p>이다. 이제 <span class="math inline">\(F\)</span> 에 의해 발생하는 표류 전류가 확산과 균형을 이루도록 힘 <span class="math inline">\(F\)</span> 를 조정하여, 우리의 특별 분자들의 순흐림이 없도록 하자. <span class="math inline">\(J_x+J_\text{drift}=0\)</span> 으로부터</p>
+<p>이다. 이제 <span class="math inline">\(F\)</span> 에 의해 발생하는 표류 전류가 확산과 균형을 이루도록 힘 <span class="math inline">\(F\)</span> 를 조정하여, 우리의 특별 분자들의 순흐름이 없도록 하자. <span class="math inline">\(J_x + J_\text{drift}=0\)</span> 으로부터</p>
 <p><span id="eq-FLP_1_43_35"><span class="math display">\[
-D\dfrac{dn_a}{dx}=n_a\mu F
+D\dfrac{d n_a}{dx} = n_a\mu F
 \tag{3.115}\]</span></span></p>
 <p>이며, 이 ‘균형’ 조건 하에서 다음이 성립한다.</p>
 <p><span id="eq-FLP_1_43_36"><span class="math display">\[
-\dfrac{dn_a}{dx} = \dfrac{n_a\mu F}{D}
+\dfrac{d n_a}{dx} = \dfrac{n_a\mu F}{D}
 \tag{3.116}\]</span></span></p>
-<p>우리는 평형 조건에서 기술하고 있으며 따라서 통계역학의 평형 법칙이 적용된다. 이러한 법칙에 따르면 좌표 <span class="math inline">\(x\)</span> 에서 분자를 찾을 확률은 포텐셜 에너지 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\(e^{−U/k_B T}\)</span> 에 비례하며,</p>
+<p>우리는 평형 조건에서 기술하고 있으며 따라서 통계역학의 평형 법칙이 적용된다. 이러한 법칙에 따르면 좌표 <span class="math inline">\(\boldsymbol{x}\)</span> 에서 분자를 찾을 확률은 포텐셜 에너지 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\(e^{−U(\boldsymbol{x})/k_B T}\)</span> 에 비례하며,</p>
 <p><span id="eq-FLP_1_43_37"><span class="math display">\[
 n_a=n_0e^{−U/k_B T}
 \tag{3.117}\]</span></span></p>
 <p>이다. 그래디언트를 취하면</p>
 <p><span id="eq-FLP_1_43_37"><span class="math display">\[
-\nabla n_a = − n_0 e^{−U/k_B T}⋅\dfrac{1}{k_B T}\nabla U,
+\dfrac{d n_a}{dx} = − n_0 e^{−U/k_B T}⋅\dfrac{1}{k_B T}\dfrac{d U}{dx},
 \tag{3.118}\]</span></span></p>
 <p>혹은</p>
 <p><span id="eq-FLP_1_43_39"><span class="math display">\[
-\nabla n_a = −\dfrac{n_a}{k_B T}\nabla U
+\dfrac{d n_a}{dx} = −\dfrac{n_a}{k_B T}\dfrac{dU}{dx}
 \tag{3.119}\]</span></span></p>
 <p>이다. <span class="math inline">\(\nabla U = -\boldsymbol{F}\)</span> 이므로</p>
 <p><span id="eq-FLP_1_43_40"><span class="math display">\[
-\nabla n_a = \dfrac{n_a}{k_B T}\boldsymbol{F}
+\dfrac{d n_a}{dx} = \dfrac{n_a}{k_B T}F
 \tag{3.120}\]</span></span></p>
-<p>이다. 이것은 정확히 <a href="#eq-FLP_1_40_2" class="quarto-xref">식&nbsp;<span>3.36</span></a> 이다. 우리는 처음에 e−U/kT를 추론했으므로, 우리는 원을 그리게 되었습니다]. <a href="#eq-FLP_1_43_40" class="quarto-xref">식&nbsp;<span>3.120</span></a> 과 <a href="#eq-FLP_1_43_36" class="quarto-xref">식&nbsp;<span>3.116</span></a> 을 비교하면 정확히 <a href="#eq-FLP_1_43_31" class="quarto-xref">식&nbsp;<span>3.111</span></a> 을 얻는다. <a href="#eq-FLP_1_43_31" class="quarto-xref">식&nbsp;<span>3.111</span></a> 은 이동성을 이용하여 확산 전류를 제시하는데 매우 일반적으로 참이다. 이동성과 확산은 밀접하게 연결되어 있다. 이 관계는 아인슈타인에 의해 최초로 유도되었다.</p>
+<p>이다. 이것은 정확히 <a href="#eq-FLP_1_40_2" class="quarto-xref">식&nbsp;<span>3.36</span></a> 이다. 우리는 처음에 <span class="math inline">\(e^{−U/k_B T}\)</span> 를 추론했으므로, 우리는 원을 그리게 되었다. <a href="#eq-FLP_1_43_40" class="quarto-xref">식&nbsp;<span>3.120</span></a> 과 <a href="#eq-FLP_1_43_36" class="quarto-xref">식&nbsp;<span>3.116</span></a> 을 비교하면 정확히 <a href="#eq-FLP_1_43_31" class="quarto-xref">식&nbsp;<span>3.111</span></a> 을 얻는다. <a href="#eq-FLP_1_43_31" class="quarto-xref">식&nbsp;<span>3.111</span></a> 은 이동도를 이용하여 확산 전류를 제시하는데 매우 일반적으로 참이다. 이동도와 확산은 밀접하게 연결되어 있다. 이 관계는 아인슈타인에 의해 최초로 유도되었다.</p>
 <p><br></p>
 </section>
 <section id="sec-FLP_1_43_6" class="level3">
 <h3 class="anchored" data-anchor-id="sec-FLP_1_43_6">I.43-6 열전도도</h3>
-<p>앞서 사용한 분자운동론의 방법은 기체의 열전도율을 계산하는 데에도 활용될 수 있습다. 용기의 상단 기체가 하단의 기체보다 더 뜨겁다면, 열이 위에서 아래로 흐른다. (우리는 위가 더 뜨겁다고 가정한다. 그렇지 않으면 대류에 의한 열전달이 발생한다) 열이 더 뜨거운 기체에서 차가운 가스로 전달되는 것은 에너지가 더 높은 “뜨거운” 분자들의 아래쪽으로 확산과, “차가운” 분자들의 위쪽 확산에 의해 발생한다. 열 에너지의 흐름을 계산하려면, 아래쪽으로 이동하는 분자들이 면적의 한 요소를 가로질러 아래로 전달되는 에너지와 위쪽으로 이동하는 분자들이 표면을 가로질러 위쪽으로 전달하는 에너지에 대해 알아봐야야 한다. 그 차이는 우리에게 순하향 에너지의 흐름을 제공한다.</p>
-<p>열전도율 <span class="math inline">\(\kappa\)</span> 는 단위 표면적을 가로질러 열에너지가 전달되는 속도와 온도 구배의 비율로 정의된다.</p>
+<p>앞서 사용한 분자운동론의 방법은 기체의 열전도율을 계산하는 데에도 활용될 수 있다. 용기의 상단 기체가 하단의 기체보다 더 뜨겁다면, 열이 위에서 아래로 흐른다. (우리는 위가 더 뜨겁다고 가정한다. 그렇지 않으면 대류에 의한 열전달이 발생한다) 열이 더 뜨거운 기체에서 차가운 가스로 전달되는 것은 에너지가 더 높은 “뜨거운” 분자들의 아래쪽으로 확산과, “차가운” 분자들의 위쪽 확산에 의해 발생한다. 열 에너지의 흐름을 계산하려면, 아래쪽으로 이동하는 분자들이 면적의 한 요소를 가로질러 아래로 전달되는 에너지와 위쪽으로 이동하는 분자들이 표면을 가로질러 위쪽으로 전달하는 에너지에 대해 알아봐야야 한다. 그 차이는 우리에게 아래로 내려가는 에너지의 흐름을 제공한다. 열전도율 <span class="math inline">\(\kappa\)</span> 는 단위 표면적을 가로질러 열에너지가 전달되는 속도와 온도 구배의 비율로 정의된다.</p>
 <p><span id="eq-FLP_1_43_41"><span class="math display">\[
 \dfrac{1}{A}\dfrac{dQ}{dt}=−\kappa \dfrac{dT}{dz}
 \tag{3.121}\]</span></span></p>
@@ -2095,8 +2102,8 @@ n_a=n_0e^{−U/k_B T}
 <p><span id="eq-FLP_1_43_43"><span class="math display">\[
 \kappa = \dfrac{1}{\gamma − 1}\dfrac{k_B v}{\sigma_c}
 \tag{3.123}\]</span></span></p>
-<p>이다. 우리는 다소 놀라운 결과를 얻었다. 우리는 기체 분자의 평균 속도가 온도에 의존하지만 밀도에는 의존하지 않는다는 것을 알고 있다. 우리는 <span class="math inline">\(\sigma_c\)</span> 가 분자의 크기에만 의존한다고 예상한다. 따라서 위 결과는 열전도율 <span class="math inline">\(\kappa\)</span> (따라서 특정 상황에서의 열 흐름 속도)가 가스의 밀도와 무관하다는 것을 말한다! 에너지의 “carriers” 수가 밀도 변화에 따라 변하는 것은 충돌 사이에 “carriers”가 이동할 수 있는 거리가 커짐에 의해 보상됩니다.</p>
-<p>혹자는 이렇게 물어볼 수 있다: “밀도가 0 이 되는 극한에서 열 흐름이 기체 밀도와 무관한가?” 기채가 전혀 없을 때? 절대 아닙니다! <a href="#eq-FLP_1_43_43" class="quarto-xref">식&nbsp;<span>3.123</span></a> 은 이 장의 다른 모든 것들과 마찬가지로, 충돌 사이의 평균 자유 경로가 컨테이너의 모든 차원보다 훨씬 작다는 가정 하에 도출되었다. 가스 밀도가 너무 낮아 분자가 용기의 한 벽에서 다른 벽으로 충돌 없이 통과할 가능성이 충분히 높을 경우, 이 장의 계산은 전혀 적용되지 않는다. 그러한 경우에는 동역학 이론으로 돌아가 일어날 일에 대한 세부 사항을 다시 계산해야 한다.</p>
+<p>이다. 우리는 다소 놀라운 결과를 얻었다. 우리는 기체 분자의 평균 속도가 온도에 의존하지만 밀도에는 의존하지 않는다는 것을 알고 있다. 우리는 <span class="math inline">\(\sigma_c\)</span> 가 분자의 크기에만 의존한다고 예상한다. 따라서 위 결과는 열전도율 <span class="math inline">\(\kappa\)</span> (따라서 특정 상황에서의 열 흐름 속도)가 가스의 밀도와 무관하다는 것을 말한다! 에너지의 “carriers” 수가 밀도 변화에 따라 변하는 것은 충돌 사이에 “carriers”가 이동할 수 있는 거리가 커짐에 의해 보상된다.</p>
+<p>혹자는 이렇게 물어볼 수 있다: “밀도가 0 이 되는 극한에서 열 흐름이 기체 밀도와 무관한가?” 기체가 전혀 없을 때? 절대 아닙니다! <a href="#eq-FLP_1_43_43" class="quarto-xref">식&nbsp;<span>3.123</span></a> 은 이 장의 다른 모든 것들과 마찬가지로, 충돌 사이의 평균 자유 경로가 컨테이너의 모든 차원보다 훨씬 작다는 가정 하에 도출되었다. 가스 밀도가 너무 낮아 분자가 용기의 한 벽에서 다른 벽으로 충돌 없이 통과할 가능성이 충분히 높을 경우, 이 장의 계산은 전혀 적용되지 않는다. 그러한 경우에는 동역학 이론으로 돌아가 일어날 일에 대한 세부 사항을 다시 계산해야 한다.</p>
 <p><br></p>
 </section>
 </section>
@@ -2106,16 +2113,16 @@ n_a=n_0e^{−U/k_B T}
 <h3 class="anchored" data-anchor-id="sec-FLP_1_44_1">I.44-1 열기관과 열역학 제 1 법칙</h3>
 <section id="역사적-배경" class="level4">
 <h4 class="anchored" data-anchor-id="역사적-배경"><strong>역사적 배경</strong></h4>
-<p>지금까지 우리는 물질의 특성을 원자적 관점에서 논의해 왔으며, 사물이 특정 법칙을 따르는 원자로 이루어져 있다고 가정하고 어떤 일이 일어날지 이해하려고 노력해 왔다. 그러나 물질의 특성 사이에는 재료의 상세한 구조와는 무관한 여러 관계가 존재하며, 이 관계가 열역학의 주제이다. 역사적으로 열역학은 물질의 내부 구조에 대한 이해가 이루어지기 전에 개발되었다.</p>
+<p>지금까지 우리는 물질의 특성을 원자적 관점에서 논의해 왔으며, 사물이 특정 법칙을 따르는 원자로 이루어져 있다고 가정하고 어떤 일이 일어날지 이해하려고 노력해 왔다. 그러나 물질의 특성 사이에는 재료의 상세한 구조와는 무관한 여러 관계가 존재하며, 이 관계가 열역학의 주제이다. 역사적으로 열역학은 물질의 내부 구조에 대해 이해하기 전에 개발되었다.</p>
 <p>예를 들어, 분자운동론으로부터 압력의 원인은 분자 폭격이며, 기체를 가열하면 폭격이 증가하면 압력도 상승해야 한다는 것을 안다. 반대로, 기체 용기의 피스톤이 이 폭격의 힘에 반하여 안쪽으로 이동하면, 피스톤을 폭격하는 분자들의 에너지가 증가하고 그 결과 온도가 상승한다는 것을 안다. 또한 한편으로는 주어진 부피에서 온도를 높이면 압력이 증가하며, 반면에 기체를 압축하면 온도가 상승한다는 것을 안다. 분자운동론으로부터 이 두 효과 사이의 정량적 관계를 이끌어 낼 수 있지만, 본능적으로는 충돌의 세부 사항과 무관한 방식으로 서로 연관되어 있다고 추측할 수 있다.</p>
-<p>다른 예를 살펴보자. 고무의 흥미로운 특성은 잡아당기면 온도가 올라가고 수축하면 내려간다는 것이다. 이제 고무줄을 가열하면 밴드가 당겨진다고 생각 할 수 있다. 밴드를 당겨서 가열한다는 사실이 밴드를 가열하면 밴드가 수축하도록 만들 수 있음을 암시할 수 있습니다. 그리고 실제로, 무게를 잡고 있는 고무 밴드에 가스 불꽃을 가하면, 밴드가 갑자기 수축하는 것을 보게 된다. 따라서 고무 밴드를 가열하면 당겨지는 것이 사실이며, 이 사실은 그 밴드의 장력을 풀면 식는 것과 확실히 관련이 있다.</p>
+<p>다른 예를 살펴보자. 고무의 흥미로운 특성은 잡아당기면 온도가 올라가고 수축하면 내려간다는 것이다. 이제 고무줄을 가열하면 밴드가 당겨진다고 생각 할 수 있다. 밴드를 당겨서 가열한다는 사실이 밴드를 가열하면 밴드가 수축하도록 만들 수 있음을 암시할 수 있다. 그리고 실제로, 무게를 잡고 있는 고무 밴드에 가스 불꽃을 가하면, 밴드가 갑자기 수축하는 것을 보게 된다. 따라서 고무 밴드를 가열하면 당겨지는 것이 사실이며, 이 사실은 그 밴드의 장력을 풀면 식는 것과 확실히 관련이 있다.</p>
 <p>이러한 효과를 일으키는 고무의 내부 메커니즘은 상당히 복잡하다. 이 장의 주요 목적은 분자 모델과 무관하게 이러한 효과들의 관계를 이해하는 것이지만 일단 어느 정도 분자적 관점에서 이를 이해해보자. 우선 고무는 거대한 긴 분자 사슬의 얽혀 있는, 일종의 “분자 스파게티”라고 할 수 있다. 여기에 분자 사슬 사이에 교차 연결—때때로 스파게티 면들이 붙어서 교차하는 것과 유사한—도 존재한다. 이렇게 얽혀있는 것을 잡아당기면, 일부 사슬은 당기는 방향으로 정렬되는 경향이 있다. 동시에 사슬들은 열운동을 하고 있어 서로 지속적으로 충돌한다. 따라서 그러한 사슬은 늘어날 경우 자체적으로 늘어난 상태를 유지하지 못하고 다른 사슬 및 다른 분자들에 의해 측면에서 타격을 받아 다시 구부려지는 경향이 있다. 따라서 고무줄이 수축하는 진정한 이유는 다음과 같다. 고무줄을 잡아당기면 사슬이 길이 방향으로 이동하고, 사슬 측면에 있는 분자들의 열운동이 사슬을 수축시키려 하기 때문이다. 사슬을 팽팽하게 잡고 온도가 상승하면 사슬 측면에 가해지는 폭격의 강도도 증가하여 사슬이 수축되는 경향이 있으며, 가열될 때 더 강한 무게를 끌어당길 수 있다는 것을 이해할 수 있다. 고무줄을 일정 시간 늘린 후 고무줄이 이완되도록 허용하면, 각 사슬이 부드러워지고, 그 사슬에 닿는 분자들은 이완 사슬을 두드리면서 에너지를 잃게 된다. 그래서 온도가 떨어진다.</p>
-<p>우리는 가열 시 수축과 이완 시 냉각이라는 두 과정이 운동 이론에 의해 어떻게 연관될 수 있는지 확인했지만, 이론으로부터 두 과정 사이의 정확한 관계를 규명하는 것은 엄청난 도전이 될 것이다. 우리는 매초 몇 번의 충돌이 발생했는지와 사슬이 어떻게 생겼는지를 알아야 하며, 다양한 다른 복잡한 문제들을 고려해야 한다. 상세한 메커니즘은 매우 복잡하여 분자운동론만으로는 정확히 무슨 일이 일어나는지 정확히 파악할 수 없다. 그럼에도 불구하고, 내부 메커니즘에 대해 전혀 알지 못하더라도 관찰하는 두 효과 사이의 명확한 관계를 도출할 수 있다.</p>
-<p>열역학 전체 과목은 본질적으로 다음과 같은 사고에 기반한다: 고무줄이 낮은 온도보다 높은 온도에서 “더 강하다”는 점을 고려하면, 무게를 들어 올리고 이를 이동시켜 열을 이용한 작업을 수행할 수 있어야 한다. 실제로 실험적으로 가열된 고무 밴드가 무게를 들어올릴 수 있음다는 것을 확인했다. 열을 다루는 방식에 대한 연구는 열역학 과학의 시작이다. 고무 밴드의 가열 효과를 이용해 작동시키는 엔진을 만들 수 있을까? 이와 같은 일을 하는 어리석은 엔진을 만들 수 있습니다. 그것은 모든 살이 고무줄인 자전거 바퀴로 구성되어 있다. 바퀴의 한쪽에 있는 고무줄을 열램프 한 쌍으로 가열하면, 반대쪽 고무줄보다 “더 강해집니다”. 바퀴의 무게 중심이 베어링에서 떨어진 한쪽으로 당겨져 바퀴가 회전하며, 회전할 때 차가운 고무 밴드가 램프 방향으로 이동하고, 가열된 밴드는 램프에서 멀어져 차가워지며, 열이 가해지는 한 바퀴가 천천히 회전한다. 이 엔진의 효율은 매우 낮아, 400 와트의 전력으로 램프를 구동하더라도 겨우 파리를 들어올릴 수 있을 뿐이다! 하지만 흥미로운 질문은 열을 사용하여 작업을 보다 효율적으로 수행할 수 있는지 여부이다.</p>
+<p>우리는 가열 시 수축과 이완 시 냉각이라는 두 과정이 운동 이론에 의해 어떻게 연관될 수 있는지 확인했지만, 이론으로부터 두 과정 사이의 정확한 관계를 규명하는 것은 엄청난 도전이 될 것이다. 우리는 매초 몇 번의 충돌이 발생했는지와 사슬이 어떻게 생겼는지를 알아야 하며, 다양한 다른 복잡한 문제들을 고려해야 한다. 상세한 메커니즘은 매우 복잡하여 분자운동론만으로는 정확히 무슨 일이 일어나는지 정확히 파악할 수 없다. 그럼에도 불구하고 내부 메커니즘에 대해 전혀 알지 못하더라도 관찰하는 두 효과 사이의 명확한 관계를 도출할 수 있다.</p>
+<p>열역학 전체 과목은 본질적으로 다음과 같은 사고에 기반한다: 고무줄이 낮은 온도보다 높은 온도에서 “더 강하다”는 점을 고려하면, 무게를 들어 올리고 이를 이동시켜 열을 이용한 작업을 수행할 수 있어야 한다. 실제로 실험적으로 가열된 고무 밴드가 무게를 들어올릴 수 있음다는 것을 확인했다. 열을 다루는 방식에 대한 연구는 열역학 과학의 시작이다. 고무 밴드의 가열 효과를 이용해 작동시키는 엔진을 만들 수 있을까? 이와 같은 일을 하는 시시한 엔진을 만들 수 있다. 그것은 모든 살이 고무줄인 자전거 바퀴로 구성되어 있다. 바퀴의 한쪽에 있는 고무줄을 열램프 한 쌍으로 가열하면, 반대쪽 고무줄보다 “더 강해진다”. 바퀴의 무게 중심이 베어링에서 떨어진 한쪽으로 당겨져 바퀴가 회전하며, 회전할 때 차가운 고무 밴드가 램프 방향으로 이동하고, 가열된 밴드는 램프에서 멀어져 차가워지며, 열이 가해지는 한 바퀴가 천천히 회전한다. 이 엔진의 효율은 매우 낮아, 400 와트의 전력으로 램프를 구동하더라도 겨우 파리를 들어올릴 수 있을 뿐이다! 하지만 흥미로운 질문은 열을 사용하여 작업을 보다 효율적으로 수행할 수 있는지 여부이다.</p>
 <p>실제로 열역학 과학은 위대한 엔지니어 사디 카르노(Sadi Carnot)가 가장 우수하고 효율적인 엔진을 만드는 방법에 대한 분석으로 시작되었으며, 이는 공학이 물리학 이론에 근본적으로 기여한 몇 안 되는 유명한 사례 중 하나이다. 또 다른 떠오르는 예는 클로드 샤넌이 제시한 정보 이론에 대한 보다 최근의 분석이다. 이 두 분석은 우연히도 밀접하게 관련되어 있는 것으로 보인다.</p>
-<p>증기 기관은 일반적으로 열을 가해 끓는 물로부터 형성된 증기가 팽창하여 피스톤을 눌러 바퀴를 회전시켜 작동한다. 증기가 피스톤을 밀어내고는 작업을 종료해야 한다. 사이클을 완성하는 어리석은 방법은 증기를 공기 중으로 배출하게 하는 것인데, 이렇게 하려면 물을 계속 공급해야 한다. 증기를 차가운 물로 응축시킨 뒤 다시 보일러로 보내 지속적으로 순환하도록 하는 것이 더 저렴하고 효율적이다. 열은 이렇게 기관에 공급되어 일로 전환된다. 카르노는 ‘알코올을 사용하는 것이 더 나을까?’, ‘물질이 최상의 엔진을 만들기 위해 어떤 특성을 가져야 하는가?’ 와 같은 질문을 스스로에게 던졌으며, 그 부산물로 위에서 방금 설명한 관련성을 발견하였다.</p>
-<p>열역학의 결과는 모두 열역학 법칙이라고 불리는 겉보기에 단순한 몇몇 명제에 암묵적으로 포함되어 있다. 카르노가 살아 있던 시기에, 열역학의 첫 번째 법칙인 에너지 보존 법칙은 알려져 있지 않았다. 카르노의 주장은 매우 신중하게 도출되었으므로 첫 번째 법칙이 그의 시대에 알려지지 않았음에도 불구하고 유효하다! 어느정도 시간이 흐른 뒤 클라페이론(Clapeyron)은 카르노의 매우 미묘한 추론보다 더 쉽게 이해할 수 있는 더 단순한 추론을 만들었다. 하지만 클라페이론은 일반적인 에너지 보존이 아니라 열이 열량 이론에 따라 보존된다고 가정했으며, 이는 나중에 거짓임이 밝혀졌다. 이때문에 카르노의 논리가 틀렸다고 자주 말해졌지만 하지만 그의 논리는 꽤 정확했습니다. 모두가 읽은 클라페이론의 간소화된 버전만이 틀렸다.</p>
-<p>소위 열역학의 제2법칙은 제1법칙보다 먼저 카르노에 의해 발견되었다! 첫 번째 법칙을 사용하지 않은 카르노의 주장을 제시하는 것이 흥미로울 것이지만, 우리는 역사가 아니라 물리학을 배우고 싶기 때문에 그렇게 하지 않겠다. 우리는 그것 없이도 많은 일을 할 수 있다는 사실에도 불구하고 처음부터 첫 번째 법칙을 사용할 것이다.</p>
+<p>증기 기관은 일반적으로 열을 가해 끓는 물로부터 형성된 증기가 팽창하여 피스톤을 눌러 바퀴를 회전시켜 작동한다. 증기가 피스톤을 밀어내고는 작업을 종료해야 한다. 사이클을 완성하는 어리석은 방법은 증기를 공기 중으로 배출하게 하는 것인데, 이렇게 하려면 물을 계속 공급해야 한다. 증기를 차가운 물로 응축시킨 뒤 다시 보일러로 보내 지속적으로 순환하도록 하는 것이 더 저렴하고 효율적이다. 열은 이렇게 기관에 공급되어 일로 전환된다. 카르노는 “알코올을 사용하는 것이 더 나을까?”, “물질이 최상의 엔진을 만들기 위해 어떤 특성을 가져야 하는가?” 와 같은 질문을 스스로에게 던졌으며, 그 부산물로 위에서 방금 설명한 관련성을 발견하였다.</p>
+<p>열역학의 결과는 모두 열역학 법칙이라고 불리는 겉보기에 단순한 몇몇 명제에 암묵적으로 포함되어 있다. 카르노가 살아 있던 시기에는 열역학의 첫 번째 법칙인 에너지 보존 법칙은 알려져 있지 않았다. 카르노의 주장은 매우 신중하게 도출되었으므로 첫 번째 법칙이 그의 시대에 알려지지 않았음에도 불구하고 유효하다! 어느정도 시간이 흐른 뒤 클라페이론(Clapeyron)은 카르노의 매우 미묘한 추론보다 더 쉽게 이해할 수 있는 더 단순한 추론을 만들었다. 하지만 클라페이론은 일반적인 에너지 보존이 아니라 칼로릭 이론(Caloric theory)에 따라 열이 보존된다고 가정했는데 이는 나중에 틀렸음이 밝혀졌다. 이때문에 카르노의 논리가 틀렸다고 자주 말해졌지만 그의 논리는 꽤 정확했다. 모두가 읽은 클라페이론의 간소화된 버전만이 틀렸다.</p>
+<p>소위 열역학의 제2법칙은 제1법칙보다 먼저 카르노에 의해 발견되었다! 첫 번째 법칙을 사용하지 않은 카르노의 주장을 제시하는 것이 흥미로울 것이지만, 우리는 역사가 아니라 물리학을 배우기 때문에 그렇게 하지 않는다. 우리는 그것 없이도 많은 일을 할 수 있다는 사실에도 불구하고 처음부터 첫 번째 법칙을 사용할 것이다.</p>
 </section>
 <section id="열역학-제-1-법칙" class="level4">
 <h4 class="anchored" data-anchor-id="열역학-제-1-법칙"><strong>열역학 제 1 법칙</strong></h4>
@@ -2129,16 +2136,16 @@ n_a=n_0e^{−U/k_B T}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>첫 번째 법칙인 에너지 보존을 언급함으로써 시작하겠습니다: 우리가 계에 열을 가하고 일을 한다면, 계의 에너지는 투입된 열과 수행된 작업에 의해 증가한다. 계에 가해지는 열 <span class="math inline">\(Q\)</span> 와 계에 가해지는 일 <span class="math inline">\(W\)</span> 를 더한만큼 시스템의 에너지 <span class="math inline">\(U\)</span> 가 증가한다.</p>
+<p>우리가 계에 열을 가하고 일을 한다면, 계의 에너지는 투입된 열과 수행된 작업에 의해 증가한다. 계에 가해지는 열 <span class="math inline">\(Q\)</span> 와 계에 가해지는 일 <span class="math inline">\(W\)</span> 를 더한 만큼 시스템의 에너지 <span class="math inline">\(U\)</span> 가 증가한다.</p>
 <p><span id="eq-FLP_1_44_1"><span class="math display">\[
 [U \text{ 의 변화량}]=Q+W.
 \tag{3.124}\]</span></span></p>
-</div>
-</div>
 <p>이를 미분형태로 표현하면 <span class="math inline">\(U\)</span> 의 미소변화 <span class="math inline">\(dU\)</span> 는 다음과 같다.</p>
 <p><span id="eq-FLP_1_44_2"><span class="math display">\[
 dU=dQ+dW.
 \tag{3.125}\]</span></span></p>
+</div>
+</div>
 <p><br></p>
 </section>
 </section>
@@ -2146,9 +2153,24 @@ dU=dQ+dW.
 <h3 class="anchored" data-anchor-id="sec-FLP_1_44_2">I.44-2 열역학 제 2 법칙</h3>
 <section id="카르노의-가정" class="level4">
 <h4 class="anchored" data-anchor-id="카르노의-가정"><strong>카르노의 가정</strong></h4>
-<p>이제 열역학 제 2 법칙에 대해 알아보자. 우리가 마찰에 저항하여 일을 한다면 손실되는 일은 발생하는 열과 동일하다는 것을 알고 있다. 만약 우리가 온도 <span class="math inline">\(T\)</span> 에서 충분히 천천히 일을 가한다면, 실내 온도는 크게 변하지 않은 채로 주어진 온도에서 일을 열로 변환한 것이다. 그렇다면 반대의 가능성은 어떨까? 주어진 온도에서 열을 다시 일로 변환하는 것이 가능할까? 열역학 제2법칙은 불가능하다고 주장한다. 마찰과 같은 과정을 역전시키는 것만으로도 열을 일으로 전환할 수 있다면 매우 편리할 것이다. 에너지 보존만을 고려한다면, 분자의 진동 운동과 같은 열 에너지가 유용한 에너지를 충분히 공급할 수 있다고 생각할 수 있다. 하지만 카르노는 단일 온도에서 열의 에너지를 추출하는 것이 불가능하다고 가정했다. 다시 말해, 전 세계가 같은 온도에 있다면, 그 열 에너지를 일로 전환할 수 없다. 일을 열로 전환하는 과정은 주어진 온도에서 진행될 수 있지만, 다시 일을 되돌릴 수는 없습니다. 구체적으로, 카르노는 가정은 다음과 같다 : <strong>열이 정해진 온도에서 흡수되어 시스템이나 주변 환경에 다른 변화 없이 작업으로 전환될 수 없다.</strong></p>
-<p>그 마지막 구절은 매우 중요하다. 예를 들어, 정해진 온도에 압축 공기 한 캔이 있다고 가정하고, 그 공기가 팽창하도록 두면. 그것은 일을 할 수 있으며, 예를 들어 망치를 작동시킬 수 있다. 팽창 중에 약간 식지만, 만약 주어진 온도—열 저장소—의 대양와 같은 큰 바다가 있다면 다시 따뜻하게 될 수 있다. 그래서 우리는 바다의 열을 제거했고, 압축 공기로 일을 했다. 하지만 카르노는 틀리지 않았다. 왜냐하면 우리는 모든 것을 그대로 두지 않았기 때문이다. 우리가 팽창하도록 허용한 공기를 재압축한다는 것은 추가로 일을 가한다는 의미이며, 과정이 종료된 후에는 온도 <span class="math inline">\(T\)</span> 에서 시스템이 한 일은 없고 우리가 해준 일만 남았기 때문이다. 우리는 전체 과정의 순수한 결과가 열을 빼앗아 일로 전환하는 상황에 대해서만 이야기해야 하는데 이는 마찰에 맞서 일을 하는 과정의 순수한 결과가 일을 받아 열로 전환하는 것과 같다. 우리가 원을 그리며 움직이면 시스템을 정확히 시작점으로 되돌릴 수 있으며, 그 결과 우리는 마찰을 억제하고 열을 발생시킨 결과가 된다. 과정를 되돌릴 수 있습니까? 스위치를 켜서 모든 것이 뒤로 돌아가게 하고, 마찰이 우리에게 작용하도록 하며, 바다를 식할 수 있을까? Carnot에 따르면 불능하며, 따라서 우리는 불가능하다고 가정한다.</p>
-<p>이것이 가능하다면 차가운 물체에서 열을 추출하여 비용 없이 뜨거운 물체에 넣을 수 있다. 이제 우리는 뜨거운 것이 차가운 것을 따뜻하게 할 수 있다는 것이 자연스럽다는 것을 알게 되었다. 뜨거운 물체와 차가운 물체을 단순히 결합하고 다른 것을 바꾸지 않으면, 우리는 경험에 의해 뜨거운 것이 더 뜨거워지고 차가운 것이 더 차가워지는 일은 일어나지 않을 것임을 확신한다. 하지만 예를 들어 바다에서 열을 추출하거나 다른 어떤 것으로부터 단일 온도에서 열을 추출함으로써 일을 얻을 수 있다면, 그 일은 다른 온도에서 마찰을 통해 다시 열로 변환될 수 있다. 예를 들어, 작동하는 기계의 다른 팔이 이미 뜨거운 것을 문지르고 있을 수 있다. 그 결과는 “차가운” 물체, 즉 바다에서 열을 받아 뜨거운 물체에 전달하는 것이 된다. 열역학 제2법칙인 카르노의 가설은 때때로 다음과 같이 제시된다: <strong>열은 자체적으로 차가운 물체에서 뜨거운 물체로 흐를 수 없다.</strong> 하지만 방금 본 바와 같이, 이 두 진술은 동등하다.</p>
+<p>이제 열역학 제 2 법칙에 대해 알아보자. 우리가 마찰에 저항하여 일을 한다면 손실되는 일은 발생하는 열과 동일하다는 것을 알고 있다. 만약 우리가 온도 <span class="math inline">\(T\)</span> 에서 충분히 천천히 일을 가한다면, 실내 온도는 크게 변하지 않은 채로 주어진 온도에서 일을 열로 변환한 것이다. 그렇다면 반대의 가능성은 어떨까? 주어진 온도에서 열을 다시 일로 변환하는 것이 가능할까? 열역학 제2법칙은 불가능하다고 주장한다. 마찰과 같은 과정을 역전시키는 것만으로도 열을 일으로 전환할 수 있다면 매우 편리할 것이다. 에너지 보존만을 고려한다면, 분자의 진동 운동과 같은 열 에너지가 유용한 에너지를 충분히 공급할 수 있다고 생각할 수 있다. 하지만 카르노는 단일 온도에서 열의 에너지를 추출하는 것이 불가능하다고 가정했다. 다시 말해, 전 세계가 같은 온도에 있다면, 그 열 에너지를 일로 전환할 수 없다. 일을 열로 전환하는 과정은 주어진 온도에서 진행될 수 있지만, 다시 일로 되돌릴 수는 없다. 구체적으로, 카르노는 다음과 같이 가정했다. <strong>열이 정해진 온도에서 흡수되어 시스템이나 주변 환경에 다른 변화 없이 일으로 전환될 수 없다</strong></p>
+<p>이것은 매우 중요하다. 예를 들어, 정해진 온도에 압축 공기 한 캔이 있다고 가정하고, 그 공기가 팽창하도록 두면. 그것은 일을 할 수 있으며, 예를 들어 망치를 작동시킬 수 있다. 팽창 중에 약간 식지만, 만약 주어진 온도의 대양와 같은 큰 바다가 있다면-우리는 이를 <strong>열 저장소 (heat reservoir)</strong>라고 부른다- 다시 따뜻하게 될 수 있다. 결론적으로 우리는 열 저장소-여기서는 바다-로부터 열을 얻었고 압축 공기로 일을 했다. 그러나 카르노의 가정은 위배되지 않았다. 왜냐하면 우리는 모든 것을 그대로 두지는 않았기 때문이다. 팽창했던 공기를 다시 압축했다면, 우리는 여분의 일을 했다는 것을 알게 될 것이며 과정이 종료된 후에는 온도 <span class="math inline">\(T\)</span> 에서 시스템이 한 일은 없고 우리가 해준 일만 남을것이기 때문이다. 우리는 전체 과정의 최종 결과가 열을 빼앗아 일로 전환하는 상황에 대해서만 이야기해야 하는데 이는 마찰에 맞서 일을 하는 과정의 최종 결과가 일을 받아 열로 전환하는 것과 정확히 반대이다. 사이클이라면 마찰에 반하여 일을 하고 열을 발생시킨 결과가 된다. 이 과정를 거꾸로 작동시킬 수 있을까? 스위치를 켜서 모든 것이 뒤로 돌아가게 하고, 마찰이 우리에게 작용하도록 하며, 바다를 식할 수 있을까? 카르노에 따르면 불가능하며, 따라서 우리는 불가능하다고 가정한다.</p>
+<p>이것이 가능하다면 차가운 물체에서 열을 추출하여 비용 없이 뜨거운 물체에 넣을 수 있다. 우리는 뜨거운 것이 차가운 것을 따뜻하게 할 수 있다는 것이 자연스럽다는 것을 알고 있다. 뜨거운 물체와 차가운 물체을 단순히 결합하고 다른 것을 바꾸지 않으면, 우리는 경험적으로 뜨거운 것이 더 뜨거워지고 차가운 것이 더 차가워지는 일은 일어나지 않을 것임을 확신한다. 하지만 예를 들어 바다에서 열을 추출하거나 다른 어떤 것으로부터 단일 온도에서 열을 추출하여 일을 할 수 있다면, 그 일은 다른 온도에서 마찰을 통해 다시 열로 변환될 수 있다. 예를 들어, 작동하는 기계의 다른 팔이 이미 뜨거운 것을 문지르고 있을 수 있다. 그 결과는 “차가운” 물체, 즉 바다에서 열을 받아 뜨거운 물체에 전달하는 것이 된다. 열역학 제2법칙인 카르노의 가설은 때때로 다음과 같이 제시된다: <strong>열은 자체적으로 차가운 물체에서 뜨거운 물체로 흐를 수 없다.</strong> 하지만 방금 본 바와 같이, 이 두 진술은 동등하다. 정리하면 다음과 같다.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span><strong>동등한 두 과정</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p> <strong>1. 단일 온도에서 유일한 결과가 열을 일로 변환시키는 과정은 없다.</strong></p>
+<p> <strong>2. 차가운 곳에서 뜨거운 곳으로 열이 스스로 흐르게 할 수 없다.</strong></p>
+</div>
+</div>
+<p><br></p>
 </section>
 <section id="열기관" class="level4">
 <h4 class="anchored" data-anchor-id="열기관"><strong>열기관</strong></h4>
