@@ -11,16 +11,6 @@ book:
   
   chapters:
     - index.qmd
-
-    - part: src/Feynman/00_index.qmd    
-      chapters: 
-        - src/Feynman/vol1/vol1_1.qmd
-        - src/Feynman/vol1/vol1_2.qmd
-        - src/Feynman/vol1/vol1_3.qmd
-        - src/Feynman/vol1/vol1_4.qmd
-        - src/Feynman/vol2/vol2_1.qmd
-        # - src/Feynmann/feynmann_trans.qmd
-  
     - part: src/ClassicalMechanics/00_index.qmd
       chapters:
       - src/ClassicalMechanics/01_basic_principles.qmd
