@@ -654,6 +654,137 @@ $$
 
 </br>
 
+### 정전기 문제의 유일성 정리 {#sec-ED_ES_uniqueness_theorem_for_electrostatics}
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition}
+
+#### 정전기 포텐셜의 유일성 정리
+
+표면 $S_1,\,S_2,\ldots,\,S_n$ 에 대해 디리클레 경계조건 혹은 노이만 경계조건이 정해진 경우 라플라스 방정식의 해가 존재한다면 그 해는 유일하다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+$S_i$ 에서의 경계값을 만족하는 두 정전 포텐셜 $\Phi_1$ 과 $\Phi_2$ 가 있다고 하자. 이 때 $\Psi = \Phi_1-\Phi_2$ 라고 하자. $\nabla^2 \Phi_1 = \nabla^2 \Phi_2 = 0$ 이므로 $\nabla^2 \Psi = 0$ 이다. 모든 $S_i$ 로 둘러쌓여진 영역을 포함하는 큰 영역 $V_0$ 를 생각하자. $V_0$ 에서 $S_i$ 에 의해 둘러쌓인 부분을 제외한 영역을 $V$ 라고 하면 $V$ 의 경계면은 $V_0$ 의 경계면 $S_0$ 와 $S_1,\ldots,\,S_n$ 이다. 그 경계 $\partial V = \bigcup_{k=0}^n S_k$ 를 생각 할 수 있다. 이 $V$ 에 대해 $\nabla^2 \Psi = 0$ 와 그린의 제 1 항등식(@eq-ED_ES_green_first_identity) 을 이용하면 
+
+$$
+\begin{aligned}
+\int_V (\nabla \Psi \bf{\cdot}\nabla \Psi)\,d^3\bf{r} &= \int_V \left[\nabla \bf{\cdot} (\Psi \nabla \Psi)- \Psi \nabla^2 \Psi\right]\,d^3\bf{r} \\[0.3em] 
+&= \int_{\partial V} \Psi \dfrac{\partial \Psi}{\partial \bf{n}}\bf{\cdot}d \bf{a} 
+\end{aligned}
+$${#eq-thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition_1}
+
+이다. 여기서
+
+$$
+\int_V (\nabla \Psi \bf{\cdot}\nabla \Psi)\,d^3\bf{r} = \int_V \|\nabla \Psi\|\,d^3 \bf{r} \ge 0
+$$ {#eq-thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition_2}
+
+임을 안다. 또한
+
+$$
+\int_{\partial V}\Psi \dfrac{\partial \Psi}{\partial \bf{n}}\bf{\cdot}d \bf{a} 
+$$
+
+을 생각하자. 디리클레 혹은 노이만 경계조건이 정해졌으므로 $S_1,\ldots,\,S_n$ 에 대해 $\Psi = 0$ 이거나 $\partial \Psi/\partial \bf{n} = \bf{0}$ 이므로 
+
+$$
+\int_{\partial V}\Psi \dfrac{\partial \Psi}{\partial \bf{n}}\bf{\cdot}d \bf{a} = \int_{\partial S_0}\Psi \dfrac{\partial \Psi}{\partial \bf{n}}\bf{\cdot}d \bf{a} 
+$$
+
+이다. $V_0$ 를 모든 $S_1$ 를 포함하는 매우 큰 반지름 $R$ 을 갖는 구로 잡으며 $\Psi \sim 1/R$, $\|\partial \Psi/\partial \bf{n}\| \sim 1/R^2$ 이며 $d\bf{a} \sim 4\pi \hat{\bf{R}}R^2 d\Omega$ 이므로 이 적분값은 $\sim 1/R$ 이다. 즉 $R\to \infty$ 극한에서 $0$ 이다. @eq-thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition_2 로부터 $\Psi = 0$ 임을 알 수 있다. 즉 $\Phi_1= \Phi_2$ 이다. $\square$
+
+::: 
+
+</br>
+
+도체에 전하 $Q$ 가 대전되었을 때의 포텐셜 $\Phi_0$ 가 정해져 있다고 하자. 도체에 대전된 전하는 표면에만 존재하며 따라서 표면 전하 밀도 $\sigma$ 를 생성한다. 도체에 대전된 전하가 변했을 때 표면전하밀도가 원래의 표면전하 밀도에 단순히 비례할거라는 보장이 없으며 따라서 포텐셜이 대전된 전하량에 비례할것이라는 보장도 없다. 그러나 유일성 정리는 이것을 보장한다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-ED_ES_linearity_of_surface_charge_density_on_conducting_surface}
+
+전하 $Q$ 가 대전된 도체 표면 $S$ 에서의 표면 전하 밀도가 $\sigma(\bf{r})$ 라면 $\lambda Q$ 가 대전된 도체 표면에서의 표면전하밀도는 $\lambda \sigma(\bf{r})$ 이다. . 
+
+:::
+
+</div>
+
+::: {.proof}
+
+전하 $Q$ 가 대전되어있을 때 $\sigma = -\epsilon_0 \dfrac{\partial \Phi}{\partial n}$ 이며 도체 밖에서 $\nabla^2 \Phi = 0$, $\Phi (\|\bf{r}\|\to \infty)=0$ 이고 도체 표면에서 정전 포텐셜이 일정한 값 $\Phi_0$ 를 가진다. $\lambda Q$ 만큼의 전하가 대전되었을 때의 정전 포텐셜을 $\Psi$ 를 $\Psi(\bf{r})=\lambda \Phi(\bf{r})$ 라고 하면 $\Psi$ 역시 라플라스 방정식 $\nabla^2 \Psi = 0$ 과 $\Psi (r\to \infty)=0$ 을 만족한다. 또한 표면 전하 밀도 $\sigma_\lambda = -\epsilon_0 \dfrac{\partial \Psi}{\partial n}= \lambda \sigma$ 로 표면 잔하 밀도의 적분값은 $\lambda Q$ 이다. 또한 표면에서의 포텐셜 $\Psi_0 = \lambda \Phi_0$ 역시 등전위면이 된다. 유일성 정리에 의해 $\Psi=\lambda \Phi$ 이외의 해는 없다. $\square$
+
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-ED_ES_green_first_identity}
+
+#### 그린의 제 1 항등식
+
+부피 $V$ 에서 정의된 스칼라장 $\phi,\,\psi$ 에 대해 다음이 성립함을 보여라.
+
+$$
+\int_V \left[\nabla \phi \bf{\cdot } \nabla \psi + \phi \nabla^2 \psi \right] = \int_{\partial V} (\phi \nabla \psi)\bf{\cdot}d\bf{a}
+$$ {#eq-ED_ES_green_first_identity}
+
+
+:::
+</div>
+
+::: {.solution}
+
+$\nabla \bf{\cdot}(\phi \nabla \psi) = \nabla \phi \bf{\cdot} \nabla \psi + \phi \nabla^2 \psi$ 이므로
+
+$$
+\begin{aligned}
+\int_V \left[\nabla \phi \bf{\cdot } \nabla \psi + \phi \nabla^2 \psi \right] &=\int_V \nabla \bf{\cdot}(\phi \nabla \psi) dV \quad &;\text{Divergent theorem}\\[0.3em]
+&=\int_{\partial V} (\phi \nabla \Psi)\bf{\cdot} d\bf{a}.
+\end{aligned}
+$$
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-ED_ES_green_second_identity}
+
+#### 그린의 제 2 항등식
+
+부피 $V$ 에서 정의된 스칼라장 $\phi,\,\psi$ 에 대해 다음이 성립함을 보여라.
+
+$$
+\int_V \left[ \phi \nabla^2 \psi - \psi \nabla^2 \phi \right] = \int_{\partial V} (\phi \nabla \psi - \psi \nabla \phi)\bf{\cdot}d\bf{a}
+$${#eq-ED_ES_green_second_identity}
+
+
+:::
+</div>
+
+::: {.solution}
+
+@eq-ED_ES_green_first_identity 로 부터
+
+$$
+[\phi\nabla^2 \psi + \nabla \phi \bf{\cdot} \nabla \psi] - [\psi\nabla^2 \phi + \nabla \phi \bf{\cdot} \nabla \psi] = \nabla \bf{\cdot}\left[\phi \nabla \psi - \psi\nabla \phi\right]
+$$
+
+임을 안다. 발산정리를 이용하면 @eq-ED_ES_green_second_identity 를 보일 수 있다.
+
+:::
+
+
+
+</br>
+
 ## 정전기 에너지
 
 ### 정전기 에너지의 의미 {#sec-ED_ES_meaning_of_electrostatic_energy}

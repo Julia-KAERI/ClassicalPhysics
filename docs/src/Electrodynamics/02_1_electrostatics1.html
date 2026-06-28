@@ -393,6 +393,7 @@ window.Quarto = {
   <li><a href="#sec-ED_ES_electrostatic_potential" id="toc-sec-ED_ES_electrostatic_potential" class="nav-link" data-scroll-target="#sec-ED_ES_electrostatic_potential"><span class="header-section-number">13.2.1</span> 전위</a></li>
   <li><a href="#sec-ED_ES_multipole_expansion" id="toc-sec-ED_ES_multipole_expansion" class="nav-link" data-scroll-target="#sec-ED_ES_multipole_expansion"><span class="header-section-number">13.2.2</span> 다중극 전개</a></li>
   <li><a href="#sec-ED_ES_electrostatic_stable_equilibrium" id="toc-sec-ED_ES_electrostatic_stable_equilibrium" class="nav-link" data-scroll-target="#sec-ED_ES_electrostatic_stable_equilibrium"><span class="header-section-number">13.2.3</span> 정전기적 안정평형상태</a></li>
+  <li><a href="#sec-ED_ES_uniqueness_theorem_for_electrostatics" id="toc-sec-ED_ES_uniqueness_theorem_for_electrostatics" class="nav-link" data-scroll-target="#sec-ED_ES_uniqueness_theorem_for_electrostatics"><span class="header-section-number">13.2.4</span> 정전기 문제의 유일성 정리</a></li>
   </ul></li>
   <li><a href="#정전기-에너지" id="toc-정전기-에너지" class="nav-link" data-scroll-target="#정전기-에너지"><span class="header-section-number">13.3</span> 정전기 에너지</a>
   <ul class="collapse">
@@ -926,6 +927,82 @@ Q_{lm}&amp;= q\left(\dfrac{d}{2}\right)^{l} \left(1-(-1)^l\right) {Y_{l}^m}^{\as
 </div>
 <p><br></p>
 </section>
+<section id="sec-ED_ES_uniqueness_theorem_for_electrostatics" class="level3" data-number="13.2.4">
+<h3 data-number="13.2.4" class="anchored" data-anchor-id="sec-ED_ES_uniqueness_theorem_for_electrostatics"><span class="header-section-number">13.2.4</span> 정전기 문제의 유일성 정리</h3>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition" class="theorem">
+<p><span class="theorem-title"><strong>정리 13.3 (정전기 포텐셜의 유일성 정리)</strong></span> 표면 <span class="math inline">\(S_1,\,S_2,\ldots,\,S_n\)</span> 에 대해 디리클레 경계조건 혹은 노이만 경계조건이 정해진 경우 라플라스 방정식의 해가 존재한다면 그 해는 유일하다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(S_i\)</span> 에서의 경계값을 만족하는 두 정전 포텐셜 <span class="math inline">\(\Phi_1\)</span> 과 <span class="math inline">\(\Phi_2\)</span> 가 있다고 하자. 이 때 <span class="math inline">\(\Psi = \Phi_1-\Phi_2\)</span> 라고 하자. <span class="math inline">\(\nabla^2 \Phi_1 = \nabla^2 \Phi_2 = 0\)</span> 이므로 <span class="math inline">\(\nabla^2 \Psi = 0\)</span> 이다. 모든 <span class="math inline">\(S_i\)</span> 로 둘러쌓여진 영역을 포함하는 큰 영역 <span class="math inline">\(V_0\)</span> 를 생각하자. <span class="math inline">\(V_0\)</span> 에서 <span class="math inline">\(S_i\)</span> 에 의해 둘러쌓인 부분을 제외한 영역을 <span class="math inline">\(V\)</span> 라고 하면 <span class="math inline">\(V\)</span> 의 경계면은 <span class="math inline">\(V_0\)</span> 의 경계면 <span class="math inline">\(S_0\)</span> 와 <span class="math inline">\(S_1,\ldots,\,S_n\)</span> 이다. 그 경계 <span class="math inline">\(\partial V = \bigcup_{k=0}^n S_k\)</span> 를 생각 할 수 있다. 이 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(\nabla^2 \Psi = 0\)</span> 와 그린의 제 1 항등식(<a href="#eq-ED_ES_green_first_identity" class="quarto-xref">식&nbsp;<span>13.31</span></a>) 을 이용하면</p>
+<p><span id="eq-thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition_1"><span class="math display">\[
+\begin{aligned}
+\int_V (\nabla \Psi \boldsymbol{\cdot}\nabla \Psi)\,d^3\boldsymbol{r} &amp;= \int_V \left[\nabla \boldsymbol{\cdot} (\Psi \nabla \Psi)- \Psi \nabla^2 \Psi\right]\,d^3\boldsymbol{r} \\[0.3em]
+&amp;= \int_{\partial V} \Psi \dfrac{\partial \Psi}{\partial \boldsymbol{n}}\boldsymbol{\cdot}d \boldsymbol{a}
+\end{aligned}
+\tag{13.29}\]</span></span></p>
+<p>이다. 여기서</p>
+<p><span id="eq-thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition_2"><span class="math display">\[
+\int_V (\nabla \Psi \boldsymbol{\cdot}\nabla \Psi)\,d^3\boldsymbol{r} = \int_V \|\nabla \Psi\|\,d^3 \boldsymbol{r} \ge 0
+\tag{13.30}\]</span></span></p>
+<p>임을 안다. 또한</p>
+<p><span class="math display">\[
+\int_{\partial V}\Psi \dfrac{\partial \Psi}{\partial \boldsymbol{n}}\boldsymbol{\cdot}d \boldsymbol{a}
+\]</span></p>
+<p>을 생각하자. 디리클레 혹은 노이만 경계조건이 정해졌으므로 <span class="math inline">\(S_1,\ldots,\,S_n\)</span> 에 대해 <span class="math inline">\(\Psi = 0\)</span> 이거나 <span class="math inline">\(\partial \Psi/\partial \boldsymbol{n} = \boldsymbol{0}\)</span> 이므로</p>
+<p><span class="math display">\[
+\int_{\partial V}\Psi \dfrac{\partial \Psi}{\partial \boldsymbol{n}}\boldsymbol{\cdot}d \boldsymbol{a} = \int_{\partial S_0}\Psi \dfrac{\partial \Psi}{\partial \boldsymbol{n}}\boldsymbol{\cdot}d \boldsymbol{a}
+\]</span></p>
+<p>이다. <span class="math inline">\(V_0\)</span> 를 모든 <span class="math inline">\(S_1\)</span> 를 포함하는 매우 큰 반지름 <span class="math inline">\(R\)</span> 을 갖는 구로 잡으며 <span class="math inline">\(\Psi \sim 1/R\)</span>, <span class="math inline">\(\|\partial \Psi/\partial \boldsymbol{n}\| \sim 1/R^2\)</span> 이며 <span class="math inline">\(d\boldsymbol{a} \sim 4\pi \hat{\boldsymbol{R}}R^2 d\Omega\)</span> 이므로 이 적분값은 <span class="math inline">\(\sim 1/R\)</span> 이다. 즉 <span class="math inline">\(R\to \infty\)</span> 극한에서 <span class="math inline">\(0\)</span> 이다. <a href="#eq-thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition_2" class="quarto-xref">식&nbsp;<span>13.30</span></a> 로부터 <span class="math inline">\(\Psi = 0\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(\Phi_1= \Phi_2\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<p>도체에 전하 <span class="math inline">\(Q\)</span> 가 대전되었을 때의 포텐셜 <span class="math inline">\(\Phi_0\)</span> 가 정해져 있다고 하자. 도체에 대전된 전하는 표면에만 존재하며 따라서 표면 전하 밀도 <span class="math inline">\(\sigma\)</span> 를 생성한다. 도체에 대전된 전하가 변했을 때 표면전하밀도가 원래의 표면전하 밀도에 단순히 비례할거라는 보장이 없으며 따라서 포텐셜이 대전된 전하량에 비례할것이라는 보장도 없다. 그러나 유일성 정리는 이것을 보장한다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-ED_ES_linearity_of_surface_charge_density_on_conducting_surface" class="theorem">
+<p><span class="theorem-title"><strong>정리 13.4</strong></span> 전하 <span class="math inline">\(Q\)</span> 가 대전된 도체 표면 <span class="math inline">\(S\)</span> 에서의 표면 전하 밀도가 <span class="math inline">\(\sigma(\boldsymbol{r})\)</span> 라면 <span class="math inline">\(\lambda Q\)</span> 가 대전된 도체 표면에서의 표면전하밀도는 <span class="math inline">\(\lambda \sigma(\boldsymbol{r})\)</span> 이다. .</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>전하 <span class="math inline">\(Q\)</span> 가 대전되어있을 때 <span class="math inline">\(\sigma = -\epsilon_0 \dfrac{\partial \Phi}{\partial n}\)</span> 이며 도체 밖에서 <span class="math inline">\(\nabla^2 \Phi = 0\)</span>, <span class="math inline">\(\Phi (\|\boldsymbol{r}\|\to \infty)=0\)</span> 이고 도체 표면에서 정전 포텐셜이 일정한 값 <span class="math inline">\(\Phi_0\)</span> 를 가진다. <span class="math inline">\(\lambda Q\)</span> 만큼의 전하가 대전되었을 때의 정전 포텐셜을 <span class="math inline">\(\Psi\)</span> 를 <span class="math inline">\(\Psi(\boldsymbol{r})=\lambda \Phi(\boldsymbol{r})\)</span> 라고 하면 <span class="math inline">\(\Psi\)</span> 역시 라플라스 방정식 <span class="math inline">\(\nabla^2 \Psi = 0\)</span> 과 <span class="math inline">\(\Psi (r\to \infty)=0\)</span> 을 만족한다. 또한 표면 전하 밀도 <span class="math inline">\(\sigma_\lambda = -\epsilon_0 \dfrac{\partial \Psi}{\partial n}= \lambda \sigma\)</span> 로 표면 잔하 밀도의 적분값은 <span class="math inline">\(\lambda Q\)</span> 이다. 또한 표면에서의 포텐셜 <span class="math inline">\(\Psi_0 = \lambda \Phi_0\)</span> 역시 등전위면이 된다. 유일성 정리에 의해 <span class="math inline">\(\Psi=\lambda \Phi\)</span> 이외의 해는 없다. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-ED_ES_green_first_identity" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 13.1 (그린의 제 1 항등식)</strong></span> 부피 <span class="math inline">\(V\)</span> 에서 정의된 스칼라장 <span class="math inline">\(\phi,\,\psi\)</span> 에 대해 다음이 성립함을 보여라.</p>
+<p><span id="eq-ED_ES_green_first_identity"><span class="math display">\[
+\int_V \left[\nabla \phi \boldsymbol{\cdot } \nabla \psi + \phi \nabla^2 \psi \right] = \int_{\partial V} (\phi \nabla \psi)\boldsymbol{\cdot}d\boldsymbol{a}
+\tag{13.31}\]</span></span></p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\nabla \boldsymbol{\cdot}(\phi \nabla \psi) = \nabla \phi \boldsymbol{\cdot} \nabla \psi + \phi \nabla^2 \psi\)</span> 이므로</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int_V \left[\nabla \phi \boldsymbol{\cdot } \nabla \psi + \phi \nabla^2 \psi \right] &amp;=\int_V \nabla \boldsymbol{\cdot}(\phi \nabla \psi) dV \quad &amp;;\text{Divergent theorem}\\[0.3em]
+&amp;=\int_{\partial V} (\phi \nabla \Psi)\boldsymbol{\cdot} d\boldsymbol{a}.
+\end{aligned}
+\]</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-ED_ES_green_second_identity" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 13.2 (그린의 제 2 항등식)</strong></span> 부피 <span class="math inline">\(V\)</span> 에서 정의된 스칼라장 <span class="math inline">\(\phi,\,\psi\)</span> 에 대해 다음이 성립함을 보여라.</p>
+<p><span id="eq-ED_ES_green_second_identity"><span class="math display">\[
+\int_V \left[ \phi \nabla^2 \psi - \psi \nabla^2 \phi \right] = \int_{\partial V} (\phi \nabla \psi - \psi \nabla \phi)\boldsymbol{\cdot}d\boldsymbol{a}
+\tag{13.32}\]</span></span></p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-ED_ES_green_first_identity" class="quarto-xref">식&nbsp;<span>13.31</span></a> 로 부터</p>
+<p><span class="math display">\[
+[\phi\nabla^2 \psi + \nabla \phi \boldsymbol{\cdot} \nabla \psi] - [\psi\nabla^2 \phi + \nabla \phi \boldsymbol{\cdot} \nabla \psi] = \nabla \boldsymbol{\cdot}\left[\phi \nabla \psi - \psi\nabla \phi\right]
+\]</span></p>
+<p>임을 안다. 발산정리를 이용하면 <a href="#eq-ED_ES_green_second_identity" class="quarto-xref">식&nbsp;<span>13.32</span></a> 를 보일 수 있다.</p>
+</div>
+<p><br></p>
+</section>
 </section>
 <section id="정전기-에너지" class="level2" data-number="13.3">
 <h2 data-number="13.3" class="anchored" data-anchor-id="정전기-에너지"><span class="header-section-number">13.3</span> 정전기 에너지</h2>
@@ -934,7 +1011,7 @@ Q_{lm}&amp;= q\left(\dfrac{d}{2}\right)^{l} \left(1-(-1)^l\right) {Y_{l}^m}^{\as
 <p>정전기 에너지는 역학적 포텐셜 에너지와 같이 무한히 먼 지점에서 특정 지점까지 전하 <span class="math inline">\(q\)</span> 를 움직이는데 해준 일을 의미한다. 즉 정전기 에너지 <span class="math inline">\(U(\boldsymbol{r})\)</span> 는 다음과 같다.</p>
 <p><span id="eq-ED_ES_electrostatic_energy_for_single_paticle_over_potential"><span class="math display">\[
 U(\boldsymbol{r}) = -\int_{\infty}^\boldsymbol{r} \boldsymbol{F\cdot}\, d\boldsymbol{l} = q\int_{\infty}^\boldsymbol{r} \nabla \Phi \boldsymbol{\cdot}\,d\boldsymbol{l} = q\Phi(\boldsymbol{r}).
-\tag{13.29}\]</span></span></p>
+\tag{13.33}\]</span></span></p>
 <p>여기서 <span class="math inline">\(\Phi(\infty) = 0\)</span> 이라는 경계조건을 사용하였다.</p>
 <p><br></p>
 </section>
@@ -943,7 +1020,7 @@ U(\boldsymbol{r}) = -\int_{\infty}^\boldsymbol{r} \boldsymbol{F\cdot}\, d\boldsy
 <p>이제 전하 <span class="math inline">\(q_1,\ldots,\,q_N\)</span> 을 각각 순서대로 <span class="math inline">\(\boldsymbol{r}_1,\ldots,\,\boldsymbol{r}_N\)</span> 에 위치시키는데 필요한 일을 알아보자. <span class="math inline">\(1\le i &lt; j\le N\)</span> 에 대해 <span class="math inline">\(W_{ij}\)</span> 를 이미 <span class="math inline">\(\boldsymbol{r}_i\)</span> 에 위치한 전하 <span class="math inline">\(q_i\)</span> 가 존재할 때 <span class="math inline">\(q_j\)</span> 를 <span class="math inline">\(\infty\)</span> 에서 <span class="math inline">\(\boldsymbol{r}_j\)</span> 까지 이동시키는 데 필요한 일이라고 하면,</p>
 <p><span id="eq-ED_ES_total_electrostatic_energy_for_2_point_charge"><span class="math display">\[
 W_{ij} = \dfrac{q_iq_j}{4\pi\epsilon_0r_{ij}}
-\tag{13.30}\]</span></span></p>
+\tag{13.34}\]</span></span></p>
 <p>이다. 여기서 <span class="math inline">\(r_{ij} = \|\boldsymbol{r}_i-\boldsymbol{r}_j\|\)</span> 이다. 그렇다면 이 전하를 배치하는데 필요한 일 <span class="math inline">\(W_{\text{tot}}\)</span> 는</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -954,13 +1031,13 @@ W_{\text{tot}} &amp;= W_{12} + W_{13}+ W_{23} + W_{14}+ W_{24}+W_{34}+W_{44} + \
 <p>이다. 즉 이 시스템의 정전기 에너지 <span class="math inline">\(U(\boldsymbol{r})\)</span> 은 <span class="math inline">\(W_\text{tot}\)</span> 와 같으므로</p>
 <p><span id="eq-ED_ES_total_electrostatic_energy_for_N_point_charges_system"><span class="math display">\[
 U(\boldsymbol{r}) = \dfrac{1}{2} \sum_{i,\,j=1,\, i\ne j}^N \dfrac{q_iq_j}{4\pi\epsilon_0 r_{ij}} = \dfrac{1}{2} \sum_{i=1}^N q_i \Phi(\boldsymbol{r_i})
-\tag{13.31}\]</span></span></p>
+\tag{13.35}\]</span></span></p>
 <p>임을 알 수 있다.</p>
 <p><br></p>
 </section>
 <section id="sec-ED_ES_electrostatic_energy_for_charge_distribution" class="level3" data-number="13.3.3">
 <h3 data-number="13.3.3" class="anchored" data-anchor-id="sec-ED_ES_electrostatic_energy_for_charge_distribution"><span class="header-section-number">13.3.3</span> 전하 분포의 정전기 에너지</h3>
-<p>이제 점전하가 아니라 전하가 연속적인 분포를 이룰 경우에 대해 생각해보자. 전하의 분포가 특정 영역에 한정되어 있다고 가정한다. 그렇다면 <a href="#eq-ED_ES_total_electrostatic_energy_for_N_point_charges_system" class="quarto-xref">식&nbsp;<span>13.31</span></a> 은 아래와 같이 변경 될 수 있을 것이다.</p>
+<p>이제 점전하가 아니라 전하가 연속적인 분포를 이룰 경우에 대해 생각해보자. 전하의 분포가 특정 영역에 한정되어 있다고 가정한다. 그렇다면 <a href="#eq-ED_ES_total_electrostatic_energy_for_N_point_charges_system" class="quarto-xref">식&nbsp;<span>13.35</span></a> 은 아래와 같이 변경 될 수 있을 것이다.</p>
 <p><span class="math display">\[
 U = \dfrac{1}{2} \int \rho (\boldsymbol{r})\,\Phi (\boldsymbol{r})\,d^3\boldsymbol{r}
 \]</span></p>
@@ -974,17 +1051,17 @@ U &amp;= \dfrac{1}{2} \int \epsilon_0 (\nabla \boldsymbol{\cdot E}) \Phi \,d^3\b
 <p>만약 우리가 전체 공간에 대해 적분을 한다고 생각해보자. 그렇다면 첫번째 항은 <span class="math inline">\(\Phi(r\to \infty) = 0\)</span> 조건에 의해 <span class="math inline">\(0\)</span> 이 될 것이며, 따라서 다음을 얻게 된다.</p>
 <p><span id="eq-ED_ES_total_electrostatic_energy_for_charge_distribution"><span class="math display">\[
 U = \dfrac{\epsilon_0}{2} \int_{\text{Universe}} \|\boldsymbol{E}\|^2\,d^3\boldsymbol{r}
-\tag{13.32}\]</span></span></p>
+\tag{13.36}\]</span></span></p>
 <p><br></p>
 </section>
 <section id="sec-ED_ES_comparison_of_electrostatic_energy" class="level3" data-number="13.3.4">
 <h3 data-number="13.3.4" class="anchored" data-anchor-id="sec-ED_ES_comparison_of_electrostatic_energy"><span class="header-section-number">13.3.4</span> 정전기 에너지 비교</h3>
-<p>자 이제 <a href="#eq-ED_ES_total_electrostatic_energy_for_2_point_charge" class="quarto-xref">식&nbsp;<span>13.30</span></a> 와 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.32</span></a> 을 비교해보자. <span class="math inline">\(e,\,-e\)</span> 의 전하를 가진 두 입자가 떨어져 있다면 그 전기 포텐셜 에너지는 <a href="#eq-ED_ES_total_electrostatic_energy_for_2_point_charge" class="quarto-xref">식&nbsp;<span>13.30</span></a> 에 의하면 음수이고 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.32</span></a> 에 의하면 양수이다. 이 차이는 어디서 왔을까?</p>
-<p>우선 우리의 유도 과정을 살펴보자 우리는 <a href="#eq-ED_ES_total_electrostatic_energy_for_N_point_charges_system" class="quarto-xref">식&nbsp;<span>13.31</span></a> 에서 <span class="math inline">\(q_i \Phi(\boldsymbol{r}_i)\)</span> 를 <span class="math inline">\(\rho(\boldsymbol{r})\Phi(\boldsymbol{r})\)</span> 로 바꾸어 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.32</span></a> 을 얻었다. <a href="#eq-ED_ES_total_electrostatic_energy_for_N_point_charges_system" class="quarto-xref">식&nbsp;<span>13.31</span></a> 에서는 각각의 전하 <span class="math inline">\(q_i\)</span> 가 이미 조립된 상태로 존재하지만 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.32</span></a> 에서는 그렇지 않다는 것이다. 예를 들어 전하 <span class="math inline">\(q=-e\)</span> 를 가진 전자에 의한 정전기 에너지를 계산해 보자. 이 때 전자의 반경을 <span class="math inline">\(r_e\)</span> 라고 하고 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.32</span></a> 를 사용하면</p>
+<p>자 이제 <a href="#eq-ED_ES_total_electrostatic_energy_for_2_point_charge" class="quarto-xref">식&nbsp;<span>13.34</span></a> 와 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.36</span></a> 을 비교해보자. <span class="math inline">\(e,\,-e\)</span> 의 전하를 가진 두 입자가 떨어져 있다면 그 전기 포텐셜 에너지는 <a href="#eq-ED_ES_total_electrostatic_energy_for_2_point_charge" class="quarto-xref">식&nbsp;<span>13.34</span></a> 에 의하면 음수이고 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.36</span></a> 에 의하면 양수이다. 이 차이는 어디서 왔을까?</p>
+<p>우선 우리의 유도 과정을 살펴보자 우리는 <a href="#eq-ED_ES_total_electrostatic_energy_for_N_point_charges_system" class="quarto-xref">식&nbsp;<span>13.35</span></a> 에서 <span class="math inline">\(q_i \Phi(\boldsymbol{r}_i)\)</span> 를 <span class="math inline">\(\rho(\boldsymbol{r})\Phi(\boldsymbol{r})\)</span> 로 바꾸어 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.36</span></a> 을 얻었다. <a href="#eq-ED_ES_total_electrostatic_energy_for_N_point_charges_system" class="quarto-xref">식&nbsp;<span>13.35</span></a> 에서는 각각의 전하 <span class="math inline">\(q_i\)</span> 가 이미 조립된 상태로 존재하지만 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.36</span></a> 에서는 그렇지 않다는 것이다. 예를 들어 전하 <span class="math inline">\(q=-e\)</span> 를 가진 전자에 의한 정전기 에너지를 계산해 보자. 이 때 전자의 반경을 <span class="math inline">\(r_e\)</span> 라고 하고 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.36</span></a> 를 사용하면</p>
 <p><span class="math display">\[
 U = \dfrac{\epsilon_0}{2} \int \dfrac{e^2}{4^2\pi^2 \epsilon_0^2 r^4}r^2 d\Omega = \dfrac{e^2}{8\pi \epsilon_0 r_e}
 \]</span></p>
-<p>이며 <span class="math inline">\(r_e\to 0\)</span> 극한에서 발산한다. 물론 점전하가 아니라 연속적인 전하분포에서는 발산하지 않지만 정전기 에너지에 큰 양의 기여를 하기때문에 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.32</span></a> 가 양수인 것을 설명 할 수 있다. 여기에 대해 더 정확하게 이해하기 위해서는 여기의 범위를 벗어나는 양자전기역학이 필요하다.</p>
+<p>이며 <span class="math inline">\(r_e\to 0\)</span> 극한에서 발산한다. 물론 점전하가 아니라 연속적인 전하분포에서는 발산하지 않지만 정전기 에너지에 큰 양의 기여를 하기때문에 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.36</span></a> 가 양수인 것을 설명 할 수 있다. 여기에 대해 더 정확하게 이해하기 위해서는 여기의 범위를 벗어나는 양자전기역학이 필요하다.</p>
 <p><br></p>
 </section>
 <section id="sec-ED_ES_force_between_electric_dipoles" class="level3" data-number="13.3.5">
@@ -1000,7 +1077,7 @@ U &amp;= \dfrac{q}{2}\left[\Phi\left(\boldsymbol{r}+\dfrac{\boldsymbol{d}}{2}\ri
 <p>이제 <span class="math inline">\(\boldsymbol{r}_1,\ldots,\boldsymbol{r}_N\)</span> 에 위치한 전기쌍극자 <span class="math inline">\(\boldsymbol{p}_1,\ldots,\,\boldsymbol{p}_N\)</span> 로 이루어진 시스템을 생각하자. 이 시스템의 정전기 에너지 <span class="math inline">\(U\)</span> 는 다음과 같다.</p>
 <p><span id="eq-ED_ES_electrostatic_energy_for_electric_dipole_system"><span class="math display">\[
 U = \dfrac{1}{2}\sum_{i,\,j=1,\,i\ne j}^N \dfrac{1}{8\pi\epsilon_0}\left(\dfrac{\boldsymbol{p}_1\boldsymbol{\cdot p}_2}{\|\boldsymbol{r}_i-\boldsymbol{r}_j\|^3} - \dfrac{3(\boldsymbol{p}_i \boldsymbol{\cdot}(\boldsymbol{r}_i-\boldsymbol{r}_j))(\boldsymbol{p}_j \boldsymbol{\cdot}(\boldsymbol{r}_i-\boldsymbol{r}_j))}{\|\boldsymbol{r}_i-\boldsymbol{r}_j\|^5}\right).
-\tag{13.33}\]</span></span></p>
+\tag{13.37}\]</span></span></p>
 
 
 </section>
