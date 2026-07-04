@@ -1,7 +1,0 @@
----
-title: "그림들"
-number-sections: true
-number-depth: 2
-crossref:
-  chapters: true
----
