@@ -432,6 +432,8 @@ window.Quarto = {
   <li><a href="#유전체" id="toc-유전체" class="nav-link" data-scroll-target="#유전체"><span class="header-section-number">13.4</span> 유전체</a>
   <ul class="collapse">
   <li><a href="#sec-ED_ES_dielectrics" id="toc-sec-ED_ES_dielectrics" class="nav-link" data-scroll-target="#sec-ED_ES_dielectrics"><span class="header-section-number">13.4.1</span> 유전체와 유도 쌍극자</a></li>
+  <li><a href="#sec-ED_ES_alignement_of_polar_molecule" id="toc-sec-ED_ES_alignement_of_polar_molecule" class="nav-link" data-scroll-target="#sec-ED_ES_alignement_of_polar_molecule"><span class="header-section-number">13.4.2</span> 극성 분자의 정렬</a></li>
+  <li><a href="#sec-ED_ES_polarizaiton_vector_P" id="toc-sec-ED_ES_polarizaiton_vector_P" class="nav-link" data-scroll-target="#sec-ED_ES_polarizaiton_vector_P"><span class="header-section-number">13.4.3</span> 편극 벡터 <span class="math inline">\(\boldsymbol{P}\)</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1139,7 +1141,7 @@ U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\boldsymbol{E}\|^2
 </section>
 <section id="거울-영상법" class="level4">
 <h4 class="anchored" data-anchor-id="거울-영상법"><strong>거울 영상법</strong></h4>
-<p><a href="#thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition" class="quarto-xref">정리&nbsp;<span>13.7</span></a> 는 일단 경계조건을 만족하는 포텐셜을 구하기만 한다면 그 포텐셜은 유일하다는 것을 의미한다. 이것을 이용하는 방법중의 하나가 <strong>거울영상볍 (method of images)</strong> 이다. 관심 있는 영역에 대한 포텐셜을 구할 때 이 영역이 아닌 다른 영역에 가상의 전하를 배치하여 경계조건을 만족하게 하여 포텐셜을 구하는 방법이다. 일단 가장 간단한 예시를 보자.</p>
+<p><a href="02_2_electrostatics2.html#thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition" class="quarto-xref">정리&nbsp;<span>14.3</span></a> 는 일단 경계조건을 만족하는 포텐셜을 구하기만 한다면 그 포텐셜은 유일하다는 것을 의미한다. 이것을 이용하는 방법중의 하나가 <strong>거울영상볍 (method of images)</strong> 이다. 관심 있는 영역에 대한 포텐셜을 구할 때 이 영역이 아닌 다른 영역에 가상의 전하를 배치하여 경계조건을 만족하게 하여 포텐셜을 구하는 방법이다. 일단 가장 간단한 예시를 보자.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-ED_ES_image_method_plane" class="theorem example">
@@ -1230,6 +1232,131 @@ Q_{\text{total induced}} = \int \sigma \,dxdy = -q.
 p_i = \sum_j \alpha_{ij}E_j,\qquad i,\,j = x,\,y,\,z
 \tag{13.36}\]</span></span></p>
 <p>가 된다.</p>
+</section>
+<section id="sec-ED_ES_alignement_of_polar_molecule" class="level3" data-number="13.4.2">
+<h3 data-number="13.4.2" class="anchored" data-anchor-id="sec-ED_ES_alignement_of_polar_molecule"><span class="header-section-number">13.4.2</span> 극성 분자의 정렬</h3>
+<p>H<sub>2</sub>O 와 같은 내재된 영구적인 쌍극자 모멘트를 가진다(<a href="#fig-ED_ES_polar_molecule" class="quarto-xref">그림&nbsp;<span>13.9</span></a> 의 오른쪽 그림). 이런 문자를 <strong>극성 분자 (polar molecule)</strong> 이라고 한다. 물의 쌍극자 모멘트는 다른 분자에 비해 비정상적으로 큰데 <span class="math inline">\(6.1 \times 10^{−30} \text{C}\cdot\text{m}\)</span> 이다. 이러한 극성 분자에 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 를 가한다고 생각해보자.</p>
+<div id="fig-ED_ES_polar_molecule" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ED_ES_polar_molecule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/electrostatics/polar_molecule/polar_molecule.png" class="img-fluid figure-img" width="450">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_polar_molecule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;13.9: CO<sub>2</sub> 분자의 배치
+</figcaption>
+</figure>
+</div>
+<p>전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 가 균일하다면 총 전하가 <span class="math inline">\(0\)</span> 이므로 전하에 가히지는 힘은 <span class="math inline">\(0\)</span> 이다. 그러나 토크 <span class="math inline">\(\boldsymbol{N}\)</span> 을 계산해보면</p>
+<p><span class="math display">\[
+\boldsymbol{N} = (\boldsymbol{r}^++\times \boldsymbol{F}^+) + (\boldsymbol{r}^-\times \boldsymbol{F}^-)= q\boldsymbol{d}\times \boldsymbol{E}
+\]</span></p>
+<p>이며, 쌍극자 모멘트 <span class="math inline">\(\boldsymbol{p}=q\boldsymbol{d}\)</span> 를 생각하면 균일한 전기장에 놓인 쌍극자 모멘트에 가해지는 토크는 다음과 같다는 것을 알 수 있다.</p>
+<p><span id="eq-ED_ES_torque_on_dipole_by_uniform_electric_field"><span class="math display">\[
+\boldsymbol{N} = \boldsymbol{p}\times \boldsymbol{E}.
+\tag{13.37}\]</span></span></p>
+<p>가해지는 전기장이 균일하지 않다면 <span class="math inline">\(\|\boldsymbol{F}^+\| \ne \|\boldsymbol{F}^-\|\)</span> 일 수 있으며 이 경우 극성 분자는</p>
+<p><span class="math display">\[
+\boldsymbol{F}=\boldsymbol{F}^++\boldsymbol{F}^-= q(\Delta \boldsymbol{E})
+\]</span></p>
+<p>의 힘을 받는다. 여기서 <span class="math inline">\(\Delta \boldsymbol{E}\)</span> 는 전하의 위치에서의 전기장의 차이이다. 일반적으로 쌍극자에서의 두 전하의 거리는 매우 짧기 때문에</p>
+<p><span class="math display">\[
+\Delta \boldsymbol{E} = (\boldsymbol{d\cdot} \nabla)\boldsymbol{E}
+\]</span></p>
+<p>이며, 따라서</p>
+<p><span id="eq-ED_ES_force_on_dipole_moment_by_nonuniform_electric_field"><span class="math display">\[
+\boldsymbol{F}=(\boldsymbol{p\cdot}\nabla) \boldsymbol{E}
+\tag{13.38}\]</span></span></p>
+<p>이다.</p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-ED_ES_energy_of_dipole_in_field" class="theorem example">
+<p><span class="theorem-title"><strong>예제 13.4 (전기장 안의 쌍극자의 에너지)</strong></span> 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 가 가해진 쌍극자 <span class="math inline">\(\boldsymbol{p}\)</span> 의 에너지 <span class="math inline">\(U\)</span> 는</p>
+<p><span id="eq-ED_ES_energy_of_dipole_in_field"><span class="math display">\[
+U = -\boldsymbol{p \cdot E}
+\tag{13.39}\]</span></span></p>
+<p>로 쓸 수 있다. 전기장 내의 쌍극자는 힘을 받지 않으며 토크만 맏는다. 토크 <span class="math inline">\(\boldsymbol{N}=\boldsymbol{p}\times \boldsymbol{E}\)</span> 이며 따라서 <span class="math inline">\(N=pE\sin \theta\)</span> 이다. 토크는 항상 <span class="math inline">\(\boldsymbol{p}\)</span> 와 <span class="math inline">\(\boldsymbol{E}\)</span> 가 평행하도록 작용하며 따라서</p>
+<p><span class="math display">\[
+U = -\int_{\theta}^0 pE\sin\theta'\,d\theta' = - pE\cos \theta  + pE
+\]</span></p>
+<p>이다. <span class="math inline">\(pE\)</span> 는 상수이므로 의미가 없고 따라서</p>
+<p><span class="math display">\[
+U = -pE\cos \theta = -\boldsymbol{p\cdot E}
+\]</span></p>
+<p>라고 쓸 수 있다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="sec-ED_ES_polarizaiton_vector_P" class="level3" data-number="13.4.3">
+<h3 data-number="13.4.3" class="anchored" data-anchor-id="sec-ED_ES_polarizaiton_vector_P"><span class="header-section-number">13.4.3</span> 편극 벡터 <span class="math inline">\(\boldsymbol{P}\)</span></h3>
+<p>앞서 우리는 유전 물질을 전기장에 배치하면,</p>
+<ol type="1">
+<li>중성 원자(또는 비극성 분자)로 구성되었을 경우 전기장이 각 원자(분자)에 작은 쌍극자 모멘트를 유도하거나</li>
+<li>물질이 극성 분자로 이루어져 있다면, 영구 쌍극자에 의한 토크로 인해 그 쌍극자 모멘트가 전기장 방향으로 정렬되는 경향이 생간다.이 과정에서 무작위적인 열운동과 경쟁하므로 정렬은 완전하지 않다.</li>
+</ol>
+<p>어쨌든 두가지 경우 모두 대량의 쌍극자 모멘트가 발생하며 이 때 단위 부피당 쌍극자 모멘트를 <strong>편극 (polarizaiotn)</strong> 이라고 하고 <span class="math inline">\(\boldsymbol{P}\)</span> 로 표기한다.</p>
+<p>우리는 쌍극자에 의한 정전포텐셜이</p>
+<p><span class="math display">\[
+\Phi(\boldsymbol{r})= \dfrac{1}{4\pi\epsilon_0}\dfrac{\boldsymbol{p\cdot}(\boldsymbol{r}-\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3}
+\]</span></p>
+<p>임을 안다. 그렇다면 우리가 위치마다의 편극 벡터 <span class="math inline">\(\boldsymbol{P}(\boldsymbol{r}')\)</span> 을 안다면 이 유전물질에 의한 정전포텐셜은</p>
+<p><span id="eq-ED_ES_electrostatic_potential_by_polarizaiton"><span class="math display">\[
+\Phi (\boldsymbol{r})= \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\boldsymbol{P}(\boldsymbol{r}')\boldsymbol{\cdot} (\boldsymbol{r}-\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3}d^3\boldsymbol{r}'
+\tag{13.40}\]</span></span></p>
+<p>이다. 유전물질이 차지한 부피 <span class="math inline">\(V\)</span> 와 그 표면 <span class="math inline">\(S=\partial V\)</span> 를 생각하자. 항등식</p>
+<p><span class="math display">\[
+\nabla' \left(\dfrac{1}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\right) = \dfrac{\boldsymbol{r}-\boldsymbol{r}'}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3}
+\]</span></p>
+<p>로부터 아래와 같이 전개 할 수 있다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\Phi (\boldsymbol{r}) &amp;= \dfrac{1}{4\pi\epsilon_0} \int_V \boldsymbol{P}(\boldsymbol{r}')\boldsymbol{\cdot}\nabla'\left(\dfrac{1}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\right)\,d^3\boldsymbol{r} \\[0.3em]
+&amp;= \dfrac{1}{4\pi\epsilon_0} \left[\int_V \nabla'\boldsymbol{\cdot}\left(\dfrac{\boldsymbol{P(\boldsymbol{r}')}}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\right)\,d^3\boldsymbol{r} - \int_V \dfrac{\nabla' \boldsymbol{\cdot P}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|} \,d^3\boldsymbol{r} \right] \\[0.3em]
+&amp;= \dfrac{1}{4\pi\epsilon_0}\int_S \dfrac{\boldsymbol{P\cdot}\hat{\boldsymbol{n}}}{\|\boldsymbol{r}-\boldsymbol{r}'\|}da  + \dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\left(-\nabla\boldsymbol{\cdot P}\right)}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\,d^3\boldsymbol{r}.
+\end{aligned}
+\]</span></p>
+<p>이로부터 유전물질에서의 쌍극자에 의한 표면전하밀도 <span class="math inline">\(\sigma_b\)</span> 와 부피 전하 밀도 <span class="math inline">\(\rho_b\)</span> 를 다음과 같이 정의 할 수 있다.</p>
+<p><span id="eq-ED_ES_bounded_charged_density"><span class="math display">\[
+\boxed{\sigma_b = \boldsymbol{P \cdot}\hat{\boldsymbol{n}}},\qquad \boxed{\rho_b= - \nabla \boldsymbol{\cdot P}}.
+\tag{13.41}\]</span></span></p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-ED_ES_potential_by_uniformly_polarized_sphere" class="theorem example">
+<p><span class="theorem-title"><strong>예제 13.5 (균일하게 편극된 구에 의한 정전포텐셜과 전기장)</strong></span> 아래 그림과 같이 균일하게 편극된 구에 의한 정전포텐셜과 전기장을 구해보자.</p>
+<div id="fig-ED_ES_uniformly_polarized_sphere" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ED_ES_uniformly_polarized_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/electrostatics/uniformly_polarized_sphere/uniformly_polarized_sphere.png" class="img-fluid figure-img" width="150">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_uniformly_polarized_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;13.10: 균일한 <span class="math inline">\(z\)</span> 방향으로의 편극
+</figcaption>
+</figure>
+</div>
+<p>우선 편극이 균일하므로 <a href="#eq-ED_ES_bounded_charged_density" class="quarto-xref">식&nbsp;<span>13.41</span></a> 에 대해</p>
+<p><span class="math display">\[
+\sigma_b = P\cos\theta,\qquad \rho_b = 0
+\]</span></p>
+<p>이다. 이제 <span class="math inline">\(r&lt;R\)</span> 인 경우와 <span class="math inline">\(r&gt;R\)</span> 인 경우로 나눠 보자. <a href="A1_mathematics.html#eq-ED_MT_spherical_haromics_expansion_of_inverse_vector_difference" class="quarto-xref">식&nbsp;<span>17.19</span></a> 를 사용한다.</p>
+<p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(r&lt;R\)</span> 인 경우</p>
+<p><span class="math display">\[
+\begin{aligned}
+\Phi_{\text{in}}(\boldsymbol{r}) &amp;= \dfrac{1}{4\pi\epsilon_0}\sum_{l=0}^\infty \sum_{m=-l}^{l}\dfrac{4\pi}{2l+1}\dfrac{r^l}{R^{l-1}}\int P\cos\theta' {Y_l^m}^\ast (\theta',\,\varphi')Y_l^m(\theta,\,\varphi) d\Omega'  \\[0.3em]
+&amp;= \dfrac{P}{\epsilon_0}\sum_{l=0}^\infty\sum_{m=-l}^{l}\dfrac{1}{2l+1}\dfrac{r^n}{R^{n-1}}Y_l^m (\theta,\,\varphi) \int \cos\theta' {Y_l^m}^\ast (\theta',\,\varphi') d\Omega' \\[0.3em]
+&amp;=\dfrac{P}{\epsilon_0}\sum_{l=0}^\infty\sum_{m=-l}^{l}\dfrac{1}{2l+1}\dfrac{r^l}{R^{l-1}}Y_l^m (\theta,\,\varphi) \sqrt{\dfrac{4\pi}{3}}\underbrace{\int Y_1^0(\theta',\,\varphi') {Y_l^m}^\ast (\theta',\,\varphi') d\Omega' }_{=\delta_{l1}\delta_{m0}}\\[0.3em]
+&amp;=\dfrac{Pr}{\epsilon_0}\sqrt{\dfrac{4\pi}{3}} \dfrac{1}{3} Y_1^0 (\theta,\,\varphi) = \dfrac{Pr\cos\theta}{3\epsilon_0}.
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\Phi_\text{in}= \dfrac{Pz}{3\epsilon_0}\)</span> 이므로</p>
+<p><span class="math display">\[
+\boldsymbol{E}_\text{in} = - \nabla \Phi_\text{in}= - \dfrac{\boldsymbol{P}}{3\epsilon_0}
+\]</span></p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(r&gt;R\)</span> 인 경우 같은방법으로 구할 수 있다.</p>
+<p><span class="math display">\[
+\Phi_\text{out}= \dfrac{PR^3\cos\theta}{3\epsilon_0 r^2}.
+\]</span></p>
+</div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
