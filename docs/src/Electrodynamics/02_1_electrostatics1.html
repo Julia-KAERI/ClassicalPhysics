@@ -1341,15 +1341,19 @@ U = -pE\cos \theta = -\boldsymbol{p\cdot E}
 <p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(r&lt;R\)</span> 인 경우</p>
 <p><span class="math display">\[
 \begin{aligned}
-\Phi(\boldsymbol{r}) &amp;= \dfrac{1}{4\pi\epsilon_0}\sum_{l=0}^\infty \sum_{m=-l}^{l}\dfrac{4\pi}{2l+1}\dfrac{r^n}{R^{n-1}}\oint_S P\cos\theta' {Y_l^m}^\ast (\theta',\,\varphi')Y_l^m(\theta,\,\varphi) d\Omega'  \\[0.3em]
-&amp;= \dfrac{P}{\epsilon_0}\sum_{l=0}^\infty\sum_{m=-l}^{l}\dfrac{4\pi}{2l+1}\dfrac{r^n}{R^{n-1}}Y_l^m (\theta,\,\varphi) \oㄴint_S \cos\theta' {Y_l^m}^\ast (\theta',\,\varphi') d\Omega' \\[0.3em]
-&amp;=\dfrac{P}{\epsilon_0}\sum_{l=0}^\infty\sum_{m=-l}^{l}\dfrac{4\pi}{2l+1}\dfrac{r^n}{R^{n-1}}Y_l^m (\theta,\,\varphi) \sqrt{\dfrac{4\pi}{3}}\underbrace{\oint_S Y_1^0(\theta',\,\varphi') {Y_l^m}^\ast (\theta',\,\varphi') d\Omega' }_{=\delta_{l1}\delta_{m0}}\\[0.3em]
-&amp;=\dfrac{P}{3\epsilon_0}\sqrt{\dfrac{4\pi}{3}} \dfrac{4\pi}{3} Y_0^0 (\theta,\,\varphi)
+\Phi_{\text{in}}(\boldsymbol{r}) &amp;= \dfrac{1}{4\pi\epsilon_0}\sum_{l=0}^\infty \sum_{m=-l}^{l}\dfrac{4\pi}{2l+1}\dfrac{r^l}{R^{l-1}}\int P\cos\theta' {Y_l^m}^\ast (\theta',\,\varphi')Y_l^m(\theta,\,\varphi) d\Omega'  \\[0.3em]
+&amp;= \dfrac{P}{\epsilon_0}\sum_{l=0}^\infty\sum_{m=-l}^{l}\dfrac{1}{2l+1}\dfrac{r^n}{R^{n-1}}Y_l^m (\theta,\,\varphi) \int \cos\theta' {Y_l^m}^\ast (\theta',\,\varphi') d\Omega' \\[0.3em]
+&amp;=\dfrac{P}{\epsilon_0}\sum_{l=0}^\infty\sum_{m=-l}^{l}\dfrac{1}{2l+1}\dfrac{r^l}{R^{l-1}}Y_l^m (\theta,\,\varphi) \sqrt{\dfrac{4\pi}{3}}\underbrace{\int Y_1^0(\theta',\,\varphi') {Y_l^m}^\ast (\theta',\,\varphi') d\Omega' }_{=\delta_{l1}\delta_{m0}}\\[0.3em]
+&amp;=\dfrac{Pr}{\epsilon_0}\sqrt{\dfrac{4\pi}{3}} \dfrac{1}{3} Y_1^0 (\theta,\,\varphi) = \dfrac{Pr\cos\theta}{3\epsilon_0}.
 \end{aligned}
 \]</span></p>
-<p>이며 <a href="A1_mathematics.html#eq-ED_MT_orthogonality_of_legendre_polynomial" class="quarto-xref">식&nbsp;<span>17.5</span></a> 에 의해 <span class="math inline">\(n=1\)</span> 경우만 적분이 사라지지 않으므로</p>
+<p><span class="math inline">\(\Phi_\text{in}= \dfrac{Pz}{3\epsilon_0}\)</span> 이므로</p>
 <p><span class="math display">\[
-\Phi (\boldsymbol{r})= \dfrac{P}{3\pi\epsilon_0}
+\boldsymbol{E}_\text{in} = - \nabla \Phi_\text{in}= - \dfrac{\boldsymbol{P}}{3\epsilon_0}
+\]</span></p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(r&gt;R\)</span> 인 경우 같은방법으로 구할 수 있다.</p>
+<p><span class="math display">\[
+\Phi_\text{out}= \dfrac{PR^3\cos\theta}{3\epsilon_0 r^2}.
 \]</span></p>
 </div>
 </div>
