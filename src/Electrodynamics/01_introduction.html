@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; 작은 진동 – 고전물리학</title>
+<title>12&nbsp; 들어가며 – 고전물리학</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/ClassicalMechanics/A_proofs.html" rel="next">
-<link href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" rel="prev">
+<link href="../../src/Electrodynamics/02_1_electrostatics1.html" rel="next">
+<link href="../../src/Electrodynamics/00_index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -114,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/13_small_oscillations.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">작은 진동</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electrodynamics/00_index.html">전기자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electrodynamics/01_introduction.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">들어가며</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -126,8 +126,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/13_small_oscillations.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">작은 진동</span></a></li></ol></nav>
-      <h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">작은 진동</span></h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electrodynamics/00_index.html">전기자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electrodynamics/01_introduction.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">들어가며</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">들어가며</span></h1>
                       </div>
   </div>
     
@@ -208,7 +208,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
   </div>
 </li>
@@ -260,7 +260,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
   </div>
 </li>
@@ -387,17 +387,15 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#차원-조화진동자-review" id="toc-차원-조화진동자-review" class="nav-link active" data-scroll-target="#차원-조화진동자-review"><span class="header-section-number">7.1</span> 1차원 조화진동자 Review</a>
+  <li><a href="#전하와-전류" id="toc-전하와-전류" class="nav-link active" data-scroll-target="#전하와-전류"><span class="header-section-number">12.1</span> 전하와 전류</a>
   <ul class="collapse">
-  <li><a href="#sec-CM_lagrangian_description_of_1d_sho" id="toc-sec-CM_lagrangian_description_of_1d_sho" class="nav-link" data-scroll-target="#sec-CM_lagrangian_description_of_1d_sho"><span class="header-section-number">7.1.1</span> 1차원 단순조화진동자의 라그랑지안 기술</a></li>
-  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
+  <li><a href="#sec-ED_charge_and_current" id="toc-sec-ED_charge_and_current" class="nav-link" data-scroll-target="#sec-ED_charge_and_current"><span class="header-section-number">12.1.1</span> 전하와 전류</a></li>
+  <li><a href="#sec-ED_charge_conservartion_law" id="toc-sec-ED_charge_conservartion_law" class="nav-link" data-scroll-target="#sec-ED_charge_conservartion_law"><span class="header-section-number">12.1.2</span> 전하 보존 법칙</a></li>
   </ul></li>
-  <li><a href="#강제-진동" id="toc-강제-진동" class="nav-link" data-scroll-target="#강제-진동"><span class="header-section-number">7.2</span> 강제 진동</a>
+  <li><a href="#힘과-장" id="toc-힘과-장" class="nav-link" data-scroll-target="#힘과-장"><span class="header-section-number">12.2</span> 힘과 장</a>
   <ul class="collapse">
-  <li><a href="#sec-CM_forced_osillation_without_damping" id="toc-sec-CM_forced_osillation_without_damping" class="nav-link" data-scroll-target="#sec-CM_forced_osillation_without_damping"><span class="header-section-number">7.2.1</span> 감쇠 없는 강제 진동</a></li>
-  <li><a href="#sec-CM_forced_oscillation_near_resonance" id="toc-sec-CM_forced_oscillation_near_resonance" class="nav-link" data-scroll-target="#sec-CM_forced_oscillation_near_resonance"><span class="header-section-number">7.2.2</span> 공명 근처에서</a></li>
-  <li><a href="#복소수-영역에서의-미분방정식의-처리" id="toc-복소수-영역에서의-미분방정식의-처리" class="nav-link" data-scroll-target="#복소수-영역에서의-미분방정식의-처리"><span class="header-section-number">7.2.3</span> 복소수 영역에서의 미분방정식의 처리</a></li>
-  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
+  <li><a href="#sec-ED_force_and_field" id="toc-sec-ED_force_and_field" class="nav-link" data-scroll-target="#sec-ED_force_and_field"><span class="header-section-number">12.2.1</span> 전기장, 자기장과 로런츠 힘</a></li>
+  <li><a href="#sec-ED_maxwell_equation" id="toc-sec-ED_maxwell_equation" class="nav-link" data-scroll-target="#sec-ED_maxwell_equation"><span class="header-section-number">12.2.2</span> 맥스웰 방정식</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -417,264 +415,74 @@ window.Quarto = {
 \DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
 </div>
-<p><br></p>
-<p>많은 경우 일반화된 변수 <span class="math inline">\(q\)</span> 의 움직임이 작을 경우 진동(osciilation) 으로 기술된다. 여기서는 우선 앞서 다루었던 진동을 다시 다루며, 특히 특정한 상황에 대해서는 변수의 폭이 매우 작아 근사(approximation) 를 이용하여 진동으로 다룰 수 있는 경우를 생각하기로 한다.</p>
-<p><br></p>
-<section id="차원-조화진동자-review" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="차원-조화진동자-review"><span class="header-section-number">7.1</span> 1차원 조화진동자 Review</h2>
-<section id="sec-CM_lagrangian_description_of_1d_sho" class="level3" data-number="7.1.1">
-<h3 data-number="7.1.1" class="anchored" data-anchor-id="sec-CM_lagrangian_description_of_1d_sho"><span class="header-section-number">7.1.1</span> 1차원 단순조화진동자의 라그랑지안 기술</h3>
-<p><a href="../../src/ClassicalMechanics/11_one_body_problems.html#차원-조화진동자">1차원 조화진동자</a> 의 단순조화진동자를 라그랑지한 형태는 아래와 같다.</p>
+<section id="전하와-전류" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="전하와-전류"><span class="header-section-number">12.1</span> 전하와 전류</h2>
+<section id="sec-ED_charge_and_current" class="level3" data-number="12.1.1">
+<h3 data-number="12.1.1" class="anchored" data-anchor-id="sec-ED_charge_and_current"><span class="header-section-number">12.1.1</span> 전하와 전류</h3>
+<p>근본적으로는 전하는 양자화 되어 있으며, 여기서 사용하는 SI 단위계에서는 쿨롱(Coulomb, <span class="math inline">\(C\)</span>) 단위를 사용한다. 기본 전자 단위로는 전자의 전하량 <span class="math inline">\(-e\)</span> 을 사용하며</p>
 <p><span class="math display">\[
-L = \dfrac{m\dot{x}^2}{2} - \dfrac{kx^2}{2} = \dfrac{m\dot{x}^2}{2} - \dfrac{m\omega_0^2x^2}{2},\qquad \omega_0 = \sqrt{\dfrac{k}{m}}.
+e = 1.60217657 \times 10^{−19} C
 \]</span></p>
-<p>역학적 시스템이 안정평형상태일 때는 시스템의 전체 포텐셜 에너지가 최소인 상태이다. 1차원 시스템에서 포텐셜 에너지 <span class="math inline">\(U(q)\)</span> 를 생각하고 최소인 위치는 <span class="math inline">\(q=q_0\)</span> 일 때 라고 하자. 이 평형상태에서 작게 벗어난다면 포텐셜 에너지는 아래와 같이 근사시킬 수 있다.</p>
-<p><span class="math display">\[
-U(q) \approx U(q_0) + \dfrac{1}{2}\left.\dfrac{d^2U}{dq^2}\right|_{q=q_0} (q-q_0)^2 .
-\]</span></p>
-<p>이 때</p>
-<p><span class="math display">\[
-\omega_0 = \sqrt{\dfrac{1}{m}\left.\dfrac{d^2U}{dq^2}\right|_{q=q_0} }
-\]</span></p>
-<p>이다. 일반적으로 라그랑지안이 어떤 일반화된 좌표 <span class="math inline">\(q\)</span> 에 대해</p>
-<p><span class="math display">\[
-L = \dfrac{a\dot{q}^2}{2} - \dfrac{bq^2}{2}
-\]</span></p>
-<p>라면 이 시스템은 각진동수 <span class="math inline">\(\omega = \sqrt{b}{a}\)</span> 인 단순조화진동 운동으로 기술할 수 있다.</p>
-</section>
-<section id="연습문제" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-CM_landau_21_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.1 (L&amp;L Mechanics 21.2)</strong></span> 서로 다른 두 동위원소들로 이루어진 이원자 분자를 생각하자. 하나는 질량이 <span class="math inline">\(m_1,\,m_2\)</span> 인 동위원소의 이원자 분자이고 다른 하나는 <span class="math inline">\(m_1',\,m_2'\)</span> 인 이원자 분자이다 (<span class="math inline">\(m_1\)</span> 과 <span class="math inline">\(m_1'\)</span> 이 동위원소이고 <span class="math inline">\(m_2\)</span> 와 <span class="math inline">\(m_2'\)</span> 이 동위원소이다.). 이 때 각각의 진동수 <span class="math inline">\(\omega,\,\omega'\)</span> 의 비율을 구하라.</p>
-</div>
-</div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>우선 <span class="math inline">\(m_1,\,m_2\)</span> 로 이루어진 이원자 분자의 라그랑지안 <span class="math display">\[
-L = \dfrac{m_1\dot{x}_1^2}{2} + \dfrac{m_2 \dot{x}_2^2}{2} - \dfrac{k}{2}(x_1-x_2)^2
-\]</span></p>
-<p>로 기술 될 수 있다. 여기서 질량중심 <span class="math inline">\(R\)</span> 과 상대적인 변화 <span class="math inline">\(x=x_1-x_2\)</span> 를 도입하면 환산질량 <span class="math inline">\(\mu = m_1m_2/(m_1+m_2)\)</span> 에 대해</p>
-<p><span class="math display">\[
-L = \dfrac{\mu\dot{x}^2}{2} + \dfrac{(m_1+m_2)\dot{R}^2}{2}+ \dfrac{k}{2}x^2
-\]</span></p>
-<p>이므로 진동수 <span class="math inline">\(\omega_0 = \sqrt{k/\mu}=\sqrt{k(m_1+m_2)/(m_1m_2)}\)</span> 이다. 동위원소간에 화학적 성질이 일정하다고 가정하면 <span class="math inline">\(m_1',\,m_2'\)</span> 으로 이루어진 분자에서도 같은 용수철 상수 값을 가진다고 볼 수 있다. 따라서</p>
-<p><span class="math display">\[
-\dfrac{\omega_0}{\omega_0'} = \sqrt{\dfrac{(m_1+m_2)}{(m_1'+m_2')}\dfrac{(m_1' m_2')}{(m_1 m_2)}}
-\]</span>.</p>
-</div>
-<br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-CM_landau_21_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.2 (L&amp;L Mechanics 21.3)</strong></span> 아래 그림과 같이 한쪽 끝이 <span class="math inline">\(A\)</span> 에 고정되었으며 직선상에서 움직이는 단순조화진동자의 진동수를 구하라. <span class="math inline">\(A\)</span> 와 직선의 거리는 <span class="math inline">\(l\)</span> 이며 용수철을 <span class="math inline">\(l\)</span> 만큼 늘이는 데는 힘 <span class="math inline">\(F\)</span> 가 필요하다.</p>
-<div id="fig-CM_exr_landau_21_3" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-CM_exr_landau_21_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/landau_pr_21_3/landau_pr_21_3.png" class="img-fluid figure-img" width="200">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_exr_landau_21_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;7.1: 그림
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(|x|\ll l\)</span> 조건에서 <span class="math inline">\(\delta l = \sqrt{l^2+x^2}-l = \dfrac{x^2}{2l}\)</span> 이다. 용수철에 의한 포텐셜 에너지 <span class="math inline">\(U = F\delta x = \dfrac{Fx^2}{2l}\)</span> 이므로 각진동수 <span class="math inline">\(\omega = \sqrt{F/ml}\)</span>.</p>
-</div>
-<br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-CM_landau_21_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.3 (L&amp;L Mechanics 21.4)</strong></span> 질량 <span class="math inline">\(m\)</span> 인 입자가 반지름 <span class="math inline">\(r\)</span> 이니 원주에서 움직이는것을 제외하면 <a href="#exr-CM_landau_21_4" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-CM_landau_21_4</span></a> 과 같은 문제이다 진동수를 구하라.</p>
-<div id="fig-CM_exr_landau_21_4" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-CM_exr_landau_21_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/landau_pr_21_4/landau_pr_21_4.png" class="img-fluid figure-img" width="200">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_exr_landau_21_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;7.2: 그림
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(|\phi| \ll 1\)</span> 이라는 조건에서 구한다. <span class="math inline">\(\cos \phi \approx 1-\phi^2/2\)</span> 임을 생각하자.</p>
-<p><span class="math display">\[
-\begin{aligned}
-\delta l &amp;= \sqrt{r^2 \sin^2\phi + (l+r(1-\cos \phi))^2} -l \\[0.3em]
-&amp;= \sqrt{(l+r)^2+r^2 -2r(l+r)\cos \phi}-l \\[0.3em]
-&amp;\approx \sqrt{l^2 + r(l+r)\phi^2} -l = \dfrac{r(l+r)\phi^2}{2}
-\end{aligned}
-\]</span></p>
-<p>이며 <span class="math inline">\(U=F\delta l = Fr(l+r) \phi^2/2\)</span> 이다. 운동에너지 <span class="math inline">\(T=mr^2\dot{\phi}^2/2\)</span> 이므로 <span class="math inline">\(\omega = \sqrt{F(r+l)/mrl}\)</span> 이다.</p>
-</div>
-<br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-CM_landau_21_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.4 (L&amp;L Mechanics 21.6)</strong></span> <a href="#exr-landau_cm_5_2" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-landau_cm_5_2</span></a> 에서의 각진동수를 구하라.</p>
-</div>
-</div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#exr-landau_cm_14_3" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-landau_cm_14_3</span></a> 역시 생각한다. 라그랑지안 <span class="math inline">\(L\)</span> 은 <span class="math inline">\(|\phi|\ll 1\)</span> 조건에서</p>
-<p><span class="math display">\[
-\begin{aligned}
-L &amp;= \dfrac{m_2l^2\dot{\phi}^2}{2}\left[1- \dfrac{m_2 \cos^2\phi}{m_1+m_2}\right] + m_2gl\cos \phi \\[0.3em]
-&amp;\approx \dfrac{m_1m_2l^2 \dot{\phi}^2}{2(m_1+m_2)} + mgl - \dfrac{m_2gl\phi^2}{2}
-\end{aligned}
-\]</span></p>
-<p>이므로 각진동수 <span class="math inline">\(\omega\)</span> 는 다음과 같다.</p>
-<p><span class="math display">\[
-\omega = \sqrt{\dfrac{g(m_1+m_2)}{m_1l}}.
-\]</span></p>
-</div>
-<br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-CM_landau_21_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.5 (L&amp;L Mechanics 21.6)</strong></span> Determine the form of a curve such that the frequency of oscillations of a particle on it under the force of gravity is independent of the amplitude.</p>
-</div>
-</div>
+<p>이다. 점입자가 아닌 전하 분포를 사용할 경우는 전하 밀도, 즉 단위 부피당 전하량를 사용하며 <span class="math inline">\(\rho(\boldsymbol{x},\,t)\)</span> 라고 표기한다. 공간 <span class="math inline">\(V\)</span> 를 점유하는 총 전하량 <span class="math inline">\(Q=\int_V \rho (\boldsymbol{x},\,t) d^3\boldsymbol{x}\)</span> 이다. 때때로 점전하를 표현할 경우 디랙 델타 함수를 사용하여 <span class="math inline">\(\rho = q \delta(\boldsymbol{x}-\boldsymbol{r}(t))\)</span> 와 같이 쓴다.</p>
+<p>많은 경우 전하는 움직이며 이것을 수학적으로 표현해야 한다. 특정 위치 <span class="math inline">\(\boldsymbol{x}\)</span>, 시간 <span class="math inline">\(t\)</span> 에서의 전하 밀도가 <span class="math inline">\(\rho\)</span> 이고 이 전하가 <span class="math inline">\(\boldsymbol{v}\)</span> 의 속도로 움직일 때 <strong>전류 밀도 (current density)</strong> <span class="math inline">\(\boldsymbol{J}\)</span> 는 아래와 같이 정의된다.</p>
+<p><span id="eq-ED_definition_of_current_density"><span class="math display">\[
+\boldsymbol{J} := \rho \boldsymbol{v}.
+\tag{12.1}\]</span></span></p>
+<p>전하의 경우와 마찬가지로 점전하가 속도 <span class="math inline">\(\boldsymbol{v}\)</span> 로 움직일 경우 전류밀도는 <span class="math inline">\(\boldsymbol{J} = \rho\,\delta(\boldsymbol{x}-\boldsymbol{r}(t))\boldsymbol{v}\)</span> 이다.</p>
+<p>많은 경우 특정 표면 <span class="math inline">\(S\)</span> 에 대해 이 표면을 통과하는 전하의 흐름이 중요하다. 이 값을 <strong>전류 (electric current)</strong> 라고 하며 관례적으로 <span class="math inline">\(I\)</span> 로 표기하고 아래와 같이 정의된다.</p>
+<p><span id="eq-ED_definition_of_electric_current"><span class="math display">\[
+I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
+\tag{12.2}\]</span></span></p>
+<p><span class="math inline">\(q\)</span> 의 전하를 가진 입자가 <span class="math inline">\(S\)</span> 의 표면을 단위면적당 <span class="math inline">\(n\)</span> 개가 <span class="math inline">\(\boldsymbol{v}\)</span> 의 속도로 통과한다고 하자. 그렇다면 <span class="math inline">\(\boldsymbol{J}=nq\boldsymbol{v}\)</span> 이고 <span class="math inline">\(I = nqvS\)</span> 이다.</p>
 <p><br></p>
 </section>
+<section id="sec-ED_charge_conservartion_law" class="level3" data-number="12.1.2">
+<h3 data-number="12.1.2" class="anchored" data-anchor-id="sec-ED_charge_conservartion_law"><span class="header-section-number">12.1.2</span> 전하 보존 법칙</h3>
+<p><span id="eq-ED_charge_conservation_law"><span class="math display">\[
+\dfrac{\partial \rho}{\partial t} + \nabla \boldsymbol{\cdot J} = 0.
+\tag{12.3}\]</span></span></p>
+<p></p>
 </section>
-<section id="강제-진동" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="강제-진동"><span class="header-section-number">7.2</span> 강제 진동</h2>
-<section id="sec-CM_forced_osillation_without_damping" class="level3" data-number="7.2.1">
-<h3 data-number="7.2.1" class="anchored" data-anchor-id="sec-CM_forced_osillation_without_damping"><span class="header-section-number">7.2.1</span> 감쇠 없는 강제 진동</h3>
-<p>앞서 다루었듯이 외력이 작용하는 경우를 강제 진동이라고 한다. 이런 시스템은 <span class="math inline">\(kx^2/2\)</span> 형태의 포텐설 에너지 이외에 추가적인 포텐셜 에너지 <span class="math inline">\(U_e(x,\,t)\)</span> 도 고려해야 한다. <span class="math inline">\(|x|\)</span> 가 매우 작을 때 <span class="math inline">\(U_e\)</span> 는 아래와 같이 근사 될 수 있다.</p>
-<p><span class="math display">\[
-U_e(x,\,t) \approx U_e(0,\,t) + \left.\dfrac{\partial U_e(x,\,t)}{\partial x}\right|_{x=0}x.
-\]</span></p>
-<p>첫번째항은 시간에만 의존하는 항인데 이 경우 어떤 함수의 시간에 대한 전미분 형태가 될 수 있으므로 라그랑지안에서 제외 할 수 있다. 두번째항의 경우 평형 위치에서 작용하는 힘이므로 <span class="math inline">\(-F(t)x\)</span> 로 쓸 수 있다. 즉 이 시스템의 라그랑지안은 아래와 같이 쓸 수 있다.</p>
-<p><span class="math display">\[
-L = \dfrac{1}{2}m\dot{x}^2 - \dfrac{1}{2}kx^2 + xF(t).
-\]</span></p>
-<p>또한 운동방정식은 <span class="math inline">\(\omega_0 = \sqrt{k/m}\)</span> 에 대해 다음과 같다.</p>
-<p><span id="eq-CM_LL_forced_sho_eom"><span class="math display">\[
-\ddot{x} + {\omega_0}^2x = \dfrac{F(t)}{m}
-\tag{7.1}\]</span></span></p>
-<p><a href="#sec-CM_forced_dsho"><span class="quarto-xref"><span class="quarto-unresolved-ref">sec-CM_forced_dsho</span></span> 강제 조화 진동자</a> 에서 보았듯이 위 미분방정식의 해는 동차미분방정식의 해인 일반해와 비동차 방정식의 해인 특수해의 합이다.</p>
-<p><span class="math inline">\(F=\overline{f}_0 e^{i\omega t}\)</span> 라고 놓고 복소수 영역에서 위 방정식의 일반해를 구하면 (<a href="#sec-CM_forced_dsho" class="quarto-xref"><span class="quarto-unresolved-ref">sec-CM_forced_dsho</span></a> 에서 <span class="math inline">\(\beta=0\)</span> 일 때)</p>
-<p><span id="eq-CM_LL_complex_solution_of_forced_sho"><span class="math display">\[
-\overline{x}(t) = \overline{a} e^{i\omega_0 t} + \dfrac{\overline{f}_0}{m(\omega_0^2-\omega^2)}e^{i\omega t}
-\tag{7.2}\]</span></span></p>
-<p>이며 이를 실수에서 표현하면</p>
-<p><span id="eq-CM_LL_real_solution_of_forced_sho"><span class="math display">\[
-x (t) = a\cos (\omega_0 t + \theta_0) + \dfrac{f_0\cos (\omega t + \phi_0)}{m (\omega_0^2 - \omega^2)}
-\tag{7.3}\]</span></span></p>
-<p>이다.</p>
+</section>
+<section id="힘과-장" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="힘과-장"><span class="header-section-number">12.2</span> 힘과 장</h2>
+<section id="sec-ED_force_and_field" class="level3" data-number="12.2.1">
+<h3 data-number="12.2.1" class="anchored" data-anchor-id="sec-ED_force_and_field"><span class="header-section-number">12.2.1</span> 전기장, 자기장과 로런츠 힘</h3>
+<p>전기장 <span class="math inline">\(\boldsymbol{E}(\boldsymbol{x},\,t)\)</span> 와 자기장 <span class="math inline">\(\boldsymbol{B}(\boldsymbol{x},\,t)\)</span> 에 대해 <span class="math inline">\(\boldsymbol{r}(t)\)</span> 에 위치한 전하 <span class="math inline">\(q\)</span> 는 아래의 힘을 받으미 이 힘을 <strong>로런츠 힘(Lorentz force)</strong> 라고 한다.</p>
+<p><span id="eq-ED_lorentz_force"><span class="math display">\[
+\boldsymbol{F}=q(\boldsymbol{E} + \dot{\boldsymbol{r}}\times \boldsymbol{B}).
+\tag{12.4}\]</span></span></p>
+<p>이 로런츠 힘을 전하 분포 <span class="math inline">\(\rho\)</span> 와 전류 밀도 <span class="math inline">\(\boldsymbol{J}\)</span> 에 대해 아래와 같이 쓸 수 있다.</p>
+<p><span id="eq-ED_force_density"><span class="math display">\[
+\boldsymbol{f} = \rho \boldsymbol{E} + \boldsymbol{J}\times \boldsymbol{B}.
+\tag{12.5}\]</span></span></p>
+<p>여기서 <span class="math inline">\(\boldsymbol{f}\)</span> 는 <span class="math inline">\(\boldsymbol{x}\)</span> 에 위치한 작은 부피의 전하 <span class="math inline">\(\rho\)</span> 가 <span class="math inline">\(\rho(\boldsymbol{x},\,t)\)</span> 와 <span class="math inline">\(\boldsymbol{J}(\boldsymbol{x},\,t)\)</span> 에 의해 받는 단위 부피당 힘이다.</p>
 <p><br></p>
 </section>
-<section id="sec-CM_forced_oscillation_near_resonance" class="level3" data-number="7.2.2">
-<h3 data-number="7.2.2" class="anchored" data-anchor-id="sec-CM_forced_oscillation_near_resonance"><span class="header-section-number">7.2.2</span> 공명 근처에서</h3>
-<p>당연하게도 <span class="math inline">\(\omega \to \omega_0\)</span> 일 때 <span class="math inline">\(x\)</span> 의 진폭이 무한대로 증가하는 공명을 볼 수 있다. 이 식을 <span class="math inline">\(\omega \ne \omega_0\)</span> 에서 아래와 같이 고쳐보자.</p>
+<section id="sec-ED_maxwell_equation" class="level3" data-number="12.2.2">
+<h3 data-number="12.2.2" class="anchored" data-anchor-id="sec-ED_maxwell_equation"><span class="header-section-number">12.2.2</span> 맥스웰 방정식</h3>
+<p>로런츠 힘은 주어진 전기장과 자기장에 대해 전하 및 전하의 흐름에 의해 생성되는 힘을 표현한다. 전기장과 자기장은 어떻게 생성될지를 말하는 식이 멕스웰 방정식이다. 멕스웰 방정식은 아래의 네 식이다.</p>
+<p><span id="eq-ED_maxwell_eq_1"><span class="math display">\[
+\nabla \boldsymbol{\cdot E} = \dfrac{\rho}{\epsilon_0},
+\tag{12.6}\]</span></span></p>
+<p><span id="eq-ED_maxwell_eq_2"><span class="math display">\[
+\nabla \boldsymbol{\cdot B} = 0,
+\tag{12.7}\]</span></span></p>
+<p><span id="eq-ED_maxwell_eq_3"><span class="math display">\[
+\nabla \times \boldsymbol{E} + \dfrac{\partial \boldsymbol{B}}{\partial t} = 0,
+\tag{12.8}\]</span></span></p>
+<p><span id="eq-ED_maxwell_eq_4"><span class="math display">\[
+\nabla \times B - \mu_0\epsilon_0 \dfrac{\partial \boldsymbol{E}}{\partial t} = \mu_0 \boldsymbol{J}.
+\tag{12.9}\]</span></span></p>
+<p>여기서 <span class="math inline">\(\epsilon_0\)</span> 는 진공 유전율로</p>
 <p><span class="math display">\[
-x(t) = b \cos (\omega_0 t +\theta_0) + \dfrac{f_0 \left[\cos (\omega t + \phi_0) - \cos (\omega_0 t + \phi_0)\right]}{m(\omega_0^2 - \omega^2)}
+\epsilon_0 \approx 8.85 \times 10^{-12} \;\text{m}^{-3}\,\text{Kg}^{-1}\,\text{s}^2\,\text{C}^2
 \]</span></p>
-<p><span class="math inline">\(\omega \to \omega_0\)</span> 근사에서 두번째 항을 로피탈의 정리를 이용하면</p>
+<p>이며 <span class="math inline">\(\mu_0\)</span> 는 진공 자화율로</p>
 <p><span class="math display">\[
-x(t) = b \cos (\omega_0 t +\theta_0) + \dfrac{f_0t \sin(\omega t + \phi_0) }{2m\omega}
-\]</span></p>
-<p>이다. 즉 진폭은 공명 근처에서 선형적으로 증가한다.</p>
-<p>이제 공명 근처에서의 작은 진동에 대해 생각해보자. <span class="math inline">\(\omega = \omega_0 + \epsilon\)</span> 이라고 하면 복소수 영역에서 (<span class="math inline">\(\overline{x}\)</span> 를 그냥 <span class="math inline">\(x\)</span> 로 표기한다.)</p>
-<p><span class="math display">\[
-x= ae^{i\omega_0 t} + be^{i(\omega_0 + \epsilon)t} = (a+be^{i\epsilon t})e^{i\omega_0 t}
-\]</span></p>
-<p>이다. <span class="math inline">\(|\epsilon| \ll |\omega|\)</span> 이므로 <span class="math inline">\(x\)</span> <span class="math inline">\(ab+be^{i\epsilon t}\)</span> 는 <span class="math inline">\(e^{i\omega t}\)</span> 에 비해 훨씬 천천히 변한다. 이 때 진폭 <span class="math inline">\(C=|a+b^{i\epsilon t}|\)</span> 이며 이런 현상을 <strong>맥놀이 (beats)</strong> 라고 한다.</p>
-<div id="fig-CM_beats" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-CM_beats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/beats/beats.png" class="img-fluid figure-img" width="300">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_beats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;7.3: Beats
-</figcaption>
-</figure>
-</div>
-<p><br></p>
-</section>
-<section id="복소수-영역에서의-미분방정식의-처리" class="level3" data-number="7.2.3">
-<h3 data-number="7.2.3" class="anchored" data-anchor-id="복소수-영역에서의-미분방정식의-처리"><span class="header-section-number">7.2.3</span> 복소수 영역에서의 미분방정식의 처리</h3>
-<p><a href="#eq-CM_LL_forced_sho_eom" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_LL_forced_sho_eom</span></a> 은 <span class="math inline">\(\xi := \dot{x}+i\omega x\)</span> 에 대해서</p>
-<p><span id="eq-CM_LL_forced_sho_eom_complex_form"><span class="math display">\[
-\dfrac{d\xi}{dt} - i\omega_0 \xi = \dfrac{F(t)}{m}
-\tag{7.4}\]</span></span></p>
-<p>으로 쓸 수 있다. 상수 <span class="math inline">\(h\)</span> 에 대해 <span class="math inline">\(\xi = he^{i\omega_0 t}\)</span> 는 위 방정식의 제차 형태에 대한 일반해이며, 우리는 <span class="math inline">\(\xi = h(t) e^{i\omega_0 t}\)</span> 형태의 특수해가 존재하는지 확인해보자. <a href="#eq-CM_LL_forced_sho_eom_complex_form" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_LL_forced_sho_eom_complex_form</span></a> 에 대입하면</p>
-<p><span class="math display">\[
-\dot{h}e^{i\omega_0 t}  = \dfrac{F(t)}{m}
-\]</span></p>
-<p>이므로</p>
-<p><span class="math display">\[
-h(t) = \int^t \dfrac{F(t')e^{-i\omega_0 t'}}{m}\,dt'
-\]</span></p>
-<p>이므로 <span class="math inline">\(\xi(t)\)</span> 는 아래와 같다.</p>
-<p><span id="eq-CM_LL_forced_sho_eom_complex_form_solution_1"><span class="math display">\[
-\xi (t) = e^{i \omega t} \left[\int_0^t \dfrac{F(t')e^{-i\omega_0 t'}}{m}\,dt' + \xi_0\right].
-\tag{7.5}\]</span></span></p>
-<p>외력이 작용하기 때문에 에너지는 보존되지 않는다. 이제 모든 시간동안에 조화진동자에 전달되는 에너지를 구해보자. <a href="#eq-CM_LL_forced_sho_eom_complex_form_solution_1" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_LL_forced_sho_eom_complex_form_solution_1</span></a> 에서 적분상수 <span class="math inline">\(\xi_0\)</span> 를 없에고 적분 구간을 <span class="math inline">\((-\infty,\, \infty)\)</span> 로 잡으면</p>
-<p><span class="math display">\[
-|\xi_\infty|^2 = \dfrac{1}{m^2} \left|\int_{-\infty}^\infty F(t')e^{-i\omega_0 t'}\,dt'\right|^2
-\]</span></p>
-<p>이다. 또한</p>
-<p><span class="math display">\[
-E=\dfrac{m(\dot{x}^2)+ \omega_0^2x^2}{2} = \dfrac{m|\xi|^2}{2}
-\]</span></p>
-<p>이므로 전달된 에너지는</p>
-<p><span class="math display">\[
-E=\dfrac{1}{2m} \left|\int_{-\infty}^\infty F(t')e^{-i\omega_0 t'}\,dt'\right|^2
-\]</span></p>
-<p>이다. 즉 <span class="math inline">\(F(t)\)</span> 의 푸리에 변환의 절대갑 제곱에 비례한다. 여기서 특별히 힘이 <span class="math inline">\(1/\omega_0\)</span> 에 비해 아주 짧은 시간 동안만 작용했다면 <span class="math inline">\(e^{-i\omega_0 t}\)</span> 에 의한 변화는 무시 할 있으므로</p>
-<p><span class="math display">\[
-E = \dfrac{1}{2m} \left|\int_{-\infty}^\infty F(t')\,dt'\right|^2
+\mu_0 :=4\pi \times 10^{-7}\; \text{m}\,\text{Kg}\,\text{C}^{-2} \approx 1.25 \times 10^{-6} \; \text{m}\,\text{Kg}\,\text{C}^{-2}
 \]</span></p>
 <p>이다.</p>
-<p><br></p>
-</section>
-<section id="연습문제-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-CM_landau_22_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.6 (L&amp;L Mechanics 22.1)</strong></span> 초기조건dl <span class="math inline">\(x(t)=0,\, \dot{x}=0\)</span> 으로 주어졌다고 하자. 힘이 아래의 경우로 주어졌을 때 강제 조화 진동의 운동을 결정하라. (<span class="math inline">\(a\)</span>) <span class="math inline">\(F=F_0\)</span>, (<span class="math inline">\(b\)</span>) <span class="math inline">\(F=F_0t\)</span>, (<span class="math inline">\(c\)</span>) <span class="math inline">\(F=F_0 e^{-\alpha t}\)</span>, (<span class="math inline">\(d\)</span>) <span class="math inline">\(F=F_0 e^{-\alpha t}\cos \beta t\)</span>.</p>
-</div>
-</div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-CM_LL_real_solution_of_forced_sho" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_LL_real_solution_of_forced_sho</span></a> 을 이용한다.</p>
-<p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(x (t) = a\cos (\omega_0 t + \theta_0) + \dfrac{F_0 }{m \omega_0^2}\)</span> 이며 초기조건으로부터 <span class="math inline">\(a\cos \theta_0 + \dfrac{F_0 }{m\omega_0^2} =0\)</span>, <span class="math inline">\(-a\omega_0 \sin \theta_0 = 0\)</span> 이므로 <span class="math inline">\(\theta_0 = 0\)</span>, <span class="math inline">\(a = - \dfrac{F_0\phi_0}{m\omega_0^2}\)</span> 이다. 즉</p>
-<p><span class="math display">\[
-x(t) = \dfrac{F_0}{m\omega_0^2}(1-\cos \omega_0 t).
-\]</span></p>
-<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(x (t) = a\cos (\omega_0 t + \theta_0) + \dfrac{F_0t }{m \omega_0^2}\)</span> 이며 초기조건으로부터 <span class="math inline">\(a\cos (\theta_0) = 0\)</span>, <span class="math inline">\(-a\omega_0 \sin\theta_0 + F_0/(m\omega_0^2)=0\)</span> 이다. <span class="math inline">\(\theta_0 = \pi/2\)</span>, <span class="math inline">\(a=F_0/(m\omega_0^3)\)</span> 이므로</p>
-<p><span class="math display">\[
-x(t) = \dfrac{F_0}{m\omega_0^3}\left[\omega_0 t-\sin \omega_0 t\right]
-\]</span></p>
-<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(x\)</span> 는 일반해 <span class="math inline">\(x_h = a \cos (\omega_0 t + \theta_0)\)</span> 와 특수해 <span class="math inline">\(x_p\)</span> 의 합이다. <span class="math inline">\(F=F_0 e^{-\alpha t}\)</span> 로부터 <span class="math inline">\(x_p = be^{-\alpha t}\)</span> 로 놓고 <span class="math inline">\(b\)</span> 를 구하면</p>
-<p><span class="math display">\[
-(\alpha^2+\omega_0^2) b = \dfrac{F_0}{m}
-\]</span></p>
-<p>이므로</p>
-<p><span class="math display">\[
-x_p = \dfrac{F_0}{m(\omega_0^2+\alpha^2)}e^{-\alpha t}
-\]</span></p>
-<p>임을 안다.</p>
-<p><span class="math display">\[
-x(t) = a\cos (\omega_0 t +\theta_0) + \dfrac{F_0}{m(\omega_0^2 + \alpha^2)}e^{-\alpha t}
-\]</span></p>
-<p>의 초기조건 <span class="math inline">\(x(0) =0,\, \dot{x}(0) = 0\)</span> 으로부터</p>
-<p><span class="math display">\[
-\begin{gather}
-a \cos \theta_0 + \dfrac{F_0}{m(\omega_0^2 +\alpha^2)} =0, \\[0.3em]
-\omega_0 a \sin \theta_0 + \dfrac{\alpha F_0}{m (\omega_0^2 + \alpha^2)} = 0,
-\end{gather}
-\]</span></p>
-<p>이며 이로부터</p>
-<p><span class="math display">\[
-a= \dfrac{F_0}{m\omega_0 \sqrt{\omega_0^2 + \alpha^2}}
-\]</span></p>
-<p>암을 안다. 이를 정리하면 다음과 같다.</p>
-<p><span class="math display">\[
-x(t) = \dfrac{F_0}{m \omega_0 (\omega_0^2+\alpha^2)}\left[e^{-\alpha t} - \cos \omega_0 t + \left(\dfrac{\alpha}{\omega} \right)\sin \omega_0 t\right]
-\]</span></p>
-<p>(<span class="math inline">\(d\)</span>)</p>
-</div>
 
 
 </section>
@@ -1083,13 +891,13 @@ x(t) = \dfrac{F_0}{m \omega_0 (\omega_0^2+\alpha^2)}\left[e^{-\alpha t} - \cos \
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="pagination-link" aria-label="고전역학의 다체 문제 - 충돌과 산란">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span>
+      <a href="../../src/Electrodynamics/00_index.html" class="pagination-link" aria-label="전기자기학">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">전기자기학</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/ClassicalMechanics/A_proofs.html" class="pagination-link" aria-label="증명들">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">증명들</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/Electrodynamics/02_1_electrostatics1.html" class="pagination-link" aria-label="정전기 I">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">정전기 I</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
