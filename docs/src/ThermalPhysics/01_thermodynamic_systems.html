@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-221f8d40ef94b7d7736ec4c1e420c32a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -387,7 +390,7 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#계의-상태와-변환" id="toc-계의-상태와-변환" class="nav-link active" data-scroll-target="#계의-상태와-변환"><span class="header-section-number">21.1</span> 계의 상태와 변환</a>
+  <li><a href="#sec-TD_state_and_transform_of_system" id="toc-sec-TD_state_and_transform_of_system" class="nav-link active" data-scroll-target="#sec-TD_state_and_transform_of_system"><span class="header-section-number">21.1</span> 계의 상태와 변환</a>
   <ul class="collapse">
   <li><a href="#sec-TD_mechanical_system_and_thermodynamic_system" id="toc-sec-TD_mechanical_system_and_thermodynamic_system" class="nav-link" data-scroll-target="#sec-TD_mechanical_system_and_thermodynamic_system"><span class="header-section-number">21.1.1</span> 역학적 계와 열열학적 계</a></li>
   <li><a href="#sec-TD_exmaples_of_thermodynamic_system" id="toc-sec-TD_exmaples_of_thermodynamic_system" class="nav-link" data-scroll-target="#sec-TD_exmaples_of_thermodynamic_system"><span class="header-section-number">21.1.2</span> 열역학적 계</a></li>
@@ -395,7 +398,7 @@ window.Quarto = {
   <li><a href="#sec-TD_work" id="toc-sec-TD_work" class="nav-link" data-scroll-target="#sec-TD_work"><span class="header-section-number">21.1.4</span> 일</a></li>
   <li><a href="#sec-TD_cycle" id="toc-sec-TD_cycle" class="nav-link" data-scroll-target="#sec-TD_cycle"><span class="header-section-number">21.1.5</span> 사이클</a></li>
   </ul></li>
-  <li><a href="#이상-기체" id="toc-이상-기체" class="nav-link" data-scroll-target="#이상-기체"><span class="header-section-number">21.2</span> 이상 기체</a>
+  <li><a href="#sec_TD_perfect_gas_0" id="toc-sec_TD_perfect_gas_0" class="nav-link" data-scroll-target="#sec_TD_perfect_gas_0"><span class="header-section-number">21.2</span> 이상 기체</a>
   <ul class="collapse">
   <li><a href="#sec-TD_perfect_gas" id="toc-sec-TD_perfect_gas" class="nav-link" data-scroll-target="#sec-TD_perfect_gas"><span class="header-section-number">21.2.1</span> 이상 기체</a></li>
   <li><a href="#sec-TD_partial_pressure" id="toc-sec-TD_partial_pressure" class="nav-link" data-scroll-target="#sec-TD_partial_pressure"><span class="header-section-number">21.2.2</span> 부분압</a></li>
@@ -404,17 +407,17 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#sec-TD_energy_of_system_and_conservation_of_energy" id="toc-sec-TD_energy_of_system_and_conservation_of_energy" class="nav-link" data-scroll-target="#sec-TD_energy_of_system_and_conservation_of_energy"><span class="header-section-number">21.3.1</span> 계의 에너지와 에너지 보존</a></li>
   <li><a href="#sec-TD_heat_the_another_form_of_energy" id="toc-sec-TD_heat_the_another_form_of_energy" class="nav-link" data-scroll-target="#sec-TD_heat_the_another_form_of_energy"><span class="header-section-number">21.3.2</span> 에너지 보존과 열</a></li>
-  <li><a href="#열역학-제-1-법칙-1" id="toc-열역학-제-1-법칙-1" class="nav-link" data-scroll-target="#열역학-제-1-법칙-1"><span class="header-section-number">21.3.3</span> 열역학 제 1 법칙</a></li>
+  <li><a href="#sec-TD_the_first_law_of_thermodynamics" id="toc-sec-TD_the_first_law_of_thermodynamics" class="nav-link" data-scroll-target="#sec-TD_the_first_law_of_thermodynamics"><span class="header-section-number">21.3.3</span> 열역학 제 1 법칙</a></li>
   </ul></li>
   <li><a href="#이상기체와-열역학-제-1-법칙" id="toc-이상기체와-열역학-제-1-법칙" class="nav-link" data-scroll-target="#이상기체와-열역학-제-1-법칙"><span class="header-section-number">21.4</span> 이상기체와 열역학 제 1 법칙</a>
   <ul class="collapse">
-  <li><a href="#상태가-vp-도식으로-표현되는-계에서의-열역학-제-1-법칙" id="toc-상태가-vp-도식으로-표현되는-계에서의-열역학-제-1-법칙" class="nav-link" data-scroll-target="#상태가-vp-도식으로-표현되는-계에서의-열역학-제-1-법칙"><span class="header-section-number">21.4.1</span> 상태가 <span class="math inline">\((V,\,p)\)</span> 도식으로 표현되는 계에서의 열역학 제 1 법칙</a></li>
+  <li><a href="#sec-TD_the_first_law_of_thermocynaics_in_Vp_diagram" id="toc-sec-TD_the_first_law_of_thermocynaics_in_Vp_diagram" class="nav-link" data-scroll-target="#sec-TD_the_first_law_of_thermocynaics_in_Vp_diagram"><span class="header-section-number">21.4.1</span> 상태가 <span class="math inline">\((V,\,p)\)</span> 도식으로 표현되는 계에서의 열역학 제 1 법칙</a></li>
   <li><a href="#sec-TD_heat_capapcity" id="toc-sec-TD_heat_capapcity" class="nav-link" data-scroll-target="#sec-TD_heat_capapcity"><span class="header-section-number">21.4.2</span> 열용량과 비열</a></li>
-  <li><a href="#이상기체의-열용량" id="toc-이상기체의-열용량" class="nav-link" data-scroll-target="#이상기체의-열용량"><span class="header-section-number">21.4.3</span> 이상기체의 열용량</a></li>
-  <li><a href="#이상기체의-단열-가역-과정" id="toc-이상기체의-단열-가역-과정" class="nav-link" data-scroll-target="#이상기체의-단열-가역-과정"><span class="header-section-number">21.4.4</span> 이상기체의 단열 가역 과정</a></li>
+  <li><a href="#sec-TD_the_heat_capacity_of_ideal_gas" id="toc-sec-TD_the_heat_capacity_of_ideal_gas" class="nav-link" data-scroll-target="#sec-TD_the_heat_capacity_of_ideal_gas"><span class="header-section-number">21.4.3</span> 이상기체의 열용량</a></li>
+  <li><a href="#sec-TD_adiabatic_reversible_process_of_ideal_gas" id="toc-sec-TD_adiabatic_reversible_process_of_ideal_gas" class="nav-link" data-scroll-target="#sec-TD_adiabatic_reversible_process_of_ideal_gas"><span class="header-section-number">21.4.4</span> 이상기체의 단열 가역 과정</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
-  <li><a href="#열역학-제-2-법칙" id="toc-열역학-제-2-법칙" class="nav-link" data-scroll-target="#열역학-제-2-법칙"><span class="header-section-number">21.5</span> 열역학 제 2 법칙</a>
+  <li><a href="#sec-TD0_the_second_raw_of_thermodynamics" id="toc-sec-TD0_the_second_raw_of_thermodynamics" class="nav-link" data-scroll-target="#sec-TD0_the_second_raw_of_thermodynamics"><span class="header-section-number">21.5</span> 열역학 제 2 법칙</a>
   <ul class="collapse">
   <li><a href="#sec-TD_heat_source_and_engine" id="toc-sec-TD_heat_source_and_engine" class="nav-link" data-scroll-target="#sec-TD_heat_source_and_engine"><span class="header-section-number">21.5.1</span> 열원과 기관</a></li>
   <li><a href="#sec-TD_the_second_law_of_thermodynamics" id="toc-sec-TD_the_second_law_of_thermodynamics" class="nav-link" data-scroll-target="#sec-TD_the_second_law_of_thermodynamics"><span class="header-section-number">21.5.2</span> 열역학 제 2 법칙</a></li>
@@ -424,7 +427,7 @@ window.Quarto = {
   <li><a href="#sec-TD_equivalence_of_two_versions_of_2nd_principle_of_thermodynamics" id="toc-sec-TD_equivalence_of_two_versions_of_2nd_principle_of_thermodynamics" class="nav-link" data-scroll-target="#sec-TD_equivalence_of_two_versions_of_2nd_principle_of_thermodynamics"><span class="header-section-number">21.6.1</span> 두가지 열역학 제 2 법칙의 동등성</a></li>
   <li><a href="#sec-TD_carnot_theorem" id="toc-sec-TD_carnot_theorem" class="nav-link" data-scroll-target="#sec-TD_carnot_theorem"><span class="header-section-number">21.6.2</span> 카르노의 정리</a></li>
   <li><a href="#카르노-기관과-이상기체" id="toc-카르노-기관과-이상기체" class="nav-link" data-scroll-target="#카르노-기관과-이상기체"><span class="header-section-number">21.6.3</span> 카르노 기관과 이상기체</a></li>
-  <li><a href="#열역학적-절대온도" id="toc-열역학적-절대온도" class="nav-link" data-scroll-target="#열역학적-절대온도"><span class="header-section-number">21.6.4</span> 열역학적 절대온도</a></li>
+  <li><a href="#sec-TD_absolute_thermodynamic_temperature" id="toc-sec-TD_absolute_thermodynamic_temperature" class="nav-link" data-scroll-target="#sec-TD_absolute_thermodynamic_temperature"><span class="header-section-number">21.6.4</span> 열역학적 절대온도</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -444,8 +447,8 @@ window.Quarto = {
 \DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
 </div>
-<section id="계의-상태와-변환" class="level2" data-number="21.1">
-<h2 data-number="21.1" class="anchored" data-anchor-id="계의-상태와-변환"><span class="header-section-number">21.1</span> 계의 상태와 변환</h2>
+<section id="sec-TD_state_and_transform_of_system" class="level2" data-number="21.1">
+<h2 data-number="21.1" class="anchored" data-anchor-id="sec-TD_state_and_transform_of_system"><span class="header-section-number">21.1</span> 계의 상태와 변환</h2>
 <section id="sec-TD_mechanical_system_and_thermodynamic_system" class="level3" data-number="21.1.1">
 <h3 data-number="21.1.1" class="anchored" data-anchor-id="sec-TD_mechanical_system_and_thermodynamic_system"><span class="header-section-number">21.1.1</span> 역학적 계와 열열학적 계</h3>
 <ul>
@@ -453,7 +456,6 @@ window.Quarto = {
 <li>그러나 열역학에서는 <span class="math inline">\(N\approx 10^{23}\)</span> 개의 입자로 이루어진 계를 다루며 <span class="math inline">\(6N\)</span> 개의 변수를 특정하는 것은 실질적으로 불가능하다.</li>
 <li>더우기 열역학에서 다루는 양은 이 계의 평균적인 특성이며, 각각의 입자에 대한 정보는 불필요하다.</li>
 </ul>
-<p><br></p>
 </section>
 <section id="sec-TD_exmaples_of_thermodynamic_system" class="level3" data-number="21.1.2">
 <h3 data-number="21.1.2" class="anchored" data-anchor-id="sec-TD_exmaples_of_thermodynamic_system"><span class="header-section-number">21.1.2</span> 열역학적 계</h3>
@@ -467,21 +469,18 @@ f(p, V, T) = 0.
 \tag{21.1}\]</span></span></li>
 <li>상태방정식의 구체적인 형태는 물질에 따라 다르다. 또한 세 변수중 한 변수는 다른 두 변수의 함수로 기술할 수 있다. 즉 세 변수가운데 두 값을 안다면 상태를 결정 할 수 있다.</li>
 </ul>
-<p><br></p>
 </section>
 <section id="화학적으로-정의된-동일한-종류의-고체로-구성된-계" class="level4">
 <h4 class="anchored" data-anchor-id="화학적으로-정의된-동일한-종류의-고체로-구성된-계"><strong>화학적으로 정의된 동일한 종류의 고체로 구성된 계</strong></h4>
 <ul>
 <li>유체와는 다르게 압력의 방향이 특정되어야 하지만 많은 경우 등방적인 압력을 가정한다.</li>
 </ul>
-<p><br></p>
 </section>
 <section id="여러-화합물이-균일하게-섞여있는-계" class="level4">
 <h4 class="anchored" data-anchor-id="여러-화합물이-균일하게-섞여있는-계"><strong>여러 화합물이 균일하게 섞여있는 계</strong></h4>
 <ul>
 <li>온도, 부피, 압력 이외에 농도가 고려되어야 한다.</li>
 </ul>
-<p><br></p>
 </section>
 <section id="불균일한-계" class="level4">
 <h4 class="anchored" data-anchor-id="불균일한-계"><strong>불균일한 계</strong></h4>
@@ -489,14 +488,12 @@ f(p, V, T) = 0.
 <li>불균일한 계를 다수의 균일한 부분으로 분할한다. 부분적인 균일성이 연속적으로 변할 때는 균일한 부분의 갯수가 무한일 수 있다.</li>
 <li>이 경우 상태는 각각의 균일한 부분의 질량, 화학 조성, 뭉친 정도, 압력, 부피, 온도 에 의해 결정된다.</li>
 </ul>
-<p><br></p>
 </section>
 <section id="움직이는-부분을-가진-계" class="level4">
 <h4 class="anchored" data-anchor-id="움직이는-부분을-가진-계"><strong>움직이는 부분을 가진 계</strong></h4>
 <ul>
 <li>대부분의 열역학적 계는 계의 각각의 부분이 정지해 있거나, 매우 느리게 움직여 부분의 운동에너지를 무시할 수 있다고 간주된다. 이 가정이 적용되지 않는다면 계의 각각의 부분의 속도를 특정해야 한다.</li>
 </ul>
-<p><br></p>
 </section>
 </section>
 <section id="sec-TD_enssemble_of_state_and_equillibrium" class="level3" data-number="21.1.3">
@@ -509,7 +506,6 @@ f(p, V, T) = 0.
 <li>가역과정은 실제적으로 외부 조건을 매우 느리게 변화시켜 계가 각각의 단계에서 변화된 조건에 적응하게 하여 구현한다.</li>
 <li>초기상태 <span class="math inline">\(A\)</span> 에서 최종상태 <span class="math inline">\(B\)</span> 까지 가역변환 되었다면 이 과정을 역으로 수행하면 <span class="math inline">\(B\)</span> 에서 <span class="math inline">\(A\)</span> 까지 변환될 수 있다.</li>
 </ul>
-<p><br></p>
 </section>
 <section id="sec-TD_work" class="level3" data-number="21.1.4">
 <h3 data-number="21.1.4" class="anchored" data-anchor-id="sec-TD_work"><span class="header-section-number">21.1.4</span> 일</h3>
@@ -542,7 +538,6 @@ W = \int_A^B  p \,dV
 </figcaption>
 </figure>
 </div>
-<p><br></p>
 </section>
 <section id="sec-TD_cycle" class="level3" data-number="21.1.5">
 <h3 data-number="21.1.5" class="anchored" data-anchor-id="sec-TD_cycle"><span class="header-section-number">21.1.5</span> 사이클</h3>
@@ -572,12 +567,11 @@ W = \int_A^B  p \,dV
 <li>과정 전체에서 압력이 변하지 않는 과정을 <strong>등압 과정(isobaric process)</strong> 라고 한다.</li>
 <li>과정 전체에서 온도가 변하지 않는 과정을 <strong>등온 과정(isothermal process)</strong> 라고 한다.</li>
 </ul>
-<p><br></p>
 </section>
 </section>
 </section>
-<section id="이상-기체" class="level2" data-number="21.2">
-<h2 data-number="21.2" class="anchored" data-anchor-id="이상-기체"><span class="header-section-number">21.2</span> 이상 기체</h2>
+<section id="sec_TD_perfect_gas_0" class="level2" data-number="21.2">
+<h2 data-number="21.2" class="anchored" data-anchor-id="sec_TD_perfect_gas_0"><span class="header-section-number">21.2</span> 이상 기체</h2>
 <section id="sec-TD_perfect_gas" class="level3" data-number="21.2.1">
 <h3 data-number="21.2.1" class="anchored" data-anchor-id="sec-TD_perfect_gas"><span class="header-section-number">21.2.1</span> 이상 기체</h3>
 <ul>
@@ -603,7 +597,6 @@ W = \int_{V_1}^{V_2} p\,dV = \dfrac{m}{M}RT\int_{V_1}^{V_2}\dfrac{dV}{V} = \dfra
 <ul>
 <li>여러 종류 기체의 혼합물은 화학적으로 동일한 종류의 그것과 비슷한 법칙의 지배를 받는다. 여러 기체의 혼합물이 있을 때 그중 한 종류의 혼합물이 같은 온도에서 같은 부피를 채우고 있을 때의 압력을 <strong>부분압 (partial pressure)</strong> 라고 한다. 돌텅의 법칙은 혼합기체의 경우 전체 얍력은 부분압의 합과 같다는 것을 말한다.</li>
 </ul>
-<p><br></p>
 </section>
 </section>
 <section id="열역학-제-1-법칙" class="level2" data-number="21.3">
@@ -624,7 +617,6 @@ U_B-U_A = -W.
 <li>이제 두 상태 <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> 를 생각하자. <span class="math inline">\(A\to B\)</span> 과정은 <span class="math inline">\(A\to O \to B\)</span> 과정으로 생각할 수 있으며 <span class="math inline">\(W=-W_A + W_B\)</span> 이므로 <span class="math inline">\(U_B-U_A = -W\)</span> 이다. 이제 우리는 <a href="#eq-TD_work_and_internal_energy" class="quarto-xref">식&nbsp;<span>21.5</span></a> 를 얻었다.</li>
 <li>실험적으로 정의된 내부 에너지는 표준상태 <span class="math inline">\(O\)</span> 에 따라 다르다는 것은 자명하다.</li>
 </ul>
-<p><br></p>
 </section>
 <section id="sec-TD_heat_the_another_form_of_energy" class="level3" data-number="21.3.2">
 <h3 data-number="21.3.2" class="anchored" data-anchor-id="sec-TD_heat_the_another_form_of_energy"><span class="header-section-number">21.3.2</span> 에너지 보존과 열</h3>
@@ -633,10 +625,9 @@ U_B-U_A = -W.
 <li>예를 들면 (<span class="math inline">\(1\)</span>) 외부에서 열을 가한다면 계의 온도는 올라가지만 이 계가 일을 하거나 받지 않을 수 있다. (<span class="math inline">\(2\)</span>) <a href="https://en.wikipedia.org/wiki/Mechanical_equivalent_of_heat">줄의 실험</a> 은 명백히 역학적 일(<span class="math inline">\(V\)</span> 가 변하는) 없이도 내부의 온도를 상승시킬 수 있음을 보여준다.</li>
 <li>이로부터 우리는 열(heat) 이라는 비 역학적인(non mechanical) 형태로 에너지가 전달되는 것을 인정 할 수 밖에 없다. 즉 열은 에너지이다.</li>
 </ul>
-<p><br></p>
 </section>
-<section id="열역학-제-1-법칙-1" class="level3" data-number="21.3.3">
-<h3 data-number="21.3.3" class="anchored" data-anchor-id="열역학-제-1-법칙-1"><span class="header-section-number">21.3.3</span> 열역학 제 1 법칙</h3>
+<section id="sec-TD_the_first_law_of_thermodynamics" class="level3" data-number="21.3.3">
+<h3 data-number="21.3.3" class="anchored" data-anchor-id="sec-TD_the_first_law_of_thermodynamics"><span class="header-section-number">21.3.3</span> 열역학 제 1 법칙</h3>
 <ul>
 <li>계 와 환경이 열적으로 분리된 경우, 즉 계가 단열체로 둘러쌓인 경우를 생각해보자. 이 경우 계와 환경 사이에 열교환은 없으며 서로 역학적 일을 주고받을수 있을 뿐이다. 이 경우 계가 해준 혹은 받은 일은 초기상태와 최종상태에 의해 결정된다. 또한 계의 에너지 변화 역시 초기상태와 나중상태에 의해 결정된다.</li>
 <li>계가 <span class="math inline">\(A\to B\)</span> 과정을 겪었을 때 에너지 변화 <span class="math inline">\(\Delta U = U_B-U_A\)</span> 라고 하자. 계가 단열되었으므로 <span class="math inline">\(\Delta U + W=0\)</span> 이다.</li>
@@ -646,13 +637,12 @@ U_B-U_A = -W.
 <li>위 식에서 <span class="math inline">\(Q\)</span> 는 역학적 에너지(<span class="math inline">\(dV\ne 0\)</span>) 의 형태가 아닌 다른 형태로 전달되는 에너지 전체이다.</li>
 <li>순환 과정일 경우 <span class="math inline">\(\Delta U = 0\)</span> 이므로 <span class="math inline">\(W=Q\)</span> 이다.</li>
 </ul>
-<p><br></p>
 </section>
 </section>
 <section id="이상기체와-열역학-제-1-법칙" class="level2" data-number="21.4">
 <h2 data-number="21.4" class="anchored" data-anchor-id="이상기체와-열역학-제-1-법칙"><span class="header-section-number">21.4</span> 이상기체와 열역학 제 1 법칙</h2>
-<section id="상태가-vp-도식으로-표현되는-계에서의-열역학-제-1-법칙" class="level3" data-number="21.4.1">
-<h3 data-number="21.4.1" class="anchored" data-anchor-id="상태가-vp-도식으로-표현되는-계에서의-열역학-제-1-법칙"><span class="header-section-number">21.4.1</span> 상태가 <span class="math inline">\((V,\,p)\)</span> 도식으로 표현되는 계에서의 열역학 제 1 법칙</h3>
+<section id="sec-TD_the_first_law_of_thermocynaics_in_Vp_diagram" class="level3" data-number="21.4.1">
+<h3 data-number="21.4.1" class="anchored" data-anchor-id="sec-TD_the_first_law_of_thermocynaics_in_Vp_diagram"><span class="header-section-number">21.4.1</span> 상태가 <span class="math inline">\((V,\,p)\)</span> 도식으로 표현되는 계에서의 열역학 제 1 법칙</h3>
 <ul>
 <li>동일한 유체로 이루어진 계와 같이 상태가 <span class="math inline">\(V,\,p,\,T\)</span> 가운데 두개로 정의 될 수 있는 계를 생각하자. 여기서 독립변수가 무엇인지를 정하기 위해 예를들어 아래와 같은 표기는 <span class="math inline">\(V\)</span> 가 일정한 상태에서의 <span class="math inline">\(\partial U/\partial T\)</span> 는 아래와 같이 표기한다.</li>
 </ul>
@@ -718,10 +708,9 @@ C_p &amp;= \left(\dfrac{{d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q}{dT}\right)_p =
 \]</span></p></li>
 <li><p>단위 질량당의 열용량을 <strong>비열 (specific heat capacity)</strong> 이라고 한다. 정적 비열 <span class="math inline">\(c_V\)</span> 와 정압 비열 <span class="math inline">\(c_p\)</span> 는 <span class="math inline">\(C_V,\,C_p\)</span> 를 각각 질량으로 나눈 값이다.</p></li>
 </ul>
-<p><br></p>
 </section>
-<section id="이상기체의-열용량" class="level3" data-number="21.4.3">
-<h3 data-number="21.4.3" class="anchored" data-anchor-id="이상기체의-열용량"><span class="header-section-number">21.4.3</span> 이상기체의 열용량</h3>
+<section id="sec-TD_the_heat_capacity_of_ideal_gas" class="level3" data-number="21.4.3">
+<h3 data-number="21.4.3" class="anchored" data-anchor-id="sec-TD_the_heat_capacity_of_ideal_gas"><span class="header-section-number">21.4.3</span> 이상기체의 열용량</h3>
 <p>독립변수로 <span class="math inline">\(T,\,V\)</span> 를 선택할 때 이상기체의 에너지 <span class="math inline">\(U=U(T)\)</span> 이며 <span class="math inline">\(V\)</span> 와는 독립적임이라는 것은 우선 Joule 에 의해 실험적으로 확인되었으며, 이론적으로는 열역학 제 2 법칙을 통해 보일 수 있다. Joule 의 실험은 아래와 같은 장치에서 이루어졌다.</p>
 <div id="fig-TD_joule_exp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -774,7 +763,6 @@ C_p = \left(\dfrac{{d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q}{dT}\right)_p = C_V 
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <p>이후에 계산하겠지만 하나의 원자로 이루어진 기체 분자의 경우 <span class="math inline">\(C_V=\frac{3}{2}R\)</span>, <span class="math inline">\(C_p = \frac{5}{2}R\)</span> 이며 두개의 원자로 이루어진 기체 분자의 경우 <span class="math inline">\(C_V=\frac{5}{2}R\)</span>, <span class="math inline">\(C_p = \frac{7}{2}R\)</span> 이다.</p>
 <p>여기서</p>
 <p><span class="math display">\[
@@ -784,10 +772,9 @@ C_p = \left(\dfrac{{d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q}{dT}\right)_p = C_V 
 <p><span class="math display">\[
 \gamma = \dfrac{C_p}{C_V}=1+ \dfrac{\nu R}{C_V}
 \]</span></p>
-<p><br></p>
 </section>
-<section id="이상기체의-단열-가역-과정" class="level3" data-number="21.4.4">
-<h3 data-number="21.4.4" class="anchored" data-anchor-id="이상기체의-단열-가역-과정"><span class="header-section-number">21.4.4</span> 이상기체의 단열 가역 과정</h3>
+<section id="sec-TD_adiabatic_reversible_process_of_ideal_gas" class="level3" data-number="21.4.4">
+<h3 data-number="21.4.4" class="anchored" data-anchor-id="sec-TD_adiabatic_reversible_process_of_ideal_gas"><span class="header-section-number">21.4.4</span> 이상기체의 단열 가역 과정</h3>
 <p><strong>단열과정 (adiabatic process)</strong> 는 <span class="math inline">\({d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q=0\)</span> 인 과정을 말한다. <a href="#fig-TD_simple_system" class="quarto-xref">그림&nbsp;<span>21.1</span></a> 에서 실린더 벽과 피스톤이 모두 열을 전달하지 않는 재질로 되어 있으며 피스톤이 매우 느리게 움직이는 경우가 해당된다. 피스톤이 위로(혹은 실린더 바깥쪽으로) 움직이면 <span class="math inline">\({d\hspace{-0.08em}\bar{}\hspace{0.1em}}W&gt;0\)</span> 이며 아래로(혹은 실린더 안쪽으로) 움직이면 <span class="math inline">\({d\hspace{-0.08em}\bar{}\hspace{0.1em}}W&lt;0\)</span> 이다. <span class="math inline">\({d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q=0\)</span> 이므로 <span class="math inline">\(dU\)</span> 의 부호는 <span class="math inline">\({d\hspace{-0.08em}\bar{}\hspace{0.1em}}W\)</span> 의 부호와 반대이다.</p>
 <p><span class="math display">\[
 C_V dT + pdV=0 \implies C_V dT + \dfrac{\nu RT}{V}\,dV =0
@@ -948,11 +935,10 @@ dp = -\left(\dfrac{C_p}{A}\right)dT = \left(\dfrac{C_p}{A}\right)\left(\dfrac{B}
 \]</span></p>
 <p>이다.</p>
 </div>
-<p><br></p>
 </section>
 </section>
-<section id="열역학-제-2-법칙" class="level2" data-number="21.5">
-<h2 data-number="21.5" class="anchored" data-anchor-id="열역학-제-2-법칙"><span class="header-section-number">21.5</span> 열역학 제 2 법칙</h2>
+<section id="sec-TD0_the_second_raw_of_thermodynamics" class="level2" data-number="21.5">
+<h2 data-number="21.5" class="anchored" data-anchor-id="sec-TD0_the_second_raw_of_thermodynamics"><span class="header-section-number">21.5</span> 열역학 제 2 법칙</h2>
 <section id="sec-TD_heat_source_and_engine" class="level3" data-number="21.5.1">
 <h3 data-number="21.5.1" class="anchored" data-anchor-id="sec-TD_heat_source_and_engine"><span class="header-section-number">21.5.1</span> 열원과 기관</h3>
 <p>열역학 제 1 법칙은 에너지를 생산하는 기계를 만들 수 없으며 단지 에너지를 변환할 뿐이라는 것을 한다.그러나 제 1 법칙은 에너지 사이의 변환에 대해서는 어떤 제약도 말하지 않는다. 따라서 이 법칙에 따르면 열은 일로, 일은 열로 자유롭게 변환 될 수 있다.</p>
@@ -989,9 +975,16 @@ dp = -\left(\dfrac{C_p}{A}\right)dT = \left(\dfrac{C_p}{A}\right)\left(\dfrac{B}
 <p>낮은 온도의 물체의 열을 높은 온도를 가진 물체로 전달하는 유일한 최종결과를 갖는 과정은 불가능하다</p>
 </div>
 </div>
-<p>이제 두가지 열역학 법칙은 동등하다는 것을 증명하고자 한다. 즉 하나가 참이면 다른 하나는 반드시 참이다. 우선 캘빈의 명제가 틀리다고 가정하자. 즉 온도 <span class="math inline">\(T\)</span> 인 열원으로부터 추출한 열을 일 <span class="math inline">\(W\)</span> 로 변환시켰다고 하자. 마찰을 통해 우리는 이 일 <span class="math inline">\(W\)</span> 를 열로 변환할 수 있고 이를 통해 다른 물체의 온도를 높일 수 있다. 이 때 다른 물체의 온도가 <span class="math inline">\(T\)</span> 보다 높은지 낮은지와는 무관하므로 캘빈경의 명제가 틀리다면 클라우시우스의 명제도 틀리다.</p>
-<p>클라우시우스의 명제가 틀렸을 때 캘빈경의 명제가 틀리다는 것을 보이기 위해서는 조금 해야할 것이 있다.</p>
-<p><br></p>
+<p>열역학 제 2 법칙에 대한 두가지 명제는 동일하다는 것을 보일 수 있다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="lem-TD_equivallence_of_two_second_laws_of_thermodynamics_1" class="theorem lemma">
+<p><span class="theorem-title"><strong>보조정리 21.1</strong></span> 클라우시우스의 법칙이 참이면 캘빈의 법칙도 참이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>우선 캘빈의 명제가 틀리다고 가정하자. 즉 온도 <span class="math inline">\(T\)</span> 인 열원으로부터 추출한 열을 일 <span class="math inline">\(W\)</span> 로 변환시켰다고 하자. 마찰을 통해 우리는 이 <span class="math inline">\(W\)</span> 를 열로 변환할 수 있고 이를 통해 다른 물체의 온도를 높일 수 있다. 이 때 다른 물체의 온도가 <span class="math inline">\(T\)</span> 보다 높은지 낮은지와는 무관하므로 캘빈경의 명제가 틀리다면 클라우시우스의 명제도 틀리다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>반대로 클라우시우스의 명제가 틀렸을 때 캘빈경의 명제가 틀리다는 것을 보이기 위해서는 조금 해야할 것이 있다.</p>
 </section>
 </section>
 <section id="카르노-순환" class="level2" data-number="21.6">
@@ -1035,14 +1028,26 @@ W = Q_{h}- Q_{l}
 \eta := \dfrac{W}{Q_{h}}= \dfrac{Q_{h}-Q_{l}}{Q_{h}}= 1- \dfrac{Q_{h}}{Q_{l}}.
 \]</span></p>
 <p>이 과정은 가역과정이므로 역순인 <span class="math inline">\(A\to D\to C\to B \to A\)</span> 의 과정을 생각 할 수 있다. 즉 이 과정은 <span class="math inline">\(W\)</span> 만큼의 일을 받으면서 온도 <span class="math inline">\(T_l\)</span> 일 때 <span class="math inline">\(Q_{l}\)</span> 의 열을 받고 <span class="math inline">\(T_h\)</span> 일 때 <span class="math inline">\(Q_{h}\)</span> 의 열을 방출 할 수 있으며 이를 통해 최종 결과는 외부로부터 <span class="math inline">\(-W\)</span> 만큼의 일을 받는 것이다.</p>
-<p>클라우시우스의 제 2 법칙을 부정하면 온도가 <span class="math inline">\(T_l\)</span> 일때 열원으로부터 <span class="math inline">\(Q_h\)</span> 의 열을 받아 이것을 같은 상태에서 <span class="math inline">\(T_h\)</span> 의 열원에 전달하며 최종적으로 계의 상태에 변화가 없는 것이 가능하다. 카르노 기관으로부터 우리는 <span class="math inline">\(Q_h\)</span> 의 열을 받으며 <span class="math inline">\(W\)</span> 만큼의 일을 한다. <span class="math inline">\(T_h\)</span> 의 열원의 입장에서는 <span class="math inline">\(Q_h-W\)</span> 만큼의 열을 받으며, 계의 입장에서는 변화가 없는데 이것은 캘빈의 열역학 제 2 법칙에 위배된다. 즉 클라우시우스의 제 2 법칙의 부정은 캘빈의 제 2 법칙의 부정이다.</p>
-<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="lem-TD_equivallence_of_two_second_laws_of_thermodynamics_2" class="theorem lemma">
+<p><span class="theorem-title"><strong>보조정리 21.2</strong></span> 열역학 제 2 법칙에 대한 캘빈의 명제가 참이면 클라우시우스의 명제도 참이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>클라우시우스의 제 2 법칙을 부정하면 온도가 <span class="math inline">\(T_l\)</span> 인 열원으로부터 <span class="math inline">\(Q_l\)</span> 의 열을 받아 이것을 같은 상태에서 <span class="math inline">\(T_h(&gt;T_l)\)</span> 의 열원에 전달하며 최종적으로 계의 상태에 변화가 없는 장치가 가능하다. 이것을 카르노 기관에 연결한다.두 장치를 합친 전체 시스템을 보면, 저온 열원(<span class="math inline">\(T_l\)</span>)은 주고받은 열이 상쇄되어 변화가 없고, 고온 열원에서는 순수하게 <span class="math inline">\(Q_h - Q_l\)</span> 만큼의 열만 소모되었다.시스템이 한 일 <span class="math inline">\(W = Q_h - Q_l\)</span> 이므로, 단일 고온 열원(저장소)에서 열을 받아 전부 일로 바꾼 셈이 되며 이는 켈빈의 제 2 법칙 위반이다.<span class="math inline">\(\square\)</span></p>
+</div>
+<p>이로부터 우리는 다음 결과를 얻는다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-TD_equivallence_of_two_second_laws_of_thermodynamics" class="theorem">
+<p><span class="theorem-title"><strong>정리 21.1</strong></span> 열역학 제 2 법칙에 대한 캘빈과 클라시우스의 진술은 동등하다.</p>
+</div>
+</div>
 </section>
 <section id="sec-TD_carnot_theorem" class="level3" data-number="21.6.2">
 <h3 data-number="21.6.2" class="anchored" data-anchor-id="sec-TD_carnot_theorem"><span class="header-section-number">21.6.2</span> 카르노의 정리</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-TD_carnot_theorem" class="theorem">
-<p><span class="theorem-title"><strong>정리 21.1</strong></span> 주어진 두 열원에서 작동하는 기관가운데 카르노 기관보다 효율이 높은 기관은 존재하지 않는다.</p>
+<p><span class="theorem-title"><strong>정리 21.2</strong></span> 주어진 두 열원에서 작동하는 기관가운데 카르노 기관보다 효율이 높은 기관은 존재하지 않는다.</p>
 </div>
 </div>
 <div class="proof">
@@ -1118,13 +1123,47 @@ Q_l = -\int_{V_C}^{V_D} p\,dV = -\nu RT_l \ln \left(\dfrac{V_D}{V_C}\right).
 \tag{21.33}\]</span></span></p>
 <p><br></p>
 </section>
-<section id="열역학적-절대온도" class="level3" data-number="21.6.4">
-<h3 data-number="21.6.4" class="anchored" data-anchor-id="열역학적-절대온도"><span class="header-section-number">21.6.4</span> 열역학적 절대온도</h3>
-<p>카르노 순환은 정방향 순환의 경우 <span class="math inline">\(T_h\)</span> 인 열원으로부터 <span class="math inline">\(Q_h\)</span> 의 열을 받아 <span class="math inline">\(W\)</span> 만큼의 일을 하고 <span class="math inline">\(T_l\)</span> 인 열원에게 <span class="math inline">\(Q_l\)</span> 만큼의 열을 방출한다. 이 경우 <span class="math inline">\(Q_h&gt;0\)</span>, <span class="math inline">\(Q_l&gt;0\)</span> 이며 <span class="math inline">\(Q_l&lt;0\)</span> 이라면 <span class="math inline">\(T_l\)</span> 열원으로 부터 열을 받는것이 된다. 이제 <span class="math inline">\(Q_l&lt;0\)</span> 인 순환이 불가능하다는 것을 알아보자.</p>
-<p>순환의 과정에서 <span class="math inline">\(T_l\)</span> 열원이 <span class="math inline">\(Q_l\)</span> 만큼의 열을 방출하므로 주변으로부터 <span class="math inline">\(Q_l\)</span> 만큼의 열을 받아야 시작상태로 복귀 할 수 있다.</p>
-<p>… to be filled</p>
+<section id="sec-TD_absolute_thermodynamic_temperature" class="level3" data-number="21.6.4">
+<h3 data-number="21.6.4" class="anchored" data-anchor-id="sec-TD_absolute_thermodynamic_temperature"><span class="header-section-number">21.6.4</span> 열역학적 절대온도</h3>
+<section id="미리-짚고-넘어가는-것들" class="level4">
+<h4 class="anchored" data-anchor-id="미리-짚고-넘어가는-것들"><strong>미리 짚고 넘어가는 것들</strong></h4>
+<p>두 열원 <span class="math inline">\(T_h,\,T_l\)</span> 에서 각 사이클당 <span class="math inline">\(Q_h,\,Q_l\)</span> 만큼의 열을 주고 받으며 <span class="math inline">\(W=Q_h-Q_l\)</span> 만큼의 일을 하는 기관을 생각하자. <a href="#fig-TD_carnot_engine" class="quarto-xref">그림&nbsp;<span>21.7</span></a> 와 같은 카르노 기관일 필요는 없지만, 순환이어야 한다. 즉 과정의 끝이 초기상태이어야 한다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="lem-TD_absolute_thermodynamic_temperature_1" class="theorem lemma">
+<p><span class="theorem-title"><strong>보조정리 21.3</strong></span> <span class="math inline">\(Q_l \ge 0\)</span> 이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(Q_l \le 0\)</span> 이라고 하자. 저온 열원이 <span class="math inline">\(|Q_l|\)</span> 만큼의 열을 방출하고 고온 열원과 열적으로 연결되어 방출한 만큼의 열을 받았다고 하자. 그렇다면 저온 열원은 변화가 없고 기관 자체는 초기상태로 돌하오게 되며 최종 결과는 고온 열원으로 부터 얻은 열 만큼 일을 한 것이 된다. 이는 캘빈의 원리에 위반되므로 <span class="math inline">\(Q_l &gt; 0\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="lem-TD_absolute_thermodynamic_temperature_2" class="theorem lemma">
+<p><span class="theorem-title"><strong>보조정리 21.4</strong></span> <span class="math inline">\(Q_h \ge 0\)</span> 이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(W=Q_2-Q_1&gt;0\)</span> 이며 <span class="math inline">\(Q_1&gt;0\)</span> 이므로 <span class="math inline">\(Q_2&gt;0\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+</section>
+<section id="가역기관의-공통값" class="level4">
+<h4 class="anchored" data-anchor-id="가역기관의-공통값"><strong>가역기관의 공통값</strong></h4>
+<p>정해진 온도 <span class="math inline">\(T_h,\,T_l\)</span> 에서 동작하는 가역기관에 대해 <a href="#thm-TD_carnot_theorem" class="quarto-xref">정리&nbsp;<span>21.2</span></a> 로 부터 우리는 <span class="math inline">\(Q_h/Q_l\)</span> 이 동일하다는 것을 알 수 있다. 즉 이 값은 가역기관의 세부적인 특징과 무관하다. 따라서</p>
+<p><span id="eq-TD_universal_fuction_of_reversible_engine"><span class="math display">\[
+f(T_h,\,T_l) = \dfrac{Q_h}{Q_l}
+\tag{21.34}\]</span></span></p>
+<p>는 일종의 보편 함수이다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-TD_proper" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 21.1</strong></span> <span class="math inline">\(Q_h \ge 0\)</span> 이다.</p>
+</div>
+</div>
 
 
+</section>
 </section>
 </section>
 
