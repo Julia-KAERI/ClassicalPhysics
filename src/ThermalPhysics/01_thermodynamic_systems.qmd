@@ -1,7 +1,7 @@
 ---
 title: "열역학 계 와 열역학 법칙"
 number-sections: true
-number-depth: 3
+number-depth: 2
 crossref:
   chapters: true
 ---
@@ -277,7 +277,7 @@ $$ {#eq-TD_heat_capacity_at_constant_pressure_for_ideal_gas}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-ED_ES_charge_distribution_circular_charge}
+::: {#exm-TD_properties_of_ideal_gas}
 
 우리는 이상기체에 대해 다음이 성립함을 보일 수 있다.
 $$

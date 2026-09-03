@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,13 +12,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -63,10 +60,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-221f8d40ef94b7d7736ec4c1e420c32a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -96,7 +93,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -447,8 +444,8 @@ window.Quarto = {
   <li><a href="#sec-TD_carnot_theorem" id="toc-sec-TD_carnot_theorem" class="nav-link" data-scroll-target="#sec-TD_carnot_theorem"><span class="header-section-number">21.6.2</span> 카르노의 정리</a></li>
   <li><a href="#카르노-기관과-이상기체" id="toc-카르노-기관과-이상기체" class="nav-link" data-scroll-target="#카르노-기관과-이상기체"><span class="header-section-number">21.6.3</span> 카르노 기관과 이상기체</a></li>
   <li><a href="#sec-TD_absolute_thermodynamic_temperature" id="toc-sec-TD_absolute_thermodynamic_temperature" class="nav-link" data-scroll-target="#sec-TD_absolute_thermodynamic_temperature"><span class="header-section-number">21.6.4</span> 열역학적 절대온도</a></li>
-  <li><a href="#sec-TD_thermal_engines" id="toc-sec-TD_thermal_engines" class="nav-link" data-scroll-target="#sec-TD_thermal_engines"><span class="header-section-number">21.6.5</span> 열기관</a></li>
   </ul></li>
+  <li><a href="#sec-TD_thermal_engines" id="toc-sec-TD_thermal_engines" class="nav-link" data-scroll-target="#sec-TD_thermal_engines"><span class="header-section-number">21.7</span> 열기관</a></li>
   </ul>
 </nav>
     </div>
@@ -769,7 +766,7 @@ pdV + vdp = \nu R dT
 C_p = \left(\dfrac{{d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q}{dT}\right)_p = C_V + \nu R.
 \tag{21.15}\]</span></span></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-ED_ES_charge_distribution_circular_charge" class="theorem example">
+<div id="exm-TD_properties_of_ideal_gas" class="theorem example">
 <p><span class="theorem-title"><strong>예제 21.1</strong></span> 우리는 이상기체에 대해 다음이 성립함을 보일 수 있다. <span id="eq-TD_partial_U_partial_T_at_constant_p"><span class="math display">\[
 \left(\dfrac{\partial U}{\partial T}\right)_p = \dfrac{dU}{dT} = C_V, \qquad \left(\dfrac{\partial V}{\partial T}\right)_p = \dfrac{\nu R}{p}
 \tag{21.16}\]</span></span></p>
@@ -1234,8 +1231,9 @@ Q_l = -\int_{V_C}^{V_D} p\,dV = -\nu RT_l \ln \left(\dfrac{V_D}{V_C}\right).
 <p>을 얻는다. 그리고 <strong>이제부터 <span class="math inline">\(T\)</span> 는 열역학적 절대온도이다.</strong></p>
 </section>
 </section>
-<section id="sec-TD_thermal_engines" class="level3" data-number="21.6.5">
-<h3 data-number="21.6.5" class="anchored" data-anchor-id="sec-TD_thermal_engines"><span class="header-section-number">21.6.5</span> 열기관</h3>
+</section>
+<section id="sec-TD_thermal_engines" class="level2" data-number="21.7">
+<h2 data-number="21.7" class="anchored" data-anchor-id="sec-TD_thermal_engines"><span class="header-section-number">21.7</span> 열기관</h2>
 <p>카르노 열기관의 효율은 <a href="#eq-TD_efficiency_of_carnot_engine_using_ideal_gas" class="quarto-xref">식&nbsp;<span>21.33</span></a> 로 주어진다. 그리고 모든 가역기관에서 <span class="math inline">\(Q_h/Q_l = T_h/T_l\)</span> 이다. 따라서 <a href="#eq-TD_efficiency_of_carnot_engine_using_ideal_gas" class="quarto-xref">식&nbsp;<span>21.33</span></a> 는 카르노 기관 뿐만 아니라 가역기관의 효율이 된다. 즉</p>
 <p><span id="eq-TD_efficiency_of_reversible_engine"><span class="math display">\[
 \eta_R = 1-\dfrac{Q_h}{Q_l} = 1-\dfrac{T_h}{T_l}.
@@ -1254,7 +1252,6 @@ Q_l = W \dfrac{T_l}{T_h-T_l}.
 Fermi, Enrico. 1956. <em>Thermodynamics</em>. New ed. Dover Publications.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->

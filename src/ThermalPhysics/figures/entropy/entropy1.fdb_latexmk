@@ -1,11 +1,13 @@
 # Fdb version 4
-["pdflatex"] 1788255422 "/Users/jiyong/Documents/Projects/ClassicalPhysics/src/ThermalPhysics/figures/adiabatic_process/universal_function_1.tex" "universal_function_1.pdf" "universal_function_1" 1788255423 0
-  "/Users/jiyong/Documents/Projects/ClassicalPhysics/src/ThermalPhysics/figures/adiabatic_process/universal_function_1.tex" 1788255421 1416 0352abc78c72962d568ed3bbaf69cdf9 ""
-  "/dev/null" 1788255412 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1788433223 "/Users/jiyong/Documents/Projects/ClassicalPhysics/src/ThermalPhysics/figures/entropy/entropy1.tex" "entropy1.pdf" "entropy1" 1788433224 0
+  "/Users/jiyong/Documents/Projects/ClassicalPhysics/src/ThermalPhysics/figures/entropy/entropy1.tex" 1788433223 1140 d996c4750b917e79140b143fd2ada700 ""
+  "/dev/null" 1788433216 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
@@ -164,10 +166,10 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1674016646 4623355 58034c3eb7ddf7eacc726a83d01e26d2 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1672789015 7874810 bfa33868b1ee0a17ddb982f07460daa5 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "universal_function_1.aux" 1788255423 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "universal_function_1.tex" 1788255421 1416 0352abc78c72962d568ed3bbaf69cdf9 ""
+  "entropy1.aux" 1788433224 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "entropy1.tex" 1788433223 1140 d996c4750b917e79140b143fd2ada700 ""
   (generated)
-  "universal_function_1.aux"
-  "universal_function_1.log"
-  "universal_function_1.pdf"
+  "entropy1.aux"
+  "entropy1.log"
+  "entropy1.pdf"
   (rewritten before read)
