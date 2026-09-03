@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-221f8d40ef94b7d7736ec4c1e420c32a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -484,7 +487,7 @@ L = \dfrac{\mu\dot{x}^2}{2} + \dfrac{(m_1+m_2)\dot{R}^2}{2}+ \dfrac{k}{2}x^2
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_landau_21_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.3 (L&amp;L Mechanics 21.4)</strong></span> 질량 <span class="math inline">\(m\)</span> 인 입자가 반지름 <span class="math inline">\(r\)</span> 이니 원주에서 움직이는것을 제외하면 <a href="#exr-CM_landau_21_4" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-CM_landau_21_4</span></a> 과 같은 문제이다 진동수를 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.3 (L&amp;L Mechanics 21.4)</strong></span> 질량 <span class="math inline">\(m\)</span> 인 입자가 반지름 <span class="math inline">\(r\)</span> 이니 원주에서 움직이는것을 제외하면 <a href="#exr-CM_landau_21_4" class="quarto-xref">연습문제&nbsp;<span>7.3</span></a> 과 같은 문제이다 진동수를 구하라.</p>
 <div id="fig-CM_exr_landau_21_4" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-CM_exr_landau_21_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -511,11 +514,11 @@ L = \dfrac{\mu\dot{x}^2}{2} + \dfrac{(m_1+m_2)\dot{R}^2}{2}+ \dfrac{k}{2}x^2
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_landau_21_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.4 (L&amp;L Mechanics 21.6)</strong></span> <a href="#exr-landau_cm_5_2" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-landau_cm_5_2</span></a> 에서의 각진동수를 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.4 (L&amp;L Mechanics 21.6)</strong></span> <a href="02_variational_principle.html#exr-landau_cm_5_2" class="quarto-xref">연습문제&nbsp;<span>2.8</span></a> 에서의 각진동수를 구하라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#exr-landau_cm_14_3" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-landau_cm_14_3</span></a> 역시 생각한다. 라그랑지안 <span class="math inline">\(L\)</span> 은 <span class="math inline">\(|\phi|\ll 1\)</span> 조건에서</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="11_one_body_problems.html#exr-landau_cm_14_3" class="quarto-xref">연습문제&nbsp;<span>5.8</span></a> 역시 생각한다. 라그랑지안 <span class="math inline">\(L\)</span> 은 <span class="math inline">\(|\phi|\ll 1\)</span> 조건에서</p>
 <p><span class="math display">\[
 \begin{aligned}
 L &amp;= \dfrac{m_2l^2\dot{\phi}^2}{2}\left[1- \dfrac{m_2 \cos^2\phi}{m_1+m_2}\right] + m_2gl\cos \phi \\[0.3em]
@@ -552,8 +555,8 @@ L = \dfrac{1}{2}m\dot{x}^2 - \dfrac{1}{2}kx^2 + xF(t).
 <p><span id="eq-CM_LL_forced_sho_eom"><span class="math display">\[
 \ddot{x} + {\omega_0}^2x = \dfrac{F(t)}{m}
 \tag{7.1}\]</span></span></p>
-<p><a href="#sec-CM_forced_dsho"><span class="quarto-xref"><span class="quarto-unresolved-ref">sec-CM_forced_dsho</span></span> 강제 조화 진동자</a> 에서 보았듯이 위 미분방정식의 해는 동차미분방정식의 해인 일반해와 비동차 방정식의 해인 특수해의 합이다.</p>
-<p><span class="math inline">\(F=\overline{f}_0 e^{i\omega t}\)</span> 라고 놓고 복소수 영역에서 위 방정식의 일반해를 구하면 (<a href="#sec-CM_forced_dsho" class="quarto-xref"><span class="quarto-unresolved-ref">sec-CM_forced_dsho</span></a> 에서 <span class="math inline">\(\beta=0\)</span> 일 때)</p>
+<p><a href="11_one_body_problems.html#sec-CM_forced_dsho"><span class="quarto-xref"><span> 5.2.3</span></span> 강제 조화 진동자</a> 에서 보았듯이 위 미분방정식의 해는 동차미분방정식의 해인 일반해와 비동차 방정식의 해인 특수해의 합이다.</p>
+<p><span class="math inline">\(F=\overline{f}_0 e^{i\omega t}\)</span> 라고 놓고 복소수 영역에서 위 방정식의 일반해를 구하면 (<a href="11_one_body_problems.html#sec-CM_forced_dsho" class="quarto-xref"><span> 5.2.3</span></a> 에서 <span class="math inline">\(\beta=0\)</span> 일 때)</p>
 <p><span id="eq-CM_LL_complex_solution_of_forced_sho"><span class="math display">\[
 \overline{x}(t) = \overline{a} e^{i\omega_0 t} + \dfrac{\overline{f}_0}{m(\omega_0^2-\omega^2)}e^{i\omega t}
 \tag{7.2}\]</span></span></p>
@@ -594,11 +597,11 @@ x= ae^{i\omega_0 t} + be^{i(\omega_0 + \epsilon)t} = (a+be^{i\epsilon t})e^{i\om
 </section>
 <section id="복소수-영역에서의-미분방정식의-처리" class="level3" data-number="7.2.3">
 <h3 data-number="7.2.3" class="anchored" data-anchor-id="복소수-영역에서의-미분방정식의-처리"><span class="header-section-number">7.2.3</span> 복소수 영역에서의 미분방정식의 처리</h3>
-<p><a href="#eq-CM_LL_forced_sho_eom" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_LL_forced_sho_eom</span></a> 은 <span class="math inline">\(\xi := \dot{x}+i\omega x\)</span> 에 대해서</p>
+<p><a href="#eq-CM_LL_forced_sho_eom" class="quarto-xref">식&nbsp;<span>7.1</span></a> 은 <span class="math inline">\(\xi := \dot{x}+i\omega x\)</span> 에 대해서</p>
 <p><span id="eq-CM_LL_forced_sho_eom_complex_form"><span class="math display">\[
 \dfrac{d\xi}{dt} - i\omega_0 \xi = \dfrac{F(t)}{m}
 \tag{7.4}\]</span></span></p>
-<p>으로 쓸 수 있다. 상수 <span class="math inline">\(h\)</span> 에 대해 <span class="math inline">\(\xi = he^{i\omega_0 t}\)</span> 는 위 방정식의 제차 형태에 대한 일반해이며, 우리는 <span class="math inline">\(\xi = h(t) e^{i\omega_0 t}\)</span> 형태의 특수해가 존재하는지 확인해보자. <a href="#eq-CM_LL_forced_sho_eom_complex_form" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_LL_forced_sho_eom_complex_form</span></a> 에 대입하면</p>
+<p>으로 쓸 수 있다. 상수 <span class="math inline">\(h\)</span> 에 대해 <span class="math inline">\(\xi = he^{i\omega_0 t}\)</span> 는 위 방정식의 제차 형태에 대한 일반해이며, 우리는 <span class="math inline">\(\xi = h(t) e^{i\omega_0 t}\)</span> 형태의 특수해가 존재하는지 확인해보자. <a href="#eq-CM_LL_forced_sho_eom_complex_form" class="quarto-xref">식&nbsp;<span>7.4</span></a> 에 대입하면</p>
 <p><span class="math display">\[
 \dot{h}e^{i\omega_0 t}  = \dfrac{F(t)}{m}
 \]</span></p>
@@ -610,7 +613,7 @@ h(t) = \int^t \dfrac{F(t')e^{-i\omega_0 t'}}{m}\,dt'
 <p><span id="eq-CM_LL_forced_sho_eom_complex_form_solution_1"><span class="math display">\[
 \xi (t) = e^{i \omega t} \left[\int_0^t \dfrac{F(t')e^{-i\omega_0 t'}}{m}\,dt' + \xi_0\right].
 \tag{7.5}\]</span></span></p>
-<p>외력이 작용하기 때문에 에너지는 보존되지 않는다. 이제 모든 시간동안에 조화진동자에 전달되는 에너지를 구해보자. <a href="#eq-CM_LL_forced_sho_eom_complex_form_solution_1" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_LL_forced_sho_eom_complex_form_solution_1</span></a> 에서 적분상수 <span class="math inline">\(\xi_0\)</span> 를 없에고 적분 구간을 <span class="math inline">\((-\infty,\, \infty)\)</span> 로 잡으면</p>
+<p>외력이 작용하기 때문에 에너지는 보존되지 않는다. 이제 모든 시간동안에 조화진동자에 전달되는 에너지를 구해보자. <a href="#eq-CM_LL_forced_sho_eom_complex_form_solution_1" class="quarto-xref">식&nbsp;<span>7.5</span></a> 에서 적분상수 <span class="math inline">\(\xi_0\)</span> 를 없에고 적분 구간을 <span class="math inline">\((-\infty,\, \infty)\)</span> 로 잡으면</p>
 <p><span class="math display">\[
 |\xi_\infty|^2 = \dfrac{1}{m^2} \left|\int_{-\infty}^\infty F(t')e^{-i\omega_0 t'}\,dt'\right|^2
 \]</span></p>
@@ -637,7 +640,7 @@ E = \dfrac{1}{2m} \left|\int_{-\infty}^\infty F(t')\,dt'\right|^2
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-CM_LL_real_solution_of_forced_sho" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_LL_real_solution_of_forced_sho</span></a> 을 이용한다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-CM_LL_real_solution_of_forced_sho" class="quarto-xref">식&nbsp;<span>7.3</span></a> 을 이용한다.</p>
 <p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(x (t) = a\cos (\omega_0 t + \theta_0) + \dfrac{F_0 }{m \omega_0^2}\)</span> 이며 초기조건으로부터 <span class="math inline">\(a\cos \theta_0 + \dfrac{F_0 }{m\omega_0^2} =0\)</span>, <span class="math inline">\(-a\omega_0 \sin \theta_0 = 0\)</span> 이므로 <span class="math inline">\(\theta_0 = 0\)</span>, <span class="math inline">\(a = - \dfrac{F_0\phi_0}{m\omega_0^2}\)</span> 이다. 즉</p>
 <p><span class="math display">\[
 x(t) = \dfrac{F_0}{m\omega_0^2}(1-\cos \omega_0 t).

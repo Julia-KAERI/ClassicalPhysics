@@ -8,9 +8,9 @@ crossref:
 
 {{< include ../../latexmacros.qmd >}}
 
-## 엔트로피
+## 엔트로피 {#sec-TD_entropy}
 
-$n$ 개의 $T_i$ 열원 ($i=1,\ldots,\,n$)을 생각하자. 그리고 $T_i$ 열원에서 주고받는 열을 각각 $Q_i (i=1,\ldots,\,n)$ 이라고 하자. $Q_i>0$ 이면 열원으로 부터 열을 받으며, $Q_i<0$ 이면 열을 방출한고 하자. 그리고 전체 과정이 순환이라고 하자. 우리는 다음을 보일 것이다.
+$n$ 개의 온도가 $T_i$ ($i=1,\ldots,\,n$) 인 열원을 생각하자. 그리고 $T_i$ 열원에서 주고받는 열을 각각 $Q_i$ 라고 하자. $Q_i>0$ 이면 열원으로 부터 열을 받으며, $Q_i<0$ 이면 열을 방출한고 하자. 그리고 전체 과정이 순환이라고 하자. 우리는 다음을 보일 것이다.
 
 $$
 \sum_{i=1}^n \dfrac{Q_i}{T_i} \le 0.
@@ -18,12 +18,23 @@ $$ {#eq-TD_primitive_form_of_entropy}
 
 이 때 등호는 전체 과정, 즉 순환이 가역일 때 성립한다. 이 계를 $\Sigma$ 라고 하자.
 
-유사한 계 $\Sigma'$ 을 다음과 같이 구성한다. $\Sigma$ 의 $n$ 개의 열원 이외에 $T_0$ 의 온도를 갖는 $T_0$ 열원을 추가한다. 그리고 $T_i$ 의 온도와 $T_0$ 의 온도에서 작동하는 카르노 기관 $C_i$ 를 생각하자. $\Sigma'$ 의 한 순환은 각각의 $C_i$ 의 한 순환의 연속이다. 여기서  @eq-TD_relation_of_heat_and_temperature_of_carnot_engine_using_ideal_gas 로 부터 
+$\Sigma$ 의 $n$ 개의 열원 이외에 임의의 정해진 $T_0$ 의 온도를 갖는 $T_0$ 열원을 추가한다. 그리고 $T_i$ 의 온도와 $T_0$ 의 온도에서 작동하는 카르노 기관 $C_i$ 를 생각하자. $C_i$ 는 $T_i$ 열원으로부터 $Q_i$ 만큼의 열을 배출한다고 하자. $T_0$ 열원으로부터 흡수하는 열 $Q_{i,\,0}$ 는  @eq-TD_relation_of_heat_and_temperature_of_carnot_engine_using_ideal_gas 로 부터 
 
 $$
 Q_{i,\,0}= \dfrac{T_0}{T_i} Q_i
+$${#eq-TD_eq_for_entropy_1}
+
+임을 안다. 이렇게 $\Sigma$ 와 $n$ 개의 카르노 기관으로 이루어진 계를 $\Sigma'$ 라고 하자.
+
+이제 $\Sigma$ 의 한 순환과 각각의 카르노 기관의 한 사이클씩으로 이루어진 복잡한 사이클을 생각하자. $T_i$ 의 열원에서 $\Sigma$ 로 주는 열과 $C_i$ 로부터 받는 열이 $Q_i$ 로 같기 때문에 $T_i$ 에서의 순 열교환은 $0$ 이다. $T_0$ 열원이 잃는 열을 $Q_0$ 라고 하면
+
 $$
+Q_0 = \sum_{i=0}^n Q_{i,0} = T_0 \sum_{i=1}^n \dfrac{Q_i}{T_i}.
+$$ {#eq-TD_eq_for_entropy_2}
 
-임을 안다. 
+$\Sigma'$ 의 한 순환에서 $T_0$ 열원으로 부터 받는 열은 $Q_{0}$ 이다. 그런데 우리는 순환에서 수행된 일은 계로부터 받는 열과 같다는 것을 안다. $\Sigma'$ 의 한 사이클에서 $S,\,C_1,\ldots,\,C_n$ 은 초기상태로 돌아 왔다. 만약 $Q_0\ge 0$ 이라면 켈밴의 열역학 제 2 법칙을 위배하므로 $Q_0\le 0$ 이다. $T_0\ge 0$ 이므로 우리는 @eq-TD_primitive_form_of_entropy 를 얻게 된다. $S$ 가 가역이라면 우리는 이 과정을 모두 역으로 돌릴 수 있고 $\sum_{i=1}Q_i /T_i \ge 0$ 이어야 한다. 따라서 $S$ 가 가역이라면
 
-이제 $\Sigma$ 의 한 순환과 $\Sigma'$ 의 한 순환을 비교한다.   
+$$
+\sum_{i=1}^n \dfrac{Q_i}{T_i} = 0,\qquad (\text{for reversivble system})
+$$ {#eq-TD_eq_for_entropy_3}
+

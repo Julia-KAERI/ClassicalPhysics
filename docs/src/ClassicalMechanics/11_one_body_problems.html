@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-221f8d40ef94b7d7736ec4c1e420c32a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -602,7 +605,7 @@ m\ddot{x} = -2m\beta \dot{x} -k x + F(t)
 <p><span id="eq-CM_ddho_eom_complex"><span class="math display">\[
 \ddot{\tilde{x}} + 2\beta \dot{\tilde{x}} + \omega_0^2 \tilde {x} = \tilde{f}_0 e^{i\omega t}
 \tag{5.6}\]</span></span></p>
-<p>를 생각하자. <span class="math inline">\(\tilde{x}\)</span> 의 실수부는 <a href="#eq-CM_ddho_emo" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_ddho_emo</span></a> 를 만족한다. <span class="math inline">\(\tilde{x} = \tilde{x}_0 e^{i\omega t}\)</span> 로 놓으면,</p>
+<p>를 생각하자. <span class="math inline">\(\tilde{x}\)</span> 의 실수부는 <a href="#eq-CM_ddho_emo" class="quarto-xref">식&nbsp;<span>5.5</span></a> 를 만족한다. <span class="math inline">\(\tilde{x} = \tilde{x}_0 e^{i\omega t}\)</span> 로 놓으면,</p>
 <p><span class="math display">\[
 (-\omega^2 + 2i\beta \omega + \omega_0^2) \tilde{x}_0 e^{i\omega t} =  \tilde{f}_0 e^{i\omega t}
 \]</span></p>
@@ -617,11 +620,11 @@ m\ddot{x} = -2m\beta \dot{x} -k x + F(t)
 <p><span id="eq-CM_particular_solution_of_ddho"><span class="math display">\[
 x_p(t) = \text{Re}(\tilde{x}(t)) = \dfrac{f_0}{\sqrt{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}} \cos (\omega t + \theta_0 + \phi_0)
 \tag{5.7}\]</span></span></p>
-<p>이다. 그렇다면 일반해는 <a href="#eq-CM_characteristic_solution_of_dho_for_overdampled" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_characteristic_solution_of_dho_for_overdampled</span></a>, <a href="#eq-CM_characteristic_solution_of_dho_for_underdampled" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_characteristic_solution_of_dho_for_underdampled</span></a>, <a href="#eq-CM_characteristic_solution_of_dho_for_criticallly_damped" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_characteristic_solution_of_dho_for_criticallly_damped</span></a> 가운데 해당되는 경우와 <a href="#eq-CM_particular_solution_of_ddho" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_particular_solution_of_ddho</span></a> 의 합으로 표현된다. 앞서 언급했듯이 <span class="math inline">\(t\gg 1\)</span> 이면 일시적인 해는 <span class="math inline">\(0\)</span> 으로 수렴하기 때문에 <span class="math inline">\(x_p(t)\)</span> 가 주도적이 된다. 이를 반영하여 <span class="math inline">\(x_p(t)\)</span> 를 <strong>안정한 해 (steady solution)</strong> 이라고 한다. 흥미로운 것은 외부 힘의 진동수 <span class="math inline">\(\omega\)</span> 와 조화진동자의 고유진동수 <span class="math inline">\(\omega_0\)</span> 가 가까울수록 <span class="math inline">\(x_p(t)\)</span> 의 진폭이 커지며 <span class="math inline">\(\omega = \omega_0\)</span> 라면 진폭이 발산하게된다. 이를 <strong>공명(resonance)</strong> 라고 한다. 안정해의 진폭 <span class="math inline">\(x_0(\omega)\)</span> 는 다음과 같이 표현된다.</p>
+<p>이다. 그렇다면 일반해는 <a href="#eq-CM_characteristic_solution_of_dho_for_overdampled" class="quarto-xref">식&nbsp;<span>5.1</span></a>, <a href="#eq-CM_characteristic_solution_of_dho_for_underdampled" class="quarto-xref">식&nbsp;<span>5.2</span></a>, <a href="#eq-CM_characteristic_solution_of_dho_for_criticallly_damped" class="quarto-xref">식&nbsp;<span>5.3</span></a> 가운데 해당되는 경우와 <a href="#eq-CM_particular_solution_of_ddho" class="quarto-xref">식&nbsp;<span>5.7</span></a> 의 합으로 표현된다. 앞서 언급했듯이 <span class="math inline">\(t\gg 1\)</span> 이면 일시적인 해는 <span class="math inline">\(0\)</span> 으로 수렴하기 때문에 <span class="math inline">\(x_p(t)\)</span> 가 주도적이 된다. 이를 반영하여 <span class="math inline">\(x_p(t)\)</span> 를 <strong>안정한 해 (steady solution)</strong> 이라고 한다. 흥미로운 것은 외부 힘의 진동수 <span class="math inline">\(\omega\)</span> 와 조화진동자의 고유진동수 <span class="math inline">\(\omega_0\)</span> 가 가까울수록 <span class="math inline">\(x_p(t)\)</span> 의 진폭이 커지며 <span class="math inline">\(\omega = \omega_0\)</span> 라면 진폭이 발산하게된다. 이를 <strong>공명(resonance)</strong> 라고 한다. 안정해의 진폭 <span class="math inline">\(x_0(\omega)\)</span> 는 다음과 같이 표현된다.</p>
 <p><span id="eq-CM_amplitude_of_steady_solution"><span class="math display">\[
 x_0 (\omega) =\dfrac{f_0}{\sqrt{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}}
 \tag{5.8}\]</span></span></p>
-<p><span class="math inline">\(x_0\)</span> 를 <span class="math inline">\(\omega/\omega_0\)</span> 에 대해 표현하면 <a href="#fig-resonance" class="quarto-xref">그림&nbsp;<span class="quarto-unresolved-ref">fig-resonance</span></a> 와 같다.</p>
+<p><span class="math inline">\(x_0\)</span> 를 <span class="math inline">\(\omega/\omega_0\)</span> 에 대해 표현하면 <a href="#fig-resonance" class="quarto-xref">그림&nbsp;<span>5.1</span></a> 와 같다.</p>
 <div id="fig-resonance" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-resonance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -636,7 +639,7 @@ x_0 (\omega) =\dfrac{f_0}{\sqrt{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}}
 <p>이제 driving force 가 이 조화진동자에 해주는 시간당 일을 생각해보자. <span class="math display">\[
 E= \dfrac{1}{2}m\dot{x}^2 + \dfrac{1}{2}m\omega_0^2 {x}^2
 \]</span></p>
-<p>이므로, <a href="#eq-CM_ddho_emo0" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_ddho_emo0</span></a> 를 이용하면</p>
+<p>이므로, <a href="#eq-CM_ddho_emo0" class="quarto-xref">식&nbsp;<span>5.4</span></a> 를 이용하면</p>
 <p><span class="math display">\[
 \dfrac{dE}{dt} =  m \dot{x}\ddot{x} + m\omega_0^2 x\dot{x} = -2m \beta \dot{x}^2 + m\omega_0^2x \dot{x}+ \dot{x}F(t)
 \]</span></p>
@@ -694,7 +697,7 @@ Q= 2\pi\dfrac{E}{|\Delta E|}.
 <p><span class="math display">\[
 Q = 2\pi \dfrac{m\omega^2}{m\omega^2 - m\omega^2 e^{-2\beta T}} \approx \dfrac{2\pi}{2\beta T} = \dfrac{\pi}{\beta T}.
 \]</span></p>
-<p>(<span class="math inline">\(b\)</span>) <a href="#eq-CM_amplitude_of_steady_solution" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_amplitude_of_steady_solution</span></a> 로부터, <span class="math inline">\(x_0(\omega) = x_0 (\omega_0)/\sqrt{2}\)</span> 가 되도록 하는 <span class="math inline">\(\omega\)</span> 를 찾으면</p>
+<p>(<span class="math inline">\(b\)</span>) <a href="#eq-CM_amplitude_of_steady_solution" class="quarto-xref">식&nbsp;<span>5.8</span></a> 로부터, <span class="math inline">\(x_0(\omega) = x_0 (\omega_0)/\sqrt{2}\)</span> 가 되도록 하는 <span class="math inline">\(\omega\)</span> 를 찾으면</p>
 <p><span class="math display">\[
 (\omega^2-\omega_0^2)^2 = 4\beta^2 \omega^2
 \]</span></p>
@@ -724,7 +727,7 @@ L = \dfrac{1}{2}m\dot{x} - V(x)
 <p><span class="math display">\[
 t = \sqrt{\dfrac{m}{2}}\int_0^x \dfrac{dx}{\sqrt{E-V(x)}} + \text{const.}
 \]</span></p>
-<p>이다. 포텐셜 에너지 <span class="math inline">\(V(x)\)</span> 가 아래 <a href="#fig-CM_1d_potential" class="quarto-xref">그림&nbsp;<span class="quarto-unresolved-ref">fig-CM_1d_potential</span></a> 와 같다고 하자. <span class="math inline">\(\dfrac{1}{2}m\dot{x}^2 = E-V(x)\ge 0\)</span> 이어야 하므로 초기조건과 총 에너지 <span class="math inline">\(E\)</span> 에 의해 입자가 움직일 수 있는 구간이 결정된다. 예를 들어 <a href="#fig-CM_1d_potential" class="quarto-xref">그림&nbsp;<span class="quarto-unresolved-ref">fig-CM_1d_potential</span></a> 에서 <span class="math inline">\(E=E_1\)</span> 일 때 입자는 <span class="math inline">\([x_2,\,x_3]\)</span> 구간에서 밖에 존재 할 수 없다. 이렇게 <span class="math inline">\(U(x)=E\)</span> 인 <span class="math inline">\(x\)</span> 를 <strong>turning point</strong> 라고 한다. 이 경우 입자는 주기운동을 하며, 그 주기 <span class="math inline">\(T\)</span> 는 <span class="math inline">\(x_2\to x_3\)</span> 이동에 걸리는 시간과 <span class="math inline">\(x_3 \to x_2\)</span> 에 걸리는 시간의 합이며, 이 두 시간은 같기 때문에 아래와 같이 구할 수 있다.</p>
+<p>이다. 포텐셜 에너지 <span class="math inline">\(V(x)\)</span> 가 아래 <a href="#fig-CM_1d_potential" class="quarto-xref">그림&nbsp;<span>5.2</span></a> 와 같다고 하자. <span class="math inline">\(\dfrac{1}{2}m\dot{x}^2 = E-V(x)\ge 0\)</span> 이어야 하므로 초기조건과 총 에너지 <span class="math inline">\(E\)</span> 에 의해 입자가 움직일 수 있는 구간이 결정된다. 예를 들어 <a href="#fig-CM_1d_potential" class="quarto-xref">그림&nbsp;<span>5.2</span></a> 에서 <span class="math inline">\(E=E_1\)</span> 일 때 입자는 <span class="math inline">\([x_2,\,x_3]\)</span> 구간에서 밖에 존재 할 수 없다. 이렇게 <span class="math inline">\(U(x)=E\)</span> 인 <span class="math inline">\(x\)</span> 를 <strong>turning point</strong> 라고 한다. 이 경우 입자는 주기운동을 하며, 그 주기 <span class="math inline">\(T\)</span> 는 <span class="math inline">\(x_2\to x_3\)</span> 이동에 걸리는 시간과 <span class="math inline">\(x_3 \to x_2\)</span> 에 걸리는 시간의 합이며, 이 두 시간은 같기 때문에 아래와 같이 구할 수 있다.</p>
 <p><span id="eq-period_1d_potential_bounded"><span class="math display">\[
 T(E) = 2 \times \sqrt{\dfrac{m}{2}}\int_{x_2}^{x_3} \dfrac{dx}{\sqrt{E-V(x)}} = \sqrt{2m}\int_{x_2}^{x_3} \dfrac{dx}{\sqrt{E-V(x)}}.
 \tag{5.9}\]</span></span></p>
@@ -753,14 +756,14 @@ V(x) \approx V(x_0) + \dfrac{1}{2}\left(\dfrac{d^2V}{dx^2}\right)_{x=x_0}(x-x_0)
 <p><span id="eq-CM_central_field"><span class="math display">\[
 V(\boldsymbol{r}_1,\,\boldsymbol{r}_2) = V(\|\boldsymbol{r}_1-\boldsymbol{r}_2\|) = V(r),\qquad \text{where }\boldsymbol{r} := \boldsymbol{r}_1-\boldsymbol{r}_2
 \tag{5.10}\]</span></span></p>
-<p>일 때 이를 <strong>중심장(central field)</strong> 라고 하고 중심장에 의해 발생하는 힘을 <strong>중심력(central force)</strong> 라고 한다. 포텐셜이 <a href="#eq-CM_central_field" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_central_field</span></a> 와 같이 주어졌을 경우,</p>
+<p>일 때 이를 <strong>중심장(central field)</strong> 라고 하고 중심장에 의해 발생하는 힘을 <strong>중심력(central force)</strong> 라고 한다. 포텐셜이 <a href="#eq-CM_central_field" class="quarto-xref">식&nbsp;<span>5.10</span></a> 와 같이 주어졌을 경우,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \boldsymbol{F}_{21} &amp;= -\nabla_{\boldsymbol{r}_1}V(\|\boldsymbol{r}_1-\boldsymbol{r}_2\|) = - \dfrac{\partial V(r)}{\partial r}\hat{\boldsymbol{r}} \qquad \text{where }\hat{\boldsymbol{r}} = \dfrac{\boldsymbol{r}}{r}, \\
 \boldsymbol{F}_{12} &amp;= - \boldsymbol{F}_{12} = \dfrac{\partial V(r)}{\partial r}\hat{\boldsymbol{r}}
 \end{aligned}
 \]</span></p>
-<p>가 된다. 즉 두 입자 사이에 작용하는 힘은 <span class="math inline">\(\boldsymbol{r}\)</span> 방향이다. 중심력의 경우 두 물체의 각운동량의 합은 보존된다는 것을 이미 <a href="#sec-CM_total_angular_momentum" class="quarto-xref"><span class="quarto-unresolved-ref">sec-CM_total_angular_momentum</span></a> 에서 보였다.</p>
+<p>가 된다. 즉 두 입자 사이에 작용하는 힘은 <span class="math inline">\(\boldsymbol{r}\)</span> 방향이다. 중심력의 경우 두 물체의 각운동량의 합은 보존된다는 것을 이미 <a href="01_basic_principles.html#sec-CM_total_angular_momentum" class="quarto-xref"><span> 1.3.2</span></a> 에서 보였다.</p>
 <p>중심력으로는 대표적으로 만유인력과 쿨롱 힘이 존재한다. 둘 다 중심장이며 질량 <span class="math inline">\(m_1,\,m_2\)</span> 인 입자가 각각 <span class="math inline">\(\boldsymbol{r}_1,\,\boldsymbol{r}_2\)</span> 위치에 있을 경우의 포텐셜 <span class="math inline">\(V_G(r)\)</span> 는</p>
 <p><span id="eq-CM_gravitational_potential"><span class="math display">\[
 V_G (r) = - \dfrac{Gm_1m_2}{r}
@@ -792,7 +795,7 @@ L = \dfrac{1}{2}m_1 \|\dot{\boldsymbol{r}_1}\|^2 + \dfrac{1}{2}m_2 \|\dot{\bolds
 <p><span id="eq-CM_lagrangian_of_2body_reduced_mass"><span class="math display">\[
 L = \dfrac{1}{2}\mu \|\dot{\boldsymbol{r}}\|^2 + V(\|\boldsymbol{r}\|) + \dfrac{1}{2}M\|\dot{\boldsymbol{R}}\|^2 .
 \tag{5.15}\]</span></span></p>
-<p>이다. <span class="math inline">\(\mu\)</span> 는 <strong>환원 질량(reduced mass)</strong> 라고 불리며 <span class="math inline">\(M\)</span> 은 두 물체의 질량의 합이다. <a href="#eq-CM_lagrangian_of_2body_reduced_mass" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_lagrangian_of_2body_reduced_mass</span></a> 의 <span class="math inline">\(L\)</span> 은 두 변수 <span class="math inline">\(\boldsymbol{r}\)</span> 과 <span class="math inline">\(\boldsymbol{R}\)</span> 이 분리되어 있으며 <span class="math inline">\(\boldsymbol{R}=0\)</span> 인 좌표계를 생각 할 수 있는데 보통 실험실 좌표계라고 한다. 실험실 좌표계에서의 라그랑지안은 다음과 같다.</p>
+<p>이다. <span class="math inline">\(\mu\)</span> 는 <strong>환원 질량(reduced mass)</strong> 라고 불리며 <span class="math inline">\(M\)</span> 은 두 물체의 질량의 합이다. <a href="#eq-CM_lagrangian_of_2body_reduced_mass" class="quarto-xref">식&nbsp;<span>5.15</span></a> 의 <span class="math inline">\(L\)</span> 은 두 변수 <span class="math inline">\(\boldsymbol{r}\)</span> 과 <span class="math inline">\(\boldsymbol{R}\)</span> 이 분리되어 있으며 <span class="math inline">\(\boldsymbol{R}=0\)</span> 인 좌표계를 생각 할 수 있는데 보통 실험실 좌표계라고 한다. 실험실 좌표계에서의 라그랑지안은 다음과 같다.</p>
 <p><span id="eq-CM_lagrangian_of_2body_reduced_mass_LAB_frame"><span class="math display">\[
 L = \dfrac{1}{2}\mu \|\dot{\boldsymbol{r}}\|^2 + V(\|\boldsymbol{r}\|).
 \tag{5.16}\]</span></span></p>
@@ -804,7 +807,7 @@ L = \dfrac{1}{2}\mu \|\dot{\boldsymbol{r}}\|^2 + V(\|\boldsymbol{r}\|).
 <p><span class="math display">\[
 \dot{\boldsymbol{r}} = \dot{r}\hat{\boldsymbol{r}} + r\dot{\theta}\hat{\boldsymbol{\theta}}
 \]</span></p>
-<p>이며 따라서, <a href="#eq-CM_lagrangian_of_2body_reduced_mass_LAB_frame" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_lagrangian_of_2body_reduced_mass_LAB_frame</span></a> 은</p>
+<p>이며 따라서, <a href="#eq-CM_lagrangian_of_2body_reduced_mass_LAB_frame" class="quarto-xref">식&nbsp;<span>5.16</span></a> 은</p>
 <p><span id="eq-CM_lagrangian_for_reduced_to_1d"><span class="math display">\[
 L = \dfrac{1}{2}\mu \dot{r}^2 + \dfrac{1}{2}\mu r^2 \dot{\theta}^2 + V(r)
 \tag{5.17}\]</span></span></p>
@@ -838,7 +841,7 @@ t = \int \left[\dfrac{2}{\mu}  \left(E-V(r) - \dfrac{l^2}{2\mu r^2}\right)\right
 \tag{5.19}\]</span></span></p>
 <p>이다.</p>
 <p><br></p>
-<p><a href="#eq-CM_lagrangian_for_reduced_to_1d" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_lagrangian_for_reduced_to_1d</span></a> 을 보자. <span class="math inline">\(l = \mu r^2\dot{\theta}\)</span> 에 대해</p>
+<p><a href="#eq-CM_lagrangian_for_reduced_to_1d" class="quarto-xref">식&nbsp;<span>5.17</span></a> 을 보자. <span class="math inline">\(l = \mu r^2\dot{\theta}\)</span> 에 대해</p>
 <p><span class="math display">\[
 L = \dfrac{1}{2}\mu \dot{r}^2 + V_{\textrm{eff}}(r),\qquad {\textrm{where }}V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} + V(r)
 \]</span></p>
@@ -846,7 +849,7 @@ L = \dfrac{1}{2}\mu \dot{r}^2 + V_{\textrm{eff}}(r),\qquad {\textrm{where }}V_{\
 <p><span class="math display">\[
 \lim_{r \to 0} \dfrac{l^2}{2\mu r^2} = +\infty,\qquad \lim_{r \to \infty} \dfrac{l^2}{2\mu r^2} = 0
 \]</span></p>
-<p>이며 <span class="math inline">\(\lim_{r \to \infty}V(r) = 0\)</span> 임을 안다. 많은 경우 이에 대한 운동은 <a href="#fig-CM_1d_potential" class="quarto-xref">그림&nbsp;<span class="quarto-unresolved-ref">fig-CM_1d_potential</span></a> 의 닫힌 상태(<span class="math inline">\(E_2\)</span> 의 상태) 이며 <span class="math inline">\(r\)</span> 에 대한 최소값(<span class="math inline">\(r_{\textrm{min}}\)</span>)과 최대값(<span class="math inline">\(r_{\textrm{max}}\)</span>)이 존재한다. <a href="#eq-CM_reduced_to_1d_theta" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_reduced_to_1d_theta</span></a> 로부터 <span class="math inline">\(r_{\textrm{min}}\)</span> 에서 <span class="math inline">\(r_{\textrm{max}}\)</span> 까지의 <span class="math inline">\(\theta\)</span> 의 차이를 <em>aspidal angle</em> 이라고 한다. <span class="math inline">\(\Delta \theta\)</span> 를 계산 할 수 있다.</p>
+<p>이며 <span class="math inline">\(\lim_{r \to \infty}V(r) = 0\)</span> 임을 안다. 많은 경우 이에 대한 운동은 <a href="#fig-CM_1d_potential" class="quarto-xref">그림&nbsp;<span>5.2</span></a> 의 닫힌 상태(<span class="math inline">\(E_2\)</span> 의 상태) 이며 <span class="math inline">\(r\)</span> 에 대한 최소값(<span class="math inline">\(r_{\textrm{min}}\)</span>)과 최대값(<span class="math inline">\(r_{\textrm{max}}\)</span>)이 존재한다. <a href="#eq-CM_reduced_to_1d_theta" class="quarto-xref">식&nbsp;<span>5.19</span></a> 로부터 <span class="math inline">\(r_{\textrm{min}}\)</span> 에서 <span class="math inline">\(r_{\textrm{max}}\)</span> 까지의 <span class="math inline">\(\theta\)</span> 의 차이를 <em>aspidal angle</em> 이라고 한다. <span class="math inline">\(\Delta \theta\)</span> 를 계산 할 수 있다.</p>
 <p><span id="eq-CM_reduced_1d_potential_precession"><span class="math display">\[
 \Delta \theta = \int_{r_\textrm{min}}^{r_\textrm{max}}  \dfrac{l}{r^2} \left[2\mu  \left(E-V(r) - \dfrac{l^2}{2\mu r^2}\right)\right]^{-1/2}\, dr
 \tag{5.20}\]</span></span></p>
@@ -877,7 +880,7 @@ V(r) = -\dfrac{K}{r}
 <p><span id="eq-CM_effective_potential_for_kepler_problem"><span class="math display">\[
 V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} - \dfrac{K}{r}
 \tag{5.22}\]</span></span></p>
-<p>이다. <span class="math inline">\(V'_{\textrm{eff}}(r)=0\)</span> 인 경우는 <span class="math inline">\(r=r_0=\dfrac{l^2}{\mu K}\)</span> 이며 이 때 <span class="math inline">\(V_{\textrm{eff}}(r)\)</span> 은 최소값을 갖는다. <span class="math inline">\(V_{\textrm{eff}}(r)\)</span> 은 아래 <a href="#fig-CM_effective_potential_for_kepler_problem_1" class="quarto-xref">그림&nbsp;<span class="quarto-unresolved-ref">fig-CM_effective_potential_for_kepler_problem_1</span></a> 과 같다.</p>
+<p>이다. <span class="math inline">\(V'_{\textrm{eff}}(r)=0\)</span> 인 경우는 <span class="math inline">\(r=r_0=\dfrac{l^2}{\mu K}\)</span> 이며 이 때 <span class="math inline">\(V_{\textrm{eff}}(r)\)</span> 은 최소값을 갖는다. <span class="math inline">\(V_{\textrm{eff}}(r)\)</span> 은 아래 <a href="#fig-CM_effective_potential_for_kepler_problem_1" class="quarto-xref">그림&nbsp;<span>5.5</span></a> 과 같다.</p>
 <div id="fig-CM_effective_potential_for_kepler_problem_1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-CM_effective_potential_for_kepler_problem_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -888,11 +891,11 @@ V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} - \dfrac{K}{r}
 </figcaption>
 </figure>
 </div>
-<p>정확한 궤적은 <a href="#eq-CM_reduced_to_1d_theta" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_reduced_to_1d_theta</span></a> 을 통해 얻을 수 있다. <span class="math inline">\(p = \dfrac{l^2}{\mu K}\)</span> 와 <span class="math inline">\(\varepsilon = \sqrt{1+\dfrac{2El^2}{\mu K^2}}\)</span> 에 대해 아래와 같은 궤적을 얻을 수 있다. 증명은 어렵지 않으며 <a href="#exr-proof_of_kepler_orbit" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-proof_of_kepler_orbit</span></a> 을 보라.</p>
+<p>정확한 궤적은 <a href="#eq-CM_reduced_to_1d_theta" class="quarto-xref">식&nbsp;<span>5.19</span></a> 을 통해 얻을 수 있다. <span class="math inline">\(p = \dfrac{l^2}{\mu K}\)</span> 와 <span class="math inline">\(\varepsilon = \sqrt{1+\dfrac{2El^2}{\mu K^2}}\)</span> 에 대해 아래와 같은 궤적을 얻을 수 있다. 증명은 어렵지 않으며 <a href="#exr-proof_of_kepler_orbit" class="quarto-xref">연습문제&nbsp;<span>5.6</span></a> 을 보라.</p>
 <p><span id="eq-CM_orbit_for_kepler_problem"><span class="math display">\[
 \dfrac{p}{r} = 1+ \varepsilon \cos\theta.
 \tag{5.23}\]</span></span></p>
-<p>위의 식은 잘 알려진 이차곡선의 극좌표계 형식이다. 이때의 <span class="math inline">\(\varepsilon\)</span> 을 <strong>이심률 (eccentricity)</strong> 라고 하며 이심률 값에 따라 곡선의 모양이 달라진다. <a href="#tbl-eccentricity_and_orbit" class="quarto-xref">표&nbsp;<span class="quarto-unresolved-ref">tbl-eccentricity_and_orbit</span></a> 는 이심률에 따른 궤도의 모양을 분류하였고, <a href="#fig-kepler_orbit" class="quarto-xref">그림&nbsp;<span class="quarto-unresolved-ref">fig-kepler_orbit</span></a> 은 <span class="math inline">\(\varepsilon\)</span> 값에 따른 궤도를 보여준다.</p>
+<p>위의 식은 잘 알려진 이차곡선의 극좌표계 형식이다. 이때의 <span class="math inline">\(\varepsilon\)</span> 을 <strong>이심률 (eccentricity)</strong> 라고 하며 이심률 값에 따라 곡선의 모양이 달라진다. <a href="#tbl-eccentricity_and_orbit" class="quarto-xref">표&nbsp;<span>5.1</span></a> 는 이심률에 따른 궤도의 모양을 분류하였고, <a href="#fig-kepler_orbit" class="quarto-xref">그림&nbsp;<span>5.6</span></a> 은 <span class="math inline">\(\varepsilon\)</span> 값에 따른 궤도를 보여준다.</p>
 <div id="tbl-eccentricity_and_orbit" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-eccentricity_and_orbit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -957,7 +960,7 @@ V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} - \dfrac{K}{r}
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#exr-proof_of_laplace_runge_lenz" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-proof_of_laplace_runge_lenz</span></a></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#exr-proof_of_laplace_runge_lenz" class="quarto-xref">연습문제&nbsp;<span>5.7</span></a></p>
 </div>
 <p><br></p>
 <p><span class="math inline">\(\boldsymbol{A}\)</span> 를 이용하면 궤도를 쉽게 구할 수 있다.</p>
@@ -968,12 +971,12 @@ V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} - \dfrac{K}{r}
 <p><span class="math display">\[
 \dfrac{1}{r} =\dfrac{mK}{l^2}\left(1+ \dfrac{A}{mK} \cos \theta\right)
 \]</span></p>
-<p>를 얻는다. 이를 <a href="#eq-CM_orbit_for_kepler_problem" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_orbit_for_kepler_problem</span></a> 와 비교해보라. 이로부터</p>
+<p>를 얻는다. 이를 <a href="#eq-CM_orbit_for_kepler_problem" class="quarto-xref">식&nbsp;<span>5.23</span></a> 와 비교해보라. 이로부터</p>
 <p><span id="eq-CM_magnitude_of_RLR_vector"><span class="math display">\[
 \|\boldsymbol{A}\|^2 = mK^2 + 2mEl^2
 \tag{5.25}\]</span></span></p>
 <p>임을 알 수 있다.</p>
-<p>우리는 운동상수로 <span class="math inline">\(\boldsymbol{L},\,\boldsymbol{A},\,E\)</span> 가 있다는 것을 알았다. <span class="math inline">\(\boldsymbol{L}\)</span> 과 <span class="math inline">\(\boldsymbol{A}\)</span> 는 3차원 벡터이므로 총 7개의 양이 운동상수이다. 시스템의 자유도가 <span class="math inline">\(3\)</span> 이므로 우리는 6개의 독립적인 초기조건(초기 위치로부터 3개의 값, 초기 속도로부터 3개의 값) 을 통해 운동을 정의 할 수 있다. 시간 변수를 생각하면 독립적인 운동상수는 5 개 이어야 한다. <a href="#prp-CM_properties_of_RLR_vector" class="quarto-xref">명제&nbsp;<span class="quarto-unresolved-ref">prp-CM_properties_of_RLR_vector</span></a> 의 (<span class="math inline">\(2\)</span>) 와 <a href="#eq-CM_magnitude_of_RLR_vector" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_magnitude_of_RLR_vector</span></a> 가 운동상수에 추가적인 조건을 부여하기 때문에 정확히 5개의 독립적인 운동상수가 있게 된다.</p>
+<p>우리는 운동상수로 <span class="math inline">\(\boldsymbol{L},\,\boldsymbol{A},\,E\)</span> 가 있다는 것을 알았다. <span class="math inline">\(\boldsymbol{L}\)</span> 과 <span class="math inline">\(\boldsymbol{A}\)</span> 는 3차원 벡터이므로 총 7개의 양이 운동상수이다. 시스템의 자유도가 <span class="math inline">\(3\)</span> 이므로 우리는 6개의 독립적인 초기조건(초기 위치로부터 3개의 값, 초기 속도로부터 3개의 값) 을 통해 운동을 정의 할 수 있다. 시간 변수를 생각하면 독립적인 운동상수는 5 개 이어야 한다. <a href="#prp-CM_properties_of_RLR_vector" class="quarto-xref">명제&nbsp;<span>5.1</span></a> 의 (<span class="math inline">\(2\)</span>) 와 <a href="#eq-CM_magnitude_of_RLR_vector" class="quarto-xref">식&nbsp;<span>5.25</span></a> 가 운동상수에 추가적인 조건을 부여하기 때문에 정확히 5개의 독립적인 운동상수가 있게 된다.</p>
 <p><br></p>
 </section>
 </section>
@@ -982,7 +985,7 @@ V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} - \dfrac{K}{r}
 <h2 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h2>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-proof_of_kepler_orbit" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.6</strong></span> <a href="#eq-CM_reduced_to_1d_theta" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_reduced_to_1d_theta</span></a> 로부터 <a href="#eq-CM_orbit_for_kepler_problem" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-CM_orbit_for_kepler_problem</span></a> 를 얻어라.</p>
+<p><span class="theorem-title"><strong>연습문제 5.6</strong></span> <a href="#eq-CM_reduced_to_1d_theta" class="quarto-xref">식&nbsp;<span>5.19</span></a> 로부터 <a href="#eq-CM_orbit_for_kepler_problem" class="quarto-xref">식&nbsp;<span>5.23</span></a> 를 얻어라.</p>
 </div>
 </div>
 <div class="proof">
@@ -1017,7 +1020,7 @@ V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} - \dfrac{K}{r}
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-proof_of_laplace_runge_lenz" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.7</strong></span> <a href="#prp-CM_properties_of_RLR_vector" class="quarto-xref">명제&nbsp;<span class="quarto-unresolved-ref">prp-CM_properties_of_RLR_vector</span></a> 를 증명하라.</p>
+<p><span class="theorem-title"><strong>연습문제 5.7</strong></span> <a href="#prp-CM_properties_of_RLR_vector" class="quarto-xref">명제&nbsp;<span>5.1</span></a> 를 증명하라.</p>
 </div>
 </div>
 <div class="proof">
@@ -1043,7 +1046,7 @@ V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} - \dfrac{K}{r}
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-landau_cm_14_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.8 (L&amp;L Mechanics 14.3)</strong></span> <a href="#exr-landau_cm_5_2" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-landau_cm_5_2</span></a> 에서 <span class="math inline">\(m_2\)</span> 에 대한 운동방정식을 구하라. <span class="math inline">\(m_1\)</span> 은 수평방향으로 자유롭게 움직이며 이 수평방향은 <span class="math inline">\(m_2\)</span> 가 움직이는 평면상에 존재한다.</p>
+<p><span class="theorem-title"><strong>연습문제 5.8 (L&amp;L Mechanics 14.3)</strong></span> <a href="02_variational_principle.html#exr-landau_cm_5_2" class="quarto-xref">연습문제&nbsp;<span>2.8</span></a> 에서 <span class="math inline">\(m_2\)</span> 에 대한 운동방정식을 구하라. <span class="math inline">\(m_1\)</span> 은 수평방향으로 자유롭게 움직이며 이 수평방향은 <span class="math inline">\(m_2\)</span> 가 움직이는 평면상에 존재한다.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -1133,7 +1136,7 @@ V(R) = - 2\pi G m \rho \int_{a}^{a + \Delta a} 2r\,dr = \text{constant}
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-helliwell_1_53" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.10 (Helliwelll 1.53, 고전적인 빅뱅 우주 모델)</strong></span> 균일한 질량 밀도 <span class="math inline">\(\rho(t)\)</span> 를 갖는 거대한 구체의 먼지 분포를 생각하자. 즉 질량 밀도는 공간적으로는 균일하지만 시간에 대해서는 변화한다. 이 구체가 팽창하면 시간에 대해 감소할 것이고 이 구채가 수축하면 시간에 대해 증가한다. <span class="math inline">\(t=0\)</span> 일 때 이 구체는 한 점(여기서 원점으로 삼는다)에 집중되었으며, 밀도는 무한이고, 외부로 향하는 속도 역시 무한이다. 즉 빅뱅이 일어났다. 어떤 시간 <span class="math inline">\(t_0\)</span> 에서 밀도는 <span class="math inline">\(\rho_0\)</span> 이며 원점에서의 거리가 <span class="math inline">\(r_0\)</span> 인 한 특정 먼지 입자의 외부 방향 속력이 <span class="math inline">\(v_0\)</span> 라고 하자.</p>
-<p>(<span class="math inline">\(a\)</span>) <a href="#exr-helliwell_1_41" class="quarto-xref">연습문제&nbsp;<span class="quarto-unresolved-ref">exr-helliwell_1_41</span></a> 에서 보았듯이 구 대칭인 반지름 <span class="math inline">\(r\)</span> 인 spherical shell 의 경우 중심에서 <span class="math inline">\(r\)</span> 보다 작은 위치의 먼지 입자에는 영항을 끼치지 않는다. 반지름 <span class="math inline">\(r\)</span> 안쪽의 질량을 <span class="math inline">\(M_r\)</span> 이라고 하자. 먼지 입자가 탈출속도를 가질 때 <span class="math inline">\(r(t)\)</span> 를 구하라. 즉 먼지 입자는 모두 바깥족으로 향하며(즉 속도가 <span class="math inline">\(\hat{\boldsymbol{r}}\)</span> 방향이며) <span class="math inline">\(r \to \infty\)</span> 일 때 속도가 <span class="math inline">\(0\)</span> 이 된다.</p>
+<p>(<span class="math inline">\(a\)</span>) <a href="#exr-helliwell_1_41" class="quarto-xref">연습문제&nbsp;<span>5.9</span></a> 에서 보았듯이 구 대칭인 반지름 <span class="math inline">\(r\)</span> 인 spherical shell 의 경우 중심에서 <span class="math inline">\(r\)</span> 보다 작은 위치의 먼지 입자에는 영항을 끼치지 않는다. 반지름 <span class="math inline">\(r\)</span> 안쪽의 질량을 <span class="math inline">\(M_r\)</span> 이라고 하자. 먼지 입자가 탈출속도를 가질 때 <span class="math inline">\(r(t)\)</span> 를 구하라. 즉 먼지 입자는 모두 바깥족으로 향하며(즉 속도가 <span class="math inline">\(\hat{\boldsymbol{r}}\)</span> 방향이며) <span class="math inline">\(r \to \infty\)</span> 일 때 속도가 <span class="math inline">\(0\)</span> 이 된다.</p>
 <p>(<span class="math inline">\(b\)</span>) Spherical shell 이 아닌 sphere 를 생각하자. 각각의 먼지 입자는 항상 탈출속도보다 작은 속도를 가진다고 하자. 즉 입자의 에너지</p>
 <p><span id="eq-exr-helliwell_1_53_1"><span class="math display">\[
 E=\dfrac{1}{2}m\dot{r}^2 - \dfrac{GM_rm}{r}&lt;0
@@ -1150,7 +1153,7 @@ t = \left(\dfrac{\alpha^3}{8GM_r}\right)^{1/2} (\eta - \sin \eta).
 <p><br></p>
 <p>고전적인 빅뱅 우주모델에서 음의 에너지를 가질 때 (<span class="math inline">\(c\)</span>) 로부터의 <span class="math inline">\(t(r)\)</span> 은 사이클로이드이다. 즉 우주는 빅 뱅(big bang) 에서 시작하여 빅 크런치(big crunch) 로 끝난다.</p>
 <p><br></p>
-<p>(<span class="math inline">\(d\)</span>) 이제 먼지 입자의 속도가 항상 탈출속도보다 크다고 가정하자. <a href="#eq-exr-helliwell_1_53_1" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-exr-helliwell_1_53_1</span></a> 의 <span class="math inline">\(E&gt;0\)</span> 이다. 이 경우 <span class="math inline">\(t(r)\)</span> 은 아래의 형태로 표현될 수 있음을 보여라.</p>
+<p>(<span class="math inline">\(d\)</span>) 이제 먼지 입자의 속도가 항상 탈출속도보다 크다고 가정하자. <a href="#eq-exr-helliwell_1_53_1" class="quarto-xref">식&nbsp;<span>5.27</span></a> 의 <span class="math inline">\(E&gt;0\)</span> 이다. 이 경우 <span class="math inline">\(t(r)\)</span> 은 아래의 형태로 표현될 수 있음을 보여라.</p>
 <p><span id="eq-exr-helliwell_1_53_4"><span class="math display">\[
 t(r) = \sqrt{\dfrac{m}{2E}}\int^r \sqrt{\dfrac{r}{\alpha+r}} .
 \tag{5.30}\]</span></span></p>
@@ -1166,7 +1169,7 @@ t(r) = \sqrt{\dfrac{m}{2E}}\int^r \sqrt{\dfrac{r}{\alpha+r}} .
 r(t) = \dfrac{2}{3}\left[\sqrt{2GM_r} (t-t_0) + \dfrac{3}{2}{r_0}^{3/2}\right]^{2/3}
 \]</span></p>
 <p>이 때 <span class="math inline">\(v_0 = \sqrt{\dfrac{2GM_r}{r_0}}\)</span> 가 탈출속도이다.</p>
-<p>(<span class="math inline">\(b\)</span>) <a href="#eq-exr-helliwell_1_53_1" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-exr-helliwell_1_53_1</span></a> 로부터</p>
+<p>(<span class="math inline">\(b\)</span>) <a href="#eq-exr-helliwell_1_53_1" class="quarto-xref">식&nbsp;<span>5.27</span></a> 로부터</p>
 <p><span class="math display">\[
 \dfrac{dr}{dt} = \sqrt{\dfrac{GM_r}{r}-\dfrac{2|E|}{m}} = \sqrt{\dfrac{GM_rm-2|E|r}{mr}} = \sqrt{\dfrac{2|E|}{m}} \sqrt{\dfrac{GM_rm/2|E| - r}{r}}
 \]</span></p>
@@ -1175,7 +1178,7 @@ r(t) = \dfrac{2}{3}\left[\sqrt{2GM_r} (t-t_0) + \dfrac{3}{2}{r_0}^{3/2}\right]^{
 dt = \sqrt{\dfrac{m}{2|E|}} \int^r \sqrt{\dfrac{r}{\alpha -r}}\, dr
 \]</span></p>
 <p>이다.</p>
-<p>(<span class="math inline">\(c\)</span>) <a href="#eq-exr-helliwell_1_53_2" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-exr-helliwell_1_53_2</span></a> 의 적분을 <span class="math inline">\(r=\alpha \sin^2(\eta/2) = (\alpha/2)(1-\cos \eta)\)</span> 로 놓고 수행하면,</p>
+<p>(<span class="math inline">\(c\)</span>) <a href="#eq-exr-helliwell_1_53_2" class="quarto-xref">식&nbsp;<span>5.28</span></a> 의 적분을 <span class="math inline">\(r=\alpha \sin^2(\eta/2) = (\alpha/2)(1-\cos \eta)\)</span> 로 놓고 수행하면,</p>
 <p><span class="math display">\[
 \int^r \sqrt{\dfrac{r}{\alpha-r}}\,dr = \int_\eta \alpha \sin^2 \left(\dfrac{\eta}{2}\right)\, d\eta = \dfrac{\alpha}{2} (\eta - \sin \eta)
 \]</span></p>
@@ -1184,7 +1187,7 @@ dt = \sqrt{\dfrac{m}{2|E|}} \int^r \sqrt{\dfrac{r}{\alpha -r}}\, dr
 t = \sqrt{\dfrac{m}{2|E|}} \dfrac{\alpha}{2} (\eta - \sin \eta) = \left(\dfrac{\alpha^3}{8GM_r m}\right)^{1/2}(\eta-\sin \eta)
 \]</span></p>
 <p>이다.</p>
-<p>(<span class="math inline">\(d\)</span>) <a href="#eq-exr-helliwell_1_53_1" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-exr-helliwell_1_53_1</span></a> 와 (<span class="math inline">\(b\)</span>) 로 부터</p>
+<p>(<span class="math inline">\(d\)</span>) <a href="#eq-exr-helliwell_1_53_1" class="quarto-xref">식&nbsp;<span>5.27</span></a> 와 (<span class="math inline">\(b\)</span>) 로 부터</p>
 <p><span class="math display">\[
 \dfrac{dr}{dt} = \sqrt{\dfrac{2E}{m}} \sqrt{\dfrac{GM_r m/2E + r}{r}} = \sqrt{\dfrac{2E}{m}} \sqrt{\dfrac{\alpha+ r}{r}},\qquad \textrm{where } \alpha = \dfrac{GM_rm}{2E}
 \]</span></p>
@@ -1207,7 +1210,7 @@ t(r) = \sqrt{\dfrac{m}{2E}}\int^r \sqrt{\dfrac{r}{\alpha+r}}\, dr
 <p><span id="eq-exr-helliwell_1_54_1"><span class="math display">\[
 \ddot{a} = - \dfrac{4\pi G \rho}{3}a,\qquad \text{and }\qquad {\dot{a}}^2 = \dfrac{8\pi G \rho}{3}a^2 - \dfrac{kc^2}{{R_0}^2}
 \tag{5.31}\]</span></span></p>
-<p>이다. 여기서 <span class="math inline">\(G\)</span> 는 뉴턴의 만유인력상수, <span class="math inline">\(c\)</span> 는 및의 속도, <span class="math inline">\(R_0\)</span> 는 특정 시간 <span class="math inline">\(t_0\)</span> 에서의 두 먼지 입자 사이의 거리이며, <span class="math inline">\(k\)</span> 는 <span class="math inline">\(-1,\,1,\,0\)</span> 가운데 하나이다. 먼지의 밀도는 <span class="math inline">\(a(t)\)</span> 의 <span class="math inline">\(3\)</span> 승에 반비례한다. 즉 <span class="math inline">\(t=t_0\)</span> 일 때의 밀도를 <span class="math inline">\(\rho_0\)</span> 라고 하면 <span class="math inline">\(\rho = \rho_0 ( a_0 / a)^3\)</span> 이다. 따라서 <a href="#eq-exr-helliwell_1_54_1" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-exr-helliwell_1_54_1</span></a> 은</p>
+<p>이다. 여기서 <span class="math inline">\(G\)</span> 는 뉴턴의 만유인력상수, <span class="math inline">\(c\)</span> 는 및의 속도, <span class="math inline">\(R_0\)</span> 는 특정 시간 <span class="math inline">\(t_0\)</span> 에서의 두 먼지 입자 사이의 거리이며, <span class="math inline">\(k\)</span> 는 <span class="math inline">\(-1,\,1,\,0\)</span> 가운데 하나이다. 먼지의 밀도는 <span class="math inline">\(a(t)\)</span> 의 <span class="math inline">\(3\)</span> 승에 반비례한다. 즉 <span class="math inline">\(t=t_0\)</span> 일 때의 밀도를 <span class="math inline">\(\rho_0\)</span> 라고 하면 <span class="math inline">\(\rho = \rho_0 ( a_0 / a)^3\)</span> 이다. 따라서 <a href="#eq-exr-helliwell_1_54_1" class="quarto-xref">식&nbsp;<span>5.31</span></a> 은</p>
 <p><span id="eq-exr-helliwell_1_54_2"><span class="math display">\[
 \ddot{a} = - \dfrac{4\pi G \rho_0 {a_0}^3}{3a^2},\qquad \text{and}\qquad {\dot{a}}^2 = \dfrac{8 \pi G \rho {a_0}^3}{3a} - \dfrac{kc^2}{{R_0}^2}
 \tag{5.32}\]</span></span></p>
@@ -1230,20 +1233,20 @@ t(r) = \sqrt{\dfrac{m}{2E}}\int^r \sqrt{\dfrac{r}{\alpha+r}}\, dr
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(M = \dfrac{4\pi \rho_0 {R_0}^3}{3}\)</span> 와 <span class="math inline">\(a_0=1\)</span> 을 <a href="#eq-exr-helliwell_1_54_2" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-exr-helliwell_1_54_2</span></a> 에 대입하면 <a href="#eq-exr-helliwell_1_54_3" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-exr-helliwell_1_54_3</span></a> 이 나온다.</p>
-<p>(<span class="math inline">\(b\)</span>) <a href="#eq-exr-helliwell_1_54_3" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-exr-helliwell_1_54_3</span></a> 의 첫번째 식의 양변에 <span class="math inline">\(\dot{a}\)</span> 를 곱하자. 좌변의 <span class="math inline">\(\dfrac{1}{2}\dfrac{d}{dt}\left(\dot{a}^2\right)= \ddot{a}\dot{a}\)</span>, <span class="math inline">\(\dfrac{d}{dt}\left(\dfrac{1}{a}\right) = -\dfrac{\dot{a}}{a^2}\)</span> 이므로</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(M = \dfrac{4\pi \rho_0 {R_0}^3}{3}\)</span> 와 <span class="math inline">\(a_0=1\)</span> 을 <a href="#eq-exr-helliwell_1_54_2" class="quarto-xref">식&nbsp;<span>5.32</span></a> 에 대입하면 <a href="#eq-exr-helliwell_1_54_3" class="quarto-xref">식&nbsp;<span>5.33</span></a> 이 나온다.</p>
+<p>(<span class="math inline">\(b\)</span>) <a href="#eq-exr-helliwell_1_54_3" class="quarto-xref">식&nbsp;<span>5.33</span></a> 의 첫번째 식의 양변에 <span class="math inline">\(\dot{a}\)</span> 를 곱하자. 좌변의 <span class="math inline">\(\dfrac{1}{2}\dfrac{d}{dt}\left(\dot{a}^2\right)= \ddot{a}\dot{a}\)</span>, <span class="math inline">\(\dfrac{d}{dt}\left(\dfrac{1}{a}\right) = -\dfrac{\dot{a}}{a^2}\)</span> 이므로</p>
 <p><span class="math display">\[
 \dfrac{1}{2}{\dot{a}}^2 - \dfrac{GM/{R_0}^3}{a} = \text{const.} = \epsilon.
 \]</span></p>
 <p>이다.</p>
 <p>(<span class="math inline">\(c\)</span>) 고전적인 경우 <span class="math inline">\(\ddot{r} = - \dfrac{GM}{r^2}\)</span> 와 <span class="math inline">\(\dfrac{1}{2}{\dot{r}}^2 - \dfrac{GM}{r} = \dfrac{E}{m}\)</span> 인 에너지 보존법칙을 따른다.</p>
-<p>(<span class="math inline">\(d\)</span>) <a href="#eq-exr-helliwell_1_54_4" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-exr-helliwell_1_54_4</span></a> 에서 <span class="math inline">\(V(a) = - \dfrac{GM/{R_0}^3}{a}- \dfrac{\Lambda}{6}a^2\)</span> 라고 하자. <span class="math inline">\(\dfrac{dV}{da} = 0\)</span> 일 때의 <span class="math inline">\(a\)</span> 를 <span class="math inline">\(a_0\)</span> 라고 하면 <span class="math inline">\(a_0 = \left(\dfrac{3GM}{\Lambda {R_0}^3}\right)^{1/3}\)</span> 이며, <span class="math inline">\(\epsilon = - V(a_0)\)</span> 이면 <span class="math inline">\(\dot{a}=0\)</span> 이므로 static 하다. 즉 static solution <span class="math inline">\(a=a_0\)</span> 에 대해</p>
+<p>(<span class="math inline">\(d\)</span>) <a href="#eq-exr-helliwell_1_54_4" class="quarto-xref">식&nbsp;<span>5.34</span></a> 에서 <span class="math inline">\(V(a) = - \dfrac{GM/{R_0}^3}{a}- \dfrac{\Lambda}{6}a^2\)</span> 라고 하자. <span class="math inline">\(\dfrac{dV}{da} = 0\)</span> 일 때의 <span class="math inline">\(a\)</span> 를 <span class="math inline">\(a_0\)</span> 라고 하면 <span class="math inline">\(a_0 = \left(\dfrac{3GM}{\Lambda {R_0}^3}\right)^{1/3}\)</span> 이며, <span class="math inline">\(\epsilon = - V(a_0)\)</span> 이면 <span class="math inline">\(\dot{a}=0\)</span> 이므로 static 하다. 즉 static solution <span class="math inline">\(a=a_0\)</span> 에 대해</p>
 <p><span class="math display">\[
 \Lambda = \dfrac{3GM}{(a_0 R_0)^3}
 \]</span></p>
 <p>이다.</p>
 <p>(<span class="math inline">\(e\)</span>) <span class="math inline">\(V'(a) =  \dfrac{GM/{R_0}^3}{a^2} - \dfrac{\Lambda}{3}a\)</span>, <span class="math inline">\(V''(a) = -\dfrac{2GM/{R_0}^3}{a^3} - \dfrac{\Lambda}{3}\)</span> 이므로 <span class="math inline">\(V''(a_0) = -\Lambda\)</span> 이다. <span class="math inline">\(\Lambda &gt;0\)</span> 이라면 unstable 하다. ((<span class="math inline">\(g\)</span>) 에 <span class="math inline">\(\Lambda&gt;0\)</span> 이라는 조건이 부여되어 있다.)</p>
-<p>(<span class="math inline">\(f\)</span>) <a href="#eq-exr-helliwell_1_54_4" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-exr-helliwell_1_54_4</span></a> 의 첫번째 방정식에서 <span class="math inline">\(M=0\)</span> 으로 놓으면 <span class="math inline">\(\ddot{a} = \dfrac{\Lambda}{3}a\)</span> 로 그 해는 상수 <span class="math inline">\(c_1,\,c_2\)</span> 에 대해</p>
+<p>(<span class="math inline">\(f\)</span>) <a href="#eq-exr-helliwell_1_54_4" class="quarto-xref">식&nbsp;<span>5.34</span></a> 의 첫번째 방정식에서 <span class="math inline">\(M=0\)</span> 으로 놓으면 <span class="math inline">\(\ddot{a} = \dfrac{\Lambda}{3}a\)</span> 로 그 해는 상수 <span class="math inline">\(c_1,\,c_2\)</span> 에 대해</p>
 <p><span class="math display">\[
 a(t) = c_1 e^{\sqrt{\Lambda/3} t} + c_2 e^{-\sqrt{\Lambda/3}t}
 \]</span></p>

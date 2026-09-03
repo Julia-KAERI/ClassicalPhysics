@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,10 +63,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-221f8d40ef94b7d7736ec4c1e420c32a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -93,7 +96,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -425,16 +428,16 @@ window.Quarto = {
 \DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
 </div>
-<p>여기서는 <span class="citation" data-cites="Arnold2013mathematical">Arnold et al. (<a href="#ref-Arnold2013mathematical" role="doc-biblioref">2013</a>)</span> 를 바탕으로 고전역학을 처음부터 다시 재구성하도록 한다.</p>
+<p>여기서는 <span class="citation" data-cites="Arnold2013mathematical">Arnold et al. (<a href="../ClassicalMechanics/00_index.html#ref-Arnold2013mathematical" role="doc-biblioref">2013</a>)</span> 를 바탕으로 고전역학을 처음부터 다시 재구성하도록 한다.</p>
 <section id="참고문헌" class="level3">
 <h3 class="anchored" data-anchor-id="참고문헌">참고문헌</h3>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<p><span class="citation" data-cites="Helliwell_Sahakian_2020">Helliwell and Sahakian (<a href="#ref-Helliwell_Sahakian_2020" role="doc-biblioref">2020</a>)</span></p>
-<p><span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span></p>
-<p><span class="citation" data-cites="Landau1976Mechanics">Landau and Lifshitz (<a href="#ref-Landau1976Mechanics" role="doc-biblioref">1976</a>)</span></p>
-<p><span class="citation" data-cites="Symon1971mechanics">Symon (<a href="#ref-Symon1971mechanics" role="doc-biblioref">1971</a>)</span></p>
-<p><span class="citation" data-cites="Arnold2013mathematical">Arnold et al. (<a href="#ref-Arnold2013mathematical" role="doc-biblioref">2013</a>)</span></p>
-<p><span class="citation" data-cites="Marion2004classical">Thornton and Marion (<a href="#ref-Marion2004classical" role="doc-biblioref">2004</a>)</span></p>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<p><span class="citation" data-cites="Helliwell_Sahakian_2020">Helliwell and Sahakian (<a href="../ClassicalMechanics/00_index.html#ref-Helliwell_Sahakian_2020" role="doc-biblioref">2020</a>)</span></p>
+<p><span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="../ClassicalMechanics/00_index.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span></p>
+<p><span class="citation" data-cites="Landau1976Mechanics">Landau and Lifshitz (<a href="../ClassicalMechanics/00_index.html#ref-Landau1976Mechanics" role="doc-biblioref">1976</a>)</span></p>
+<p><span class="citation" data-cites="Symon1971mechanics">Symon (<a href="../ClassicalMechanics/00_index.html#ref-Symon1971mechanics" role="doc-biblioref">1971</a>)</span></p>
+<p><span class="citation" data-cites="Arnold2013mathematical">Arnold et al. (<a href="../ClassicalMechanics/00_index.html#ref-Arnold2013mathematical" role="doc-biblioref">2013</a>)</span></p>
+<p><span class="citation" data-cites="Marion2004classical">Thornton and Marion (<a href="../ClassicalMechanics/00_index.html#ref-Marion2004classical" role="doc-biblioref">2004</a>)</span></p>
 <div id="ref-Arnold2013mathematical" class="csl-entry" role="listitem">
 Arnold, V. I., K. Vogtmann, and A. Weinstein. 2013. <em>Mathematical Methods of Classical Mechanics</em>. Graduate Texts in Mathematics. Springer New York. <a href="https://books.google.co.kr/books?id=UOQlBQAAQBAJ">https://books.google.co.kr/books?id=UOQlBQAAQBAJ</a>.
 </div>

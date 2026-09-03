@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,10 +63,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-221f8d40ef94b7d7736ec4c1e420c32a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -93,7 +96,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -444,6 +447,7 @@ window.Quarto = {
   <li><a href="#sec-TD_carnot_theorem" id="toc-sec-TD_carnot_theorem" class="nav-link" data-scroll-target="#sec-TD_carnot_theorem"><span class="header-section-number">21.6.2</span> 카르노의 정리</a></li>
   <li><a href="#카르노-기관과-이상기체" id="toc-카르노-기관과-이상기체" class="nav-link" data-scroll-target="#카르노-기관과-이상기체"><span class="header-section-number">21.6.3</span> 카르노 기관과 이상기체</a></li>
   <li><a href="#sec-TD_absolute_thermodynamic_temperature" id="toc-sec-TD_absolute_thermodynamic_temperature" class="nav-link" data-scroll-target="#sec-TD_absolute_thermodynamic_temperature"><span class="header-section-number">21.6.4</span> 열역학적 절대온도</a></li>
+  <li><a href="#sec-TD_thermal_engines" id="toc-sec-TD_thermal_engines" class="nav-link" data-scroll-target="#sec-TD_thermal_engines"><span class="header-section-number">21.6.5</span> 열기관</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1215,7 +1219,34 @@ Q_l = -\int_{V_C}^{V_D} p\,dV = -\nu RT_l \ln \left(\dfrac{V_D}{V_C}\right).
 <section id="열역학적-절대-온도" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="열역학적-절대-온도"><strong>열역학적 절대 온도</strong></h4>
 <div class="page-columns page-full"><p>지금까지 실제 물질적인 온도 <span class="math inline">\(T\)</span> 를 사용했기 때문에 <span class="math inline">\(\theta(T)\)</span> 함수의 형태를 알 수 없다. 그러나 온도의 스케일은 임의적이기 때문에 아예 <span class="math inline">\(\theta(T)\)</span> 를 온도의 스케일로 사용 할 수 있다. 여기서 <a href="#eq-TD_thermodynamic_universal_function_for_T_1" class="quarto-xref">식&nbsp;<span>21.36</span></a> 의 상수 <span class="math inline">\(K\)</span> 역시 우리가 임의로 정할 수 있다. 보통은 1 기압에서의 물의 어는점과 끓는 점의 차이를 100 도로 삼는다<span class="math inline">\(^1\)</span>.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^1\)</span> 이것은 <span class="citation" data-cites="Fermi1956ThermodynamicsDover">Fermi (<a href="../ClassicalMechanics/00_index.html#ref-Fermi1956ThermodynamicsDover" role="doc-biblioref">1956</a>)</span> 의 구절이다. 이 책은 1936년의 책을 그대로 낸 것으로 1936년 당시에는 옳았지만 이후 절대 온도 스케일의 정의가 변화하였으므로 현재는 맞지 않는다.</span></div></div>
-<p>이렇게 정의된 온도 스케일을 <strong>온도에 대한 열역학적 절대 스케일 (absolute thermodynamic scale of temperature)</strong> 라고 하며 이 스케일에서의 온도를 <strong>열역학적 절대 온도 (absolute thermodynamic temperature)</strong> 라고 한다. 앞으로의 온도는 모두 열역학절 절대 온도이다.</p>
+<p>이렇게 정의된 온도 스케일을 <strong>온도에 대한 열역학적 절대 스케일 (absolute thermodynamic scale of temperature)</strong> 라고 하며 이 스케일에서의 온도를 <strong>열역학적 절대 온도 (absolute thermodynamic temperature)</strong> 라고 한다. 앞으로의 온도는 모두 열역학적 절대 온도이다.</p>
+</section>
+<section id="열역학적-절대온도와-측정-온도의-일치" class="level4">
+<h4 class="anchored" data-anchor-id="열역학적-절대온도와-측정-온도의-일치"><strong>열역학적 절대온도와 측정 온도의 일치</strong></h4>
+<p><a href="#fig-TD_carnot_cycle" class="quarto-xref">그림&nbsp;<span>21.6</span></a> 에서 기술된 카르노 순환을 다시 생각하자. 카르노 순환 과정에서 일이 이상기체에 의해 수행된다고 하자. 그리고 <span class="math inline">\(T_h,\,T_l\)</span> 를 카르노 순환의 두 온도라고 하자. 이 온도는 온도계로 측정되었다. 그렇다면 <a href="#eq-TD_relation_of_heat_and_temperature_of_carnot_engine_using_ideal_gas" class="quarto-xref">식&nbsp;<span>21.32</span></a> 로 부터</p>
+<p><span class="math display">\[
+\dfrac{T_h}{T_l} = \dfrac{Q_h}{Q_l} = \dfrac{\theta(T_h)}{\theta(T_l)}
+\]</span></p>
+<p>를 얻는다. 두 온도 <span class="math inline">\(T\)</span> 와 <span class="math inline">\(\theta(T)\)</span> 스케일을 동일하게 놓는다면</p>
+<p><span id="eq-TD_equivalence_of_absolute_and_thermometer_scale"><span class="math display">\[
+\theta (T)=T
+\tag{21.38}\]</span></span></p>
+<p>을 얻는다. 그리고 <strong>이제부터 <span class="math inline">\(T\)</span> 는 열역학적 절대온도이다.</strong></p>
+</section>
+</section>
+<section id="sec-TD_thermal_engines" class="level3" data-number="21.6.5">
+<h3 data-number="21.6.5" class="anchored" data-anchor-id="sec-TD_thermal_engines"><span class="header-section-number">21.6.5</span> 열기관</h3>
+<p>카르노 열기관의 효율은 <a href="#eq-TD_efficiency_of_carnot_engine_using_ideal_gas" class="quarto-xref">식&nbsp;<span>21.33</span></a> 로 주어진다. 그리고 모든 가역기관에서 <span class="math inline">\(Q_h/Q_l = T_h/T_l\)</span> 이다. 따라서 <a href="#eq-TD_efficiency_of_carnot_engine_using_ideal_gas" class="quarto-xref">식&nbsp;<span>21.33</span></a> 는 카르노 기관 뿐만 아니라 가역기관의 효율이 된다. 즉</p>
+<p><span id="eq-TD_efficiency_of_reversible_engine"><span class="math display">\[
+\eta_R = 1-\dfrac{Q_h}{Q_l} = 1-\dfrac{T_h}{T_l}.
+\tag{21.39}\]</span></span></p>
+<p>이며 이 값은 두 온도 <span class="math inline">\(T_l,\,T_h\)</span> 에서 작동하는 기관이 가질 수 있는 최대 효율이다.</p>
+<p>일반적으로 기관에서 <span class="math inline">\(T_l\)</span> 은 환경의 온도로 제어 할 수 없으며 따라서 <span class="math inline">\(T_h\)</span> 를 높일 수록 높은 효율을 얻게 된다. 물론 일반적으로 기관은 가역기관과 차이거 커서 실제 효율은 <span class="math inline">\(\eta_R\)</span> 과 차이가 많이 난다.</p>
+<p>가역기관을 거꾸로 작동시키면 (가역)냉동기가 된다. <span class="math inline">\(W+Q_l = Q_h\)</span> 와 <span class="math inline">\(Q_h/Q_l = T_h/T_l\)</span> 로부터 가역 냉동기에 대해 다음 식을 얻는다.</p>
+<p><span id="eq-TD_Ql_for_refregerator"><span class="math display">\[
+Q_l = W \dfrac{T_l}{T_h-T_l}.
+\tag{21.40}\]</span></span></p>
+<p>이 경우는 <span class="math inline">\(T_h\)</span> 가 주변의 온도이다.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
@@ -1223,7 +1254,6 @@ Q_l = -\int_{V_C}^{V_D} p\,dV = -\nu RT_l \ln \left(\dfrac{V_D}{V_C}\right).
 Fermi, Enrico. 1956. <em>Thermodynamics</em>. New ed. Dover Publications.
 </div>
 </div>
-</section>
 </section>
 </section>
 

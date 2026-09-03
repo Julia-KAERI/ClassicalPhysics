@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-221f8d40ef94b7d7736ec4c1e420c32a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -457,7 +460,7 @@ F := \int_S \boldsymbol{B \cdot}\,d\boldsymbol{a}
 \]</span> {#fig-ED_ED_second_faraday_law}</p>
 <p>를 얻는다.</p>
 <p><br></p>
-<p>아래 <a href="#fig-ED_ED_lenz_law_0" class="quarto-xref">그림&nbsp;<span class="quarto-unresolved-ref">fig-ED_ED_lenz_law_0</span></a> 와 같이 평면상의 원형 도선에 자기장 <span class="math inline">\(\boldsymbol{B} = B\hat{\boldsymbol{z}}\)</span> 가 통과한다고 하자.</p>
+<p>아래 <a href="#fig-ED_ED_lenz_law_0" class="quarto-xref">그림&nbsp;<span>16.1</span></a> 와 같이 평면상의 원형 도선에 자기장 <span class="math inline">\(\boldsymbol{B} = B\hat{\boldsymbol{z}}\)</span> 가 통과한다고 하자.</p>
 <div id="fig-ED_ED_lenz_law_0" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ED_ED_lenz_law_0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -537,7 +540,7 @@ F := \int_S \boldsymbol{B \cdot}\,d\boldsymbol{a}
 </section>
 <section id="sec-ED_ED_inductance_and_magnetic_energy" class="level3" data-number="16.1.3">
 <h3 data-number="16.1.3" class="anchored" data-anchor-id="sec-ED_ED_inductance_and_magnetic_energy"><span class="header-section-number">16.1.3</span> 인덕턴스와 자기에너지</h3>
-<p><a href="#sec-ED_ES_electrostatic_energy_for_charge_distribution" class="quarto-xref"><span class="quarto-unresolved-ref">sec-ED_ES_electrostatic_energy_for_charge_distribution</span></a> 에서 우리는 전하로 이루어진 정전기 시스템을 구성하는데 필요하는 에너지를 계산하였다. 그러나 아직까지 자기장에 대해서는 비슷한 작업을 하지 않았는데 이는 전류들의 모임에 대해 기전력에 대해 아는 것이 필요했기 때문에다. 그리고 이를 위해서는 몇가지 개념이 필요하다.</p>
+<p><a href="02_1_electrostatics1.html#sec-ED_ES_electrostatic_energy_for_charge_distribution" class="quarto-xref"><span> 13.2.3</span></a> 에서 우리는 전하로 이루어진 정전기 시스템을 구성하는데 필요하는 에너지를 계산하였다. 그러나 아직까지 자기장에 대해서는 비슷한 작업을 하지 않았는데 이는 전류들의 모임에 대해 기전력에 대해 아는 것이 필요했기 때문에다. 그리고 이를 위해서는 몇가지 개념이 필요하다.</p>
 <section id="inductance" class="level4">
 <h4 class="anchored" data-anchor-id="inductance"><strong>Inductance</strong></h4>
 <p>곡선 <span class="math inline">\(C\)</span> 를 흐르는 전류 <span class="math inline">\(I\)</span> 가 자기 선속 <span class="math inline">\(F=\int_S \boldsymbol{B\cdot}d\boldsymbol{a}\)</span> 를 발생시킬 때 인덕턴스 <span class="math inline">\(L\)</span> 은 다음과 같이 정의된다.</p>
@@ -558,7 +561,7 @@ F := \int_S \boldsymbol{B \cdot}\,d\boldsymbol{a}
 </figcaption>
 </figure>
 </div>
-<p>길이 <span class="math inline">\(h\)</span>, 단면적 <span class="math inline">\(A\)</span> 로 이루어진 위의 그림과 같은 솔레노이드를 생각하자. <span class="math inline">\(h \gg \sqrt{A}\)</span> 를 가정하여 솔레노이드의 양 끝에서 발생하는 효과를 무시하자. 단위 길이당 감은 횟수 <span class="math inline">\(N\)</span> 에 전류 <span class="math inline">\(I\)</span> 가 흐른다면 <a href="#exm-ED_MS_magnetic_field_due_to_solenoid" class="quarto-xref">예제&nbsp;<span class="quarto-unresolved-ref">exm-ED_MS_magnetic_field_due_to_solenoid</span></a> 에서 보았듯이 솔레노이드 내부의 자기장 <span class="math inline">\(B = \mu_0 N I\)</span> 이며 총 <span class="math inline">\(Nh\)</span> 개의 원형 회로가 있는 것으로 생각 할 수 있으므로 자기 선속 <span class="math inline">\(F = \mu_0 N^2 IAh = \mu_0 N^2 IV_S\)</span> 이다. 여기서 <span class="math inline">\(V_S = Ah\)</span> 는 솔레노이드의 부피이다. 그렇다면 솔레노이드에 의한 인덕턴스 <span class="math inline">\(L = \mu_0 N^2 V_S\)</span> 이다.</p>
+<p>길이 <span class="math inline">\(h\)</span>, 단면적 <span class="math inline">\(A\)</span> 로 이루어진 위의 그림과 같은 솔레노이드를 생각하자. <span class="math inline">\(h \gg \sqrt{A}\)</span> 를 가정하여 솔레노이드의 양 끝에서 발생하는 효과를 무시하자. 단위 길이당 감은 횟수 <span class="math inline">\(N\)</span> 에 전류 <span class="math inline">\(I\)</span> 가 흐른다면 <a href="03_magnetostatics.html#exm-ED_MS_magnetic_field_due_to_solenoid" class="quarto-xref">예제&nbsp;<span>15.2</span></a> 에서 보았듯이 솔레노이드 내부의 자기장 <span class="math inline">\(B = \mu_0 N I\)</span> 이며 총 <span class="math inline">\(Nh\)</span> 개의 원형 회로가 있는 것으로 생각 할 수 있으므로 자기 선속 <span class="math inline">\(F = \mu_0 N^2 IAh = \mu_0 N^2 IV_S\)</span> 이다. 여기서 <span class="math inline">\(V_S = Ah\)</span> 는 솔레노이드의 부피이다. 그렇다면 솔레노이드에 의한 인덕턴스 <span class="math inline">\(L = \mu_0 N^2 V_S\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -598,7 +601,7 @@ U &amp;= \dfrac{1}{2\mu_0} \int \left[(\nabla \times \boldsymbol{B}) \boldsymbol
 <p><span class="math display">\[
 U = \dfrac{1}{2\mu_0}\int \|\boldsymbol{B}\|^2\,d^3\boldsymbol{r}
 \]</span></p>
-<p>이다. 이를 <a href="#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ES_total_electrostatic_energy_for_charge_distribution</span></a> 와 함께 생각하면</p>
+<p>이다. 이를 <a href="02_1_electrostatics1.html#eq-ED_ES_total_electrostatic_energy_for_charge_distribution" class="quarto-xref">식&nbsp;<span>13.33</span></a> 와 함께 생각하면</p>
 <p><span class="math display">\[
 U = \int \left(\dfrac{\epsilon_0 \|\boldsymbol{E}\|^2}{2} + \dfrac{\|\boldsymbol{B}\|^2}{2\mu_0}\right)\,d^3\boldsymbol{r}
 \]</span></p>
@@ -724,7 +727,7 @@ U = \int \left(\dfrac{\epsilon_0 \|\boldsymbol{E}\|^2}{2} + \dfrac{\|\boldsymbol
 <p><span class="math display">\[
 c= \dfrac{1}{\sqrt{\mu_0 \epsilon_0}} = 2.99792458 \times 10^8 \text{m}/\text{s}
 \]</span></p>
-<p><a href="#eq-ED_ED_wave_equation_of_E_field" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ED_wave_equation_of_E_field</span></a> 와 <a href="#eq-ED_ED_wave_equation_of_B_field" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ED_wave_equation_of_B_field</span></a> 는 속도가 <span class="math inline">\(c\)</span> 인 파동 방정식으로 <span class="math inline">\(c\)</span> 는 전기장과 자기장의 전달 속도이다.</p>
+<p><a href="#eq-ED_ED_wave_equation_of_E_field" class="quarto-xref">식&nbsp;<span>16.3</span></a> 와 <a href="#eq-ED_ED_wave_equation_of_B_field" class="quarto-xref">식&nbsp;<span>16.4</span></a> 는 속도가 <span class="math inline">\(c\)</span> 인 파동 방정식으로 <span class="math inline">\(c\)</span> 는 전기장과 자기장의 전달 속도이다.</p>
 <p><br></p>
 </section>
 <section id="sec-ED_ED_solution_of_wave_equation" class="level3" data-number="16.3.2">
@@ -734,7 +737,7 @@ c= \dfrac{1}{\sqrt{\mu_0 \epsilon_0}} = 2.99792458 \times 10^8 \text{m}/\text{s}
 <p><span class="math display">\[
 \boldsymbol{E}(z,\,t) = (0,\, E(z,\,t),\, 0).
 \]</span></p>
-<p><a href="#eq-ED_ED_wave_equation_of_E_field" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ED_wave_equation_of_E_field</span></a> 로부터</p>
+<p><a href="#eq-ED_ED_wave_equation_of_E_field" class="quarto-xref">식&nbsp;<span>16.3</span></a> 로부터</p>
 <p><span class="math display">\[
 \dfrac{1}{c^2}\dfrac{\partial^2 E(z,\,t)}{\partial t^2} = -\dfrac{\partial^2 E(z,\,t)}{\partial z^2}
 \]</span></p>
@@ -764,7 +767,7 @@ E(z,\,t) = f(z-ct)+g(z+ct).
 <p><span id="eq-ED_ED_sin_wave_discription_of_monochromatic_B_field"><span class="math display">\[
 \boldsymbol{B} = \dfrac{E_0}{c} \sin (kz-\omega t)\hat{\boldsymbol{y}}
 \tag{16.8}\]</span></span></p>
-<p><a href="#eq-ED_ED_sin_wave_discription_of_monochromatic_E_field" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ED_sin_wave_discription_of_monochromatic_E_field</span></a> 와 <a href="#eq-ED_ED_sin_wave_discription_of_monochromatic_B_field" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ED_sin_wave_discription_of_monochromatic_B_field</span></a> 은 전기장과 자기장이 서로 수직을 이룬다는 것을 보여주며 같은 위상으로 진행한다는 것은 쉽게 보일 수 있다.</p>
+<p><a href="#eq-ED_ED_sin_wave_discription_of_monochromatic_E_field" class="quarto-xref">식&nbsp;<span>16.7</span></a> 와 <a href="#eq-ED_ED_sin_wave_discription_of_monochromatic_B_field" class="quarto-xref">식&nbsp;<span>16.8</span></a> 은 전기장과 자기장이 서로 수직을 이룬다는 것을 보여주며 같은 위상으로 진행한다는 것은 쉽게 보일 수 있다.</p>
 <div id="fig-ED_ED_emwave_propagation_1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ED_ED_emwave_propagation_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -775,7 +778,7 @@ E(z,\,t) = f(z-ct)+g(z+ct).
 </figcaption>
 </figure>
 </div>
-<p>멕스웰 방정식으로부터 얻을 수 있는 또 하나의 특징은 선형성이다. <a href="#eq-ED_ED_maxwell_equation_in_vacuum" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ED_maxwell_equation_in_vacuum</span></a> 은 선형방정식이므로 각각의 각진동수에 대한 해의 선형 결합 역시 <a href="#eq-ED_ED_maxwell_equation_in_vacuum" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ED_maxwell_equation_in_vacuum</span></a> 의 해이다.</p>
+<p>멕스웰 방정식으로부터 얻을 수 있는 또 하나의 특징은 선형성이다. <a href="#eq-ED_ED_maxwell_equation_in_vacuum" class="quarto-xref">식&nbsp;<span>16.1</span></a> 은 선형방정식이므로 각각의 각진동수에 대한 해의 선형 결합 역시 <a href="#eq-ED_ED_maxwell_equation_in_vacuum" class="quarto-xref">식&nbsp;<span>16.1</span></a> 의 해이다.</p>
 <p>이제 수학적 편의를 위해 복소수에서 전자기장을 표현하기로 하자.</p>
 <p><span id="eq-ED_ED_complex_form_of_monochromatic_wave"><span class="math display">\[
 \boldsymbol{\tilde{E}} = \boldsymbol{\tilde{E}}_0 e^{i(kz-\omega t)},\qquad \boldsymbol{\tilde{B}}=\boldsymbol{\tilde{B}}_0 e^{i(kz-\omega t)},\qquad \text{where }\boldsymbol{\tilde{B}}_0 = \dfrac{\boldsymbol{\tilde{E}}_0}{c}
@@ -785,11 +788,11 @@ E(z,\,t) = f(z-ct)+g(z+ct).
 </section>
 <section id="sec-ED_ED_polarization_of_light" class="level3" data-number="16.3.3">
 <h3 data-number="16.3.3" class="anchored" data-anchor-id="sec-ED_ED_polarization_of_light"><span class="header-section-number">16.3.3</span> 편광</h3>
-<p><a href="#eq-ED_ED_complex_form_of_monochromatic_wave" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ED_complex_form_of_monochromatic_wave</span></a> 로부터 3차원 평면파의 해를 다음과 같다고 가정하자.</p>
+<p><a href="#eq-ED_ED_complex_form_of_monochromatic_wave" class="quarto-xref">식&nbsp;<span>16.9</span></a> 로부터 3차원 평면파의 해를 다음과 같다고 가정하자.</p>
 <p><span id="eq-ED_ED_wave_equation_3d_complex_form"><span class="math display">\[
 \boldsymbol{\widetilde{{E}}} = \boldsymbol{\widetilde{{E}}}_0 e^{i(\boldsymbol{k \cdot r}-\omega t)},\qquad \boldsymbol{\widetilde{{B}}} = \boldsymbol{\widetilde{{B}}}_0 e^{i(\boldsymbol{k \cdot r}-\omega t)}
 \tag{16.10}\]</span></span></p>
-<p>여기서 <span class="math inline">\(\boldsymbol{k}\)</span> 를 <strong>파수 벡터 (wave vector)</strong> 라고 하며 <span class="math inline">\(k=\|\boldsymbol{k}\|\)</span> 가 앞서 나온 파수(wave number) 이다. 이제 멕스웰 방정식을 <a href="#eq-ED_ED_wave_equation_3d_complex_form" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ED_wave_equation_3d_complex_form</span></a> 에 적용시키면 다음과 같다.</p>
+<p>여기서 <span class="math inline">\(\boldsymbol{k}\)</span> 를 <strong>파수 벡터 (wave vector)</strong> 라고 하며 <span class="math inline">\(k=\|\boldsymbol{k}\|\)</span> 가 앞서 나온 파수(wave number) 이다. 이제 멕스웰 방정식을 <a href="#eq-ED_ED_wave_equation_3d_complex_form" class="quarto-xref">식&nbsp;<span>16.10</span></a> 에 적용시키면 다음과 같다.</p>
 <p><span id="eq-ED_ED_maxwell_equation_for_complex_plane_wave_form"><span class="math display">\[
 \begin{aligned}
 \nabla \boldsymbol{\cdot}\boldsymbol{E} &amp;=0 &amp; \implies &amp;  &amp;i\boldsymbol{k\cdot } \boldsymbol{\widetilde{{E}}}_0&amp;= 0, \\[0.3em]
@@ -841,11 +844,11 @@ E(z,\,t) = f(z-ct)+g(z+ct).
 <p><span class="math display">\[
 \boldsymbol{E}_\text{ref}=-E_0 e^{-i(kz+\omega t)}\hat{\boldsymbol{y}}
 \]</span></p>
-<p>가 존재해야 한다. 여기에 대한 자기장은 <a href="#eq-ED_ED_maxwell_equation_for_complex_plane_wave_form" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ED_maxwell_equation_for_complex_plane_wave_form</span></a> 로부터 아래와 같다.</p>
+<p>가 존재해야 한다. 여기에 대한 자기장은 <a href="#eq-ED_ED_maxwell_equation_for_complex_plane_wave_form" class="quarto-xref">식&nbsp;<span>16.11</span></a> 로부터 아래와 같다.</p>
 <p><span class="math display">\[
 \boldsymbol{B}_\text{ref}= -\dfrac{E_0}{c}e^{i(kz -\omega t)}\hat{\boldsymbol{y}},\qquad \boldsymbol{B}_\text{ref} = -\dfrac{E_0}{c}e^{-i(kz+\omega t)}\hat{\boldsymbol{y}}.
 \]</span></p>
-<p><span class="math inline">\(\boldsymbol{B}=\boldsymbol{B}_\text{inc}+\boldsymbol{B}_\text{ref}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{B}(z=0^-) \boldsymbol{\cdot  \hat{k}}=0\)</span> 이며 <span class="math inline">\(\boldsymbol{B}(z=0^-)\boldsymbol{\cdot \hat{y}}=-\dfrac{2E_0}{c}e^{-i\omega t}\)</span> 임을 안다. 도체 내부에서 <span class="math inline">\(\boldsymbol{B}_{\text{in}}=\boldsymbol{0}\)</span> 이며 <span class="math inline">\(\nabla \times \boldsymbol{B}= \mu_0 \boldsymbol{J}\)</span> 로부터 표면전류밀도(see <a href="#sec-ED_MS_surface_current_density_and_discontinuity_of_magnetic_field" class="quarto-xref"><span class="quarto-unresolved-ref">sec-ED_MS_surface_current_density_and_discontinuity_of_magnetic_field</span></a>) 를 아래와 같이 구할 수 있다.</p>
+<p><span class="math inline">\(\boldsymbol{B}=\boldsymbol{B}_\text{inc}+\boldsymbol{B}_\text{ref}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{B}(z=0^-) \boldsymbol{\cdot  \hat{k}}=0\)</span> 이며 <span class="math inline">\(\boldsymbol{B}(z=0^-)\boldsymbol{\cdot \hat{y}}=-\dfrac{2E_0}{c}e^{-i\omega t}\)</span> 임을 안다. 도체 내부에서 <span class="math inline">\(\boldsymbol{B}_{\text{in}}=\boldsymbol{0}\)</span> 이며 <span class="math inline">\(\nabla \times \boldsymbol{B}= \mu_0 \boldsymbol{J}\)</span> 로부터 표면전류밀도(see <a href="03_magnetostatics.html#sec-ED_MS_surface_current_density_and_discontinuity_of_magnetic_field" class="quarto-xref"><span> 15.1.2</span></a>) 를 아래와 같이 구할 수 있다.</p>
 <p><span class="math display">\[
 \boldsymbol{K} = -\dfrac{2E_0}{c\mu_0}e^{-i\omega t}\hat{\boldsymbol{x}}.
 \]</span></p>
@@ -853,7 +856,7 @@ E(z,\,t) = f(z-ct)+g(z+ct).
 </section>
 <section id="도체면에-경사지게-입사하는-전기장" class="level4">
 <h4 class="anchored" data-anchor-id="도체면에-경사지게-입사하는-전기장"><strong>도체면에 경사지게 입사하는 전기장</strong></h4>
-<p><a href="#fig-ED_ED_reflections_of_E_field" class="quarto-xref">그림&nbsp;<span class="quarto-unresolved-ref">fig-ED_ED_reflections_of_E_field</span></a> <span class="math inline">\((b)\)</span> 의 경우를 보자. 전기장이 아래와 같이 주어졌다고 생각하자.</p>
+<p><a href="#fig-ED_ED_reflections_of_E_field" class="quarto-xref">그림&nbsp;<span>16.8</span></a> <span class="math inline">\((b)\)</span> 의 경우를 보자. 전기장이 아래와 같이 주어졌다고 생각하자.</p>
 <p><span class="math display">\[
 \boldsymbol{E}_\text{inc} = E_0 e^{i(\boldsymbol{k\cdot r}-\omega t)}\hat{\boldsymbol{y}},\qquad \text{where }\boldsymbol{k} = k\cos\theta \hat{\boldsymbol{z}} + k \sin \theta \hat{\boldsymbol{x}}.
 \]</span></p>
@@ -915,11 +918,11 @@ U = \int_V \left(\dfrac{\epsilon_0}{2} \boldsymbol{E\cdot E} + \dfrac{1}{2\mu_0}
 <p><span id="eq-ED_ED_definition_of_poynting_vector"><span class="math display">\[
 \boldsymbol{S} := \dfrac{1}{\mu_0}\boldsymbol{E}\times\boldsymbol{B}
 \tag{16.13}\]</span></span></p>
-<p>그렇다면 <a href="#eq-ED_ED_poynting_theorem" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ED_poynting_theorem</span></a> 은 아래와 같이 쓸 수 있다.</p>
+<p>그렇다면 <a href="#eq-ED_ED_poynting_theorem" class="quarto-xref">식&nbsp;<span>16.12</span></a> 은 아래와 같이 쓸 수 있다.</p>
 <p><span id="eq-ED_ED_energy_conservation_by_poynting_vector"><span class="math display">\[
 \dfrac{dU}{dt} + \int_V d^3\boldsymbol{r} (\boldsymbol{J \cdot E}) = - \dfrac{1}{\mu_0} \oint_S \boldsymbol{S}\boldsymbol{\cdot}d\boldsymbol{a}
 \tag{16.14}\]</span></span></p>
-<p>여기서 <span class="math inline">\(dU/dt\)</span> 는 장에 저장된 에너지의 시간에 대한 변화량이다. 두번째 항에 대해 생각해보자. 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 에서 속도 <span class="math inline">\(\boldsymbol{v}\)</span> 로 움직이는 전하 <span class="math inline">\(q\)</span> 에 <span class="math inline">\(\delta t\)</span> 의 시간 동안 해준 일 <span class="math inline">\(\delta W = \boldsymbol{F\cdot v}\delta t = q\boldsymbol{v\cdot E}\delta t\)</span> 을 생각하자. 즉 <span class="math inline">\(\int_V d^3\boldsymbol{r} (\boldsymbol{J\cdot E})\)</span> 는 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 와 전류 밀도 <span class="math inline">\(\boldsymbol{J}\)</span> 에 의해 증가하는 에너지이다. 그렇다면 <span class="math inline">\(\oint_S \boldsymbol{S\cdot}d\boldsymbol{a}\)</span> 는 면적 <span class="math inline">\(S\)</span> 를 통해 빠져나가는 에너지이며 따라서 <span class="math inline">\(\boldsymbol{S}\)</span> 는 빠져나가는 에너지의 밀도이고, <a href="#eq-ED_ED_energy_conservation_by_poynting_vector" class="quarto-xref">식&nbsp;<span class="quarto-unresolved-ref">eq-ED_ED_energy_conservation_by_poynting_vector</span></a> 는 전하와 전기장, 자기장에 대한 에너지 보존 법칙이라고 할 수 있다.</p>
+<p>여기서 <span class="math inline">\(dU/dt\)</span> 는 장에 저장된 에너지의 시간에 대한 변화량이다. 두번째 항에 대해 생각해보자. 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 에서 속도 <span class="math inline">\(\boldsymbol{v}\)</span> 로 움직이는 전하 <span class="math inline">\(q\)</span> 에 <span class="math inline">\(\delta t\)</span> 의 시간 동안 해준 일 <span class="math inline">\(\delta W = \boldsymbol{F\cdot v}\delta t = q\boldsymbol{v\cdot E}\delta t\)</span> 을 생각하자. 즉 <span class="math inline">\(\int_V d^3\boldsymbol{r} (\boldsymbol{J\cdot E})\)</span> 는 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 와 전류 밀도 <span class="math inline">\(\boldsymbol{J}\)</span> 에 의해 증가하는 에너지이다. 그렇다면 <span class="math inline">\(\oint_S \boldsymbol{S\cdot}d\boldsymbol{a}\)</span> 는 면적 <span class="math inline">\(S\)</span> 를 통해 빠져나가는 에너지이며 따라서 <span class="math inline">\(\boldsymbol{S}\)</span> 는 빠져나가는 에너지의 밀도이고, <a href="#eq-ED_ED_energy_conservation_by_poynting_vector" class="quarto-xref">식&nbsp;<span>16.14</span></a> 는 전하와 전기장, 자기장에 대한 에너지 보존 법칙이라고 할 수 있다.</p>
 <p><br></p>
 </section>
 <section id="sec-ED_ED_energy_transfer_of_em_wave" class="level3" data-number="16.4.2">

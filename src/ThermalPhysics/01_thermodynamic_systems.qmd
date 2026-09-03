@@ -860,5 +860,40 @@ $$ {#eq-TD_thermodynamic_universal_function_for_T_2}
 
 지금까지 실제 물질적인 온도 $T$ 를 사용했기 때문에 $\theta(T)$ 함수의 형태를 알 수 없다. 그러나 온도의 스케일은 임의적이기 때문에 아예 $\theta(T)$ 를 온도의 스케일로 사용 할 수 있다. 여기서 @eq-TD_thermodynamic_universal_function_for_T_1 의 상수 $K$ 역시 우리가 임의로 정할 수 있다. 보통은 1 기압에서의 물의 어는점과 끓는 점의 차이를 100 도로 삼는다$^1$.[$^1$ 이것은 @Fermi1956ThermodynamicsDover 의 구절이다. 이 책은 1936년의 책을 그대로 낸 것으로 1936년 당시에는 옳았지만 이후 절대 온도 스케일의 정의가 변화하였으므로 현재는 맞지 않는다.]{.aside}
 
-이렇게 정의된 온도 스케일을 **온도에 대한 열역학적 절대 스케일 (absolute thermodynamic scale of temperature)** 라고 하며 이 스케일에서의 온도를 **열역학적 절대 온도 (absolute thermodynamic temperature)** 라고 한다. 앞으로의 온도는 모두 열역학절 절대 온도이다. 
+이렇게 정의된 온도 스케일을 **온도에 대한 열역학적 절대 스케일 (absolute thermodynamic scale of temperature)** 라고 하며 이 스케일에서의 온도를 **열역학적 절대 온도 (absolute thermodynamic temperature)** 라고 한다. 앞으로의 온도는 모두 열역학적 절대 온도이다. 
 
+#### **열역학적 절대온도와 측정 온도의 일치**
+
+@fig-TD_carnot_cycle 에서 기술된 카르노 순환을 다시 생각하자. 카르노 순환 과정에서 일이 이상기체에 의해 수행된다고 하자. 그리고 $T_h,\,T_l$ 를 카르노 순환의 두 온도라고 하자. 이 온도는 온도계로 측정되었다. 그렇다면 @eq-TD_relation_of_heat_and_temperature_of_carnot_engine_using_ideal_gas 로 부터
+
+$$
+\dfrac{T_h}{T_l} = \dfrac{Q_h}{Q_l} = \dfrac{\theta(T_h)}{\theta(T_l)}
+$$
+
+를 얻는다. 두 온도 $T$ 와 $\theta(T)$ 스케일을 동일하게 놓는다면
+
+$$
+\theta (T)=T
+$$ {#eq-TD_equivalence_of_absolute_and_thermometer_scale}
+
+을 얻는다. 그리고 **이제부터 $T$ 는 열역학적 절대온도이다.** 
+
+## 열기관 {#sec-TD_thermal_engines}
+
+카르노 열기관의 효율은 @eq-TD_efficiency_of_carnot_engine_using_ideal_gas 로 주어진다. 그리고 모든 가역기관에서 $Q_h/Q_l = T_h/T_l$ 이다. 따라서 @eq-TD_efficiency_of_carnot_engine_using_ideal_gas 는 카르노 기관 뿐만 아니라 가역기관의 효율이 된다. 즉
+
+$$
+\eta_R = 1-\dfrac{Q_h}{Q_l} = 1-\dfrac{T_h}{T_l}.
+$$ {#eq-TD_efficiency_of_reversible_engine}
+
+이며 이 값은 두 온도 $T_l,\,T_h$ 에서 작동하는 기관이 가질 수 있는 최대 효율이다.
+
+일반적으로 기관에서 $T_l$ 은 환경의 온도로 제어 할 수 없으며 따라서 $T_h$ 를 높일 수록 높은 효율을 얻게 된다. 물론 일반적으로 기관은 가역기관과 차이거 커서 실제 효율은 $\eta_R$ 과 차이가 많이 난다.
+
+가역기관을 거꾸로 작동시키면 (가역)냉동기가 된다. $W+Q_l = Q_h$ 와 $Q_h/Q_l = T_h/T_l$ 로부터 가역 냉동기에 대해 다음 식을 얻는다.
+
+$$
+Q_l = W \dfrac{T_l}{T_h-T_l}.
+$$ {#eq-TD_Ql_for_refregerator}
+
+이 경우는 $T_h$ 가 주변의 온도이다. 
