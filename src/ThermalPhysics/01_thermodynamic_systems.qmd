@@ -254,7 +254,7 @@ $${#eq-TD_integration_of_heat_capacity_at_constant_volume_for_ideal_gas}
 
 $$
 C_V dT + pdV = \dbar Q
-$$
+$$ {#eq-TD_fermi_30}
 
 임을 안다. 이상기체 상태 방정식 @eq-TD_equation_of_state_for_perfect_gas 에서 $\nu = m/M$ 라 놓으면 ($\nu$ 는 기체의 몰수가 된다)
 
