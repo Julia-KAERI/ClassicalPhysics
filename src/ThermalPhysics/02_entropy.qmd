@@ -8,7 +8,7 @@ crossref:
 
 {{< include ../../latexmacros.qmd >}}
 
-## 순환에서의 특성 {#sec-TD_entropy}
+## 순환에서의 특성 {#sec-TD_some_properties_of_cycles}
 
 $n$ 개의 온도가 $T_i$ ($i=1,\ldots,\,n$) 인 열원을 생각하자. 그리고 $T_i$ 열원에서 주고받는 열을 각각 $Q_i$ 라고 하자. $Q_i>0$ 이면 열원으로 부터 열을 받으며, $Q_i<0$ 이면 열을 방출한고 하자. 그리고 전체 과정이 순환이라고 하자. 우리는 다음을 보일 것이다.
 
@@ -258,14 +258,14 @@ $$
 상태가 $p,\,V,\,T$ 가운데 두개로 정의 될 수 있는 시스템을 생각하자. 우선 $T,\,V$ 가 독립변수라면
 
 $$
-dQ = dU + dW = \left(\dfrac{\partial U}{\partial T}\right)_V dT + \left[\left(\dfrac{\partial U}{\partial V}\right)_T + p\right] dV
+\dbar Q = dU + dW = \left(\dfrac{\partial U}{\partial T}\right)_V dT + \left[\left(\dfrac{\partial U}{\partial V}\right)_T + p\right] dV
 $$ {#eq-TD_fermi_79}
 
 이며 이로부터
 
 $$
-dS = \dfrac{dQ}{T} =  \dfrac{1}{T}\left(\dfrac{\partial U}{\partial T}\right)_V dT + \dfrac{1}{T} \left[\left(\dfrac{\partial U}{\partial V}\right)_T + p\right] dV
-$$
+dS = \dfrac{\dbar Q}{T} =  \dfrac{1}{T}\left(\dfrac{\partial U}{\partial T}\right)_V dT + \dfrac{1}{T} \left[\left(\dfrac{\partial U}{\partial V}\right)_T + p\right] dV
+$$ {#eq-TD_fermi_80}
 
 이다. 위의 $dQ$ 와 $dS$ 는 큰 차이가 있는데 $dQ$ 는 경로 의존적이며 $dS$ 는 경로 독립적이라는 것이다. $dS$ 는 전미분이며 즉 $S$ 는 $T,\,P$ 의 함수이다. 
 
@@ -299,10 +299,10 @@ $$
 @eq-TD_fermi_30 와 이상기체 상태방정식 $pV=\nu RT$ 로부터
 
 $$
-dQ = C_V dT + \dfrac{\nu RT}{V}dV
+\dbar Q = C_V dT + \dfrac{\nu RT}{V}dV
 $$ {#eq-TD_fermi_84}
 
-이다. $dQ$ 가 전미분이려면 
+이다. $\dbar Q$ 가 전미분이려면 
 
 $$
 \left(\dfrac{\partial C_V}{\partial V}\right)_T = \left(\dfrac{\partial (\nu R T/V)}{\partial T}\right)_V
@@ -311,7 +311,7 @@ $$
 이어야 한다. 이상기체의 경우 $C_V$ 는 부피와 무관한 $\frac{5}{2}\nu R$ 이므로 좌변은 $0$ 이지만 우변은 $nuR/V \ne 0$ 이므로 $dQ$ 는 전미분이 아니라는 것을 확인 할 수 있다. 이제 엔트로피의 경우를 보자
 
 $$
-dS = \dfrac{dQ}{T}= \dfrac{C_V}{T}dT + \dfrac{\nu R}{V}dV
+dS = \dfrac{\dbar Q}{T}= \dfrac{C_V}{T}dT + \dfrac{\nu R}{V}dV
 $$
 
 이며 같은 방법으로 전미분임을 확인 할 수 있다. 이제 $dS$ 를 적분하면
@@ -326,5 +326,59 @@ $$
 S= C_p\ln T - \nu R \ln p + a + \nu R \ln \nu R.
 $$ {#eq-TD_fermi_87}
 
+### **열역학적 관계들**
 
+이제 @eq-TD_fermi_80 으로 돌아가서 $dS$ 가 전미분이므로
 
+$$
+\dfrac{\partial }{\partial V}\left(\dfrac{1}{T}\dfrac{\partial U}{\partial T}\right) = \dfrac{\partial }{\partial T}\left[\dfrac{1}{T} \left(\dfrac{\partial U}{\partial V} + p\right)\right]
+$$
+
+이어야 한다. $T,\,V$ 가 독립변수이므로 @eq-TD_fermi_80 의 아래첨자 $T,\,V$ 가 생략되었다.
+
+$$
+\begin{aligned}
+\dfrac{\partial }{\partial V}\left(\dfrac{1}{T}\dfrac{\partial U}{\partial T}\right) &= \dfrac{1}{T} \dfrac{\partial^2 U}{\partial V \partial T}, \\[0.3em]
+\dfrac{\partial }{\partial T}\left[\dfrac{1}{T} \left(\dfrac{\partial U}{\partial V} + p\right)\right] &= -\dfrac{1}{T^2}\left(\dfrac{\partial U}{\partial V} + p\right) + \dfrac{1}{T}\dfrac{\partial^2 U}{\partial T \partial V} + \dfrac{1}{T} \dfrac{\partial p}{\partial T}
+\end{aligned}
+$$
+
+이므로 우리는 다음 식을 얻는다.
+
+$$
+\left(\dfrac{\partial U}{\partial V}\right)_T = T\left(\dfrac{\partial p}{\partial T}\right)_V -p.
+$$ {#eq-TD_fermi_88}
+
+이상기체의 경우 $pV=\nu RT$ 이며 @eq-TD_fermi_88 에 적용하면
+
+$$
+\left(\dfrac{\partial U}{\partial V}\right)_T = 0
+$$
+
+이다. 즉 이상기체의 내부 에너지는 부피와 무관하다.
+
+$T,\,V$ 대신에 $T,\,p$ 나 $p,\,V$ 를 독립변수로 사용하면 @eq-TD_fermi_88 과 본질적으로 동등한 식을 얻게 된다. @eq-TD_fermi_23 에서 주어진 $\dbar Q$ 에 대해 $dS=\dbar Q/dT$ 를 취하면
+
+$$
+\begin{aligned}
+dS =   \left[\dfrac{1}{T}\left(\dfrac{\partial U}{\partial T}\right)_p + \dfrac{p}{T}\left(\dfrac{\partial V}{\partial T}\right)_V\right]\,dT + \left[\dfrac{1}{T}\left(\dfrac{\partial U}{\partial p}\right)_T + \dfrac{p}{T}\left(\dfrac{\partial V}{\partial p}\right)_T\right]\,dp
+\end{aligned}
+$$
+
+이며 $dS$ 는 전미분이므로
+
+$$
+\dfrac{\partial }{\partial p}\left[\dfrac{1}{T}\left(\dfrac{\partial U}{\partial T}\right)_p + \dfrac{p}{T}\left(\dfrac{\partial V}{\partial T}\right)_V\right] = \dfrac{\partial }{\partial T}\left[\dfrac{1}{T}\left(\dfrac{\partial U}{\partial p}\right)_T + \dfrac{p}{T}\left(\dfrac{\partial V}{\partial p}\right)_T\right]
+$$
+
+이어야 한다. 이로부터 다음 관계를 얻는다.
+
+$$
+\left(\dfrac{\partial U}{\partial p}\right)_T = - p \left(\dfrac{\partial V}{\partial p}\right)_T - T\left(\dfrac{\partial V}{\partial T}\right)_p.
+$$ {#eq-TD_fermi_89}
+
+마찬가지로 $p,\,V$ 를 독립변수로 취하면 @eq-TD_fermi_24 의 $\dbar Q$ 로부터 아래의 관계를 얻는다.
+
+$$
+T = \left[\dfrac{\partial U}{\partial V}_p + p\right] \left(\dfrac{\partial T}{\partial p}\right)_V - \left(\dfrac{\partial U}{\partial p}\right)_V \left(\dfrac{\partial T}{\partial V}\right)_p .
+$$ {#eq-TD_fermi_90}

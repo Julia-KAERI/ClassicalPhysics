@@ -169,13 +169,13 @@ $$
 
 $$
 dU + \dbar W = \dbar Q.
-$$ {#eq-TD_dU_in_form_1}
+$$ {#eq-TD_fermi_20}
 
 - $\dbar W = pdV$ 이므로 다음과 같다.
   
   $$
   dU + pdV = \dbar Q
-  $$ {#eq-TD_dU_in_form_2}
+  $$ {#eq-TD_fermi_21}
 
 </br>
 
@@ -187,19 +187,19 @@ $$ {#eq-TD_dU_in_form_1}
   dU = \left(\dfrac{\partial U}{\partial T}\right)_V\,dT + \left(\dfrac{\partial U}{\partial V}\right)_T\, dV
   $$
   
-  이며 @eq-TD_dU_in_form_2 는 아래와 같이 쓸 수 있다.
+  이며 @eq-TD_fermi_21 는 아래와 같이 쓸 수 있다.
   $$
   \left(\dfrac{\partial U}{\partial T}\right)_V\,dT + \left[p + \left(\dfrac{\partial U}{\partial V}\right)_T\right] \,dV = \dbar Q.
-  $$ {#eq-TD_1st_thermodynamic_raw_in_TV_variables}
+  $$ {#eq-TD_fermi_22}
 
 - $T,\,p$ 를 독립변수로 정하면 아래와 같은 식을 얻는다.
   $$
-  \left[\left(\dfrac{\partial U}{\partial T}\right)_p + p\left(\dfrac{\partial V}{\partial T}\right)_V\right]\,dT + \left[\left(\dfrac{\partial U}{\partial p}_T\right) + p\left(\dfrac{\partial V}{\partial p}\right)_T\right]\,dp = Q.
-  $${#eq-TD_1st_thermodynamic_raw_in_Tp_variables}
+  \left[\left(\dfrac{\partial U}{\partial T}\right)_p + p\left(\dfrac{\partial V}{\partial T}\right)_V\right]\,dT + \left[\left(\dfrac{\partial U}{\partial p}\right)_T + p\left(\dfrac{\partial V}{\partial p}\right)_T\right]\,dp = \dbar Q.
+  $${#eq-TD_fermi_23}
 - $V,\,p$ 를 독립변수로 정하면 아래와 같은 식을 얻는다.
   $$
   \left(\dfrac{\partial U}{\partial p}\right)_V\,dp + \left[p + \left(\dfrac{\partial U}{\partial V}\right)_p\right] \,dV = \dbar Q.
-  $$ {#eq-TD_1st_thermodynamic_raw_in_Vp_variables}
+  $$ {#eq-TD_fermi_24}
 
 
 ::: {.callout-note icon="false"}
@@ -212,13 +212,13 @@ $$ {#eq-TD_dU_in_form_1}
 
 $$
 C_V := \left(\dfrac{\dbar Q}{dT}\right)_V,\qquad   C_p := \left(\dfrac{\dbar Q}{dT}\right)_p
-$$ {#eq-TD_definiton_of_heat_capacity}
+$$ {#eq-TD_fermi_25}
 
 이다.
 :::
 :::
 
-- @eq-TD_1st_thermodynamic_raw_in_TV_variables 로부터 정적열용량과 정압열용량은 다음과 같다.
+- @eq-TD_fermi_22 로부터 정적열용량과 정압열용량은 다음과 같다.
   $$
   \begin{aligned}
   C_V &= \left(\dfrac{\dbar Q}{dT}\right)_V = \left(\dfrac{\partial U}{\partial T}\right)_V, \\[0.3em]
@@ -250,7 +250,7 @@ $$
 U = C_V T + U_0
 $${#eq-TD_integration_of_heat_capacity_at_constant_volume_for_ideal_gas}
 
-이다. 여기서 $U_0$ 는 $0\,K$ 에서의 이상기체의 에너지이다. @eq-TD_dU_in_form_2 로부터
+이다. 여기서 $U_0$ 는 $0\,K$ 에서의 이상기체의 에너지이다. @eq-TD_fermi_21 로부터
 
 $$
 C_V dT + pdV = \dbar Q

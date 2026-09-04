@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,13 +12,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -63,10 +60,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-221f8d40ef94b7d7736ec4c1e420c32a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -96,7 +93,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -672,12 +669,12 @@ U_B-U_A = -W.
 <ul>
 <li>내부에너지 <span class="math inline">\(U\)</span>, 일 <span class="math inline">\(W\)</span>, 열 <span class="math inline">\(Q\)</span> 의 미소 변화를 보자. 여기서 주의할것은 <span class="math inline">\(U\)</span> 는 물질의 상태에만 의존하는 <strong>상태 함수(state function)</strong> 이지만 일이나 열은 상태에 도달하기까지의 과정에 의존하는 <strong>경로 함수(path function)</strong> 이라는 것이다. 이를 구분하기 위해 <span class="math inline">\(dU\)</span> 나 <span class="math inline">\({d\hspace{-0.08em}\bar{}\hspace{0.1em}}W\)</span> 와 같이 다른 기호를 사용한다. 열역학 제 1 법칙에 의해 다음이 성립한다.</li>
 </ul>
-<p><span id="eq-TD_dU_in_form_1"><span class="math display">\[
+<p><span id="eq-TD_fermi_20"><span class="math display">\[
 dU + {d\hspace{-0.08em}\bar{}\hspace{0.1em}}W = {d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q.
 \tag{21.7}\]</span></span></p>
 <ul>
 <li><p><span class="math inline">\({d\hspace{-0.08em}\bar{}\hspace{0.1em}}W = pdV\)</span> 이므로 다음과 같다.</p>
-<p><span id="eq-TD_dU_in_form_2"><span class="math display">\[
+<p><span id="eq-TD_fermi_21"><span class="math display">\[
 dU + pdV = {d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q
 \tag{21.8}\]</span></span></p></li>
 </ul>
@@ -690,13 +687,13 @@ dU + pdV = {d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q
 <p><span class="math display">\[
 dU = \left(\dfrac{\partial U}{\partial T}\right)_V\,dT + \left(\dfrac{\partial U}{\partial V}\right)_T\, dV
 \]</span></p>
-<p>이며 <a href="#eq-TD_dU_in_form_2" class="quarto-xref">식&nbsp;<span>21.8</span></a> 는 아래와 같이 쓸 수 있다. <span id="eq-TD_1st_thermodynamic_raw_in_TV_variables"><span class="math display">\[
+<p>이며 <a href="#eq-TD_fermi_21" class="quarto-xref">식&nbsp;<span>21.8</span></a> 는 아래와 같이 쓸 수 있다. <span id="eq-TD_fermi_22"><span class="math display">\[
 \left(\dfrac{\partial U}{\partial T}\right)_V\,dT + \left[p + \left(\dfrac{\partial U}{\partial V}\right)_T\right] \,dV = {d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q.
 \tag{21.9}\]</span></span></p></li>
-<li><p><span class="math inline">\(T,\,p\)</span> 를 독립변수로 정하면 아래와 같은 식을 얻는다. <span id="eq-TD_1st_thermodynamic_raw_in_Tp_variables"><span class="math display">\[
-\left[\left(\dfrac{\partial U}{\partial T}\right)_p + p\left(\dfrac{\partial V}{\partial T}\right)_V\right]\,dT + \left[\left(\dfrac{\partial U}{\partial p}_T\right) + p\left(\dfrac{\partial V}{\partial p}\right)_T\right]\,dp = Q.
+<li><p><span class="math inline">\(T,\,p\)</span> 를 독립변수로 정하면 아래와 같은 식을 얻는다. <span id="eq-TD_fermi_23"><span class="math display">\[
+\left[\left(\dfrac{\partial U}{\partial T}\right)_p + p\left(\dfrac{\partial V}{\partial T}\right)_V\right]\,dT + \left[\left(\dfrac{\partial U}{\partial p}_T\right) + p\left(\dfrac{\partial V}{\partial p}\right)_T\right]\,dp = {d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q.
 \tag{21.10}\]</span></span></p></li>
-<li><p><span class="math inline">\(V,\,p\)</span> 를 독립변수로 정하면 아래와 같은 식을 얻는다. <span id="eq-TD_1st_thermodynamic_raw_in_Vp_variables"><span class="math display">\[
+<li><p><span class="math inline">\(V,\,p\)</span> 를 독립변수로 정하면 아래와 같은 식을 얻는다. <span id="eq-TD_fermi_24"><span class="math display">\[
 \left(\dfrac{\partial U}{\partial p}\right)_V\,dp + \left[p + \left(\dfrac{\partial U}{\partial V}\right)_p\right] \,dV = {d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q.
 \tag{21.11}\]</span></span></p></li>
 </ul>
@@ -712,7 +709,7 @@ dU = \left(\dfrac{\partial U}{\partial T}\right)_V\,dT + \left(\dfrac{\partial U
 <div class="callout-body-container callout-body">
 <div id="def-CM_specific_heat" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 21.1</strong></span> 부피가 일정할 때 단위 온도만큼 온도를 올리기 위해 필요한 열량 <span class="math inline">\(C_V\)</span> 를 <strong>정적 열용량 (heat capacity at constant volumn)</strong> 이라고 하고 압력이 일정할 때 단위 온도만큼 온도를 올리기 위해 필요한 열량 <span class="math inline">\(C_p\)</span> 를 <strong>정압 열용량 (heat capacity at constant pressure)</strong> 이라고 한다. 즉</p>
-<p><span id="eq-TD_definiton_of_heat_capacity"><span class="math display">\[
+<p><span id="eq-TD_fermi_25"><span class="math display">\[
 C_V := \left(\dfrac{{d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q}{dT}\right)_V,\qquad   C_p := \left(\dfrac{{d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q}{dT}\right)_p
 \tag{21.12}\]</span></span></p>
 <p>이다.</p>
@@ -720,7 +717,7 @@ C_V := \left(\dfrac{{d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q}{dT}\right)_V,\qqua
 </div>
 </div>
 <ul>
-<li><p><a href="#eq-TD_1st_thermodynamic_raw_in_TV_variables" class="quarto-xref">식&nbsp;<span>21.9</span></a> 로부터 정적열용량과 정압열용량은 다음과 같다. <span class="math display">\[
+<li><p><a href="#eq-TD_fermi_22" class="quarto-xref">식&nbsp;<span>21.9</span></a> 로부터 정적열용량과 정압열용량은 다음과 같다. <span class="math display">\[
 \begin{aligned}
 C_V &amp;= \left(\dfrac{{d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q}{dT}\right)_V = \left(\dfrac{\partial U}{\partial T}\right)_V, \\[0.3em]
 C_p &amp;= \left(\dfrac{{d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q}{dT}\right)_p = \left(\dfrac{\partial U}{\partial T}\right)_p + p\left(\dfrac{\partial V}{\partial T}\right)_V,
@@ -752,7 +749,7 @@ C_V = \dfrac{dU}{dT}
 <p><span id="eq-TD_integration_of_heat_capacity_at_constant_volume_for_ideal_gas"><span class="math display">\[
 U = C_V T + U_0
 \tag{21.14}\]</span></span></p>
-<p>이다. 여기서 <span class="math inline">\(U_0\)</span> 는 <span class="math inline">\(0\,K\)</span> 에서의 이상기체의 에너지이다. <a href="#eq-TD_dU_in_form_2" class="quarto-xref">식&nbsp;<span>21.8</span></a> 로부터</p>
+<p>이다. 여기서 <span class="math inline">\(U_0\)</span> 는 <span class="math inline">\(0\,K\)</span> 에서의 이상기체의 에너지이다. <a href="#eq-TD_fermi_21" class="quarto-xref">식&nbsp;<span>21.8</span></a> 로부터</p>
 <p><span id="eq-TD_fermi_30"><span class="math display">\[
 C_V dT + pdV = {d\hspace{-0.08em}\bar{}\hspace{0.1em}}Q
 \tag{21.15}\]</span></span></p>
