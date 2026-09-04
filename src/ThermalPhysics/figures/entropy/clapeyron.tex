@@ -6,8 +6,8 @@
 \begin{tikzpicture}
 \begin{axis}[
     axis lines = left,
-    xlabel = {$V$ (Volume)},
-    ylabel = {$P$ (Pressure)},
+    xlabel = {$V$},
+    ylabel = {$p$},
     xtick = \empty,
     ytick = \empty,
     xmin = 0, xmax = 10,
@@ -18,30 +18,56 @@
     legend style = {draw=none, fill=none}
 ]
 
-    % Isotherm T + dT
-    \addplot[blue, thick] {9/x + 1} node[right, pos=0.9] {$T + dT$};
-    
-    % Isotherm T
-    \addplot[cyan, thick] {6/x + 0.5} node[right, pos=0.95] {$T$};
-    
-    % Adiabatic expansion (left side of cycle)
-    \addplot[red, dashed, domain=2:3.5] {13/(x^1.4) + 0.2};
-    
-    % Adiabatic compression (right side of cycle)
-    \addplot[red, dashed, domain=4.5:7.2] {28/(x^1.4) - 0.5};
-    
-    % Shaded Carnot Cycle area (Approximation for Clapeyron physical derivation)
-    \path[name path=top] (axis cs:2,5.5) plot[domain=2:4.5] (\x, {9/\x + 1});
-    \path[name path=bottom] (axis cs:3.5,2.21) plot[domain=3.5:7.2] (\x, {6/\x + 0.5});
-    
-    % Core labels for the infinitesimal change
-    \draw[black, <->, dashed] (axis cs:3, 2.5) -- (axis cs:3, 4) 
-        node[midway, left] {$dP$};
-    \draw[black, <->, dashed] (axis cs:3, 2.5) -- (axis cs:5.5, 2.5) 
-        node[midway, below] {$dV$};
+    \addplot[blue, thick, dashed, domain=2:5] {-2*(\x-3.5)^2 +5 } ;
 
-    % Title/Equation inside the graph
-    \node[anchor=west] at (axis cs:5, 8) {\Large $\frac{dP}{dT} = \frac{L}{T \Delta V}$};
+    \addplot[smooth, red, thick] coordinates {
+        (1 , 9.5) (1.5, 5) (2,2.4) (2.2, 1.7)
+    };
+    \draw[red, thick] (2.2, 1.7)--(4.8, 1.7) node [midway, below] {$a$};
+    \addplot[smooth, red, thick] coordinates {
+        (4.8, 1.7) (6,1.4) (9, 1)
+    } node [right] {$a$};
+
+    
+    \addplot[smooth, red, thick] coordinates {
+        (1.2, 9.5) (1.5, 6.5) (2.2, 3.2) (2.4, 2.58)
+    };
+    \draw[red, thick] (2.4, 2.58)--(4.6, 2.58) node [midway, below] {$b$};
+    \addplot[smooth, red, thick] coordinates {
+        (4.6, 2.58) (6,2.3) (9, 2)
+    } node [right] {$b$};
+
+    \addplot[smooth, red, thick] coordinates {
+        (1.4, 9.5) (2, 5.2) (2.4, 3.95) (2.62, 3.4512)
+    };
+    \draw[red, thick] (2.62, 3.4512)--(4.37, 3.4512) node [midway, below] {$c$};
+    
+    \addplot[smooth, red, thick] coordinates {
+        (4.37, 3.4512) (6, 3) (9, 2.6)
+    } node [right] {$c$};
+
+    \addplot[smooth, red, thick] coordinates {
+        (1.6, 9.5) (2, 6.2) (2.4, 4.95) (2.9, 4.28)
+    };
+    \draw[red, thick] (2.9, 4.28)--(4.1, 4.28) node [midway, below] {$d$};
+    
+    \addplot[smooth, red, thick] coordinates {
+        (4.1, 4.28) (6, 3.6) (9, 3)
+    } node [right] {$d$};
+
+    \addplot[smooth, red, thick] coordinates {
+        (1.8, 9.5) (2.4, 6.4) (3.0, 5.3) (3.5, 5)  (4, 4.85) (6, 4.2) (9, 3.4)
+    } node [right] {$e$};
+
+    \addplot[smooth, red, thick] coordinates {
+        (2, 9.5)  (3.0, 6.3) (3.5, 5.4)  (4.2, 5.2) (6, 4.7) (9, 4)
+    } node [right] {$f$};
+    
+    
+    \node [teal] at (0.5, 4) {$L$};
+    \node [teal] at (3.5, 0.4) {$L,\,V$};
+    \node [teal] at (7, 0.4) {$V$};
+    \node [teal] at (6, 8) {$G$};
 
 \end{axis}
 \end{tikzpicture}

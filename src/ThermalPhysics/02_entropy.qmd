@@ -382,3 +382,57 @@ $$ {#eq-TD_fermi_89}
 $$
 T = \left[\dfrac{\partial U}{\partial V}_p + p\right] \left(\dfrac{\partial T}{\partial p}\right)_V - \left(\dfrac{\partial U}{\partial p}\right)_V \left(\dfrac{\partial T}{\partial V}\right)_p .
 $$ {#eq-TD_fermi_90}
+
+
+## 클라우지우스-클라페롱 공식 {#sec-TD_the_Clapeyron_equation}
+
+### 임계
+
+이 장에서는 @eq-TD_fermi_88 를 포화 증기 상태, 즉 액체와 증기가 평형을 이루는 시스템에 적용한다. 실린더에 갇힌 액체를 생각하자. 액체 표면에서 실린더 까지의 공간은 포화된 기체로 차 있다고 하자. 이때의 압력 $p$ 는 온도에만 의존하며 부피에는 무관하다. 정해진 온도에 대한 $(V,\,p)$ 곡선은 다음과 같이 얻을 수 있다.
+
+1. 온도를 일정하게 유지하면서 피스톤을 올려 증기의 부피를 증가시킨다.
+2. 증기압을 일정하게 유지시키기 위해 액체의 일부가 기화된다.
+3. 충분한 기체가 남에 있는 한, 즉 액체와 기체가 평형을 이룬다면 압력은 일정하게 유지된다. (@fig-TD_fermi_13)
+4. 모든 증기가 기화된 상태에서는 부피를 증가시키면 압력이 감소한다. 
+5. 기체상태에서 피스톤을 온도를 유지시키는 상태에서 천천히 내리면 반대의 현상이 나타난다.
+   
+![Fig.13](figures/entropy/clapeyron.png){#fig-TD_fermi_13 width=350}
+
+@fig-TD_fermi_13 에서 $e$ 곡선은 액체와 증기가 평행을 이루는 구간, 즉 부피의 변화에 대해 압력이 변하지 않는 구간이 $0$ 이 되기 시작하는 온도를 나타낸다. 이 때의 온도를 **임계 온도 (critical temperature)** 라고 하고 $T_c$ 로 표기한다. 그리고 이 때의 부피와 압력을 각각 **임계 부피 (critical volume)**, **임계 압력 (critical pressure)** 라고 쓰고 $V_c,\,p_c$ 라고 표기한다. $V_c,\,p_c,\,T_c$ 에 해당하는 상태를 **임계 상태 (critical state)** 혹은 **임계점 (critical point)** 라고 한다. 온도가 $T_c$ 보다 높다면 액체상태가 존재하지 않는 기체 상태가 된다. @fig-TD_fermi_13 에서 $G$ 는 기체상태, $L$ 은 액체상태, $V$ 는 증기 상태를 의미한다. 
+
+### 클라우시우스-클라페롱 공식
+
+액체와 증기의 질량을 각각 $m_l,\,m_v$ 라고 하자. $m=m_l+m_v$ 는 유지된다. 임계온도보다 낮은 온도의 $T<T_c$ 는 고정되어 있다. $u_l,\,u_v$ 를 단위 질량에서의 에너지라고 하고 $v_l,\,v_v$ 를 단위질량당 부피, 즉 밀도의 역수라고 하자. 이 때 $u_l,\,u_v,\,v_l,\,v_v,\,p$ 는 온도의 함수이다. 총 부피 $V$ 와 총 에너지 $U$ 는 다음과 같다.
+
+$$
+\begin{aligned}
+V &= m_l v_l(T) + m_v v_v (T), \\[0.3em]
+U &= m_l u_l (T) + m_v u_v (T).
+\end{aligned}
+$$
+
+이제 $dm$ 만큼의 질량이 기화되었다고 하자. 그렇다면 액체의 질량은 $m_l-dm$ 이 되고 증기의 질량은 $m_v+dm$ 이 되며 이에 따라 부피는
+
+$$
+\begin{aligned}
+V + dV &= (m_l-dm)v_l(T) + (m_v + dm)v_v (T) = V+ [v_v(T)-v_l(T)]\,dm
+\end{aligned}
+$$
+
+이 된다. 즉 부피의 변화 $dV$ 는
+
+$$
+dV = [v_v(T)-v_l(T)]\,dm.
+$$ {#eq-TD_fermi_91}
+
+같은 방식으로 에너지의 변화 $dU$ 는
+
+$$
+dU = [u_v(T)-u_l(T)]\,dm.
+$$ {#eq-TD_fermi_92}
+
+이로부터
+
+$$
+\dbar Q = dU + pdV = 
+$$
