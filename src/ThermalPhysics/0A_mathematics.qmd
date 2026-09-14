@@ -87,3 +87,80 @@ $$
 
 
 :::
+
+</br>
+
+## 스털링 근사 {#sec-TD_Appendix_stiring_approximation}
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-TD_stirling_approximation}
+
+$n$ 이 매우 클 때 $n!$ 을 다음과 같이 근사 할 수 있다.
+
+$$
+n! \approx n^n e^{-n} \sqrt{2\pi n}
+$$ {#eq-TD_Appendix_stirling_approximation}
+
+:::
+
+</div>
+
+::: {.proof}
+
+우선 @eq-TD_Appendix_stirling_approximation 보다 좀 더 부정확한 근사값을 얻어보자. 자연수 $n\gg 1$ 임을 가정한다. $\ln (n!)$ 은
+
+$$
+\ln (n!) = \ln n + \ln (n-1) + \cdots + \ln 2 + \ln 1
+$$ {#eq-TD_Appendix_stirling_1}
+
+이며
+
+$$
+\ln (n!) \approx \int_0^n \ln n \, dx = (x\ln x - x){\huge |}_{0}^n  = n \ln n - n =\left(\dfrac{n}{e}\right)^n
+$$
+
+를 얻는다. @eq-TD_Appendix_stirling_approximation 에 비교해 보면 $\sqrt{2\pi n}$ 이 빠져 있다.
+
+이제 좀 더 정확한 근사를 얻어보자. 우리는 팩토리알을 다음과 같이 쓸 수 있다는 것을 안다.
+
+$$
+n! = \int_0^\infty x^n e^{-x}\, dx
+$${#eq-TD_Appendix_stirling_2}
+
+여기서 $x^n$ 은 매우 급격하게 증가하는 함수이고 $e^{-x}$ 는 매우 급격하게 감소하는 함수이다. $x^ne^{-x}$ 의 미분을 통해 이 함수의 최대값은 $x=n$ 일 때 $n^ne^{-n}$ 임을 확인 할 수 있다. 
+
+$$
+x^n e^{-x} = e^{\ln x^n -x} = e^{n \ln x - x}
+$$
+
+이므로 $y:=x-n$ 이라고 하자. 그렇다면
+
+$$
+\begin{aligned}
+n \ln x - x &= n \ln (n + y) - n - y = n \ln \left[n \left(1+ \dfrac{y}{n}\right)\right] -n-y \\[0.3em]
+& = n \ln n - n + n \ln \left(1 + \dfrac{y}{n}\right) - y
+\end{aligned}
+$$
+
+이다. 여기서 $0 < \delta \ll 1$ 일 때 $\ln (1+\delta) \approx \delta - \dfrac{1}{2}\delta^2$ 임을 이용하면(테일러 전개)
+
+$$
+n \ln x - x \approx n \ln n - n - \dfrac{y^2}{2n}
+$$
+
+이므로
+
+$$
+x^n e^{-n} \approx e^{n \ln n - n - y^2/(2n)} = n^n e^{-n} e^{-y^2/2n}
+$$
+
+이다. @eq-TD_Appendix_stirling_1 을 이용하는데 거의 모든 적분값은 $x\approx n$ 근처이므로 적분 구간을 $(-\infty,\,\infty)$ 로 확장 할 수 있다. 따라서
+
+$$
+n! \approx n^n e^{-n} \int_{-\infty}^\infty e^{-y^2/2n} \,dy = n^n e^{-n}\sqrt{2\pi n}
+$$
+
+을 얻는다. $\square$
+
+:::

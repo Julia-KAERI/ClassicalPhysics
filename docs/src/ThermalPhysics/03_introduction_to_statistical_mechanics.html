@@ -434,7 +434,7 @@ E_n = \hbar \omega \left(n + \dfrac{1}{2}\right),\qquad n=0,\,1,\,2,\ldots
 <img src="figures/schroeder/chap2/schroeder_fig_2_3.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_2_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;23.1: 카르노 순환
+그림&nbsp;23.1: 에너지를 교환하는 두 아인슈타인 고체
 </figcaption>
 </figure>
 </div>
@@ -536,6 +536,23 @@ E_n = \hbar \omega \left(n + \dfrac{1}{2}\right),\qquad n=0,\,1,\,2,\ldots
 </div>
 </div>
 <p>통계역학의 기본원리에 따르면 앞에서 다룬 아인슈타인 고체의 가능한 462 개의 미시 상태 각각은 동일한 확률을 가진다. 하지만 거시상태에 각각에 대한 확률은 다른데 이는 <a href="#tbl-TD_number_of_states_for_2_solids_of_3_quanta" class="quarto-xref">표&nbsp;<span>23.1</span></a> 에서 확인 할 수 있다.</p>
+<p><span class="math inline">\(N_A, N_B, q_A+q_B\)</span> 값이 클 경우 컴퓨터를 이용하여 계산 할 수 있다. 예를 들어</p>
+<p><span class="math display">\[
+N_A=300,\quad N_B=200,\quad q_A+q_B=100
+\]</span></p>
+<p>인 경우 <span class="math inline">\(q_A=0,\,q_B=100\)</span> 일 때 최소값 <span class="math inline">\(\Omega_\text{total}=2.8\times 10^{81}\)</span> 을 가지며 <span class="math inline">\(q_A=60,\,q_B=40\)</span> 일 때 <span class="math inline">\(\Omega_\text{total}=6.9\times 10^{114}\)</span> 인 최대값을 가진다. 최소값과 최대값으 비율은 <span class="math inline">\(10^{33}\)</span> 정도로 매우 크다. <span class="math inline">\(q_A\)</span> 에 대한 <span class="math inline">\(\Omega_\text{total}\)</span> 을 그리면 아래와 같다. 정규분포곡선과 유사하며 <span class="math inline">\(q_A\)</span> 가 56 에서 64 까지의 합이 전체의 60 % 정도를 차지한다. 통계역학의 기본원리에 의하면 이 시스템은 전체 시간의 60 % 정도를 <span class="math inline">\(56 \le q_A \le 64\)</span> 인 미시상태에 존재한다.</p>
+<div id="fig-TD_schroeder_2_5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-TD_schroeder_2_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/schroeder/chap2/schroeder_2_5.png" class="img-fluid figure-img" width="450">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_2_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;23.2: <span class="math inline">\(\Omega_\text{total}(q_A)\)</span>
+</figcaption>
+</figure>
+</div>
+<p>이제 이 시스템이 초기에 <span class="math inline">\(q_A \ll 60\)</span> 인 상태에서 시작했다고 하자. 충분한 시간이 흐른다면 어느 정도의 에너지가 <span class="math inline">\(B\)</span> 에서 <span class="math inline">\(A\)</span> 로 이동하는 것을 발견 할 수 있을 것이다. 그리고 대부분의 시간을 <span class="math inline">\(q_A\)</span> 가 60 근처인 미시상태에 머무르게 된다. 이것은 비가역적인 변화이다. 우리는 여기서 열에 대한 어떤 설명을 얻을 수 있다. <strong>이것은 확률적인 현상이다. 절대적이지는 않지만 대단히 그러한 경향이 있다.</strong> 에너지의 자발적 흐름은 시스템이 가장 확률이 높은 상태에 있을 때 멈추게 된다. 이것은 열역학 제 2 법칙의 한가지 버젼이다.</p>
+<p>거시적인 계는 대략 <span class="math inline">\(10^{23}\)</span> 개 혹은 그 이상의 입자를 다룬다. 컴퓨터로도 다루기 힘들지만 우리에게는 잠시 후 다룰 유용한 수학적인 도구가 있다.</p>
 
 
 </section>
