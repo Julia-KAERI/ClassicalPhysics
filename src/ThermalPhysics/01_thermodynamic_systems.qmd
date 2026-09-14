@@ -464,7 +464,10 @@ $${#eq-TD_relations_2_in_adiabatic_revirsible_process_of_ideal_gas}
 
 ![단열과정과 등온과정](figures/adiabatic_process/adiabatic.png){#fig-TD_adiabatic_and_isothermal_process width=350}
 
-</br>
+
+### 잠열 
+
+특별한 경우 열을 가해도 온도가 올라가지 않는 경우가 있다. 보통 물의 끓음이나 녹음 같은 상전이가 발생할 때 이며 이 경우 비열은 무한대가 된다. 단위 질량당 상전이에 필요한 열을 **잠열 (latent heat)** 이라고 한다. 하지만 이 정의는 모호한데 상전이 과정에서 어떤 일을 할수도 있기 때문이다. 일반적으로 압력이 일정한 상태를 가정하고, 등압 팽창 혹은 수축 과정 이외에 필요한 열을 잠열이라고 한다.
 
 ### 연습문제 {.unnumbered}
 
@@ -706,371 +709,104 @@ $$
 c_s = \sqrt{B/\rho}.
 $$
 
-여기서 $\rho$ 는 매질의 밀도이고 $B$ 는 물질의 강도의 척도인 부피 탄성 계수(bulk modulus) 이다. 정확히는 다음과 같이 정의된다.
+여기서 $\rho$ 는 매질의 밀도이고 $B$ 는 물질의 강도의 척도인 부피탄성계수(bulk modulus) 이다. 정확히는 다음과 같이 정의된다.
 
 $$
 B := - V \dfrac{dp}{dV}
 $$
-:::
 
-</div>
+이 압축이 등온인지 단연일지 혹은 다른 방법에 의한건지 아직 정하지 않았으므로 위의 정의는 아직 모호하다.
 
-</br>
+($a$) 이상기체의 부피탄성계수를 등온과 단열 압축에 대해 각각 계산하라.
 
-## 열역학 제 2 법칙 {#sec-TD0_the_second_raw_of_thermodynamics}
+($b$) 음파의 속도를 계산하는데 있어 단열 압축을 하용하여야 하는 이유를 논하라.
 
-### 열원과 기관 {#sec-TD_heat_source_and_engine}
+($c$) 주어진 온도와 평균 분자 질량에 대해 이상기체에서의 음속을 계산하라. 이 결과를 기체에서의 분자의평균제곱근 속도 식과 비교하라.
 
-열역학 제 1 법칙은 에너지를 생산하는 기계를 만들 수 없으며 단지 에너지를 변환할 뿐이라는 것을 한다.그러나 제 1 법칙은 에너지 사이의 변환에 대해서는 어떤 제약도 말하지 않는다. 따라서 이 법칙에 따르면 열은 일로, 일은 열로 자유롭게 변환 될 수 있다.
-
-일을 열로 변환시키는 경우는 항상 가능한 듯이 보인다. 마찰, 혹은 전기 저항을 통해 역학적/전기적 에너지를 열로 변환시킬수 있다는 것을 안다. 그러나 반대의 경우, 즉 열을 일로 바꾸는 것에는 명확한 제한이 존재한다. 만약 제한이 존재하지 않는다면 우리는 환경이 아무리 온도가 낮더라도 이 환경의 온도를 더 낮추어 일로 바꿀 수 있게 된다. 그리고 열역학 제 2 법칙에 의하면 이것은 불가능하다.
-
-이것을 살펴보기 위해 우리는 우선 **열원 (heat source)** 과 **기관 (engine)** 을 정의하자. 주변과 열만을 주고받으며 일은 주고받지 않으면서 정해진 온도 $T$ 를 유지하는 물리적 대상을 **온도 $T$ 의 열원** 이라고 한다. 또한 순환 과정을 통해 열을 일로 바꾸는 계(system)를 **열기관(heat engine)** 혹은 **기관** 이라고 한다. 
-
-</br>
-
-### 열역학 제 2 법칙 {#sec-TD_the_second_law_of_thermodynamics}
-
-열역학 제 2 법칙은 아래와 같이 두가지로 표현 될 수 있다.
-
-::: {.callout-important icon="false"}
-
-#### **캘빈의 열역학 제 2 법칙**
-
-온도 $T$ 상태에서 같은 온도의 열원으로부터 추출한 열을 일로 변환시키는 유일한 최종결과를 갖는 과정은 불가능하다. 
-
-:::
-
-::: {.callout-important icon="false"}
-
-#### **클라우시우스의 열역학 제 2 법칙**
-
-낮은 온도의 물체의 열을 높은 온도를 가진 물체로 전달하는 유일한 최종결과를 갖는 과정은 불가능하다 
-
-:::
-
-
-열역학 제 2 법칙에 대한 두가지 명제는 동일하다는 것을 보일 수 있다. 
-
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-
-::: {#lem-TD_equivallence_of_two_second_laws_of_thermodynamics_1}
-
-클라우시우스의 법칙이 참이면 캘빈의 법칙도 참이다.
+($d$) 스코틀랜드의 배틀필드 밴드가 유타에서 연주할 때 한 연주가가 고도로 인해 백파이프의 음정이 나갔다는 것을 발견했다. 고도가 음속에 미치는 영향, 즉 파이프에서의 정상파의 진동수에 미치는 영향을 예상 할 수 있는가? 그렇다면 어느 방향으로? 그렇지 않다면 왜?
 
 :::
 
 </div>
 
-::: {.proof}
+::: {.solution}
 
-우선 캘빈의 명제가 틀리다고 가정하자. 즉 온도 $T$ 인 열원으로부터 추출한 열을 일 $W$ 로 변환시켰다고 하자. 마찰을 통해 우리는 이 $W$ 를 열로 변환할 수 있고 이를 통해 다른 물체의 온도를 높일 수 있다. 이 때 다른 물체의 온도가 $T$ 보다 높은지 낮은지와는 무관하므로 캘빈경의 명제가 틀리다면 클라우시우스의 명제도 틀리다. $\square$
+($a$) 등온 압축이라면 $pV=A=\text{constant}$ 이므로 $B = p$. 단열 압축시 $pV^\gamma = \text{constant}=C$ 로부터 $B = \gamma p$.
 
-:::
+($b$) 
 
-반대로 클라우시우스의 명제가 틀렸을 때 캘빈경의 명제가 틀리다는 것을 보이기 위해서는 조금 해야할 것이 있다.
+($c$) 공기분자의 경우 이원자 분자가 지배적이므로 $\gamma = 7/5$ 로 놓을 수 있다. $p=1\,\text{atm} = 101,325 \text{N/m}^2$, $\rho = 1.225\,\text{kg/m}^3$ 이므로 $c_s = \sqrt{B/\rho}=340.3\,\text{m/sec}$
 
-## 카르노 순환
-
-### 두가지 열역학 제 2 법칙의 동등성 {#sec-TD_equivalence_of_two_versions_of_2nd_principle_of_thermodynamics}
-
-![카르노 순환](figures/adiabatic_process/carnot_cycle.png){#fig-TD_carnot_cycle width=600}
-
-$T_h$ 과 $T_l$ $(T_h>T_l)$ 의 두 열원이 있다고 하자. 그리고 위의 그림과 같은 $ABCDA$ 과정을 생각하자. 여기서 $AB$ 과정과 $CD$ 과정은 등온과정이고 $BC$, $DA$ 과정은 단열 과정이다. 이 이 전체 과정이 가역과정일 때 **카르노 순환 (Carnot cycle)** 이라고 한다. 
-
-- $AB$ 과정은 등온과정이며 부피가 증가하므로 $W_{AB}>0$ 의 일을 외부에 해 주게 되며, 따라서 $Q_{h}=W_{AB}$ 만큼의 열을 흡수한다. 
-- $BC$ 과정은 단열과정이고 $W_{BC}$ 만큼의 일을 하므로 내부에너지는 $W_{BC}$ 만큼 감소한다.
-- $CD$ 과정은 등온과정이며 부피가 감소하므로 $-W_{CD}<0$ 의 일을 외부로부터 받게 되며 따라서 $Q_{l}=-W_{CD}$ 만큼의 열을 외부로 방출한다.
-- $DA$ 과정은 단열과정으로 $-W_{DA}$ 만큼의 일을 외부에서 하므로 내부에너지는 $W_{DA}$ 만큼 증가한다.
-
-이 과정에서 외부에 한 일 $W >0$ 는 $ABCD$ 로 닫힌 곡선의 면적이다. 순환이므로 순환을 한 번 거쳤을 때 내부에너지는 변화가 없다. 따라서
-
-$$
-W = Q_{h}- Q_{l}
-$$
-
-이다. 두개의 열원, 열과 일의 흐름을 아래와 같이 도식화 시킬 수 있다.
-
-![카르노 엔진](figures/adiabatic_process/carnot_engine.png){#fig-TD_carnot_engine width=250}
-
-위의 방정식과 그림은 높은 온도의 열원으로부터 받은 열 $Q_h$ 의 일부만 일로 변환되며 $Q_l$ 만큼의 열은 낮은 에너지의 열원으로 방출된다는 것을 보여준다. 여기서 우리는 카르노 순환의 효율을 $\eta$ 를 다음과 같이 정의 할 수 있다.
-
-$$
-\eta := \dfrac{W}{Q_{h}}= \dfrac{Q_{h}-Q_{l}}{Q_{h}}= 1- \dfrac{Q_{h}}{Q_{l}}.
-$$
-
-이 과정은 가역과정이므로 역순인 $A\to D\to C\to B \to A$ 의 과정을 생각 할 수 있다. 즉 이 과정은 $W$ 만큼의 일을 받으면서 온도 $T_l$ 일 때 $Q_{l}$ 의 열을 받고 $T_h$ 일 때 $Q_{h}$ 의 열을 방출 할 수 있으며 이를 통해 최종 결과는 외부로부터 $-W$ 만큼의 일을 받는 것이다.
-
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-
-::: {#lem-TD_equivallence_of_two_second_laws_of_thermodynamics_2}
-
-열역학 제 2 법칙에 대한 캘빈의 명제가 참이면 클라우시우스의 명제도 참이다.
+($d$) $B\propto p$ 이며 $\rho \propto p$ 이므로 $c_s$ 는 온도가 일정할 때 차이가 없다. 그렇다면 아마 온도차이일 것이다. 
 
 :::
 
-</div>
 
-::: {.proof}
-클라우시우스의 제 2 법칙을 부정하면 온도가 $T_l$ 인 열원으로부터 $Q_l$ 의 열을 받아 이것을 같은 상태에서 $T_h(>T_l)$ 의 열원에 전달하며 최종적으로 계의 상태에 변화가 없는 장치가 가능하다. 이것을 카르노 기관에 연결한다.두 장치를 합친 전체 시스템을 보면, 저온 열원($T_l$)은 주고받은 열이 상쇄되어 변화가 없고, 고온 열원에서는 순수하게 $Q_h - Q_l$ 만큼의 열만 소모되었다.시스템이 한 일 $W = Q_h - Q_l$ 이므로, 단일 고온 열원(저장소)에서 열을 받아 전부 일로 바꾼 셈이 되며 이는 켈빈의 제 2 법칙 위반이다.$\square$
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-:::
+::: {#exr-TD_schroeder_1_46}
 
-이로부터 우리는 다음 결과를 얻는다.
+#### Schroeder 1.46
 
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+고체나 액체의 열용량은 대부분 일정한 압력 상태에서 측정된다. 왜인지 보이기 위해 여기서는 $T$ 의 변화에 따른 $V$ 의 변화를 없에기 위한 압력값을 구해보자.
 
-::: {#thm-TD_equivallence_of_two_second_laws_of_thermodynamics}
 
-열역학 제 2 법칙에 대한 캘빈과 클라시우스의 진술은 동등하다.
+($a$) 물질의 **열팽창 계수 (thermal expansion coefficient)** $\beta$ 는 다음과 같이 정의된다.
+
+$$
+\beta := \dfrac {1}{V}\left(\dfrac{\partial V}{\partial T}\right)_p.
+$$ {#eq-TD_definition_of_thermal_expansion_coefficient}
+
+압력을 일정하게 유지하면서 물질을 압축시킬 때 물질의 부피의 변화 $dV_1$ 을 $dT$ 와 $\beta$ 를 이용하여 기술하라.
+
+($b$) **등온 압축률 (isothermal compressibility)** $\kappa_T$ 는 다음과 같이 정의된다.
+
+$$
+\kappa_T = - \dfrac{1}{V}\left(\dfrac{\partial V}{\partial p}\right)_T.
+$${#eq-TD_definition_of_isothermal_compressibility}
+
+온도를 일정하게 유지하면서 물질을 약간 압축시킬 때의 부피 변화 $V_2$ 를 $dp$ 에 대해 표현하라.
+
+($c$) ($b$) 에 의한 압축에 의해 $(a)$ 에 의한 팽창이 상쇄되도록 합축했다고 하자. 그렇다면 이 경우 $(dp)/(dT)=\left(\partial p/\partial T\right)_V$ 이다. 이 편미분을 $\beta,\,\kappa_T$ 로 표현하라. 이 경우 
+
+$$
+\left(\dfrac{\partial p}{\partial T}\right)_V = - \dfrac{\left(\partial V/\partial T\right)_p}{\left(\partial V/\partial p\right)_T}
+$$ {#eq-TD_cyclic_relation_of_partial_derivatives}
+
+를 얻어야 한다(편미분의 삼중곱 규칙 혹은 순환 규칙이라고 한다). 위 관계는 순전히 수학적인 관계이다.
+
+($d$) 이상기체에 대해 $\beta,\,\kappa_T,\,(\partial p/\partial T)_V$ 를 얻고 @eq-TD_cyclic_relation_of_partial_derivatives 가 성립하는지 비교하라.
+
 
 :::
 
 </div>
 
-### 카르노의 정리 {#sec-TD_carnot_theorem}
+::: {.solution}
 
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-
-::: {#thm-TD_carnot_theorem}
-
-주어진 두 열원에서 작동하는 기관가운데 카르노 기관보다 효율이 높은 기관은 존재하지 않는다.
-
-:::
-
-</div>
-
-::: {.proof}
-
-카르노 기관보다 효율이 높은 기관 $X$ 를 생각하자. 카르노 기관의 열효율을 $\eta_C$ 라고 하고 이 기관 $X$ 의 열효율을 $\eta_X$ 라고 하자. 카르노 기관은 가역이므로 아래 그림과 같이 $X$ 와 카르노 기관을 연결할 수 있다.
-
-![가상의 기관 $X$ 과 역방향으로 가동되는 카르노 기관의 연결](figures/adiabatic_process/efficient_engine.png){#fig-TD_more_efficient_engine width=350}
-
-$\eta_X > \eta_C$ 이므로
-
+$T,\,p$ 를 독립변수로 할 때
 $$
-\dfrac{W}{Q'_h} > \dfrac{W}{Q_h}
+dV = \left(\dfrac{\partial V}{\partial T}\right)_p\,\,dT + \left(\dfrac{\partial V}{\partial p}\right)_T\,dp
 $$
 
-이며 따라서 $Q_h > Q'_h$ 이다. 열역학 제 1 법칙에 의해 
+임을 이용한다.
+
+($a$) $dV_1 = \beta V\,dT$
+
+($b$) $dV_2 = -\kappa_T V dp$
+
+($c$) $\left(\dfrac{\partial p}{\partial T}\right)_V = \dfrac{\beta}{\kappa_T} = - \dfrac{\left(\partial V/\partial T\right)_p}{\left(\partial V\partial p\right)_T}.$
+
+($d$) 이상기체의 경우 이상기체 상태방정식 $pV=\nu k_BT$ 로부터,
 
 $$
-W = Q_h'-Q_l' = Q_h-Q_l
+\begin{aligned}
+\beta &=\dfrac{1}{V}\left(\dfrac{\partial V}{\partial T}\right)_p = \dfrac{1}{T}, \\[0.3em]
+\kappa_T &= - \dfrac{1}{V}\left(\dfrac{\partial V}{\partial p}\right)_T = \dfrac{1}{p}, \\[0.3em]
+\left(\dfrac{\partial p}{\partial T}\right)_V &= \dfrac{p}{T}= \dfrac{\beta}{\kappa_T}.
+\end{aligned}
 $$
-
-이므로 $Q_l > Q_l'$ 이다. 열원 $T_h$ 과 $T_l$ 을 보면 $T_l$ 에서 열을 빼서 $T_h$ 에 열을 공급하게 되며 이는 클라우시우스의 열역학 제 2 법칙에 위배된다. 따라서 카르노 열기관보다 더 효율이 높은 열기관은 존재하지 않는다. $\square$
-
-:::
-
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-
-::: {#cor-TD_carnot_theorem}
-
-두 온도의 열원에 대해 작동하는 모든 가역 기관은 카르노 기관과 같은 효율을 가진다.
-
-:::
-
-</div>
-
-::: {.proof}
-
-가역 기관 $Y$ 의 효율 $\eta_Y \le \eta_C$ 이다. 아래 그림과 같이 카르노 기관과 $Y$ 를 연결했다고 하자.
-
-![카르노 기관과 가역 기관 $Y$ 의 연결](figures/adiabatic_process/efficient_revisible_engine.png){#fig-TD_revisible_efficient_engine width=350}
-
-클라우시우스의 열역학 제 2 법칙에 의해 $Q_h'-Q_h > Q_l'-Q_l$  이어야 한다. 그런데 에너지 보존에 의해 $Q_h-Q_l = W = Q'_h - Q'_l$ 이므로 $Q_h'-Q_h = Q_l'-Q_l$ 이다. 
-
 :::
 
 </br>
 
-### 카르노 기관과 이상기체
-
-@fig-TD_carnot_cycle 을 보자. 이상기체가 열을 주거나 받으며 일을 한다고 하자. 
-
-**1. $A\to B$ 과정** : 등온과정이므로 $dU=0$ 이며 따라서 $\dbar Q=\dbar W$ 이다. 다음이 성립한다.
-
-$$
-Q_h = \int_{V_A}^{V_B} p\,dV = \nu RT_h \ln \left(\dfrac{V_B}{V_A}\right).
-$$ {#eq-TD_carnot_cycle_of_ideal_gas_AB_process}
-
-**2. $B\to C$ 과정** : 단열과정이며 @eq-TD_relations_1_in_adiabatic_revirsible_process_of_ideal_gas 에 의해 다음이 성립한다.
-
-$$
-\left(\dfrac{T_h}{T_l}\right) = \left(\dfrac{V_C}{V_B}\right)^{\gamma -1}.
-$${#eq-TD_carnot_cycle_of_ideal_gas_BC_process}
-
-**3. $C\to D$ 과정** : $Q_l$ 은 방출하는 열량임을 고려하자. 등온과정이므로 $A\to B$ 과정과 같이 다음이 성립한다. 
-
-$$
-Q_l = -\int_{V_C}^{V_D} p\,dV = -\nu RT_l \ln \left(\dfrac{V_D}{V_C}\right).
-$$ {#eq-TD_carnot_cycle_of_ideal_gas_CD_process}
-
-**4. $D\to A$ 과정** : 단열과정이므로 $A\to B$ 과정과 비슷하게 아래가 성립한다.
-$$
-\left(\dfrac{T_l}{T_h}\right) = \left(\dfrac{V_A}{V_D}\right)^{\gamma -1}.
-$${#eq-TD_carnot_cycle_of_ideal_gas_DA_process}
-
-</br>
-
-@eq-TD_carnot_cycle_of_ideal_gas_BC_process 와 @eq-TD_carnot_cycle_of_ideal_gas_DA_process 로부터 $V_C/V_B = V_D/V_A$ 임을 안다. 즉 $V_B/V_A=V_C/V_D$ 이다. 그렇다면
-
-$$
-\dfrac{Q_h}{Q_l}= -\dfrac{T_h \ln (V_B/V_A)}{T_l \ln (V_D/V_C)}= \dfrac{T_h}{T_l}
-$${#eq-TD_relation_of_heat_and_temperature_of_carnot_engine_using_ideal_gas}
-
-이다. 즉 이상기체를 사용한 카르노 기관의 효율 $\eta_C$ 는 아래와 같다.
-
-$$
-\eta_C = \dfrac{Q_h-Q_l}{Q_h}= 1- \dfrac{T_l}{T_h}
-$$ {#eq-TD_efficiency_of_carnot_engine_using_ideal_gas}
-
-
-</br>
-
-### 열역학적 절대온도 {#sec-TD_absolute_thermodynamic_temperature}
-
-#### **미리 짚고 넘어가는 것들**
-
-두 열원 $T_h,\,T_l$ 에서 각 사이클당 $Q_h,\,Q_l$ 만큼의 열을 주고 받으며 $W=Q_h-Q_l$ 만큼의 일을 하는 기관을 생각하자. @fig-TD_carnot_engine 와 같은 카르노 기관일 필요는 없지만, 순환이어야 한다. 즉 과정의 끝이 초기상태이어야 한다.
-
-
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-
-::: {#lem-TD_absolute_thermodynamic_temperature_1}
-
-$Q_l \ge 0$ 이다.
-
-:::
-
-</div>
-
-::: {.proof}
-
-$Q_l \le 0$ 이라고 하자. 저온 열원이 $|Q_l|$ 만큼의 열을 방출하고 고온 열원과 열적으로 연결되어 방출한 만큼의 열을 받았다고 하자. 그렇다면 저온 열원은 변화가 없고 기관 자체는 초기상태로 돌하오게 되며 최종 결과는 고온 열원으로 부터 얻은 열 만큼 일을 한 것이 된다. 이는 캘빈의 원리에 위반되므로 $Q_l > 0$ 이다. $\square$
-
-:::
-
-
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-
-::: {#lem-TD_absolute_thermodynamic_temperature_2}
-
-$Q_h \ge 0$ 이다.
-
-:::
-
-</div>
-
-::: {.proof}
-
-$W=Q_2-Q_1>0$ 이며 $Q_1>0$ 이므로 $Q_2>0$ 이다. $\square$
-
-:::
-
-</br>
-
-#### **가역기관의 공통값**
-
-정해진 온도 $T_h,\,T_l$ 에서 동작하는 가역기관에 대해 @cor-TD_carnot_theorem 로 부터 우리는 $Q_h/Q_l$ 이 동일하다는 것을 알 수 있다. 즉 이 값은 가역기관의 세부적인 특징과 무관하다. 따라서
-
-$$
-\Theta(T_l,\,T_h) := \dfrac{Q_h}{Q_l}
-$$ {#eq-TD_universal_fuction_of_reversible_engine}
-
-는 두 온도 $T_1,\,T_2$ 에 대한 보편함수이다.
-
-
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-
-::: {#thm-TD_properties_of_thermodynamic_universial_function_1}
-
-@eq-TD_universal_fuction_of_reversible_engine 의 $\Theta$ 는 다음을 만족한다.
-
-$$
-\Theta(T_1,\,T_2) = \dfrac{\Theta (T_0,\,T_2)}{\Theta (T_0,\,T_1)}.
-$$ {#eq-TD_properties_of_thermodynamic_universial_function_1}
-
-
-:::
-
-</div>
-
-::: {.proof}
-
-$A_1$ 이 각각 $T_0,\,T_1$ 에서 작동하는 가역기관이며 $A_2$ 가 $T_0,\,T_2$ 에서 작동하는 가역기관이라고 하자. $A_1$ 이 $T_1$ 열원에서 $Q_1$ 만큼의 열을 받아 일을 하고 $T_0$ 열원에 $Q_0$ 만큼의 열을 반납한다고 하자. $A_2$ 는 $T_2$ 열원에서 $Q_2$ 만큼의 열을 받아 일을 하고 $T_0$ 열원에 역시 $Q_0$ 만큼의 열을 반납한다고 하자. 계산을 간단하게 하기 위해 두 기관이 $T_0$ 의 열원에 같은 만큼의 열을 반납하는 것으로 정할 수 있다. 그렇다면
-
-$$
-\dfrac{\Theta(T_0,\,T_2)}{\Theta(T_0,\,T_1)}= \dfrac{Q_2/Q_0}{Q_1/Q_0} =\dfrac{Q_2}{Q_1} 
-$$
-
-이다. 이제 $A_2$ 의 역과정과 $A_1$ 과정을 연결한다. 그렇다면 아래 그림과 같다.
-
-
-![$A_1$ 과 반대로 가동되는 $A_2$ 기관의 연결](figures/adiabatic_process/universal_function_1.png){#fig-TD_universal_function_1 width=400}
-
-이 과정은 가역과정이며 이 열기관은 $T_1,\,T_2$ 에서 가동되는 가역기관이므로
-
-$$
-\Theta(T_1,\,T_2)= \dfrac{Q_2}{Q_1}
-$$
-
-이다. 따라서 @eq-TD_properties_of_thermodynamic_universial_function_1 이 성립한다. $\square$
-
-:::
-
-@thm-TD_properties_of_thermodynamic_universial_function_1 에서의 $T_0$ 는 임의의 온도이므로 우리가 임의로 고정시키고 $\Theta (T_0,\,T)$ 를 $T$ 의 함수로 생각 할 수 있다. 즉
-
-$$
-\theta (T) := K \cdot \Theta(T_0,\,T).
-$$ {#eq-TD_thermodynamic_universal_function_for_T_1}
-
-이 때 $K$ 는 우리가 앞으로 유용하게 정할 상수이다. 그렇다면
-
-$$
-\Theta(T_1,\,T_2) = \dfrac{\theta(T_1)}{\theta(T_2)}
-$$ {#eq-TD_thermodynamic_universal_function_for_T_2}
-
-이다. 
-
-#### **열역학적 절대 온도**
-
-지금까지 실제 물질적인 온도 $T$ 를 사용했기 때문에 $\theta(T)$ 함수의 형태를 알 수 없다. 그러나 온도의 스케일은 임의적이기 때문에 아예 $\theta(T)$ 를 온도의 스케일로 사용 할 수 있다. 여기서 @eq-TD_thermodynamic_universal_function_for_T_1 의 상수 $K$ 역시 우리가 임의로 정할 수 있다. 보통은 1 기압에서의 물의 어는점과 끓는 점의 차이를 100 도로 삼는다$^2$.[$^2$ 이것은 @Fermi1956ThermodynamicsDover 의 구절이다. 이 책은 1936년의 책을 그대로 낸 것으로 1936년 당시에는 옳았지만 이후 절대 온도 스케일의 정의가 변화하였으므로 현재는 맞지 않는다.]{.aside}
-
-이렇게 정의된 온도 스케일을 **온도에 대한 열역학적 절대 스케일 (absolute thermodynamic scale of temperature)** 라고 하며 이 스케일에서의 온도를 **열역학적 절대 온도 (absolute thermodynamic temperature)** 라고 한다. 앞으로의 온도는 모두 열역학적 절대 온도이다. 
-
-#### **열역학적 절대온도와 측정 온도의 일치**
-
-@fig-TD_carnot_cycle 에서 기술된 카르노 순환을 다시 생각하자. 카르노 순환 과정에서 일이 이상기체에 의해 수행된다고 하자. 그리고 $T_h,\,T_l$ 를 카르노 순환의 두 온도라고 하자. 이 온도는 온도계로 측정되었다. 그렇다면 @eq-TD_relation_of_heat_and_temperature_of_carnot_engine_using_ideal_gas 로 부터
-
-$$
-\dfrac{T_h}{T_l} = \dfrac{Q_h}{Q_l} = \dfrac{\theta(T_h)}{\theta(T_l)}
-$$
-
-를 얻는다. 두 온도 $T$ 와 $\theta(T)$ 스케일을 동일하게 놓는다면
-
-$$
-\theta (T)=T
-$$ {#eq-TD_equivalence_of_absolute_and_thermometer_scale}
-
-을 얻는다. 그리고 **이제부터 $T$ 는 열역학적 절대온도이다.** 
-
-## 열기관 {#sec-TD_thermal_engines}
-
-카르노 열기관의 효율은 @eq-TD_efficiency_of_carnot_engine_using_ideal_gas 로 주어진다. 그리고 모든 가역기관에서 $Q_h/Q_l = T_h/T_l$ 이다. 따라서 @eq-TD_efficiency_of_carnot_engine_using_ideal_gas 는 카르노 기관 뿐만 아니라 가역기관의 효율이 된다. 즉
-
-$$
-\eta_R = 1-\dfrac{Q_h}{Q_l} = 1-\dfrac{T_h}{T_l}.
-$$ {#eq-TD_efficiency_of_reversible_engine}
-
-이며 이 값은 두 온도 $T_l,\,T_h$ 에서 작동하는 기관이 가질 수 있는 최대 효율이다.
-
-일반적으로 기관에서 $T_l$ 은 환경의 온도로 제어 할 수 없으며 따라서 $T_h$ 를 높일 수록 높은 효율을 얻게 된다. 물론 일반적으로 기관은 가역기관과 차이거 커서 실제 효율은 $\eta_R$ 과 차이가 많이 난다.
-
-가역기관을 거꾸로 작동시키면 (가역)냉동기가 된다. $W+Q_l = Q_h$ 와 $Q_h/Q_l = T_h/T_l$ 로부터 가역 냉동기에 대해 다음 식을 얻는다.
-
-$$
-Q_l = W \dfrac{T_l}{T_h-T_l}.
-$$ {#eq-TD_Ql_for_refregerator}
-
-이 경우는 $T_h$ 가 주변의 온도이다. 

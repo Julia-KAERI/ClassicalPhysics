@@ -48,6 +48,7 @@ book:
       chapters:
       - src/ThermalPhysics/01_thermodynamic_systems.qmd
       - src/ThermalPhysics/02_entropy.qmd
+      - src/ThermalPhysics/03_introduction_to_statistical_mechanics.qmd
       - src/ThermalPhysics/0A_mathematics.qmd
 
     
