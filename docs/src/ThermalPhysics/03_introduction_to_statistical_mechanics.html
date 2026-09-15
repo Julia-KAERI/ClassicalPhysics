@@ -396,7 +396,12 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#sec-TD_einstein_model_of_solid" id="toc-sec-TD_einstein_model_of_solid" class="nav-link active" data-scroll-target="#sec-TD_einstein_model_of_solid"><span class="header-section-number">23.1</span> 아인슈타인 고체 모델</a></li>
+  <li><a href="#sec-TD_einstein_solid_model" id="toc-sec-TD_einstein_solid_model" class="nav-link active" data-scroll-target="#sec-TD_einstein_solid_model"><span class="header-section-number">23.1</span> 아인슈타인 고체 모델</a>
+  <ul class="collapse">
+  <li><a href="#sec-TD_small_einstein_solid_model" id="toc-sec-TD_small_einstein_solid_model" class="nav-link" data-scroll-target="#sec-TD_small_einstein_solid_model">작은 아인슈타인 고체 시스템</a></li>
+  <li><a href="#sec-TD_large_system" id="toc-sec-TD_large_system" class="nav-link" data-scroll-target="#sec-TD_large_system">거대 시스템</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -415,8 +420,10 @@ window.Quarto = {
 \DeclareMathOperator*{\argmax}{argmax}
 \]</span></p>
 </div>
-<section id="sec-TD_einstein_model_of_solid" class="level2" data-number="23.1">
-<h2 data-number="23.1" class="anchored" data-anchor-id="sec-TD_einstein_model_of_solid"><span class="header-section-number">23.1</span> 아인슈타인 고체 모델</h2>
+<section id="sec-TD_einstein_solid_model" class="level2" data-number="23.1">
+<h2 data-number="23.1" class="anchored" data-anchor-id="sec-TD_einstein_solid_model"><span class="header-section-number">23.1</span> 아인슈타인 고체 모델</h2>
+<section id="sec-TD_small_einstein_solid_model" class="level3">
+<h3 class="anchored" data-anchor-id="sec-TD_small_einstein_solid_model">작은 아인슈타인 고체 시스템</h3>
 <p>특성진동수가 <span class="math inline">\(\omega\)</span> 인 1차원 양자 진동자의 경우 <span class="math inline">\(n\)</span> 번째 준위 에서의 에너지 <span class="math inline">\(E_n\)</span> 은</p>
 <p><span class="math display">\[
 E_n = \hbar \omega \left(n + \dfrac{1}{2}\right),\qquad n=0,\,1,\,2,\ldots
@@ -553,8 +560,87 @@ N_A=300,\quad N_B=200,\quad q_A+q_B=100
 </div>
 <p>이제 이 시스템이 초기에 <span class="math inline">\(q_A \ll 60\)</span> 인 상태에서 시작했다고 하자. 충분한 시간이 흐른다면 어느 정도의 에너지가 <span class="math inline">\(B\)</span> 에서 <span class="math inline">\(A\)</span> 로 이동하는 것을 발견 할 수 있을 것이다. 그리고 대부분의 시간을 <span class="math inline">\(q_A\)</span> 가 60 근처인 미시상태에 머무르게 된다. 이것은 비가역적인 변화이다. 우리는 여기서 열에 대한 어떤 설명을 얻을 수 있다. <strong>이것은 확률적인 현상이다. 절대적이지는 않지만 대단히 그러한 경향이 있다.</strong> 에너지의 자발적 흐름은 시스템이 가장 확률이 높은 상태에 있을 때 멈추게 된다. 이것은 열역학 제 2 법칙의 한가지 버젼이다.</p>
 <p>거시적인 계는 대략 <span class="math inline">\(10^{23}\)</span> 개 혹은 그 이상의 입자를 다룬다. 컴퓨터로도 다루기 힘들지만 우리에게는 잠시 후 다룰 유용한 수학적인 도구가 있다.</p>
+</section>
+<section id="sec-TD_large_system" class="level3">
+<h3 class="anchored" data-anchor-id="sec-TD_large_system">거대 시스템</h3>
+<p><a href="../../src/ThermalPhysics/0A_mathematics.html#sec-TD_Appendix_stiring_approximation">스털링 근사</a> 는 큰 <span class="math inline">\(N\)</span> 에 대해 다음이 성립한다는 것을 알려준다.</p>
+<p><span id="eq-TD_stirling_approximation"><span class="math display">\[
+N! \approx N^N e^{-N}\sqrt{2\pi N},\qquad \text{where }N \gg 1
+\tag{23.2}\]</span></span></p>
+<p>통계역학에서는 <span class="math inline">\(\ln (N!)\)</span> 을 많이 사용하며</p>
+<p><span id="eq-TD_stirling_approximation_0"><span class="math display">\[
+\ln N! \approx N\ln N - N + \dfrac{1}{2}\ln (2\pi N)
+\tag{23.3}\]</span></span></p>
+<p>인데 여기서 세번째 <span class="math inline">\(\ln (2\pi N)\)</span> 은 나머지 두 항에 비해 매우 작기때문에 실제 많이 사용되는 근사는</p>
+<p><span id="eq-TD_stirling_approximation_in_log"><span class="math display">\[
+\ln N! \approx N \ln N - N
+\tag{23.4}\]</span></span></p>
+<p>이다.</p>
+<p>이제 스털링 근사를 사용하여 많은 진동자와 에너지 단위를 가진 아인슈타인 고체 모델을 알아보자. 즉 <span class="math inline">\(N\gg 1,\,q \gg 1\)</span>. 우선 <span class="math inline">\(q\gg N\)</span> 인 경우, 즉 에너지 단위가 진동자의 수보다 매우 큰 경우를 알아보자. 이것은 온도가 매우 높은 경우에 타당하다. 그렇다면</p>
+<p><span id="eq-TD_schroeder_2_17"><span class="math display">\[
+\Omega (N,\,q) = \dfrac{(q+N-1)!}{q! (N-1)!} \approx \dfrac{(q+N)!}{q!N!}
+\tag{23.5}\]</span></span></p>
+<p>이며, 스털링 근사를 이용하면</p>
+<p><span id="eq-TD_schroeder_2_18"><span class="math display">\[
+\ln \Omega \approx (q+N)\ln (q+N) - q \ln q -N \ln N
+\tag{23.6}\]</span></span></p>
+<p>이며, 여기서 <span class="math inline">\(0&lt;\delta \ll 1\)</span> 에 대해 <span class="math inline">\(\ln(1+\delta) \approx \delta\)</span> 임을 이용하면</p>
+<p><span class="math display">\[
+\ln (q+N) = \ln q(1+N/q) = \ln q + \ln (1+N/q) = \ln q + \dfrac{N}{q}
+\]</span></p>
+<p>이다. 이로부터</p>
+<p><span id="eq-TD_schroeder_2_20"><span class="math display">\[
+\ln \Omega \approx N \ln \dfrac{q}{N} + N + \dfrac{N^2}{q}
+\tag{23.7}\]</span></span></p>
+<p>이다. <span class="math inline">\(q\gg N\)</span> 근사에서 <span class="math inline">\(N^2/q \ll 1\)</span> 이므로 마지막 항을 무시 할 수 있다. 이로부터</p>
+<p><span id="eq-TD_schroeder_2_21"><span class="math display">\[
+\Omega(N,\,q) \approx e^{N \ln (q/N) + N} = \left(\dfrac{eq}{N}\right)^N.
+\tag{23.8}\]</span></span></p>
+<p>이것은 매우 큰 수이다.</p>
+</section>
+<section id="연습문제" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_2_17" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 23.1 (Schroeder 2.17)</strong></span> <span class="math inline">\(q \ll N\)</span> 인 근사를 사용하여 <a href="#eq-TD_schroeder_2_21" class="quarto-xref">식&nbsp;<span>23.8</span></a> 과 유사한 식을 구하라. 이것은 온도가 매우 낮은 경우에 타당하다.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-TD_schroeder_2_18" class="quarto-xref">식&nbsp;<span>23.6</span></a> 까지는 <span class="math inline">\(q \ll N\)</span> 이어도 성립한다. 여기서</p>
+<p><span class="math display">\[
+\ln (q+N) = \ln N + \ln (1+q/N) \approx \ln N + q/N
+\]</span></p>
+<p>이며 이로부터</p>
+<p><span class="math display">\[
+\ln \Omega \approx q \ln \left(\dfrac{N}{q}\right) +q
+\]</span></p>
+<p>이며, 따라서</p>
+<p><span class="math display">\[
+\Omega (N,\,q) \approx \left(\dfrac{eN}{q}\right)^q
+\]</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_2_18" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 23.2 (Schroeder 2.18)</strong></span> 스털링 근사를 사용하여 큰 <span class="math inline">\(N\)</span> 과 <span class="math inline">\(q\)</span> 에 대해 다음이 성립함을 보여라.</p>
+<p><span class="math display">\[
+\Omega (N,\,q) \approx \dfrac{\left(\dfrac{q+N}{q}\right)^q\left(\dfrac{q+N}{N}\right)^N}{\sqrt{2\pi q (q+N)/N}}
+\]</span></p>
+<p>일반적으로 분모는 무시되지만 그렇지 않을 때도 있다.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-TD_schroeder_2_18" class="quarto-xref">식&nbsp;<span>23.6</span></a> 로부터, 그리고 <a href="#eq-TD_stirling_approximation_0" class="quarto-xref">식&nbsp;<span>23.3</span></a> 에서의 마지막 항을 무시하지 않으면</p>
+<p><span class="math display">\[
+\begin{aligned}
+\ln \Omega (N,\,q) &amp;= q\ln \left(\dfrac{q+N}{q}\right) + N \ln \left(\dfrac{q+N}{N}\right) + \dfrac{1}{2}\ln \left(\dfrac{q+N}{2\pi q N}\right)\\[0.3em]
+&amp;=
+\end{aligned}
+\]</span></p>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

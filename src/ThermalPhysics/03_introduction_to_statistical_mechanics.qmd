@@ -8,8 +8,9 @@ crossref:
 
 {{< include ../../latexmacros.qmd >}}
 
-## 아인슈타인 고체 모델 {#sec-TD_einstein_model_of_solid}
+## 아인슈타인 고체 모델 {#sec-TD_einstein_solid_model}
 
+### 작은 아인슈타인 고체 시스템 {#sec-TD_small_einstein_solid_model}
 
 특성진동수가 $\omega$ 인 1차원 양자 진동자의 경우 $n$ 번째 준위 에서의 에너지 $E_n$ 은
 
@@ -78,7 +79,127 @@ $$
 
 거시적인 계는 대략 $10^{23}$ 개 혹은 그 이상의 입자를 다룬다. 컴퓨터로도 다루기 힘들지만 우리에게는 잠시 후 다룰 유용한 수학적인 도구가 있다. 
 
+### 거대 시스템 {#sec-TD_large_system}
+
+[스털링 근사](0A_mathematics.qmd#sec-TD_Appendix_stiring_approximation) 는 큰 $N$ 에 대해 다음이 성립한다는 것을 알려준다.
+
+$$
+N! \approx N^N e^{-N}\sqrt{2\pi N},\qquad \text{where }N \gg 1
+$$ {#eq-TD_stirling_approximation}
+
+통계역학에서는 $\ln (N!)$ 을 많이 사용하며
+
+$$
+\ln N! \approx N\ln N - N + \dfrac{1}{2}\ln (2\pi N)
+$$ {#eq-TD_stirling_approximation_0}
+
+인데 여기서 세번째 $\ln (2\pi N)$ 은 나머지 두 항에 비해 매우 작기때문에 실제 많이 사용되는 근사는 
+
+$$
+\ln N! \approx N \ln N - N
+$${#eq-TD_stirling_approximation_in_log}
+
+이다. 
+
+이제 스털링 근사를 사용하여 많은 진동자와 에너지 단위를 가진 아인슈타인 고체 모델을 알아보자. 즉 $N\gg 1,\,q \gg 1$. 우선 $q\gg N$ 인 경우, 즉 에너지 단위가 진동자의 수보다 매우 큰 경우를 알아보자. 이것은 온도가 매우 높은 경우에 타당하다. 그렇다면 
+
+$$
+\Omega (N,\,q) = \dfrac{(q+N-1)!}{q! (N-1)!} \approx \dfrac{(q+N)!}{q!N!}
+$$ {#eq-TD_schroeder_2_17}
+
+이며, 스털링 근사를 이용하면
+
+$$
+\ln \Omega \approx (q+N)\ln (q+N) - q \ln q -N \ln N 
+$$ {#eq-TD_schroeder_2_18}
+
+이며, 여기서 $0<\delta \ll 1$ 에 대해 $\ln(1+\delta) \approx \delta$ 임을 이용하면
+
+$$
+\ln (q+N) = \ln q(1+N/q) = \ln q + \ln (1+N/q) = \ln q + \dfrac{N}{q} 
+$$
+
+이다. 이로부터
+
+$$
+\ln \Omega \approx N \ln \dfrac{q}{N} + N + \dfrac{N^2}{q}
+$$ {#eq-TD_schroeder_2_20}
+
+이다. $q\gg N$ 근사에서 $N^2/q \ll 1$ 이므로 마지막 항을 무시 할 수 있다. 이로부터
+
+$$
+\Omega(N,\,q) \approx e^{N \ln (q/N) + N} = \left(\dfrac{eq}{N}\right)^N.
+$$ {#eq-TD_schroeder_2_21}
+
+이것은 매우 큰 수이다.
 
 
 
+### 연습문제 {.unnumbered}
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_2_17}
+
+#### Schroeder 2.17
+
+$q \ll N$ 인 근사를 사용하여 @eq-TD_schroeder_2_21 과 유사한 식을 구하라. 이것은 온도가 매우 낮은 경우에 타당하다.
+
+
+:::
+
+</div>
+
+::: {.solution}
+
+@eq-TD_schroeder_2_18 까지는 $q \ll N$ 이어도 성립한다. 여기서
+
+$$
+\ln (q+N) = \ln N + \ln (1+q/N) \approx \ln N + q/N
+$$
+
+이며 이로부터
+
+$$
+\ln \Omega \approx q \ln \left(\dfrac{N}{q}\right) +q 
+$$
+
+이며, 따라서
+
+$$
+\Omega (N,\,q) \approx \left(\dfrac{eN}{q}\right)^q
+$$
+
+:::
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_2_18}
+
+#### Schroeder 2.18
+
+스털링 근사를 사용하여 큰 $N$ 과 $q$ 에 대해 다음이 성립함을 보여라.
+
+$$
+\Omega (N,\,q) \approx \dfrac{\left(\dfrac{q+N}{q}\right)^q\left(\dfrac{q+N}{N}\right)^N}{\sqrt{2\pi q (q+N)/N}}
+$$
+
+일반적으로 분모는 무시되지만 그렇지 않을 때도 있다.
+
+:::
+
+</div>
+
+::: {.solution}
+
+@eq-TD_schroeder_2_18 로부터, 그리고 @eq-TD_stirling_approximation_0 에서의 마지막 항을 무시하지 않으면
+
+$$
+\begin{aligned}
+\ln \Omega (N,\,q) &= q\ln \left(\dfrac{q+N}{q}\right) + N \ln \left(\dfrac{q+N}{N}\right) + \dfrac{1}{2}\ln \left(\dfrac{q+N}{2\pi q N}\right)\\[0.3em]
+&= 
+\end{aligned}
+$$
+
+:::
