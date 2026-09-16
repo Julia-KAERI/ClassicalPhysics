@@ -108,7 +108,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -403,12 +403,17 @@ window.Quarto = {
   <li><a href="#분포의-뾰족함" id="toc-분포의-뾰족함" class="nav-link" data-scroll-target="#분포의-뾰족함">분포의 뾰족함</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
-  <li><a href="#sec-TD_ideal_gas_in_statistical_mechanics" id="toc-sec-TD_ideal_gas_in_statistical_mechanics" class="nav-link" data-scroll-target="#sec-TD_ideal_gas_in_statistical_mechanics"><span class="header-section-number">23.2</span> 이상기체</a></li>
+  <li><a href="#sec-TD_ideal_gas_in_statistical_mechanics" id="toc-sec-TD_ideal_gas_in_statistical_mechanics" class="nav-link" data-scroll-target="#sec-TD_ideal_gas_in_statistical_mechanics"><span class="header-section-number">23.2</span> 이상기체</a>
+  <ul class="collapse">
+  <li><a href="#단원자-분자-이상기체의-미시상태-수" id="toc-단원자-분자-이상기체의-미시상태-수" class="nav-link" data-scroll-target="#단원자-분자-이상기체의-미시상태-수">단원자 분자 이상기체의 미시상태 수</a></li>
+  <li><a href="#상호작용하는-이상기체" id="toc-상호작용하는-이상기체" class="nav-link" data-scroll-target="#상호작용하는-이상기체">상호작용하는 이상기체</a></li>
+  <li><a href="#엔트로피" id="toc-엔트로피" class="nav-link" data-scroll-target="#엔트로피">엔트로피</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -711,28 +716,97 @@ x=\pm \dfrac{q}{2\sqrt{N}}
 <p><br></p>
 </section>
 </section>
-<section id="sec-TD_ideal_gas_in_statistical_mechanics" class="level2" data-number="23.2">
+<section id="sec-TD_ideal_gas_in_statistical_mechanics" class="level2 page-columns page-full" data-number="23.2">
 <h2 data-number="23.2" class="anchored" data-anchor-id="sec-TD_ideal_gas_in_statistical_mechanics"><span class="header-section-number">23.2</span> 이상기체</h2>
+<section id="단원자-분자-이상기체의-미시상태-수" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="단원자-분자-이상기체의-미시상태-수">단원자 분자 이상기체의 미시상태 수</h3>
 <p>우리는 앞서 큰 수의 진동자를 가진, 열적으로 연결된 두 아인슈타인 고체의 경우 가능한 전체 거시상태의 개수 가운데 매우 작은 비율만 어느정도로 나타날 수 있는 확률을 가진다는 것을 확인했다. 이것은 비단 아인슈타인 고체 뿐만 아니라 거의 모든 상호작용하는 다수의 입자로 이루어진 시스템에도 성립한다. 여기서는 이상기체에 적용하여 다루어 보도록 한다.</p>
-<p>부피 <span class="math inline">\(V\)</span> 안의 <span class="math inline">\(N\)</span> 개의 입자가 가질 수 있는 미시상태의 개수는 주어진 조건(예를 들면 총 에너지의 합) 에서 이 계가 접근 가능한 위상공간(phase space)의 부피를 플랑크 상수 <span class="math inline">\(h^{3N}\)</span> 로 나눈 값에, 구분불가능 할 경우 양자역학에서와 같이 <span class="math inline">\(1/N!\)</span> 을 곱해줘야 한다. 예를 들어 입자의 총 에너지가 <span class="math inline">\((E,\,E + \Delta E)\)</span> 범위라면</p>
+<p>부피 <span class="math inline">\(V\)</span> 안의 <span class="math inline">\(N\)</span> 개의 입자가 가질 수 있는 미시상태의 개수는 주어진 조건(예를 들면 총 에너지의 합) 에서 이 계가 접근 가능한 위상공간(phase space)의 부피를 플랑크 상수 <span class="math inline">\(h^{3N}\)</span> 로 나눈 값에, 구분불가능 할 경우 양자역학에서와 같이 <span class="math inline">\(1/N!\)</span> 을 곱해줘야 한다. 예를 들어 입자의 총 에너지가 <span class="math inline">\(E\)</span></p>
 <p><span class="math display">\[
-\Omega(N,\,E) = \dfrac{1}{N!}\dfrac{1}{h^{3N}}\int_{E&lt;U&lt;E+\Delta E} d^3r\,d^3p ,\qquad \text{(동일한 입자의 경우)}
+\Omega(N,\,E) = \dfrac{1}{N!}\dfrac{1}{h^{3N}}\int_{U=E} d^3r\,d^3p ,\qquad \text{(동일한 입자의 경우)}
 \]</span></p>
-<p>이다. 단원자 분자 이상기체의 경우 에너지는 위치에 무관하므로 <span class="math inline">\(\int d^3r=V^N\)</span> 이며, <span class="math inline">\(\Delta E\)</span> 가 작을 경우</p>
+<p>이다. 단원자 분자 이상기체의 경우 에너지는 위치에 무관하므로 <span class="math inline">\(\int d^3r=V^N\)</span> 이며,</p>
 <p><span class="math display">\[
-\int_{E&lt;U&lt;E+\Delta E}\,d^3p = \text{[Area of momentum space]} \times \Delta E
+\int_{U=E}\,d^3p = \text{[Area of momentum space]}
 \]</span></p>
 <p>이다. 우리는 <span class="math inline">\(3N\)</span> 차원 공간에서의 구의 표면적이</p>
-<p><span id="eq-TD_schroeder_2_39"><span class="math display">\[
-\text{반지름이 }r\text{ 인 }d\text{ 차원 공간의 구의 표면적} = \dfrac{2\pi^{d/2}}{\left(\dfrac{d}{2}-1\right)!} r^{d-1}
+<p><span id="eq-TD_schroeder_2_39_0"><span class="math display">\[
+\text{반지름이 }r\text{ 인 }d\text{ 차원 공ㅋ간의 구의 표면적} = \dfrac{2\pi^{d/2}}{\left(\dfrac{d}{2}-1\right)!} r^{d-1}
 \tag{23.14}\]</span></span></p>
 <p>임을 이용한다. 그렇다면 부피 <span class="math inline">\(V\)</span> 안의 <span class="math inline">\(N\)</span> 개의 단원자 이상기체의 총 에너지가 <span class="math inline">\(U\)</span> 일 때 가질 수 있는 미시상태의 수</p>
+<p><span id="eq-TD_schroeder_2_39_1"><span class="math display">\[
+\Omega (U,\,V,\,N) = \dfrac{1}{N!} \dfrac{V^{N}}{h^{3N}} \dfrac{2\pi^{3N/2}}{(3N/2-1)!} \left(\sqrt{2mU}\right)^{3N-1}
+\tag{23.15}\]</span></span></p>
+<div class="page-columns page-full"><p>이다. 운동량 공간에서의 반지름은 총 에너지 <span class="math inline">\(\sum_{i=1}^N \|\boldsymbol{p}_i\|^2 = 2mU\)</span> 로부터 구한다. 위 <a href="#eq-TD_schroeder_2_39_1" class="quarto-xref">식&nbsp;<span>23.15</span></a> 은 다음과 같이 근사시킬 수 있다<span class="math inline">\(^1\)</span>.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^1\)</span> (본인주) <a href="#eq-TD_schroeder_2_39_1" class="quarto-xref">식&nbsp;<span>23.15</span></a> 에서 <a href="#eq-TD_schroeder_2_39" class="quarto-xref">식&nbsp;<span>23.16</span></a> 로의 근사는 매우 불편하지만 <a href="#eq-TD_schroeder_2_39" class="quarto-xref">식&nbsp;<span>23.16</span></a> 자체는 이후 정준앙상블을 배우면서 정확히 구할 수 있다.</span></div></div>
+<p><span id="eq-TD_schroeder_2_39"><span class="math display">\[
+\Omega (U,\,V,\,N) \approx \dfrac{1}{N!} \dfrac{V^{N}}{h^{3N}} \dfrac{\pi^{3N/2}}{(3N/2)!} \left(\sqrt{2mU}\right)^{3N}.
+\tag{23.16}\]</span></span></p>
+<p>위 식에서 <span class="math inline">\(U,\,V,\,N\)</span> 에 대한 의존성을 분리하면 다음과 같이 쓸 수 있다.</p>
+<p><span id="eq-TD_schroeder_2_41"><span class="math display">\[
+\Omega (U,\,V,\,N) = \phi(N) V^N U^{3N/2}.
+\tag{23.17}\]</span></span></p>
+</section>
+<section id="상호작용하는-이상기체" class="level3">
+<h3 class="anchored" data-anchor-id="상호작용하는-이상기체">상호작용하는 이상기체</h3>
+<div id="fig-TD_schroeder_2_11" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-TD_schroeder_2_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/schroeder/chap2/schroeder_2_11.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_2_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;23.3: 정해진 부피를 가지며 에너지를 교환하는 두 이상기체. 에너지의 합은 보존된다.
+</figcaption>
+</figure>
+</div>
+<p>각각 <span class="math inline">\(N\)</span> 개의 단원자 분지로 <span class="math inline">\(V_A,\, V_B\)</span> 의 부피를 갖는 이상기체가 <span class="math inline">\(U_A,\,U_B\)</span> 의 에너지를 가지고 있다고 하자. 그렇다면 이 시스템의 미시상태의 수는</p>
 <p><span class="math display">\[
-\Omega (N, V, U) = \dfrac{1}{N!} \dfrac{V^{N}}{h^{3N}} \dfrac{2\pi^{3N/2}}{(3N/2-1)!} \left(\sqrt{2mU}\right)^{3N-1}
+\Omega_\text{total} = \Omega_A \Omega_B = [\phi(N)]^2 (V_AV_B)^N (U_A U_B)^{3N/2}
 \]</span></p>
-<p>이다. 운동량 공간에서의 반지름은 총 에너지 <span class="math inline">\(\sum_{i=1}^N \|\boldsymbol{p}_i\|^2 = 2mU\)</span> 로부터 구한다.</p>
+<p>이다. 이 식은 아인슈타인 고체의 경우(<a href="#eq-TD_schroeder_2_22" class="quarto-xref">식&nbsp;<span>23.9</span></a>) 와 본질적으로 같다. <span class="math inline">\(N\)</span> 값이 크기 때문에 각각의 에너지가 증가함에 따라 미시상태의 수는 급격하게 증가하며 반대쪽은 급격하게 감소하므로 <span class="math inline">\(\Omega_\text{total}\)</span> 은 어떤 값을 중심으로 매우 뾰족한 값을 가진다는 것을 예측 할 수 있다. 아인슈타인 고체와 마찬가지로 중심에서의 에너지 분포의 폭 <span class="math inline">\(\Delta_U\)</span> 는 <span class="math inline">\(U_\text{total} = U_A + U_B\)</span> 에 대해 다음과 같을 것이다.</p>
+<p><span id="eq-TD_schroeder_2_43"><span class="math display">\[
+\Delta_U = \dfrac{U_\text{total}}{\sqrt{3N/2}}.
+\tag{23.18}\]</span></span></p>
+<p><span class="math inline">\(N\)</span> 값이 클수록 <span class="math inline">\(U_A\)</span> (혹은 <span class="math inline">\(U_B\)</span>) 가 가질 수 있는 값중애 메우 일부만 어느 이상의 미시상태 수를 가지며 나머지는 매우 작은 값만 갖게 된다.</p>
+<p>이제 에너지 뿐만 아니라 부피도 변할 수 있다고 하자. 그렇다면 부피 변화의 폭 <span class="math inline">\(\Delta_V\)</span> 역시 <span class="math inline">\(V_\text{total}=V_A+V_B\)</span> 에 대해 다음과 같다.</p>
+<p><span id="eq-TD_schroeder_2_44"><span class="math display">\[
+\Delta_V = \dfrac{V_\text{total}}{\sqrt{N}}.
+\tag{23.19}\]</span></span></p>
+<p><span class="math inline">\(\Omega_\text{total}\)</span> 을 <span class="math inline">\(U_A\)</span> 와 <span class="math inline">\(V_A\)</span> 의 함수로 표현하면 어떤 값 <span class="math inline">\(U_A^0,\, V_A^0\)</span> 의 매우 가까운 근처를 제외하면 무시할 만큼 작다. 즉 평형 상태가 실질적으로 정해진다.</p>
+<p>이제 <a href="#fig-TD_schroeder_2_11" class="quarto-xref">그림&nbsp;<span>23.3</span></a> 에서 <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> 사이에 입자가 통과할 수 있는 작은 구멍이 있다고 해 보자. 그리고 <span class="math inline">\(V_A=V_B\)</span> 로 고정되어 있다고 하자. 컨테이너에 <span class="math inline">\(N\)</span> 개의 분자들이 있을 때 모든 분자들이 <span class="math inline">\(V_A\)</span> 에 있을 미시상태의 수는 <a href="#eq-TD_schroeder_2_41" class="quarto-xref">식&nbsp;<span>23.17</span></a> 로 부터</p>
+<p><span class="math display">\[
+\dfrac{\Omega(U,\, V/2,\,N)}{\Omega (U,\,V,\,N)} = 2^{-N}
+\]</span></p>
+<p>이며 <span class="math inline">\(N\)</span> 이 크다면 이 값은 실질적으로 <span class="math inline">\(0\)</span> 과 차이가 없게 된다. 즉 모든 분자들이 한쪽으로 몰리는 일은 일어나지 않는다.</p>
+</section>
+<section id="엔트로피" class="level3">
+<h3 class="anchored" data-anchor-id="엔트로피">엔트로피</h3>
+<p>지금까지 우리는 몇몇 시스템에서 입자와 에너지가 미시상태의 개수가 최대가 되는 거시상태가 되도록 배치된다는 것을 보았다. 이것은 충분히 많은 입자의 수와 에너지가 있을 때 항상 성립한다. 이를 위해 통계역학적 엔트로피 <span class="math inline">\(S\)</span> 를 다음과 같이 정의한다.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>통계역학적 엔트로피</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>주어진 조건을 만족하는 시스템의 미시상태의 개수를 <span class="math inline">\(\Omega\)</span> 라고 할 때 <strong>엔트로피(entropy)</strong> <span class="math inline">\(S\)</span> 는 다음과 같이 정의된다.</p>
+<p><span id="eq-TD_schroeder_2_45"><span class="math display">\[
+\boxed{S=k_B \ln \Omega.}
+\tag{23.20}\]</span></span></p>
+</div>
+</div>
+<p>즉 평형 상태에서는 엔트로피는 항상 최대값을 찾아 간다.</p>
+<p><strong>우리는 열역학적으로 엔트로피와 열역학 제 2 법칙을 살펴보았다. 그리고 이제 통계역학적으로 엔트로피와 열역학 제 2 법칙을 정의하고 이 두가지고 모두 동일하다는 것을 보일 것이다.</strong></p>
+<p>우선 아인슈타인 고체의 경우의 엔트로피를 계산해 보자. <span class="math inline">\(N\)</span> 개의 진동자와 <span class="math inline">\(q\)</span> 개의 에너지 단위로 이루어진 아인슈타인 고체는 <span class="math inline">\(q\gg N\)</span> 일 때 <a href="#eq-TD_schroeder_2_21" class="quarto-xref">식&nbsp;<span>23.8</span></a> 로 부터</p>
+<p><span id="eq-TD_schroeder_2_46"><span class="math display">\[
+S = Nk_B\left(\ln q-\ln N +1\right)
+\tag{23.21}\]</span></span></p>
+<p>이며 <span class="math inline">\(N=10^{22}\)</span>, <span class="math inline">\(q=10^{24}\)</span> 일 때 <span class="math inline">\(S=0.774 \text{ J/K}\)</span> 이다.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
