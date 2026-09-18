@@ -26,7 +26,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -408,6 +427,9 @@ window.Quarto = {
   <li><a href="#단원자-분자-이상기체의-미시상태-수" id="toc-단원자-분자-이상기체의-미시상태-수" class="nav-link" data-scroll-target="#단원자-분자-이상기체의-미시상태-수">단원자 분자 이상기체의 미시상태 수</a></li>
   <li><a href="#상호작용하는-이상기체" id="toc-상호작용하는-이상기체" class="nav-link" data-scroll-target="#상호작용하는-이상기체">상호작용하는 이상기체</a></li>
   <li><a href="#엔트로피" id="toc-엔트로피" class="nav-link" data-scroll-target="#엔트로피">엔트로피</a></li>
+  <li><a href="#이상기체의-엔트로피" id="toc-이상기체의-엔트로피" class="nav-link" data-scroll-target="#이상기체의-엔트로피">이상기체의 엔트로피</a></li>
+  <li><a href="#혼합-엔트로피" id="toc-혼합-엔트로피" class="nav-link" data-scroll-target="#혼합-엔트로피">혼합 엔트로피</a></li>
+  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -723,22 +745,22 @@ x=\pm \dfrac{q}{2\sqrt{N}}
 <p>우리는 앞서 큰 수의 진동자를 가진, 열적으로 연결된 두 아인슈타인 고체의 경우 가능한 전체 거시상태의 개수 가운데 매우 작은 비율만 어느정도로 나타날 수 있는 확률을 가진다는 것을 확인했다. 이것은 비단 아인슈타인 고체 뿐만 아니라 거의 모든 상호작용하는 다수의 입자로 이루어진 시스템에도 성립한다. 여기서는 이상기체에 적용하여 다루어 보도록 한다.</p>
 <p>부피 <span class="math inline">\(V\)</span> 안의 <span class="math inline">\(N\)</span> 개의 입자가 가질 수 있는 미시상태의 개수는 주어진 조건(예를 들면 총 에너지의 합) 에서 이 계가 접근 가능한 위상공간(phase space)의 부피를 플랑크 상수 <span class="math inline">\(h^{3N}\)</span> 로 나눈 값에, 구분불가능 할 경우 양자역학에서와 같이 <span class="math inline">\(1/N!\)</span> 을 곱해줘야 한다. 예를 들어 입자의 총 에너지가 <span class="math inline">\(E\)</span></p>
 <p><span class="math display">\[
-\Omega(N,\,E) = \dfrac{1}{N!}\dfrac{1}{h^{3N}}\int_{U=E} d^3r\,d^3p ,\qquad \text{(동일한 입자의 경우)}
+\Omega(N,\,E) = \dfrac{1}{N!}\dfrac{1}{h^{3N}}\int_{U=E} d^{3N}r\,d^{3N}p ,\qquad \text{(동일한 입자의 경우)}
 \]</span></p>
-<p>이다. 단원자 분자 이상기체의 경우 에너지는 위치에 무관하므로 <span class="math inline">\(\int d^3r=V^N\)</span> 이며,</p>
+<p>이다. 단원자 분자 이상기체의 경우 에너지는 위치에 무관하므로 <span class="math inline">\(\int d^{3N}r=V^N\)</span> 이며,</p>
 <p><span class="math display">\[
-\int_{U=E}\,d^3p = \text{[Area of momentum space]}
+\int_{U=E}\,d^{3N}p = \text{[Area of momentum space]}
 \]</span></p>
-<p>이다. 우리는 <span class="math inline">\(3N\)</span> 차원 공간에서의 구의 표면적이</p>
+<p>이다. 우리는 <span class="math inline">\(d\)</span> 차원 공간에서의 구의 표면적이</p>
 <p><span id="eq-TD_schroeder_2_39_0"><span class="math display">\[
 \text{반지름이 }r\text{ 인 }d\text{ 차원 공ㅋ간의 구의 표면적} = \dfrac{2\pi^{d/2}}{\left(\dfrac{d}{2}-1\right)!} r^{d-1}
 \tag{23.14}\]</span></span></p>
 <p>임을 이용한다. 그렇다면 부피 <span class="math inline">\(V\)</span> 안의 <span class="math inline">\(N\)</span> 개의 단원자 이상기체의 총 에너지가 <span class="math inline">\(U\)</span> 일 때 가질 수 있는 미시상태의 수</p>
-<p><span id="eq-TD_schroeder_2_39_1"><span class="math display">\[
+<p><span id="eq-TD_schroeder_2_40_1"><span class="math display">\[
 \Omega (U,\,V,\,N) = \dfrac{1}{N!} \dfrac{V^{N}}{h^{3N}} \dfrac{2\pi^{3N/2}}{(3N/2-1)!} \left(\sqrt{2mU}\right)^{3N-1}
 \tag{23.15}\]</span></span></p>
-<div class="page-columns page-full"><p>이다. 운동량 공간에서의 반지름은 총 에너지 <span class="math inline">\(\sum_{i=1}^N \|\boldsymbol{p}_i\|^2 = 2mU\)</span> 로부터 구한다. 위 <a href="#eq-TD_schroeder_2_39_1" class="quarto-xref">식&nbsp;<span>23.15</span></a> 은 다음과 같이 근사시킬 수 있다<span class="math inline">\(^1\)</span>.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^1\)</span> (본인주) <a href="#eq-TD_schroeder_2_39_1" class="quarto-xref">식&nbsp;<span>23.15</span></a> 에서 <a href="#eq-TD_schroeder_2_39" class="quarto-xref">식&nbsp;<span>23.16</span></a> 로의 근사는 매우 불편하지만 <a href="#eq-TD_schroeder_2_39" class="quarto-xref">식&nbsp;<span>23.16</span></a> 자체는 이후 정준앙상블을 배우면서 정확히 구할 수 있다.</span></div></div>
-<p><span id="eq-TD_schroeder_2_39"><span class="math display">\[
+<div class="page-columns page-full"><p>이다. 운동량 공간에서의 반지름은 총 에너지 <span class="math inline">\(\sum_{i=1}^N \|\boldsymbol{p}_i\|^2 = 2mU\)</span> 로부터 구한다. 위 <a href="#eq-TD_schroeder_2_40_1" class="quarto-xref">식&nbsp;<span>23.15</span></a> 은 다음과 같이 근사시킬 수 있다<span class="math inline">\(^1\)</span>.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^1\)</span> (본인주) <a href="#eq-TD_schroeder_2_39_0" class="quarto-xref">식&nbsp;<span>23.14</span></a> 에서 <a href="#eq-TD_schroeder_2_40_1" class="quarto-xref">식&nbsp;<span>23.15</span></a> 로의 근사는 매우 불편하지만 <a href="#eq-TD_schroeder_2_40_1" class="quarto-xref">식&nbsp;<span>23.15</span></a> 자체는 이후 정준앙상블을 배우면서 정확히 구할 수 있다.</span></div></div>
+<p><span id="eq-TD_schroeder_2_40"><span class="math display">\[
 \Omega (U,\,V,\,N) \approx \dfrac{1}{N!} \dfrac{V^{N}}{h^{3N}} \dfrac{\pi^{3N/2}}{(3N/2)!} \left(\sqrt{2mU}\right)^{3N}.
 \tag{23.16}\]</span></span></p>
 <p>위 식에서 <span class="math inline">\(U,\,V,\,N\)</span> 에 대한 의존성을 분리하면 다음과 같이 쓸 수 있다.</p>
@@ -804,8 +826,187 @@ x=\pm \dfrac{q}{2\sqrt{N}}
 S = Nk_B\left(\ln q-\ln N +1\right)
 \tag{23.21}\]</span></span></p>
 <p>이며 <span class="math inline">\(N=10^{22}\)</span>, <span class="math inline">\(q=10^{24}\)</span> 일 때 <span class="math inline">\(S=0.774 \text{ J/K}\)</span> 이다.</p>
+<p><strong>엔트로피의 중요한 특징 가운데 하나는 전체 시스템이 여러 개의 부분적인 시스템으로 나뉠 경우 전체 엔트로피는 부분 엔트로피의 합이라는 것이다</strong>. 그것은 경우의 수가 독립적인 부분의 곱으로 표현될 수 있다는 것으로부터 자명하다. 전체 시스템이 부분 시스템 <span class="math inline">\(A,\,B\)</span> 로 이루어졌을 경우 다음이 성립한다.</p>
+<p><span id="eq-TD_schroeder_2_48"><span class="math display">\[
+S_\text{total} = k_B \ln \Omega_\text{total} = k_B \ln \Omega_A \Omega_B = k_B \ln \Omega_A + k_B \ln \Omega_B = S_A+S_B.
+\tag{23.22}\]</span></span></p>
+<p>자연로그함수 <span class="math inline">\(\ln\)</span> 은 엄격한 단조증가함수이며 따라서 큰 시스템의 평행상태는 가장 미시상태가 많은 거시상태라는 사실로부터 시스템의 평행상태는 엔트로피가 최대인 상태라는 것을 알 수 있다. 이것이 통계역학 버젼의 열역학 제 2 법칙이다.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span><strong>통계역학의 열역학 제 2 법칙</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>큰 시스템의 평형상태는 엔트로피가 최대인 상태이다.</p>
+</div>
+</div>
+</section>
+<section id="이상기체의-엔트로피" class="level3">
+<h3 class="anchored" data-anchor-id="이상기체의-엔트로피">이상기체의 엔트로피</h3>
+<p><a href="#eq-TD_schroeder_2_40" class="quarto-xref">식&nbsp;<span>23.16</span></a> 과 스털링 근사를 이용하여 이상기체의 엔트로피가 다음과 같음을 보일 수 있다(<a href="#exr-TD_schroeder_2_31" class="quarto-xref">연습문제&nbsp;<span>23.8</span></a>). 이 방정식을 <strong>자쿠르-테트로데 방정식(Saktur-Tetrode equation)</strong> 이라고 한다.</p>
+<p><span id="eq-TD_schroeder_2_49"><span class="math display">\[
+S = Nk_B \left[\ln \left(\dfrac{V}{N}\left(\dfrac{4\pi mU}{3Nh^2}\right)^{3/2}\right)+\dfrac{5}{2}\right].
+\tag{23.23}\]</span></span></p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-TD_examples_of_entropy_of_ideal_gas" class="theorem example">
+<p><span class="theorem-title"><strong>예제 23.1 (헬륨 1 몰의 엔트로피)</strong></span> 상온(<span class="math inline">\(300\,\text{K}\)</span>) 과 1기압 (<span class="math inline">\(101.325\,\text{kPa}\)</span>) 에서 1 몰의 헬륨은 <span class="math inline">\(0.025\,\text{m}^3\)</span> 의 부피를 차지하고, 내부 에너지는 <span class="math inline">\(\frac{3}{2}nRT = 3700\,\text{J}\)</span> 이다. 이 기체의 엔트로피 <span class="math inline">\(S_{\text{He}} \approx 126\,\text{J/K}\)</span> 이다.</p>
+</div>
+</div>
+<p>이상기체의 부피가 <span class="math inline">\(V_i \to V_f\)</span> 로 변하며 다른 값은 변하지 않는다면 엔트로피 변화는 다음과 같다.</p>
+<p><span id="eq-TD_schroeder_2_51"><span class="math display">\[
+\Delta S = Nk_B \ln \dfrac{V_f}{V_i}\qquad (U,\,N \text{ fixed}).
+\tag{23.24}\]</span></span></p>
+<p>위 식은 입자의 개수가 일정한 등온과정에 적용할 수 있다.</p>
+<p>기체가 팽창중에 <strong>자유 팽창 (free expansion)</strong> 은 기체가 외부 압력이 없는 공간으로 확산되는 것을 말한다. 예를 들어 파티션으로 분리된 두 방에서 한 방에만 기체 분자가 있다가 파티션이 제거되는 경우. 자유 팽창의 경우 압력이 없으므로 기체가 하는 일은 <span class="math inline">\(0\)</span> 이다. 또한 열도 유입되지 않으며, 따라서 열역학 제 1 법칙에 따라 내부에너지 변화도 <span class="math inline">\(0\)</span> 이다.</p>
+</section>
+<section id="혼합-엔트로피" class="level3">
+<h3 class="anchored" data-anchor-id="혼합-엔트로피">혼합 엔트로피</h3>
+<p>같은 에너지, 부피, 입자수의 서로 다른 두 이상기체 <span class="math inline">\(A,\,B\)</span> 를 생각하자. 직육면체 상자와 이 상자를 반으로 가르는 파티션이 있고 양쪽에 각각 <span class="math inline">\(A,\,B\)</span> 이상기체가 차 있다. 전체 부피를 <span class="math inline">\(2V\)</span> 라고 하자. 이 파티션을 제거하면 엔트로피틑 증가한다. 당연히 자유 팽창이며 따라서 <span class="math inline">\(A\)</span> 와 <span class="math inline">\(B\)</span> 의 엔트로피 증가는 동일하며</p>
+<p><span class="math display">\[
+\Delta S_A = \Delta S_B = Nk_B \ln \left(\dfrac{2V}{V}\right) = Nk_B \ln 2
+\]</span></p>
+<p>이므로 엔트로피의 총 증가 <span class="math inline">\(\Delta S_{\text{total}}\)</span> 은</p>
+<p><span id="eq-TD_schroeder_2_54"><span class="math display">\[
+\Delta S_\text{total} = \Delta S_A + \Delta S_B = 2Nk_B \ln 2.
+\tag{23.25}\]</span></span></p>
+<p>이다. 이렇게 서로 다른 공간을 점유하고 있던 서로 다른 기체가 섞이면서 발생하는 엔트로피 증가를 <strong>혼합 엔트로피 (entropy of mixing)</strong> 이라고 한다. 여기서 주의할 것은 혼합 엔트로피는 두 기체가 서로 다를 때 발생한다. 그렇다면 <span class="math inline">\(A\)</span> 와 <span class="math inline">\(B\)</span> 가 같다면 어떻게 될 것인가?</p>
+</section>
+<section id="연습문제-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_2_26" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 23.4 (Schroeder 2.26)</strong></span> 2차원 우주에서의 단원자 분자 이상기체를 생각할 수 있다. 이 경우 부피 <span class="math inline">\(V\)</span> 대신 면적 <span class="math inline">\(A\)</span> 를 생각해야 한다. 이 경우 <a href="#eq-TD_schroeder_2_40" class="quarto-xref">식&nbsp;<span>23.16</span></a> 과 같은 식을 구하라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>2차원의 경우</p>
+<p><span class="math display">\[
+\Omega(N,\,E) = \dfrac{1}{N!}\dfrac{1}{h^{2N}} \int_{U=E} d^{2N}r\, d^{2N}p
+\]</span></p>
+<p>이다 <span class="math inline">\(\int d^{2N}r = A^{N}\)</span> 이며 <span class="math inline">\(\int_{U=E} d^{2N}p = 2\pi^N (\sqrt{2mU})^{2N}\)</span> 이므로</p>
+<p><span id="eq-TD_exr_schroeder_2_26"><span class="math display">\[
+\Omega_N \approx \dfrac{1}{N!} \dfrac{A^{N}}{h^{2N}}\dfrac{\pi^N}{N!}(2mU)^N
+\tag{23.26}\]</span></span></p>
+<p>이라고 찍을 수 있다. 실제로는 정준 앙상블을 적용하여야 제대로 구한다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_2_28" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 23.5 (Schroeder 2.28)</strong></span> 52 장의 카드 한벌에 가능한 배치는 얼마나 많은가? 즉 52 장의 서로 다른 카드를 순서대로 배치할 때의 가능한 경우의 수는 얼마인가? 정렬된 카드에서 시작하여 이 카드 반복해서 섞는다면 가능한 모든 배치중의 하나가 될 것이다. 이 과정에서 얼마나 많은 엔트로피를 생산했는가? 너의 답을 <span class="math inline">\(k_B\)</span> 를 무시한 숫자로 답하라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\Omega = 52!=8.1\times 10^{67}\)</span>, <span class="math inline">\(S/k_B =\ln (\Omega)= 156.36\)</span>, <span class="math inline">\(S=2.16\times 10^{-21}\,\text{J/K}\)</span>.</p>
+<p><span class="math inline">\(\Delta S = S-k_B\ln(1)=S=2.16\times 10^{-21}\,\text{J/K}\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_2_29" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 23.6 (Schroeder 2.29)</strong></span> 두 아인슈타인 고체로 이루어진 시스템을 생각하자. <a href="#fig-TD_schroeder_2_3" class="quarto-xref">그림&nbsp;<span>23.1</span></a> 에서 <span class="math inline">\(N_A=300,\, N_B=200,\,q_\text{total}=100\)</span> 이다. 가장 확률이 높은 거시상태와 가장 확률이 낮은 거시상태의 엔트로피를 계산하라. 매우 긴 시간스케일에서 모든 미시상태에 접근가능하다고 할 때의 엔트로피를 구하라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#fig-TD_schroeder_2_5" class="quarto-xref">그림&nbsp;<span>23.2</span></a> 앞부분에 가능한 상태의수가 나오며 이를 이용하면며 <span class="math inline">\(S_\text{min}/k_B = 187.54\)</span>, <span class="math inline">\(S_\text{max}/k_B = 264.43\)</span> 이다. <span class="citation" data-cites="Schroeder2000introduction">Schroeder (<a href="../ClassicalMechanics/00_index.html#ref-Schroeder2000introduction" role="doc-biblioref">2000</a>)</span> 2.3 장에 나온바 모든 미시상태의 갯수는 <span class="math inline">\(9.3\times 10^{115}\)</span> 이므로 <span class="math inline">\(S_\text{total}/k_B = 267.03\)</span> 으로 <span class="math inline">\(S_\text{max}\)</span> 보다 약간 크다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_2_30" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 23.7 (Schroeder 2.30)</strong></span> <a href="#exr-TD_schroeder_2_22" class="quarto-xref">연습문제&nbsp;<span>23.3</span></a> 에서 다뤘던 크고 동일한 아인슈타인 고체 시스템을 생각하자.</p>
+<p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(N=10^{23}\)</span> 일 때 모든 미시상태에 접근가능하다고 가정하고 시스템의 엔트로피(즉 매우 큰 시간 스케일에서의 엔트로피)를 계산하라.</p>
+<p>(<span class="math inline">\(b\)</span>) 이 시스템이 가장 확률이 높은 거시상태에 있을 때의 엔트로피(짧은 시간 스케일에서의 엔트로피)를 계산하라.</p>
+<p>(<span class="math inline">\(c\)</span>) 시간 스케일이 이 시스템의 엔트로피에 영향을 주는가?</p>
+<p>(<span class="math inline">\(d\)</span>) 이 시스템이 가장 확률이 높은 거시상테 근처일 때 갑자기 두 고체 사이의 에너지 교환이 불가능하게 되었다고 하자. 훨씬 긴 시간 스케일에서도 엔트로피는 (<span class="math inline">\(b\)</span>) 와 같다. 이 값이 (<span class="math inline">\(a\)</span>) 의 결과값보다 작기 때문에 우리는 어떤 의미에서는 열역학 제 2 법칙에 위배되는 결과를 얻게 되었다. 이 위반이 중요한가?</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <a href="#exr-TD_schroeder_2_22" class="quarto-xref">연습문제&nbsp;<span>23.3</span></a> (<span class="math inline">\(b\)</span>) 로부터 <span class="math inline">\(S_\text{total}/k_B = 4N\ln 2 - 0.5*\ln (8 \pi N) = 2.77\times 10^{23}\)</span></p>
+<p>(<span class="math inline">\(b\)</span>) <a href="#exr-TD_schroeder_2_22" class="quarto-xref">연습문제&nbsp;<span>23.3</span></a> (<span class="math inline">\(c\)</span>) 로부터 <span class="math inline">\(S_\text{max}/k_B = 4N\ln 2 - \ln (4 \pi N) =2.77 \times 10^{23}\)</span></p>
+<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(S_\text{total} &gt; S_\text{max}\)</span> 이어야 하지만 실제로 계산해보면 유효숫자 15개 까지 동일하다.</p>
+<p>(<span class="math inline">\(d\)</span>) 파티션을 삽입하여 에너지 교환을 막는다면 당연히 이것때문에 엔트로피가 증가하겠지.. 무슨 문제가 이래?</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_2_31" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 23.8 (Schroeder 2.31)</strong></span> <a href="#eq-TD_schroeder_2_40" class="quarto-xref">식&nbsp;<span>23.16</span></a> 로부터 스털링 근사와 적절한 근사를 사용하여 이상기체의 엔트로피가 <a href="#eq-TD_schroeder_2_49" class="quarto-xref">식&nbsp;<span>23.23</span></a> 가 됨을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-TD_schroeder_2_40" class="quarto-xref">식&nbsp;<span>23.16</span></a> 와 <span class="math inline">\(\ln N! \approx N \ln N - N\)</span> 을 사용하면</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac{S}{k_B} &amp;= \ln \left[\dfrac{1}{N!} \dfrac{V^{N}}{h^{3N}} \dfrac{\pi^{3N/2}}{(3N/2)!} \left(\sqrt{2mU}\right)^{3N}\right] \\[0.3em]
+&amp;= N \ln V + 3N \ln \dfrac{\sqrt{2\pi mU}}{h} - N \ln N + N - \underbrace{\dfrac{3N}{2}\ln \dfrac{3N}{2}}_{=N\ln (3N/2)^{3/2}} + \dfrac{3N}{2} \\[0.3em]
+&amp;= N \left[\ln \left(\dfrac{V}{N}\right) +  3 \ln \dfrac{\sqrt{2\pi mU}}{h} - \ln\left(\dfrac{3N}{2}\right)^{3/2} + \dfrac{5}{2}\right]\\[0.3em]
+&amp;= N\left[\ln \left(\dfrac{V}{N} \left(\dfrac{(4\pi mU)}{ 3Nh^2}\right)^{3/2}\right) + \dfrac{5}{2}\right]
+\end{aligned}
+\]</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_2_32" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 23.9 (Schroeder 2.32)</strong></span> <a href="#exr-TD_schroeder_2_26" class="quarto-xref">연습문제&nbsp;<span>23.4</span></a> 의 결과를 이용하여 2차원 이상기체의 엔트로피를 <span class="math inline">\(U,\,A,\,N\)</span> 을 이용하여 구하라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-TD_exr_schroeder_2_26" class="quarto-xref">식&nbsp;<span>23.26</span></a> 으로부터</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac{S}{k_B} =  \ln \Omega_N &amp;= N\left[\ln A -  \ln N + 1 - \ln N + 1 + \ln \left(\dfrac{2\pi m U}{h^2}\right)\right] \\[0.3em]
+&amp;= N \left[\ln \left(\dfrac{A}{N} \dfrac{2\pi m U}{Nh^2} \right) + 2\right].
+\end{aligned}
+\]</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_2_33" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 23.10 (Schroeder 2.33)</strong></span> 자쿠르-테트로테 방정식을 사용하여 1 몰의 아르곤 기체의 엔트로피를 상온 1기압에서 구하라. 아르곤의 엔트로피는 헬륨보다 더 큰가?</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>Ar 의 원자량은 40 으로 이를 이용하여 계산하면 <span class="math inline">\(S_\text{Ar}= 155\,\text{J/K}\)</span> 이다. He 의 경우는 <span class="math inline">\(S_\text{He}= 126\,\text{J/K}\)</span> 이다. Ar 엔트로피가 더 큰것은 <span class="math inline">\(\sum_i \|\boldsymbol{p}_i\|^2 = 2mU\)</span> 에서 <span class="math inline">\(U\)</span> 는 동일하지만 <span class="math inline">\(m\)</span> 이 Ar 의 경우가 더 크기 때문에 운동량 공간상에서 차지하는 부피(혹은 표면적) 이 더 크기 때문이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_2_34" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 23.11 (Schroeder 2.34)</strong></span> 단원자 분자 이상기체가 준정적 등온 팽창 할 때 유입되는 열 <span class="math inline">\(Q\)</span> 에 대해 엔트로피의 변화 <span class="math inline">\(\Delta S = Q/T\)</span> 임을 보여라. 다음장에서는 이것이 모든 준정적 과정에서도 성립함을 보일 것이다. 그러나 이것은 자유 팽창에는 적용되지 않음을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>이 과정에서 <span class="math inline">\(V_i \to V_f\)</span> 로 변한다고 하자. 등온 팽창이므로 <span class="math inline">\(U\)</span> 에는 변화가 없으며, <span class="math inline">\(N\)</span> 역시 그러하다. 따라서</p>
+<p><span class="math display">\[
+Q = -W = \int_{V_i}^{V_f} p\,dV = \int_{V_i}^{V_f} \dfrac{Nk_B T}{V}\,dV = Nk_B T \ln \left(\dfrac{V_f}{V_i}\right)
+\]</span></p>
+<p>이다. <a href="#eq-TD_schroeder_2_49" class="quarto-xref">식&nbsp;<span>23.23</span></a> 로부터</p>
+<p><span class="math display">\[
+\Delta S = Nk_B \ln \left(\dfrac{V_f}{V_i}\right) = \dfrac{Q}{T}.
+\]</span></p>
+<p>자유 팽창에서는 <span class="math inline">\(W=0\)</span> 이므로 <span class="math inline">\(\Delta U=Q\)</span> 이다. 따라서 <span class="math inline">\(\Delta S = Q/T\)</span> 가 적용되지 않는다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_2_35" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 23.12 (Schroeder 2.35)</strong></span> 자쿠르-테트로데 방정식에 따르면 온도가 충분히 낮을 때(따라서 에너지가 충분히 낮을 때) 엔트로피는 음수가 될 수 있다. 그러나 이것은 말되 안되며 따라서 자쿠르-테트로데 방정식은 저온에서는 맞지 않다. 상온 1 기압의 헬륨을 밀도를 유지시키면서 냉각시킨다고 하자. 헬륨은 기체상태로 유지되어 액화되지 않는다고 하자. 자쿠르 테트로데 방정식에 따르면 몇도에서 <span class="math inline">\(S\)</span> 가 음수가 되는가?</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>단원제 분자 이상기체의 경우 <span class="math inline">\(U=\frac{3}{2}Nk_BT\)</span> 이다. <a href="#eq-TD_schroeder_2_49" class="quarto-xref">식&nbsp;<span>23.23</span></a> 로부터 <span class="math inline">\(S=0\)</span> 인 온도 <span class="math inline">\(T_0\)</span> 는</p>
+<p><span class="math display">\[
+T_0 = \dfrac{h^2}{2\pi m k_B}\left(\dfrac{N}{V}\right)^{2/3} e^{-5/3}
+\]</span></p>
+<p>이다. 밀도가 유지되므로 <span class="math inline">\(300 \, \text{K}\)</span> 에서의 <span class="math inline">\(N/V = 2.446\times 10^{25}\, \text{m}^{-3}\)</span> 이며 이를 계산하면 <span class="math inline">\(T_0 = 0.024 \, \text{K}\)</span> 이다.</p>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Schroeder2000introduction" class="csl-entry" role="listitem">
+Schroeder, D. V. 2000. <em>An Introduction to Thermal Physics</em>. Addison Wesley. <a href="https://books.google.co.kr/books?id=1gosQgAACAAJ">https://books.google.co.kr/books?id=1gosQgAACAAJ</a>.
+</div>
+</div>
 </section>
 </section>
 
