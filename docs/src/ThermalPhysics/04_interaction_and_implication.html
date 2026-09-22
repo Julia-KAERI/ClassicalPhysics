@@ -431,8 +431,13 @@ window.Quarto = {
   <li><a href="#sec-TD_predicting_heat_capacity" id="toc-sec-TD_predicting_heat_capacity" class="nav-link" data-scroll-target="#sec-TD_predicting_heat_capacity"><span class="header-section-number">24.2.1</span> 열용량 예측</a></li>
   <li><a href="#sec-TD_measureing_entropies" id="toc-sec-TD_measureing_entropies" class="nav-link" data-scroll-target="#sec-TD_measureing_entropies"><span class="header-section-number">24.2.2</span> 엔트로피 측정</a></li>
   <li><a href="#sec-TD_the_third_law_of_thermodynamics" id="toc-sec-TD_the_third_law_of_thermodynamics" class="nav-link" data-scroll-target="#sec-TD_the_third_law_of_thermodynamics"><span class="header-section-number">24.2.3</span> 열역학 제 3 법칙</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
-  <li><a href="#sec-TD_paramagnetism" id="toc-sec-TD_paramagnetism" class="nav-link" data-scroll-target="#sec-TD_paramagnetism"><span class="header-section-number">24.3</span> 상자성</a></li>
+  <li><a href="#sec-TD_paramagnetism" id="toc-sec-TD_paramagnetism" class="nav-link" data-scroll-target="#sec-TD_paramagnetism"><span class="header-section-number">24.3</span> 상자성</a>
+  <ul class="collapse">
+  <li><a href="#sec-TD_notation_and_mocroscopic_physics_of_paramagnetism" id="toc-sec-TD_notation_and_mocroscopic_physics_of_paramagnetism" class="nav-link" data-scroll-target="#sec-TD_notation_and_mocroscopic_physics_of_paramagnetism"><span class="header-section-number">24.3.1</span> 표기법과 물리</a></li>
+  <li><a href="#sec-TD_numerical_solution" id="toc-sec-TD_numerical_solution" class="nav-link" data-scroll-target="#sec-TD_numerical_solution"><span class="header-section-number">24.3.2</span> 수치 해석 해</a></li>
+  </ul></li>
   <li><a href="#sec-TD_mechanica_equillibrium_and_pressure" id="toc-sec-TD_mechanica_equillibrium_and_pressure" class="nav-link" data-scroll-target="#sec-TD_mechanica_equillibrium_and_pressure"><span class="header-section-number">24.4</span> 역학적 평형과 압력</a></li>
   </ul>
 </nav>
@@ -751,11 +756,122 @@ S_f-S_i = \int_0^{T}\dfrac{C_V}{T'}\,dT'
 <p>열역학 제 3 법칙으로 부터 여려 결론을 내릴 수 있지만 아직 열역학적 양에 대해 많이 다루지않은 관계로 대표적인 두가지만 짚고 넘어가기로 하자.</p>
 <p><strong>1.</strong> <span class="math inline">\(T \to 0\)</span> 일 때 비열은 <span class="math inline">\(0\)</span> 이다. 즉 <span class="math inline">\(\displaystyle \lim_{T\to 0} C = \lim_{T\to 0} T\left(\dfrac{\partial S}{\partial T}\right)=0\)</span>.</p>
 <p><strong>2.</strong> <strong>도달 불가능성</strong> : 유한한 단계로 <span class="math inline">\(T=0\)</span> 까지 냉각 시킬 수 없다.</p>
-<p><strong>3.</strong> <strong>카르노 엔진의 효율</strong> : 우리는 카르노 엔진의 효율 <span class="math inline">\(\eta_C = 1-T_l/T_h\)</span> (<a href="02_entropy.html#eq-TD_efficiency_of_carnot_engine_using_ideal_gas" class="quarto-xref">식&nbsp;<span>22.6</span></a>) 임을 안다. 그런데 <span class="math inline">\(T_l=0\)</span> 이면 <span class="math inline">\(\eta_C=1\)</span> 이다. 카르노 엔진은 등온팽창(압축)과 단열팽창(압축)의 반복인데 <span class="math inline">\(0\,\text{K}\)</span> 에서 등온압축은 어떻게 가능할까? 일단 <span class="math inline">\(0\,\text{K}\)</span> 에서는 열역학적 상태를 변경시킬 수 없으므로 등온 압축 자체가 불가능하다. 실제 열역학 3 법칙이 열역학 2법칙으로 부터 분리된 독자적 법칙이어야 한다고 믿어진 계기는 이것이었다.</p>
+<p><strong>3.</strong> <strong>카르노 엔진의 효율</strong> : 우리는 카르노 엔진의 효율 <span class="math inline">\(\eta_C = 1-T_l/T_h\)</span> (<a href="02_entropy.html#eq-TD_efficiency_of_carnot_engine_using_ideal_gas" class="quarto-xref">식&nbsp;<span>22.7</span></a>) 임을 안다. 그런데 <span class="math inline">\(T_l=0\)</span> 이면 <span class="math inline">\(\eta_C=1\)</span> 이다. 카르노 엔진은 등온팽창(압축)과 단열팽창(압축)의 반복인데 <span class="math inline">\(0\,\text{K}\)</span> 에서 등온압축은 어떻게 가능할까? 일단 <span class="math inline">\(0\,\text{K}\)</span> 에서는 열역학적 상태를 변경시킬 수 없으므로 등온 압축 자체가 불가능하다. 실제 열역학 3 법칙이 열역학 2법칙으로 부터 분리된 독자적 법칙이어야 한다고 믿어진 계기는 이것이었다.</p>
+</section>
+<section id="연습문제" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_3_10" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 24.5 (Schroeder 3.10)</strong></span> 0 °C 30 g 얼음 큐브가 25 °C 인 부엌의 테이블에 놓여져 있다.</p>
+<p>(<span class="math inline">\(a\)</span>) 얼음이 0°C 에서 녹을 때 얼음 큐브의 엔트로피 변화를 계산하라. 얼음의 잠열은 <span class="math inline">\(333\,\text{J/g}\)</span> 이다.</p>
+<p>(<span class="math inline">\(b\)</span>) 물의 온도가 0°C 에서 25°C 로 올랐을 때의 물의 엔트로피 변화를 계산하라. 물의 비열 <span class="math inline">\(C = 4.18\,\text{J/K}\cdot\text{g}\)</span> 이다.</p>
+<p>(<span class="math inline">\(c\)</span>) 얼음이 녹고 물은 온도가 높아진 것에 의한 부엌의 엔트로피 변화를 계산하라.</p>
+<p>(<span class="math inline">\(d\)</span>) 이 과정에서의 우주의 엔트로피 변화를 계산하라. 엔트로피의 순 변화는 양수인가? 음수인가? 아니면 0 인가?. 이것이 우리가 기대하는 바인가?</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(\Delta S_{\text{melting}} = (333/273)\times 30 = 36.6 \,\text{J/K}\)</span>.</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\Delta S_{\text{water}} = C\ln (T_f/T_i) = 11.0 \,\text{J/K}\)</span>.</p>
+<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(\Delta S_{\text{kitchin, melting}} = -30\times 333 /(25 + 273) = -33.5 \,\text{J/K}\)</span>, <span class="math inline">\(\Delta S_{\text{kitchin, water}} = -30 \times C \times 25 = -10.5 \,\text{J/K}\)</span>, 따라서 <span class="math inline">\(\Delta S_{\text{total, kichin}}= -44.0\,\text{J/K}\)</span></p>
+<p>(<span class="math inline">\(d\)</span>) 엔트로피의 순 변화 <span class="math inline">\(\Delta S_\text{total} = 4.6 \,\text{J/K}\)</span> 로 엔트로피는 순증가하였다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_3_11" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 24.6 (Schroeder 3.11)</strong></span> 목욕물의 온도를 적절하게 맞추기 위해 55°C 의 물 50 리터와 10°C 의 물 25 리터를 섞었다. 이 물을 섞음으로서 증가한 엔트로피는?</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>평형이 되는 온도는 40°C 이며 <span class="math inline">\(\Delta S\approx 746 \,\text{J/K}\)</span>.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_3_13" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 24.7 (Schroeder 3.13)</strong></span> 태양이 하늘에 높이 떠 있을때 지표면 <span class="math inline">\(1\,\text{m}^2\)</span> 당 1000 W 의 일률을 전달한다. 태양의 표면 온도는 6000 K 이고 지구의 표면 온도를 300 K 라고 할 때 다음에 답하라.</p>
+<p>(<span class="math inline">\(a\)</span>) 태양으로부터의 열에너지 전달로 인해 발생하는 지표면에서 1 제곱미터당 엔트로피 변화를 계산하라.</p>
+<p>(<span class="math inline">\(b\)</span>) 당신이 지표면에 1 제곱 미터의 잔디를 기른다고 하자. 혹자는 잔디가 성장하는 것은 무질서한 영양소를 정렬된 생명 형태로 바꾸는 것이기 때문에 열역학 제 2 법칙을 거스른다고 주장 할 수 있다. 어떻게 반박할까?</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(\Delta S_\text{sun}=-1000 \times 3600 \times 24 \times 365 /6000 = -5.25\times 10^6\,\text{J/K}\)</span>.</p>
+<p><span class="math inline">\(\Delta S_\text{earth} = \Delta S_\text{sun}\times 6000/300 = 1.05 \times 10^{8}\,\text{J/K}\)</span>.</p>
+<p>(<span class="math inline">\(b\)</span>) 지구에서 증가하는 엔트로피 차이는 태양에서 감소하는 엔트로피에 비해 막대하며 (20배) 지구에 도달하는 에너지 중 일부가 잔디의 엔트로피를 감소시킨다고 하더라도 잔디까지 고려한 순 엔트로피틑 증가 할 수 있다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_3_14" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 24.8 (Schroeder 3.14)</strong></span> 저온에서의 알루미늄의 1 몰의 열용량은 실험적으로</p>
+<p><span class="math display">\[
+C_V = aT + bT^3
+\]</span></p>
+<p>이며 여기서 <span class="math inline">\(a=0.00135 \,\text{J/K}^2\)</span>, <span class="math inline">\(b=2.48\times 10^{-5}\,\text{J/K}^4\)</span> 이다. 이로부터 일 몰의 알루미늄의 엔트로피를 온도에 대한 함수로 구하라. <span class="math inline">\(T=1\,\text{K}\)</span> 와 <span class="math inline">\(T=10\,\text{K}\)</span> 에서의 엔트로피를 <span class="math inline">\(\text{J/K}\)</span> 단위와 무단위 값(볼츠만 상수로 나눈 값) 으로 구하라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-TD_schroeder_3_19" class="quarto-xref">식&nbsp;<span>24.12</span></a> 로 부터 <span class="math display">\[
+S = \int_0^T \dfrac{C_V}{T}\,dT = aT + \dfrac{b}{3}T^3
+\]</span></p>
+<p>이며, <span class="math inline">\(S(1\,\text{K}) = 1.36\times 10^{-3}\,\text{J/K}\)</span>, <span class="math inline">\(S(10\,\text{K}) = 2.18\times 10^{-2}\,\text{J/K}\)</span>.</p>
+<p><span class="math inline">\(S(1\,\text{K})/k_B \approx 9.84\times 10^{19},\, S(10\,\text{K})/k_B \approx 1.58\times 10^{21}\)</span>.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_3_16" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 24.9 (Schroeder 3.16)</strong></span> 컴퓨터 메모리의 <strong>비트(bit)</strong> 는 두 다른 상태가운데 하나에 있을 수 있는 물리적 대상이다. 1 바이트(byte) 는 8 비트이며 킬로바이트는 1024 바이트이고, 메가바이트는 1024 킬로바이트며, 기가바이트는 1024 메가바이트이다.</p>
+<p>(<span class="math inline">\(a\)</span>) 당신의 컴퓨터가 1 기가바이트의 메모리를 지우거나 덮어써 기존의 기록을 모두 제거했다고 하자. 이 과정을 통해 어떤 최소한의 엔트로피를 생성하는지 설명하고 계산하라.</p>
+<p>(<span class="math inline">\(b\)</span>) 이 엔트로피가 상온에서 생성되었다면 얼마나 많은 열이 필요한가? 이 열이 상당한 양인가?</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(N_\text{bits} = 8\times (1024)^3 = 8.6\times 10^9\)</span>. <span class="math inline">\(\Omega  = \text{[상태의 개수]}= 2^{N_\text{bits}}\)</span>.</p>
+<p>따라서 <span class="math inline">\(\Delta S = N_\text{bits}k_B \ln 2 = 8.2 \times 10^{-14}\,\text{J/K}\)</span>.</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(Q=T\Delta S = 2.47 \times 10^{-11}\,\text{J}\)</span> 로 매우 적은 양이다.</p>
+</div>
 </section>
 </section>
 <section id="sec-TD_paramagnetism" class="level2" data-number="24.3">
 <h2 data-number="24.3" class="anchored" data-anchor-id="sec-TD_paramagnetism"><span class="header-section-number">24.3</span> 상자성</h2>
+<section id="sec-TD_notation_and_mocroscopic_physics_of_paramagnetism" class="level3" data-number="24.3.1">
+<h3 data-number="24.3.1" class="anchored" data-anchor-id="sec-TD_notation_and_mocroscopic_physics_of_paramagnetism"><span class="header-section-number">24.3.1</span> 표기법과 물리</h3>
+<p>스핀 <span class="math inline">\(1/2\)</span> 입자는 외부 자기장 <span class="math inline">\(\boldsymbol{B}=B\hat{\boldsymbol{z}}\)</span> 에 대해 스핀이 <span class="math inline">\(+z\)</span> 혹은 <span class="math inline">\(-z\)</span> 방향으로 정렬하며 <span class="math inline">\(+z\)</span> 방향으로 정렬할 때 <span class="math inline">\(-\mu B\)</span> 를 <span class="math inline">\(-z\)</span> 방향으로 정렬할 때 <span class="math inline">\(\mu B\)</span> 에너지를 가진다. <span class="math inline">\(N\)</span> 개의 스핀 <span class="math inline">\(1/2\)</span> 입자에 자기장을 가할 때 <span class="math inline">\(+z\)</span> 방향으로 정렬한 입자의 개수를 <span class="math inline">\(N_\uparrow\)</span>, <span class="math inline">\(-z\)</span> 방향으로 정렬한 입자의 개수를 <span class="math inline">\(N_\downarrow\)</span> 라고 하면 <span class="math inline">\(N= N_\uparrow + N_\downarrow\)</span> 이고 이 시스템의 총 에너지 <span class="math inline">\(U\)</span> 는</p>
+<p><span id="eq-TD_schroeder_3_25"><span class="math display">\[
+U = -\mu BN_\uparrow +\mu B N_\downarrow = \mu B(N_\downarrow - N_\uparrow) = \mu B(N -2N_\uparrow).
+\tag{24.15}\]</span></span></p>
+<p>외부 자기장에 대해 <strong>자화율 (Magnetization)</strong> <span class="math inline">\(M\)</span> 은 다음과 같이 정의된다.</p>
+<p><span id="eq-TD_schroeder_3_26"><span class="math display">\[
+M := \mu (N_\uparrow-N_\downarrow) = - \dfrac{U}{B}.
+\tag{24.16}\]</span></span></p>
+<p><span class="math inline">\(N\)</span> 개 가운데 <span class="math inline">\(N_\uparrow\)</span> 가 정해졌을 때 가능한 미시상태의 수 <span class="math inline">\(\Omega(N_\uparrow)\)</span> 는</p>
+<p><span id="eq-TD_schroeder_3_27"><span class="math display">\[
+\Omega(N_\uparrow) = \dfrac{N!}{N_\uparrow ! N_\downarrow !}.
+\tag{24.17}\]</span></span></p>
+</section>
+<section id="sec-TD_numerical_solution" class="level3" data-number="24.3.2">
+<h3 data-number="24.3.2" class="anchored" data-anchor-id="sec-TD_numerical_solution"><span class="header-section-number">24.3.2</span> 수치 해석 해</h3>
+<p><span class="math inline">\(N=100\)</span> 에 대해 <span class="math inline">\(S/k_B = \ln \Omega\)</span> 를 그려 보면 아래 그림과 같다.</p>
+<div id="fig-TD_schroeder_3_8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-TD_schroeder_3_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/schroeder/chap3/schroeder_3_8.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_3_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;24.2: <span class="math inline">\(S/k_B - U/\mu B\)</span> 그래프. 엔트로피의 에너지 의존성을 보여준다.
+</figcaption>
+</figure>
+</div>
+<p>위의 그래프를 보자. <span class="math inline">\(U/\mu B=N_\downarrow - N_\uparrow\)</span> 이므로 <span class="math inline">\(N_\downarrow=0\)</span> 일 때, 즉 모든 스핀에 <span class="math inline">\(+z\)</span> 방향으로 정렬되어 있을 때 엔트로피-에너지 그래프는 매우 가파르다. <span class="math inline">\(U&lt;0\)</span> 일 때는 에너지가 증가할수록 기울기가 낮아지다가 <span class="math inline">\(U=0\)</span> 일 때 엔트로피가 최대가 된다. 이 때는 <span class="math inline">\(N_\downarrow=N_\uparrow=N/2\)</span> 이다. 그러나 <span class="math inline">\(U&gt;0\)</span> 일 때 <span class="math inline">\(\partial S/\partial U&lt;0\)</span> 이 되며 이 상태에서는 주변의 <span class="math inline">\((\partial S/\partial U)&gt;0\)</span> 인 물체에 에너지를 방출하게 된다.</p>
+<p>이제 온도 이야기로 넘어가보자. <a href="#eq-TD_schroeder_3_5" class="quarto-xref">식&nbsp;<span>24.3</span></a> 로부터 <span class="math inline">\(U=0\)</span> 일 때 이 시스템의 온도는 <span class="math inline">\(\infty\)</span> 이며, <span class="math inline">\(U&gt;0\)</span> 일 때 이 시스템의 온도는 음수이다.</p>
+<div id="fig-TD_schroeder_2_9" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-TD_schroeder_2_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/schroeder/chap3/schroeder_3_9.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_2_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;24.3: 온도-에너지 곡선
+</figcaption>
+</figure>
+</div>
+</section>
 </section>
 <section id="sec-TD_mechanica_equillibrium_and_pressure" class="level2" data-number="24.4">
 <h2 data-number="24.4" class="anchored" data-anchor-id="sec-TD_mechanica_equillibrium_and_pressure"><span class="header-section-number">24.4</span> 역학적 평형과 압력</h2>
