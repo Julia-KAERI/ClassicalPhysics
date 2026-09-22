@@ -11,7 +11,12 @@ k_B = 1.380649e-23     # Boltzmann constant in m^2 kg /s^2 /K
 G = 6.674e-11               # 만유인력 상수 in N⋅m^2⋅kg^{-2}
 N_A = 6.02214076e23         # 아보가드로 수
 
+
+
+
+
 pf2kg = 0.453592            # 1 Pf = 0.453592 kg
 feet2m = 0.3048             # 1 feet = 0.3048 m
+
 
 ;

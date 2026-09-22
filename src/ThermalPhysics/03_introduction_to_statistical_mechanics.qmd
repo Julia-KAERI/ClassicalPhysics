@@ -1,7 +1,7 @@
 ---
 title: "통계역학의 기초"
 number-sections: true
-number-depth: 2
+number-depth: 3
 crossref:
   chapters: true
 ---
@@ -181,7 +181,6 @@ $$
 $$
 
 으로 정할 수 있다. 우리의 가정에서 $q\gg N \gg 1$ 이며 이는 정해진 $q$ 값에 대해 $\Delta \ll q$ 임을 말한다. 일반적으로 다루는 열역학 시스템에서 $N\approx 10^{23}$ 이며 이는 미시상태의 분포가 최대값 근처의 좁은 영역에 몰려 있으며 가장 확률이 높은 거시상태로부터 멀리 떨어진 상태에 있을 확률이 지극기 작다는 것을 의미한다. 즉 모든 미시상태에 대한 확률이 동일한 열평형 상태에서 시스템은 가장 확률이 높은 거시상태에 존재한다. 시스템이 매우 크다면 가장 확률이 높은 거시상태로부터의 측정 가능한 fluctuation 은 거의 존재할 수 없다. 이것을 **열역학적 극한** 이라고 한다. 
-
 
 ### 연습문제 {.unnumbered}
 
@@ -458,7 +457,7 @@ $$ {#eq-TD_schroeder_2_51}
 
 위 식은 입자의 개수가 일정한 등온과정에 적용할 수 있다. 
 
-기체가 팽창중에 **자유 팽창 (free expansion)** 은 기체가 외부 압력이 없는 공간으로 확산되는 것을 말한다. 예를 들어 파티션으로 분리된 두 방에서 한 방에만 기체 분자가 있다가 파티션이 제거되는 경우. 자유 팽창의 경우 압력이 없으므로 기체가 하는 일은 $0$ 이다. 또한 열도 유입되지 않으며, 따라서 열역학 제 1 법칙에 따라 내부에너지 변화도 $0$ 이다.
+기체가 팽창중에 **자유 팽창 (free expansion)** 혹은 **줄 팽창 (Joule expansion)** 은 기체가 외부 압력이 없는 공간으로 확산되는 것을 말한다. 예를 들어 파티션으로 분리된 두 방에서 한 방에만 기체 분자가 있다가 파티션이 제거되는 경우. 자유 팽창의 경우 압력이 없으므로 기체가 하는 일은 $0$ 이다. 또한 열도 유입되지 않으며, 따라서 열역학 제 1 법칙에 따라 내부에너지 변화도 $0$ 이다.
 
 ### 혼합 엔트로피
 
@@ -474,11 +473,43 @@ $$
 \Delta S_\text{total} = \Delta S_A + \Delta S_B = 2Nk_B \ln 2.
 $$ {#eq-TD_schroeder_2_54}
 
-이다. 이렇게 서로 다른 공간을 점유하고 있던 서로 다른 기체가 섞이면서 발생하는 엔트로피 증가를 **혼합 엔트로피 (entropy of mixing)** 이라고 한다. 여기서 주의할 것은 혼합 엔트로피는 두 기체가 서로 다를 때 발생한다. 그렇다면 $A$ 와 $B$ 가 같다면 어떻게 될 것인가?
+이다. 이렇게 서로 다른 공간을 점유하고 있던 서로 다른 기체가 섞이면서 발생하는 엔트로피 증가를 **혼합 엔트로피 (entropy of mixing)** 이라고 한다. 여기서 주의할 것은 혼합 엔트로피는 두 기체가 서로 다를 때 발생한다. 이제 혼합에 의한 효과를 보기위해 몇가지 경우를 생각하자.
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-TD_entropy_of_mixing_of_two_different_ideal_gases}
+
+#### 두 기체의 엔트로피 혼합
+
+1 몰의 He 의 엔트로로피 $S_\text{He}$ 는 자쿠르-테르토데 방정식(@eq-TD_schroeder_2_49) 으로 구할 수 있다. 여기에 1 몰의 Ar 를 혼합하면 총 엔트로피는 Ar 의 엔트로피 $S_\text{Ar}$ 에 대해 $S_\text{total} = S_\text{He}+S_\text{Ar}$ 이다. @exm-TD_examples_of_entropy_of_ideal_gas 과 @exr-TD_schroeder_2_33 를 보면 $S_\text{Ar} > S_\text{He}$ 이다.
 
 
+하지만 Ar 대신에 He 1 몰을 더하멘 여떻게 될까? 자쿠르-테르토데 방정식(@eq-TD_schroeder_2_49) 으로부터
 
+$$
+\begin{aligned}
+S_\text{2He} &= \bf{(2N)}k_B \left[\ln \left(\dfrac{V}{\bf{2N}}\left(\dfrac{4\pi m(\bf{2U})}{3(\bf{2N})h^2}\right)^{3/2}\right)+\dfrac{5}{2}\right] \\[0.3em]
+&= 2S_\text{He} - 2Nk_B \ln 2
+\end{aligned}
+$$
 
+임을 안다. 즉 섞기 전의 엔트로피 합보다 $2Nk_B \ln 2$ 만큼 작으며 이것이 혼합 엔트로피이다.
+
+:::
+
+</div>
+
+</br>
+
+자쿠르-테르토데 방정식(@eq-TD_schroeder_2_49) 은 가능한 경우의 수 로부터 나오며 우리는 상태를 셀 때 같은 입자들이 서로 구별할 수 없다고 가정했다. 만약 같은 입자들이 서로 구별할 수 있다고 가정할 경우, 엔트로피는
+
+$$
+S_\text{distinguishable} = Nk_B \left[\ln \left(V \left(\dfrac{4\pi mU}{3Nh^2}\right)^{3/2}\right) + \dfrac{3}{2}\right]
+$$ {#eq-TD_schroeder_2_57}
+
+이며 엔트로피가 위와 같다면 $S_\text{2He} = 2S_\text{He}$ 가 된다. 이것은 처음 깁스(J. Wallard Gibbs) 에 의해 제기되었으며 현재는 **깁스 역설 (Gibbs paradox)** 로 알려져 있다. 
+
+### 가역과정과 비가역 과정 {#sec-TD_reversible_and_irreversible_process}
 
 
 
@@ -705,3 +736,163 @@ $$
 
 :::
 
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_2_36}
+
+#### Schroeder 2.36
+
+단원자 분자 이상기체나 고온 아인슈타인 고체 둘 다 엔트로피는 $Nk_B$ 에 어떤 로그값을 곱한 값이다. 로그값은 커질 수 없으므로 order of magnitude 만 생각하면 $S\sim Nk_B$ 로 놓을 수 있다. 즉 엔트로피는 시스템의 입자 개수에 대한 근본적인 단위이다. 이 결론은 아주 낮은 온도를 제외한(열역학 제 3 법칙) 대부분의 시스템에서 참임이 밝혀졌다. 이 책는 주로 탄소 화합물로 이루어졌으며 무게는 $1\,\text{kg}$ 정도인데 이 책의 엔트로피를 구하라. 그리고 무스 사슴(대략 $400 \,\text{kg}$ 정도의 물) 과 태양($2\times 10^{30}\,\text{kg}$ 정도의 수소 이온) 의 엔트로피도 구해보라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+- $S_\text{book} \approx 1 \text{kg}/[\text{탄소 원자 1개의 질량}] \times k_B \approx 687 \,\text{J/K}$
+
+- $S_\text{moose} \approx 300 \text{kg}/[\text{물 분자 1개의 질량}] \times k_B \approx 1.4 \times 10^5 \text{J/K}$
+
+- $S_\text{moose} \approx \left(2\times 10^{30}\text{kg}\right)/[\text{수소 이온 1개의 질량}] \times k_B \times 2\approx 3.3 \times 10^{34}\,\text{J/K}$
+
+  태양의 경우 마지막에 2를 곱해주는 이유는 이온이므로 수소 원자 하나가 1개의 전자와 1개의 양성자로 분리되기 때문.
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_2_37}
+
+#### Schroeder 2.37
+
+서로 다른 두 단원자 분자 $A,\,B$ 에서 두 이상기체의 총 분자수가 $N$ 이며 $A$ 의 비율이 $x$, $B$ 의 비율이 $1-x$ 일 때 혼합 엔트로피 $\Delta S_\text{mixing}$ 이
+
+$$
+\Delta S_\text{mixing} = -Nk_B \left[x \ln x + (1-x) \ln (1-x)\right]
+$$
+
+임을 보여라. $x=1/2$ 일 때 본문의 결과와 확인하라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+자쿠르-테트로데 방정식(@eq-TD_schroeder_2_49) 으로부터
+$$
+\begin{aligned}
+S_\text{total} &= (xN)k_B \left[\ln \left(\dfrac{V}{xN}\left(\dfrac{4\pi m(xU)}{3(xN)h^2}\right)^{3/2}\right)+\dfrac{5}{2}\right] \\[0.3em]
+&+((1-x)N)k_B \left[\ln \left(\dfrac{V}{(1-x)N}\left(\dfrac{4\pi m((1-x)U)}{3((1-x)N)h^2}\right)^{3/2}\right)+\dfrac{5}{2}\right] \\[0.3em]
+&= -Nk_B[x \ln x + (1-x)\ln (1-x)] + S_A+S_B
+\end{aligned}
+$$
+
+이므로
+
+$$
+\Delta S_\text{mixing} = -Nk_B \left[x \ln x + (1-x) \ln (1-x)\right]
+$$
+이며 $x=1/2$ 일 때 $\Delta S_\text{mixing} = 2Nk_B \ln 2$ 이다. 
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_2_38}
+
+#### Schroeder 2.38
+
+본문에서 유도한 혼합 엔트로피는 이상기체 뿐만 아니라 일반적인 기체나 액체, 고체에도 적용 할 수 있다. 이 경우 서로 다른 두 분자의 크기가 같고, 동일한 분자와 똑같은 상호작용을 한다고 가정해야 한다. 이런 시스템을 **이상 혼합물 (ideal mixture)** 이라고 한다. 이상 혼합물의 경우 각 분자의 수가 $N_1,\,N_2$ 이고 총 분자수를 $N$ 이라고 할 때 혼합 엔트로피가 다음과 같음을 보여라.
+
+$$
+\Delta S_\text{mixing} = k_B \ln \begin{pmatrix} N \\ N_1 \end{pmatrix} = k_B \ln \left(\dfrac{N!}{N_1! (N-N_1)!}\right)
+$$
+
+$N \gg 1,\,N_1 \gg 1$ 일 때 스털링 근사를 이용하여 @exr-TD_schroeder_2_37 의 결과가 같음을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+이상 혼합물 조건에서 $N$ 개의 동일한 분자와 $N_1,\,N_2$ 의 이상 혼합물의 차이는 $N$ 개의 입자를 $N_1$ 개와 $N_2$ 개의 각각 구별할 수 없는 입자로 나누는 방법의 차이이다. 따라서
+
+$$
+\Delta S_\text{mixing} = k_B \ln \Omega_\text{mixing} = k_B \ln \dfrac{N!}{N_1! N_2!} = k_B \ln \begin{pmatrix} N \\ N_1 \end{pmatrix} . 
+$$
+
+
+$x=N_1/N$ 으로 놓으면 $N_2/N = 1-x$ 이다. 스털링 근사를 이용하면
+
+$$
+\begin{aligned}
+\Delta S_\text{mixed} &= k_B\left[N \ln N - N - N_1 \ln N_1 + N_1 - N_2\ln N_2 - N_2\right] \\[0.3em]
+&= Nk_B [\ln N - (N_1/N) \ln N_1 - (N_2/N) - \ln N_2] &\\[0.3em]
+&= Nk_B [(\underbrace{N_1/N+ N_2/N}_{=1})\ln N - (N_1/N) \ln N_1 - (N_2/N) - \ln N_2] \\[0.3em]
+&= Nk_B [-N_1/N \ln (N_1/N) - (N_2/N)\ln (N_2/N)] \\[0.3em]
+&= -Nk_B [x\ln x + (1-x)\ln (1-x)].
+\end{aligned}
+$$
+
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_2_39}
+
+#### Schroeder 2.39
+
+헬륨 1 몰의 각각의 분자를 구분가능하다고 가정 할때 상온 1기압 에서의 엔트로피를 구하고 실제 엔트로피와 비교하라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$S_\text{distinguishable} = S_\text{Saktur-Tetrode} + Nk_B \ln N$ 이므로 $S_\text{distinguishable,\, He}=582\,\text{J/K}$.
+
+:::
+
+</br>
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_2_42}
+
+#### Schroeder 2.42
+
+블랙홀은 중력이  매우 커 빛조차도 탈출 할 수 없는 공간상의 영역을 말한다. 따라서 블랙홀에 무엇을 던지는 것은 우리의 일상 경험에서 뿐만 아니라 순수 열역학적 의미에서도 비가역 과정이다. 블랙홀에 질량을 추가하는 것은 엔트로피를 증가시킨다. 그런데 어떤 물질이 뭉쳐저 블랙홀을 만들었는지는 알 수 없다는 것이 밝혀졌다$^\dagger$. 따라서 블랙홀의 엔트로피는 블랙홀을 만드는데 차미연 모든 물질의 엔트로피 합보다 커야한다. 이것을 알면 블랙홀의 엔트로피를 가늠해보는것은 어렵지 않다. [$\dagger$ 이것은 다소 과장이다. 전기 전하나 각운동량은 블랙홀 형성에서도 보존돠며 블랙홀 밖에서도 이 물리량은 측정될 수 있다. 이 문제에서는 복잡함을 피하기 위해 이 두 값을 0 으로 잡는다.]{.aside}
+
+($a$) 차원을 분석하여 질량 $M$ 인 블랙홀의 반지름은 $GM/c^2$ 보다 커야함을 보여라. 여기서 $G$ 는 뉴튼 중력 상수이고 $c$ 는 빛의 속도이다. 이를 이용하여 태양 질량($M_S = 2\times 10^30 \,\text{kg}$) 블랙홀의 반지름을 구하라.
+
+($b$) @exr-TD_schroeder_2_36 에 설명된 의미를 통해 왜 블랙홀의 엔트로피가 그것을 형성하는데 사용된 모든 입자의 개수의 order of magnitude 에 대한 기본 단위가 되는지 설명하라.
+
+($c$) 최대한 가능한 개수의 입자로부터 블랙홀을 만들기 위해 가장 낮은 에너지를 가진 입자(장파장 입자나 무질량 입자)도 사용되어야 한다. 그러나 파장은 블랙홀의 크기보다 클 수 없다. 광자들의 총 에너지를 $Mc^2$ 로 잡고 질량 $M$ 인 블랙홀을 만드는데 사용될 수 있는 최대 광자의 수를 평가하라. $8\pi^2$ 를 제외하고 답은 스티븐 호킹이 1973 년 논문에서 얻은 아래의 답과 일치해야 한다.
+
+$$
+S_{\text{black hole}} = \dfrac{8\pi^2 GM^2}{hc}k_B
+$$
+
+($d$) 태양 질량 블랙홀의 엔트로피를 구하고 그 답에 대해 논하라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+($a$) $E=mc^2-GMm/R=0 \implies R=GM/c^2$
+
+($b$) @exr-TD_schroeder_2_36 를 보라
+
+($c$)  
+
+($d$) $S_\text{black hole} \approx 1.5\times 10^{54}\,\text{J/K}$ 이며 $S/k_B = 1.1 \times 10^{77}$ 로 엄청나게 큰 수이다. 
+:::

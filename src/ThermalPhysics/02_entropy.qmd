@@ -88,7 +88,7 @@ $$
 
 $$
 \eta := \dfrac{W}{Q_{h}}= \dfrac{Q_{h}-Q_{l}}{Q_{h}}= 1- \dfrac{Q_{h}}{Q_{l}}.
-$$
+$$ {#eq-TD_definition_of_efficiency_of_carnot_engine}
 
 이 과정은 가역과정이므로 역순인 $A\to D\to C\to B \to A$ 의 과정을 생각 할 수 있다. 즉 이 과정은 $W$ 만큼의 일을 받으면서 온도 $T_l$ 일 때 $Q_{l}$ 의 열을 받고 $T_h$ 일 때 $Q_{h}$ 의 열을 방출 할 수 있으며 이를 통해 최종 결과는 외부로부터 $-W$ 만큼의 일을 받는 것이다.
 
