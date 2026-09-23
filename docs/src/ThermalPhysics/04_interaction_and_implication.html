@@ -436,7 +436,9 @@ window.Quarto = {
   <li><a href="#sec-TD_paramagnetism" id="toc-sec-TD_paramagnetism" class="nav-link" data-scroll-target="#sec-TD_paramagnetism"><span class="header-section-number">24.3</span> 상자성</a>
   <ul class="collapse">
   <li><a href="#sec-TD_notation_and_mocroscopic_physics_of_paramagnetism" id="toc-sec-TD_notation_and_mocroscopic_physics_of_paramagnetism" class="nav-link" data-scroll-target="#sec-TD_notation_and_mocroscopic_physics_of_paramagnetism"><span class="header-section-number">24.3.1</span> 표기법과 물리</a></li>
-  <li><a href="#sec-TD_numerical_solution" id="toc-sec-TD_numerical_solution" class="nav-link" data-scroll-target="#sec-TD_numerical_solution"><span class="header-section-number">24.3.2</span> 수치 해석 해</a></li>
+  <li><a href="#sec-TD_numerical_solution" id="toc-sec-TD_numerical_solution" class="nav-link" data-scroll-target="#sec-TD_numerical_solution"><span class="header-section-number">24.3.2</span> 수치해석적 해와 음의 온도</a></li>
+  <li><a href="#sec-TD_analytic_solution" id="toc-sec-TD_analytic_solution" class="nav-link" data-scroll-target="#sec-TD_analytic_solution"><span class="header-section-number">24.3.3</span> 해석적 해</a></li>
+  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul></li>
   <li><a href="#sec-TD_mechanica_equillibrium_and_pressure" id="toc-sec-TD_mechanica_equillibrium_and_pressure" class="nav-link" data-scroll-target="#sec-TD_mechanica_equillibrium_and_pressure"><span class="header-section-number">24.4</span> 역학적 평형과 압력</a></li>
   </ul>
@@ -847,7 +849,7 @@ M := \mu (N_\uparrow-N_\downarrow) = - \dfrac{U}{B}.
 \tag{24.17}\]</span></span></p>
 </section>
 <section id="sec-TD_numerical_solution" class="level3" data-number="24.3.2">
-<h3 data-number="24.3.2" class="anchored" data-anchor-id="sec-TD_numerical_solution"><span class="header-section-number">24.3.2</span> 수치 해석 해</h3>
+<h3 data-number="24.3.2" class="anchored" data-anchor-id="sec-TD_numerical_solution"><span class="header-section-number">24.3.2</span> 수치해석적 해와 음의 온도</h3>
 <p><span class="math inline">\(N=100\)</span> 에 대해 <span class="math inline">\(S/k_B = \ln \Omega\)</span> 를 그려 보면 아래 그림과 같다.</p>
 <div id="fig-TD_schroeder_3_8" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -860,7 +862,7 @@ M := \mu (N_\uparrow-N_\downarrow) = - \dfrac{U}{B}.
 </figure>
 </div>
 <p>위의 그래프를 보자. <span class="math inline">\(U/\mu B=N_\downarrow - N_\uparrow\)</span> 이므로 <span class="math inline">\(N_\downarrow=0\)</span> 일 때, 즉 모든 스핀에 <span class="math inline">\(+z\)</span> 방향으로 정렬되어 있을 때 엔트로피-에너지 그래프는 매우 가파르다. <span class="math inline">\(U&lt;0\)</span> 일 때는 에너지가 증가할수록 기울기가 낮아지다가 <span class="math inline">\(U=0\)</span> 일 때 엔트로피가 최대가 된다. 이 때는 <span class="math inline">\(N_\downarrow=N_\uparrow=N/2\)</span> 이다. 그러나 <span class="math inline">\(U&gt;0\)</span> 일 때 <span class="math inline">\(\partial S/\partial U&lt;0\)</span> 이 되며 이 상태에서는 주변의 <span class="math inline">\((\partial S/\partial U)&gt;0\)</span> 인 물체에 에너지를 방출하게 된다.</p>
-<p>이제 온도 이야기로 넘어가보자. <a href="#eq-TD_schroeder_3_5" class="quarto-xref">식&nbsp;<span>24.3</span></a> 로부터 <span class="math inline">\(U=0\)</span> 일 때 이 시스템의 온도는 <span class="math inline">\(\infty\)</span> 이며, <span class="math inline">\(U&gt;0\)</span> 일 때 이 시스템의 온도는 음수이다.</p>
+<p>이제 온도 이야기로 넘어가보자. <a href="#eq-TD_schroeder_3_5" class="quarto-xref">식&nbsp;<span>24.3</span></a> 로부터 <span class="math inline">\(U=0\)</span> 일 때 이 시스템의 온도는 <span class="math inline">\(\infty\)</span> 이며, <span class="math inline">\(U&gt;0\)</span> 일 때 이 시스템의 온도는 통계역학적 정의에 의하면 음수이다. 그리고 음의 온도는 아무리 큰 양의 온도의 물체라도 에너지를 공급하기 때문에 양의 온도보다 더 높은 온도라고 볼 수 있다.</p>
 <div id="fig-TD_schroeder_2_9" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TD_schroeder_2_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -870,6 +872,80 @@ M := \mu (N_\uparrow-N_\downarrow) = - \dfrac{U}{B}.
 그림&nbsp;24.3: 온도-에너지 곡선
 </figcaption>
 </figure>
+</div>
+<p>음의 온도는 시스템의 총 에너지가 위로 유계이며, 이로인해 에너지가 증가하면서 가능한 미시상태의 수가 에너지가 증가할수록 감소할 때 발생한다. 가장 좋은 예는 <strong>핵 상자성 (nuclear paramagnet)</strong> 이다. 이 경우 자기쌍극자는 전자의 스핀이 아니라 핵의 스핀에 의한 것이며, 핵은 아주 높은 온도가 아니라면 운동에너지가 무한히 증가할수 없으므로 외부 자기장에 의한 에너지에 한계가 있다. 또한 어떤 결에서는 핵의 쌍극자에 대한 완화시간(relaxation time) 이 격자 진동과 핵 쌍극자의 완화시간보다 매우 짧기 때문에, 이 경우 짧은 시간 스케일에서 핵의 쌍극자는 격자 진동으로부터 독립된 고립계처럼 행동한다. 앞서에서 본 것 처럼 이런 시스템에서 모든 쌍극자가 자기장과 같은 방향으로 정렬되는 상태부터 시작하여 자기장을 역전시킨다면 음의 온도를 얻게 된다. 이 실험은 1951년도에 Edward M. Purcell 과 R. V. Pound 에 의해 1951 년도에 플루오린화 리튬 결정으로 수행되었다.</p>
+</section>
+<section id="sec-TD_analytic_solution" class="level3" data-number="24.3.3">
+<h3 data-number="24.3.3" class="anchored" data-anchor-id="sec-TD_analytic_solution"><span class="header-section-number">24.3.3</span> 해석적 해</h3>
+<p>이제 <span class="math inline">\(N\)</span> 값이 매우 클 경우에 대한 해를 구해보자. <a href="#eq-TD_schroeder_3_27" class="quarto-xref">식&nbsp;<span>24.17</span></a> 로부터</p>
+<p><span id="eq-TD_schroeder_3_28"><span class="math display">\[
+\begin{aligned}
+S/k_B &amp;= \ln N! - \ln N_\uparrow! - \ln (N-N_\uparrow)! \\[0.3em]
+&amp;\approx N \ln N - N_\uparrow \ln N_\uparrow - (N-N_\uparrow) \ln (N-N_\uparrow).
+\end{aligned}
+\tag{24.18}\]</span></span></p>
+<p><span class="math inline">\(U=\mu B(N-2N_\uparrow)\)</span>(<a href="#eq-TD_schroeder_3_25" class="quarto-xref">식&nbsp;<span>24.15</span></a>) 이므로,</p>
+<p><span id="eq-TD_schroeder_3_29"><span class="math display">\[
+\begin{aligned}
+\dfrac{1}{T} &amp; =\left(\dfrac{\partial S}{\partial U}\right)_{N,\,B} = -\dfrac{1}{2\mu B}\left(\dfrac{\partial S}{\partial N_\uparrow}\right) = \dfrac{k_B}{2\mu B}\ln \left(\dfrac{N_\uparrow}{N-N_\uparrow}\right)
+\end{aligned}
+\tag{24.19}\]</span></span></p>
+<p>이며</p>
+<p><span id="eq-TD_schroeder_3_30"><span class="math display">\[
+\dfrac{1}{T}= \dfrac{k_B}{2\mu B}\ln \left(\dfrac{N-U/\mu B}{N+U/\mu B}\right)
+\tag{24.20}\]</span></span></p>
+<p>이다. 이 식을 <span class="math inline">\(U\)</span> 에 대해 구하면</p>
+<p><span id="eq-TD_schoreder_3.31"><span class="math display">\[
+U=\mu N B \left(\dfrac{1-e^{2\mu  B/k_BT}}{1+e^{2\mu B/k_B T}}\right) = -\mu N B \tanh \left(\dfrac{\mu B}{k_BT}\right)
+\tag{24.21}\]</span></span></p>
+<p>이며, 따라서 자화율은</p>
+<p><span id="eq-TD_schroeder_3_32"><span class="math display">\[
+M = -\dfrac{U}{B} = \mu N \tanh \left(\dfrac{\mu B}{k_B T}\right).
+\tag{24.22}\]</span></span></p>
+<p>따라서 <span class="math inline">\(T\to \infty\)</span> 일 때 <span class="math inline">\(M=0\)</span> 이다. 또한 일정한 자기장에서의 비열 <span class="math inline">\(C_B\)</span> 를 구하면</p>
+<p><span id="eq-TD_schroeder_3_33"><span class="math display">\[
+C_B = \left(\dfrac{\partial U}{\partial T}\right)_{N,\,B} = Nk_B \dfrac{(\mu B/ k_B T)^2}{\cosh^2 (\mu B/ k_B T)}
+\tag{24.23}\]</span></span></p>
+<p>이며 <span class="math inline">\(T\to \infty\)</span> 에서 <span class="math inline">\(C_B \to 0\)</span> 이다.</p>
+<p>실제로 상자성에서는 전자나 핵에 의한 자기쌍극자이다. 전자의 경우 궤도각운동량 혹은 스핀각운동량에 의한 것이며 가능한 상태의 수는 작은 자연수이다. 특정한 상황에서는 전자의 궤도각운동량값이 주위 원자에 의해 0 이 되며 이를 <strong>orbital quenching</strong> 이라고 한다. 이 경우에는 전자의 스핀각운동량만 살아남는다. <span class="math inline">\(S=1/2\)</span> 일 경우는 2개의 상태만 가능하며 이것이 우리가 지금까지 살펴온 것이다. 전자의 경우 <span class="math inline">\(\mu\)</span> 값은 <strong>보어 마그네톤 (Bohr magneton)</strong> <span class="math inline">\(\mu_B\)</span> 값을 사용한다.</p>
+<p><span id="eq-TD_schroeder_3.34"><span class="math display">\[
+\mu_B = \dfrac{e\hbar}{2m_e} = 9.274 \times 10^{-24}\,\text{J/T} = 5.788 \times 10^{-5}\,\text{eV/T}.
+\tag{24.24}\]</span></span></p>
+<p>자기장 <span class="math inline">\(1 T\)</span> 의 경우 <span class="math inline">\(\mu_B B \approx 5.8 10^{-5}\, \text{eV}\)</span> 이며 <span class="math inline">\(k_B (300\,\text{K}) \approx 0.025\,\text{eV}\)</span> 이므로 <span class="math inline">\(k_B T_\text{room} \gg \mu B\)</span> 이다. 이 경우 <a href="#eq-TD_schroeder_3_32" class="quarto-xref">식&nbsp;<span>24.22</span></a> 는</p>
+<p><span id="eq-TD_schroeder_3_35"><span class="math display">\[
+M \approx \dfrac{\mu_B^2 N B}{k_BT}  \qquad (k_B T \gg \mu_B B)
+\tag{24.25}\]</span></span></p>
+<p>이다. <span class="math inline">\(M\propto 1/T\)</span> 이며 이를 <strong>퀴리 법칙 (Curie’s law)</strong> 라고 한다.</p>
+</section>
+<section id="연습문제-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_3_20" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 24.10 (Schroeder 3.20)</strong></span> DPPH 와 같은 이상적인 2상태 상자성 물질을 생각하자. 여기서 <span class="math inline">\(\mu = \mu_B\)</span> 이다. 2.06 T 의 자기장을 걸었고 가장 낮은 온도는 2.2 K 이다. 에너지와 자화율, 엔트로피를 구하고 가능한 최대값에 대한 비율로 표현하라. 가능한 자화의 99% 를 얻기 위해서 무엇을 해야 하는가?</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>2.06 T, 2.2 K 에서 생각한다. <span class="math inline">\(\mu_B \times 2.2\,\text{T}/(k_B \times 2.2 \,\text{K})=0.629\)</span>. <span class="math inline">\(U_\max = \mu_B NB\)</span> 이며 <span class="math inline">\(U/U_\text{Max}=-0.557\)</span>, <span class="math inline">\(M/M_\text{max}=0.557\)</span>, <span class="math inline">\(N_\uparrow=0.779 N\)</span>, <span class="math inline">\(S_\text{Max}= k_B\ln 2\)</span> 이므로 <span class="math inline">\(S/S_\text{Max}=0.762\)</span>.</p>
+<p>99% 자화를 얻기 위해서는 <span class="math inline">\(\mu_B B/k_B T\approx 2.65\)</span> 이어야 하며 자기장을 4.2배 증가시킨 8.65 T 로 올리거나 온도를 0.5 K 로 낮추어야 한다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_3_22" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 24.11 (Schroeder 3.22)</strong></span> 2상태 상자성의 엔트로피를 온도의 함수로 표현하면 <span class="math inline">\(x=\mu B/k_BT\)</span> 에 대해</p>
+<p><span class="math display">\[
+S=Nk_B \left[\ln (2 \cosh x) - x \tanh x\right]
+\]</span></p>
+<p>임을 보여라. 이 때 <span class="math inline">\(T\to 0\)</span> 과 <span class="math inline">\(T \to \infty\)</span> 를 논하라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-TD_schroeder_3_25" class="quarto-xref">식&nbsp;<span>24.15</span></a> 과 <a href="#eq-TD_schoreder_3.31" class="quarto-xref">식&nbsp;<span>24.21</span></a> 로부터 <span class="math inline">\(N_\uparrow = (N/2)(1+\tanh x)\)</span> 임을 안다. <a href="#eq-TD_schroeder_3_28" class="quarto-xref">식&nbsp;<span>24.18</span></a> 로부터</p>
+<p><span class="math display">\[
+\begin{aligned}
+S/k_B &amp;= N \ln N - \dfrac{N}{2}(1+\tanh x)  \ln  \dfrac{N}{2}(1+\tanh x)  \\[0.3em]
+&amp;\qquad - \dfrac{N - \tanh x}{2}\ln  \dfrac{N}{2}(1-\tanh x)
+\end{aligned}
+\]</span></p>
 </div>
 </section>
 </section>
