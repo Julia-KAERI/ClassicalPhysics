@@ -447,7 +447,12 @@ window.Quarto = {
   <li><a href="#sec-TD_entropy_and_heat_revisited" id="toc-sec-TD_entropy_and_heat_revisited" class="nav-link" data-scroll-target="#sec-TD_entropy_and_heat_revisited"><span class="header-section-number">24.4.3</span> 엔트로피와 열을 다시 보기</a></li>
   <li><a href="#연습문제-2" id="toc-연습문제-2" class="nav-link" data-scroll-target="#연습문제-2">연습문제</a></li>
   </ul></li>
-  <li><a href="#sec-TD_diffusive_equillibrium_and_chemical_potential" id="toc-sec-TD_diffusive_equillibrium_and_chemical_potential" class="nav-link" data-scroll-target="#sec-TD_diffusive_equillibrium_and_chemical_potential"><span class="header-section-number">24.5</span> 확상 편형과 화학 포텐셜</a></li>
+  <li><a href="#sec-TD_diffusive_equillibrium_and_chemical_potential" id="toc-sec-TD_diffusive_equillibrium_and_chemical_potential" class="nav-link" data-scroll-target="#sec-TD_diffusive_equillibrium_and_chemical_potential"><span class="header-section-number">24.5</span> 확산 평형과 화학 포텐셜</a>
+  <ul class="collapse">
+  <li><a href="#확산-평형과-화학-포텐셜" id="toc-확산-평형과-화학-포텐셜" class="nav-link" data-scroll-target="#확산-평형과-화학-포텐셜"><span class="header-section-number">24.5.1</span> 확산 평형과 화학 포텐셜</a></li>
+  <li><a href="#화학포텐셜을-포함하는-열역학적-항등식" id="toc-화학포텐셜을-포함하는-열역학적-항등식" class="nav-link" data-scroll-target="#화학포텐셜을-포함하는-열역학적-항등식"><span class="header-section-number">24.5.2</span> 화학포텐셜을 포함하는 열역학적 항등식</a></li>
+  <li><a href="#연습문제-3" id="toc-연습문제-3" class="nav-link" data-scroll-target="#연습문제-3">연습문제</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -527,14 +532,14 @@ window.Quarto = {
 <p>시스템 <span class="math inline">\(A\)</span> 와 시스템 <span class="math inline">\(B\)</span> 가 열평형이고 시스템 <span class="math inline">\(B\)</span> 와 시스템 <span class="math inline">\(C\)</span> 가 열평형이면 시스템 <span class="math inline">\(A\)</span> 와 시스템 <span class="math inline">\(C\)</span> 도 열평형이다.</p>
 </div>
 </div>
-<p><span class="math inline">\((\partial S_A){\partial U_A}_{N_A,\,V_A}= (\partial S_B/\partial U_B)_{N_B,\,V_B}\)</span> 이고 <span class="math inline">\((\partial S_B){\partial U_B}_{N_B,\,V_B}= (\partial S_C/\partial U_C)_{N_C,\,V_C}\)</span> 이면 당연히 <span class="math inline">\((\partial S_A){\partial U_A}_{N_A,\,V_A}= (\partial S_C/\partial U_C)_{N_C,\,V_C}\)</span> 이다.</p>
+<p><span class="math inline">\((\partial S_A/\partial U_A)_{N_A,\,V_A}= (\partial S_B/\partial U_B)_{N_B,\,V_B}\)</span> 이고 <span class="math inline">\((\partial S_B){\partial U_B}_{N_B,\,V_B}= (\partial S_C/\partial U_C)_{N_C,\,V_C}\)</span> 이면 당연히 <span class="math inline">\((\partial S_A){\partial U_A}_{N_A,\,V_A}= (\partial S_C/\partial U_C)_{N_C,\,V_C}\)</span> 이다.</p>
 </div>
 </section>
 <section id="sec-TD_real_world_example_of_temperature_of_statistical_mechanics" class="level3" data-number="24.1.2">
 <h3 data-number="24.1.2" class="anchored" data-anchor-id="sec-TD_real_world_example_of_temperature_of_statistical_mechanics"><span class="header-section-number">24.1.2</span> 통계역학적 온도의 실제 예</h3>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-TD_examples_temperature_of_statistical_mechanics_1" class="theorem example">
-<p><span class="theorem-title"><strong>예제 24.1 (아인슈타인 고체의 경우)</strong></span> 아인슈타인 고체에서 <span class="math inline">\(q\gg N\)</span> 인 경우를 보자 여기서 <span class="math inline">\(q\)</span> 는 에너지 단위, <span class="math inline">\(N\)</span> 은 진동자의 개수이다. <span class="math inline">\(U=\hbar \omega (q+1/2)\)</span> 이며 <a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_46" class="quarto-xref">식&nbsp;<span>23.21</span></a> 으로 부터</p>
+<p><span class="theorem-title"><strong>예제 24.1 (아인슈타인 고체의 경우)</strong></span> 아인슈타인 고체에서 <span class="math inline">\(q\gg N\)</span> 인 경우를 보자 여기서 <span class="math inline">\(q\)</span> 는 에너지 단위, <span class="math inline">\(N\)</span> 은 진동자의 개수이다. <span class="math inline">\(U=\hbar \omega q\)</span> 이며 <a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_46" class="quarto-xref">식&nbsp;<span>23.21</span></a> 으로 부터</p>
 <p><span class="math display">\[
 S =  Nk_B\left(\ln q-\ln N +1\right)
 \]</span></p>
@@ -542,9 +547,9 @@ S =  Nk_B\left(\ln q-\ln N +1\right)
 <p><span class="math display">\[
 \dfrac{1}{T}= \left(\dfrac{\partial S}{\partial U}\right)_{N} = \dfrac{1}{\hbar\omega}\dfrac{Nk_B}{q}
 \]</span></p>
-<p>이며 따라서 <span class="math inline">\(U_0 = \frac{1}{2}\hbar \omega\)</span> 에 대해 <span class="math inline">\(U\)</span> 와 <span class="math inline">\(T\)</span> 아래와 같은 관계를 거잔다.</p>
+<p>이며 따라서 <span class="math inline">\(U\)</span> 와 <span class="math inline">\(T\)</span> 아래와 같은 관계를 거잔다.</p>
 <p><span id="eq-TD_schroeder_3_11"><span class="math display">\[
-U-U_0 = Nk_B T
+U = Nk_B T
 \tag{24.4}\]</span></span></p>
 </div>
 </div>
@@ -575,9 +580,9 @@ U = \dfrac{3}{2}Nk_BT.
 <p><span class="math display">\[
 \dfrac{1}{T}= \dfrac{k_B}{\hbar \omega}\left(\ln \left(\dfrac{N}{q}\right)\right)
 \]</span></p>
-<p>이며 이로부터 <span class="math inline">\(U_0 = \frac{1}{2}\hbar \omega\)</span> 에 대해</p>
+<p>이며 이로부터</p>
 <p><span class="math display">\[
-U=U_0 + \hbar \omega Ne^{-\hbar \omega/k_B T}.
+U=\hbar \omega Ne^{-\hbar \omega/k_B T}.
 \]</span></p>
 </div>
 <br>
@@ -984,7 +989,7 @@ S/k_B &amp;= N \ln N - \dfrac{N}{2}(1+\tanh x)  \ln  \dfrac{N}{2}(1+\tanh x)  \\
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 스털링 근사를 사용하면</p>
 <p><span class="math display">\[
 \begin{aligned}
-S = k_b \ln \Omega &amp;= q\ln (q+N) - q\ln q + N \ln (q+N) - N \ln N \\[0.3em]
+S = k_B \ln \Omega &amp;= q\ln (q+N) - q\ln q + N \ln (q+N) - N \ln N \\[0.3em]
 &amp;= (N+q)\ln (N+q) - q\ln q - N \ln N
 \end{aligned}
 \]</span></p>
@@ -994,24 +999,15 @@ S = k_b \ln \Omega &amp;= q\ln (q+N) - q\ln q + N \ln (q+N) - N \ln N \\[0.3em]
 \begin{aligned}
 \dfrac{1}{T} &amp;= \left(\dfrac{\partial S}{\partial U}\right)_{N} = \dfrac{1}{\hbar \omega}\left(\dfrac{\partial S}{\partial q}\right)_N \\[0.3em]
 &amp;= \dfrac{k_B}{\hbar \omega}\left[\ln (N+q) + 1 - \ln q -1\right] = \dfrac{k_B}{\hbar \omega}\ln \dfrac{N+q}{q} \\[0.3em]
-&amp;=  \dfrac{k_B}{\hbar \omega}\ln \left(\dfrac{\hbar \omega (N-1/2) + U }{U-\hbar \omega/2}\right)
+&amp;=  \dfrac{k_B}{\hbar \omega}\ln \left(\dfrac{\hbar \omega N+ U }{U}\right)
 \end{aligned}
 \]</span></p>
-<p>(<span class="math inline">\(c\)</span>) (<span class="math inline">\(b\)</span>) 로 부터 <span class="math inline">\(e^{\hbar \omega/k_B T} = \dfrac{\hbar \omega (N-1/2) + U }{U-\hbar \omega/2}\)</span> 이므로</p>
+<p>(<span class="math inline">\(c\)</span>) (<span class="math inline">\(b\)</span>) 로 부터 <span class="math inline">\(e^{\hbar \omega/k_B T} = \dfrac{\hbar \omega N + U }{U}\)</span> 이므로</p>
 <p><span class="math display">\[
-U = \dfrac{\hbar \omega \left[N-\dfrac{1}{2} + \dfrac{1}{2} e^{\hbar \omega /k_BT}\right]}{e^{\hbar \omega /k_BT} -1}.
+U = \dfrac{\hbar \omega N}{e^{\hbar \omega /k_BT} -1}.
 \]</span></p>
-<p>(<span class="math inline">\(d\)</span>)</p>
-<p><span class="math display">\[
-\begin{aligned}
-C = \left(\dfrac{\partial U}{\partial T}\right)_N = \dfrac{-\dfrac{(\hbar \omega)^2}{2k_BT^2}e^{\hbar \omega/k_BT}}{e^{\hbar \omega/k_B T}-1}  - \dfrac{-\dfrac{(\hbar \omega)^2}{k_BT^2} \left[N-\dfrac{1}{2} + \dfrac{1}{2} e^{\hbar \omega /k_BT} \right]e^{\hbar \omega/k_B T}}{\left(e^{\hbar \omega /k_BT} -1\right)^2}.
-\end{aligned}
-\]</span></p>
-<p>이며 <span class="math inline">\(T \to \infty\)</span> 조건에서</p>
-<p><span class="math display">\[
-C \to - \dfrac{\hbar \omega}{2T} + Nk_B \to N k_B
-\]</span></p>
-<p>이다.</p>
+<p>(<span class="math inline">\(d\)</span>) <span class="math inline">\(\displaystyle C = \left(\dfrac{\partial U}{\partial T}\right)_N = - \dfrac{(\hbar \omega)^2}{k_B T^2}\dfrac{Ne^{\hbar \omega/k_B T}}{\left(e^{\hbar \omega/k_B T}-1\right)^2}\)</span></p>
+<p>이며 <span class="math inline">\(T \to \infty\)</span> 조건에서 <span class="math inline">\(C \to Nk_B\)</span> 이다.</p>
 </div>
 </section>
 </section>
@@ -1279,7 +1275,129 @@ F= -\dfrac{Tk_B}{2l}\ln \left(\dfrac{N-N_R}{N_R}\right) = -\dfrac{Tk_B}{2l}\ln \
 </section>
 </section>
 <section id="sec-TD_diffusive_equillibrium_and_chemical_potential" class="level2" data-number="24.5">
-<h2 data-number="24.5" class="anchored" data-anchor-id="sec-TD_diffusive_equillibrium_and_chemical_potential"><span class="header-section-number">24.5</span> 확상 편형과 화학 포텐셜</h2>
+<h2 data-number="24.5" class="anchored" data-anchor-id="sec-TD_diffusive_equillibrium_and_chemical_potential"><span class="header-section-number">24.5</span> 확산 평형과 화학 포텐셜</h2>
+<section id="확산-평형과-화학-포텐셜" class="level3" data-number="24.5.1">
+<h3 data-number="24.5.1" class="anchored" data-anchor-id="확산-평형과-화학-포텐셜"><span class="header-section-number">24.5.1</span> 확산 평형과 화학 포텐셜</h3>
+<p>두 시스템이 열평형이면 온도가 같다. 두 시스템이 역학적 평형이면 압력이 같다. 시스템의 물질의 농도가 균일해저서 순 변화가 없을 때 <strong>확산 평형 (diffusive equillibrium)</strong> 이라고 한다. 이를 위해 아래와 같이 에너지 뿐만 아니라 입자까지 자유롭게 교환 할 수 있는 시스템을 생각하자. 물론 부피도 변화할 수 있는 시스템을 생각할 수 있지만 문제를 단순화하기 위해 일단 각 시스템의 부피는 일정하게 유지한다. 그리고 우선 두 시스템이 같은종류의 입자로 이루어졌다고 가정한다. 그리고 <span class="math inline">\(U_\text{total}=U_A+U_B\)</span> 와 <span class="math inline">\(N_\text{total}=N_A+N_B\)</span> 는 일정하다고 가정한다.</p>
+<div id="fig-TD_schroeder_3_18" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-TD_schroeder_3_18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/schroeder/chap3/schroeder_3_18.png" class="img-fluid figure-img" width="350">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_3_18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;24.7: 에너지와 입자를 교환할 수 있는 두 시스템
+</figcaption>
+</figure>
+</div>
+<p>총 엔트로피를 최대가 되어야 하므로,</p>
+<p><span id="eq-TD_schroeder_3_52"><span class="math display">\[
+\left(\dfrac{\partial S_\text{total}}{\partial U_A}\right)_{N_A,\,V_A} = 0\qquad \text{and}\qquad \left(\dfrac{\partial S_\text{total}}{\partial N_A}\right)_{U_A,\,V_A} = 0
+\tag{24.42}\]</span></span></p>
+<p>이어야 한다. 부피가 바뀔 수 있다면 <span class="math inline">\((\partial S_\text{total}/\partial V_A)_{U_A,N_A}=0\)</span> 조건도 포함되어야 한다. 첫번째 조건은 두 시스템의 온도가 동일하다는 조건이며 두번째 조건이 새로운 조건이다. <span class="math inline">\(N_\text{total}\)</span> 이 일정하다는 조건으로부터</p>
+<p><span id="eq-TD_schroeder_3_54"><span class="math display">\[
+-T\dfrac{\partial S_A}{\partial N_A} = - T\dfrac{\partial S_B}{\partial N_B} \qquad \text{at equillibrium}.
+\tag{24.43}\]</span></span></p>
+<p>를 얻는다. 이 값은 매우 중요하며 다음과 같이 정의한다.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>화학포텐셜</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>화학포텐셜 <span class="math inline">\(\mu\)</span> 는 다음과 같이 정의된다.</p>
+<p><span id="eq-TD_schroeder_3_56"><span class="math display">\[
+\boxed{\mu = -T \left(\dfrac{\partial S}{\partial N}\right)_{U,V}.}
+\tag{24.44}\]</span></span></p>
+</div>
+</div>
+<p>즉 <span class="math inline">\(A,\,B\)</span> 두 시스템이 확산평형일 때 <span class="math inline">\(\mu_A = \mu_B\)</span> 이어야 한다. 화학포텐셜의 정의로부터 입자의 수가 증가할 때 엔트로피가 증가한다면 <span class="math inline">\(\mu&lt;0\)</span> 이며, 입자의 수가 감소할 때 엔트로피가 증가한다면 <span class="math inline">\(\mu &gt; 0\)</span> 이다. 따라서 입자는 화학 포텐셜이 높은 곳으로부터 낮은 곳으로 이동한다.</p>
+</section>
+<section id="화학포텐셜을-포함하는-열역학적-항등식" class="level3" data-number="24.5.2">
+<h3 data-number="24.5.2" class="anchored" data-anchor-id="화학포텐셜을-포함하는-열역학적-항등식"><span class="header-section-number">24.5.2</span> 화학포텐셜을 포함하는 열역학적 항등식</h3>
+<p>이제 열역학적 항등식을 입자 교환까지 포함하도록 확장 할 수 있다.</p>
+<p><span id="eq-TD_schroeder_3_57"><span class="math display">\[
+\begin{aligned}
+dS &amp;= \left(\dfrac{\partial S}{\partial U}\right)_{V,N}\,dU + \left(\dfrac{\partial S}{\partial V}\right)_{U,N}\,dV + \left(\dfrac{\partial S}{\partial N}\right)_{U,V}\,dN \\[0.3em]
+&amp;= \dfrac{1}{T}\,dU + \dfrac{p}{T}\,dV - \dfrac{\mu}{T}\,dN.
+\end{aligned}
+\tag{24.45}\]</span></span></p>
+<p>위 식은 아래와 같이 쓸 수 있다.</p>
+<p><span id="eq-TD_schroeder_3_58"><span class="math display">\[
+dU = T\,dS - p\,dV + \mu \,dN.
+\tag{24.46}\]</span></span></p>
+<p>우리가 <span class="math inline">\(-p\,dV\)</span> 를 역학적 일이라고 하듯이 <span class="math inline">\(\mu\,dN\)</span> 을 화학적 일(chemical work) 이라고 부르기도 한다. 위 식을 통해 우리는</p>
+<p><span id="eq-TD_schroeder_3_60"><span class="math display">\[
+\mu = \left(\dfrac{\partial U}{\partial N}\right)_{S,\,V}
+\tag{24.47}\]</span></span></p>
+<p>을 얻는다. 즉 화학포텐셜은 엔트로피와 부피가 고정되어 있을 때 입자 하나를 추가하는데 필요한 에너지임을 알 수 있다. 일반적으로 엔트로피를 고정시킨 상태에서 입자를 추가하려면 에너지가 감소해야 하므로 이 경우 화학포텐셜은 음수이다. 그러나 입자를 추가하는데 입자에 포텐셜 에너지를 더해야 한다면 이 에너지는 화학 포텐셜에 영향을 준다. 이에 대해서는 <span class="citation" data-cites="Schroeder2000introduction">Schroeder (<a href="../ClassicalMechanics/00_index.html#ref-Schroeder2000introduction" role="doc-biblioref">2000</a>)</span> 7장에서 예를 들어 설명하고 있다.</p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-TD_examples_chemical_potential_and_einstein_solid" class="theorem example">
+<p><span class="theorem-title"><strong>예제 24.6 (아인슈타인 고체와 화학 포텐셜)</strong></span> 3 개의 진동자와 3개의 에너지 단위를 가진 시스템을 생각하자. <span class="math inline">\(\Omega_1 = 10\)</span> (<a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_9" class="quarto-xref">식&nbsp;<span>23.1</span></a>) 이므로 <span class="math inline">\(S_1=k_B\ln 10\)</span> 이다. 진동자 하나를 추가하며 에너지 단위는 변하지 않는다면 <span class="math inline">\(\Omega_2 = 20\)</span> 이며 <span class="math inline">\(S_2=k_B\ln 20\)</span> 이다. 그러나 처음에서 진동자 하나를 추가하면서 에너지 단위를 하나 뺀다면 <span class="math inline">\(\omega_3 = 10\)</span> 으로 엔트로피가 변화하지 않는다. 이 때 화학포텐셜은</p>
+<p><span class="math display">\[
+\mu = \left(\dfrac{\Delta U}{\Delta N}\right)_{S} = - \hbar \omega
+\]</span></p>
+<p>이다. 여기서 주의할것은 입자의 개수가 작은 시스템에서는 입자 하나의 추가가 에너지의 미소 변화를 일으키지 않고 더 크고 이산적인 변화를 준다는 것이다.</p>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-TD_examples_chemical_potential_and_ideal_Gas" class="theorem example">
+<p><span class="theorem-title"><strong>예제 24.7 (이상기체와 화학 포텐셜)</strong></span> 이상기체의 경우 엔트로피는 자쿠르-테트로데 방정식 <a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_49" class="quarto-xref">식&nbsp;<span>23.23</span></a> 에 따라</p>
+<p><span id="eq-TD_schroeder_3_62"><span class="math display">\[
+S = Nk_B \left[\ln \left(V\left(\dfrac{4\pi mU}{3h^2}\right)^{3/2}\right) - \dfrac{5}{2}\ln N + \dfrac{5}{2}\right].
+\tag{24.48}\]</span></span></p>
+<p>이며, 이로부터</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu &amp;= - T k_B\left[\ln \left(V\left(\dfrac{4\pi mU}{3h^2}\right)^{3/2}\right) - \dfrac{5}{2}\ln N + \dfrac{5}{2}\right]  + \dfrac{5Tk_B}{2} \\[0.3em]
+&amp;= - T k_B\left[\ln \left(\dfrac{V}{N}\left(\dfrac{4\pi mU}{3Nh^2}\right)^{3/2}\right) \right]
+\end{aligned}
+\]</span></p>
+<p>이다. 여기서 이상기체의 경우 <span class="math inline">\(U=3Nk_B T/2\)</span> 이므로</p>
+<p><span id="eq-TD_schroedeR_3_63"><span class="math display">\[
+\mu = - T k_B\left[\ln \left(\dfrac{V}{N}\left(\dfrac{2\pi m k_B T}{h^2}\right)^{3/2}\right) \right].
+\tag{24.49}\]</span></span></p>
+<p>상온, 1기압의 경우 <span class="math inline">\(V/N = 4.2 \times 10^{-26}\, \text{m}^3\)</span> 이며 헬륨의 경우 <span class="math inline">\((h^2/2\pi m k_B T)^{3/2} \approx 1.3 \times 10^{-31}\,\text{m}^3\)</span> 이다. 이로부터 상온 1기압에서의 헬륨의 화학 포텐셜은 다음과 같다.</p>
+<p><span id="eq-TD_schroeder_3_64"><span class="math display">\[
+\mu_{\text{He}} = - 0.32\, \text{eV},\qquad \text{at } 300\, \text{K},\, 1\,\text{atm}.
+\tag{24.50}\]</span></span></p>
+<p>고정된 온도에서 밀도가 증가할 경우, 즉 <span class="math inline">\(V/N\)</span> 이 감소할 경우 <span class="math inline">\(\mu\)</span> 는 증가한다. 즉 주변에 입자를 방출하려는 경항을 띈다.</p>
+</div>
+</div>
+<p>이제 한종류가 아닌 여러종류의 입자가 교환되는 시스템을 생각하자. 각각의 입자는 각각의 화학 포텐셜을 가진다. 즉 <span class="math inline">\(i\)</span> 번째 종류의 입자의 화학포텐셜 <span class="math inline">\(\mu_i\)</span> 는 다음과 같이 정의된다.</p>
+<p><span id="eq-TD_schroeder_3_65"><span class="math display">\[
+\mu_i = - T\left(\dfrac{\partial S}{\partial N_i}\right)_{U,V, N_1,\ldots,N_{i-1},N_{i+1},\ldots}.
+\tag{24.51}\]</span></span></p>
+<p>또한 열역학적 항등식은</p>
+<p><span id="eq-TD_schroeder_3_66"><span class="math display">\[
+dU = T\,dS - p\,dV + \sum_i \mu_i \, dN_i
+\tag{24.52}\]</span></span></p>
+<p>이다. 여러 입자가 포함된 두 시스템의 확산 평형은 각각의 입자에 대한 화학 포텐셜이 동일한 상태이다.</p>
+</section>
+<section id="연습문제-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제-3">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-TD_schroeder_3_36" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 24.17 (Schroeder 3.36)</strong></span> <span class="math inline">\(N,\,q \gg 1\)</span> 인 아인슈타인 고체를 생각하자. 각각의 진동자가 별도의 입자라고 생각한다.</p>
+<p>(<span class="math inline">\(a\)</span>) 케미컬 포텐셜이 다음과 같음을 보여라.</p>
+<p><span id="eq-TD_schroeder_prob_3_36_1"><span class="math display">\[
+\mu = - k_B T \ln\left(\dfrac{N+q}{N}\right).
+\tag{24.53}\]</span></span></p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(N \gg q\)</span> 일 때와 <span class="math inline">\(N \ll q\)</span> 일 때 에너지를 갖지 않은 입자가 증가할 때 <span class="math inline">\(S\)</span> 가 얼마나 증가하는지를 말하고 화학포텐셜에 대해 설명하라. 이 식은 직관적으로 말이 되는가?</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <a href="#exr-TD_schroeder_3_25" class="quarto-xref">연습문제&nbsp;<span>24.12</span></a> (<span class="math inline">\(a\)</span>) 로부터 <span class="math inline">\(S = (N+q)\ln (N+q) - q\ln q - N \ln N\)</span> 이므로</p>
+<p><span class="math display">\[
+\mu = -T\left[\ln (N+q) + 1 -\ln N -1 \right]= -T \ln (N+q)/N.
+\]</span></p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(N\gg q\)</span> 이면 <span class="math inline">\(\mu \approx -k_B T\dfrac{q}{N}\)</span> 이며 0 에 근접한 음수 값을 가진다. 입자가 이미 너무 많고 에너지가 부족하기 때문에, 새로운 입자가 들어와도 엔트로피의 변화가 미미하며 화학적으로 매우 안정(둔감)해진 상태이다.</p>
+<p><span class="math inline">\(N\ll q\)</span> 이면 <span class="math inline">\(\mu \approx -k_B T \ln (q/N+1) \approx -k_B T \ln (q/N)\)</span> 으로 매우 큰 음수값을 가진다. 시스템에 입자 하나를 추가할 때 엔트로피가 매우 크게 증가하며 입자를 적극적으로 받아들이려는 경항성을 갖게 된다.</p>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
@@ -1290,6 +1408,7 @@ Blundell, S., S. J. Blundell, and K. M. Blundell. 2006. <em>Concepts in Thermal 
 Schroeder, D. V. 2000. <em>An Introduction to Thermal Physics</em>. Addison Wesley. <a href="https://books.google.co.kr/books?id=1gosQgAACAAJ">https://books.google.co.kr/books?id=1gosQgAACAAJ</a>.
 </div>
 </div>
+</section>
 </section>
 
 </main> <!-- /main -->

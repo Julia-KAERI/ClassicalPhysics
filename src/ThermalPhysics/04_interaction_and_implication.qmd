@@ -71,7 +71,7 @@ $$ {#eq-TD_schroeder_3_5}
 
 :::
 
-$(\partial S_A){\partial U_A}_{N_A,\,V_A}= (\partial S_B/\partial U_B)_{N_B,\,V_B}$ 이고 $(\partial S_B){\partial U_B}_{N_B,\,V_B}= (\partial S_C/\partial U_C)_{N_C,\,V_C}$ 이면 당연히 $(\partial S_A){\partial U_A}_{N_A,\,V_A}= (\partial S_C/\partial U_C)_{N_C,\,V_C}$ 이다.   
+$(\partial S_A/\partial U_A)_{N_A,\,V_A}= (\partial S_B/\partial U_B)_{N_B,\,V_B}$ 이고 $(\partial S_B){\partial U_B}_{N_B,\,V_B}= (\partial S_C/\partial U_C)_{N_C,\,V_C}$ 이면 당연히 $(\partial S_A){\partial U_A}_{N_A,\,V_A}= (\partial S_C/\partial U_C)_{N_C,\,V_C}$ 이다.   
 
 :::
 
@@ -83,7 +83,7 @@ $(\partial S_A){\partial U_A}_{N_A,\,V_A}= (\partial S_B/\partial U_B)_{N_B,\,V_
 
 #### 아인슈타인 고체의 경우
 
-아인슈타인 고체에서 $q\gg N$ 인 경우를 보자 여기서 $q$ 는 에너지 단위, $N$ 은 진동자의 개수이다. $U=\hbar \omega (q+1/2)$ 이며 @eq-TD_schroeder_2_46 으로 부터
+아인슈타인 고체에서 $q\gg N$ 인 경우를 보자 여기서 $q$ 는 에너지 단위, $N$ 은 진동자의 개수이다. $U=\hbar \omega q$ 이며 @eq-TD_schroeder_2_46 으로 부터
 
 $$
 S =  Nk_B\left(\ln q-\ln N +1\right)
@@ -95,10 +95,10 @@ $$
 \dfrac{1}{T}= \left(\dfrac{\partial S}{\partial U}\right)_{N} = \dfrac{1}{\hbar\omega}\dfrac{Nk_B}{q}
 $$
 
-이며 따라서 $U_0 = \frac{1}{2}\hbar \omega$ 에 대해 $U$ 와 $T$ 아래와 같은 관계를 거잔다. 
+이며 따라서 $U$ 와 $T$   아래와 같은 관계를 거잔다. 
 
 $$
-U-U_0 = Nk_B T
+U = Nk_B T
 $$ {#eq-TD_schroeder_3_11}
 
 
@@ -152,10 +152,10 @@ $$
 \dfrac{1}{T}= \dfrac{k_B}{\hbar \omega}\left(\ln \left(\dfrac{N}{q}\right)\right)
 $$
 
-이며 이로부터 $U_0 = \frac{1}{2}\hbar \omega$ 에 대해
+이며 이로부터
 
 $$
-U=U_0 + \hbar \omega Ne^{-\hbar \omega/k_B T}.
+U=\hbar \omega Ne^{-\hbar \omega/k_B T}.
 $$ 
 
 :::
@@ -691,7 +691,7 @@ $$
 
 $$
 \begin{aligned}
-S = k_b \ln \Omega &= q\ln (q+N) - q\ln q + N \ln (q+N) - N \ln N \\[0.3em]
+S = k_B \ln \Omega &= q\ln (q+N) - q\ln q + N \ln (q+N) - N \ln N \\[0.3em]
 &= (N+q)\ln (N+q) - q\ln q - N \ln N
 \end{aligned}
 $$
@@ -704,31 +704,19 @@ $$
 \begin{aligned}
 \dfrac{1}{T} &= \left(\dfrac{\partial S}{\partial U}\right)_{N} = \dfrac{1}{\hbar \omega}\left(\dfrac{\partial S}{\partial q}\right)_N \\[0.3em] 
 &= \dfrac{k_B}{\hbar \omega}\left[\ln (N+q) + 1 - \ln q -1\right] = \dfrac{k_B}{\hbar \omega}\ln \dfrac{N+q}{q} \\[0.3em]
-&=  \dfrac{k_B}{\hbar \omega}\ln \left(\dfrac{\hbar \omega (N-1/2) + U }{U-\hbar \omega/2}\right)
+&=  \dfrac{k_B}{\hbar \omega}\ln \left(\dfrac{\hbar \omega N+ U }{U}\right)
 \end{aligned}
 $$
 
-($c$) ($b$) 로 부터 $e^{\hbar \omega/k_B T} = \dfrac{\hbar \omega (N-1/2) + U }{U-\hbar \omega/2}$ 이므로
+($c$) ($b$) 로 부터 $e^{\hbar \omega/k_B T} = \dfrac{\hbar \omega N + U }{U}$ 이므로
 
 $$
-U = \dfrac{\hbar \omega \left[N-\dfrac{1}{2} + \dfrac{1}{2} e^{\hbar \omega /k_BT}\right]}{e^{\hbar \omega /k_BT} -1}.
+U = \dfrac{\hbar \omega N}{e^{\hbar \omega /k_BT} -1}.
 $$
 
-($d$) 
+($d$) $\displaystyle C = \left(\dfrac{\partial U}{\partial T}\right)_N = - \dfrac{(\hbar \omega)^2}{k_B T^2}\dfrac{Ne^{\hbar \omega/k_B T}}{\left(e^{\hbar \omega/k_B T}-1\right)^2}$
 
-$$
-\begin{aligned}
-C = \left(\dfrac{\partial U}{\partial T}\right)_N = \dfrac{-\dfrac{(\hbar \omega)^2}{2k_BT^2}e^{\hbar \omega/k_BT}}{e^{\hbar \omega/k_B T}-1}  - \dfrac{-\dfrac{(\hbar \omega)^2}{k_BT^2} \left[N-\dfrac{1}{2} + \dfrac{1}{2} e^{\hbar \omega /k_BT} \right]e^{\hbar \omega/k_B T}}{\left(e^{\hbar \omega /k_BT} -1\right)^2}.
-\end{aligned}
-$$
-
-이며 $T \to \infty$ 조건에서
-
-$$
-C \to - \dfrac{\hbar \omega}{2T} + Nk_B \to N k_B
-$$
-
-이다. 
+이며 $T \to \infty$ 조건에서 $C \to Nk_B$ 이다.
 
 :::
 
@@ -1079,5 +1067,172 @@ $$
 
 :::
 
-## 확상 편형과 화학 포텐셜 {#sec-TD_diffusive_equillibrium_and_chemical_potential}
+## 확산 평형과 화학 포텐셜 {#sec-TD_diffusive_equillibrium_and_chemical_potential}
 
+### 확산 평형과 화학 포텐셜
+
+두 시스템이 열평형이면 온도가 같다. 두 시스템이 역학적 평형이면 압력이 같다. 시스템의 물질의 농도가 균일해저서 순 변화가 없을 때 **확산 평형 (diffusive equillibrium)** 이라고 한다. 이를 위해 아래와 같이 에너지 뿐만 아니라 입자까지 자유롭게 교환 할 수 있는 시스템을 생각하자. 물론 부피도 변화할 수 있는 시스템을 생각할 수 있지만 문제를 단순화하기 위해 일단 각 시스템의 부피는 일정하게 유지한다. 그리고 우선 두 시스템이 같은종류의 입자로 이루어졌다고 가정한다. 그리고 $U_\text{total}=U_A+U_B$ 와 $N_\text{total}=N_A+N_B$ 는 일정하다고 가정한다.
+
+![에너지와 입자를 교환할 수 있는 두 시스템](figures/schroeder/chap3/schroeder_3_18.png){#fig-TD_schroeder_3_18 width=350}
+
+총 엔트로피를 최대가 되어야 하므로,
+
+$$
+\left(\dfrac{\partial S_\text{total}}{\partial U_A}\right)_{N_A,\,V_A} = 0\qquad \text{and}\qquad \left(\dfrac{\partial S_\text{total}}{\partial N_A}\right)_{U_A,\,V_A} = 0
+$$ {#eq-TD_schroeder_3_52}
+
+이어야 한다. 부피가 바뀔 수 있다면 $(\partial S_\text{total}/\partial V_A)_{U_A,N_A}=0$ 조건도 포함되어야 한다. 첫번째 조건은 두 시스템의 온도가 동일하다는 조건이며 두번째 조건이 새로운 조건이다. $N_\text{total}$ 이 일정하다는 조건으로부터
+
+$$
+-T\dfrac{\partial S_A}{\partial N_A} = - T\dfrac{\partial S_B}{\partial N_B} \qquad \text{at equillibrium}.
+$$ {#eq-TD_schroeder_3_54}
+
+를 얻는다. 이 값은 매우 중요하며 다음과 같이 정의한다.
+
+::: {.callout-note icon="false"}
+
+#### **화학포텐셜**
+
+화학포텐셜 $\mu$ 는 다음과 같이 정의된다.
+
+$$
+\boxed{\mu = -T \left(\dfrac{\partial S}{\partial N}\right)_{U,V}.}
+$$ {#eq-TD_schroeder_3_56}
+
+:::
+
+즉 $A,\,B$ 두 시스템이 확산평형일 때 $\mu_A = \mu_B$ 이어야 한다. 화학포텐셜의 정의로부터 입자의 수가 증가할 때 엔트로피가 증가한다면 $\mu<0$ 이며, 입자의 수가 감소할 때 엔트로피가 증가한다면 $\mu > 0$ 이다. 따라서 입자는 화학 포텐셜이 높은 곳으로부터 낮은 곳으로 이동한다. 
+
+### 화학포텐셜을 포함하는 열역학적 항등식
+
+이제 열역학적 항등식을 입자 교환까지 포함하도록 확장 할 수 있다. 
+
+$$
+\begin{aligned}
+dS &= \left(\dfrac{\partial S}{\partial U}\right)_{V,N}\,dU + \left(\dfrac{\partial S}{\partial V}\right)_{U,N}\,dV + \left(\dfrac{\partial S}{\partial N}\right)_{U,V}\,dN \\[0.3em]
+&= \dfrac{1}{T}\,dU + \dfrac{p}{T}\,dV - \dfrac{\mu}{T}\,dN.
+\end{aligned}
+$$ {#eq-TD_schroeder_3_57}
+
+위 식은 아래와 같이 쓸 수 있다.
+
+$$
+dU = T\,dS - p\,dV + \mu \,dN.
+$$ {#eq-TD_schroeder_3_58}
+
+우리가 $-p\,dV$ 를 역학적 일이라고 하듯이 $\mu\,dN$ 을 화학적 일(chemical work) 이라고 부르기도 한다. 위 식을 통해 우리는 
+
+$$
+\mu = \left(\dfrac{\partial U}{\partial N}\right)_{S,\,V}
+$$ {#eq-TD_schroeder_3_60}
+
+을 얻는다. 즉 화학포텐셜은 엔트로피와 부피가 고정되어 있을 때 입자 하나를 추가하는데 필요한 에너지임을 알 수 있다. 일반적으로 엔트로피를 고정시킨 상태에서 입자를 추가하려면 에너지가 감소해야 하므로 이 경우 화학포텐셜은 음수이다. 그러나 입자를 추가하는데 입자에 포텐셜 에너지를 더해야 한다면 이 에너지는 화학 포텐셜에 영향을 준다. 이에 대해서는 @Schroeder2000introduction 7장에서 예를 들어 설명하고 있다.
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-TD_examples_chemical_potential_and_einstein_solid}
+
+#### 아인슈타인 고체와 화학 포텐셜
+
+3 개의 진동자와 3개의 에너지 단위를 가진 시스템을 생각하자. $\Omega_1 = 10$ (@eq-TD_schroeder_2_9) 이므로 $S_1=k_B\ln 10$ 이다. 진동자 하나를 추가하며 에너지 단위는 변하지 않는다면 $\Omega_2 = 20$ 이며 $S_2=k_B\ln 20$ 이다. 그러나 처음에서 진동자 하나를 추가하면서 에너지 단위를 하나 뺀다면 $\omega_3 = 10$ 으로 엔트로피가 변화하지 않는다. 이 때 화학포텐셜은
+
+$$
+\mu = \left(\dfrac{\Delta U}{\Delta N}\right)_{S} = - \hbar \omega
+$$
+
+이다. 여기서 주의할것은 입자의 개수가 작은 시스템에서는 입자 하나의 추가가 에너지의 미소 변화를 일으키지 않고 더 크고 이산적인 변화를 준다는 것이다. 
+
+:::
+
+</div>
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-TD_examples_chemical_potential_and_ideal_Gas}
+
+#### 이상기체와 화학 포텐셜
+
+이상기체의 경우 엔트로피는 자쿠르-테트로데 방정식 @eq-TD_schroeder_2_49 에 따라
+
+$$
+S = Nk_B \left[\ln \left(V\left(\dfrac{4\pi mU}{3h^2}\right)^{3/2}\right) - \dfrac{5}{2}\ln N + \dfrac{5}{2}\right].
+$$ {#eq-TD_schroeder_3_62}
+
+이며, 이로부터
+
+$$
+\begin{aligned}
+\mu &= - T k_B\left[\ln \left(V\left(\dfrac{4\pi mU}{3h^2}\right)^{3/2}\right) - \dfrac{5}{2}\ln N + \dfrac{5}{2}\right]  + \dfrac{5Tk_B}{2} \\[0.3em]
+&= - T k_B\left[\ln \left(\dfrac{V}{N}\left(\dfrac{4\pi mU}{3Nh^2}\right)^{3/2}\right) \right]
+\end{aligned}
+$$
+
+이다. 여기서 이상기체의 경우 $U=3Nk_B T/2$ 이므로 
+
+$$
+\mu = - T k_B\left[\ln \left(\dfrac{V}{N}\left(\dfrac{2\pi m k_B T}{h^2}\right)^{3/2}\right) \right].
+$$ {#eq-TD_schroedeR_3_63}
+
+상온, 1기압의 경우 $V/N = 4.2 \times 10^{-26}\, \text{m}^3$ 이며 헬륨의 경우 $(h^2/2\pi m k_B T)^{3/2} \approx 1.3 \times 10^{-31}\,\text{m}^3$ 이다. 이로부터 상온 1기압에서의 헬륨의 화학 포텐셜은 다음과 같다.
+
+$$
+\mu_{\text{He}} = - 0.32\, \text{eV},\qquad \text{at } 300\, \text{K},\, 1\,\text{atm}.
+$$ {#eq-TD_schroeder_3_64}
+
+고정된 온도에서 밀도가 증가할 경우, 즉 $V/N$ 이 감소할 경우 $\mu$ 는 증가한다. 즉 주변에 입자를 방출하려는 경항을 띈다.
+
+:::
+
+</div>
+
+이제 한종류가 아닌 여러종류의 입자가 교환되는 시스템을 생각하자. 각각의 입자는 각각의 화학 포텐셜을 가진다. 즉 $i$ 번째 종류의 입자의 화학포텐셜 $\mu_i$ 는 다음과 같이 정의된다.
+
+$$
+\mu_i = - T\left(\dfrac{\partial S}{\partial N_i}\right)_{U,V, N_1,\ldots,N_{i-1},N_{i+1},\ldots}.
+$$ {#eq-TD_schroeder_3_65}
+
+또한 열역학적 항등식은
+
+$$
+dU = T\,dS - p\,dV + \sum_i \mu_i \, dN_i
+$$ {#eq-TD_schroeder_3_66}
+
+이다. 여러 입자가 포함된 두 시스템의 확산 평형은 각각의 입자에 대한 화학 포텐셜이 동일한 상태이다. 
+
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_3_36}
+
+#### Schroeder 3.36
+
+$N,\,q \gg 1$ 인 아인슈타인 고체를 생각하자. 각각의 진동자가 별도의 입자라고 생각한다.
+
+($a$) 케미컬 포텐셜이 다음과 같음을 보여라.
+
+$$
+\mu = - k_B T \ln\left(\dfrac{N+q}{N}\right).
+$$ {#eq-TD_schroeder_prob_3_36_1}
+
+($b$) $N \gg q$ 일 때와 $N \ll q$ 일 때 에너지를 갖지 않은 입자가 증가할 때 $S$ 가 얼마나 증가하는지를 말하고 화학포텐셜에 대해 설명하라. 이 식은 직관적으로 말이 되는가?
+
+
+
+:::
+
+</div>
+
+::: {.solution}
+
+($a$) @exr-TD_schroeder_3_25 ($a$) 로부터 $S = (N+q)\ln (N+q) - q\ln q - N \ln N$ 이므로
+
+$$
+\mu = -T\left[\ln (N+q) + 1 -\ln N -1 \right]= -T \ln (N+q)/N.
+$$
+
+($b$) $N\gg q$ 이면 $\mu \approx -k_B T\dfrac{q}{N}$ 이며 0 에 근접한 음수 값을 가진다. 입자가 이미 너무 많고 에너지가 부족하기 때문에, 새로운 입자가 들어와도 엔트로피의 변화가 미미하며 화학적으로 매우 안정(둔감)해진 상태이다.
+
+$N\ll q$ 이면 $\mu \approx -k_B T \ln (q/N+1) \approx -k_B T \ln (q/N)$ 으로 매우 큰 음수값을 가진다. 시스템에 입자 하나를 추가할 때 엔트로피가 매우 크게 증가하며 입자를 적극적으로 받아들이려는 경항성을 갖게 된다.
+
+:::

@@ -464,12 +464,16 @@ window.Quarto = {
 <p><span class="math display">\[
 E_n = \hbar \omega \left(n + \dfrac{1}{2}\right),\qquad n=0,\,1,\,2,\ldots
 \]</span></p>
-<p>임을 안다. 아인슈타인은 고체를 양자 진동자로 모델링 했으며 앞으로 이를 <strong>아인슈타인 고체 (Einstein solid)</strong> 라고 하자.</p>
-<p><span class="math inline">\(N\)</span> 개의 1차원 진동자로 이루어진 시스템을 생각하자. <span class="math inline">\(i\)</span> 번째 진동자의 준위를 <span class="math inline">\(n_i\)</span> 라고 하자. <span class="math inline">\(n=n_1+\cdots + n_N\)</span> 이라고 하면 가능한 경우의 수 <span class="math inline">\(\Omega(N,\,n)\)</span> 은</p>
+<p>임을 안다. 아인슈타인은 고체를 양자 진동자로 모델링 했으며 몇몇 성공을 이루었다. 여기에서는 계산의 단순화를 위해 1차원 진동자로 이루어진 고체 모델에서 에너지를</p>
+<p><span class="math display">\[
+E_n = \hbar \omega n
+\]</span></p>
+<p>으로 정한 것을 <strong>아인슈타인 고체 (Einstein solid)</strong> 라고 한다.</p>
+<p><span class="math inline">\(N\)</span> 개의 1차원 진동자로 이루어진 아인슈타인 고체를 생각하자. <span class="math inline">\(i\)</span> 번째 진동자의 준위를 <span class="math inline">\(q_i\)</span> 라고 하자. <span class="math inline">\(q=q_1+\cdots + q_N\)</span> 이라고 하면 가능한 경우의 수 <span class="math inline">\(\Omega(N,\,q)\)</span> 은</p>
 <p><span id="eq-TD_schroeder_2_9"><span class="math display">\[
-\Omega (N,\,n) = \begin{pmatrix} n+N-1 \\ n \end{pmatrix} = \dfrac{(n+N-1)!}{n! (N-1)!}.
+\Omega (N,\,q) = \begin{pmatrix} q+N-1 \\ q \end{pmatrix} = \dfrac{(q+N-1)!}{q! (N-1)!}.
 \tag{23.1}\]</span></span></p>
-<p>이 때 <span class="math inline">\(n\)</span> 을 <span class="math inline">\(n\)</span> 개의 에너지 단위로 간주 할 수 있다.</p>
+<p>이 때 <span class="math inline">\(q\)</span> 를 <span class="math inline">\(q\)</span> 개의 에너지 단위로 간주 할 수 있다.</p>
 <p>다음과 같이 두 아인슈타인 고체가 에너지를 주고 받을 수 있다고 하자. 각각을 <span class="math inline">\(A,\,B\)</span> 라고 부르자(<a href="#fig-TD_schroeder_2_3" class="quarto-xref">그림&nbsp;<span>23.1</span></a>). 우선 <span class="math inline">\(A\)</span> 와 <span class="math inline">\(B\)</span> 사이의 에너지 교환이 <span class="math inline">\(A,\,B\)</span> 내부에서의 에너지 교환보다 매우 느리다고 가정하며 이를 <strong>약한 결합(weakly coupled) 조건</strong> 이라고 한다. 그렇다만 <span class="math inline">\(A\)</span> 와 <span class="math inline">\(B\)</span> 의 에너지 <span class="math inline">\(U_A,\,U_B\)</span> 는 매우 느리게 변하며 충분히 작은 시간 스케일에서 <span class="math inline">\(U_A,\,U_B\)</span> 는 고정되어 있다고 볼 수 있다. 그리고 (일시적으로 고정된) <span class="math inline">\(U_A\)</span> 와 <span class="math inline">\(U_B\)</span> 에 의해 정해지는 이 두 고체의 결합된 상태를 <strong>거시상태 (macrostate)</strong> 라고 부르기로 하자. 그러나 충분히 큰 시간 스케일에서는 <span class="math inline">\(U_A,\,U_B\)</span> 는 변하며 <span class="math inline">\(U_A,\,U_B\)</span> 각각에 허용된 값에 대한 모든 가능한 거시항태를 따져야 한다. 물론 <span class="math inline">\(U_\text{total} = U_A+U_B\)</span> 는 고정되어 있다.</p>
 <div id="fig-TD_schroeder_2_3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
