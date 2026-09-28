@@ -37,7 +37,7 @@ $$ {#eq-TD_schroeder_3_3}
 
 ::: {.callout-note icon="false"}
 
-#### 통계역학적 온도
+#### **통계역학적 온도**
 
 온도는 다음과 같이 정의된다.
 $$
@@ -213,7 +213,10 @@ $$
 C_V = \dfrac{3}{2}Nk_B
 $$ {#eq-TD_schroeder_3_16}
 
-이다. 두가지 경우 정적 열용량은 온도에 무관하며 $\frac{1}{2}Nk_B$ 에 **제곱항 자유도(quadratic degree of freedom)** 개수를 곱한 값이다. 이 두 경우 모두 밀도가 낮은 이상기체나 충분히 고온에서의 고체의 경우 실험값과 잘 일치한다. 
+이다. 두가지 경우 정적 열용량은 온도에 무관하며 $\frac{1}{2}Nk_B$ 에 **제곱항 자유도(quadratic degree of freedom)** 개수를 곱한 값이다$^2$. 이 두 경우 모두 밀도가 낮은 이상기체나 충분히 고온에서의 고체의 경우 실험값과 잘 일치한다. [$^2$ 등분배 정리(equipartition theorem) 의 결과이다.]{.aside}
+
+**고체와 액체의 경우 정적 비열과 정압 비열의 차이가 극히 미미하므로 일반적으로 구분하지 않는다.**. 고체의 경우 각 원자마다 6개의 자유도가 존재하며 따라서 고체를 이루는 $N$ 개의 원자에 대한 열용량은 $\frac{6}{2}Nk_B = 3Nk_B$ 이다. 낮은 온도에서는 잘 안맞지만 고온에서는 비교적 잘 맞으며 이를 **뒬롱-쁘디 법칙 (Dulong–Petit law)** 이라고 한다.
+
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -610,12 +613,11 @@ DPPH 와 같은 이상적인 2상태 상자성 물질을 생각하자. 여기서
 99% 자화를 얻기 위해서는 $\mu_B B/k_B T\approx 2.65$ 이어야 하며 자기장을 4.2배 증가시킨 8.65 T 로 올리거나 온도를 0.5 K 로 낮추어야 한다. 
 :::
 
-
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-TD_schroeder_3_22}
+::: {#exr-TD_schroeder_3_23}
 
-#### Schroeder 3.22
+#### Schroeder 3.23
 
 2상태 상자성의 엔트로피를 온도의 함수로 표현하면 $x=\mu B/k_BT$ 에 대해
 
@@ -636,10 +638,446 @@ $$
 $$
 \begin{aligned}
 S/k_B &= N \ln N - \dfrac{N}{2}(1+\tanh x)  \ln  \dfrac{N}{2}(1+\tanh x)  \\[0.3em]
-&\qquad - \dfrac{N - \tanh x}{2}\ln  \dfrac{N}{2}(1-\tanh x)
+&\qquad - \dfrac{N}{2} (1- \tanh x)\ln  \dfrac{N}{2}(1-\tanh x) \\[0.3em]
+&= \underbrace{N \ln N - N\ln N/2}_{\Large = N \ln 2} - \dfrac{N}{2} \ln \underbrace{(1+\tanh x)(1-\tanh x)}_{=\Large 1/\cosh^2 x}- \dfrac{N\tanh x}{2}\ln \underbrace{\dfrac{1+\tanh x}{1-\tanh x}}_{\Large = e^{2x}} \\[0.3em]
+&= N \ln 2 + N \ln \cosh x - N x\tanh x = N[\ln 2 \cosh x - x\tanh x].
 \end{aligned}
 $$
 
+**1.** $T\to 0$ 극한은 $x\to +\infty$ 극한이며 $(2\cosh x) \to x$, $\tanh x \to 1$ 이므로
+
+$$
+\lim_{x\to \infty} \dfrac{S}{k_B} = 0.
+$$
+
+**2.** $T \to \infty$ 극한은 $x\to 0$ 극한이며 $(2 \cos x) \to 2$ $\tanh x \to 0$ 이므로
+
+$$
+\lim_{x\to 0} \dfrac{S}{k_B} = N \ln 2.
+$$
 :::
 
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_3_25}
+
+#### Schroeder 3.25
+
+@exr-TD_schroeder_2_18 에서 $N$ 개의 진동자로 이루어진 아인슈타인 고체가 $q$ 단위의 에너지를 가질 때 
+
+$$
+\Omega (N,\,q) \approx \left(\dfrac{q+N}{q}\right)^q \left(\dfrac{q+N}{N}\right)^N
+$$
+
+임을 보였다. 
+
+($a$) 위 식으로 부터 시작하여 아인슈타인 고체의 엔트로피를 $N$ 과 $q$ 의 함수로 구하라 위 식에서 빠진 백터가 $N$ 과 $q$ 가 클 때 엔트로피에 영향을 주지 않는 이유를 논하라
+
+($b$) ($a$) 의 결과를 이용하여 아인슈타인 고체의 온도를 에너지의 함수로 구하라. $U=(q+1/2)\hbar \omega$ 이다. 
+
+($c$) ($b$) 를 이용하여 에너지를 온도의 함수로 나타내라. 
+
+($d$) $T\to \infty$ 극한에서 $C=Nk_B$ 임을 보여라. 이 결과는 우리가 기대할 만한 것인지 설명하라.
+
+($e$) ($f$) 는 생략.
+:::
+
+</div>
+
+::: {.solution}
+
+($a$) 스털링 근사를 사용하면
+
+$$
+\begin{aligned}
+S = k_b \ln \Omega &= q\ln (q+N) - q\ln q + N \ln (q+N) - N \ln N \\[0.3em]
+&= (N+q)\ln (N+q) - q\ln q - N \ln N
+\end{aligned}
+$$
+
+이다. @eq-TD_exr_schroeder_2_18 에서 분모부분을 엔트로피로 바꾸면 $\dfrac{1}{2}\ln q(q+N)/N$ 인데 $q,\,N$ 이 모두 크다면 나머지 항에 비해 매우 작기때문에 무시 할 수 있다. 
+
+($b$)
+
+$$
+\begin{aligned}
+\dfrac{1}{T} &= \left(\dfrac{\partial S}{\partial U}\right)_{N} = \dfrac{1}{\hbar \omega}\left(\dfrac{\partial S}{\partial q}\right)_N \\[0.3em] 
+&= \dfrac{k_B}{\hbar \omega}\left[\ln (N+q) + 1 - \ln q -1\right] = \dfrac{k_B}{\hbar \omega}\ln \dfrac{N+q}{q} \\[0.3em]
+&=  \dfrac{k_B}{\hbar \omega}\ln \left(\dfrac{\hbar \omega (N-1/2) + U }{U-\hbar \omega/2}\right)
+\end{aligned}
+$$
+
+($c$) ($b$) 로 부터 $e^{\hbar \omega/k_B T} = \dfrac{\hbar \omega (N-1/2) + U }{U-\hbar \omega/2}$ 이므로
+
+$$
+U = \dfrac{\hbar \omega \left[N-\dfrac{1}{2} + \dfrac{1}{2} e^{\hbar \omega /k_BT}\right]}{e^{\hbar \omega /k_BT} -1}.
+$$
+
+($d$) 
+
+$$
+\begin{aligned}
+C = \left(\dfrac{\partial U}{\partial T}\right)_N = \dfrac{-\dfrac{(\hbar \omega)^2}{2k_BT^2}e^{\hbar \omega/k_BT}}{e^{\hbar \omega/k_B T}-1}  - \dfrac{-\dfrac{(\hbar \omega)^2}{k_BT^2} \left[N-\dfrac{1}{2} + \dfrac{1}{2} e^{\hbar \omega /k_BT} \right]e^{\hbar \omega/k_B T}}{\left(e^{\hbar \omega /k_BT} -1\right)^2}.
+\end{aligned}
+$$
+
+이며 $T \to \infty$ 조건에서
+
+$$
+C \to - \dfrac{\hbar \omega}{2T} + Nk_B \to N k_B
+$$
+
+이다. 
+
+:::
+
+
 ## 역학적 평형과 압력 {#sec-TD_mechanica_equillibrium_and_pressure}
+
+### 통계역학적 압력 {#sec-TD_definition_of_pressure_in_statistical_mechanics}
+
+![서로 에너지와 부피를 교환 할 수 있는 두 시스템. 전체 에너지와 부피는 고정이다.](figures/schroeder/chap3/schroeder_3_13.png){#fig-TD_schroeder_3_13 width=350}
+
+앞서 온도를 정의할 땐 계의 부피를 고정시키고 온도를 정했다. 이제 부피가 변할 수 있는 상태에서 생각해보자. @fig-TD_schroeder_3_13 와 같이 움직이는 파티션으로 분할된, 에너지와 부피를 서로 교환하지만 전체 에너지와 전체 부피는 고정된 두 시스템 $A,\,B$ 를 생각하자. 평행 조건에서 전체 엔트로피가 최대가 되므로
+
+$$
+\dfrac{\partial S_\text{total}}{\partial U_A} =0,\qquad \dfrac{\partial S_\text{total}}{\partial V_A} = 0 
+$$ {#eq-TD_schroeder_3_36}
+
+이어야 한다. $U_\text{total} = U_A+U_B$, $V_\text{total}=V_A+V_B$ 는 변하지 않기 때문에
+
+$$
+0 = \dfrac{\partial S_\text{total}}{\partial V_A} = \dfrac{\partial S_A}{\partial U_A}+\dfrac{\partial S_B}{\partial U_A} = \dfrac{\partial S_A}{\partial U_A} - \dfrac{\partial S_B}{\partial U_B}
+$$ {#eq-TD_schoeder_3_37}
+
+이므로
+
+$$
+\dfrac{\partial S_A}{\partial V_A} = \dfrac{\partial S_B}{\partial V_B}, \qquad \text{at equillibrium}.
+$$ {#eq-TD_schroedeR_3_38}
+
+우리는 경험적으로 역학적 평형에서는 압력이 같아야 한다는 것을 알며, @eq-TD_schroedeR_3_38 의 편미분은 아마도 압력과 밀접한 관련이 있을 것이다. 엔트로피의 단위는 $\text{J/K}$ 이므로 $\partial S/\partial V$ 의 단위는 $[\text{N}\cdot \text{m}^2\text{/K}]$ 이다. 온도 단위의 무언가를 곱하면 압력의 단위인 $[\text{N}/\text{m}^2]$ 가 된다. 우리는 평형상테에서 온도가 같다는 것을 알기 때문에 그냥 온도를 곱하면, 평형 상태에서 $T(\partial S_A/\partial V_A) = T(\partial S_B/\partial V_B)$ 역시 성립한다는 것을 안다. 이로부터 통계역학적 압력을 다음과 같이 정의한다.
+
+::: {.callout-note icon="false"}
+
+#### **통계역학적 압력**
+
+압력은 다음과 같이 정의된다.
+
+$$
+\boxed{ p := T \left(\dfrac{\partial S}{\partial V}\right)_{U,\,N}.}
+$$ {#eq-TD_schroeder_3_39}
+
+:::
+
+이상기체의 경우 이 정의가 이전까지의 정의와 일치하는지 알아보자. 우리는 이상기체의 경우 @eq-TD_schroeder_2_41 로부터
+
+$$
+S_\text{ideal gas}= Nk_B \ln V + \dfrac{3}{2}Nk_B \ln U + k_B \ln \phi (N)
+$$ {#eq-TD_schroeder_3_41}
+
+이며 @eq-TD_schroeder_3_39 로부터 
+
+$$
+p = T \dfrac{\partial S_\text{ideal gas}}{\partial V} = \dfrac{Nk_B T}{V}
+$$ {#eq-TD_schroeder_3_42}
+
+이다. 즉 우리는 이상기체 상태방정식을 얻었다.
+
+### 열역학적 항등식 {#sec-TD_thermodynamic_identity}
+
+온도와 압력에 대한 통계역학적 정의를 아우르는 멋진 방정식을 유도해보자. 우선 에너지와 부피가 $\Delta U$, $\Delta V$ 만큼 아주 작게 변화하는 과정을 생각하자. 그렇다면 엔트로피는 얼마나 변하는가? 이를 위해 부피가 일정하게 유지되면서 에너지만 변하는 1 단계와 에너지가 일정하게 유지되면서 부피만 변하는 2단계로 분리한다. 그렇다면 엔트로피의 총 변화 $\Delta S$ 는 1단계의 엔트로피 변화 $(\Delta S)_1$ 과 2단계에서의 엔트로피 변화 $(\Delta S)_2$ 의 합이며 다음과 같이 쓸 수 있다.
+
+$$
+\Delta S = \left(\dfrac{\Delta S}{\Delta U}\right)_V\Delta U + \left(\dfrac{\Delta S}{\Delta V}\right)_2 \Delta V.
+$$ 
+
+위 식은 $\Delta U,\,\Delta V$ 가 매우 작을 때 온도와 압력의 통계역학적 정의롤 통해 다음과 같이 쓸 수 있다.
+
+$$
+dS = \left(\dfrac{\partial S}{\partial U}\right)_V dU + \left(\dfrac{\partial S}{\partial V}\right)_U dV = \dfrac{1}{T}\,dU + \dfrac{p}{T}\,dV.
+$$ {#eq-TD_schroeder_3_45}
+
+이 식을 변형하여 다음과 같은 항등식을 얻을 수 있는데 이를 **열역학적 항등식 (thermodynamic identity)** 라고 한다.
+
+$$
+\boxed{dU = T\,dS - p\,dV.}
+$$ {#eq-TD_schroeder_3_46}
+
+이 식은 $T$ 와 $p$ 가 잘 정의되며 다른 관계된 변수들, 예를 들면 입자의 개수 같은 것들이 변화하지 않을 때 항상 성립한다.
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-TD_examples_of_thermodynamic_identity}
+
+#### 열역학적 항등식의 활용
+
+@eq-TD_schroeder_3_46 로 부터 다음과 같은 관계를 얻을 수 있다.
+
+$$
+T=\left(\dfrac{\partial U}{\partial S}\right)_V,\qquad p = - \left(\dfrac{\partial U}{\partial V}\right)_S.
+$$ {#eq-TD_exms_thermodynamic_identity_1}
+
+온도에 대한 식은 온도에 대한 정의 @eq-TD_schroeder_3_5 로부터 쉽게 납득 가능하다. 그러나 압력은 @eq-TD_schroeder_3_39 와 비교했을 때 사뭇 다르지만 위 식 역시 등엔트로피 과정, 즉 단열과정(+가역과정) 에서 $dU = -pdV$ 이므로 위 식이 성립한다는 것을 알 수 있다.
+:::
+
+</div>
+
+### 엔트로피와 열을 다시 보기 {#sec-TD_entropy_and_heat_revisited}
+
+#### **열역학적 항등식과 열역학 제 1 법칙** 
+
+열역학적 항등식(@eq-TD_schroeder_3_46) 과 열역학 제 1 법칙 
+
+$$
+dU = Q+W
+$$ {#eq-TD_schroeder_3_47}
+
+매우 닮았기 때문에 $Q=T\,dS$, $W=-p\,dV$ 로 연결된다고 생각할 수 있다. 그러나 이 관계는 항상 타당한 것은 아니다. 이것이 타당한 경우는 아래의 세가지 조건이 충족된 경우이다.
+
+  1. 부피가 준정적으로(quasistatically) 변화할 때, 즉 압력이 시스템 전체로 항상 균일할 때,
+  2. 부피의 변화 이외에 시스템이 하거나 받는 일이 없을 때,
+  3. 입자의 수 같은 다른 관련된 변수가 고정되었을 때.
+
+그렇다면 $W=-p\,dV$ 이며 따라서 @eq-TD_schroeder_3_46 로부터 
+
+$$
+Q=T\,dS \qquad (\text{quasistatic}).
+$$ {#eq-TD_schroeder_3_48} 
+
+임을 알게 된다. 위의 제한된 조건 하에서 시스템의 엔트로피 변화는 $Q/T$ 이며 이는 과정 가운데 $W\ne 0$ 일 때도 마찬가지이다. 엔트로피가 변하지 않는 과정을 **등엔트로피 과정 (isentropic process)** 라고 하는데 **등엔트로피 과정은 단열과정이며 동시에 준정적 과정임을 의미한다**.
+
+#### **준정적 과정이 아닌 과정**
+
+![준정적 과정이 아닌 부피 변화 : 고속 압축과 자유 팽창](figures/schroeder/chap3/schroeder_3_16.png){#fig-TD_schroeder_3_16 width=400}
+
+우리에게 친숙한 많은 과정이 근사적으로 준정적이지만 중요한 반대사항을 기억해야 한다. 
+
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-TD_examples_non_quasistatic_process_1}
+
+#### 고속 압축
+
+@fig-TD_schroeder_3_16 의 왼쪽의 경우와 같이 기체로 가득찬 실린더의 피스톤을 매우 강하게 쳐서 피스톤이 내부의 기체 분자보다 훨씬 빠르게 움직인다고 생각하자. 그렇다면 피스톤 내부 표면 바로 앞에 기체 분자들이 밀집하게 되며 피스톤을 밀어내는 강한 힘이 작용한다. 피스톤이 매우 짧은 거리만 움직이고 멈췄다고 하자. 모든 것이 정착한 뒤에는 압력이 매우 조금 증가할 것이다.  
+
+여기서 준정적으로 피스톤을 밀었을 때와 수행한 일을 비교해보자. 피스톤을 빠르게 밀었을 경우 피스톤 표면에 국소적으로 형성되는 압력을 $p_\text{face}$ 이라고 하고 준정적 과정에서의 압력을 $p_\text{quasi}$ 라고 하자. $p_{\text{face}} > p_{\text{quasi}}$ 이며 
+
+$$
+p_{\text{face}} > p_{\text{quasi}} \quad\Rightarrow\quad W = \int p_{\text{face}}\,|dV| > p_{\text{quasi}}|dV| = -p_\text{quasi}\,dV
+$$
+
+열역학 항등식 $dU = T\,dS - p\,dV$ 는 상태함수들 사이의 관계라 항상 성립하며 열역학 제1법칙 $dU = Q + W$ 도 항상 성립한다. 이 둘을 빼면 $T\,dS - Q = W + p\,dV > 0$ 이며, 따라서
+
+$$
+dS > \dfrac{Q}{T} \qquad (\text{when }W>-p\,dV).
+$$ {#eq-TD_schroeder_3_51}
+
+
+즉 일이 $-p\,dV$ 를 초과한 만큼 엔트로피가 열로 설명되는 양 $Q/T$ 보다 더 늘어난다. 물리적으로는 피스톤 면에 몰린 층이 받은 여분의 에너지가 처음엔 압축파/음파 같은 조직된 운동이었다가 곧 열운동으로 흩어진다는 의미이다. 즉 시스템 내부에서 일이 열로 산일되는(dissipation) 과정이고, 이게 $Q$ 없이 엔트로피가 생기는 메커니즘이다. 단열 조건($Q=0$)이면 준정적일 땐 $dS=0$ 인데 빠르게 밀면 $dS>0$ 이 되는 이유가 바로 이것이다.
+
+:::
+
+</div>
+
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-TD_examples_non_quasistatic_process_2}
+
+#### 진공으로의 자유팽창
+
+@fig-TD_schroeder_3_16 의 오른쪽 경우와 같이 두 부분으로 분할된 방 한쪽은 기체로, 한쪽은 진공이라고 하자. 그리고 둘을 분리시키는 분리판에 균열이 생겨 기체 분자가 진공으로 들어 갈 수 있다고 하자. 이 과정에서 열도 없고 일도 없다. 따라서 $\Delta U =0$ 이다. 하지만 열역학적 항등식(@eq-TD_schroeder_3_46) 으로부터 $T\,dS = p\,dV > 0$ 이 되므로 $\Delta S > 0$ 이다. 
+
+:::
+
+</div>
+
+앞서 본 두가지 경우 모두 열의 흐름에 추가로, 혹은 열의 흐름 없이 새로운 엔트로피가 생성되었다. 열역학 제 2 법칙은 일단 새로운 엔트로피가 생성되면 그것이 사라질 수 없다는 것을 말해준다.
+
+#### **정압 비열**
+
+
+
+
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_3_28}
+
+#### Schroeder 3.28
+
+상온 1기압의 1 리터의 공기가 일정한 압력에서 부피가 두배가 되었다. 이 과정에서 증가하는 엔트로피를 계산하라.
+
+:::
+</div>
+
+::: {.solution}
+
+$pV = \nu RT$ 로부터 $\nu = 0.041$ 이다. 
+
+이원자 1몰의 분자의 정압 열용량 $C_p = \dfrac{7}{2}R$ 이며 $dS = (C_p/T)\,dT$ 이다. 따라서 $\Delta S = C_p\ln (T_f/T_i)$ 이다. 이상기체는 압력이 일정할 때 온도와 부피가 비례하므로 부피가 2배가 되면 온도 역시 2배가 된다. 따라서 $\Delta S = 0.82\,\text{J/K}$.
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_3_29}
+
+#### Schroeder 3.29
+
+H<sub>2</sub>O 의 엔트로피를 고정된 압력에서 온도의 함수로 정성적으로 스케치하라. 어디가 고체이고, 액체이며, 기체인지 표시하라. 그래프의 각각의 모습을 간략하게 설명하라.
+
+:::
+</div>
+
+::: {.solution}
+
+열역학적 항등식 @eq-TD_schroeder_3_45 을 보자. 우선 정리하면
+
+1. 고체와 액체의 경우 정적비열과 정압비열의 차이가 매우 작아 구분하지 않고 $C$ 로 표기한다
+
+2. 고체의 경유 뒬롱-쁘띠 법칙에 의해 $C_p \approx 3Nk_B$ 이다. 주로 고온에서 성립하지만 우리가 다른 비열을 배운것도 아니고.
+
+3. 잠열이 존재하며 따라서 어는점과 끓는점에서 엔트로피가 불연속적이다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_3_33}
+
+#### Schroeder 3.33
+
+열역학적 항등식으로부터 열용량에 대한 다음 식을 유도하라.
+
+$$
+C_V = T\left(\dfrac{\partial S}{\partial T}\right)_V.
+$$ {#eq-TD_exr_schroeder_3_33_1}
+
+엔탈피 $H=U+PV$ 를 이용하여 $C_p$ 에 대한 유사한 식을 구하라.
+
+:::
+</div>
+
+::: {.proof}
+
+$U$ 와 $S$ 를 각각 $T$ 와 $V$ 의 함수로 보면
+
+$$
+dU = \left(\dfrac{\partial U}{\partial T}\right)_V\, dT + \left(\dfrac{\partial U}{\partial V}\right)_T \,dV,\qquad dS = \left(\dfrac{\partial S}{\partial T}\right)_V\, dT + \left(\dfrac{\partial S}{\partial V}\right)_T \,dV
+$$
+
+이고 열역학적 항등식(@eq-TD_schroeder_3_46) 과 비교하면
+
+$$
+\begin{aligned}
+dU &= \left(\dfrac{\partial U}{\partial T}\right)_V\, dT + \left(\dfrac{\partial U}{\partial V}\right)_T \,dV, \\[0.3em]
+T\,dS - p\,dV &= T\left(\dfrac{\partial S}{\partial T}\right)_V\, dT + \left[T\left(\dfrac{\partial S}{\partial V}\right)_T -p\right]\,dV
+\end{aligned}
+$$
+
+이다. 따라서 @eq-TD_exr_schroeder_3_33_1 가 성립한다. 또한 문제로 제시하지 않았지만 다음 관계도 얻는다.
+
+$$
+\left(\dfrac{\partial U}{\partial V}\right)_T = T\left(\dfrac{\partial S}{\partial V}\right)_T -p.
+$$ {#eq-TD_exr_schroeder_3_33_2}
+
+엔탈피 $H=U+pV$ 에 대해
+
+$$
+dH = dU + p\,dV + V\,dp = T\,dS + V\,dp
+$$
+
+이며
+
+$$
+C_p = \left(\dfrac{\partial H}{\partial T}\right)_p = T \left(\dfrac{\partial S}{\partial T}\right)_p
+$$
+
+이다. 
+
+::: {.callout-tip icon="false"}
+
+#### 편미분에 대한 수학적 코멘트
+
+$df=x\,dy$ 라는 식이 주어졌다고 하자. $f,\,y$ 가 매개변수 $x$ 로 매개화 되어 있다면 $df = f'(x)\,dx,\, dy = y'(x)\,dy$ 이므로
+
+$$
+f'(x)\,dx = xy'(x)\,dx
+$$
+
+이며 따라서 $f'= xy'$ 이다. 앞에서는 $dU = TdS$ 를 좀 복잡하게 계산했지만 이를 이용하면 $(\partial U/\partial T)_V = T(\partial S/\partial T)_V$ 임을 쉽게 알 수 있다.
+
+:::
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-TD_schroeder_3_34}
+
+#### Schroeder 3.34
+
+고무와 같은 고분자는 매우 긴 분자들로 이루어졌으며, 보통 매우 높은 엔트로피를 가진 배치로 얽혀 있다. 매우 초보적인 고무줄에 대한 모델은 $N$ 개의 링크를 갖고 각각의 길이가 $l$ 인 사슬로 기술한다(@fig-TD_schroeder_prob_3_34). 각각의 링크는 왼쪽 혹은 오른쪽의 두가지 상태만을 가질 수 있다. 총 길이 $L$ 은 첫번째 링크의 시작점과 마지막 링크 끝점 사이의 길이이다.
+
+![고무줄에 대한 초보적 모델 : 고무줄을 양 끝단만 연결된 사슬로 기술함](figures/schroeder/chap3/schroeder_prob_3_34.png){#fig-TD_schroeder_prob_3_34 width=400}
+
+($a$) 오른쪽을 향하는 링크의 개수를 $N_R$ 이라고 할 때, 이 시스템의 엔트로피를 $N$ 과 $N_R$ 로 표기하라.
+
+($b$) $L$ 을 $N$ 과 $N_R$ 로 표기하라.
+
+($c$) 이 모델과 같은 1차원 계에서 길이 $L$ 은 3차원 시스템의 부피 $V$ 와 유사하다. 또한 압력 $p$ 는 장력 $F$ 로 대체 될 수 있다. 고무줄이 안쪽으로 당겨질 때 $F>0$ 으로 잡고 이 시스템에 대한 적절한 열역학적 항등식을 구하고 설명하라.
+
+($d$) 열역학적 항등식을 이용하여 장력 $F$ 를 엔트로피의 편미분으로 구하라. 이 표현식으로부터 장력을 $L,\,T,\,N,\,l$ 로 표현하라.
+
+($e$) $L\ll Nl$ 일 때 장력은 $L$ 에 직접적으로 비례함을 보여라 (후크의 법칙).
+
+($f$) 장력의 온도의존성을 논하라. 고무줄의 온도를 올리면 고무줄은 늘어나는가 수축되는가? 이것은 납득할 만 한가?
+
+($g$) 길게 늘어진 고무줄을 갑자기 잡아당긴다면 온도는 증가할까? 아니면 감소할까? 
+
+:::
+</div>
+
+::: {.solution}
+
+($a$) $S= k_B \ln (N!/[(N_R)!(N-N_R)!])$ 이므로 스털링 근사를 사용하면
+
+$$
+S=k_B \left[N\ln N - N_R \ln N_R - (N-N_R)\ln (N-N_R)\right]
+$$ {#eq-exr_TD_schroeder_3_34_1}
+
+($b$) $L = l + N_Rl - (N-N_R)l= (1+2N_R - N)l \approx (2N_R-N)l$.
+
+($c$) $dU = T\,dS + FdL$ 혹은 $dS = (1/T)dU - (F/T)dL$
+
+($d$) ($c$) 의 두번째 식으로부터 $\displaystyle F= -T\left(\dfrac{\partial S}{\partial L}\right)_U$. ($b$) 로부터 $dL = 2N_R l$ 이므로 $\displaystyle F=-\dfrac{T}{2l}\left(\dfrac{\partial S}{\partial N_R}\right)_U$. @eq-exr_TD_schroeder_3_34_1 로부터
+
+$$
+\begin{aligned}
+F=-\dfrac{T}{2l}\left(\dfrac{\partial S}{\partial N_R}\right)_U &= -\dfrac{Tk_B}{2l}\ln \left(\dfrac{N-N_R}{N_R}\right) .
+\end{aligned}
+$${#eq-exr_TD_schroeder_3_34_2}
+
+($e$) $N_R = (N+L/l)/2$, $N-N_R = (N-L/l)/2$ 이며 $N\gg L/l$ 이다. $|\delta| \ll 1 \implies \ln (1+\delta ) \approx \delta$ 임을 이용하면 
+
+$$
+\begin{aligned}
+F= -\dfrac{Tk_B}{2l}\ln \left(\dfrac{N-N_R}{N_R}\right) = -\dfrac{Tk_B}{2l}\ln \left(\dfrac{N-L/l}{N+L/l}\right) = \dfrac{Tk_B}{Nl^2}L
+\end{aligned} 
+$$
+
+($f$) @eq-exr_TD_schroeder_3_34_2 로 부터 $N_R > N/2$ 이면 $F \propto T$, $N_R<N/2$ 이면 $F \propto -T$ 이다. 즉 장력은 $N_R=N/2$ 가 되도록 작용하며, 온도가 높을수록 장력이 커진다. 
+
+($g$) 열역학적 항등식 $dU = T\,dS + F\,dL$ 에서 $dL>0$ 이며 열교환이 없으므로 $dS=0$ 이다. 따라서 $dU$ 가 증가하며 이로부터 온도가 증가한다는 것을 알 수 있다.
+
+:::
+
+## 확상 편형과 화학 포텐셜 {#sec-TD_diffusive_equillibrium_and_chemical_potential}
+

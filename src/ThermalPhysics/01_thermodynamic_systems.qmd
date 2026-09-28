@@ -349,7 +349,7 @@ $$ {#eq-TD_fermi_25}
 
 독립변수로 $T,\,V$ 를 선택할 때 이상기체의 에너지 $U=U(T)$ 이며 $V$ 와는 독립적임이라는 것은 우선 Joule 에 의해 실험적으로 확인되었으며, 이론적으로는 열역학 제 2 법칙을 통해 보일 수 있다. Joule 의 실험은 아래와 같은 장치에서 이루어졌다.
 
-![빨간색-밸브, 파란색-온도계](figures/joule_exp/joule_exp.png){#fig-TD_joule_exp width=300}
+![빨간색-밸브, 파란색-온도계](figures/fermi/joule_exp/joule_exp.png){#fig-TD_joule_exp width=300}
 
 두개의 챔버 $A,\,B$ 로 이루어진 콘테이너가 그림과 같이 열량계 속에 잠겨 있다. $A,\,B$ 는 벨브로 연결되어 있다. $A$ 는 가스로 차 있고 $B$ 는 진공상태에서 밸브는 잠겨 있다. 열평형 상태에 도달한 후 온도 $T_1$ 을 재고 밸브를 열고 나서 평형상태에 도달한 후 온도 $T_2$ 를 쟀을 때 Joule 은 $T_1$ 과 $T_2$ 가 거의 차이가 없음을 확인하였다. 이상기체의 경우 $T_1=T_2$ 일 것이다.
 
@@ -462,7 +462,7 @@ $${#eq-TD_relations_2_in_adiabatic_revirsible_process_of_ideal_gas}
 
 단열 가역과정이 아닌 등온과정에서는 $pV=\text{constant}$ 가 성립한다는 것을 안다. 
 
-![단열과정과 등온과정](figures/adiabatic_process/adiabatic.png){#fig-TD_adiabatic_and_isothermal_process width=350}
+![단열과정과 등온과정](figures/fermi/adiabatic_process/adiabatic.png){#fig-TD_adiabatic_and_isothermal_process width=350}
 
 
 ### 잠열 
@@ -751,13 +751,13 @@ $$
 고체나 액체의 열용량은 대부분 일정한 압력 상태에서 측정된다. 왜인지 보이기 위해 여기서는 $T$ 의 변화에 따른 $V$ 의 변화를 없에기 위한 압력값을 구해보자.
 
 
-($a$) 물질의 **열팽창 계수 (thermal expansion coefficient)** $\beta$ 는 다음과 같이 정의된다.
+($a$) 물질의 **열팽창 계수 (thermal expansion coefficient)** $\alpha$ 는 다음과 같이 정의된다.
 
 $$
-\beta := \dfrac {1}{V}\left(\dfrac{\partial V}{\partial T}\right)_p.
+\alpha := \dfrac {1}{V}\left(\dfrac{\partial V}{\partial T}\right)_p.
 $$ {#eq-TD_definition_of_thermal_expansion_coefficient}
 
-압력을 일정하게 유지하면서 물질을 압축시킬 때 물질의 부피의 변화 $dV_1$ 을 $dT$ 와 $\beta$ 를 이용하여 기술하라.
+압력을 일정하게 유지하면서 물질을 압축시킬 때 물질의 부피의 변화 $dV_1$ 을 $dT$ 와 $\alpha$ 를 이용하여 기술하라.
 
 ($b$) **등온 압축률 (isothermal compressibility)** $\kappa_T$ 는 다음과 같이 정의된다.
 
@@ -767,7 +767,7 @@ $${#eq-TD_definition_of_isothermal_compressibility}
 
 온도를 일정하게 유지하면서 물질을 약간 압축시킬 때의 부피 변화 $V_2$ 를 $dp$ 에 대해 표현하라.
 
-($c$) ($b$) 에 의한 압축에 의해 $(a)$ 에 의한 팽창이 상쇄되도록 합축했다고 하자. 그렇다면 이 경우 $(dp)/(dT)=\left(\partial p/\partial T\right)_V$ 이다. 이 편미분을 $\beta,\,\kappa_T$ 로 표현하라. 이 경우 
+($c$) ($b$) 에 의한 압축에 의해 $(a)$ 에 의한 팽창이 상쇄되도록 합축했다고 하자. 그렇다면 이 경우 $(dp)/(dT)=\left(\partial p/\partial T\right)_V$ 이다. 이 편미분을 $\alpha,\,\kappa_T$ 로 표현하라. 이 경우 
 
 $$
 \left(\dfrac{\partial p}{\partial T}\right)_V = - \dfrac{\left(\partial V/\partial T\right)_p}{\left(\partial V/\partial p\right)_T}
@@ -775,7 +775,7 @@ $$ {#eq-TD_cyclic_relation_of_partial_derivatives}
 
 를 얻어야 한다(편미분의 삼중곱 규칙 혹은 순환 규칙이라고 한다). 위 관계는 순전히 수학적인 관계이다.
 
-($d$) 이상기체에 대해 $\beta,\,\kappa_T,\,(\partial p/\partial T)_V$ 를 얻고 @eq-TD_cyclic_relation_of_partial_derivatives 가 성립하는지 비교하라.
+($d$) 이상기체에 대해 $\alpha,\,\kappa_T,\,(\partial p/\partial T)_V$ 를 얻고 @eq-TD_cyclic_relation_of_partial_derivatives 가 성립하는지 비교하라.
 
 
 :::
@@ -791,19 +791,19 @@ $$
 
 임을 이용한다.
 
-($a$) $dV_1 = \beta V\,dT$
+($a$) $dV_1 = \alpha V\,dT$
 
 ($b$) $dV_2 = -\kappa_T V dp$
 
-($c$) $\left(\dfrac{\partial p}{\partial T}\right)_V = \dfrac{\beta}{\kappa_T} = - \dfrac{\left(\partial V/\partial T\right)_p}{\left(\partial V\partial p\right)_T}.$
+($c$) $\left(\dfrac{\partial p}{\partial T}\right)_V = \dfrac{\alpha}{\kappa_T} = - \dfrac{\left(\partial V/\partial T\right)_p}{\left(\partial V\partial p\right)_T}.$
 
 ($d$) 이상기체의 경우 이상기체 상태방정식 $pV=\nu k_BT$ 로부터,
 
 $$
 \begin{aligned}
-\beta &=\dfrac{1}{V}\left(\dfrac{\partial V}{\partial T}\right)_p = \dfrac{1}{T}, \\[0.3em]
+\alpha &=\dfrac{1}{V}\left(\dfrac{\partial V}{\partial T}\right)_p = \dfrac{1}{T}, \\[0.3em]
 \kappa_T &= - \dfrac{1}{V}\left(\dfrac{\partial V}{\partial p}\right)_T = \dfrac{1}{p}, \\[0.3em]
-\left(\dfrac{\partial p}{\partial T}\right)_V &= \dfrac{p}{T}= \dfrac{\beta}{\kappa_T}.
+\left(\dfrac{\partial p}{\partial T}\right)_V &= \dfrac{p}{T}= \dfrac{\alpha}{\kappa_T}.
 \end{aligned}
 $$
 :::

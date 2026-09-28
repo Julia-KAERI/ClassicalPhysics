@@ -511,8 +511,6 @@ $$ {#eq-TD_schroeder_2_57}
 
 ### 가역과정과 비가역 과정 {#sec-TD_reversible_and_irreversible_process}
 
-
-
 ### 연습문제 {.unnumbered}
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">

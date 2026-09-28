@@ -859,7 +859,7 @@ C_p &amp;= \left(\dfrac{\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ}{d
 <div id="fig-TD_joule_exp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TD_joule_exp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/joule_exp/joule_exp.png" class="img-fluid figure-img" width="300">
+<img src="figures/fermi/joule_exp/joule_exp.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_joule_exp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;21.5: 빨간색-밸브, 파란색-온도계
@@ -940,7 +940,7 @@ pV^\gamma= \text{constant.},\qquad Tp^{(1-\gamma)/\gamma}=\text{constant.}
 <div id="fig-TD_adiabatic_and_isothermal_process" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TD_adiabatic_and_isothermal_process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/adiabatic_process/adiabatic.png" class="img-fluid figure-img" width="350">
+<img src="figures/fermi/adiabatic_process/adiabatic.png" class="img-fluid figure-img" width="350">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_adiabatic_and_isothermal_process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;21.6: 단열과정과 등온과정
@@ -1128,22 +1128,22 @@ B := - V \dfrac{dp}{dV}
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_1_46" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 21.6 (Schroeder 1.46)</strong></span> 고체나 액체의 열용량은 대부분 일정한 압력 상태에서 측정된다. 왜인지 보이기 위해 여기서는 <span class="math inline">\(T\)</span> 의 변화에 따른 <span class="math inline">\(V\)</span> 의 변화를 없에기 위한 압력값을 구해보자.</p>
-<p>(<span class="math inline">\(a\)</span>) 물질의 <strong>열팽창 계수 (thermal expansion coefficient)</strong> <span class="math inline">\(\beta\)</span> 는 다음과 같이 정의된다.</p>
+<p>(<span class="math inline">\(a\)</span>) 물질의 <strong>열팽창 계수 (thermal expansion coefficient)</strong> <span class="math inline">\(\alpha\)</span> 는 다음과 같이 정의된다.</p>
 <p><span id="eq-TD_definition_of_thermal_expansion_coefficient"><span class="math display">\[
-\beta := \dfrac {1}{V}\left(\dfrac{\partial V}{\partial T}\right)_p.
+\alpha := \dfrac {1}{V}\left(\dfrac{\partial V}{\partial T}\right)_p.
 \tag{21.30}\]</span></span></p>
-<p>압력을 일정하게 유지하면서 물질을 압축시킬 때 물질의 부피의 변화 <span class="math inline">\(dV_1\)</span> 을 <span class="math inline">\(dT\)</span> 와 <span class="math inline">\(\beta\)</span> 를 이용하여 기술하라.</p>
+<p>압력을 일정하게 유지하면서 물질을 압축시킬 때 물질의 부피의 변화 <span class="math inline">\(dV_1\)</span> 을 <span class="math inline">\(dT\)</span> 와 <span class="math inline">\(\alpha\)</span> 를 이용하여 기술하라.</p>
 <p>(<span class="math inline">\(b\)</span>) <strong>등온 압축률 (isothermal compressibility)</strong> <span class="math inline">\(\kappa_T\)</span> 는 다음과 같이 정의된다.</p>
 <p><span id="eq-TD_definition_of_isothermal_compressibility"><span class="math display">\[
 \kappa_T = - \dfrac{1}{V}\left(\dfrac{\partial V}{\partial p}\right)_T.
 \tag{21.31}\]</span></span></p>
 <p>온도를 일정하게 유지하면서 물질을 약간 압축시킬 때의 부피 변화 <span class="math inline">\(V_2\)</span> 를 <span class="math inline">\(dp\)</span> 에 대해 표현하라.</p>
-<p>(<span class="math inline">\(c\)</span>) (<span class="math inline">\(b\)</span>) 에 의한 압축에 의해 <span class="math inline">\((a)\)</span> 에 의한 팽창이 상쇄되도록 합축했다고 하자. 그렇다면 이 경우 <span class="math inline">\((dp)/(dT)=\left(\partial p/\partial T\right)_V\)</span> 이다. 이 편미분을 <span class="math inline">\(\beta,\,\kappa_T\)</span> 로 표현하라. 이 경우</p>
+<p>(<span class="math inline">\(c\)</span>) (<span class="math inline">\(b\)</span>) 에 의한 압축에 의해 <span class="math inline">\((a)\)</span> 에 의한 팽창이 상쇄되도록 합축했다고 하자. 그렇다면 이 경우 <span class="math inline">\((dp)/(dT)=\left(\partial p/\partial T\right)_V\)</span> 이다. 이 편미분을 <span class="math inline">\(\alpha,\,\kappa_T\)</span> 로 표현하라. 이 경우</p>
 <p><span id="eq-TD_cyclic_relation_of_partial_derivatives"><span class="math display">\[
 \left(\dfrac{\partial p}{\partial T}\right)_V = - \dfrac{\left(\partial V/\partial T\right)_p}{\left(\partial V/\partial p\right)_T}
 \tag{21.32}\]</span></span></p>
 <p>를 얻어야 한다(편미분의 삼중곱 규칙 혹은 순환 규칙이라고 한다). 위 관계는 순전히 수학적인 관계이다.</p>
-<p>(<span class="math inline">\(d\)</span>) 이상기체에 대해 <span class="math inline">\(\beta,\,\kappa_T,\,(\partial p/\partial T)_V\)</span> 를 얻고 <a href="#eq-TD_cyclic_relation_of_partial_derivatives" class="quarto-xref">식&nbsp;<span>21.32</span></a> 가 성립하는지 비교하라.</p>
+<p>(<span class="math inline">\(d\)</span>) 이상기체에 대해 <span class="math inline">\(\alpha,\,\kappa_T,\,(\partial p/\partial T)_V\)</span> 를 얻고 <a href="#eq-TD_cyclic_relation_of_partial_derivatives" class="quarto-xref">식&nbsp;<span>21.32</span></a> 가 성립하는지 비교하라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -1151,15 +1151,15 @@ B := - V \dfrac{dp}{dV}
 dV = \left(\dfrac{\partial V}{\partial T}\right)_p\,\,dT + \left(\dfrac{\partial V}{\partial p}\right)_T\,dp
 \]</span></p>
 <p>임을 이용한다.</p>
-<p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(dV_1 = \beta V\,dT\)</span></p>
+<p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(dV_1 = \alpha V\,dT\)</span></p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(dV_2 = -\kappa_T V dp\)</span></p>
-<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(\left(\dfrac{\partial p}{\partial T}\right)_V = \dfrac{\beta}{\kappa_T} = - \dfrac{\left(\partial V/\partial T\right)_p}{\left(\partial V\partial p\right)_T}.\)</span></p>
+<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(\left(\dfrac{\partial p}{\partial T}\right)_V = \dfrac{\alpha}{\kappa_T} = - \dfrac{\left(\partial V/\partial T\right)_p}{\left(\partial V\partial p\right)_T}.\)</span></p>
 <p>(<span class="math inline">\(d\)</span>) 이상기체의 경우 이상기체 상태방정식 <span class="math inline">\(pV=\nu k_BT\)</span> 로부터,</p>
 <p><span class="math display">\[
 \begin{aligned}
-\beta &amp;=\dfrac{1}{V}\left(\dfrac{\partial V}{\partial T}\right)_p = \dfrac{1}{T}, \\[0.3em]
+\alpha &amp;=\dfrac{1}{V}\left(\dfrac{\partial V}{\partial T}\right)_p = \dfrac{1}{T}, \\[0.3em]
 \kappa_T &amp;= - \dfrac{1}{V}\left(\dfrac{\partial V}{\partial p}\right)_T = \dfrac{1}{p}, \\[0.3em]
-\left(\dfrac{\partial p}{\partial T}\right)_V &amp;= \dfrac{p}{T}= \dfrac{\beta}{\kappa_T}.
+\left(\dfrac{\partial p}{\partial T}\right)_V &amp;= \dfrac{p}{T}= \dfrac{\alpha}{\kappa_T}.
 \end{aligned}
 \]</span></p>
 </div>
