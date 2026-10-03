@@ -50,15 +50,15 @@ $$ {#eq-ED_MS_amprer_law_for_current}
 
 $$
 \begin{aligned}
-\bf{B}(\bf{r}) &= \nabla \times \dfrac{\mu_0}{4\pi} \int \dfrac{\bf{J}(\bf{r}')}{\|\bf{r}-\bf{r}'\|} \,d^3\bf{r}' \\[0.3em]
-&=\dfrac{\mu_0}{4\pi} \int \dfrac{\nabla \times \bf{J}(\bf{r}')}{\|\bf{r}-\bf{r}'\|} \,d^3\bf{r}' + \dfrac{\mu_0}{4\pi} \int \dfrac{\bf{J}(\bf{r}')\times (\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3} \, d^3\bf{r}
+\bf{B}(\bf{r}) &= \nabla \times \dfrac{\mu_0}{4\pi} \int \dfrac{\bf{J}(\bf{r}')}{\|\bf{r}-\bf{r}'\|} \,d\mathcal{V}' \\[0.3em]
+&=\dfrac{\mu_0}{4\pi} \int \dfrac{\nabla \times \bf{J}(\bf{r}')}{\|\bf{r}-\bf{r}'\|} \,d\mathcal{V}' + \dfrac{\mu_0}{4\pi} \int \dfrac{\bf{J}(\bf{r}')\times (\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3} \, d\mathcal{V}'
 \end{aligned}
 $$
 
 이다. 여기서 $\bf{J}(\bf{r}')$ 은 $\bf{r}$ 에 대한 함수가 아니므로 $\nabla \times \bf{J}(\bf{r}') = \bf{0}$ 이므로
 
 $$
-\bf{B}(\bf{r}) = \dfrac{\mu_0}{4\pi} \int \dfrac{\bf{J}(\bf{r}')\times (\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3} \, d^3\bf{r}
+\bf{B}(\bf{r}) = \dfrac{\mu_0}{4\pi} \int \dfrac{\bf{J}(\bf{r}')\times (\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3} \, d\mathcal{V}'
 $$ {#eq-ED_MS_biot_savart_law}
 
 이며 이를 **비오-사바르의 법칙 (Biot-Savart's law)** 이라고 한다. 
@@ -114,7 +114,7 @@ $$
 \bf{B}(0^+) - \bf{B}(0^-) = \mu_0 \bf{K} \times \hat{\bf{n}}
 $$
 
-@exm-ED_ES_charge_distribution_plane 의 경우와 같은 가우스 면을 생각하되 전하 대신 평면에서의 임의의 방향으로 표면전류가 흐른다고 생각하자. $\nabla \bf{\cdot B}=0$ 이므로
+[대전된 표면에서의 가우스면](https://julia-kaeri.github.io/FeynmanLecturesOnPhysics/src/vol2/figures/fig_2_5/fig_2_5_6.png) 와 같은 가우스 면을 생각하되 전하 대신 평면에서의 임의의 방향으로 표면전류가 흐른다고 생각하자. $\nabla \bf{\cdot B}=0$ 이므로
 
 $$
 \hat{\bf{n}}\bf{\cdot B}(0^+) = \hat{\bf{n}}\bf{\cdot B}(0^-) 
@@ -212,7 +212,7 @@ $$
 이므로 $\nabla^2\chi = -\psi$ 를 만족하는 $\chi$ 를 찾을 수 있다면 쿨롱게이지가 존재한다. 이 때
 
 $$
-\chi(\bf{r}) = \dfrac{1}{4\pi} \int_V \dfrac{\psi(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}'
+\chi(\bf{r}) = \dfrac{1}{4\pi} \int_V \dfrac{\psi(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d\mathcal{V}'
 $$
 
 가 $\nabla^2\chi = -\psi$ 를 만족하므로 쿨롱게이지는 항상 존재한다. $\square$
@@ -230,7 +230,7 @@ $$
 이며, 따라서 다음이 성립한다.
 
 $$
-\bf{A}(\bf{r}) = \dfrac{\mu_0}{4\pi} \int_V \dfrac{\bf{J}(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}'
+\bf{A}(\bf{r}) = \dfrac{\mu_0}{4\pi} \int_V \dfrac{\bf{J}(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d\mathcal{V}'
 $$ {#eq-ED_MS_vector_potential_from_current_density_within_coulomb_gauge}
 
 </br>
@@ -252,38 +252,38 @@ $$ {#eq-ED_MS_vector_potential_from_current_density_within_coulomb_gauge}
 
 $$
 \begin{aligned}
-\bf{A}(\bf{r}) &= \dfrac{\mu_0}{4\pi} \int_V \dfrac{\bf{J}(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\, d^3\bf{r}'=\dfrac{\mu_0}{4\pi}\int_V \bf{J}(\bf{r}')\left(\dfrac{1}{r} + \dfrac{\bf{r \cdot  r}'}{r^3} + \cdots\right)\,d^3\bf{r}'.
+\bf{A}(\bf{r}) &= \dfrac{\mu_0}{4\pi} \int_V \dfrac{\bf{J}(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\, d\mathcal{V}'=\dfrac{\mu_0}{4\pi}\int_V \bf{J}(\bf{r}')\left(\dfrac{1}{r} + \dfrac{\bf{r \cdot  r}'}{r^3} + \cdots\right)\,d\mathcal{V}'.
 \end{aligned}
 $$ {#eq-ED_MS_localized_current_distribution_1}
 
 여기서 각 성분으로 분해하면 아래와 같다.
 
 $$
-A_i(\bf{x}) = \dfrac{\mu_0}{4\pi} \left[\dfrac{1}{\|\bf{r}\|} \int_V J_i(\bf{r}') \,d^3\bf{r}' + \dfrac{\bf{r}}{\|\bf{r}\|^3} \bf{\cdot} \int J_i(\bf{r}') \bf{r}'\,d^3\bf{r}'\right].
+A_i(\bf{x}) = \dfrac{\mu_0}{4\pi} \left[\dfrac{1}{\|\bf{r}\|} \int_V J_i(\bf{r}') \,d\mathcal{V}' + \dfrac{\bf{r}}{\|\bf{r}\|^3} \bf{\cdot} \int J_i(\bf{r}') \bf{r}'\,d\mathcal{V}'\right].
 $${#eq-DE_localized_current_distribution_2}
 
 벡터 항등식 (증명은 @exr-ED_MS_for_magnetic_dipole)
 
 $$
-\int (f\bf{J\cdot} \nabla' g + g\bf{J\cdot } \nabla' f + fg \nabla'\bf{\cdot J}) d^3\bf{r}'=0.
+\int (f\bf{J\cdot} \nabla' g + g\bf{J\cdot } \nabla' f + fg \nabla'\bf{\cdot J}) d\mathcal{V}'=0.
 $$ {#eq-ED_MS_vector_equality_for_localized_current}
 
 에서 $f=1,\,g=x'_i$ 로 놓고 $\nabla'\bf{\cdot J}=0$ 을 이용하면
 
 $$
-\int_V \bf{J}(\bf{r}') \,d^3\bf{r}' =0
+\int_V \bf{J}(\bf{r}') \,d\mathcal{V}' =0
 $$
 
 을 얻는다. 즉 @eq-DE_localized_current_distribution_2 의 첫번째 항은 항상 $0$ 이다. 이제 두번째 항을 생각하자. 역시 @eq-ED_MS_vector_equality_for_localized_current 에서 $f=x'_i,\, g=x'_j$ 로 놓고 $\nabla'\bf{\cdot J}=0$ 을 이용하면 다음을 얻는다.
 
 $$
-\int (x'_i J_j(\bf{r}') + x'_j J_i(\bf{r}'))\,d^3\bf{r}' = 0.
+\int (x'_i J_j(\bf{r}') + x'_j J_i(\bf{r}'))\,d\mathcal{V}' = 0.
 $$ {#eq-ED_MS_equality_cxxzg}
 
 @exr-ED_MS_for_magnetic_dipole2 에서 $\bf{a}=\bf{r}$ 로 놓으면 @eq-DE_localized_current_distribution_2 의 두번째 항은 다음과 같다.
 
 $$
-\dfrac{1}{\|\bf{r}\|^3}\int_V (\bf{r\cdot}\bf{r}')\bf{J} \,d^3\bf{r}' = - \dfrac{1}{2\|\bf{r}\|^3} \int_V \bf{r} \times (\bf{r}' \times \bf{J})\,d^3\bf{r}'.
+\dfrac{1}{\|\bf{r}\|^3}\int_V (\bf{r\cdot}\bf{r}')\bf{J} \,d\mathcal{V}' = - \dfrac{1}{2\|\bf{r}\|^3} \int_V \bf{r} \times (\bf{r}' \times \bf{J})\,d\mathcal{V}'.
 $$ {#eq-ED_MS_vector_identity_for_calculation_of_magnetic_moment_by_current_density}
 
 이 때 자화율(magnetization) $\bf{M}(\bf{r})$ 과 자기 모먼트(magnetic moment) $\bf{m}$ 을 아래와 같이 정의한다.
@@ -292,7 +292,7 @@ $$
 \boxed{
 \begin{aligned}
 \bf{M}(\bf{r})&:= \dfrac{1}{2}[\bf{r}\times \bf{J}(\bf{r})]\\[0.3em] 
-\bf{m} &:= \int \bf{M}(\bf{r}')\,d^3\bf{r}' = \dfrac{1}{2}\int \bf{r}'\times \bf{J}(\bf{r}')\,d^3\bf{r}' .
+\bf{m} &:= \int \bf{M}(\bf{r}')\,d\mathcal{V}' = \dfrac{1}{2}\int \bf{r}'\times \bf{J}(\bf{r}')\,d\mathcal{V}' .
 \end{aligned}}
 $$ {#eq-ED_MS_definition_of_magnatization_and_magnetic_moment}
 
@@ -347,7 +347,7 @@ $${#eq-ED_MS_magnetic_moment_due_to_closed_loop}
 매끄러운 스칼라 함수 $f(\bf{r}),\,g(\bf{r})$ 와 국소화된 전류 밀도 $\bf{J}(\bf{r})$ 에 대해 다음이 성립함을 보여라.
 
 $$
-\int (f\bf{J\cdot} \nabla g + g\bf{J\cdot } \nabla f + fg \nabla\bf{\cdot J}) d^3\bf{r}=0.
+\int (f\bf{J\cdot} \nabla g + g\bf{J\cdot } \nabla f + fg \nabla\bf{\cdot J}) \,d\mathcal{V}=0.
 $$
 
 :::
@@ -359,8 +359,8 @@ $$
 
 $$
 \begin{aligned}
-\sum_i\int  \left(gJ_i \dfrac{\partial f}{\partial x_i}\right)  d^3\bf{r} &= \sum_i{\Large [} gfJ_i {\Large ]}_S - \sum_i \int f\left(\dfrac{\partial gJ_i}{\partial x_i}\right)\,d^3\bf{r} \\[0.3em]
-&= \sum_i{\Large [} gfJ_i {\Large ]}_S - \int (f\bf{J\cdot}\nabla g + fg\nabla\bf{\cdot J})\,d^3\bf{r}
+\sum_i\int  \left(gJ_i \dfrac{\partial f}{\partial x_i}\right)  d\mathcal{V} &= \sum_i{\Large [} gfJ_i {\Large ]}_S - \sum_i \int f\left(\dfrac{\partial gJ_i}{\partial x_i}\right)\,d\mathcal{V} \\[0.3em]
+&= \sum_i{\Large [} gfJ_i {\Large ]}_S - \int (f\bf{J\cdot}\nabla g + fg\nabla\bf{\cdot J})\,d\mathcal{V}
 \end{aligned}
 $$
 
@@ -375,7 +375,7 @@ $$
 @eq-ED_MS_equality_cxxzg 의 조건에서 임의의 벡터 $\bf{a}$ 에 대해
 
 $$
-\bf{a \cdot} \int \bf{r}' \bf{J}(\bf{r}') \,d^3\bf{r}' = - \dfrac{1}{2} \bf{a}\times \int (\bf{r}'\times \bf{J}(\bf{r}'))\,d^3\bf{r}' 
+\bf{a \cdot} \int \bf{r}' \bf{J}(\bf{r}') \,d\mathcal{V}' = - \dfrac{1}{2} \bf{a}\times \int (\bf{r}'\times \bf{J}(\bf{r}'))\,d\mathcal{V}' 
 $$
 
 임을 보여라.
@@ -388,9 +388,9 @@ $$
 $i$ 번째 성분에 대해 보이자.
 $$
 \begin{aligned}
-\bf{a\cdot}\int \bf{r}' J_i d^3\bf{r}' &= \sum_j a_j \int x'_j J_i d^3\bf{r}' = -\dfrac{1}{2} \sum_j a_j \int (x_i' J_j - x_j' J_i) \,d^3\bf{r}'  \\[0.3em]
-&= -\dfrac{1}{2} \sum_j \varepsilon_{ijk} a_j \int  (\bf{x}'\times \bf{J})_k \,d^3\bf{r}' \\[0.3em]
-&= - \dfrac{1}{2} \left[\bf{a} \times \int (\bf{r}'\times \bf{J}) \,d^3\bf{r}'\right].
+\bf{a\cdot}\int \bf{r}' J_i d\mathcal{V}' &= \sum_j a_j \int x'_j J_i d\mathcal{V}' = -\dfrac{1}{2} \sum_j a_j \int (x_i' J_j - x_j' J_i) \,d\mathcal{V}'  \\[0.3em]
+&= -\dfrac{1}{2} \sum_j \varepsilon_{ijk} a_j \int  (\bf{x}'\times \bf{J})_k \,d\mathcal{V}' \\[0.3em]
+&= - \dfrac{1}{2} \left[\bf{a} \times \int (\bf{r}'\times \bf{J}) \,d\mathcal{V}'\right].
 \end{aligned}
 $$
 
@@ -454,7 +454,7 @@ $$ {#eq-ED_MS_force_between_two_parallel_currents}
 $I_1$ 의 전류에 의해 생성되는 자기장 $\bf{B}_1$ 의 영항으로 전류밀도 $\bf{J}_2$ 가 받는 전체 로렌츠 힘은
 
 $$
-\bf{F}_2 = \int \bf{J}_2(\bf{r}_2) \times \bf{B}_1(\bf{r}_2)\,d^3\bf{r}_2
+\bf{F}_2 = \int \bf{J}_2(\bf{r}_2) \times \bf{B}_1(\bf{r}_2)\,d\mathcal{V}_2
 $$
 
 이며 $\bf{J}_1,\,\bf{J}_2$ 가 각각 폐곡선 $C_1,\,C_2$ 에서 닫힌 전류 회로를 이루며 각각의 전류가 $I_1,\,I_2$ 일 때 $I_2$ 가 받는 힘은 아래와 같이 계산 할 수 있다.
@@ -476,7 +476,7 @@ $$
 이제 두 전류 흐름이 아닌 자기장 안의 전류흐름에 대해 알아보자. 앞서 보았듯이 자기장 $\bf{B}(\bf{r}')$ 이 주어졌을 때 전류 밀도 $\bf{J}(\bf{r}')$ 이 받는 총 힘은 아래와 같다.
 
 $$
-\bf{F} = \int_V \bf{J}(\bf{r}')\times \bf{B}(\bf{r}')\,d^3\bf{r}'.
+\bf{F} = \int_V \bf{J}(\bf{r}')\times \bf{B}(\bf{r}')\,d\mathcal{V}'.
 $$
 
 이제 전류 밀도가 공간에서 원점 $\bf{0}$ 근처에서 국소화 되어 있으며 회로를 이루고 있다고 하자. $\bf{B}(\bf{r}')$ 을 $\bf{0}$ 을 중심으로 테일러 전개하면
@@ -488,7 +488,7 @@ $$
 이며 
 
 $$
-F_i = \sum_{jk} \varepsilon_{ijk} \left[ B_k(0) \int J_j  (\bf{r}') \,d^3\bf{r}' + \int J_j(\bf{r}') \bf{r}' \bf{\cdot} \nabla' B_k(\bf{0}) \,d^3\bf{r}' + \cdots \right]
+F_i = \sum_{jk} \varepsilon_{ijk} \left[ B_k(0) \int J_j  (\bf{r}') \,d^3\bf{r}' + \int J_j(\bf{r}') \bf{r}' \bf{\cdot} \nabla' B_k(\bf{0}) \,d\mathcal{V}' + \cdots \right]
 $$
 
 
@@ -506,7 +506,7 @@ $$
 
 $$
 \begin{aligned}
-F^{(2)}_i = \varepsilon_{ijk} \int J_j (\bf{r}') \bf{r}'\bf{\cdot} \nabla B_k(\bf{0})\,d^3\bf{r}'
+F^{(2)}_i = \varepsilon_{ijk} \int J_j (\bf{r}') \bf{r}'\bf{\cdot} \nabla B_k(\bf{0})\,d^3\mathcal{V}'
 \end{aligned}
 $$
 

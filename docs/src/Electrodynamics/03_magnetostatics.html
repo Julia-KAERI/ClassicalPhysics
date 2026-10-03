@@ -490,13 +490,13 @@ window.Quarto = {
 <p><a href="#sec-ED_MS_Helmholtz_theorem">헬름홀츠 정리</a> 에 의해, 그리고 항등식 <span class="math inline">\(\nabla \times (f\boldsymbol{A}) = (\nabla f) \times \boldsymbol{A} + f(\nabla \times \boldsymbol{A})\)</span>) 를 이용하면,</p>
 <p><span class="math display">\[
 \begin{aligned}
-\boldsymbol{B}(\boldsymbol{r}) &amp;= \nabla \times \dfrac{\mu_0}{4\pi} \int \dfrac{\boldsymbol{J}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|} \,d^3\boldsymbol{r}' \\[0.3em]
-&amp;=\dfrac{\mu_0}{4\pi} \int \dfrac{\nabla \times \boldsymbol{J}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|} \,d^3\boldsymbol{r}' + \dfrac{\mu_0}{4\pi} \int \dfrac{\boldsymbol{J}(\boldsymbol{r}')\times (\boldsymbol{r}-\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3} \, d^3\boldsymbol{r}
+\boldsymbol{B}(\boldsymbol{r}) &amp;= \nabla \times \dfrac{\mu_0}{4\pi} \int \dfrac{\boldsymbol{J}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|} \,d\mathcal{V}' \\[0.3em]
+&amp;=\dfrac{\mu_0}{4\pi} \int \dfrac{\nabla \times \boldsymbol{J}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|} \,d\mathcal{V}' + \dfrac{\mu_0}{4\pi} \int \dfrac{\boldsymbol{J}(\boldsymbol{r}')\times (\boldsymbol{r}-\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3} \, d\mathcal{V}'
 \end{aligned}
 \]</span></p>
 <p>이다. 여기서 <span class="math inline">\(\boldsymbol{J}(\boldsymbol{r}')\)</span> 은 <span class="math inline">\(\boldsymbol{r}\)</span> 에 대한 함수가 아니므로 <span class="math inline">\(\nabla \times \boldsymbol{J}(\boldsymbol{r}') = \boldsymbol{0}\)</span> 이므로</p>
 <p><span id="eq-ED_MS_biot_savart_law"><span class="math display">\[
-\boldsymbol{B}(\boldsymbol{r}) = \dfrac{\mu_0}{4\pi} \int \dfrac{\boldsymbol{J}(\boldsymbol{r}')\times (\boldsymbol{r}-\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3} \, d^3\boldsymbol{r}
+\boldsymbol{B}(\boldsymbol{r}) = \dfrac{\mu_0}{4\pi} \int \dfrac{\boldsymbol{J}(\boldsymbol{r}')\times (\boldsymbol{r}-\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3} \, d\mathcal{V}'
 \tag{15.5}\]</span></span></p>
 <p>이며 이를 <strong>비오-사바르의 법칙 (Biot-Savart’s law)</strong> 이라고 한다. 특정 전선으로 전류 <span class="math inline">\(I\)</span> 가 흐른다고 하자. 이 경로를 <span class="math inline">\(C\)</span> 라고 하면 이 전류에 의한 자기장은 아래와 같다.</p>
 <p><span id="eq-ED_MS_biot_savart_law_for_current"><span class="math display">\[
@@ -550,7 +550,7 @@ B_0 = \dfrac{\mu_0 K}{2}
 <p><span class="math display">\[
 \boldsymbol{B}(0^+) - \boldsymbol{B}(0^-) = \mu_0 \boldsymbol{K} \times \hat{\boldsymbol{n}}
 \]</span></p>
-<p><span class="quarto-unresolved-ref">?exm-ED_ES_charge_distribution_plane</span> 의 경우와 같은 가우스 면을 생각하되 전하 대신 평면에서의 임의의 방향으로 표면전류가 흐른다고 생각하자. <span class="math inline">\(\nabla \boldsymbol{\cdot B}=0\)</span> 이므로</p>
+<p><a href="https://julia-kaeri.github.io/FeynmanLecturesOnPhysics/src/vol2/figures/fig_2_5/fig_2_5_6.png">대전된 표면에서의 가우스면</a> 와 같은 가우스 면을 생각하되 전하 대신 평면에서의 임의의 방향으로 표면전류가 흐른다고 생각하자. <span class="math inline">\(\nabla \boldsymbol{\cdot B}=0\)</span> 이므로</p>
 <p><span class="math display">\[
 \hat{\boldsymbol{n}}\boldsymbol{\cdot B}(0^+) = \hat{\boldsymbol{n}}\boldsymbol{\cdot B}(0^-)
 \]</span></p>
@@ -622,7 +622,7 @@ B_\text{in}(r) - B_\text{out}(r) = N\mu_0 I
 \]</span></p>
 <p>이므로 <span class="math inline">\(\nabla^2\chi = -\psi\)</span> 를 만족하는 <span class="math inline">\(\chi\)</span> 를 찾을 수 있다면 쿨롱게이지가 존재한다. 이 때</p>
 <p><span class="math display">\[
-\chi(\boldsymbol{r}) = \dfrac{1}{4\pi} \int_V \dfrac{\psi(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\,d^3\boldsymbol{r}'
+\chi(\boldsymbol{r}) = \dfrac{1}{4\pi} \int_V \dfrac{\psi(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\,d\mathcal{V}'
 \]</span></p>
 <p>가 <span class="math inline">\(\nabla^2\chi = -\psi\)</span> 를 만족하므로 쿨롱게이지는 항상 존재한다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -633,7 +633,7 @@ B_\text{in}(r) - B_\text{out}(r) = N\mu_0 I
 \]</span></p>
 <p>이며, 따라서 다음이 성립한다.</p>
 <p><span id="eq-ED_MS_vector_potential_from_current_density_within_coulomb_gauge"><span class="math display">\[
-\boldsymbol{A}(\boldsymbol{r}) = \dfrac{\mu_0}{4\pi} \int_V \dfrac{\boldsymbol{J}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\,d^3\boldsymbol{r}'
+\boldsymbol{A}(\boldsymbol{r}) = \dfrac{\mu_0}{4\pi} \int_V \dfrac{\boldsymbol{J}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\,d\mathcal{V}'
 \tag{15.10}\]</span></span></p>
 <p><br></p>
 <p>이번 장에서 벡터포텐셜을 생각할 때 특별한 언급이 없다면 <span class="math inline">\(\nabla \boldsymbol{\cdot A}=0\)</span> 을 만족하는 벡터포텐셜임을 가정한다.</p>
@@ -658,35 +658,35 @@ B_\text{in}(r) - B_\text{out}(r) = N\mu_0 I
 <p>위의 그림과 같이 국소화된 전류 분포 <span class="math inline">\(\boldsymbol{J}(\boldsymbol{r}')\)</span> 을 생각하고 <span class="math inline">\(\|\boldsymbol{r}\|\gg \|\boldsymbol{r}'\|\)</span> 조건에서의 벡터포텐셜을 계산해 보자. 우선 <a href="#eq-ED_MS_vector_potential_from_current_density_within_coulomb_gauge" class="quarto-xref">식&nbsp;<span>15.10</span></a> 에 의해 벡터포텬셜은 아래와 같이 주어진다.</p>
 <p><span id="eq-ED_MS_localized_current_distribution_1"><span class="math display">\[
 \begin{aligned}
-\boldsymbol{A}(\boldsymbol{r}) &amp;= \dfrac{\mu_0}{4\pi} \int_V \dfrac{\boldsymbol{J}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\, d^3\boldsymbol{r}'=\dfrac{\mu_0}{4\pi}\int_V \boldsymbol{J}(\boldsymbol{r}')\left(\dfrac{1}{r} + \dfrac{\boldsymbol{r \cdot  r}'}{r^3} + \cdots\right)\,d^3\boldsymbol{r}'.
+\boldsymbol{A}(\boldsymbol{r}) &amp;= \dfrac{\mu_0}{4\pi} \int_V \dfrac{\boldsymbol{J}(\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|}\, d\mathcal{V}'=\dfrac{\mu_0}{4\pi}\int_V \boldsymbol{J}(\boldsymbol{r}')\left(\dfrac{1}{r} + \dfrac{\boldsymbol{r \cdot  r}'}{r^3} + \cdots\right)\,d\mathcal{V}'.
 \end{aligned}
 \tag{15.11}\]</span></span></p>
 <p>여기서 각 성분으로 분해하면 아래와 같다.</p>
 <p><span id="eq-DE_localized_current_distribution_2"><span class="math display">\[
-A_i(\boldsymbol{x}) = \dfrac{\mu_0}{4\pi} \left[\dfrac{1}{\|\boldsymbol{r}\|} \int_V J_i(\boldsymbol{r}') \,d^3\boldsymbol{r}' + \dfrac{\boldsymbol{r}}{\|\boldsymbol{r}\|^3} \boldsymbol{\cdot} \int J_i(\boldsymbol{r}') \boldsymbol{r}'\,d^3\boldsymbol{r}'\right].
+A_i(\boldsymbol{x}) = \dfrac{\mu_0}{4\pi} \left[\dfrac{1}{\|\boldsymbol{r}\|} \int_V J_i(\boldsymbol{r}') \,d\mathcal{V}' + \dfrac{\boldsymbol{r}}{\|\boldsymbol{r}\|^3} \boldsymbol{\cdot} \int J_i(\boldsymbol{r}') \boldsymbol{r}'\,d\mathcal{V}'\right].
 \tag{15.12}\]</span></span></p>
 <p>벡터 항등식 (증명은 <a href="#exr-ED_MS_for_magnetic_dipole" class="quarto-xref">연습문제&nbsp;<span>15.1</span></a>)</p>
 <p><span id="eq-ED_MS_vector_equality_for_localized_current"><span class="math display">\[
-\int (f\boldsymbol{J\cdot} \nabla' g + g\boldsymbol{J\cdot } \nabla' f + fg \nabla'\boldsymbol{\cdot J}) d^3\boldsymbol{r}'=0.
+\int (f\boldsymbol{J\cdot} \nabla' g + g\boldsymbol{J\cdot } \nabla' f + fg \nabla'\boldsymbol{\cdot J}) d\mathcal{V}'=0.
 \tag{15.13}\]</span></span></p>
 <p>에서 <span class="math inline">\(f=1,\,g=x'_i\)</span> 로 놓고 <span class="math inline">\(\nabla'\boldsymbol{\cdot J}=0\)</span> 을 이용하면</p>
 <p><span class="math display">\[
-\int_V \boldsymbol{J}(\boldsymbol{r}') \,d^3\boldsymbol{r}' =0
+\int_V \boldsymbol{J}(\boldsymbol{r}') \,d\mathcal{V}' =0
 \]</span></p>
 <p>을 얻는다. 즉 <a href="#eq-DE_localized_current_distribution_2" class="quarto-xref">식&nbsp;<span>15.12</span></a> 의 첫번째 항은 항상 <span class="math inline">\(0\)</span> 이다. 이제 두번째 항을 생각하자. 역시 <a href="#eq-ED_MS_vector_equality_for_localized_current" class="quarto-xref">식&nbsp;<span>15.13</span></a> 에서 <span class="math inline">\(f=x'_i,\, g=x'_j\)</span> 로 놓고 <span class="math inline">\(\nabla'\boldsymbol{\cdot J}=0\)</span> 을 이용하면 다음을 얻는다.</p>
 <p><span id="eq-ED_MS_equality_cxxzg"><span class="math display">\[
-\int (x'_i J_j(\boldsymbol{r}') + x'_j J_i(\boldsymbol{r}'))\,d^3\boldsymbol{r}' = 0.
+\int (x'_i J_j(\boldsymbol{r}') + x'_j J_i(\boldsymbol{r}'))\,d\mathcal{V}' = 0.
 \tag{15.14}\]</span></span></p>
 <p><a href="#exr-ED_MS_for_magnetic_dipole2" class="quarto-xref">연습문제&nbsp;<span>15.2</span></a> 에서 <span class="math inline">\(\boldsymbol{a}=\boldsymbol{r}\)</span> 로 놓으면 <a href="#eq-DE_localized_current_distribution_2" class="quarto-xref">식&nbsp;<span>15.12</span></a> 의 두번째 항은 다음과 같다.</p>
 <p><span id="eq-ED_MS_vector_identity_for_calculation_of_magnetic_moment_by_current_density"><span class="math display">\[
-\dfrac{1}{\|\boldsymbol{r}\|^3}\int_V (\boldsymbol{r\cdot}\boldsymbol{r}')\boldsymbol{J} \,d^3\boldsymbol{r}' = - \dfrac{1}{2\|\boldsymbol{r}\|^3} \int_V \boldsymbol{r} \times (\boldsymbol{r}' \times \boldsymbol{J})\,d^3\boldsymbol{r}'.
+\dfrac{1}{\|\boldsymbol{r}\|^3}\int_V (\boldsymbol{r\cdot}\boldsymbol{r}')\boldsymbol{J} \,d\mathcal{V}' = - \dfrac{1}{2\|\boldsymbol{r}\|^3} \int_V \boldsymbol{r} \times (\boldsymbol{r}' \times \boldsymbol{J})\,d\mathcal{V}'.
 \tag{15.15}\]</span></span></p>
 <p>이 때 자화율(magnetization) <span class="math inline">\(\boldsymbol{M}(\boldsymbol{r})\)</span> 과 자기 모먼트(magnetic moment) <span class="math inline">\(\boldsymbol{m}\)</span> 을 아래와 같이 정의한다.</p>
 <p><span id="eq-ED_MS_definition_of_magnatization_and_magnetic_moment"><span class="math display">\[
 \boxed{
 \begin{aligned}
 \boldsymbol{M}(\boldsymbol{r})&amp;:= \dfrac{1}{2}[\boldsymbol{r}\times \boldsymbol{J}(\boldsymbol{r})]\\[0.3em]
-\boldsymbol{m} &amp;:= \int \boldsymbol{M}(\boldsymbol{r}')\,d^3\boldsymbol{r}' = \dfrac{1}{2}\int \boldsymbol{r}'\times \boldsymbol{J}(\boldsymbol{r}')\,d^3\boldsymbol{r}' .
+\boldsymbol{m} &amp;:= \int \boldsymbol{M}(\boldsymbol{r}')\,d\mathcal{V}' = \dfrac{1}{2}\int \boldsymbol{r}'\times \boldsymbol{J}(\boldsymbol{r}')\,d\mathcal{V}' .
 \end{aligned}}
 \tag{15.16}\]</span></span></p>
 <p>이를 이용하여 <a href="#eq-DE_localized_current_distribution_2" class="quarto-xref">식&nbsp;<span>15.12</span></a> 를 두번째 항 까지 계산하면 벡터포텐셜은 아래와 같다.</p>
@@ -733,7 +733,7 @@ A_i(\boldsymbol{x}) = \dfrac{\mu_0}{4\pi} \left[\dfrac{1}{\|\boldsymbol{r}\|} \i
 <div id="exr-ED_MS_for_magnetic_dipole" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 15.1</strong></span> 매끄러운 스칼라 함수 <span class="math inline">\(f(\boldsymbol{r}),\,g(\boldsymbol{r})\)</span> 와 국소화된 전류 밀도 <span class="math inline">\(\boldsymbol{J}(\boldsymbol{r})\)</span> 에 대해 다음이 성립함을 보여라.</p>
 <p><span class="math display">\[
-\int (f\boldsymbol{J\cdot} \nabla g + g\boldsymbol{J\cdot } \nabla f + fg \nabla\boldsymbol{\cdot J}) d^3\boldsymbol{r}=0.
+\int (f\boldsymbol{J\cdot} \nabla g + g\boldsymbol{J\cdot } \nabla f + fg \nabla\boldsymbol{\cdot J}) \,d\mathcal{V}=0.
 \]</span></p>
 </div>
 </div>
@@ -741,8 +741,8 @@ A_i(\boldsymbol{x}) = \dfrac{\mu_0}{4\pi} \left[\dfrac{1}{\|\boldsymbol{r}\|} \i
 <p><span class="proof-title"><em>(해답)</em>. </span>적분항의 두번째 항을 부분적분하자.</p>
 <p><span class="math display">\[
 \begin{aligned}
-\sum_i\int  \left(gJ_i \dfrac{\partial f}{\partial x_i}\right)  d^3\boldsymbol{r} &amp;= \sum_i{\Large [} gfJ_i {\Large ]}_S - \sum_i \int f\left(\dfrac{\partial gJ_i}{\partial x_i}\right)\,d^3\boldsymbol{r} \\[0.3em]
-&amp;= \sum_i{\Large [} gfJ_i {\Large ]}_S - \int (f\boldsymbol{J\cdot}\nabla g + fg\nabla\boldsymbol{\cdot J})\,d^3\boldsymbol{r}
+\sum_i\int  \left(gJ_i \dfrac{\partial f}{\partial x_i}\right)  d\mathcal{V} &amp;= \sum_i{\Large [} gfJ_i {\Large ]}_S - \sum_i \int f\left(\dfrac{\partial gJ_i}{\partial x_i}\right)\,d\mathcal{V} \\[0.3em]
+&amp;= \sum_i{\Large [} gfJ_i {\Large ]}_S - \int (f\boldsymbol{J\cdot}\nabla g + fg\nabla\boldsymbol{\cdot J})\,d\mathcal{V}
 \end{aligned}
 \]</span></p>
 <p>따라서 위 식의 적분은 <span class="math inline">\(\sum_i [gfJ_i]_S\)</span> 와 같고 <span class="math inline">\(\boldsymbol{J}(\boldsymbol{r})\)</span> 이 국소화 되어 있으므로, 즉 충분히 큰 <span class="math inline">\(\boldsymbol{r}\)</span> 에서 <span class="math inline">\(0\)</span> 이므로 위 식의 적분은 <span class="math inline">\(0\)</span> 이다.</p>
@@ -752,7 +752,7 @@ A_i(\boldsymbol{x}) = \dfrac{\mu_0}{4\pi} \left[\dfrac{1}{\|\boldsymbol{r}\|} \i
 <div id="exr-ED_MS_for_magnetic_dipole2" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 15.2</strong></span> <a href="#eq-ED_MS_equality_cxxzg" class="quarto-xref">식&nbsp;<span>15.14</span></a> 의 조건에서 임의의 벡터 <span class="math inline">\(\boldsymbol{a}\)</span> 에 대해</p>
 <p><span class="math display">\[
-\boldsymbol{a \cdot} \int \boldsymbol{r}' \boldsymbol{J}(\boldsymbol{r}') \,d^3\boldsymbol{r}' = - \dfrac{1}{2} \boldsymbol{a}\times \int (\boldsymbol{r}'\times \boldsymbol{J}(\boldsymbol{r}'))\,d^3\boldsymbol{r}'
+\boldsymbol{a \cdot} \int \boldsymbol{r}' \boldsymbol{J}(\boldsymbol{r}') \,d\mathcal{V}' = - \dfrac{1}{2} \boldsymbol{a}\times \int (\boldsymbol{r}'\times \boldsymbol{J}(\boldsymbol{r}'))\,d\mathcal{V}'
 \]</span></p>
 <p>임을 보여라.</p>
 </div>
@@ -760,9 +760,9 @@ A_i(\boldsymbol{x}) = \dfrac{\mu_0}{4\pi} \left[\dfrac{1}{\|\boldsymbol{r}\|} \i
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(i\)</span> 번째 성분에 대해 보이자. <span class="math display">\[
 \begin{aligned}
-\boldsymbol{a\cdot}\int \boldsymbol{r}' J_i d^3\boldsymbol{r}' &amp;= \sum_j a_j \int x'_j J_i d^3\boldsymbol{r}' = -\dfrac{1}{2} \sum_j a_j \int (x_i' J_j - x_j' J_i) \,d^3\boldsymbol{r}'  \\[0.3em]
-&amp;= -\dfrac{1}{2} \sum_j \varepsilon_{ijk} a_j \int  (\boldsymbol{x}'\times \boldsymbol{J})_k \,d^3\boldsymbol{r}' \\[0.3em]
-&amp;= - \dfrac{1}{2} \left[\boldsymbol{a} \times \int (\boldsymbol{r}'\times \boldsymbol{J}) \,d^3\boldsymbol{r}'\right].
+\boldsymbol{a\cdot}\int \boldsymbol{r}' J_i d\mathcal{V}' &amp;= \sum_j a_j \int x'_j J_i d\mathcal{V}' = -\dfrac{1}{2} \sum_j a_j \int (x_i' J_j - x_j' J_i) \,d\mathcal{V}'  \\[0.3em]
+&amp;= -\dfrac{1}{2} \sum_j \varepsilon_{ijk} a_j \int  (\boldsymbol{x}'\times \boldsymbol{J})_k \,d\mathcal{V}' \\[0.3em]
+&amp;= - \dfrac{1}{2} \left[\boldsymbol{a} \times \int (\boldsymbol{r}'\times \boldsymbol{J}) \,d\mathcal{V}'\right].
 \end{aligned}
 \]</span></p>
 </div>
@@ -816,7 +816,7 @@ A_i(\boldsymbol{x}) = \dfrac{\mu_0}{4\pi} \left[\dfrac{1}{\|\boldsymbol{r}\|} \i
 <h3 data-number="15.4.2" class="anchored" data-anchor-id="sec-ED_MS_general_force_between_current"><span class="header-section-number">15.4.2</span> 전류 사이의 힘</h3>
 <p><span class="math inline">\(I_1\)</span> 의 전류에 의해 생성되는 자기장 <span class="math inline">\(\boldsymbol{B}_1\)</span> 의 영항으로 전류밀도 <span class="math inline">\(\boldsymbol{J}_2\)</span> 가 받는 전체 로렌츠 힘은</p>
 <p><span class="math display">\[
-\boldsymbol{F}_2 = \int \boldsymbol{J}_2(\boldsymbol{r}_2) \times \boldsymbol{B}_1(\boldsymbol{r}_2)\,d^3\boldsymbol{r}_2
+\boldsymbol{F}_2 = \int \boldsymbol{J}_2(\boldsymbol{r}_2) \times \boldsymbol{B}_1(\boldsymbol{r}_2)\,d\mathcal{V}_2
 \]</span></p>
 <p>이며 <span class="math inline">\(\boldsymbol{J}_1,\,\boldsymbol{J}_2\)</span> 가 각각 폐곡선 <span class="math inline">\(C_1,\,C_2\)</span> 에서 닫힌 전류 회로를 이루며 각각의 전류가 <span class="math inline">\(I_1,\,I_2\)</span> 일 때 <span class="math inline">\(I_2\)</span> 가 받는 힘은 아래와 같이 계산 할 수 있다.</p>
 <p><span class="math display">\[
@@ -833,7 +833,7 @@ A_i(\boldsymbol{x}) = \dfrac{\mu_0}{4\pi} \left[\dfrac{1}{\|\boldsymbol{r}\|} \i
 <h3 data-number="15.4.3" class="anchored" data-anchor-id="sec-ED_MS_force_and_energy_of_magnetic_dipole"><span class="header-section-number">15.4.3</span> 쌍극자의 힘과 에너지</h3>
 <p>이제 두 전류 흐름이 아닌 자기장 안의 전류흐름에 대해 알아보자. 앞서 보았듯이 자기장 <span class="math inline">\(\boldsymbol{B}(\boldsymbol{r}')\)</span> 이 주어졌을 때 전류 밀도 <span class="math inline">\(\boldsymbol{J}(\boldsymbol{r}')\)</span> 이 받는 총 힘은 아래와 같다.</p>
 <p><span class="math display">\[
-\boldsymbol{F} = \int_V \boldsymbol{J}(\boldsymbol{r}')\times \boldsymbol{B}(\boldsymbol{r}')\,d^3\boldsymbol{r}'.
+\boldsymbol{F} = \int_V \boldsymbol{J}(\boldsymbol{r}')\times \boldsymbol{B}(\boldsymbol{r}')\,d\mathcal{V}'.
 \]</span></p>
 <p>이제 전류 밀도가 공간에서 원점 <span class="math inline">\(\boldsymbol{0}\)</span> 근처에서 국소화 되어 있으며 회로를 이루고 있다고 하자. <span class="math inline">\(\boldsymbol{B}(\boldsymbol{r}')\)</span> 을 <span class="math inline">\(\boldsymbol{0}\)</span> 을 중심으로 테일러 전개하면</p>
 <p><span class="math display">\[
@@ -841,7 +841,7 @@ B_k(\boldsymbol{r}') = B_k(\boldsymbol{0}) + \boldsymbol{r}'\boldsymbol{\cdot} \
 \]</span></p>
 <p>이며</p>
 <p><span class="math display">\[
-F_i = \sum_{jk} \varepsilon_{ijk} \left[ B_k(0) \int J_j  (\boldsymbol{r}') \,d^3\boldsymbol{r}' + \int J_j(\boldsymbol{r}') \boldsymbol{r}' \boldsymbol{\cdot} \nabla' B_k(\boldsymbol{0}) \,d^3\boldsymbol{r}' + \cdots \right]
+F_i = \sum_{jk} \varepsilon_{ijk} \left[ B_k(0) \int J_j  (\boldsymbol{r}') \,d^3\boldsymbol{r}' + \int J_j(\boldsymbol{r}') \boldsymbol{r}' \boldsymbol{\cdot} \nabla' B_k(\boldsymbol{0}) \,d\mathcal{V}' + \cdots \right]
 \]</span></p>
 <p>이다. 여기서 첫번째 적분은 전류밀도가 닫힌 경로를 따라 흐르므로 <span class="math inline">\(0\)</span> 이다. 이제 두번째 항을 보자. 여기서</p>
 <p><span class="math display">\[
@@ -854,7 +854,7 @@ F_i = \sum_{jk} \varepsilon_{ijk} \left[ B_k(0) \int J_j  (\boldsymbol{r}') \,d^
 <p>이므로 두번째 항에 의한 힘 <span class="math inline">\(F^{(2)}_i\)</span> 는</p>
 <p><span class="math display">\[
 \begin{aligned}
-F^{(2)}_i = \varepsilon_{ijk} \int J_j (\boldsymbol{r}') \boldsymbol{r}'\boldsymbol{\cdot} \nabla B_k(\boldsymbol{0})\,d^3\boldsymbol{r}'
+F^{(2)}_i = \varepsilon_{ijk} \int J_j (\boldsymbol{r}') \boldsymbol{r}'\boldsymbol{\cdot} \nabla B_k(\boldsymbol{0})\,d^3\mathcal{V}'
 \end{aligned}
 \]</span></p>
 <p>이다. <a href="#exr-ED_MS_for_magnetic_dipole2" class="quarto-xref">연습문제&nbsp;<span>15.2</span></a> 에서 <span class="math inline">\(\boldsymbol{a} = \nabla B_k(\boldsymbol{0})\)</span> 로 놓으면</p>
