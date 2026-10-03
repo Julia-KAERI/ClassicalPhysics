@@ -12,10 +12,10 @@ crossref:
 
 ### 전하와 전류 {#sec-ED_charge_and_current}
 
-근본적으로는 전하는 양자화 되어 있으며, 여기서 사용하는 SI 단위계에서는 쿨롱(Coulomb, $C$) 단위를 사용한다. 기본 전자 단위로는 전자의 전하량 $-e$ 을 사용하며 
+근본적으로는 전하는 양자화 되어 있으며, 여기서 사용하는 SI 단위계에서는 쿨롱(Coulomb, $\text{C}$) 단위를 사용한다. 기본 전자 단위로는 전자의 전하량 $-e$ 을 사용하며 
 
 $$
-e = 1.60217657 \times 10^{−19} C
+e = 1.60217657 \times 10^{−19} \text{ C}
 $$
 
 이다. 점입자가 아닌 전하 분포를 사용할 경우는 전하 밀도, 즉 단위 부피당 전하량를 사용하며 $\rho(\bf{x},\,t)$ 라고 표기한다. 공간 $V$ 를 점유하는 총 전하량 $Q=\int_V \rho (\bf{x},\,t) d^3\bf{x}$ 이다. 때때로 점전하를 표현할 경우 디랙 델타 함수를 사용하여 $\rho = q \delta(\bf{x}-\bf{r}(t))$ 와 같이 쓴다. 
@@ -50,11 +50,17 @@ $$ {#eq-ED_charge_conservation_law}
 
 ### 전기장, 자기장과 로런츠 힘 {#sec-ED_force_and_field}
 
+::: {.callout-important icon="false"}
+
+#### **로런츠 힘**
+
 전기장 $\bf{E}(\bf{x},\,t)$ 와 자기장 $\bf{B}(\bf{x},\,t)$ 에 대해 $\bf{r}(t)$ 에 위치한 전하 $q$ 는 아래의 힘을 받으미 이 힘을 **로런츠 힘(Lorentz force)** 라고 한다.
 
 $$
 \bf{F}=q(\bf{E} + \dot{\bf{r}}\times \bf{B}).
 $$ {#eq-ED_lorentz_force}
+
+:::
 
 이 로런츠 힘을 전하 분포 $\rho$ 와 전류 밀도 $\bf{J}$ 에 대해 아래와 같이 쓸 수 있다.
 
@@ -70,6 +76,9 @@ $$ {#eq-ED_force_density}
 
 로런츠 힘은 주어진 전기장과 자기장에 대해 전하 및 전하의 흐름에 의해 생성되는 힘을 표현한다. 전기장과 자기장은 어떻게 생성될지를 말하는 식이 멕스웰 방정식이다. 멕스웰 방정식은 아래의 네 식이다.
 
+::: {.callout-important icon="false"}
+
+#### **멕스웰 방정식** 
 $$
 \nabla \bf{\cdot E} = \dfrac{\rho}{\epsilon_0},
 $$ {#eq-ED_maxwell_eq_1}
@@ -99,3 +108,5 @@ $$
 $$
 
 이다. 
+
+:::

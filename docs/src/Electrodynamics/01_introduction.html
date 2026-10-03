@@ -434,9 +434,9 @@ window.Quarto = {
 <h2 data-number="12.1" class="anchored" data-anchor-id="전하와-전류"><span class="header-section-number">12.1</span> 전하와 전류</h2>
 <section id="sec-ED_charge_and_current" class="level3" data-number="12.1.1">
 <h3 data-number="12.1.1" class="anchored" data-anchor-id="sec-ED_charge_and_current"><span class="header-section-number">12.1.1</span> 전하와 전류</h3>
-<p>근본적으로는 전하는 양자화 되어 있으며, 여기서 사용하는 SI 단위계에서는 쿨롱(Coulomb, <span class="math inline">\(C\)</span>) 단위를 사용한다. 기본 전자 단위로는 전자의 전하량 <span class="math inline">\(-e\)</span> 을 사용하며</p>
+<p>근본적으로는 전하는 양자화 되어 있으며, 여기서 사용하는 SI 단위계에서는 쿨롱(Coulomb, <span class="math inline">\(\text{C}\)</span>) 단위를 사용한다. 기본 전자 단위로는 전자의 전하량 <span class="math inline">\(-e\)</span> 을 사용하며</p>
 <p><span class="math display">\[
-e = 1.60217657 \times 10^{−19} C
+e = 1.60217657 \times 10^{−19} \text{ C}
 \]</span></p>
 <p>이다. 점입자가 아닌 전하 분포를 사용할 경우는 전하 밀도, 즉 단위 부피당 전하량를 사용하며 <span class="math inline">\(\rho(\boldsymbol{x},\,t)\)</span> 라고 표기한다. 공간 <span class="math inline">\(V\)</span> 를 점유하는 총 전하량 <span class="math inline">\(Q=\int_V \rho (\boldsymbol{x},\,t) d^3\boldsymbol{x}\)</span> 이다. 때때로 점전하를 표현할 경우 디랙 델타 함수를 사용하여 <span class="math inline">\(\rho = q \delta(\boldsymbol{x}-\boldsymbol{r}(t))\)</span> 와 같이 쓴다.</p>
 <p>많은 경우 전하는 움직이며 이것을 수학적으로 표현해야 한다. 특정 위치 <span class="math inline">\(\boldsymbol{x}\)</span>, 시간 <span class="math inline">\(t\)</span> 에서의 전하 밀도가 <span class="math inline">\(\rho\)</span> 이고 이 전하가 <span class="math inline">\(\boldsymbol{v}\)</span> 의 속도로 움직일 때 <strong>전류 밀도 (current density)</strong> <span class="math inline">\(\boldsymbol{J}\)</span> 는 아래와 같이 정의된다.</p>
@@ -463,10 +463,22 @@ I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
 <h2 data-number="12.2" class="anchored" data-anchor-id="힘과-장"><span class="header-section-number">12.2</span> 힘과 장</h2>
 <section id="sec-ED_force_and_field" class="level3" data-number="12.2.1">
 <h3 data-number="12.2.1" class="anchored" data-anchor-id="sec-ED_force_and_field"><span class="header-section-number">12.2.1</span> 전기장, 자기장과 로런츠 힘</h3>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span><strong>로런츠 힘</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>전기장 <span class="math inline">\(\boldsymbol{E}(\boldsymbol{x},\,t)\)</span> 와 자기장 <span class="math inline">\(\boldsymbol{B}(\boldsymbol{x},\,t)\)</span> 에 대해 <span class="math inline">\(\boldsymbol{r}(t)\)</span> 에 위치한 전하 <span class="math inline">\(q\)</span> 는 아래의 힘을 받으미 이 힘을 <strong>로런츠 힘(Lorentz force)</strong> 라고 한다.</p>
 <p><span id="eq-ED_lorentz_force"><span class="math display">\[
 \boldsymbol{F}=q(\boldsymbol{E} + \dot{\boldsymbol{r}}\times \boldsymbol{B}).
 \tag{12.4}\]</span></span></p>
+</div>
+</div>
 <p>이 로런츠 힘을 전하 분포 <span class="math inline">\(\rho\)</span> 와 전류 밀도 <span class="math inline">\(\boldsymbol{J}\)</span> 에 대해 아래와 같이 쓸 수 있다.</p>
 <p><span id="eq-ED_force_density"><span class="math display">\[
 \boldsymbol{f} = \rho \boldsymbol{E} + \boldsymbol{J}\times \boldsymbol{B}.
@@ -477,6 +489,16 @@ I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
 <section id="sec-ED_maxwell_equation" class="level3" data-number="12.2.2">
 <h3 data-number="12.2.2" class="anchored" data-anchor-id="sec-ED_maxwell_equation"><span class="header-section-number">12.2.2</span> 맥스웰 방정식</h3>
 <p>로런츠 힘은 주어진 전기장과 자기장에 대해 전하 및 전하의 흐름에 의해 생성되는 힘을 표현한다. 전기장과 자기장은 어떻게 생성될지를 말하는 식이 멕스웰 방정식이다. 멕스웰 방정식은 아래의 네 식이다.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span><strong>멕스웰 방정식</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><span id="eq-ED_maxwell_eq_1"><span class="math display">\[
 \nabla \boldsymbol{\cdot E} = \dfrac{\rho}{\epsilon_0},
 \tag{12.6}\]</span></span></p>
@@ -498,6 +520,8 @@ I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
 \mu_0 :=4\pi \times 10^{-7}\; \text{m}\,\text{Kg}\,\text{C}^{-2} \approx 1.25 \times 10^{-6} \; \text{m}\,\text{Kg}\,\text{C}^{-2}
 \]</span></p>
 <p>이다.</p>
+</div>
+</div>
 
 
 </section>

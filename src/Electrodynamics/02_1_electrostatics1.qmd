@@ -12,7 +12,7 @@ crossref:
 
 $$
 \nabla \bf{\cdot E}= \dfrac{\rho}{\epsilon_0},\qquad \nabla \times \bf{E}=\bf{0}
-$$
+$$ {#eq-ED_ES_equations_for_electrostatics}
 
 </br>
 
@@ -23,7 +23,7 @@ $$
 가우스 법칙과 발산 정리를 통해 닫힌 곡면 $S$ 로 둘러쌓인 부피 $V$ 에 대해 
 
 $$
-\int_V (\nabla \bf{\cdot E}) \, d^3 \bf{r} = \int_S \bf{E\cdot}d\bf{a} = \dfrac{1}{\epsilon_0}\int_V \rho(\bf{x})\,d^3 \bf{r} = \dfrac{Q}{\epsilon_0}
+\int_S \bf{E\cdot}d\bf{a} = \int_V (\nabla \bf{\cdot E}) \, d\mathcal{V} = \dfrac{1}{\epsilon_0}\int_V \rho(\bf{x})\,d\mathcal{V} = \dfrac{Q}{\epsilon_0}
 $$
 
 이다. 여기서 $Q$ 는 부피 $V$ 에 포함된 총 전하량이다. 이로부터 우리는 아래의 가우스 법칙의 적분형태를 얻는다.
@@ -67,7 +67,7 @@ $${#eq-ED_ES_coulomb_force_by_point_charge_at_rprime}
 또한 점전하가 아니라 전하분포 $\rho(\bf{r}')$ 에 의해 성성되는 전기장은 다음과 같다는 것을 알 수 있다.
 
 $$
-\bf{E}(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\bf{r}')(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3} \,d^3\bf{r},
+\bf{E}(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\bf{r}')(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3} \,d\mathcal{V}'.
 $${#eq-ED_ES_electric_field_by_point_charge_distribution}
 
 
@@ -80,7 +80,7 @@ $${#eq-ED_ES_electric_field_by_point_charge_distribution}
 [헬름홀츠 정리](https://julia-kaeri.github.io/MathematicalPhysics/src/vector_calculus/vectorcalculus.html#헬름홀츠-정리) 와 정전기 상태의 멕스웰 방정식으로부터 벡터장 $\bf{E}$ 는 스칼라장
 
 $$
-\Phi(\bf{r}) := \dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}d^3\bf{r}
+\Phi(\bf{r}) := \dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}d\mathcal{V}'
 $$ {#eq-ED_ES_definition_of_electrostatic_potential}
 
 에 대해
@@ -155,7 +155,7 @@ $$
 원점에 위치한 점전하 $q$ 에 의한 포텐셜은 @eq-ED_ES_electrostatic_potential_difference 를 이용하여 계산하면 아래와 같다.
 
 $$
-\Phi(\bf{r}) = -\int_{\infty}^{\bf{r}} \dfrac{1}{4\pi\epsilon_0}\dfrac{q\bf{r'\cdot}\,d^3\bf{r'}}{r'^3} = -\dfrac{q}{4\pi\epsilon_0} \int_{\infty}^r \dfrac{dr'}{r'^2} = \dfrac{q}{4\pi\epsilon_0 r}
+\Phi(\bf{r}) = -\int_{\infty}^{\bf{r}} \dfrac{1}{4\pi\epsilon_0}\dfrac{q\bf{r'\cdot}\,d\bf{r'}}{r'^3} = -\dfrac{q}{4\pi\epsilon_0} \int_{\infty}^r \dfrac{dr'}{r'^2} = \dfrac{q}{4\pi\epsilon_0 r}
 $$ 
 
 즉, $\bf{r}'$ 에 위치한 점전하 $q$ 에 의해 발생하는 $\bf{r}$ 에서의 포텐셜 $\Phi(\bf{r})$ 은 다음과 같다. 
@@ -223,7 +223,7 @@ $$
 $$
 \begin{aligned}
 \dfrac{d\langle \Phi\rangle}{dR} &= \dfrac{1}{4\pi} \int \dfrac{\partial \Phi}{\partial R}\, d\Omega = \dfrac{1}{4\pi} \int\dfrac{\partial \Phi}{\partial R}\hat{\bf{R}}\cdot \hat{\bf{R}} \, d\Omega \\
-&= \dfrac{1}{4\pi R^2} \int \nabla \Phi \cdot d\bf{a} = \dfrac{1}{4\pi R^2}\int_V \nabla^2 \Phi \,dV = 0
+&= \dfrac{1}{4\pi R^2} \int \nabla \Phi \cdot d\bf{a} = \dfrac{1}{4\pi R^2}\int_V \nabla^2 \Phi \,d\mathcal{V} = 0
 \end{aligned}
 $$
 
@@ -256,7 +256,7 @@ $$
 이다. 이로부터
 
 $$
-0 < \int_S \hat{\bf{n}}\bf{\cdot} \nabla \Phi  \, da = - \int_S \hat{\bf{n}}\bf{\cdot}\bf{E}\,da = -\int_R \nabla \cdot E \, d^3\bf{r} = - \int_R \dfrac{\rho(\bf{r})}{\epsilon_0}\, d^3\bf{r} = 0
+0 < \int_S \hat{\bf{n}}\bf{\cdot} \nabla \Phi  \, da = - \int_S \hat{\bf{n}}\bf{\cdot}\bf{E}\,da = -\int_R \nabla \cdot E \, d\mathcal{V} = - \int_R \dfrac{\rho(\bf{r})}{\epsilon_0}\, d\mathcal{V} = 0
 $$
 
 이므로 모순이다. $\bf{r}_0$ 가 극대점일 경우 $\hat{\bf{n}}\bf{\cdot}\nabla \Phi <0$ 이므로 위의 식의 부호가 반대가 되어 역시 모순이 된다. $\square$
@@ -290,7 +290,7 @@ $S_i$ 에서의 경계값을 만족하는 두 정전 포텐셜 $\Phi_1$ 과 $\Ph
 
 $$
 \begin{aligned}
-\int_V (\nabla \Psi \bf{\cdot}\nabla \Psi)\,d^3\bf{r} &= \int_V \left[\nabla \bf{\cdot} (\Psi \nabla \Psi)- \Psi \nabla^2 \Psi\right]\,d^3\bf{r} \\[0.3em] 
+\int_V (\nabla \Psi \bf{\cdot}\nabla \Psi)\,d\mathcal{V} &= \int_V \left[\nabla \bf{\cdot} (\Psi \nabla \Psi)- \Psi \nabla^2 \Psi\right]\,d\mathcal{V}\\[0.3em] 
 &= \int_{\partial V} \Psi \dfrac{\partial \Psi}{\partial \bf{n}}\bf{\cdot}d \bf{a} 
 \end{aligned}
 $${#eq-thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition_1}
@@ -298,7 +298,7 @@ $${#eq-thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition
 이다. 여기서
 
 $$
-\int_V (\nabla \Psi \bf{\cdot}\nabla \Psi)\,d^3\bf{r} = \int_V \|\nabla \Psi\|\,d^3 \bf{r} \ge 0
+\int_V (\nabla \Psi \bf{\cdot}\nabla \Psi)\,d\mathcal{V} = \int_V \|\nabla \Psi\|\,d\mathcal{V} \ge 0
 $$ {#eq-thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition_2}
 
 임을 안다. 또한
@@ -348,7 +348,7 @@ $$
 부피 $V$ 에서 정의된 스칼라장 $\phi,\,\psi$ 에 대해 다음이 성립함을 보여라.
 
 $$
-\int_V \left[\nabla \phi \bf{\cdot } \nabla \psi + \phi \nabla^2 \psi \right] = \int_{\partial V} (\phi \nabla \psi)\bf{\cdot}d\bf{a}
+\int_V \left[\nabla \phi \bf{\cdot } \nabla \psi + \phi \nabla^2 \psi \right]\,d\mathcal{V} = \int_{\partial V} (\phi \nabla \psi)\bf{\cdot}d\bf{a}
 $$ {#eq-ED_ES_green_first_identity}
 
 
@@ -361,7 +361,7 @@ $\nabla \bf{\cdot}(\phi \nabla \psi) = \nabla \phi \bf{\cdot} \nabla \psi + \phi
 
 $$
 \begin{aligned}
-\int_V \left[\nabla \phi \bf{\cdot } \nabla \psi + \phi \nabla^2 \psi \right] &=\int_V \nabla \bf{\cdot}(\phi \nabla \psi) dV \quad &;\text{Divergent theorem}\\[0.3em]
+\int_V \left[\nabla \phi \bf{\cdot } \nabla \psi + \phi \nabla^2 \psi \right] \,d\mathcal{V}&=\int_V \nabla \bf{\cdot}(\phi \nabla \psi) \,d\mathcal{V} \quad &;\text{Divergent theorem}\\[0.3em]
 &=\int_{\partial V} (\phi \nabla \Psi)\bf{\cdot} d\bf{a}.
 \end{aligned}
 $$
@@ -378,7 +378,7 @@ $$
 부피 $V$ 에서 정의된 스칼라장 $\phi,\,\psi$ 에 대해 다음이 성립함을 보여라.
 
 $$
-\int_V \left[ \phi \nabla^2 \psi - \psi \nabla^2 \phi \right] = \int_{\partial V} (\phi \nabla \psi - \psi \nabla \phi)\bf{\cdot}d\bf{a}
+\int_V \left[ \phi \nabla^2 \psi - \psi \nabla^2 \phi \right] \,d\mathcal{V}= \int_{\partial V} (\phi \nabla \psi - \psi \nabla \phi)\bf{\cdot}d\bf{a}
 $${#eq-ED_ES_green_second_identity}
 
 
@@ -444,17 +444,17 @@ $$ {#eq-ED_ES_electric_field_dipole}
 
 $$
 \begin{aligned}
-\Phi(\bf{r}) &=\dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}' \\[0.3em]
-&= \dfrac{1}{4\pi\epsilon_0}\sum_{k=0}^\infty \dfrac{1}{\|\bf{r}\|^{k+1}} \int_V \|\bf{r}'\|^k P_k(\cos\theta')\,\rho(\bf{r}')\,d^3\bf{r'} \\[0.3em]
-&= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{1}{r}\int_V \rho(\bf{r}')\, d^3\bf{r}' + \dfrac{1}{r^2}\int_V r'\cos \gamma \, \rho(\bf{r}')\,d^3\bf{r}'  \right.\\[0.3em]
-&\qquad \qquad + \left.\int_V r'^2\left(\dfrac{3}{2}\cos^2 \gamma' - \dfrac{1}{2}\right)\rho(\bf{r}') \, d^3\bf{r}' + \cdots \right]
+\Phi(\bf{r}) &=\dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\,d\mathcal{V}' \\[0.3em]
+&= \dfrac{1}{4\pi\epsilon_0}\sum_{k=0}^\infty \dfrac{1}{\|\bf{r}\|^{k+1}} \int_V \|\bf{r}'\|^k P_k(\cos\theta')\,\rho(\bf{r}')\,d\mathcal{V}' \\[0.3em]
+&= \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{1}{r}\int_V \rho(\bf{r}')\, d\mathcal{V}' + \dfrac{1}{r^2}\int_V r'\cos \gamma \, \rho(\bf{r}')\,d\mathcal{V}'  \right.\\[0.3em]
+&\qquad \qquad + \left.\int_V r'^2\left(\dfrac{3}{2}\cos^2 \gamma' - \dfrac{1}{2}\right)\rho(\bf{r}') \, d\mathcal{V}' + \cdots \right]
 \end{aligned}
 $$
 
 이다. 즉, 다중극 모멘트 $Q_k$ 
 
 $$
-Q_k := \int_V (r')^k P_k(\cos\gamma)\,\rho(\bf{r}')\,d^3\bf{r'}
+Q_k := \int_V (r')^k P_k(\cos\gamma)\,\rho(\bf{r}')\,d\mathcal{V}'
 $$ {#eq-ED_ES_electric_multipole_moment}
 
 에 대해 전기 포텐셜을 다음과 같이 쓸 수 있다.
@@ -465,7 +465,7 @@ $$ {#eq-ED_ES_multipole_expansion}
 여기서 전기 쌍극자 모멘트 $Q_1$ 은
 
 $$
-Q_1 = \int_V r' \cos \gamma \rho(\bf{r}')\, d^3\bf{r}'
+Q_1 = \int_V r' \cos \gamma \rho(\bf{r}')\, d\mathcal{V}'
 $$
 
 이며 @fig-ED_ES_electric_dipole 의 전하 분포 $\rho(\bf{r}') = q\delta(\bf{r}'-\bf{d}/2) -q\delta(\bf{r}'+\bf{d}/2)$ 및 $\bf{p}= q\bf{d}$ 를 대입하면 $Q_1 = qd\cos \gamma$ 이고 @eq-ED_ES_electric_potential_dipole_2 의 결과를 얻는다. 
@@ -476,7 +476,7 @@ $$
 
 $$
 \begin{aligned}
-\Phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1}\dfrac{Y_l^m (\theta,\, \varphi) }{r^{l+1}} \int_V (r')^l {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\theta',\, \varphi') \, d^3\bf{r}' 
+\Phi(\bf{r}) &= \dfrac{1}{4\pi\epsilon_0} \sum_{l=0}^\infty \sum_{m=-l}^l \dfrac{4\pi}{2l+1}\dfrac{Y_l^m (\theta,\, \varphi) }{r^{l+1}} \int_V (r')^l {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\theta',\, \varphi') \, d\mathcal{V}' 
 \end{aligned}
 $$ {#eq-ED_ES_electrostatics_multpile_expansion_using_spherical_harmonics}
 
@@ -484,7 +484,7 @@ $$ {#eq-ED_ES_electrostatics_multpile_expansion_using_spherical_harmonics}
 
 $$
 \begin{aligned}
-Q_{lm} := & \int_V (r')^l {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\theta',\, \varphi') \, d^3\bf{r}' \\[0.3em]
+Q_{lm} := & \int_V (r')^l {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\theta',\, \varphi') \, d\mathcal{V}' \\[0.3em]
 =&\int_V (r')^{l+2} {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\theta',\, \varphi') \, \, dr'd\sin\theta' d\varphi'
 \end{aligned}
 $$ {#eq-ED-electrostatics_moltiple_moment_2}
@@ -610,22 +610,22 @@ $$ {#eq-ED_ES_definition_of_electrostatic_energy_density}
 이제 점전하가 아니라 전하가 연속적인 분포를 이룰 경우에 대해 생각해보자. 전하의 분포가 특정 영역에 한정되어 있다고 가정한다. 그렇다면 @eq-ED_ES_total_electrostatic_energy_for_N_point_charges_system 은 아래와 같이 변경 될 수 있을 것이다.
 
 $$
-U = \dfrac{1}{2} \int \rho (\bf{r})\,\Phi (\bf{r})\,d^3\bf{r}
+U = \dfrac{1}{2} \int \rho (\bf{r})\,\Phi (\bf{r})\,d\mathcal{V}
 $$
 
 이 식은 아래와 같이 변경 될 수 있다.
 
 $$
 \begin{aligned}
-U &= \dfrac{1}{2} \int \epsilon_0 (\nabla \bf{\cdot E}) \Phi \,d^3\bf{r} = \dfrac{\epsilon_0}{2} \int \left[\nabla \bf{\cdot} (\bf{E}\Phi) - \bf{E\cdot} \nabla \Phi\right]\,d^3\bf{r} \\[0.3em]
-&= \dfrac{\epsilon_0}{2}\int_S \Phi \bf{E \cdot} d\bf{a} + \dfrac{1}{2}\int \epsilon_0\|\bf{E}\|^2 \,d^3\bf{r}
+U &= \dfrac{1}{2} \int \epsilon_0 (\nabla \bf{\cdot E}) \Phi \,d\mathcal{V} = \dfrac{\epsilon_0}{2} \int \left[\nabla \bf{\cdot} (\bf{E}\Phi) - \bf{E\cdot} \nabla \Phi\right]\,d\mathcal{V} \\[0.3em]
+&= \dfrac{\epsilon_0}{2}\int_S \Phi \bf{E \cdot} d\bf{a} + \dfrac{1}{2}\int \epsilon_0\|\bf{E}\|^2 \,d\mathcal{V}
 \end{aligned}
 $$
 
 만약 우리가 전체 공간에 대해 적분을 한다고 생각해보자. 그렇다면 첫번째 항은 $\Phi(r\to \infty) = 0$ 조건에 의해 $0$ 이 될 것이며, 따라서 다음을 얻게 된다.
 
 $$
-U = \dfrac{\epsilon_0}{2} \int_{\text{Universe}} \|\bf{E}\|^2\,d^3\bf{r}
+U = \dfrac{\epsilon_0}{2} \int_{\text{Universe}} \|\bf{E}\|^2\,d\mathcal{V}
 $$ {#eq-ED_ES_total_electrostatic_energy_for_charge_distribution}
 
 </br>
@@ -778,13 +778,13 @@ $$
 물체의 부피가 $V$ 이며  물체 내의 전하 분포를 $\rho(\bf{r})$ 이라고 하자. 물체 바깥의 전하 분포에 의한 포텐셜을 $\Phi_e(\bf{r})$ 이라고 하자. 물체의 정전기 에너지는 
 
 $$
-U[\rho] = \dfrac{1}{8\pi\epsilon_0} \int_V \int_V \dfrac{\rho(\bf{r})\, \rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\, d^3\bf{r}\,d^3\bf{r}' + \int_V d^3{\bf{r}} \rho(\bf{r})\,\Phi_e(\bf{r})
+U[\rho] = \dfrac{1}{8\pi\epsilon_0} \int_V \int_V \dfrac{\rho(\bf{r})\, \rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\, d\mathcal{V}\,d\mathcal{V}' + \int_V d\mathcal{V} \rho(\bf{r})\,\Phi_e(\bf{r})
 $$
 
-이다. 여기에 $Q = \int_v \rho(\bf{r})\,d^3\bf{r}$ 이라는 제한이 존재한다. 라그랑쥬 승수법을 이용한다. 즉
+이다. 여기에 $Q = \int_v \rho(\bf{r})\,d\mathcal{V}$ 이라는 제한이 존재한다. 라그랑쥬 승수법을 이용한다. 즉
 
 $$
-I[\rho] = U_E[\rho] + \lambda \left[Q-\int_V \rho(\bf{r})\,d^3\bf{r}\right]
+I[\rho] = U_E[\rho] + \lambda \left[Q-\int_V \rho(\bf{r})\,d\mathcal{V}\right]
 $$
 
 이라고 하자. 여기에 대해 
@@ -797,29 +797,29 @@ $$
 
 $$
 \begin{aligned}
-\delta I &= \dfrac{1}{8\pi\epsilon_0} \int_V \int_V d^3\bf{r}\, d^3\bf{r}' \left[\dfrac{\delta \rho(\bf{r}) \rho(\bf{r}') + \delta \rho(\bf{r}')\,\rho(\bf{r})}{\|\bf{r}-\bf{r}'\|}\right] + \int_V d^3\bf{r} \delta \rho (\bf{r})\,\Phi_e(\bf{r}) \\[0.3em]
-&\qquad - \lambda \int_V d^3 \bf{r} \delta \rho(\bf{r}) \\[0.3em]
+\delta I &= \dfrac{1}{8\pi\epsilon_0} \int_V \int_V d\mathcal{V}\, d\mathcal{V}' \left[\dfrac{\delta \rho(\bf{r}) \rho(\bf{r}') + \delta \rho(\bf{r}')\,\rho(\bf{r})}{\|\bf{r}-\bf{r}'\|}\right] + \int_V d\mathcal{V} \delta \rho (\bf{r})\,\Phi_e(\bf{r}) \\[0.3em]
+&\qquad - \lambda \int_V d\mathcal{V} \delta \rho(\bf{r}) \\[0.3em]
 \end{aligned}
 $$
 
 이다. 여기서 위 식의 좌변의 첫번째 항은
 
 $$
-\int_V \int_V d^3\bf{r}\, d^3\bf{r}' \left[\dfrac{\delta \rho(\bf{r}) \rho(\bf{r}') + \delta \rho(\bf{r}')\,\rho(\bf{r})}{\|\bf{r}-\bf{r}'\|}\right] = 2\int_V \int_V d^3\bf{r}\, d^3\bf{r}' \left[\dfrac{\delta \rho(\bf{r})\,\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\right]
+\int_V \int_V  \left[\dfrac{\delta \rho(\bf{r}) \rho(\bf{r}') + \delta \rho(\bf{r}')\,\rho(\bf{r})}{\|\bf{r}-\bf{r}'\|}\right]\,d\mathcal{V}\, d\mathcal{V}' = 2\int_V \int_V \left[\dfrac{\delta \rho(\bf{r})\,\rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}\right]\,d\mathcal{V}\, d\mathcal{V}' 
 $$
 
 를 이용하여 줄일 수 있다. 그렇다면
 
 $$
 \begin{aligned}
-\delta I &= \int_V \, d^3\bf{r} \delta \rho(\bf{r}) \left[\int_V d^3\bf{r}'\dfrac{1}{4\pi\epsilon_0} \dfrac{ \rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}+ \Phi_e(\bf{r}) - \lambda \right]=0
+\delta I &= \int_V  \delta \rho(\bf{r}) \left[\int_V d^3\bf{r}'\dfrac{1}{4\pi\epsilon_0} \dfrac{ \rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}+ \Phi_e(\bf{r}) - \lambda \right]\, d\mathcal{V}=0
 \end{aligned}
 $$
 
 이어야 하므로,
 
 $$
-\lambda = \int_V d^3\bf{r}'\dfrac{1}{4\pi\epsilon_0} \dfrac{ \rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|}+ \Phi_e(\bf{r}) 
+\lambda = \int_V \dfrac{1}{4\pi\epsilon_0} \dfrac{ \rho(\bf{r}')}{\|\bf{r}-\bf{r}'\|} \,d\mathcal{V}'+ \Phi_e(\bf{r}) 
 $$
 
 이다. 여기서 첫번째 항은 $\rho$ 에 의한 포텐셜이므로 이를 $\Phi_\rho$ 라고 표기하면 $\lambda = \Phi_\rho + \Phi_e = \Phi_\text{tot}$, 즉 시스템 전체에 결처 포텐셜이 일정한 경우이다. $\square$ 
@@ -863,7 +863,7 @@ $$
 이제 이 축전지에 저장되는 전기에너지를 알아보자. 
 
 $$
-U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\bf{E}\|^2\,d^3\bf{r} = \dfrac{A\epsilon_0}{2}\int_0^d \left(\dfrac{\sigma}{\epsilon_0}\right)^2\,dz=\dfrac{Q^2}{2C}
+U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\bf{E}\|^2\,d\mathcal{V} = \dfrac{A\epsilon_0}{2}\int_0^d \left(\dfrac{\sigma}{\epsilon_0}\right)^2\,dz=\dfrac{Q^2}{2C}
 $$
 
 </br>
@@ -924,13 +924,13 @@ $$
 두 해를 $\Phi_1,\,\Phi_2$ 라고 하고 $f=\Phi_1-\Phi_2$ 라고 하자. $\nabla^2f=0$ 이므로
 
 $$
-\int_V \nabla \bf{\cdot} (f\nabla f)\,d^3\bf{r} = \int_V (\nabla f) \bf{\cdot} (\nabla f)\,d^3\bf{r} \ge 0
+\int_V \nabla \bf{\cdot} (f\nabla f)\,d\mathcal{V} = \int_V (\nabla f) \bf{\cdot} (\nabla f)\,d\mathcal{V} \ge 0
 $$
 
 이며 또한 발산정리에 따라 다음이 성립한다.
 
 $$
-\int_V \nabla \bf{\cdot} (f\nabla f)\,d^3\bf{r} = \sum_i\int_{S_i} f\nabla f\,d\bf{a} = \sum_i \int_{S_i}  f (\nabla f \cdot \hat{\bf{n}})da.
+\int_V \nabla \bf{\cdot} (f\nabla f)\,d\mathcal{V} = \sum_i\int_{S_i} f\nabla f\bf{\cdot}\,d\bf{a} = \sum_i \int_{S_i}  f (\nabla f \cdot \hat{\bf{n}})da.
 $$
 
 $S_i$ 에서 $f=0$ 이거나 $\nabla f\bf{\cdot} \hat{\bf{n}}=0$ 이므로 $\nabla f = 0$ 이다. 즉 $\Phi_1-\Phi_2=\text{const}$ 이다. 최소한 하나의 디리클레 경계조건이 있다면 $\Phi_1-\Phi_2=0$ 이므로 전위는 유일하게 정해진다. 모두 노이만 경계조건이라면 $\Phi_1-\Phi-2$ 는 항상 일정한데 이는 물리적으로 의미가 없는 차이이다. $\square$
@@ -1107,7 +1107,7 @@ $$
 임을 안다. 그렇다면 우리가 위치마다의 편극 벡터 $\bf{P}(\bf{r}')$ 을 안다면 이 유전물질에 의한 정전포텐셜은
 
 $$
-\Phi (\bf{r})= \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\bf{P}(\bf{r}')\bf{\cdot} (\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3}d^3\bf{r}'
+\Phi (\bf{r})= \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\bf{P}(\bf{r}')\bf{\cdot} (\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3}d\mathcal{V}'
 $$ {#eq-ED_ES_electrostatic_potential_by_polarizaiton}
 
 이다. 유전물질이 차지한 부피 $V$ 와 그 표면 $S=\partial V$ 를 생각하자. 항등식
@@ -1120,9 +1120,9 @@ $$
 
 $$
 \begin{aligned}
-\Phi (\bf{r}) &= \dfrac{1}{4\pi\epsilon_0} \int_V \bf{P}(\bf{r}')\bf{\cdot}\nabla'\left(\dfrac{1}{\|\bf{r}-\bf{r}'\|}\right)\,d^3\bf{r} \\[0.3em]
-&= \dfrac{1}{4\pi\epsilon_0} \left[\int_V \nabla'\bf{\cdot}\left(\dfrac{\bf{P(\bf{r}')}}{\|\bf{r}-\bf{r}'\|}\right)\,d^3\bf{r} - \int_V \dfrac{\nabla' \bf{\cdot P}(\bf{r}')}{\|\bf{r}-\bf{r}'\|} \,d^3\bf{r} \right] \\[0.3em]
-&= \dfrac{1}{4\pi\epsilon_0}\int_S \dfrac{\bf{P\cdot}\hat{\bf{n}}}{\|\bf{r}-\bf{r}'\|}da  + \dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\left(-\nabla\bf{\cdot P}\right)}{\|\bf{r}-\bf{r}'\|}\,d^3\bf{r}.
+\Phi (\bf{r}) &= \dfrac{1}{4\pi\epsilon_0} \int_V \bf{P}(\bf{r}')\bf{\cdot}\nabla'\left(\dfrac{1}{\|\bf{r}-\bf{r}'\|}\right)\,d\mathcal{V}'\\[0.3em]
+&= \dfrac{1}{4\pi\epsilon_0} \left[\int_V \nabla'\bf{\cdot}\left(\dfrac{\bf{P(\bf{r}')}}{\|\bf{r}-\bf{r}'\|}\right)\,d\mathcal{V}' - \int_V \dfrac{\nabla' \bf{\cdot P}(\bf{r}')}{\|\bf{r}-\bf{r}'\|} \,d\mathcal{V}' \right] \\[0.3em]
+&= \dfrac{1}{4\pi\epsilon_0}\int_S \dfrac{\bf{P\cdot}\hat{\bf{n}}}{\|\bf{r}-\bf{r}'\|}da  + \dfrac{1}{4\pi\epsilon_0}\int_V \dfrac{\left(-\nabla\bf{\cdot P}\right)}{\|\bf{r}-\bf{r}'\|}\,\mathcal{V}'.
 \end{aligned}
 $$
 
