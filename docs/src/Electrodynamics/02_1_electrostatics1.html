@@ -426,8 +426,10 @@ window.Quarto = {
   <li><a href="#sec-ED-ES_electric_field_and_coulomb_force" id="toc-sec-ED-ES_electric_field_and_coulomb_force" class="nav-link" data-scroll-target="#sec-ED-ES_electric_field_and_coulomb_force"><span class="header-section-number">13.1.1</span> 전기장과 쿨롱힘</a></li>
   <li><a href="#sec-ED_ES_electrostatic_potential" id="toc-sec-ED_ES_electrostatic_potential" class="nav-link" data-scroll-target="#sec-ED_ES_electrostatic_potential"><span class="header-section-number">13.1.2</span> 정전 포텐셜</a></li>
   <li><a href="#sec-ED_ES_electrostatic_stable_equilibrium" id="toc-sec-ED_ES_electrostatic_stable_equilibrium" class="nav-link" data-scroll-target="#sec-ED_ES_electrostatic_stable_equilibrium"><span class="header-section-number">13.1.3</span> 정전기적 안정평형상태</a></li>
-  <li><a href="#sec-ED_ES_uniqueness_theorem_for_electrostatics" id="toc-sec-ED_ES_uniqueness_theorem_for_electrostatics" class="nav-link" data-scroll-target="#sec-ED_ES_uniqueness_theorem_for_electrostatics"><span class="header-section-number">13.1.4</span> 정전기 문제의 유일성 정리</a></li>
-  <li><a href="#sec-ED_ES_multipole_expansion" id="toc-sec-ED_ES_multipole_expansion" class="nav-link" data-scroll-target="#sec-ED_ES_multipole_expansion"><span class="header-section-number">13.1.5</span> 다중극 전개</a></li>
+  <li><a href="#sec-ED_ES_conductor" id="toc-sec-ED_ES_conductor" class="nav-link" data-scroll-target="#sec-ED_ES_conductor"><span class="header-section-number">13.1.4</span> 도체</a></li>
+  <li><a href="#sec-ED_ES_uniqueness_theorem_for_electrostatics" id="toc-sec-ED_ES_uniqueness_theorem_for_electrostatics" class="nav-link" data-scroll-target="#sec-ED_ES_uniqueness_theorem_for_electrostatics"><span class="header-section-number">13.1.5</span> 정전기 문제의 유일성 정리</a></li>
+  <li><a href="#sec-ED_ES_multipole_expansion" id="toc-sec-ED_ES_multipole_expansion" class="nav-link" data-scroll-target="#sec-ED_ES_multipole_expansion"><span class="header-section-number">13.1.6</span> 다중극 전개</a></li>
+  <li><a href="#sec-ED_ES_image_method" id="toc-sec-ED_ES_image_method" class="nav-link" data-scroll-target="#sec-ED_ES_image_method"><span class="header-section-number">13.1.7</span> 거울 영상법</a></li>
   </ul></li>
   <li><a href="#정전기-에너지" id="toc-정전기-에너지" class="nav-link" data-scroll-target="#정전기-에너지"><span class="header-section-number">13.2</span> 정전기 에너지</a>
   <ul class="collapse">
@@ -436,19 +438,14 @@ window.Quarto = {
   <li><a href="#sec-ED_ES_electrostatic_energy_for_charge_distribution" id="toc-sec-ED_ES_electrostatic_energy_for_charge_distribution" class="nav-link" data-scroll-target="#sec-ED_ES_electrostatic_energy_for_charge_distribution"><span class="header-section-number">13.2.3</span> 전하 분포의 정전기 에너지</a></li>
   <li><a href="#sec-ED_ES_comparison_of_electrostatic_energy" id="toc-sec-ED_ES_comparison_of_electrostatic_energy" class="nav-link" data-scroll-target="#sec-ED_ES_comparison_of_electrostatic_energy"><span class="header-section-number">13.2.4</span> 정전기 에너지 비교</a></li>
   <li><a href="#sec-ED_ES_force_between_electric_dipoles" id="toc-sec-ED_ES_force_between_electric_dipoles" class="nav-link" data-scroll-target="#sec-ED_ES_force_between_electric_dipoles"><span class="header-section-number">13.2.5</span> 전기쌍극자 사이의 상호작용</a></li>
+  <li><a href="#톰슨-정리" id="toc-톰슨-정리" class="nav-link" data-scroll-target="#톰슨-정리"><span class="header-section-number">13.2.6</span> 톰슨 정리</a></li>
+  <li><a href="#sec-ED_ES_capacitor" id="toc-sec-ED_ES_capacitor" class="nav-link" data-scroll-target="#sec-ED_ES_capacitor"><span class="header-section-number">13.2.7</span> 축전지</a></li>
   </ul></li>
-  <li><a href="#도체" id="toc-도체" class="nav-link" data-scroll-target="#도체"><span class="header-section-number">13.3</span> 도체</a>
+  <li><a href="#유전체" id="toc-유전체" class="nav-link" data-scroll-target="#유전체"><span class="header-section-number">13.3</span> 유전체</a>
   <ul class="collapse">
-  <li><a href="#sec-ED_ES_conductor" id="toc-sec-ED_ES_conductor" class="nav-link" data-scroll-target="#sec-ED_ES_conductor"><span class="header-section-number">13.3.1</span> 도체의 기본적 성질</a></li>
-  <li><a href="#톰슨-정리" id="toc-톰슨-정리" class="nav-link" data-scroll-target="#톰슨-정리"><span class="header-section-number">13.3.2</span> 톰슨 정리</a></li>
-  <li><a href="#sec-ED_ES_capacitor" id="toc-sec-ED_ES_capacitor" class="nav-link" data-scroll-target="#sec-ED_ES_capacitor"><span class="header-section-number">13.3.3</span> 축전지</a></li>
-  <li><a href="#sec-ED_ES_boundary_value_problem_in_conductors" id="toc-sec-ED_ES_boundary_value_problem_in_conductors" class="nav-link" data-scroll-target="#sec-ED_ES_boundary_value_problem_in_conductors"><span class="header-section-number">13.3.4</span> 도체에서의 경계값 문제</a></li>
-  </ul></li>
-  <li><a href="#유전체" id="toc-유전체" class="nav-link" data-scroll-target="#유전체"><span class="header-section-number">13.4</span> 유전체</a>
-  <ul class="collapse">
-  <li><a href="#sec-ED_ES_dielectrics" id="toc-sec-ED_ES_dielectrics" class="nav-link" data-scroll-target="#sec-ED_ES_dielectrics"><span class="header-section-number">13.4.1</span> 유전체와 유도 쌍극자</a></li>
-  <li><a href="#sec-ED_ES_alignement_of_polar_molecule" id="toc-sec-ED_ES_alignement_of_polar_molecule" class="nav-link" data-scroll-target="#sec-ED_ES_alignement_of_polar_molecule"><span class="header-section-number">13.4.2</span> 극성 분자의 정렬</a></li>
-  <li><a href="#sec-ED_ES_polarizaiton_vector_P" id="toc-sec-ED_ES_polarizaiton_vector_P" class="nav-link" data-scroll-target="#sec-ED_ES_polarizaiton_vector_P"><span class="header-section-number">13.4.3</span> 편극 벡터 <span class="math inline">\(\boldsymbol{P}\)</span></a></li>
+  <li><a href="#sec-ED_ES_dielectrics" id="toc-sec-ED_ES_dielectrics" class="nav-link" data-scroll-target="#sec-ED_ES_dielectrics"><span class="header-section-number">13.3.1</span> 유전체와 유도 쌍극자</a></li>
+  <li><a href="#sec-ED_ES_alignement_of_polar_molecule" id="toc-sec-ED_ES_alignement_of_polar_molecule" class="nav-link" data-scroll-target="#sec-ED_ES_alignement_of_polar_molecule"><span class="header-section-number">13.3.2</span> 극성 분자의 정렬</a></li>
+  <li><a href="#sec-ED_ES_polarizaiton_vector_P" id="toc-sec-ED_ES_polarizaiton_vector_P" class="nav-link" data-scroll-target="#sec-ED_ES_polarizaiton_vector_P"><span class="header-section-number">13.3.3</span> 편극 벡터 <span class="math inline">\(\boldsymbol{P}\)</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -509,7 +506,6 @@ window.Quarto = {
 <p><span id="eq-ED_ES_electric_field_by_point_charge_distribution"><span class="math display">\[
 \boldsymbol{E}(\boldsymbol{r}) = \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\boldsymbol{r}')(\boldsymbol{r}-\boldsymbol{r}')}{\|\boldsymbol{r}-\boldsymbol{r}'\|^3} \,d\mathcal{V}'.
 \tag{13.7}\]</span></span></p>
-<p><br></p>
 </section>
 <section id="sec-ED_ES_electrostatic_potential" class="level3" data-number="13.1.2">
 <h3 data-number="13.1.2" class="anchored" data-anchor-id="sec-ED_ES_electrostatic_potential"><span class="header-section-number">13.1.2</span> 정전 포텐셜</h3>
@@ -524,7 +520,6 @@ window.Quarto = {
 \boldsymbol{E}=-\nabla \Phi
 \tag{13.9}\]</span></span></p>
 <p>이다. 이 때 <span class="math inline">\(\Phi(\boldsymbol{r})\)</span> 을 <strong>정전 포텐셜(electrostatic potential)</strong> 이라고 한다.</p>
-<p><br></p>
 </section>
 <section id="쿨롱힘과-보존력" class="level4">
 <h4 class="anchored" data-anchor-id="쿨롱힘과-보존력"><strong>쿨롱힘과 보존력</strong></h4>
@@ -536,7 +531,6 @@ window.Quarto = {
 <p><span id="eq-ED_ES_electro_static_work_by_electrostatic_potential"><span class="math display">\[
 W_{12} = q\int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \boldsymbol{E\cdot}d\boldsymbol{l}= - q\Delta \Phi_{12}.
 \tag{13.11}\]</span></span></p>
-<p><br></p>
 </section>
 <section id="푸아송-방정식과-라플라스-방정식" class="level4">
 <h4 class="anchored" data-anchor-id="푸아송-방정식과-라플라스-방정식"><strong>푸아송 방정식과 라플라스 방정식</strong></h4>
@@ -560,12 +554,10 @@ W_{12} = q\int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \boldsymbol{E\cdot}d\boldsy
 \Phi(\boldsymbol{r}) = -\int_{\mathcal{O}}^{\boldsymbol{r}}\boldsymbol{E}\boldsymbol{\cdot}\,d\boldsymbol{l}
 \]</span></p>
 <p>기준점이 바뀌더라도 포텐셜에는 상수 만큼의 차이밖에 나지 않으며 물리에는 변화가 없다. <span class="math inline">\(\displaystyle \lim_{|\boldsymbol{r}\|\to \infty} \Phi(\boldsymbol{r})=0\)</span> 이면 무한히 먼 점을 기준으로 사용한다.</p>
-<p><br></p>
 </section>
 <section id="중첩의-원리" class="level4">
 <h4 class="anchored" data-anchor-id="중첩의-원리"><strong>중첩의 원리</strong></h4>
 <p>푸아송 방정식을 보자. 전하 밀도 <span class="math inline">\(\rho_1\)</span> 에 대해 포텐셜 <span class="math inline">\(\Phi_1\)</span> 을 얻고 <span class="math inline">\(\rho_2\)</span> 에 대해 포텐셜 <span class="math inline">\(\Phi_2\)</span> 를 얻었다면 <span class="math inline">\(\nabla^2 (\Phi_1+ \Phi_2) = (\rho_1+\rho_2)/\epsilon_0\)</span> 이다. 이것은 전기장 <span class="math inline">\(\boldsymbol{E}_1,\,\boldsymbol{E}_2\)</span> 에 대해서도 마찬가지이다. 이를 <strong>중첩 원리 (principle of superposition)</strong> 라고 한다.</p>
-<p><br></p>
 </section>
 <section id="점전하에-의한-포텐셜" class="level4">
 <h4 class="anchored" data-anchor-id="점전하에-의한-포텐셜"><strong>점전하에 의한 포텐셜</strong></h4>
@@ -577,7 +569,6 @@ W_{12} = q\int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \boldsymbol{E\cdot}d\boldsy
 <p><span id="eq-ED_ES_potential_by_point_charge"><span class="math display">\[
 \Phi(\boldsymbol{r})= \dfrac{1}{4\pi\epsilon_0}\dfrac{q}{\|\boldsymbol{r}-\boldsymbol{r}'\|}.
 \tag{13.14}\]</span></span></p>
-<p><br></p>
 </section>
 <section id="정전기-시스템의-경계-조건" class="level4">
 <h4 class="anchored" data-anchor-id="정전기-시스템의-경계-조건"><strong>정전기 시스템의 경계 조건</strong></h4>
@@ -590,12 +581,11 @@ W_{12} = q\int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \boldsymbol{E\cdot}d\boldsy
 \Phi_1 (\boldsymbol{r}_{1\to S_0}) = \Phi_2(\boldsymbol{r}_{2\to S_0})
 \tag{13.16}\]</span></span></p>
 <p>를 얻는다.</p>
-<p><br></p>
 </section>
 </section>
 <section id="sec-ED_ES_electrostatic_stable_equilibrium" class="level3" data-number="13.1.3">
 <h3 data-number="13.1.3" class="anchored" data-anchor-id="sec-ED_ES_electrostatic_stable_equilibrium"><span class="header-section-number">13.1.3</span> 정전기적 안정평형상태</h3>
-<p>평형이란 어떤 시스템의 모든 입자에 대해 가해지는 힘이 <span class="math inline">\(0\)</span> 인 상태이다. 정전기적 안정평형상태, 즉 전하들이 정지된 상태에서 각 전하에 가해지는 힘이 <span class="math inline">\(0\)</span> 이며 또한 미소 변화에 대해 복원력이 작용하는 전하 분포가 존재할까? 여기서는 서로 겹치지 않는 이산적인 점전하의 분포에서 가능한지 여부를 알아보자. 예를 들어 붙어있는 양전하와 음전하는 안정평형상태라고 볼 수 있다.</p>
+<p>평형이란 어떤 시스템의 모든 입자에 대해 가해지는 순힘이 <span class="math inline">\(0\)</span> 인 상태이다. 정전기적 안정평형상태, 즉 전하들이 정지된 상태에서 각 전하에 가해지는 힘이 <span class="math inline">\(0\)</span> 이며 또한 미소 변화에 대해 복원력이 작용하는 전하 분포가 존재할까? 여기서는 서로 겹치지 않는 이산적인 점전하의 분포에서 가능한지 여부를 알아보자. 예를 들어 붙어있는 양전하와 음전하는 안정평형상태라고 볼 수 있다.</p>
 <p><span class="math inline">\(\boldsymbol{r}\)</span> 에 위치한 전하 <span class="math inline">\(q\)</span> 에 가해지는 힘 <span class="math inline">\(\boldsymbol{F} = q\boldsymbol{E} = -q\nabla \Phi\)</span> 이다. 정전기 평형상태이려면 <span class="math inline">\(\boldsymbol{F}=0\)</span> 이어야 하므로 <span class="math inline">\(\nabla \Phi(\boldsymbol{r}) = 0\)</span> 이어야 한다. 또한 <span class="math inline">\(q\nabla^2\Phi &gt;0\)</span> 이어야 한다. 하지만 우리는 전하 분포가 없는 공간에서 <span class="math inline">\(\nabla^2 \Phi = 0\)</span> 임을 안다. 즉 이산적 전하분포에서 정전기적 안정평형상태는 존재하지 않는다.</p>
 <p>우리는 이것에 대해 좀 더 수학적으로 알아보자.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -640,19 +630,93 @@ W_{12} = q\int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \boldsymbol{E\cdot}d\boldsy
 \]</span></p>
 <p>이므로 모순이다. <span class="math inline">\(\boldsymbol{r}_0\)</span> 가 극대점일 경우 <span class="math inline">\(\hat{\boldsymbol{n}}\boldsymbol{\cdot}\nabla \Phi &lt;0\)</span> 이므로 위의 식의 부호가 반대가 되어 역시 모순이 된다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<p>Earnshow 의 정리로부터 우리는 전하로 이루어진 계가 <strong>정전기력만으로는</strong> 안정평형상태를 유지할 수 없다는 것을 알 수 있다.</p>
-<p><br></p>
+<p>Earnshow 의 정리로부터 우리는 <strong>전하로 이루어진 계가 정전기력만으로는 안정평형상태를 유지할 수 없다</strong>는 것을 알 수 있다.</p>
 </section>
-<section id="sec-ED_ES_uniqueness_theorem_for_electrostatics" class="level3" data-number="13.1.4">
-<h3 data-number="13.1.4" class="anchored" data-anchor-id="sec-ED_ES_uniqueness_theorem_for_electrostatics"><span class="header-section-number">13.1.4</span> 정전기 문제의 유일성 정리</h3>
+<section id="sec-ED_ES_conductor" class="level3" data-number="13.1.4">
+<h3 data-number="13.1.4" class="anchored" data-anchor-id="sec-ED_ES_conductor"><span class="header-section-number">13.1.4</span> 도체</h3>
+<section id="도체의-기본적-성질" class="level4">
+<h4 class="anchored" data-anchor-id="도체의-기본적-성질"><strong>도체의 기본적 성질</strong></h4>
+<p><strong>도체 (conductor)</strong> 는 전자가 자유롭게 움직 일 수 있는 공간적인 영역을 의미한다. 또한 자유롭게 움직일 수 있는 전자가 충분히 많다는 것을 가정한다. 일반적으로 도체는 금속을 의미하며 금속은 보통 원자당 하나 이상의 자유전자를 가지므로 거시적인 시스템에서 도체의 자유전자의 개수는 <span class="math inline">\(10^{23}\)</span> 이상으로 충분히 많다. 이 짧은 정의로부터 우리는 아래와 같은 사실을 유추할 수 있다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition" class="theorem">
-<p><span class="theorem-title"><strong>정리 13.3 (정전기 포텐셜의 유일성 정리)</strong></span> 표면 <span class="math inline">\(S_1,\,S_2,\ldots,\,S_n\)</span> 에 대해 디리클레 경계조건 혹은 노이만 경계조건이 정해진 경우 라플라스 방정식의 해가 존재한다면 그 해는 유일하다.</p>
+<div id="thm-ED_ES_basic_properties_of_conductor" class="theorem">
+<p><span class="theorem-title"><strong>정리 13.3 (도체의 기본적인 성질)</strong></span> 도체 내부에서 받는 힘 <span class="math inline">\(\boldsymbol{F}=0\)</span> 이며, 따라서 다음이 성립한다.</p>
+<p> (<span class="math inline">\(1\)</span>) 도체 내부에서 전기장 <span class="math inline">\(\boldsymbol{E}=\boldsymbol{0}\)</span> 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) 도체 내부에서 정전기 포텐셜 <span class="math inline">\(\Phi\)</span> 는 상수이다.</p>
+<p> (<span class="math inline">\(3\)</span>) 도체 내부에서 전하 밀도 <span class="math inline">\(\rho = 0\)</span> 이다.</p>
+<p> (<span class="math inline">\(4\)</span>) 도체가 포함하는 전하의 합이 <span class="math inline">\(0\)</span> 이 아닐 때 그 여분의 전하는 도체 표면에 존재한다.</p>
+<p> (<span class="math inline">\(5\)</span>) 도체 표면의 전기장은 표면에 대해 수직방향이다.</p>
+<p> (<span class="math inline">\(6\)</span>) 도체 표면의 전하밀도가 <span class="math inline">\(\sigma\)</span> 일 때 도체 표면 바로 바깥의 전기장의 크기는 <span class="math inline">\(\dfrac{\sigma}{\epsilon_0}\)</span> 이다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(S_i\)</span> 에서의 경계값을 만족하는 두 정전 포텐셜 <span class="math inline">\(\Phi_1\)</span> 과 <span class="math inline">\(\Phi_2\)</span> 가 있다고 하자. 이 때 <span class="math inline">\(\Psi = \Phi_1-\Phi_2\)</span> 라고 하자. <span class="math inline">\(\nabla^2 \Phi_1 = \nabla^2 \Phi_2 = 0\)</span> 이므로 <span class="math inline">\(\nabla^2 \Psi = 0\)</span> 이다. 모든 <span class="math inline">\(S_i\)</span> 로 둘러쌓여진 영역을 포함하는 큰 영역 <span class="math inline">\(V_0\)</span> 를 생각하자. <span class="math inline">\(V_0\)</span> 에서 <span class="math inline">\(S_i\)</span> 에 의해 둘러쌓인 부분을 제외한 영역을 <span class="math inline">\(V\)</span> 라고 하면 <span class="math inline">\(V\)</span> 의 경계면은 <span class="math inline">\(V_0\)</span> 의 경계면 <span class="math inline">\(S_0\)</span> 와 <span class="math inline">\(S_1,\ldots,\,S_n\)</span> 이다. 그 경계 <span class="math inline">\(\partial V = \bigcup_{k=0}^n S_k\)</span> 를 생각 할 수 있다. 이 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(\nabla^2 \Psi = 0\)</span> 와 그린의 제 1 항등식(<a href="#eq-ED_ES_green_first_identity" class="quarto-xref">식&nbsp;<span>13.19</span></a>) 을 이용하면</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{F}=0\)</span> 으로부터 <span class="math inline">\(\boldsymbol{E}=0\)</span> 이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{E}= \nabla \Phi\)</span> 로부터 자명하다.</p>
+<p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(\boldsymbol{E} =\rho/\epsilon_0\)</span> 로부터 자명하다.</p>
+<p>(<span class="math inline">\(4\)</span>) (<span class="math inline">\(3\)</span>) 으로부터 도체 내부에서 <span class="math inline">\(\rho=0\)</span> 이므로 유일하게 남은 가능성은 이것뿐이다.</p>
+<p>(<span class="math inline">\(5\)</span>) 도체 내부에서 <span class="math inline">\(\Phi\)</span> 가 상수이고 <span class="math inline">\(\Phi\)</span> 는 연속이므로 도체 포면에서 <span class="math inline">\(\nabla \Phi\)</span> 는 표면에 수직방향이다.</p>
+<p>(<span class="math inline">\(6\)</span>) 가우스법칙과 <span class="math inline">\(\boldsymbol{E}_{\text{in}} = 0\)</span> 으로부터 <span class="math inline">\(\boldsymbol{E}_{\text{out}} = \sigma/\epsilon_0 \hat{\boldsymbol{n}}\)</span> 이다. 여기서 <span class="math inline">\(\hat{\boldsymbol{n}}\)</span> 은 도체 표면에 수직방향인 단위벡터이다. <span class="math inline">\(\square\)</span></p>
+</div>
+</section>
+<section id="유도-전하" class="level4">
+<h4 class="anchored" data-anchor-id="유도-전하"><strong>유도 전하</strong></h4>
+<div id="fig-ED_ES_electrostatics_conductor_in_field" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ED_ES_electrostatics_conductor_in_field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/electrostatics/conductor/conductor.png" class="img-fluid figure-img" width="600">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_electrostatics_conductor_in_field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;13.1: 외부 전기장에 대해 (<span class="math inline">\(a\)</span>) 전기적으로 중성인 부도체의 경우, (<span class="math inline">\(b\)</span>) 도체의 경우 내부의 전하가 이동하기 시작하며 (<span class="math inline">\(c\)</span>) 도체 표면의 전하 분포로 인해 내부 전기장이 사라진 경우 (출처 <span class="citation" data-cites="Purcell2013electricity">Purcell (<a href="../ClassicalMechanics/00_index.html#ref-Purcell2013electricity" role="doc-biblioref">2013</a>)</span>)
+</figcaption>
+</figure>
+</div>
+<p>외부의 전기장에 대해 도체 내의 자유롭게 움직일 수 없는 전하들이 움직이며, 위의 그림 (<span class="math inline">\(c\)</span>) 에서 보듯이 이동한 전하들에 의한 전기장은 외부의 전기장을 상쇄하는 방향으로 이루어진다. 도체 내에서 자유롭게 움직일 수 있는 전하가 아주 많기 때문에 이 과정은 도체 내부의 전기장이 <span class="math inline">\(0\)</span> 이 될 때 까지 이루어진다. 전하가 도체 바깥으로 탈출할 수 없다고 가정하면 당연히 이렇게 움직인 전하는 표면에 모여 있을 수 밖에 없다. 이렇게 외부 전기장에 의해 표면에 나타나는 전하를 <strong>유도 전하 (induced charge)</strong> 라고 한다.</p>
+<p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-ED_ES_field_of_spherical_shell" class="theorem example">
+<p><span class="theorem-title"><strong>예제 13.1 (구 대칭 전기장)</strong></span> 반지름 <span class="math inline">\(R\)</span> 인 도체의 구 껍질을 생각하자. 구의 내부에 전하 <span class="math inline">\(q\)</span> 가 있을 때의 구 외부의 전기장은 전하 <span class="math inline">\(q\)</span> 가 구의 중심에 있고 구 껍질이 사라졌을 때의 전기장과 같는 것을 보이자. 구 껍질은 안쪽 면과 바깥쪽 면이 존재하며 안쪽 면과 바깥쪽 면 사이의 도체 부분에 아래 그림과 같은 가우스 면을 생각하자.</p>
+<div id="fig-ED_ES_electrostatics_conductor_in_field_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ED_ES_electrostatics_conductor_in_field_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/electrostatics/conductor/conductor2.png" class="img-fluid figure-img" width="200">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_electrostatics_conductor_in_field_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;13.2: 도체 구 껍질 내부의 가우스 면
+</figcaption>
+</figure>
+</div>
+<p>도체 내부의 전기장은 <span class="math inline">\(\boldsymbol{0}\)</span> 이기 때문에 가우스 면에 가우스 법칙을 적용하면</p>
+<p><span class="math display">\[
+\dfrac{Q_{in}}{\epsilon_0} =  \int \boldsymbol{E\cdot}d\boldsymbol{a} = \pi R_{\text{in}}^2 E = 0
+\]</span></p>
+<p>이다. 즉 구 내부의 전하 <span class="math inline">\(q\)</span> 에 대해 구 껍질의 안쪽 면에 <span class="math inline">\(-q\)</span> 의 유도 전하가 발생하며 따라서 구 껍질의 바깥족 면에는 <span class="math inline">\(+q\)</span> 의 유도 전하가 발생하게 된다. <span class="math inline">\(q\)</span> 의 전하가 구의 중심에 있지 않다면 구 껍찔 안쪽 면의 유도전하는 균일하지 않다. 그러나 일단 구 껍질 내부 유도전하가 <span class="math inline">\(q\)</span> 의 전하를 구 내부 껍질 외부에서 가리기 때문에 구 껍질 외부의 포텐셜 혹은 전기장을 결정하는 것은 구 껍찔 바깥쪽 면에 유도되는 유도전하의 분포이다.</p>
+<p>그렇다면 이제 구 껍질 바깥쪽의 유도 전하를 보자. 일단 구 껍질 바깥쪽의 전하들은 자기 자신들에 의해 발생하는 전기장 이외의 전기장을 느낄 수 없으며, 따라서 균일하게 분포 할 수 밖에 없다. 즉 구 껍찔 바깥족 면은 균일한 면 전하 밀도 <span class="math inline">\(\dfrac{q}{4\pi R^2}\)</span> 를 가지며, 따라서 구 껍질 외부에서의 포텐셜은 가우스 법칙에 따라</p>
+<p><span class="math display">\[
+\Phi (r&gt;R)= \dfrac{1}{4\pi\epsilon_0}\dfrac{q}{r}
+\]</span></p>
+<p>이다.</p>
+<p>좀 더 일반적으로 구형이 아닌, 어떤 전하를 내부에 포함하는 임의의 도체 껍질을 생각하자. 중요한 것은 도체 껍질 내부의 가우스 면의 전기장이 <span class="math inline">\(0\)</span> 이기 때문에 도체 껍질 외부의 전기장 혹은 포텐셜은 전하의 위치와는 무관하게 도체 껍질 내부의 전하를 무시하고 그 전하가 도체 껍질 외부에 분포하고 있을 때의 전기장 혹은 포텐셜만 생각하면 된다는 것이다.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-ED_ES_uniqueness_theorem_for_electrostatics" class="level3" data-number="13.1.5">
+<h3 data-number="13.1.5" class="anchored" data-anchor-id="sec-ED_ES_uniqueness_theorem_for_electrostatics"><span class="header-section-number">13.1.5</span> 정전기 문제의 유일성 정리</h3>
+<section id="디리클레-경계조건과-노이만-경계조건" class="level4">
+<h4 class="anchored" data-anchor-id="디리클레-경계조건과-노이만-경계조건"><strong>디리클레 경계조건과 노이만 경계조건</strong></h4>
+<p>우리가 관심 있는 공간이 가장 외부의 닫힌 곡면 <span class="math inline">\(S_0\)</span> 과 내부의 겹치지 않는 닫힌 곡면 <span class="math inline">\(S_1,\,S_2,\ldots,\,S_N\)</span> 으로 정의된다고 하자. 정전기학에서 <span class="math inline">\(S_0,\ldots, S_N\)</span> 에서 정전포텐셜 <span class="math inline">\(\Phi\)</span> 와 관계된 다음과 같은 경계조건이 존재한다.</p>
+<p><strong>디리클레 경계 조건</strong> : 곡면 <span class="math inline">\(S_i\,(i=0,\ldots,\,N)\)</span> 에서의 포텐셜 <span class="math inline">\(\Phi_i\)</span> 가 정해진 경우 이 경계조건을 디리클레 경계조건 (Dirichlet boundary condition) 이라고 한다.</p>
+<p><strong>노이만 경계 조건</strong> : 곡면 <span class="math inline">\(S_i\,(i=0,\ldots,\,N)\)</span> 에서의 포텐셜의 표면에 수직방향의 미분 <span class="math inline">\(\partial \Phi_i/\partial\boldsymbol{n}_i\)</span> 가 정해진 경우 이 경계조건을 노이만 경계조건 (Neumann boundary condition)** 이라고 한다.</p>
+<p><strong>혼합 경계 조건</strong> : 일부 곡면은 디리클레 형태이고, 나머지 곡면이 노이면 형태일 때 혼합경계조건이라고 한다.</p>
+</section>
+<section id="정전기-포텐셜의-유일성-정리" class="level4">
+<h4 class="anchored" data-anchor-id="정전기-포텐셜의-유일성-정리"><strong>정전기 포텐셜의 유일성 정리</strong></h4>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition" class="theorem">
+<p><span class="theorem-title"><strong>정리 13.4 (정전기 포텐셜의 유일성 정리)</strong></span> 앞의 경계조건 정의와 같이 표면 <span class="math inline">\(S_0,\, S_1,\ldots,\,S_N\)</span> 에 대해 디리클레 경계조건 혹은 노이만 경계조건이 정해진 경우 푸아송 방정식, 혹은 라플라스 방정식의 해가 존재한다면 그 해는 유일하다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(S_i\)</span> 에서의 경계값을 만족하는 두 정전 포텐셜 <span class="math inline">\(\Phi_1\)</span> 과 <span class="math inline">\(\Phi_2\)</span> 가 있으며 <span class="math inline">\(\Psi = \Phi_1-\Phi_2\)</span> 라고 하자. <span class="math inline">\(\nabla^2 \Phi_1 = \nabla^2 \Phi_2 = 0\)</span> 이므로 <span class="math inline">\(\nabla^2 \Psi = 0\)</span> 이다. 모든 <span class="math inline">\(S_i\)</span> 로 둘러쌓여진 영역을 포함하는 큰 영역 <span class="math inline">\(V_0\)</span> 를 생각하자. <span class="math inline">\(V_0\)</span> 에서 <span class="math inline">\(S_i\)</span> 에 의해 둘러쌓인 부분을 제외한 영역을 <span class="math inline">\(V\)</span> 라고 하면 <span class="math inline">\(V\)</span> 의 경계면은 <span class="math inline">\(V_0\)</span> 의 경계면 <span class="math inline">\(S_0\)</span> 와 <span class="math inline">\(S_1,\ldots,\,S_n\)</span> 이다. 그 경계 <span class="math inline">\(\partial V = \bigcup_{k=0}^N S_k\)</span> 를 생각 할 수 있다. 이 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(\nabla^2 \Psi = 0\)</span> 와 그린의 제 1 항등식(<a href="#eq-ED_ES_green_first_identity" class="quarto-xref">식&nbsp;<span>13.19</span></a>) 을 이용하면</p>
 <p><span id="eq-thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition_1"><span class="math display">\[
 \begin{aligned}
 \int_V (\nabla \Psi \boldsymbol{\cdot}\nabla \Psi)\,d\mathcal{V} &amp;= \int_V \left[\nabla \boldsymbol{\cdot} (\Psi \nabla \Psi)- \Psi \nabla^2 \Psi\right]\,d\mathcal{V}\\[0.3em]
@@ -678,11 +742,11 @@ W_{12} = q\int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \boldsymbol{E\cdot}d\boldsy
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-ED_ES_linearity_of_surface_charge_density_on_conducting_surface" class="theorem">
-<p><span class="theorem-title"><strong>정리 13.4</strong></span> 전하 <span class="math inline">\(Q\)</span> 가 대전된 도체 표면 <span class="math inline">\(S\)</span> 에서의 표면 전하 밀도가 <span class="math inline">\(\sigma(\boldsymbol{r})\)</span> 라면 <span class="math inline">\(\lambda Q\)</span> 가 대전된 도체 표면에서의 표면전하밀도는 <span class="math inline">\(\lambda \sigma(\boldsymbol{r})\)</span> 이다. .</p>
+<p><span class="theorem-title"><strong>정리 13.5</strong></span> 도체 표면 <span class="math inline">\(S\)</span> 에 전하 <span class="math inline">\(Q\)</span> 가 대전되었을 때 표면 전하 밀도가 <span class="math inline">\(\sigma(\boldsymbol{r})\)</span> 라면 <span class="math inline">\(\lambda Q\)</span> 가 대전된 도체 표면에서의 표면전하밀도는 <span class="math inline">\(\lambda \sigma(\boldsymbol{r})\)</span> 이다. .</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>전하 <span class="math inline">\(Q\)</span> 가 대전되어있을 때 <span class="math inline">\(\sigma = -\epsilon_0 \dfrac{\partial \Phi}{\partial n}\)</span> 이며 도체 밖에서 <span class="math inline">\(\nabla^2 \Phi = 0\)</span>, <span class="math inline">\(\Phi (\|\boldsymbol{r}\|\to \infty)=0\)</span> 이고 도체 표면에서 정전 포텐셜이 일정한 값 <span class="math inline">\(\Phi_0\)</span> 를 가진다. <span class="math inline">\(\lambda Q\)</span> 만큼의 전하가 대전되었을 때의 정전 포텐셜을 <span class="math inline">\(\Psi\)</span> 를 <span class="math inline">\(\Psi(\boldsymbol{r})=\lambda \Phi(\boldsymbol{r})\)</span> 라고 하면 <span class="math inline">\(\Psi\)</span> 역시 라플라스 방정식 <span class="math inline">\(\nabla^2 \Psi = 0\)</span> 과 <span class="math inline">\(\Psi (r\to \infty)=0\)</span> 을 만족한다. 또한 표면 전하 밀도 <span class="math inline">\(\sigma_\lambda = -\epsilon_0 \dfrac{\partial \Psi}{\partial n}= \lambda \sigma\)</span> 로 표면 잔하 밀도의 적분값은 <span class="math inline">\(\lambda Q\)</span> 이다. 또한 표면에서의 포텐셜 <span class="math inline">\(\Psi_0 = \lambda \Phi_0\)</span> 역시 등전위면이 된다. 유일성 정리에 의해 <span class="math inline">\(\Psi=\lambda \Phi\)</span> 이외의 해는 없다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span>전하 <span class="math inline">\(Q\)</span> 가 대전되었을 때 <span class="math inline">\(\sigma = -\epsilon_0 \dfrac{\partial \Phi}{\partial n}\)</span> 이며 도체 밖에서 <span class="math inline">\(\nabla^2 \Phi = 0\)</span>, <span class="math inline">\(\Phi (\|\boldsymbol{r}\|\to \infty)=0\)</span> 이고 도체 표면에서 정전 포텐셜이 일정한 값 <span class="math inline">\(\Phi_0\)</span> 를 가진다. <span class="math inline">\(\lambda Q\)</span> 만큼의 전하가 대전되었을 때의 정전 포텐셜을 <span class="math inline">\(\Psi\)</span> 를 <span class="math inline">\(\Psi(\boldsymbol{r})=\lambda \Phi(\boldsymbol{r})\)</span> 라고 하면 <span class="math inline">\(\Psi\)</span> 역시 라플라스 방정식 <span class="math inline">\(\nabla^2 \Psi = 0\)</span> 과 <span class="math inline">\(\Psi (r\to \infty)=0\)</span> 을 만족한다. 또한 표면 전하 밀도 <span class="math inline">\(\sigma_\lambda = -\epsilon_0 \dfrac{\partial \Psi}{\partial n}= \lambda \sigma\)</span> 로 표면 전하 밀도의 적분값은 <span class="math inline">\(\lambda Q\)</span> 이다. 또한 표면에서의 포텐셜 <span class="math inline">\(\Psi_0 = \lambda \Phi_0\)</span> 역시 등전위면이 된다. 유일성 정리에 의해 <span class="math inline">\(\Psi=\lambda \Phi\)</span> 이외의 해는 없다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
@@ -718,10 +782,50 @@ W_{12} = q\int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \boldsymbol{E\cdot}d\boldsy
 \]</span></p>
 <p>임을 안다. 발산정리를 이용하면 <a href="#eq-ED_ES_green_second_identity" class="quarto-xref">식&nbsp;<span>13.20</span></a> 를 보일 수 있다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-ED_ES_uniqueness_theorem_for_electrif_field_surrounding_conductors" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 13.3 (제 2 유일성 정리)</strong></span> 정전기 문제에 대한 경계 조건을 설정하는 가장 간단한 방법은 관심 영역을 둘러싼 모든 표면에 대해 정전 포텐셜을 지정하는 것이며 실제로 자주 발생한다. 대표적으로 전위를 유지하는 배터리를 사용하거나, 접지를 통해 포텐셜으르 0 으로 고정하는 것이다. 그러나 경계에서의 전위를 알지 못하고, 오히려 배치된 여러 도체 표면의 전하를 알 수 있는 다른 상황도 있다. 예를 들어, 첫 번째 도체에 전하 <span class="math inline">\(Q_a\)</span>, 두 번째 도체에 <span class="math inline">\(Q_b\)</span>, … 를 놓는 상황. 이런 상황에서 각각의 도체에서의 표면전하 밀도를 아는 것은 힘들다. 각각의 전하 배치에 따라 복잡한 방식으로 변하기 때문이다. 그리고 도체 사이 영역에 지정된 전하 밀도 <span class="math inline">\(\rho\)</span> 가 있다고 하자.</p>
+<div id="fig-ED_ES_fig_griffith_3_6" class="quarto-float quarto-figure quarto-figure-center anchored" width="400">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ED_ES_fig_griffith_3_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/electrostatics/fig_griffith_3_6.png" id="fig-ED_ES_fig_griffith_3_6" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-ED_ES_fig_griffith_3_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;13.3
+</figcaption>
+</figure>
+</div>
+<p>이 상황을 일반화 하여 다음과 같이 진술할 때 이것이 성립함을 보여라.</p>
+<blockquote class="blockquote">
+<p>유한한 크기의 도체 <span class="math inline">\(C_1,\ldots,\,C_N\)</span> 들이 각각 <span class="math inline">\(Q_1,\,\ldots, Q_N\ldots\)</span> 로 대전되어 있으며 이 도체들을 내부에 포함하는 공간 <span class="math inline">\(V\)</span> 가 무한히 퍼져있거나, 다른 더 큰 도체 내부에 있다고 하자. <span class="math inline">\(V\)</span> 에 포함되는 도체가 아닌 공간 <span class="math inline">\(\mathcal{V}\)</span> 에서의 전기장은 유일하게 결정된다.</p>
+</blockquote>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\mathcal{V}\)</span> 에서 주어진 조건을 만족하는 두 전기장 <span class="math inline">\(\boldsymbol{E}_1\)</span>, <span class="math inline">\(\boldsymbol{E}_2\)</span> 를 생각하자. 두 전기장 모두 가우스 법칙 <span class="math inline">\(\nabla \boldsymbol{\cdot E}_i = \rho/\epsilon_0\, (i=1,\,2)\)</span> 를 만족한다. <span class="math inline">\(\boldsymbol{E}_3:=\boldsymbol{E}_1-\boldsymbol{E}_2\)</span> 라고 하자. 도체 <span class="math inline">\(C_i\)</span> 의 표면을 <span class="math inline">\(S_i\)</span> 라고 하면</p>
+<p><span class="math display">\[
+\oint_{S_i} \boldsymbol{E}_1 \boldsymbol{\cdot}d\boldsymbol{a}= \oint_{S_i} \boldsymbol{E}_2 \boldsymbol{\cdot}d\boldsymbol{a} = \dfrac{Q_i}{\epsilon_0}
+\]</span></p>
+<p>이다. 이로부터 <span class="math inline">\(\nabla \boldsymbol{\cdot E}_3 = 0\)</span>, <span class="math inline">\(\oint_{S_1+\cdots + S_N}\boldsymbol{E}_3 \boldsymbol{\cdot}d\boldsymbol{a}=0\)</span> 임을 안다.</p>
+<p>이제 <span class="math inline">\(S_i\)</span> 에서의 포텐셜 <span class="math inline">\(\Phi_i\)</span> 를 생각하자. 도체 표면이므로 <span class="math inline">\(S_i\)</span> 전체에서 <span class="math inline">\(\Phi_i\)</span> 는 상수이다. 이를 이용하면</p>
+<p><span class="math display">\[
+\nabla \boldsymbol{\cdot}(\Phi_3 \boldsymbol{E}_3)= \Phi_3 (\nabla \boldsymbol{\cdot E}_3) + \boldsymbol{E}_3 \boldsymbol{\cdot}(\nabla \Phi_3) = - {E_3}^2
+\]</span></p>
+<p>이다. 위 식을 <span class="math inline">\(\mathcal{V}\)</span> (도체를 포함하지 않는 공간) 에 대해 적분하면</p>
+<p><span class="math display">\[
+\int_\mathcal{V} \nabla\boldsymbol{\cdot}(\Phi_3 \boldsymbol{E}_3) \,d\mathcal{V} = \oint_{\mathcal{S}} (\Phi_3 \boldsymbol{E}_3)\boldsymbol{\cdot}d\boldsymbol{a}= -\int_\mathcal{V} {E_3}^2\,d\mathcal{V}
+\]</span></p>
+<p>여기서 두번째 적분을 보자. <span class="math inline">\(\mathcal{S}\)</span> 는 <span class="math inline">\(S_1,\ldots,\,S_N\)</span> 과 가장 외부의 표면 <span class="math inline">\(S_0\)</span> 의 합집합이며 여기서는 <span class="math inline">\(\Phi_3\)</span> 는 상수이다. 따라서</p>
+<p><span class="math display">\[
+\oint_{\mathcal{S}} (\Phi_3 \boldsymbol{E}_3)\boldsymbol{\cdot}d\boldsymbol{a} = \Phi_3 \oint_{\mathcal{S}} \boldsymbol{E}_3\boldsymbol{\cdot}d\boldsymbol{a} = 0
+\]</span></p>
+<p>이며 따라서 <span class="math inline">\(\boldsymbol{E}_3=\boldsymbol{0}\)</span> 이다. 즉 전기장은 유일하게 정해진다. <span class="math inline">\(\square\)</span></p>
+</div>
 </section>
-<section id="sec-ED_ES_multipole_expansion" class="level3" data-number="13.1.5">
-<h3 data-number="13.1.5" class="anchored" data-anchor-id="sec-ED_ES_multipole_expansion"><span class="header-section-number">13.1.5</span> 다중극 전개</h3>
+</section>
+<section id="sec-ED_ES_multipole_expansion" class="level3" data-number="13.1.6">
+<h3 data-number="13.1.6" class="anchored" data-anchor-id="sec-ED_ES_multipole_expansion"><span class="header-section-number">13.1.6</span> 다중극 전개</h3>
 <section id="sec-EM_electric_dipole_moment" class="level4">
 <h4 class="anchored" data-anchor-id="sec-EM_electric_dipole_moment"><strong>쌍극자 모멘트</strong></h4>
 <div id="fig-ED_ES_electric_dipole" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -730,7 +834,7 @@ W_{12} = q\int_{\boldsymbol{r}_1}^{\boldsymbol{r}_2} \boldsymbol{E\cdot}d\boldsy
 <img src="figures/electrostatics/electric_dipole/electric_dipole.png" class="img-fluid figure-img" width="200">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_electric_dipole-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;13.1: 전기 쌍극자
+그림&nbsp;13.4: 전기 쌍극자
 </figcaption>
 </figure>
 </div>
@@ -777,7 +881,7 @@ Q_k := \int_V (r')^k P_k(\cos\gamma)\,\rho(\boldsymbol{r}')\,d\mathcal{V}'
 <p><span class="math display">\[
 Q_1 = \int_V r' \cos \gamma \rho(\boldsymbol{r}')\, d\mathcal{V}'
 \]</span></p>
-<p>이며 <a href="#fig-ED_ES_electric_dipole" class="quarto-xref">그림&nbsp;<span>13.1</span></a> 의 전하 분포 <span class="math inline">\(\rho(\boldsymbol{r}') = q\delta(\boldsymbol{r}'-\boldsymbol{d}/2) -q\delta(\boldsymbol{r}'+\boldsymbol{d}/2)\)</span> 및 <span class="math inline">\(\boldsymbol{p}= q\boldsymbol{d}\)</span> 를 대입하면 <span class="math inline">\(Q_1 = qd\cos \gamma\)</span> 이고 <a href="#eq-ED_ES_electric_potential_dipole_2" class="quarto-xref">식&nbsp;<span>13.23</span></a> 의 결과를 얻는다.</p>
+<p>이며 <a href="#fig-ED_ES_electric_dipole" class="quarto-xref">그림&nbsp;<span>13.4</span></a> 의 전하 분포 <span class="math inline">\(\rho(\boldsymbol{r}') = q\delta(\boldsymbol{r}'-\boldsymbol{d}/2) -q\delta(\boldsymbol{r}'+\boldsymbol{d}/2)\)</span> 및 <span class="math inline">\(\boldsymbol{p}= q\boldsymbol{d}\)</span> 를 대입하면 <span class="math inline">\(Q_1 = qd\cos \gamma\)</span> 이고 <a href="#eq-ED_ES_electric_potential_dipole_2" class="quarto-xref">식&nbsp;<span>13.23</span></a> 의 결과를 얻는다.</p>
 <p><br></p>
 <p>르장드르 다항식을 이용한 다중극 전개는 위치 벡터 <span class="math inline">\(\boldsymbol{r}\)</span> 을 중심으로 전개하지만 <a href="A1_mathematics.html#eq-ED_MT_spherical_haromics_expansion_of_inverse_vector_difference" class="quarto-xref">식&nbsp;<span>17.19</span></a> 를 이용하여 구면조화함수를 사용하면 정해진 좌표계에서 표현 할 수 있다. 즉</p>
 <p><span id="eq-ED_ES_electrostatics_multpile_expansion_using_spherical_harmonics"><span class="math display">\[
@@ -800,14 +904,14 @@ Q_{lm} := &amp; \int_V (r')^l {Y_{l}^m}^\ast (\theta',\, \varphi') \rho(r',\,\th
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-EM_multipole_expansion_of_potentials_monopoe_dipole_cases" class="theorem example">
-<p><span class="theorem-title"><strong>예제 13.1</strong></span> <a href="#eq-ED_ES_electrostatics_multpile_expansion_using_spherical_harmonics_2" class="quarto-xref">식&nbsp;<span>13.29</span></a> 을 이용하여 아래 그림의 다중극 상태를 보자.</p>
+<p><span class="theorem-title"><strong>예제 13.2</strong></span> <a href="#eq-ED_ES_electrostatics_multpile_expansion_using_spherical_harmonics_2" class="quarto-xref">식&nbsp;<span>13.29</span></a> 을 이용하여 아래 그림의 다중극 상태를 보자.</p>
 <div id="fig-ED_ES_electrostatics_manipoles" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ED_ES_electrostatics_manipoles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/electrostatics/electric_manypole/manypoles.png" class="img-fluid figure-img" width="600">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_electrostatics_manipoles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;13.2: 다중극
+그림&nbsp;13.5: 다중극
 </figcaption>
 </figure>
 </div>
@@ -853,6 +957,71 @@ Q_{lm}&amp;= q\left(\dfrac{d}{2}\right)^{l} \left(1-(-1)^l\right) {Y_{l}^m}^{\as
 </div>
 <p><br></p>
 </section>
+</section>
+<section id="sec-ED_ES_image_method" class="level3" data-number="13.1.7">
+<h3 data-number="13.1.7" class="anchored" data-anchor-id="sec-ED_ES_image_method"><span class="header-section-number">13.1.7</span> 거울 영상법</h3>
+<p><a href="#thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition" class="quarto-xref">정리&nbsp;<span>13.4</span></a> 는 일단 경계조건을 만족하는 포텐셜을 구하기만 한다면 그 포텐셜은 유일하다는 것을 의미한다. 이것을 이용하는 방법중의 하나가 <strong>거울영상볍 (method of images)</strong> 이다. 관심 있는 영역에 대한 포텐셜을 구할 때 이 영역이 아닌 다른 영역에 가상의 전하를 배치하여 경계조건을 만족하게 하여 포텐셜을 구하는 방법이다. 일단 가장 간단한 예시를 보자.</p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-ED_ES_image_method_plane" class="theorem example">
+<p><span class="theorem-title"><strong>예제 13.3 (도체 평면 근처의 전하)</strong></span> &nbsp;</p>
+<div id="fig-ED_ES_image_method_plane" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ED_ES_image_method_plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ED_ES_image_method_plane" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-ED_ES_image_method_plane_config" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-ED_ES_image_method_plane_config-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/electrostatics/image_method_plaine/fig1.png" class="img-fluid figure-img" data-ref-parent="fig-ED_ES_image_method_plane">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ED_ES_image_method_plane_config-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) <span class="math inline">\(+q\)</span> 의 전하가 위치했을 때 <span class="math inline">\(-q\)</span> 거울 전하의 위치
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ED_ES_image_method_plane" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-ED_ES_image_method_plane_field" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-ED_ES_image_method_plane_field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/electrostatics/image_method_plaine/fig2.png" class="img-fluid figure-img" data-ref-parent="fig-ED_ES_image_method_plane">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ED_ES_image_method_plane_field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) 도체 평면과 전하에 의한 전기장
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_image_method_plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;13.6: 도체 평면 근처의 전하와 거울 전하
+</figcaption>
+</figure>
+</div>
+<p>위의 그림 (<span class="math inline">\(a\)</span>) 와 같이 <span class="math inline">\((0,\,0,\,h)\)</span> 좌표에 <span class="math inline">\(+q\)</span> 의 전하가 <span class="math inline">\(xy\)</span> 평면상의 도체 평면과 함께 위치한다고 하자. 도체 평면은 접지되어 <span class="math inline">\(\Phi_{\text{conducting plane}}=0\)</span> 이다. 이 대 가상의 거울 전하 <span class="math inline">\(-q\)</span> 를 <span class="math inline">\((0,\,0,\,-h)\)</span> 에 위치시키고 도체 평면을 무시했을 때의 포텐셜은 아래와 같다.</p>
+<p><span class="math display">\[
+\Phi (x,\,y,\,z) = \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{+q}{\sqrt{x^2+y^2+(z-h)^2}} +\dfrac{-q}{\sqrt{x^2+y^2+(z+h)^2}} \right].
+\]</span></p>
+<p><span class="math inline">\(\Phi (x,\,y,\,z=0)=0\)</span> 이므로 도체 평면상의 경계조건을 만족한다. 다만 이것은 <span class="math inline">\(z\ge 0\)</span> 인 영역에 대해서만 성립하며 <span class="math inline">\(z\le 0\)</span> 인 영역에서는 성립하지 않는다. 도체 표면의 전하 분포를 계산해 보자. 우선</p>
+<p><span class="math display">\[
+E_z(x,\,y, z&gt;0) = -\dfrac{\partial \Phi}{\partial z}= \dfrac{q}{4\pi\epsilon_0}\left[\dfrac{z-h}{\|\boldsymbol{r}-h\hat{\boldsymbol{z}}\|^3}- \dfrac{z+h}{\|\boldsymbol{r}+h\hat{\boldsymbol{z}}\|^3}\right]
+\]</span></p>
+<p>이며 <span class="math inline">\(E_z(x,\,y,\,z=0^-) = 0\)</span> 이므로 도체 표면에 유도되는 표면 전하 <span class="math inline">\(\sigma\)</span> 는 아래와 같다.</p>
+<p><span class="math display">\[
+\sigma=\epsilon_0 E_z(x,\,y,\,z=0^+) = -\dfrac{q}{2\pi}\dfrac{h}{(x^2+y^2+h^2)^{3/2}}.
+\]</span></p>
+<p>이 전하 분포는 원점에서 가장 밀집되어 있으며 유도된 총 전하량은 다음과 같다. <span class="math display">\[
+Q_{\text{total induced}} = \int \sigma \,dxdy = -q.
+\]</span></p>
+<p>외부의 전하에 의해 도체에 유도되는 전하의 총합이 외부의 전하와 크기가 같다는 것은 모든 거울 영상법에서 공통적인 사실이다. 또한 전하 <span class="math inline">\(+q\)</span> 는 유도된 표면전하에 의해 원래의 전하 <span class="math inline">\(+q\)</span> 가 힘을 받으며 당연히 그 힘은 아래와 같다.</p>
+<p><span class="math display">\[
+\boldsymbol{F} = -\dfrac{q^2}{4\pi\epsilon_0}\dfrac{q}{4h^2}\hat{\boldsymbol{z}}
+\]</span></p>
+</div>
+</div>
+<p><br></p>
 </section>
 </section>
 <section id="정전기-에너지" class="level2" data-number="13.2">
@@ -935,77 +1104,8 @@ U = \dfrac{1}{2}\sum_{i,\,j=1,\,i\ne j}^N \dfrac{1}{8\pi\epsilon_0}\left(\dfrac{
 \tag{13.35}\]</span></span></p>
 <p><br></p>
 </section>
-</section>
-<section id="도체" class="level2" data-number="13.3">
-<h2 data-number="13.3" class="anchored" data-anchor-id="도체"><span class="header-section-number">13.3</span> 도체</h2>
-<section id="sec-ED_ES_conductor" class="level3" data-number="13.3.1">
-<h3 data-number="13.3.1" class="anchored" data-anchor-id="sec-ED_ES_conductor"><span class="header-section-number">13.3.1</span> 도체의 기본적 성질</h3>
-<p><strong>도체 (conductor)</strong> 는 전자가 자유롭게 움직 일 수 있는 공간적인 영역을 의미한다. 또한 자유롭게 움직일 수 있는 전자가 충분히 많다는 것을 가정한다. 일반적으로 도체는 금속을 의미하며 금속은 보통 원자당 하나 이상의 자유전자를 가지므로 거시적인 시스템에서 도체의 자유전자의 개수는 <span class="math inline">\(10^{23}\)</span> 이상으로 충분히 많다. 이 짧은 정의로부터 우리는 아래와 같은 사실을 유추할 수 있다.</p>
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-ED_ES_basic_properties_of_conductor" class="theorem">
-<p><span class="theorem-title"><strong>정리 13.5 (도체의 기본적인 성질)</strong></span> 도체 내부에서 받는 힘 <span class="math inline">\(\boldsymbol{F}=0\)</span> 이며, 따라서 다음이 성립한다.</p>
-<p> (<span class="math inline">\(1\)</span>) 도체 내부에서 전기장 <span class="math inline">\(\boldsymbol{E}=\boldsymbol{0}\)</span> 이다.</p>
-<p> (<span class="math inline">\(2\)</span>) 도체 내부에서 정전기 포텐셜 <span class="math inline">\(\Phi\)</span> 는 상수이다.</p>
-<p> (<span class="math inline">\(3\)</span>) 도체 내부에서 전하 밀도 <span class="math inline">\(\rho = 0\)</span> 이다.</p>
-<p> (<span class="math inline">\(4\)</span>) 도체가 포함하는 전하의 합이 <span class="math inline">\(0\)</span> 이 아닐 때 그 여분의 전하는 도체 표면에 존재한다.</p>
-<p> (<span class="math inline">\(5\)</span>) 도체 표면의 전기장은 표면에 대해 수직방향이다.</p>
-<p> (<span class="math inline">\(6\)</span>) 도체 표면의 전하밀도가 <span class="math inline">\(\sigma\)</span> 일 때 도체 표면 바로 바깥의 전기장의 크기는 <span class="math inline">\(\dfrac{\sigma}{\epsilon_0}\)</span> 이다.</p>
-</div>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{F}=0\)</span> 으로부터 <span class="math inline">\(\boldsymbol{E}=0\)</span> 이다.</p>
-<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{E}= \nabla \Phi\)</span> 로부터 자명하다.</p>
-<p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(\boldsymbol{E} =\rho/\epsilon_0\)</span> 로부터 자명하다.</p>
-<p>(<span class="math inline">\(4\)</span>) (<span class="math inline">\(3\)</span>) 으로부터 도체 내부에서 <span class="math inline">\(\rho=0\)</span> 이므로 유일하게 남은 가능성은 이것뿐이다.</p>
-<p>(<span class="math inline">\(5\)</span>) 도체 내부에서 <span class="math inline">\(\Phi\)</span> 가 상수이고 <span class="math inline">\(\Phi\)</span> 는 연속이므로 도체 포면에서 <span class="math inline">\(\nabla \Phi\)</span> 는 표면에 수직방향이다.</p>
-<p>(<span class="math inline">\(6\)</span>) 가우스법칙과 <span class="math inline">\(\boldsymbol{E}_{\text{in}} = 0\)</span> 으로부터 <span class="math inline">\(\boldsymbol{E}_{\text{out}} = \sigma/\epsilon_0 \hat{\boldsymbol{n}}\)</span> 이다. 여기서 <span class="math inline">\(\hat{\boldsymbol{n}}\)</span> 은 도체 표면에 수직방향인 단위벡터이다. <span class="math inline">\(\square\)</span></p>
-</div>
-<p><br></p>
-<section id="유도-전하" class="level4">
-<h4 class="anchored" data-anchor-id="유도-전하"><strong>유도 전하</strong></h4>
-<div id="fig-ED_ES_electrostatics_conductor_in_field" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ED_ES_electrostatics_conductor_in_field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/electrostatics/conductor/conductor.png" class="img-fluid figure-img" width="600">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_electrostatics_conductor_in_field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;13.3: 외부 전기장에 대해 (<span class="math inline">\(a\)</span>) 전기적으로 중성인 부도체의 경우, (<span class="math inline">\(b\)</span>) 도체의 경우 내부의 전하가 이동하기 시작하며 (<span class="math inline">\(c\)</span>) 도체 표면의 전하 분포로 인해 내부 전기장이 사라진 경우 (출처 <span class="citation" data-cites="Purcell2013electricity">Purcell (<a href="../ClassicalMechanics/00_index.html#ref-Purcell2013electricity" role="doc-biblioref">2013</a>)</span>)
-</figcaption>
-</figure>
-</div>
-<p>외부의 전기장에 대해 도체 내의 자유롭게 움직일 수 없는 전하들이 움직이며, 위의 그림 (<span class="math inline">\(c\)</span>) 에서 보듯이 이동한 전하들에 의한 전기장은 외부의 전기장을 상쇄하는 방향으로 이루어진다. 도체 내에서 자유롭게 움직일 수 있는 전하가 아주 많기 때문에 이 과정은 도체 내부의 전기장이 <span class="math inline">\(0\)</span> 이 될 때 까지 이루어진다. 전하가 도체 바깥으로 탈출할 수 없다고 가정하면 당연히 이렇게 움직인 전하는 표면에 모여 있을 수 밖에 없다. 이렇게 외부 전기장에 의해 표면에 나타나는 전하를 <strong>유도 전하 (induced charge)</strong> 라고 한다.</p>
-<p><br></p>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-ED_ES_field_of_spherical_shell" class="theorem example">
-<p><span class="theorem-title"><strong>예제 13.2 (구 대칭 전기장)</strong></span> 반지름 <span class="math inline">\(R\)</span> 인 도체의 구 껍질을 생각하자. 구의 내부에 전하 <span class="math inline">\(q\)</span> 가 있을 때의 구 외부의 전기장은 전하 <span class="math inline">\(q\)</span> 가 구의 중심에 있고 구 껍질이 사라졌을 때의 전기장과 같는 것을 보이자. 구 껍질은 안쪽 면과 바깥쪽 면이 존재하며 안쪽 면과 바깥쪽 면 사이의 도체 부분에 아래 그림과 같은 가우스 면을 생각하자.</p>
-<div id="fig-ED_ES_electrostatics_conductor_in_field_2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ED_ES_electrostatics_conductor_in_field_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/electrostatics/conductor/conductor2.png" class="img-fluid figure-img" width="200">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_electrostatics_conductor_in_field_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;13.4: 도체 구 껍질 내부의 가우스 면
-</figcaption>
-</figure>
-</div>
-<p>도체 내부의 전기장은 <span class="math inline">\(\boldsymbol{0}\)</span> 이기 때문에 가우스 면에 가우스 법칙을 적용하면</p>
-<p><span class="math display">\[
-\dfrac{Q_{in}}{\epsilon_0} =  \int \boldsymbol{E\cdot}d\boldsymbol{a} = \pi R_{\text{in}}^2 E = 0
-\]</span></p>
-<p>이다. 즉 구 내부의 전하 <span class="math inline">\(q\)</span> 에 대해 구 껍질의 안쪽 면에 <span class="math inline">\(-q\)</span> 의 유도 전하가 발생하며 따라서 구 껍질의 바깥족 면에는 <span class="math inline">\(+q\)</span> 의 유도 전하가 발생하게 된다. <span class="math inline">\(q\)</span> 의 전하가 구의 중심에 있지 않다면 구 껍찔 안쪽 면의 유도전하는 균일하지 않다. 그러나 일단 구 껍질 내부 유도전하가 <span class="math inline">\(q\)</span> 의 전하를 구 내부 껍찔 외부에서 가리기 때문에 구 껍질 외부의 포텐셜 혹은 전기장을 결정하는 것은 구 껍찔 바깥쪽 면에 유도되는 유도전하의 분포이다.</p>
-<p>그렇다면 이제 구 껍질 바깥쪽의 유도 전하를 보자. 일단 구 껍질 바깥쪽의 전하들은 자기 자신들에 의해 발생하는 전기장 이외의 전기장을 느낄 수 없으며, 따라서 균일하게 분포 할 수 밖에 없다. 즉 구 껍찔 바깥족 면은 균일한 면 전하 밀도 <span class="math inline">\(\dfrac{q}{4\pi R^2}\)</span> 를 가지며, 따라서 구 껍질 외부에서의 포텐셜은 가우스 법칙에 따라</p>
-<p><span class="math display">\[
-\Phi (r&gt;R)= \dfrac{1}{4\pi\epsilon_0}\dfrac{q}{r}
-\]</span></p>
-<p>이다.</p>
-<p>좀 더 일반적으로 구형이 아닌, 어떤 전하를 내부에 포함하는 임의의 도체 껍질을 생각하자. 중요한 것은 도체 껍질 내부의 가우스 면의 전기장이 <span class="math inline">\(0\)</span> 이기 때문에 도체 껍질 외부의 전기장 혹은 포텐셜은 전하의 위치와는 무관하게 도체 껍질 내부의 전하를 무시하고 그 전하가 도체 껍질 외부에 분포하고 있을 때의 전기장 혹은 포텐셜만 생각하면 된다는 것이다.</p>
-</div>
-</div>
-<p><br></p>
-</section>
-</section>
-<section id="톰슨-정리" class="level3" data-number="13.3.2">
-<h3 data-number="13.3.2" class="anchored" data-anchor-id="톰슨-정리"><span class="header-section-number">13.3.2</span> 톰슨 정리</h3>
+<section id="톰슨-정리" class="level3" data-number="13.2.6">
+<h3 data-number="13.2.6" class="anchored" data-anchor-id="톰슨-정리"><span class="header-section-number">13.2.6</span> 톰슨 정리</h3>
 <p>모든 물리적 계(system)는 역학적 평형 상태에서 총 에너지를 최소화하도록 전하 밀도를 배열한다. 양자역학적 에너지 기여도와 정전기적 에너지 기여도가 경쟁하여 전하 배열을 결정하는 정도에 따라 다를 뿐이다.</p>
 <p>도체는 총 에너지에서 양자역학적 기여가 무시할 정도로 작은 계(단, 물체의 크기와 형상을 결정하는 역할은 예외)이다. 이는 정전 유도의 근본적인 기원과 도체의 차폐 및 스크리닝(screening) 특성이 오직 고전적 정전기적 에너지를 최소화하는 것에서 비롯된다는 것을 의미한다. 이러한 내용이 톰슨(Thomson)의 정전기학 정리(theorem of electrostatics)이며, 이는 샘플의 총 전하, 형상 및 부피를 유지하는 조건하에서 전하 밀도 <span class="math inline">\(\rho(\boldsymbol{r})\)</span> 에 대해 정전기적 에너지를 최소화하는 원리이다.</p>
 <br>
@@ -1052,8 +1152,8 @@ I[\rho] = U_E[\rho] + \lambda \left[Q-\int_V \rho(\boldsymbol{r})\,d\mathcal{V}\
 </div>
 <p><br></p>
 </section>
-<section id="sec-ED_ES_capacitor" class="level3" data-number="13.3.3">
-<h3 data-number="13.3.3" class="anchored" data-anchor-id="sec-ED_ES_capacitor"><span class="header-section-number">13.3.3</span> 축전지</h3>
+<section id="sec-ED_ES_capacitor" class="level3" data-number="13.2.7">
+<h3 data-number="13.2.7" class="anchored" data-anchor-id="sec-ED_ES_capacitor"><span class="header-section-number">13.2.7</span> 축전지</h3>
 <section id="평행판-축전지" class="level4">
 <h4 class="anchored" data-anchor-id="평행판-축전지"><strong>평행판 축전지</strong></h4>
 <div id="fig-ED_ES_capacitor_3d" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1062,7 +1162,7 @@ I[\rho] = U_E[\rho] + \lambda \left[Q-\int_V \rho(\boldsymbol{r})\,d\mathcal{V}\
 <img src="figures/electrostatics/capacitor/capacitor_3d.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_capacitor_3d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;13.5: 도체 구 껍질 내부의 가우스 면
+그림&nbsp;13.7: 도체 구 껍질 내부의 가우스 면
 </figcaption>
 </figure>
 </div>
@@ -1097,7 +1197,7 @@ U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\boldsymbol{E}\|^2
 <img src="figures/electrostatics/concentric_sphere_capacitor/figure.png" class="img-fluid figure-img" width="150">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_concentric_sphere_capacitor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;13.6: 같은 중심을 가진 두 구 껍질에 의한 축전지
+그림&nbsp;13.8: 같은 중심을 가진 두 구 껍질에 의한 축전지
 </figcaption>
 </figure>
 </div>
@@ -1110,121 +1210,13 @@ U = \dfrac{\epsilon_0}{2} \int_{\text{inside of capacitor}} \|\boldsymbol{E}\|^2
 \Phi_\text{in} = \dfrac{Q}{4\pi\epsilon_0 r}.
 \]</span></p>
 <p>따라서 용량 <span class="math inline">\(C = 4\pi \epsilon_0 r_1r_2/(r_2-r_1)\)</span> 이다.</p>
-<p><br></p>
-</section>
-</section>
-<section id="sec-ED_ES_boundary_value_problem_in_conductors" class="level3" data-number="13.3.4">
-<h3 data-number="13.3.4" class="anchored" data-anchor-id="sec-ED_ES_boundary_value_problem_in_conductors"><span class="header-section-number">13.3.4</span> 도체에서의 경계값 문제</h3>
-<div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">중요</span>접지
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>지금까지는 도체가 정해진 전하 <span class="math inline">\(Q\)</span> 를 품고 있는 경우를 생각했다. 하지만 많은 경우 전하 <span class="math inline">\(Q\)</span> 가 유지되는 것이 아니라 전위 <span class="math inline">\(V=\Delta \Phi\)</span> 가 유지된다. 그리고 표면의 전위가 각각 일정하게 유지되는 복수의 도체를 다루는 경우가 많다. 이것을 좀 더 자세히 살펴보자. <span class="math inline">\(n\)</span> 개의 도체 표면이 각각 <span class="math inline">\(\Phi_1,\ldots,\,\Phi_n\)</span> 의 전위를 유지한다고 하자. 이것은 많이 의야한데 앞서 중심을 공유하는 축전지에서 본 겉과 같이, 그리고 당연히 생각할 수 있는 것과 같이 한 축전지가 품고 있는 전하량 혹은 포텐셜이 바뀐다면 당연히 모든 도체에서의 표텐셜이 이 변화에 따라 같이 변하게 되기 때문이다. 만약 모든 도체 표면에서듸 포텐셜이 일정하다면 각 도체에 포함되는 전하량이 변한다는 의미이다.</p>
-<p>어떤 도체 <span class="math inline">\(C_1\)</span> 가 매우 크고 전하를 많이 가진 <span class="math inline">\(C_R\)</span> 과 전기적으로 연결되어 있다고 가정하면 <span class="math inline">\(C_1\)</span> 에서의 전하의 변화는 전체적으로 거의 영향을 끼치지 않을 것이고 따라서 <span class="math inline">\(C_1\)</span> 과 <span class="math inline">\(C_R\)</span> 에서 정해지는 포텐셜은 변화가 없을 것이다. 많은 경우 <span class="math inline">\(C_R\)</span> 의 역할은 지구가 담당하며, 지구의 전위를 <span class="math inline">\(0\)</span> 으로 잡고, 지구와 전기적으로 연결된 경우 <strong>접지되었다(be grounded)</strong> 라고 한다. 혹은 스마트폰의 경우에는 민감한 작은 소자들을 상대적으로 이 소자들보다 매우 큰 스마트폰의 금속 케이스 혹은 프레임과 전기적으로 연결한다.</p>
-</div>
-</div>
-<p><br></p>
-<section id="경계값-문제" class="level4">
-<h4 class="anchored" data-anchor-id="경계값-문제"><strong>경계값 문제</strong></h4>
-<p>많은 도체로 이루어진 시스템을 생각하고 각각의 도체 표면을 <span class="math inline">\(S_i\)</span> 라고 하자. 어떤 도체는 일정한 전위 <span class="math inline">\(\Phi_i\)</span> 를 갖고 어떤 도체는 일정한 전하량 <span class="math inline">\(Q_i\)</span> 를 가질 수 있다. 후자의 경우 표면 전하 <span class="math inline">\(\sigma\)</span> 가 재배치되면서 내부 전기장은 <span class="math inline">\(0\)</span> 이 되며 바깥쪽 전기장은 <span class="math inline">\(\boldsymbol{E}=4\pi\sigma \hat{\boldsymbol{n}}\)</span> 이 된다. 그리고 도체가 아닌 공간에서의 전위는 라플라스 방정식 <span class="math inline">\(\nabla^2 \Phi = 0\)</span> 을 만족하며 경계조건은 아래 둘 가운데 하나이다.</p>
-<p> (<span class="math inline">\(1\)</span>) 디리클레 경계조건 : <span class="math inline">\(S_i\)</span> 에서의 전위가 고정되어 있는 경우, 즉 <span class="math inline">\(\Phi_i=\text{const.}\)</span></p>
-<p> (<span class="math inline">\(2\)</span>) 노이만 경계 조건 : <span class="math inline">\(S_i\)</span> 에 대한 수직방향 전기장이 고정되어 있는 경우, 즉 <span class="math inline">\(\nabla \Phi_i\boldsymbol{\cdot} \hat{\boldsymbol{n}}=\text{const.}\)</span></p>
-<br>
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition" class="theorem">
-<p><span class="theorem-title"><strong>정리 13.7</strong></span> 도체들의 표면 <span class="math inline">\(S_i\)</span> 에 대해 디리클레 경계조건 혹은 노이만 경계조건이 정해진 경우 라플라스 방정식의 해가 존재한다면 그 해는 유일하다.</p>
-</div>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>두 해를 <span class="math inline">\(\Phi_1,\,\Phi_2\)</span> 라고 하고 <span class="math inline">\(f=\Phi_1-\Phi_2\)</span> 라고 하자. <span class="math inline">\(\nabla^2f=0\)</span> 이므로</p>
-<p><span class="math display">\[
-\int_V \nabla \boldsymbol{\cdot} (f\nabla f)\,d\mathcal{V} = \int_V (\nabla f) \boldsymbol{\cdot} (\nabla f)\,d\mathcal{V} \ge 0
-\]</span></p>
-<p>이며 또한 발산정리에 따라 다음이 성립한다.</p>
-<p><span class="math display">\[
-\int_V \nabla \boldsymbol{\cdot} (f\nabla f)\,d\mathcal{V} = \sum_i\int_{S_i} f\nabla f\boldsymbol{\cdot}\,d\boldsymbol{a} = \sum_i \int_{S_i}  f (\nabla f \cdot \hat{\boldsymbol{n}})da.
-\]</span></p>
-<p><span class="math inline">\(S_i\)</span> 에서 <span class="math inline">\(f=0\)</span> 이거나 <span class="math inline">\(\nabla f\boldsymbol{\cdot} \hat{\boldsymbol{n}}=0\)</span> 이므로 <span class="math inline">\(\nabla f = 0\)</span> 이다. 즉 <span class="math inline">\(\Phi_1-\Phi_2=\text{const}\)</span> 이다. 최소한 하나의 디리클레 경계조건이 있다면 <span class="math inline">\(\Phi_1-\Phi_2=0\)</span> 이므로 전위는 유일하게 정해진다. 모두 노이만 경계조건이라면 <span class="math inline">\(\Phi_1-\Phi-2\)</span> 는 항상 일정한데 이는 물리적으로 의미가 없는 차이이다. <span class="math inline">\(\square\)</span></p>
-</div>
-<p><br></p>
-</section>
-<section id="거울-영상법" class="level4">
-<h4 class="anchored" data-anchor-id="거울-영상법"><strong>거울 영상법</strong></h4>
-<p><a href="#thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition" class="quarto-xref">정리&nbsp;<span>13.7</span></a> 는 일단 경계조건을 만족하는 포텐셜을 구하기만 한다면 그 포텐셜은 유일하다는 것을 의미한다. 이것을 이용하는 방법중의 하나가 <strong>거울영상볍 (method of images)</strong> 이다. 관심 있는 영역에 대한 포텐셜을 구할 때 이 영역이 아닌 다른 영역에 가상의 전하를 배치하여 경계조건을 만족하게 하여 포텐셜을 구하는 방법이다. 일단 가장 간단한 예시를 보자.</p>
-<br>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-ED_ES_image_method_plane" class="theorem example">
-<p><span class="theorem-title"><strong>예제 13.3 (도체 평면 근처의 전하)</strong></span> &nbsp;</p>
-<div id="fig-ED_ES_image_method_plane" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ED_ES_image_method_plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ED_ES_image_method_plane" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-ED_ES_image_method_plane_config" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-ED_ES_image_method_plane_config-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/electrostatics/image_method_plaine/fig1.png" class="img-fluid figure-img" data-ref-parent="fig-ED_ES_image_method_plane">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ED_ES_image_method_plane_config-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) <span class="math inline">\(+q\)</span> 의 전하가 위치했을 때 <span class="math inline">\(-q\)</span> 거울 전하의 위치
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ED_ES_image_method_plane" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-ED_ES_image_method_plane_field" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-ED_ES_image_method_plane_field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/electrostatics/image_method_plaine/fig2.png" class="img-fluid figure-img" data-ref-parent="fig-ED_ES_image_method_plane">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ED_ES_image_method_plane_field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) 도체 평면과 전하에 의한 전기장
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_image_method_plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;13.7: 도체 평면 근처의 전하와 거울 전하
-</figcaption>
-</figure>
-</div>
-<p>위의 그림 (<span class="math inline">\(a\)</span>) 와 같이 <span class="math inline">\((0,\,0,\,h)\)</span> 좌표에 <span class="math inline">\(+q\)</span> 의 전하가 <span class="math inline">\(xy\)</span> 평면상의 도체 평면과 함께 위치한다고 하자. 도체 평면은 접지되어 <span class="math inline">\(\Phi_{\text{conducting plane}}=0\)</span> 이다. 이 대 가상의 거울 전하 <span class="math inline">\(-q\)</span> 를 <span class="math inline">\((0,\,0,\,-h)\)</span> 에 위치시키고 도체 평면을 무시했을 때의 포텐셜은 아래와 같다.</p>
-<p><span class="math display">\[
-\Phi (x,\,y,\,z) = \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{+q}{\sqrt{x^2+y^2+(z-h)^2}} +\dfrac{-q}{\sqrt{x^2+y^2+(z+h)^2}} \right].
-\]</span></p>
-<p><span class="math inline">\(\Phi (x,\,y,\,z=0)=0\)</span> 이므로 도체 평면상의 경계조건을 만족한다. 다만 이것은 <span class="math inline">\(z\ge 0\)</span> 인 영역에 대해서만 성립하며 <span class="math inline">\(z\le 0\)</span> 인 영역에서는 성립하지 않는다. 도체 표면의 전하 분포를 계산해 보자. 우선</p>
-<p><span class="math display">\[
-E_z(x,\,y, z&gt;0) = -\dfrac{\partial \Phi}{\partial z}= \dfrac{q}{4\pi\epsilon_0}\left[\dfrac{z-h}{\|\boldsymbol{r}-h\hat{\boldsymbol{z}}\|^3}- \dfrac{z+h}{\|\boldsymbol{r}+h\hat{\boldsymbol{z}}\|^3}\right]
-\]</span></p>
-<p>이며 <span class="math inline">\(E_z(x,\,y,\,z=0^-) = 0\)</span> 이므로 도체 표면에 유도되는 표면 전하 <span class="math inline">\(\sigma\)</span> 는 아래와 같다.</p>
-<p><span class="math display">\[
-\sigma=\epsilon_0 E_z(x,\,y,\,z=0^+) = -\dfrac{q}{2\pi}\dfrac{h}{(x^2+y^2+h^2)^{3/2}}.
-\]</span></p>
-<p>이 전하 분포는 원점에서 가장 밀집되어 있으며 유도된 총 전하량은 다음과 같다. <span class="math display">\[
-Q_{\text{total induced}} = \int \sigma \,dxdy = -q.
-\]</span></p>
-<p>외부의 전하에 의해 도체에 유도되는 전하의 총합이 외부의 전하와 크기가 같다는 것은 모든 거울 영상법에서 공통적인 사실이다. 또한 전하 <span class="math inline">\(+q\)</span> 는 유도된 표면전하에 의해 원래의 전하 <span class="math inline">\(+q\)</span> 가 힘을 받으며 당연히 그 힘은 아래와 같다.</p>
-<p><span class="math display">\[
-\boldsymbol{F} = -\dfrac{q^2}{4\pi\epsilon_0}\dfrac{q}{4h^2}\hat{\boldsymbol{z}}
-\]</span></p>
-</div>
-</div>
-<p><br></p>
 </section>
 </section>
 </section>
-<section id="유전체" class="level2" data-number="13.4">
-<h2 data-number="13.4" class="anchored" data-anchor-id="유전체"><span class="header-section-number">13.4</span> 유전체</h2>
-<section id="sec-ED_ES_dielectrics" class="level3" data-number="13.4.1">
-<h3 data-number="13.4.1" class="anchored" data-anchor-id="sec-ED_ES_dielectrics"><span class="header-section-number">13.4.1</span> 유전체와 유도 쌍극자</h3>
+<section id="유전체" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="유전체"><span class="header-section-number">13.3</span> 유전체</h2>
+<section id="sec-ED_ES_dielectrics" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="sec-ED_ES_dielectrics"><span class="header-section-number">13.3.1</span> 유전체와 유도 쌍극자</h3>
 <p>자유전자가 있는 도체와 반대로 유전체에서는 모든 전하가 특정 원자나 분자에 속해 있으며 이 원자나 분자 내부에서 약간 움직일 수 있을 뿐이다. 원자나 분자 단위에서 양전하와 음전하의 중심이 차이가 나게 되면 원자나 분자 단위의 쌍극자라고 생각 할 수 있으며 거시적으로 대단히 많은 쌍극자가 발생할 수 있다. 이 누적 효과가 유전체적인 거동을 설명한다. 실제로 전기장이 유전체 원자 또는 분자의 전하 분포를 왜곡시킬 수 있는 두 가지 주요 메커니즘은 stretching 과 회전이다.</p>
 <p>중성 원자에 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 를 가하면 원자핵은 핵은 장의 방향으로 밀려나고 전자는 그 반대 방향으로 밀리게 된다. 원칙적으로, 전기장이 충분히 크면 원자를 완전히 분리시켜 “이온화”시킬 수 있으며, 그 물질은 전도체가 된다. 그 이하의 크기의 장에서는 전자 구름의 중심이 핵과 일치하지 않을 경우 양전하와 음전하가 서로 끌어당겨 곧 평형상태가 된다. 이렇게 외부의 전기장에 의해 원자의 양전하와 음전하의 중심이 일치하지 않은 상태로 평형상태인 것을 <strong>편극 (polarization)</strong> 이라고 하며 이제 분원는 전기 쌍극자가 되며, 일반적으로 쌍극자 모멘트는 가해준 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 에 비례하여</p>
 <p><span id="eq-ED_ES_definition_of_atomic_polarizability"><span class="math display">\[
@@ -1238,7 +1230,7 @@ Q_{\text{total induced}} = \int \sigma \,dxdy = -q.
 <img src="figures/electrostatics/fig_CO2_moleucule.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_CO2_molecule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;13.8: CO<sub>2</sub> 분자의 배치
+그림&nbsp;13.9: CO<sub>2</sub> 분자의 배치
 </figcaption>
 </figure>
 </div>
@@ -1248,16 +1240,16 @@ p_i = \sum_j \alpha_{ij}E_j,\qquad i,\,j = x,\,y,\,z
 \tag{13.37}\]</span></span></p>
 <p>가 된다.</p>
 </section>
-<section id="sec-ED_ES_alignement_of_polar_molecule" class="level3" data-number="13.4.2">
-<h3 data-number="13.4.2" class="anchored" data-anchor-id="sec-ED_ES_alignement_of_polar_molecule"><span class="header-section-number">13.4.2</span> 극성 분자의 정렬</h3>
-<p>H<sub>2</sub>O 와 같은 내재된 영구적인 쌍극자 모멘트를 가진다(<a href="#fig-ED_ES_polar_molecule" class="quarto-xref">그림&nbsp;<span>13.9</span></a> 의 오른쪽 그림). 이런 문자를 <strong>극성 분자 (polar molecule)</strong> 이라고 한다. 물의 쌍극자 모멘트는 다른 분자에 비해 비정상적으로 큰데 <span class="math inline">\(6.1 \times 10^{−30} \text{C}\cdot\text{m}\)</span> 이다. 이러한 극성 분자에 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 를 가한다고 생각해보자.</p>
+<section id="sec-ED_ES_alignement_of_polar_molecule" class="level3" data-number="13.3.2">
+<h3 data-number="13.3.2" class="anchored" data-anchor-id="sec-ED_ES_alignement_of_polar_molecule"><span class="header-section-number">13.3.2</span> 극성 분자의 정렬</h3>
+<p>H<sub>2</sub>O 와 같은 내재된 영구적인 쌍극자 모멘트를 가진다(<a href="#fig-ED_ES_polar_molecule" class="quarto-xref">그림&nbsp;<span>13.10</span></a> 의 오른쪽 그림). 이런 문자를 <strong>극성 분자 (polar molecule)</strong> 이라고 한다. 물의 쌍극자 모멘트는 다른 분자에 비해 비정상적으로 큰데 <span class="math inline">\(6.1 \times 10^{−30} \text{C}\cdot\text{m}\)</span> 이다. 이러한 극성 분자에 전기장 <span class="math inline">\(\boldsymbol{E}\)</span> 를 가한다고 생각해보자.</p>
 <div id="fig-ED_ES_polar_molecule" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ED_ES_polar_molecule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/electrostatics/polar_molecule/polar_molecule.png" class="img-fluid figure-img" width="450">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_polar_molecule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;13.9: CO<sub>2</sub> 분자의 배치
+그림&nbsp;13.10: CO<sub>2</sub> 분자의 배치
 </figcaption>
 </figure>
 </div>
@@ -1302,8 +1294,8 @@ U = -pE\cos \theta = -\boldsymbol{p\cdot E}
 </div>
 <p><br></p>
 </section>
-<section id="sec-ED_ES_polarizaiton_vector_P" class="level3" data-number="13.4.3">
-<h3 data-number="13.4.3" class="anchored" data-anchor-id="sec-ED_ES_polarizaiton_vector_P"><span class="header-section-number">13.4.3</span> 편극 벡터 <span class="math inline">\(\boldsymbol{P}\)</span></h3>
+<section id="sec-ED_ES_polarizaiton_vector_P" class="level3" data-number="13.3.3">
+<h3 data-number="13.3.3" class="anchored" data-anchor-id="sec-ED_ES_polarizaiton_vector_P"><span class="header-section-number">13.3.3</span> 편극 벡터 <span class="math inline">\(\boldsymbol{P}\)</span></h3>
 <p>앞서 우리는 유전 물질을 전기장에 배치하면,</p>
 <ol type="1">
 <li>중성 원자(또는 비극성 분자)로 구성되었을 경우 전기장이 각 원자(분자)에 작은 쌍극자 모멘트를 유도하거나</li>
@@ -1344,7 +1336,7 @@ U = -pE\cos \theta = -\boldsymbol{p\cdot E}
 <img src="figures/electrostatics/uniformly_polarized_sphere/uniformly_polarized_sphere.png" class="img-fluid figure-img" width="150">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ED_ES_uniformly_polarized_sphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;13.10: 균일한 <span class="math inline">\(z\)</span> 방향으로의 편극
+그림&nbsp;13.11: 균일한 <span class="math inline">\(z\)</span> 방향으로의 편극
 </figcaption>
 </figure>
 </div>

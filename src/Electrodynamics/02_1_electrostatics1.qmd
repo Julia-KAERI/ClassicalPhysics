@@ -70,9 +70,6 @@ $$
 \bf{E}(\bf{r}) = \dfrac{1}{4\pi\epsilon_0} \int_V \dfrac{\rho(\bf{r}')(\bf{r}-\bf{r}')}{\|\bf{r}-\bf{r}'\|^3} \,d\mathcal{V}'.
 $${#eq-ED_ES_electric_field_by_point_charge_distribution}
 
-
-</br>
-
 ### 정전 포텐셜 {#sec-ED_ES_electrostatic_potential}
 
 #### **정전 포텐셜**
@@ -91,8 +88,6 @@ $$ {#eq-ED_ES_electrostatic_potential_and_electric_field}
 
 이다. 이 때 $\Phi(\bf{r})$ 을 **정전 포텐셜(electrostatic potential)** 이라고 한다. 
 
-</br>
-
 #### **쿨롱힘과 보존력**
 
 정전기 상태일 경우 @eq-ED_ES_electrostatic_potential_and_electric_field 로 부터
@@ -107,11 +102,7 @@ $$
 W_{12} = q\int_{\bf{r}_1}^{\bf{r}_2} \bf{E\cdot}d\bf{l}= - q\Delta \Phi_{12}.
 $$ {#eq-ED_ES_electro_static_work_by_electrostatic_potential}
 
-
-</br>
-
 #### **푸아송 방정식과 라플라스 방정식**
-
 
 정전기 상태에서
 
@@ -131,7 +122,6 @@ $$
 \boxed{\nabla^2\Phi = 0.}
 $$ {#eq-ED_ES_laplace_equation}
 
-
 #### **포텐셜의 기준점**
 
 일반적으로 포텐셜은 어떤 기준점 $\mathcal{O}$ 을 정하고 그 기준점과의 포텐셜 차이를 포텐셜로 정한다. 즉
@@ -142,13 +132,10 @@ $$
 
 기준점이 바뀌더라도 포텐셜에는 상수 만큼의 차이밖에 나지 않으며 물리에는 변화가 없다. $\displaystyle \lim_{|\bf{r}\|\to \infty} \Phi(\bf{r})=0$ 이면 무한히 먼 점을 기준으로 사용한다.
 
-</br>
 
 #### **중첩의 원리**
 
 푸아송 방정식을 보자. 전하 밀도 $\rho_1$ 에 대해 포텐셜 $\Phi_1$ 을 얻고 $\rho_2$ 에 대해 포텐셜 $\Phi_2$ 를 얻었다면 $\nabla^2 (\Phi_1+ \Phi_2) = (\rho_1+\rho_2)/\epsilon_0$ 이다. 이것은 전기장 $\bf{E}_1,\,\bf{E}_2$ 에 대해서도 마찬가지이다. 이를 **중첩 원리 (principle of superposition)** 라고 한다.
-
-</br>
 
 #### **점전하에 의한 포텐셜**
 
@@ -163,8 +150,6 @@ $$
 $$
 \Phi(\bf{r})= \dfrac{1}{4\pi\epsilon_0}\dfrac{q}{\|\bf{r}-\bf{r}'\|}.
 $${#eq-ED_ES_potential_by_point_charge}
-
-</br>
 
 #### **정전기 시스템의 경계 조건**
 
@@ -182,12 +167,9 @@ $${#eq-ED_ES_electrostatic_boundary_condition_for_electrostatic_potential}
 
 를 얻는다. 
 
-
-</br>
-
 ### 정전기적 안정평형상태 {#sec-ED_ES_electrostatic_stable_equilibrium}
 
-평형이란 어떤 시스템의 모든 입자에 대해 가해지는 힘이 $0$ 인 상태이다. 정전기적 안정평형상태, 즉 전하들이 정지된 상태에서 각 전하에 가해지는 힘이 $0$ 이며 또한 미소 변화에 대해 복원력이 작용하는 전하 분포가 존재할까? 여기서는 서로 겹치지 않는 이산적인 점전하의 분포에서 가능한지 여부를 알아보자. 예를 들어 붙어있는 양전하와 음전하는 안정평형상태라고 볼 수 있다. 
+평형이란 어떤 시스템의 모든 입자에 대해 가해지는 순힘이 $0$ 인 상태이다. 정전기적 안정평형상태, 즉 전하들이 정지된 상태에서 각 전하에 가해지는 힘이 $0$ 이며 또한 미소 변화에 대해 복원력이 작용하는 전하 분포가 존재할까? 여기서는 서로 겹치지 않는 이산적인 점전하의 분포에서 가능한지 여부를 알아보자. 예를 들어 붙어있는 양전하와 음전하는 안정평형상태라고 볼 수 있다. 
 
 $\bf{r}$ 에 위치한 전하 $q$ 에 가해지는 힘 $\bf{F} = q\bf{E} = -q\nabla \Phi$ 이다. 정전기 평형상태이려면 $\bf{F}=0$ 이어야 하므로 $\nabla \Phi(\bf{r}) = 0$ 이어야 한다. 또한 $q\nabla^2\Phi >0$ 이어야 한다. 하지만 우리는 전하 분포가 없는 공간에서 $\nabla^2 \Phi = 0$ 임을 안다. 즉 이산적 전하분포에서 정전기적 안정평형상태는 존재하지 않는다.
 
@@ -263,22 +245,32 @@ $$
 
 :::
 
-</br>
+Earnshow 의 정리로부터 우리는 **전하로 이루어진 계가 정전기력만으로는 안정평형상태를 유지할 수 없다**는 것을 알 수 있다. 
 
-Earnshow 의 정리로부터 우리는 전하로 이루어진 계가 **정전기력만으로는** 안정평형상태를 유지할 수 없다는 것을 알 수 있다. 
+### 도체 {#sec-ED_ES_conductor}
 
+#### **도체의 기본적 성질**
 
-</br>
+**도체 (conductor)** 는 전자가 자유롭게 움직 일 수 있는 공간적인 영역을 의미한다. 또한 자유롭게 움직일 수 있는 전자가 충분히 많다는 것을 가정한다. 일반적으로 도체는 금속을 의미하며 금속은 보통 원자당 하나 이상의 자유전자를 가지므로 거시적인 시스템에서 도체의 자유전자의 개수는 $10^{23}$ 이상으로 충분히 많다. 이 짧은 정의로부터 우리는 아래와 같은 사실을 유추할 수 있다.
 
-### 정전기 문제의 유일성 정리 {#sec-ED_ES_uniqueness_theorem_for_electrostatics}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+::: {#thm-ED_ES_basic_properties_of_conductor}
 
-::: {#thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition}
+#### 도체의 기본적인 성질
+도체 내부에서 받는 힘 $\bf{F}=0$ 이며, 따라서 다음이 성립한다.
 
-#### 정전기 포텐셜의 유일성 정리
+&emsp;($1$) 도체 내부에서 전기장 $\bf{E}=\bf{0}$ 이다. 
 
-표면 $S_1,\,S_2,\ldots,\,S_n$ 에 대해 디리클레 경계조건 혹은 노이만 경계조건이 정해진 경우 라플라스 방정식의 해가 존재한다면 그 해는 유일하다.
+&emsp;($2$) 도체 내부에서 정전기 포텐셜 $\Phi$ 는 상수이다.
+
+&emsp;($3$) 도체 내부에서 전하 밀도 $\rho = 0$ 이다.
+
+&emsp;($4$) 도체가 포함하는 전하의 합이 $0$ 이 아닐 때 그 여분의 전하는 도체 표면에 존재한다.
+
+&emsp;($5$) 도체 표면의 전기장은 표면에 대해 수직방향이다.
+
+&emsp;($6$) 도체 표면의 전하밀도가 $\sigma$ 일 때 도체 표면 바로 바깥의 전기장의 크기는 $\dfrac{\sigma}{\epsilon_0}$ 이다.
 
 :::
 
@@ -286,14 +278,96 @@ Earnshow 의 정리로부터 우리는 전하로 이루어진 계가 **정전기
 
 ::: {.proof}
 
-$S_i$ 에서의 경계값을 만족하는 두 정전 포텐셜 $\Phi_1$ 과 $\Phi_2$ 가 있다고 하자. 이 때 $\Psi = \Phi_1-\Phi_2$ 라고 하자. $\nabla^2 \Phi_1 = \nabla^2 \Phi_2 = 0$ 이므로 $\nabla^2 \Psi = 0$ 이다. 모든 $S_i$ 로 둘러쌓여진 영역을 포함하는 큰 영역 $V_0$ 를 생각하자. $V_0$ 에서 $S_i$ 에 의해 둘러쌓인 부분을 제외한 영역을 $V$ 라고 하면 $V$ 의 경계면은 $V_0$ 의 경계면 $S_0$ 와 $S_1,\ldots,\,S_n$ 이다. 그 경계 $\partial V = \bigcup_{k=0}^n S_k$ 를 생각 할 수 있다. 이 $V$ 에 대해 $\nabla^2 \Psi = 0$ 와 그린의 제 1 항등식(@eq-ED_ES_green_first_identity) 을 이용하면 
+($1$) $\bf{F}=0$ 으로부터 $\bf{E}=0$ 이다.
+
+($2$) $\bf{E}= \nabla \Phi$ 로부터 자명하다.
+
+($3$) $\bf{E} =\rho/\epsilon_0$ 로부터 자명하다.
+
+($4$) ($3$) 으로부터 도체 내부에서 $\rho=0$ 이므로 유일하게 남은 가능성은 이것뿐이다.
+
+($5$) 도체 내부에서 $\Phi$ 가 상수이고 $\Phi$ 는 연속이므로 도체 포면에서 $\nabla \Phi$ 는 표면에 수직방향이다.
+
+($6$) 가우스법칙과 $\bf{E}_{\text{in}} = 0$ 으로부터 $\bf{E}_{\text{out}} = \sigma/\epsilon_0 \hat{\bf{n}}$ 이다. 여기서 $\hat{\bf{n}}$ 은 도체 표면에 수직방향인 단위벡터이다. $\square$ 
+
+:::
+
+#### **유도 전하**
+
+![외부 전기장에 대해 ($a$) 전기적으로 중성인 부도체의 경우, ($b$) 도체의 경우 내부의 전하가 이동하기 시작하며 ($c$) 도체 표면의 전하 분포로 인해 내부 전기장이 사라진 경우 (출처 @Purcell2013electricity)](figures/electrostatics/conductor/conductor.png){#fig-ED_ES_electrostatics_conductor_in_field width=600}
+
+외부의 전기장에 대해 도체 내의 자유롭게 움직일 수 없는 전하들이 움직이며, 위의 그림 ($c$) 에서 보듯이 이동한 전하들에 의한 전기장은 외부의 전기장을 상쇄하는 방향으로 이루어진다. 도체 내에서 자유롭게 움직일 수 있는 전하가 아주 많기 때문에 이 과정은 도체 내부의 전기장이 $0$ 이 될 때 까지 이루어진다. 전하가 도체 바깥으로 탈출할 수 없다고 가정하면 당연히 이렇게 움직인 전하는 표면에 모여 있을 수 밖에 없다. 이렇게 외부 전기장에 의해 표면에 나타나는 전하를 **유도 전하 (induced charge)** 라고 한다.
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-ED_ES_field_of_spherical_shell}
+
+#### 구 대칭 전기장
+
+반지름 $R$ 인 도체의 구 껍질을 생각하자. 구의 내부에 전하 $q$ 가 있을 때의 구 외부의 전기장은 전하 $q$ 가 구의 중심에 있고 구 껍질이 사라졌을 때의 전기장과 같는 것을 보이자. 구 껍질은 안쪽 면과 바깥쪽 면이 존재하며 안쪽 면과 바깥쪽 면 사이의 도체 부분에 아래 그림과 같은 가우스 면을 생각하자.
+
+![도체 구 껍질 내부의 가우스 면](figures/electrostatics/conductor/conductor2.png){#fig-ED_ES_electrostatics_conductor_in_field_2 width=200}
+
+도체 내부의 전기장은 $\bf{0}$ 이기 때문에 가우스 면에 가우스 법칙을 적용하면
+
+$$
+\dfrac{Q_{in}}{\epsilon_0} =  \int \bf{E\cdot}d\bf{a} = \pi R_{\text{in}}^2 E = 0
+$$
+
+이다. 즉 구 내부의 전하 $q$ 에 대해 구 껍질의 안쪽 면에 $-q$ 의 유도 전하가 발생하며 따라서 구 껍질의 바깥족 면에는 $+q$ 의 유도 전하가 발생하게 된다. $q$ 의 전하가 구의 중심에 있지 않다면 구 껍찔 안쪽 면의 유도전하는 균일하지 않다. 그러나 일단 구 껍질 내부 유도전하가 $q$ 의 전하를 구 내부 껍질 외부에서 가리기 때문에 구 껍질 외부의 포텐셜 혹은 전기장을 결정하는 것은 구 껍찔 바깥쪽 면에 유도되는 유도전하의 분포이다.
+
+그렇다면 이제 구 껍질 바깥쪽의 유도 전하를 보자. 일단 구 껍질 바깥쪽의 전하들은 자기 자신들에 의해 발생하는 전기장 이외의 전기장을 느낄 수 없으며, 따라서 균일하게 분포 할 수 밖에 없다. 즉 구 껍찔 바깥족 면은 균일한 면 전하 밀도 $\dfrac{q}{4\pi R^2}$ 를 가지며, 따라서 구 껍질 외부에서의 포텐셜은 가우스 법칙에 따라
+
+$$
+\Phi (r>R)= \dfrac{1}{4\pi\epsilon_0}\dfrac{q}{r}
+$$
+
+이다. 
+
+좀 더 일반적으로 구형이 아닌, 어떤 전하를 내부에 포함하는 임의의 도체 껍질을 생각하자. 중요한 것은 도체 껍질 내부의 가우스 면의 전기장이 $0$ 이기 때문에 도체 껍질 외부의 전기장 혹은 포텐셜은 전하의 위치와는 무관하게 도체 껍질 내부의 전하를 무시하고 그 전하가 도체 껍질 외부에 분포하고 있을 때의 전기장 혹은 포텐셜만 생각하면 된다는 것이다.
+
+:::
+
+</div>
+
+### 정전기 문제의 유일성 정리 {#sec-ED_ES_uniqueness_theorem_for_electrostatics}
+
+#### **디리클레 경계조건과 노이만 경계조건**
+
+우리가 관심 있는 공간이 가장 외부의 닫힌 곡면 $S_0$ 과 내부의 겹치지 않는 닫힌 곡면 $S_1,\,S_2,\ldots,\,S_N$ 으로 정의된다고 하자. 정전기학에서 $S_0,\ldots, S_N$ 에서 정전포텐셜 $\Phi$ 와 관계된 다음과 같은 경계조건이 존재한다.
+
+**디리클레 경계 조건** : 곡면 $S_i\,(i=0,\ldots,\,N)$ 에서의 포텐셜 $\Phi_i$ 가 정해진 경우 이 경계조건을 디리클레 경계조건 (Dirichlet boundary condition) 이라고 한다.
+
+**노이만 경계 조건** : 곡면 $S_i\,(i=0,\ldots,\,N)$ 에서의 포텐셜의 표면에 수직방향의 미분 $\partial \Phi_i/\partial\bf{n}_i$ 가 정해진 경우 이 경계조건을 노이만 경계조건 (Neumann boundary condition)** 이라고 한다.
+
+**혼합 경계 조건** : 일부 곡면은 디리클레 형태이고, 나머지 곡면이 노이면 형태일 때 혼합경계조건이라고 한다.
+
+#### **정전기 포텐셜의 유일성 정리**
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition}
+
+#### 정전기 포텐셜의 유일성 정리
+
+앞의 경계조건 정의와 같이 표면 $S_0,\, S_1,\ldots,\,S_N$ 에 대해 디리클레 경계조건 혹은 노이만 경계조건이 정해진 경우 푸아송 방정식, 혹은 라플라스 방정식의 해가 존재한다면 그 해는 유일하다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+$S_i$ 에서의 경계값을 만족하는 두 정전 포텐셜 $\Phi_1$ 과 $\Phi_2$ 가 있으며 $\Psi = \Phi_1-\Phi_2$ 라고 하자. $\nabla^2 \Phi_1 = \nabla^2 \Phi_2 = 0$ 이므로 $\nabla^2 \Psi = 0$ 이다. 모든 $S_i$ 로 둘러쌓여진 영역을 포함하는 큰 영역 $V_0$ 를 생각하자. $V_0$ 에서 $S_i$ 에 의해 둘러쌓인 부분을 제외한 영역을 $V$ 라고 하면 $V$ 의 경계면은 $V_0$ 의 경계면 $S_0$ 와 $S_1,\ldots,\,S_n$ 이다. 그 경계 $\partial V = \bigcup_{k=0}^N S_k$ 를 생각 할 수 있다. 이 $V$ 에 대해 $\nabla^2 \Psi = 0$ 와 그린의 제 1 항등식(@eq-ED_ES_green_first_identity) 을 이용하면 
 
 $$
 \begin{aligned}
 \int_V (\nabla \Psi \bf{\cdot}\nabla \Psi)\,d\mathcal{V} &= \int_V \left[\nabla \bf{\cdot} (\Psi \nabla \Psi)- \Psi \nabla^2 \Psi\right]\,d\mathcal{V}\\[0.3em] 
 &= \int_{\partial V} \Psi \dfrac{\partial \Psi}{\partial \bf{n}}\bf{\cdot}d \bf{a} 
 \end{aligned}
-$${#eq-thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition_1}
+$$ {#eq-thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition_1}
 
 이다. 여기서
 
@@ -325,7 +399,7 @@ $$
 
 ::: {#thm-ED_ES_linearity_of_surface_charge_density_on_conducting_surface}
 
-전하 $Q$ 가 대전된 도체 표면 $S$ 에서의 표면 전하 밀도가 $\sigma(\bf{r})$ 라면 $\lambda Q$ 가 대전된 도체 표면에서의 표면전하밀도는 $\lambda \sigma(\bf{r})$ 이다. . 
+도체 표면 $S$ 에 전하 $Q$ 가 대전되었을 때 표면 전하 밀도가 $\sigma(\bf{r})$ 라면 $\lambda Q$ 가 대전된 도체 표면에서의 표면전하밀도는 $\lambda \sigma(\bf{r})$ 이다. . 
 
 :::
 
@@ -333,10 +407,12 @@ $$
 
 ::: {.proof}
 
-전하 $Q$ 가 대전되어있을 때 $\sigma = -\epsilon_0 \dfrac{\partial \Phi}{\partial n}$ 이며 도체 밖에서 $\nabla^2 \Phi = 0$, $\Phi (\|\bf{r}\|\to \infty)=0$ 이고 도체 표면에서 정전 포텐셜이 일정한 값 $\Phi_0$ 를 가진다. $\lambda Q$ 만큼의 전하가 대전되었을 때의 정전 포텐셜을 $\Psi$ 를 $\Psi(\bf{r})=\lambda \Phi(\bf{r})$ 라고 하면 $\Psi$ 역시 라플라스 방정식 $\nabla^2 \Psi = 0$ 과 $\Psi (r\to \infty)=0$ 을 만족한다. 또한 표면 전하 밀도 $\sigma_\lambda = -\epsilon_0 \dfrac{\partial \Psi}{\partial n}= \lambda \sigma$ 로 표면 잔하 밀도의 적분값은 $\lambda Q$ 이다. 또한 표면에서의 포텐셜 $\Psi_0 = \lambda \Phi_0$ 역시 등전위면이 된다. 유일성 정리에 의해 $\Psi=\lambda \Phi$ 이외의 해는 없다. $\square$
-
+전하 $Q$ 가 대전되었을 때 $\sigma = -\epsilon_0 \dfrac{\partial \Phi}{\partial n}$ 이며 도체 밖에서 $\nabla^2 \Phi = 0$, $\Phi (\|\bf{r}\|\to \infty)=0$ 이고 도체 표면에서 정전 포텐셜이 일정한 값 $\Phi_0$ 를 가진다. $\lambda Q$ 만큼의 전하가 대전되었을 때의 정전 포텐셜을 $\Psi$ 를 $\Psi(\bf{r})=\lambda \Phi(\bf{r})$ 라고 하면 $\Psi$ 역시 라플라스 방정식 $\nabla^2 \Psi = 0$ 과 $\Psi (r\to \infty)=0$ 을 만족한다. 또한 표면 전하 밀도 $\sigma_\lambda = -\epsilon_0 \dfrac{\partial \Psi}{\partial n}= \lambda \sigma$ 로 표면 전하 밀도의 적분값은 $\lambda Q$ 이다. 또한 표면에서의 포텐셜 $\Psi_0 = \lambda \Phi_0$ 역시 등전위면이 된다. 유일성 정리에 의해 $\Psi=\lambda \Phi$ 이외의 해는 없다. $\square$
 
 :::
+
+
+
 
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
@@ -397,7 +473,56 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-ED_ES_uniqueness_theorem_for_electrif_field_surrounding_conductors}
+
+#### 제 2 유일성 정리
+
+정전기 문제에 대한 경계 조건을 설정하는 가장 간단한 방법은 관심 영역을 둘러싼 모든 표면에 대해 정전 포텐셜을 지정하는 것이며 실제로 자주 발생한다. 대표적으로 전위를 유지하는 배터리를 사용하거나, 접지를 통해 포텐셜으르 0 으로 고정하는 것이다. 그러나 경계에서의 전위를 알지 못하고, 오히려 배치된 여러 도체 표면의 전하를 알 수 있는 다른 상황도 있다. 예를 들어, 첫 번째 도체에 전하 $Q_a$, 두 번째 도체에 $Q_b$, ... 를 놓는 상황. 이런 상황에서 각각의 도체에서의 표면전하 밀도를 아는 것은 힘들다. 각각의 전하 배치에 따라 복잡한 방식으로 변하기 때문이다. 그리고 도체 사이 영역에 지정된 전하 밀도 $\rho$ 가 있다고 하자. 
+
+![](figures/electrostatics/fig_griffith_3_6.png){#fig-ED_ES_fig_griffith_3_6 width=400}
+
+이 상황을 일반화 하여 다음과 같이 진술할 때 이것이 성립함을 보여라.
+
+>유한한 크기의 도체 $C_1,\ldots,\,C_N$ 들이 각각 $Q_1,\,\ldots, Q_N\ldots$ 로 대전되어 있으며 이 도체들을 내부에 포함하는 공간 $V$ 가 무한히 퍼져있거나, 다른 더 큰 도체 내부에 있다고 하자. $V$ 에 포함되는 도체가 아닌 공간 $\mathcal{V}$ 에서의 전기장은 유일하게 결정된다.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$\mathcal{V}$ 에서 주어진 조건을 만족하는 두 전기장 $\bf{E}_1$, $\bf{E}_2$ 를 생각하자. 두 전기장 모두 가우스 법칙 $\nabla \bf{\cdot E}_i = \rho/\epsilon_0\, (i=1,\,2)$ 를 만족한다. $\bf{E}_3:=\bf{E}_1-\bf{E}_2$ 라고 하자. 도체 $C_i$ 의 표면을 $S_i$ 라고 하면 
+
+$$
+\oint_{S_i} \bf{E}_1 \bf{\cdot}d\bf{a}= \oint_{S_i} \bf{E}_2 \bf{\cdot}d\bf{a} = \dfrac{Q_i}{\epsilon_0}
+$$
+
+이다. 이로부터 $\nabla \bf{\cdot E}_3 = 0$, $\oint_{S_1+\cdots + S_N}\bf{E}_3 \bf{\cdot}d\bf{a}=0$ 임을 안다. 
+
+이제 $S_i$ 에서의 포텐셜 $\Phi_i$ 를 생각하자. 도체 표면이므로 $S_i$ 전체에서 $\Phi_i$ 는 상수이다. 이를 이용하면
+
+$$
+\nabla \bf{\cdot}(\Phi_3 \bf{E}_3)= \Phi_3 (\nabla \bf{\cdot E}_3) + \bf{E}_3 \bf{\cdot}(\nabla \Phi_3) = - {E_3}^2
+$$
+
+이다. 위 식을 $\mathcal{V}$ (도체를 포함하지 않는 공간) 에 대해 적분하면
+
+$$
+\int_\mathcal{V} \nabla\bf{\cdot}(\Phi_3 \bf{E}_3) \,d\mathcal{V} = \oint_{\mathcal{S}} (\Phi_3 \bf{E}_3)\bf{\cdot}d\bf{a}= -\int_\mathcal{V} {E_3}^2\,d\mathcal{V}
+$$
+
+여기서 두번째 적분을 보자. $\mathcal{S}$ 는 $S_1,\ldots,\,S_N$ 과 가장 외부의 표면 $S_0$ 의 합집합이며 여기서는 $\Phi_3$ 는 상수이다. 따라서 
+
+$$
+ \oint_{\mathcal{S}} (\Phi_3 \bf{E}_3)\bf{\cdot}d\bf{a} = \Phi_3 \oint_{\mathcal{S}} \bf{E}_3\bf{\cdot}d\bf{a} = 0
+$$
+
+이며 따라서 $\bf{E}_3=\bf{0}$ 이다. 즉 전기장은 유일하게 정해진다. $\square$
+
+
+:::
 
 ### 다중극 전개 {#sec-ED_ES_multipole_expansion}
 
@@ -558,6 +683,60 @@ $$
 </div></br>
 
 
+### 거울 영상법 {#sec-ED_ES_image_method}
+
+@thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition 는 일단 경계조건을 만족하는 포텐셜을 구하기만 한다면 그 포텐셜은 유일하다는 것을 의미한다. 이것을 이용하는 방법중의 하나가 **거울영상볍 (method of images)** 이다. 관심 있는 영역에 대한 포텐셜을 구할 때 이 영역이 아닌 다른 영역에 가상의 전하를 배치하여 경계조건을 만족하게 하여 포텐셜을 구하는 방법이다. 일단 가장 간단한 예시를 보자.
+
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-ED_ES_image_method_plane}
+
+#### 도체 평면 근처의 전하
+
+::: {#fig-ED_ES_image_method_plane layout-ncol=2}
+
+![$+q$ 의 전하가 위치했을 때 $-q$ 거울 전하의 위치](figures/electrostatics/image_method_plaine/fig1.png){#fig-ED_ES_image_method_plane_config}
+
+![도체 평면과 전하에 의한 전기장](figures/electrostatics/image_method_plaine/fig2.png){#fig-ED_ES_image_method_plane_field}
+
+도체 평면 근처의 전하와 거울 전하
+:::
+
+위의 그림 ($a$) 와 같이 $(0,\,0,\,h)$ 좌표에 $+q$ 의 전하가 $xy$ 평면상의 도체 평면과 함께 위치한다고 하자. 도체 평면은 접지되어 $\Phi_{\text{conducting plane}}=0$ 이다. 이 대 가상의 거울 전하 $-q$ 를 $(0,\,0,\,-h)$ 에 위치시키고 도체 평면을 무시했을 때의 포텐셜은 아래와 같다.
+
+$$
+\Phi (x,\,y,\,z) = \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{+q}{\sqrt{x^2+y^2+(z-h)^2}} +\dfrac{-q}{\sqrt{x^2+y^2+(z+h)^2}} \right].
+$$
+
+$\Phi (x,\,y,\,z=0)=0$ 이므로 도체 평면상의 경계조건을 만족한다. 다만 이것은 $z\ge 0$ 인 영역에 대해서만 성립하며 $z\le 0$ 인 영역에서는 성립하지 않는다. 도체 표면의 전하 분포를 계산해 보자. 우선
+
+$$
+E_z(x,\,y, z>0) = -\dfrac{\partial \Phi}{\partial z}= \dfrac{q}{4\pi\epsilon_0}\left[\dfrac{z-h}{\|\bf{r}-h\hat{\bf{z}}\|^3}- \dfrac{z+h}{\|\bf{r}+h\hat{\bf{z}}\|^3}\right]
+$$
+
+이며 $E_z(x,\,y,\,z=0^-) = 0$ 이므로 도체 표면에 유도되는 표면 전하 $\sigma$ 는 아래와 같다.
+
+$$
+\sigma=\epsilon_0 E_z(x,\,y,\,z=0^+) = -\dfrac{q}{2\pi}\dfrac{h}{(x^2+y^2+h^2)^{3/2}}.
+$$
+
+이 전하 분포는 원점에서 가장 밀집되어 있으며 유도된 총 전하량은 다음과 같다.
+$$
+Q_{\text{total induced}} = \int \sigma \,dxdy = -q.
+$$
+
+외부의 전하에 의해 도체에 유도되는 전하의 총합이 외부의 전하와 크기가 같다는 것은 모든 거울 영상법에서 공통적인 사실이다. 또한 전하 $+q$ 는 유도된 표면전하에 의해 원래의 전하 $+q$ 가 힘을 받으며 당연히 그 힘은 아래와 같다.
+
+$$
+\bf{F} = -\dfrac{q^2}{4\pi\epsilon_0}\dfrac{q}{4h^2}\hat{\bf{z}}
+$$
+
+:::
+
+</div></br>
+
+
+
 ## 정전기 에너지
 
 ### 정전기 에너지의 의미 {#sec-ED_ES_meaning_of_electrostatic_energy}
@@ -666,93 +845,6 @@ $$ {#eq-ED_ES_electrostatic_energy_for_electric_dipole_system}
 </br>
 
 
-## 도체
-
-### 도체의 기본적 성질 {#sec-ED_ES_conductor}
-
-**도체 (conductor)** 는 전자가 자유롭게 움직 일 수 있는 공간적인 영역을 의미한다. 또한 자유롭게 움직일 수 있는 전자가 충분히 많다는 것을 가정한다. 일반적으로 도체는 금속을 의미하며 금속은 보통 원자당 하나 이상의 자유전자를 가지므로 거시적인 시스템에서 도체의 자유전자의 개수는 $10^{23}$ 이상으로 충분히 많다. 이 짧은 정의로부터 우리는 아래와 같은 사실을 유추할 수 있다.
-
-
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#thm-ED_ES_basic_properties_of_conductor}
-
-#### 도체의 기본적인 성질
-도체 내부에서 받는 힘 $\bf{F}=0$ 이며, 따라서 다음이 성립한다.
-
-&emsp;($1$) 도체 내부에서 전기장 $\bf{E}=\bf{0}$ 이다. 
-
-&emsp;($2$) 도체 내부에서 정전기 포텐셜 $\Phi$ 는 상수이다.
-
-&emsp;($3$) 도체 내부에서 전하 밀도 $\rho = 0$ 이다.
-
-&emsp;($4$) 도체가 포함하는 전하의 합이 $0$ 이 아닐 때 그 여분의 전하는 도체 표면에 존재한다.
-
-&emsp;($5$) 도체 표면의 전기장은 표면에 대해 수직방향이다.
-
-&emsp;($6$) 도체 표면의 전하밀도가 $\sigma$ 일 때 도체 표면 바로 바깥의 전기장의 크기는 $\dfrac{\sigma}{\epsilon_0}$ 이다.
-
-:::
-
-</div>
-
-::: {.proof}
-
-($1$) $\bf{F}=0$ 으로부터 $\bf{E}=0$ 이다.
-
-($2$) $\bf{E}= \nabla \Phi$ 로부터 자명하다.
-
-($3$) $\bf{E} =\rho/\epsilon_0$ 로부터 자명하다.
-
-($4$) ($3$) 으로부터 도체 내부에서 $\rho=0$ 이므로 유일하게 남은 가능성은 이것뿐이다.
-
-($5$) 도체 내부에서 $\Phi$ 가 상수이고 $\Phi$ 는 연속이므로 도체 포면에서 $\nabla \Phi$ 는 표면에 수직방향이다.
-
-($6$) 가우스법칙과 $\bf{E}_{\text{in}} = 0$ 으로부터 $\bf{E}_{\text{out}} = \sigma/\epsilon_0 \hat{\bf{n}}$ 이다. 여기서 $\hat{\bf{n}}$ 은 도체 표면에 수직방향인 단위벡터이다. $\square$ 
-
-
-:::
-
-</br>
-
-#### **유도 전하**
-
-![외부 전기장에 대해 ($a$) 전기적으로 중성인 부도체의 경우, ($b$) 도체의 경우 내부의 전하가 이동하기 시작하며 ($c$) 도체 표면의 전하 분포로 인해 내부 전기장이 사라진 경우 (출처 @Purcell2013electricity)](figures/electrostatics/conductor/conductor.png){#fig-ED_ES_electrostatics_conductor_in_field width=600}
-
-외부의 전기장에 대해 도체 내의 자유롭게 움직일 수 없는 전하들이 움직이며, 위의 그림 ($c$) 에서 보듯이 이동한 전하들에 의한 전기장은 외부의 전기장을 상쇄하는 방향으로 이루어진다. 도체 내에서 자유롭게 움직일 수 있는 전하가 아주 많기 때문에 이 과정은 도체 내부의 전기장이 $0$ 이 될 때 까지 이루어진다. 전하가 도체 바깥으로 탈출할 수 없다고 가정하면 당연히 이렇게 움직인 전하는 표면에 모여 있을 수 밖에 없다. 이렇게 외부 전기장에 의해 표면에 나타나는 전하를 **유도 전하 (induced charge)** 라고 한다.
-
-</br>
-
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-
-::: {#exm-ED_ES_field_of_spherical_shell}
-
-#### 구 대칭 전기장
-
-반지름 $R$ 인 도체의 구 껍질을 생각하자. 구의 내부에 전하 $q$ 가 있을 때의 구 외부의 전기장은 전하 $q$ 가 구의 중심에 있고 구 껍질이 사라졌을 때의 전기장과 같는 것을 보이자. 구 껍질은 안쪽 면과 바깥쪽 면이 존재하며 안쪽 면과 바깥쪽 면 사이의 도체 부분에 아래 그림과 같은 가우스 면을 생각하자.
-
-![도체 구 껍질 내부의 가우스 면](figures/electrostatics/conductor/conductor2.png){#fig-ED_ES_electrostatics_conductor_in_field_2 width=200}
-
-도체 내부의 전기장은 $\bf{0}$ 이기 때문에 가우스 면에 가우스 법칙을 적용하면
-
-$$
-\dfrac{Q_{in}}{\epsilon_0} =  \int \bf{E\cdot}d\bf{a} = \pi R_{\text{in}}^2 E = 0
-$$
-
-이다. 즉 구 내부의 전하 $q$ 에 대해 구 껍질의 안쪽 면에 $-q$ 의 유도 전하가 발생하며 따라서 구 껍질의 바깥족 면에는 $+q$ 의 유도 전하가 발생하게 된다. $q$ 의 전하가 구의 중심에 있지 않다면 구 껍찔 안쪽 면의 유도전하는 균일하지 않다. 그러나 일단 구 껍질 내부 유도전하가 $q$ 의 전하를 구 내부 껍찔 외부에서 가리기 때문에 구 껍질 외부의 포텐셜 혹은 전기장을 결정하는 것은 구 껍찔 바깥쪽 면에 유도되는 유도전하의 분포이다.
-
-그렇다면 이제 구 껍질 바깥쪽의 유도 전하를 보자. 일단 구 껍질 바깥쪽의 전하들은 자기 자신들에 의해 발생하는 전기장 이외의 전기장을 느낄 수 없으며, 따라서 균일하게 분포 할 수 밖에 없다. 즉 구 껍찔 바깥족 면은 균일한 면 전하 밀도 $\dfrac{q}{4\pi R^2}$ 를 가지며, 따라서 구 껍질 외부에서의 포텐셜은 가우스 법칙에 따라
-
-$$
-\Phi (r>R)= \dfrac{1}{4\pi\epsilon_0}\dfrac{q}{r}
-$$
-
-이다. 
-
-좀 더 일반적으로 구형이 아닌, 어떤 전하를 내부에 포함하는 임의의 도체 껍질을 생각하자. 중요한 것은 도체 껍질 내부의 가우스 면의 전기장이 $0$ 이기 때문에 도체 껍질 외부의 전기장 혹은 포텐셜은 전하의 위치와는 무관하게 도체 껍질 내부의 전하를 무시하고 그 전하가 도체 껍질 외부에 분포하고 있을 때의 전기장 혹은 포텐셜만 생각하면 된다는 것이다.
-
-:::
-
-</div></br>
 
 ### 톰슨 정리
 
@@ -886,111 +978,6 @@ $$
 
 따라서 용량 $C = 4\pi \epsilon_0 r_1r_2/(r_2-r_1)$ 이다.
 
-</br>
-
-### 도체에서의 경계값 문제 {#sec-ED_ES_boundary_value_problem_in_conductors}
-
-::: {.callout-important icon="false"}
-
-#### 접지 
-
-지금까지는 도체가 정해진 전하 $Q$ 를 품고 있는 경우를 생각했다. 하지만 많은 경우 전하 $Q$ 가 유지되는 것이 아니라 전위 $V=\Delta \Phi$ 가 유지된다. 그리고 표면의 전위가 각각 일정하게 유지되는 복수의 도체를 다루는 경우가 많다. 이것을 좀 더 자세히 살펴보자. $n$ 개의 도체 표면이 각각 $\Phi_1,\ldots,\,\Phi_n$ 의 전위를 유지한다고 하자. 이것은 많이 의야한데 앞서 중심을 공유하는 축전지에서 본 겉과 같이, 그리고 당연히 생각할 수 있는 것과 같이 한 축전지가 품고 있는 전하량 혹은 포텐셜이 바뀐다면 당연히 모든 도체에서의 표텐셜이 이 변화에 따라 같이 변하게 되기 때문이다. 만약 모든 도체 표면에서듸 포텐셜이 일정하다면 각 도체에 포함되는 전하량이 변한다는 의미이다. 
-
-어떤 도체 $C_1$ 가 매우 크고 전하를 많이 가진 $C_R$ 과 전기적으로 연결되어 있다고 가정하면 $C_1$ 에서의 전하의 변화는 전체적으로 거의 영향을 끼치지 않을 것이고 따라서 $C_1$ 과 $C_R$ 에서 정해지는 포텐셜은 변화가 없을 것이다. 많은 경우 $C_R$ 의 역할은 지구가 담당하며, 지구의 전위를 $0$ 으로 잡고, 지구와 전기적으로 연결된 경우 **접지되었다(be grounded)** 라고 한다. 혹은 스마트폰의 경우에는 민감한 작은 소자들을 상대적으로 이 소자들보다 매우 큰 스마트폰의 금속 케이스 혹은 프레임과 전기적으로 연결한다.
-
-:::
-
-</br>
-
-#### **경계값 문제**
-
-많은 도체로 이루어진 시스템을 생각하고 각각의 도체 표면을 $S_i$ 라고 하자. 어떤 도체는 일정한 전위 $\Phi_i$ 를 갖고 어떤 도체는 일정한 전하량 $Q_i$ 를 가질 수 있다. 후자의 경우 표면 전하 $\sigma$ 가 재배치되면서 내부 전기장은 $0$ 이 되며 바깥쪽 전기장은 $\bf{E}=4\pi\sigma \hat{\bf{n}}$ 이 된다. 그리고 도체가 아닌 공간에서의 전위는 라플라스 방정식 $\nabla^2 \Phi = 0$ 을 만족하며 경계조건은 아래 둘 가운데 하나이다.
-
-&emsp;($1$) 디리클레 경계조건 : $S_i$ 에서의 전위가 고정되어 있는 경우, 즉 $\Phi_i=\text{const.}$
-
-&emsp;($2$) 노이만 경계 조건 : $S_i$ 에 대한 수직방향 전기장이 고정되어 있는 경우, 즉 $\nabla \Phi_i\bf{\cdot} \hat{\bf{n}}=\text{const.}$
-
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-
-::: {#thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition}
-
-도체들의 표면 $S_i$ 에 대해 디리클레 경계조건 혹은 노이만 경계조건이 정해진 경우 라플라스 방정식의 해가 존재한다면 그 해는 유일하다.
-
-:::
-</div>
-
-::: {.proof}
-
-두 해를 $\Phi_1,\,\Phi_2$ 라고 하고 $f=\Phi_1-\Phi_2$ 라고 하자. $\nabla^2f=0$ 이므로
-
-$$
-\int_V \nabla \bf{\cdot} (f\nabla f)\,d\mathcal{V} = \int_V (\nabla f) \bf{\cdot} (\nabla f)\,d\mathcal{V} \ge 0
-$$
-
-이며 또한 발산정리에 따라 다음이 성립한다.
-
-$$
-\int_V \nabla \bf{\cdot} (f\nabla f)\,d\mathcal{V} = \sum_i\int_{S_i} f\nabla f\bf{\cdot}\,d\bf{a} = \sum_i \int_{S_i}  f (\nabla f \cdot \hat{\bf{n}})da.
-$$
-
-$S_i$ 에서 $f=0$ 이거나 $\nabla f\bf{\cdot} \hat{\bf{n}}=0$ 이므로 $\nabla f = 0$ 이다. 즉 $\Phi_1-\Phi_2=\text{const}$ 이다. 최소한 하나의 디리클레 경계조건이 있다면 $\Phi_1-\Phi_2=0$ 이므로 전위는 유일하게 정해진다. 모두 노이만 경계조건이라면 $\Phi_1-\Phi-2$ 는 항상 일정한데 이는 물리적으로 의미가 없는 차이이다. $\square$
-
-:::
-
-
-</br>
-
-#### **거울 영상법**
-
-@thm-ED_ES_uniqueness_theorem_for_dirichlet_and_neumann_boundary_condition 는 일단 경계조건을 만족하는 포텐셜을 구하기만 한다면 그 포텐셜은 유일하다는 것을 의미한다. 이것을 이용하는 방법중의 하나가 **거울영상볍 (method of images)** 이다. 관심 있는 영역에 대한 포텐셜을 구할 때 이 영역이 아닌 다른 영역에 가상의 전하를 배치하여 경계조건을 만족하게 하여 포텐셜을 구하는 방법이다. 일단 가장 간단한 예시를 보자.
-
-</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-
-::: {#exm-ED_ES_image_method_plane}
-
-#### 도체 평면 근처의 전하
-
-::: {#fig-ED_ES_image_method_plane layout-ncol=2}
-
-![$+q$ 의 전하가 위치했을 때 $-q$ 거울 전하의 위치](figures/electrostatics/image_method_plaine/fig1.png){#fig-ED_ES_image_method_plane_config}
-
-![도체 평면과 전하에 의한 전기장](figures/electrostatics/image_method_plaine/fig2.png){#fig-ED_ES_image_method_plane_field}
-
-도체 평면 근처의 전하와 거울 전하
-:::
-
-위의 그림 ($a$) 와 같이 $(0,\,0,\,h)$ 좌표에 $+q$ 의 전하가 $xy$ 평면상의 도체 평면과 함께 위치한다고 하자. 도체 평면은 접지되어 $\Phi_{\text{conducting plane}}=0$ 이다. 이 대 가상의 거울 전하 $-q$ 를 $(0,\,0,\,-h)$ 에 위치시키고 도체 평면을 무시했을 때의 포텐셜은 아래와 같다.
-
-$$
-\Phi (x,\,y,\,z) = \dfrac{1}{4\pi\epsilon_0}\left[\dfrac{+q}{\sqrt{x^2+y^2+(z-h)^2}} +\dfrac{-q}{\sqrt{x^2+y^2+(z+h)^2}} \right].
-$$
-
-$\Phi (x,\,y,\,z=0)=0$ 이므로 도체 평면상의 경계조건을 만족한다. 다만 이것은 $z\ge 0$ 인 영역에 대해서만 성립하며 $z\le 0$ 인 영역에서는 성립하지 않는다. 도체 표면의 전하 분포를 계산해 보자. 우선
-
-$$
-E_z(x,\,y, z>0) = -\dfrac{\partial \Phi}{\partial z}= \dfrac{q}{4\pi\epsilon_0}\left[\dfrac{z-h}{\|\bf{r}-h\hat{\bf{z}}\|^3}- \dfrac{z+h}{\|\bf{r}+h\hat{\bf{z}}\|^3}\right]
-$$
-
-이며 $E_z(x,\,y,\,z=0^-) = 0$ 이므로 도체 표면에 유도되는 표면 전하 $\sigma$ 는 아래와 같다.
-
-$$
-\sigma=\epsilon_0 E_z(x,\,y,\,z=0^+) = -\dfrac{q}{2\pi}\dfrac{h}{(x^2+y^2+h^2)^{3/2}}.
-$$
-
-이 전하 분포는 원점에서 가장 밀집되어 있으며 유도된 총 전하량은 다음과 같다.
-$$
-Q_{\text{total induced}} = \int \sigma \,dxdy = -q.
-$$
-
-외부의 전하에 의해 도체에 유도되는 전하의 총합이 외부의 전하와 크기가 같다는 것은 모든 거울 영상법에서 공통적인 사실이다. 또한 전하 $+q$ 는 유도된 표면전하에 의해 원래의 전하 $+q$ 가 힘을 받으며 당연히 그 힘은 아래와 같다.
-
-$$
-\bf{F} = -\dfrac{q^2}{4\pi\epsilon_0}\dfrac{q}{4h^2}\hat{\bf{z}}
-$$
-
-:::
-
-</div></br>
 
 ## 유전체 
 
