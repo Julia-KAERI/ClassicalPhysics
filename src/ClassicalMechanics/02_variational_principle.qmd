@@ -493,7 +493,7 @@ $$
 
 </br>
 
-## 대칭과 보존
+## 대칭과 보존 {#sec-CM_chapter_symmetry_and_conservation}
 
 ### 정준운동량과 위상공간 {#sec-CM_variational_phase_space}
 

@@ -12,7 +12,7 @@ crossref:
 
 우리는 라그랑지안이 운동방정식을 세우고 그로부터 역학계를 기술하는데 아주 유용하다는 것을 안다. 이제 소위 해밀토니안(Hamintonian) 을 통해 운동을 기술하는 방법을 소개하고자 한다. 실제의 운동방정식을 세우고 푸는데 해밀토니안 방법이 라그랑지안 방법보다 유리한 경우는 거의 없다. 그러나 해밀토니안 방법은 고전역학 이후에 발전한 통계역학과 양자역학의 이론적 발전에 지대한 영향을 끼쳤으며, 고전역학을 새로운 관점을 보는데도 매우 유용하다.
 
-여기서는 모든 시스템이 holonomic 이며(즉 역학적 제한조건이 좌표에만 의존한다), 힘이 monogenic 이거나 (즉 위치만의 함수인 포텐셜에 의해 힘이 주어진다) 속도에 의존적인 일반화된 포텐셜의 미분으로 주어지는 경우만을 생각하기로 하자.
+여기서는 모든 시스템이 holonomic 이며, 힘이 monogenic 이거나 (즉 위치만의 함수인 포텐셜에 의해 힘이 주어진다) 속도에 의존적인 일반화된 포텐셜의 미분으로 주어지는 경우만을 생각하기로 하자.
 
 </br>
 
@@ -76,11 +76,10 @@ $$
 
 ### 해밀토니안 {#sec-CM_hamiltonian}
 
-::: {.callout-note appearance="minimal" icon="false"}
+::: {.callout-note  icon="false"}
 
-::: {#def-CM_hamiltonian}
+#### **해밀토니안**
 
-#### 해밀토니안
 라그랑지안 $L(\bf{q},\, \dot{\bf{q}},\,t)$ 에 대해 아래와 같은 르장드르 변환을 수행하여 얻은 $H(\bf{q},\, \bf{p},\,t)$ 를 **해밀토니안(Hamiltonian)** 이라고 한다. 
 
 $$
@@ -88,10 +87,6 @@ H\left(\bf{q}, \bf{p}, t\right) = \sum_{i} \dot{q}_i p_i - L(\bf{q}, \dot{\bf{q}
 $$ {#eq-CM_hamiltonian}
 
 :::
-
-:::
-
-</br>
 
 해밀토니안은 $\bf{q},\, \bf{p},\, t$ 에 대한 함수이므로 그 미분형식은 다음과 같다.
 
@@ -114,13 +109,13 @@ $$
 이므로, 
 
 $$
-dH = -\sum_i (\dot{p}_i dq_i + \dot{q}_i dp_i ) - \dfrac{\partial L}{\partial t} dt
+dH = -\sum_i \dot{p}_i dq_i + \sum_i \dot{q}_i dp_i - \dfrac{\partial L}{\partial t} dt
 $$
 
 이며 이로부터
 
 $$
-\dot{q}_i = \dfrac{\partial H}{\partial p_i},\qquad \dot{p}_i =- \dfrac{\partial H}{\partial q_i}, 
+\boxed{\dot{q}_i = \dfrac{\partial H}{\partial p_i},\qquad \dot{p}_i =- \dfrac{\partial H}{\partial q_i}, }
 $$ {#eq-CM_canonical_equation_of_hamiltonian}
 
 $$
@@ -128,8 +123,6 @@ $$
 $$ {#eq-CM_time_dependence_of_hamiltonian} 
 
 를 얻는다. @eq-CM_canonical_equation_of_hamiltonian 을 **해밀턴 정준 방정식(canonical equations of Haminton)** 이라고 부른다. 우리는 이를 통해 $n$ 개의 2차 미분방정식(라그랑쥬 방정식) 을 $2n$ 개의 1차 미분방정식(해밀턴의 정준 방정식) 으로 바꿨다. 차이는 (이것은 매우 중요하다) 라그랑지안이 일반화된 좌표계에서 $\bf{q},\, \dot{\bf{q}},\,t$ 의 함수라면 해밀토니안은 $\bf{q},\, \bf{p},\,t$ 의 함수라는 것이다. 해밀턴 정준방정식을 따르는 좌표 $\bf{q},\, \bf{p}$ 를 **정준 좌표 (canonical coordinate)** 라고 한다.(운동량 변수도 정준 좌표에 포함된다.)
-
-</br>
 
 ### 해밀토니안을 직접 구할 수 있는 경우
 
@@ -144,19 +137,29 @@ $$ {#eq-CM_time_dependence_of_hamiltonian}
 
 이것은 진짜로 일반화된 좌표계에서는 쉽지 않은 일이다. $\bf{p}$ 를 구한 후 모든 $\dot{q}_j$ 를 $\bf{q},\, \bf{p},\,t$ 에 대한 함수로 다시 기술해야 하기 때문이다. 하지만 물리적으로 중요한 많은 문제에 대해서는 지름길이 존재한다.
 
-우선 라그랑지안 $L$ 이 $\{\dot{q}_i\}$ 에 대해 $0$, $1$, $2$ 차 로 homogeneous 한 함수의 합으로 표현 할 수 있을 때이다. 어떤 함수$f(x_1,\ldots,\,x_n)$ 이 $k$ 차로 homogeneous 하다는 것은 
+우선 라그랑지안 $L$ 이 $\{\dot{q}_i\}$ 에 대해 $0$, $1$, $2$ 계 동차 함수의 합으로 표현 할 수 있을 때이다. 
+
+::: {.callout-note icon="false"}
+
+#### **동차 함수**
+
+함수 $f(x_1,\ldots,\,x_n)$ 이 자연수 $k$ 에 대해 
 
 $$
 f(tx_1,\ldots,\,t x_n) = t^k f(x_1,\ldots,\,x_n)
 $$ {#eq-CM_homogeneous_function}
 
-이 성립한다는 의미다. 이 경우,
+를 만족할 때 이 함수 를 **$k$-계 동차함수 ($k$-order homogeneous function)** 라고 한다.
 
+:::
+
+
+$k$-계 동차함수 $f$ 가 다음을 만족한다는 것은 잘 알려져 있다.
 $$
-k f(x_1,\ldots,\,x_n) = \sum_{i=1}^n x_i \dfrac{\partial f}{\partial x_i}
+\sum_{i=1}^n x_i \dfrac{\partial f}{\partial x_i} = k f(x_1,\ldots,\,x_n).
 $$ {#eq-CM_differential_of_homogeneous_function}
 
-가 성립한다. $L_0,\,L_1,\,L_2$ 를 각각 $\{\dot{q}_i\}$ 에 대한 $0,\,1,\,2$ 차 동차함수(homogeneous function) 이며 $L=L_0 + L_1 + L_2$ 라면, 
+$L_0,\,L_1,\,L_2$ 를 각각 $\{\dot{q}_i\}$ 에 대한 $0,\,1,\,2$ 계 동차함수이며 $L=L_0 + L_1 + L_2$ 라면, 
 
 $$
 H = \sum \dot{q}_i p_i - L_0 - L_1 - L_2 = \sum \dot{q}_i \dfrac{\partial L}{\partial \dot{q}_i} - L_0 - L_1 - L_2 = L_2-L_0
@@ -166,7 +169,7 @@ $$
 
 $$
 L_0 = L_0 (\bf{q}),\quad L_1 = \bf{a}^T \dot{\bf{q}},\quad L_2 =\dfrac{1}{2}\dot{\bf{q}}^T \bf{T}\dot{\bf{q}}, 
-$$
+$$ {#eq-CM_lagramgian_in_matrix_form}
 
 이다. 이 때 정준운동량 $\bf{p}$ 는
 
@@ -174,23 +177,71 @@ $$
 \bf{p}= \bf{T}\dot{\bf{q}} + \bf{a}
 $$
 
-이다. 일반적으로 $\bf{T}$ 는 positive definite 행렬(이므로 당연히 symmetric)이므로 가역행렬이며, 따라서 [positive definite 행렬에 대해서는 선형대수학을 참고하라]{.aside}
+이다. 일반적으로 $\bf{T}$ 는 [positive definite 행렬](https://julia-kaeri.github.io/Algebra.doc/src/part1/ch1_07_spectrum_theorem.html#positive-positive-definite-행렬과-제곱근-행렬) 이므로 가역행렬이며, 따라서 [positive definite 행렬에 대해서는 선형대수학을 참고하라]{.aside}
 
 $$
 \dot{\bf{q}} = \bf{T}^{-1}(\bf{p}-\bf{a})
 $$
 
-이다. 따라서 해밀토니안 $H$ 는
+이다. 따라서 해밀토니안 $H$ 는 아래의 형태이다.
 
 $$
-H = \dfrac{1}{2} (\bf{p}-\bf{a})^T \bf{T}^{-1} (\bf{p}-\bf{a}) - L_0(\bf{q})
+H = \dfrac{1}{2} (\bf{p}-\bf{a})^T \bf{T}^{-1} (\bf{p}-\bf{a}) - L_0(\bf{q}).
+$$ {#eq-CM_hamiltonian_form}
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-CM_hamiltonian_for_monogenic_potential_in_spherical_coordinate}
+
+#### 구면좌표계의 해밀토니안
+
+구면좌표계 $(r,\,\theta,\,\varphi)$ 에서 구면 대칭 포텐셜 $V(r)$ 의 영향을 받는 입자의 운동에너지는
+
+$$
+T=\dfrac{mv^2}{2} = \dfrac{m}{2}\left(\dot{r}^2 + r^2 \sin^2 \theta \,\dot{\varphi}^2 + r^2 (\dot\theta)^2\right)
+$$
+
+이다. 여기서
+
+$$
+\bf{T} = m\begin{bmatrix}  1 & 0 & 0 \\ 0 & r^2 & 0\\ 0 & 0 & r^2\sin^2\theta \end{bmatrix},\qquad \bf{T}^{-1} = \dfrac{1}{m}\begin{bmatrix}  1 & 0 & 0 \\ 0 & \dfrac{1}{r^2} & 0\\ 0 & 0 & \dfrac{1}{r^2\sin^2\theta} \end{bmatrix}
+$$
+
+이며, 따라서 해밀토니안은 $T+V$ 형태이다. 이로부터 시스템의 해밀토니안은
+$$
+H(r,\,\theta,\,\varphi,\, p_r,\,p_\theta,\,p_\varphi) = \dfrac{1}{2m}\left(p_r^2 + \dfrac{p_\theta^2}{r^2} + \dfrac{p_\varphi^2}{r^2\sin^2\theta}\right)
+$$
+
+이다. 그러나 일반화된 좌표계가 데카르트 좌표계라면,
+
+$$
+T=\dfrac{mv^2}{2} = \dfrac{\bf{\dot{x}\cdot \dot{x}}}{2}
+$$
+
+이며 따라서 해밀토니안은
+
+$$
+H(\bf{x},\,\bf{p}) = \dfrac{\bf{p\cdot p}}{2m} + V(\sqrt{\bf{x\cdot x}})
 $$
 
 
-이다. 이제 이것을 전자기장에서의 라그랑지안에 대해 생각해보자. @eq-CM_generalized_force 으로 주어진 일반화된 포텐셜에 대해 
+:::
+
+</div>
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-CM_hamiltonian_for_charged_particle_in_electromagnetic_field}
+
+#### 전자기장에서의 하전입자의 해밀토니안
+
+
+이제 이것을 전자기장에서의 라그랑지안에 대해 생각해보자. @eq-CM_generalized_force 으로 주어진 일반화된 포텐셜에 대해 
 
 $$
-L = T-U = \dfrac{1}{2}mv^2 -q\phi + q \bf{A\cdot v}
+L = T-U = \dfrac{1}{2}mv^2 -q\Phi + q \bf{A\cdot v}
 $$
 
 이다. 따라서 정준운동량 $\bf{p}$ 는
@@ -202,12 +253,13 @@ $$
 이므로, 
 
 $$
-H = \dfrac{\|\bf{p}- q\bf{A}\|^2}{2m} + q\phi
+H = \dfrac{\|\bf{p}- q\bf{A}\|^2}{2m} + q\Phi
 $$ {#eq-CM_hamiltonian_of_charged_particle}
 
 이다. 
 
-</br>
+:::
+</div>
 
 ### 심플렉틱 표기법 {#sec-CM_symplectic_notation}
 
@@ -225,7 +277,7 @@ $$
 그렇다면 해밀턴의 정준방정식 @eq-CM_canonical_equation_of_hamiltonian 은 다음과 같이 쓸 수 있다.
 
 $$
-\dot{\bf{\eta}} =  \bf{J} \left(\nabla_\bf{\eta} H\right).
+\dot{\bf{\eta}} =  \bf{J}\dfrac{\partial H}{\partial \bf{\eta}}.
 $$ {#eq-CM_simplectic_notation_of_hamilton_equation_of_motion}
 
 해밀턴 운동방정식을 위와 같이 표기하는 것을 **심플렉틱 표기법(symplectic notation)** 이라고 한다. 
@@ -246,7 +298,9 @@ $$ {#eq-CM_symplectic_determinant_of_J}
 
 </br>
 
-### 순환좌표 와 보존 정리 {#sec-cyclic_coordinate_hamiltonian}
+### 순환좌표와 보존 정리 {#sec-cyclic_coordinate_hamiltonian}
+
+#### **운동량 보존**
 
 [정준운동량과 위상공간](#sec-CM_variational_phase_space) 에서 다루었던 순환 좌표를 다시 생각해보자. 라그랑지안과 해밀토니안의 관계 즉 $H = \sum_i \dot{q}_i p_i -L$ 을 생각해보면
 
@@ -254,8 +308,9 @@ $$
 \dfrac{\partial L}{\partial q_i}=0 \iff \dfrac{\partial H}{\partial q_i}=0
 $$
 
-이 성립한다. $\dot{p}_i = - \dfrac{\partial H}{\partial q_i}$ 이므로 $H$ 에 명시적인 $q_i$ 의존성이 없다면 $p_i$ 는 운동상수이다. 
+이 성립한다. $\dot{p}_i = - \dfrac{\partial H}{\partial q_i}$ 이므로 $H$ 에 명시적인 $q_i$ 의존성이 없다면 $p_i$ 는 운동상수이다. 순환좌표에 대한 정준운동량이 보존된다는 사실이 해밀토니안 방법에서도 그대로 적용된다.
 
+#### **라그랑지안이 시간에 명시적으로 의존하지 않을 때의 해밀토니안**
 
 또한 해밀턴 운동방정식 @eq-CM_canonical_equation_of_hamiltonian 과 @eq-CM_time_dependence_of_hamiltonian 으로부터
 $$
@@ -266,6 +321,20 @@ $$
 $$
 
 을 얻는다. 즉 라그랑지안이 명시적으로 시간에 의존적이지 않으면 해밀토니안 값은 운동상수이다. 
+
+#### **일반화된 좌표로의 변환이 시간에 대해 명시적으로 의존하지 않을 때**
+
+앞서 [대칭과 보존](02_variational_principle.qmd#sec-CM_chapter_symmetry_and_conservation)
+에서 봤지만 일반화된 좌표 $q_1,\ldots,q_n$ 으로의 변환을 생각하자. 이 때 
+
+$$
+\bf{r}_m = \bf{r}_m(q_1,\ldots,\,q_n,\,t)
+$$
+
+가 시간에 명시적으로 의존하지 않는며, 포텐셜이 속도에 의존하지 않는다면 $H$(당시는 에너지 함수 $h$)가 운동상수이며 $T+V$ 임을 보았다. 어떤 경우에는 이 좌표 변환이 시간에 명시적으로 의존하더라도 $H$ 는 그렇지 않을 수 있다. 이 경우 $H$ 는 운동상수이지만 총 에너지는 아니다. 앞서 [대칭과 보존](02_variational_principle.qmd#sec-CM_chapter_symmetry_and_conservation) 에서 보았듯이 해밀토니안은 크기와 함수 형태에서 일반화된 좌표계의 선택에 의존한다. 라그랑지안을 $L=T-V$ 로 쓰고 여기서 일반된 좌표계로 변환한다면 함수의 형태는 바뀔지라도 값은 바뀌지 않지만 해밀토니안의 경우는 그 값도 바뀔 수 있다. 어떤 선택에서는 $H$ 가 보존되지만 어떤 선택에서는 시간에 대해 변한다.
+
+
+
 
 </br>
 

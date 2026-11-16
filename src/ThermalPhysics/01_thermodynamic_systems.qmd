@@ -71,7 +71,7 @@ crossref:
 
 ![실린더-피스톤](figures/fermi/simple_system/simple_system.png){#fig-TD_simple_system width=200}
 
-- 열역학적 과정에서 계가 외부에 일을 하거나(음의 일) 외부가 계에 일을 할 수 있다(양의 일)$^1$. [$^1$ 교재나 학자에 따라 일의 부호가 바뀐다. @Fermi1956ThermodynamicsDover 는 계가 외부에 한 일을 양으로 놓았지만 @feynman2010feynman 이나 @Schroeder2000introduction 는 여기에 쓰인대로 정의했으며 근래의 교재들도 이 표기법을 따른다.]{.aside} 
+- 열역학적 과정에서 계가 외부에 일을 하거나(음의 일) 외부가 계에 일을 할 수 있다(양의 일)$^1$. [$^1$ 교재나 학자에 따라 일의 부호가 바뀐다. @Fermi1956ThermodynamicsDover 는 계가 외부에 한 일을 양으로 놓았지만 @Feynman2010Lectures 이나 @Schroeder2000introduction 는 여기에 쓰인대로 정의했으며 근래의 교재들도 이 표기법을 따른다.]{.aside} 
 
 - 위의 그림과 같은 실린더-피스톤 시스템을 생각하자. 실린더의 면적을 $A$ 라고 내부에서 압력 $p$ 가 작용한다고 하면 피스톤에 가해지는 힘은 $pA$ 이다. 피스톤이 $dh$ 만큼 들렸다면 이 시스템이 외부에 한 미소 일(infinitesimla work) $dW = -pA\,dh$ 이며 $A\,dh$ 는 부피의 변화 $dV$ 이므로 미소 일은 다음과 같다.
 $$
