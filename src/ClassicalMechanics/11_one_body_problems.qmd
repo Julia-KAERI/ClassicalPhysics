@@ -13,6 +13,58 @@ crossref:
 
 여기서는 운동방정식으로 다루는 입자의 대상이 하나이거나, 여러개더라도 하나에 대한 운동방정식으로 환원시킬 수 있는 시스템에 대해 다루도록 한다. 뉴턴 방법 운동방정식이나 라그랑지안 운동방정식 가운데 그때 그때 편한 운동방정식으로 기술한다. 
 
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-CM_bead_on_a_rotating_hoop} 
+
+#### 회전하는 굴렁쇠의 구슬
+
+반지름 $a$ 인 굴렁쇠가 아래 @fig-CM_bead_on_a_rotating_hoop 와 같이 일정한 각속도 $\omega$ 로 회전한다고 하자. 회전하는 굴렁쇠 테 위에서 마찰 없이 움직이는 질량 $m$ 의 구슬을 생각하자.
+
+![회전하는 굴렁쇠에서의 구슬](images/beads_on_a_rotating_hoop/beads.png){#fig-CM_bead_on_a_rotating_hoop width=300}
+
+데카르트 좌표계에서 위치 $x,\,y,\,z$ 는 아래와 같다.
+
+$$
+x = a \sin \psi \cos \omega t,\qquad y = a \sin \psi \sin \omega t,\qquad z= a(1-\cos\psi).
+$$
+
+독립 변수는 $\psi$ 뿐이며 라그랑지안 $L(\psi)$ 는 다음과 같다.
+
+$$
+\begin{aligned}
+L &= \dfrac{m}{2}(\dot{x}^2+\dot{y}^2+\dot{z}^2) - mgz \\[0.3em]
+&=\dfrac{m}{2}[a\dot{\psi}^2 +  \omega^2 \sin^2 \psi]  + mag\cos \psi - mag.
+\end{aligned}
+$$
+
+상수항 $-mag$ 는 라그랑지안에서 의미가 없으며 유표 포텐설 $V_\text{eff}$ 을 
+
+$$
+V_\text{eff}(\psi) = - mag \cos \psi - \dfrac{m\omega^2 \sin^2\psi}{2}
+$$
+
+라고 하면 라그링지안을 아래와 같이 쓸 수 있다.
+
+$$
+L = \dfrac{ma^2\dot{\psi}^2}{2} - V_\text{eff}(\psi)
+$$
+
+그렇다면 이 라그랑지안에 대한 오일러-라그랑쥬 방정식은 다음과 같다.
+
+$$
+\ddot{\psi} = -\dfrac{\partial V_\text{eff}}{\partial \psi} = -mag \sin \psi + m\omega^2 \sin\psi \cos \psi.
+$$
+
+아래 그림은 이 시스템의 유효 표텐셜 $V_\text{eff}$ 를 세가지 경우로 나누어 표현했다. 이로부터 굴렁쇠가 충분히 빠르게 회전한다면, 즉 $\omega^2 > g/a$ 라면 $\psi$ 에 대한 안정점은 $\psi\ne 0$ 이 아닌 위치에서 형성된다. 
+
+![유효 포텐셜](images/beads_on_a_rotating_hoop/effective_potential.png){#fig-CM_effective_potential_for_bead_on_a_rotating_hoop width=500}
+
+
+:::
+</div>
+
 </br>
 
 ## 1차원 Drag force {#sec-CM_1d_drag_force}

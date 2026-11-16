@@ -30,7 +30,7 @@ $$
 ![1차원 경로](images/path1d/path1d.png){#fig-1d_path_variational width=250}
 
 
-$x_1$ 과 $x_2$ 사이의 경로 $y=y(x)$ 에서 정의된 함수 $f(y,\,\dot{y},\,x)$ 를 생각하자. 그리고 선적분 $\displaystyle J=\int_{x_1}^{x_2} f(y,\,\dot{y},\,x)\, dx$ 가 정류값(stationary value) 를 갖도록 하는 경로를 찾아야 한다고 하자. 우리가 찾고자 하는 경로와 그 이웃 경로를 다음 식과 같은 관계로 표현하자. 두 경로는 시작점과 끝점이 같아야 한다. 
+$x_1$ 과 $x_2$ 사이의 경로 $y=y(x)$ 에서 정의된 함수 $f(y,\,\dot{y},\,x)$ 를 생각하자. 그리고 선적분 $\displaystyle J=\int_{x_1}^{x_2} f(y,\,\dot{y},\,x)\, dx$ 가 정류값(stationary value) 를 갖도록 하는 경로를 찾아야 한다고 하자. 우리가 찾고자 하는 경로와 시작점과 끝점이 같은 이웃 경로를 다음 식과 같은 관계로 표현하자.
 
 $$
 y(x,\,\alpha) = y(x,\,0) + \alpha \eta(x)\;.
@@ -42,7 +42,7 @@ $$ {#eq-CM_variational_in_1d_initial_path}
 
 $$
 J(\alpha) = \int_{x_1}^{x_2} f(y(x,\,\alpha),\,\dot{y}(x,\,\alpha),\,x)\,dx
-$$ 
+$$ {#eq-CM_line_integral_of_J_for_alpha}
 
 이며 정류값은 다음을 만족할 때 이다(정류 조건).
 
@@ -58,15 +58,17 @@ $$
 \end{aligned}
 $$ {#eq-CM_variational_derivative_of_J_to_alpha}
 
-따라서 정류조건 인 @eq-CM_stationary_condition 은 다음과 같게 된다.
+따라서 정류조건 @eq-CM_stationary_condition 은 다음과 같게 된다.
 
 $$
 \int_{x_1}^{x_2} \left[\dfrac{ \partial f}{\partial y} - \dfrac{d}{dx} \left(\dfrac{\partial f}{\partial \dot{y}}\right)\right]\left( \dfrac{dy}{d\alpha}\right)_{\alpha=0} dx = 0\;.
 $$ {#eq-CM_stationary_condition_2}
 
 
-::: {.callout-caution appearance="minimal" icon="false"}
-*Fundamental lemma of the calculus of variations* 에 의해, 임의의 $C^2$ 함수(2차 미분까지 연속인 함수) $\eta(x)$에 대해 다음을 만족하는 $M(x)$는 $M(x)=0$ in $(x_1,\,x_2)$ 이어야 함이 알려져 있다.
+::: {.callout-caution icon="false"}
+#### **Fundamental lemma of the calculus of variations 으로부터의 결론**
+
+*Fundamental lemma of the calculus of variations* 에 의해, 임의의 $C^2$ 함수(2차 미분까지 연속인 함수) $\eta(x)$에 대해 다음을 만족하는 $M(x)$는 모든 $x\in (x_1,\,x_2)$ 에 대해 $M(x)=0$ 이어야 함이 알려져 있다.
 
 $$
 \int_{x_1}^{x_2} M(x) \eta(x) \,dx = 0\;.
@@ -203,7 +205,7 @@ $$
 \dot{y} = \sqrt{\dfrac{2a-y}{y}} \implies \dfrac{dy}{dx} = \sqrt{\dfrac{a(1-\cos \theta)}{a(1-\sin \theta)}} = \dfrac{\cos (\theta/2)}{\sin (\theta/2)}
 $$
 
-이며, $\dfrac{dy}{dx}= \dfrac{dy}{d\theta}\dfrac{d\theta}{dx}$ 임을 이용하면 $\dfrac{dx}{d\theta} = 2a \sin^2 (\dfrac{\theta}{2})$ 이므로 $x=a(\theta - \sin\theta)$ 이다. 즉 $x=a(\theta - \sin \theta)$, $y=a(1-\cos \theta)$ 이다. 
+이며, $\dfrac{dy}{dx}= \dfrac{dy}{d\theta}\dfrac{d\theta}{dx}$ 임을 이용하면 $\dfrac{dx}{d\theta} = 2a \sin^2 \left(\dfrac{\theta}{2}\right)$ 이므로 $x=a(\theta - \sin\theta)$ 이다. 즉 $x=a(\theta - \sin \theta)$, $y=a(1-\cos \theta)$ 이다. 
 
 :::
 
@@ -211,17 +213,17 @@ $$
 
 ### 다차원의 경우 {#sec-CM_variational_method_n_dimension}
 
-이제 $f$ 가 많은 독립변수들 $y_1,\,y_2,\ldots$ 와 그 미분 $\dot{y}_1(x),\,\dot{y}_2 (x),\ldots$ 의 함수 일 때, $\displaystyle J=\int_1^2 f dx$ 에 대한 $\delta J$ 가 $0$ 이 되도록 하는 $y_i$ 들을 찾아보자. 즉
+이제 $f$ 가 많은 독립변수들 $y_1,\,y_2,\ldots$ 와 그 미분 $\dot{y}_1(x),\,\dot{y}_2 (x),\ldots$ 의 함수 일 때, $\displaystyle J=\int_1^2 f \,dx$ 에 대한 $\delta J$ 가 $0$ 이 되도록 하는 $y_i$ 들을 찾아보자. 즉
 
 $$
 \delta J= \delta \int_1^2 f(y_1(x),\,y_2(x),\ldots,\,\dot{y}_1(x),\,\dot{y}_2 (x),\ldots,\,x)\, dx = 0
 $$
 
-를 만족하는 $\{y_i(x)\}$ 를 찾아야 한다. 앞서 보았듯이 $J$ 를 매개변수 $\alpha$ 의 함수로 표현하기 위해 $\alpha$ 를 $y_i (x,\,\alpha) = y_i (x,\,0) + \alpha \eta_i(x)$ for $i=1,\,2,\ldots$ 로 도입한다. 여기서  $y_i (x,\,0)$ 은 우리가 구하고자 하는 경로이고, $\eta_i (x)$ 는 각 끝점에서 $0$ 을 갖는 독립적인 그리고 임의의 함수이다. 앞서 언급했듯이 fundamental lemma of calculus of variations를 만족하기 위해서는  모든 $\eta_i(x)$ 는 2차 도함수까지 연속이어야 한다. $\delta J$ 는 다음과 같이 계산 할 수 있다. $\delta y_i = \left( \dfrac{\partial y_i}{\partial \alpha} \right)_0 d \alpha$ 임을 고려하면, 
+를 만족하는 $\{y_i(x) : i=1,\ldots\}$ 를 찾아야 한다. 앞서 보았듯이 $J$ 를 매개변수 $\alpha$ 의 함수로 표현하기 위해 $\alpha$ 를 $y_i (x,\,\alpha) = y_i (x,\,0) + \alpha \eta_i(x)$ for $i=1,\,2,\ldots$ 로 도입한다. 여기서  $y_i (x,\,0)$ 은 우리가 구하고자 하는 경로이고, $\eta_i (x)$ 는 각 끝점에서 $0$ 을 갖는 독립적인 임의의 함수이다. 앞서 언급했듯이 fundamental lemma of calculus of variations를 만족하기 위해서는  모든 $\eta_i(x)$ 는 2차 도함수까지 연속이어야 한다. $\delta J$ 는 다음과 같이 계산 할 수 있다. $\delta y_i = \left( \dfrac{\partial y_i}{\partial \alpha} \right)_0 d \alpha$ 임을 고려하면, 
 
 $$
 \begin{aligned}
-\delta J = \left(\dfrac{\partial J}{\partial \alpha}\right)_0 d\alpha & = \int_1^2 \sum_i \left[ \dfrac{\partial f}{\partial y_i}\dfrac{\partial y_i}{\partial \alpha} + \dfrac{\partial f}{\partial \dot{y}_i} \dfrac{\partial \dot{y}_i}{\partial d\alpha} \right] d\alpha dx  \nonumber\\ 
+\delta J = \left(\dfrac{\partial J}{\partial \alpha}\right)_0 d\alpha & = \int_1^2 \sum_i \left[ \dfrac{\partial f}{\partial y_i}\dfrac{\partial y_i}{\partial \alpha} + \dfrac{\partial f}{\partial \dot{y}_i} \dfrac{\partial \dot{y}_i}{\partial \alpha} \right] d\alpha dx  \nonumber\\ 
 &= \int_1^2 \sum_i \left[ \dfrac{\partial f}{\partial y_i} - \dfrac{d}{dx} \left( \dfrac{\partial f}{\partial \dot{y}}\right)\right] \left(\dfrac{\partial y_i}{\partial \alpha } d\alpha\right)_0 dx \nonumber\\
 &=  \int_1^2 \sum_i \left[ \dfrac{\partial f}{\partial y_i} - \dfrac{d}{dx} \left( \dfrac{\partial f}{\partial \dot{y}}\right)\right] \delta y_i dx\;. 
 \end{aligned}
@@ -279,28 +281,22 @@ $$
 
 달랑베르 원리를 통해 시스템의 특정 순간의 상태에서의 가상 변위(virtual dispacement)를 이용하여 라그랑쥬 방정식을 유도하였다. 라그랑쥬 방정식은 전혀 다른 방법, 즉 특정 시간 구간 $[t_1,\,t_2]$ 에 대한 일반화된 좌표의 짜임새 공간 에서의 경로와 이 경로에 대한 가상 변형(viartial variation) 을 이용하여 유도될 수 있다. 이 때 시간 $t$ 는 변수가 아닌 매개변수로 고려되며 짜임새 공간 상의 하나의 점은 하나 이상의 $t$ 값에 해당 할 수 있다.
 
-</br>
-
 ### 해밀턴의 원리 {#sec-CM_least_action_principle}
 
 ::: {.callout-note icon="false"}
 
-#### Monogenic 과 multigenic
-
-::: {#def-CM_classical_monogenic}
+#### **Monogenic 과 multigenic**
 
 구속력을 제외한 모든 힘을 일반화된 변수에 대한 스칼라 포텐셜로부터 얻을 수 있을 때 이 시스템을 **monogenic** 이라고 하며 그렇지 않을 때 **multigenic** 이라고 한다.
 
 :::
-:::
 
-
-해밀턴의 원리는 monogenic 시스템에서의 운동을 기술한다. 이 때 일반화된 포텐셜은 포텐셜이 $\{q_i\} = \bf{q},\,\{\dot{q}_i\}=\dot{\bf{q}},\, t$ 의 함수인 것을 말한다. Monogenic 시스템에서의 포텐셜이 위치만의 함수 일 때, 이 시스템은 보존적이다. 
+해밀턴의 원리는 monogenic 시스템에서의 운동을 기술한다. 이 때 일반화된 포텐셜은 포텐셜이 $\bf{q}=(q_1,\ldots),\,\bf{\dot{q}}=(\dot{\bf{q}}_1,\ldots),\, t$ 의 함수인 것을 말한다. Monogenic 시스템에서의 포텐셜이 위치만의 함수 일 때, 이 시스템은 보존적이다. 
 
 
 ::: {.callout-important icon="false"}
 
-#### 해밀턴의 원리 (최소 작용의 원리)
+#### **해밀턴의 원리 (최소 작용의 원리)**
 
 Monogenic system 에서 시간 $t_1$ 에서 $t_2$ 까지의 시스템의 운동은 라그랑지안 $L=T-V$에 대한 선적분 
 
@@ -325,7 +321,6 @@ $$ {#eq-CM_euler_lagrange_equation_of_motion}
 
 우리는 변분법에서 라그랑쥬 방정식을 유도할 때 모든 $\bf{q}$ 의 성분이 각각 독립임을 가정하였다. 이것은 짜임새 공간에서의 holonomic 조건과 동치이다. 즉 holonomic 조건에서 해밀톤의 원리를 이용하여 달랑베르 정리와 같은 결과를 얻었다.
 
-</br>
 
 ## Nonholonomic Systems 과 해밀턴의 원리
 
@@ -333,14 +328,11 @@ $$ {#eq-CM_euler_lagrange_equation_of_motion}
 
 Nonholonomic system 을 다룰 때 holonomic system 과의 차이점.
 
-- 해밀턴의 원리를 이용해서든 달랑베르 원리(D'Alembert's principle)을 이용해서든 holonomic 구속 조건에서 라그랑쥬 방정식을 얻을 때, holonomic 구속 조건은 맨 마지막에 가서 변수들의 variation 이 독립적이라는 것을 가정 할 때 나온다. Holonomic 구속 조건이 부여된 시스템에서는 당장의 일반화된 좌표가 독립적이지 않더라도 $f(q_1,\ldots,\,q_n,\,t)=0$ 꼴의 구속 조건에 대한 방정식을 통해 독립적인 일반화된 기준틀을 구성 할 수 있는데, nonholonomic 구속조건에서는 일반적으로 이것이 불가능하다. 
+- 해밀턴의 원리를 이용해서든 달랑베르 원리을 이용해서든 holonomic 구속 조건에서 라그랑쥬 방정식을 얻을 때, holonomic 구속 조건은 맨 마지막에 가서 변수들의 variation 이 독립적이라는 것을 가정 할 때 나온다. Holonomic 구속 조건이 부여된 시스템에서는 당장의 일반화된 좌표가 독립적이지 않더라도 $f(q_1,\ldots,\,q_n,\,t)=0$ 꼴의 구속 조건에 대한 방정식을 통해 독립적인 일반화된 좌표계을 구성 할 수 있는데, nonholonomic 구속조건에서는 일반적으로 이것이 불가능하다. 
 
-- 변동 경로는 $y_i (x,\,\alpha) = y_i (x,\,0)+\alpha \eta_i (x)$ 형태로 표현된다. 그리고 $\delta y_i$ 는 실제 경로와 이웃의 가상 경로의 가상 변위를 의미한다. 독립적인 일반화된 기준틀 조건에서는 마지막 최종 변경 후의 점(points) 만 중요하지만 변수들이 독립적이지 않으면 변위가 구속조건을 따르며 변화했는지 여부가 매우 중요하다. 
-
+- 변동 경로는 $y_i (x,\,\alpha) = y_i (x,\,0)+\alpha \eta_i (x)$ 형태로 표현된다. 그리고 $\delta y_i$ 는 실제 경로와 이웃의 가상 경로의 가상 변위를 의미한다. 독립적인 일반화된 기준틀 조건에서는 마지막 최종 변경 후의 점(points) 만 중요하지만 변수들이 독립적이지 않으면 가상 변위가 구속조건을 따르며 변화했는지 여부가 매우 중요하다. 
 
 위의 두가지 경우를 고려하면 일반적으로 non-holonomic 구속계를 다루기가 매후 힘들다는 것을 예상 할 수 있다. 그러나 그 가운데 특별한 경우는 어느정도 다룰 수 있는데 그것을 이제 확인해 보자.
-
-</br>
 
 ### 간단한 nonholonomic case
 
@@ -350,16 +342,17 @@ $$
 \sum_k a_{lk}dq_k  + a_{lt}dt = 0\;.
 $$ {#eq-CM_nonholonomic_constraints}
 
-여기서 $l$ 은 이러한 nonholonomic 구속 조건 방정식에 대한 인덱스이다. $m$ 개의 이러한 방정식이 존재한다고 생각하자. 그리고 $a_{lk}$ 와 $a_{lt}$ 는 $\bf{q}$ 와 시간의 함수일 수 있다는 것을 유념하자. 변분경로 혹은 변분경로를 짜임새 하는 변위는 @eq-CM_nonholonomic_constraints 의 제약 조건을 충족해야 한다고 예상된다. 그러나 @eq-CM_nonholonomic_constraints 가 적분 가능(integrable) 하지 않으면 이러한 다양한 경로를 구성할 수 없다는 것이 증명 되었으며, 이 경우 제약 조건은 실제로는 homolomic 이다. 그럼에도 불구하고 정확한 운동 방정식으로 이어지는 변분 원리는 가상 변위에 의해 실제 운동으로부터 다양한 경로가 구성될 때 얻을 수 있다.
+여기서 $l$ 은 이러한 nonholonomic 구속 조건 방정식에 대한 인덱스이다. $m$ 개의 이러한 방정식이 존재한다고 생각하자. <font color="darkblue">그리고 $a_{lk}$ 와 $a_{lt}$ 는 $\bf{q}$ 와 $t$ 의 함수일 수 있다는 것을 유념하자.</font> 변분경로 혹은 변분경로를 구성하는 변위는 @eq-CM_nonholonomic_constraints 의 제약 조건을 충족해야 한다고 예상된다. 그러나 **@eq-CM_nonholonomic_constraints 가 적분 가능(integrable) 하지 않으면 이러한 다양한 경로를 구성할 수 없다**는 것이 증명 되었으며, 이 경우 제약 조건은 실제로는 homolomic 이다. 그럼에도 불구하고 정확한 운동 방정식으로 이어지는 변분 원리는 가상 변위에 의해 실제 운동으로부터 다양한 경로가 구성될 때 얻을 수 있다.
 
 
-주어진 구속 조건 방정식으로부터 가상 변위에 대한 구속조건 방정식식을 얻으면 아래와 같다. 
+주어진 구속 조건 방정식으로부터 가상 변위에 대한 구속조건 식을 얻으면 아래와 같다. 
 
 $$
 \sum_k a_{lk}dq_k = 0\;.
 $$ {#eq-CM_nonholonomic_displacement}
 
-이제 *라그랑쥬 승수법(Lagrange multiplier method)* 를 사용하자. 위의 @eq-CM_nonholonomic_displacement 에서 모든 $l=1,\,2,\ldots,\,m$ 에 대해
+
+이제 **라그랑쥬 승수법(Lagrange multiplier method)** 를 사용하자. 위의 @eq-CM_nonholonomic_displacement 에서 모든 $l=1,\,2,\ldots,\,m$ 에 대해
 
 $$
 \lambda_l \sum\limits_k a_{lk}\delta q_k = 0
@@ -368,7 +361,7 @@ $$ {#eq-CM_lagrange_multiplier}
 이다. 해밀턴의 원리 $\delta \int_1^2 L \, dt =0$ 이 nonholonomic 구속계에서도 성립함을 가정하면 다음이 성립한다. 
 
 $$
-\int_1^2 dt \sum_k \left[ \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k} \right)\right] dq_k = 0
+\int_1^2 dt \sum_k \left[ \dfrac{\partial L}{\partial q_k} - \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_k} \right)\right] \delta q_k = 0
 $$ {#eq-CM_hamilton_t1}
 
 라그랑쥬 승수법을 이용하기 위해 @eq-CM_lagrange_multiplier 를 다음과 같이 쓸 수 있다.
@@ -454,7 +447,7 @@ V &= Mg(l-x) \sin \phi\;.
 \end{aligned}
 $$
 
-따라서 라그랑지안 $L = T-v$는 아래와 같다.
+따라서 라그랑지안 $L = T - V$는 아래와 같다.
 
 $$
 L= \dfrac{1}{2}M\dot{x}^2 + \dfrac{1}{2}Mr^2 \dot{\theta}^2 -  Mg(l-x) \sin \phi\;.
@@ -486,7 +479,15 @@ $$
 
 우리는 역학을 기술하는 세가지 방법, 즉 ($1$) 뉴턴의 3 원리에 의한 뉴턴 역학, ($2$) 달랑베르 원리에 따른 달랑베르 역학, ($3$) 해밀턴의 원리와 변분법을 이용한 변분 역학 에 대해 알아보았다. 
 
-앞서 변분 역학을 non-holonomic 구속 조건을 포함하도록 확장했지만 변분 역학의 가장 큰 장점은 monogenic 조건과 holonomic 구속 조건에서 독립적인 일반화된 좌표를 사용할 때 드러난다. 변분 역학은 간결하고 우아할 뿐만 아니라 특정한 일반화된 기준틀에 구애되지 않고 운동에너지와 포텐셜 에너지라는 물리량만을 이용한다는 장점이 있다. 여기서 나온 식들은 좌표의 변환에 대해 불변이다. 즉 $\bf{q} = (x,\,y,\,z)$ 이든 $\bf{q} = (r,\,\theta,\, \varphi)$ 이든 오일러-라그랑쥬 방정식의 형태는 동일하다.
+앞서 변분 역학을 non-holonomic 구속 조건을 포함하도록 확장했지만 변분 역학의 가장 큰 장점은 monogenic 조건과 holonomic 구속 조건에서 독립적인 일반화된 좌표를 사용할 때 드러난다. 변분 역학은 간결하고 우아할 뿐만 아니라 특정한 일반화된 기준틀에 구애되지 않고 운동에너지와 포텐셜 에너지라는 물리량만을 이용한다는 장점이 있다. 따라서 나온 식들은 좌표 선택에 대해 불변이다. 즉 $\bf{q} = (x,\,y,\,z)$ 이든 $\bf{q} = (r,\,\theta,\, \varphi)$ 이든 오일러-라그랑쥬 방정식의 형태는 동일하다.
+
+우리는 앞서 @sec-CM_lagrange_equation 에서 라그랑지안은 유일하지 않고 임의의 함수에 대한 시간에 대한 전미분을 더하더라도 라그랑쥬 방정식이 변하지 않음을 보았다. 이것을 보이는 것은 해밀턴의 원리에서는 쉬운데,
+
+$$
+J' =\int_{1}^2 \left(L+\dfrac{dF}{dt}\right)\,dt = \int_1^2 L\,dt + F(2)-F(1)
+$$
+
+이며 $F(2) - F(1)$ 은 상수이므로 $\delta J = 0$ 에 영향을 끼치지 않기 때문이다.
 
 변분 역학의 장점 가운데 하나는 라그랑지안 형식이 역학이 아닌 시스템에까지 확장 될 수 있다는 것이다. 이 확장은 전기장, 전자기장, 기본입자의 장의 성질까지 확장된다. 이 확장된 영역에서 이미 풀어놓은 시스템이 있다면 자연스럽게 변분역학에 적용 될 수 있다. 
 
@@ -501,9 +502,7 @@ Monogenic 시스템이며 포텐셜이 위치에만 의존하면 $\dfrac{\partia
 
 ::: {.callout-note icon="false"}
 
-#### 정준운동량과 위상공간
-
-::: {#def-CM_canonical_momentum}
+#### **정준운동량** 
 
 일반화된 좌표 $q_j$ 에 대해 아래와 같이 정의된 $p_j$ 를 $q_j$ 에 대한 **정준운동량(canonical momentum** or **conjugate momentum)** 이라고 한다.
 
@@ -512,9 +511,14 @@ $$
 p_j = \dfrac{\partial L}{\partial \dot{q}_j}. }
 $$ {#eq-CM_canonical_momentum}
 
+:::
+
+::: {.callout-note icon="false"}
+
+#### **위상 공간**
+
 일반화된 좌표 $(q_1,\ldots,\,q_n)$ 와 그 정준운동량 $(p_1,\ldots,\,p_n)$ 으로 이루어진, 즉 어떤 시스템에서 가능한 $(q_1,\ldots,\,q_n,\,p_1,\ldots,\,p_n)\in \R^{2n}$ 의 집합을 **위상공간(phase space)** 라고 한다.
 
-:::
 :::
 
 
@@ -523,16 +527,11 @@ $n$-자유도 시스템은 시간에 대한 $n$ 개의 2차 미분방정식으�
 
 ::: {.callout-note icon="false"}
 
-#### 운동상수와 제일적분
-
-::: {#def-CM_first_integral_and_constant_of_motion}
-
+#### **운동상수와 제일적분**
 
 미분방정식으로 기술되는 물리계에서 그 경로 전체에 대해 어떤 위상의 좌표 즉 일반화된 좌표와 운동량, 그리고 시간에 대한 함수 $f = f(\bf{q},\,\dot{\bf{q}},\,t)$ 에 대해 $df/dt=0$ 일 때 이런 함수들을 이 계의 **운동상수 (constant of motion)** 라고 한다. 운동 상수 가운데 시간에 대한 명시적인 의존성이 없는 함수, 즉 $\partial g/\partial t=0$ 인 운동 상수 $g$ 를 **제일적분(first integrals)** 혹은 **운동적분 (integrals of motion)** 이라고 한다.
 
 :::
-:::
-
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
@@ -561,27 +560,25 @@ $$
 
 #### **순환 좌표**
 
-또 하나 흥미로운 경우는 일반화된 기준틀에서 표현된 라그랑지안이 어떤 일반화된 좌표 $q_i$ 에 대해 의존성이 없을 경우, 즉 $\dfrac{\partial L}{\partial q_i}=0$ 일 경우이다. 이 때 $\dfrac{\partial L}{\partial \dot{q_j}}=p_j = \text{const.}$ 이며 이때의 $p_j$ 를 **순환 좌표(cyclic coordinate)** 라고 한다. 즉 순환좌표에 $q_j$ 에 대한 정준 운동량 $p_j$ 는 보존된다. 이렇게 보존되는 $p_j$ 는 라그랑지안에서 제일적분이다.
-
-</br>
+또 하나 흥미로운 경우는 일반화된 좌표로 표현된 라그랑지안이 어떤 일반화된 좌표 $q_i$ 에 대해 의존성이 없을 경우, 즉 $\dfrac{\partial L}{\partial q_i}=0$ 일 경우이다. 이 때 $\dfrac{\partial L}{\partial \dot{q_j}}=p_j = \text{const.}$ 이며 이때의 $p_j$ 를 **순환 좌표(cyclic coordinate)** 라고 한다. 즉 순환좌표에 $q_j$ 에 대한 정준 운동량 $p_j$ 는 보존된다. 이렇게 보존되는 $p_j$ 는 라그랑지안에서 제일적분이다.
 
 이렇게 일반화된 운동량 보존은 우리가 알고 있는 선형 운동량 보존이나 각운동량 보존보다 일반적이다. 예를 들어 전자기장에서의 하전 입자의 운동에서 보존되는것은 전자기장에서의 일반화된 운동량이다.
 
-</br>
+순환 좌표가 있을 경우 문제에서 순환좌표를 제외하고 남은 일반화된 좌표에 대해 문제를 풀 수 있다. 라우스(Routh) 가 처음 제안한 이 과정은 순환좌표에 대한 일반화된 속도 대신에 정준 운동량을 사용한다. 자세한 것은 [라우스 과정](03_hamilton_dynamics.qmd#sec-CM_routh_procedure) 에 설명한다.
 
-### 병진 대칭 {#sec-CM_variation_translational_symmetry}
+### 공간상에서의 대칭 {#sec-CM_symmetry_in_space}
+
+#### **병진 대칭**
 
 ![Translational Symmetry](images/translational_symmetry/translational_symmetry.png){#fig-CM_variation_translational_symmetry width=50%}
 
-
-
-일반화된 좌표 $q_j$ 에 대해 $q_j \to q_j + \delta q_j$ 변환이 시스템의 전체 입자를 특정한 방향으로 병진 이동(translation) 시키는 변환이라고 하자. 즉 시스템의 모든 입자에 대해
+일반화된 좌표 $q_j$ 에 대해 $q_j \to q_j + dq_j$ 변환이 시스템의 전체 입자를 특정한 방향으로 병진 이동(translation) 시키는 변환이라고 하자. 즉 시스템의 모든 입자에 대해
 
 $$
 \dfrac{\partial \bf{r}_a}{\partial q_j} = \bf{n}
 $$
 
-이다. 운동에너지 $T$ 는 원점에 영향을 받지 않으므로, $\partial T/\partial q_j=0$ 일 것이다. 또한 보존계이며 포텐셜 에너지 $V$ 가 속도에 의존하지 않는다고 가정하자. 이 때의 라그랑쥬 방정식은 다음과 같다.
+이다. 운동에너지 $T$ 는 원점에 영향을 받지 않으므로 $\partial T/\partial q_j=0$ 이다. 또한 보존계이며 포텐셜 에너지 $V$ 가 속도에 의존하지 않는다고 가정하자. 이 때의 라그랑쥬 방정식은 다음과 같다.
 
 $$
 \dot{p}_j \equiv \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_j} \right) = -\dfrac{\partial V}{\partial q_j} \equiv Q_j \;.
@@ -610,9 +607,7 @@ $$
 
 이다. 즉, $p_j$ 는 시스템의 총 선형 운동량의 $j$-번째 성분이다. 그렇다면 $q_j$ 가 순환좌표인 경우, $Q_j=0$ 이므로 $\dot{p}_j=0$ 이다. 즉 $p_j$ 는 운동상수이다.
 
-</br>
-
-### 회전 대칭 {#sec-CM_variation_rotational_symmetry}
+#### **회전 대칭**
 
 마찬가지로 $q_j \mapsto q_j+dq_j$ 변환이 어떤 축에 대한 전체 입자 각각의 위치 벡터 $\bf{r}_a$ 의 미소회전(infinitesimal rotation) 변환이며 $\hat{\bf{n}}$ 을 그 회전축의 단위벡터라고 하자 (@fig-CM_variation_rotational_symmetry). 그렇다면, $|d\bf{r}_a| = r_a \sin \theta \, dq_j$ 이다. 이로부터, $\bf{r}_a$의 $q_j$ 에 대한 편미분은 $\bf{r}_a$ 와 $\bf{n}$ 모두와 직교할 것이므로, 아래와 같은 꼴을 가질 것임을 알 수 있다.
 
@@ -638,26 +633,41 @@ $$
 
 $q_j$ 가 순환좌표일 경우 $Q_j=0$ 이며, 따라서 $\bf{n} \cdot \bf{L}=\text{constant}$ 이다. 즉 각운동량 보존.
 
-</br>
+#### **순환좌표와 대칭**
 
-### 시간 대칭 {#sec-CM_variation_time_symmetry}
+계가 어떤 주어진 방향으로의 병진 변환에 대해 불변일 때, 이에 해당하는 운동량은 보존된다. 어떤 회전 좌표가 순환 좌표이면 이에 해당하는 각운동량 역시 보존된다. 즉 운동량 보존은 계의 대칭성과 밀접한 관련을 가진다.  
+
+### 시간에 대한 대칭 {#sec-CM_variation_time_symmetry}
+
+#### **라그랑지안이 시간에 대한 명시적으로 의존하지 않는 경우**
 
 라그랑지안 $L$ 이 시간에 대해 명시적으로 의존한다면 $L$ 의 시간에 대한 미분은 다음과 같다.
 
 $$
-\dfrac{dL}{dt}= \sum_i \dfrac{\partial L}{\partial q_i}\dfrac{dq_i}{dt}+\sum_i \dfrac{\partial L}{\partial \dot{q}_i}\dfrac{d\dot{q}}{dt}+ \dfrac{\partial L}{\partial t}
+\dfrac{dL}{dt}= \sum_j \dfrac{\partial L}{\partial q_j}\dfrac{dq_j}{dt} + \sum_i \dfrac{\partial L}{\partial \dot{q}_j}\dfrac{d\dot{q}_j}{dt}+ \dfrac{\partial L}{\partial t}
 $$ {#eq-CM_time_derivative_lagrangian}
 
 라그랑쥬 방정식으로부터,
 
 $$
-\dfrac{d}{dt}\left( \sum_j \dot{q}_j \dfrac{\partial L}{\partial \dot{q}_j} -L\right) + \dfrac{\partial L}{\partial t}=0
+\dfrac{\partial L}{\partial q_j} = \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_j}\right)
 $$
 
-임을 알 수 있다. 여기서 **에너지 함수(energy function)** $h(q,\,\dot{q},\,t)$ 를 아래와 같이 정의한다.
+이며 @eq-CM_time_derivative_lagrangian 은 
 
 $$
-h(q,\, \dot{q},\,t) = \sum_j \dot{q}_j \dfrac{\partial L}{\partial \dot{q}_j} - L.
+\dfrac{dL}{dt} = \sum_j \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_j}\right) \dot{q}_j + \sum_i \dfrac{\partial L}{\partial \dot{q}_j}\dfrac{d\dot{q}_j}{dt}+ \dfrac{\partial L}{\partial t}
+$$
+
+이므로 다음과 같이 정리 할 수 있다.
+$$
+\dfrac{d}{dt}\left( \sum_j \dot{q}_j \dfrac{\partial L}{\partial \dot{q}_j} -L\right) + \dfrac{\partial L}{\partial t}=0.
+$$
+
+여기서 **에너지 함수(energy function)** $h(q,\,\dot{q},\,t)$ 를 아래와 같이 정의한다.
+
+$$
+h(q,\, \dot{q},\,t) := \sum_j \dot{q}_j \dfrac{\partial L}{\partial \dot{q}_j} - L.
 $$ {#eq-CM_variation_definition_of_energy_function}
 
 
@@ -669,57 +679,102 @@ $$
 
 이므로 라그랑지안에 명시적인 시간 의존성이 없다면, 즉 $\dfrac{\partial L}{\partial t}=0$ 이라면 $h$ 는 보존된다. 
 
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+#### **에너지 함수와 에너지**
 
-::: {#exm-CM_bead_on_a_rotating_hoop} 
-
-#### 회전하는 굴렁쇠에의 구슬
-
-반지름 $a$ 인 굴렁쇠가 아래 @fig-CM_bead_on_a_rotating_hoop 와 같이 일정한 각속도 $\omega$ 로 회전한다고 하자. 회전하는 굴렁쇠 테 위에서 마찰 없이 움직이는 질량 $m$ 의 구슬을 생각하자.
-
-![회전하는 굴러오시에서의 구슬](images/beads_on_a_rotating_hoop/beads.png){#fig-CM_bead_on_a_rotating_hoop width=300}
-
-데카르트 좌표계에서 위치 $x,\,y,\,z$ 는 아래와 같다.
+@eq-CM_variation_definition_of_energy_function 로 정의된 에너지 함수가 계의 에너지와 같을 조건을 알아보자. 계의 운동에너지를 세 부분 - 일반화된 좌표에만 의존하는 $T_0$, 일반화된 좌표와 속도에 같의 의존하는 $T_1$, 일반화된 속도에만 의존하는 $T_2$-의 합으로 나타 낼 수 있다. 
 
 $$
-x = a \sin \psi \cos \omega t,\qquad y = a \sin \psi \sin \omega t,\qquad z= a(1-\cos\psi).
+T= T_0 + T_1 + T_2.
 $$
 
-독립 변수는 $\psi$ 뿐이며 라그랑지안 $L(\psi)$ 는 다음과 같다.
+그리고 많은 시스템과 일반화된 좌표계 집합에서 라그랑지안은 다음과 같이 분해된다.
 
 $$
-\begin{aligned}
-L &= \dfrac{m}{2}(\dot{x}^2+\dot{y}^2+\dot{z}^2) - mgz \\[0.3em]
-&=\dfrac{m}{2}[a\dot{\psi}^2 +  \omega^2 \sin^2 \psi]  + mag\cos \psi - mag.
-\end{aligned}
-$$
+L(q,\,\dot{q},\,t) = L_0 (q,\,t) + L_1(q,\,\dot{q},\,t) + L_2 (q,\, \dot{q},\,t).
+$$ {#eq-CM_decomposition_of_lagrangian_according_to_coordinate_and_degree_of_homogeniety}
 
-상수항 $-mag$ 는 라그랑지안에서 의미가 없으며 유표 포텐설 $V_\text{eff}$ 을 
+여기서 $L_0$ 는 속도에 독립적인 부분, $L_2$ 는 $\dot{q}$ 에 2계 동차(homogeneous)인 부분, $L_1$ 은 $\dot{q}$ 에 1계 동차인 부분이다. 오일러의 정리에 따르면 $n$계 동차함수 $f$ 는 다음을 만족한다.
 
 $$
-V_\text{eff}(\psi) = - mag \cos \psi - \dfrac{m\omega^2 \sin^2\psi}{2}
-$$
+\sum_j x_j \dfrac{\partial f}{\partial x} = nf.
+$$ {#eq-CM_euler_theorem_for_n_th_order_homogeneous_function}
 
-라고 하면 라그링지안을 아래와 같이 쓸 수 있다.
-
-$$
-L = \dfrac{ma^2\dot{\psi}^2}{2} - V_\text{eff}(\psi)
-$$
-
-그렇다면 이 라그랑지안에 대한 오일러-라그랑쥬 방정식은 다음과 같다.
+이로부터 이 시스템의 에너지 함수 $h$ 는
 
 $$
-\ddot{\psi} = -\dfrac{\partial V_\text{eff}}{\partial \psi} = -mag \sin \psi + m\omega^2 \sin\psi \cos \psi.
+h = L_1 + 2L_2 - (L_0 + L_1 - L_2) = L_2 - L_0.
 $$
 
-아래 그림은 이 시스템의 유효 표텐셜 $V_\text{eff}$ 를 세가지 경우로 나누어 표현했다. 이로부터 굴렁쇠가 충분히 빠르게 회전한다면, 즉 $\omega^2 > g/a$ 라면 $\psi$ 에 대한 안정점은 $\psi\ne 0$ 이 아닌 위치에서 형성된다. 
+이다. 만약 <font color="darkblue">일반화된 좌표계로의 변환 $\bf{r}_a = \bf{r}_a (q_1,\ldots,\,q_{3N-f},\,t)$, $a=1,\ldots,\,N$ 각각에 대해 시간에 대한 명시적 의존성이 없다면</font> 운동에너지 $T$ 는
 
-![유효 포텐셜](images/beads_on_a_rotating_hoop/effective_potential.png){#fig-CM_effective_potential_for_bead_on_a_rotating_hoop width=500}
+$$
+T = \sum_a\dfrac{1}{2}m_a \left(\dfrac{d\bf{r}_a}{dt}\right)^2 = \sum_a \dfrac{1}{2}m_a \left(\sum_j \dfrac{d\bf{r}_a}{dq_j}\dot{q}_j\right)^2
+$$
 
+이므로 $T=T_2$ 이다. 여기에 <font color="darkblue">포텐셜이 일반화된 속도에 명시적으로 의존하지 않는다면</font> $L_2 = T$, $L_0 = -V$ 이다. 이 경우
+
+$$
+h = T+V = E
+$$ {#eq-CM_energy_function_is_idential_to_energy}
+
+이다. 즉 에너지 함수는 에너지와 동일한 값을 가진다. 앞의 두 조건에 $V$ 에 명시적 시간의존성이 없다면 에너지는 보존되므로 $h$ 는 상수함수이다.
+
+<font color="brown">여기서 주의할 것은 $h$ 가 보존되는 조건과 $h$ 가 총 에너지인 조건은 원리적으로 다르다는 것이다. 어떤 일반화된 좌표계에서는 $h$ 가 보존되지만 총 에너지는 보존되지 않으며, 다른 경우에는 $h$ 가 $T+V$ 형태의 계의 총 에너지이지만 보존되지 않는다.</font>
+
+>It may also be noted that whereas the Lagrangian is uniquely fixed for each system by the prescription $L=T-U$ independent of the choice of generalized coordinates, the energy function $h$ depends in magnitude and functional form on the specific set of generalized coordinates 
+
+::: {.callout-tip icon="false"}
+
+#### Claude 의 해설 
+
+핵심은 이거야. $L$ 은 좌표를 바꿔도 값이 그대로인 scalar인데, $h$ 는 시간에 의존하는 좌표 변환을 하면 값 자체가 달라져. 같은 계인데도 어떤 좌표에서는 $h$ 가 총 에너지이고 다른 좌표에서는 아니게 돼.
+
+일반식부터. $q = q(Q, t)$ 로 좌표를 바꾸면 새 Lagrangian은 옛것에 대입만 한 거라 $L′(Q, \dot{Q}, t) = L(q, \dot{q}, t)$로 값이 같아. 그런데 속도는
+
+$$
+\dot{q}_i = \sum_j \frac{\partial q_i}{\partial Q_j}\dot Q_j + \frac{\partial q_i}{\partial t}
+$$
+
+로 변하고, momentum은 $P_j = \sum_i p_i \dfrac{∂q_i}{∂Q_j}$ 니까 $\sum_j P_j \dot{Q}_j = \sum_i p_i (\dot{q}_i − ∂q_i/∂t)$ 가 돼. 따라서
+
+$$
+h' = h - \sum_i p_i \frac{\partial q_i}{\partial t}
+$$
+
+야. 변환이 시간을 포함하지 않으면 마지막 항이 $0$ 이라 $h$ 의 값은 같고 함수 꼴만 바뀌어. 시간을 포함하면 값까지 달라져.
+
+구체적인 예. 등속 $v_0$ 로 움직이는 수레에 용수철로 매달린 질량을 봐. 실험실 좌표 $x$ 로 쓰면
+
+$$
+L = \dfrac{1}{2} m\dot x^2 - \dfrac{1}{2} k(x - v_0 t)^2,\qquad h = \dfrac{1}{2} m\dot x^2 + \dfrac{1}{2} k(x - v_0 t)^2
+$$
+
+야. 이 $h$ 는 총 에너지 $E$ 인데, $L$ 이 $t$ 를 직접 포함하니까 보존되지 않아. 수레가 계에 일을 하니까 당연해. 
+
+수레에 대한 상대 좌표 $x' = x − v_0t$ 로 바꾸면
+
+$$
+L = \dfrac{1}{2} m(\dot x' + v_0)^2 - \dfrac{1}{2} k x'^2,\qquad h' = \dfrac{1}{2} m\dot x'^2 + \dfrac{1}{2} k x'^2 - \dfrac{1}{2} m v_0^2
+$$
+
+이야. 이번엔 $L$ 에 $t$ 가 없어서 $h'$ 은 보존돼. 대신 총 에너지는 아니야. 위 일반식으로 확인해도 $h' = h − m\dot{x}v_0$ 로 맞아떨어져.
+
+같은 계인데 한 좌표에서는 "에너지지만 보존 안 됨", 다른 좌표에서는 "보존되지만 에너지 아님"이 되는 거야. 회전 좌표계도 마찬가지로, 회전하는 좌표에서 $h$ 는 $E − \omega L_z$ (Jacobi integral)가 돼.
+
+그러니까 질문이 두 개로 나뉘고 서로 독립이야.
+
+$h$ 가 보존되나? $L$ 이 그 좌표에서 t를 직접 포함하지 않으면 보존돼.
+$h$ 가 $E$ 인가? $T$ 가 $\dot{q}$ 의 순수 2차식이고(좌표 변환이 시간에 무관), $U$ 가 속도에 의존하지 않으면 E야.
+
+Goldstein 문장은 두 군데가 느슨해. 하나는 “$h$ 가 좌표 선택에 의존한다”는 건데, 시간에 무관한 변환에서는 값이 안 바뀌니까 정확히는 시간 의존 변환일 때만 문제가 돼. 다른 하나는 “$L$ 이 uniquely fixed”라는 건데, 오전에 얘기했듯 total time derivative만큼의 자유가 있으니 유일하지 않아. 여기서 말하려는 건 “$L = T − U$ 라는 처방으로 얻은 $L$ 은 좌표에 무관한 scalar”라는 것뿐이야.
+
+크게 보면 $h$ 는 "시간 translation에 대응하는 Noether 보존량"인데, 시간 의존 좌표 변환을 하면 "좌표를 고정하고 시간만 민다"는 것의 의미가 달라져. 실험실 좌표를 고정한 시간 translation과 수레 좌표를 고정한 시간 translation은 서로 다른 변환이고, 그래서 대응하는 보존량도 달라. 8장에서 Hamiltonian이 canonical transformation에서 $K = H + \partial F/\partial t$ 로 변하는 것도 같은 현상이야.
 
 :::
 
-</div>
+
+
+
 
 ## 연습문제 {.unnumbered}
 
