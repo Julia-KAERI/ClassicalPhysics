@@ -694,6 +694,39 @@ H = \dfrac{\|\boldsymbol{p}- q\boldsymbol{A}\|^2}{2m} + q\Phi
 \boldsymbol{r}_m = \boldsymbol{r}_m(q_1,\ldots,\,q_n,\,t)
 \]</span></p>
 <p>가 시간에 명시적으로 의존하지 않는며, 포텐셜이 속도에 의존하지 않는다면 <span class="math inline">\(H\)</span>(당시는 에너지 함수 <span class="math inline">\(h\)</span>)가 운동상수이며 <span class="math inline">\(T+V\)</span> 임을 보았다. 어떤 경우에는 이 좌표 변환이 시간에 명시적으로 의존하더라도 <span class="math inline">\(H\)</span> 는 그렇지 않을 수 있다. 이 경우 <span class="math inline">\(H\)</span> 는 운동상수이지만 총 에너지는 아니다. 앞서 <a href="../../src/ClassicalMechanics/02_variational_principle.html#sec-CM_chapter_symmetry_and_conservation">대칭과 보존</a> 에서 보았듯이 해밀토니안은 크기와 함수 형태에서 일반화된 좌표계의 선택에 의존한다. 라그랑지안을 <span class="math inline">\(L=T-V\)</span> 로 쓰고 여기서 일반된 좌표계로 변환한다면 함수의 형태는 바뀔지라도 값은 바뀌지 않지만 해밀토니안의 경우는 그 값도 바뀔 수 있다. 어떤 선택에서는 <span class="math inline">\(H\)</span> 가 보존되지만 어떤 선택에서는 시간에 대해 변한다.</p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-CM_lagrangian_and_hamiltonian_functinal_form" class="theorem example">
+<p><span class="theorem-title"><strong>예제 3.3 (라그랑지안과 해밀토니안)</strong></span> &nbsp;</p>
+<div id="fig-CM_uniformly_moving_cart" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-CM_uniformly_moving_cart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/uniformly_moving_cart/uniformly_moving_cart.png" class="img-fluid figure-img" width="250">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CM_uniformly_moving_cart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;3.1: Rotational Symmetry
+</figcaption>
+</figure>
+</div>
+<p>위의 그림과 같이 점질량 <span class="math inline">\(m\)</span> 이 용수철 상수 <span class="math inline">\(k\)</span> 인 용수철에 붙어 있으며 용수철의 반대쪽 끝은 질량이 없는 카트에 붙어 있으며 이 카트는 <span class="math inline">\(v_0\)</span> 의 속력으로 움직이고 있다. 우리가 <span class="math inline">\(x\)</span> 를 일반화된 좌표계로 사용한다면 이 시스템의 라그랑지안 <span class="math inline">\(L\)</span> 은</p>
+<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_1"><span class="math display">\[
+L(x,\,\dot{x},t) = T-V = \dfrac{m\dot{x}^2}{2} - \dfrac{k}{2}(x-v_0t)^2
+\tag{3.16}\]</span></span></p>
+<p>이다. 문제를 간단하게 하기 위해 차가 <span class="math inline">\(t=0\)</span> 에서 지나는 점을 <span class="math inline">\(x=0\)</span> 으로 잡았다. 운동방정식은</p>
+<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_2"><span class="math display">\[
+m\ddot{x} = -k(x-v_0t)
+\tag{3.17}\]</span></span></p>
+<p>이다. 이제 카트의 중심을 기준으로 하는 좌푝 <span class="math inline">\(x'=x-v_0t\)</span> 를 생각하자. 이 경우 운동방정식은</p>
+<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_3"><span class="math display">\[
+m\ddot{x}' = -kx'
+\tag{3.18}\]</span></span></p>
+<p>이며, 이 운동방정식으로부터 카트에 타고 있는 관찰자에게는 단순조화진동자 운동이 보인다.</p>
+<p>이제 해밀토니안 관점에서 보자. <span class="math inline">\(x\)</span> 는 데카르트 좌표계에서의 좌표이고 포텐셜은 일반화된 운동을 포함하지 않기 때문에 <span class="math inline">\(x\)</span> 에 대한 해밀토니안은 운동에너지와 포텐셜 에너지의 합이다. 즉,</p>
+<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_4"><span class="math display">\[
+H(x,\,p,\,t) = T+V = \dfrac{p^2}{2m} + \dfrac{k}{2}(x-v_0t)^2.
+\tag{3.19}\]</span></span></p>
+<p>여기서 해밀토니안은 시스템의 총 에너지이지만 <span class="math inline">\(t\)</span> 에 대한 명시적 의존성을 가진다. 즉 에너지는 보존되지 않는다.</p>
+</div>
+</div>
 <p><br></p>
 </section>
 </section>
@@ -716,7 +749,7 @@ q_n = \dfrac{\partial H}{\partial \alpha}
 <div class="page-columns page-full"><p>순환좌표가 있을 경우 해밀토니안과 라그랑지안을 섞어 쓸 수 있는 데 이것은 라우스(Routh) 에 의해 고안되었다.<span class="math inline">\(^{\dagger}\)</span> <span class="math inline">\(n\)</span>-자유도 시스템에서 <span class="math inline">\(q_{s+1},\ldots,\,q_n\)</span> 이 순환좌표일 때 라우시안 <span class="math inline">\(R\)</span> 을 아래와 같이 정의한다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^\dagger\)</span> Edward John Routh 는 캐나다 퀘벡 출신이므로 프랑스식으로 라우스 라고 읽는다.</span></div></div>
 <p><span id="eq-CM_definition_of_routhian"><span class="math display">\[
 R(q_1,\ldots,\,q_n;\dot{q}_1,\ldots,\,\dot{q}_{s};p_{s+1},\ldots,\,p_n;t) := \sum_{i=s+1}^n p_i\dot{q}_i-L.
-\tag{3.16}\]</span></span></p>
+\tag{3.20}\]</span></span></p>
 <p><span class="math inline">\(R\)</span> 에 대한 미분은 다음과 같다.</p>
 <p><span class="math display">\[
 dR = \sum_{i=s+1}^n \dot{q}_i dp_i - \sum_{i=1}^s \dfrac{\partial L}{\partial \dot{q}_i}d\dot{q}_i - \sum_{i=1}^n \dfrac{\partial L}{\partial q_i}dq_i - \dfrac{\partial L}{\partial t}dt.
@@ -727,7 +760,7 @@ dR = \sum_{i=s+1}^n \dot{q}_i dp_i - \sum_{i=1}^s \dfrac{\partial L}{\partial \d
 \dfrac{\partial R}{\partial q_i} &amp;= - \dfrac{\partial L}{\partial q_i},\qquad &amp;\dfrac{\partial R}{\partial \dot{q}_i} &amp;= - \dfrac{\partial L}{\partial \dot{q}_i}, \qquad \qquad&amp; i=1,\ldots,\,s,\\[0.3em]
 \dfrac{\partial R}{\partial q_i}&amp;=-\dot{p}_i, &amp;\dfrac{\partial R}{\partial p_i} &amp;= \dot{q}_i, &amp; i=s+1,\ldots,\,n
 \end{aligned}
-\tag{3.17}\]</span></span></p>
+\tag{3.21}\]</span></span></p>
 <p><br></p>
 </section>
 <section id="변분법으로부터-해밀턴-운동-방정식으로" class="level2" data-number="3.3">
@@ -744,12 +777,12 @@ S_L = \int_{t_1}^{t_2} L(\boldsymbol{q},\, \boldsymbol{\dot{q}},\,t)\, dt .
 <p><span class="math inline">\(L(\boldsymbol{q},\,\dot{\boldsymbol{q}},\,t) = \sum_i \dot{q}_i p_i - H(\boldsymbol{q},\, \boldsymbol{p},\,t)\)</span> 이므로 라그랑지안이 아닌 해밀토니안을 사용하는 action <span class="math inline">\(S_H\)</span> 를 아래와 같이 정할 수 있다.</p>
 <p><span id="eq-CM_action_in_phase_space"><span class="math display">\[
 S_H = \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - H(\boldsymbol{p},\, \boldsymbol{q},\,t)\right] \, dt
-\tag{3.18}\]</span></span></p>
-<p>이다. 여기서 라그랑지안에 대한 <span class="math inline">\(S_L\)</span> 는 짜임새 공간에서의 경로에 대한 적분이지만 해밀토니안에 대한 <span class="math inline">\(S_H\)</span> 는 위상공간에서의 경로에 대한 적분이 이 되며, 해밀토니안 형식에 따라 <span class="math inline">\(\boldsymbol{q}\)</span> 와 <span class="math inline">\(\boldsymbol{p}\)</span> 는 각각 독립변수로 간주된다. 따라서 <a href="#eq-CM_action_in_phase_space" class="quarto-xref">식&nbsp;<span>3.18</span></a> 에서 적분되는 함수는 <span class="math inline">\(\boldsymbol{q},\, \dot{\boldsymbol{q}},\, \boldsymbol{p},\, \dot{\boldsymbol{p}}\)</span> 의 함수로 표현되어야 한다. 따라서 어떤 경로의 변형 역시 위상공간에서의 경로의 변형 이다. 해밀턴의 원리는 짜임새 공간에서의 action <span class="math inline">\(S_L\)</span> 에 대해 다루는데 <strong>변형된 해밀턴의 원리 (modified Hamilton’s principle)</strong> 는 위상공간에서의 action <span class="math inline">\(S_H\)</span> 에 대해 <span class="math inline">\(\delta S_H=0\)</span> 이 되는 위상공간 상의 경로를 따른는 것을 주장한다. 즉</p>
+\tag{3.22}\]</span></span></p>
+<p>이다. 여기서 라그랑지안에 대한 <span class="math inline">\(S_L\)</span> 는 짜임새 공간에서의 경로에 대한 적분이지만 해밀토니안에 대한 <span class="math inline">\(S_H\)</span> 는 위상공간에서의 경로에 대한 적분이 이 되며, 해밀토니안 형식에 따라 <span class="math inline">\(\boldsymbol{q}\)</span> 와 <span class="math inline">\(\boldsymbol{p}\)</span> 는 각각 독립변수로 간주된다. 따라서 <a href="#eq-CM_action_in_phase_space" class="quarto-xref">식&nbsp;<span>3.22</span></a> 에서 적분되는 함수는 <span class="math inline">\(\boldsymbol{q},\, \dot{\boldsymbol{q}},\, \boldsymbol{p},\, \dot{\boldsymbol{p}}\)</span> 의 함수로 표현되어야 한다. 따라서 어떤 경로의 변형 역시 위상공간에서의 경로의 변형 이다. 해밀턴의 원리는 짜임새 공간에서의 action <span class="math inline">\(S_L\)</span> 에 대해 다루는데 <strong>변형된 해밀턴의 원리 (modified Hamilton’s principle)</strong> 는 위상공간에서의 action <span class="math inline">\(S_H\)</span> 에 대해 <span class="math inline">\(\delta S_H=0\)</span> 이 되는 위상공간 상의 경로를 따른는 것을 주장한다. 즉</p>
 <p><span id="eq-CM_modified_hamilton_principle"><span class="math display">\[
 \delta S_H = \delta \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - H(\boldsymbol{p},\, \boldsymbol{q},\,t)\right] \, dt = 0
-\tag{3.19}\]</span></span></p>
-<p>이다. 이 변형된 해밀턴의 원리가 가장 많이 사용되는 곳은 다음 장에 다룰 변환 이론이지만 여기서 중요한 것은 이 변형된 해밀턴의 원리를 통해 해밀턴의 정준 운동방정식을 유도할 수 있다는 것이다. <a href="#eq-CM_modified_hamilton_principle" class="quarto-xref">식&nbsp;<span>3.19</span></a> <span class="math inline">\([\;\cdots\;]\)</span> 안의 함수를 <span class="math inline">\(F\)</span> 라고 임시로 붙이면 <span class="math inline">\(F\)</span> 는 <span class="math inline">\(\boldsymbol{q},\, \dot{\boldsymbol{q}},\, \boldsymbol{p}\)</span> 의 함수이며 <span class="math inline">\(\dot{\boldsymbol{p}}\)</span> 에 명시적인 의존성은 없다. 변형된 해밀턴의 원리는</p>
+\tag{3.23}\]</span></span></p>
+<p>이다. 이 변형된 해밀턴의 원리가 가장 많이 사용되는 곳은 다음 장에 다룰 변환 이론이지만 여기서 중요한 것은 이 변형된 해밀턴의 원리를 통해 해밀턴의 정준 운동방정식을 유도할 수 있다는 것이다. <a href="#eq-CM_modified_hamilton_principle" class="quarto-xref">식&nbsp;<span>3.23</span></a> <span class="math inline">\([\;\cdots\;]\)</span> 안의 함수를 <span class="math inline">\(F\)</span> 라고 임시로 붙이면 <span class="math inline">\(F\)</span> 는 <span class="math inline">\(\boldsymbol{q},\, \dot{\boldsymbol{q}},\, \boldsymbol{p}\)</span> 의 함수이며 <span class="math inline">\(\dot{\boldsymbol{p}}\)</span> 에 명시적인 의존성은 없다. 변형된 해밀턴의 원리는</p>
 <p><span class="math display">\[
 \delta S = \delta\int_{t_1}^{t_2} \left[\sum_i \dot{q}_i p_i - H(\boldsymbol{q},\, \boldsymbol{p},\,t)\right] \, dt = \delta \int_{t_1}^{t_2}F(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,\boldsymbol{p}, t)\, dt =0
 \]</span></p>
@@ -759,7 +792,7 @@ S_H = \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - H(\boldsymbol{p},\, \bolds
 \dfrac{d}{dt}\left(\dfrac{\partial F}{\partial \dot{q}_i}\right) - \dfrac{\partial F}{\partial q_i} &amp;= 0, \qquad  i = 1,\ldots,\,n \\
 \dfrac{d}{dt}\left(\dfrac{\partial F}{\partial \dot{p}_i}\right) - \dfrac{\partial F}{\partial p_i} &amp;= 0, \qquad  i = 1,\ldots,\,n \\
 \end{aligned}
-\tag{3.20}\]</span></span></p>
+\tag{3.24}\]</span></span></p>
 <p>이다. 첫번째 식으로부터</p>
 <p><span class="math display">\[
 \dot{p}_i = - \dfrac{\partial H}{\partial q_i}

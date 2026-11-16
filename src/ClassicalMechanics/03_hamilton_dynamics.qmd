@@ -333,6 +333,47 @@ $$
 
 가 시간에 명시적으로 의존하지 않는며, 포텐셜이 속도에 의존하지 않는다면 $H$(당시는 에너지 함수 $h$)가 운동상수이며 $T+V$ 임을 보았다. 어떤 경우에는 이 좌표 변환이 시간에 명시적으로 의존하더라도 $H$ 는 그렇지 않을 수 있다. 이 경우 $H$ 는 운동상수이지만 총 에너지는 아니다. 앞서 [대칭과 보존](02_variational_principle.qmd#sec-CM_chapter_symmetry_and_conservation) 에서 보았듯이 해밀토니안은 크기와 함수 형태에서 일반화된 좌표계의 선택에 의존한다. 라그랑지안을 $L=T-V$ 로 쓰고 여기서 일반된 좌표계로 변환한다면 함수의 형태는 바뀔지라도 값은 바뀌지 않지만 해밀토니안의 경우는 그 값도 바뀔 수 있다. 어떤 선택에서는 $H$ 가 보존되지만 어떤 선택에서는 시간에 대해 변한다.
 
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-CM_lagrangian_and_hamiltonian_functinal_form}
+
+#### 라그랑지안과 해밀토니안
+
+![Rotational Symmetry](images/uniformly_moving_cart/uniformly_moving_cart.png){#fig-CM_uniformly_moving_cart width=250}
+
+위의 그림과 같이 점질량 $m$ 이 용수철 상수 $k$ 인 용수철에 붙어 있으며 용수철의 반대쪽 끝은 질량이 없는 카트에 붙어 있으며 이 카트는 $v_0$ 의 속력으로 움직이고 있다. 우리가 $x$ 를 일반화된 좌표계로 사용한다면 이 시스템의 라그랑지안 $L$ 은
+
+$$
+L(x,\,\dot{x},t) = T-V = \dfrac{m\dot{x}^2}{2} - \dfrac{k}{2}(x-v_0t)^2
+$$ {#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_1}
+
+이다. 문제를 간단하게 하기 위해 차가 $t=0$ 에서 지나는 점을 $x=0$ 으로 잡았다. 운동방정식은
+
+$$
+m\ddot{x} = -k(x-v_0t)
+$${#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_2}
+
+이다. 이제 카트의 중심을 기준으로 하는 좌푝 $x'=x-v_0t$ 를 생각하자. 이 경우 운동방정식은
+
+$$
+m\ddot{x}' = -kx'
+$${#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_3}
+
+이며, 이 운동방정식으로부터 카트에 타고 있는 관찰자에게는 단순조화진동자 운동이 보인다.
+
+이제 해밀토니안 관점에서 보자. $x$ 는 데카르트 좌표계에서의 좌표이고 포텐셜은 일반화된 운동을 포함하지 않기 때문에 $x$ 에 대한 해밀토니안은 운동에너지와 포텐셜 에너지의 합이다. 즉,
+
+$$
+H(x,\,p,\,t) = T+V = \dfrac{p^2}{2m} + \dfrac{k}{2}(x-v_0t)^2.
+$${#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_4}
+
+여기서 해밀토니안은 시스템의 총 에너지이지만 $t$ 에 대한 명시적 의존성을 가진다. 즉 에너지는 보존되지 않는다.
+
+
+
+:::
+
+</div>
 
 
 

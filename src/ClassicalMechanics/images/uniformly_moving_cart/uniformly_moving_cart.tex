@@ -118,7 +118,7 @@
 \draw[very thick] (5.0, 0.3) circle(0.3);
 \draw[very thick] (4.3, 0.3) circle(0.3);
 
-\filldraw [] (1.0, 1.5) circle (0.1);
+\filldraw [] (1.0, 1.5) circle (0.1) node [left] {$m$};
 \filldraw [] (3.25, 1.5) circle (0.05);
 \draw [thick] (1.0, 1.5) -- (1.5, 1.5);
 \draw [thick] (2.75, 1.5) -- (3.25, 1.5);
@@ -127,6 +127,8 @@
 \draw[] (1.0, 2.4) -- (1.0, 3.4);
 \draw[] (3.25, 2.4) -- (3.25, 3.4);
 \draw[<->] (1.0, 2.9) -- (3.25, 2.9) node[midway, fill=white] {$x'$};
+
+\draw[thick, ->] (5.4, 0.9) --++(1, 0) node[above left] {$v_0t$};
 
 %   \def\R{1.5}
 %   \def\L{4.0}
