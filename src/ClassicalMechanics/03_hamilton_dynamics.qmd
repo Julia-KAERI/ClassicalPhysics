@@ -367,7 +367,23 @@ $$
 H(x,\,p,\,t) = T+V = \dfrac{p^2}{2m} + \dfrac{k}{2}(x-v_0t)^2.
 $${#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_4}
 
-여기서 해밀토니안은 시스템의 총 에너지이지만 $t$ 에 대한 명시적 의존성을 가진다. 즉 에너지는 보존되지 않는다.
+여기서 해밀토니안은 시스템의 총 에너지이지만 $t$ 에 대한 명시적 의존성을 가진다. 즉 에너지는 보존되지 않는다. 그 이유는 진동하는 입자에 대한 반작용에 반하여 카트를 균일한 속력으로 움직이게 하기 위해선 외부에 에너지가 들어오고 나가야 하기 때문이다.
+
+이제 $x'$ 좌표계에서의 라그랑지안을 구해보면 $L'(x,\,\dot{x})$ 에 $x'=x+v_0t,\, \dot{x}'=\dot{x}+v$ 를 대입하여
+
+$$
+L(x',\, \dot{x}') = \dfrac{m\dot{x}'^2}{2} + m\dot{x}'v_0 + \dfrac{mv_0^2}{2} - \dfrac{kx'^2}{2}.
+$${#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_5}
+
+이제 새로운 해밀토니안 $H=H(x',\, p')$ 은
+
+$$
+\begin{aligned}
+H'(x',\,p') = \dot{x}'p' - L = \dfrac{(p'-mv_0)^2}{2m} + \dfrac{kx'^2}{2}- \dfrac{mv_0^2}{2}.
+\end{aligned}
+$${#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_6}
+
+이 식에서 마지막 $mv_0^2/2$ 는 상수항이므로 운동방정식에 영향을 미치지 않으므로 제거해도 무방하다. 마지막 항을 제거한 해밀토니안은 카트 기준 좌표계에서의 총 에너지이다. 이렇게 구한 $H'$ 은 계의 총 에너지가 아니지만 $-\partial L/\partial t = dH'/dt = 0$ 이므로 보존된다. 
 
 
 
@@ -375,13 +391,11 @@ $${#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_4}
 
 </div>
 
-
-
 </br>
 
 ## 라우스 과정 {#sec-CM_routh_procedure}
 
-해밀토니안 운동방정식으로 역학 문제를 푸는 것은 많은 경우 라그랑지안 방법에 비해 큰 장점이 없다. $2n$ 개의 1차 미분방정식을 풀다보면 결국은 라그랑지안 운동방정식으로 돌아가는 경우도 많다. 여기서는 그 예외를 살펴보겠다. 해밀토니안 운동방정식은 순환 좌표에 대해 관련된 문제를 풀 때 큰 도움이 된다. $\bf{q}\in \R^n$ 에서 $q_n$ 이 순환좌표인 경우를 살펴보자. 이 경우 라그랑지안은 다음과 같다.
+해밀토니안 운동방정식으로 역학 문제를 푸는 것은 많은 경우 라그랑지안 방법에 비해 큰 장점이 없다. $2n$ 개의 1차 미분방정식을 풀다보면 결국은 라그랑지안 운동방정식으로 돌아가는 경우도 많다. 여기서는 그 예외를 살펴보겠다. 해밀토니안 운동방정식은 순환 좌표에 관련된 문제를 풀 때 큰 도움이 된다. $\bf{q}\in \R^n$ 에서 $q_n$ 이 순환좌표인 경우를 살펴보자. 이 경우 라그랑지안은 다음과 같다.
 
 $$
 L = L(q_1,\ldots,\,q_{n-1}; \dot{q}_1, \ldots,\, \dot{q}_n;t)
@@ -396,7 +410,7 @@ $$
 이 된다. 즉 $n-1$-자유도 문제가 되며 $q_n$ 의 변화는
 
 $$
-q_n = \dfrac{\partial H}{\partial \alpha}
+\dot{q}_n = \dfrac{\partial H}{\partial \alpha}
 $$
 
 를 통해 얻을 수 있다. 
@@ -407,7 +421,7 @@ $$
 R(q_1,\ldots,\,q_n;\dot{q}_1,\ldots,\,\dot{q}_{s};p_{s+1},\ldots,\,p_n;t) := \sum_{i=s+1}^n p_i\dot{q}_i-L.
 $$ {#eq-CM_definition_of_routhian}
 
-$R$ 에 대한 미분은 다음과 같다.
+즉 라우시안은 순환좌표가 아닌 좌표에 대해서는 $(q,\,\dot{q})$ 변수를, 순환좌표에 대해서는 $(q,\,p)$ 변수를 사용한다. $R$ 에 대한 미분은 다음과 같다.
 
 $$
 dR = \sum_{i=s+1}^n \dot{q}_i dp_i - \sum_{i=1}^s \dfrac{\partial L}{\partial \dot{q}_i}d\dot{q}_i - \sum_{i=1}^n \dfrac{\partial L}{\partial q_i}dq_i - \dfrac{\partial L}{\partial t}dt.
@@ -419,8 +433,23 @@ $$
 \begin{aligned}
 \dfrac{\partial R}{\partial q_i} &= - \dfrac{\partial L}{\partial q_i},\qquad &\dfrac{\partial R}{\partial \dot{q}_i} &= - \dfrac{\partial L}{\partial \dot{q}_i}, \qquad \qquad& i=1,\ldots,\,s,\\[0.3em]
 \dfrac{\partial R}{\partial q_i}&=-\dot{p}_i, &\dfrac{\partial R}{\partial p_i} &= \dot{q}_i, & i=s+1,\ldots,\,n
-\end{aligned}
+\end{aligned}.
 $$ {#eq-CM_equation_of_motion_of_routhian}
+
+비순환 좌표에 대해서는 라우시안에 대한 라그랑쥬 방정식을 다음과 같이 쓸 수 있다는 것을 알 수 있다.
+
+$$
+\dfrac{d}{dt}\left(\dfrac{\partial R}{\partial \dot{q}}\right) - \dfrac{\partial R}{\partial q} = 0,\qquad i=1,\ldots,\,s.
+$$ {#eq-CM_lagrange_equation_for_non_cyclic_variables_in_routian}
+
+또한 순환변수에 대한 정준 모먼트 $p_j\, (j=s+1,\ldots,\,n)$ 은 상수이므로 $p_{s+i}$ 를 $\alpha_i$ 로 바꾸면 라우시안은
+
+$$
+R = R(q_1,\ldots,\,q_n;\dot{q}_1,\ldots,\,\dot{q}_s;\alpha_{1},\ldots,\,\alpha_r;t),\qquad \text{where }r=n-s.
+$${#eq-CM_routhian_form_1}
+
+이제 비순환 좌표에 대한 라그랑쥬 방정식 @eq-CM_lagrange_equation_for_non_cyclic_variables_in_routian 은 순환좌표와 무관하게 풀릴 수 있으며 마치 자유도 $s$ 인 시스템의 라그랑쥬 방정식과 같다.  
+
 
 
 </br>
