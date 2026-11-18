@@ -12,6 +12,7 @@ crossref:
 전기자기학에 대해 설명한다.
 
 ### 참고문헌
+
 ::: {#refs}
 
 @TongElectromagnetism

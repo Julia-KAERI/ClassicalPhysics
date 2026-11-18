@@ -1,4 +1,7 @@
 # References {.unnumbered}
 
+@Goldstein1980Mechanics
+
 ::: {#refs}
 :::
+

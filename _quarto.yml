@@ -8,7 +8,9 @@ book:
   date: "2/11/2024"
   page-navigation: true
 
-  
+
+
+
   chapters:
     - index.qmd
     - part: src/ClassicalMechanics/00_index.qmd
