@@ -12,10 +12,3 @@ crossref:
 열역학의 기본원리에 대해 설명한다.
 
 @Fermi1956ThermodynamicsDover
-
-### 참고문헌
-::: {#refs}
-
-@Fermi1956ThermodynamicsDover
-@Schroeder2000introduction
-:::

@@ -1,7 +1,10 @@
 # References {.unnumbered}
-
-@Goldstein1980Mechanics
-
+---
+nocite: |
+  @Goldstein1980Mechanics, @Landau1976Mechanics, @Lanczos2012variational, @Grifitths2013Introduction, @Zangwill2013Modern, @Reif2009Fundamentals,
+  @TongClassicalDynamics, @TongDynamicsAndRelativity, @TongElectromagnetism,
+  @Maggiore2023Modern
+---
 ::: {#refs}
 :::
 

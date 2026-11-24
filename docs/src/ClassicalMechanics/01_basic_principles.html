@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -26,7 +26,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,14 +59,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/ClassicalMechanics/00_index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-7a627ccb779a4a431ef462281a400409.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,17 +128,17 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating slimcontent quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
-  <nav class="quarto-secondary-nav">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/01_basic_principles.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴턴역학의 기본 원리와 달랑베르 원리</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/01_basic_principles.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴턴역학의 기본 원리와 달랑베르 원리</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -129,7 +149,7 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/01_basic_principles.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴턴역학의 기본 원리와 달랑베르 원리</span></a></li></ol></nav>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/01_basic_principles.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴턴역학의 기본 원리와 달랑베르 원리</span></a></li></ol></nav>
       <h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">뉴턴역학의 기본 원리와 달랑베르 원리</span></h1>
                       </div>
   </div>
@@ -145,7 +165,7 @@ window.Quarto = {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">고전물리학</a> 
@@ -167,12 +187,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/ClassicalMechanics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">고전역학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-1-label">고전역학</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션: 고전역학">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link active">
@@ -232,12 +252,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Mechanics_and_Symmetry/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">고전역학과 대칭</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-2-label">고전역학과 대칭</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션: 고전역학과 대칭">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
@@ -255,12 +275,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Electrodynamics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">전기자기학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-3-label">전기자기학</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션: 전기자기학">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
@@ -308,12 +328,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">상대론</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-4-label">상대론</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션: 상대론">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
@@ -331,12 +351,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/ThermalPhysics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">열역학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-5-label">열역학</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션: 열역학">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
@@ -372,12 +392,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/topics/Topics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">별도의 주제들</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-6-label">별도의 주제들</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="true" aria-label="토글 섹션: 별도의 주제들">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
@@ -398,7 +418,7 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
     <h2 id="toc-title">목차</h2>
    
   <ul>
@@ -423,10 +443,11 @@ window.Quarto = {
   <li><a href="#sec-CM_total_angular_momentum" id="toc-sec-CM_total_angular_momentum" class="nav-link" data-scroll-target="#sec-CM_total_angular_momentum"><span class="header-section-number">1.3.3</span> 총 각운동량</a></li>
   <li><a href="#sec-CM_COM_refrence_frame" id="toc-sec-CM_COM_refrence_frame" class="nav-link" data-scroll-target="#sec-CM_COM_refrence_frame"><span class="header-section-number">1.3.4</span> 질량중심 좌표계</a></li>
   </ul></li>
-  <li><a href="#구속조건" id="toc-구속조건" class="nav-link" data-scroll-target="#구속조건"><span class="header-section-number">1.4</span> 구속조건</a>
+  <li><a href="#구속조건과-일반화된-좌표계" id="toc-구속조건과-일반화된-좌표계" class="nav-link" data-scroll-target="#구속조건과-일반화된-좌표계"><span class="header-section-number">1.4</span> 구속조건과 일반화된 좌표계</a>
   <ul class="collapse">
-  <li><a href="#sec-CM_classification_of_constraints" id="toc-sec-CM_classification_of_constraints" class="nav-link" data-scroll-target="#sec-CM_classification_of_constraints"><span class="header-section-number">1.4.1</span> 구속조건의 분류</a></li>
-  <li><a href="#sec-CM_generalized_coordinates" id="toc-sec-CM_generalized_coordinates" class="nav-link" data-scroll-target="#sec-CM_generalized_coordinates"><span class="header-section-number">1.4.2</span> 구속조건과 일반화된 좌표계</a></li>
+  <li><a href="#sec-CM_constraints" id="toc-sec-CM_constraints" class="nav-link" data-scroll-target="#sec-CM_constraints"><span class="header-section-number">1.4.1</span> 구속조건</a></li>
+  <li><a href="#sec-CM_generalized_coordinates" id="toc-sec-CM_generalized_coordinates" class="nav-link" data-scroll-target="#sec-CM_generalized_coordinates"><span class="header-section-number">1.4.2</span> 일반화된 좌표계와 짜임새 공간</a></li>
+  <li><a href="#sec-CM_kinetic_energy_and_riemanian_geometry" id="toc-sec-CM_kinetic_energy_and_riemanian_geometry" class="nav-link" data-scroll-target="#sec-CM_kinetic_energy_and_riemanian_geometry"><span class="header-section-number">1.4.3</span> 운동에너지와 리만 기하학<span class="math inline">\(^3\)</span></a></li>
   </ul></li>
   <li><a href="#달랑베르-원리-와-라그랑쥬-방정식" id="toc-달랑베르-원리-와-라그랑쥬-방정식" class="nav-link" data-scroll-target="#달랑베르-원리-와-라그랑쥬-방정식"><span class="header-section-number">1.5</span> 달랑베르 원리 와 라그랑쥬 방정식</a>
   <ul class="collapse">
@@ -445,7 +466,7 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content" tabindex="-1">
 
 
 
@@ -908,12 +929,11 @@ V=\sum_i V_i + \dfrac{1}{2} \sum_{\substack{i,j \\ i \ne j }} V_{ij}\;.
 <p><br></p>
 </section>
 </section>
-<section id="구속조건" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="구속조건"><span class="header-section-number">1.4</span> 구속조건</h2>
+<section id="구속조건과-일반화된-좌표계" class="level2 page-columns page-full" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="구속조건과-일반화된-좌표계"><span class="header-section-number">1.4</span> 구속조건과 일반화된 좌표계</h2>
+<section id="sec-CM_constraints" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="sec-CM_constraints"><span class="header-section-number">1.4.1</span> 구속조건</h3>
 <p><strong>구속조건(Constraint)</strong> 는 운동방정식의 제한조건을 의미한다. 예를 들어 강체의 경우 <span class="math inline">\(|\boldsymbol{r}_a - \boldsymbol{r}_b| =c_{ab} = \text{const.}\)</span></p>
-<p><br></p>
-<section id="sec-CM_classification_of_constraints" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="sec-CM_classification_of_constraints"><span class="header-section-number">1.4.1</span> 구속조건의 분류</h3>
 <p>구속조건이 시간과 위치에 대한 함수이며 다음과 같은 꼴로 표현 될 수 있을 때 <strong>holonomic</strong> 이라 한다.</p>
 <p><span id="eq-CM_holonomic_constraint"><span class="math display">\[
 f(\boldsymbol{r}_1,\,\boldsymbol{r}_2,\ldots,\,t) =0.
@@ -923,10 +943,11 @@ f(\boldsymbol{r}_1,\,\boldsymbol{r}_2,\ldots,\,t) =0.
 <p><br></p>
 </section>
 <section id="sec-CM_generalized_coordinates" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="sec-CM_generalized_coordinates"><span class="header-section-number">1.4.2</span> 구속조건과 일반화된 좌표계</h3>
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="sec-CM_generalized_coordinates"><span class="header-section-number">1.4.2</span> 일반화된 좌표계와 짜임새 공간</h3>
+<section id="짜임새-공간" class="level4">
+<h4 class="anchored" data-anchor-id="짜임새-공간"><strong>짜임새 공간</strong></h4>
 <p>물체의 운동을 기술할 때 구속조건이 부여된다면 두가지 어려운 점이 발생한다. 우선 좌표 <span class="math inline">\((r_1,\,r_2,\ldots)\)</span> 는 더이상 서로 독립적이지 하지 않다. 두번째로는 <strong>구속력(force of constraint)</strong> 문제가 있다. 이중 첫번째에 대해 구속조건이 holonomic 할 때 소위 <strong>일반화된 좌표계(generalized coordinate)</strong> 를 사용함으로서 문제를 풀 수 있다.</p>
 <p><span class="math inline">\(N\)</span>-입자계를 생각하자. 구속조건이 없다면 <span class="math inline">\(3N\)</span> 개의 독립적인 좌표변수가 존재한다. 이렇게 시스템을 기술하는데 필요한 독립적인 변수의 갯수를 <strong>자유도(degree of freedom)</strong> 라고 한다. 만약 <span class="math inline">\(k\)</span> 개의 독립적인 holonomic 구속조건이 존재한다면 이 입자계의 자유도는 <span class="math inline">\(3N-k\)</span> 가 될 것이다. 그렇다면 이 입자계는 <span class="math inline">\(3N-k\)</span> 개의 독립변수 <span class="math inline">\(q_1,\ldots,\,q_{3N-k}\)</span> 로 기술 될 수 있다. 즉 <span class="math inline">\(\boldsymbol{r}_a = \boldsymbol{r}_a (q_1,\ldots,\,q_{3N-k},t)\)</span> for <span class="math inline">\(i=1,\ldots,\,3N-k\)</span>. 이 경우 <span class="math inline">\(q_i\)</span> 가 거리 단위의 값일 필요가 없으며 어떤 <span class="math inline">\((q_i,\,q_j,\,q_k)\)</span> 가 벡터일 필요도 없다. <em>모든 종류의 물리량이 일반화된 좌표계의 좌표변수가 될 수 있다.</em> Nonhonolomic 구속조건의 경우는 독립변수의 개수를 줄이는 데 사용 될 수 없다. 이 일반화된 좌표에 대해 짜임새 공간이 아래와 같이 정의된다.</p>
-<p><br></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -940,6 +961,116 @@ f(\boldsymbol{r}_1,\,\boldsymbol{r}_2,\ldots,\,t) =0.
 <p>어떤 <span class="math inline">\(n\)</span>-자유도 시스템의 <strong>짜임새 공간 (configuration space)</strong> 은 이 시스템의 <span class="math inline">\(n\)</span> 개의 일반화된 좌표가 가질 수 있는 값의 집합이다.</p>
 </div>
 </div>
+<p>짜임새 공간에서는 거리적 특성보다 위상적 특성(topological property) 가 보존된다. 예를 들어 자유 입자에 대한 데카르트 좌표계 <span class="math inline">\(x,\,y,\,z\)</span> 짜임새 공간을 <span class="math inline">\(C_D\)</span>, 구면좌표계 <span class="math inline">\(r,\,\theta,\,\varphi\)</span> 에서의 짜임새 공간을 <span class="math inline">\(C_S\)</span> 라고 하자. <span class="math inline">\(C_D\)</span> 에서의 직선은 <span class="math inline">\(C_S\)</span> 에서의 직선이 아니며, 거리, 각도, 면적과 같은 거리적 틍성 역시 그러하다. 그러나 <span class="math inline">\(C_D\)</span> 에서의 점은 <span class="math inline">\(C_S\)</span> 에서의 점이며, 곡선도 역시 곡선이고, 근방 역시 근방이다. 따라서 해석 역학은 미분기하학적 성질이 매우 중요해진다.</p>
+<p>자유도 <span class="math inline">\(n\)</span> 인 계의 두 일반화된 좌표계 <span class="math inline">\(\boldsymbol{q}=(q_1,\ldots,\,q_n)\)</span> 로 기술되는 공간 <span class="math inline">\(S\)</span> 와 <span class="math inline">\(\overline{\boldsymbol{q}}=(\overline{q}_1,\ldots,\overline{q}_n)\)</span> 로 기술되는 공간 <span class="math inline">\(\overline{S}\)</span> 사이에 <span class="math inline">\(C^1\)</span> 급 전단사 사상 <span class="math inline">\(F:S \to \overline{S}\)</span> 가 존재하여 <span class="math display">\[
+\overline{\boldsymbol{q}} = F(\boldsymbol{q}),\qquad q_j = F_i (\boldsymbol{q}),\quad \text{where }i=1,\ldots,\,n
+\]</span></p>
+<p>이어야 한다. 따라서 이 변환에 대한 야코비안 <span class="math inline">\(J_F\)</span> 의 행렬식은 <span class="math inline">\(0\)</span> 이 아니다. 또한</p>
+<p><span class="math display">\[
+d\overline{q}_j = \sum_i\dfrac{\partial F_j}{\partial q_i}dq_i,\qquad i=1,\ldots,\,n
+\]</span></p>
+<p>의 관계가 성립한다. 또한 이로부터 <span class="math inline">\(S\)</span> 에서의 미소 영역에서의 직선은 <span class="math inline">\(\overline{S}\)</span> 에서의 직선이며 <span class="math inline">\(S\)</span> 의 미소영역에서의 평행선은 <span class="math inline">\(\overline{S}\)</span> 에서의 평행선이다. 물론 앞서 말했듯이 각이나 길이는 달라진다. 또한 <span class="math inline">\(S\)</span> 에서의 <span class="math inline">\(P\)</span> 근처의 미소부피 <span class="math inline">\(v_P\)</span> 에 대해 <span class="math inline">\(\overline{S}\)</span> 로 변환된 부피는 <span class="math inline">\(|\det (J_F(P))|\cdot v_P\)</span> 이다.</p>
+</section>
+</section>
+<section id="sec-CM_kinetic_energy_and_riemanian_geometry" class="level3 page-columns page-full" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="sec-CM_kinetic_energy_and_riemanian_geometry"><span class="header-section-number">1.4.3</span> 운동에너지와 리만 기하학<span class="math inline">\(^3\)</span></h3>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^3\)</span> <span class="citation" data-cites="Lanczos2012variational">Lanczos (<a href="../../references.html#ref-Lanczos2012variational" role="doc-biblioref">2012</a>)</span> 의 5절을 요약한다.</span></div></div>
+<p>리만 기하학은 선소(line element) <span class="math inline">\(\overline{ds}\)</span> 에 기반한다. 인접한 두 점 사이의 거리 <span class="math inline">\(\overline{ds}\)</span> 는 좌표와 그 1차 미분형식에 의해 주어진다. 유클리드 공간에서는 피타고라스 정리에 의해</p>
+<p><span id="eq-CM_definition_of_line_element"><span class="math display">\[
+\overline{ds^2} = dx^2 + dy^2 +dz^2
+\tag{1.22}\]</span></span></p>
+<div class="page-columns page-full"><p>이다. 지금부터는 <a href="#eq-CM_definition_of_line_element" class="quarto-xref">식&nbsp;<span>1.22</span></a> 를 선소에 대한 표현으로서 증명 없이 받아들이자<span class="math inline">\(^4\)</span>. 구면좌표계에서는</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^4\)</span> <span class="math inline">\(\overline{ds}\)</span> 는 어떤 미분형식이 아니라 표현식이다. 즉 <span class="math inline">\(dx\)</span> 는 <span class="math inline">\(x\)</span> 에 대한 <span class="math inline">\(d\)</span> 라면 <span class="math inline">\(\overline{ds}\)</span> 는 그렇지 않다. 만약 <span class="math inline">\(\overline{ds}\)</span> 가 적분가능하다면 두 점 사이의 거리는 어떤 경로에서도 동일하다.</span></div></div>
+<p><span id="eq-CM_definition_of_line_element_in_spherical_coordinate"><span class="math display">\[
+\overline{ds^2} = dr^2 + r^2d\theta^2 + r^2 \sin^2\theta d\varphi^2.
+\tag{1.23}\]</span></span></p>
+<p>알반적으로 곡면좌표계에서는</p>
+<p><span class="math display">\[
+\overline{ds^2} =\sum_{i,j=1}^3g_{ij} dx_i dx_j,
+\]</span></p>
+<p>이며 여기서 <span class="math inline">\(g_{ij}\)</span> 는 <strong>메트릭 텐서 (metric tensor)</strong> 라고 불리는 대칭 텐서로서</p>
+<p><span class="math display">\[
+g_{ij}=g_{ji}
+\]</span></p>
+<p>이다. <span class="math inline">\(n\)</span> 차원 공간에서는</p>
+<p><span id="eq-CM_riemannian_square_distance"><span class="math display">\[
+\overline{ds^2} = \sum_{i,\,j=1}^n g_{ij}x_ix_j,\qquad g_{ij} = g_{ji}
+\tag{1.24}\]</span></span></p>
+<p>이다.</p>
+<p>일반적으로 <span class="math inline">\(g_{ij}\)</span> 는 <span class="math inline">\(x_1,\ldots,\,x_n\)</span> 의 함수이지만 직선좌표계(rectlinear coordinate system) 에서는 상수이다. 이 메트릭 텐서는 공간의 기하학을 이해하는 핵심이다. <a href="#eq-CM_riemannian_square_distance" class="quarto-xref">식&nbsp;<span>1.24</span></a> 로 주어지는 선소는 유클리드 공준을 뛰어넘는 기하학을 구축하는 기반이다. <span class="math inline">\(g_{ij}\)</span> 가 유클리드 공준에서 벗어난다면 다음의 두가지 특징을 갖는 새로운 형태의 기하학이 등장한다.</p>
+<ol type="1">
+<li>공간의 특성은 위치마다 다르지면 연속적으로 변화한다.</li>
+<li>광역적으로는 유클리드 기하학이 적용되지 않더라도 국소적으로는 적용된다.</li>
+</ol>
+<p>아인슈타인과 민코프스키에 의해 특수상대성 이론을 통해 시간과 공간이 합쳐져 4차원을 구성할 때에도 기하학은 유클리드 타입이었지만 아인슈타인의 일반상대성이론에서는 열개의 독립적인 <span class="math inline">\(g_{ij}\)</span> 성분에 대한 선소가 시간과 공간의 함수이어야 만 했다. 여기서 만유인력이라는 신비로운 힘은 시공간의 리만 구조에서 기인하는 순수하게 기하학적인 힘이 되었다.</p>
+<div class="page-columns page-full"><p>리만기하학의 추상화는 상대성 이론 뿐만 아니라 해석역학에서도 사용된다. 리만기하학의 개념과 텐서 해석학<span class="math inline">\(^5\)</span> 의 방법론은 해석 역학을 이용해 동역학을 푸는데 매우 유용하다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^5\)</span> Lanczos 는 절대 미적분학 (absolute calculus) 이라는 구세대 용어로 표현한다.</span></div></div>
+<p>기하학이 역학과 연결되는 부분은 관성질량이다. 뉴튼의 제 2 법칙에서 관성질량은 <span class="math inline">\(\boldsymbol{F}=m\boldsymbol{a}\)</span> 의 <span class="math inline">\(m\)</span> 으로 나타나며, 해석역학에서는 운동에너지 <span class="math inline">\(\frac{1}{2}mv^2\)</span> 의 <span class="math inline">\(m\)</span> 으로 나타난다. 입자의 속도 <span class="math inline">\(v\)</span> 는</p>
+<p><span class="math display">\[
+v^2 = \left(\dfrac{\overline{ds}}{dt}\right)^2 = \dfrac{dx^2+dy^2+dz^2}{dt^2}
+\]</span></p>
+<p>이므로 운동에너지는 선소 <span class="math inline">\(\overline{ds}\)</span> 와 명시적으로 관련되며, 따라서 공간의 기하학에 의존한다. <span class="math inline">\(3N\)</span> 차원 공간에서의 선소를 다음과 같이 정의하자. <span id="eq-CM_definition_of_line_element_for_3n_dimension_space"><span class="math display">\[
+\overline{ds^2} := 2Tdt^2 = \sum_{i=1}^N m_i v_i^2\,dt^2 = \sum_i^N m_i \left(dx_i^2+dy_i^2+dz_i^2\right)
+\tag{1.25}\]</span></span></p>
+<p>그렇다면 역학계의 총 운동에너지는</p>
+<p><span id="eq-CM_kinetic_energy_using_3N_dimensional_line_element"><span class="math display">\[
+T = \dfrac{1}{2}m\left(\dfrac{\overline{ds^2}}{dt^2}\right),\qquad \text{with }m=1.
+\tag{1.26}\]</span></span></p>
+<p>즉 전체 역학계의 총 운동에너지는 질량 <span class="math inline">\(1\)</span> 인 단일 입자의 운동에너지로 치환 될 수 있으며, 이 가상의 입자는 <span class="math inline">\(3N\)</span>-차원 짜입새 공간에서의 점으로 표현된다. <a href="#eq-CM_definition_of_line_element_for_3n_dimension_space" class="quarto-xref">식&nbsp;<span>1.25</span></a> 는 <span class="math inline">\(N\)</span>-개의 자유입자에대한 짜임새 공간은</p>
+<p><span id="eq-CM_lanczos_rectangular_coord_for_free_N_particle_system"><span class="math display">\[
+\sqrt{m_i}x_i,\, \sqrt{m_i}y_i,\, \sqrt{m_i}z_i
+\tag{1.27}\]</span></span></p>
+<p>가 직교좌표계를 이루는 공간으로 생각되어야 한다는 것을 의미한다.</p>
+<p><a href="#eq-CM_lanczos_rectangular_coord_for_free_N_particle_system" class="quarto-xref">식&nbsp;<span>1.27</span></a> 직교좌표계가 <span class="math inline">\(x_i = x_i(q_1,\ldots,\,q_{3N})\)</span> 좌표변환에 의해 곡면 좌표계로 바뀌면 선소에 대한 식은 <a href="#eq-CM_riemannian_square_distance" class="quarto-xref">식&nbsp;<span>1.24</span></a> 같은 리만 형태가 되더라도 기하학 자체는 유클리드이다. 그러나 구속조건이 부여된다면 상황이 달라진다.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>유클리드 기하학
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p><strong>Q : </strong>그렇다면 기하가 유클리드라는 말의 정확한 의미는 뭐야?</p>
+</blockquote>
+<p>정확한 정의는 이거야. 선소를 <span class="math inline">\(\overline{ds}^2 = \sum_i dX_i^²\)</span> (즉 <span class="math inline">\(g_{ik} = \delta_{ik}\)</span>)로 만드는 좌표 <span class="math inline">\(X\)</span> 가 존재하는 공간을 Euclid 공간이라고 해. <strong>지금 쓰는 좌표에서 그 꼴이냐가 아니라, 그런 좌표가 존재하느냐가 기준이야.</strong></p>
+<p>그런데 이 정의는 “그런 좌표를 찾아봐야 안다”는 문제가 있어서, 좌표를 찾지 않고도 판정할 수 있는 동치 조건이 필요해. 그게 Riemann의 정리야.</p>
+<blockquote class="blockquote">
+<p>Riemann curvature tensor가 모든 점에서 0이다 <span class="math inline">\(\iff\)</span> 각 점 근방에서 $g_{ik} = <span class="math inline">\(\delta_{ik}\)</span> 가 되는 좌표가 존재한다.</p>
+</blockquote>
+<p>Curvature tensor는 <span class="math inline">\(g_{ik}\)</span> 와 그 1차, 2차 미분으로 계산되니까, 주어진 좌표에서 기계적으로 계산해서 0인지 보면 돼. 극좌표 <span class="math inline">\(dr^2 + r^2\theta^2\)</span> 로 계산하면 0이 나오고, 구면에서는 <span class="math inline">\(1/R^2\)</span> 이 나와.</p>
+<p>같은 내용을 기하적으로 말하는 방법도 여러 개 있고 전부 동치야.</p>
+<ul>
+<li>벡터를 평행이동시킨 결과가 경로에 의존하지 않는다 (국소적으로).</li>
+<li>Geodesic으로 만든 삼각형의 내각 합이 정확히 <span class="math inline">\(\pi\)</span> 다.</li>
+<li>반지름 <span class="math inline">\(r\)</span> 인 geodesic 원의 둘레가 정확히 <span class="math inline">\(2\pi r\)</span> 이다.</li>
+</ul>
+<p>왜 curvature가 판정 기준인가. 평평한 좌표 <span class="math inline">\(X_a\)</span> 를 찾는다는 건</p>
+<p><span class="math display">\[
+g_{ik} = \sum_a \frac{\partial X_a}{\partial q_i}\frac{\partial X_a}{\partial q_k}
+\]</span></p>
+<p>를 푸는 거야. <span class="math inline">\(n\)</span> 차원에서 미지 함수는 <span class="math inline">\(n\)</span> 개인데 방정식은 <span class="math inline">\(n(n+1)/2\)</span> 개라서 <span class="math inline">\(n \ge 2\)</span> 면 식이 더 많아. 그래서 아무 <span class="math inline">\(g_{ik}\)</span> 에 대해서나 풀리지 않고, 풀리기 위한 적분 가능 조건이 있어야 하는데 그게 Riemann tensor = 0 이야. 2차원이면 식 3개에 함수 2개라 조건이 하나 남고, 그게 Gaussian curvature <span class="math inline">\(K = 0\)</span> 이야.</p>
+<p>이건 어제 Poincaré lemma 얘기와 직접 이어져. Curvature가 0이면 평행이동이 경로에 무관하니까, 어디서나 서로 직교하고 평행한 1-form 들 <span class="math inline">\(e^a\)</span> 를 깔 수 있어. 이것들은 평행하니까 <span class="math inline">\(de^a = 0\)</span>, 즉 closed야. 그러면 Poincaré lemma로 <span class="math inline">\(e^a = dX^a\)</span> 인 함수 <span class="math inline">\(X^a\)</span> 가 있고, 그게 바로 찾던 평평한 좌표야. “Closed면 exact”의 기하학 버전인 셈이야.</p>
+<p>국소와 전역의 구분. 위 정리는 “각 점 근방에서”야. 원통이나 flat torus는 curvature가 0이라 국소적으로 Euclid지만, 전체를 한 장의 직교좌표로 덮을 수는 없어. 이것도 Poincaré lemma가 구멍 있는 영역에서 실패하는 것과 같은 현상이고. 엄밀히 “Euclid 공간이다”라고 하려면 전체에서 통하는 좌표 하나가 있어야 해. Lanczos의 경우는 <span class="math inline">\(\sqrt{m_i}x_i\)</span> 라는 전역 좌표가 처음부터 있으니까 3N차원 공간 전체가 진짜 Euclid 공간이야.</p>
+<p>Lanczos가 그 절에서 이 정의를 명시하지 않고 “기하는 Euclid로 남는다”고만 쓰는 건 좀 불친절해. 독자가 Riemann 기하를 이미 안다고 전제하는 건데, 정작 그 책의 대상 독자한테는 설명이 필요한 대목이거든.</p>
+<p>크게 보면 “기하”라는 말은 좌표 변환에 대해 불변인 성질들의 모임을 뜻하고, metric이 주어진 공간에서 그 불변 정보는 국소적으로 curvature tensor에 다 들어 있어. 그래서 “기하가 Euclid다”는 “불변량이 전부 자명하다”는 말이고, constraint가 걸려서 curvature가 0이 아니게 되는 순간부터 역학이 진짜 Riemann 기하의 문제가 돼.</p>
+</div>
+</div>
+<p>구속조건이</p>
+<p><span id="eq-CM_constraints_depends_only_on_position"><span class="math display">\[
+\begin{aligned}
+f_1(x_1,\ldots,\,z_N) &amp;=  0, \\[0.3em]
+\vdots \\[0.3em]
+f_m(x_1,\ldots,\,z_N) &amp;= 0
+\end{aligned}
+\tag{1.28}\]</span></span></p>
+<p>과 같이 주어졌다면 두가지 방법이 있다.</p>
+<p><strong>1.</strong> 각각의 <a href="#eq-CM_constraints_depends_only_on_position" class="quarto-xref">식&nbsp;<span>1.28</span></a> 는 <span class="math inline">\(3N\)</span> 차원 공간의 초평면을 의미하며 모든 식에 의해 <span class="math inline">\(3N-m=n\)</span> 차원의 부분공간에서만 짜임새 공간의 점이 위치할 수 있다. 이 부분공간은 더이상 평평항 유클리드 공간이 아닌 휘어진 리만 공간이다.</p>
+<p><strong>2.</strong> 처음부터 직교좌표 <span class="math inline">\(x_1,\ldots,\,z_{N}\)</span> 에 대해 <span class="math inline">\(n=3N-m\)</span> 개의 일반화된 좌표 <span class="math inline">\(q_1,\ldots,\,q_n\)</span> 를 사용한다. 이 일반회된 좌표는 곡면 좌표이며 일반화된 좌표에 대한 선소는 <a href="#eq-CM_definition_of_line_element_for_3n_dimension_space" class="quarto-xref">식&nbsp;<span>1.25</span></a> 로부터 얻을 수 있다. 즉 선소를 일반화된 좌표를 이용하여 다음의 형태로 얻을 수 있다.</p>
+<p><span id="eq-CM_line_element_of_generalized_coordinates"><span class="math display">\[
+\overline{ds^2} = \sum_{i,\,k=1}^{3N-m} a_{ik}dq_i dq_k .
+\tag{1.29}\]</span></span></p>
+<p>이 선소는 진정으로 리만적인다 <span class="math inline">\(q_i\)</span> 들이 곡면 좌표일 뿐만 아니라 짜임새 공간의 기하학이 원래의 <span class="math inline">\(3N\)</span> 차원 공간의 유클리드 구조를 유지하지 않기 때문이다. 이로부터 역학 문제는 미분기하학의 문제로 번역된다.</p>
 <p><br></p>
 </section>
 </section>
@@ -977,11 +1108,11 @@ f(\boldsymbol{r}_1,\,\boldsymbol{r}_2,\ldots,\,t) =0.
 <div class="callout-body-container callout-body">
 <p>시스템이 평형상태일 때, 작용력에 의한 가상 일은 <span class="math inline">\(0\)</span> 이다. 즉 <span id="eq-CM_principle_of_virtual_work"><span class="math display">\[
 \sum_i \boldsymbol{F}^{(a)}_i \cdot \delta \boldsymbol{r}_i = 0.
-\tag{1.22}\]</span></span></p>
+\tag{1.30}\]</span></span></p>
 </div>
 </div>
 <p>여기서 구속 조건이 있을 때 <span class="math inline">\(\delta \boldsymbol{r}_i\)</span> 들은 서로 독립이 아니며 따라서 그 계수인 <span class="math inline">\(\boldsymbol{F}^{(a)}_i\)</span> 도 모두 <span class="math inline">\(0\)</span> 이 아니어도 된다. 즉 일반적으로 <span class="math inline">\(\boldsymbol{F}^{(a)}_i \ne \boldsymbol{0}\)</span> 이다.</p>
-<p>이렇게 되면 각각의 <span class="math inline">\(i\)</span> 번째 입자에 대해 <span class="math inline">\(\boldsymbol{F}^{(a)}_i\)</span> 가 <span class="math inline">\(0\)</span> 인 조건이 아니게 되며, 따라서 <span class="math inline">\(\delta \boldsymbol{r}_i\)</span> 는 서로 독립적이지 않게 되고 위의 <a href="#eq-CM_principle_of_virtual_work" class="quarto-xref">식&nbsp;<span>1.22</span></a> 가 하나의 구속조건이며 따라서 일반화된 좌표계에 대한 가상 변위로 변환해야 한다. <a href="#eq-CM_principle_of_virtual_work" class="quarto-xref">식&nbsp;<span>1.22</span></a> 는 구속력 <span class="math inline">\(\boldsymbol{f}_a\)</span> 를 포함하지 않는다는 측면에서 우리가 원하는 것이지만 단지 정적인 경우만을 다룬다는 점에서 부족하다. 우리는 이것으로 부터 우리가 원하는 운동방정식을 얻고자 한다.</p>
+<p>이렇게 되면 각각의 <span class="math inline">\(i\)</span> 번째 입자에 대해 <span class="math inline">\(\boldsymbol{F}^{(a)}_i\)</span> 가 <span class="math inline">\(0\)</span> 인 조건이 아니게 되며, 따라서 <span class="math inline">\(\delta \boldsymbol{r}_i\)</span> 는 서로 독립적이지 않게 되고 위의 <a href="#eq-CM_principle_of_virtual_work" class="quarto-xref">식&nbsp;<span>1.30</span></a> 가 하나의 구속조건이며 따라서 일반화된 좌표계에 대한 가상 변위로 변환해야 한다. <a href="#eq-CM_principle_of_virtual_work" class="quarto-xref">식&nbsp;<span>1.30</span></a> 는 구속력 <span class="math inline">\(\boldsymbol{f}_a\)</span> 를 포함하지 않는다는 측면에서 우리가 원하는 것이지만 단지 정적인 경우만을 다룬다는 점에서 부족하다. 우리는 이것으로 부터 우리가 원하는 운동방정식을 얻고자 한다.</p>
 </section>
 <section id="sec-CM_dlambert_principle" class="level3" data-number="1.5.2">
 <h3 data-number="1.5.2" class="anchored" data-anchor-id="sec-CM_dlambert_principle"><span class="header-section-number">1.5.2</span> 달랑베르 원리</h3>
@@ -996,51 +1127,51 @@ f(\boldsymbol{r}_1,\,\boldsymbol{r}_2,\ldots,\,t) =0.
 <p>이며 구속력에 의한 가상 일이 <span class="math inline">\(0\)</span> 이라는 조건을 입히면,</p>
 <p><span id="eq-CM_dalembert_principle"><span class="math display">\[
 \sum_j \left( \boldsymbol{F}^{(a)}_j - \dot{\boldsymbol{p}}_j \right) \boldsymbol{\cdot} \delta \boldsymbol{r}_j = 0\;
-\tag{1.23}\]</span></span></p>
-<p>이다. 이것을 <strong>달랑베르 원리(D’Alembert’s principle)</strong> 라고 한다. 위 식에는 구속력이 포함되지 않으므로 위첨자 <span class="math inline">\((a)\)</span> 를 떼어도 모호하지 않을 것이다. 여기서 우리는 항상 일반적인 데카르트 좌표계가 아닌 일반화된 좌표계에서 기술해야 하며 <a href="#eq-CM_dalembert_principle" class="quarto-xref">식&nbsp;<span>1.23</span></a> 도 일반화된 좌표계로 변환하여야 한다는 것이다. 앞에서도 그랬지만 자유도가 <span class="math inline">\(n\)</span> 인 일반화된 좌표계의 좌표를 <span class="math inline">\((q_1,\ldots,\,q_n)\)</span> 으로 표기하기로 한다.</p>
+\tag{1.31}\]</span></span></p>
+<p>이다. 이것을 <strong>달랑베르 원리(D’Alembert’s principle)</strong> 라고 한다. 위 식에는 구속력이 포함되지 않으므로 위첨자 <span class="math inline">\((a)\)</span> 를 떼어도 모호하지 않을 것이다. 여기서 우리는 항상 일반적인 데카르트 좌표계가 아닌 일반화된 좌표계에서 기술해야 하며 <a href="#eq-CM_dalembert_principle" class="quarto-xref">식&nbsp;<span>1.31</span></a> 도 일반화된 좌표계로 변환하여야 한다는 것이다. 앞에서도 그랬지만 자유도가 <span class="math inline">\(n\)</span> 인 일반화된 좌표계의 좌표를 <span class="math inline">\((q_1,\ldots,\,q_n)\)</span> 으로 표기하기로 한다.</p>
 </section>
 <section id="sec-CM_dlambert_principle_in_generalized_coordinate" class="level3" data-number="1.5.3">
 <h3 data-number="1.5.3" class="anchored" data-anchor-id="sec-CM_dlambert_principle_in_generalized_coordinate"><span class="header-section-number">1.5.3</span> 일반화된 좌표계에서의 달랑베르 원리</h3>
 <p>일반화된 좌표계 <span class="math inline">\((q_1,\,q_2,\ldots,\,q_n)\)</span> 을 생각하자. <span class="math inline">\(\boldsymbol{r}_a = \boldsymbol{r}_a (q_1,\ldots,\,q_n,\,t)\)</span> 이므로 미분의 연쇄 규칙에 의해</p>
 <p><span id="eq-CM_dlambert_0"><span class="math display">\[
 \boldsymbol{v}_a = \dfrac{d\boldsymbol{r}_a}{dt} = \sum_k \dfrac{\partial \boldsymbol{r}_a}{\partial q_k} \dot{q}_k + \dfrac{\partial \boldsymbol{r}_a}{\partial t}
-\tag{1.24}\]</span></span></p>
+\tag{1.32}\]</span></span></p>
 <p>이다. 우리는 이로부터</p>
 <p><span id="eq-CM_dlambert_1"><span class="math display">\[
 \boxed{\dfrac{\partial \boldsymbol{v}_a}{\partial \dot{q}_k} = \dfrac{\partial \boldsymbol{r}_a}{\partial q_k}}
-\tag{1.25}\]</span></span></p>
+\tag{1.33}\]</span></span></p>
 <p>임을 알 수 있다. 가상 변위 <span class="math inline">\(\delta \boldsymbol{r}_a\)</span> 는 정의에 의해 공간 변수만 생각하므로 시간 <span class="math inline">\(t\)</span> 에 대한 편미분 항이 없다. 따라서</p>
 <p><span id="eq-CM_virtual_displacement_and_generalized_coordinate"><span class="math display">\[
 \boxed{\delta \boldsymbol{r}_a = \sum_j\dfrac{\partial \boldsymbol{r}_a}{\partial q_j} \delta q_j.}
-\tag{1.26}\]</span></span></p>
+\tag{1.34}\]</span></span></p>
 <p>이제,</p>
 <p><span id="eq-CM_generalized_force_0"><span class="math display">\[
 \sum_a \boldsymbol{F}_a \cdot \delta \boldsymbol{r}_a = \sum_{a,\,j} \boldsymbol{F}_a \cdot \left( \dfrac{\partial \boldsymbol{r}_a}{\partial q_j}\right) \delta q_j = \sum_j Q_j \delta q_j
-\tag{1.27}\]</span></span></p>
+\tag{1.35}\]</span></span></p>
 <p>를 통해 <strong>일반화된 힘(generalized force)</strong> <span class="math inline">\(Q_j\)</span> 를 아래와 같이 정의한다.</p>
 <p><span id="eq-CM_generalized_force"><span class="math display">\[
 \boxed{
 Q_j = \sum\limits_a \boldsymbol{F}_a \cdot \dfrac{\partial \boldsymbol{r}_a}{\partial q_j}
 }
-\tag{1.28}\]</span></span></p>
+\tag{1.36}\]</span></span></p>
 <p>일반화된 좌표계에서 <span class="math inline">\(q_j\)</span> 가 거리의 차원을 갖지 않아도 되기 때문에 <span class="math inline">\(Q_j\)</span> 역시 힘과 같은 차원을 가질 필요는 없다. 다만 <span class="math inline">\(Q_j \delta q_j\)</span> 는 일(Work)과 같은 차원을 갖는다.</p>
 </section>
 <section id="sec-CM_lagrange_equation" class="level3" data-number="1.5.4">
 <h3 data-number="1.5.4" class="anchored" data-anchor-id="sec-CM_lagrange_equation"><span class="header-section-number">1.5.4</span> 라그랑쥬 방정식</h3>
 <section id="일반화된-힘에-대한-라그랑쥬-방정식" class="level4">
 <h4 class="anchored" data-anchor-id="일반화된-힘에-대한-라그랑쥬-방정식"><strong>일반화된 힘에 대한 라그랑쥬 방정식</strong></h4>
-<p>달랑베르 원리(<a href="#eq-CM_dalembert_principle" class="quarto-xref">식&nbsp;<span>1.23</span></a>) 는 <span class="math inline">\(\sum\limits_a \dot{\boldsymbol{p}}_a \boldsymbol{\cdot} \delta \boldsymbol{r}_a = \sum\limits_a m_a \ddot{\boldsymbol{r}}_a \boldsymbol{\cdot} \delta \boldsymbol{r}_a\)</span> 로 쓸 수 있으며</p>
+<p>달랑베르 원리(<a href="#eq-CM_dalembert_principle" class="quarto-xref">식&nbsp;<span>1.31</span></a>) 는 <span class="math inline">\(\sum\limits_a \dot{\boldsymbol{p}}_a \boldsymbol{\cdot} \delta \boldsymbol{r}_a = \sum\limits_a m_a \ddot{\boldsymbol{r}}_a \boldsymbol{\cdot} \delta \boldsymbol{r}_a\)</span> 로 쓸 수 있으며</p>
 <p><span id="eq-CM_sec_lagrange_1"><span class="math display">\[
 \sum\limits_a m_a \ddot{\boldsymbol{r}}_a \boldsymbol{\cdot} \delta \boldsymbol{r}_a = \sum\limits_{a,\,j} m_a \ddot{\boldsymbol{r}}_a \cdot \dfrac{\partial \boldsymbol{r}_a}{\partial q_j} \delta q_j
-\tag{1.29}\]</span></span></p>
-<p>이다. 또한 <a href="#eq-CM_dlambert_0" class="quarto-xref">식&nbsp;<span>1.24</span></a> 를 이용하면</p>
+\tag{1.37}\]</span></span></p>
+<p>이다. 또한 <a href="#eq-CM_dlambert_0" class="quarto-xref">식&nbsp;<span>1.32</span></a> 를 이용하면</p>
 <p><span id="eq-CM_sec_lagrange_2"><span class="math display">\[
 \begin{aligned}
 \dfrac{d}{dt} \left(\dfrac{\partial \boldsymbol{r}_a}{\partial q_j} \right) &amp;= \sum_k \dfrac{ \partial^2 \boldsymbol{r}_a }{\partial q_j \partial q_k} \dot{q}_k + \dfrac{\partial^2 \boldsymbol{r}_a}{\partial q_j \partial t}  \\[0.3em]
 &amp;=\dfrac{\partial}{\partial q_j}\underbrace{\left[\sum_k \dfrac{ \partial \boldsymbol{r}_a }{\partial q_k} \dot{q}_k + \dfrac{\partial \boldsymbol{r}_a}{\partial t}\right]}_{\Large = \dot{\boldsymbol{r}}_a}= \dfrac{\partial \dot{\boldsymbol{r}}_a}{\partial q_j} = \dfrac{\partial \boldsymbol{v}_a}{\partial q_j}
 \end{aligned}
-\tag{1.30}\]</span></span></p>
-<p>이다. <a href="#eq-CM_dlambert_1" class="quarto-xref">식&nbsp;<span>1.25</span></a> 과 <a href="#eq-CM_sec_lagrange_2" class="quarto-xref">식&nbsp;<span>1.30</span></a> 를 이용하면, 그리고 <span class="math inline">\(T_a = m_a v_a^2/2\)</span> 라고 놓으면,</p>
+\tag{1.38}\]</span></span></p>
+<p>이다. <a href="#eq-CM_dlambert_1" class="quarto-xref">식&nbsp;<span>1.33</span></a> 과 <a href="#eq-CM_sec_lagrange_2" class="quarto-xref">식&nbsp;<span>1.38</span></a> 를 이용하면, 그리고 <span class="math inline">\(T_a = m_a v_a^2/2\)</span> 라고 놓으면,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \sum_{a} m_a \ddot{\boldsymbol{r}}_a \cdot \dfrac{\partial \boldsymbol{r}_a}{\partial q_j} &amp;= \sum_a \left[\dfrac{d}{dt} \left(m_a \dot{\boldsymbol{r}}_a \boldsymbol{\cdot} \dfrac{\partial \boldsymbol{r}_a}{\partial q_j} \right)- m_a \dot{\boldsymbol{r}}_a \boldsymbol{\cdot} \dfrac{d}{dt}\left(\dfrac{\partial \boldsymbol{r}_a}{\partial q_j}\right)\right] \\[0.2em]
@@ -1049,18 +1180,18 @@ Q_j = \sum\limits_a \boldsymbol{F}_a \cdot \dfrac{\partial \boldsymbol{r}_a}{\pa
 &amp;= \sum_a \left[\dfrac{d}{dt}\left(\dfrac{\partial T_a}{\partial \dot{q}_j}\right) -\dfrac{\partial T_a}{\partial q_j}\right]
 \end{aligned}
 \]</span></p>
-<p>이다. 총 운동에너지 <span class="math inline">\(T = \sum_a T_a\)</span> 라고 놓으고 위 식과 <a href="#eq-CM_sec_lagrange_1" class="quarto-xref">식&nbsp;<span>1.29</span></a> 를 결합하면 다음을 얻는다.</p>
+<p>이다. 총 운동에너지 <span class="math inline">\(T = \sum_a T_a\)</span> 라고 놓으고 위 식과 <a href="#eq-CM_sec_lagrange_1" class="quarto-xref">식&nbsp;<span>1.37</span></a> 를 결합하면 다음을 얻는다.</p>
 <p><span id="eq-CM_dlembert_principle2"><span class="math display">\[
 \sum_j \left[  \left\{ \dfrac{d}{dt} \left( \dfrac{\partial T}{\partial \dot{q}_j}\right) - \dfrac{\partial T}{\partial q_j}\right\} - Q_j \right] \delta q_j = 0\;.
-\tag{1.31}\]</span></span></p>
+\tag{1.39}\]</span></span></p>
 <p>한가지 주의할점은 데카르트 좌표계에서는 항상 <span class="math inline">\(\dfrac{\partial T}{\partial q_j} = 0\)</span> 이지만 일반화된 좌표계에서는 그렇지 않을 수 있다는 것이다. 극좌표계의 경우 각에 대한 미분이 구심력을 의미한다.</p>
-<p>지금까지는 구속력에 대해 가상 변위에 대한 일은 0 이라는 것 이외의 가정을 하지 않았다. 따라서 일반화된 좌표 <span class="math inline">\(\{q_j\}\)</span> 는 운동을 기술하는 어떤 좌표라도 될 수 있다. Holonomic 구속 조건에서는 독립적인 일반화된 좌표 <span class="math inline">\(q_1,\ldots,\,q_n\)</span> 을 찾을 수 있다. 그렇다면 <a href="#eq-CM_dlembert_principle2" class="quarto-xref">식&nbsp;<span>1.31</span></a> 는 각각의 <span class="math inline">\(q_j\)</span> 에 대해,</p>
+<p>지금까지는 구속력에 대해 가상 변위에 대한 일은 0 이라는 것 이외의 가정을 하지 않았다. 따라서 일반화된 좌표 <span class="math inline">\(\{q_j\}\)</span> 는 운동을 기술하는 어떤 좌표라도 될 수 있다. Holonomic 구속 조건에서는 독립적인 일반화된 좌표 <span class="math inline">\(q_1,\ldots,\,q_n\)</span> 을 찾을 수 있다. 그렇다면 <a href="#eq-CM_dlembert_principle2" class="quarto-xref">식&nbsp;<span>1.39</span></a> 는 각각의 <span class="math inline">\(q_j\)</span> 에 대해,</p>
 <p><span id="eq-CM_lagrange_from_dlembert_1"><span class="math display">\[
 \boxed{
 \dfrac{d}{dt}\left( \dfrac{\partial T}{\partial \dot{q}_j}\right) - \dfrac{\partial T}{\partial q_j}= Q_j
 }
-\tag{1.32}\]</span></span></p>
-<p>이 성립한다는 의미이다. <span class="math inline">\(n\)</span> 개의 일반화된 좌표에 대해 <span class="math inline">\(n\)</span> 개의 <a href="#eq-CM_lagrange_from_dlembert_1" class="quarto-xref">식&nbsp;<span>1.32</span></a> 의 방정식이 존재한다.</p>
+\tag{1.40}\]</span></span></p>
+<p>이 성립한다는 의미이다. <span class="math inline">\(n\)</span> 개의 일반화된 좌표에 대해 <span class="math inline">\(n\)</span> 개의 <a href="#eq-CM_lagrange_from_dlembert_1" class="quarto-xref">식&nbsp;<span>1.40</span></a> 의 방정식이 존재한다.</p>
 </section>
 <section id="보존력의-경우" class="level4">
 <h4 class="anchored" data-anchor-id="보존력의-경우"><strong>보존력의 경우</strong></h4>
@@ -1068,22 +1199,22 @@ Q_j = \sum\limits_a \boldsymbol{F}_a \cdot \dfrac{\partial \boldsymbol{r}_a}{\pa
 <p><span class="math display">\[
 Q_j = \sum_a \boldsymbol{F}_a \boldsymbol{\cdot} \dfrac{\partial \boldsymbol{r}_a}{\partial q_j} = -\sum_a \left(\dfrac{\partial V}{\partial \boldsymbol{r}_a}\right) \boldsymbol{\cdot} \dfrac{\partial \boldsymbol{r}_a}{\partial q_j} = - \dfrac{\partial V}{\partial q_j}\;.
 \]</span></p>
-<p>그렇다면 <a href="#eq-CM_lagrange_from_dlembert_1" class="quarto-xref">식&nbsp;<span>1.32</span></a> 은 다음과 같이 쓸 수 있다.</p>
+<p>그렇다면 <a href="#eq-CM_lagrange_from_dlembert_1" class="quarto-xref">식&nbsp;<span>1.40</span></a> 은 다음과 같이 쓸 수 있다.</p>
 <p><span id="eq-CM_lagrange_from_dlembert_2"><span class="math display">\[
 \dfrac{d}{dt} \left( \dfrac{\partial T}{\partial \dot{q}_j}\right) - \dfrac{\partial (T-V)}{\partial q_j} = 0\;.
-\tag{1.33}\]</span></span></p>
-<p><a href="#eq-CM_lagrange_from_dlembert_2" class="quarto-xref">식&nbsp;<span>1.33</span></a> 형태의 운동방정식은 포텐셜 <span class="math inline">\(V\)</span> 가 꼭 보존계에만 제한되지 않는다. <span class="math inline">\(V\)</span> 가 시간에 대해 명시적인 함수가 아니기만 하면 이 시스템은 보존계이다.</p>
+\tag{1.41}\]</span></span></p>
+<p><a href="#eq-CM_lagrange_from_dlembert_2" class="quarto-xref">식&nbsp;<span>1.41</span></a> 형태의 운동방정식은 포텐셜 <span class="math inline">\(V\)</span> 가 꼭 보존계에만 제한되지 않는다. <span class="math inline">\(V\)</span> 가 시간에 대해 명시적인 함수가 아니기만 하면 이 시스템은 보존계이다.</p>
 </section>
 <section id="라그랑쥬-방정식" class="level4">
 <h4 class="anchored" data-anchor-id="라그랑쥬-방정식"><strong>라그랑쥬 방정식</strong></h4>
-<p>지금까지는 <span class="math inline">\(V\)</span> 가 일반화된 속도 <span class="math inline">\(\dot{q}_j\)</span> 에 의존하지 않는다고 가정하였다. 이 경우 <a href="#eq-CM_lagrange_from_dlembert_2" class="quarto-xref">식&nbsp;<span>1.33</span></a> 는 다음과 같다.</p>
+<p>지금까지는 <span class="math inline">\(V\)</span> 가 일반화된 속도 <span class="math inline">\(\dot{q}_j\)</span> 에 의존하지 않는다고 가정하였다. 이 경우 <a href="#eq-CM_lagrange_from_dlembert_2" class="quarto-xref">식&nbsp;<span>1.41</span></a> 는 다음과 같다.</p>
 <p><span id="eq-CM_lagrange_from_dlembert_3"><span class="math display">\[
 \dfrac{d}{dt} \left( \dfrac{\partial (T-V)}{\partial \dot{q}_j} \right) - \dfrac{\partial (T-V)}{\partial q_j} = 0
-\tag{1.34}\]</span></span></p>
+\tag{1.42}\]</span></span></p>
 <p>여기서 <strong>라그랑지안 (Lagrangian)</strong> <span class="math inline">\(L\)</span> 을 <span class="math inline">\(L=T-V\)</span> 로 정의한다면,</p>
 <p><span id="eq-CM_Lagrange_equation_from_Dlambert_principle"><span class="math display">\[
 \dfrac{d}{dt} \left( \dfrac{\partial L}{\partial \dot{q}_j} \right) - \dfrac{\partial L}{\partial q_j} = 0
-\tag{1.35}\]</span></span></p>
+\tag{1.43}\]</span></span></p>
 <p>이며 이를 <strong>라그랑쥬 방정식(Lagrange’s equation)</strong> 이라고 한다.</p>
 </section>
 <section id="라그랑지안은-유일하지-않다." class="level4">
@@ -1091,8 +1222,8 @@ Q_j = \sum_a \boldsymbol{F}_a \boldsymbol{\cdot} \dfrac{\partial \boldsymbol{r}_
 <p>라그랑지안 <span class="math inline">\(L(q,\,\dot{q},\,t)\)</span> 와 어떤 미분가능하며 <span class="math inline">\(q,\,t\)</span> 에만 의존하는 함수 <span class="math inline">\(F(q,\,t)\)</span> 에 대해,</p>
 <p><span id="eq-CM_non_uniqueness_of_largangian"><span class="math display">\[
 L'(q,\,\dot{q},\,t) = L(q,\,\dot{q},\,t) + \dfrac{dF}{dt}
-\tag{1.36}\]</span></span></p>
-<p>라고 하면 <span class="math inline">\(L'\)</span> 에 대한 라그랑쥬 방정식은 <span class="math inline">\(L\)</span> 에 대한 라그랑쥬 방정식과 같다는 것을 보일 수 있다(<a href="#exr-goldestein_1_14" class="quarto-xref">연습문제&nbsp;<span>1.4</span></a>). 즉 어떤 시스템에 대한 라그랑지안은 유일하지 않다. 때때로 <span class="math inline">\(L=T-V\)</span> 보다 <a href="#eq-CM_non_uniqueness_of_largangian" class="quarto-xref">식&nbsp;<span>1.36</span></a> 형태의 라그랑지안이 유용한 경우가 있다.</p>
+\tag{1.44}\]</span></span></p>
+<p>라고 하면 <span class="math inline">\(L'\)</span> 에 대한 라그랑쥬 방정식은 <span class="math inline">\(L\)</span> 에 대한 라그랑쥬 방정식과 같다는 것을 보일 수 있다(<a href="#exr-goldestein_1_14" class="quarto-xref">연습문제&nbsp;<span>1.4</span></a>). 즉 어떤 시스템에 대한 라그랑지안은 유일하지 않다. 때때로 <span class="math inline">\(L=T-V\)</span> 보다 <a href="#eq-CM_non_uniqueness_of_largangian" class="quarto-xref">식&nbsp;<span>1.44</span></a> 형태의 라그랑지안이 유용한 경우가 있다.</p>
 <p><br></p>
 </section>
 </section>
@@ -1104,8 +1235,8 @@ L'(q,\,\dot{q},\,t) = L(q,\,\dot{q},\,t) + \dfrac{dF}{dt}
 <p>만약 일반화된 힘 <span class="math inline">\(Q_j\)</span> 를 어떤 함수 <span class="math inline">\(U(q_j,\,\dot{q}_j)\)</span> 에 대한</p>
 <p><span id="eq-CM_generalized_force_from_generalized_potential"><span class="math display">\[
 Q_j = - \dfrac{ \partial U}{\partial q_j} + \dfrac{d}{dt} \left( \dfrac{\partial U}{\partial \dot{q}_j}\right)
-\tag{1.37}\]</span></span></p>
-<p>로 얻을 수 있다면, 일반적 의미의 포텐셜이 없다 하더라도 <span class="math inline">\(L=T-U\)</span> 에 대한 라그랑주 방정식 <a href="#eq-CM_Lagrange_equation_from_Dlambert_principle" class="quarto-xref">식&nbsp;<span>1.35</span></a> 가 성립한다. 이 때 <span class="math inline">\(U\)</span>를 <strong>일반회된 포텐셜 (generalized potential)</strong> 혹은 <strong>속도 의존 포텐셜(velocity-dependent potential)</strong> 이라 한다.</p>
+\tag{1.45}\]</span></span></p>
+<p>로 얻을 수 있다면, 일반적 의미의 포텐셜이 없다 하더라도 <span class="math inline">\(L=T-U\)</span> 에 대한 라그랑주 방정식 <a href="#eq-CM_Lagrange_equation_from_Dlambert_principle" class="quarto-xref">식&nbsp;<span>1.43</span></a> 가 성립한다. 이 때 <span class="math inline">\(U\)</span>를 <strong>일반회된 포텐셜 (generalized potential)</strong> 혹은 <strong>속도 의존 포텐셜(velocity-dependent potential)</strong> 이라 한다.</p>
 </section>
 <section id="sec-CM_generalized_potential_electromagnetic_force" class="level3" data-number="1.6.2">
 <h3 data-number="1.6.2" class="anchored" data-anchor-id="sec-CM_generalized_potential_electromagnetic_force"><span class="header-section-number">1.6.2</span> 전자기력에 대한 일반화된 포텐셜</h3>
@@ -1114,14 +1245,14 @@ Q_j = - \dfrac{ \partial U}{\partial q_j} + \dfrac{d}{dt} \left( \dfrac{\partial
 <p>일반화된 포텐셜 <span class="math inline">\(U\)</span> 가 다음과 같이 주어졌다고 하자.</p>
 <p><span id="eq-CM_electromagnetic_potential"><span class="math display">\[
 U=q \Phi - q \boldsymbol{A} \cdot \boldsymbol{v}\;.
-\tag{1.38}\]</span></span></p>
+\tag{1.46}\]</span></span></p>
 <p>이. <span class="math inline">\(U\)</span> 에 대한 일반화된 힘이 로런츠 힘임을 보일 수 있다. 맥스웰 방정식을 보자.</p>
 <p><span id="eq-CM_maxwell_equation"><span class="math display">\[
 \begin{aligned}
 &amp;\nabla \cdot \boldsymbol{E} = \dfrac{\rho}{\epsilon_0},  &amp; &amp; \nabla \times \boldsymbol{E} = - \dfrac{\partial \boldsymbol{B}}{\partial t}\\
 &amp;\nabla \cdot \boldsymbol{B} = 0, &amp; &amp; \nabla \times \boldsymbol{B} = {\mu_0}\left(\boldsymbol{J} + \epsilon_0 \dfrac{\partial \boldsymbol{E}}{\partial t}\right)
 \end{aligned}
-\tag{1.39}\]</span></span></p>
+\tag{1.47}\]</span></span></p>
 <p>이며 여기서 <span class="math inline">\(\boldsymbol{E} = -\nabla \Phi\)</span>, <span class="math inline">\(\boldsymbol{B}=\nabla \times \boldsymbol{A}\)</span> 이다. 포텐셜에 대한 미분을 통해 다음을 얻는다.</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1139,10 +1270,10 @@ Q_x &amp;= -\dfrac{\partial U}{\partial x} + \dfrac{d}{dt}\left(\dfrac{\partial 
 &amp;= q (E_x + (\boldsymbol{v} \times \boldsymbol{B})_x)
 \end{aligned}
 \]</span></p>
-<p>을 얻는다. 즉 <a href="#eq-CM_electromagnetic_potential" class="quarto-xref">식&nbsp;<span>1.38</span></a> 로부터 얻은 일반화된 힘은 로런츠 힘(Lorentz force) 이며, 따라서 전자기장 내의 하전입자에 대한 라그랑지안을 다음과 같이 쓸 수 있다.</p>
+<p>을 얻는다. 즉 <a href="#eq-CM_electromagnetic_potential" class="quarto-xref">식&nbsp;<span>1.46</span></a> 로부터 얻은 일반화된 힘은 로런츠 힘(Lorentz force) 이며, 따라서 전자기장 내의 하전입자에 대한 라그랑지안을 다음과 같이 쓸 수 있다.</p>
 <p><span id="eq-CM_lagrangian_for_charged_particle_in_electromagnetic_field"><span class="math display">\[
 L = T - q\Phi + \dfrac{q}{c}\boldsymbol{A\cdot v}.
-\tag{1.40}\]</span></span></p>
+\tag{1.48}\]</span></span></p>
 </section>
 <section id="포텐셜로부터-유도되지-않는-일반화된-힘" class="level4">
 <h4 class="anchored" data-anchor-id="포텐셜로부터-유도되지-않는-일반화된-힘"><strong>포텐셜로부터 유도되지 않는 일반화된 힘</strong></h4>
@@ -1153,7 +1284,7 @@ L = T - q\Phi + \dfrac{q}{c}\boldsymbol{A\cdot v}.
 <p>여기서 라그랑지안 <span class="math inline">\(L\)</span> 은 보존력에 대한 포텐셜만을 포함하는 라그랑지안이다. 예를 들어 마찰력이 있는 경우 이런 상황이 발생한다. 마찰력 가운데 속도에 비례하는 마찰력의 경우 레일리 소산 함수 (Rayleigh’s dissipation function)</p>
 <p><span id="eq-CM_layleigh_dissipation_function"><span class="math display">\[
 R = \dfrac{1}{2} \sum_i (k_x v_{ix}^2 + k_y v_{iy}^2 + k_z v_{iz}^2)
-\tag{1.41}\]</span></span></p>
+\tag{1.49}\]</span></span></p>
 <p>으로 기술된다. 여기서 <span class="math inline">\(\sum_i\)</span> 는 모든 입자에 대한 합이다. 이 소산함수에 대해 <span class="math inline">\(i\)</span> 번째 입자에 대한 마찰력 <span class="math inline">\(\boldsymbol{f}_i\)</span> 는</p>
 <p><span class="math display">\[
 \boldsymbol{f}_i = - \dfrac{\partial R}{\partial \boldsymbol{v}_i}
@@ -1162,7 +1293,7 @@ R = \dfrac{1}{2} \sum_i (k_x v_{ix}^2 + k_y v_{iy}^2 + k_z v_{iz}^2)
 <p><span class="math display">\[
 dW_f = -\sum_{i} \boldsymbol{f}_i\boldsymbol{\cdot}d\boldsymbol{r}_i = -\sum_i \boldsymbol{f}_i \boldsymbol{\cdot v}_i\,dt = 2R\,dt
 \]</span></p>
-<p>이다. 즉 마찰력으로 인해 초당 <span class="math inline">\(2R\)</span> 만큼의 에너지가 소산된다. 마찰력으로 인한 일반화된 힘은 (<a href="#eq-CM_dlambert_1" class="quarto-xref">식&nbsp;<span>1.25</span></a> 이 사용된다.)</p>
+<p>이다. 즉 마찰력으로 인해 초당 <span class="math inline">\(2R\)</span> 만큼의 에너지가 소산된다. 마찰력으로 인한 일반화된 힘은 (<a href="#eq-CM_dlambert_1" class="quarto-xref">식&nbsp;<span>1.33</span></a> 이 사용된다.)</p>
 <p><span class="math display">\[
 \begin{aligned}
 Q_j &amp;= \sum_i \boldsymbol{f}_i \boldsymbol{\cdot} \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = -\sum_i\dfrac{\partial R}{\partial \boldsymbol{v}_i}\boldsymbol{\cdot} \dfrac{\partial \boldsymbol{r}_i}{\partial q_j} = -\sum_i\dfrac{\partial R}{\partial \boldsymbol{v}_i}\boldsymbol{\cdot} \dfrac{\partial \boldsymbol{v}_i}{\partial \dot{q}_j} \\[0.3em]
@@ -1231,7 +1362,7 @@ M\sum_i m_i {r_i}^2 - \dfrac{1}{2} \sum_{i,\,j}m_i m_j {r_{ij}}^2  &amp;= \sum_{
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-goldstein_1_11" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 1.3 (Goldstein 1.11)</strong></span> 라그랑쥬 방정식 (<a href="#eq-CM_lagrange_from_dlembert_1" class="quarto-xref">식&nbsp;<span>1.32</span></a>) 은 다음과 같이 변형됨을 보여라. 아래의 방정식을 라그랑쥬 방정식의 <em>Nielson 형식</em> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>연습문제 1.3 (Goldstein 1.11)</strong></span> 라그랑쥬 방정식 (<a href="#eq-CM_lagrange_from_dlembert_1" class="quarto-xref">식&nbsp;<span>1.40</span></a>) 은 다음과 같이 변형됨을 보여라. 아래의 방정식을 라그랑쥬 방정식의 <em>Nielson 형식</em> 이라고 한다.</p>
 <p><span class="math display">\[
 \dfrac{\partial \dot{T}}{\partial \dot{q}_j} - 2\dfrac{\partial T}{\partial q_j} = Q_j.
 \]</span></p>
@@ -1307,6 +1438,11 @@ q_i = q_i (s_1,\ldots,\,s_n,\,t)
 <p><br></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Lanczos2012variational" class="csl-entry" role="listitem">
+Lanczos, C. 2012. <em>The Variational Principles of Mechanics</em>. 4th ed. Dover Books on Physics. Dover Publications. <a href="https://books.google.co.kr/books?id=cmPDAgAAQBAJ">https://books.google.co.kr/books?id=cmPDAgAAQBAJ</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1388,7 +1524,8 @@ q_i = q_i (s_1,\ldots,\,s_n,\,t)
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -1397,8 +1534,69 @@ q_i = q_i (s_1,\ldots,\,s_n,\,t)
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -1412,6 +1610,7 @@ q_i = q_i (s_1,\ldots,\,s_n,\,t)
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -1574,44 +1773,54 @@ q_i = q_i (s_1,\ldots,\,s_n,\,t)
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -1710,7 +1919,10 @@ q_i = q_i (s_1,\ldots,\,s_n,\,t)
     }
   });
   </script>
-<nav class="page-navigation">
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
   <div class="nav-page nav-page-previous">
       <a href="../../src/ClassicalMechanics/00_index.html" class="pagination-link" aria-label="고전역학">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">고전역학</span>
