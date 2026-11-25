@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.9">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,15 +40,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/ClassicalMechanics/03_hamilton_dynamics.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7a627ccb779a4a431ef462281a400409.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -109,17 +108,17 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating slimcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
-  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+  <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/04_canonical_transform.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">정준 변환</span></a></li></ol></nav>
-        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/04_canonical_transform.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">정준 변환</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -130,7 +129,7 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/04_canonical_transform.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">정준 변환</span></a></li></ol></nav>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/04_canonical_transform.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">정준 변환</span></a></li></ol></nav>
       <h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">정준 변환</span></h1>
                       </div>
   </div>
@@ -146,7 +145,7 @@ window.Quarto = {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">고전물리학</a> 
@@ -168,12 +167,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/ClassicalMechanics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-1-label">고전역학</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션: 고전역학">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">고전역학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
@@ -233,12 +232,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Mechanics_and_Symmetry/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-2-label">고전역학과 대칭</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션: 고전역학과 대칭">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">고전역학과 대칭</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
@@ -256,12 +255,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Electrodynamics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-3-label">전기자기학</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션: 전기자기학">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">전기자기학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
@@ -309,12 +308,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-4-label">상대론</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션: 상대론">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">상대론</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
@@ -332,12 +331,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/ThermalPhysics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-5-label">열역학</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션: 열역학">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">열역학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
@@ -373,12 +372,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/topics/Topics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-6-label">별도의 주제들</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="true" aria-label="토글 섹션: 별도의 주제들">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">별도의 주제들</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
@@ -399,7 +398,7 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">목차</h2>
    
   <ul>
@@ -424,7 +423,7 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content" tabindex="-1">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
@@ -440,24 +439,25 @@ window.Quarto = {
 </div>
 <p>많은 경우 해밀토니안으로 역학계의 문제를 푸는 것이 라그랑지안을 이용해 푸는 것보다 쉬워지거나 하지는 않는다. 그렇다면 왜 굳이 해밀토니안을 배우는 것일까? 그것은 고전역학에 내제된 수학적 구조를 보는데 해밀토니안 방법이 훨씬 유용하기 때문이다. 이 방법은 또한 통계역학이나 양자역학이 발전하는데 해밀토니안이 큰 기여를 했다.</p>
 <p><br></p>
-<section id="정준-변환의-방정식" class="level2 page-columns page-full" data-number="4.1">
+<section id="정준-변환의-방정식" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="정준-변환의-방정식"><span class="header-section-number">4.1</span> 정준 변환의 방정식</h2>
-<section id="sec-CM_equation_of_canonical_transform" class="level3 page-columns page-full" data-number="4.1.1">
+<section id="sec-CM_equation_of_canonical_transform" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="sec-CM_equation_of_canonical_transform"><span class="header-section-number">4.1.1</span> 정준 변환의 방정식</h3>
 <p><a href="01_basic_principles.html#exr-goldestein_1_15" class="quarto-xref">연습문제&nbsp;<span>1.5</span></a> 에서 점변환을 정의하였다. 여기서는 이것이 매우 중요하므로 정식으로 정의하기로 하자.</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-CM_point_transformations" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.1 (점변환)</strong></span> 독립적인 일반화된 좌표 <span class="math inline">\(\boldsymbol{q}\)</span> 에서 다른 독립적인 일반화된 좌표 <span class="math inline">\(\boldsymbol{Q}\)</span> 로의 아래와 같은 형태의 변환을 <strong>점변환 (point transformation)</strong> 이라고 한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>점변환</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>독립적인 일반화된 좌표 <span class="math inline">\(\boldsymbol{q}\)</span> 에서 다른 독립적인 일반화된 좌표 <span class="math inline">\(\boldsymbol{Q}\)</span> 로의 아래와 같은 형태의 변환을 <strong>점변환 (point transformation)</strong> 이라고 한다.</p>
 <p><span id="eq-CM_point_transformation"><span class="math display">\[
 Q_i =Q_i(\boldsymbol{q},\,t).
 \tag{4.1}\]</span></span></p>
-</div>
-</div>
 </div>
 </div>
 <p>해밀토니안이 구성되는 위상공간에서는 좌표와 운동량이 독립적인 좌표이다. 따라서 좌표 뿐만 아니라 운동량도 <a href="#eq-CM_point_transformation" class="quarto-xref">식&nbsp;<span>4.1</span></a> 와 같은 형태로 변해야 한다.</p>
@@ -471,7 +471,7 @@ P_i = P_i (\boldsymbol{q},\, \boldsymbol{p},\, t),
 <p><span id="eq-CM_hamilton_equation_of_motion_after_point_transformation"><span class="math display">\[
 \dot{Q}_i = \dfrac{\partial \overline{H}}{\partial P_i}, \qquad \dot{P}_i = - \dfrac{\partial \overline{H}}{\partial Q_i}
 \tag{4.3}\]</span></span></p>
-<p>라면 <span class="math inline">\(\overline{H}\)</span> 는 <span class="math inline">\((\boldsymbol{Q},\,\boldsymbol{P})\)</span> 위상공간에서의 해밀토니안 역할을 수행하는 것이다.</p>
+<p>라면 <span class="math inline">\(\overline{H}\)</span> 는 <span class="math inline">\((\boldsymbol{Q},\,\boldsymbol{P})\)</span> 위상공간에서의 해밀토니안 역할을 수행한다.</p>
 <p>앞서 <a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html#sec-CM_modified_hamilton_principle">변형된 해밀턴의 원리</a> 에서 보았듯이 <span class="math inline">\(\boldsymbol{Q},\, \boldsymbol{P}\)</span> 가 정준 좌표라면 변형된 해밀턴 원리를 만족시켜야 한다. 즉</p>
 <p><span id="eq-CM_modifield_hamiltons_principle_in_new_coord"><span class="math display">\[
 \delta \int_{t_1}^{t_2} \left(\sum_i \dot{Q}_i P_i - \overline{H}(\boldsymbol{Q},\, \boldsymbol{P},\, t)\right)\, dt = 0.
@@ -480,7 +480,7 @@ P_i = P_i (\boldsymbol{q},\, \boldsymbol{p},\, t),
 <p><span id="eq-CM_modifield_hamiltons_principle_in_old_coord"><span class="math display">\[
 \delta \int_{t_1}^{t_2} \left(\sum_i \dot{q}_i p_i - H(\boldsymbol{q},\, \boldsymbol{p},\, t)\right)\, dt = 0
 \tag{4.5}\]</span></span></p>
-<div class="page-columns page-full"><p>이어야 한다. <a href="#eq-CM_modifield_hamiltons_principle_in_old_coord" class="quarto-xref">식&nbsp;<span>4.5</span></a> 와 <a href="#eq-CM_modifield_hamiltons_principle_in_new_coord" class="quarto-xref">식&nbsp;<span>4.4</span></a> 가 동시에 만족한다는 것은 두 식이 같다는 것을 의미하지 않는다. 일반적으로 두 식이 같을 때의 조건은 어떤 상수 <span class="math inline">\(\lambda\)</span> 와 <span class="math inline">\(C^2\)</span> 급 함수<span class="math inline">\(^\ast\)</span> <span class="math inline">\(G\)</span> 에 대해 </p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^{\ast}\)</span> <span class="math inline">\(C^n\)</span> 급 함수는 <span class="math inline">\(n\)</span> 번 미분 가능하고, 그 <span class="math inline">\(n\)</span> 차 도함수가 연속인 함수이다</span></div></div>
+<p>이어야 한다. <a href="#eq-CM_modifield_hamiltons_principle_in_old_coord" class="quarto-xref">식&nbsp;<span>4.5</span></a> 와 <a href="#eq-CM_modifield_hamiltons_principle_in_new_coord" class="quarto-xref">식&nbsp;<span>4.4</span></a> 가 동시에 만족한다는 것은 두 식이 같다는 것을 의미하지 않는다. 일반적으로 두 식이 같을 때의 조건은 어떤 상수 <span class="math inline">\(\lambda\)</span> 와 <span class="math inline">\(C^2\)</span> 급 함수 <span class="math inline">\(G\)</span> 에 대해</p>
 <p><span id="eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0"><span class="math display">\[
 \lambda \left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_{i}\dot{Q}_i P_i - \overline{H} + \dfrac{dG}{dt}
 \tag{4.6}\]</span></span></p>
@@ -493,7 +493,7 @@ P_i = P_i (\boldsymbol{q},\, \boldsymbol{p},\, t),
 <p><span class="math display">\[
 \mu \nu \left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_i \dot{Q}_i P_i -\overline{H}
 \]</span></p>
-<p>이다. <a href="#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0" class="quarto-xref">식&nbsp;<span>4.6</span></a> 와 비교하면 <span class="math inline">\(\lambda = \mu\nu,\, G=\text{const.}\)</span> 인 꼴이다. 이런 변환을 <strong>스케일 변환(scale transformation)</strong> 이라고 하며 우리는 실제로 <a href="#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0" class="quarto-xref">식&nbsp;<span>4.6</span></a> 에서 <span class="math inline">\(\lambda=1\)</span> 인 경우에만 신경써도 된다는 것을 할 수 있다. 따라서 앞으로는 <span id="eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero"><span class="math display">\[
+<p>이다. <a href="#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0" class="quarto-xref">식&nbsp;<span>4.6</span></a> 와 비교하면 <span class="math inline">\(\lambda = \mu\nu,\, G=\text{const.}\)</span> 인 꼴이다. 이런 변환을 <strong>스케일 변환(scale transformation)</strong> 이라고 하며 우리는 실제로 <a href="#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0" class="quarto-xref">식&nbsp;<span>4.6</span></a> 에서 <span class="math inline">\(\lambda=1\)</span> 인 경우에만 신경써도 된다는 것을 알 수 있다. 따라서 앞으로는 <span id="eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero"><span class="math display">\[
 \left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_{i}\dot{Q}_i P_i - \overline{H} + \dfrac{dG}{dt}
 \tag{4.7}\]</span></span></p>
 <p>인 경우만 다루기로 하자. 앞으로는 <span class="math inline">\(\lambda\ne 1\)</span> 일 경우는 <strong>확장된 정준 변환 (extended canonical transformation)</strong> 이라고 하고 <span class="math inline">\(\lambda =1\)</span> 인 경우에만 <strong>정준 변환</strong> 이라고 하기로 하자. 또 하나 정준변환 <a href="#eq-CM_transformation_in_phase_space" class="quarto-xref">식&nbsp;<span>4.2</span></a> 에서 시간에 대해 명시적인 의존성이 없을 경우 <strong>제한된 정준 변환 (restricted canonical transformation)</strong> 이라고 한다.</p>
@@ -691,11 +691,135 @@ q = \sqrt{\dfrac{2E}{m\omega^2}} \sin (\omega t+ \phi_0)
 <p>변환생성함수를 사용하여 정준변환을 다루는 방법과는 다른 접근법으로 심플렉틱 접근법에 대해 알아본다.</p>
 <section id="sec-CM_symplectic_approach_to_restricted_canonical_transform" class="level3" data-number="4.3.1">
 <h3 data-number="4.3.1" class="anchored" data-anchor-id="sec-CM_symplectic_approach_to_restricted_canonical_transform"><span class="header-section-number">4.3.1</span> 제한된 정준변환의 경우</h3>
+<section id="제한된-정준-변환의-직접-조건" class="level4">
+<h4 class="anchored" data-anchor-id="제한된-정준-변환의-직접-조건"><strong>제한된 정준 변환의 직접 조건</strong></h4>
 <p>제한된 정준 변환 즉, 변환에 명시적인 시간 의존성이 없는 경우 변환은 다음과 같다.</p>
 <p><span id="eq-CM_restricted_canonical_transform"><span class="math display">\[
 Q_i = Q_i(\boldsymbol{q},\, \boldsymbol{p}),\qquad P_i = P_i(\boldsymbol{q},\,\boldsymbol{p})
 \tag{4.19}\]</span></span></p>
+<p>여기서,</p>
+<p><span id="eq-CM_symplectic_approach_to_cananolical_transform_1"><span class="math display">\[
+\dot{Q}_i = \sum_j \left(\dfrac{\partial Q_i}{\partial q_j}\dot{q}_j + \dfrac{\partial Q_i}{\partial p_j}\dot{p}_j\right) = \sum_j \left(\dfrac{\partial Q_i}{\partial q_j}\dfrac{\partial H}{\partial p_j} - \dfrac{\partial Q_i}{\partial p_j} \dfrac{\partial H}{\partial q_j}\right)
+\tag{4.20}\]</span></span></p>
+<p>이다. 또한 <a href="#eq-CM_restricted_canonical_transform" class="quarto-xref">식&nbsp;<span>4.19</span></a> 의 역변환</p>
+<p><span id="eq-CM_restricted_canonical_transform_2"><span class="math display">\[
+q_j = q_j(\boldsymbol{Q,\,\boldsymbol{P}}),\qquad  p_j = p_j(\boldsymbol{Q},\,\boldsymbol{P})
+\tag{4.21}\]</span></span></p>
+<p>를 생각하면 <span class="math inline">\(H(\boldsymbol{q},\,\boldsymbol{p},\,t)\)</span> 를 <span class="math inline">\(H(\boldsymbol{Q},\,\boldsymbol{P},\,t)\)</span> 로 바꿀 수 있다. 그렇다면,</p>
+<p><span id="eq-CM_symplectic_approach_to_cananolical_transform_2"><span class="math display">\[
+\dfrac{\partial H}{\partial P_i} = \sum_j\dfrac{\partial H}{\partial p_j}\dfrac{\partial p_j}{\partial P_i} + \dfrac{\partial H}{\partial q_j}\dfrac{\partial q_j}{\partial P_i}
+\tag{4.22}\]</span></span></p>
+<p>인데, <a href="#eq-CM_symplectic_approach_to_cananolical_transform_1" class="quarto-xref">식&nbsp;<span>4.20</span></a> 과 비교하면 아래가 성립해야 함을 알 수 있다.</p>
+<p><span id="eq-CM_symplectic_approach_to_cananolical_transform_3"><span class="math display">\[
+\left(\dfrac{\partial Q_i}{\partial q_j}\right)_{p,\,q} = \left(\dfrac{\partial p_j}{\partial P_i}\right)_{Q,\,P},\qquad \left(\dfrac{\partial Q_i}{\partial p_j}\right)_{p,\,q} = -\left(\dfrac{\partial q_j}{\partial P_i}\right)_{Q,\,P}.
+\tag{4.23}\]</span></span></p>
+<p>위 식에서 아래첨자 <span class="math inline">\(p,\,q\)</span> 는 <span class="math inline">\(Q=Q(\boldsymbol{p},\boldsymbol{q})\)</span> 임을 의미하며, <span class="math inline">\(Q,\,P\)</span> 는 <span class="math inline">\(p_j,\,q_j\)</span> 가 <span class="math inline">\(\boldsymbol{Q},\,\boldsymbol{P}\)</span> 의 함수임을 의미한다. 이와 비슷한 방법으로 <span class="math inline">\(\dot{P}_i\)</span> 에 대해 처리하면</p>
+<p><span id="eq-CM_symplectic_approach_to_cananolical_transform_4"><span class="math display">\[
+\left(\dfrac{\partial P_i}{\partial q_j}\right)_{p,\,q} = -\left(\dfrac{\partial p_j}{\partial Q_i}\right)_{Q,\,P},\qquad \left(\dfrac{\partial P_i}{\partial p_j}\right)_{p,\,q} = \left(\dfrac{\partial q_j}{\partial Q_i}\right)_{Q,\,P}.
+\tag{4.24}\]</span></span></p>
+<p>를 얻는다. <a href="#eq-CM_symplectic_approach_to_cananolical_transform_3" class="quarto-xref">식&nbsp;<span>4.23</span></a>, <a href="#eq-CM_symplectic_approach_to_cananolical_transform_4" class="quarto-xref">식&nbsp;<span>4.24</span></a> 는 제한된 정준 변환에 대한 직접 조건으로 알려져 있다.</p>
+</section>
+<section id="제한된-정준변환에서의-심플렉틱-조건" class="level4">
+<h4 class="anchored" data-anchor-id="제한된-정준변환에서의-심플렉틱-조건"><strong>제한된 정준변환에서의 심플렉틱 조건</strong></h4>
+<p>우리는 앞서 <span class="math inline">\(\boldsymbol{\eta }= \begin{bmatrix} \boldsymbol{q} &amp; \boldsymbol{p}\end{bmatrix}^T\)</span> 와 <span class="math inline">\(\boldsymbol{J} = \begin{bmatrix} \boldsymbol{0} &amp; \boldsymbol{1}\\ \boldsymbol{-1}&amp; \boldsymbol{0}\end{bmatrix}\)</span> 에 대해 해밀턴 방정식을 다음과 같이 쓸 수 있다는 것을 안다.</p>
+<p><span class="math display">\[
+\boldsymbol{\dot\eta} = \boldsymbol{J}\dfrac{\partial H}{\partial \boldsymbol{\eta}}.
+\]</span></p>
+<p>이제 제한된 정준변환 <a href="#eq-CM_restricted_canonical_transform" class="quarto-xref">식&nbsp;<span>4.19</span></a> 을</p>
+<p><span id="eq-CM_restricted_canonical_transform_symplectic_form"><span class="math display">\[
+\boldsymbol{\zeta} = \boldsymbol{\zeta}(\boldsymbol{\eta})
+\tag{4.25}\]</span></span></p>
+<p>라고 하자. <span class="math inline">\(\boldsymbol{\zeta}\)</span> 에 대한 시간 미분은</p>
+<p><span class="math display">\[
+\dot{\zeta}_i = \sum_j \dfrac{\partial \zeta_i}{\partial\eta_j}\dot{\eta}_j
+\]</span></p>
+<p>이므로 행렬 <span class="math inline">\(\boldsymbol{M}\)</span> 을</p>
+<p><span id="eq-CM_symplectic_approach_to_cananolical_transform_5"><span class="math display">\[
+M_{ij} := \partial \zeta_i/\partial \eta_j
+\tag{4.26}\]</span></span></p>
+<p>로 정의하면</p>
+<p><span id="eq-CM_symplectic_approach_to_cananolical_transform_6"><span class="math display">\[
+\boldsymbol{\dot\zeta} = \boldsymbol{M \dot{\eta}} = \boldsymbol{MJ}\dfrac{\partial H}{\partial \boldsymbol{\eta}}
+\tag{4.27}\]</span></span></p>
+<p>이다. 이제 역변환에 의해 <span class="math inline">\(H=H(\boldsymbol{\zeta})\)</span> 로 간주하고 <span class="math inline">\(\boldsymbol{\eta}\)</span> 에 대해 미분하면</p>
+<p><span id="eq-CM_symplectic_approach_to_cananolical_transform_7"><span class="math display">\[
+\dfrac{\partial H}{\partial \eta_i} = \sum_j \dfrac{\partial H}{\partial \zeta_j}\dfrac{\partial \zeta_j}{\partial \eta_i}
+\tag{4.28}\]</span></span></p>
+<p>이며, 이는 아래와 같이 쓸 수 있다.</p>
+<p><span id="eq-CM_symplectic_approach_to_cananolical_transform_8"><span class="math display">\[
+\dfrac{\partial H}{\partial \boldsymbol{\eta}} = \boldsymbol{M}^T\dfrac{\partial H}{\partial \boldsymbol{\zeta}}.
+\tag{4.29}\]</span></span></p>
+<p><a href="#eq-CM_symplectic_approach_to_cananolical_transform_6" class="quarto-xref">식&nbsp;<span>4.27</span></a> 과 <a href="#eq-CM_symplectic_approach_to_cananolical_transform_8" class="quarto-xref">식&nbsp;<span>4.29</span></a> 로 부터</p>
+<p><span id="eq-CM_symplectic_approach_to_cananolical_transform_9"><span class="math display">\[
+\boldsymbol{\dot{\zeta}} = \boldsymbol{MJM}^T \dfrac{\partial H}{\partial \boldsymbol{\zeta}}.
+\tag{4.30}\]</span></span></p>
+<p>그러나 우리는 새로운 변수에 대해서도 다음이 성립해야 한다는 것을 알고 있다.</p>
+<p><span class="math display">\[
+\boldsymbol{\dot\zeta} = \boldsymbol{J}\dfrac{\partial H}{\partial \boldsymbol{\zeta}}.
+\]</span></p>
+<p>확장된 정준변환의 경우에는 우변에 상수를 곱한 값으로 성립할 수 있지만 여기서는 정준변환만을 고려하자. 그렇다면</p>
+<p><span id="eq-CM_symplectic_approach_to_cananolical_transform_10"><span class="math display">\[
+\boldsymbol{MJ} = \boldsymbol{J}(\boldsymbol{M}^T)^{-1}
+\tag{4.31}\]</span></span></p>
+<p>이 성립해야 한다. 여기에 <span class="math inline">\(\boldsymbol{J}^2=\boldsymbol{I}\)</span> 이므로 다음 역시 성립한다.</p>
+<p><span id="eq-CM_symplectic_approach_to_cananolical_transform_11"><span class="math display">\[
+\boldsymbol{JM} = (\boldsymbol{M}^T)^{-1}\boldsymbol{J},\qquad \text{or}\qquad (\boldsymbol{M}^{T})^{-1}\boldsymbol{JM} = \boldsymbol{J}.
+\tag{4.32}\]</span></span></p>
+<p><a href="#eq-CM_symplectic_approach_to_cananolical_transform_10" class="quarto-xref">식&nbsp;<span>4.31</span></a> 과 <a href="#eq-CM_symplectic_approach_to_cananolical_transform_11" class="quarto-xref">식&nbsp;<span>4.32</span></a> 을 <strong>정준 변환을 위한 심플렉틱 조건 (symplectic condition for a canonical transformation)</strong> 이라고 하고 이 조건을 만족하는 행렬 <span class="math inline">\(\boldsymbol{M}\)</span> 을 <strong>심플렉틱 행렬 (symplectic matrix)</strong> 라고 한다. 참고로 심플렉틱 행렬의 집합은 군을 이루며 이를 <strong>심플렉틱 군 (symplectic group)</strong> 이라고 한다.</p>
+</section>
+<section id="정준변환에서의-심플렉틱-조건" class="level4">
+<h4 class="anchored" data-anchor-id="정준변환에서의-심플렉틱-조건"><strong>정준변환에서의 심플렉틱 조건</strong></h4>
+<p>시간을 매개변수로 포함하는 정준 변환에 대해서는 이렇게 간단하게 유도되지 않지만 심플렉틱 조건은 성립한다. 이제</p>
+<p><span id="eq-CM_restricted_canonical_transform_symplectic_form_12"><span class="math display">\[
+\boldsymbol{\zeta  }= \boldsymbol{\zeta}(\boldsymbol{\eta},\,t)
+\tag{4.33}\]</span></span></p>
+<p>의 경우를 보자. 심플렉틱 조건의 성립을 직접적으로 보일 수 있지만 매우 길고 지루하므로 다른 방법을 사용하도록 하자.</p>
+<p><span id="eq-CM_restricted_canonical_transform_symplectic_form_13"><span class="math display">\[
+\boldsymbol{\eta} \mapsto \boldsymbol{\zeta}(t)
+\tag{4.34}\]</span></span></p>
+<p>가 정준변환이라면 특정 시작 시간 <span class="math inline">\(t_0\)</span> 에 대해</p>
+<p><span id="eq-CM_restricted_canonical_transform_symplectic_form_14"><span class="math display">\[
+\boldsymbol{\eta} \mapsto \boldsymbol{\zeta}(t_0)
+\tag{4.35}\]</span></span></p>
+<p>의 경우도 정준변환이라는 것은 자명하다. 또한 정준 변환의 정의로부터 <span id="eq-CM_restricted_canonical_transform_symplectic_form_15"><span class="math display">\[
+\boldsymbol{\zeta}(t_0)\mapsto \boldsymbol{\zeta}(t)
+\tag{4.36}\]</span></span></p>
+<p>역시 정준변환임은 자명하다. <a href="#eq-CM_restricted_canonical_transform_symplectic_form_14" class="quarto-xref">식&nbsp;<span>4.35</span></a> 은 심플렉틱 조건을 만족하므로 <a href="#eq-CM_restricted_canonical_transform_symplectic_form_15" class="quarto-xref">식&nbsp;<span>4.36</span></a> 의 경우 심플렉틱 조건을 만족한다는 것을 보이면 심플렉틱 군의 성질에 의해 <a href="#eq-CM_restricted_canonical_transform_symplectic_form_13" class="quarto-xref">식&nbsp;<span>4.34</span></a> 의 경우에도 심플렉틱 조건을 만족한다. 이제 문제는 <a href="#eq-CM_restricted_canonical_transform_symplectic_form_15" class="quarto-xref">식&nbsp;<span>4.36</span></a> 변환에 대해 심플렉틱 조건이 만족된다는 것을 보이는 것이다. 이를 위해 미소 정준 변환 (infinitesimal canonocal transformation) 개념을 도입한다.</p>
+<p>미소 변환을 아래와 같이 정의한다.</p>
+<p><span id="eq-CM_restricted_canonical_transform_symplectic_form_16"><span class="math display">\[
+Q_i = \delta q_i + \delta q_i,\qquad P_i = p_i + \delta p_i.
+\tag{4.37}\]</span></span></p>
+<p>혹은 행렬 형태로</p>
+<p><span id="eq-CM_restricted_canonical_transform_symplectic_form_17"><span class="math display">\[
+\boldsymbol{\zeta} = \boldsymbol{\eta} + \delta \boldsymbol{\eta}
+\tag{4.38}\]</span></span></p>
+<p>여기서의 <span class="math inline">\(\delta\)</span> 는 가상 변위와 무관한 미소 변화를 의미한다. 변환 생성 함수로는 미소 매개변수 <span class="math inline">\(\epsilon\)</span> 에 대해</p>
+<p><span id="eq-CM_restricted_canonical_transform_symplectic_form_18"><span class="math display">\[
+G_2 = \sum_i q_i P_i + \epsilon K(\boldsymbol{q},\,\boldsymbol{P},\,t)
+\tag{4.39}\]</span></span></p>
+<p>을 생각한다. <a href="#eq-CM_equations_for_type2_generating_function" class="quarto-xref">식&nbsp;<span>4.11</span></a> 로부터,</p>
+<p><span class="math display">\[
+p_j = P_j + \epsilon \dfrac{\partial K}{\partial q_j}  
+\]</span></p>
+<p>이므로</p>
+<p><span id="eq-CM_equations_for_type2_generating_function_19"><span class="math display">\[
+\delta p_j = P_j - p_j = - \epsilon \dfrac{\partial K}{\partial q_j}
+\tag{4.40}\]</span></span></p>
+<p>이다. 같은 방법으로</p>
+<p><span id="eq-CM_equations_for_type2_generating_function_20"><span class="math display">\[
+Q_j = q_j + \epsilon \dfrac{\partial K}{\partial P_j}.
+\tag{4.41}\]</span></span></p>
+<p><a href="#eq-CM_equations_for_type2_generating_function_19" class="quarto-xref">식&nbsp;<span>4.40</span></a> 에서 우리는 <span class="math inline">\(p_j\)</span> 와 <span class="math inline">\(P_j\)</span> 의 차이가 매우 적다는것을 안다. 따라서 <a href="#eq-CM_equations_for_type2_generating_function_20" class="quarto-xref">식&nbsp;<span>4.41</span></a> 편미분항 <span class="math inline">\(\partial P_j\)</span> 를 <span class="math inline">\(\partial p_j\)</span> 로 교체할 수 있다. 또한 <span class="math inline">\(K\)</span> 를 <span class="math inline">\(\boldsymbol{q}\)</span> 와 <span class="math inline">\(\boldsymbol{p}\)</span> 의 함수로 간주 할수 있으며, 이 경우</p>
+<p><span id="eq-CM_equations_for_type2_generating_function_21"><span class="math display">\[
+\delta q_j = \epsilon \dfrac{\partial K}{\partial p_j}
+\tag{4.42}\]</span></span></p>
+<p>라고 쓸 수 있다. 그렇다면 행렬 형식으로 아래와 같다.</p>
+<p><span id="eq-CM_equations_for_type2_generating_function_21"><span class="math display">\[
+\delta \boldsymbol{\eta} = \epsilon \boldsymbol{J} \dfrac{\partial K}{\partial \boldsymbol{\eta}}
+\tag{4.43}\]</span></span></p>
+<p><a href="#eq-CM_restricted_canonical_transform_symplectic_form_15" class="quarto-xref">식&nbsp;<span>4.36</span></a> 에서 미소 시간 간격 <span class="math inline">\(dt\)</span> 에 대해 <span class="math inline">\(t=t_0+dt\)</span> 라면 이것은 미소 정준 변환의 전형적인 예이다. <span class="math inline">\(\boldsymbol{\zeta}(\boldsymbol{\eta},\,t_0)\)</span> 로부터 <span class="math inline">\(\boldsymbol{\zeta}(\boldsymbol{\eta},t)\)</span></p>
 <p><br></p>
+</section>
 </section>
 </section>
 <section id="연습문제" class="level2 unnumbered">
@@ -805,10 +929,10 @@ Q=\ln\left(\dfrac{1}{q}\sin p\right),\qquad P = q \cot p.
 </div>
 <div class="callout-body-container">
 <div id="def-CM_poisson_bracket" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.2 (푸아송 괄호)</strong></span> <span class="math inline">\(f(\boldsymbol{q},\,\boldsymbol{q})\)</span> 와 <span class="math inline">\(g(\boldsymbol{p},\,\boldsymbol{q})\)</span> 가 위상공간에서 정의된 두 함수일 때 <strong>푸아송 괄호 (Poisson bracket)</strong> <span class="math inline">\(\{f,\,g\}\)</span> 는 다음과 같이 정의된다.</p>
+<p><span class="theorem-title"><strong>정의 4.1 (푸아송 괄호)</strong></span> <span class="math inline">\(f(\boldsymbol{q},\,\boldsymbol{q})\)</span> 와 <span class="math inline">\(g(\boldsymbol{p},\,\boldsymbol{q})\)</span> 가 위상공간에서 정의된 두 함수일 때 <strong>푸아송 괄호 (Poisson bracket)</strong> <span class="math inline">\(\{f,\,g\}\)</span> 는 다음과 같이 정의된다.</p>
 <p><span id="eq-CM_definition_of_poission_bracket"><span class="math display">\[
 \{f,\,g\} := \sum_i \left[\dfrac{\partial f}{\partial q_i}\dfrac{\partial g}{\partial p_i} - \dfrac{\partial f}{\partial p_i}\dfrac{\partial g}{\partial q_i}\right]
-\tag{4.20}\]</span></span></p>
+\tag{4.44}\]</span></span></p>
 </div>
 </div>
 </div>
@@ -840,7 +964,7 @@ Q=\ln\left(\dfrac{1}{q}\sin p\right),\qquad P = q \cot p.
 <p><span class="theorem-title"><strong>정리 4.2</strong></span> 임의의 함수 <span class="math inline">\(f(\boldsymbol{q},\boldsymbol{p},\,t)\)</span> 에 대해 다음이 성립한다.</p>
 <p><span id="eq-CM_time_derivative_and_poisson_bracket"><span class="math display">\[
 \dfrac{df}{dt} = \{f,\, H\} + \dfrac{\partial f}{\partial t}.
-\tag{4.21}\]</span></span></p>
+\tag{4.45}\]</span></span></p>
 </div>
 </div>
 <div class="proof">
@@ -1001,8 +1125,7 @@ A_i &amp;= p^2x_i - (\boldsymbol{p\cdot x})p_i - \dfrac{mKx_i}{r^2}
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-      window.quartoDecorateExternalLinks = function (root) {
-     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -1011,69 +1134,8 @@ A_i &amp;= p^2x_i - (\boldsymbol{p\cdot x})p_i - \dfrac{mKx_i}{r^2}
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
-          if (!link.classList.contains('no-external-icon')) {
-          }
         }
       }
-      };
-      window.quartoDecorateExternalLinks(window.document);
-    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
-    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
-    const hideOnEscAndFocusOut = {
-      name: 'hideOnEscAndFocusOut',
-      defaultValue: true,
-      fn(instance) {
-        const dismiss = () => {
-          // A show scheduled by the trigger delay would otherwise reopen it
-          instance.clearDelayTimeouts();
-          instance.hide();
-        };
-        const onKeyDown = (event) => {
-          if (event.key !== 'Escape') {
-            return;
-          }
-          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
-          // except an open reveal.js slide menu, which Esc should close too.
-          // The menu handles keys only when its keyboard option is on.
-          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
-            window.Reveal.getConfig().menu?.keyboard !== false;
-          if (!menuHandlesEsc) {
-            event.stopPropagation();
-          }
-          if (instance.popper.contains(window.document.activeElement)) {
-            // Disabled while refocusing so the focus trigger does not reopen it
-            instance.disable();
-            instance.reference.focus();
-            instance.enable();
-          }
-          dismiss();
-        };
-        const onFocusOut = (event) => {
-          const target = event.relatedTarget;
-          if (target && !instance.reference.contains(target) &&
-              !instance.popper.contains(target)) {
-            dismiss();
-          }
-        };
-        // On the trigger too: a click trigger (code-annotations: select) has no
-        // blur handling. Attached for the instance's lifetime so leaving the
-        // trigger also cancels a show still pending on the trigger delay.
-        instance.reference.addEventListener('focusout', onFocusOut);
-        return {
-          onShow() {
-            window.document.addEventListener('keydown', onKeyDown, true);
-            instance.popper.addEventListener('focusout', onFocusOut);
-          },
-          onHide() {
-            window.document.removeEventListener('keydown', onKeyDown, true);
-            instance.popper.removeEventListener('focusout', onFocusOut);
-          },
-          onDestroy() {
-            instance.reference.removeEventListener('focusout', onFocusOut);
-          },
-        };
-      },
-    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -1087,7 +1149,6 @@ A_i &amp;= p^2x_i - (\boldsymbol{p\cdot x})p_i - \dfrac{mKx_i}{r^2}
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
-        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -1250,54 +1311,44 @@ A_i &amp;= p^2x_i - (\boldsymbol{p\cdot x})p_i - \dfrac{mKx_i}{r^2}
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          // Each band is positioned against its own containing block, which is
-          // not the offsetParent of the lines, so place it from client rects.
-          const placeBand = (band, firstEl, lastEl, codeBlock) => {
-            const container = band.offsetParent;
-            if (container === null) {
-              return;
-            }
-            const containerRect = container.getBoundingClientRect();
-            // Reveal.js scales slides with a transform, so convert client
-            // pixels back to the CSS pixels of the container.
-            const scale = containerRect.height / container.offsetHeight || 1;
-            const firstRect = firstEl.getBoundingClientRect();
-            const lastRect = lastEl.getBoundingClientRect();
-            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
-            const height = (lastRect.bottom - firstRect.top) / scale;
-            band.style.top = top - 2 + "px";
-            band.style.height = height + 4 + "px";
-            if (codeBlock) {
-              // Without the copy button wrapper, the containing block is wider
-              // than the code block, so span the code block explicitly.
-              const blockRect = codeBlock.getBoundingClientRect();
-              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
-              band.style.width = blockRect.width / scale + "px";
-            }
-          };
+          let top = null;
+          let height = null;
+          let parent = null;
           if (lineIds.length > 0) {
-            const el = window.document.getElementById(lineIds[0]);
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const parent = el.parentElement.parentElement;
-            // cook up a div (if necessary) and position it
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
             }
-            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
             }
-            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -1396,10 +1447,7 @@ A_i &amp;= p^2x_i - (\boldsymbol{p\cdot x})p_i - \dfrac{mKx_i}{r^2}
     }
   });
   </script>
-  <script type="application/javascript">
-  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
-  </script>
-<nav class="page-navigation" aria-label="Page">
+<nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html" class="pagination-link" aria-label="해밀턴 동역학">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></span>
