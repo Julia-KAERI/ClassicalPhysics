@@ -1021,7 +1021,7 @@ $$
 \end{aligned}
 $$
 
-($b$) $\{g,\,\{h,\,f\}\}= g_k J_{kl}(h_{jl} J_{ji}f_{i} + h_j J_{ji}f_{il})$ 이므로,
+($b$) $\{g,\,\{h,\,f\}\}= g_k J_{kl}(h_{jl} J_{ji}f_{i} + h_j J_{ji}f_{il})$ 라고 쓸 수 있다. 인덱스는 모두 dummy 이므로 순서만 맞추면 된다. 
 
 $$
 \begin{aligned}
