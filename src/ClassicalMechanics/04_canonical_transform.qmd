@@ -614,7 +614,7 @@ $${#eq-CM_definition_of_poission_bracket_2}
 
 
 
-아래의 명제는 푸아송 괄호의 순전히 수학적인 성질에 대한 것이다. 증명은 생략한다.
+아래의 명제는 푸아송 괄호의 순전히 수학적인 성질에 대한 것이다. ($1$), ($2$), ($3$) 에 대한 증명은 생략하며 ($4$) 에 대한 증명은 @exr-CM_jacobi_identity 로 넘긴다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -676,9 +676,11 @@ $${#eq-CM_definition_of_poission_bracket_2}
 
 </br>
 
+### 정준 불변량 {#sec-CM_canonical_invariance}
+
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-CM_invariance_under_poisson_backet_under_canonical_transform}
+::: {#prp-CM_invariance_under_poisson_backet_under_canonical_transform_1}
 
 정준변환 $\bf{\eta} \mapsto \bf{\zeta}$ 에 대해 푸아송 괄호는 불변이다. 즉
 
@@ -721,11 +723,56 @@ $\square$
 
 :::
 
+
+### 심플렉틱 조건과 변환생성함수 {#sec-CM_symplectic_condition_and_generating_function}
+
+여기서는 자유도 1인 시스템에서 심플렉틱 조건이 성립하면 변환생성함수가 존재한다는 것을 증명한다. 다차원 에서는 Goldstein 은 참고문헌을 제시했다. 일단 변환 함수 $Q=Q(q,\,p),\,P=P(q,\,p)$ 가 가역이고 $\partial Q/\partial p \ne 0$ 이면 음함수 정리에 의해 $p = \phi (q,\,Q)$ 인 $\phi$ 가 (국소적으로) 존재한다. 또한 $P(q,\, \phi(q,\,Q)) = \psi (q,\,Q)$ 역시 존재한다.  
+
+제 1종 변환생성함수 $G_1(q,\,Q,\,t)$  대한 @eq-CM_equations_for_type1_generating_function 를 생각하면
+
+$$
+\dfrac{\partial \phi}{\partial Q} = - \dfrac{\partial \psi}{\partial q}
+$$ {#eq-symplectic_condition_and_generating_function_1}
+
+일 경우 1종 변환함수가 존재한다. $Q=Q(q,\,\phi(q,\,Q))$ 와 $\partial Q/\partial Q=1$ 로부터
+
+$$
+1=\dfrac{\partial Q}{\partial Q} = \dfrac{\partial Q}{\partial p}\dfrac{\partial \phi}{\partial Q}.
+$${#eq-symplectic_condition_and_generating_function_2}
+
+푸아송 괄호로부터
+
+$$
+\begin{aligned}
+1= \{Q,\,P\} &= \dfrac{\partial Q}{\partial q}\dfrac{\partial P}{\partial p} - \dfrac{\partial P}{\partial q}\dfrac{\partial Q}{\partial p} \\[0.3em]
+&= \dfrac{\partial Q}{\partial q}\dfrac{\partial \psi}{\partial Q}\dfrac{\partial Q}{\partial p} - \dfrac{\partial Q}{\partial p}\left(\dfrac{\partial \psi}{\partial q}+ \dfrac{\partial \psi}{\partial Q}\dfrac{\partial Q}{\partial q}\right)  \\[0.3em]
+&= \dfrac{\partial \psi}{\partial Q}\left(\underbrace{\dfrac{\partial Q}{\partial q}\dfrac{\partial Q}{\partial p} - \dfrac{\partial Q}{\partial p}\dfrac{\partial Q}{\partial q}}_{\large = 0}\right) - \dfrac{\partial Q}{\partial p}\dfrac{\partial \psi}{\partial q} = - \dfrac{\partial Q}{\partial p}\dfrac{\partial \psi}{\partial q}
+\end{aligned}
+$${#eq-symplectic_condition_and_generating_function_3}
+
+
+$\partial Q/\partial p\ne 0$ 이라는 조건과 @eq-symplectic_condition_and_generating_function_2 와 @eq-symplectic_condition_and_generating_function_3 으로부터 @eq-symplectic_condition_and_generating_function_1 이 성립한다. 
 </br>
 
-푸아송 괄호가 정준 변환에 대해 불변이므로 이제 $\{f,\,g\}_\bf{\eta}$ 나 $\{f,\,g\}_{\bf{q},\bf{p}}$ 에서의 아래첨자는 의미가 사라진다. 따라서 앞으로는 일반적으로 아래 첨자 없이 사용한다.
+푸아송 괄호가 정준 변환에 대해 불변이므로 이제 $\{f,\,g\}_\bf{\eta}$ 나 $\{f,\,g\}_{\bf{q},\bf{p}}$ 에서의 아래첨자는 의미가 사라진다. 따라서 앞으로는 일반적으로 아래 첨자 없이 사용한다. 
 
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-CM_invariance_under_poisson_backet_under_canonical_transform_2}
+
+정준변환 $\bf{\eta} \mapsto \bf{\zeta}$ 에 대해 위상공간에서의 부피 성분은 불변이다. 즉 $d\bf{\eta} = d\bf{\zeta}$ 이다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+$d\bf{\eta} = dq_1\cdots dq_n dp_1 \cdots dp_n$, $d\bf{\zeta}=dQ_1\cdots dQ_n dP_1 \cdots dP_n$ 을 생각하자. $d\zeta_i = \dfrac{\partial \zeta_i}{\partial \eta_j}d\eta_j = M_{ij}d\eta_j$ 이므로 $d\bf{\zeta} = |\det(M)| d\bf{\eta}$ 이다. 심플렉틱 조건 $\bf{MJM}^T=\bf{J}$ 으로부터 $(\det (\bf{M}))^2 \cdot (\det (\bf{J})) = \det(\bf{J})$ 임을 안다. 이로부터 $|\det{M}|=1$ 이므로 $d\bf{\eta} = d\bf{\zeta}$ 이다. $\square$
+
+
+:::
 
 
 아래의 수학적 성질은 푸아송 괄호와 해밀토니안, 그리고 시간의 밀접한 연관성을 보여준다.
@@ -1007,9 +1054,11 @@ $$
 $${#eq-exr_CM_jacobi_identity_1}
  
 ($b$) $\{g,\,\{h,\,f\}\}$ 를 계산하고 @eq-exr_CM_jacobi_identity_1 의 결과와 합쳐 $h$ 에 대한 두번 편미분 항이 사라짐을 보여라.
+
+($c$) @eq-exr_CM_jacobi_identity_0 이 성립함을 보여라.
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1021,15 +1070,30 @@ $$
 \end{aligned}
 $$
 
-($b$) $\{g,\,\{h,\,f\}\}= g_k J_{kl}(h_{jl} J_{ji}f_{i} + h_j J_{ji}f_{il})$ 라고 쓸 수 있다. 인덱스는 모두 dummy 이므로 순서만 맞추면 된다. 
+($b$) $\{g,\,\{h,\,f\}\}= g_k J_{kl}(h_{jl} J_{ji}f_{i} + h_j J_{ji}f_{il})$ 라고 쓸 수 있다. 인덱스는 모두 dummy 이므로 식 내에서 순서만 맞추면 된다. 이제 둘을 더하면, 그리고 $h_{lj}= h_{jl}$ 임을 이용하면
 
 $$
 \begin{aligned}
-\{f,\,\{g,\,h\}\} + \{g,\,\{h,\,f\}\} &= J_{ij}J_{kl}(f_ig_{kj}h_l +f_{lj}g_i h_k) + \underline{J_{ij}J_{kl}(f_i g_k h_{lj} + f_l g_i h_{kj})}
+\{f,\,\{g,\,h\}\} +& \{g,\,\{h,\,f\}\} \\[0.3em]
+&= J_{kl}(J_{ij} f_i g_{kj}h_l + J_{ji}f_{il}g_kh_j) + J_{kl}(J_{ij}f_ig_kh_{lj} + J_{ji}f_ig_kh_{jl}) \\[0.3em]
+&= J_{kl}(J_{ij} f_i g_{kj}h_l + J_{ji}f_{il}g_kh_j) + J_{kl}(\underbrace{J_{ij}+ J_{ji}}_{\large = 0})f_ig_kh_{jl} \\[0.3em]
+&= J_{kl}(J_{ij} f_i g_{kj}h_l + J_{ji}f_{il}g_kh_j)
 \end{aligned}
 $$
 
-여기서 $J_{ij}J_{kl}(f_i g_k h_{lj} + f_l g_i h_{kj})$ 을 보자. $h_{ij}= h_{ji}$ 이며 
+($c$) $\{h,\,\{f,\,g\}\}= h_i J_{ij}(f_{kj} J_{kl}g_{l} + f_k J_{kl}g_{li})$ 에서 인덱스를 위 식과의 합이 잘 맛도록 고치면
 
+$$
+\{h,\,\{f,\,g\}\}= h_j J_{ji}f_{li} J_{lk}g_{k} + h_l J_{lk}f_i J_{ij}g_{jk}
+$$ 
+
+이며 이로부터
+
+$$
+\begin{aligned}
+\{f,\,\{g,\,h\}\} &+ \{g,\, \{h,\,f\}\} + \{h,\,\{f,\,g\}\} \\[0.3em]
+&= J_{ji}(\underbrace{J_{kl} + J_{lk}}_{\large = 0})f_{il}g_k h_j + J_{ij}(\underbrace{J_{kl}+ J_{lk}}_{\large = 0})f_i g_{jk}h_l = 0
+\end{aligned}
+$$
 
 :::
