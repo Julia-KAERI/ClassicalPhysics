@@ -1,3 +1,13 @@
 p {
   text-align: justify
 }
+
+/* 전체 KaTeX 수식 크기 조절 (기본값: 1.21em) */
+.katex {
+  font-size: 1.1em;
+}
+
+/* 블록 수식($$ ... $$) 크기만 별도로 조절할 때 */
+.katex-display {
+  font-size: 1.05em;
+}

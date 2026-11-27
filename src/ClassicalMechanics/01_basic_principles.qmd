@@ -389,7 +389,7 @@ $$
 \bf{L} &= \sum_a \bf{r}_i \times m_a \bf{v}_a  \\
 &=\sum_a \bf{R}_\text{CM} \times m_a \bf{V}_\text{CM} + \sum_a \bf{r}'_a  \times m_i \bf{v}'_a  \\[0.3em]
 & \qquad + \left(\sum_a m_a \bf{r}'_a \right) \times \bf{V}_\text{CM} + \bf{R}_\text{CM} \times \left( \dfrac{d}{dt} \sum_a m_a \bf{r}'_a\right) \\[0.3em]
-& = \underbrace{\bf{R}_\text{CM} \times M\bf{V}_\text{CM}}_{\Large :=\mathbf{L}_\text{CM}} + \underbrace{\sum_a \bf{r}'_a \times \bf{p}'_a}_{\Large := \bf{L}_R}.
+& = \underbrace{\bf{R}_\text{CM} \times M\bf{V}_\text{CM}}_{\normalsize :=\bf{L}_\text{CM}} + \underbrace{\sum_a \bf{r}'_a \times \bf{p}'_a}_{\normalsize := \bf{L}_R}.
 \end{aligned}
 $$ {#eq-CM_total_angular_momentum_for_center_of_mass_coord}
 
@@ -405,7 +405,7 @@ $$ {#eq-work_system_of_particles}
 $$
 \begin{aligned}
 \sum_i \int_{P_1}^{P_2} \bf{F}_i \cdot d\bf{s}_i &= \sum_i \int_{P_1}^{P_2} m_i \bf{v}_i \cdot \bf{v}_i dt = \sum_i \int_{P_1}^{P_2} d\left(\dfrac{1}{2} m_i v_i^2\right) \\[0.3em]
-&= \underbrace{\sum_i \dfrac{1}{2}m(v_i (P_2))^2}_{\Large =T_1} - \underbrace{\sum_i \dfrac{1}{2} m_i (v_i (P_1))^2}_{\Large = T2} = T_2-T_2. 
+&= \underbrace{\sum_i \dfrac{1}{2}m(v_i (P_2))^2}_{\normalsize =T_1} - \underbrace{\sum_i \dfrac{1}{2} m_i (v_i (P_1))^2}_{\normalsize = T2} = T_2-T_2. 
 \end{aligned}
 $$
 
@@ -796,7 +796,7 @@ $$ {#eq-CM_sec_lagrange_1}
 $$
 \begin{aligned}
 \dfrac{d}{dt} \left(\dfrac{\partial \bf{r}_a}{\partial q_j} \right) &= \sum_k \dfrac{ \partial^2 \bf{r}_a }{\partial q_j \partial q_k} \dot{q}_k + \dfrac{\partial^2 \bf{r}_a}{\partial q_j \partial t}  \\[0.3em]
-&=\dfrac{\partial}{\partial q_j}\underbrace{\left[\sum_k \dfrac{ \partial \bf{r}_a }{\partial q_k} \dot{q}_k + \dfrac{\partial \bf{r}_a}{\partial t}\right]}_{\Large = \dot{\bf{r}}_a}= \dfrac{\partial \dot{\bf{r}}_a}{\partial q_j} = \dfrac{\partial \bf{v}_a}{\partial q_j}
+&=\dfrac{\partial}{\partial q_j}\underbrace{\left[\sum_k \dfrac{ \partial \bf{r}_a }{\partial q_k} \dot{q}_k + \dfrac{\partial \bf{r}_a}{\partial t}\right]}_{\normalsize = \dot{\bf{r}}_a}= \dfrac{\partial \dot{\bf{r}}_a}{\partial q_j} = \dfrac{\partial \bf{v}_a}{\partial q_j}
 \end{aligned}
 $$ {#eq-CM_sec_lagrange_2}
 
@@ -853,23 +853,23 @@ $$
 \dfrac{d}{dt} \left( \dfrac{\partial (T-V)}{\partial \dot{q}_j} \right) - \dfrac{\partial (T-V)}{\partial q_j} = 0
 $$ {#eq-CM_lagrange_from_dlembert_3}
 
-여기서 **라그랑지안 (Lagrangian)** $L$ 을 $L=T-V$ 로 정의한다면,
+여기서 **라그랑지안 (Lagrangian)** $\mathcal{L}$ 을 $\mathcal{L}=T-V$ 로 정의한다면,
 
 $$
-\dfrac{d}{dt} \left( \dfrac{\partial L}{\partial \dot{q}_j} \right) - \dfrac{\partial L}{\partial q_j} = 0
+\dfrac{d}{dt} \left( \dfrac{\partial \lagr}{\partial \dot{q}_j} \right) - \dfrac{\partial \lagr}{\partial q_j} = 0
 $$ {#eq-CM_Lagrange_equation_from_Dlambert_principle}
 
 이며 이를 **라그랑쥬 방정식(Lagrange's equation)** 이라고 한다.
 
 #### **라그랑지안은 유일하지 않다.**
 
-라그랑지안 $L(q,\,\dot{q},\,t)$ 와 어떤 미분가능하며 $q,\,t$ 에만 의존하는 함수 $F(q,\,t)$ 에 대해, 
+라그랑지안 $\lagr(q,\,\dot{q},\,t)$ 와 어떤 미분가능하며 $q,\,t$ 에만 의존하는 함수 $F(q,\,t)$ 에 대해, 
 
 $$
-L'(q,\,\dot{q},\,t) = L(q,\,\dot{q},\,t) + \dfrac{dF}{dt}
+\lagr'(q,\,\dot{q},\,t) = \lagr(q,\,\dot{q},\,t) + \dfrac{dF}{dt}
 $$ {#eq-CM_non_uniqueness_of_largangian}
 
-라고 하면 $L'$ 에 대한 라그랑쥬 방정식은 $L$ 에 대한 라그랑쥬 방정식과 같다는 것을 보일 수 있다(@exr-goldestein_1_14). 즉 어떤 시스템에 대한 라그랑지안은 유일하지 않다. 때때로 $L=T-V$ 보다 @eq-CM_non_uniqueness_of_largangian 형태의 라그랑지안이 유용한 경우가 있다.
+라고 하면 $\lagr'$ 에 대한 라그랑쥬 방정식은 $\lagr$ 에 대한 라그랑쥬 방정식과 같다는 것을 보일 수 있다(@exr-goldestein_1_14). 즉 어떤 시스템에 대한 라그랑지안은 유일하지 않다. 때때로 $\lagr=T-V$ 보다 @eq-CM_non_uniqueness_of_largangian 형태의 라그랑지안이 유용한 경우가 있다.
 
 </br>
 
@@ -928,7 +928,7 @@ $$
 을 얻는다. 즉 @eq-CM_electromagnetic_potential 로부터 얻은 일반화된 힘은 로런츠 힘(Lorentz force) 이며, 따라서 전자기장 내의 하전입자에 대한 라그랑지안을 다음과 같이 쓸 수 있다.
 
 $$
-L = T - q\Phi + \dfrac{q}{c}\bf{A\cdot v}.
+\lagr = T - q\Phi + \dfrac{q}{c}\bf{A\cdot v}.
 $$ {#eq-CM_lagrangian_for_charged_particle_in_electromagnetic_field}
 
 
@@ -937,7 +937,7 @@ $$ {#eq-CM_lagrangian_for_charged_particle_in_electromagnetic_field}
 일반화된 힘 $Q_j$ 가 포텐셜로부터 유도되지 않더라도 라그랑쥬 방정식을 다음과 같이 쓸 수 있다.
 
 $$
-\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_j}\right) - \dfrac{\partial L}{\partial q_j} = Q_j.
+\dfrac{d}{dt}\left(\dfrac{\partial \lagr}{\partial \dot{q}_j}\right) - \dfrac{\partial \lagr}{\partial q_j} = Q_j.
 $$
 
 여기서 라그랑지안 $L$ 은 보존력에 대한 포텐셜만을 포함하는 라그랑지안이다. 예를 들어 마찰력이 있는 경우 이런 상황이 발생한다. 마찰력 가운데 속도에 비례하는 마찰력의 경우 레일리 소산 함수 (Rayleigh's dissipation function) 
@@ -970,7 +970,7 @@ $$
 이로부터, 라그랑쥬 방정식은
 
 $$
-\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_j}\right) - \dfrac{\partial L}{\partial q_j} + \dfrac{\partial R}{\partial \dot{q}_j} = 0.
+\dfrac{d}{dt}\left(\dfrac{\partial \lagr}{\partial \dot{q}_j}\right) - \dfrac{\partial\lagr}{\partial q_j} + \dfrac{\partial R}{\partial \dot{q}_j} = 0.
 $$
 
 
@@ -987,13 +987,13 @@ $$
 일정한 질량을 갖는 single particle의 운동방정식은 다음과 같은 kinetic energy에 대한 differential equation을 만족함을 보이시오.
 
 $$
-\dfrac{dT}{dt} = \mathbf{F}\cdot \mathbf{v}\;.
+\dfrac{dT}{dt} = \bf{F}\cdot \bf{v}\;.
 $$
 
 만약 질량이 시간에 대해 변한다면 다음의 미분방정식을 만족함을 보이시오.
 
 $$
-\dfrac{d(mT)}{dt} = \mathbf{F} \cdot \mathbf{p}\;.
+\dfrac{d(mT)}{dt} = \bf{F} \cdot \bf{p}\;.
 $$
 
 :::
@@ -1006,7 +1006,7 @@ For $m=\text{constant}$,
 
 $$
 \begin{aligned}
-\dfrac{dT}{dt} = \dfrac{d}{dt}\left(\dfrac{1}{2}mv^2 \right) = m\mathbf{v}\cdot\dot{\mathbf{v}}= \mathbf{F}\cdot \mathbf{v}\;.\notag
+\dfrac{dT}{dt} = \dfrac{d}{dt}\left(\dfrac{1}{2}mv^2 \right) = m\bf{v}\cdot\dot{\bf{v}}= \bf{F}\cdot \bf{v}\;.\notag
 \end{aligned}
 $$
 
@@ -1014,8 +1014,9 @@ For $\dot{m}\ne 0$ case,
 
 $$
 \begin{aligned}
-    \mathbf{F} &= \dot{\mathbf{p}} = \dot{m} \mathbf{v} + m \dot{\mathbf{v}}\;.\notag \\
-    \dfrac{dT}{dt} &= \dfrac{d}{dt}\left(\dfrac{1}{2}m^2v^2 \right) = m^2\mathbf{v}\cdot\dot{\mathbf{v}} +  \dot{m}m v^2= \mathbf{F}\cdot \mathbf{v} = m\mathbf{v} \cdot (\dot{m} \mathbf{v} + m \dot{\mathbf{v}}) = \mathbf{F}\cdot \mathbf{p}\;.\notag
+    \bf{F} &= \dot{\bf{p}} = \dot{m} \bf{v} + m \dot{\bf{v}}\;.\\
+    \dfrac{dT}{dt} &= \dfrac{d}{dt}\left(\dfrac{1}{2}m^2v^2 \right) = m^2\bf{v}\cdot\dot{\bf{v}} +  \dot{m}m v^2= \bf{F}\cdot \bf{v} \\[0.3em]
+    &= m\bf{v} \cdot (\dot{m} \bf{v} + m \dot{\bf{v}}) = \bf{F}\cdot \bf{p}\;.
     \end{aligned}
 $$
 
@@ -1029,7 +1030,7 @@ $$
 
 #### Goldstein 1.5
 
-임의의 origin에서의 center of mass에 대한 position vector $\mathbf{R}$ 의 크기 $R=\|\mathbf{R}\|$ 은 다음의 방정식을 만족함을 보이시오.
+임의의 origin에서의 center of mass에 대한 position vector $\bf{R}$ 의 크기 $R=\|\bf{R}\|$ 은 다음의 방정식을 만족함을 보이시오.
 
 $$
 M^2R^2 = M \sum\limits_i m_i {r_i}^2 - \dfrac{1}{2} \sum_{i,\,j}m_i m_j {r_{ij}}^2 \;.
@@ -1040,13 +1041,13 @@ $$
 
 ::: {.solution}
 
-$\mathbf{R}=\sum\limits_i m_i \mathbf{r}_i$, $M=\sum\limits_i m_i$ 에 대해
+$\bf{R}=\sum\limits_i m_i \bf{r}_i$, $M=\sum\limits_i m_i$ 에 대해
 
 $$
 \begin{aligned}
 M\sum_i m_i {r_i}^2 - \dfrac{1}{2} \sum_{i,\,j}m_i m_j {r_{ij}}^2  &= \sum_{i,\,j}m_i m_j {r_i}^2 - \dfrac{1}{2} \sum_{i,\,j} m_i m_j {r_{i,\,j}}^2\notag \\
 &= \dfrac{1}{2} \sum_{i,\,j} m_i m_i ({r_i}^2 + {r_j}^2 - {r_{i,\,j}}^2)  \notag \\ 
-&= \dfrac{1}{2} \sum_{i,\,j}m_i m_j (2 \mathbf{r}_i \cdot \mathbf{r}_j) = (M\mathbf{R}) \cdot (M\mathbf{R}) \notag \\
+&= \dfrac{1}{2} \sum_{i,\,j}m_i m_j (2 \bf{r}_i \cdot \bf{r}_j) = (M\bf{R}) \cdot (M\bf{R}) \notag \\
 &= M^2R^2\;. \notag
 \end{aligned}
 $$
@@ -1100,7 +1101,7 @@ $$
 
 #### Goldstein 1.14
 
-$n$-자유도 시스템의 라그랑지안 $L$ 이 라그랑쥬 방정식을 만족시킬 때, 임의의 미분가능한 함수 $F=F(q_1,\ldots,\,q_n,\,t)$ 에 대해 $L' = L + dF/dt$ 역시 라그랑쥬 방정식을 만족함을 보여라.
+$n$-자유도 시스템의 라그랑지안 $L$ 이 라그랑쥬 방정식을 만족시킬 때, 임의의 미분가능한 함수 $F=F(q_1,\ldots,\,q_n,\,t)$ 에 대해 $\lagr' = \lagr + dF/dt$ 역시 라그랑쥬 방정식을 만족함을 보여라.
 
 :::
 
@@ -1115,8 +1116,8 @@ $$
 임을 이용한다.
 $$
 \begin{aligned}
-\dfrac{d}{dt}\dfrac{\partial L'}{\partial \dot{q}_j} - \dfrac{\partial L'}{\partial q_j} &= \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_j} + \dfrac{\partial F}{\partial q_j}\right) - \dfrac{\partial L}{\partial q_j} - \dfrac{\partial}{\partial q_j}\dfrac{dF}{dt} \\[0.3em]
-&=\dfrac{d}{dt}\dfrac{\partial L}{\partial \dot{q}_j} - \dfrac{\partial L}{\partial q_j} + \underbrace{\dfrac{d}{dt}\dfrac{\partial F}{\partial q_j} - \dfrac{\partial}{\partial q_j}\dfrac{dF}{dt}}_{\Large = 0}
+\dfrac{d}{dt}\dfrac{\partial \lagr'}{\partial \dot{q}_j} - \dfrac{\partial \lagr'}{\partial q_j} &= \dfrac{d}{dt}\left(\dfrac{\partial \lagr}{\partial \dot{q}_j} + \dfrac{\partial F}{\partial q_j}\right) - \dfrac{\partial \lagr}{\partial q_j} - \dfrac{\partial}{\partial q_j}\dfrac{dF}{dt} \\[0.3em]
+&=\dfrac{d}{dt}\dfrac{\partial \lagr}{\partial \dot{q}_j} - \dfrac{\partial \lagr}{\partial q_j} + \underbrace{\dfrac{d}{dt}\dfrac{\partial F}{\partial q_j} - \dfrac{\partial}{\partial q_j}\dfrac{dF}{dt}}_{\normalsize = 0}
 \end{aligned}
 $$
 
@@ -1141,7 +1142,7 @@ $$
 
 #### Goldstein 1.15
 
-자유도가 $n$ 인 시스템의 independent generalized coordinates $q_1,\ldots,\,q_n$ 를 생각하자. 이 시스템의 라그랑지안이 $L(\{q_i\},\, \{\dot{q}_i\},\,t)$ 로 주어졌다. 우리가 이 시스템의 좌표를 역시 독립적인 $s_1,\ldots,\,s_n$ 으로 변화시키면, 즉
+자유도가 $n$ 인 시스템의 independent generalized coordinates $q_1,\ldots,\,q_n$ 를 생각하자. 이 시스템의 라그랑지안이 $\lagr(\{q_i\},\, \{\dot{q}_i\},\,t)$ 로 주어졌다. 우리가 이 시스템의 좌표를 역시 독립적인 $s_1,\ldots,\,s_n$ 으로 변화시키면, 즉
 
 $$
 q_i = q_i (s_1,\ldots,\,s_n,\,t)
@@ -1150,7 +1151,7 @@ $$
 로 변환시키면 (이 변환을 *point transformation* 이라고 한다) $\{s_i\}$ 좌표료 표현된 오일러-라그랑쥬 방정식은
 
 $$
-\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{s}_j}\right) - \dfrac{\partial L}{\partial s_j}=0
+\dfrac{d}{dt}\left(\dfrac{\partial \lagr}{\partial \dot{s}_j}\right) - \dfrac{\partial \lagr}{\partial s_j}=0
 $$
 
 이 됨을 보여라. 
@@ -1170,9 +1171,9 @@ $$
 이다. 따라서 $\dfrac{\partial \dot{s}_j}{\partial \dot{q}_i} = \dfrac{\partial s_j}{\partial q_i}$ 이므로 다음과 같이 보일 수 있다. 
 $$
 \begin{aligned}
- \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{s}_j}\right) - \dfrac{\partial L}{\partial s_j}
-&= \dfrac{d}{dt} \left[ \sum_i \left(\dfrac{\partial L}{\partial q_i}\dfrac{\partial q_i}{\partial \dot{s}_j} +\dfrac{\partial L}{\partial \dot{q}_i}\dfrac{\partial \dot{q}_i}{\partial \dot{s}_j} \right) \right]  + \sum_i \dfrac{\partial L}{\partial q_i} \dfrac{\partial q_i}{\partial s_j} \\
-&= \sum_i \left[\dfrac{d}{dt} \left(\dfrac{\partial L}{\partial \dot{q}_i} \right) + \dfrac{\partial L}{\partial q_i}\right] \left(\dfrac{\partial q_i}{\partial s_j}\right) \\
+ \dfrac{d}{dt}\left(\dfrac{\partial \lagr}{\partial \dot{s}_j}\right) - \dfrac{\partial \lagr}{\partial s_j}
+&= \dfrac{d}{dt} \left[ \sum_i \left(\dfrac{\partial L}{\partial q_i}\dfrac{\partial q_i}{\partial \dot{s}_j} +\dfrac{\partial \lagr}{\partial \dot{q}_i}\dfrac{\partial \dot{q}_i}{\partial \dot{s}_j} \right) \right]  + \sum_i \dfrac{\partial \lagr}{\partial q_i} \dfrac{\partial q_i}{\partial s_j} \\
+&= \sum_i \left[\dfrac{d}{dt} \left(\dfrac{\partial \lagr}{\partial \dot{q}_i} \right) + \dfrac{\partial \lagr}{\partial q_i}\right] \left(\dfrac{\partial q_i}{\partial s_j}\right) \\
 &=0
 \end{aligned}
 $$

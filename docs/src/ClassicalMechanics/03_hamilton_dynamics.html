@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.9">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -59,15 +59,14 @@ div.csl-indent {
 <link href="../../src/ClassicalMechanics/02_variational_principle.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7a627ccb779a4a431ef462281a400409.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -96,8 +95,22 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -128,17 +141,17 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating slimcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
-  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+  <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></a></li></ol></nav>
-        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -149,7 +162,7 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></a></li></ol></nav>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/00_index.html">고전역학</a></li><li class="breadcrumb-item"><a href="../../src/ClassicalMechanics/03_hamilton_dynamics.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></a></li></ol></nav>
       <h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">해밀턴 동역학</span></h1>
                       </div>
   </div>
@@ -165,7 +178,7 @@ window.Quarto = {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">고전물리학</a> 
@@ -187,12 +200,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/ClassicalMechanics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-1-label">고전역학</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션: 고전역학">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">고전역학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
@@ -219,32 +232,38 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../src/ClassicalMechanics/05_hamilton_jacobi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">해밀턴-야코비 이론</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/11_one_body_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/A_proofs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
   </div>
 </li>
       </ul>
@@ -252,22 +271,22 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Mechanics_and_Symmetry/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-2-label">고전역학과 대칭</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션: 고전역학과 대칭">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">고전역학과 대칭</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -275,52 +294,52 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Electrodynamics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-3-label">전기자기학</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션: 전기자기학">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">전기자기학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/02_1_electrostatics1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/02_2_electrostatics2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/03_magnetostatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A1_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A2_waves.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
   </div>
 </li>
       </ul>
@@ -328,22 +347,22 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-4-label">상대론</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션: 상대론">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">상대론</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -351,40 +370,40 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/ThermalPhysics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-5-label">열역학</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션: 열역학">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">열역학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/02_entropy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">열역학 제 2 법칙-열역학적 접근</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">열역학 제 2 법칙-열역학적 접근</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/03_introduction_to_statistical_mechanics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">통계역학의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">통계역학의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/04_interaction_and_implication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">상호작용과 결과</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">상호작용과 결과</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/0A_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
   </div>
 </li>
       </ul>
@@ -392,16 +411,16 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/topics/Topics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-6-label">별도의 주제들</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="true" aria-label="토글 섹션: 별도의 주제들">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">별도의 주제들</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -418,7 +437,7 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">목차</h2>
    
   <ul>
@@ -438,7 +457,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#최소-작용-원리" id="toc-최소-작용-원리" class="nav-link" data-scroll-target="#최소-작용-원리"><span class="header-section-number">3.4</span> 최소 작용 원리</a>
   <ul class="collapse">
-  <li><a href="#sec-CM_delta_variations" id="toc-sec-CM_delta_variations" class="nav-link" data-scroll-target="#sec-CM_delta_variations"><span class="header-section-number">3.4.1</span> <span class="math inline">\(\delta\)</span>-변화 와 <span class="math inline">\(\Delta\)</span>-변화</a></li>
+  <li><a href="#sec-CM_delta_variations" id="toc-sec-CM_delta_variations" class="nav-link" data-scroll-target="#sec-CM_delta_variations"><span class="header-section-number">3.4.1</span> <span class="math inline">\delta</span>-변화 와 <span class="math inline">\Delta</span>-변화</a></li>
   <li><a href="#sec-CM_principle_of_Maupertuis_least_action" id="toc-sec-CM_principle_of_Maupertuis_least_action" class="nav-link" data-scroll-target="#sec-CM_principle_of_Maupertuis_least_action"><span class="header-section-number">3.4.2</span> 모페르튀이의 최소작용 원리</a></li>
   </ul></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
@@ -446,7 +465,7 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content" tabindex="-1">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -455,10 +474,10 @@ window.Quarto = {
 <div class="hidden">
 <p>% %</p>
 <p>% </p>
-<p><span class="math display">\[
+<p><span class="math display">
 \DeclarePairedDelimiters{\set}{\{}{\}}
 \DeclareMathOperator*{\argmax}{argmax}
-\]</span></p>
+</span></p>
 </div>
 <p><br></p>
 <p>우리는 라그랑지안이 운동방정식을 세우고 그로부터 역학계를 기술하는데 아주 유용하다는 것을 안다. 이제 소위 해밀토니안(Hamintonian) 을 통해 운동을 기술하는 방법을 소개하고자 한다. 실제의 운동방정식을 세우고 푸는데 해밀토니안 방법이 라그랑지안 방법보다 유리한 경우는 거의 없다. 그러나 해밀토니안 방법은 고전역학 이후에 발전한 통계역학과 양자역학의 이론적 발전에 지대한 영향을 끼쳤으며, 고전역학을 새로운 관점을 보는데도 매우 유용하다.</p>
@@ -468,15 +487,15 @@ window.Quarto = {
 <h2 data-number="3.1" class="anchored" data-anchor-id="르장드르-변환과-해밀턴-운동방정식"><span class="header-section-number">3.1</span> 르장드르 변환과 해밀턴 운동방정식</h2>
 <section id="sec-CM_lagrangian_and_hamiltonian_mechanics_intro" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="sec-CM_lagrangian_and_hamiltonian_mechanics_intro"><span class="header-section-number">3.1.1</span> 라그랑지안 역학과 해밀토니안 역학</h3>
-<p><span class="math inline">\(n\)</span>-자유도 시스템의 라그랑지안 역학은 <span class="math inline">\(n\)</span> 개의 2차 미분방정식(라그랑쥬 방정식) 으로 기술된다.</p>
-<p><span class="math display">\[
-\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_j}\right) - \dfrac{\partial L}{\partial q_j} = 0.
-\]</span></p>
-<p>이 방정식의 해를 구하기 위해서는 <span class="math inline">\(2n\)</span> 개의 초기값이 필요하며 (<span class="math inline">\(1\)</span>) 특정 시간 <span class="math inline">\(t\)</span> 에 대해 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(q_i(t)\)</span> 와 역시 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(\dot{q}(t_i)\)</span> 이거나 (<span class="math inline">\(2\)</span>) 두 시간 <span class="math inline">\(t_1,\,t_2\)</span> 에 대해 <span class="math inline">\(n\)</span> 개의 <span class="math inline">\(q_i(t_1)\)</span> 과 <span class="math inline">\(q_i(t_2)\)</span> 이다. 즉 <span class="math inline">\(n\)</span> 개의 독립 변수 <span class="math inline">\(\{q_i\}\)</span> 와 시간에 대한 미분 <span class="math inline">\(\{\dot{q}_i\}\)</span> 에 관한 문제이다. 라그랑지안은 각각의 일반화된 좌표로 이루어진 <span class="math inline">\(n\)</span> 차원 짜임새 공간에서 표현된다.</p>
-<p>이에 반해 <span class="math inline">\(n\)</span>-자유도 시스템의 해밀토니안 역학은 <span class="math inline">\(2n\)</span> 개의 독립변수에 대한 <span class="math inline">\(2n\)</span> 개의 1차 이분방정식으로 기술된다. 필요한 초기조건은 라그랑지안과 동일한 <span class="math inline">\(2n\)</span> 개이며, <span class="math inline">\(2n\)</span> 차원의 위상 공간에서 표현된다. 이 <span class="math inline">\(2n\)</span> 개의 독립변수는 <span class="math inline">\(n\)</span> 개의 일반화된 변수 <span class="math inline">\(\{q_i\}\)</span> 와 <span class="math inline">\(n\)</span> 개의 정준 운동량 <span class="math inline">\(\{p_i\}\)</span> 이며 <span class="math inline">\((\boldsymbol{q},\, \boldsymbol{p})\)</span> 를 <strong>정준 변수 (canonical variables)</strong> 라고 한다.</p>
-<p><span id="eq-CM_canonical_momentum"><span class="math display">\[
-\boxed{\boldsymbol{p} := \dfrac{\partial L(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)}{\partial \dot{\boldsymbol{q}}},\qquad \text{or}\qquad  p_i = \dfrac{\partial L(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)}{\partial \dot{q}_i}. }
-\tag{3.1}\]</span></span></p>
+<p><span class="math inline">n</span>-자유도 시스템의 라그랑지안 역학은 <span class="math inline">n</span> 개의 2차 미분방정식(라그랑쥬 방정식) 으로 기술된다.</p>
+<p><span class="math display">
+\dfrac{d}{dt}\left(\dfrac{\partial \mathcal{L}}{\partial \dot{q}_j}\right) - \dfrac{\partial \mathcal{L}}{\partial q_j} = 0.
+</span></p>
+<p>이 방정식의 해를 구하기 위해서는 <span class="math inline">2n</span> 개의 초기값이 필요하며 (<span class="math inline">1</span>) 특정 시간 <span class="math inline">t</span> 에 대해 <span class="math inline">n</span> 개의 <span class="math inline">q_i(t)</span> 와 역시 <span class="math inline">n</span> 개의 <span class="math inline">\dot{q}(t_i)</span> 이거나 (<span class="math inline">2</span>) 두 시간 <span class="math inline">t_1,\,t_2</span> 에 대해 <span class="math inline">n</span> 개의 <span class="math inline">q_i(t_1)</span> 과 <span class="math inline">q_i(t_2)</span> 이다. 즉 <span class="math inline">n</span> 개의 독립 변수 <span class="math inline">\{q_i\}</span> 와 시간에 대한 미분 <span class="math inline">\{\dot{q}_i\}</span> 에 관한 문제이다. 라그랑지안은 각각의 일반화된 좌표로 이루어진 <span class="math inline">n</span> 차원 짜임새 공간에서 표현된다.</p>
+<p>이에 반해 <span class="math inline">n</span>-자유도 시스템의 해밀토니안 역학은 <span class="math inline">2n</span> 개의 독립변수에 대한 <span class="math inline">2n</span> 개의 1차 이분방정식으로 기술된다. 필요한 초기조건은 라그랑지안과 동일한 <span class="math inline">2n</span> 개이며, <span class="math inline">2n</span> 차원의 위상 공간에서 표현된다. 이 <span class="math inline">2n</span> 개의 독립변수는 <span class="math inline">n</span> 개의 일반화된 변수 <span class="math inline">\{q_i\}</span> 와 <span class="math inline">n</span> 개의 정준 운동량 <span class="math inline">\{p_i\}</span> 이며 <span class="math inline">(\boldsymbol{q},\, \boldsymbol{p})</span> 를 <strong>정준 변수 (canonical variables)</strong> 라고 한다.</p>
+<p><span id="eq-CM_canonical_momentum"><span class="math display">
+\boxed{\boldsymbol{p} := \dfrac{\partial \mathcal{L}(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)}{\partial \dot{\boldsymbol{q}}},\qquad \text{or}\qquad  p_i = \dfrac{\partial \mathcal{L}(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)}{\partial \dot{q}_i}. }
+\tag{3.1}</span></span></p>
 <p><br></p>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -488,8 +507,8 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>특별한 언급이 없는 한 이 장에서 <span class="math inline">\(p_i\)</span> 는 일반화된 좌표 <span class="math inline">\(q_i\)</span> 에 대한 정준운동량을 의미하며 질량에 속도를 곱한 선형 운동량과는 다르다. 일반화된 좌표를 <span class="math inline">\(Q\)</span> 나 <span class="math inline">\(Q_i\)</span> 와 같이 쓸 때의 정준운동량은 <span class="math inline">\(P\)</span> 나 <span class="math inline">\(P_i\)</span> 로 표기하기로 한다.</p>
-<p>또한 다변수 함수의 편미분에 대해 <a href="../Mechanics_and_Symmetry/01_experimental_facts.html#def-MS_derivative_to_vector" class="quarto-xref">정의&nbsp;<span>10.5</span></a> 의 표기법을 사용한다.</p>
+<p>특별한 언급이 없는 한 이 장에서 <span class="math inline">p_i</span> 는 일반화된 좌표 <span class="math inline">q_i</span> 에 대한 정준운동량을 의미하며 질량에 속도를 곱한 선형 운동량과는 다르다. 일반화된 좌표를 <span class="math inline">Q</span> 나 <span class="math inline">Q_i</span> 와 같이 쓸 때의 정준운동량은 <span class="math inline">P</span> 나 <span class="math inline">P_i</span> 로 표기하기로 한다.</p>
+<p>또한 다변수 함수의 편미분에 대해 <a href="../Mechanics_and_Symmetry/01_experimental_facts.html#def-MS_derivative_to_vector" class="quarto-xref">정의&nbsp;<span>11.5</span></a> 의 표기법을 사용한다.</p>
 </div>
 </div>
 <p><br></p>
@@ -499,19 +518,19 @@ window.Quarto = {
 <ul>
 <li>참고자료 : <span class="citation" data-cites="Zia2009">Zia et al. (<a href="../../references.html#ref-Zia2009" role="doc-biblioref">2009</a>)</span></li>
 </ul>
-<p><span class="math inline">\(\boldsymbol{x},\, \boldsymbol{y}\in \mathbb{R}^n\)</span> 이며 <span class="math inline">\(F:\mathbb{R}^{2n} \to \mathbb{R}\)</span> 이라고 하자. <span class="math inline">\(F\)</span> 가 미분가능하다면</p>
-<p><span class="math display">\[
+<p><span class="math inline">\boldsymbol{x},\, \boldsymbol{y}\in \mathbb{R}^n</span> 이며 <span class="math inline">F:\mathbb{R}^{2n} \to \mathbb{R}</span> 이라고 하자. <span class="math inline">F</span> 가 미분가능하다면</p>
+<p><span class="math display">
 dF = \sum_{i=1}^n \dfrac{\partial F}{\partial x_i} dx_i + \sum_{i=1}^n \dfrac{\partial F}{\partial y_j}dy_j = \dfrac{\partial F}{\partial \boldsymbol{x}}\boldsymbol{\cdot} d\boldsymbol{x} + \dfrac{\partial F}{\partial \boldsymbol{y}} \boldsymbol{\cdot} d\boldsymbol{y}
-\]</span></p>
-<p>이며, <span class="math inline">\(\boldsymbol{u}=\dfrac{\partial F}{\partial \boldsymbol{x}}\)</span> 에 대해</p>
-<p><span class="math display">\[
+</span></p>
+<p>이며, <span class="math inline">\boldsymbol{u}=\dfrac{\partial F}{\partial \boldsymbol{x}}</span> 에 대해</p>
+<p><span class="math display">
 G =  \boldsymbol{ u\cdot x} - F
-\]</span></p>
+</span></p>
 <p>라고 하면</p>
-<p><span class="math display">\[
+<p><span class="math display">
 dG = \boldsymbol{x \cdot} d\boldsymbol{u}  + \boldsymbol{u \cdot} d\boldsymbol{x}  - dF =  \boldsymbol{x \cdot}d\boldsymbol{u} - \dfrac{\partial F}{\partial \boldsymbol{y}} \boldsymbol{\cdot} d\boldsymbol{y}
-\]</span></p>
-<p>이다. 그렇다면 <span class="math inline">\(G=G(\boldsymbol{u},\, \boldsymbol{y})\)</span> 이며, <span class="math inline">\(\dfrac{\partial G}{\partial \boldsymbol{u}} = \boldsymbol{x},\, \dfrac{\partial G}{\partial \boldsymbol{y}} = - \dfrac{\partial F}{\partial \boldsymbol{y}}\)</span> 이다.</p>
+</span></p>
+<p>이다. 그렇다면 <span class="math inline">G=G(\boldsymbol{u},\, \boldsymbol{y})</span> 이며, <span class="math inline">\dfrac{\partial G}{\partial \boldsymbol{u}} = \boldsymbol{x},\, \dfrac{\partial G}{\partial \boldsymbol{y}} = - \dfrac{\partial F}{\partial \boldsymbol{y}}</span> 이다.</p>
 <p><br></p>
 </section>
 <section id="sec-CM_hamiltonian" class="level3" data-number="3.1.3">
@@ -526,45 +545,45 @@ dG = \boldsymbol{x \cdot} d\boldsymbol{u}  + \boldsymbol{u \cdot} d\boldsymbol{x
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>라그랑지안 <span class="math inline">\(L(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)\)</span> 에 대해 아래와 같은 르장드르 변환을 수행하여 얻은 <span class="math inline">\(H(\boldsymbol{q},\, \boldsymbol{p},\,t)\)</span> 를 <strong>해밀토니안(Hamiltonian)</strong> 이라고 한다.</p>
-<p><span id="eq-CM_hamiltonian"><span class="math display">\[
-H\left(\boldsymbol{q}, \boldsymbol{p}, t\right) = \sum_{i} \dot{q}_i p_i - L(\boldsymbol{q}, \dot{\boldsymbol{q}}, t)
-\tag{3.2}\]</span></span></p>
+<p>라그랑지안 <span class="math inline">\mathcal{L}(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)</span> 에 대해 아래와 같은 르장드르 변환을 수행하여 얻은 <span class="math inline">\mathcal{H}(\boldsymbol{q},\, \boldsymbol{p},\,t)</span> 를 <strong>해밀토니안(Hamiltonian)</strong> 이라고 한다.</p>
+<p><span id="eq-CM_hamiltonian"><span class="math display">
+\mathcal{H}\left(\boldsymbol{q}, \boldsymbol{p}, t\right) = \sum_{i} \dot{q}_i p_i - \mathcal{L}(\boldsymbol{q}, \dot{\boldsymbol{q}}, t)
+\tag{3.2}</span></span></p>
 </div>
 </div>
-<p>해밀토니안은 <span class="math inline">\(\boldsymbol{q},\, \boldsymbol{p},\, t\)</span> 에 대한 함수이므로 그 미분형식은 다음과 같다.</p>
-<p><span id="eq-CM_differential_form_of_hamiltonian"><span class="math display">\[
-dH = \sum_i \left(\dfrac{\partial H}{\partial q_i}\right) dq_i + \sum_i \left(\dfrac{\partial H}{\partial p_i}\right) dp_i + \dfrac{\partial H}{\partial t}\, dt
-\tag{3.3}\]</span></span></p>
+<p>해밀토니안은 <span class="math inline">\boldsymbol{q},\, \boldsymbol{p},\, t</span> 에 대한 함수이므로 그 미분형식은 다음과 같다.</p>
+<p><span id="eq-CM_differential_form_of_hamiltonian"><span class="math display">
+d\mathcal{H}= \sum_i \left(\dfrac{\partial \mathcal{H}}{\partial q_i}\right) dq_i + \sum_i \left(\dfrac{\partial \mathcal{H}}{\partial p_i}\right) dp_i + \dfrac{\partial \mathcal{H}}{\partial t}\, dt
+\tag{3.3}</span></span></p>
 <p>또한 <a href="#eq-CM_hamiltonian" class="quarto-xref">식&nbsp;<span>3.2</span></a> 으로 부터,</p>
-<p><span class="math display">\[
-dH = \sum_i\left(-\dfrac{\partial L}{\partial q_i}\right)dq_i + \sum_i \left(\dot{q}_i\right)\, dp_i + \left(p_i - \sum_i \dfrac{\partial L}{\partial \dot{q}_i}\right) d\dot{q}_i - \dfrac{\partial L}{\partial t}\,dt
-\]</span></p>
-<p>을 얻는다. 여기서 <span class="math inline">\(d\dot{q}_i\)</span> 앞의 항은 <span class="math inline">\(p_i\)</span> 의 정의에 의해 <span class="math inline">\(0\)</span> 이다. 또한 오일러 라그랑쥬 방정식에 의해</p>
-<p><span class="math display">\[
-0 = \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_i}\right) - \dfrac{\partial L}{\partial q_i} = \dot{p}_i - \dfrac{\partial L}{\partial q_i}
-\]</span></p>
+<p><span class="math display">
+d\mathcal{H}= \sum_i\left(-\dfrac{\partial \mathcal{L}}{\partial q_i}\right)dq_i + \sum_i \left(\dot{q}_i\right)\, dp_i + \left(p_i - \sum_i \dfrac{\partial \mathcal{L}}{\partial \dot{q}_i}\right) d\dot{q}_i - \dfrac{\partial \mathcal{L}}{\partial t}\,dt
+</span></p>
+<p>을 얻는다. 여기서 <span class="math inline">d\dot{q}_i</span> 앞의 항은 <span class="math inline">p_i</span> 의 정의에 의해 <span class="math inline">0</span> 이다. 또한 오일러 라그랑쥬 방정식에 의해</p>
+<p><span class="math display">
+0 = \dfrac{d}{dt}\left( \dfrac{\partial \mathcal{L}}{\partial \dot{q}_i}\right) - \dfrac{\partial \mathcal{L}}{\partial q_i} = \dot{p}_i - \dfrac{\partial \mathcal{L}}{\partial q_i}
+</span></p>
 <p>이므로,</p>
-<p><span class="math display">\[
-dH = -\sum_i \dot{p}_i dq_i + \sum_i \dot{q}_i dp_i - \dfrac{\partial L}{\partial t} dt
-\]</span></p>
+<p><span class="math display">
+d\mathcal{H}= -\sum_i \dot{p}_i dq_i + \sum_i \dot{q}_i dp_i - \dfrac{\partial \mathcal{L}}{\partial t} dt
+</span></p>
 <p>이며 이로부터</p>
-<p><span id="eq-CM_canonical_equation_of_hamiltonian"><span class="math display">\[
-\boxed{\dot{q}_i = \dfrac{\partial H}{\partial p_i},\qquad \dot{p}_i =- \dfrac{\partial H}{\partial q_i}, }
-\tag{3.4}\]</span></span></p>
-<p><span id="eq-CM_time_dependence_of_hamiltonian"><span class="math display">\[
-\dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
-\tag{3.5}\]</span></span></p>
-<p>를 얻는다. <a href="#eq-CM_canonical_equation_of_hamiltonian" class="quarto-xref">식&nbsp;<span>3.4</span></a> 을 <strong>해밀턴 정준 방정식(canonical equations of Haminton)</strong> 이라고 부른다. 우리는 이를 통해 <span class="math inline">\(n\)</span> 개의 2차 미분방정식(라그랑쥬 방정식) 을 <span class="math inline">\(2n\)</span> 개의 1차 미분방정식(해밀턴의 정준 방정식) 으로 바꿨다. 차이는 (이것은 매우 중요하다) 라그랑지안이 일반화된 좌표계에서 <span class="math inline">\(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t\)</span> 의 함수라면 해밀토니안은 <span class="math inline">\(\boldsymbol{q},\, \boldsymbol{p},\,t\)</span> 의 함수라는 것이다. 해밀턴 정준방정식을 따르는 좌표 <span class="math inline">\(\boldsymbol{q},\, \boldsymbol{p}\)</span> 를 <strong>정준 좌표 (canonical coordinate)</strong> 라고 한다.(운동량 변수도 정준 좌표에 포함된다.)</p>
+<p><span id="eq-CM_canonical_equation_of_hamiltonian"><span class="math display">
+\boxed{\dot{q}_i = \dfrac{\partial \mathcal{H}}{\partial p_i},\qquad \dot{p}_i =- \dfrac{\partial \mathcal{H}}{\partial q_i}, }
+\tag{3.4}</span></span></p>
+<p><span id="eq-CM_time_dependence_of_hamiltonian"><span class="math display">
+\dfrac{\partial \mathcal{H}}{\partial t} = -\dfrac{\partial \mathcal{L}}{\partial t}
+\tag{3.5}</span></span></p>
+<p>를 얻는다. <a href="#eq-CM_canonical_equation_of_hamiltonian" class="quarto-xref">식&nbsp;<span>3.4</span></a> 을 <strong>해밀턴 정준 방정식(canonical equations of Haminton)</strong> 이라고 부른다. 우리는 이를 통해 <span class="math inline">n</span> 개의 2차 미분방정식(라그랑쥬 방정식) 을 <span class="math inline">2n</span> 개의 1차 미분방정식(해밀턴의 정준 방정식) 으로 바꿨다. 차이는 (이것은 매우 중요하다) 라그랑지안이 일반화된 좌표계에서 <span class="math inline">\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t</span> 의 함수라면 해밀토니안은 <span class="math inline">\boldsymbol{q},\, \boldsymbol{p},\,t</span> 의 함수라는 것이다. 해밀턴 정준방정식을 따르는 좌표 <span class="math inline">\boldsymbol{q},\, \boldsymbol{p}</span> 를 <strong>정준 좌표 (canonical coordinate)</strong> 라고 한다.(운동량 변수도 정준 좌표에 포함된다.)</p>
 </section>
 <section id="해밀토니안을-직접-구할-수-있는-경우" class="level3 page-columns page-full" data-number="3.1.4">
 <h3 data-number="3.1.4" class="anchored" data-anchor-id="해밀토니안을-직접-구할-수-있는-경우"><span class="header-section-number">3.1.4</span> 해밀토니안을 직접 구할 수 있는 경우</h3>
 <p>해밀토니안은 라그랑지안에 대한 르장드르 변환으로 정의된다. 따라서 다음과 같은 순서로 해밀토니안을 구한다.</p>
-<p> (<span class="math inline">\(1\)</span>) 적절한 일반화된 좌표계에서 라그랑지안 <span class="math inline">\(L(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)\)</span> 를 구한다.</p>
-<p> (<span class="math inline">\(2\)</span>) 각각의 일반화된 좌표 <span class="math inline">\(q_i\)</span> 에 대한 정준 운동량 <span class="math inline">\(p_i = \dfrac{\partial L}{\partial \dot{q}_i}\)</span> 를 구한다.</p>
-<p> (<span class="math inline">\(3\)</span>) <a href="#eq-CM_hamiltonian" class="quarto-xref">식&nbsp;<span>3.2</span></a> 로 해밀토니안을 구한다.</p>
-<p>이것은 진짜로 일반화된 좌표계에서는 쉽지 않은 일이다. <span class="math inline">\(\boldsymbol{p}\)</span> 를 구한 후 모든 <span class="math inline">\(\dot{q}_j\)</span> 를 <span class="math inline">\(\boldsymbol{q},\, \boldsymbol{p},\,t\)</span> 에 대한 함수로 다시 기술해야 하기 때문이다. 하지만 물리적으로 중요한 많은 문제에 대해서는 지름길이 존재한다.</p>
-<p>우선 라그랑지안 <span class="math inline">\(L\)</span> 이 <span class="math inline">\(\{\dot{q}_i\}\)</span> 에 대해 <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span> 계 동차 함수의 합으로 표현 할 수 있을 때이다.</p>
+<p> (<span class="math inline">1</span>) 적절한 일반화된 좌표계에서 라그랑지안 <span class="math inline">\mathcal{L}(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,t)</span> 를 구한다.</p>
+<p> (<span class="math inline">2</span>) 각각의 일반화된 좌표 <span class="math inline">q_i</span> 에 대한 정준 운동량 <span class="math inline">p_i = \dfrac{\partial \mathcal{L}}{\partial \dot{q}_i}</span> 를 구한다.</p>
+<p> (<span class="math inline">3</span>) <a href="#eq-CM_hamiltonian" class="quarto-xref">식&nbsp;<span>3.2</span></a> 로 해밀토니안을 구한다.</p>
+<p>이것은 진짜로 일반화된 좌표계에서는 쉽지 않은 일이다. <span class="math inline">\boldsymbol{p}</span> 를 구한 후 모든 <span class="math inline">\dot{q}_j</span> 를 <span class="math inline">\boldsymbol{q},\, \boldsymbol{p},\,t</span> 에 대한 함수로 다시 기술해야 하기 때문이다. 하지만 물리적으로 중요한 많은 문제에 대해서는 지름길이 존재한다.</p>
+<p>우선 라그랑지안 <span class="math inline">L</span> 이 <span class="math inline">\{\dot{q}_i\}</span> 에 대해 <span class="math inline">0</span>, <span class="math inline">1</span>, <span class="math inline">2</span> 계 동차 함수의 합으로 표현 할 수 있을 때이다.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -575,131 +594,131 @@ dH = -\sum_i \dot{p}_i dq_i + \sum_i \dot{q}_i dp_i - \dfrac{\partial L}{\partia
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>함수 <span class="math inline">\(f(x_1,\ldots,\,x_n)\)</span> 이 자연수 <span class="math inline">\(k\)</span> 에 대해</p>
-<p><span id="eq-CM_homogeneous_function"><span class="math display">\[
+<p>함수 <span class="math inline">f(x_1,\ldots,\,x_n)</span> 이 자연수 <span class="math inline">k</span> 에 대해</p>
+<p><span id="eq-CM_homogeneous_function"><span class="math display">
 f(tx_1,\ldots,\,t x_n) = t^k f(x_1,\ldots,\,x_n)
-\tag{3.6}\]</span></span></p>
-<p>를 만족할 때 이 함수 를 <strong><span class="math inline">\(k\)</span>-계 동차함수 (<span class="math inline">\(k\)</span>-order homogeneous function)</strong> 라고 한다.</p>
+\tag{3.6}</span></span></p>
+<p>를 만족할 때 이 함수 를 <strong><span class="math inline">k</span>-계 동차함수 (<span class="math inline">k</span>-order homogeneous function)</strong> 라고 한다.</p>
 </div>
 </div>
-<p><span class="math inline">\(k\)</span>-계 동차함수 <span class="math inline">\(f\)</span> 가 다음을 만족한다는 것은 잘 알려져 있다. <span id="eq-CM_differential_of_homogeneous_function"><span class="math display">\[
+<p><span class="math inline">k</span>-계 동차함수 <span class="math inline">f</span> 가 다음을 만족한다는 것은 잘 알려져 있다. <span id="eq-CM_differential_of_homogeneous_function"><span class="math display">
 \sum_{i=1}^n x_i \dfrac{\partial f}{\partial x_i} = k f(x_1,\ldots,\,x_n).
-\tag{3.7}\]</span></span></p>
-<p><span class="math inline">\(L_0,\,L_1,\,L_2\)</span> 를 각각 <span class="math inline">\(\{\dot{q}_i\}\)</span> 에 대한 <span class="math inline">\(0,\,1,\,2\)</span> 계 동차함수이며 <span class="math inline">\(L=L_0 + L_1 + L_2\)</span> 라면,</p>
-<p><span class="math display">\[
-H = \sum \dot{q}_i p_i - L_0 - L_1 - L_2 = \sum \dot{q}_i \dfrac{\partial L}{\partial \dot{q}_i} - L_0 - L_1 - L_2 = L_2-L_0
-\]</span></p>
-<p>이다. 이것을 <span class="math inline">\(\boldsymbol{q}\)</span> 에 대해 표현하면 <span class="math inline">\(L_2\)</span> 는 <span class="math inline">\(\dot{\boldsymbol{q}}\)</span> 에 대한 이차함수이며, <span class="math inline">\(L_1\)</span> 은 <span class="math inline">\(\dot{\boldsymbol{q}}\)</span> 에 대해 일차함수이다. 따라서, 적당한 상수벡터 <span class="math inline">\(\boldsymbol{a}\)</span> 와 행렬 <span class="math inline">\(\boldsymbol{T}\)</span> 에 대해</p>
-<p><span id="eq-CM_lagramgian_in_matrix_form"><span class="math display">\[
-L_0 = L_0 (\boldsymbol{q}),\quad L_1 = \boldsymbol{a}^T \dot{\boldsymbol{q}},\quad L_2 =\dfrac{1}{2}\dot{\boldsymbol{q}}^T \boldsymbol{T}\dot{\boldsymbol{q}},
-\tag{3.8}\]</span></span></p>
-<p>이다. 이 때 정준운동량 <span class="math inline">\(\boldsymbol{p}\)</span> 는</p>
-<p><span class="math display">\[
+\tag{3.7}</span></span></p>
+<p><span class="math inline">\mathcal{L}_0,\,\mathcal{L}_1,\,\mathcal{L}_2</span> 를 각각 <span class="math inline">\{\dot{q}_i\}</span> 에 대한 <span class="math inline">0,\,1,\,2</span> 계 동차함수이며 <span class="math inline">\mathcal{L}=\mathcal{L}_0 + \mathcal{L}_1 + \mathcal{L}_2</span> 라면,</p>
+<p><span class="math display">
+\mathcal{H}= \sum \dot{q}_i p_i - \mathcal{L}_0 - \mathcal{L}_1 - \mathcal{L}_2 = \sum \dot{q}_i \dfrac{\partial \mathcal{L}}{\partial \dot{q}_i} - \mathcal{L}_0 - \mathcal{L}_1 - \mathcal{L}_2 = \mathcal{L}_2 - \mathcal{L}_0
+</span></p>
+<p>이다. 이것을 <span class="math inline">\boldsymbol{q}</span> 에 대해 표현하면 <span class="math inline">\mathcal{L}_2</span> 는 <span class="math inline">\dot{\boldsymbol{q}}</span> 에 대한 이차함수이며, <span class="math inline">\mathcal{L}_1</span> 은 <span class="math inline">\dot{\boldsymbol{q}}</span> 에 대해 일차함수이다. 따라서, 적당한 상수벡터 <span class="math inline">\boldsymbol{a}</span> 와 행렬 <span class="math inline">\boldsymbol{T}</span> 에 대해</p>
+<p><span id="eq-CM_lagramgian_in_matrix_form"><span class="math display">
+\mathcal{L}_0 = \mathcal{L}_0 (\boldsymbol{q}),\quad \mathcal{L}_1 = \boldsymbol{a}^T \dot{\boldsymbol{q}},\quad \mathcal{L}_2 =\dfrac{1}{2}\dot{\boldsymbol{q}}^T \boldsymbol{T}\dot{\boldsymbol{q}},
+\tag{3.8}</span></span></p>
+<p>이다. 이 때 정준운동량 <span class="math inline">\boldsymbol{p}</span> 는</p>
+<p><span class="math display">
 \boldsymbol{p}= \boldsymbol{T}\dot{\boldsymbol{q}} + \boldsymbol{a}
-\]</span></p>
-<div class="page-columns page-full"><p>이다. 일반적으로 <span class="math inline">\(\boldsymbol{T}\)</span> 는 <a href="https://julia-kaeri.github.io/Algebra.doc/src/part1/ch1_07_spectrum_theorem.html#positive-positive-definite-행렬과-제곱근-행렬">positive definite 행렬</a> 이므로 가역행렬이며, 따라서 </p><div class="no-row-height column-margin column-container"><span class="margin-aside">positive definite 행렬에 대해서는 선형대수학을 참고하라</span></div></div>
-<p><span class="math display">\[
+</span></p>
+<div class="page-columns page-full"><p>이다. 일반적으로 <span class="math inline">\boldsymbol{T}</span> 는 <a href="https://julia-kaeri.github.io/Algebra.doc/src/part1/ch1_07_spectrum_theorem.html#positive-positive-definite-행렬과-제곱근-행렬">positive definite 행렬</a> 이므로 가역행렬이며, 따라서 </p><div class="no-row-height column-margin column-container"><span class="margin-aside">positive definite 행렬에 대해서는 선형대수학을 참고하라</span></div></div>
+<p><span class="math display">
 \dot{\boldsymbol{q}} = \boldsymbol{T}^{-1}(\boldsymbol{p}-\boldsymbol{a})
-\]</span></p>
-<p>이다. 따라서 해밀토니안 <span class="math inline">\(H\)</span> 는 아래의 형태이다.</p>
-<p><span id="eq-CM_hamiltonian_form"><span class="math display">\[
-H = \dfrac{1}{2} (\boldsymbol{p}-\boldsymbol{a})^T \boldsymbol{T}^{-1} (\boldsymbol{p}-\boldsymbol{a}) - L_0(\boldsymbol{q}).
-\tag{3.9}\]</span></span></p>
+</span></p>
+<p>이다. 따라서 해밀토니안 <span class="math inline">\mathcal{H}</span> 는 아래의 형태이다.</p>
+<p><span id="eq-CM_hamiltonian_form"><span class="math display">
+\mathcal{H}= \dfrac{1}{2} (\boldsymbol{p}-\boldsymbol{a})^T \boldsymbol{T}^{-1} (\boldsymbol{p}-\boldsymbol{a}) - L_0(\boldsymbol{q}).
+\tag{3.9}</span></span></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-CM_hamiltonian_for_monogenic_potential_in_spherical_coordinate" class="theorem example">
-<p><span class="theorem-title"><strong>예제 3.1 (구면좌표계의 해밀토니안)</strong></span> 구면좌표계 <span class="math inline">\((r,\,\theta,\,\varphi)\)</span> 에서 구면 대칭 포텐셜 <span class="math inline">\(V(r)\)</span> 의 영향을 받는 입자의 운동에너지는</p>
-<p><span class="math display">\[
+<p><span class="theorem-title"><strong>예제 3.1 (구면좌표계의 해밀토니안)</strong></span> 구면좌표계 <span class="math inline">(r,\,\theta,\,\varphi)</span> 에서 구면 대칭 포텐셜 <span class="math inline">V(r)</span> 의 영향을 받는 입자의 운동에너지는</p>
+<p><span class="math display">
 T=\dfrac{mv^2}{2} = \dfrac{m}{2}\left(\dot{r}^2 + r^2 \sin^2 \theta \,\dot{\varphi}^2 + r^2 (\dot\theta)^2\right)
-\]</span></p>
+</span></p>
 <p>이다. 여기서</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \boldsymbol{T} = m\begin{bmatrix}  1 &amp; 0 &amp; 0 \\ 0 &amp; r^2 &amp; 0\\ 0 &amp; 0 &amp; r^2\sin^2\theta \end{bmatrix},\qquad \boldsymbol{T}^{-1} = \dfrac{1}{m}\begin{bmatrix}  1 &amp; 0 &amp; 0 \\ 0 &amp; \dfrac{1}{r^2} &amp; 0\\ 0 &amp; 0 &amp; \dfrac{1}{r^2\sin^2\theta} \end{bmatrix}
-\]</span></p>
-<p>이며, 따라서 해밀토니안은 <span class="math inline">\(T+V\)</span> 형태이다. 이로부터 시스템의 해밀토니안은 <span class="math display">\[
-H(r,\,\theta,\,\varphi,\, p_r,\,p_\theta,\,p_\varphi) = \dfrac{1}{2m}\left(p_r^2 + \dfrac{p_\theta^2}{r^2} + \dfrac{p_\varphi^2}{r^2\sin^2\theta}\right)
-\]</span></p>
+</span></p>
+<p>이며, 따라서 해밀토니안은 <span class="math inline">T+V</span> 형태이다. 이로부터 시스템의 해밀토니안은 <span class="math display">
+\mathcal{H}(r,\,\theta,\,\varphi,\, p_r,\,p_\theta,\,p_\varphi) = \dfrac{1}{2m}\left(p_r^2 + \dfrac{p_\theta^2}{r^2} + \dfrac{p_\varphi^2}{r^2\sin^2\theta}\right)
+</span></p>
 <p>이다. 그러나 일반화된 좌표계가 데카르트 좌표계라면,</p>
-<p><span class="math display">\[
+<p><span class="math display">
 T=\dfrac{mv^2}{2} = \dfrac{\boldsymbol{\dot{x}\cdot \dot{x}}}{2}
-\]</span></p>
+</span></p>
 <p>이며 따라서 해밀토니안은</p>
-<p><span class="math display">\[
-H(\boldsymbol{x},\,\boldsymbol{p}) = \dfrac{\boldsymbol{p\cdot p}}{2m} + V(\sqrt{\boldsymbol{x\cdot x}})
-\]</span></p>
+<p><span class="math display">
+\mathcal{H}(\boldsymbol{x},\,\boldsymbol{p}) = \dfrac{\boldsymbol{p\cdot p}}{2m} + V(\sqrt{\boldsymbol{x\cdot x}})
+</span></p>
 </div>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-CM_hamiltonian_for_charged_particle_in_electromagnetic_field" class="theorem example">
 <p><span class="theorem-title"><strong>예제 3.2 (전자기장에서의 하전입자의 해밀토니안)</strong></span> 이제 이것을 전자기장에서의 라그랑지안에 대해 생각해보자. <a href="01_basic_principles.html#eq-CM_generalized_force" class="quarto-xref">식&nbsp;<span>1.38</span></a> 으로 주어진 일반화된 포텐셜에 대해</p>
-<p><span class="math display">\[
-L = T-U = \dfrac{1}{2}mv^2 -q\Phi + q \boldsymbol{A\cdot v}
-\]</span></p>
-<p>이다. 따라서 정준운동량 <span class="math inline">\(\boldsymbol{p}\)</span> 는</p>
-<p><span class="math display">\[
-\boldsymbol{p} = \dfrac{\partial L}{\partial \boldsymbol{v}} = m\boldsymbol{v} + q\boldsymbol{A}
-\]</span></p>
+<p><span class="math display">
+\mathcal{L}= T-U = \dfrac{1}{2}mv^2 -q\Phi + q \boldsymbol{A\cdot v}
+</span></p>
+<p>이다. 따라서 정준운동량 <span class="math inline">\boldsymbol{p}</span> 는</p>
+<p><span class="math display">
+\boldsymbol{p} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{v}} = m\boldsymbol{v} + q\boldsymbol{A}
+</span></p>
 <p>이므로,</p>
-<p><span id="eq-CM_hamiltonian_of_charged_particle"><span class="math display">\[
-H = \dfrac{\|\boldsymbol{p}- q\boldsymbol{A}\|^2}{2m} + q\Phi
-\tag{3.10}\]</span></span></p>
+<p><span id="eq-CM_hamiltonian_of_charged_particle"><span class="math display">
+\mathcal{H}= \dfrac{\|\boldsymbol{p}- q\boldsymbol{A}\|^2}{2m} + q\Phi
+\tag{3.10}</span></span></p>
 <p>이다.</p>
 </div>
 </div>
 </section>
 <section id="sec-CM_symplectic_notation" class="level3" data-number="3.1.5">
 <h3 data-number="3.1.5" class="anchored" data-anchor-id="sec-CM_symplectic_notation"><span class="header-section-number">3.1.5</span> 심플렉틱 표기법</h3>
-<p><span class="math inline">\(n\)</span>-자유도 시스템에 대해 <span class="math inline">\(2n\)</span> 개의 성분을 갖는 벡터 <span class="math inline">\(\boldsymbol{\eta}\)</span> 를 <span class="math inline">\(\eta_i = q_i,\, \eta_{n+i} = p_i\)</span> 로 정의하자. 즉 <span id="eq-CM_vctor_in_simplectic_notation"><span class="math display">\[
+<p><span class="math inline">n</span>-자유도 시스템에 대해 <span class="math inline">2n</span> 개의 성분을 갖는 벡터 <span class="math inline">\boldsymbol{\eta}</span> 를 <span class="math inline">\eta_i = q_i,\, \eta_{n+i} = p_i</span> 로 정의하자. 즉 <span id="eq-CM_vctor_in_simplectic_notation"><span class="math display">
 \boldsymbol{\eta} = \begin{bmatrix} \boldsymbol{q} \\ \boldsymbol{p}\end{bmatrix}.
-\tag{3.11}\]</span></span></p>
-<p>이다. 또한 <span class="math inline">\(n\times n\)</span> 영행렬 <span class="math inline">\(\boldsymbol{0}_n\)</span> 와 항등행렬 <span class="math inline">\(\boldsymbol{1}_n\)</span> 에 대해 <span class="math inline">\(2n \times 2n\)</span> 행렬 <span class="math inline">\(\boldsymbol{J}\)</span> 를 다음과 같이 정의하자.</p>
-<p><span class="math display">\[
+\tag{3.11}</span></span></p>
+<p>이다. 또한 <span class="math inline">n\times n</span> 영행렬 <span class="math inline">\boldsymbol{0}_n</span> 와 항등행렬 <span class="math inline">\boldsymbol{1}_n</span> 에 대해 <span class="math inline">2n \times 2n</span> 행렬 <span class="math inline">\boldsymbol{J}</span> 를 다음과 같이 정의하자.</p>
+<p><span class="math display">
 \boldsymbol{J} = \begin{bmatrix} \boldsymbol{0}_n &amp; \boldsymbol{1}_n\\ -\boldsymbol{1}_n &amp; \boldsymbol{0}_n \end{bmatrix}
-\]</span></p>
+</span></p>
 <p>그렇다면 해밀턴의 정준방정식 <a href="#eq-CM_canonical_equation_of_hamiltonian" class="quarto-xref">식&nbsp;<span>3.4</span></a> 은 다음과 같이 쓸 수 있다.</p>
-<p><span id="eq-CM_simplectic_notation_of_hamilton_equation_of_motion"><span class="math display">\[
+<p><span id="eq-CM_simplectic_notation_of_hamilton_equation_of_motion"><span class="math display">
 \dot{\boldsymbol{\eta}} =  \boldsymbol{J}\dfrac{\partial H}{\partial \boldsymbol{\eta}}.
-\tag{3.12}\]</span></span></p>
+\tag{3.12}</span></span></p>
 <p>해밀턴 운동방정식을 위와 같이 표기하는 것을 <strong>심플렉틱 표기법(symplectic notation)</strong> 이라고 한다.</p>
-<p><span class="math inline">\(\boldsymbol{J}\)</span> 를 많이 사용하므로 여기서 <span class="math inline">\(\boldsymbol{J}\)</span> 의 기본 성질에 대해 정리하자.</p>
-<p><span id="eq-CM_symplectic_J_square"><span class="math display">\[
+<p><span class="math inline">\boldsymbol{J}</span> 를 많이 사용하므로 여기서 <span class="math inline">\boldsymbol{J}</span> 의 기본 성질에 대해 정리하자.</p>
+<p><span id="eq-CM_symplectic_J_square"><span class="math display">
 \boldsymbol{J}^2 = \boldsymbol{1}_{2n}.
-\tag{3.13}\]</span></span></p>
-<p><span id="eq-CM_symplectic_J_orthogonality"><span class="math display">\[
+\tag{3.13}</span></span></p>
+<p><span id="eq-CM_symplectic_J_orthogonality"><span class="math display">
 \boldsymbol{J}^T\boldsymbol{J} = \boldsymbol{JJ}^T = \boldsymbol{1}_{2n}.
-\tag{3.14}\]</span></span></p>
-<p><span id="eq-CM_symplectic_determinant_of_J"><span class="math display">\[
+\tag{3.14}</span></span></p>
+<p><span id="eq-CM_symplectic_determinant_of_J"><span class="math display">
 \det(\boldsymbol{J}) = 1.
-\tag{3.15}\]</span></span></p>
+\tag{3.15}</span></span></p>
 <p><br></p>
 </section>
 <section id="sec-cyclic_coordinate_hamiltonian" class="level3" data-number="3.1.6">
 <h3 data-number="3.1.6" class="anchored" data-anchor-id="sec-cyclic_coordinate_hamiltonian"><span class="header-section-number">3.1.6</span> 순환좌표와 보존 정리</h3>
 <section id="운동량-보존" class="level4">
 <h4 class="anchored" data-anchor-id="운동량-보존"><strong>운동량 보존</strong></h4>
-<p><a href="02_variational_principle.html#sec-CM_variational_phase_space">정준운동량과 위상공간</a> 에서 다루었던 순환 좌표를 다시 생각해보자. 라그랑지안과 해밀토니안의 관계 즉 <span class="math inline">\(H = \sum_i \dot{q}_i p_i -L\)</span> 을 생각해보면</p>
-<p><span class="math display">\[
-\dfrac{\partial L}{\partial q_i}=0 \iff \dfrac{\partial H}{\partial q_i}=0
-\]</span></p>
-<p>이 성립한다. <span class="math inline">\(\dot{p}_i = - \dfrac{\partial H}{\partial q_i}\)</span> 이므로 <span class="math inline">\(H\)</span> 에 명시적인 <span class="math inline">\(q_i\)</span> 의존성이 없다면 <span class="math inline">\(p_i\)</span> 는 운동상수이다. 순환좌표에 대한 정준운동량이 보존된다는 사실이 해밀토니안 방법에서도 그대로 적용된다.</p>
+<p><a href="02_variational_principle.html#sec-CM_variational_phase_space">정준운동량과 위상공간</a> 에서 다루었던 순환 좌표를 다시 생각해보자. 라그랑지안과 해밀토니안의 관계 즉 <span class="math inline">H = \sum_i \dot{q}_i p_i -L</span> 을 생각해보면</p>
+<p><span class="math display">
+\dfrac{\partial \mathcal{L}}{\partial q_i}=0 \iff \dfrac{\partial \mathcal{H}}{\partial q_i}=0
+</span></p>
+<p>이 성립한다. <span class="math inline">\dot{p}_i = - \dfrac{\partial \mathcal{H}}{\partial q_i}</span> 이므로 <span class="math inline">\mathcal{H}</span> 에 명시적인 <span class="math inline">q_i</span> 의존성이 없다면 <span class="math inline">p_i</span> 는 운동상수이다. 순환좌표에 대한 정준운동량이 보존된다는 사실이 해밀토니안 방법에서도 그대로 적용된다.</p>
 </section>
 <section id="라그랑지안이-시간에-명시적으로-의존하지-않을-때의-해밀토니안" class="level4">
 <h4 class="anchored" data-anchor-id="라그랑지안이-시간에-명시적으로-의존하지-않을-때의-해밀토니안"><strong>라그랑지안이 시간에 명시적으로 의존하지 않을 때의 해밀토니안</strong></h4>
-<p>또한 해밀턴 운동방정식 <a href="#eq-CM_canonical_equation_of_hamiltonian" class="quarto-xref">식&nbsp;<span>3.4</span></a> 과 <a href="#eq-CM_time_dependence_of_hamiltonian" class="quarto-xref">식&nbsp;<span>3.5</span></a> 으로부터 <span class="math display">\[
+<p>또한 해밀턴 운동방정식 <a href="#eq-CM_canonical_equation_of_hamiltonian" class="quarto-xref">식&nbsp;<span>3.4</span></a> 과 <a href="#eq-CM_time_dependence_of_hamiltonian" class="quarto-xref">식&nbsp;<span>3.5</span></a> 으로부터 <span class="math display">
 \begin{aligned}
-\dfrac{dH}{dt} &amp;= \sum_i \left[\dfrac{\partial H}{\partial q_i} \dot{q_i} + \dfrac{\partial H}{\partial p_i} \dot{p}_i\right] + \dfrac{\partial H}{\partial t} \\[0.3em]
-&amp;= \sum_i \left[-\dot{p}_i \dot{q}_i  + \dot{q}_i \dot{p}_i\right] + \dfrac{\partial H}{\partial t} = \dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
+\dfrac{d\mathcal{H}}{dt} &amp;= \sum_i \left[\dfrac{\partial \mathcal{H}}{\partial q_i} \dot{q_i} + \dfrac{\partial \mathcal{H}}{\partial p_i} \dot{p}_i\right] + \dfrac{\partial \mathcal{H}}{\partial t} \\[0.3em]
+&amp;= \sum_i \left[-\dot{p}_i \dot{q}_i  + \dot{q}_i \dot{p}_i\right] + \dfrac{\partial \mathcal{H}}{\partial t} = \dfrac{\partial \mathcal{H}}{\partial t} = -\dfrac{\partial \mathcal{L}}{\partial t}
 \end{aligned}
-\]</span></p>
+</span></p>
 <p>을 얻는다. 즉 라그랑지안이 명시적으로 시간에 의존적이지 않으면 해밀토니안 값은 운동상수이다.</p>
 </section>
 <section id="일반화된-좌표로의-변환이-시간에-대해-명시적으로-의존하지-않을-때" class="level4">
 <h4 class="anchored" data-anchor-id="일반화된-좌표로의-변환이-시간에-대해-명시적으로-의존하지-않을-때"><strong>일반화된 좌표로의 변환이 시간에 대해 명시적으로 의존하지 않을 때</strong></h4>
-<p>앞서 <a href="../../src/ClassicalMechanics/02_variational_principle.html#sec-CM_chapter_symmetry_and_conservation">대칭과 보존</a> 에서 봤지만 일반화된 좌표 <span class="math inline">\(q_1,\ldots,q_n\)</span> 으로의 변환을 생각하자. 이 때</p>
-<p><span class="math display">\[
+<p>앞서 <a href="../../src/ClassicalMechanics/02_variational_principle.html#sec-CM_chapter_symmetry_and_conservation">대칭과 보존</a> 에서 봤지만 일반화된 좌표 <span class="math inline">q_1,\ldots,q_n</span> 으로의 변환을 생각하자. 이 때</p>
+<p><span class="math display">
 \boldsymbol{r}_m = \boldsymbol{r}_m(q_1,\ldots,\,q_n,\,t)
-\]</span></p>
-<p>가 시간에 명시적으로 의존하지 않는며, 포텐셜이 속도에 의존하지 않는다면 <span class="math inline">\(H\)</span>(당시는 에너지 함수 <span class="math inline">\(h\)</span>)가 운동상수이며 <span class="math inline">\(T+V\)</span> 임을 보았다. 어떤 경우에는 이 좌표 변환이 시간에 명시적으로 의존하더라도 <span class="math inline">\(H\)</span> 는 그렇지 않을 수 있다. 이 경우 <span class="math inline">\(H\)</span> 는 운동상수이지만 총 에너지는 아니다. 앞서 <a href="../../src/ClassicalMechanics/02_variational_principle.html#sec-CM_chapter_symmetry_and_conservation">대칭과 보존</a> 에서 보았듯이 해밀토니안은 크기와 함수 형태에서 일반화된 좌표계의 선택에 의존한다. 라그랑지안을 <span class="math inline">\(L=T-V\)</span> 로 쓰고 여기서 일반된 좌표계로 변환한다면 함수의 형태는 바뀔지라도 값은 바뀌지 않지만 해밀토니안의 경우는 그 값도 바뀔 수 있다. 어떤 선택에서는 <span class="math inline">\(H\)</span> 가 보존되지만 어떤 선택에서는 시간에 대해 변한다.</p>
+</span></p>
+<p>가 시간에 명시적으로 의존하지 않는며, 포텐셜이 속도에 의존하지 않는다면 <span class="math inline">\mathcal{H}</span>(당시는 에너지 함수 <span class="math inline">h</span>)가 운동상수이며 <span class="math inline">T+V</span> 임을 보았다. 어떤 경우에는 이 좌표 변환이 시간에 명시적으로 의존하더라도 <span class="math inline">\mathcal{H}</span> 는 그렇지 않을 수 있다. 이 경우 <span class="math inline">\mathcal{H}</span> 는 운동상수이지만 총 에너지는 아니다. 앞서 <a href="../../src/ClassicalMechanics/02_variational_principle.html#sec-CM_chapter_symmetry_and_conservation">대칭과 보존</a> 에서 보았듯이 해밀토니안은 크기와 함수 형태에서 일반화된 좌표계의 선택에 의존한다. 라그랑지안을 <span class="math inline">\mathcal{L}=T-V</span> 로 쓰고 여기서 일반된 좌표계로 변환한다면 함수의 형태는 바뀔지라도 값은 바뀌지 않지만 해밀토니안의 경우는 그 값도 바뀔 수 있다. 어떤 선택에서는 <span class="math inline">H</span> 가 보존되지만 어떤 선택에서는 시간에 대해 변한다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-CM_lagrangian_and_hamiltonian_functinal_form" class="theorem example">
 <p><span class="theorem-title"><strong>예제 3.3 (라그랑지안과 해밀토니안)</strong></span> &nbsp;</p>
@@ -713,35 +732,35 @@ H = \dfrac{\|\boldsymbol{p}- q\boldsymbol{A}\|^2}{2m} + q\Phi
 </figcaption>
 </figure>
 </div>
-<p>위의 그림과 같이 점질량 <span class="math inline">\(m\)</span> 이 용수철 상수 <span class="math inline">\(k\)</span> 인 용수철에 붙어 있으며 용수철의 반대쪽 끝은 질량이 없는 카트에 붙어 있으며 이 카트는 <span class="math inline">\(v_0\)</span> 의 속력으로 움직이고 있다. 우리가 <span class="math inline">\(x\)</span> 를 일반화된 좌표계로 사용한다면 이 시스템의 라그랑지안 <span class="math inline">\(L\)</span> 은</p>
-<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_1"><span class="math display">\[
-L(x,\,\dot{x},t) = T-V = \dfrac{m\dot{x}^2}{2} - \dfrac{k}{2}(x-v_0t)^2
-\tag{3.16}\]</span></span></p>
-<p>이다. 문제를 간단하게 하기 위해 차가 <span class="math inline">\(t=0\)</span> 에서 지나는 점을 <span class="math inline">\(x=0\)</span> 으로 잡았다. 운동방정식은</p>
-<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_2"><span class="math display">\[
+<p>위의 그림과 같이 점질량 <span class="math inline">m</span> 이 용수철 상수 <span class="math inline">k</span> 인 용수철에 붙어 있으며 용수철의 반대쪽 끝은 질량이 없는 카트에 붙어 있으며 이 카트는 <span class="math inline">v_0</span> 의 속력으로 움직이고 있다. 우리가 <span class="math inline">x</span> 를 일반화된 좌표계로 사용한다면 이 시스템의 라그랑지안 <span class="math inline">L</span> 은</p>
+<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_1"><span class="math display">
+\mathcal{L}(x,\,\dot{x},t) = T-V = \dfrac{m\dot{x}^2}{2} - \dfrac{k}{2}(x-v_0t)^2
+\tag{3.16}</span></span></p>
+<p>이다. 문제를 간단하게 하기 위해 차가 <span class="math inline">t=0</span> 에서 지나는 점을 <span class="math inline">x=0</span> 으로 잡았다. 운동방정식은</p>
+<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_2"><span class="math display">
 m\ddot{x} = -k(x-v_0t)
-\tag{3.17}\]</span></span></p>
-<p>이다. 이제 카트의 중심을 기준으로 하는 좌푝 <span class="math inline">\(x'=x-v_0t\)</span> 를 생각하자. 이 경우 운동방정식은</p>
-<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_3"><span class="math display">\[
+\tag{3.17}</span></span></p>
+<p>이다. 이제 카트의 중심을 기준으로 하는 좌푝 <span class="math inline">x'=x-v_0t</span> 를 생각하자. 이 경우 운동방정식은</p>
+<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_3"><span class="math display">
 m\ddot{x}' = -kx'
-\tag{3.18}\]</span></span></p>
+\tag{3.18}</span></span></p>
 <p>이며, 이 운동방정식으로부터 카트에 타고 있는 관찰자에게는 단순조화진동자 운동이 보인다.</p>
-<p>이제 해밀토니안 관점에서 보자. <span class="math inline">\(x\)</span> 는 데카르트 좌표계에서의 좌표이고 포텐셜은 일반화된 운동을 포함하지 않기 때문에 <span class="math inline">\(x\)</span> 에 대한 해밀토니안은 운동에너지와 포텐셜 에너지의 합이다. 즉,</p>
-<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_4"><span class="math display">\[
-H(x,\,p,\,t) = T+V = \dfrac{p^2}{2m} + \dfrac{k}{2}(x-v_0t)^2.
-\tag{3.19}\]</span></span></p>
-<p>여기서 해밀토니안은 시스템의 총 에너지이지만 <span class="math inline">\(t\)</span> 에 대한 명시적 의존성을 가진다. 즉 에너지는 보존되지 않는다. 그 이유는 진동하는 입자에 대한 반작용에 반하여 카트를 균일한 속력으로 움직이게 하기 위해선 외부에 에너지가 들어오고 나가야 하기 때문이다.</p>
-<p>이제 <span class="math inline">\(x'\)</span> 좌표계에서의 라그랑지안을 구해보면 <span class="math inline">\(L'(x,\,\dot{x})\)</span> 에 <span class="math inline">\(x'=x+v_0t,\, \dot{x}'=\dot{x}+v\)</span> 를 대입하여</p>
-<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_5"><span class="math display">\[
-L(x',\, \dot{x}') = \dfrac{m\dot{x}'^2}{2} + m\dot{x}'v_0 + \dfrac{mv_0^2}{2} - \dfrac{kx'^2}{2}.
-\tag{3.20}\]</span></span></p>
-<p>이제 새로운 해밀토니안 <span class="math inline">\(H=H(x',\, p')\)</span> 은</p>
-<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_6"><span class="math display">\[
+<p>이제 해밀토니안 관점에서 보자. <span class="math inline">x</span> 는 데카르트 좌표계에서의 좌표이고 포텐셜은 일반화된 운동을 포함하지 않기 때문에 <span class="math inline">x</span> 에 대한 해밀토니안은 운동에너지와 포텐셜 에너지의 합이다. 즉,</p>
+<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_4"><span class="math display">
+\mathcal{H}(x,\,p,\,t) = T+V = \dfrac{p^2}{2m} + \dfrac{k}{2}(x-v_0t)^2.
+\tag{3.19}</span></span></p>
+<p>여기서 해밀토니안은 시스템의 총 에너지이지만 <span class="math inline">t</span> 에 대한 명시적 의존성을 가진다. 즉 에너지는 보존되지 않는다. 그 이유는 진동하는 입자에 대한 반작용에 반하여 카트를 균일한 속력으로 움직이게 하기 위해선 외부에 에너지가 들어오고 나가야 하기 때문이다.</p>
+<p>이제 <span class="math inline">x'</span> 좌표계에서의 라그랑지안을 구해보면 <span class="math inline">\mathcal{L}'(x,\,\dot{x})</span> 에 <span class="math inline">x'=x+v_0t,\, \dot{x}'=\dot{x}+v</span> 를 대입하여</p>
+<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_5"><span class="math display">
+\mathcal{L}(x',\, \dot{x}') = \dfrac{m\dot{x}'^2}{2} + m\dot{x}'v_0 + \dfrac{mv_0^2}{2} - \dfrac{kx'^2}{2}.
+\tag{3.20}</span></span></p>
+<p>이제 새로운 해밀토니안 <span class="math inline">H=H(x',\, p')</span> 은</p>
+<p><span id="eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_6"><span class="math display">
 \begin{aligned}
-H'(x',\,p') = \dot{x}'p' - L = \dfrac{(p'-mv_0)^2}{2m} + \dfrac{kx'^2}{2}- \dfrac{mv_0^2}{2}.
+\mathcal{H}'(x',\,p') = \dot{x}'p' - \mathcal{L}= \dfrac{(p'-mv_0)^2}{2m} + \dfrac{kx'^2}{2}- \dfrac{mv_0^2}{2}.
 \end{aligned}
-\tag{3.21}\]</span></span></p>
-<p>이 식에서 마지막 <span class="math inline">\(mv_0^2/2\)</span> 는 상수항이므로 운동방정식에 영향을 미치지 않으므로 제거해도 무방하다. 마지막 항을 제거한 해밀토니안은 카트 기준 좌표계에서의 총 에너지이다. 이렇게 구한 <span class="math inline">\(H'\)</span> 은 계의 총 에너지가 아니지만 <span class="math inline">\(-\partial L/\partial t = dH'/dt = 0\)</span> 이므로 보존된다.</p>
+\tag{3.21}</span></span></p>
+<p>이 식에서 마지막 <span class="math inline">mv_0^2/2</span> 는 상수항이므로 운동방정식에 영향을 미치지 않으므로 제거해도 무방하다. 마지막 항을 제거한 해밀토니안은 카트 기준 좌표계에서의 총 에너지이다. 이렇게 구한 <span class="math inline">H'</span> 은 계의 총 에너지가 아니지만 <span class="math inline">-\partial \mathcal{L}/\partial t = d\mathcal{H}'/dt = 0</span> 이므로 보존된다.</p>
 </div>
 </div>
 <p><br></p>
@@ -750,43 +769,43 @@ H'(x',\,p') = \dot{x}'p' - L = \dfrac{(p'-mv_0)^2}{2m} + \dfrac{kx'^2}{2}- \dfra
 </section>
 <section id="sec-CM_routh_procedure" class="level2 page-columns page-full" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="sec-CM_routh_procedure"><span class="header-section-number">3.2</span> 라우스 과정</h2>
-<p>해밀토니안 운동방정식으로 역학 문제를 푸는 것은 많은 경우 라그랑지안 방법에 비해 큰 장점이 없다. <span class="math inline">\(2n\)</span> 개의 1차 미분방정식을 풀다보면 결국은 라그랑지안 운동방정식으로 돌아가는 경우도 많다. 여기서는 그 예외를 살펴보겠다. 해밀토니안 운동방정식은 순환 좌표에 관련된 문제를 풀 때 큰 도움이 된다. <span class="math inline">\(\boldsymbol{q}\in \mathbb{R}^n\)</span> 에서 <span class="math inline">\(q_n\)</span> 이 순환좌표인 경우를 살펴보자. 이 경우 라그랑지안은 다음과 같다.</p>
-<p><span class="math display">\[
-L = L(q_1,\ldots,\,q_{n-1}; \dot{q}_1, \ldots,\, \dot{q}_n;t)
-\]</span></p>
-<p>일반화된 속도 <span class="math inline">\(\dot{q}_n\)</span> 이 라그랑지안에 나타난다. 비록 순환좌표가 있더라도 일반적인 <span class="math inline">\(n\)</span>-자유도 시스템을 풀 때와 크게 다르지 않다. 그러나 해밀토니안의 경우 경우 <span class="math inline">\(p_n\)</span> 이 상수이므로 <span class="math inline">\(p_n=\alpha\)</span> 라고 놓으면</p>
-<p><span class="math display">\[
-H = H(q_1,\ldots,\,q_{n-1};p_1,\ldots,\,p_{n-1};\alpha;t)
-\]</span></p>
-<p>이 된다. 즉 <span class="math inline">\(n-1\)</span>-자유도 문제가 되며 <span class="math inline">\(q_n\)</span> 의 변화는</p>
-<p><span class="math display">\[
-\dot{q}_n = \dfrac{\partial H}{\partial \alpha}
-\]</span></p>
+<p>해밀토니안 운동방정식으로 역학 문제를 푸는 것은 많은 경우 라그랑지안 방법에 비해 큰 장점이 없다. <span class="math inline">2n</span> 개의 1차 미분방정식을 풀다보면 결국은 라그랑지안 운동방정식으로 돌아가는 경우도 많다. 여기서는 그 예외를 살펴보겠다. 해밀토니안 운동방정식은 순환 좌표에 관련된 문제를 풀 때 큰 도움이 된다. <span class="math inline">\boldsymbol{q}\in \mathbb{R}^n</span> 에서 <span class="math inline">q_n</span> 이 순환좌표인 경우를 살펴보자. 이 경우 라그랑지안은 다음과 같다.</p>
+<p><span class="math display">
+\mathcal{L}= \mathcal{L}(q_1,\ldots,\,q_{n-1}; \dot{q}_1, \ldots,\, \dot{q}_n;t)
+</span></p>
+<p>일반화된 속도 <span class="math inline">\dot{q}_n</span> 이 라그랑지안에 나타난다. 비록 순환좌표가 있더라도 일반적인 <span class="math inline">n</span>-자유도 시스템을 풀 때와 크게 다르지 않다. 그러나 해밀토니안의 경우 경우 <span class="math inline">p_n</span> 이 상수이므로 <span class="math inline">p_n=\alpha</span> 라고 놓으면</p>
+<p><span class="math display">
+\mathcal{H}= \mathcal{H}(q_1,\ldots,\,q_{n-1};p_1,\ldots,\,p_{n-1};\alpha;t)
+</span></p>
+<p>이 된다. 즉 <span class="math inline">n-1</span>-자유도 문제가 되며 <span class="math inline">q_n</span> 의 변화는</p>
+<p><span class="math display">
+\dot{q}_n = \dfrac{\partial \mathcal{H}}{\partial \alpha}
+</span></p>
 <p>를 통해 얻을 수 있다.</p>
-<div class="page-columns page-full"><p>순환좌표가 있을 경우 해밀토니안과 라그랑지안을 섞어 쓸 수 있는 데 이것은 라우스(Routh) 에 의해 고안되었다.<span class="math inline">\(^{\dagger}\)</span> <span class="math inline">\(n\)</span>-자유도 시스템에서 <span class="math inline">\(q_{s+1},\ldots,\,q_n\)</span> 이 순환좌표일 때 라우시안 <span class="math inline">\(R\)</span> 을 아래와 같이 정의한다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^\dagger\)</span> Edward John Routh 는 캐나다 퀘벡 출신이므로 프랑스식으로 라우스 라고 읽는다.</span></div></div>
-<p><span id="eq-CM_definition_of_routhian"><span class="math display">\[
-R(q_1,\ldots,\,q_n;\dot{q}_1,\ldots,\,\dot{q}_{s};p_{s+1},\ldots,\,p_n;t) := \sum_{i=s+1}^n p_i\dot{q}_i-L.
-\tag{3.22}\]</span></span></p>
-<p>즉 라우시안은 순환좌표가 아닌 좌표에 대해서는 <span class="math inline">\((q,\,\dot{q})\)</span> 변수를, 순환좌표에 대해서는 <span class="math inline">\((q,\,p)\)</span> 변수를 사용한다. <span class="math inline">\(R\)</span> 에 대한 미분은 다음과 같다.</p>
-<p><span class="math display">\[
-dR = \sum_{i=s+1}^n \dot{q}_i dp_i - \sum_{i=1}^s \dfrac{\partial L}{\partial \dot{q}_i}d\dot{q}_i - \sum_{i=1}^n \dfrac{\partial L}{\partial q_i}dq_i - \dfrac{\partial L}{\partial t}dt.
-\]</span></p>
+<div class="page-columns page-full"><p>순환좌표가 있을 경우 해밀토니안과 라그랑지안을 섞어 쓸 수 있는 데 이것은 라우스(Routh) 에 의해 고안되었다.<span class="math inline">^{\dagger}</span> <span class="math inline">n</span>-자유도 시스템에서 <span class="math inline">q_{s+1},\ldots,\,q_n</span> 이 순환좌표일 때 라우시안 <span class="math inline">R</span> 을 아래와 같이 정의한다.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">^\dagger</span> Edward John Routh 는 캐나다 퀘벡 출신이므로 프랑스식으로 라우스 라고 읽는다.</span></div></div>
+<p><span id="eq-CM_definition_of_routhian"><span class="math display">
+\mathcal{R}(q_1,\ldots,\,q_n;\dot{q}_1,\ldots,\,\dot{q}_{s};p_{s+1},\ldots,\,p_n;t) := \sum_{i=s+1}^n p_i\dot{q}_i-\mathcal{L}.
+\tag{3.22}</span></span></p>
+<p>즉 라우시안은 순환좌표가 아닌 좌표에 대해서는 <span class="math inline">(q,\,\dot{q})</span> 변수를, 순환좌표에 대해서는 <span class="math inline">(q,\,p)</span> 변수를 사용한다. <span class="math inline">\mathcal{R}</span> 에 대한 미분은 다음과 같다.</p>
+<p><span class="math display">
+d\mathcal{R} = \sum_{i=s+1}^n \dot{q}_i dp_i - \sum_{i=1}^s \dfrac{\partial L}{\partial \dot{q}_i}d\dot{q}_i - \sum_{i=1}^n \dfrac{\partial \mathcal{L}}{\partial q_i}dq_i - \dfrac{\partial \mathcal{L}}{\partial t}dt.
+</span></p>
 <p>이로부터,</p>
-<p><span id="eq-CM_equation_of_motion_of_routhian"><span class="math display">\[
+<p><span id="eq-CM_equation_of_motion_of_routhian"><span class="math display">
 \begin{aligned}
-\dfrac{\partial R}{\partial q_i} &amp;= - \dfrac{\partial L}{\partial q_i},\qquad &amp;\dfrac{\partial R}{\partial \dot{q}_i} &amp;= - \dfrac{\partial L}{\partial \dot{q}_i}, \qquad \qquad&amp; i=1,\ldots,\,s,\\[0.3em]
-\dfrac{\partial R}{\partial q_i}&amp;=-\dot{p}_i, &amp;\dfrac{\partial R}{\partial p_i} &amp;= \dot{q}_i, &amp; i=s+1,\ldots,\,n
+\dfrac{\partial \mathcal{R}}{\partial q_i} &amp;= - \dfrac{\partial \mathcal{L}}{\partial q_i},\qquad &amp;\dfrac{\partial \mathcal{R}}{\partial \dot{q}_i} &amp;= - \dfrac{\partial \mathcal{L}}{\partial \dot{q}_i}, \qquad \qquad&amp; i=1,\ldots,\,s,\\[0.3em]
+\dfrac{\partial \mathcal{R}}{\partial q_i}&amp;=-\dot{p}_i, &amp;\dfrac{\partial \mathcal{R}}{\partial p_i} &amp;= \dot{q}_i, &amp; i=s+1,\ldots,\,n
 \end{aligned}.
-\tag{3.23}\]</span></span></p>
+\tag{3.23}</span></span></p>
 <p>비순환 좌표에 대해서는 라우시안에 대한 라그랑쥬 방정식을 다음과 같이 쓸 수 있다는 것을 알 수 있다.</p>
-<p><span id="eq-CM_lagrange_equation_for_non_cyclic_variables_in_routian"><span class="math display">\[
-\dfrac{d}{dt}\left(\dfrac{\partial R}{\partial \dot{q}}\right) - \dfrac{\partial R}{\partial q} = 0,\qquad i=1,\ldots,\,s.
-\tag{3.24}\]</span></span></p>
-<p>또한 순환변수에 대한 정준 모먼트 <span class="math inline">\(p_j\, (j=s+1,\ldots,\,n)\)</span> 은 상수이므로 <span class="math inline">\(p_{s+i}\)</span> 를 <span class="math inline">\(\alpha_i\)</span> 로 바꾸면 라우시안은</p>
-<p><span id="eq-CM_routhian_form_1"><span class="math display">\[
-R = R(q_1,\ldots,\,q_n;\dot{q}_1,\ldots,\,\dot{q}_s;\alpha_{1},\ldots,\,\alpha_r;t),\qquad \text{where }r=n-s.
-\tag{3.25}\]</span></span></p>
-<p>이제 비순환 좌표에 대한 라그랑쥬 방정식 <a href="#eq-CM_lagrange_equation_for_non_cyclic_variables_in_routian" class="quarto-xref">식&nbsp;<span>3.24</span></a> 은 순환좌표와 무관하게 풀릴 수 있으며 마치 자유도 <span class="math inline">\(s\)</span> 인 시스템의 라그랑쥬 방정식과 같다.</p>
+<p><span id="eq-CM_lagrange_equation_for_non_cyclic_variables_in_routian"><span class="math display">
+\dfrac{d}{dt}\left(\dfrac{\partial \mathcal{R}}{\partial \dot{q}}\right) - \dfrac{\partial \mathcal{R}}{\partial q} = 0,\qquad i=1,\ldots,\,s.
+\tag{3.24}</span></span></p>
+<p>또한 순환변수에 대한 정준 모먼트 <span class="math inline">p_j\, (j=s+1,\ldots,\,n)</span> 은 상수이므로 <span class="math inline">p_{s+i}</span> 를 <span class="math inline">\alpha_i</span> 로 바꾸면 라우시안은</p>
+<p><span id="eq-CM_routhian_form_1"><span class="math display">
+\mathcal{R} = \mathcal{R}(q_1,\ldots,\,q_n;\dot{q}_1,\ldots,\,\dot{q}_s;\alpha_{1},\ldots,\,\alpha_r;t),\qquad \text{where }r=n-s.
+\tag{3.25}</span></span></p>
+<p>이제 비순환 좌표에 대한 라그랑쥬 방정식 <a href="#eq-CM_lagrange_equation_for_non_cyclic_variables_in_routian" class="quarto-xref">식&nbsp;<span>3.24</span></a> 은 순환좌표와 무관하게 풀릴 수 있으며 마치 자유도 <span class="math inline">s</span> 인 시스템의 라그랑쥬 방정식과 같다.</p>
 <p><br></p>
 </section>
 <section id="변분법으로부터-해밀턴-운동-방정식으로" class="level2" data-number="3.3">
@@ -796,116 +815,116 @@ R = R(q_1,\ldots,\,q_n;\dot{q}_1,\ldots,\,\dot{q}_s;\alpha_{1},\ldots,\,\alpha_r
 <ul>
 <li><a href="https://physics.stackexchange.com/questions/560216/modified-hamiltons-principle-overconstraining-a-system-by-imposing-too-many-bou">StackExchange 의 관련 논의</a></li>
 </ul>
-<p><a href="../../src/ClassicalMechanics/02_variational_principle.html#sec-CM_least_action_theorem">해밀턴의 원리</a> 를 상기하자. 라그랑쥬 방정식은 해밀턴의 원리로부터의 자연스러운 결론이다. 이제 해밀턴의 원리로부터 해밀턴의 운동방정식이 자연스럽게 유도됨을 보이고자 한다. 라그랑지안 <span class="math inline">\(L\)</span> 에 대한 action <span class="math inline">\(S_L\)</span> 은 다음과 같다.</p>
-<p><span class="math display">\[
-S_L = \int_{t_1}^{t_2} L(\boldsymbol{q},\, \boldsymbol{\dot{q}},\,t)\, dt .
-\]</span></p>
-<p><span class="math inline">\(L(\boldsymbol{q},\,\dot{\boldsymbol{q}},\,t) = \sum_i \dot{q}_i p_i - H(\boldsymbol{q},\, \boldsymbol{p},\,t)\)</span> 이므로 라그랑지안이 아닌 해밀토니안을 사용하는 action <span class="math inline">\(S_H\)</span> 를 아래와 같이 정할 수 있다.</p>
-<p><span id="eq-CM_action_in_phase_space"><span class="math display">\[
-S_H = \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - H(\boldsymbol{q},\, \boldsymbol{p},\,t)\right] \, dt
-\tag{3.26}\]</span></span></p>
-<p>이다. 여기서 라그랑지안에 대한 <span class="math inline">\(S_L\)</span> 는 짜임새 공간에서의 경로에 대한 적분이지만 해밀토니안에 대한 <span class="math inline">\(S_H\)</span> 는 위상공간에서의 경로에 대한 적분이 이 되며, 해밀토니안 형식에 따라 <span class="math inline">\(\boldsymbol{q}\)</span> 와 <span class="math inline">\(\boldsymbol{p}\)</span> 는 각각 독립변수로 간주된다. 따라서 <a href="#eq-CM_action_in_phase_space" class="quarto-xref">식&nbsp;<span>3.26</span></a> 에서 적분되는 함수는 <span class="math inline">\(\boldsymbol{q},\, \dot{\boldsymbol{q}},\, \boldsymbol{p},\, \dot{\boldsymbol{p}}\)</span> 의 함수로 표현되어야 한다. 따라서 어떤 경로의 변형 역시 위상공간에서의 경로의 변형 이다. 해밀턴의 원리는 짜임새 공간에서의 action <span class="math inline">\(S_L\)</span> 에 대해 다루는데 <strong>변형된 해밀턴의 원리 (modified Hamilton’s principle)</strong> 는 위상공간에서의 action <span class="math inline">\(S_H\)</span> 에 대해 <span class="math inline">\(\delta S_H=0\)</span> 이 되는 위상공간 상의 경로를 따른는 것을 주장한다. 즉</p>
-<p><span id="eq-CM_modified_hamilton_principle"><span class="math display">\[
-\delta S_H = \delta \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - H(\boldsymbol{p},\, \boldsymbol{q},\,t)\right] \, dt = 0
-\tag{3.27}\]</span></span></p>
-<p>이다. 이 변형된 해밀턴의 원리가 가장 많이 사용되는 곳은 다음 장에 다룰 변환 이론이지만 여기서 중요한 것은 이 변형된 해밀턴의 원리를 통해 해밀턴의 정준 운동방정식을 유도할 수 있다는 것이다. <a href="#eq-CM_modified_hamilton_principle" class="quarto-xref">식&nbsp;<span>3.27</span></a> <span class="math inline">\([\;\cdots\;]\)</span> 안의 함수를 <span class="math inline">\(F\)</span> 라고 임시로 붙이면 <span class="math inline">\(F\)</span> 는 <span class="math inline">\(\boldsymbol{q},\, \dot{\boldsymbol{q}},\, \boldsymbol{p}\)</span> 의 함수이며 <span class="math inline">\(\dot{\boldsymbol{p}}\)</span> 에 명시적인 의존성은 없다. 변형된 해밀턴의 원리는</p>
-<p><span class="math display">\[
-\delta S = \delta\int_{t_1}^{t_2} \left[\sum_i \dot{q}_i p_i - H(\boldsymbol{q},\, \boldsymbol{p},\,t)\right] \, dt = \delta \int_{t_1}^{t_2}F(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,\boldsymbol{p}, t)\, dt =0
-\]</span></p>
+<p><a href="../../src/ClassicalMechanics/02_variational_principle.html#sec-CM_least_action_theorem">해밀턴의 원리</a> 를 상기하자. 라그랑쥬 방정식은 해밀턴의 원리로부터의 자연스러운 결론이다. 이제 해밀턴의 원리로부터 해밀턴의 운동방정식이 자연스럽게 유도됨을 보이고자 한다. 라그랑지안 <span class="math inline">L</span> 에 대한 action <span class="math inline">S_L</span> 은 다음과 같다.</p>
+<p><span class="math display">
+S_\magr = \int_{t_1}^{t_2} \mathcal{L}(\boldsymbol{q},\, \boldsymbol{\dot{q}},\,t)\, dt .
+</span></p>
+<p><span class="math inline">\mathcal{L}(\boldsymbol{q},\,\dot{\boldsymbol{q}},\,t) = \sum_i \dot{q}_i p_i - \mathcal{H}(\boldsymbol{q},\, \boldsymbol{p},\,t)</span> 이므로 라그랑지안이 아닌 해밀토니안을 사용하는 action <span class="math inline">S_H</span> 를 아래와 같이 정할 수 있다.</p>
+<p><span id="eq-CM_action_in_phase_space"><span class="math display">
+S_\mathcal{H}= \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - \mathcal{H}(\boldsymbol{q},\, \boldsymbol{p},\,t)\right] \, dt
+\tag{3.26}</span></span></p>
+<p>이다. 여기서 라그랑지안에 대한 <span class="math inline">S_\mathcal{L}</span> 는 짜임새 공간에서의 경로에 대한 적분이지만 해밀토니안에 대한 <span class="math inline">S_\mathcal{H}</span> 는 위상공간에서의 경로에 대한 적분이 이 되며, 해밀토니안 형식에 따라 <span class="math inline">\boldsymbol{q}</span> 와 <span class="math inline">\boldsymbol{p}</span> 는 각각 독립변수로 간주된다. 따라서 <a href="#eq-CM_action_in_phase_space" class="quarto-xref">식&nbsp;<span>3.26</span></a> 에서 적분되는 함수는 <span class="math inline">\boldsymbol{q},\, \dot{\boldsymbol{q}},\, \boldsymbol{p},\, \dot{\boldsymbol{p}}</span> 의 함수로 표현되어야 한다. 따라서 어떤 경로의 변형 역시 위상공간에서의 경로의 변형 이다. 해밀턴의 원리는 짜임새 공간에서의 action <span class="math inline">S_\mathcal{L}</span> 에 대해 다루는데 <strong>변형된 해밀턴의 원리 (modified Hamilton’s principle)</strong> 는 위상공간에서의 action <span class="math inline">S_\mathcal{H}</span> 에 대해 <span class="math inline">\delta S_\mathcal{H}=0</span> 이 되는 위상공간 상의 경로를 따른는 것을 주장한다. 즉</p>
+<p><span id="eq-CM_modified_hamilton_principle"><span class="math display">
+\delta S_\mathcal{H}= \delta \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - \mathcal{H}(\boldsymbol{p},\, \boldsymbol{q},\,t)\right] \, dt = 0
+\tag{3.27}</span></span></p>
+<p>이다. 이 변형된 해밀턴의 원리가 가장 많이 사용되는 곳은 다음 장에 다룰 변환 이론이지만 여기서 중요한 것은 이 변형된 해밀턴의 원리를 통해 해밀턴의 정준 운동방정식을 유도할 수 있다는 것이다. <a href="#eq-CM_modified_hamilton_principle" class="quarto-xref">식&nbsp;<span>3.27</span></a> <span class="math inline">[\;\cdots\;]</span> 안의 함수를 <span class="math inline">F</span> 라고 임시로 붙이면 <span class="math inline">F</span> 는 <span class="math inline">\boldsymbol{q},\, \dot{\boldsymbol{q}},\, \boldsymbol{p}</span> 의 함수이며 <span class="math inline">\dot{\boldsymbol{p}}</span> 에 명시적인 의존성은 없다. 변형된 해밀턴의 원리는</p>
+<p><span class="math display">
+\delta S = \delta\int_{t_1}^{t_2} \left[\sum_i \dot{q}_i p_i - \mathcal{H}(\boldsymbol{q},\, \boldsymbol{p},\,t)\right] \, dt = \delta \int_{t_1}^{t_2}F(\boldsymbol{q},\, \dot{\boldsymbol{q}},\,\boldsymbol{p}, t)\, dt =0
+</span></p>
 <p>이 된다. 그리고 이에 대한 오일러-라그랑쥬 방정식은,</p>
-<p><span id="eq-CM_euler_lagrange_equation_from_action_using_hamiltonian"><span class="math display">\[
+<p><span id="eq-CM_euler_lagrange_equation_from_action_using_hamiltonian"><span class="math display">
 \begin{aligned}
 \dfrac{d}{dt}\left(\dfrac{\partial F}{\partial \dot{q}_i}\right) - \dfrac{\partial F}{\partial q_i} &amp;= 0, \qquad  i = 1,\ldots,\,n \\
 \dfrac{d}{dt}\left(\dfrac{\partial F}{\partial \dot{p}_i}\right) - \dfrac{\partial F}{\partial p_i} &amp;= 0, \qquad  i = 1,\ldots,\,n \\
 \end{aligned}
-\tag{3.28}\]</span></span></p>
+\tag{3.28}</span></span></p>
 <p>이다. 첫번째 식으로부터</p>
-<p><span id="eq-CM_canonical_equation_from_modified_hamiltonian_principle_1"><span class="math display">\[
-\dot{p}_i = - \dfrac{\partial H}{\partial q_i}
-\tag{3.29}\]</span></span></p>
-<p>를 얻을 수 있으며, <span class="math inline">\(F\)</span> 는 명시적인 <span class="math inline">\(\dot{p}_i\)</span> 의존성이 없으므로 두번째 식으로부터</p>
-<p><span id="eq-CM_canonical_equation_from_modified_hamiltonian_principle_2"><span class="math display">\[
-\dot{q}_i = \dfrac{\partial H}{\partial p_i}
-\tag{3.30}\]</span></span></p>
+<p><span id="eq-CM_canonical_equation_from_modified_hamiltonian_principle_1"><span class="math display">
+\dot{p}_i = - \dfrac{\partial \mathcal{H}}{\partial q_i}
+\tag{3.29}</span></span></p>
+<p>를 얻을 수 있으며, <span class="math inline">F</span> 는 명시적인 <span class="math inline">\dot{p}_i</span> 의존성이 없으므로 두번째 식으로부터</p>
+<p><span id="eq-CM_canonical_equation_from_modified_hamiltonian_principle_2"><span class="math display">
+\dot{q}_i = \dfrac{\partial \mathcal{H}}{\partial p_i}
+\tag{3.30}</span></span></p>
 <p>를 얻는다. 즉 우리는 변형된 해밀턴의 원리로부터 해밀턴의 운동방정식을 얻었다. 여기서 몇가지를 정리해 보기로 하자.</p>
-<p>(<span class="math inline">\(1\)</span>) 변형된 해밀턴의 원리는 해밀턴의 원리와 동일한지 아니면 다른 추가적인 물리적인 의미를 가지고 있는지에 대해 의문을 가질 수 있다. Goldstein 에 의하면 이 질문은 irrelevant 하다(<span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="../../references.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span> pp.&nbsp;363, 3판의 경우는 pp.&nbsp;354-355). 해밀턴의 원리가 정당한 것은 해밀턴의 원리의 결과가 라그랑쥬 방정식이기 때문이다. 변형된 해밀턴의 원리가 정당한 것은 그 결과가 해밀턴 운동방정식이기 때문이다.</p>
-<p>(<span class="math inline">\(2\)</span>) 해밀턴의 원리와 변분원리에서는 양 끝점에서의 변화가 <span class="math inline">\(0\)</span> 임을 가정하였으나 변형된 해밀토니안의 원리에 이를 적용한다면 운동량에 대해서도 <span class="math inline">\(\delta p_i(t_1)= \delta p_i(t_2)=0\)</span> 임을 가정해야 할 것 같다. 그런데 이 가정은 필요가 없는 것이, <a href="02_variational_principle.html#exr-CM_variational_devivation_of_euler_lagrange_eq" class="quarto-xref">연습문제&nbsp;<span>2.1</span></a> 에서 보았듯이 <span class="math inline">\(\delta p_i = 0\)</span> 이 필요한 것은 부분적분에서</p>
-<p><span class="math display">\[
+<p>(<span class="math inline">1</span>) 변형된 해밀턴의 원리는 해밀턴의 원리와 동일한지 아니면 다른 추가적인 물리적인 의미를 가지고 있는지에 대해 의문을 가질 수 있다. Goldstein 에 의하면 이 질문은 irrelevant 하다(<span class="citation" data-cites="Goldstein1980Mechanics">Goldstein (<a href="../../references.html#ref-Goldstein1980Mechanics" role="doc-biblioref">1980</a>)</span> pp.&nbsp;363, 3판의 경우는 pp.&nbsp;354-355). 해밀턴의 원리가 정당한 것은 해밀턴의 원리의 결과가 라그랑쥬 방정식이기 때문이다. 변형된 해밀턴의 원리가 정당한 것은 그 결과가 해밀턴 운동방정식이기 때문이다.</p>
+<p>(<span class="math inline">2</span>) 해밀턴의 원리와 변분원리에서는 양 끝점에서의 변화가 <span class="math inline">0</span> 임을 가정하였으나 변형된 해밀토니안의 원리에 이를 적용한다면 운동량에 대해서도 <span class="math inline">\delta p_i(t_1)= \delta p_i(t_2)=0</span> 임을 가정해야 할 것 같다. 그런데 이 가정은 필요가 없는 것이, <a href="02_variational_principle.html#exr-CM_variational_devivation_of_euler_lagrange_eq" class="quarto-xref">연습문제&nbsp;<span>2.1</span></a> 에서 보았듯이 <span class="math inline">\delta p_i = 0</span> 이 필요한 것은 부분적분에서</p>
+<p><span class="math display">
 \left.\dfrac{\partial F}{\partial \dot{p}_i} \dfrac{\partial p_i}{\partial \alpha} \right|_{t_1}^{t_2}
-\]</span></p>
-<p>인 부분이다. 그런데 <span class="math inline">\(F\)</span> 는 <span class="math inline">\(\boldsymbol{\dot{p}}\)</span> 에 명시적인 의존성이 없기 때문에 위의 항은 항상 <span class="math inline">\(0\)</span> 이다. 즉 변형된 해밀턴의 원리에로부터 해밀턴 운동방정식을 유도할 때 <span class="math inline">\(\delta \boldsymbol{p}=0\)</span> 의 조건은 필요하지 않다. <strong>즉 해밀턴의 원리와 변형된 해밀턴의 원리는 동일한 경계조건을 사용한다.</strong></p>
-<p>(<span class="math inline">\(3\)</span>) 변형된 해밀토니안에서는 <span class="math inline">\(\boldsymbol{q}\)</span> 와 <span class="math inline">\(\boldsymbol{p}\)</span> 에 대한 경계조건을 생각하기 때문에, 라그랑지안에서 두번 미분 가능한 <span class="math inline">\(g(\boldsymbol{q},\,t)\)</span> 의 시간에 대한 미분을 더할 수 있듯이, 변형된 라그랑지안에서는 <span class="math inline">\(g(\boldsymbol{q},\, \boldsymbol{p},\,t)\)</span> 의 시간에 대한 미분을 더할 수 있다. 예를 들어,</p>
-<p><span id="eq-CM_modified_hamiltonian_example_1"><span class="math display">\[
+</span></p>
+<p>인 부분이다. 그런데 <span class="math inline">F</span> 는 <span class="math inline">\boldsymbol{\dot{p}}</span> 에 명시적인 의존성이 없기 때문에 위의 항은 항상 <span class="math inline">0</span> 이다. 즉 변형된 해밀턴의 원리에로부터 해밀턴 운동방정식을 유도할 때 <span class="math inline">\delta \boldsymbol{p}=0</span> 의 조건은 필요하지 않다. <strong>즉 해밀턴의 원리와 변형된 해밀턴의 원리는 동일한 경계조건을 사용한다.</strong></p>
+<p>(<span class="math inline">3</span>) 변형된 해밀토니안에서는 <span class="math inline">\boldsymbol{q}</span> 와 <span class="math inline">\boldsymbol{p}</span> 에 대한 경계조건을 생각하기 때문에, 라그랑지안에서 두번 미분 가능한 <span class="math inline">g(\boldsymbol{q},\,t)</span> 의 시간에 대한 미분을 더할 수 있듯이, 변형된 라그랑지안에서는 <span class="math inline">g(\boldsymbol{q},\, \boldsymbol{p},\,t)</span> 의 시간에 대한 미분을 더할 수 있다. 예를 들어,</p>
+<p><span id="eq-CM_modified_hamiltonian_example_1"><span class="math display">
 \begin{aligned}
-0=\delta \int_{t_1}^{t_2} &amp; \left[\left(\sum_{i} \dot{q}_i p_i - H(\boldsymbol{q},\, \boldsymbol{p},\,t)\right) - \dfrac{d}{dt}\left(\sum_i q_i p_i \right)\right]\,dt \\[0.3em]
-&amp;= \delta \int_{t_1}^{t_2} \left(\sum_i -\dot{p}_iq_i - H(\boldsymbol{q},\,\boldsymbol{p},\,t)\right)\,dt.
+0=\delta \int_{t_1}^{t_2} &amp; \left[\left(\sum_{i} \dot{q}_i p_i - \mathcal{H}(\boldsymbol{q},\, \boldsymbol{p},\,t)\right) - \dfrac{d}{dt}\left(\sum_i q_i p_i \right)\right]\,dt \\[0.3em]
+&amp;= \delta \int_{t_1}^{t_2} \left(\sum_i -\dot{p}_iq_i - \mathcal{H}(\boldsymbol{q},\,\boldsymbol{p},\,t)\right)\,dt.
 \end{aligned}
-\tag{3.31}\]</span></span></p>
-<p>위 식의 <span class="math inline">\(-\sum_i \dot{p}_i q_i - H\)</span> 는 라그랑지안도 아니고 짜임새 공간의 점변환을 통해 라그랑지안으로 변환될 수도 없지만 <span class="math inline">\(q\)</span> 와 <span class="math inline">\(p\)</span> 의 끝점에서의 변화를 <span class="math inline">\(0\)</span> 으로 제한함으로서 올바른 해밀턴 운동방정식을 얻을 수 있다(<a href="#exr-CM_goldstein_8_1" class="quarto-xref">연습문제&nbsp;<span>3.1</span></a> (<span class="math inline">\(b\)</span>)).</p>
+\tag{3.31}</span></span></p>
+<p>위 식의 <span class="math inline">-\sum_i \dot{p}_i q_i - \mathcal{H}</span> 는 라그랑지안도 아니고 짜임새 공간의 점변환을 통해 라그랑지안으로 변환될 수도 없지만 <span class="math inline">q</span> 와 <span class="math inline">p</span> 의 끝점에서의 변화를 <span class="math inline">0</span> 으로 제한함으로서 올바른 해밀턴 운동방정식을 얻을 수 있다(<a href="#exr-CM_goldstein_8_1" class="quarto-xref">연습문제&nbsp;<span>3.1</span></a> (<span class="math inline">b</span>)).</p>
 </section>
 </section>
 <section id="최소-작용-원리" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="최소-작용-원리"><span class="header-section-number">3.4</span> 최소 작용 원리</h2>
 <section id="sec-CM_delta_variations" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="sec-CM_delta_variations"><span class="header-section-number">3.4.1</span> <span class="math inline">\(\delta\)</span>-변화 와 <span class="math inline">\(\Delta\)</span>-변화</h3>
-<p>지금까지 해석역학에서 <span class="math inline">\(\delta q\)</span> 라던가 <span class="math inline">\(\delta \int L\,dt\)</span> 의 경우 변화는 정해진 시간 <span class="math inline">\(t_1,\,t_2\)</span> 에 정해진 짜임새 공간 상의 점을 지나는 경로에 대한 변화였다. 즉 <span class="math inline">\(\delta q(t_1) = \delta q(t_2)=0\)</span>. 이를 <span class="math inline">\(\delta\)</span>-변화 라고 하자. 이제 소개할 <span class="math inline">\(\Delta\)</span>-변화는 좀 더 제한적인 변화이다.</p>
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="sec-CM_delta_variations"><span class="header-section-number">3.4.1</span> <span class="math inline">\delta</span>-변화 와 <span class="math inline">\Delta</span>-변화</h3>
+<p>지금까지 해석역학에서 <span class="math inline">\delta q</span> 라던가 <span class="math inline">\delta \int \mathcal{L}\,dt</span> 의 경우 변화는 정해진 시간 <span class="math inline">t_1,\,t_2</span> 에 정해진 짜임새 공간 상의 점을 지나는 경로에 대한 변화였다. 즉 <span class="math inline">\delta q(t_1) = \delta q(t_2)=0</span>. 이를 <span class="math inline">\delta</span>-변화 라고 하자. 이제 소개할 <span class="math inline">\Delta</span>-변화는 좀 더 제한적인 변화이다.</p>
 <ul>
-<li>정확한 경로에서의 <span class="math inline">\(t_2\)</span> 에 도달하는 시간이 달라 질 수 있다.</li>
+<li>정확한 경로에서의 <span class="math inline">t_2</span> 에 도달하는 시간이 달라 질 수 있다.</li>
 <li>양 끝 지점의 위치가 달라질 수 있다.</li>
 </ul>
-<p>이전에는 <span class="math inline">\(\delta\)</span>-변화에 대한 경로 변화를</p>
-<p><span id="eq-CM_path_by_delta_variation"><span class="math display">\[
+<p>이전에는 <span class="math inline">\delta</span>-변화에 대한 경로 변화를</p>
+<p><span id="eq-CM_path_by_delta_variation"><span class="math display">
 q_i (t,\,\alpha) = q_i (t,\,0) + \alpha \eta_i (t)
-\tag{3.32}\]</span></span></p>
-<p>이며 <span class="math inline">\(\eta_i (t_1) = \eta_i (t_2)=0\)</span> 으로 제한했지만 이제 <span class="math inline">\(\eta_i\)</span> 에 대한 제한을 풀어버린다. 이제 <span class="math inline">\(\eta_i\)</span> 에 대한 요구조건은 <span class="math inline">\(C^1\)</span> 급 함수라는 것 뿐이다. 그리고 이제 작용 적분에 대한 <span class="math inline">\(\Delta\)</span> 변화를 다음과 같이 정의한다.</p>
-<p><span id="eq-CM_least_maupertuis_action_principle_0"><span class="math display">\[
-\Delta \int_{t_1}^{t_2} L\,dt := \int_{t_1+\Delta t_1}^{t_2 + \Delta t_2} L(\alpha)\, dt - \int_{t_1}^{t_2} L(0)\,dt.
-\tag{3.33}\]</span></span></p>
-<p>여기서 <span class="math inline">\(\int L(\alpha)\,dt\)</span> 는 <a href="#eq-CM_path_by_delta_variation" class="quarto-xref">식&nbsp;<span>3.32</span></a> 의 경로에 대한 적분이며 <span class="math inline">\(\int L(0)\,dt\)</span> 는 운동의 실제 경로에 대한 적분이다.</p>
+\tag{3.32}</span></span></p>
+<p>이며 <span class="math inline">\eta_i (t_1) = \eta_i (t_2)=0</span> 으로 제한했지만 이제 <span class="math inline">\eta_i</span> 에 대한 제한을 풀어버린다. 이제 <span class="math inline">\eta_i</span> 에 대한 요구조건은 <span class="math inline">C^1</span> 급 함수라는 것 뿐이다. 그리고 이제 작용 적분에 대한 <span class="math inline">\Delta</span> 변화를 다음과 같이 정의한다.</p>
+<p><span id="eq-CM_least_maupertuis_action_principle_0"><span class="math display">
+\Delta \int_{t_1}^{t_2} \mathcal{L}\,dt := \int_{t_1+\Delta t_1}^{t_2 + \Delta t_2} \mathcal{L}(\alpha)\, dt - \int_{t_1}^{t_2} \mathcal{L}(0)\,dt.
+\tag{3.33}</span></span></p>
+<p>여기서 <span class="math inline">\int \mathcal{L}(\alpha)\,dt</span> 는 <a href="#eq-CM_path_by_delta_variation" class="quarto-xref">식&nbsp;<span>3.32</span></a> 의 경로에 대한 적분이며 <span class="math inline">\int \mathcal{L}(0)\,dt</span> 는 운동의 실제 경로에 대한 적분이다.</p>
 <p>미소 시간변화의 1차까지 생각하면</p>
-<p><span id="eq-CM_least_maupertuis_action_principle_1"><span class="math display">\[
-\Delta \int_{t_1}^{t_2}L\,dt = L(t_2)\Delta t_2 - L(t_1)\Delta t_1 - \int_{t_1}^{t_2}\delta L\, dt
-\tag{3.34}\]</span></span></p>
+<p><span id="eq-CM_least_maupertuis_action_principle_1"><span class="math display">
+\Delta \int_{t_1}^{t_2} \mathcal{L}\,dt = L(t_2)\Delta t_2 - \mathcal{L}(t_1)\Delta t_1 - \int_{t_1}^{t_2}\delta \mathcal{L}\, dt
+\tag{3.34}</span></span></p>
 <p>이며, 여기서</p>
-<p><span id="eq-CM_least_maupertuis_action_principle_2"><span class="math display">\[
-\int_{t_1}^{t_2} \delta L \, dt = \int_{t_1}^{t_2}\left[\dfrac{\partial L}{\partial q_i} - \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_i}\right)\right] \delta q_i \, dt + \left.\dfrac{\partial L}{\partial \dot{q}_i}\delta q_i\right|_{1}^2
-\tag{3.35}\]</span></span></p>
-<p>이다. 끝점에서 <span class="math inline">\(\delta q_i(t_1) = \delta q_i(t_2)=0\)</span> 이라는 조건이 여기서는 성립하지 않으므로 마지막 항이 살아남아야 한다. 이제 <a href="#eq-CM_least_maupertuis_action_principle_1" class="quarto-xref">식&nbsp;<span>3.34</span></a> 를 구해보면 <a href="#eq-CM_least_maupertuis_action_principle_1" class="quarto-xref">식&nbsp;<span>3.34</span></a> 의 적분의 <span class="math inline">\([\cdots]\)</span> 는 사라지므로,</p>
-<p><span id="eq-CM_least_maupertuis_action_principle_3"><span class="math display">\[
-\Delta \left.\int_{t_1}^{t_2} L\,dt = (L\Delta t + p_i \delta q_i)\right|_{1}^2.
-\tag{3.36}\]</span></span></p>
-<p>여기서 <span class="math inline">\(\delta q_i\)</span> 는 원래의 <span class="math inline">\(t_1,\,t_2\)</span> 시간의 짜임새 공간상의 점에 대한 변화를 의미한다. <span class="math inline">\(\Delta t\)</span> 에 대한 1차 근사로</p>
-<p><span class="math display">\[
+<p><span id="eq-CM_least_maupertuis_action_principle_2"><span class="math display">
+\int_{t_1}^{t_2} \delta \mathcal{L}\, dt = \int_{t_1}^{t_2}\left[\dfrac{\partial \mathcal{L}}{\partial q_i} - \dfrac{d}{dt}\left(\dfrac{\partial \mathcal{L}}{\partial \dot{q}_i}\right)\right] \delta q_i \, dt + \left.\dfrac{\partial \mathcal{L}}{\partial \dot{q}_i}\delta q_i\right|_{1}^2
+\tag{3.35}</span></span></p>
+<p>이다. 끝점에서 <span class="math inline">\delta q_i(t_1) = \delta q_i(t_2)=0</span> 이라는 조건이 여기서는 성립하지 않으므로 마지막 항이 살아남아야 한다. 이제 <a href="#eq-CM_least_maupertuis_action_principle_1" class="quarto-xref">식&nbsp;<span>3.34</span></a> 를 구해보면 <a href="#eq-CM_least_maupertuis_action_principle_1" class="quarto-xref">식&nbsp;<span>3.34</span></a> 의 적분의 <span class="math inline">[\cdots]</span> 는 사라지므로,</p>
+<p><span id="eq-CM_least_maupertuis_action_principle_3"><span class="math display">
+\Delta \left.\int_{t_1}^{t_2} \mathcal{L}\,dt = (\mathcal{L}\Delta t + p_i \delta q_i)\right|_{1}^2.
+\tag{3.36}</span></span></p>
+<p>여기서 <span class="math inline">\delta q_i</span> 는 원래의 <span class="math inline">t_1,\,t_2</span> 시간의 짜임새 공간상의 점에 대한 변화를 의미한다. <span class="math inline">\Delta t</span> 에 대한 1차 근사로</p>
+<p><span class="math display">
 \Delta q_i = \delta q_i + \dot{q}_i \Delta t
-\]</span></p>
+</span></p>
 <p>라고 놓으면 <a href="#eq-CM_least_maupertuis_action_principle_3" class="quarto-xref">식&nbsp;<span>3.36</span></a> 은</p>
-<p><span id="eq-CM_least_maupertuis_action_principle_4"><span class="math display">\[
+<p><span id="eq-CM_least_maupertuis_action_principle_4"><span class="math display">
 \begin{aligned}
-\Delta \int_{t_1}^{t_2} L\,dt &amp;= (L\Delta t - p_i \dot{q}_i \Delta t + p_i \Delta q_i){\huge |}_{1}^2, \\[0.3em]
-&amp;= (p_i \Delta q_i - H\Delta t){\huge |}_{1}^2.
+\Delta \int_{t_1}^{t_2} \mathcal{L}\,dt &amp;= (\mathcal{L}\Delta t - p_i \dot{q}_i \Delta t + p_i \Delta q_i){\huge |}_{1}^2, \\[0.3em]
+&amp;= (p_i \Delta q_i - \mathcal{H}\Delta t){\huge |}_{1}^2.
 \end{aligned}
-\tag{3.37}\]</span></span></p>
+\tag{3.37}</span></span></p>
 </section>
 <section id="sec-CM_principle_of_Maupertuis_least_action" class="level3" data-number="3.4.2">
 <h3 data-number="3.4.2" class="anchored" data-anchor-id="sec-CM_principle_of_Maupertuis_least_action"><span class="header-section-number">3.4.2</span> 모페르튀이의 최소작용 원리</h3>
 <p>최소 작용의 원리를 얻기 위해 3가지 제한을 건다.</p>
 <ol type="1">
-<li>라그랑지안 <span class="math inline">\(L\)</span> 은 시간에 명시적으로 의존하지 않는다. 따라서 해밀토니안은 보존된다.</li>
-<li>실제 경로 뿐만 아니라 변동 경로 역시 <span class="math inline">\(H\)</span> 가 보존되는 경로를 따른다.</li>
-<li><span class="math inline">\(\Delta q_i(t_1) = \Delta q_i(t_2) = 0\)</span> 이다.</li>
+<li>라그랑지안 <span class="math inline">\mathcal{L}</span> 은 시간에 명시적으로 의존하지 않는다. 따라서 해밀토니안은 보존된다.</li>
+<li>실제 경로 뿐만 아니라 변동 경로 역시 <span class="math inline">\mathcal{H}</span> 가 보존되는 경로를 따른다.</li>
+<li><span class="math inline">\Delta q_i(t_1) = \Delta q_i(t_2) = 0</span> 이다.</li>
 </ol>
 <p>이 조건에서 <a href="#eq-CM_least_maupertuis_action_principle_4" class="quarto-xref">식&nbsp;<span>3.37</span></a> 는</p>
-<p><span id="eq-CM_least_maupertuis_action_principle_5"><span class="math display">\[
-\Delta \int_{t_1}^{t_2} L\,dt = -H (\Delta t_2 - \Delta t_1)
-\tag{3.38}\]</span></span></p>
+<p><span id="eq-CM_least_maupertuis_action_principle_5"><span class="math display">
+\Delta \int_{t_1}^{t_2} \mathcal{L}\,dt = -\mathcal{H}(\Delta t_2 - \Delta t_1)
+\tag{3.38}</span></span></p>
 <p>이다. 그런데, 같은 조건에서</p>
-<p><span class="math display">\[
-\int_{t_1}^{t_2} L\,dt = \int_{t_1}^{t_2} p_i \dot{q}_i \,dt - H(t_2-t_1)
-\]</span></p>
+<p><span class="math display">
+\int_{t_1}^{t_2} \mathcal{L}\,dt = \int_{t_1}^{t_2} p_i \dot{q}_i \,dt - \mathcal{H}(t_2-t_1)
+</span></p>
 <p>이므로 이로부터</p>
-<p><span id="eq-CM_least_maupertuis_action_principle_6"><span class="math display">\[
-\Delta \int_{t_1}^{t_2} L\,dt = \Delta \int_{t_1}^{t_2} p_i \dot{q}_i\,dt - H(\Delta t_2 - \Delta t_1).
-\tag{3.39}\]</span></span></p>
+<p><span id="eq-CM_least_maupertuis_action_principle_6"><span class="math display">
+\Delta \int_{t_1}^{t_2} \mathcal{L}\,dt = \Delta \int_{t_1}^{t_2} p_i \dot{q}_i\,dt - \mathcal{H}(\Delta t_2 - \Delta t_1).
+\tag{3.39}</span></span></p>
 <p><a href="#eq-CM_least_maupertuis_action_principle_5" class="quarto-xref">식&nbsp;<span>3.38</span></a> 와 <a href="#eq-CM_least_maupertuis_action_principle_6" class="quarto-xref">식&nbsp;<span>3.39</span></a> 으로부터 우리는 소위 <strong>모페르튀이의 최소작용원리 (principle of Maupertuis’ least action)</strong> 를 유도 할 수 있다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -917,49 +936,49 @@ q_i (t,\,\alpha) = q_i (t,\,0) + \alpha \eta_i (t)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><span id="eq-CM_principle_of_Maupertuis_least_action"><span class="math display">\[
+<p><span id="eq-CM_principle_of_Maupertuis_least_action"><span class="math display">
 \Delta \left(\sum_{i}\int_{t_1}^{t_2} p_i \dot{q}_i\,dt \right) = 0.
-\tag{3.40}\]</span></span></p>
+\tag{3.40}</span></span></p>
 </div>
 </div>
 <section id="자유입자의-경우" class="level4">
 <h4 class="anchored" data-anchor-id="자유입자의-경우"><strong>자유입자의 경우</strong></h4>
 <p>예를 들어 시간에 명시적으로 의존하지 않는 일반화된 좌표계에서 운동에너지가 다음과 같다고 하자.</p>
-<p><span class="math display">\[
+<p><span class="math display">
 T = \sum_{j, k} \dfrac{1}{2}M_{jk}(q) \dot{q}_j \dot{q}_k.
-\]</span></p>
+</span></p>
 <p>이로부터</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \sum_i p_i \dot{q}_i = \sum_i \dfrac{\partial T}{\partial \dot{q}_i}\dot{q}_i = 2T
-\]</span></p>
+</span></p>
 <p>이며 이 시스템에 모페르튀이의 최소작용원리를 적용하면,</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \Delta \int_{t_1}^{t_2} T\,dt = 0
-\]</span></p>
-<p>이다. 여기에 외부의 힘이 작용하지 않는 시스템, 예를 들면 작용력이 없는 강체와 같은, 을 고려하면 <span class="math inline">\(T = H\)</span> 는 보존되며 따라서</p>
-<p><span class="math display">\[
+</span></p>
+<p>이다. 여기에 외부의 힘이 작용하지 않는 시스템, 예를 들면 작용력이 없는 강체와 같은, 을 고려하면 <span class="math inline">T = H</span> 는 보존되며 따라서</p>
+<p><span class="math display">
 \Delta (t_2-t_1) = 0.
-\]</span></p>
+</span></p>
 <p>위 식은 최소 시간 경로를 의미하며, 광학에서의 페르마의 원리와 같다.</p>
 </section>
 <section id="곡면에서의-운동" class="level4">
 <h4 class="anchored" data-anchor-id="곡면에서의-운동"><strong>곡면에서의 운동</strong></h4>
-<p>곡면에서의 메트릭 텐서 <span class="math inline">\(g_{jk}\)</span> 에 대해 <span class="math inline">\(ds^2 = g_{jk}dq_idq_j\)</span> 가 주어졌을 때 운동에너지는</p>
-<p><span id="eq-CM_least_maupertuis_action_principle_7"><span class="math display">\[
+<p>곡면에서의 메트릭 텐서 <span class="math inline">g_{jk}</span> 에 대해 <span class="math inline">ds^2 = g_{jk}dq_idq_j</span> 가 주어졌을 때 운동에너지는</p>
+<p><span id="eq-CM_least_maupertuis_action_principle_7"><span class="math display">
 T = \dfrac{1}{2}\left(\dfrac{ds}{dt}\right)^2
-\tag{3.41}\]</span></span></p>
+\tag{3.41}</span></span></p>
 <p>이며,</p>
-<p><span id="eq-CM_least_maupertuis_action_principle_8"><span class="math display">\[
+<p><span id="eq-CM_least_maupertuis_action_principle_8"><span class="math display">
 dt = \dfrac{ds}{\sqrt{T}}
-\tag{3.42}\]</span></span></p>
-<p>이다. <a href="#eq-CM_least_maupertuis_action_principle_8" class="quarto-xref">식&nbsp;<span>3.42</span></a> 을 이용하면 모페르튀이 작용 적분을 <span class="math inline">\(t\)</span> 에 대한 적분에서 <span class="math inline">\(s\)</span> 에 대한 적분으로 바꿀 수 있다.</p>
-<p><span id="eq-CM_least_maupertuis_action_principle_9"><span class="math display">\[
+\tag{3.42}</span></span></p>
+<p>이다. <a href="#eq-CM_least_maupertuis_action_principle_8" class="quarto-xref">식&nbsp;<span>3.42</span></a> 을 이용하면 모페르튀이 작용 적분을 <span class="math inline">t</span> 에 대한 적분에서 <span class="math inline">s</span> 에 대한 적분으로 바꿀 수 있다.</p>
+<p><span id="eq-CM_least_maupertuis_action_principle_9"><span class="math display">
 \Delta \int_{t_1}^{t_2}T\,dt = 0 = \Delta \int_{t_1}^{t_2} \sqrt{T}\,ds.
-\tag{3.43}\]</span></span></p>
-<p><span class="math inline">\(T=H-U(q)\)</span> 임을 이용하면 다음과 같은 최소 작용 원리의 야코비 식을 얻는다. <span id="eq-CM_least_maupertuis_action_principle_10"><span class="math display">\[
-\Delta \int_{s_1}^{s_2} \sqrt{H - U(q)}\,ds = 0.
-\tag{3.44}\]</span></span></p>
-<p>그동안의 다양한 적분이 시간에 대한 적분이었다면 위의 야코비 식은 경로에 대한 적분식이다. <span class="math inline">\(H\)</span> 는 보존되며 <span class="math inline">\(U(q)\)</span> 역시 시간에 의존하지 않으므로 시간 <span class="math inline">\(t\)</span> 는 이 식에 등장하지 않는다.</p>
+\tag{3.43}</span></span></p>
+<p><span class="math inline">T=H-U(q)</span> 임을 이용하면 다음과 같은 최소 작용 원리의 야코비 식을 얻는다. <span id="eq-CM_least_maupertuis_action_principle_10"><span class="math display">
+\Delta \int_{s_1}^{s_2} \sqrt{\mathcal{H}- U(q)}\,ds = 0.
+\tag{3.44}</span></span></p>
+<p>그동안의 다양한 적분이 시간에 대한 적분이었다면 위의 야코비 식은 경로에 대한 적분식이다. <span class="math inline">H</span> 는 보존되며 <span class="math inline">U(q)</span> 역시 시간에 의존하지 않으므로 시간 <span class="math inline">t</span> 는 이 식에 등장하지 않는다.</p>
 <p><br></p>
 </section>
 </section>
@@ -968,79 +987,79 @@ dt = \dfrac{ds}{\sqrt{T}}
 <h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_goldstein_8_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 3.1 (Goldstein 8.1)</strong></span> (<span class="math inline">\(a\)</span>) 해밀토니안 <span class="math inline">\(H(q_i,\,p_i,\,t)\)</span> 로부터 <span class="math inline">\(\dot{\boldsymbol{q}}\)</span> 를 독립 변수로 취급하여 라그랑지안 <span class="math inline">\(L(q_i,\,\dot{q}_i,t)\)</span> 를 구하라.</p>
-<p>(<span class="math inline">\(b\)</span>) 같은 과정을 통해 다음 함수를 이용하여 운동방정식을 구하라.</p>
-<p><span class="math display">\[
-L'(p,\, \dot{p},\,t) = -\dot{p} q - H(q,\,p,\,t)
-\]</span></p>
+<p><span class="theorem-title"><strong>연습문제 3.1 (Goldstein 8.1)</strong></span> (<span class="math inline">a</span>) 해밀토니안 <span class="math inline">\mathcal{H}(q_i,\,p_i,\,t)</span> 로부터 <span class="math inline">\dot{\boldsymbol{q}}</span> 를 독립 변수로 취급하여 라그랑지안 <span class="math inline">\mathcal{L}(q_i,\,\dot{q}_i,t)</span> 를 구하라.</p>
+<p>(<span class="math inline">b</span>) 같은 과정을 통해 다음 함수를 이용하여 운동방정식을 구하라.</p>
+<p><span class="math display">
+\mathcal{L}'(p,\, \dot{p},\,t) = -\dot{p} q - \mathcal{H}(q,\,p,\,t)
+</span></p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(L(q,\,p) := \sum_i p_i\dot{q}_i - H(q_i,\,p_i)\)</span> 라고 하면,</p>
-<p><span class="math display">\[
-\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_i}\right) -\dfrac{\partial L}{\partial q_i } = \dfrac{dp_i}{dt} + \underbrace{\dfrac{\partial H}{\partial q_i}}_{\Large = -\dot{p}_i} =  0.
-\]</span></p>
-<p>(<span class="math inline">\(b\)</span>)</p>
-<p><span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">a</span>) <span class="math inline">\mathcal{L}(q,\,p) := \sum_i p_i\dot{q}_i - \mathcal{H}(q_i,\,p_i)</span> 라고 하면,</p>
+<p><span class="math display">
+\dfrac{d}{dt}\left(\dfrac{\partial \mathcal{L}}{\partial \dot{q}_i}\right) -\dfrac{\partial \mathcal{L}}{\partial q_i } = \dfrac{dp_i}{dt} + \underbrace{\dfrac{\partial \mathcal{H}}{\partial q_i}}_{\normalsize = -\dot{p}_i} =  0.
+</span></p>
+<p>(<span class="math inline">b</span>)</p>
+<p><span class="math display">
 \begin{aligned}
-\dfrac{d}{dt}\left(\dfrac{\partial L'}{\partial \dot{p}}\right) - \dfrac{\partial L'}{\partial p} &amp;= -\dfrac{dq}{dt} + \dfrac{\partial H}{\partial p} = 0, \\[0.3em]
-\dfrac{d}{dt}\left(\dfrac{\partial L'}{\partial \dot{q}}\right) - \dfrac{\partial L'}{\partial q} &amp;=  \left(\dot{p} +  \dfrac{\partial H}{\partial q} \right) = 0.
+\dfrac{d}{dt}\left(\dfrac{\partial \mathcal{L}'}{\partial \dot{p}}\right) - \dfrac{\partial \mathcal{L}'}{\partial p} &amp;= -\dfrac{dq}{dt} + \dfrac{\partial \mathcal{H}}{\partial p} = 0, \\[0.3em]
+\dfrac{d}{dt}\left(\dfrac{\partial \mathcal{L}'}{\partial \dot{q}}\right) - \dfrac{\partial \mathcal{L}'}{\partial q} &amp;=  \left(\dot{p} +  \dfrac{\partial \mathcal{H}}{\partial q} \right) = 0.
 \end{aligned}
-\]</span></p>
+</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_goldstein_8_19" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 3.2 (Goldstein 8.19)</strong></span> 라그랑지안 <span class="math inline">\(L(q_i,\,\dot{q}_i,t)\)</span> 에 함수 <span class="math inline">\(g(q_i,\,t)\)</span> 의 시간에 대한 미분을 더해도 운동방정식에 변화가 없다는 것을 안다. 이 경우 정준 운동량과 해밀토니안은 어떻게 바뀌는가? 새로운 해밀토니안에 대한 운동방정식 역시 변하지 않음을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 3.2 (Goldstein 8.19)</strong></span> 라그랑지안 <span class="math inline">\mathcal{L}(q_i,\,\dot{q}_i,t)</span> 에 함수 <span class="math inline">g(q_i,\,t)</span> 의 시간에 대한 미분을 더해도 운동방정식에 변화가 없다는 것을 안다. 이 경우 정준 운동량과 해밀토니안은 어떻게 바뀌는가? 새로운 해밀토니안에 대한 운동방정식 역시 변하지 않음을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\overline{L}(q_i,\,\dot{q}_i,\,t) = L(q_i,\,\dot{q}_i,t) + \dfrac{dg(q_i,t)}{dt}\)</span> 에 대해</p>
-<p><span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\overline{\mathcal{L}}(q_i,\,\dot{q}_i,\,t) = \mathcal{L}(q_i,\,\dot{q}_i,t) + \dfrac{dg(q_i,t)}{dt}</span> 에 대해</p>
+<p><span class="math display">
 \dfrac{dg}{dt} = \sum_i\dfrac{\partial g}{\partial q_i}\dot{q}_i + \dfrac{\partial g}{\partial t}
-\]</span></p>
-<p>임을 이용하면, 새로운 정준운동량은 <span class="math display">\[
-\overline{p}_i = \dfrac{\partial \overline{L}}{\partial \dot{q}_i} = p_i + \dfrac{\partial g}{\partial q_i}
-\]</span></p>
+</span></p>
+<p>임을 이용하면, 새로운 정준운동량은 <span class="math display">
+\overline{p}_i = \dfrac{\partial \overline{\mathcal{L}}}{\partial \dot{q}_i} = p_i + \dfrac{\partial g}{\partial q_i}
+</span></p>
 <p>이며, 새로운 해밀토니안은</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \begin{aligned}
-\overline{H} &amp;= \sum_i \overline{p}_i\dot{q}_i - \overline{L} = \sum_i \left(p_i+\dfrac{\partial g}{\partial q_i}\right)\dot{q}_i - L - \dfrac{dg}{dt} \\[0.3em]
-&amp;= \sum_i p_i\dot{q}_i - L - \dfrac{\partial g}{\partial t} = H\left(q,\,\overline{p}-\dfrac{\partial g}{\partial q_i},\,t \right)-\dfrac{\partial g}{\partial t}
+\overline{\mathcal{H}} &amp;= \sum_i \overline{p}_i\dot{q}_i - \overline{\mathcal{L}} = \sum_i \left(p_i+\dfrac{\partial g}{\partial q_i}\right)\dot{q}_i - \mathcal{L}- \dfrac{dg}{dt} \\[0.3em]
+&amp;= \sum_i p_i\dot{q}_i - \mathcal{L}- \dfrac{\partial g}{\partial t} = \mathcal{H}\left(q,\,\overline{p}-\dfrac{\partial g}{\partial q_i},\,t \right)-\dfrac{\partial g}{\partial t}
 \end{aligned}
-\]</span></p>
+</span></p>
 <p>이다. 여기서</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \begin{aligned}
-\dfrac{\partial \overline{H}}{\partial q_i} &amp;= \dfrac{\partial H}{\partial q_i} - \sum_j\underbrace{\dfrac{\partial H}{\partial p_j}}_{=\dot{q}_j} \left(\dfrac{\partial g^2} {\partial q_i\partial q_j}\right) - \dfrac{\partial^2 g}{\partial q_i\partial t} \\[0.3em]
+\dfrac{\partial \overline{\mathcal{H}}}{\partial q_i} &amp;= \dfrac{\partial \mathcal{H}}{\partial q_i} - \sum_j\underbrace{\dfrac{\partial \mathcal{H}}{\partial p_j}}_{=\dot{q}_j} \left(\dfrac{\partial g^2} {\partial q_i\partial q_j}\right) - \dfrac{\partial^2 g}{\partial q_i\partial t} \\[0.3em]
 &amp;=\dfrac{\partial H}{\partial q_i} - \dfrac{d}{dt}\left(\dfrac{\partial g}{\partial q_i}\right) = \dfrac{d\overline{p}_i}{dt}, \\[0.3em]
-\dfrac{\partial \overline{H}}{\partial \overline{p}_i} &amp;= \dfrac{\partial H}{\partial p_i} = \dot{q}_i
+\dfrac{\partial \overline{\mathcal{H}}}{\partial \overline{p}_i} &amp;= \dfrac{\partial \mathcal{H}}{\partial p_i} = \dot{q}_i
 \end{aligned}
-\]</span></p>
+</span></p>
 <p>이므로 정준 운동방정식이 보존된다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-CM_goldstein_8_26" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 3.3 (Goldstein 8.26)</strong></span> 해밀턴 원리는 다음 식으로 쓰일 수 있음을 보여라.</p>
-<p><span class="math display">\[
-\delta \int_1^2 \left[2H(\boldsymbol{\eta},\,t) + \boldsymbol{\eta J \dot{\eta}} \right]\, dt = 0
-\]</span></p>
+<p><span class="math display">
+\delta \int_1^2 \left[2\mathcal{H}(\boldsymbol{\eta},\,t) + \boldsymbol{\eta J \dot{\eta}} \right]\, dt = 0
+</span></p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>해밀턴 원리 <span class="math inline">\(\delta \int_1^2 L\,dt = 0\)</span> 과 라그랑지안에 시간에 대한 미분 함수를 더해도 불변이라는 사실로부터</p>
-<p><span class="math display">\[
-\delta \int_1^2 \left[2L - \dfrac{d}{dt}\left(\sum_i p_i q_i\right)\right] = 0
-\]</span></p>
-<p>을 얻는다. <span class="math inline">\(H = \sum_i p_i\dot{q}_i -L\)</span> 을 이용하면</p>
-<p><span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span>해밀턴 원리 <span class="math inline">\delta \int_1^2 L\,dt = 0</span> 과 라그랑지안에 시간에 대한 미분 함수를 더해도 불변이라는 사실로부터</p>
+<p><span class="math display">
+\delta \int_1^2 \left[2\mathcal{L}- \dfrac{d}{dt}\left(\sum_i p_i q_i\right)\right] = 0
+</span></p>
+<p>을 얻는다. <span class="math inline">\mathcal{H}= \sum_i p_i\dot{q}_i -\mathcal{L}</span> 을 이용하면</p>
+<p><span class="math display">
 \begin{aligned}
-2L - \dfrac{d}{dt}\left(\sum_i p_i q_i\right) &amp;= 2\sum_i p_i \dot{q}_i - 2H - \sum_i \left(\dot{p}_i q_i + p_i \dot{q}_i \right) \\[0.3em]
-&amp;= -(2H + \sum_i \dot{p_i}q_i - p_i \dot{q}_i) \\[0.3em]
-&amp;= -(2H + \boldsymbol{\eta J \dot{\eta}}).
+2\mathcal{L}- \dfrac{d}{dt}\left(\sum_i p_i q_i\right) &amp;= 2\sum_i p_i \dot{q}_i - 2\mathcal{H}- \sum_i \left(\dot{p}_i q_i + p_i \dot{q}_i \right) \\[0.3em]
+&amp;= -(2\mathcal{H}+ \sum_i \dot{p_i}q_i - p_i \dot{q}_i) \\[0.3em]
+&amp;= -(2\mathcal{H}+ \boldsymbol{\eta J \dot{\eta}}).
 \end{aligned}
-\]</span></p>
+</span></p>
 </div>
 
 
@@ -1133,8 +1152,7 @@ Zia, R. K. P., Edward F. Redish, and Susan R. McKay. 2009. <span>“Making Sense
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-      window.quartoDecorateExternalLinks = function (root) {
-     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -1143,69 +1161,8 @@ Zia, R. K. P., Edward F. Redish, and Susan R. McKay. 2009. <span>“Making Sense
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
-          if (!link.classList.contains('no-external-icon')) {
-          }
         }
       }
-      };
-      window.quartoDecorateExternalLinks(window.document);
-    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
-    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
-    const hideOnEscAndFocusOut = {
-      name: 'hideOnEscAndFocusOut',
-      defaultValue: true,
-      fn(instance) {
-        const dismiss = () => {
-          // A show scheduled by the trigger delay would otherwise reopen it
-          instance.clearDelayTimeouts();
-          instance.hide();
-        };
-        const onKeyDown = (event) => {
-          if (event.key !== 'Escape') {
-            return;
-          }
-          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
-          // except an open reveal.js slide menu, which Esc should close too.
-          // The menu handles keys only when its keyboard option is on.
-          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
-            window.Reveal.getConfig().menu?.keyboard !== false;
-          if (!menuHandlesEsc) {
-            event.stopPropagation();
-          }
-          if (instance.popper.contains(window.document.activeElement)) {
-            // Disabled while refocusing so the focus trigger does not reopen it
-            instance.disable();
-            instance.reference.focus();
-            instance.enable();
-          }
-          dismiss();
-        };
-        const onFocusOut = (event) => {
-          const target = event.relatedTarget;
-          if (target && !instance.reference.contains(target) &&
-              !instance.popper.contains(target)) {
-            dismiss();
-          }
-        };
-        // On the trigger too: a click trigger (code-annotations: select) has no
-        // blur handling. Attached for the instance's lifetime so leaving the
-        // trigger also cancels a show still pending on the trigger delay.
-        instance.reference.addEventListener('focusout', onFocusOut);
-        return {
-          onShow() {
-            window.document.addEventListener('keydown', onKeyDown, true);
-            instance.popper.addEventListener('focusout', onFocusOut);
-          },
-          onHide() {
-            window.document.removeEventListener('keydown', onKeyDown, true);
-            instance.popper.removeEventListener('focusout', onFocusOut);
-          },
-          onDestroy() {
-            instance.reference.removeEventListener('focusout', onFocusOut);
-          },
-        };
-      },
-    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -1219,7 +1176,6 @@ Zia, R. K. P., Edward F. Redish, and Susan R. McKay. 2009. <span>“Making Sense
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
-        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -1382,54 +1338,44 @@ Zia, R. K. P., Edward F. Redish, and Susan R. McKay. 2009. <span>“Making Sense
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          // Each band is positioned against its own containing block, which is
-          // not the offsetParent of the lines, so place it from client rects.
-          const placeBand = (band, firstEl, lastEl, codeBlock) => {
-            const container = band.offsetParent;
-            if (container === null) {
-              return;
-            }
-            const containerRect = container.getBoundingClientRect();
-            // Reveal.js scales slides with a transform, so convert client
-            // pixels back to the CSS pixels of the container.
-            const scale = containerRect.height / container.offsetHeight || 1;
-            const firstRect = firstEl.getBoundingClientRect();
-            const lastRect = lastEl.getBoundingClientRect();
-            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
-            const height = (lastRect.bottom - firstRect.top) / scale;
-            band.style.top = top - 2 + "px";
-            band.style.height = height + 4 + "px";
-            if (codeBlock) {
-              // Without the copy button wrapper, the containing block is wider
-              // than the code block, so span the code block explicitly.
-              const blockRect = codeBlock.getBoundingClientRect();
-              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
-              band.style.width = blockRect.width / scale + "px";
-            }
-          };
+          let top = null;
+          let height = null;
+          let parent = null;
           if (lineIds.length > 0) {
-            const el = window.document.getElementById(lineIds[0]);
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const parent = el.parentElement.parentElement;
-            // cook up a div (if necessary) and position it
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
             }
-            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
             }
-            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -1528,10 +1474,7 @@ Zia, R. K. P., Edward F. Redish, and Susan R. McKay. 2009. <span>“Making Sense
     }
   });
   </script>
-  <script type="application/javascript">
-  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
-  </script>
-<nav class="page-navigation" aria-label="Page">
+<nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/ClassicalMechanics/02_variational_principle.html" class="pagination-link" aria-label="변분 원리와 라그랑쥬 방정식">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">변분 원리와 라그랑쥬 방정식</span></span>

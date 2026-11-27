@@ -291,10 +291,10 @@ $$
 
 </br>
 
-@fig-CM_elastic_scattering_angles_ss 에서 볼 수 있듯이 $m_1<m_2$ 일 때 $m_1$ 은 어떤 방향이든지 가능하지만 $m_1>m_2$ 일 때는 $m_1$ 의 방향은 $\theta_{\max}$ 이하의 산란각만 가능하다. $\theta_\max$ 는 다음과 같다.
+@fig-CM_elastic_scattering_angles_ss 에서 볼 수 있듯이 $m_1<m_2$ 일 때 $m_1$ 은 어떤 방향이든지 가능하지만 $m_1>m_2$ 일 때는 $m_1$ 의 방향은 $\theta_{\max}$ 이하의 산란각만 가능하다. $\theta_{\text{max}}$ 는 다음과 같다.
 
 $$
-\sin \theta_\max = \dfrac{|OC|}{|OA|} = \dfrac{m_2}{m_1} .
+\sin \theta_{\max} = \dfrac{|OC|}{|OA|} = \dfrac{m_2}{m_1} .
 $$
 
 
@@ -360,7 +360,7 @@ $$
 \theta_0 = \int_{r_{\min}}^\infty \dfrac{l/r^2}{\sqrt{2m(E-V(r)) - l^2/r^2}}\, dr
 $$ {#eq-CM_rutherford_1}
 
-이며, $r_\min$ 은 적분 분모의 $\sqrt{\cdots}$ 를 $0$ 으로 한다는 것을 기억하자. $V(r\to \infty) = 0$ 이며 따라서 이때의 속도를 $\bf{v}_0$ 라고 하자. **충격 변수(impact parameter)** $\rho$ 를 
+이며, $r_{\min}$ 은 적분 분모의 $\sqrt{\cdots}$ 를 $0$ 으로 한다는 것을 기억하자. $V(r\to \infty) = 0$ 이며 따라서 이때의 속도를 $\bf{v}_0$ 라고 하자. **충격 변수(impact parameter)** $\rho$ 를 
 @fig-CM_rutherford_scattering 와 같이 정의하자. 그렇다면 $m$ 의 에너지 $E$ 와 각운동량 $l=\|\bf{L}\|$ 은 
 
 $$

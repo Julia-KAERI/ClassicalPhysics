@@ -23,7 +23,7 @@ crossref:
 $n$-자유도 시스템의 라그랑지안 역학은 $n$ 개의 2차 미분방정식(라그랑쥬 방정식) 으로 기술된다.
 
 $$
-\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_j}\right) - \dfrac{\partial L}{\partial q_j} = 0.
+\dfrac{d}{dt}\left(\dfrac{\partial \lagr}{\partial \dot{q}_j}\right) - \dfrac{\partial \lagr}{\partial q_j} = 0.
 $$
 
 이 방정식의 해를 구하기 위해서는 $2n$ 개의 초기값이 필요하며 ($1$) 특정 시간 $t$ 에 대해 $n$ 개의 $q_i(t)$ 와 역시 $n$ 개의 $\dot{q}(t_i)$ 이거나 ($2$) 두 시간 $t_1,\,t_2$ 에 대해 $n$ 개의 $q_i(t_1)$ 과 $q_i(t_2)$ 이다. 즉 $n$ 개의 독립 변수 $\{q_i\}$ 와 시간에 대한 미분 $\{\dot{q}_i\}$ 에 관한 문제이다. 라그랑지안은  각각의 일반화된 좌표로 이루어진 $n$ 차원 짜임새 공간에서 표현된다.
@@ -31,7 +31,7 @@ $$
 이에 반해 $n$-자유도 시스템의 해밀토니안 역학은 $2n$ 개의 독립변수에 대한 $2n$ 개의 1차 이분방정식으로 기술된다. 필요한 초기조건은 라그랑지안과 동일한 $2n$ 개이며, $2n$ 차원의 위상 공간에서 표현된다. 이 $2n$ 개의 독립변수는 $n$ 개의 일반화된 변수 $\{q_i\}$ 와 $n$ 개의 정준 운동량 $\{p_i\}$ 이며 $(\bf{q},\, \bf{p})$ 를 **정준 변수 (canonical variables)** 라고 한다. 
 
 $$
-\boxed{\bf{p} := \dfrac{\partial L(\bf{q},\, \dot{\bf{q}},\,t)}{\partial \dot{\bf{q}}},\qquad \text{or}\qquad  p_i = \dfrac{\partial L(\bf{q},\, \dot{\bf{q}},\,t)}{\partial \dot{q}_i}. }
+\boxed{\bf{p} := \dfrac{\partial \lagr(\bf{q},\, \dot{\bf{q}},\,t)}{\partial \dot{\bf{q}}},\qquad \text{or}\qquad  p_i = \dfrac{\partial \lagr(\bf{q},\, \dot{\bf{q}},\,t)}{\partial \dot{q}_i}. }
 $$ {#eq-CM_canonical_momentum}
 
 </br>
@@ -80,10 +80,10 @@ $$
 
 #### **해밀토니안**
 
-라그랑지안 $L(\bf{q},\, \dot{\bf{q}},\,t)$ 에 대해 아래와 같은 르장드르 변환을 수행하여 얻은 $H(\bf{q},\, \bf{p},\,t)$ 를 **해밀토니안(Hamiltonian)** 이라고 한다. 
+라그랑지안 $\lagr(\bf{q},\, \dot{\bf{q}},\,t)$ 에 대해 아래와 같은 르장드르 변환을 수행하여 얻은 $\hamil(\bf{q},\, \bf{p},\,t)$ 를 **해밀토니안(Hamiltonian)** 이라고 한다. 
 
 $$
-H\left(\bf{q}, \bf{p}, t\right) = \sum_{i} \dot{q}_i p_i - L(\bf{q}, \dot{\bf{q}}, t)
+\hamil \left(\bf{q}, \bf{p}, t\right) = \sum_{i} \dot{q}_i p_i - \lagr(\bf{q}, \dot{\bf{q}}, t)
 $$ {#eq-CM_hamiltonian}
 
 :::
@@ -91,35 +91,35 @@ $$ {#eq-CM_hamiltonian}
 해밀토니안은 $\bf{q},\, \bf{p},\, t$ 에 대한 함수이므로 그 미분형식은 다음과 같다.
 
 $$
-dH = \sum_i \left(\dfrac{\partial H}{\partial q_i}\right) dq_i + \sum_i \left(\dfrac{\partial H}{\partial p_i}\right) dp_i + \dfrac{\partial H}{\partial t}\, dt
+d\hamil = \sum_i \left(\dfrac{\partial \hamil}{\partial q_i}\right) dq_i + \sum_i \left(\dfrac{\partial \hamil}{\partial p_i}\right) dp_i + \dfrac{\partial \hamil}{\partial t}\, dt
 $$ {#eq-CM_differential_form_of_hamiltonian}
 
 또한 @eq-CM_hamiltonian 으로 부터, 
 
 $$
-dH = \sum_i\left(-\dfrac{\partial L}{\partial q_i}\right)dq_i + \sum_i \left(\dot{q}_i\right)\, dp_i + \left(p_i - \sum_i \dfrac{\partial L}{\partial \dot{q}_i}\right) d\dot{q}_i - \dfrac{\partial L}{\partial t}\,dt
+d\hamil = \sum_i\left(-\dfrac{\partial \lagr}{\partial q_i}\right)dq_i + \sum_i \left(\dot{q}_i\right)\, dp_i + \left(p_i - \sum_i \dfrac{\partial \lagr}{\partial \dot{q}_i}\right) d\dot{q}_i - \dfrac{\partial \lagr}{\partial t}\,dt
 $$
 
 을 얻는다. 여기서 $d\dot{q}_i$ 앞의 항은 $p_i$ 의 정의에 의해 $0$ 이다. 또한 오일러 라그랑쥬 방정식에 의해
 
 $$
-0 = \dfrac{d}{dt}\left( \dfrac{\partial L}{\partial \dot{q}_i}\right) - \dfrac{\partial L}{\partial q_i} = \dot{p}_i - \dfrac{\partial L}{\partial q_i} 
+0 = \dfrac{d}{dt}\left( \dfrac{\partial \lagr}{\partial \dot{q}_i}\right) - \dfrac{\partial \lagr}{\partial q_i} = \dot{p}_i - \dfrac{\partial \lagr}{\partial q_i} 
 $$
 
 이므로, 
 
 $$
-dH = -\sum_i \dot{p}_i dq_i + \sum_i \dot{q}_i dp_i - \dfrac{\partial L}{\partial t} dt
+d\hamil = -\sum_i \dot{p}_i dq_i + \sum_i \dot{q}_i dp_i - \dfrac{\partial \lagr}{\partial t} dt
 $$
 
 이며 이로부터
 
 $$
-\boxed{\dot{q}_i = \dfrac{\partial H}{\partial p_i},\qquad \dot{p}_i =- \dfrac{\partial H}{\partial q_i}, }
+\boxed{\dot{q}_i = \dfrac{\partial \hamil}{\partial p_i},\qquad \dot{p}_i =- \dfrac{\partial \hamil}{\partial q_i}, }
 $$ {#eq-CM_canonical_equation_of_hamiltonian}
 
 $$
-\dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
+\dfrac{\partial \hamil}{\partial t} = -\dfrac{\partial \lagr}{\partial t}
 $$ {#eq-CM_time_dependence_of_hamiltonian} 
 
 를 얻는다. @eq-CM_canonical_equation_of_hamiltonian 을 **해밀턴 정준 방정식(canonical equations of Haminton)** 이라고 부른다. 우리는 이를 통해 $n$ 개의 2차 미분방정식(라그랑쥬 방정식) 을 $2n$ 개의 1차 미분방정식(해밀턴의 정준 방정식) 으로 바꿨다. 차이는 (이것은 매우 중요하다) 라그랑지안이 일반화된 좌표계에서 $\bf{q},\, \dot{\bf{q}},\,t$ 의 함수라면 해밀토니안은 $\bf{q},\, \bf{p},\,t$ 의 함수라는 것이다. 해밀턴 정준방정식을 따르는 좌표 $\bf{q},\, \bf{p}$ 를 **정준 좌표 (canonical coordinate)** 라고 한다.(운동량 변수도 정준 좌표에 포함된다.)
@@ -128,9 +128,9 @@ $$ {#eq-CM_time_dependence_of_hamiltonian}
 
 해밀토니안은 라그랑지안에 대한 르장드르 변환으로 정의된다. 따라서 다음과 같은 순서로 해밀토니안을 구한다.
 
-&emsp;($1$) 적절한 일반화된 좌표계에서 라그랑지안 $L(\bf{q},\, \dot{\bf{q}},\,t)$ 를 구한다.
+&emsp;($1$) 적절한 일반화된 좌표계에서 라그랑지안 $\lagr(\bf{q},\, \dot{\bf{q}},\,t)$ 를 구한다.
 
-&emsp;($2$) 각각의 일반화된 좌표 $q_i$ 에 대한 정준 운동량 $p_i = \dfrac{\partial L}{\partial \dot{q}_i}$ 를 구한다.
+&emsp;($2$) 각각의 일반화된 좌표 $q_i$ 에 대한 정준 운동량 $p_i = \dfrac{\partial \lagr}{\partial \dot{q}_i}$ 를 구한다.
 
 &emsp;($3$) @eq-CM_hamiltonian 로 해밀토니안을 구한다.
 
@@ -159,16 +159,16 @@ $$
 \sum_{i=1}^n x_i \dfrac{\partial f}{\partial x_i} = k f(x_1,\ldots,\,x_n).
 $$ {#eq-CM_differential_of_homogeneous_function}
 
-$L_0,\,L_1,\,L_2$ 를 각각 $\{\dot{q}_i\}$ 에 대한 $0,\,1,\,2$ 계 동차함수이며 $L=L_0 + L_1 + L_2$ 라면, 
+$\lagr_0,\,\lagr_1,\,\lagr_2$ 를 각각 $\{\dot{q}_i\}$ 에 대한 $0,\,1,\,2$ 계 동차함수이며 $\lagr=\lagr_0 + \lagr_1 + \lagr_2$ 라면, 
 
 $$
-H = \sum \dot{q}_i p_i - L_0 - L_1 - L_2 = \sum \dot{q}_i \dfrac{\partial L}{\partial \dot{q}_i} - L_0 - L_1 - L_2 = L_2-L_0
+\hamil = \sum \dot{q}_i p_i - \lagr_0 - \lagr_1 - \lagr_2 = \sum \dot{q}_i \dfrac{\partial \lagr}{\partial \dot{q}_i} - \lagr_0 - \lagr_1 - \lagr_2 = \lagr_2 - \lagr_0
 $$
 
-이다. 이것을 $\bf{q}$ 에 대해 표현하면 $L_2$ 는 $\dot{\bf{q}}$ 에 대한 이차함수이며, $L_1$ 은 $\dot{\bf{q}}$ 에 대해 일차함수이다. 따라서, 적당한 상수벡터 $\bf{a}$ 와 행렬 $\bf{T}$ 에 대해 
+이다. 이것을 $\bf{q}$ 에 대해 표현하면 $\lagr_2$ 는 $\dot{\bf{q}}$ 에 대한 이차함수이며, $\lagr_1$ 은 $\dot{\bf{q}}$ 에 대해 일차함수이다. 따라서, 적당한 상수벡터 $\bf{a}$ 와 행렬 $\bf{T}$ 에 대해 
 
 $$
-L_0 = L_0 (\bf{q}),\quad L_1 = \bf{a}^T \dot{\bf{q}},\quad L_2 =\dfrac{1}{2}\dot{\bf{q}}^T \bf{T}\dot{\bf{q}}, 
+\lagr_0 = \lagr_0 (\bf{q}),\quad \lagr_1 = \bf{a}^T \dot{\bf{q}},\quad \lagr_2 =\dfrac{1}{2}\dot{\bf{q}}^T \bf{T}\dot{\bf{q}}, 
 $$ {#eq-CM_lagramgian_in_matrix_form}
 
 이다. 이 때 정준운동량 $\bf{p}$ 는
@@ -183,10 +183,10 @@ $$
 \dot{\bf{q}} = \bf{T}^{-1}(\bf{p}-\bf{a})
 $$
 
-이다. 따라서 해밀토니안 $H$ 는 아래의 형태이다.
+이다. 따라서 해밀토니안 $\hamil$ 는 아래의 형태이다.
 
 $$
-H = \dfrac{1}{2} (\bf{p}-\bf{a})^T \bf{T}^{-1} (\bf{p}-\bf{a}) - L_0(\bf{q}).
+\hamil = \dfrac{1}{2} (\bf{p}-\bf{a})^T \bf{T}^{-1} (\bf{p}-\bf{a}) - L_0(\bf{q}).
 $$ {#eq-CM_hamiltonian_form}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
@@ -209,7 +209,7 @@ $$
 
 이며, 따라서 해밀토니안은 $T+V$ 형태이다. 이로부터 시스템의 해밀토니안은
 $$
-H(r,\,\theta,\,\varphi,\, p_r,\,p_\theta,\,p_\varphi) = \dfrac{1}{2m}\left(p_r^2 + \dfrac{p_\theta^2}{r^2} + \dfrac{p_\varphi^2}{r^2\sin^2\theta}\right)
+\hamil(r,\,\theta,\,\varphi,\, p_r,\,p_\theta,\,p_\varphi) = \dfrac{1}{2m}\left(p_r^2 + \dfrac{p_\theta^2}{r^2} + \dfrac{p_\varphi^2}{r^2\sin^2\theta}\right)
 $$
 
 이다. 그러나 일반화된 좌표계가 데카르트 좌표계라면,
@@ -221,7 +221,7 @@ $$
 이며 따라서 해밀토니안은
 
 $$
-H(\bf{x},\,\bf{p}) = \dfrac{\bf{p\cdot p}}{2m} + V(\sqrt{\bf{x\cdot x}})
+\hamil(\bf{x},\,\bf{p}) = \dfrac{\bf{p\cdot p}}{2m} + V(\sqrt{\bf{x\cdot x}})
 $$
 
 
@@ -241,19 +241,19 @@ $$
 이제 이것을 전자기장에서의 라그랑지안에 대해 생각해보자. @eq-CM_generalized_force 으로 주어진 일반화된 포텐셜에 대해 
 
 $$
-L = T-U = \dfrac{1}{2}mv^2 -q\Phi + q \bf{A\cdot v}
+\lagr = T-U = \dfrac{1}{2}mv^2 -q\Phi + q \bf{A\cdot v}
 $$
 
 이다. 따라서 정준운동량 $\bf{p}$ 는
 
 $$
-\bf{p} = \dfrac{\partial L}{\partial \bf{v}} = m\bf{v} + q\bf{A}
+\bf{p} = \dfrac{\partial \lagr}{\partial \bf{v}} = m\bf{v} + q\bf{A}
 $$
 
 이므로, 
 
 $$
-H = \dfrac{\|\bf{p}- q\bf{A}\|^2}{2m} + q\Phi
+\hamil = \dfrac{\|\bf{p}- q\bf{A}\|^2}{2m} + q\Phi
 $$ {#eq-CM_hamiltonian_of_charged_particle}
 
 이다. 
@@ -305,18 +305,18 @@ $$ {#eq-CM_symplectic_determinant_of_J}
 [정준운동량과 위상공간](#sec-CM_variational_phase_space) 에서 다루었던 순환 좌표를 다시 생각해보자. 라그랑지안과 해밀토니안의 관계 즉 $H = \sum_i \dot{q}_i p_i -L$ 을 생각해보면
 
 $$
-\dfrac{\partial L}{\partial q_i}=0 \iff \dfrac{\partial H}{\partial q_i}=0
+\dfrac{\partial \lagr}{\partial q_i}=0 \iff \dfrac{\partial \hamil}{\partial q_i}=0
 $$
 
-이 성립한다. $\dot{p}_i = - \dfrac{\partial H}{\partial q_i}$ 이므로 $H$ 에 명시적인 $q_i$ 의존성이 없다면 $p_i$ 는 운동상수이다. 순환좌표에 대한 정준운동량이 보존된다는 사실이 해밀토니안 방법에서도 그대로 적용된다.
+이 성립한다. $\dot{p}_i = - \dfrac{\partial \hamil}{\partial q_i}$ 이므로 $\hamil$ 에 명시적인 $q_i$ 의존성이 없다면 $p_i$ 는 운동상수이다. 순환좌표에 대한 정준운동량이 보존된다는 사실이 해밀토니안 방법에서도 그대로 적용된다.
 
 #### **라그랑지안이 시간에 명시적으로 의존하지 않을 때의 해밀토니안**
 
 또한 해밀턴 운동방정식 @eq-CM_canonical_equation_of_hamiltonian 과 @eq-CM_time_dependence_of_hamiltonian 으로부터
 $$
 \begin{aligned}
-\dfrac{dH}{dt} &= \sum_i \left[\dfrac{\partial H}{\partial q_i} \dot{q_i} + \dfrac{\partial H}{\partial p_i} \dot{p}_i\right] + \dfrac{\partial H}{\partial t} \\[0.3em]
-&= \sum_i \left[-\dot{p}_i \dot{q}_i  + \dot{q}_i \dot{p}_i\right] + \dfrac{\partial H}{\partial t} = \dfrac{\partial H}{\partial t} = -\dfrac{\partial L}{\partial t}
+\dfrac{d\hamil}{dt} &= \sum_i \left[\dfrac{\partial \hamil}{\partial q_i} \dot{q_i} + \dfrac{\partial \hamil}{\partial p_i} \dot{p}_i\right] + \dfrac{\partial \hamil}{\partial t} \\[0.3em]
+&= \sum_i \left[-\dot{p}_i \dot{q}_i  + \dot{q}_i \dot{p}_i\right] + \dfrac{\partial \hamil}{\partial t} = \dfrac{\partial \hamil}{\partial t} = -\dfrac{\partial \lagr}{\partial t}
 \end{aligned}
 $$
 
@@ -331,7 +331,7 @@ $$
 \bf{r}_m = \bf{r}_m(q_1,\ldots,\,q_n,\,t)
 $$
 
-가 시간에 명시적으로 의존하지 않는며, 포텐셜이 속도에 의존하지 않는다면 $H$(당시는 에너지 함수 $h$)가 운동상수이며 $T+V$ 임을 보았다. 어떤 경우에는 이 좌표 변환이 시간에 명시적으로 의존하더라도 $H$ 는 그렇지 않을 수 있다. 이 경우 $H$ 는 운동상수이지만 총 에너지는 아니다. 앞서 [대칭과 보존](02_variational_principle.qmd#sec-CM_chapter_symmetry_and_conservation) 에서 보았듯이 해밀토니안은 크기와 함수 형태에서 일반화된 좌표계의 선택에 의존한다. 라그랑지안을 $L=T-V$ 로 쓰고 여기서 일반된 좌표계로 변환한다면 함수의 형태는 바뀔지라도 값은 바뀌지 않지만 해밀토니안의 경우는 그 값도 바뀔 수 있다. 어떤 선택에서는 $H$ 가 보존되지만 어떤 선택에서는 시간에 대해 변한다.
+가 시간에 명시적으로 의존하지 않는며, 포텐셜이 속도에 의존하지 않는다면 $\hamil$(당시는 에너지 함수 $h$)가 운동상수이며 $T+V$ 임을 보았다. 어떤 경우에는 이 좌표 변환이 시간에 명시적으로 의존하더라도 $\hamil$ 는 그렇지 않을 수 있다. 이 경우 $\hamil$ 는 운동상수이지만 총 에너지는 아니다. 앞서 [대칭과 보존](02_variational_principle.qmd#sec-CM_chapter_symmetry_and_conservation) 에서 보았듯이 해밀토니안은 크기와 함수 형태에서 일반화된 좌표계의 선택에 의존한다. 라그랑지안을 $\lagr=T-V$ 로 쓰고 여기서 일반된 좌표계로 변환한다면 함수의 형태는 바뀔지라도 값은 바뀌지 않지만 해밀토니안의 경우는 그 값도 바뀔 수 있다. 어떤 선택에서는 $H$ 가 보존되지만 어떤 선택에서는 시간에 대해 변한다.
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
@@ -344,7 +344,7 @@ $$
 위의 그림과 같이 점질량 $m$ 이 용수철 상수 $k$ 인 용수철에 붙어 있으며 용수철의 반대쪽 끝은 질량이 없는 카트에 붙어 있으며 이 카트는 $v_0$ 의 속력으로 움직이고 있다. 우리가 $x$ 를 일반화된 좌표계로 사용한다면 이 시스템의 라그랑지안 $L$ 은
 
 $$
-L(x,\,\dot{x},t) = T-V = \dfrac{m\dot{x}^2}{2} - \dfrac{k}{2}(x-v_0t)^2
+\lagr(x,\,\dot{x},t) = T-V = \dfrac{m\dot{x}^2}{2} - \dfrac{k}{2}(x-v_0t)^2
 $$ {#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_1}
 
 이다. 문제를 간단하게 하기 위해 차가 $t=0$ 에서 지나는 점을 $x=0$ 으로 잡았다. 운동방정식은
@@ -364,26 +364,26 @@ $${#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_3}
 이제 해밀토니안 관점에서 보자. $x$ 는 데카르트 좌표계에서의 좌표이고 포텐셜은 일반화된 운동을 포함하지 않기 때문에 $x$ 에 대한 해밀토니안은 운동에너지와 포텐셜 에너지의 합이다. 즉,
 
 $$
-H(x,\,p,\,t) = T+V = \dfrac{p^2}{2m} + \dfrac{k}{2}(x-v_0t)^2.
+\hamil(x,\,p,\,t) = T+V = \dfrac{p^2}{2m} + \dfrac{k}{2}(x-v_0t)^2.
 $${#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_4}
 
 여기서 해밀토니안은 시스템의 총 에너지이지만 $t$ 에 대한 명시적 의존성을 가진다. 즉 에너지는 보존되지 않는다. 그 이유는 진동하는 입자에 대한 반작용에 반하여 카트를 균일한 속력으로 움직이게 하기 위해선 외부에 에너지가 들어오고 나가야 하기 때문이다.
 
-이제 $x'$ 좌표계에서의 라그랑지안을 구해보면 $L'(x,\,\dot{x})$ 에 $x'=x+v_0t,\, \dot{x}'=\dot{x}+v$ 를 대입하여
+이제 $x'$ 좌표계에서의 라그랑지안을 구해보면 $\lagr'(x,\,\dot{x})$ 에 $x'=x+v_0t,\, \dot{x}'=\dot{x}+v$ 를 대입하여
 
 $$
-L(x',\, \dot{x}') = \dfrac{m\dot{x}'^2}{2} + m\dot{x}'v_0 + \dfrac{mv_0^2}{2} - \dfrac{kx'^2}{2}.
+\lagr(x',\, \dot{x}') = \dfrac{m\dot{x}'^2}{2} + m\dot{x}'v_0 + \dfrac{mv_0^2}{2} - \dfrac{kx'^2}{2}.
 $${#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_5}
 
 이제 새로운 해밀토니안 $H=H(x',\, p')$ 은
 
 $$
 \begin{aligned}
-H'(x',\,p') = \dot{x}'p' - L = \dfrac{(p'-mv_0)^2}{2m} + \dfrac{kx'^2}{2}- \dfrac{mv_0^2}{2}.
+\hamil'(x',\,p') = \dot{x}'p' - \lagr = \dfrac{(p'-mv_0)^2}{2m} + \dfrac{kx'^2}{2}- \dfrac{mv_0^2}{2}.
 \end{aligned}
 $${#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_6}
 
-이 식에서 마지막 $mv_0^2/2$ 는 상수항이므로 운동방정식에 영향을 미치지 않으므로 제거해도 무방하다. 마지막 항을 제거한 해밀토니안은 카트 기준 좌표계에서의 총 에너지이다. 이렇게 구한 $H'$ 은 계의 총 에너지가 아니지만 $-\partial L/\partial t = dH'/dt = 0$ 이므로 보존된다. 
+이 식에서 마지막 $mv_0^2/2$ 는 상수항이므로 운동방정식에 영향을 미치지 않으므로 제거해도 무방하다. 마지막 항을 제거한 해밀토니안은 카트 기준 좌표계에서의 총 에너지이다. 이렇게 구한 $H'$ 은 계의 총 에너지가 아니지만 $-\partial \lagr/\partial t = d\hamil'/dt = 0$ 이므로 보존된다. 
 
 
 
@@ -398,19 +398,19 @@ $${#eq-exm-CM_lagrangian_and_hamiltonian_functinal_form_6}
 해밀토니안 운동방정식으로 역학 문제를 푸는 것은 많은 경우 라그랑지안 방법에 비해 큰 장점이 없다. $2n$ 개의 1차 미분방정식을 풀다보면 결국은 라그랑지안 운동방정식으로 돌아가는 경우도 많다. 여기서는 그 예외를 살펴보겠다. 해밀토니안 운동방정식은 순환 좌표에 관련된 문제를 풀 때 큰 도움이 된다. $\bf{q}\in \R^n$ 에서 $q_n$ 이 순환좌표인 경우를 살펴보자. 이 경우 라그랑지안은 다음과 같다.
 
 $$
-L = L(q_1,\ldots,\,q_{n-1}; \dot{q}_1, \ldots,\, \dot{q}_n;t)
+\lagr = \lagr(q_1,\ldots,\,q_{n-1}; \dot{q}_1, \ldots,\, \dot{q}_n;t)
 $$
 
 일반화된 속도 $\dot{q}_n$ 이 라그랑지안에 나타난다. 비록 순환좌표가 있더라도 일반적인 $n$-자유도 시스템을 풀 때와 크게 다르지 않다. 그러나 해밀토니안의 경우 경우 $p_n$ 이 상수이므로 $p_n=\alpha$ 라고 놓으면
 
 $$
-H = H(q_1,\ldots,\,q_{n-1};p_1,\ldots,\,p_{n-1};\alpha;t)
+\hamil = \hamil(q_1,\ldots,\,q_{n-1};p_1,\ldots,\,p_{n-1};\alpha;t)
 $$
 
 이 된다. 즉 $n-1$-자유도 문제가 되며 $q_n$ 의 변화는
 
 $$
-\dot{q}_n = \dfrac{\partial H}{\partial \alpha}
+\dot{q}_n = \dfrac{\partial \hamil}{\partial \alpha}
 $$
 
 를 통해 얻을 수 있다. 
@@ -418,34 +418,34 @@ $$
 순환좌표가 있을 경우 해밀토니안과 라그랑지안을 섞어 쓸 수 있는 데 이것은 라우스(Routh) 에 의해 고안되었다.$^{\dagger}$[$^\dagger$ Edward John Routh 는 캐나다 퀘벡 출신이므로 프랑스식으로 라우스 라고 읽는다.]{.aside} $n$-자유도 시스템에서 $q_{s+1},\ldots,\,q_n$ 이 순환좌표일 때 라우시안 $R$ 을 아래와 같이 정의한다.
 
 $$
-R(q_1,\ldots,\,q_n;\dot{q}_1,\ldots,\,\dot{q}_{s};p_{s+1},\ldots,\,p_n;t) := \sum_{i=s+1}^n p_i\dot{q}_i-L.
+\mathcal{R}(q_1,\ldots,\,q_n;\dot{q}_1,\ldots,\,\dot{q}_{s};p_{s+1},\ldots,\,p_n;t) := \sum_{i=s+1}^n p_i\dot{q}_i-\lagr.
 $$ {#eq-CM_definition_of_routhian}
 
-즉 라우시안은 순환좌표가 아닌 좌표에 대해서는 $(q,\,\dot{q})$ 변수를, 순환좌표에 대해서는 $(q,\,p)$ 변수를 사용한다. $R$ 에 대한 미분은 다음과 같다.
+즉 라우시안은 순환좌표가 아닌 좌표에 대해서는 $(q,\,\dot{q})$ 변수를, 순환좌표에 대해서는 $(q,\,p)$ 변수를 사용한다. $\mathcal{R}$ 에 대한 미분은 다음과 같다.
 
 $$
-dR = \sum_{i=s+1}^n \dot{q}_i dp_i - \sum_{i=1}^s \dfrac{\partial L}{\partial \dot{q}_i}d\dot{q}_i - \sum_{i=1}^n \dfrac{\partial L}{\partial q_i}dq_i - \dfrac{\partial L}{\partial t}dt.
+d\mathcal{R} = \sum_{i=s+1}^n \dot{q}_i dp_i - \sum_{i=1}^s \dfrac{\partial L}{\partial \dot{q}_i}d\dot{q}_i - \sum_{i=1}^n \dfrac{\partial \lagr}{\partial q_i}dq_i - \dfrac{\partial \lagr}{\partial t}dt.
 $$
 
 이로부터,
 
 $$
 \begin{aligned}
-\dfrac{\partial R}{\partial q_i} &= - \dfrac{\partial L}{\partial q_i},\qquad &\dfrac{\partial R}{\partial \dot{q}_i} &= - \dfrac{\partial L}{\partial \dot{q}_i}, \qquad \qquad& i=1,\ldots,\,s,\\[0.3em]
-\dfrac{\partial R}{\partial q_i}&=-\dot{p}_i, &\dfrac{\partial R}{\partial p_i} &= \dot{q}_i, & i=s+1,\ldots,\,n
+\dfrac{\partial \mathcal{R}}{\partial q_i} &= - \dfrac{\partial \lagr}{\partial q_i},\qquad &\dfrac{\partial \mathcal{R}}{\partial \dot{q}_i} &= - \dfrac{\partial \lagr}{\partial \dot{q}_i}, \qquad \qquad& i=1,\ldots,\,s,\\[0.3em]
+\dfrac{\partial \mathcal{R}}{\partial q_i}&=-\dot{p}_i, &\dfrac{\partial \mathcal{R}}{\partial p_i} &= \dot{q}_i, & i=s+1,\ldots,\,n
 \end{aligned}.
 $$ {#eq-CM_equation_of_motion_of_routhian}
 
 비순환 좌표에 대해서는 라우시안에 대한 라그랑쥬 방정식을 다음과 같이 쓸 수 있다는 것을 알 수 있다.
 
 $$
-\dfrac{d}{dt}\left(\dfrac{\partial R}{\partial \dot{q}}\right) - \dfrac{\partial R}{\partial q} = 0,\qquad i=1,\ldots,\,s.
+\dfrac{d}{dt}\left(\dfrac{\partial \mathcal{R}}{\partial \dot{q}}\right) - \dfrac{\partial \mathcal{R}}{\partial q} = 0,\qquad i=1,\ldots,\,s.
 $$ {#eq-CM_lagrange_equation_for_non_cyclic_variables_in_routian}
 
 또한 순환변수에 대한 정준 모먼트 $p_j\, (j=s+1,\ldots,\,n)$ 은 상수이므로 $p_{s+i}$ 를 $\alpha_i$ 로 바꾸면 라우시안은
 
 $$
-R = R(q_1,\ldots,\,q_n;\dot{q}_1,\ldots,\,\dot{q}_s;\alpha_{1},\ldots,\,\alpha_r;t),\qquad \text{where }r=n-s.
+\mathcal{R} = \mathcal{R}(q_1,\ldots,\,q_n;\dot{q}_1,\ldots,\,\dot{q}_s;\alpha_{1},\ldots,\,\alpha_r;t),\qquad \text{where }r=n-s.
 $${#eq-CM_routhian_form_1}
 
 이제 비순환 좌표에 대한 라그랑쥬 방정식 @eq-CM_lagrange_equation_for_non_cyclic_variables_in_routian 은 순환좌표와 무관하게 풀릴 수 있으며 마치 자유도 $s$ 인 시스템의 라그랑쥬 방정식과 같다.  
@@ -463,25 +463,25 @@ $${#eq-CM_routhian_form_1}
 [해밀턴의 원리](02_variational_principle.qmd#sec-CM_least_action_theorem) 를 상기하자. 라그랑쥬 방정식은 해밀턴의 원리로부터의 자연스러운 결론이다. 이제 해밀턴의 원리로부터 해밀턴의 운동방정식이 자연스럽게 유도됨을 보이고자 한다. 라그랑지안 $L$ 에 대한 action $S_L$ 은 다음과 같다.
 
 $$
-S_L = \int_{t_1}^{t_2} L(\bf{q},\, \bf{\dot{q}},\,t)\, dt .
+S_\magr = \int_{t_1}^{t_2} \lagr(\bf{q},\, \bf{\dot{q}},\,t)\, dt .
 $$
 
-$L(\bf{q},\,\dot{\bf{q}},\,t) = \sum_i \dot{q}_i p_i - H(\bf{q},\, \bf{p},\,t)$ 이므로 라그랑지안이 아닌 해밀토니안을 사용하는 action $S_H$ 를 아래와 같이 정할 수 있다.
+$\lagr(\bf{q},\,\dot{\bf{q}},\,t) = \sum_i \dot{q}_i p_i - \hamil(\bf{q},\, \bf{p},\,t)$ 이므로 라그랑지안이 아닌 해밀토니안을 사용하는 action $S_H$ 를 아래와 같이 정할 수 있다.
 
 $$
-S_H = \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - H(\bf{q},\, \bf{p},\,t)\right] \, dt
+S_\hamil = \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - \hamil(\bf{q},\, \bf{p},\,t)\right] \, dt
 $$ {#eq-CM_action_in_phase_space}
 
-이다. 여기서 라그랑지안에 대한 $S_L$ 는 짜임새 공간에서의 경로에 대한 적분이지만 해밀토니안에 대한 $S_H$ 는 위상공간에서의 경로에 대한 적분이 이 되며, 해밀토니안 형식에 따라 $\bf{q}$ 와 $\bf{p}$ 는 각각 독립변수로 간주된다. 따라서 @eq-CM_action_in_phase_space 에서 적분되는 함수는 $\bf{q},\, \dot{\bf{q}},\, \bf{p},\, \dot{\bf{p}}$ 의 함수로 표현되어야 한다. 따라서 어떤 경로의 변형 역시 위상공간에서의 경로의 변형 이다. 해밀턴의 원리는 짜임새 공간에서의 action $S_L$ 에 대해 다루는데 **변형된 해밀턴의 원리 (modified Hamilton's principle)** 는 위상공간에서의 action $S_H$ 에 대해 $\delta S_H=0$ 이 되는 위상공간 상의 경로를 따른는 것을 주장한다. 즉
+이다. 여기서 라그랑지안에 대한 $S_\lagr$ 는 짜임새 공간에서의 경로에 대한 적분이지만 해밀토니안에 대한 $S_\hamil$ 는 위상공간에서의 경로에 대한 적분이 이 되며, 해밀토니안 형식에 따라 $\bf{q}$ 와 $\bf{p}$ 는 각각 독립변수로 간주된다. 따라서 @eq-CM_action_in_phase_space 에서 적분되는 함수는 $\bf{q},\, \dot{\bf{q}},\, \bf{p},\, \dot{\bf{p}}$ 의 함수로 표현되어야 한다. 따라서 어떤 경로의 변형 역시 위상공간에서의 경로의 변형 이다. 해밀턴의 원리는 짜임새 공간에서의 action $S_\lagr$ 에 대해 다루는데 **변형된 해밀턴의 원리 (modified Hamilton's principle)** 는 위상공간에서의 action $S_\hamil$ 에 대해 $\delta S_\hamil=0$ 이 되는 위상공간 상의 경로를 따른는 것을 주장한다. 즉
 
 $$
-\delta S_H = \delta \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - H(\bf{p},\, \bf{q},\,t)\right] \, dt = 0
+\delta S_\hamil = \delta \int_{t_1}^{t_2} \left[\sum_{i} \dot{q}_i p_i - \hamil(\bf{p},\, \bf{q},\,t)\right] \, dt = 0
 $$ {#eq-CM_modified_hamilton_principle}
 
 이다. 이 변형된 해밀턴의 원리가 가장 많이 사용되는 곳은 다음 장에 다룰 변환 이론이지만 여기서 중요한 것은 이 변형된 해밀턴의 원리를 통해 해밀턴의 정준 운동방정식을 유도할 수 있다는 것이다. @eq-CM_modified_hamilton_principle $[\;\cdots\;]$ 안의 함수를 $F$ 라고 임시로 붙이면 $F$ 는 $\bf{q},\, \dot{\bf{q}},\, \bf{p}$ 의 함수이며 $\dot{\bf{p}}$ 에 명시적인 의존성은 없다. 변형된 해밀턴의 원리는
 
 $$
-\delta S = \delta\int_{t_1}^{t_2} \left[\sum_i \dot{q}_i p_i - H(\bf{q},\, \bf{p},\,t)\right] \, dt = \delta \int_{t_1}^{t_2}F(\bf{q},\, \dot{\bf{q}},\,\bf{p}, t)\, dt =0
+\delta S = \delta\int_{t_1}^{t_2} \left[\sum_i \dot{q}_i p_i - \hamil (\bf{q},\, \bf{p},\,t)\right] \, dt = \delta \int_{t_1}^{t_2}F(\bf{q},\, \dot{\bf{q}},\,\bf{p}, t)\, dt =0
 $$
 
 이 된다. 그리고 이에 대한 오일러-라그랑쥬 방정식은, 
@@ -496,13 +496,13 @@ $$ {#eq-CM_euler_lagrange_equation_from_action_using_hamiltonian}
 이다. 첫번째 식으로부터 
 
 $$
-\dot{p}_i = - \dfrac{\partial H}{\partial q_i}
+\dot{p}_i = - \dfrac{\partial \hamil}{\partial q_i}
 $$ {#eq-CM_canonical_equation_from_modified_hamiltonian_principle_1}
 
 를 얻을 수 있으며, $F$ 는 명시적인 $\dot{p}_i$ 의존성이 없으므로 두번째 식으로부터
 
 $$
-\dot{q}_i = \dfrac{\partial H}{\partial p_i}
+\dot{q}_i = \dfrac{\partial \hamil}{\partial p_i}
 $$ {#eq-CM_canonical_equation_from_modified_hamiltonian_principle_2}
 
 를 얻는다. 즉 우리는 변형된 해밀턴의 원리로부터 해밀턴의 운동방정식을 얻었다. 여기서 몇가지를 정리해 보기로 하자.
@@ -522,18 +522,18 @@ $$
 
 $$
 \begin{aligned}
-0=\delta \int_{t_1}^{t_2} & \left[\left(\sum_{i} \dot{q}_i p_i - H(\bf{q},\, \bf{p},\,t)\right) - \dfrac{d}{dt}\left(\sum_i q_i p_i \right)\right]\,dt \\[0.3em]
-&= \delta \int_{t_1}^{t_2} \left(\sum_i -\dot{p}_iq_i - H(\bf{q},\,\bf{p},\,t)\right)\,dt.
+0=\delta \int_{t_1}^{t_2} & \left[\left(\sum_{i} \dot{q}_i p_i - \hamil (\bf{q},\, \bf{p},\,t)\right) - \dfrac{d}{dt}\left(\sum_i q_i p_i \right)\right]\,dt \\[0.3em]
+&= \delta \int_{t_1}^{t_2} \left(\sum_i -\dot{p}_iq_i - \hamil (\bf{q},\,\bf{p},\,t)\right)\,dt.
 \end{aligned}
 $$ {#eq-CM_modified_hamiltonian_example_1}
 
-위 식의 $-\sum_i \dot{p}_i q_i - H$ 는 라그랑지안도 아니고 짜임새 공간의 점변환을 통해 라그랑지안으로 변환될 수도 없지만 $q$ 와 $p$ 의 끝점에서의 변화를 $0$ 으로 제한함으로서 올바른 해밀턴 운동방정식을 얻을 수 있다(@exr-CM_goldstein_8_1 ($b$)). 
+위 식의 $-\sum_i \dot{p}_i q_i - \hamil$ 는 라그랑지안도 아니고 짜임새 공간의 점변환을 통해 라그랑지안으로 변환될 수도 없지만 $q$ 와 $p$ 의 끝점에서의 변화를 $0$ 으로 제한함으로서 올바른 해밀턴 운동방정식을 얻을 수 있다(@exr-CM_goldstein_8_1 ($b$)). 
 
 ## 최소 작용 원리
 
 ### $\delta$-변화 와 $\Delta$-변화 {#sec-CM_delta_variations}
 
-지금까지 해석역학에서 $\delta q$ 라던가 $\delta \int L\,dt$ 의 경우 변화는 정해진 시간 $t_1,\,t_2$ 에 정해진 짜임새 공간 상의 점을 지나는 경로에 대한 변화였다. 즉 $\delta q(t_1) = \delta q(t_2)=0$. 이를 $\delta$-변화 라고 하자. 이제 소개할 $\Delta$-변화는 좀 더 제한적인 변화이다. 
+지금까지 해석역학에서 $\delta q$ 라던가 $\delta \int \lagr\,dt$ 의 경우 변화는 정해진 시간 $t_1,\,t_2$ 에 정해진 짜임새 공간 상의 점을 지나는 경로에 대한 변화였다. 즉 $\delta q(t_1) = \delta q(t_2)=0$. 이를 $\delta$-변화 라고 하자. 이제 소개할 $\Delta$-변화는 좀 더 제한적인 변화이다. 
 
 - 정확한 경로에서의 $t_2$ 에 도달하는 시간이 달라 질 수 있다.
 - 양 끝 지점의 위치가 달라질 수 있다.
@@ -547,27 +547,27 @@ $$ {#eq-CM_path_by_delta_variation}
 이며 $\eta_i (t_1) = \eta_i (t_2)=0$ 으로 제한했지만 이제 $\eta_i$ 에 대한 제한을 풀어버린다. 이제 $\eta_i$ 에 대한 요구조건은 $C^1$ 급 함수라는 것 뿐이다. 그리고 이제 작용 적분에 대한 $\Delta$ 변화를 다음과 같이 정의한다.
 
 $$
-\Delta \int_{t_1}^{t_2} L\,dt := \int_{t_1+\Delta t_1}^{t_2 + \Delta t_2} L(\alpha)\, dt - \int_{t_1}^{t_2} L(0)\,dt.
+\Delta \int_{t_1}^{t_2} \lagr\,dt := \int_{t_1+\Delta t_1}^{t_2 + \Delta t_2} \lagr(\alpha)\, dt - \int_{t_1}^{t_2} \lagr(0)\,dt.
 $$ {#eq-CM_least_maupertuis_action_principle_0}
 
-여기서 $\int L(\alpha)\,dt$ 는 @eq-CM_path_by_delta_variation 의 경로에 대한 적분이며 $\int L(0)\,dt$ 는 운동의 실제 경로에 대한 적분이다.
+여기서 $\int \lagr(\alpha)\,dt$ 는 @eq-CM_path_by_delta_variation 의 경로에 대한 적분이며 $\int \lagr(0)\,dt$ 는 운동의 실제 경로에 대한 적분이다.
 
 미소 시간변화의 1차까지 생각하면 
 
 $$
-\Delta \int_{t_1}^{t_2}L\,dt = L(t_2)\Delta t_2 - L(t_1)\Delta t_1 - \int_{t_1}^{t_2}\delta L\, dt
+\Delta \int_{t_1}^{t_2} \lagr\,dt = L(t_2)\Delta t_2 - \lagr(t_1)\Delta t_1 - \int_{t_1}^{t_2}\delta \lagr \, dt
 $$ {#eq-CM_least_maupertuis_action_principle_1}
 
 이며, 여기서
 
 $$
- \int_{t_1}^{t_2} \delta L \, dt = \int_{t_1}^{t_2}\left[\dfrac{\partial L}{\partial q_i} - \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_i}\right)\right] \delta q_i \, dt + \left.\dfrac{\partial L}{\partial \dot{q}_i}\delta q_i\right|_{1}^2
+ \int_{t_1}^{t_2} \delta \lagr \, dt = \int_{t_1}^{t_2}\left[\dfrac{\partial \lagr}{\partial q_i} - \dfrac{d}{dt}\left(\dfrac{\partial \lagr}{\partial \dot{q}_i}\right)\right] \delta q_i \, dt + \left.\dfrac{\partial \lagr}{\partial \dot{q}_i}\delta q_i\right|_{1}^2
 $${#eq-CM_least_maupertuis_action_principle_2}
 
 이다. 끝점에서 $\delta q_i(t_1) = \delta q_i(t_2)=0$ 이라는 조건이 여기서는 성립하지 않으므로 마지막 항이 살아남아야 한다. 이제 @eq-CM_least_maupertuis_action_principle_1 를 구해보면 @eq-CM_least_maupertuis_action_principle_1 의 적분의 $[\cdots]$ 는 사라지므로,
 
 $$
-\Delta \left.\int_{t_1}^{t_2} L\,dt = (L\Delta t + p_i \delta q_i)\right|_{1}^2.
+\Delta \left.\int_{t_1}^{t_2} \lagr \,dt = (\lagr\Delta t + p_i \delta q_i)\right|_{1}^2.
 $$ {#eq-CM_least_maupertuis_action_principle_3}
 
 여기서 $\delta q_i$ 는 원래의 $t_1,\,t_2$ 시간의 짜임새 공간상의 점에 대한 변화를 의미한다. $\Delta t$ 에 대한 1차 근사로
@@ -580,8 +580,8 @@ $$
 
 $$
 \begin{aligned}
-\Delta \int_{t_1}^{t_2} L\,dt &= (L\Delta t - p_i \dot{q}_i \Delta t + p_i \Delta q_i){\huge |}_{1}^2, \\[0.3em]
-&= (p_i \Delta q_i - H\Delta t){\huge |}_{1}^2.
+\Delta \int_{t_1}^{t_2} \lagr \,dt &= (\lagr \Delta t - p_i \dot{q}_i \Delta t + p_i \Delta q_i){\huge |}_{1}^2, \\[0.3em]
+&= (p_i \Delta q_i - \hamil \Delta t){\huge |}_{1}^2.
 \end{aligned}
 $${#eq-CM_least_maupertuis_action_principle_4}
 
@@ -589,26 +589,26 @@ $${#eq-CM_least_maupertuis_action_principle_4}
 
 최소 작용의 원리를 얻기 위해 3가지 제한을 건다.
 
-1. 라그랑지안 $L$ 은 시간에 명시적으로 의존하지 않는다. 따라서 해밀토니안은 보존된다.
-2. 실제 경로 뿐만 아니라 변동 경로 역시 $H$ 가 보존되는 경로를 따른다.
+1. 라그랑지안 $\lagr$ 은 시간에 명시적으로 의존하지 않는다. 따라서 해밀토니안은 보존된다.
+2. 실제 경로 뿐만 아니라 변동 경로 역시 $\hamil$ 가 보존되는 경로를 따른다.
 3. $\Delta q_i(t_1) = \Delta q_i(t_2) = 0$ 이다.
 
 이 조건에서 @eq-CM_least_maupertuis_action_principle_4 는 
 
 $$
-\Delta \int_{t_1}^{t_2} L\,dt = -H (\Delta t_2 - \Delta t_1)
+\Delta \int_{t_1}^{t_2} \lagr\,dt = -\hamil (\Delta t_2 - \Delta t_1)
 $${#eq-CM_least_maupertuis_action_principle_5}
 
 이다. 그런데, 같은 조건에서
 
 $$
-\int_{t_1}^{t_2} L\,dt = \int_{t_1}^{t_2} p_i \dot{q}_i \,dt - H(t_2-t_1)
+\int_{t_1}^{t_2} \lagr \,dt = \int_{t_1}^{t_2} p_i \dot{q}_i \,dt - \hamil (t_2-t_1)
 $$
 
 이므로 이로부터
 
 $$
-\Delta \int_{t_1}^{t_2} L\,dt = \Delta \int_{t_1}^{t_2} p_i \dot{q}_i\,dt - H(\Delta t_2 - \Delta t_1).
+\Delta \int_{t_1}^{t_2} \lagr \,dt = \Delta \int_{t_1}^{t_2} p_i \dot{q}_i\,dt - \hamil (\Delta t_2 - \Delta t_1).
 $$ {#eq-CM_least_maupertuis_action_principle_6}
 
 @eq-CM_least_maupertuis_action_principle_5 와 @eq-CM_least_maupertuis_action_principle_6 으로부터 우리는 소위 **모페르튀이의 최소작용원리 (principle of Maupertuis' least action)** 를 유도 할 수 있다.
@@ -673,7 +673,7 @@ $${#eq-CM_least_maupertuis_action_principle_9}
 
 $T=H-U(q)$ 임을 이용하면 다음과 같은 최소 작용 원리의 야코비 식을 얻는다.
 $$
-\Delta \int_{s_1}^{s_2} \sqrt{H - U(q)}\,ds = 0.
+\Delta \int_{s_1}^{s_2} \sqrt{\hamil - U(q)}\,ds = 0.
 $${#eq-CM_least_maupertuis_action_principle_10}
 
 그동안의 다양한 적분이 시간에 대한 적분이었다면 위의 야코비 식은 경로에 대한 적분식이다. $H$ 는 보존되며 $U(q)$ 역시 시간에 의존하지 않으므로 시간 $t$ 는 이 식에 등장하지 않는다. 
@@ -688,12 +688,12 @@ $${#eq-CM_least_maupertuis_action_principle_10}
 ::: {#exr-CM_goldstein_8_1}
 #### Goldstein 8.1
 
-($a$) 해밀토니안 $H(q_i,\,p_i,\,t)$ 로부터 $\dot{\bf{q}}$ 를 독립 변수로 취급하여 라그랑지안 $L(q_i,\,\dot{q}_i,t)$ 를 구하라.
+($a$) 해밀토니안 $\hamil (q_i,\,p_i,\,t)$ 로부터 $\dot{\bf{q}}$ 를 독립 변수로 취급하여 라그랑지안 $\lagr (q_i,\,\dot{q}_i,t)$ 를 구하라.
 
 ($b$) 같은 과정을 통해 다음 함수를 이용하여 운동방정식을 구하라.
 
 $$
-L'(p,\, \dot{p},\,t) = -\dot{p} q - H(q,\,p,\,t)
+\lagr'(p,\, \dot{p},\,t) = -\dot{p} q - \hamil (q,\,p,\,t)
 $$
 
 :::
@@ -702,18 +702,18 @@ $$
 
 ::: {.solution}
 
-($a$) $L(q,\,p) := \sum_i p_i\dot{q}_i - H(q_i,\,p_i)$ 라고 하면,
+($a$) $\lagr (q,\,p) := \sum_i p_i\dot{q}_i - \hamil (q_i,\,p_i)$ 라고 하면,
 
 $$
-\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_i}\right) -\dfrac{\partial L}{\partial q_i } = \dfrac{dp_i}{dt} + \underbrace{\dfrac{\partial H}{\partial q_i}}_{\Large = -\dot{p}_i} =  0.
+\dfrac{d}{dt}\left(\dfrac{\partial \lagr}{\partial \dot{q}_i}\right) -\dfrac{\partial \lagr}{\partial q_i } = \dfrac{dp_i}{dt} + \underbrace{\dfrac{\partial \hamil}{\partial q_i}}_{\normalsize = -\dot{p}_i} =  0.
 $$
 
 ($b$)
 
 $$
 \begin{aligned}
-\dfrac{d}{dt}\left(\dfrac{\partial L'}{\partial \dot{p}}\right) - \dfrac{\partial L'}{\partial p} &= -\dfrac{dq}{dt} + \dfrac{\partial H}{\partial p} = 0, \\[0.3em]
-\dfrac{d}{dt}\left(\dfrac{\partial L'}{\partial \dot{q}}\right) - \dfrac{\partial L'}{\partial q} &=  \left(\dot{p} +  \dfrac{\partial H}{\partial q} \right) = 0.
+\dfrac{d}{dt}\left(\dfrac{\partial \lagr'}{\partial \dot{p}}\right) - \dfrac{\partial \lagr'}{\partial p} &= -\dfrac{dq}{dt} + \dfrac{\partial \hamil}{\partial p} = 0, \\[0.3em]
+\dfrac{d}{dt}\left(\dfrac{\partial \lagr'}{\partial \dot{q}}\right) - \dfrac{\partial \lagr'}{\partial q} &=  \left(\dot{p} +  \dfrac{\partial \hamil}{\partial q} \right) = 0.
 \end{aligned}
 $$
 
@@ -724,7 +724,7 @@ $$
 ::: {#exr-CM_goldstein_8_19}
 #### Goldstein 8.19
 
-라그랑지안 $L(q_i,\,\dot{q}_i,t)$ 에 함수 $g(q_i,\,t)$ 의 시간에 대한 미분을 더해도 운동방정식에 변화가 없다는 것을 안다. 이 경우 정준 운동량과 해밀토니안은 어떻게 바뀌는가? 새로운 해밀토니안에 대한 운동방정식 역시 변하지 않음을 보여라.
+라그랑지안 $\lagr(q_i,\,\dot{q}_i,t)$ 에 함수 $g(q_i,\,t)$ 의 시간에 대한 미분을 더해도 운동방정식에 변화가 없다는 것을 안다. 이 경우 정준 운동량과 해밀토니안은 어떻게 바뀌는가? 새로운 해밀토니안에 대한 운동방정식 역시 변하지 않음을 보여라.
 
 :::
 
@@ -732,7 +732,7 @@ $$
 
 ::: {.solution}
 
-$\overline{L}(q_i,\,\dot{q}_i,\,t) = L(q_i,\,\dot{q}_i,t) + \dfrac{dg(q_i,t)}{dt}$ 에 대해 
+$\overline{\lagr}(q_i,\,\dot{q}_i,\,t) = \lagr(q_i,\,\dot{q}_i,t) + \dfrac{dg(q_i,t)}{dt}$ 에 대해 
 
 $$
 \dfrac{dg}{dt} = \sum_i\dfrac{\partial g}{\partial q_i}\dot{q}_i + \dfrac{\partial g}{\partial t}
@@ -740,15 +740,15 @@ $$
 
 임을 이용하면, 새로운 정준운동량은
 $$
-\overline{p}_i = \dfrac{\partial \overline{L}}{\partial \dot{q}_i} = p_i + \dfrac{\partial g}{\partial q_i}
+\overline{p}_i = \dfrac{\partial \overline{\lagr}}{\partial \dot{q}_i} = p_i + \dfrac{\partial g}{\partial q_i}
 $$
 
 이며, 새로운 해밀토니안은
 
 $$
 \begin{aligned}
-\overline{H} &= \sum_i \overline{p}_i\dot{q}_i - \overline{L} = \sum_i \left(p_i+\dfrac{\partial g}{\partial q_i}\right)\dot{q}_i - L - \dfrac{dg}{dt} \\[0.3em]
-&= \sum_i p_i\dot{q}_i - L - \dfrac{\partial g}{\partial t} = H\left(q,\,\overline{p}-\dfrac{\partial g}{\partial q_i},\,t \right)-\dfrac{\partial g}{\partial t}
+\overline{\hamil} &= \sum_i \overline{p}_i\dot{q}_i - \overline{\lagr} = \sum_i \left(p_i+\dfrac{\partial g}{\partial q_i}\right)\dot{q}_i - \lagr - \dfrac{dg}{dt} \\[0.3em]
+&= \sum_i p_i\dot{q}_i - \lagr - \dfrac{\partial g}{\partial t} = \hamil\left(q,\,\overline{p}-\dfrac{\partial g}{\partial q_i},\,t \right)-\dfrac{\partial g}{\partial t}
 \end{aligned}
 $$
 
@@ -756,9 +756,9 @@ $$
 
 $$
 \begin{aligned}
-\dfrac{\partial \overline{H}}{\partial q_i} &= \dfrac{\partial H}{\partial q_i} - \sum_j\underbrace{\dfrac{\partial H}{\partial p_j}}_{=\dot{q}_j} \left(\dfrac{\partial g^2} {\partial q_i\partial q_j}\right) - \dfrac{\partial^2 g}{\partial q_i\partial t} \\[0.3em]
+\dfrac{\partial \overline{\hamil}}{\partial q_i} &= \dfrac{\partial \hamil}{\partial q_i} - \sum_j\underbrace{\dfrac{\partial \hamil}{\partial p_j}}_{=\dot{q}_j} \left(\dfrac{\partial g^2} {\partial q_i\partial q_j}\right) - \dfrac{\partial^2 g}{\partial q_i\partial t} \\[0.3em]
 &=\dfrac{\partial H}{\partial q_i} - \dfrac{d}{dt}\left(\dfrac{\partial g}{\partial q_i}\right) = \dfrac{d\overline{p}_i}{dt}, \\[0.3em]
-\dfrac{\partial \overline{H}}{\partial \overline{p}_i} &= \dfrac{\partial H}{\partial p_i} = \dot{q}_i
+\dfrac{\partial \overline{\hamil}}{\partial \overline{p}_i} &= \dfrac{\partial \hamil}{\partial p_i} = \dot{q}_i
 \end{aligned}
 $$
 
@@ -775,7 +775,7 @@ $$
 해밀턴 원리는 다음 식으로 쓰일 수 있음을 보여라.
 
 $$
-\delta \int_1^2 \left[2H(\bf{\eta},\,t) + \bf{\eta J \dot{\eta}} \right]\, dt = 0
+\delta \int_1^2 \left[2\hamil(\bf{\eta},\,t) + \bf{\eta J \dot{\eta}} \right]\, dt = 0
 $$
 
 :::
@@ -787,16 +787,16 @@ $$
 해밀턴 원리 $\delta \int_1^2 L\,dt = 0$ 과 라그랑지안에 시간에 대한 미분 함수를 더해도 불변이라는 사실로부터
 
 $$
-\delta \int_1^2 \left[2L - \dfrac{d}{dt}\left(\sum_i p_i q_i\right)\right] = 0
+\delta \int_1^2 \left[2\lagr - \dfrac{d}{dt}\left(\sum_i p_i q_i\right)\right] = 0
 $$
 
-을 얻는다. $H = \sum_i p_i\dot{q}_i -L$ 을 이용하면
+을 얻는다. $\hamil = \sum_i p_i\dot{q}_i -\lagr$ 을 이용하면
 
 $$
 \begin{aligned}
-2L - \dfrac{d}{dt}\left(\sum_i p_i q_i\right) &= 2\sum_i p_i \dot{q}_i - 2H - \sum_i \left(\dot{p}_i q_i + p_i \dot{q}_i \right) \\[0.3em]
-&= -(2H + \sum_i \dot{p_i}q_i - p_i \dot{q}_i) \\[0.3em]
-&= -(2H + \bf{\eta J \dot{\eta}}).
+2\lagr - \dfrac{d}{dt}\left(\sum_i p_i q_i\right) &= 2\sum_i p_i \dot{q}_i - 2\hamil - \sum_i \left(\dot{p}_i q_i + p_i \dot{q}_i \right) \\[0.3em]
+&= -(2\hamil + \sum_i \dot{p_i}q_i - p_i \dot{q}_i) \\[0.3em]
+&= -(2\hamil + \bf{\eta J \dot{\eta}}).
 \end{aligned}
 $$
 

@@ -1,0 +1,9 @@
+---
+title: "해밀턴-야코비 이론"
+number-sections: true
+number-depth: 3
+crossref:
+  chapters: true
+---
+
+{{< include ../../latexmacros.qmd >}}

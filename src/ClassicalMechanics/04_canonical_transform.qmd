@@ -38,31 +38,31 @@ P_i = P_i (\bf{q},\, \bf{p},\, t),
 \end{aligned}
 $$ {#eq-CM_transformation_in_phase_space}
 
-우리가 원하는 것은 이 변환에 대해 @eq-CM_canonical_equation_of_hamiltonian 와 같은 정준방정식이 만족되는 것이다. 어떤 함수 $\overline{H}=\overline{H}(\bf{Q},\, \bf{P},\,t)$ 에 대해
+우리가 원하는 것은 이 변환에 대해 @eq-CM_canonical_equation_of_hamiltonian 와 같은 정준방정식이 만족되는 것이다. 어떤 함수 $\overline{\hamil}=\overline{\hamil}(\bf{Q},\, \bf{P},\,t)$ 에 대해
 
 $$
-\dot{Q}_i = \dfrac{\partial \overline{H}}{\partial P_i}, \qquad \dot{P}_i = - \dfrac{\partial \overline{H}}{\partial Q_i}
+\dot{Q}_i = \dfrac{\partial \overline{\hamil}}{\partial P_i}, \qquad \dot{P}_i = - \dfrac{\partial \overline{\hamil}}{\partial Q_i}
 $$ {#eq-CM_hamilton_equation_of_motion_after_point_transformation}
 
-라면 $\overline{H}$ 는 $(\bf{Q},\,\bf{P})$ 위상공간에서의 해밀토니안 역할을 수행한다. 
+라면 $\overline{\hamil}$ 는 $(\bf{Q},\,\bf{P})$ 위상공간에서의 해밀토니안 역할을 수행한다. 
 
 
 앞서 [변형된 해밀턴의 원리](03_hamilton_dynamics.qmd#sec-CM_modified_hamilton_principle) 에서 보았듯이 $\bf{Q},\, \bf{P}$ 가 정준 좌표라면 변형된 해밀턴 원리를 만족시켜야 한다. 즉
 
 $$
-\delta \int_{t_1}^{t_2} \left(\sum_i \dot{Q}_i P_i - \overline{H}(\bf{Q},\, \bf{P},\, t)\right)\, dt = 0.
+\delta \int_{t_1}^{t_2} \left(\sum_i \dot{Q}_i P_i - \overline{\hamil}(\bf{Q},\, \bf{P},\, t)\right)\, dt = 0.
 $$ {#eq-CM_modifield_hamiltons_principle_in_new_coord}
 
 또한
 
 $$
-\delta \int_{t_1}^{t_2} \left(\sum_i \dot{q}_i p_i - H(\bf{q},\, \bf{p},\, t)\right)\, dt = 0
+\delta \int_{t_1}^{t_2} \left(\sum_i \dot{q}_i p_i - \hamil(\bf{q},\, \bf{p},\, t)\right)\, dt = 0
 $${#eq-CM_modifield_hamiltons_principle_in_old_coord}
 
 이어야 한다. @eq-CM_modifield_hamiltons_principle_in_old_coord 와 @eq-CM_modifield_hamiltons_principle_in_new_coord 가 동시에 만족한다는 것은 두 식이 같다는 것을 의미하지 않는다. 일반적으로 두 식이 같을 때의 조건은 어떤 상수 $\lambda$ 와 $C^2$ 급 함수 $G$ 에 대해 
 
 $$
-\lambda \left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_{i}\dot{Q}_i P_i - \overline{H} + \dfrac{dG}{dt}
+\lambda \left(\sum_{i}\dot{q}_i p_i - \hamil\right) = \sum_{i}\dot{Q}_i P_i - \overline{\hamil} + \dfrac{dG}{dt}
 $$ {#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0}
 
 을 만족하는 경우이다. 
@@ -71,15 +71,15 @@ $$ {#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0}
 
 ### 정준변환의 분류 {#sec-CM_grouping_of_canonical_transformation}
 
-위상공간의 점변환을 상수 $\mu,\, \nu$ 에 대해 $\bf{Q} = \mu \bf{q},\, \bf{P} = \nu \bf{p}$ 로 놓자. 그렇다면 $\overline{H}(\bf{Q},\, \bf{P}) = \mu\nu H(\bf{q},\, \bf{p})$ 에 대해 @eq-CM_hamilton_equation_of_motion_after_point_transformation 이 성립하며
+위상공간의 점변환을 상수 $\mu,\, \nu$ 에 대해 $\bf{Q} = \mu \bf{q},\, \bf{P} = \nu \bf{p}$ 로 놓자. 그렇다면 $\overline{\hamil}(\bf{Q},\, \bf{P}) = \mu\nu \hamil(\bf{q},\, \bf{p})$ 에 대해 @eq-CM_hamilton_equation_of_motion_after_point_transformation 이 성립하며
 
 $$
-\mu \nu \left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_i \dot{Q}_i P_i -\overline{H}
+\mu \nu \left(\sum_{i}\dot{q}_i p_i - \hamil\right) = \sum_i \dot{Q}_i P_i -\overline{\hamil}
 $$
 
 이다. @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0 와 비교하면 $\lambda = \mu\nu,\, G=\text{const.}$ 인 꼴이다. 이런 변환을 **스케일 변환(scale transformation)** 이라고 하며 우리는 실제로 @eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero_0 에서 $\lambda=1$ 인 경우에만 신경써도 된다는 것을 알 수 있다. 따라서 앞으로는 
 $$
-\left(\sum_{i}\dot{q}_i p_i - H\right) = \sum_{i}\dot{Q}_i P_i - \overline{H} + \dfrac{dG}{dt}
+\left(\sum_{i}\dot{q}_i p_i - \hamil\right) = \sum_{i}\dot{Q}_i P_i - \overline{\hamil} + \dfrac{dG}{dt}
 $$ {#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero}
 
 인 경우만 다루기로 하자. 앞으로는 $\lambda\ne 1$ 일 경우는 **확장된 정준 변환 (extended canonical transformation)** 이라고 하고 $\lambda =1$ 인 경우에만 **정준 변환** 이라고 하기로 하자. 또 하나 정준변환 @eq-CM_transformation_in_phase_space 에서 시간에 대해 명시적인 의존성이 없을 경우 **제한된 정준 변환 (restricted canonical transformation)** 이라고 한다. 
@@ -97,15 +97,15 @@ $$ {#eq-CM_condition_for_two_modified_hammiltons_principle_results_are_zero}
 
 $$
 \begin{aligned}
-\sum_i p_i \dot{q}_i - H &= \sum_i P_i \dot{Q}_i - \overline{H} + \dfrac{dG_1}{dt} \\[0.3em]
-&= \sum_i P_i\dot{Q}_i - \overline{H} + \dfrac{\partial G_1}{\partial t} + \sum_{i}\left(\dfrac{\partial G_1}{\partial q_i}\dot{q}_i + \dfrac{\partial G_1}{\partial Q_i} \dot{Q}_i\right)
+\sum_i p_i \dot{q}_i - \hamil &= \sum_i P_i \dot{Q}_i - \overline{\hamil} + \dfrac{dG_1}{dt} \\[0.3em]
+&= \sum_i P_i\dot{Q}_i - \overline{\hamil} + \dfrac{\partial G_1}{\partial t} + \sum_{i}\left(\dfrac{\partial G_1}{\partial q_i}\dot{q}_i + \dfrac{\partial G_1}{\partial Q_i} \dot{Q}_i\right)
 \end{aligned}
 $$ {#eq-CM_lagrangian_for_type1_generationg_function}
 
 이다. $\bf{q}$ 와 $\bf{Q}$ 는 각각 독립적이므로 이로부터
 
 $$
-p_i = \dfrac{\partial G_1}{\partial q_i},\qquad P_i = - \dfrac{\partial G_1}{\partial Q_i},\qquad \overline{H} = H + \dfrac{\partial G_1}{\partial t}
+p_i = \dfrac{\partial G_1}{\partial q_i},\qquad P_i = - \dfrac{\partial G_1}{\partial Q_i},\qquad \overline{\hamil} = \hamil + \dfrac{\partial G_1}{\partial t}
 $${#eq-CM_equations_for_type1_generating_function}
 
 를 얻는다. 위 식의 첫번째 식으로부터 $n$ 개의 $p_i$ 를 $(\bf{q},\, \bf{Q},\,t)$ 의 함수로 얻을 수 있다. 이 $p_i$ 가 가역이라면 $n$ 개의 $Q_i$ 를  $(\bf{q},\, \bf{p},\, t)$ 의 함수로 얻을 수 있다. 또한 이를 이용하면 위 식의 두번째 식으로부터 $n$ 개의 $P_i$ 를 얻을 수 있다. 그리고 세번째 식으로부터 $\overline{H}$ 를 얻을 수 있다. 
@@ -127,14 +127,14 @@ $$
 
 $$
 \begin{aligned}
-\sum_i p_i \dot{q}_i - H &= -\sum_i Q_i \dot{P}_i- \overline{H} + \sum_i \dfrac{\partial G_2}{\partial q_i}\dot{q}_i + \sum_i \dfrac{\partial G_2}{\partial P_i}\dot{P}_i + \dfrac{\partial G_2}{\partial t}
+\sum_i p_i \dot{q}_i - \hamil &= -\sum_i Q_i \dot{P}_i- \overline{\hamil} + \sum_i \dfrac{\partial G_2}{\partial q_i}\dot{q}_i + \sum_i \dfrac{\partial G_2}{\partial P_i}\dot{P}_i + \dfrac{\partial G_2}{\partial t}
 \end{aligned}
 $$ {#eq-CM_lagrangian_for_type2_generationg_function}
 
 이므로,
 
 $$
-p_i =\dfrac{\partial G_2}{\partial q_i},\qquad Q_i = \dfrac{\partial G_2}{\partial P_i},\qquad \overline{H} = H + \dfrac{\partial G_2}{\partial t}
+p_i =\dfrac{\partial G_2}{\partial q_i},\qquad Q_i = \dfrac{\partial G_2}{\partial P_i},\qquad \overline{\hamil} = \hamil + \dfrac{\partial G_2}{\partial t}
 $$ {#eq-CM_equations_for_type2_generating_function}
 
 이다. 위 식의 첫번째 식으로부터 $p_i = p_i(\bf{q},\, \bf{P},\,t)$ 을 얻으며, 가역이라면 $P_i$ 를 $\bf{q},\, \bf{p},\,t$ 의 함수로 얻을 수 있다. 이제 두번째 식으로부터 $\bf{Q}$ 를 얻을 수 있다. 
@@ -151,14 +151,14 @@ $$
 
 $$
 \begin{aligned}
--\sum_i \dot{p}_i q_i - H &= \sum_i \dot{Q}_i P_i -\overline{H}+ \sum_i \dfrac{\partial G_2}{\partial p_i}\dot{p}_i + \sum_i \dfrac{\partial G_2}{\partial Q_i}\dot{Q}_i + \dfrac{\partial G_2}{\partial t}
+-\sum_i \dot{p}_i q_i - \hamil &= \sum_i \dot{Q}_i P_i -\overline{\hamil}+ \sum_i \dfrac{\partial G_2}{\partial p_i}\dot{p}_i + \sum_i \dfrac{\partial G_2}{\partial Q_i}\dot{Q}_i + \dfrac{\partial G_2}{\partial t}
 \end{aligned}
 $${#eq-CM_lagrangian_for_type3_generationg_function}
 
 이므로,
 
 $$
-q_i = -\dfrac{\partial G_2}{\partial p_i},\qquad P_i = -\dfrac{\partial G_2}{\partial Q_i},\qquad \overline{H} = \overline{H}+ \dfrac{\partial G_2}{\partial t}
+q_i = -\dfrac{\partial G_2}{\partial p_i},\qquad P_i = -\dfrac{\partial G_2}{\partial Q_i},\qquad \overline{\hamil} = \overline{\hamil}+ \dfrac{\partial G_2}{\partial t}
 $${#eq-CM_equations_for_type3_generating_function}
 
 이다. 역시 첫번째 식으로부터 $\bf{q} = \bf{q}(\bf{p},\, \bf{Q},\,t)$ 를 얻으며, 가역일 경우 $\bf{Q} = \bf{Q}(\bf{q},\, \bf{p},\, t)$ 를 얻는다. 두번째 식으로붜 $\bf{P}$ 를 얻는다.
@@ -174,13 +174,13 @@ $$
 로 놓으면
 
 $$
--\sum_i q_i \dot{p}_i - H = - \sum_i Q_i \dot{P}_i - \overline{H}  + \sum_i\dfrac{\partial G_4}{\partial p_i} \dot{p_i} + \sum_i \dfrac{\partial G_4}{\partial P_i}\dot{P}_i + \dfrac{\partial G_4}{\partial t}
+-\sum_i q_i \dot{p}_i - \hamil = - \sum_i Q_i \dot{P}_i - \overline{\hamil}  + \sum_i\dfrac{\partial G_4}{\partial p_i} \dot{p_i} + \sum_i \dfrac{\partial G_4}{\partial P_i}\dot{P}_i + \dfrac{\partial G_4}{\partial t}
 $${#eq-CM_lagrangian_for_type4_generationg_function}
 
 이다. 이로부터
 
 $$
-q_i = - \dfrac{\partial G_4}{\partial p_i},\qquad Q_i = \dfrac{\partial G_4}{\partial P_i},\qquad \overline{H}= H + \dfrac{\partial G_4}{\partial t}
+q_i = - \dfrac{\partial G_4}{\partial p_i},\qquad Q_i = \dfrac{\partial G_4}{\partial P_i},\qquad \overline{\hamil}= \hamil + \dfrac{\partial G_4}{\partial t}
 $${#eq-CM_equations_for_type4_generating_function}
 
 를 얻는다. $\bf{q} = \bf{q}(\bf{p},\, \bf{P},\,t)$ 이므로 가역이라면 $\bf{P}= \bf{P}(\bf{q},\, \bf{p},\,t)$ 를 얻을 수 있다. 이를 두번째 식에 적용하여 $\bf{Q}_i = \bf{Q}(\bf{q},\, \bf{p},\,t)$ 를 얻는다.
@@ -200,7 +200,7 @@ $${#eq-CM_equations_for_type4_generating_function}
 Type II 변환생성함수 $G_2 = q_i P_i$ 가 주어졌다고 하자. 그렇다면 @eq-CM_equations_for_type2_generating_function 에 따라
 
 $$
-p_i = P_i,\qquad Q_i = q_i,\qquad \overline{H} = H
+p_i = P_i,\qquad Q_i = q_i,\qquad \overline{\hamil} = \hamil
 $$
 
 인 항등 변환이다. 즉 $q_iP_i$ 는 항등변환에 대한 변환생성함수이다.
@@ -228,19 +228,19 @@ $$
 이다. 이것을 행렬 표기법으로 표현할 수 있다. 
 
 $$
-\bf{g} = \begin{bmatrix} g_1 \\ \vdots \\ g_n \end{bmatrix},\qquad \dfrac{\partial \bf{g}}{\partial \bf{q}} = \begin{bmatrix} \dfrac{\partial g_1}{\partial q_1} & \cdots &\dfrac{\partial g_1}{\partial q_n} \\ \vdots & \ddots & \vdots \\ \dfrac{\partial g_n}{\partial q_1} & \cdots &\dfrac{\partial g_n}{\partial q_n} \end{bmatrix},\qquad \dfrac{\partial h}{\partial \bf{q}} = \begin{bmatrix} \dfrac{\partial h}{\partial q_1} & \cdots & \dfrac{\partial h}{\partial q_n} \end{bmatrix}
+\bf{g} = \begin{bmatrix} g_1 \\ \vdots \\ g_n \end{bmatrix},\qquad \dfrac{\partial \bf{g}}{\partial \bf{q}} = \begin{bmatrix} \dfrac{\partial g_1}{\partial q_1} & \cdots &\dfrac{\partial g_1}{\partial q_n} \\ \vdots & \ddots & \vdots \\ \dfrac{\partial g_n}{\partial q_1} & \cdots &\dfrac{\partial g_n}{\partial q_n} \end{bmatrix},\qquad \dfrac{\partial h}{\partial \bf{q}} = \begin{bmatrix} \dfrac{\partial h}{\partial q_1} \\ \vdots \\\dfrac{\partial h}{\partial q_n} \end{bmatrix}
 $$ 
 
 에 대해
 $$
-\bf{p} = \begin{bmatrix} p_1 &  \cdots & p_n\end{bmatrix} =\bf{P} \left(\dfrac{\partial \bf{g}}{\partial \bf{q}}\right)+ \dfrac{\partial h}{\partial \bf{q}}
+\bf{p} = \begin{bmatrix} p_1 \\  \vdots \\ p_n\end{bmatrix} = \left(\dfrac{\partial \bf{g}}{\partial \bf{q}}\right) ^T\bf{P}+ \dfrac{\partial h}{\partial \bf{q}}
 $$
 
 
 이므로 $\bf{P}$ 는 아래와 같다.
 
 $$
-\bf{P} = \left(\bf{p}-\dfrac{\partial h}{\partial \bf{q}}\right)\left(\dfrac{\partial \bf{g}}{\partial \bf{q}}\right)^{-1}
+\bf{P} = \left(\left(\dfrac{\partial \bf{g}}{\partial \bf{q}}\right)^T\right)^{-1}\left(\bf{p}-\dfrac{\partial h}{\partial \bf{q}}\right)
 $$
 
 즉 $\bf{Q} = \bf{Q}(\bf{q},\,t)$ 로 $\bf{p}$ 에 의존하지 않으나 $\bf{P} = \bf{P}(\bf{q},\, \bf{p},\, t)$ 로 $\bf{q},\, \bf{p}$ 모두에 의존한다. 
@@ -274,7 +274,7 @@ $$
 단순조화진동자의 해밀토니안은 아래와 같다.
 
 $$
-H = \dfrac{1}{2m}(p^2+m^2\omega^2 q^2)
+\hamil = \dfrac{1}{2m}(p^2+m^2\omega^2 q^2)
 $$ {#eq-exm_ct_and_sho_1}
 
 만약 어떤 함수 $f$ 에 대해 아래와 같은 변환이 정준변환이라고 하자.
@@ -286,7 +286,7 @@ $${#eq-exm_ct_and_sho_2}
 그렇다면 변환된 해밀토니안 $\overline{H}$ 는
 
 $$
-\overline{H} = \dfrac{(f(P))^2}{2m}
+\overline{\hamil} = \dfrac{(f(P))^2}{2m}
 $${#eq-exm_ct_and_sho_3}
 
 이며 $Q$ 는 순환변수로 나타낼 수 있는 장점이 있다. 이제 이런 $f$ 를 찾아보자. 위의 @eq-exm_ct_and_sho_2 로부터
@@ -328,7 +328,7 @@ $$
 이다. 이 경우 변형된 해밀토니안 $\overline{H}$ 는 다음과 같다.
 
 $$
-\overline{H}= \omega P.
+\overline{\hamil}= \omega P.
 $$
 
 $Q$ 가 $\overline{H}$ 의 순환 변수이므로 $P$ 는 운동상수이며 에너지 $E$ 에 대해
@@ -380,7 +380,7 @@ $$ {#eq-CM_restricted_canonical_transform}
 여기서,
 
 $$
-\dot{Q}_i = \sum_j \left(\dfrac{\partial Q_i}{\partial q_j}\dot{q}_j + \dfrac{\partial Q_i}{\partial p_j}\dot{p}_j\right) = \sum_j \left(\dfrac{\partial Q_i}{\partial q_j}\dfrac{\partial H}{\partial p_j} - \dfrac{\partial Q_i}{\partial p_j} \dfrac{\partial H}{\partial q_j}\right)
+\dot{Q}_i = \sum_j \left(\dfrac{\partial Q_i}{\partial q_j}\dot{q}_j + \dfrac{\partial Q_i}{\partial p_j}\dot{p}_j\right) = \sum_j \left(\dfrac{\partial Q_i}{\partial q_j}\dfrac{\partial \hamil}{\partial p_j} - \dfrac{\partial Q_i}{\partial p_j} \dfrac{\partial \hamil}{\partial q_j}\right)
 $$ {#eq-CM_symplectic_approach_to_cananolical_transform_1}
 
 이다. 또한 @eq-CM_restricted_canonical_transform 의 역변환
@@ -389,10 +389,10 @@ $$
 q_j = q_j(\bf{Q,\,\bf{P}}),\qquad  p_j = p_j(\bf{Q},\,\bf{P})
 $${#eq-CM_restricted_canonical_transform_2}
 
-를 생각하면 $H(\bf{q},\,\bf{p},\,t)$ 를 $H(\bf{Q},\,\bf{P},\,t)$ 로 바꿀 수 있다. 그렇다면,
+를 생각하면 $\hamil(\bf{q},\,\bf{p},\,t)$ 를 $\hamil(\bf{Q},\,\bf{P},\,t)$ 로 바꿀 수 있다. 그렇다면,
 
 $$
-\dfrac{\partial H}{\partial P_i} = \sum_j\dfrac{\partial H}{\partial p_j}\dfrac{\partial p_j}{\partial P_i} + \dfrac{\partial H}{\partial q_j}\dfrac{\partial q_j}{\partial P_i}
+\dfrac{\partial \hamil}{\partial P_i} = \sum_j\dfrac{\partial \hamil}{\partial p_j}\dfrac{\partial p_j}{\partial P_i} + \dfrac{\partial \hamil}{\partial q_j}\dfrac{\partial q_j}{\partial P_i}
 $${#eq-CM_symplectic_approach_to_cananolical_transform_2}
 
 인데, @eq-CM_symplectic_approach_to_cananolical_transform_1 과 비교하면 아래가 성립해야 함을 알 수 있다.
@@ -414,7 +414,7 @@ $${#eq-CM_symplectic_approach_to_cananolical_transform_4}
 우리는 앞서 $\bf\eta = \begin{bmatrix} \bf{q} & \bf{p}\end{bmatrix}^T$ 와 $\bf{J} = \begin{bmatrix} \bf{0} & \bf{1}\\ \bf{-1}& \bf{0}\end{bmatrix}$ 에 대해 해밀턴 방정식을 다음과 같이 쓸 수 있다는 것을 안다.
 
 $$
-\bf{\dot\eta} = \bf{J}\dfrac{\partial H}{\partial \bf{\eta}}.
+\bf{\dot\eta} = \bf{J}\dfrac{\partial \hamil}{\partial \bf{\eta}}.
 $$
 
 이제 제한된 정준변환 @eq-CM_restricted_canonical_transform 을
@@ -438,31 +438,31 @@ $$ {#eq-CM_symplectic_approach_to_cananolical_transform_5}
 로 정의하면
 
 $$
-\bf{\dot\zeta} = \bf{M \dot{\eta}} = \bf{MJ}\dfrac{\partial H}{\partial \bf{\eta}}
+\bf{\dot\zeta} = \bf{M \dot{\eta}} = \bf{MJ}\dfrac{\partial \hamil}{\partial \bf{\eta}}
 $${#eq-CM_symplectic_approach_to_cananolical_transform_6}
 
 이다. 이제 역변환에 의해 $H=H(\bf{\zeta})$ 로 간주하고 $\bf{\eta}$ 에 대해 미분하면 
 
 $$
-\dfrac{\partial H}{\partial \eta_i} = \sum_j \dfrac{\partial H}{\partial \zeta_j}\dfrac{\partial \zeta_j}{\partial \eta_i}
+\dfrac{\partial H}{\partial \eta_i} = \sum_j \dfrac{\partial \hamil}{\partial \zeta_j}\dfrac{\partial \zeta_j}{\partial \eta_i}
 $${#eq-CM_symplectic_approach_to_cananolical_transform_7}
 
 이며, 이는 아래와 같이 쓸 수 있다.
 
 $$
-\dfrac{\partial H}{\partial \bf{\eta}} = \bf{M}^T\dfrac{\partial H}{\partial \bf{\zeta}}.
+\dfrac{\partial \hamil}{\partial \bf{\eta}} = \bf{M}^T\dfrac{\partial \hamil}{\partial \bf{\zeta}}.
 $${#eq-CM_symplectic_approach_to_cananolical_transform_8 }
 
 @eq-CM_symplectic_approach_to_cananolical_transform_6 과 @eq-CM_symplectic_approach_to_cananolical_transform_8 로 부터
 
 $$
-\bf{\dot{\zeta}} = \bf{MJM}^T \dfrac{\partial H}{\partial \bf{\zeta}}.
+\bf{\dot{\zeta}} = \bf{MJM}^T \dfrac{\partial \hamil}{\partial \bf{\zeta}}.
 $${#eq-CM_symplectic_approach_to_cananolical_transform_9}
 
 그러나 우리는 새로운 변수에 대해서도 다음이 성립해야 한다는 것을 알고 있다. 
 
 $$
-\bf{\dot\zeta} = \bf{J}\dfrac{\partial H}{\partial \bf\zeta}.
+\bf{\dot\zeta} = \bf{J}\dfrac{\partial \hamil}{\partial \bf\zeta}.
 $$
 
 확장된 정준변환의 경우에는 우변에 상수를 곱한 값으로 성립할 수 있지만 여기서는 정준변환만을 고려하자. 그렇다면
@@ -607,7 +607,7 @@ $$ {#eq-CM_definition_of_poission_bracket}
 이것을 행렬 형태로 쓰면 다음과 같다.
 
 $$
-\{f,\,g\}_\bf{\eta} = \left(\dfrac{\partial f}{\partial \bf{\eta}}\right)^T\bf{J} \left(\dfrac{\partial g}{\partial \bf{\eta}}\right).
+\{f,\,g\}_{\bf{\eta}} = \left(\dfrac{\partial f}{\partial \bf{\eta}}\right)^T\bf{J} \left(\dfrac{\partial g}{\partial \bf{\eta}}\right).
 $${#eq-CM_definition_of_poission_bracket_2}
 
 :::
@@ -656,9 +656,9 @@ $${#eq-CM_definition_of_poission_bracket_2}
 
 푸아송 괄호의 행렬 형태에 대해 다음이 성립한다.
 
-&emsp;($1$) $\{\bf{\eta},\,\bf{\eta}\}_\bf{\eta} = \bf{J}$,
+&emsp;($1$) $\{\bf{\eta},\,\bf{\eta}\}_{\bf{\eta}} = \bf{J}$,
 
-&emsp;($2$) $\{\bf{\zeta},\,\bf{\zeta}\}_\bf{\eta} = \bf{J}$.
+&emsp;($2$) $\{\bf{\zeta},\,\bf{\zeta}\}_{\bf{\eta}} = \bf{J}$.
 
 :::
 
@@ -668,7 +668,7 @@ $${#eq-CM_definition_of_poission_bracket_2}
 
 ($1$) 은 자명하다.
 
-($2$) $\bf{\eta} \mapsto \bf{\zeta}$ 가 정준변환이며 심플렉틱 조건이 성립한다. 정의에 의해 $\{\bf{\zeta},\,\bf{\zeta}\}_\bf{\eta} = \bf{M}^T\bf{JM} = \bf{J}$. $\square$ 
+($2$) $\bf{\eta} \mapsto \bf{\zeta}$ 가 정준변환이며 심플렉틱 조건이 성립한다. 정의에 의해 $\{\bf{\zeta},\,\bf{\zeta}\}_{\bf{\eta}} = \bf{M}^T\bf{JM} = \bf{J}$. $\square$ 
 
 :::
 
@@ -685,7 +685,7 @@ $${#eq-CM_definition_of_poission_bracket_2}
 정준변환 $\bf{\eta} \mapsto \bf{\zeta}$ 에 대해 푸아송 괄호는 불변이다. 즉
 
 $$
-\{f,\,g\}_\bf{\eta} = \{f,\,g\}_\bf{\zeta}.
+\{f,\,g\}_{\bf{\eta}} = \{f,\,g\}_{\bf{\zeta}}.
 $$ {#eq-CM_invariance_of_poisson_pracket_under_canonical_transform}
 
 
@@ -716,46 +716,15 @@ $$
 이로부터
 
 $$
-\{f,\,g\}_\bf{\eta} = \left(\dfrac{\partial f}{\partial \bf{\eta}}\right)^T\bf{J} \left(\dfrac{\partial g}{\partial \bf{\eta}}\right) = \left(\dfrac{\partial f}{\partial \bf{\zeta}}\right)^T\bf{MJM}^T\dfrac{\partial g}{\partial \bf{\zeta}}= \left(\dfrac{\partial f}{\partial \bf{\zeta}}\right)^T\bf{J}\dfrac{\partial g}{\partial \bf{\zeta}} = \{f,\,g\}_\bf{\zeta}.
+\begin{aligned}
+\{f,\,g\}_{\bf{\eta}} &= \left(\dfrac{\partial f}{\partial \bf{\eta}}\right)^T\bf{J} \left(\dfrac{\partial g}{\partial \bf{\eta}}\right) \\[0.3em]
+&= \left(\dfrac{\partial f}{\partial \bf{\zeta}}\right)^T\bf{MJM}^T\dfrac{\partial g}{\partial \bf{\zeta}}= \left(\dfrac{\partial f}{\partial \bf{\zeta}}\right)^T\bf{J}\dfrac{\partial g}{\partial \bf{\zeta}} = \{f,\,g\}_{\bf{\zeta}}.
+\end{aligned}
 $$
 
 $\square$
 
 :::
-
-
-### 심플렉틱 조건과 변환생성함수 {#sec-CM_symplectic_condition_and_generating_function}
-
-여기서는 자유도 1인 시스템에서 심플렉틱 조건이 성립하면 변환생성함수가 존재한다는 것을 증명한다. 다차원 에서는 Goldstein 은 참고문헌을 제시했다. 일단 변환 함수 $Q=Q(q,\,p),\,P=P(q,\,p)$ 가 가역이고 $\partial Q/\partial p \ne 0$ 이면 음함수 정리에 의해 $p = \phi (q,\,Q)$ 인 $\phi$ 가 (국소적으로) 존재한다. 또한 $P(q,\, \phi(q,\,Q)) = \psi (q,\,Q)$ 역시 존재한다.  
-
-제 1종 변환생성함수 $G_1(q,\,Q,\,t)$  대한 @eq-CM_equations_for_type1_generating_function 를 생각하면
-
-$$
-\dfrac{\partial \phi}{\partial Q} = - \dfrac{\partial \psi}{\partial q}
-$$ {#eq-symplectic_condition_and_generating_function_1}
-
-일 경우 1종 변환함수가 존재한다. $Q=Q(q,\,\phi(q,\,Q))$ 와 $\partial Q/\partial Q=1$ 로부터
-
-$$
-1=\dfrac{\partial Q}{\partial Q} = \dfrac{\partial Q}{\partial p}\dfrac{\partial \phi}{\partial Q}.
-$${#eq-symplectic_condition_and_generating_function_2}
-
-푸아송 괄호로부터
-
-$$
-\begin{aligned}
-1= \{Q,\,P\} &= \dfrac{\partial Q}{\partial q}\dfrac{\partial P}{\partial p} - \dfrac{\partial P}{\partial q}\dfrac{\partial Q}{\partial p} \\[0.3em]
-&= \dfrac{\partial Q}{\partial q}\dfrac{\partial \psi}{\partial Q}\dfrac{\partial Q}{\partial p} - \dfrac{\partial Q}{\partial p}\left(\dfrac{\partial \psi}{\partial q}+ \dfrac{\partial \psi}{\partial Q}\dfrac{\partial Q}{\partial q}\right)  \\[0.3em]
-&= \dfrac{\partial \psi}{\partial Q}\left(\underbrace{\dfrac{\partial Q}{\partial q}\dfrac{\partial Q}{\partial p} - \dfrac{\partial Q}{\partial p}\dfrac{\partial Q}{\partial q}}_{\large = 0}\right) - \dfrac{\partial Q}{\partial p}\dfrac{\partial \psi}{\partial q} = - \dfrac{\partial Q}{\partial p}\dfrac{\partial \psi}{\partial q}
-\end{aligned}
-$${#eq-symplectic_condition_and_generating_function_3}
-
-
-$\partial Q/\partial p\ne 0$ 이라는 조건과 @eq-symplectic_condition_and_generating_function_2 와 @eq-symplectic_condition_and_generating_function_3 으로부터 @eq-symplectic_condition_and_generating_function_1 이 성립한다. 
-</br>
-
-푸아송 괄호가 정준 변환에 대해 불변이므로 이제 $\{f,\,g\}_\bf{\eta}$ 나 $\{f,\,g\}_{\bf{q},\bf{p}}$ 에서의 아래첨자는 의미가 사라진다. 따라서 앞으로는 일반적으로 아래 첨자 없이 사용한다. 
-
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -771,9 +740,47 @@ $\partial Q/\partial p\ne 0$ 이라는 조건과 @eq-symplectic_condition_and_ge
 
 $d\bf{\eta} = dq_1\cdots dq_n dp_1 \cdots dp_n$, $d\bf{\zeta}=dQ_1\cdots dQ_n dP_1 \cdots dP_n$ 을 생각하자. $d\zeta_i = \dfrac{\partial \zeta_i}{\partial \eta_j}d\eta_j = M_{ij}d\eta_j$ 이므로 $d\bf{\zeta} = |\det(M)| d\bf{\eta}$ 이다. 심플렉틱 조건 $\bf{MJM}^T=\bf{J}$ 으로부터 $(\det (\bf{M}))^2 \cdot (\det (\bf{J})) = \det(\bf{J})$ 임을 안다. 이로부터 $|\det{M}|=1$ 이므로 $d\bf{\eta} = d\bf{\zeta}$ 이다. $\square$
 
-
 :::
 
+푸아송 괄호가 정준 변환에 대해 불변이므로 이제 $\{f,\,g\}_{\bf{\eta}}$ 나 $\{f,\,g\}_{\bf{q},\bf{p}}$ 에서의 아래첨자는 의미가 사라진다. 따라서 앞으로는 일반적으로 아래 첨자 없이 사용한다. 
+
+### 심플렉틱 조건과 변환생성함수 {#sec-CM_symplectic_condition_and_generating_function}
+
+여기서는 자유도 1인 시스템에서 심플렉틱 조건이 성립하면 변환생성함수가 존재한다는 것을 증명한다. 다차원 에서는 Goldstein 은 참고문헌을 제시했다. 일단 변환 함수 $Q=Q(q,\,p),\,P=P(q,\,p)$ 가 가역이고 $\partial Q/\partial p \ne 0$ 이면 음함수 정리에 의해 $p = \phi (q,\,Q)$ 인 $\phi$ 가 (국소적으로) 존재한다. 또한 $P(q,\, \phi(q,\,Q)) = \psi (q,\,Q)$ 역시 존재한다.  
+
+제 1종 변환생성함수 $G_1(q,\,Q,\,t)$ 대한 @eq-CM_equations_for_type1_generating_function 를 생각하면
+
+$$
+p = \dfrac{\partial G_1}{\partial q},\qquad P = - \dfrac{\partial G_1}{\partial Q}
+$$
+
+이다. 우리는 이에 대해 
+
+$$
+\dfrac{\partial \phi}{\partial Q} = - \dfrac{\partial \psi}{\partial q}
+$$ {#eq-symplectic_condition_and_generating_function_1}
+
+일 경우 1종 변환함수가 존재한다는 것을 안다$^1$ [$^1$ [외미분](https://julia-kaeri.github.io/DifferentialGeometry/src/AnalysisOnManifolds/06_differential_forms.html#sec-CM_external_derivative_of_differantial_form) 에서의 푸앙카레 보조정리를 참고하라]{.aside}. $Q=Q(q,\,\phi(q,\,Q))$ 와 $\partial Q/\partial Q=1$ 로부터
+
+$$
+1=\dfrac{\partial Q}{\partial Q} = \dfrac{\partial Q}{\partial p}\dfrac{\partial \phi}{\partial Q}.
+$${#eq-symplectic_condition_and_generating_function_2}
+
+푸아송 괄호로부터
+
+$$
+\begin{aligned}
+1= \{Q,\,P\} &= \dfrac{\partial Q}{\partial q}\dfrac{\partial P}{\partial p} - \dfrac{\partial P}{\partial q}\dfrac{\partial Q}{\partial p} \\[0.3em]
+&= \dfrac{\partial Q}{\partial q}\dfrac{\partial \psi}{\partial Q}\dfrac{\partial Q}{\partial p} - \dfrac{\partial Q}{\partial p}\left(\dfrac{\partial \psi}{\partial q}+ \dfrac{\partial \psi}{\partial Q}\dfrac{\partial Q}{\partial q}\right)  \\[0.3em]
+&= \dfrac{\partial \psi}{\partial Q}\left(\underbrace{\dfrac{\partial Q}{\partial q}\dfrac{\partial Q}{\partial p} - \dfrac{\partial Q}{\partial p}\dfrac{\partial Q}{\partial q}}_{\normalsize= 0}\right) - \dfrac{\partial Q}{\partial p}\dfrac{\partial \psi}{\partial q} = - \dfrac{\partial Q}{\partial p}\dfrac{\partial \psi}{\partial q}
+\end{aligned}
+$${#eq-symplectic_condition_and_generating_function_3}
+
+
+$\partial Q/\partial p\ne 0$ 이라는 조건과 @eq-symplectic_condition_and_generating_function_2 와 @eq-symplectic_condition_and_generating_function_3 으로부터 @eq-symplectic_condition_and_generating_function_1 이 성립한다. 
+</br>
+
+### 
 
 아래의 수학적 성질은 푸아송 괄호와 해밀토니안, 그리고 시간의 밀접한 연관성을 보여준다.
 
@@ -784,7 +791,7 @@ $d\bf{\eta} = dq_1\cdots dq_n dp_1 \cdots dp_n$, $d\bf{\zeta}=dQ_1\cdots dQ_n dP
 임의의 함수 $f(\bf{q},\bf{p},\,t)$ 에 대해 다음이 성립한다.
 
 $$
-\dfrac{df}{dt} = \{f,\, H\} + \dfrac{\partial f}{\partial t}.
+\dfrac{df}{dt} = \{f,\, \hamil\} + \dfrac{\partial f}{\partial t}.
 $$ {#eq-CM_time_derivative_and_poisson_bracket}
 
 :::
@@ -796,7 +803,7 @@ $$ {#eq-CM_time_derivative_and_poisson_bracket}
 $$
 \begin{aligned}
 \dfrac{df}{dt} &= \sum_i \left(\dfrac{\partial f}{\partial q_i}\dot{q}_i + \dfrac{\partial f}{\partial p_i}\dot{p}_i\right) + \dfrac{\partial f}{\partial t} \\[0.3em]
-&= \sum_i \left(\dfrac{\partial f}{\partial q_i}\dfrac{\partial H}{\partial p_i} - \dfrac{\partial f}{\partial p_i} \dfrac{\partial H}{\partial q_i}\right) + \dfrac{\partial f}{\partial t} = \{f,\,H\}+ \dfrac{\partial f}{\partial t}. \quad \square
+&= \sum_i \left(\dfrac{\partial f}{\partial q_i}\dfrac{\partial \hamil}{\partial p_i} - \dfrac{\partial f}{\partial p_i} \dfrac{\partial \hamil}{\partial q_i}\right) + \dfrac{\partial f}{\partial t} = \{f,\,\hamil\}+ \dfrac{\partial f}{\partial t}. \quad \square
 \end{aligned}
 $$
 
@@ -804,7 +811,7 @@ $$
 
 </br>
 
-위의 정리로부터 만약 $f=f(\bf{p},\,\bf{q})$ 라면 $\dot{f} = \{f,\, H\}$ 임을 알 수 있다. 즉 시간에 명시적으로 의존하지 않는 물리량 $f$ 가 $\{f,\,H\}=0$ 이면 $f$ 는 운동상수이다.
+위의 정리로부터 만약 $f=f(\bf{p},\,\bf{q})$ 라면 $\dot{f} = \{f,\, \hamil\}$ 임을 알 수 있다. 즉 시간에 명시적으로 의존하지 않는 물리량 $f$ 가 $\{f,\,\hamil\}=0$ 이면 $f$ 는 운동상수이다.
 
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -819,11 +826,11 @@ $f=f(\bf{q},\, \bf{p}),\, g=g(\bf{q},\, \bf{p})$ 가 운동상수이면 $\{f,\,g
 
 ::: {.proof}
 
-$\{f,\,H\}= \{g,\,H\}=0$ 이며 야코비 항등식(@prp-CM_basic_properties_of_poisson_bracket ($4$)) 를 이용한다.
+$\{f,\,\hamil\}= \{g,\,\hamil\}=0$ 이며 야코비 항등식(@prp-CM_basic_properties_of_poisson_bracket ($4$)) 를 이용한다.
 
 $$
 \begin{aligned}
-\{\{f,\,g\},\,H\} &= \{f,\, \{g,\,H\}\} - \{g,\,\{f,\,H\} \} = 0. \quad \square
+\{\{f,\,g\},\,\hamil\} &= \{f,\, \{g,\,\hamil\}\} - \{g,\,\{f,\,\hamil\} \} = 0. \quad \square
 \end{aligned}
 $$
 
@@ -927,8 +934,8 @@ $$
 $Q=q+ip,\, P=q-ip$ 이므로 $q=\dfrac{P+Q}{2},\, p = \dfrac{Q-P}{2i}$ 이다. 이로부터 다음을 얻는다.
 $$
 \begin{aligned}
-\dfrac{\partial H}{\partial Q} &= \dfrac{\partial H}{\partial q}\dfrac{\partial q}{\partial Q} + \dfrac{\partial H}{\partial p}\dfrac{\partial p}{\partial Q} = \dfrac{-\dot{p}}{2} + \dfrac{-i\dot{q}}{2} = -\dfrac{i}{2}\dot{P}  \ne -\dot{P} \\[0.3em]
-\dfrac{\partial H}{\partial P} &=  \dfrac{\partial H}{\partial q}\dfrac{\partial q}{\partial P} + \dfrac{\partial H}{\partial p}\dfrac{\partial p}{\partial P} = \dfrac{i}{2}(\dot{q}+i\dot{p}) = \dfrac{i}{2}\dot{Q} \ne \dot{Q}.
+\dfrac{\partial \hamil}{\partial Q} &= \dfrac{\partial H}{\partial q}\dfrac{\partial q}{\partial Q} + \dfrac{\partial \hamil}{\partial p}\dfrac{\partial p}{\partial Q} = \dfrac{-\dot{p}}{2} + \dfrac{-i\dot{q}}{2} = -\dfrac{i}{2}\dot{P}  \ne -\dot{P} \\[0.3em]
+\dfrac{\partial \hamil}{\partial P} &=  \dfrac{\partial \hamil}{\partial q}\dfrac{\partial q}{\partial P} + \dfrac{\partial \hamil}{\partial p}\dfrac{\partial p}{\partial P} = \dfrac{i}{2}(\dot{q}+i\dot{p}) = \dfrac{i}{2}\dot{Q} \ne \dot{Q}.
 \end{aligned}
 $$
 
@@ -942,8 +949,8 @@ $$
 
 $$
 \begin{aligned}
-\dfrac{\partial H}{\partial Q'} &= \dfrac{-\dot{p}}{2\alpha} - \dfrac{\dot{qi}}{2\alpha} =\dfrac{-i}{2\alpha\beta}(\beta \dot{q} - i\beta \dot{p})  = \dfrac{-i}{2\alpha\beta}\dot{P}\\[0.3em]
-\dfrac{\partial H}{\partial P'} &= \dfrac{-\dot{p}}{2\beta} + \dfrac{i\dot{q}}{2\beta} = \dfrac{i}{2\alpha \beta}(\alpha\dot{q}+ i\alpha \dot{p}) = \dfrac{i}{2\alpha \beta}\dot{Q}
+\dfrac{\partial \hamil}{\partial Q'} &= \dfrac{-\dot{p}}{2\alpha} - \dfrac{\dot{qi}}{2\alpha} =\dfrac{-i}{2\alpha\beta}(\beta \dot{q} - i\beta \dot{p})  = \dfrac{-i}{2\alpha\beta}\dot{P}\\[0.3em]
+\dfrac{\partial \hamil}{\partial P'} &= \dfrac{-\dot{p}}{2\beta} + \dfrac{i\dot{q}}{2\beta} = \dfrac{i}{2\alpha \beta}(\alpha\dot{q}+ i\alpha \dot{p}) = \dfrac{i}{2\alpha \beta}\dot{Q}
 \end{aligned}
 $$
 
@@ -957,9 +964,9 @@ $$
 
 #### Goldstein 9.2
 
-($a$) 해밀토니안이 $H=\dfrac{p^2}{2} - \dfrac{1}{2q^2}$ 으로 주어진 1차원 시스템을 생각하자. 여기에 $D=\dfrac{pq}{2}-Ht$ 는 운동상수임을 보여라.
+($a$) 해밀토니안이 $\hamil=\dfrac{p^2}{2} - \dfrac{1}{2q^2}$ 으로 주어진 1차원 시스템을 생각하자. 여기에 $D=\dfrac{pq}{2}-\hamil t$ 는 운동상수임을 보여라.
 
-($b$) ($a$) 의 결과를 일반화하여 해밀토니안이 $H = \|\bf{p}\|^n - ar^{-n}$ 으로 주어졌다고 하자. 이 때 $\bf{p}$ 는 데카르트 좌표계에서의 $\bf{r}$ 에 대한 정준운동량이다. 이 때 $D=\dfrac{\bf{p\cdot r}}{n} -Ht$ 가 운동상수임을 보여라.
+($b$) ($a$) 의 결과를 일반화하여 해밀토니안이 $\hamil = \|\bf{p}\|^n - ar^{-n}$ 으로 주어졌다고 하자. 이 때 $\bf{p}$ 는 데카르트 좌표계에서의 $\bf{r}$ 에 대한 정준운동량이다. 이 때 $D=\dfrac{\bf{p\cdot r}}{n} -\hamil t$ 가 운동상수임을 보여라.
 
 ($c$) $Q=\lambda q,\, P = (1/\lambda)p$ 변환은 명백히 정준변환이다. 그러나 여기에 $t'=\lambda^2t$ 까지 포함시키면 정준변환이 되지 않는다. 그러나 이 변환에 대해 ($a$) 의 운동방정식은 불변임을 보여라. 
 :::
@@ -968,30 +975,30 @@ $$
 
 ::: {.solution}
 
-($a$) 해밀턴 운동벙정식에 의해 $\dot{q} = p$, $\dot{p} = - 1/q^3$ 이다. 해밀토니안에 명시적인 $t$ 의존성이 없으므로 $\dfrac{dH}{dt}= \dfrac{\partial H}{\partial t}=0$ 이다. 따라서
+($a$) 해밀턴 운동벙정식에 의해 $\dot{q} = p$, $\dot{p} = - 1/q^3$ 이다. 해밀토니안에 명시적인 $t$ 의존성이 없으므로 $\dfrac{d\hamil }{dt}= \dfrac{\partial \hamil}{\partial t}=0$ 이다. 따라서
 
 $$
 \begin{aligned}
-\dfrac{dD}{dt} &= \dfrac{1}{2}(\dot{p}q + \dot{q}p) - H = \dfrac{p^2}{2} - \dfrac{1}{2q^2} - H = 0
+\dfrac{dD}{dt} &= \dfrac{1}{2}(\dot{p}q + \dot{q}p) -\hamil  = \dfrac{p^2}{2} - \dfrac{1}{2q^2} - \hamil = 0
 \end{aligned}
 $$
 
 이다.
 
-($b$) $\dot{\bf{p}} = anr^{n-2}\bf{r}$ 이며 $\dot{\bf{r}}= n\bf{p}\|\bf{p}\|^{n-2}$ 이고 역시 $\dot{H}=0$ 이므로,
+($b$) $\dot{\bf{p}} = anr^{n-2}\bf{r}$ 이며 $\dot{\bf{r}}= n\bf{p}\|\bf{p}\|^{n-2}$ 이고 역시 $\dot{\hamil}=0$ 이므로,
 
 $$
-\dfrac{dD}{dt}= \dfrac{1}{n}(\dot{\bf{p}}\bf{\cdot r} + \bf{p \cdot} \dot{\bf{r}}) -H = 0
+\dfrac{dD}{dt}= \dfrac{1}{n}(\dot{\bf{p}}\bf{\cdot r} + \bf{p \cdot} \dot{\bf{r}}) - \hamil = 0
 $$
 
 이다.
 
-($c$) $(q,\,p) \to (Q,\,P)$ 변환에 대한 해밀토니안 $\overline{H} = \dfrac{\lambda^2P^2}{2} - \dfrac{\lambda^2}{2Q^2}$ 을 생각하자. 주어진 변환으로 부터 $\dot{Q} = \lambda \dot{q},\, \dot{P}= (1/\lambda)\dot{p}$ 이어야 한다. 이 식을 이용하면
+($c$) $(q,\,p) \to (Q,\,P)$ 변환에 대한 해밀토니안 $\overline{\hamil} = \dfrac{\lambda^2P^2}{2} - \dfrac{\lambda^2}{2Q^2}$ 을 생각하자. 주어진 변환으로 부터 $\dot{Q} = \lambda \dot{q},\, \dot{P}= (1/\lambda)\dot{p}$ 이어야 한다. 이 식을 이용하면
 
 $$
 \begin{aligned}
-\dot{Q} &= \lambda \dot{q} = \lambda p = \lambda^2 P = \dfrac{\partial \overline{H}}{\partial P},\\[0.3em]
-\dot{P} &= \dfrac{1}{\lambda}\dot{p}= - \dfrac{1}{\lambda q^3} = - \dfrac{\lambda^2}{Q^3} = - \dfrac{\partial \overline{H}}{\partial P}
+\dot{Q} &= \lambda \dot{q} = \lambda p = \lambda^2 P = \dfrac{\partial \overline{\hamil}}{\partial P},\\[0.3em]
+\dot{P} &= \dfrac{1}{\lambda}\dot{p}= - \dfrac{1}{\lambda q^3} = - \dfrac{\lambda^2}{Q^3} = - \dfrac{\partial \overline{\hamil}}{\partial P}
 \end{aligned}
 $$
 
@@ -999,8 +1006,8 @@ $$
 
 $$
 \begin{aligned}
-\dot{Q} &= \dfrac{dQ}{dt'}= \dfrac{1}{\lambda^2}\dfrac{dQ}{dt}= \dfrac{1}{\lambda}\dot{q} = \dfrac{1}{\lambda}p = P \ne \dfrac{\partial \overline{H}}{\partial P}, \\[0.3em]
-\dot{P} &= \dfrac{dP}{dt'} = \dfrac{1}{\lambda^2}\dfrac{dP}{dt} = \dfrac{1}{\lambda^3}\dfrac{dp}{dt} = -\dfrac{1}{\lambda^3 q^3} = - \dfrac{1}{Q^3} \ne -\dfrac{\partial \overline{H}}{\partial P}
+\dot{Q} &= \dfrac{dQ}{dt'}= \dfrac{1}{\lambda^2}\dfrac{dQ}{dt}= \dfrac{1}{\lambda}\dot{q} = \dfrac{1}{\lambda}p = P \ne \dfrac{\partial \overline{\hamil}}{\partial P}, \\[0.3em]
+\dot{P} &= \dfrac{dP}{dt'} = \dfrac{1}{\lambda^2}\dfrac{dP}{dt} = \dfrac{1}{\lambda^3}\dfrac{dp}{dt} = -\dfrac{1}{\lambda^3 q^3} = - \dfrac{1}{Q^3} \ne -\dfrac{\partial \overline{\hamil}}{\partial P}
 \end{aligned}
 $$
 

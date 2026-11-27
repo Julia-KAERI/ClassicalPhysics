@@ -20,7 +20,7 @@ crossref:
 [1차원 조화진동자](11_one_body_problems.qmd#차원-조화진동자) 의 단순조화진동자를 라그랑지한 형태는 아래와 같다.
 
 $$
-L = \dfrac{m\dot{x}^2}{2} - \dfrac{kx^2}{2} = \dfrac{m\dot{x}^2}{2} - \dfrac{m\omega_0^2x^2}{2},\qquad \omega_0 = \sqrt{\dfrac{k}{m}}.
+\lagr = \dfrac{m\dot{x}^2}{2} - \dfrac{kx^2}{2} = \dfrac{m\dot{x}^2}{2} - \dfrac{m\omega_0^2x^2}{2},\qquad \omega_0 = \sqrt{\dfrac{k}{m}}.
 $$
 
 역학적 시스템이 안정평형상태일 때는 시스템의 전체 포텐셜 에너지가 최소인 상태이다. 1차원 시스템에서 포텐셜 에너지 $U(q)$ 를 생각하고 최소인 위치는 $q=q_0$ 일 때 라고 하자. 이 평형상태에서 작게 벗어난다면 포텐셜 에너지는 아래와 같이 근사시킬 수 있다.
@@ -38,7 +38,7 @@ $$
 이다. 일반적으로 라그랑지안이 어떤 일반화된 좌표 $q$ 에 대해
 
 $$
-L = \dfrac{a\dot{q}^2}{2} - \dfrac{bq^2}{2}
+\lagr = \dfrac{a\dot{q}^2}{2} - \dfrac{bq^2}{2}
 $$
 
 라면 이 시스템은 각진동수 $\omega = \sqrt{b}{a}$ 인 단순조화진동 운동으로 기술할 수 있다.
@@ -62,13 +62,13 @@ $$
 
 우선 $m_1,\,m_2$ 로 이루어진 이원자 분자의 라그랑지안 
 $$
-L = \dfrac{m_1\dot{x}_1^2}{2} + \dfrac{m_2 \dot{x}_2^2}{2} - \dfrac{k}{2}(x_1-x_2)^2
+\lagr = \dfrac{m_1\dot{x}_1^2}{2} + \dfrac{m_2 \dot{x}_2^2}{2} - \dfrac{k}{2}(x_1-x_2)^2
 $$
 
 로 기술 될 수 있다. 여기서 질량중심 $R$ 과 상대적인 변화 $x=x_1-x_2$ 를 도입하면 환산질량 $\mu = m_1m_2/(m_1+m_2)$ 에 대해
 
 $$
-L = \dfrac{\mu\dot{x}^2}{2} + \dfrac{(m_1+m_2)\dot{R}^2}{2}+ \dfrac{k}{2}x^2
+\lagr = \dfrac{\mu\dot{x}^2}{2} + \dfrac{(m_1+m_2)\dot{R}^2}{2}+ \dfrac{k}{2}x^2
 $$
 
 이므로 진동수 $\omega_0 = \sqrt{k/\mu}=\sqrt{k(m_1+m_2)/(m_1m_2)}$ 이다. 동위원소간에 화학적 성질이 일정하다고 가정하면 $m_1',\,m_2'$ 으로 이루어진 분자에서도 같은 용수철 상수 값을 가진다고 볼 수 있다. 따라서
@@ -144,7 +144,7 @@ $$
 
 $$
 \begin{aligned}
-L &= \dfrac{m_2l^2\dot{\phi}^2}{2}\left[1- \dfrac{m_2 \cos^2\phi}{m_1+m_2}\right] + m_2gl\cos \phi \\[0.3em]
+\lagr &= \dfrac{m_2l^2\dot{\phi}^2}{2}\left[1- \dfrac{m_2 \cos^2\phi}{m_1+m_2}\right] + m_2gl\cos \phi \\[0.3em]
 &\approx \dfrac{m_1m_2l^2 \dot{\phi}^2}{2(m_1+m_2)} + mgl - \dfrac{m_2gl\phi^2}{2}
 \end{aligned}
 $$
@@ -185,7 +185,7 @@ $$
 첫번째항은 시간에만 의존하는 항인데 이 경우 어떤 함수의 시간에 대한 전미분 형태가 될 수 있으므로 라그랑지안에서 제외 할 수 있다. 두번째항의 경우 평형 위치에서 작용하는 힘이므로 $-F(t)x$ 로 쓸 수 있다. 즉 이 시스템의 라그랑지안은 아래와 같이 쓸 수 있다.
 
 $$
-L = \dfrac{1}{2}m\dot{x}^2 - \dfrac{1}{2}kx^2 + xF(t).
+\lagr = \dfrac{1}{2}m\dot{x}^2 - \dfrac{1}{2}kx^2 + xF(t).
 $$
 
 또한 운동방정식은 $\omega_0 = \sqrt{k/m}$ 에 대해 다음과 같다.

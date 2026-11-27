@@ -30,11 +30,11 @@ $$
 x = a \sin \psi \cos \omega t,\qquad y = a \sin \psi \sin \omega t,\qquad z= a(1-\cos\psi).
 $$
 
-독립 변수는 $\psi$ 뿐이며 라그랑지안 $L(\psi)$ 는 다음과 같다.
+독립 변수는 $\psi$ 뿐이며 라그랑지안 $\lagr(\psi)$ 는 다음과 같다.
 
 $$
 \begin{aligned}
-L &= \dfrac{m}{2}(\dot{x}^2+\dot{y}^2+\dot{z}^2) - mgz \\[0.3em]
+\lagr &= \dfrac{m}{2}(\dot{x}^2+\dot{y}^2+\dot{z}^2) - mgz \\[0.3em]
 &=\dfrac{m}{2}[a\dot{\psi}^2 +  \omega^2 \sin^2 \psi]  + mag\cos \psi - mag.
 \end{aligned}
 $$
@@ -48,7 +48,7 @@ $$
 라고 하면 라그링지안을 아래와 같이 쓸 수 있다.
 
 $$
-L = \dfrac{ma^2\dot{\psi}^2}{2} - V_\text{eff}(\psi)
+\lagr = \dfrac{ma^2\dot{\psi}^2}{2} - V_\text{eff}(\psi)
 $$
 
 그렇다면 이 라그랑지안에 대한 오일러-라그랑쥬 방정식은 다음과 같다.
@@ -483,7 +483,7 @@ $$
 라그랑지안이 하나의 일반화된 변수로 기술될 때를 일차원 운동이라고 한다. 예를 들어 라그랑지안이 
 
 $$
-L = \dfrac{1}{2}m\dot{x} - V(x)
+\lagr = \dfrac{1}{2}m\dot{x} - V(x)
 $$
 
 라고 하자. $\partial_t L = 0$ 이므로 에너지가 보존되며, 따라서 
@@ -568,7 +568,7 @@ $$ {#eq-CM_coulomb_force}
 서로 상호작용하는 두 입자의 운동을 이체문제(two body problem)라고 한다. 각각의 원점에 대한 반경 벡터를 $\boldsymbol{r}_1,\,\boldsymbol{r}_2$ 라고 하자. 여기서 포텐셜이 중심장일 때 시스템의 라그랑지안은 다음과 같다.
 
 $$
-L = \dfrac{1}{2}m_1 \|\dot{\boldsymbol{r}_1}\|^2 + \dfrac{1}{2}m_2 \|\dot{\boldsymbol{r}_2}\|^2 + V(\|\boldsymbol{r}_1-\boldsymbol{r}_2\|).
+\lagr = \dfrac{1}{2}m_1 \|\dot{\boldsymbol{r}_1}\|^2 + \dfrac{1}{2}m_2 \|\dot{\boldsymbol{r}_2}\|^2 + V(\|\boldsymbol{r}_1-\boldsymbol{r}_2\|).
 $$ {#eq-CM_lagrangian_of_2body}
 
 이 때 
@@ -589,13 +589,13 @@ $$
 이 되며, $\mu := \dfrac{m_1m_2}{m_1+m_2},\, M :=m_1+m_2$ 에 대해 
 
 $$
-L = \dfrac{1}{2}\mu \|\dot{\boldsymbol{r}}\|^2 + V(\|\boldsymbol{r}\|) + \dfrac{1}{2}M\|\dot{\boldsymbol{R}}\|^2 .
+\lagr = \dfrac{1}{2}\mu \|\dot{\boldsymbol{r}}\|^2 + V(\|\boldsymbol{r}\|) + \dfrac{1}{2}M\|\dot{\boldsymbol{R}}\|^2 .
 $$ {#eq-CM_lagrangian_of_2body_reduced_mass}
 
 이다. $\mu$ 는 **환원 질량(reduced mass)** 라고 불리며 $M$ 은 두 물체의 질량의 합이다. @eq-CM_lagrangian_of_2body_reduced_mass 의 $L$ 은 두 변수 $\boldsymbol{r}$ 과 $\boldsymbol{R}$ 이 분리되어 있으며 $\boldsymbol{R}=0$ 인 좌표계를 생각 할 수 있는데 보통 실험실 좌표계라고 한다. 실험실 좌표계에서의 라그랑지안은 다음과 같다. 
 
 $$
-L = \dfrac{1}{2}\mu \|\dot{\boldsymbol{r}}\|^2 + V(\|\boldsymbol{r}\|).
+\lagr = \dfrac{1}{2}\mu \|\dot{\boldsymbol{r}}\|^2 + V(\|\boldsymbol{r}\|).
 $$ {#eq-CM_lagrangian_of_2body_reduced_mass_LAB_frame}
 
 즉 두 입자의 상대적인 변위의 차에 의존하는 포텐셜을 가진 시스템에서는 이체문제가 일체문제가 된다. 여기에서의 각운동량 $\boldsymbol{L}=\boldsymbol{r}\times \boldsymbol{p}$ 를 생각하면, 
@@ -613,7 +613,7 @@ $$
 이며 따라서, @eq-CM_lagrangian_of_2body_reduced_mass_LAB_frame 은 
 
 $$
-L = \dfrac{1}{2}\mu \dot{r}^2 + \dfrac{1}{2}\mu r^2 \dot{\theta}^2 + V(r)
+\lagr = \dfrac{1}{2}\mu \dot{r}^2 + \dfrac{1}{2}\mu r^2 \dot{\theta}^2 + V(r)
 $$ {#eq-CM_lagrangian_for_reduced_to_1d}
 
 이다. 여기에 $\theta$ 에 대한 일반화된 운동량 $p_\theta = \mu r^2 \dot{\theta}$ 는 각운동량이며 $\dfrac{\partial L}{\partial \theta}=0$ 이므로 시간에 대한 불변량이다. 변위벡터 $\boldsymbol{r}=r\hat{\boldsymbol{r}}$ 이 $d\theta$ 만큼 변할 때 변위벡터가 쓸어가는 면적은 $\dfrac{1}{2}r^2d\theta$ 이며 이는 $\dfrac{p_\theta}{\mu}dt$ 이므로 일정하다. 즉 $V(r)$ 에 무관하게 중심력에서는 케플러 2법칙이 성립한다. 
@@ -655,7 +655,7 @@ $$ {#eq-CM_reduced_to_1d_theta}
 @eq-CM_lagrangian_for_reduced_to_1d 을 보자. $l = \mu r^2\dot{\theta}$ 에 대해
 
 $$
-L = \dfrac{1}{2}\mu \dot{r}^2 + V_{\textrm{eff}}(r),\qquad {\textrm{where }}V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} + V(r)
+\lagr = \dfrac{1}{2}\mu \dot{r}^2 + V_{\textrm{eff}}(r),\qquad {\textrm{where }}V_{\textrm{eff}}(r) = \dfrac{l^2}{2\mu r^2} + V(r)
 $$
 
 이며 이것은 1차원 포텐셜 $V_{\textrm{eff}}(r)$ 에서의 $r$ 에 대한 1차원 운동을 기술하는 라그랑지안이다. 
@@ -900,7 +900,7 @@ $$
 
 $$
 \begin{aligned}
-L &= \dfrac{m_1\dot{x}_1^2}{2}+\dfrac{m_2\left[\dot{x}_1^2 + l^2\dot{\phi}^2 + 2\dot{x}_1 l \dot{\phi} \cos \phi \right]}{2} + m_2gl\cos \phi \\[0.3em]
+\lagr &= \dfrac{m_1\dot{x}_1^2}{2}+\dfrac{m_2\left[\dot{x}_1^2 + l^2\dot{\phi}^2 + 2\dot{x}_1 l \dot{\phi} \cos \phi \right]}{2} + m_2gl\cos \phi \\[0.3em]
 &= \dfrac{(m_1+m_2) \dot{x}_1^2}{2} + \dfrac{m_2 (l^2\dot{\phi}^2 + 2\dot{x}_1 l \dot{\phi}\cos \phi)}{2} + m_2gl \cos \phi.
 \end{aligned}
 $$

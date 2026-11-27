@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.9">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>24&nbsp; 상호작용과 결과 – 고전물리학</title>
+<title>25&nbsp; 상호작용과 결과 – 고전물리학</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -59,15 +59,14 @@ div.csl-indent {
 <link href="../../src/ThermalPhysics/03_introduction_to_statistical_mechanics.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7a627ccb779a4a431ef462281a400409.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -96,8 +95,22 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -128,17 +141,17 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating slimcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
-  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+  <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ThermalPhysics/00_index.html">열역학</a></li><li class="breadcrumb-item"><a href="../../src/ThermalPhysics/04_interaction_and_implication.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">상호작용과 결과</span></a></li></ol></nav>
-        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ThermalPhysics/00_index.html">열역학</a></li><li class="breadcrumb-item"><a href="../../src/ThermalPhysics/04_interaction_and_implication.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">상호작용과 결과</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -149,8 +162,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ThermalPhysics/00_index.html">열역학</a></li><li class="breadcrumb-item"><a href="../../src/ThermalPhysics/04_interaction_and_implication.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">상호작용과 결과</span></a></li></ol></nav>
-      <h1 class="title"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">상호작용과 결과</span></h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/ThermalPhysics/00_index.html">열역학</a></li><li class="breadcrumb-item"><a href="../../src/ThermalPhysics/04_interaction_and_implication.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">상호작용과 결과</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">상호작용과 결과</span></h1>
                       </div>
   </div>
     
@@ -165,7 +178,7 @@ window.Quarto = {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">고전물리학</a> 
@@ -187,12 +200,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/ClassicalMechanics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-1-label">고전역학</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션: 고전역학">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">고전역학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
@@ -219,32 +232,38 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../src/ClassicalMechanics/05_hamilton_jacobi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">해밀턴-야코비 이론</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/11_one_body_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">고전역학의 1체 문제</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/12_two_or_three_bodies_problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">고전역학의 다체 문제 - 충돌과 산란</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/13_small_oscillations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">작은 진동</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/A_proofs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">증명들</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/P1_problems01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">문제 모음</span></span></a>
   </div>
 </li>
       </ul>
@@ -252,22 +271,22 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Mechanics_and_Symmetry/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-2-label">고전역학과 대칭</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션: 고전역학과 대칭">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">고전역학과 대칭</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">실험적 사실</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/02_equations_of_motion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">운동방정식</span></span></a>
   </div>
 </li>
       </ul>
@@ -275,52 +294,52 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Electrodynamics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-3-label">전기자기학</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션: 전기자기학">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">전기자기학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">들어가며</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/02_1_electrostatics1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">정전기 I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/02_2_electrostatics2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">정전기 II</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/03_magnetostatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">정자기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/04_electrodynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">전기동력학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A1_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">부록 A. 수학</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/A2_waves.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">부록 B. 파동</span></span></a>
   </div>
 </li>
       </ul>
@@ -328,22 +347,22 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-4-label">상대론</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션: 상대론">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">상대론</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">특수 상대론의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/02_introduction_to_classical_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">고전 장론 입문</span></span></a>
   </div>
 </li>
       </ul>
@@ -351,40 +370,40 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/ThermalPhysics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-5-label">열역학</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션: 열역학">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">열역학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">열역학 계 와 열역학 법칙</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/02_entropy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">열역학 제 2 법칙-열역학적 접근</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">열역학 제 2 법칙-열역학적 접근</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/03_introduction_to_statistical_mechanics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">통계역학의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">통계역학의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/04_interaction_and_implication.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">상호작용과 결과</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">상호작용과 결과</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/0A_mathematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
   </div>
 </li>
       </ul>
@@ -392,16 +411,16 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/topics/Topics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-6-label">별도의 주제들</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="true" aria-label="토글 섹션: 별도의 주제들">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
+ <span class="menu-text">별도의 주제들</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">수학적 자료</span></span></a>
   </div>
 </li>
       </ul>
@@ -418,47 +437,47 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#sec-TD_temperature" id="toc-sec-TD_temperature" class="nav-link active" data-scroll-target="#sec-TD_temperature"><span class="header-section-number">24.1</span> 온도</a>
+  <li><a href="#sec-TD_temperature" id="toc-sec-TD_temperature" class="nav-link active" data-scroll-target="#sec-TD_temperature"><span class="header-section-number">25.1</span> 온도</a>
   <ul class="collapse">
-  <li><a href="#sec-TD_definition_of_temperature_of_statistical_mechanics" id="toc-sec-TD_definition_of_temperature_of_statistical_mechanics" class="nav-link" data-scroll-target="#sec-TD_definition_of_temperature_of_statistical_mechanics"><span class="header-section-number">24.1.1</span> 통계역학적 온도</a></li>
-  <li><a href="#sec-TD_real_world_example_of_temperature_of_statistical_mechanics" id="toc-sec-TD_real_world_example_of_temperature_of_statistical_mechanics" class="nav-link" data-scroll-target="#sec-TD_real_world_example_of_temperature_of_statistical_mechanics"><span class="header-section-number">24.1.2</span> 통계역학적 온도의 실제 예</a></li>
+  <li><a href="#sec-TD_definition_of_temperature_of_statistical_mechanics" id="toc-sec-TD_definition_of_temperature_of_statistical_mechanics" class="nav-link" data-scroll-target="#sec-TD_definition_of_temperature_of_statistical_mechanics"><span class="header-section-number">25.1.1</span> 통계역학적 온도</a></li>
+  <li><a href="#sec-TD_real_world_example_of_temperature_of_statistical_mechanics" id="toc-sec-TD_real_world_example_of_temperature_of_statistical_mechanics" class="nav-link" data-scroll-target="#sec-TD_real_world_example_of_temperature_of_statistical_mechanics"><span class="header-section-number">25.1.2</span> 통계역학적 온도의 실제 예</a></li>
   </ul></li>
-  <li><a href="#sec-TD_entropy_and_heat" id="toc-sec-TD_entropy_and_heat" class="nav-link" data-scroll-target="#sec-TD_entropy_and_heat"><span class="header-section-number">24.2</span> 엔트로피와 열</a>
+  <li><a href="#sec-TD_entropy_and_heat" id="toc-sec-TD_entropy_and_heat" class="nav-link" data-scroll-target="#sec-TD_entropy_and_heat"><span class="header-section-number">25.2</span> 엔트로피와 열</a>
   <ul class="collapse">
-  <li><a href="#sec-TD_predicting_heat_capacity" id="toc-sec-TD_predicting_heat_capacity" class="nav-link" data-scroll-target="#sec-TD_predicting_heat_capacity"><span class="header-section-number">24.2.1</span> 열용량 예측</a></li>
-  <li><a href="#sec-TD_measureing_entropies" id="toc-sec-TD_measureing_entropies" class="nav-link" data-scroll-target="#sec-TD_measureing_entropies"><span class="header-section-number">24.2.2</span> 엔트로피 측정</a></li>
-  <li><a href="#sec-TD_the_third_law_of_thermodynamics" id="toc-sec-TD_the_third_law_of_thermodynamics" class="nav-link" data-scroll-target="#sec-TD_the_third_law_of_thermodynamics"><span class="header-section-number">24.2.3</span> 열역학 제 3 법칙</a></li>
+  <li><a href="#sec-TD_predicting_heat_capacity" id="toc-sec-TD_predicting_heat_capacity" class="nav-link" data-scroll-target="#sec-TD_predicting_heat_capacity"><span class="header-section-number">25.2.1</span> 열용량 예측</a></li>
+  <li><a href="#sec-TD_measureing_entropies" id="toc-sec-TD_measureing_entropies" class="nav-link" data-scroll-target="#sec-TD_measureing_entropies"><span class="header-section-number">25.2.2</span> 엔트로피 측정</a></li>
+  <li><a href="#sec-TD_the_third_law_of_thermodynamics" id="toc-sec-TD_the_third_law_of_thermodynamics" class="nav-link" data-scroll-target="#sec-TD_the_third_law_of_thermodynamics"><span class="header-section-number">25.2.3</span> 열역학 제 3 법칙</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
-  <li><a href="#sec-TD_paramagnetism" id="toc-sec-TD_paramagnetism" class="nav-link" data-scroll-target="#sec-TD_paramagnetism"><span class="header-section-number">24.3</span> 상자성</a>
+  <li><a href="#sec-TD_paramagnetism" id="toc-sec-TD_paramagnetism" class="nav-link" data-scroll-target="#sec-TD_paramagnetism"><span class="header-section-number">25.3</span> 상자성</a>
   <ul class="collapse">
-  <li><a href="#sec-TD_notation_and_mocroscopic_physics_of_paramagnetism" id="toc-sec-TD_notation_and_mocroscopic_physics_of_paramagnetism" class="nav-link" data-scroll-target="#sec-TD_notation_and_mocroscopic_physics_of_paramagnetism"><span class="header-section-number">24.3.1</span> 표기법과 물리</a></li>
-  <li><a href="#sec-TD_numerical_solution" id="toc-sec-TD_numerical_solution" class="nav-link" data-scroll-target="#sec-TD_numerical_solution"><span class="header-section-number">24.3.2</span> 수치해석적 해와 음의 온도</a></li>
-  <li><a href="#sec-TD_analytic_solution" id="toc-sec-TD_analytic_solution" class="nav-link" data-scroll-target="#sec-TD_analytic_solution"><span class="header-section-number">24.3.3</span> 해석적 해</a></li>
+  <li><a href="#sec-TD_notation_and_mocroscopic_physics_of_paramagnetism" id="toc-sec-TD_notation_and_mocroscopic_physics_of_paramagnetism" class="nav-link" data-scroll-target="#sec-TD_notation_and_mocroscopic_physics_of_paramagnetism"><span class="header-section-number">25.3.1</span> 표기법과 물리</a></li>
+  <li><a href="#sec-TD_numerical_solution" id="toc-sec-TD_numerical_solution" class="nav-link" data-scroll-target="#sec-TD_numerical_solution"><span class="header-section-number">25.3.2</span> 수치해석적 해와 음의 온도</a></li>
+  <li><a href="#sec-TD_analytic_solution" id="toc-sec-TD_analytic_solution" class="nav-link" data-scroll-target="#sec-TD_analytic_solution"><span class="header-section-number">25.3.3</span> 해석적 해</a></li>
   <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul></li>
-  <li><a href="#sec-TD_mechanica_equillibrium_and_pressure" id="toc-sec-TD_mechanica_equillibrium_and_pressure" class="nav-link" data-scroll-target="#sec-TD_mechanica_equillibrium_and_pressure"><span class="header-section-number">24.4</span> 역학적 평형과 압력</a>
+  <li><a href="#sec-TD_mechanica_equillibrium_and_pressure" id="toc-sec-TD_mechanica_equillibrium_and_pressure" class="nav-link" data-scroll-target="#sec-TD_mechanica_equillibrium_and_pressure"><span class="header-section-number">25.4</span> 역학적 평형과 압력</a>
   <ul class="collapse">
-  <li><a href="#sec-TD_definition_of_pressure_in_statistical_mechanics" id="toc-sec-TD_definition_of_pressure_in_statistical_mechanics" class="nav-link" data-scroll-target="#sec-TD_definition_of_pressure_in_statistical_mechanics"><span class="header-section-number">24.4.1</span> 통계역학적 압력</a></li>
-  <li><a href="#sec-TD_thermodynamic_identity" id="toc-sec-TD_thermodynamic_identity" class="nav-link" data-scroll-target="#sec-TD_thermodynamic_identity"><span class="header-section-number">24.4.2</span> 열역학적 항등식</a></li>
-  <li><a href="#sec-TD_entropy_and_heat_revisited" id="toc-sec-TD_entropy_and_heat_revisited" class="nav-link" data-scroll-target="#sec-TD_entropy_and_heat_revisited"><span class="header-section-number">24.4.3</span> 엔트로피와 열을 다시 보기</a></li>
+  <li><a href="#sec-TD_definition_of_pressure_in_statistical_mechanics" id="toc-sec-TD_definition_of_pressure_in_statistical_mechanics" class="nav-link" data-scroll-target="#sec-TD_definition_of_pressure_in_statistical_mechanics"><span class="header-section-number">25.4.1</span> 통계역학적 압력</a></li>
+  <li><a href="#sec-TD_thermodynamic_identity" id="toc-sec-TD_thermodynamic_identity" class="nav-link" data-scroll-target="#sec-TD_thermodynamic_identity"><span class="header-section-number">25.4.2</span> 열역학적 항등식</a></li>
+  <li><a href="#sec-TD_entropy_and_heat_revisited" id="toc-sec-TD_entropy_and_heat_revisited" class="nav-link" data-scroll-target="#sec-TD_entropy_and_heat_revisited"><span class="header-section-number">25.4.3</span> 엔트로피와 열을 다시 보기</a></li>
   <li><a href="#연습문제-2" id="toc-연습문제-2" class="nav-link" data-scroll-target="#연습문제-2">연습문제</a></li>
   </ul></li>
-  <li><a href="#sec-TD_diffusive_equillibrium_and_chemical_potential" id="toc-sec-TD_diffusive_equillibrium_and_chemical_potential" class="nav-link" data-scroll-target="#sec-TD_diffusive_equillibrium_and_chemical_potential"><span class="header-section-number">24.5</span> 확산 평형과 화학 포텐셜</a>
+  <li><a href="#sec-TD_diffusive_equillibrium_and_chemical_potential" id="toc-sec-TD_diffusive_equillibrium_and_chemical_potential" class="nav-link" data-scroll-target="#sec-TD_diffusive_equillibrium_and_chemical_potential"><span class="header-section-number">25.5</span> 확산 평형과 화학 포텐셜</a>
   <ul class="collapse">
-  <li><a href="#확산-평형과-화학-포텐셜" id="toc-확산-평형과-화학-포텐셜" class="nav-link" data-scroll-target="#확산-평형과-화학-포텐셜"><span class="header-section-number">24.5.1</span> 확산 평형과 화학 포텐셜</a></li>
-  <li><a href="#화학포텐셜을-포함하는-열역학적-항등식" id="toc-화학포텐셜을-포함하는-열역학적-항등식" class="nav-link" data-scroll-target="#화학포텐셜을-포함하는-열역학적-항등식"><span class="header-section-number">24.5.2</span> 화학포텐셜을 포함하는 열역학적 항등식</a></li>
+  <li><a href="#확산-평형과-화학-포텐셜" id="toc-확산-평형과-화학-포텐셜" class="nav-link" data-scroll-target="#확산-평형과-화학-포텐셜"><span class="header-section-number">25.5.1</span> 확산 평형과 화학 포텐셜</a></li>
+  <li><a href="#화학포텐셜을-포함하는-열역학적-항등식" id="toc-화학포텐셜을-포함하는-열역학적-항등식" class="nav-link" data-scroll-target="#화학포텐셜을-포함하는-열역학적-항등식"><span class="header-section-number">25.5.2</span> 화학포텐셜을 포함하는 열역학적 항등식</a></li>
   <li><a href="#연습문제-3" id="toc-연습문제-3" class="nav-link" data-scroll-target="#연습문제-3">연습문제</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content" tabindex="-1">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -467,10 +486,10 @@ window.Quarto = {
 <div class="hidden">
 <p>% %</p>
 <p>% </p>
-<p><span class="math display">\[
+<p><span class="math display">
 \DeclarePairedDelimiters{\set}{\{}{\}}
 \DeclareMathOperator*{\argmax}{argmax}
-\]</span></p>
+</span></p>
 </div>
 <ul>
 <li>열역학 제 2 법칙은 자연의 근본 법칙이 아닌 확률법칙임. 그러나 큰 시스템에서 그 확률이 압도적이므로 대부분의 경우 근본법칙으로 다루고 있음.</li>
@@ -481,20 +500,20 @@ window.Quarto = {
 </ol></li>
 </ul>
 <p><br></p>
-<section id="sec-TD_temperature" class="level2 page-columns page-full" data-number="24.1">
-<h2 data-number="24.1" class="anchored" data-anchor-id="sec-TD_temperature"><span class="header-section-number">24.1</span> 온도</h2>
-<section id="sec-TD_definition_of_temperature_of_statistical_mechanics" class="level3 page-columns page-full" data-number="24.1.1">
-<h3 data-number="24.1.1" class="anchored" data-anchor-id="sec-TD_definition_of_temperature_of_statistical_mechanics"><span class="header-section-number">24.1.1</span> 통계역학적 온도</h3>
-<p>앞서 본 아인슈타인 고체의 경우와 같이 <strong>부피와 입자의 개수가 고정되어 있으며 에너지만을 교환하는 두 시스템</strong> <span class="math inline">\(A,\,B\)</span> 를 생각하자. 두 시스탐이 합쳐진 <span class="math inline">\([A+B]\)</span> 는 고립계이며 따라서 <span class="math inline">\(U_A+U_B=\text{constant}\)</span> 이다. <span class="math inline">\([A+B]\)</span> 의 엔트로피 <span class="math inline">\(S_\text{total} = S_A+S_B\)</span> 이며 평형상태에서 엔트로피가 최대가 되야 하므로</p>
-<p><span id="eq-TD_schroeder_3_2"><span class="math display">\[
+<section id="sec-TD_temperature" class="level2 page-columns page-full" data-number="25.1">
+<h2 data-number="25.1" class="anchored" data-anchor-id="sec-TD_temperature"><span class="header-section-number">25.1</span> 온도</h2>
+<section id="sec-TD_definition_of_temperature_of_statistical_mechanics" class="level3 page-columns page-full" data-number="25.1.1">
+<h3 data-number="25.1.1" class="anchored" data-anchor-id="sec-TD_definition_of_temperature_of_statistical_mechanics"><span class="header-section-number">25.1.1</span> 통계역학적 온도</h3>
+<p>앞서 본 아인슈타인 고체의 경우와 같이 <strong>부피와 입자의 개수가 고정되어 있으며 에너지만을 교환하는 두 시스템</strong> <span class="math inline">A,\,B</span> 를 생각하자. 두 시스탐이 합쳐진 <span class="math inline">[A+B]</span> 는 고립계이며 따라서 <span class="math inline">U_A+U_B=\text{constant}</span> 이다. <span class="math inline">[A+B]</span> 의 엔트로피 <span class="math inline">S_\text{total} = S_A+S_B</span> 이며 평형상태에서 엔트로피가 최대가 되야 하므로</p>
+<p><span id="eq-TD_schroeder_3_2"><span class="math display">
 \dfrac{\partial S_\text{total}}{\partial U_A} = \dfrac{\partial S_A}{\partial U_A} + \dfrac{\partial S_B}{\partial U_B}=0
-\tag{24.1}\]</span></span></p>
-<p>이어야 한다. 그런데 <span class="math inline">\(U_A+U_B=\text{constant}\)</span> 이므로 위 조건은 다음과 동등하다.</p>
-<p><span id="eq-TD_schroeder_3_3"><span class="math display">\[
+\tag{25.1}</span></span></p>
+<p>이어야 한다. 그런데 <span class="math inline">U_A+U_B=\text{constant}</span> 이므로 위 조건은 다음과 동등하다.</p>
+<p><span id="eq-TD_schroeder_3_3"><span class="math display">
 \dfrac{\partial S_A}{\partial U_A} = \dfrac{\partial S_B}{\partial U_B}.
-\tag{24.2}\]</span></span></p>
-<p>우선 단위를 보자 <span class="math inline">\(S=k_B\ln \Omega\)</span> 이므로 <span class="math inline">\(\text{J/K}\)</span> 단위이다. 따라서 <span class="math inline">\((\partial S/\partial U)\)</span> 의 단위는 <span class="math inline">\(K^{-1}\)</span> 이다.</p>
-<div class="page-columns page-full"><p>야기서는 부피와 입자의 개수가 고정되어 있는 시스템을 생각하므로 생각할 수 있는 변수는 온도 밖에 없다. 즉 <a href="#eq-TD_schroeder_3_3" class="quarto-xref">식&nbsp;<span>24.2</span></a> 는 온도의 역수와 모종의 관계가 있을 수 밖에 없다. 정확히는 엔트로피 <span class="math inline">\(S=k_B\ln \Omega\)</span> 로 정할 때 <span class="math inline">\(\partial S/\partial U\)</span> 가 온도의 역수가 되도록 <span class="math inline">\(k_B\)</span> 를 곱하여 정한 것이다<span class="math inline">\(^1\)</span>.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^1\)</span> <span class="math inline">\(S=k_B\ln \Omega\)</span> 로 정한것은 볼츠만이 아니라 플랑크다.</span></div></div>
+\tag{25.2}</span></span></p>
+<p>우선 단위를 보자 <span class="math inline">S=k_B\ln \Omega</span> 이므로 <span class="math inline">\text{J/K}</span> 단위이다. 따라서 <span class="math inline">(\partial S/\partial U)</span> 의 단위는 <span class="math inline">K^{-1}</span> 이다.</p>
+<div class="page-columns page-full"><p>야기서는 부피와 입자의 개수가 고정되어 있는 시스템을 생각하므로 생각할 수 있는 변수는 온도 밖에 없다. 즉 <a href="#eq-TD_schroeder_3_3" class="quarto-xref">식&nbsp;<span>25.2</span></a> 는 온도의 역수와 모종의 관계가 있을 수 밖에 없다. 정확히는 엔트로피 <span class="math inline">S=k_B\ln \Omega</span> 로 정할 때 <span class="math inline">\partial S/\partial U</span> 가 온도의 역수가 되도록 <span class="math inline">k_B</span> 를 곱하여 정한 것이다<span class="math inline">^1</span>.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">^1</span> <span class="math inline">S=k_B\ln \Omega</span> 로 정한것은 볼츠만이 아니라 플랑크다.</span></div></div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -505,9 +524,9 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>온도는 다음과 같이 정의된다. <span id="eq-TD_schroeder_3_5"><span class="math display">\[
+<p>온도는 다음과 같이 정의된다. <span id="eq-TD_schroeder_3_5"><span class="math display">
 \boxed{\dfrac{1}{T} := \left(\dfrac{\partial S}{\partial U}\right)_{N,\,V}.}
-\tag{24.3}\]</span></span></p>
+\tag{25.3}</span></span></p>
 </div>
 </div>
 <ul>
@@ -515,7 +534,7 @@ window.Quarto = {
 </ul>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.1 (Schroeder 3.2)</strong></span> 온도의 정의를 이용하여 <strong>열역학 0 법칙 (the zeroth law of thermodynamics)</strong> 를 증명하라.</p>
+<p><span class="theorem-title"><strong>연습문제 25.1 (Schroeder 3.2)</strong></span> 온도의 정의를 이용하여 <strong>열역학 0 법칙 (the zeroth law of thermodynamics)</strong> 를 증명하라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -530,148 +549,148 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>시스템 <span class="math inline">\(A\)</span> 와 시스템 <span class="math inline">\(B\)</span> 가 열평형이고 시스템 <span class="math inline">\(B\)</span> 와 시스템 <span class="math inline">\(C\)</span> 가 열평형이면 시스템 <span class="math inline">\(A\)</span> 와 시스템 <span class="math inline">\(C\)</span> 도 열평형이다.</p>
+<p>시스템 <span class="math inline">A</span> 와 시스템 <span class="math inline">B</span> 가 열평형이고 시스템 <span class="math inline">B</span> 와 시스템 <span class="math inline">C</span> 가 열평형이면 시스템 <span class="math inline">A</span> 와 시스템 <span class="math inline">C</span> 도 열평형이다.</p>
 </div>
 </div>
-<p><span class="math inline">\((\partial S_A/\partial U_A)_{N_A,\,V_A}= (\partial S_B/\partial U_B)_{N_B,\,V_B}\)</span> 이고 <span class="math inline">\((\partial S_B){\partial U_B}_{N_B,\,V_B}= (\partial S_C/\partial U_C)_{N_C,\,V_C}\)</span> 이면 당연히 <span class="math inline">\((\partial S_A){\partial U_A}_{N_A,\,V_A}= (\partial S_C/\partial U_C)_{N_C,\,V_C}\)</span> 이다.</p>
+<p><span class="math inline">(\partial S_A/\partial U_A)_{N_A,\,V_A}= (\partial S_B/\partial U_B)_{N_B,\,V_B}</span> 이고 <span class="math inline">(\partial S_B){\partial U_B}_{N_B,\,V_B}= (\partial S_C/\partial U_C)_{N_C,\,V_C}</span> 이면 당연히 <span class="math inline">(\partial S_A){\partial U_A}_{N_A,\,V_A}= (\partial S_C/\partial U_C)_{N_C,\,V_C}</span> 이다.</p>
 </div>
 </section>
-<section id="sec-TD_real_world_example_of_temperature_of_statistical_mechanics" class="level3" data-number="24.1.2">
-<h3 data-number="24.1.2" class="anchored" data-anchor-id="sec-TD_real_world_example_of_temperature_of_statistical_mechanics"><span class="header-section-number">24.1.2</span> 통계역학적 온도의 실제 예</h3>
+<section id="sec-TD_real_world_example_of_temperature_of_statistical_mechanics" class="level3" data-number="25.1.2">
+<h3 data-number="25.1.2" class="anchored" data-anchor-id="sec-TD_real_world_example_of_temperature_of_statistical_mechanics"><span class="header-section-number">25.1.2</span> 통계역학적 온도의 실제 예</h3>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-TD_examples_temperature_of_statistical_mechanics_1" class="theorem example">
-<p><span class="theorem-title"><strong>예제 24.1 (아인슈타인 고체의 경우)</strong></span> 아인슈타인 고체에서 <span class="math inline">\(q\gg N\)</span> 인 경우를 보자 여기서 <span class="math inline">\(q\)</span> 는 에너지 단위, <span class="math inline">\(N\)</span> 은 진동자의 개수이다. <span class="math inline">\(U=\hbar \omega q\)</span> 이며 <a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_46" class="quarto-xref">식&nbsp;<span>23.21</span></a> 으로 부터</p>
-<p><span class="math display">\[
+<p><span class="theorem-title"><strong>예제 25.1 (아인슈타인 고체의 경우)</strong></span> 아인슈타인 고체에서 <span class="math inline">q\gg N</span> 인 경우를 보자 여기서 <span class="math inline">q</span> 는 에너지 단위, <span class="math inline">N</span> 은 진동자의 개수이다. <span class="math inline">U=\hbar \omega q</span> 이며 <a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_46" class="quarto-xref">식&nbsp;<span>24.21</span></a> 으로 부터</p>
+<p><span class="math display">
 S =  Nk_B\left(\ln q-\ln N +1\right)
-\]</span></p>
+</span></p>
 <p>이므로</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \dfrac{1}{T}= \left(\dfrac{\partial S}{\partial U}\right)_{N} = \dfrac{1}{\hbar\omega}\dfrac{Nk_B}{q}
-\]</span></p>
-<p>이며 따라서 <span class="math inline">\(U\)</span> 와 <span class="math inline">\(T\)</span> 아래와 같은 관계를 거잔다.</p>
-<p><span id="eq-TD_schroeder_3_11"><span class="math display">\[
+</span></p>
+<p>이며 따라서 <span class="math inline">U</span> 와 <span class="math inline">T</span> 아래와 같은 관계를 거잔다.</p>
+<p><span id="eq-TD_schroeder_3_11"><span class="math display">
 U = Nk_B T
-\tag{24.4}\]</span></span></p>
+\tag{25.4}</span></span></p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-TD_examples_temperature_of_statistical_mechanics_2" class="theorem example">
-<p><span class="theorem-title"><strong>예제 24.2 (단원자 분자 이상기체의 경우)</strong></span> 이상기체의 엔트로피(<a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_49" class="quarto-xref">식&nbsp;<span>23.23</span></a>) 는 다음과 같다.</p>
-<p><span class="math display">\[
+<p><span class="theorem-title"><strong>예제 25.2 (단원자 분자 이상기체의 경우)</strong></span> 이상기체의 엔트로피(<a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_49" class="quarto-xref">식&nbsp;<span>24.23</span></a>) 는 다음과 같다.</p>
+<p><span class="math display">
 S = Nk_B \left[\ln \left(\dfrac{V}{N}\left(\dfrac{4\pi mU}{3Nh^2}\right)^{3/2}\right)+\dfrac{5}{2}\right].
-\]</span></p>
-<p>이로부터 <span id="eq-TD_schroeder_3_13"><span class="math display">\[
+</span></p>
+<p>이로부터 <span id="eq-TD_schroeder_3_13"><span class="math display">
 \dfrac{1}{T}= \dfrac{3Nk_B}{2U}
-\tag{24.5}\]</span></span></p>
+\tag{25.5}</span></span></p>
 <p>이므로 다음이 성립한다.</p>
-<p><span id="eq-TD_schroeder_3_13_1"><span class="math display">\[
+<p><span id="eq-TD_schroeder_3_13_1"><span class="math display">
 U = \dfrac{3}{2}Nk_BT.
-\tag{24.6}\]</span></span></p>
+\tag{25.6}</span></span></p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.2 (Schroeder 3.5)</strong></span> <a href="03_introduction_to_statistical_mechanics.html#exr-TD_schroeder_2_17" class="quarto-xref">연습문제&nbsp;<span>23.1</span></a> 로부터 <span class="math inline">\(q \ll N\)</span> 일 때의 아인슈타인 고체의 온도에 대한 식을 구하고 에너지를 온도에 대한 함수로 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 25.2 (Schroeder 3.5)</strong></span> <a href="03_introduction_to_statistical_mechanics.html#exr-TD_schroeder_2_17" class="quarto-xref">연습문제&nbsp;<span>24.1</span></a> 로부터 <span class="math inline">q \ll N</span> 일 때의 아인슈타인 고체의 온도에 대한 식을 구하고 에너지를 온도에 대한 함수로 구하라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="03_introduction_to_statistical_mechanics.html#exr-TD_schroeder_2_17" class="quarto-xref">연습문제&nbsp;<span>23.1</span></a> 로부터 <span class="math inline">\(S=k_B \ln \Omega (N,\,q) = qk_B (1+\ln N - \ln q)\)</span> 임을 안다. 따라서</p>
-<p><span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="03_introduction_to_statistical_mechanics.html#exr-TD_schroeder_2_17" class="quarto-xref">연습문제&nbsp;<span>24.1</span></a> 로부터 <span class="math inline">S=k_B \ln \Omega (N,\,q) = qk_B (1+\ln N - \ln q)</span> 임을 안다. 따라서</p>
+<p><span class="math display">
 \dfrac{1}{T}= \dfrac{k_B}{\hbar \omega}\left(\ln \left(\dfrac{N}{q}\right)\right)
-\]</span></p>
+</span></p>
 <p>이며 이로부터</p>
-<p><span class="math display">\[
+<p><span class="math display">
 U=\hbar \omega Ne^{-\hbar \omega/k_B T}.
-\]</span></p>
+</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.3 (Schroeder 3.7)</strong></span> <a href="03_introduction_to_statistical_mechanics.html#exr-TD_schroeder_2_42" class="quarto-xref">연습문제&nbsp;<span>23.17</span></a> 의 결과를 이용하여 블랙홀의 온도를 <span class="math inline">\(M\)</span> 으로 기술하라. 여기서 에너지는 <span class="math inline">\(Mc^2\)</span> 이다. 태양 질량의 블랙홀에 대해 온도를 구하라. 엔트로피-에너지 그래프를 그리고 이 그래프 모양에 대해 논하라.</p>
+<p><span class="theorem-title"><strong>연습문제 25.3 (Schroeder 3.7)</strong></span> <a href="03_introduction_to_statistical_mechanics.html#exr-TD_schroeder_2_42" class="quarto-xref">연습문제&nbsp;<span>24.17</span></a> 의 결과를 이용하여 블랙홀의 온도를 <span class="math inline">M</span> 으로 기술하라. 여기서 에너지는 <span class="math inline">Mc^2</span> 이다. 태양 질량의 블랙홀에 대해 온도를 구하라. 엔트로피-에너지 그래프를 그리고 이 그래프 모양에 대해 논하라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>블랙홀의 엔트로피는 <span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span>블랙홀의 엔트로피는 <span class="math display">
 S_{\text{black hole}} = \dfrac{8\pi^2 GM^2}{hc}k_B
-\]</span></p>
+</span></p>
 <p>이므로</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \dfrac{1}{T} = \dfrac{\partial S}{\partial (Mc^2)} = \dfrac{1}{c^2}\dfrac{\partial S}{\partial M}= \dfrac{1}{c^2}\dfrac{16\pi^2 GM}{hc}k_B
-\]</span></p>
-<p>이다. <span class="math inline">\(M=2.0\times 10^30\,\text{kg}\)</span> 에 대해 <span class="math inline">\(T=6.1\times 10^{-8}\,\text{K}\)</span>.</p>
+</span></p>
+<p>이다. <span class="math inline">M=2.0\times 10^30\,\text{kg}</span> 에 대해 <span class="math inline">T=6.1\times 10^{-8}\,\text{K}</span>.</p>
 </div>
 <p><br></p>
 </section>
 </section>
-<section id="sec-TD_entropy_and_heat" class="level2 page-columns page-full" data-number="24.2">
-<h2 data-number="24.2" class="anchored" data-anchor-id="sec-TD_entropy_and_heat"><span class="header-section-number">24.2</span> 엔트로피와 열</h2>
-<section id="sec-TD_predicting_heat_capacity" class="level3 page-columns page-full" data-number="24.2.1">
-<h3 data-number="24.2.1" class="anchored" data-anchor-id="sec-TD_predicting_heat_capacity"><span class="header-section-number">24.2.1</span> 열용량 예측</h3>
-<p>앞장에서 엔트로피를 에너지의 함수로 구할 수 있을 때 온도를 에너지의 함수로 계산하는 법을 알게 되었다. 이 값을 실험과 비교하기 위해서 부피가 일정할때의 열용량인 정적 열용량을 구할 필요가 있다. 정적 열용량의 정의는 <a href="01_thermodynamic_systems.html#eq-TD_fermi_25" class="quarto-xref">식&nbsp;<span>21.12</span></a> 의 첫번째 식과 같다. 부피가 일정하므로 <span class="math inline">\(dU=dQ\)</span> 이며 따라서</p>
-<p><span id="eq-TD_schroeder_3_14"><span class="math display">\[
+<section id="sec-TD_entropy_and_heat" class="level2 page-columns page-full" data-number="25.2">
+<h2 data-number="25.2" class="anchored" data-anchor-id="sec-TD_entropy_and_heat"><span class="header-section-number">25.2</span> 엔트로피와 열</h2>
+<section id="sec-TD_predicting_heat_capacity" class="level3 page-columns page-full" data-number="25.2.1">
+<h3 data-number="25.2.1" class="anchored" data-anchor-id="sec-TD_predicting_heat_capacity"><span class="header-section-number">25.2.1</span> 열용량 예측</h3>
+<p>앞장에서 엔트로피를 에너지의 함수로 구할 수 있을 때 온도를 에너지의 함수로 계산하는 법을 알게 되었다. 이 값을 실험과 비교하기 위해서 부피가 일정할때의 열용량인 정적 열용량을 구할 필요가 있다. 정적 열용량의 정의는 <a href="01_thermodynamic_systems.html#eq-TD_fermi_25" class="quarto-xref">식&nbsp;<span>22.12</span></a> 의 첫번째 식과 같다. 부피가 일정하므로 <span class="math inline">dU=dQ</span> 이며 따라서</p>
+<p><span id="eq-TD_schroeder_3_14"><span class="math display">
 C_V = \left(\dfrac{\partial U}{\partial T}\right)_{N,\,V}
-\tag{24.7}\]</span></span></p>
-<p>이다. 아인슈타인 고체의 경우 <span class="math inline">\(q \gg N\)</span> 일 때 <a href="#eq-TD_schroeder_3_11" class="quarto-xref">식&nbsp;<span>24.4</span></a> 로부터</p>
-<p><span id="eq-TD_schroeder_3_15"><span class="math display">\[
+\tag{25.7}</span></span></p>
+<p>이다. 아인슈타인 고체의 경우 <span class="math inline">q \gg N</span> 일 때 <a href="#eq-TD_schroeder_3_11" class="quarto-xref">식&nbsp;<span>25.4</span></a> 로부터</p>
+<p><span id="eq-TD_schroeder_3_15"><span class="math display">
 C_V = Nk_B
-\tag{24.8}\]</span></span></p>
-<p>이며, 단원자 분자 이상기체의 경우 <a href="#eq-TD_schroeder_3_13_1" class="quarto-xref">식&nbsp;<span>24.6</span></a> 로부터</p>
-<p><span id="eq-TD_schroeder_3_16"><span class="math display">\[
+\tag{25.8}</span></span></p>
+<p>이며, 단원자 분자 이상기체의 경우 <a href="#eq-TD_schroeder_3_13_1" class="quarto-xref">식&nbsp;<span>25.6</span></a> 로부터</p>
+<p><span id="eq-TD_schroeder_3_16"><span class="math display">
 C_V = \dfrac{3}{2}Nk_B
-\tag{24.9}\]</span></span></p>
-<div class="page-columns page-full"><p>이다. 두가지 경우 정적 열용량은 온도에 무관하며 <span class="math inline">\(\frac{1}{2}Nk_B\)</span> 에 <strong>제곱항 자유도(quadratic degree of freedom)</strong> 개수를 곱한 값이다<span class="math inline">\(^2\)</span>. 이 두 경우 모두 밀도가 낮은 이상기체나 충분히 고온에서의 고체의 경우 실험값과 잘 일치한다. </p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^2\)</span> 등분배 정리(equipartition theorem) 의 결과이다.</span></div></div>
-<p><strong>고체와 액체의 경우 정적 비열과 정압 비열의 차이가 극히 미미하므로 일반적으로 구분하지 않는다.</strong>. 고체의 경우 각 원자마다 6개의 자유도가 존재하며 따라서 고체를 이루는 <span class="math inline">\(N\)</span> 개의 원자에 대한 열용량은 <span class="math inline">\(\frac{6}{2}Nk_B = 3Nk_B\)</span> 이다. 낮은 온도에서는 잘 안맞지만 고온에서는 비교적 잘 맞으며 이를 <strong>뒬롱-쁘디 법칙 (Dulong–Petit law)</strong> 이라고 한다.</p>
+\tag{25.9}</span></span></p>
+<div class="page-columns page-full"><p>이다. 두가지 경우 정적 열용량은 온도에 무관하며 <span class="math inline">\frac{1}{2}Nk_B</span> 에 <strong>제곱항 자유도(quadratic degree of freedom)</strong> 개수를 곱한 값이다<span class="math inline">^2</span>. 이 두 경우 모두 밀도가 낮은 이상기체나 충분히 고온에서의 고체의 경우 실험값과 잘 일치한다. </p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">^2</span> 등분배 정리(equipartition theorem) 의 결과이다.</span></div></div>
+<p><strong>고체와 액체의 경우 정적 비열과 정압 비열의 차이가 극히 미미하므로 일반적으로 구분하지 않는다.</strong>. 고체의 경우 각 원자마다 6개의 자유도가 존재하며 따라서 고체를 이루는 <span class="math inline">N</span> 개의 원자에 대한 열용량은 <span class="math inline">\frac{6}{2}Nk_B = 3Nk_B</span> 이다. 낮은 온도에서는 잘 안맞지만 고온에서는 비교적 잘 맞으며 이를 <strong>뒬롱-쁘디 법칙 (Dulong–Petit law)</strong> 이라고 한다.</p>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_8" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.4 (Schroeder 3.8)</strong></span> <a href="#exr-TD_schroeder_3_5" class="quarto-xref">연습문제&nbsp;<span>24.2</span></a> 의 결과로부터 저온 극한에서의 아인슈타인 고체의 열용량을 구하고 온도의 함수로 그래프를 그려라.</p>
+<p><span class="theorem-title"><strong>연습문제 25.4 (Schroeder 3.8)</strong></span> <a href="#exr-TD_schroeder_3_5" class="quarto-xref">연습문제&nbsp;<span>25.2</span></a> 의 결과로부터 저온 극한에서의 아인슈타인 고체의 열용량을 구하고 온도의 함수로 그래프를 그려라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">
 C_V= \left(\dfrac{\partial U}{\partial T}\right)_{N} = \dfrac{(\hbar \omega)^2}{k_BT^2} N e^{-\hbar \omega/k_BT}
-\]</span></p>
+</span></p>
 <div id="fig-TD_schroeder_prob_3_8" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TD_schroeder_prob_3_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/schroeder/chap2/schroeder_prob_3_8.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_prob_3_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;24.1: <span class="math inline">\(N=N_A\)</span>, <span class="math inline">\(\hbar \omega = 10\,\text{meV}= 1.6 \times 10^{-21}\,\text{J}\)</span> 로 잡았을 때의 <span class="math inline">\(C_V-T\)</span> 그래프
+그림&nbsp;25.1: <span class="math inline">N=N_A</span>, <span class="math inline">\hbar \omega = 10\,\text{meV}= 1.6 \times 10^{-21}\,\text{J}</span> 로 잡았을 때의 <span class="math inline">C_V-T</span> 그래프
 </figcaption>
 </figure>
 </div>
 </div>
 </section>
-<section id="sec-TD_measureing_entropies" class="level3" data-number="24.2.2">
-<h3 data-number="24.2.2" class="anchored" data-anchor-id="sec-TD_measureing_entropies"><span class="header-section-number">24.2.2</span> 엔트로피 측정</h3>
-<p>온도의 정의 <a href="#eq-TD_schroeder_3_5" class="quarto-xref">식&nbsp;<span>24.3</span></a> 로 부터, 열 <span class="math inline">\(Q\)</span> 를 가하고 부피를 일정하게 유지하면서 다른 형태의 일을 하지 않는다면 엔트로피의 변화는 다음과 같이 쓸 수 있다.</p>
-<p><span id="eq-TD_schroeder_3_17"><span class="math display">\[
+<section id="sec-TD_measureing_entropies" class="level3" data-number="25.2.2">
+<h3 data-number="25.2.2" class="anchored" data-anchor-id="sec-TD_measureing_entropies"><span class="header-section-number">25.2.2</span> 엔트로피 측정</h3>
+<p>온도의 정의 <a href="#eq-TD_schroeder_3_5" class="quarto-xref">식&nbsp;<span>25.3</span></a> 로 부터, 열 <span class="math inline">Q</span> 를 가하고 부피를 일정하게 유지하면서 다른 형태의 일을 하지 않는다면 엔트로피의 변화는 다음과 같이 쓸 수 있다.</p>
+<p><span id="eq-TD_schroeder_3_17"><span class="math display">
 dS = \dfrac{d U}{T} = \dfrac{Q}{T} \qquad (\text{constant volume, no work}).
-\tag{24.10}\]</span></span></p>
-<p>온도와 열은 비교적 쉽게 측정 할 수 있으므로 위 식으로부터 다양한 과정에 대한 엔트로피 변화를 얻을 수 있다. <a href="#sec-TD_mechanica_equillibrium_and_pressure"><span class="quarto-xref"><span> 24.4</span></span> 역학적 평형과 압력</a> 에서는 <span class="math inline">\(dS=Q/T\)</span> 가 준정적 과정에서는 부피가 변하더라도 사용 할 수 있음을 보일 것이다.</p>
-<p>상전이와 같이 열을 가해주더라도 온도가 변하지 않는 상황에서는 <span class="math inline">\(dS\)</span> 나 <span class="math inline">\(Q\)</span> 가 미소변화가 아니더라도 <a href="#eq-TD_schroeder_3_17" class="quarto-xref">식&nbsp;<span>24.10</span></a> 을 사용할 수 있다. 온도가 변할 경우, 부피가 일정하다면 등적 열용량을 사용하여 다음과 같이 쓸 수 있다.</p>
-<p><span id="eq-TD_schroeder_3_18"><span class="math display">\[
+\tag{25.10}</span></span></p>
+<p>온도와 열은 비교적 쉽게 측정 할 수 있으므로 위 식으로부터 다양한 과정에 대한 엔트로피 변화를 얻을 수 있다. <a href="#sec-TD_mechanica_equillibrium_and_pressure"><span class="quarto-xref"><span> 25.4</span></span> 역학적 평형과 압력</a> 에서는 <span class="math inline">dS=Q/T</span> 가 준정적 과정에서는 부피가 변하더라도 사용 할 수 있음을 보일 것이다.</p>
+<p>상전이와 같이 열을 가해주더라도 온도가 변하지 않는 상황에서는 <span class="math inline">dS</span> 나 <span class="math inline">Q</span> 가 미소변화가 아니더라도 <a href="#eq-TD_schroeder_3_17" class="quarto-xref">식&nbsp;<span>25.10</span></a> 을 사용할 수 있다. 온도가 변할 경우, 부피가 일정하다면 등적 열용량을 사용하여 다음과 같이 쓸 수 있다.</p>
+<p><span id="eq-TD_schroeder_3_18"><span class="math display">
 dS = \dfrac{C_V}{T}\,dT.
-\tag{24.11}\]</span></span></p>
-<p>엔트로피 변화 <span class="math inline">\(\Delta S=S_f-S_i\)</span> 는 다음과 같다.</p>
-<p><span id="eq-TD_schroeder_3_19"><span class="math display">\[
+\tag{25.11}</span></span></p>
+<p>엔트로피 변화 <span class="math inline">\Delta S=S_f-S_i</span> 는 다음과 같다.</p>
+<p><span id="eq-TD_schroeder_3_19"><span class="math display">
 \Delta S = S_f-S_i = \int_{T_i}^{T_f}\dfrac{C_V}{T}\,dT
-\tag{24.12}\]</span></span></p>
-<p>여기서 관심 있는 온도 구간에서 <span class="math inline">\(C_V\)</span> 가 일정하다면</p>
-<p><span id="eq-TD_schroeder_3_19_1"><span class="math display">\[
+\tag{25.12}</span></span></p>
+<p>여기서 관심 있는 온도 구간에서 <span class="math inline">C_V</span> 가 일정하다면</p>
+<p><span id="eq-TD_schroeder_3_19_1"><span class="math display">
 \Delta S = C_V \ln \left(\dfrac{T_f}{T_i}\right),\qquad (\text{constant }C_V)
-\tag{24.13}\]</span></span></p>
-<p>이다. 물 200 g 을 20 °C 에서 100 °C 로 올렸을 때 <span class="math inline">\(C_V=200 \,\text{cal/K}\)</span> 이며 <a href="#eq-TD_schroeder_3_19_1" class="quarto-xref">식&nbsp;<span>24.13</span></a> 로부터 <span class="math inline">\(\Delta S \approx 200 \,\text{J/K}\)</span> 이다. 이는 가능한 미시상태의 수가 <span class="math inline">\(e^{1.5 \times 10^{25}}\)</span> 만큼 증가했다는 의미이다. 만약 <span class="math inline">\(0\,\text{K}\)</span> 까지의 비열과 <span class="math inline">\(S(0\,\text{K})\)</span> 를 안다면</p>
-<p><span id="eq-TD_schroeder_3_21"><span class="math display">\[
+\tag{25.13}</span></span></p>
+<p>이다. 물 200 g 을 20 °C 에서 100 °C 로 올렸을 때 <span class="math inline">C_V=200 \,\text{cal/K}</span> 이며 <a href="#eq-TD_schroeder_3_19_1" class="quarto-xref">식&nbsp;<span>25.13</span></a> 로부터 <span class="math inline">\Delta S \approx 200 \,\text{J/K}</span> 이다. 이는 가능한 미시상태의 수가 <span class="math inline">e^{1.5 \times 10^{25}}</span> 만큼 증가했다는 의미이다. 만약 <span class="math inline">0\,\text{K}</span> 까지의 비열과 <span class="math inline">S(0\,\text{K})</span> 를 안다면</p>
+<p><span id="eq-TD_schroeder_3_21"><span class="math display">
 S_f-S_i = \int_0^{T}\dfrac{C_V}{T'}\,dT'
-\tag{24.14}\]</span></span></p>
-<p>을 통해 시스템의 총 엔트로피를 알 수 있다. 그런데 <span class="math inline">\(S(0\,\text{K})\)</span> 는 얼마인가? 이것에 대한 답이 소위 <strong>열역학 제 3 법칙 (the third law of thermodynamics)</strong> 이다.</p>
+\tag{25.14}</span></span></p>
+<p>을 통해 시스템의 총 엔트로피를 알 수 있다. 그런데 <span class="math inline">S(0\,\text{K})</span> 는 얼마인가? 이것에 대한 답이 소위 <strong>열역학 제 3 법칙 (the third law of thermodynamics)</strong> 이다.</p>
 </section>
-<section id="sec-TD_the_third_law_of_thermodynamics" class="level3" data-number="24.2.3">
-<h3 data-number="24.2.3" class="anchored" data-anchor-id="sec-TD_the_third_law_of_thermodynamics"><span class="header-section-number">24.2.3</span> 열역학 제 3 법칙</h3>
+<section id="sec-TD_the_third_law_of_thermodynamics" class="level3" data-number="25.2.3">
+<h3 data-number="25.2.3" class="anchored" data-anchor-id="sec-TD_the_third_law_of_thermodynamics"><span class="header-section-number">25.2.3</span> 열역학 제 3 법칙</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -720,7 +739,7 @@ S_f-S_i = \int_0^{T}\dfrac{C_V}{T'}\,dT'
 <ul>
 <li>거의 모든 물질은 저온에서 고체가 되지만 <sup>4</sup>He 나 <sup>3</sup>He 은 매우 낮은 온도에서도 고체가 되지 않는다.</li>
 <li>내부 평형상태이어야 한다. 유리와 같이 fronen-in distorder 를 가진 물질은 이에 해당되지 않는다.</li>
-<li>통계역학적으로 보면 <span class="math inline">\(S=0\)</span> 은 <span class="math inline">\(\Omega = 1\)</span> 을 의미한다. <span class="math inline">\(N\)</span> 개의 스핀 0 인 원자로 이루어진 완전 고체를 생각하자. 이 고채의 핵스핀이 <span class="math inline">\(I\ne 0\)</span> 라고 하자. 외부 자기장이 없다면 핵스핀에 의한 축퇴로 인해 <span class="math inline">\(S = Nk_B \ln (2I+1) \ne 0\)</span> 이다. 그러나 핵스핀은 고체의 다른 원자의 쌍극자로부터 아주 미약한 자기장이라도 느끼게 되며 따라서 이 축퇴는 깨지고 가장 낮은 에너지상태만 남게 된다.<br>
+<li>통계역학적으로 보면 <span class="math inline">S=0</span> 은 <span class="math inline">\Omega = 1</span> 을 의미한다. <span class="math inline">N</span> 개의 스핀 0 인 원자로 이루어진 완전 고체를 생각하자. 이 고채의 핵스핀이 <span class="math inline">I\ne 0</span> 라고 하자. 외부 자기장이 없다면 핵스핀에 의한 축퇴로 인해 <span class="math inline">S = Nk_B \ln (2I+1) \ne 0</span> 이다. 그러나 핵스핀은 고체의 다른 원자의 쌍극자로부터 아주 미약한 자기장이라도 느끼게 되며 따라서 이 축퇴는 깨지고 가장 낮은 에너지상태만 남게 된다.<br>
 </li>
 <li>위의 예를 좀 더 살펴본다면 핵스핀에 의한 엔트로피가 유지되는 낮은 온도에서도, 다른 부분에 의한 엔트로피는 0 에 가깝다. 이로부터 사이먼에 의한 열역학 제 3 법칙이 등장한다.</li>
 </ul>
@@ -765,280 +784,280 @@ S_f-S_i = \int_0^{T}\dfrac{C_V}{T'}\,dT'
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>시스템의 총 엔트로피에서 내부평형상태에 있는 각각의 <strong>측면(aspect)</strong> 의 기여는 온도가 <span class="math inline">\(0\, \text{K}\)</span> 로 갈때 <span class="math inline">\(0\)</span> 이 된다.</p>
+<p>시스템의 총 엔트로피에서 내부평형상태에 있는 각각의 <strong>측면(aspect)</strong> 의 기여는 온도가 <span class="math inline">0\, \text{K}</span> 로 갈때 <span class="math inline">0</span> 이 된다.</p>
 </div>
 </div>
 <p><br></p>
 <p>열역학 제 3 법칙으로 부터 여려 결론을 내릴 수 있지만 아직 열역학적 양에 대해 많이 다루지않은 관계로 대표적인 두가지만 짚고 넘어가기로 하자.</p>
-<p><strong>1.</strong> <span class="math inline">\(T \to 0\)</span> 일 때 비열은 <span class="math inline">\(0\)</span> 이다. 즉 <span class="math inline">\(\displaystyle \lim_{T\to 0} C = \lim_{T\to 0} T\left(\dfrac{\partial S}{\partial T}\right)=0\)</span>.</p>
-<p><strong>2.</strong> <strong>도달 불가능성</strong> : 유한한 단계로 <span class="math inline">\(T=0\)</span> 까지 냉각 시킬 수 없다.</p>
-<p><strong>3.</strong> <strong>카르노 엔진의 효율</strong> : 우리는 카르노 엔진의 효율 <span class="math inline">\(\eta_C = 1-T_l/T_h\)</span> (<a href="02_entropy.html#eq-TD_efficiency_of_carnot_engine_using_ideal_gas" class="quarto-xref">식&nbsp;<span>22.7</span></a>) 임을 안다. 그런데 <span class="math inline">\(T_l=0\)</span> 이면 <span class="math inline">\(\eta_C=1\)</span> 이다. 카르노 엔진은 등온팽창(압축)과 단열팽창(압축)의 반복인데 <span class="math inline">\(0\,\text{K}\)</span> 에서 등온압축은 어떻게 가능할까? 일단 <span class="math inline">\(0\,\text{K}\)</span> 에서는 열역학적 상태를 변경시킬 수 없으므로 등온 압축 자체가 불가능하다. 실제 열역학 3 법칙이 열역학 2법칙으로 부터 분리된 독자적 법칙이어야 한다고 믿어진 계기는 이것이었다.</p>
+<p><strong>1.</strong> <span class="math inline">T \to 0</span> 일 때 비열은 <span class="math inline">0</span> 이다. 즉 <span class="math inline">\displaystyle \lim_{T\to 0} C = \lim_{T\to 0} T\left(\dfrac{\partial S}{\partial T}\right)=0</span>.</p>
+<p><strong>2.</strong> <strong>도달 불가능성</strong> : 유한한 단계로 <span class="math inline">T=0</span> 까지 냉각 시킬 수 없다.</p>
+<p><strong>3.</strong> <strong>카르노 엔진의 효율</strong> : 우리는 카르노 엔진의 효율 <span class="math inline">\eta_C = 1-T_l/T_h</span> (<a href="02_entropy.html#eq-TD_efficiency_of_carnot_engine_using_ideal_gas" class="quarto-xref">식&nbsp;<span>23.7</span></a>) 임을 안다. 그런데 <span class="math inline">T_l=0</span> 이면 <span class="math inline">\eta_C=1</span> 이다. 카르노 엔진은 등온팽창(압축)과 단열팽창(압축)의 반복인데 <span class="math inline">0\,\text{K}</span> 에서 등온압축은 어떻게 가능할까? 일단 <span class="math inline">0\,\text{K}</span> 에서는 열역학적 상태를 변경시킬 수 없으므로 등온 압축 자체가 불가능하다. 실제 열역학 3 법칙이 열역학 2법칙으로 부터 분리된 독자적 법칙이어야 한다고 믿어진 계기는 이것이었다.</p>
 </section>
 <section id="연습문제" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_10" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.5 (Schroeder 3.10)</strong></span> 0 °C 30 g 얼음 큐브가 25 °C 인 부엌의 테이블에 놓여져 있다.</p>
-<p>(<span class="math inline">\(a\)</span>) 얼음이 0°C 에서 녹을 때 얼음 큐브의 엔트로피 변화를 계산하라. 얼음의 잠열은 <span class="math inline">\(333\,\text{J/g}\)</span> 이다.</p>
-<p>(<span class="math inline">\(b\)</span>) 물의 온도가 0°C 에서 25°C 로 올랐을 때의 물의 엔트로피 변화를 계산하라. 물의 비열 <span class="math inline">\(C = 4.18\,\text{J/K}\cdot\text{g}\)</span> 이다.</p>
-<p>(<span class="math inline">\(c\)</span>) 얼음이 녹고 물은 온도가 높아진 것에 의한 부엌의 엔트로피 변화를 계산하라.</p>
-<p>(<span class="math inline">\(d\)</span>) 이 과정에서의 우주의 엔트로피 변화를 계산하라. 엔트로피의 순 변화는 양수인가? 음수인가? 아니면 0 인가?. 이것이 우리가 기대하는 바인가?</p>
+<p><span class="theorem-title"><strong>연습문제 25.5 (Schroeder 3.10)</strong></span> 0 °C 30 g 얼음 큐브가 25 °C 인 부엌의 테이블에 놓여져 있다.</p>
+<p>(<span class="math inline">a</span>) 얼음이 0°C 에서 녹을 때 얼음 큐브의 엔트로피 변화를 계산하라. 얼음의 잠열은 <span class="math inline">333\,\text{J/g}</span> 이다.</p>
+<p>(<span class="math inline">b</span>) 물의 온도가 0°C 에서 25°C 로 올랐을 때의 물의 엔트로피 변화를 계산하라. 물의 비열 <span class="math inline">C = 4.18\,\text{J/K}\cdot\text{g}</span> 이다.</p>
+<p>(<span class="math inline">c</span>) 얼음이 녹고 물은 온도가 높아진 것에 의한 부엌의 엔트로피 변화를 계산하라.</p>
+<p>(<span class="math inline">d</span>) 이 과정에서의 우주의 엔트로피 변화를 계산하라. 엔트로피의 순 변화는 양수인가? 음수인가? 아니면 0 인가?. 이것이 우리가 기대하는 바인가?</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(\Delta S_{\text{melting}} = (333/273)\times 30 = 36.6 \,\text{J/K}\)</span>.</p>
-<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\Delta S_{\text{water}} = C\ln (T_f/T_i) = 11.0 \,\text{J/K}\)</span>.</p>
-<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(\Delta S_{\text{kitchin, melting}} = -30\times 333 /(25 + 273) = -33.5 \,\text{J/K}\)</span>, <span class="math inline">\(\Delta S_{\text{kitchin, water}} = -30 \times C \times 25 = -10.5 \,\text{J/K}\)</span>, 따라서 <span class="math inline">\(\Delta S_{\text{total, kichin}}= -44.0\,\text{J/K}\)</span></p>
-<p>(<span class="math inline">\(d\)</span>) 엔트로피의 순 변화 <span class="math inline">\(\Delta S_\text{total} = 4.6 \,\text{J/K}\)</span> 로 엔트로피는 순증가하였다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">a</span>) <span class="math inline">\Delta S_{\text{melting}} = (333/273)\times 30 = 36.6 \,\text{J/K}</span>.</p>
+<p>(<span class="math inline">b</span>) <span class="math inline">\Delta S_{\text{water}} = C\ln (T_f/T_i) = 11.0 \,\text{J/K}</span>.</p>
+<p>(<span class="math inline">c</span>) <span class="math inline">\Delta S_{\text{kitchin, melting}} = -30\times 333 /(25 + 273) = -33.5 \,\text{J/K}</span>, <span class="math inline">\Delta S_{\text{kitchin, water}} = -30 \times C \times 25 = -10.5 \,\text{J/K}</span>, 따라서 <span class="math inline">\Delta S_{\text{total, kichin}}= -44.0\,\text{J/K}</span></p>
+<p>(<span class="math inline">d</span>) 엔트로피의 순 변화 <span class="math inline">\Delta S_\text{total} = 4.6 \,\text{J/K}</span> 로 엔트로피는 순증가하였다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_11" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.6 (Schroeder 3.11)</strong></span> 목욕물의 온도를 적절하게 맞추기 위해 55°C 의 물 50 리터와 10°C 의 물 25 리터를 섞었다. 이 물을 섞음으로서 증가한 엔트로피는?</p>
+<p><span class="theorem-title"><strong>연습문제 25.6 (Schroeder 3.11)</strong></span> 목욕물의 온도를 적절하게 맞추기 위해 55°C 의 물 50 리터와 10°C 의 물 25 리터를 섞었다. 이 물을 섞음으로서 증가한 엔트로피는?</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>평형이 되는 온도는 40°C 이며 <span class="math inline">\(\Delta S\approx 746 \,\text{J/K}\)</span>.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>평형이 되는 온도는 40°C 이며 <span class="math inline">\Delta S\approx 746 \,\text{J/K}</span>.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_13" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.7 (Schroeder 3.13)</strong></span> 태양이 하늘에 높이 떠 있을때 지표면 <span class="math inline">\(1\,\text{m}^2\)</span> 당 1000 W 의 일률을 전달한다. 태양의 표면 온도는 6000 K 이고 지구의 표면 온도를 300 K 라고 할 때 다음에 답하라.</p>
-<p>(<span class="math inline">\(a\)</span>) 태양으로부터의 열에너지 전달로 인해 발생하는 지표면에서 1 제곱미터당 엔트로피 변화를 계산하라.</p>
-<p>(<span class="math inline">\(b\)</span>) 당신이 지표면에 1 제곱 미터의 잔디를 기른다고 하자. 혹자는 잔디가 성장하는 것은 무질서한 영양소를 정렬된 생명 형태로 바꾸는 것이기 때문에 열역학 제 2 법칙을 거스른다고 주장 할 수 있다. 어떻게 반박할까?</p>
+<p><span class="theorem-title"><strong>연습문제 25.7 (Schroeder 3.13)</strong></span> 태양이 하늘에 높이 떠 있을때 지표면 <span class="math inline">1\,\text{m}^2</span> 당 1000 W 의 일률을 전달한다. 태양의 표면 온도는 6000 K 이고 지구의 표면 온도를 300 K 라고 할 때 다음에 답하라.</p>
+<p>(<span class="math inline">a</span>) 태양으로부터의 열에너지 전달로 인해 발생하는 지표면에서 1 제곱미터당 엔트로피 변화를 계산하라.</p>
+<p>(<span class="math inline">b</span>) 당신이 지표면에 1 제곱 미터의 잔디를 기른다고 하자. 혹자는 잔디가 성장하는 것은 무질서한 영양소를 정렬된 생명 형태로 바꾸는 것이기 때문에 열역학 제 2 법칙을 거스른다고 주장 할 수 있다. 어떻게 반박할까?</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(\Delta S_\text{sun}=-1000 \times 3600 \times 24 \times 365 /6000 = -5.25\times 10^6\,\text{J/K}\)</span>.</p>
-<p><span class="math inline">\(\Delta S_\text{earth} = \Delta S_\text{sun}\times 6000/300 = 1.05 \times 10^{8}\,\text{J/K}\)</span>.</p>
-<p>(<span class="math inline">\(b\)</span>) 지구에서 증가하는 엔트로피 차이는 태양에서 감소하는 엔트로피에 비해 막대하며 (20배) 지구에 도달하는 에너지 중 일부가 잔디의 엔트로피를 감소시킨다고 하더라도 잔디까지 고려한 순 엔트로피틑 증가 할 수 있다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">a</span>) <span class="math inline">\Delta S_\text{sun}=-1000 \times 3600 \times 24 \times 365 /6000 = -5.25\times 10^6\,\text{J/K}</span>.</p>
+<p><span class="math inline">\Delta S_\text{earth} = \Delta S_\text{sun}\times 6000/300 = 1.05 \times 10^{8}\,\text{J/K}</span>.</p>
+<p>(<span class="math inline">b</span>) 지구에서 증가하는 엔트로피 차이는 태양에서 감소하는 엔트로피에 비해 막대하며 (20배) 지구에 도달하는 에너지 중 일부가 잔디의 엔트로피를 감소시킨다고 하더라도 잔디까지 고려한 순 엔트로피틑 증가 할 수 있다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_14" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.8 (Schroeder 3.14)</strong></span> 저온에서의 알루미늄의 1 몰의 열용량은 실험적으로</p>
-<p><span class="math display">\[
+<p><span class="theorem-title"><strong>연습문제 25.8 (Schroeder 3.14)</strong></span> 저온에서의 알루미늄의 1 몰의 열용량은 실험적으로</p>
+<p><span class="math display">
 C_V = aT + bT^3
-\]</span></p>
-<p>이며 여기서 <span class="math inline">\(a=0.00135 \,\text{J/K}^2\)</span>, <span class="math inline">\(b=2.48\times 10^{-5}\,\text{J/K}^4\)</span> 이다. 이로부터 일 몰의 알루미늄의 엔트로피를 온도에 대한 함수로 구하라. <span class="math inline">\(T=1\,\text{K}\)</span> 와 <span class="math inline">\(T=10\,\text{K}\)</span> 에서의 엔트로피를 <span class="math inline">\(\text{J/K}\)</span> 단위와 무단위 값(볼츠만 상수로 나눈 값) 으로 구하라.</p>
+</span></p>
+<p>이며 여기서 <span class="math inline">a=0.00135 \,\text{J/K}^2</span>, <span class="math inline">b=2.48\times 10^{-5}\,\text{J/K}^4</span> 이다. 이로부터 일 몰의 알루미늄의 엔트로피를 온도에 대한 함수로 구하라. <span class="math inline">T=1\,\text{K}</span> 와 <span class="math inline">T=10\,\text{K}</span> 에서의 엔트로피를 <span class="math inline">\text{J/K}</span> 단위와 무단위 값(볼츠만 상수로 나눈 값) 으로 구하라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-TD_schroeder_3_19" class="quarto-xref">식&nbsp;<span>24.12</span></a> 로 부터 <span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-TD_schroeder_3_19" class="quarto-xref">식&nbsp;<span>25.12</span></a> 로 부터 <span class="math display">
 S = \int_0^T \dfrac{C_V}{T}\,dT = aT + \dfrac{b}{3}T^3
-\]</span></p>
-<p>이며, <span class="math inline">\(S(1\,\text{K}) = 1.36\times 10^{-3}\,\text{J/K}\)</span>, <span class="math inline">\(S(10\,\text{K}) = 2.18\times 10^{-2}\,\text{J/K}\)</span>.</p>
-<p><span class="math inline">\(S(1\,\text{K})/k_B \approx 9.84\times 10^{19},\, S(10\,\text{K})/k_B \approx 1.58\times 10^{21}\)</span>.</p>
+</span></p>
+<p>이며, <span class="math inline">S(1\,\text{K}) = 1.36\times 10^{-3}\,\text{J/K}</span>, <span class="math inline">S(10\,\text{K}) = 2.18\times 10^{-2}\,\text{J/K}</span>.</p>
+<p><span class="math inline">S(1\,\text{K})/k_B \approx 9.84\times 10^{19},\, S(10\,\text{K})/k_B \approx 1.58\times 10^{21}</span>.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_16" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.9 (Schroeder 3.16)</strong></span> 컴퓨터 메모리의 <strong>비트(bit)</strong> 는 두 다른 상태가운데 하나에 있을 수 있는 물리적 대상이다. 1 바이트(byte) 는 8 비트이며 킬로바이트는 1024 바이트이고, 메가바이트는 1024 킬로바이트며, 기가바이트는 1024 메가바이트이다.</p>
-<p>(<span class="math inline">\(a\)</span>) 당신의 컴퓨터가 1 기가바이트의 메모리를 지우거나 덮어써 기존의 기록을 모두 제거했다고 하자. 이 과정을 통해 어떤 최소한의 엔트로피를 생성하는지 설명하고 계산하라.</p>
-<p>(<span class="math inline">\(b\)</span>) 이 엔트로피가 상온에서 생성되었다면 얼마나 많은 열이 필요한가? 이 열이 상당한 양인가?</p>
+<p><span class="theorem-title"><strong>연습문제 25.9 (Schroeder 3.16)</strong></span> 컴퓨터 메모리의 <strong>비트(bit)</strong> 는 두 다른 상태가운데 하나에 있을 수 있는 물리적 대상이다. 1 바이트(byte) 는 8 비트이며 킬로바이트는 1024 바이트이고, 메가바이트는 1024 킬로바이트며, 기가바이트는 1024 메가바이트이다.</p>
+<p>(<span class="math inline">a</span>) 당신의 컴퓨터가 1 기가바이트의 메모리를 지우거나 덮어써 기존의 기록을 모두 제거했다고 하자. 이 과정을 통해 어떤 최소한의 엔트로피를 생성하는지 설명하고 계산하라.</p>
+<p>(<span class="math inline">b</span>) 이 엔트로피가 상온에서 생성되었다면 얼마나 많은 열이 필요한가? 이 열이 상당한 양인가?</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(N_\text{bits} = 8\times (1024)^3 = 8.6\times 10^9\)</span>. <span class="math inline">\(\Omega  = \text{[상태의 개수]}= 2^{N_\text{bits}}\)</span>.</p>
-<p>따라서 <span class="math inline">\(\Delta S = N_\text{bits}k_B \ln 2 = 8.2 \times 10^{-14}\,\text{J/K}\)</span>.</p>
-<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(Q=T\Delta S = 2.47 \times 10^{-11}\,\text{J}\)</span> 로 매우 적은 양이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">a</span>) <span class="math inline">N_\text{bits} = 8\times (1024)^3 = 8.6\times 10^9</span>. <span class="math inline">\Omega  = \text{[상태의 개수]}= 2^{N_\text{bits}}</span>.</p>
+<p>따라서 <span class="math inline">\Delta S = N_\text{bits}k_B \ln 2 = 8.2 \times 10^{-14}\,\text{J/K}</span>.</p>
+<p>(<span class="math inline">b</span>) <span class="math inline">Q=T\Delta S = 2.47 \times 10^{-11}\,\text{J}</span> 로 매우 적은 양이다.</p>
 </div>
 </section>
 </section>
-<section id="sec-TD_paramagnetism" class="level2" data-number="24.3">
-<h2 data-number="24.3" class="anchored" data-anchor-id="sec-TD_paramagnetism"><span class="header-section-number">24.3</span> 상자성</h2>
-<section id="sec-TD_notation_and_mocroscopic_physics_of_paramagnetism" class="level3" data-number="24.3.1">
-<h3 data-number="24.3.1" class="anchored" data-anchor-id="sec-TD_notation_and_mocroscopic_physics_of_paramagnetism"><span class="header-section-number">24.3.1</span> 표기법과 물리</h3>
-<p>스핀 <span class="math inline">\(1/2\)</span> 입자는 외부 자기장 <span class="math inline">\(\boldsymbol{B}=B\hat{\boldsymbol{z}}\)</span> 에 대해 스핀이 <span class="math inline">\(+z\)</span> 혹은 <span class="math inline">\(-z\)</span> 방향으로 정렬하며 <span class="math inline">\(+z\)</span> 방향으로 정렬할 때 <span class="math inline">\(-\mu B\)</span> 를 <span class="math inline">\(-z\)</span> 방향으로 정렬할 때 <span class="math inline">\(\mu B\)</span> 에너지를 가진다. <span class="math inline">\(N\)</span> 개의 스핀 <span class="math inline">\(1/2\)</span> 입자에 자기장을 가할 때 <span class="math inline">\(+z\)</span> 방향으로 정렬한 입자의 개수를 <span class="math inline">\(N_\uparrow\)</span>, <span class="math inline">\(-z\)</span> 방향으로 정렬한 입자의 개수를 <span class="math inline">\(N_\downarrow\)</span> 라고 하면 <span class="math inline">\(N= N_\uparrow + N_\downarrow\)</span> 이고 이 시스템의 총 에너지 <span class="math inline">\(U\)</span> 는</p>
-<p><span id="eq-TD_schroeder_3_25"><span class="math display">\[
+<section id="sec-TD_paramagnetism" class="level2" data-number="25.3">
+<h2 data-number="25.3" class="anchored" data-anchor-id="sec-TD_paramagnetism"><span class="header-section-number">25.3</span> 상자성</h2>
+<section id="sec-TD_notation_and_mocroscopic_physics_of_paramagnetism" class="level3" data-number="25.3.1">
+<h3 data-number="25.3.1" class="anchored" data-anchor-id="sec-TD_notation_and_mocroscopic_physics_of_paramagnetism"><span class="header-section-number">25.3.1</span> 표기법과 물리</h3>
+<p>스핀 <span class="math inline">1/2</span> 입자는 외부 자기장 <span class="math inline">\boldsymbol{B}=B\hat{\boldsymbol{z}}</span> 에 대해 스핀이 <span class="math inline">+z</span> 혹은 <span class="math inline">-z</span> 방향으로 정렬하며 <span class="math inline">+z</span> 방향으로 정렬할 때 <span class="math inline">-\mu B</span> 를 <span class="math inline">-z</span> 방향으로 정렬할 때 <span class="math inline">\mu B</span> 에너지를 가진다. <span class="math inline">N</span> 개의 스핀 <span class="math inline">1/2</span> 입자에 자기장을 가할 때 <span class="math inline">+z</span> 방향으로 정렬한 입자의 개수를 <span class="math inline">N_\uparrow</span>, <span class="math inline">-z</span> 방향으로 정렬한 입자의 개수를 <span class="math inline">N_\downarrow</span> 라고 하면 <span class="math inline">N= N_\uparrow + N_\downarrow</span> 이고 이 시스템의 총 에너지 <span class="math inline">U</span> 는</p>
+<p><span id="eq-TD_schroeder_3_25"><span class="math display">
 U = -\mu BN_\uparrow +\mu B N_\downarrow = \mu B(N_\downarrow - N_\uparrow) = \mu B(N -2N_\uparrow).
-\tag{24.15}\]</span></span></p>
-<p>외부 자기장에 대해 <strong>자화율 (Magnetization)</strong> <span class="math inline">\(M\)</span> 은 다음과 같이 정의된다.</p>
-<p><span id="eq-TD_schroeder_3_26"><span class="math display">\[
+\tag{25.15}</span></span></p>
+<p>외부 자기장에 대해 <strong>자화율 (Magnetization)</strong> <span class="math inline">M</span> 은 다음과 같이 정의된다.</p>
+<p><span id="eq-TD_schroeder_3_26"><span class="math display">
 M := \mu (N_\uparrow-N_\downarrow) = - \dfrac{U}{B}.
-\tag{24.16}\]</span></span></p>
-<p><span class="math inline">\(N\)</span> 개 가운데 <span class="math inline">\(N_\uparrow\)</span> 가 정해졌을 때 가능한 미시상태의 수 <span class="math inline">\(\Omega(N_\uparrow)\)</span> 는</p>
-<p><span id="eq-TD_schroeder_3_27"><span class="math display">\[
+\tag{25.16}</span></span></p>
+<p><span class="math inline">N</span> 개 가운데 <span class="math inline">N_\uparrow</span> 가 정해졌을 때 가능한 미시상태의 수 <span class="math inline">\Omega(N_\uparrow)</span> 는</p>
+<p><span id="eq-TD_schroeder_3_27"><span class="math display">
 \Omega(N_\uparrow) = \dfrac{N!}{N_\uparrow ! N_\downarrow !}.
-\tag{24.17}\]</span></span></p>
+\tag{25.17}</span></span></p>
 </section>
-<section id="sec-TD_numerical_solution" class="level3" data-number="24.3.2">
-<h3 data-number="24.3.2" class="anchored" data-anchor-id="sec-TD_numerical_solution"><span class="header-section-number">24.3.2</span> 수치해석적 해와 음의 온도</h3>
-<p><span class="math inline">\(N=100\)</span> 에 대해 <span class="math inline">\(S/k_B = \ln \Omega\)</span> 를 그려 보면 아래 그림과 같다.</p>
+<section id="sec-TD_numerical_solution" class="level3" data-number="25.3.2">
+<h3 data-number="25.3.2" class="anchored" data-anchor-id="sec-TD_numerical_solution"><span class="header-section-number">25.3.2</span> 수치해석적 해와 음의 온도</h3>
+<p><span class="math inline">N=100</span> 에 대해 <span class="math inline">S/k_B = \ln \Omega</span> 를 그려 보면 아래 그림과 같다.</p>
 <div id="fig-TD_schroeder_3_8" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TD_schroeder_3_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/schroeder/chap3/schroeder_3_8.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_3_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;24.2: <span class="math inline">\(S/k_B - U/\mu B\)</span> 그래프. 엔트로피의 에너지 의존성을 보여준다.
+그림&nbsp;25.2: <span class="math inline">S/k_B - U/\mu B</span> 그래프. 엔트로피의 에너지 의존성을 보여준다.
 </figcaption>
 </figure>
 </div>
-<p>위의 그래프를 보자. <span class="math inline">\(U/\mu B=N_\downarrow - N_\uparrow\)</span> 이므로 <span class="math inline">\(N_\downarrow=0\)</span> 일 때, 즉 모든 스핀에 <span class="math inline">\(+z\)</span> 방향으로 정렬되어 있을 때 엔트로피-에너지 그래프는 매우 가파르다. <span class="math inline">\(U&lt;0\)</span> 일 때는 에너지가 증가할수록 기울기가 낮아지다가 <span class="math inline">\(U=0\)</span> 일 때 엔트로피가 최대가 된다. 이 때는 <span class="math inline">\(N_\downarrow=N_\uparrow=N/2\)</span> 이다. 그러나 <span class="math inline">\(U&gt;0\)</span> 일 때 <span class="math inline">\(\partial S/\partial U&lt;0\)</span> 이 되며 이 상태에서는 주변의 <span class="math inline">\((\partial S/\partial U)&gt;0\)</span> 인 물체에 에너지를 방출하게 된다.</p>
-<p>이제 온도 이야기로 넘어가보자. <a href="#eq-TD_schroeder_3_5" class="quarto-xref">식&nbsp;<span>24.3</span></a> 로부터 <span class="math inline">\(U=0\)</span> 일 때 이 시스템의 온도는 <span class="math inline">\(\infty\)</span> 이며, <span class="math inline">\(U&gt;0\)</span> 일 때 이 시스템의 온도는 통계역학적 정의에 의하면 음수이다. 그리고 음의 온도는 아무리 큰 양의 온도의 물체라도 에너지를 공급하기 때문에 양의 온도보다 더 높은 온도라고 볼 수 있다.</p>
+<p>위의 그래프를 보자. <span class="math inline">U/\mu B=N_\downarrow - N_\uparrow</span> 이므로 <span class="math inline">N_\downarrow=0</span> 일 때, 즉 모든 스핀에 <span class="math inline">+z</span> 방향으로 정렬되어 있을 때 엔트로피-에너지 그래프는 매우 가파르다. <span class="math inline">U&lt;0</span> 일 때는 에너지가 증가할수록 기울기가 낮아지다가 <span class="math inline">U=0</span> 일 때 엔트로피가 최대가 된다. 이 때는 <span class="math inline">N_\downarrow=N_\uparrow=N/2</span> 이다. 그러나 <span class="math inline">U&gt;0</span> 일 때 <span class="math inline">\partial S/\partial U&lt;0</span> 이 되며 이 상태에서는 주변의 <span class="math inline">(\partial S/\partial U)&gt;0</span> 인 물체에 에너지를 방출하게 된다.</p>
+<p>이제 온도 이야기로 넘어가보자. <a href="#eq-TD_schroeder_3_5" class="quarto-xref">식&nbsp;<span>25.3</span></a> 로부터 <span class="math inline">U=0</span> 일 때 이 시스템의 온도는 <span class="math inline">\infty</span> 이며, <span class="math inline">U&gt;0</span> 일 때 이 시스템의 온도는 통계역학적 정의에 의하면 음수이다. 그리고 음의 온도는 아무리 큰 양의 온도의 물체라도 에너지를 공급하기 때문에 양의 온도보다 더 높은 온도라고 볼 수 있다.</p>
 <div id="fig-TD_schroeder_2_9" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TD_schroeder_2_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/schroeder/chap3/schroeder_3_9.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_2_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;24.3: 온도-에너지 곡선
+그림&nbsp;25.3: 온도-에너지 곡선
 </figcaption>
 </figure>
 </div>
 <p>음의 온도는 시스템의 총 에너지가 위로 유계이며, 이로인해 에너지가 증가하면서 가능한 미시상태의 수가 에너지가 증가할수록 감소할 때 발생한다. 가장 좋은 예는 <strong>핵 상자성 (nuclear paramagnet)</strong> 이다. 이 경우 자기쌍극자는 전자의 스핀이 아니라 핵의 스핀에 의한 것이며, 핵은 아주 높은 온도가 아니라면 운동에너지가 무한히 증가할수 없으므로 외부 자기장에 의한 에너지에 한계가 있다. 또한 어떤 결에서는 핵의 쌍극자에 대한 완화시간(relaxation time) 이 격자 진동과 핵 쌍극자의 완화시간보다 매우 짧기 때문에, 이 경우 짧은 시간 스케일에서 핵의 쌍극자는 격자 진동으로부터 독립된 고립계처럼 행동한다. 앞서에서 본 것 처럼 이런 시스템에서 모든 쌍극자가 자기장과 같은 방향으로 정렬되는 상태부터 시작하여 자기장을 역전시킨다면 음의 온도를 얻게 된다. 이 실험은 1951년도에 Edward M. Purcell 과 R. V. Pound 에 의해 1951 년도에 플루오린화 리튬 결정으로 수행되었다.</p>
 </section>
-<section id="sec-TD_analytic_solution" class="level3" data-number="24.3.3">
-<h3 data-number="24.3.3" class="anchored" data-anchor-id="sec-TD_analytic_solution"><span class="header-section-number">24.3.3</span> 해석적 해</h3>
-<p>이제 <span class="math inline">\(N\)</span> 값이 매우 클 경우에 대한 해를 구해보자. <a href="#eq-TD_schroeder_3_27" class="quarto-xref">식&nbsp;<span>24.17</span></a> 로부터</p>
-<p><span id="eq-TD_schroeder_3_28"><span class="math display">\[
+<section id="sec-TD_analytic_solution" class="level3" data-number="25.3.3">
+<h3 data-number="25.3.3" class="anchored" data-anchor-id="sec-TD_analytic_solution"><span class="header-section-number">25.3.3</span> 해석적 해</h3>
+<p>이제 <span class="math inline">N</span> 값이 매우 클 경우에 대한 해를 구해보자. <a href="#eq-TD_schroeder_3_27" class="quarto-xref">식&nbsp;<span>25.17</span></a> 로부터</p>
+<p><span id="eq-TD_schroeder_3_28"><span class="math display">
 \begin{aligned}
 S/k_B &amp;= \ln N! - \ln N_\uparrow! - \ln (N-N_\uparrow)! \\[0.3em]
 &amp;\approx N \ln N - N_\uparrow \ln N_\uparrow - (N-N_\uparrow) \ln (N-N_\uparrow).
 \end{aligned}
-\tag{24.18}\]</span></span></p>
-<p><span class="math inline">\(U=\mu B(N-2N_\uparrow)\)</span>(<a href="#eq-TD_schroeder_3_25" class="quarto-xref">식&nbsp;<span>24.15</span></a>) 이므로,</p>
-<p><span id="eq-TD_schroeder_3_29"><span class="math display">\[
+\tag{25.18}</span></span></p>
+<p><span class="math inline">U=\mu B(N-2N_\uparrow)</span>(<a href="#eq-TD_schroeder_3_25" class="quarto-xref">식&nbsp;<span>25.15</span></a>) 이므로,</p>
+<p><span id="eq-TD_schroeder_3_29"><span class="math display">
 \begin{aligned}
 \dfrac{1}{T} &amp; =\left(\dfrac{\partial S}{\partial U}\right)_{N,\,B} = -\dfrac{1}{2\mu B}\left(\dfrac{\partial S}{\partial N_\uparrow}\right) = \dfrac{k_B}{2\mu B}\ln \left(\dfrac{N_\uparrow}{N-N_\uparrow}\right)
 \end{aligned}
-\tag{24.19}\]</span></span></p>
+\tag{25.19}</span></span></p>
 <p>이며</p>
-<p><span id="eq-TD_schroeder_3_30"><span class="math display">\[
+<p><span id="eq-TD_schroeder_3_30"><span class="math display">
 \dfrac{1}{T}= \dfrac{k_B}{2\mu B}\ln \left(\dfrac{N-U/\mu B}{N+U/\mu B}\right)
-\tag{24.20}\]</span></span></p>
-<p>이다. 이 식을 <span class="math inline">\(U\)</span> 에 대해 구하면</p>
-<p><span id="eq-TD_schoreder_3.31"><span class="math display">\[
+\tag{25.20}</span></span></p>
+<p>이다. 이 식을 <span class="math inline">U</span> 에 대해 구하면</p>
+<p><span id="eq-TD_schoreder_3.31"><span class="math display">
 U=\mu N B \left(\dfrac{1-e^{2\mu  B/k_BT}}{1+e^{2\mu B/k_B T}}\right) = -\mu N B \tanh \left(\dfrac{\mu B}{k_BT}\right)
-\tag{24.21}\]</span></span></p>
+\tag{25.21}</span></span></p>
 <p>이며, 따라서 자화율은</p>
-<p><span id="eq-TD_schroeder_3_32"><span class="math display">\[
+<p><span id="eq-TD_schroeder_3_32"><span class="math display">
 M = -\dfrac{U}{B} = \mu N \tanh \left(\dfrac{\mu B}{k_B T}\right).
-\tag{24.22}\]</span></span></p>
-<p>따라서 <span class="math inline">\(T\to \infty\)</span> 일 때 <span class="math inline">\(M=0\)</span> 이다. 또한 일정한 자기장에서의 비열 <span class="math inline">\(C_B\)</span> 를 구하면</p>
-<p><span id="eq-TD_schroeder_3_33"><span class="math display">\[
+\tag{25.22}</span></span></p>
+<p>따라서 <span class="math inline">T\to \infty</span> 일 때 <span class="math inline">M=0</span> 이다. 또한 일정한 자기장에서의 비열 <span class="math inline">C_B</span> 를 구하면</p>
+<p><span id="eq-TD_schroeder_3_33"><span class="math display">
 C_B = \left(\dfrac{\partial U}{\partial T}\right)_{N,\,B} = Nk_B \dfrac{(\mu B/ k_B T)^2}{\cosh^2 (\mu B/ k_B T)}
-\tag{24.23}\]</span></span></p>
-<p>이며 <span class="math inline">\(T\to \infty\)</span> 에서 <span class="math inline">\(C_B \to 0\)</span> 이다.</p>
-<p>실제로 상자성에서는 전자나 핵에 의한 자기쌍극자이다. 전자의 경우 궤도각운동량 혹은 스핀각운동량에 의한 것이며 가능한 상태의 수는 작은 자연수이다. 특정한 상황에서는 전자의 궤도각운동량값이 주위 원자에 의해 0 이 되며 이를 <strong>orbital quenching</strong> 이라고 한다. 이 경우에는 전자의 스핀각운동량만 살아남는다. <span class="math inline">\(S=1/2\)</span> 일 경우는 2개의 상태만 가능하며 이것이 우리가 지금까지 살펴온 것이다. 전자의 경우 <span class="math inline">\(\mu\)</span> 값은 <strong>보어 마그네톤 (Bohr magneton)</strong> <span class="math inline">\(\mu_B\)</span> 값을 사용한다.</p>
-<p><span id="eq-TD_schroeder_3.34"><span class="math display">\[
+\tag{25.23}</span></span></p>
+<p>이며 <span class="math inline">T\to \infty</span> 에서 <span class="math inline">C_B \to 0</span> 이다.</p>
+<p>실제로 상자성에서는 전자나 핵에 의한 자기쌍극자이다. 전자의 경우 궤도각운동량 혹은 스핀각운동량에 의한 것이며 가능한 상태의 수는 작은 자연수이다. 특정한 상황에서는 전자의 궤도각운동량값이 주위 원자에 의해 0 이 되며 이를 <strong>orbital quenching</strong> 이라고 한다. 이 경우에는 전자의 스핀각운동량만 살아남는다. <span class="math inline">S=1/2</span> 일 경우는 2개의 상태만 가능하며 이것이 우리가 지금까지 살펴온 것이다. 전자의 경우 <span class="math inline">\mu</span> 값은 <strong>보어 마그네톤 (Bohr magneton)</strong> <span class="math inline">\mu_B</span> 값을 사용한다.</p>
+<p><span id="eq-TD_schroeder_3.34"><span class="math display">
 \mu_B = \dfrac{e\hbar}{2m_e} = 9.274 \times 10^{-24}\,\text{J/T} = 5.788 \times 10^{-5}\,\text{eV/T}.
-\tag{24.24}\]</span></span></p>
-<p>자기장 <span class="math inline">\(1 T\)</span> 의 경우 <span class="math inline">\(\mu_B B \approx 5.8 10^{-5}\, \text{eV}\)</span> 이며 <span class="math inline">\(k_B (300\,\text{K}) \approx 0.025\,\text{eV}\)</span> 이므로 <span class="math inline">\(k_B T_\text{room} \gg \mu B\)</span> 이다. 이 경우 <a href="#eq-TD_schroeder_3_32" class="quarto-xref">식&nbsp;<span>24.22</span></a> 는</p>
-<p><span id="eq-TD_schroeder_3_35"><span class="math display">\[
+\tag{25.24}</span></span></p>
+<p>자기장 <span class="math inline">1 T</span> 의 경우 <span class="math inline">\mu_B B \approx 5.8 10^{-5}\, \text{eV}</span> 이며 <span class="math inline">k_B (300\,\text{K}) \approx 0.025\,\text{eV}</span> 이므로 <span class="math inline">k_B T_\text{room} \gg \mu B</span> 이다. 이 경우 <a href="#eq-TD_schroeder_3_32" class="quarto-xref">식&nbsp;<span>25.22</span></a> 는</p>
+<p><span id="eq-TD_schroeder_3_35"><span class="math display">
 M \approx \dfrac{\mu_B^2 N B}{k_BT}  \qquad (k_B T \gg \mu_B B)
-\tag{24.25}\]</span></span></p>
-<p>이다. <span class="math inline">\(M\propto 1/T\)</span> 이며 이를 <strong>퀴리 법칙 (Curie’s law)</strong> 라고 한다.</p>
+\tag{25.25}</span></span></p>
+<p>이다. <span class="math inline">M\propto 1/T</span> 이며 이를 <strong>퀴리 법칙 (Curie’s law)</strong> 라고 한다.</p>
 </section>
 <section id="연습문제-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_20" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.10 (Schroeder 3.20)</strong></span> DPPH 와 같은 이상적인 2상태 상자성 물질을 생각하자. 여기서 <span class="math inline">\(\mu = \mu_B\)</span> 이다. 2.06 T 의 자기장을 걸었고 가장 낮은 온도는 2.2 K 이다. 에너지와 자화율, 엔트로피를 구하고 가능한 최대값에 대한 비율로 표현하라. 가능한 자화의 99% 를 얻기 위해서 무엇을 해야 하는가?</p>
+<p><span class="theorem-title"><strong>연습문제 25.10 (Schroeder 3.20)</strong></span> DPPH 와 같은 이상적인 2상태 상자성 물질을 생각하자. 여기서 <span class="math inline">\mu = \mu_B</span> 이다. 2.06 T 의 자기장을 걸었고 가장 낮은 온도는 2.2 K 이다. 에너지와 자화율, 엔트로피를 구하고 가능한 최대값에 대한 비율로 표현하라. 가능한 자화의 99% 를 얻기 위해서 무엇을 해야 하는가?</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>2.06 T, 2.2 K 에서 생각한다. <span class="math inline">\(\mu_B \times 2.2\,\text{T}/(k_B \times 2.2 \,\text{K})=0.629\)</span>. <span class="math inline">\(U_\max = \mu_B NB\)</span> 이며 <span class="math inline">\(U/U_\text{Max}=-0.557\)</span>, <span class="math inline">\(M/M_\text{max}=0.557\)</span>, <span class="math inline">\(N_\uparrow=0.779 N\)</span>, <span class="math inline">\(S_\text{Max}= k_B\ln 2\)</span> 이므로 <span class="math inline">\(S/S_\text{Max}=0.762\)</span>.</p>
-<p>99% 자화를 얻기 위해서는 <span class="math inline">\(\mu_B B/k_B T\approx 2.65\)</span> 이어야 하며 자기장을 4.2배 증가시킨 8.65 T 로 올리거나 온도를 0.5 K 로 낮추어야 한다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>2.06 T, 2.2 K 에서 생각한다. <span class="math inline">\mu_B \times 2.2\,\text{T}/(k_B \times 2.2 \,\text{K})=0.629</span>. <span class="math inline">U_\max = \mu_B NB</span> 이며 <span class="math inline">U/U_\text{Max}=-0.557</span>, <span class="math inline">M/M_\text{max}=0.557</span>, <span class="math inline">N_\uparrow=0.779 N</span>, <span class="math inline">S_\text{Max}= k_B\ln 2</span> 이므로 <span class="math inline">S/S_\text{Max}=0.762</span>.</p>
+<p>99% 자화를 얻기 위해서는 <span class="math inline">\mu_B B/k_B T\approx 2.65</span> 이어야 하며 자기장을 4.2배 증가시킨 8.65 T 로 올리거나 온도를 0.5 K 로 낮추어야 한다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_23" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.11 (Schroeder 3.23)</strong></span> 2상태 상자성의 엔트로피를 온도의 함수로 표현하면 <span class="math inline">\(x=\mu B/k_BT\)</span> 에 대해</p>
-<p><span class="math display">\[
+<p><span class="theorem-title"><strong>연습문제 25.11 (Schroeder 3.23)</strong></span> 2상태 상자성의 엔트로피를 온도의 함수로 표현하면 <span class="math inline">x=\mu B/k_BT</span> 에 대해</p>
+<p><span class="math display">
 S=Nk_B \left[\ln (2 \cosh x) - x \tanh x\right]
-\]</span></p>
-<p>임을 보여라. 이 때 <span class="math inline">\(T\to 0\)</span> 과 <span class="math inline">\(T \to \infty\)</span> 를 논하라.</p>
+</span></p>
+<p>임을 보여라. 이 때 <span class="math inline">T\to 0</span> 과 <span class="math inline">T \to \infty</span> 를 논하라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-TD_schroeder_3_25" class="quarto-xref">식&nbsp;<span>24.15</span></a> 과 <a href="#eq-TD_schoreder_3.31" class="quarto-xref">식&nbsp;<span>24.21</span></a> 로부터 <span class="math inline">\(N_\uparrow = (N/2)(1+\tanh x)\)</span> 임을 안다. <a href="#eq-TD_schroeder_3_28" class="quarto-xref">식&nbsp;<span>24.18</span></a> 로부터</p>
-<p><span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#eq-TD_schroeder_3_25" class="quarto-xref">식&nbsp;<span>25.15</span></a> 과 <a href="#eq-TD_schoreder_3.31" class="quarto-xref">식&nbsp;<span>25.21</span></a> 로부터 <span class="math inline">N_\uparrow = (N/2)(1+\tanh x)</span> 임을 안다. <a href="#eq-TD_schroeder_3_28" class="quarto-xref">식&nbsp;<span>25.18</span></a> 로부터</p>
+<p><span class="math display">
 \begin{aligned}
 S/k_B &amp;= N \ln N - \dfrac{N}{2}(1+\tanh x)  \ln  \dfrac{N}{2}(1+\tanh x)  \\[0.3em]
 &amp;\qquad - \dfrac{N}{2} (1- \tanh x)\ln  \dfrac{N}{2}(1-\tanh x) \\[0.3em]
 &amp;= \underbrace{N \ln N - N\ln N/2}_{\Large = N \ln 2} - \dfrac{N}{2} \ln \underbrace{(1+\tanh x)(1-\tanh x)}_{=\Large 1/\cosh^2 x}- \dfrac{N\tanh x}{2}\ln \underbrace{\dfrac{1+\tanh x}{1-\tanh x}}_{\Large = e^{2x}} \\[0.3em]
 &amp;= N \ln 2 + N \ln \cosh x - N x\tanh x = N[\ln 2 \cosh x - x\tanh x].
 \end{aligned}
-\]</span></p>
-<p><strong>1.</strong> <span class="math inline">\(T\to 0\)</span> 극한은 <span class="math inline">\(x\to +\infty\)</span> 극한이며 <span class="math inline">\((2\cosh x) \to x\)</span>, <span class="math inline">\(\tanh x \to 1\)</span> 이므로</p>
-<p><span class="math display">\[
+</span></p>
+<p><strong>1.</strong> <span class="math inline">T\to 0</span> 극한은 <span class="math inline">x\to +\infty</span> 극한이며 <span class="math inline">(2\cosh x) \to x</span>, <span class="math inline">\tanh x \to 1</span> 이므로</p>
+<p><span class="math display">
 \lim_{x\to \infty} \dfrac{S}{k_B} = 0.
-\]</span></p>
-<p><strong>2.</strong> <span class="math inline">\(T \to \infty\)</span> 극한은 <span class="math inline">\(x\to 0\)</span> 극한이며 <span class="math inline">\((2 \cos x) \to 2\)</span> <span class="math inline">\(\tanh x \to 0\)</span> 이므로</p>
-<p><span class="math display">\[
+</span></p>
+<p><strong>2.</strong> <span class="math inline">T \to \infty</span> 극한은 <span class="math inline">x\to 0</span> 극한이며 <span class="math inline">(2 \cos x) \to 2</span> <span class="math inline">\tanh x \to 0</span> 이므로</p>
+<p><span class="math display">
 \lim_{x\to 0} \dfrac{S}{k_B} = N \ln 2.
-\]</span></p>
+</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_25" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.12 (Schroeder 3.25)</strong></span> <a href="03_introduction_to_statistical_mechanics.html#exr-TD_schroeder_2_18" class="quarto-xref">연습문제&nbsp;<span>23.2</span></a> 에서 <span class="math inline">\(N\)</span> 개의 진동자로 이루어진 아인슈타인 고체가 <span class="math inline">\(q\)</span> 단위의 에너지를 가질 때</p>
-<p><span class="math display">\[
+<p><span class="theorem-title"><strong>연습문제 25.12 (Schroeder 3.25)</strong></span> <a href="03_introduction_to_statistical_mechanics.html#exr-TD_schroeder_2_18" class="quarto-xref">연습문제&nbsp;<span>24.2</span></a> 에서 <span class="math inline">N</span> 개의 진동자로 이루어진 아인슈타인 고체가 <span class="math inline">q</span> 단위의 에너지를 가질 때</p>
+<p><span class="math display">
 \Omega (N,\,q) \approx \left(\dfrac{q+N}{q}\right)^q \left(\dfrac{q+N}{N}\right)^N
-\]</span></p>
+</span></p>
 <p>임을 보였다.</p>
-<p>(<span class="math inline">\(a\)</span>) 위 식으로 부터 시작하여 아인슈타인 고체의 엔트로피를 <span class="math inline">\(N\)</span> 과 <span class="math inline">\(q\)</span> 의 함수로 구하라 위 식에서 빠진 백터가 <span class="math inline">\(N\)</span> 과 <span class="math inline">\(q\)</span> 가 클 때 엔트로피에 영향을 주지 않는 이유를 논하라</p>
-<p>(<span class="math inline">\(b\)</span>) (<span class="math inline">\(a\)</span>) 의 결과를 이용하여 아인슈타인 고체의 온도를 에너지의 함수로 구하라. <span class="math inline">\(U=(q+1/2)\hbar \omega\)</span> 이다.</p>
-<p>(<span class="math inline">\(c\)</span>) (<span class="math inline">\(b\)</span>) 를 이용하여 에너지를 온도의 함수로 나타내라.</p>
-<p>(<span class="math inline">\(d\)</span>) <span class="math inline">\(T\to \infty\)</span> 극한에서 <span class="math inline">\(C=Nk_B\)</span> 임을 보여라. 이 결과는 우리가 기대할 만한 것인지 설명하라.</p>
-<p>(<span class="math inline">\(e\)</span>) (<span class="math inline">\(f\)</span>) 는 생략.</p>
+<p>(<span class="math inline">a</span>) 위 식으로 부터 시작하여 아인슈타인 고체의 엔트로피를 <span class="math inline">N</span> 과 <span class="math inline">q</span> 의 함수로 구하라 위 식에서 빠진 백터가 <span class="math inline">N</span> 과 <span class="math inline">q</span> 가 클 때 엔트로피에 영향을 주지 않는 이유를 논하라</p>
+<p>(<span class="math inline">b</span>) (<span class="math inline">a</span>) 의 결과를 이용하여 아인슈타인 고체의 온도를 에너지의 함수로 구하라. <span class="math inline">U=(q+1/2)\hbar \omega</span> 이다.</p>
+<p>(<span class="math inline">c</span>) (<span class="math inline">b</span>) 를 이용하여 에너지를 온도의 함수로 나타내라.</p>
+<p>(<span class="math inline">d</span>) <span class="math inline">T\to \infty</span> 극한에서 <span class="math inline">C=Nk_B</span> 임을 보여라. 이 결과는 우리가 기대할 만한 것인지 설명하라.</p>
+<p>(<span class="math inline">e</span>) (<span class="math inline">f</span>) 는 생략.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) 스털링 근사를 사용하면</p>
-<p><span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">a</span>) 스털링 근사를 사용하면</p>
+<p><span class="math display">
 \begin{aligned}
 S = k_B \ln \Omega &amp;= q\ln (q+N) - q\ln q + N \ln (q+N) - N \ln N \\[0.3em]
 &amp;= (N+q)\ln (N+q) - q\ln q - N \ln N
 \end{aligned}
-\]</span></p>
-<p>이다. <a href="03_introduction_to_statistical_mechanics.html#eq-TD_exr_schroeder_2_18" class="quarto-xref">식&nbsp;<span>23.13</span></a> 에서 분모부분을 엔트로피로 바꾸면 <span class="math inline">\(\dfrac{1}{2}\ln q(q+N)/N\)</span> 인데 <span class="math inline">\(q,\,N\)</span> 이 모두 크다면 나머지 항에 비해 매우 작기때문에 무시 할 수 있다.</p>
-<p>(<span class="math inline">\(b\)</span>)</p>
-<p><span class="math display">\[
+</span></p>
+<p>이다. <a href="03_introduction_to_statistical_mechanics.html#eq-TD_exr_schroeder_2_18" class="quarto-xref">식&nbsp;<span>24.13</span></a> 에서 분모부분을 엔트로피로 바꾸면 <span class="math inline">\dfrac{1}{2}\ln q(q+N)/N</span> 인데 <span class="math inline">q,\,N</span> 이 모두 크다면 나머지 항에 비해 매우 작기때문에 무시 할 수 있다.</p>
+<p>(<span class="math inline">b</span>)</p>
+<p><span class="math display">
 \begin{aligned}
 \dfrac{1}{T} &amp;= \left(\dfrac{\partial S}{\partial U}\right)_{N} = \dfrac{1}{\hbar \omega}\left(\dfrac{\partial S}{\partial q}\right)_N \\[0.3em]
 &amp;= \dfrac{k_B}{\hbar \omega}\left[\ln (N+q) + 1 - \ln q -1\right] = \dfrac{k_B}{\hbar \omega}\ln \dfrac{N+q}{q} \\[0.3em]
 &amp;=  \dfrac{k_B}{\hbar \omega}\ln \left(\dfrac{\hbar \omega N+ U }{U}\right)
 \end{aligned}
-\]</span></p>
-<p>(<span class="math inline">\(c\)</span>) (<span class="math inline">\(b\)</span>) 로 부터 <span class="math inline">\(e^{\hbar \omega/k_B T} = \dfrac{\hbar \omega N + U }{U}\)</span> 이므로</p>
-<p><span class="math display">\[
+</span></p>
+<p>(<span class="math inline">c</span>) (<span class="math inline">b</span>) 로 부터 <span class="math inline">e^{\hbar \omega/k_B T} = \dfrac{\hbar \omega N + U }{U}</span> 이므로</p>
+<p><span class="math display">
 U = \dfrac{\hbar \omega N}{e^{\hbar \omega /k_BT} -1}.
-\]</span></p>
-<p>(<span class="math inline">\(d\)</span>) <span class="math inline">\(\displaystyle C = \left(\dfrac{\partial U}{\partial T}\right)_N = - \dfrac{(\hbar \omega)^2}{k_B T^2}\dfrac{Ne^{\hbar \omega/k_B T}}{\left(e^{\hbar \omega/k_B T}-1\right)^2}\)</span></p>
-<p>이며 <span class="math inline">\(T \to \infty\)</span> 조건에서 <span class="math inline">\(C \to Nk_B\)</span> 이다.</p>
+</span></p>
+<p>(<span class="math inline">d</span>) <span class="math inline">\displaystyle C = \left(\dfrac{\partial U}{\partial T}\right)_N = - \dfrac{(\hbar \omega)^2}{k_B T^2}\dfrac{Ne^{\hbar \omega/k_B T}}{\left(e^{\hbar \omega/k_B T}-1\right)^2}</span></p>
+<p>이며 <span class="math inline">T \to \infty</span> 조건에서 <span class="math inline">C \to Nk_B</span> 이다.</p>
 </div>
 </section>
 </section>
-<section id="sec-TD_mechanica_equillibrium_and_pressure" class="level2" data-number="24.4">
-<h2 data-number="24.4" class="anchored" data-anchor-id="sec-TD_mechanica_equillibrium_and_pressure"><span class="header-section-number">24.4</span> 역학적 평형과 압력</h2>
-<section id="sec-TD_definition_of_pressure_in_statistical_mechanics" class="level3" data-number="24.4.1">
-<h3 data-number="24.4.1" class="anchored" data-anchor-id="sec-TD_definition_of_pressure_in_statistical_mechanics"><span class="header-section-number">24.4.1</span> 통계역학적 압력</h3>
+<section id="sec-TD_mechanica_equillibrium_and_pressure" class="level2" data-number="25.4">
+<h2 data-number="25.4" class="anchored" data-anchor-id="sec-TD_mechanica_equillibrium_and_pressure"><span class="header-section-number">25.4</span> 역학적 평형과 압력</h2>
+<section id="sec-TD_definition_of_pressure_in_statistical_mechanics" class="level3" data-number="25.4.1">
+<h3 data-number="25.4.1" class="anchored" data-anchor-id="sec-TD_definition_of_pressure_in_statistical_mechanics"><span class="header-section-number">25.4.1</span> 통계역학적 압력</h3>
 <div id="fig-TD_schroeder_3_13" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TD_schroeder_3_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/schroeder/chap3/schroeder_3_13.png" class="img-fluid figure-img" width="350">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_3_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;24.4: 서로 에너지와 부피를 교환 할 수 있는 두 시스템. 전체 에너지와 부피는 고정이다.
+그림&nbsp;25.4: 서로 에너지와 부피를 교환 할 수 있는 두 시스템. 전체 에너지와 부피는 고정이다.
 </figcaption>
 </figure>
 </div>
-<p>앞서 온도를 정의할 땐 계의 부피를 고정시키고 온도를 정했다. 이제 부피가 변할 수 있는 상태에서 생각해보자. <a href="#fig-TD_schroeder_3_13" class="quarto-xref">그림&nbsp;<span>24.4</span></a> 와 같이 움직이는 파티션으로 분할된, 에너지와 부피를 서로 교환하지만 전체 에너지와 전체 부피는 고정된 두 시스템 <span class="math inline">\(A,\,B\)</span> 를 생각하자. 평행 조건에서 전체 엔트로피가 최대가 되므로</p>
-<p><span id="eq-TD_schroeder_3_36"><span class="math display">\[
+<p>앞서 온도를 정의할 땐 계의 부피를 고정시키고 온도를 정했다. 이제 부피가 변할 수 있는 상태에서 생각해보자. <a href="#fig-TD_schroeder_3_13" class="quarto-xref">그림&nbsp;<span>25.4</span></a> 와 같이 움직이는 파티션으로 분할된, 에너지와 부피를 서로 교환하지만 전체 에너지와 전체 부피는 고정된 두 시스템 <span class="math inline">A,\,B</span> 를 생각하자. 평행 조건에서 전체 엔트로피가 최대가 되므로</p>
+<p><span id="eq-TD_schroeder_3_36"><span class="math display">
 \dfrac{\partial S_\text{total}}{\partial U_A} =0,\qquad \dfrac{\partial S_\text{total}}{\partial V_A} = 0
-\tag{24.26}\]</span></span></p>
-<p>이어야 한다. <span class="math inline">\(U_\text{total} = U_A+U_B\)</span>, <span class="math inline">\(V_\text{total}=V_A+V_B\)</span> 는 변하지 않기 때문에</p>
-<p><span id="eq-TD_schoeder_3_37"><span class="math display">\[
+\tag{25.26}</span></span></p>
+<p>이어야 한다. <span class="math inline">U_\text{total} = U_A+U_B</span>, <span class="math inline">V_\text{total}=V_A+V_B</span> 는 변하지 않기 때문에</p>
+<p><span id="eq-TD_schoeder_3_37"><span class="math display">
 0 = \dfrac{\partial S_\text{total}}{\partial V_A} = \dfrac{\partial S_A}{\partial U_A}+\dfrac{\partial S_B}{\partial U_A} = \dfrac{\partial S_A}{\partial U_A} - \dfrac{\partial S_B}{\partial U_B}
-\tag{24.27}\]</span></span></p>
+\tag{25.27}</span></span></p>
 <p>이므로</p>
-<p><span id="eq-TD_schroedeR_3_38"><span class="math display">\[
+<p><span id="eq-TD_schroedeR_3_38"><span class="math display">
 \dfrac{\partial S_A}{\partial V_A} = \dfrac{\partial S_B}{\partial V_B}, \qquad \text{at equillibrium}.
-\tag{24.28}\]</span></span></p>
-<p>우리는 경험적으로 역학적 평형에서는 압력이 같아야 한다는 것을 알며, <a href="#eq-TD_schroedeR_3_38" class="quarto-xref">식&nbsp;<span>24.28</span></a> 의 편미분은 아마도 압력과 밀접한 관련이 있을 것이다. 엔트로피의 단위는 <span class="math inline">\(\text{J/K}\)</span> 이므로 <span class="math inline">\(\partial S/\partial V\)</span> 의 단위는 <span class="math inline">\([\text{N}\cdot \text{m}^2\text{/K}]\)</span> 이다. 온도 단위의 무언가를 곱하면 압력의 단위인 <span class="math inline">\([\text{N}/\text{m}^2]\)</span> 가 된다. 우리는 평형상테에서 온도가 같다는 것을 알기 때문에 그냥 온도를 곱하면, 평형 상태에서 <span class="math inline">\(T(\partial S_A/\partial V_A) = T(\partial S_B/\partial V_B)\)</span> 역시 성립한다는 것을 안다. 이로부터 통계역학적 압력을 다음과 같이 정의한다.</p>
+\tag{25.28}</span></span></p>
+<p>우리는 경험적으로 역학적 평형에서는 압력이 같아야 한다는 것을 알며, <a href="#eq-TD_schroedeR_3_38" class="quarto-xref">식&nbsp;<span>25.28</span></a> 의 편미분은 아마도 압력과 밀접한 관련이 있을 것이다. 엔트로피의 단위는 <span class="math inline">\text{J/K}</span> 이므로 <span class="math inline">\partial S/\partial V</span> 의 단위는 <span class="math inline">[\text{N}\cdot \text{m}^2\text{/K}]</span> 이다. 온도 단위의 무언가를 곱하면 압력의 단위인 <span class="math inline">[\text{N}/\text{m}^2]</span> 가 된다. 우리는 평형상테에서 온도가 같다는 것을 알기 때문에 그냥 온도를 곱하면, 평형 상태에서 <span class="math inline">T(\partial S_A/\partial V_A) = T(\partial S_B/\partial V_B)</span> 역시 성립한다는 것을 안다. 이로부터 통계역학적 압력을 다음과 같이 정의한다.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1050,66 +1069,66 @@ U = \dfrac{\hbar \omega N}{e^{\hbar \omega /k_BT} -1}.
 </div>
 <div class="callout-body-container callout-body">
 <p>압력은 다음과 같이 정의된다.</p>
-<p><span id="eq-TD_schroeder_3_39"><span class="math display">\[
+<p><span id="eq-TD_schroeder_3_39"><span class="math display">
 \boxed{ p := T \left(\dfrac{\partial S}{\partial V}\right)_{U,\,N}.}
-\tag{24.29}\]</span></span></p>
+\tag{25.29}</span></span></p>
 </div>
 </div>
-<p>이상기체의 경우 이 정의가 이전까지의 정의와 일치하는지 알아보자. 우리는 이상기체의 경우 <a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_41" class="quarto-xref">식&nbsp;<span>23.17</span></a> 로부터</p>
-<p><span id="eq-TD_schroeder_3_41"><span class="math display">\[
+<p>이상기체의 경우 이 정의가 이전까지의 정의와 일치하는지 알아보자. 우리는 이상기체의 경우 <a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_41" class="quarto-xref">식&nbsp;<span>24.17</span></a> 로부터</p>
+<p><span id="eq-TD_schroeder_3_41"><span class="math display">
 S_\text{ideal gas}= Nk_B \ln V + \dfrac{3}{2}Nk_B \ln U + k_B \ln \phi (N)
-\tag{24.30}\]</span></span></p>
-<p>이며 <a href="#eq-TD_schroeder_3_39" class="quarto-xref">식&nbsp;<span>24.29</span></a> 로부터</p>
-<p><span id="eq-TD_schroeder_3_42"><span class="math display">\[
+\tag{25.30}</span></span></p>
+<p>이며 <a href="#eq-TD_schroeder_3_39" class="quarto-xref">식&nbsp;<span>25.29</span></a> 로부터</p>
+<p><span id="eq-TD_schroeder_3_42"><span class="math display">
 p = T \dfrac{\partial S_\text{ideal gas}}{\partial V} = \dfrac{Nk_B T}{V}
-\tag{24.31}\]</span></span></p>
+\tag{25.31}</span></span></p>
 <p>이다. 즉 우리는 이상기체 상태방정식을 얻었다.</p>
 </section>
-<section id="sec-TD_thermodynamic_identity" class="level3" data-number="24.4.2">
-<h3 data-number="24.4.2" class="anchored" data-anchor-id="sec-TD_thermodynamic_identity"><span class="header-section-number">24.4.2</span> 열역학적 항등식</h3>
-<p>온도와 압력에 대한 통계역학적 정의를 아우르는 멋진 방정식을 유도해보자. 우선 에너지와 부피가 <span class="math inline">\(\Delta U\)</span>, <span class="math inline">\(\Delta V\)</span> 만큼 아주 작게 변화하는 과정을 생각하자. 그렇다면 엔트로피는 얼마나 변하는가? 이를 위해 부피가 일정하게 유지되면서 에너지만 변하는 1 단계와 에너지가 일정하게 유지되면서 부피만 변하는 2단계로 분리한다. 그렇다면 엔트로피의 총 변화 <span class="math inline">\(\Delta S\)</span> 는 1단계의 엔트로피 변화 <span class="math inline">\((\Delta S)_1\)</span> 과 2단계에서의 엔트로피 변화 <span class="math inline">\((\Delta S)_2\)</span> 의 합이며 다음과 같이 쓸 수 있다.</p>
-<p><span class="math display">\[
+<section id="sec-TD_thermodynamic_identity" class="level3" data-number="25.4.2">
+<h3 data-number="25.4.2" class="anchored" data-anchor-id="sec-TD_thermodynamic_identity"><span class="header-section-number">25.4.2</span> 열역학적 항등식</h3>
+<p>온도와 압력에 대한 통계역학적 정의를 아우르는 멋진 방정식을 유도해보자. 우선 에너지와 부피가 <span class="math inline">\Delta U</span>, <span class="math inline">\Delta V</span> 만큼 아주 작게 변화하는 과정을 생각하자. 그렇다면 엔트로피는 얼마나 변하는가? 이를 위해 부피가 일정하게 유지되면서 에너지만 변하는 1 단계와 에너지가 일정하게 유지되면서 부피만 변하는 2단계로 분리한다. 그렇다면 엔트로피의 총 변화 <span class="math inline">\Delta S</span> 는 1단계의 엔트로피 변화 <span class="math inline">(\Delta S)_1</span> 과 2단계에서의 엔트로피 변화 <span class="math inline">(\Delta S)_2</span> 의 합이며 다음과 같이 쓸 수 있다.</p>
+<p><span class="math display">
 \Delta S = \left(\dfrac{\Delta S}{\Delta U}\right)_V\Delta U + \left(\dfrac{\Delta S}{\Delta V}\right)_2 \Delta V.
-\]</span></p>
-<p>위 식은 <span class="math inline">\(\Delta U,\,\Delta V\)</span> 가 매우 작을 때 온도와 압력의 통계역학적 정의롤 통해 다음과 같이 쓸 수 있다.</p>
-<p><span id="eq-TD_schroeder_3_45"><span class="math display">\[
+</span></p>
+<p>위 식은 <span class="math inline">\Delta U,\,\Delta V</span> 가 매우 작을 때 온도와 압력의 통계역학적 정의롤 통해 다음과 같이 쓸 수 있다.</p>
+<p><span id="eq-TD_schroeder_3_45"><span class="math display">
 dS = \left(\dfrac{\partial S}{\partial U}\right)_V dU + \left(\dfrac{\partial S}{\partial V}\right)_U dV = \dfrac{1}{T}\,dU + \dfrac{p}{T}\,dV.
-\tag{24.32}\]</span></span></p>
+\tag{25.32}</span></span></p>
 <p>이 식을 변형하여 다음과 같은 항등식을 얻을 수 있는데 이를 <strong>열역학적 항등식 (thermodynamic identity)</strong> 라고 한다.</p>
-<p><span id="eq-TD_schroeder_3_46"><span class="math display">\[
+<p><span id="eq-TD_schroeder_3_46"><span class="math display">
 \boxed{dU = T\,dS - p\,dV.}
-\tag{24.33}\]</span></span></p>
-<p>이 식은 <span class="math inline">\(T\)</span> 와 <span class="math inline">\(p\)</span> 가 잘 정의되며 다른 관계된 변수들, 예를 들면 입자의 개수 같은 것들이 변화하지 않을 때 항상 성립한다.</p>
+\tag{25.33}</span></span></p>
+<p>이 식은 <span class="math inline">T</span> 와 <span class="math inline">p</span> 가 잘 정의되며 다른 관계된 변수들, 예를 들면 입자의 개수 같은 것들이 변화하지 않을 때 항상 성립한다.</p>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-TD_examples_of_thermodynamic_identity" class="theorem example">
-<p><span class="theorem-title"><strong>예제 24.3 (열역학적 항등식의 활용)</strong></span> <a href="#eq-TD_schroeder_3_46" class="quarto-xref">식&nbsp;<span>24.33</span></a> 로 부터 다음과 같은 관계를 얻을 수 있다.</p>
-<p><span id="eq-TD_exms_thermodynamic_identity_1"><span class="math display">\[
+<p><span class="theorem-title"><strong>예제 25.3 (열역학적 항등식의 활용)</strong></span> <a href="#eq-TD_schroeder_3_46" class="quarto-xref">식&nbsp;<span>25.33</span></a> 로 부터 다음과 같은 관계를 얻을 수 있다.</p>
+<p><span id="eq-TD_exms_thermodynamic_identity_1"><span class="math display">
 T=\left(\dfrac{\partial U}{\partial S}\right)_V,\qquad p = - \left(\dfrac{\partial U}{\partial V}\right)_S.
-\tag{24.34}\]</span></span></p>
-<p>온도에 대한 식은 온도에 대한 정의 <a href="#eq-TD_schroeder_3_5" class="quarto-xref">식&nbsp;<span>24.3</span></a> 로부터 쉽게 납득 가능하다. 그러나 압력은 <a href="#eq-TD_schroeder_3_39" class="quarto-xref">식&nbsp;<span>24.29</span></a> 와 비교했을 때 사뭇 다르지만 위 식 역시 등엔트로피 과정, 즉 단열과정(+가역과정) 에서 <span class="math inline">\(dU = -pdV\)</span> 이므로 위 식이 성립한다는 것을 알 수 있다.</p>
+\tag{25.34}</span></span></p>
+<p>온도에 대한 식은 온도에 대한 정의 <a href="#eq-TD_schroeder_3_5" class="quarto-xref">식&nbsp;<span>25.3</span></a> 로부터 쉽게 납득 가능하다. 그러나 압력은 <a href="#eq-TD_schroeder_3_39" class="quarto-xref">식&nbsp;<span>25.29</span></a> 와 비교했을 때 사뭇 다르지만 위 식 역시 등엔트로피 과정, 즉 단열과정(+가역과정) 에서 <span class="math inline">dU = -pdV</span> 이므로 위 식이 성립한다는 것을 알 수 있다.</p>
 </div>
 </div>
 </section>
-<section id="sec-TD_entropy_and_heat_revisited" class="level3" data-number="24.4.3">
-<h3 data-number="24.4.3" class="anchored" data-anchor-id="sec-TD_entropy_and_heat_revisited"><span class="header-section-number">24.4.3</span> 엔트로피와 열을 다시 보기</h3>
+<section id="sec-TD_entropy_and_heat_revisited" class="level3" data-number="25.4.3">
+<h3 data-number="25.4.3" class="anchored" data-anchor-id="sec-TD_entropy_and_heat_revisited"><span class="header-section-number">25.4.3</span> 엔트로피와 열을 다시 보기</h3>
 <section id="열역학적-항등식과-열역학-제-1-법칙" class="level4">
 <h4 class="anchored" data-anchor-id="열역학적-항등식과-열역학-제-1-법칙"><strong>열역학적 항등식과 열역학 제 1 법칙</strong></h4>
-<p>열역학적 항등식(<a href="#eq-TD_schroeder_3_46" class="quarto-xref">식&nbsp;<span>24.33</span></a>) 과 열역학 제 1 법칙</p>
-<p><span id="eq-TD_schroeder_3_47"><span class="math display">\[
+<p>열역학적 항등식(<a href="#eq-TD_schroeder_3_46" class="quarto-xref">식&nbsp;<span>25.33</span></a>) 과 열역학 제 1 법칙</p>
+<p><span id="eq-TD_schroeder_3_47"><span class="math display">
 dU = Q+W
-\tag{24.35}\]</span></span></p>
-<p>매우 닮았기 때문에 <span class="math inline">\(Q=T\,dS\)</span>, <span class="math inline">\(W=-p\,dV\)</span> 로 연결된다고 생각할 수 있다. 그러나 이 관계는 항상 타당한 것은 아니다. 이것이 타당한 경우는 아래의 세가지 조건이 충족된 경우이다.</p>
+\tag{25.35}</span></span></p>
+<p>매우 닮았기 때문에 <span class="math inline">Q=T\,dS</span>, <span class="math inline">W=-p\,dV</span> 로 연결된다고 생각할 수 있다. 그러나 이 관계는 항상 타당한 것은 아니다. 이것이 타당한 경우는 아래의 세가지 조건이 충족된 경우이다.</p>
 <ol type="1">
 <li>부피가 준정적으로(quasistatically) 변화할 때, 즉 압력이 시스템 전체로 항상 균일할 때,</li>
 <li>부피의 변화 이외에 시스템이 하거나 받는 일이 없을 때,</li>
 <li>입자의 수 같은 다른 관련된 변수가 고정되었을 때.</li>
 </ol>
-<p>그렇다면 <span class="math inline">\(W=-p\,dV\)</span> 이며 따라서 <a href="#eq-TD_schroeder_3_46" class="quarto-xref">식&nbsp;<span>24.33</span></a> 로부터</p>
-<p><span id="eq-TD_schroeder_3_48"><span class="math display">\[
+<p>그렇다면 <span class="math inline">W=-p\,dV</span> 이며 따라서 <a href="#eq-TD_schroeder_3_46" class="quarto-xref">식&nbsp;<span>25.33</span></a> 로부터</p>
+<p><span id="eq-TD_schroeder_3_48"><span class="math display">
 Q=T\,dS \qquad (\text{quasistatic}).
-\tag{24.36}\]</span></span></p>
-<p>임을 알게 된다. 위의 제한된 조건 하에서 시스템의 엔트로피 변화는 <span class="math inline">\(Q/T\)</span> 이며 이는 과정 가운데 <span class="math inline">\(W\ne 0\)</span> 일 때도 마찬가지이다. 엔트로피가 변하지 않는 과정을 <strong>등엔트로피 과정 (isentropic process)</strong> 라고 하는데 <strong>등엔트로피 과정은 단열과정이며 동시에 준정적 과정임을 의미한다</strong>.</p>
+\tag{25.36}</span></span></p>
+<p>임을 알게 된다. 위의 제한된 조건 하에서 시스템의 엔트로피 변화는 <span class="math inline">Q/T</span> 이며 이는 과정 가운데 <span class="math inline">W\ne 0</span> 일 때도 마찬가지이다. 엔트로피가 변하지 않는 과정을 <strong>등엔트로피 과정 (isentropic process)</strong> 라고 하는데 <strong>등엔트로피 과정은 단열과정이며 동시에 준정적 과정임을 의미한다</strong>.</p>
 </section>
 <section id="준정적-과정이-아닌-과정" class="level4">
 <h4 class="anchored" data-anchor-id="준정적-과정이-아닌-과정"><strong>준정적 과정이 아닌 과정</strong></h4>
@@ -1119,29 +1138,29 @@ Q=T\,dS \qquad (\text{quasistatic}).
 <img src="figures/schroeder/chap3/schroeder_3_16.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_3_16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;24.5: 준정적 과정이 아닌 부피 변화 : 고속 압축과 자유 팽창
+그림&nbsp;25.5: 준정적 과정이 아닌 부피 변화 : 고속 압축과 자유 팽창
 </figcaption>
 </figure>
 </div>
 <p>우리에게 친숙한 많은 과정이 근사적으로 준정적이지만 중요한 반대사항을 기억해야 한다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-TD_examples_non_quasistatic_process_1" class="theorem example">
-<p><span class="theorem-title"><strong>예제 24.4 (고속 압축)</strong></span> <a href="#fig-TD_schroeder_3_16" class="quarto-xref">그림&nbsp;<span>24.5</span></a> 의 왼쪽의 경우와 같이 기체로 가득찬 실린더의 피스톤을 매우 강하게 쳐서 피스톤이 내부의 기체 분자보다 훨씬 빠르게 움직인다고 생각하자. 그렇다면 피스톤 내부 표면 바로 앞에 기체 분자들이 밀집하게 되며 피스톤을 밀어내는 강한 힘이 작용한다. 피스톤이 매우 짧은 거리만 움직이고 멈췄다고 하자. 모든 것이 정착한 뒤에는 압력이 매우 조금 증가할 것이다.</p>
-<p>여기서 준정적으로 피스톤을 밀었을 때와 수행한 일을 비교해보자. 피스톤을 빠르게 밀었을 경우 피스톤 표면에 국소적으로 형성되는 압력을 <span class="math inline">\(p_\text{face}\)</span> 이라고 하고 준정적 과정에서의 압력을 <span class="math inline">\(p_\text{quasi}\)</span> 라고 하자. <span class="math inline">\(p_{\text{face}} &gt; p_{\text{quasi}}\)</span> 이며</p>
-<p><span class="math display">\[
+<p><span class="theorem-title"><strong>예제 25.4 (고속 압축)</strong></span> <a href="#fig-TD_schroeder_3_16" class="quarto-xref">그림&nbsp;<span>25.5</span></a> 의 왼쪽의 경우와 같이 기체로 가득찬 실린더의 피스톤을 매우 강하게 쳐서 피스톤이 내부의 기체 분자보다 훨씬 빠르게 움직인다고 생각하자. 그렇다면 피스톤 내부 표면 바로 앞에 기체 분자들이 밀집하게 되며 피스톤을 밀어내는 강한 힘이 작용한다. 피스톤이 매우 짧은 거리만 움직이고 멈췄다고 하자. 모든 것이 정착한 뒤에는 압력이 매우 조금 증가할 것이다.</p>
+<p>여기서 준정적으로 피스톤을 밀었을 때와 수행한 일을 비교해보자. 피스톤을 빠르게 밀었을 경우 피스톤 표면에 국소적으로 형성되는 압력을 <span class="math inline">p_\text{face}</span> 이라고 하고 준정적 과정에서의 압력을 <span class="math inline">p_\text{quasi}</span> 라고 하자. <span class="math inline">p_{\text{face}} &gt; p_{\text{quasi}}</span> 이며</p>
+<p><span class="math display">
 p_{\text{face}} &gt; p_{\text{quasi}} \quad\Rightarrow\quad W = \int p_{\text{face}}\,|dV| &gt; p_{\text{quasi}}|dV| = -p_\text{quasi}\,dV
-\]</span></p>
-<p>열역학 항등식 <span class="math inline">\(dU = T\,dS - p\,dV\)</span> 는 상태함수들 사이의 관계라 항상 성립하며 열역학 제1법칙 <span class="math inline">\(dU = Q + W\)</span> 도 항상 성립한다. 이 둘을 빼면 <span class="math inline">\(T\,dS - Q = W + p\,dV &gt; 0\)</span> 이며, 따라서</p>
-<p><span id="eq-TD_schroeder_3_51"><span class="math display">\[
+</span></p>
+<p>열역학 항등식 <span class="math inline">dU = T\,dS - p\,dV</span> 는 상태함수들 사이의 관계라 항상 성립하며 열역학 제1법칙 <span class="math inline">dU = Q + W</span> 도 항상 성립한다. 이 둘을 빼면 <span class="math inline">T\,dS - Q = W + p\,dV &gt; 0</span> 이며, 따라서</p>
+<p><span id="eq-TD_schroeder_3_51"><span class="math display">
 dS &gt; \dfrac{Q}{T} \qquad (\text{when }W&gt;-p\,dV).
-\tag{24.37}\]</span></span></p>
-<p>즉 일이 <span class="math inline">\(-p\,dV\)</span> 를 초과한 만큼 엔트로피가 열로 설명되는 양 <span class="math inline">\(Q/T\)</span> 보다 더 늘어난다. 물리적으로는 피스톤 면에 몰린 층이 받은 여분의 에너지가 처음엔 압축파/음파 같은 조직된 운동이었다가 곧 열운동으로 흩어진다는 의미이다. 즉 시스템 내부에서 일이 열로 산일되는(dissipation) 과정이고, 이게 <span class="math inline">\(Q\)</span> 없이 엔트로피가 생기는 메커니즘이다. 단열 조건(<span class="math inline">\(Q=0\)</span>)이면 준정적일 땐 <span class="math inline">\(dS=0\)</span> 인데 빠르게 밀면 <span class="math inline">\(dS&gt;0\)</span> 이 되는 이유가 바로 이것이다.</p>
+\tag{25.37}</span></span></p>
+<p>즉 일이 <span class="math inline">-p\,dV</span> 를 초과한 만큼 엔트로피가 열로 설명되는 양 <span class="math inline">Q/T</span> 보다 더 늘어난다. 물리적으로는 피스톤 면에 몰린 층이 받은 여분의 에너지가 처음엔 압축파/음파 같은 조직된 운동이었다가 곧 열운동으로 흩어진다는 의미이다. 즉 시스템 내부에서 일이 열로 산일되는(dissipation) 과정이고, 이게 <span class="math inline">Q</span> 없이 엔트로피가 생기는 메커니즘이다. 단열 조건(<span class="math inline">Q=0</span>)이면 준정적일 땐 <span class="math inline">dS=0</span> 인데 빠르게 밀면 <span class="math inline">dS&gt;0</span> 이 되는 이유가 바로 이것이다.</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-TD_examples_non_quasistatic_process_2" class="theorem example">
-<p><span class="theorem-title"><strong>예제 24.5 (진공으로의 자유팽창)</strong></span> <a href="#fig-TD_schroeder_3_16" class="quarto-xref">그림&nbsp;<span>24.5</span></a> 의 오른쪽 경우와 같이 두 부분으로 분할된 방 한쪽은 기체로, 한쪽은 진공이라고 하자. 그리고 둘을 분리시키는 분리판에 균열이 생겨 기체 분자가 진공으로 들어 갈 수 있다고 하자. 이 과정에서 열도 없고 일도 없다. 따라서 <span class="math inline">\(\Delta U =0\)</span> 이다. 하지만 열역학적 항등식(<a href="#eq-TD_schroeder_3_46" class="quarto-xref">식&nbsp;<span>24.33</span></a>) 으로부터 <span class="math inline">\(T\,dS = p\,dV &gt; 0\)</span> 이 되므로 <span class="math inline">\(\Delta S &gt; 0\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>예제 25.5 (진공으로의 자유팽창)</strong></span> <a href="#fig-TD_schroeder_3_16" class="quarto-xref">그림&nbsp;<span>25.5</span></a> 의 오른쪽 경우와 같이 두 부분으로 분할된 방 한쪽은 기체로, 한쪽은 진공이라고 하자. 그리고 둘을 분리시키는 분리판에 균열이 생겨 기체 분자가 진공으로 들어 갈 수 있다고 하자. 이 과정에서 열도 없고 일도 없다. 따라서 <span class="math inline">\Delta U =0</span> 이다. 하지만 열역학적 항등식(<a href="#eq-TD_schroeder_3_46" class="quarto-xref">식&nbsp;<span>25.33</span></a>) 으로부터 <span class="math inline">T\,dS = p\,dV &gt; 0</span> 이 되므로 <span class="math inline">\Delta S &gt; 0</span> 이다.</p>
 </div>
 </div>
 <p>앞서 본 두가지 경우 모두 열의 흐름에 추가로, 혹은 열의 흐름 없이 새로운 엔트로피가 생성되었다. 열역학 제 2 법칙은 일단 새로운 엔트로피가 생성되면 그것이 사라질 수 없다는 것을 말해준다.</p>
@@ -1154,61 +1173,61 @@ dS &gt; \dfrac{Q}{T} \qquad (\text{when }W&gt;-p\,dV).
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_28" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.13 (Schroeder 3.28)</strong></span> 상온 1기압의 1 리터의 공기가 일정한 압력에서 부피가 두배가 되었다. 이 과정에서 증가하는 엔트로피를 계산하라.</p>
+<p><span class="theorem-title"><strong>연습문제 25.13 (Schroeder 3.28)</strong></span> 상온 1기압의 1 리터의 공기가 일정한 압력에서 부피가 두배가 되었다. 이 과정에서 증가하는 엔트로피를 계산하라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(pV = \nu RT\)</span> 로부터 <span class="math inline">\(\nu = 0.041\)</span> 이다.</p>
-<p>이원자 1몰의 분자의 정압 열용량 <span class="math inline">\(C_p = \dfrac{7}{2}R\)</span> 이며 <span class="math inline">\(dS = (C_p/T)\,dT\)</span> 이다. 따라서 <span class="math inline">\(\Delta S = C_p\ln (T_f/T_i)\)</span> 이다. 이상기체는 압력이 일정할 때 온도와 부피가 비례하므로 부피가 2배가 되면 온도 역시 2배가 된다. 따라서 <span class="math inline">\(\Delta S = 0.82\,\text{J/K}\)</span>.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">pV = \nu RT</span> 로부터 <span class="math inline">\nu = 0.041</span> 이다.</p>
+<p>이원자 1몰의 분자의 정압 열용량 <span class="math inline">C_p = \dfrac{7}{2}R</span> 이며 <span class="math inline">dS = (C_p/T)\,dT</span> 이다. 따라서 <span class="math inline">\Delta S = C_p\ln (T_f/T_i)</span> 이다. 이상기체는 압력이 일정할 때 온도와 부피가 비례하므로 부피가 2배가 되면 온도 역시 2배가 된다. 따라서 <span class="math inline">\Delta S = 0.82\,\text{J/K}</span>.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_29" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.14 (Schroeder 3.29)</strong></span> H<sub>2</sub>O 의 엔트로피를 고정된 압력에서 온도의 함수로 정성적으로 스케치하라. 어디가 고체이고, 액체이며, 기체인지 표시하라. 그래프의 각각의 모습을 간략하게 설명하라.</p>
+<p><span class="theorem-title"><strong>연습문제 25.14 (Schroeder 3.29)</strong></span> H<sub>2</sub>O 의 엔트로피를 고정된 압력에서 온도의 함수로 정성적으로 스케치하라. 어디가 고체이고, 액체이며, 기체인지 표시하라. 그래프의 각각의 모습을 간략하게 설명하라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>열역학적 항등식 <a href="#eq-TD_schroeder_3_45" class="quarto-xref">식&nbsp;<span>24.32</span></a> 을 보자. 우선 정리하면</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>열역학적 항등식 <a href="#eq-TD_schroeder_3_45" class="quarto-xref">식&nbsp;<span>25.32</span></a> 을 보자. 우선 정리하면</p>
 <ol type="1">
-<li><p>고체와 액체의 경우 정적비열과 정압비열의 차이가 매우 작아 구분하지 않고 <span class="math inline">\(C\)</span> 로 표기한다</p></li>
-<li><p>고체의 경유 뒬롱-쁘띠 법칙에 의해 <span class="math inline">\(C_p \approx 3Nk_B\)</span> 이다. 주로 고온에서 성립하지만 우리가 다른 비열을 배운것도 아니고.</p></li>
+<li><p>고체와 액체의 경우 정적비열과 정압비열의 차이가 매우 작아 구분하지 않고 <span class="math inline">C</span> 로 표기한다</p></li>
+<li><p>고체의 경유 뒬롱-쁘띠 법칙에 의해 <span class="math inline">C_p \approx 3Nk_B</span> 이다. 주로 고온에서 성립하지만 우리가 다른 비열을 배운것도 아니고.</p></li>
 <li><p>잠열이 존재하며 따라서 어는점과 끓는점에서 엔트로피가 불연속적이다.</p></li>
 </ol>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_33" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.15 (Schroeder 3.33)</strong></span> 열역학적 항등식으로부터 열용량에 대한 다음 식을 유도하라.</p>
-<p><span id="eq-TD_exr_schroeder_3_33_1"><span class="math display">\[
+<p><span class="theorem-title"><strong>연습문제 25.15 (Schroeder 3.33)</strong></span> 열역학적 항등식으로부터 열용량에 대한 다음 식을 유도하라.</p>
+<p><span id="eq-TD_exr_schroeder_3_33_1"><span class="math display">
 C_V = T\left(\dfrac{\partial S}{\partial T}\right)_V.
-\tag{24.38}\]</span></span></p>
-<p>엔탈피 <span class="math inline">\(H=U+PV\)</span> 를 이용하여 <span class="math inline">\(C_p\)</span> 에 대한 유사한 식을 구하라.</p>
+\tag{25.38}</span></span></p>
+<p>엔탈피 <span class="math inline">H=U+PV</span> 를 이용하여 <span class="math inline">C_p</span> 에 대한 유사한 식을 구하라.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(U\)</span> 와 <span class="math inline">\(S\)</span> 를 각각 <span class="math inline">\(T\)</span> 와 <span class="math inline">\(V\)</span> 의 함수로 보면</p>
-<p><span class="math display">\[
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">U</span> 와 <span class="math inline">S</span> 를 각각 <span class="math inline">T</span> 와 <span class="math inline">V</span> 의 함수로 보면</p>
+<p><span class="math display">
 dU = \left(\dfrac{\partial U}{\partial T}\right)_V\, dT + \left(\dfrac{\partial U}{\partial V}\right)_T \,dV,\qquad dS = \left(\dfrac{\partial S}{\partial T}\right)_V\, dT + \left(\dfrac{\partial S}{\partial V}\right)_T \,dV
-\]</span></p>
-<p>이고 열역학적 항등식(<a href="#eq-TD_schroeder_3_46" class="quarto-xref">식&nbsp;<span>24.33</span></a>) 과 비교하면</p>
-<p><span class="math display">\[
+</span></p>
+<p>이고 열역학적 항등식(<a href="#eq-TD_schroeder_3_46" class="quarto-xref">식&nbsp;<span>25.33</span></a>) 과 비교하면</p>
+<p><span class="math display">
 \begin{aligned}
 dU &amp;= \left(\dfrac{\partial U}{\partial T}\right)_V\, dT + \left(\dfrac{\partial U}{\partial V}\right)_T \,dV, \\[0.3em]
 T\,dS - p\,dV &amp;= T\left(\dfrac{\partial S}{\partial T}\right)_V\, dT + \left[T\left(\dfrac{\partial S}{\partial V}\right)_T -p\right]\,dV
 \end{aligned}
-\]</span></p>
-<p>이다. 따라서 <a href="#eq-TD_exr_schroeder_3_33_1" class="quarto-xref">식&nbsp;<span>24.38</span></a> 가 성립한다. 또한 문제로 제시하지 않았지만 다음 관계도 얻는다.</p>
-<p><span id="eq-TD_exr_schroeder_3_33_2"><span class="math display">\[
+</span></p>
+<p>이다. 따라서 <a href="#eq-TD_exr_schroeder_3_33_1" class="quarto-xref">식&nbsp;<span>25.38</span></a> 가 성립한다. 또한 문제로 제시하지 않았지만 다음 관계도 얻는다.</p>
+<p><span id="eq-TD_exr_schroeder_3_33_2"><span class="math display">
 \left(\dfrac{\partial U}{\partial V}\right)_T = T\left(\dfrac{\partial S}{\partial V}\right)_T -p.
-\tag{24.39}\]</span></span></p>
-<p>엔탈피 <span class="math inline">\(H=U+pV\)</span> 에 대해</p>
-<p><span class="math display">\[
+\tag{25.39}</span></span></p>
+<p>엔탈피 <span class="math inline">H=U+pV</span> 에 대해</p>
+<p><span class="math display">
 dH = dU + p\,dV + V\,dp = T\,dS + V\,dp
-\]</span></p>
+</span></p>
 <p>이며</p>
-<p><span class="math display">\[
+<p><span class="math display">
 C_p = \left(\dfrac{\partial H}{\partial T}\right)_p = T \left(\dfrac{\partial S}{\partial T}\right)_p
-\]</span></p>
+</span></p>
 <p>이다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1220,84 +1239,84 @@ C_p = \left(\dfrac{\partial H}{\partial T}\right)_p = T \left(\dfrac{\partial S}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(df=x\,dy\)</span> 라는 식이 주어졌다고 하자. <span class="math inline">\(f,\,y\)</span> 가 매개변수 <span class="math inline">\(x\)</span> 로 매개화 되어 있다면 <span class="math inline">\(df = f'(x)\,dx,\, dy = y'(x)\,dy\)</span> 이므로</p>
-<p><span class="math display">\[
+<p><span class="math inline">df=x\,dy</span> 라는 식이 주어졌다고 하자. <span class="math inline">f,\,y</span> 가 매개변수 <span class="math inline">x</span> 로 매개화 되어 있다면 <span class="math inline">df = f'(x)\,dx,\, dy = y'(x)\,dy</span> 이므로</p>
+<p><span class="math display">
 f'(x)\,dx = xy'(x)\,dx
-\]</span></p>
-<p>이며 따라서 <span class="math inline">\(f'= xy'\)</span> 이다. 앞에서는 <span class="math inline">\(dU = TdS\)</span> 를 좀 복잡하게 계산했지만 이를 이용하면 <span class="math inline">\((\partial U/\partial T)_V = T(\partial S/\partial T)_V\)</span> 임을 쉽게 알 수 있다.</p>
+</span></p>
+<p>이며 따라서 <span class="math inline">f'= xy'</span> 이다. 앞에서는 <span class="math inline">dU = TdS</span> 를 좀 복잡하게 계산했지만 이를 이용하면 <span class="math inline">(\partial U/\partial T)_V = T(\partial S/\partial T)_V</span> 임을 쉽게 알 수 있다.</p>
 </div>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_34" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.16 (Schroeder 3.34)</strong></span> 고무와 같은 고분자는 매우 긴 분자들로 이루어졌으며, 보통 매우 높은 엔트로피를 가진 배치로 얽혀 있다. 매우 초보적인 고무줄에 대한 모델은 <span class="math inline">\(N\)</span> 개의 링크를 갖고 각각의 길이가 <span class="math inline">\(l\)</span> 인 사슬로 기술한다(<a href="#fig-TD_schroeder_prob_3_34" class="quarto-xref">그림&nbsp;<span>24.6</span></a>). 각각의 링크는 왼쪽 혹은 오른쪽의 두가지 상태만을 가질 수 있다. 총 길이 <span class="math inline">\(L\)</span> 은 첫번째 링크의 시작점과 마지막 링크 끝점 사이의 길이이다.</p>
+<p><span class="theorem-title"><strong>연습문제 25.16 (Schroeder 3.34)</strong></span> 고무와 같은 고분자는 매우 긴 분자들로 이루어졌으며, 보통 매우 높은 엔트로피를 가진 배치로 얽혀 있다. 매우 초보적인 고무줄에 대한 모델은 <span class="math inline">N</span> 개의 링크를 갖고 각각의 길이가 <span class="math inline">l</span> 인 사슬로 기술한다(<a href="#fig-TD_schroeder_prob_3_34" class="quarto-xref">그림&nbsp;<span>25.6</span></a>). 각각의 링크는 왼쪽 혹은 오른쪽의 두가지 상태만을 가질 수 있다. 총 길이 <span class="math inline">L</span> 은 첫번째 링크의 시작점과 마지막 링크 끝점 사이의 길이이다.</p>
 <div id="fig-TD_schroeder_prob_3_34" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TD_schroeder_prob_3_34-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/schroeder/chap3/schroeder_prob_3_34.png" class="img-fluid figure-img" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_prob_3_34-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;24.6: 고무줄에 대한 초보적 모델 : 고무줄을 양 끝단만 연결된 사슬로 기술함
+그림&nbsp;25.6: 고무줄에 대한 초보적 모델 : 고무줄을 양 끝단만 연결된 사슬로 기술함
 </figcaption>
 </figure>
 </div>
-<p>(<span class="math inline">\(a\)</span>) 오른쪽을 향하는 링크의 개수를 <span class="math inline">\(N_R\)</span> 이라고 할 때, 이 시스템의 엔트로피를 <span class="math inline">\(N\)</span> 과 <span class="math inline">\(N_R\)</span> 로 표기하라.</p>
-<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(L\)</span> 을 <span class="math inline">\(N\)</span> 과 <span class="math inline">\(N_R\)</span> 로 표기하라.</p>
-<p>(<span class="math inline">\(c\)</span>) 이 모델과 같은 1차원 계에서 길이 <span class="math inline">\(L\)</span> 은 3차원 시스템의 부피 <span class="math inline">\(V\)</span> 와 유사하다. 또한 압력 <span class="math inline">\(p\)</span> 는 장력 <span class="math inline">\(F\)</span> 로 대체 될 수 있다. 고무줄이 안쪽으로 당겨질 때 <span class="math inline">\(F&gt;0\)</span> 으로 잡고 이 시스템에 대한 적절한 열역학적 항등식을 구하고 설명하라.</p>
-<p>(<span class="math inline">\(d\)</span>) 열역학적 항등식을 이용하여 장력 <span class="math inline">\(F\)</span> 를 엔트로피의 편미분으로 구하라. 이 표현식으로부터 장력을 <span class="math inline">\(L,\,T,\,N,\,l\)</span> 로 표현하라.</p>
-<p>(<span class="math inline">\(e\)</span>) <span class="math inline">\(L\ll Nl\)</span> 일 때 장력은 <span class="math inline">\(L\)</span> 에 직접적으로 비례함을 보여라 (후크의 법칙).</p>
-<p>(<span class="math inline">\(f\)</span>) 장력의 온도의존성을 논하라. 고무줄의 온도를 올리면 고무줄은 늘어나는가 수축되는가? 이것은 납득할 만 한가?</p>
-<p>(<span class="math inline">\(g\)</span>) 길게 늘어진 고무줄을 갑자기 잡아당긴다면 온도는 증가할까? 아니면 감소할까?</p>
+<p>(<span class="math inline">a</span>) 오른쪽을 향하는 링크의 개수를 <span class="math inline">N_R</span> 이라고 할 때, 이 시스템의 엔트로피를 <span class="math inline">N</span> 과 <span class="math inline">N_R</span> 로 표기하라.</p>
+<p>(<span class="math inline">b</span>) <span class="math inline">L</span> 을 <span class="math inline">N</span> 과 <span class="math inline">N_R</span> 로 표기하라.</p>
+<p>(<span class="math inline">c</span>) 이 모델과 같은 1차원 계에서 길이 <span class="math inline">L</span> 은 3차원 시스템의 부피 <span class="math inline">V</span> 와 유사하다. 또한 압력 <span class="math inline">p</span> 는 장력 <span class="math inline">F</span> 로 대체 될 수 있다. 고무줄이 안쪽으로 당겨질 때 <span class="math inline">F&gt;0</span> 으로 잡고 이 시스템에 대한 적절한 열역학적 항등식을 구하고 설명하라.</p>
+<p>(<span class="math inline">d</span>) 열역학적 항등식을 이용하여 장력 <span class="math inline">F</span> 를 엔트로피의 편미분으로 구하라. 이 표현식으로부터 장력을 <span class="math inline">L,\,T,\,N,\,l</span> 로 표현하라.</p>
+<p>(<span class="math inline">e</span>) <span class="math inline">L\ll Nl</span> 일 때 장력은 <span class="math inline">L</span> 에 직접적으로 비례함을 보여라 (후크의 법칙).</p>
+<p>(<span class="math inline">f</span>) 장력의 온도의존성을 논하라. 고무줄의 온도를 올리면 고무줄은 늘어나는가 수축되는가? 이것은 납득할 만 한가?</p>
+<p>(<span class="math inline">g</span>) 길게 늘어진 고무줄을 갑자기 잡아당긴다면 온도는 증가할까? 아니면 감소할까?</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(S= k_B \ln (N!/[(N_R)!(N-N_R)!])\)</span> 이므로 스털링 근사를 사용하면</p>
-<p><span id="eq-exr_TD_schroeder_3_34_1"><span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">a</span>) <span class="math inline">S= k_B \ln (N!/[(N_R)!(N-N_R)!])</span> 이므로 스털링 근사를 사용하면</p>
+<p><span id="eq-exr_TD_schroeder_3_34_1"><span class="math display">
 S=k_B \left[N\ln N - N_R \ln N_R - (N-N_R)\ln (N-N_R)\right]
-\tag{24.40}\]</span></span></p>
-<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(L = l + N_Rl - (N-N_R)l= (1+2N_R - N)l \approx (2N_R-N)l\)</span>.</p>
-<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(dU = T\,dS + FdL\)</span> 혹은 <span class="math inline">\(dS = (1/T)dU - (F/T)dL\)</span></p>
-<p>(<span class="math inline">\(d\)</span>) (<span class="math inline">\(c\)</span>) 의 두번째 식으로부터 <span class="math inline">\(\displaystyle F= -T\left(\dfrac{\partial S}{\partial L}\right)_U\)</span>. (<span class="math inline">\(b\)</span>) 로부터 <span class="math inline">\(dL = 2N_R l\)</span> 이므로 <span class="math inline">\(\displaystyle F=-\dfrac{T}{2l}\left(\dfrac{\partial S}{\partial N_R}\right)_U\)</span>. <a href="#eq-exr_TD_schroeder_3_34_1" class="quarto-xref">식&nbsp;<span>24.40</span></a> 로부터</p>
-<p><span id="eq-exr_TD_schroeder_3_34_2"><span class="math display">\[
+\tag{25.40}</span></span></p>
+<p>(<span class="math inline">b</span>) <span class="math inline">L = l + N_Rl - (N-N_R)l= (1+2N_R - N)l \approx (2N_R-N)l</span>.</p>
+<p>(<span class="math inline">c</span>) <span class="math inline">dU = T\,dS + FdL</span> 혹은 <span class="math inline">dS = (1/T)dU - (F/T)dL</span></p>
+<p>(<span class="math inline">d</span>) (<span class="math inline">c</span>) 의 두번째 식으로부터 <span class="math inline">\displaystyle F= -T\left(\dfrac{\partial S}{\partial L}\right)_U</span>. (<span class="math inline">b</span>) 로부터 <span class="math inline">dL = 2N_R l</span> 이므로 <span class="math inline">\displaystyle F=-\dfrac{T}{2l}\left(\dfrac{\partial S}{\partial N_R}\right)_U</span>. <a href="#eq-exr_TD_schroeder_3_34_1" class="quarto-xref">식&nbsp;<span>25.40</span></a> 로부터</p>
+<p><span id="eq-exr_TD_schroeder_3_34_2"><span class="math display">
 \begin{aligned}
 F=-\dfrac{T}{2l}\left(\dfrac{\partial S}{\partial N_R}\right)_U &amp;= -\dfrac{Tk_B}{2l}\ln \left(\dfrac{N-N_R}{N_R}\right) .
 \end{aligned}
-\tag{24.41}\]</span></span></p>
-<p>(<span class="math inline">\(e\)</span>) <span class="math inline">\(N_R = (N+L/l)/2\)</span>, <span class="math inline">\(N-N_R = (N-L/l)/2\)</span> 이며 <span class="math inline">\(N\gg L/l\)</span> 이다. <span class="math inline">\(|\delta| \ll 1 \implies \ln (1+\delta ) \approx \delta\)</span> 임을 이용하면</p>
-<p><span class="math display">\[
+\tag{25.41}</span></span></p>
+<p>(<span class="math inline">e</span>) <span class="math inline">N_R = (N+L/l)/2</span>, <span class="math inline">N-N_R = (N-L/l)/2</span> 이며 <span class="math inline">N\gg L/l</span> 이다. <span class="math inline">|\delta| \ll 1 \implies \ln (1+\delta ) \approx \delta</span> 임을 이용하면</p>
+<p><span class="math display">
 \begin{aligned}
 F= -\dfrac{Tk_B}{2l}\ln \left(\dfrac{N-N_R}{N_R}\right) = -\dfrac{Tk_B}{2l}\ln \left(\dfrac{N-L/l}{N+L/l}\right) = \dfrac{Tk_B}{Nl^2}L
 \end{aligned}
-\]</span></p>
-<p>(<span class="math inline">\(f\)</span>) <a href="#eq-exr_TD_schroeder_3_34_2" class="quarto-xref">식&nbsp;<span>24.41</span></a> 로 부터 <span class="math inline">\(N_R &gt; N/2\)</span> 이면 <span class="math inline">\(F \propto T\)</span>, <span class="math inline">\(N_R&lt;N/2\)</span> 이면 <span class="math inline">\(F \propto -T\)</span> 이다. 즉 장력은 <span class="math inline">\(N_R=N/2\)</span> 가 되도록 작용하며, 온도가 높을수록 장력이 커진다.</p>
-<p>(<span class="math inline">\(g\)</span>) 열역학적 항등식 <span class="math inline">\(dU = T\,dS + F\,dL\)</span> 에서 <span class="math inline">\(dL&gt;0\)</span> 이며 열교환이 없으므로 <span class="math inline">\(dS=0\)</span> 이다. 따라서 <span class="math inline">\(dU\)</span> 가 증가하며 이로부터 온도가 증가한다는 것을 알 수 있다.</p>
+</span></p>
+<p>(<span class="math inline">f</span>) <a href="#eq-exr_TD_schroeder_3_34_2" class="quarto-xref">식&nbsp;<span>25.41</span></a> 로 부터 <span class="math inline">N_R &gt; N/2</span> 이면 <span class="math inline">F \propto T</span>, <span class="math inline">N_R&lt;N/2</span> 이면 <span class="math inline">F \propto -T</span> 이다. 즉 장력은 <span class="math inline">N_R=N/2</span> 가 되도록 작용하며, 온도가 높을수록 장력이 커진다.</p>
+<p>(<span class="math inline">g</span>) 열역학적 항등식 <span class="math inline">dU = T\,dS + F\,dL</span> 에서 <span class="math inline">dL&gt;0</span> 이며 열교환이 없으므로 <span class="math inline">dS=0</span> 이다. 따라서 <span class="math inline">dU</span> 가 증가하며 이로부터 온도가 증가한다는 것을 알 수 있다.</p>
 </div>
 </section>
 </section>
-<section id="sec-TD_diffusive_equillibrium_and_chemical_potential" class="level2" data-number="24.5">
-<h2 data-number="24.5" class="anchored" data-anchor-id="sec-TD_diffusive_equillibrium_and_chemical_potential"><span class="header-section-number">24.5</span> 확산 평형과 화학 포텐셜</h2>
-<section id="확산-평형과-화학-포텐셜" class="level3" data-number="24.5.1">
-<h3 data-number="24.5.1" class="anchored" data-anchor-id="확산-평형과-화학-포텐셜"><span class="header-section-number">24.5.1</span> 확산 평형과 화학 포텐셜</h3>
-<p>두 시스템이 열평형이면 온도가 같다. 두 시스템이 역학적 평형이면 압력이 같다. 시스템의 물질의 농도가 균일해저서 순 변화가 없을 때 <strong>확산 평형 (diffusive equillibrium)</strong> 이라고 한다. 이를 위해 아래와 같이 에너지 뿐만 아니라 입자까지 자유롭게 교환 할 수 있는 시스템을 생각하자. 물론 부피도 변화할 수 있는 시스템을 생각할 수 있지만 문제를 단순화하기 위해 일단 각 시스템의 부피는 일정하게 유지한다. 그리고 우선 두 시스템이 같은종류의 입자로 이루어졌다고 가정한다. 그리고 <span class="math inline">\(U_\text{total}=U_A+U_B\)</span> 와 <span class="math inline">\(N_\text{total}=N_A+N_B\)</span> 는 일정하다고 가정한다.</p>
+<section id="sec-TD_diffusive_equillibrium_and_chemical_potential" class="level2" data-number="25.5">
+<h2 data-number="25.5" class="anchored" data-anchor-id="sec-TD_diffusive_equillibrium_and_chemical_potential"><span class="header-section-number">25.5</span> 확산 평형과 화학 포텐셜</h2>
+<section id="확산-평형과-화학-포텐셜" class="level3" data-number="25.5.1">
+<h3 data-number="25.5.1" class="anchored" data-anchor-id="확산-평형과-화학-포텐셜"><span class="header-section-number">25.5.1</span> 확산 평형과 화학 포텐셜</h3>
+<p>두 시스템이 열평형이면 온도가 같다. 두 시스템이 역학적 평형이면 압력이 같다. 시스템의 물질의 농도가 균일해저서 순 변화가 없을 때 <strong>확산 평형 (diffusive equillibrium)</strong> 이라고 한다. 이를 위해 아래와 같이 에너지 뿐만 아니라 입자까지 자유롭게 교환 할 수 있는 시스템을 생각하자. 물론 부피도 변화할 수 있는 시스템을 생각할 수 있지만 문제를 단순화하기 위해 일단 각 시스템의 부피는 일정하게 유지한다. 그리고 우선 두 시스템이 같은종류의 입자로 이루어졌다고 가정한다. 그리고 <span class="math inline">U_\text{total}=U_A+U_B</span> 와 <span class="math inline">N_\text{total}=N_A+N_B</span> 는 일정하다고 가정한다.</p>
 <div id="fig-TD_schroeder_3_18" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TD_schroeder_3_18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/schroeder/chap3/schroeder_3_18.png" class="img-fluid figure-img" width="350">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TD_schroeder_3_18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;24.7: 에너지와 입자를 교환할 수 있는 두 시스템
+그림&nbsp;25.7: 에너지와 입자를 교환할 수 있는 두 시스템
 </figcaption>
 </figure>
 </div>
 <p>총 엔트로피를 최대가 되어야 하므로,</p>
-<p><span id="eq-TD_schroeder_3_52"><span class="math display">\[
+<p><span id="eq-TD_schroeder_3_52"><span class="math display">
 \left(\dfrac{\partial S_\text{total}}{\partial U_A}\right)_{N_A,\,V_A} = 0\qquad \text{and}\qquad \left(\dfrac{\partial S_\text{total}}{\partial N_A}\right)_{U_A,\,V_A} = 0
-\tag{24.42}\]</span></span></p>
-<p>이어야 한다. 부피가 바뀔 수 있다면 <span class="math inline">\((\partial S_\text{total}/\partial V_A)_{U_A,N_A}=0\)</span> 조건도 포함되어야 한다. 첫번째 조건은 두 시스템의 온도가 동일하다는 조건이며 두번째 조건이 새로운 조건이다. <span class="math inline">\(N_\text{total}\)</span> 이 일정하다는 조건으로부터</p>
-<p><span id="eq-TD_schroeder_3_54"><span class="math display">\[
+\tag{25.42}</span></span></p>
+<p>이어야 한다. 부피가 바뀔 수 있다면 <span class="math inline">(\partial S_\text{total}/\partial V_A)_{U_A,N_A}=0</span> 조건도 포함되어야 한다. 첫번째 조건은 두 시스템의 온도가 동일하다는 조건이며 두번째 조건이 새로운 조건이다. <span class="math inline">N_\text{total}</span> 이 일정하다는 조건으로부터</p>
+<p><span id="eq-TD_schroeder_3_54"><span class="math display">
 -T\dfrac{\partial S_A}{\partial N_A} = - T\dfrac{\partial S_B}{\partial N_B} \qquad \text{at equillibrium}.
-\tag{24.43}\]</span></span></p>
+\tag{25.43}</span></span></p>
 <p>를 얻는다. 이 값은 매우 중요하며 다음과 같이 정의한다.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1309,95 +1328,95 @@ F= -\dfrac{Tk_B}{2l}\ln \left(\dfrac{N-N_R}{N_R}\right) = -\dfrac{Tk_B}{2l}\ln \
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>화학포텐셜 <span class="math inline">\(\mu\)</span> 는 다음과 같이 정의된다.</p>
-<p><span id="eq-TD_schroeder_3_56"><span class="math display">\[
+<p>화학포텐셜 <span class="math inline">\mu</span> 는 다음과 같이 정의된다.</p>
+<p><span id="eq-TD_schroeder_3_56"><span class="math display">
 \boxed{\mu = -T \left(\dfrac{\partial S}{\partial N}\right)_{U,V}.}
-\tag{24.44}\]</span></span></p>
+\tag{25.44}</span></span></p>
 </div>
 </div>
-<p>즉 <span class="math inline">\(A,\,B\)</span> 두 시스템이 확산평형일 때 <span class="math inline">\(\mu_A = \mu_B\)</span> 이어야 한다. 화학포텐셜의 정의로부터 입자의 수가 증가할 때 엔트로피가 증가한다면 <span class="math inline">\(\mu&lt;0\)</span> 이며, 입자의 수가 감소할 때 엔트로피가 증가한다면 <span class="math inline">\(\mu &gt; 0\)</span> 이다. 따라서 입자는 화학 포텐셜이 높은 곳으로부터 낮은 곳으로 이동한다.</p>
+<p>즉 <span class="math inline">A,\,B</span> 두 시스템이 확산평형일 때 <span class="math inline">\mu_A = \mu_B</span> 이어야 한다. 화학포텐셜의 정의로부터 입자의 수가 증가할 때 엔트로피가 증가한다면 <span class="math inline">\mu&lt;0</span> 이며, 입자의 수가 감소할 때 엔트로피가 증가한다면 <span class="math inline">\mu &gt; 0</span> 이다. 따라서 입자는 화학 포텐셜이 높은 곳으로부터 낮은 곳으로 이동한다.</p>
 </section>
-<section id="화학포텐셜을-포함하는-열역학적-항등식" class="level3" data-number="24.5.2">
-<h3 data-number="24.5.2" class="anchored" data-anchor-id="화학포텐셜을-포함하는-열역학적-항등식"><span class="header-section-number">24.5.2</span> 화학포텐셜을 포함하는 열역학적 항등식</h3>
+<section id="화학포텐셜을-포함하는-열역학적-항등식" class="level3" data-number="25.5.2">
+<h3 data-number="25.5.2" class="anchored" data-anchor-id="화학포텐셜을-포함하는-열역학적-항등식"><span class="header-section-number">25.5.2</span> 화학포텐셜을 포함하는 열역학적 항등식</h3>
 <p>이제 열역학적 항등식을 입자 교환까지 포함하도록 확장 할 수 있다.</p>
-<p><span id="eq-TD_schroeder_3_57"><span class="math display">\[
+<p><span id="eq-TD_schroeder_3_57"><span class="math display">
 \begin{aligned}
 dS &amp;= \left(\dfrac{\partial S}{\partial U}\right)_{V,N}\,dU + \left(\dfrac{\partial S}{\partial V}\right)_{U,N}\,dV + \left(\dfrac{\partial S}{\partial N}\right)_{U,V}\,dN \\[0.3em]
 &amp;= \dfrac{1}{T}\,dU + \dfrac{p}{T}\,dV - \dfrac{\mu}{T}\,dN.
 \end{aligned}
-\tag{24.45}\]</span></span></p>
+\tag{25.45}</span></span></p>
 <p>위 식은 아래와 같이 쓸 수 있다.</p>
-<p><span id="eq-TD_schroeder_3_58"><span class="math display">\[
+<p><span id="eq-TD_schroeder_3_58"><span class="math display">
 dU = T\,dS - p\,dV + \mu \,dN.
-\tag{24.46}\]</span></span></p>
-<p>우리가 <span class="math inline">\(-p\,dV\)</span> 를 역학적 일이라고 하듯이 <span class="math inline">\(\mu\,dN\)</span> 을 화학적 일(chemical work) 이라고 부르기도 한다. 위 식을 통해 우리는</p>
-<p><span id="eq-TD_schroeder_3_60"><span class="math display">\[
+\tag{25.46}</span></span></p>
+<p>우리가 <span class="math inline">-p\,dV</span> 를 역학적 일이라고 하듯이 <span class="math inline">\mu\,dN</span> 을 화학적 일(chemical work) 이라고 부르기도 한다. 위 식을 통해 우리는</p>
+<p><span id="eq-TD_schroeder_3_60"><span class="math display">
 \mu = \left(\dfrac{\partial U}{\partial N}\right)_{S,\,V}
-\tag{24.47}\]</span></span></p>
+\tag{25.47}</span></span></p>
 <p>을 얻는다. 즉 화학포텐셜은 엔트로피와 부피가 고정되어 있을 때 입자 하나를 추가하는데 필요한 에너지임을 알 수 있다. 일반적으로 엔트로피를 고정시킨 상태에서 입자를 추가하려면 에너지가 감소해야 하므로 이 경우 화학포텐셜은 음수이다. 그러나 입자를 추가하는데 입자에 포텐셜 에너지를 더해야 한다면 이 에너지는 화학 포텐셜에 영향을 준다. 이에 대해서는 <span class="citation" data-cites="Schroeder2000introduction">Schroeder (<a href="../../references.html#ref-Schroeder2000introduction" role="doc-biblioref">2000</a>)</span> 7장에서 예를 들어 설명하고 있다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-TD_examples_chemical_potential_and_einstein_solid" class="theorem example">
-<p><span class="theorem-title"><strong>예제 24.6 (아인슈타인 고체와 화학 포텐셜)</strong></span> 3 개의 진동자와 3개의 에너지 단위를 가진 시스템을 생각하자. <span class="math inline">\(\Omega_1 = 10\)</span> (<a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_9" class="quarto-xref">식&nbsp;<span>23.1</span></a>) 이므로 <span class="math inline">\(S_1=k_B\ln 10\)</span> 이다. 진동자 하나를 추가하며 에너지 단위는 변하지 않는다면 <span class="math inline">\(\Omega_2 = 20\)</span> 이며 <span class="math inline">\(S_2=k_B\ln 20\)</span> 이다. 그러나 처음에서 진동자 하나를 추가하면서 에너지 단위를 하나 뺀다면 <span class="math inline">\(\omega_3 = 10\)</span> 으로 엔트로피가 변화하지 않는다. 이 때 화학포텐셜은</p>
-<p><span class="math display">\[
+<p><span class="theorem-title"><strong>예제 25.6 (아인슈타인 고체와 화학 포텐셜)</strong></span> 3 개의 진동자와 3개의 에너지 단위를 가진 시스템을 생각하자. <span class="math inline">\Omega_1 = 10</span> (<a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_9" class="quarto-xref">식&nbsp;<span>24.1</span></a>) 이므로 <span class="math inline">S_1=k_B\ln 10</span> 이다. 진동자 하나를 추가하며 에너지 단위는 변하지 않는다면 <span class="math inline">\Omega_2 = 20</span> 이며 <span class="math inline">S_2=k_B\ln 20</span> 이다. 그러나 처음에서 진동자 하나를 추가하면서 에너지 단위를 하나 뺀다면 <span class="math inline">\omega_3 = 10</span> 으로 엔트로피가 변화하지 않는다. 이 때 화학포텐셜은</p>
+<p><span class="math display">
 \mu = \left(\dfrac{\Delta U}{\Delta N}\right)_{S} = - \hbar \omega
-\]</span></p>
+</span></p>
 <p>이다. 여기서 주의할것은 입자의 개수가 작은 시스템에서는 입자 하나의 추가가 에너지의 미소 변화를 일으키지 않고 더 크고 이산적인 변화를 준다는 것이다.</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-TD_examples_chemical_potential_and_ideal_Gas" class="theorem example">
-<p><span class="theorem-title"><strong>예제 24.7 (이상기체와 화학 포텐셜)</strong></span> 이상기체의 경우 엔트로피는 자쿠르-테트로데 방정식 <a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_49" class="quarto-xref">식&nbsp;<span>23.23</span></a> 에 따라</p>
-<p><span id="eq-TD_schroeder_3_62"><span class="math display">\[
+<p><span class="theorem-title"><strong>예제 25.7 (이상기체와 화학 포텐셜)</strong></span> 이상기체의 경우 엔트로피는 자쿠르-테트로데 방정식 <a href="03_introduction_to_statistical_mechanics.html#eq-TD_schroeder_2_49" class="quarto-xref">식&nbsp;<span>24.23</span></a> 에 따라</p>
+<p><span id="eq-TD_schroeder_3_62"><span class="math display">
 S = Nk_B \left[\ln \left(V\left(\dfrac{4\pi mU}{3h^2}\right)^{3/2}\right) - \dfrac{5}{2}\ln N + \dfrac{5}{2}\right].
-\tag{24.48}\]</span></span></p>
+\tag{25.48}</span></span></p>
 <p>이며, 이로부터</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \begin{aligned}
 \mu &amp;= - T k_B\left[\ln \left(V\left(\dfrac{4\pi mU}{3h^2}\right)^{3/2}\right) - \dfrac{5}{2}\ln N + \dfrac{5}{2}\right]  + \dfrac{5Tk_B}{2} \\[0.3em]
 &amp;= - T k_B\left[\ln \left(\dfrac{V}{N}\left(\dfrac{4\pi mU}{3Nh^2}\right)^{3/2}\right) \right]
 \end{aligned}
-\]</span></p>
-<p>이다. 여기서 이상기체의 경우 <span class="math inline">\(U=3Nk_B T/2\)</span> 이므로</p>
-<p><span id="eq-TD_schroedeR_3_63"><span class="math display">\[
+</span></p>
+<p>이다. 여기서 이상기체의 경우 <span class="math inline">U=3Nk_B T/2</span> 이므로</p>
+<p><span id="eq-TD_schroedeR_3_63"><span class="math display">
 \mu = - T k_B\left[\ln \left(\dfrac{V}{N}\left(\dfrac{2\pi m k_B T}{h^2}\right)^{3/2}\right) \right].
-\tag{24.49}\]</span></span></p>
-<p>상온, 1기압의 경우 <span class="math inline">\(V/N = 4.2 \times 10^{-26}\, \text{m}^3\)</span> 이며 헬륨의 경우 <span class="math inline">\((h^2/2\pi m k_B T)^{3/2} \approx 1.3 \times 10^{-31}\,\text{m}^3\)</span> 이다. 이로부터 상온 1기압에서의 헬륨의 화학 포텐셜은 다음과 같다.</p>
-<p><span id="eq-TD_schroeder_3_64"><span class="math display">\[
+\tag{25.49}</span></span></p>
+<p>상온, 1기압의 경우 <span class="math inline">V/N = 4.2 \times 10^{-26}\, \text{m}^3</span> 이며 헬륨의 경우 <span class="math inline">(h^2/2\pi m k_B T)^{3/2} \approx 1.3 \times 10^{-31}\,\text{m}^3</span> 이다. 이로부터 상온 1기압에서의 헬륨의 화학 포텐셜은 다음과 같다.</p>
+<p><span id="eq-TD_schroeder_3_64"><span class="math display">
 \mu_{\text{He}} = - 0.32\, \text{eV},\qquad \text{at } 300\, \text{K},\, 1\,\text{atm}.
-\tag{24.50}\]</span></span></p>
-<p>고정된 온도에서 밀도가 증가할 경우, 즉 <span class="math inline">\(V/N\)</span> 이 감소할 경우 <span class="math inline">\(\mu\)</span> 는 증가한다. 즉 주변에 입자를 방출하려는 경항을 띈다.</p>
+\tag{25.50}</span></span></p>
+<p>고정된 온도에서 밀도가 증가할 경우, 즉 <span class="math inline">V/N</span> 이 감소할 경우 <span class="math inline">\mu</span> 는 증가한다. 즉 주변에 입자를 방출하려는 경항을 띈다.</p>
 </div>
 </div>
-<p>이제 한종류가 아닌 여러종류의 입자가 교환되는 시스템을 생각하자. 각각의 입자는 각각의 화학 포텐셜을 가진다. 즉 <span class="math inline">\(i\)</span> 번째 종류의 입자의 화학포텐셜 <span class="math inline">\(\mu_i\)</span> 는 다음과 같이 정의된다.</p>
-<p><span id="eq-TD_schroeder_3_65"><span class="math display">\[
+<p>이제 한종류가 아닌 여러종류의 입자가 교환되는 시스템을 생각하자. 각각의 입자는 각각의 화학 포텐셜을 가진다. 즉 <span class="math inline">i</span> 번째 종류의 입자의 화학포텐셜 <span class="math inline">\mu_i</span> 는 다음과 같이 정의된다.</p>
+<p><span id="eq-TD_schroeder_3_65"><span class="math display">
 \mu_i = - T\left(\dfrac{\partial S}{\partial N_i}\right)_{U,V, N_1,\ldots,N_{i-1},N_{i+1},\ldots}.
-\tag{24.51}\]</span></span></p>
+\tag{25.51}</span></span></p>
 <p>또한 열역학적 항등식은</p>
-<p><span id="eq-TD_schroeder_3_66"><span class="math display">\[
+<p><span id="eq-TD_schroeder_3_66"><span class="math display">
 dU = T\,dS - p\,dV + \sum_i \mu_i \, dN_i
-\tag{24.52}\]</span></span></p>
+\tag{25.52}</span></span></p>
 <p>이다. 여러 입자가 포함된 두 시스템의 확산 평형은 각각의 입자에 대한 화학 포텐셜이 동일한 상태이다.</p>
 </section>
 <section id="연습문제-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-3">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-TD_schroeder_3_36" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 24.17 (Schroeder 3.36)</strong></span> <span class="math inline">\(N,\,q \gg 1\)</span> 인 아인슈타인 고체를 생각하자. 각각의 진동자가 별도의 입자라고 생각한다.</p>
-<p>(<span class="math inline">\(a\)</span>) 케미컬 포텐셜이 다음과 같음을 보여라.</p>
-<p><span id="eq-TD_schroeder_prob_3_36_1"><span class="math display">\[
+<p><span class="theorem-title"><strong>연습문제 25.17 (Schroeder 3.36)</strong></span> <span class="math inline">N,\,q \gg 1</span> 인 아인슈타인 고체를 생각하자. 각각의 진동자가 별도의 입자라고 생각한다.</p>
+<p>(<span class="math inline">a</span>) 케미컬 포텐셜이 다음과 같음을 보여라.</p>
+<p><span id="eq-TD_schroeder_prob_3_36_1"><span class="math display">
 \mu = - k_B T \ln\left(\dfrac{N+q}{N}\right).
-\tag{24.53}\]</span></span></p>
-<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(N \gg q\)</span> 일 때와 <span class="math inline">\(N \ll q\)</span> 일 때 에너지를 갖지 않은 입자가 증가할 때 <span class="math inline">\(S\)</span> 가 얼마나 증가하는지를 말하고 화학포텐셜에 대해 설명하라. 이 식은 직관적으로 말이 되는가?</p>
+\tag{25.53}</span></span></p>
+<p>(<span class="math inline">b</span>) <span class="math inline">N \gg q</span> 일 때와 <span class="math inline">N \ll q</span> 일 때 에너지를 갖지 않은 입자가 증가할 때 <span class="math inline">S</span> 가 얼마나 증가하는지를 말하고 화학포텐셜에 대해 설명하라. 이 식은 직관적으로 말이 되는가?</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <a href="#exr-TD_schroeder_3_25" class="quarto-xref">연습문제&nbsp;<span>24.12</span></a> (<span class="math inline">\(a\)</span>) 로부터 <span class="math inline">\(S = (N+q)\ln (N+q) - q\ln q - N \ln N\)</span> 이므로</p>
-<p><span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">a</span>) <a href="#exr-TD_schroeder_3_25" class="quarto-xref">연습문제&nbsp;<span>25.12</span></a> (<span class="math inline">a</span>) 로부터 <span class="math inline">S = (N+q)\ln (N+q) - q\ln q - N \ln N</span> 이므로</p>
+<p><span class="math display">
 \mu = -T\left[\ln (N+q) + 1 -\ln N -1 \right]= -T \ln (N+q)/N.
-\]</span></p>
-<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(N\gg q\)</span> 이면 <span class="math inline">\(\mu \approx -k_B T\dfrac{q}{N}\)</span> 이며 0 에 근접한 음수 값을 가진다. 입자가 이미 너무 많고 에너지가 부족하기 때문에, 새로운 입자가 들어와도 엔트로피의 변화가 미미하며 화학적으로 매우 안정(둔감)해진 상태이다.</p>
-<p><span class="math inline">\(N\ll q\)</span> 이면 <span class="math inline">\(\mu \approx -k_B T \ln (q/N+1) \approx -k_B T \ln (q/N)\)</span> 으로 매우 큰 음수값을 가진다. 시스템에 입자 하나를 추가할 때 엔트로피가 매우 크게 증가하며 입자를 적극적으로 받아들이려는 경항성을 갖게 된다.</p>
+</span></p>
+<p>(<span class="math inline">b</span>) <span class="math inline">N\gg q</span> 이면 <span class="math inline">\mu \approx -k_B T\dfrac{q}{N}</span> 이며 0 에 근접한 음수 값을 가진다. 입자가 이미 너무 많고 에너지가 부족하기 때문에, 새로운 입자가 들어와도 엔트로피의 변화가 미미하며 화학적으로 매우 안정(둔감)해진 상태이다.</p>
+<p><span class="math inline">N\ll q</span> 이면 <span class="math inline">\mu \approx -k_B T \ln (q/N+1) \approx -k_B T \ln (q/N)</span> 으로 매우 큰 음수값을 가진다. 시스템에 입자 하나를 추가할 때 엔트로피가 매우 크게 증가하며 입자를 적극적으로 받아들이려는 경항성을 갖게 된다.</p>
 </div>
 
 
@@ -1491,8 +1510,7 @@ Schroeder, D. V. 2000. <em>An Introduction to Thermal Physics</em>. Addison Wesl
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-      window.quartoDecorateExternalLinks = function (root) {
-     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -1501,69 +1519,8 @@ Schroeder, D. V. 2000. <em>An Introduction to Thermal Physics</em>. Addison Wesl
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
-          if (!link.classList.contains('no-external-icon')) {
-          }
         }
       }
-      };
-      window.quartoDecorateExternalLinks(window.document);
-    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
-    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
-    const hideOnEscAndFocusOut = {
-      name: 'hideOnEscAndFocusOut',
-      defaultValue: true,
-      fn(instance) {
-        const dismiss = () => {
-          // A show scheduled by the trigger delay would otherwise reopen it
-          instance.clearDelayTimeouts();
-          instance.hide();
-        };
-        const onKeyDown = (event) => {
-          if (event.key !== 'Escape') {
-            return;
-          }
-          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
-          // except an open reveal.js slide menu, which Esc should close too.
-          // The menu handles keys only when its keyboard option is on.
-          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
-            window.Reveal.getConfig().menu?.keyboard !== false;
-          if (!menuHandlesEsc) {
-            event.stopPropagation();
-          }
-          if (instance.popper.contains(window.document.activeElement)) {
-            // Disabled while refocusing so the focus trigger does not reopen it
-            instance.disable();
-            instance.reference.focus();
-            instance.enable();
-          }
-          dismiss();
-        };
-        const onFocusOut = (event) => {
-          const target = event.relatedTarget;
-          if (target && !instance.reference.contains(target) &&
-              !instance.popper.contains(target)) {
-            dismiss();
-          }
-        };
-        // On the trigger too: a click trigger (code-annotations: select) has no
-        // blur handling. Attached for the instance's lifetime so leaving the
-        // trigger also cancels a show still pending on the trigger delay.
-        instance.reference.addEventListener('focusout', onFocusOut);
-        return {
-          onShow() {
-            window.document.addEventListener('keydown', onKeyDown, true);
-            instance.popper.addEventListener('focusout', onFocusOut);
-          },
-          onHide() {
-            window.document.removeEventListener('keydown', onKeyDown, true);
-            instance.popper.removeEventListener('focusout', onFocusOut);
-          },
-          onDestroy() {
-            instance.reference.removeEventListener('focusout', onFocusOut);
-          },
-        };
-      },
-    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -1577,7 +1534,6 @@ Schroeder, D. V. 2000. <em>An Introduction to Thermal Physics</em>. Addison Wesl
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
-        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -1740,54 +1696,44 @@ Schroeder, D. V. 2000. <em>An Introduction to Thermal Physics</em>. Addison Wesl
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          // Each band is positioned against its own containing block, which is
-          // not the offsetParent of the lines, so place it from client rects.
-          const placeBand = (band, firstEl, lastEl, codeBlock) => {
-            const container = band.offsetParent;
-            if (container === null) {
-              return;
-            }
-            const containerRect = container.getBoundingClientRect();
-            // Reveal.js scales slides with a transform, so convert client
-            // pixels back to the CSS pixels of the container.
-            const scale = containerRect.height / container.offsetHeight || 1;
-            const firstRect = firstEl.getBoundingClientRect();
-            const lastRect = lastEl.getBoundingClientRect();
-            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
-            const height = (lastRect.bottom - firstRect.top) / scale;
-            band.style.top = top - 2 + "px";
-            band.style.height = height + 4 + "px";
-            if (codeBlock) {
-              // Without the copy button wrapper, the containing block is wider
-              // than the code block, so span the code block explicitly.
-              const blockRect = codeBlock.getBoundingClientRect();
-              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
-              band.style.width = blockRect.width / scale + "px";
-            }
-          };
+          let top = null;
+          let height = null;
+          let parent = null;
           if (lineIds.length > 0) {
-            const el = window.document.getElementById(lineIds[0]);
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const parent = el.parentElement.parentElement;
-            // cook up a div (if necessary) and position it
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
             }
-            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
             }
-            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -1886,18 +1832,15 @@ Schroeder, D. V. 2000. <em>An Introduction to Thermal Physics</em>. Addison Wesl
     }
   });
   </script>
-  <script type="application/javascript">
-  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
-  </script>
-<nav class="page-navigation" aria-label="Page">
+<nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/ThermalPhysics/03_introduction_to_statistical_mechanics.html" class="pagination-link" aria-label="통계역학의 기초">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">통계역학의 기초</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">통계역학의 기초</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../src/ThermalPhysics/0A_mathematics.html" class="pagination-link" aria-label="Appendix">
-        <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Appendix</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Appendix</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

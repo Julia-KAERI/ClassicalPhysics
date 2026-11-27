@@ -19,6 +19,7 @@ book:
       - src/ClassicalMechanics/02_variational_principle.qmd
       - src/ClassicalMechanics/03_hamilton_dynamics.qmd
       - src/ClassicalMechanics/04_canonical_transform.qmd
+      - src/ClassicalMechanics/05_hamilton_jacobi.qmd
       - src/ClassicalMechanics/11_one_body_problems.qmd
       - src/ClassicalMechanics/12_two_or_three_bodies_problems.qmd
       - src/ClassicalMechanics/13_small_oscillations.qmd
@@ -88,7 +89,9 @@ format:
     code-fold: true
     code-summary: "Show the code"
   
-    html-math-method: mathjax
+    # html-math-method: mathjax
+    html-math-method: katex
+    css: styles.css
 
 
 

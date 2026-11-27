@@ -24,6 +24,8 @@ format: html
 \newcommand{\tr}{\operatorname{tr}}
 \newcommand{\sgn}{\operatorname{sgn}}
 \newcommand{\bfhat}{\bf{}}
+\newcommand{\lagr}{\mathcal{L}}
+\newcommand{\hamil}{\mathcal{H}}
 
 
 
