@@ -744,7 +744,7 @@ $$
 정전기 에너지는 역학적 포텐셜 에너지와 같이 무한히 먼 지점에서 특정 지점까지 전하 $q$ 를 움직이는데 해준 일을 의미한다. 즉 정전기 에너지 $U(\bf{r})$ 는 다음과 같다.
 
 $$
-U(\bf{r}) = -\int_{\infty}^\bf{r} \bf{F\cdot}\, d\bf{l} = q\int_{\infty}^\bf{r} \nabla \Phi \bf{\cdot}\,d\bf{l} = q\Phi(\bf{r}).
+U(\bf{r}) = -\int_{\infty}^{\bf{r}} \bf{F\cdot}\, d\bf{l} = q\int_{\infty}^{\bf{r}} \nabla \Phi \bf{\cdot}\,d\bf{l} = q\Phi(\bf{r}).
 $$ {#eq-ED_ES_electrostatic_energy_for_single_paticle_over_potential}
 
 여기서 $\Phi(\infty) = 0$ 이라는 경계조건을 사용하였다. 

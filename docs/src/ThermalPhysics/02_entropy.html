@@ -139,6 +139,7 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating slimcontent quarto-light">
@@ -493,6 +494,7 @@ window.Quarto = {
 <div class="hidden">
 <p>% %</p>
 <p>% </p>
+<p>% </p>
 <p><span class="math display">
 \DeclarePairedDelimiters{\set}{\{}{\}}
 \DeclareMathOperator*{\argmax}{argmax}
@@ -658,7 +660,7 @@ W = Q_h'-Q_l' = Q_h-Q_l
 <section id="카르노-기관과-이상기체" class="level3">
 <h3 class="anchored" data-anchor-id="카르노-기관과-이상기체">카르노 기관과 이상기체</h3>
 <p><a href="#fig-TD_carnot_cycle" class="quarto-xref">그림&nbsp;<span>23.1</span></a> 을 보자. 이상기체가 열을 주거나 받으며 일을 한다고 하자.</p>
-<p><strong>1. <span class="math inline">A\to B</span> 과정</strong> : 등온과정이므로 <span class="math inline">dU=0</span> 이며 따라서 <span class="math inline">\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ=\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dW</span> 이다. 다음이 성립한다.</p>
+<p><strong>1. <span class="math inline">A\to B</span> 과정</strong> : 등온과정이므로 <span class="math inline">dU=0</span> 이며 따라서 <span class="math inline">d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q=d\hspace*{-0.08em}\bar{}\hspace*{0.1em}W</span> 이다. 다음이 성립한다.</p>
 <p><span id="eq-TD_carnot_cycle_of_ideal_gas_AB_process"><span class="math display">
 Q_h = \int_{V_A}^{V_B} p\,dV = \nu RT_h \ln \left(\dfrac{V_B}{V_A}\right).
 \tag{23.2}</span></span></p>
@@ -954,13 +956,13 @@ f(\Omega_1 \Omega_2) = f(\Omega_1) + f(\Omega_2)
 <h3 class="anchored" data-anchor-id="상태함수와-전미분">상태함수와 전미분</h3>
 <p>상태가 <span class="math inline">p,\,V,\,T</span> 가운데 두개로 정의 될 수 있는 시스템을 생각하자. 우선 <span class="math inline">T,\,V</span> 가 독립변수라면</p>
 <p><span id="eq-TD_fermi_79"><span class="math display">
-\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ = dU - dW = \left(\dfrac{\partial U}{\partial T}\right)_V dT + \left[\left(\dfrac{\partial U}{\partial V}\right)_T - p\right] dV
+d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q = dU - dW = \left(\dfrac{\partial U}{\partial T}\right)_V dT + \left[\left(\dfrac{\partial U}{\partial V}\right)_T - p\right] dV
 \tag{23.30}</span></span></p>
 <p>이며 이로부터</p>
 <p><span id="eq-TD_fermi_80"><span class="math display">
-dS = \dfrac{\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ}{T} =  \dfrac{1}{T}\left(\dfrac{\partial U}{\partial T}\right)_V dT + \dfrac{1}{T} \left[\left(\dfrac{\partial U}{\partial V}\right)_T - p\right] dV
+dS = \dfrac{d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q}{T} =  \dfrac{1}{T}\left(\dfrac{\partial U}{\partial T}\right)_V dT + \dfrac{1}{T} \left[\left(\dfrac{\partial U}{\partial V}\right)_T - p\right] dV
 \tag{23.31}</span></span></p>
-<p>이다. 위의 <span class="math inline">\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ</span> 와 <span class="math inline">dS</span> 는 큰 차이가 있는데 <span class="math inline">dQ</span> 는 경로 의존적이며 <span class="math inline">dS</span> 는 경로 독립적이라는 것이다. <span class="math inline">dS</span> 는 전미분이며 즉 <span class="math inline">S</span> 는 <span class="math inline">T,\,P</span> 의 함수이다.</p>
+<p>이다. 위의 <span class="math inline">d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q</span> 와 <span class="math inline">dS</span> 는 큰 차이가 있는데 <span class="math inline">dQ</span> 는 경로 의존적이며 <span class="math inline">dS</span> 는 경로 독립적이라는 것이다. <span class="math inline">dS</span> 는 전미분이며 즉 <span class="math inline">S</span> 는 <span class="math inline">T,\,P</span> 의 함수이다.</p>
 <p><span id="eq-TD_fermi_81"><span class="math display">
 S=S(T,\,V).
 \tag{23.32}</span></span></p>
@@ -992,15 +994,15 @@ Q_1-Q_2 = -(W_1-W_2)
 <h3 class="anchored" data-anchor-id="이상기체의-경우">이상기체의 경우</h3>
 <p><a href="01_thermodynamic_systems.html#eq-TD_fermi_30" class="quarto-xref">식&nbsp;<span>22.15</span></a> 와 이상기체 상태방정식 <span class="math inline">pV=\nu RT</span> 로부터</p>
 <p><span id="eq-TD_fermi_84"><span class="math display">
-\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ = C_V \, dT - \dfrac{\nu RT}{V}\,dV
+d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q = C_V \, dT - \dfrac{\nu RT}{V}\,dV
 \tag{23.33}</span></span></p>
-<p>이다. <span class="math inline">\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ</span> 가 전미분이려면</p>
+<p>이다. <span class="math inline">d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q</span> 가 전미분이려면</p>
 <p><span class="math display">
 \left(\dfrac{\partial C_V}{\partial V}\right)_T = \left(\dfrac{\partial (\nu R T/V)}{\partial T}\right)_V
 </span></p>
 <p>이어야 한다. 이상기체의 경우 <span class="math inline">C_V</span> 는 부피와 무관한 <span class="math inline">\frac{5}{2}\nu R</span> 이므로 좌변은 <span class="math inline">0</span> 이지만 우변은 <span class="math inline">nuR/V \ne 0</span> 이므로 <span class="math inline">dQ</span> 는 전미분이 아니라는 것을 확인 할 수 있다. 이제 엔트로피의 경우를 보자</p>
 <p><span class="math display">
-dS = \dfrac{\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ}{T}= \dfrac{C_V}{T}dT + \dfrac{\nu R}{V}dV
+dS = \dfrac{d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q}{T}= \dfrac{C_V}{T}dT + \dfrac{\nu R}{V}dV
 </span></p>
 <p>이며 같은 방법으로 전미분임을 확인 할 수 있다. 이제 <span class="math inline">dS</span> 를 적분하면</p>
 <p><span id="eq-TD_fermi_86"><span class="math display">
@@ -1033,7 +1035,7 @@ S= C_p\ln T - \nu R \ln p + a + \nu R \ln \nu R.
 \left(\dfrac{\partial U}{\partial V}\right)_T = 0
 </span></p>
 <p>이다. 즉 이상기체의 내부 에너지는 부피와 무관하다.</p>
-<p><span class="math inline">T,\,V</span> 대신에 <span class="math inline">T,\,p</span> 나 <span class="math inline">p,\,V</span> 를 독립변수로 사용하면 <a href="#eq-TD_fermi_88" class="quarto-xref">식&nbsp;<span>23.36</span></a> 과 본질적으로 동등한 식을 얻게 된다. <a href="01_thermodynamic_systems.html#eq-TD_fermi_23" class="quarto-xref">식&nbsp;<span>22.10</span></a> 에서 주어진 <span class="math inline">\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ</span> 에 대해 <span class="math inline">dS=\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ/dT</span> 를 취하면</p>
+<p><span class="math inline">T,\,V</span> 대신에 <span class="math inline">T,\,p</span> 나 <span class="math inline">p,\,V</span> 를 독립변수로 사용하면 <a href="#eq-TD_fermi_88" class="quarto-xref">식&nbsp;<span>23.36</span></a> 과 본질적으로 동등한 식을 얻게 된다. <a href="01_thermodynamic_systems.html#eq-TD_fermi_23" class="quarto-xref">식&nbsp;<span>22.10</span></a> 에서 주어진 <span class="math inline">d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q</span> 에 대해 <span class="math inline">dS=d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q/dT</span> 를 취하면</p>
 <p><span class="math display">
 \begin{aligned}
 dS =   \left[\dfrac{1}{T}\left(\dfrac{\partial U}{\partial T}\right)_p + \dfrac{p}{T}\left(\dfrac{\partial V}{\partial T}\right)_V\right]\,dT + \left[\dfrac{1}{T}\left(\dfrac{\partial U}{\partial p}\right)_T + \dfrac{p}{T}\left(\dfrac{\partial V}{\partial p}\right)_T\right]\,dp
@@ -1047,7 +1049,7 @@ dS =   \left[\dfrac{1}{T}\left(\dfrac{\partial U}{\partial T}\right)_p + \dfrac{
 <p><span id="eq-TD_fermi_89"><span class="math display">
 \left(\dfrac{\partial U}{\partial p}\right)_T = - p \left(\dfrac{\partial V}{\partial p}\right)_T - T\left(\dfrac{\partial V}{\partial T}\right)_p.
 \tag{23.37}</span></span></p>
-<p>마찬가지로 <span class="math inline">p,\,V</span> 를 독립변수로 취하면 <a href="01_thermodynamic_systems.html#eq-TD_fermi_24" class="quarto-xref">식&nbsp;<span>22.11</span></a> 의 <span class="math inline">\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ</span> 로부터 아래의 관계를 얻는다.</p>
+<p>마찬가지로 <span class="math inline">p,\,V</span> 를 독립변수로 취하면 <a href="01_thermodynamic_systems.html#eq-TD_fermi_24" class="quarto-xref">식&nbsp;<span>22.11</span></a> 의 <span class="math inline">d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q</span> 로부터 아래의 관계를 얻는다.</p>
 <p><span id="eq-TD_fermi_90"><span class="math display">
 T = \left[\dfrac{\partial U}{\partial V}_p + p\right] \left(\dfrac{\partial T}{\partial p}\right)_V - \left(\dfrac{\partial U}{\partial p}\right)_V \left(\dfrac{\partial T}{\partial V}\right)_p .
 \tag{23.38}</span></span></p>
@@ -1102,13 +1104,13 @@ dU = [u_v(T)-u_l(T)]\,dm.
 \tag{23.40}</span></span></p>
 <p>이로부터</p>
 <p><span class="math display">
-\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ = dU + pdV = dm [u_v - u_l - p(v_l-v_v)]
+d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q = dU + pdV = dm [u_v - u_l - p(v_l-v_v)]
 </span></p>
 <p>이므로</p>
 <p><span id="eq-TD_fermi_93"><span class="math display">
-\dfrac{\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ}{dm} = u_v - u_l - p(v_l-v_v) = L
+\dfrac{d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q}{dm} = u_v - u_l - p(v_l-v_v) = L
 \tag{23.41}</span></span></p>
-<p>이다. 이 때 <span class="math inline">L=\rlap{\raise{0.8ex}{\hspace{0.12em}\scriptstyle -}}dQ/dm</span> 은 정해진 온도에서 단위질량의 액체를 기화시킬 때 필요한 열로 <strong>잠열 (latent heat)</strong> 이라 부른다. 잠열은 물질에 따라 다르며 온도에 따라서도 다르다. 예를 들어 1 기압의 물의 끓는점에서 <span class="math inline">L_{\text{H}_2\text{O}}= 2,257 \,\text{kJ/kg}</span> 이다.</p>
+<p>이다. 이 때 <span class="math inline">L=d\hspace*{-0.08em}\bar{}\hspace*{0.1em}Q/dm</span> 은 정해진 온도에서 단위질량의 액체를 기화시킬 때 필요한 열로 <strong>잠열 (latent heat)</strong> 이라 부른다. 잠열은 물질에 따라 다르며 온도에 따라서도 다르다. 예를 들어 1 기압의 물의 끓는점에서 <span class="math inline">L_{\text{H}_2\text{O}}= 2,257 \,\text{kJ/kg}</span> 이다.</p>
 </section>
 <section id="클라우시우스-클라페이롱-공식" class="level3">
 <h3 class="anchored" data-anchor-id="클라우시우스-클라페이롱-공식">클라우시우스-클라페이롱 공식</h3>

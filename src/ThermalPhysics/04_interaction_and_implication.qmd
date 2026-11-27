@@ -236,7 +236,7 @@ $$
 C_V= \left(\dfrac{\partial U}{\partial T}\right)_{N} = \dfrac{(\hbar \omega)^2}{k_BT^2} N e^{-\hbar \omega/k_BT}
 $$
 
-![$N=N_A$, $\hbar \omega = 10\,\text{meV}= 1.6 \times 10^{-21}\,\text{J}$ 로 잡았을 때의 $C_V-T$ 그래프](figures/schroeder/chap2/schroeder_prob_3_8.png){#fig-TD_schroeder_prob_3_8 width=400}
+![$N=N_A$, $\hbar \omega = 10\,\text{meV}= 1.6 \times 10^{-21}\,\text{J}$ 로 잡았을 때의 $C_V-T$ 그래프](figures/schroeder/chap3/schroeder_prob_3_8.png){#fig-TD_schroeder_prob_3_8 width=400}
 
 
 :::
@@ -608,7 +608,7 @@ DPPH 와 같은 이상적인 2상태 상자성 물질을 생각하자. 여기서
 
 ::: {.solution}
 
-2.06 T, 2.2 K 에서 생각한다. $\mu_B \times 2.2\,\text{T}/(k_B \times 2.2 \,\text{K})=0.629$. $U_\max = \mu_B NB$ 이며 $U/U_\text{Max}=-0.557$, $M/M_\text{max}=0.557$, $N_\uparrow=0.779 N$, $S_\text{Max}= k_B\ln 2$ 이므로 $S/S_\text{Max}=0.762$.
+2.06 T, 2.2 K 에서 생각한다. $\mu_B \times 2.2\,\text{T}/(k_B \times 2.2 \,\text{K})=0.629$. $U_{\max} = \mu_B NB$ 이며 $U/U_{\text{Max}}=-0.557$, $M/M_{\text{max}}=0.557$, $N_\uparrow=0.779 N$, $S_{\text{Max}}= k_B\ln 2$ 이므로 $S/S_{\text{Max}}=0.762$.
 
 99% 자화를 얻기 위해서는 $\mu_B B/k_B T\approx 2.65$ 이어야 하며 자기장을 4.2배 증가시킨 8.65 T 로 올리거나 온도를 0.5 K 로 낮추어야 한다. 
 :::

@@ -1559,7 +1559,7 @@ $$
 이로부터 $p_\mu + p_{\overline{\nu}}=0$ 이며,
 
 $$
-m_\mu^2c^2 + p_\mu^2 = (m_\pi c - p_\overline{\nu})^2 = m_\pi^2c^2 + p_\mu^2 + 2p_\mu m_\pi c
+m_{\mu}^2c^2 + p_\mu^2 = (m_\pi c - p_{\overline{\nu}})^2 = m_{\pi}^2c^2 + p_{\mu}^2 + 2p_{\mu} m_{\pi} c
 $$
 
 이므로, 
@@ -1592,10 +1592,10 @@ $$
 힉스 정지 좌표계, 즉 운동량 중심 좌표계에서 생각하자. 붕괴 전후의 4 운동량은
 
 $$
-\left(125\,\textrm{GeV}/c,\, 0,\,0,\,0 \right) = \left(\sqrt{m_b^2c^2 + p_b^2} + \sqrt{m_\overline{b}^2c^2 + p_\overline{b}^2},\, p_b+p_{\overline{b}},\,0,\,0\right)
+\left(125\,\textrm{GeV}/c,\, 0,\,0,\,0 \right) = \left(\sqrt{m_b^2c^2 + p_b^2} + \sqrt{m_{\overline{b}}^2c^2 + p_{\overline{b}}^2},\, p_b+p_{\overline{b}},\,0,\,0\right)
 $$
 
-이므로 $p_b = \sqrt{(62.5)^2-(4.2)^2}\,\textrm{GeV}/c = 62.36\, \textrm{GeV}/c = -p_{\overline{b}}$ 이다. $\beta = 4/5,\, \gamma= 5/3$ 에 대해 로런츠 변환을 수행하면, $E_b=187.31\, \textrm{GeV}$, $p_b = 187.27\, \textrm{GeV}/c$, $E_\overline{b}=21.02\, \textrm{GeV}$, $p_\overline{b} = -20.6\, \textrm{GeV}/c$.
+이므로 $p_b = \sqrt{(62.5)^2-(4.2)^2}\,\textrm{GeV}/c = 62.36\, \textrm{GeV}/c = -p_{\overline{b}}$ 이다. $\beta = 4/5,\, \gamma= 5/3$ 에 대해 로런츠 변환을 수행하면, $E_b=187.31\, \textrm{GeV}$, $p_b = 187.27\, \textrm{GeV}/c$, $E_{\overline{b}}=21.02\, \textrm{GeV}$, $p_{\overline{b}} = -20.6\, \textrm{GeV}/c$.
 
 :::
 
