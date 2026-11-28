@@ -18,33 +18,25 @@ $$
 e = 1.60217657 \times 10^{−19} \text{ C}
 $$
 
-이다. 점입자가 아닌 전하 분포를 사용할 경우는 전하 밀도, 즉 단위 부피당 전하량를 사용하며 $\rho(\bf{x},\,t)$ 라고 표기한다. 공간 $V$ 를 점유하는 총 전하량 $Q=\int_V \rho (\bf{x},\,t) d^3\bf{x}$ 이다. 때때로 점전하를 표현할 경우 디랙 델타 함수를 사용하여 $\rho = q \delta(\bf{x}-\bf{r}(t))$ 와 같이 쓴다. 
+이다. 점입자가 아닌 전하 분포를 사용할 경우는 전하 밀도, 즉 단위 부피당 전하량를 사용하며 $\rho(\bf{r},\,t)$ 라고 표기한다. 공간상의 부피 $V$ 에 포함된 총 전하량 $Q=\int_V \rho (\bf{r},\,t) d\mathcal{V}$ 이다. 때때로 점전하를 표현할 경우 디랙 델타 함수를 사용하여 $\rho(t,\,\bf{r}) = q \delta(\bf{r}-\bf{r}_0(t))$ 와 같이 쓴다. 
 
-많은 경우 전하는 움직이며 이것을 수학적으로 표현해야 한다. 특정 위치 $\bf{x}$, 시간 $t$ 에서의 전하 밀도가 $\rho$ 이고 이 전하가 $\bf{v}$ 의 속도로 움직일 때 **전류 밀도 (current density)** $\bf{J}$ 는 아래와 같이 정의된다.
+많은 경우 전하는 움직이며 이것을 수학적으로 표현해야 한다. 특정 위치 $\bf{x}$, 시간 $t$ 에서의 전하 밀도가 $\rho$ 이고 이 전하가 $\bf{v}$ 의 속도로 움직일 때 **전류 밀도 (current density)** $\bf{j}$ 는 아래와 같이 정의된다.
 
 $$
-\bf{J} := \rho \bf{v}.
+\bf{j} := \rho \bf{v}.
 $$ {#eq-ED_definition_of_current_density}
 
-전하의 경우와 마찬가지로 점전하가 속도 $\bf{v}$ 로 움직일 경우 전류밀도는 $\bf{J} = \rho\,\delta(\bf{x}-\bf{r}(t))\bf{v}$ 이다. 
+전하의 경우와 마찬가지로 점전하가 속도 $\bf{v}$ 로 움직일 경우 전류밀도는 $\bf{j} = \rho\,\delta(\bf{r}-\bf{r}_0(t))\bf{v}$ 이다. 
 
 많은 경우 특정 표면 $S$ 에 대해 이 표면을 통과하는 전하의 흐름이 중요하다. 이 값을 **전류 (electric current)** 라고 하며 관례적으로 $I$ 로 표기하고 아래와 같이 정의된다.
 
 $$
-I := \int_S \bf{J \cdot} d\bf{S}.
+I := \int_S \bf{j \cdot} d\bf{a}.
 $$ {#eq-ED_definition_of_electric_current}
 
-$q$ 의 전하를 가진 입자가 $S$ 의 표면을 단위면적당 $n$ 개가 $\bf{v}$ 의 속도로 통과한다고 하자. 그렇다면 $\bf{J}=nq\bf{v}$ 이고 $I = nqvS$ 이다. 
+$q$ 의 전하를 가진 입자가 $S$ 의 표면을 단위면적당 $n$ 개가 $\bf{v}$ 의 속도로 통과한다고 하자. 그렇다면 $\bf{j}=nq\bf{v}$ 이고 $I = nqvS$ 이다. 
 
 </br>
-
-### 전하 보존 법칙 {#sec-ED_charge_conservartion_law}
-
-$$
-\dfrac{\partial \rho}{\partial t} + \nabla \bf{\cdot J} = 0.
-$$ {#eq-ED_charge_conservation_law}
-
-</bf>
 
 ## 힘과 장 
 
@@ -54,25 +46,27 @@ $$ {#eq-ED_charge_conservation_law}
 
 #### **로런츠 힘**
 
-전기장 $\bf{E}(\bf{x},\,t)$ 와 자기장 $\bf{B}(\bf{x},\,t)$ 에 대해 $\bf{r}(t)$ 에 위치한 전하 $q$ 는 아래의 힘을 받으미 이 힘을 **로런츠 힘(Lorentz force)** 라고 한다.
+전기장 $\bf{E}(t,\,\bf{r})$ 와 자기장 $\bf{B}(t,\,\bf{r})$ 에 대해 $\bf{r}(t)$ 에 위치하고 속도 $\bf{v}$ 로 움직이는 전하 $q$ 는 아래의 힘을 받으며 이 힘을 **로런츠 힘(Lorentz force)** 라고 한다.
 
 $$
-\bf{F}=q(\bf{E} + \dot{\bf{r}}\times \bf{B}).
+\bf{F}=q(\bf{E} + \bf{v}\times \bf{B}).
 $$ {#eq-ED_lorentz_force}
 
 :::
 
-이 로런츠 힘을 전하 분포 $\rho$ 와 전류 밀도 $\bf{J}$ 에 대해 아래와 같이 쓸 수 있다.
+이 로런츠 힘을 전하 분포 $\rho$ 와 전류 밀도 $\bf{j}$ 에 대해 아래와 같이 쓸 수 있다.
 
 $$
-\bf{f} = \rho \bf{E} + \bf{J}\times \bf{B}.
+\bf{f} = \rho \bf{E} + \bf{j}\times \bf{B}.
 $$ {#eq-ED_force_density}
 
-여기서 $\bf{f}$ 는 $\bf{x}$ 에 위치한 작은 부피의 전하 $\rho$ 가 $\rho(\bf{x},\,t)$ 와 $\bf{J}(\bf{x},\,t)$ 에 의해 받는 단위 부피당 힘이다. 
+여기서 $\bf{f}$ 는 $\bf{r}$ 에 위치한 작은 부피의 전하 $\rho$ 가 $\rho(t,\,\bf{r})$ 와 $\bf{j}(t,\,\bf{r})$ 에 의해 받는 단위 부피당 힘이다. 
 
 </br>
 
 ### 맥스웰 방정식 {#sec-ED_maxwell_equation}
+
+#### **멕스웰 방정식**
 
 로런츠 힘은 주어진 전기장과 자기장에 대해 전하 및 전하의 흐름에 의해 생성되는 힘을 표현한다. 전기장과 자기장은 어떻게 생성될지를 말하는 식이 멕스웰 방정식이다. 멕스웰 방정식은 아래의 네 식이다.
 
@@ -92,7 +86,7 @@ $$
 $$ {#eq-ED_maxwell_eq_3}
 
 $$
-\nabla \times B - \mu_0\epsilon_0 \dfrac{\partial \bf{E}}{\partial t} = \mu_0 \bf{J}.
+\nabla \times \bf{B}  -\epsilon_0\mu_0 \dfrac{\partial \bf{E}}{\partial t} = \mu_0 \bf{j} .
 $${#eq-ED_maxwell_eq_4}
 
 여기서 $\epsilon_0$ 는 진공 유전율로 
@@ -107,6 +101,278 @@ $$
 \mu_0 :=4\pi \times 10^{-7}\; \text{m}\,\text{Kg}\,\text{C}^{-2} \approx 1.25 \times 10^{-6} \; \text{m}\,\text{Kg}\,\text{C}^{-2}
 $$
 
-이다. 
+이다. 이 때 광속 $c$ 는 $\epsilon_0,\, \mu_0$ 와 다음의 관계가 있다.
 
+$$
+c^2 = \dfrac{1}{\epsilon_0 \mu_0}.
+$$ {#eq-ED_speed_of_light}
+
+:::
+
+
+#### **멕스웰 방정식의 적분**
+
+부피 $V$ 의 표면 $S$ 가 매끄러운 닫힌 곡면일 때 @eq-ED_maxwell_eq_1 의 적분은 다음과 같다.
+
+$$
+\boxed{\Phi_E(t) := \oint_S \bf{E}(t,\,\bf{r})\bf{\cdot }d\bf{a} = \dfrac{Q_\text{in}(t)}{\epsilon_0}.}
+$$ {#eq-ED_maxwell_eq_1_1}
+
+여기서 $Q_\text{in} = \int_V\rho(t,\,\bf{r})\,d\mathcal{V}$ 은 $\mathcal{V}$ 안에 포함된 총 전하이고 $\Phi_E(t)$ 는 **전기선속 (flux of electric field)** 이라고 불린다.
+
+@eq-ED_maxwell_eq_2 에 대해 똑같이 하면
+
+$$
+\boxed{\Phi_B(t) := \oint_S \bf{B}(t,\,\bf{r})\bf{\cdot }d\bf{a} = 0.}
+$$ {#eq-ED_maxwell_eq_2_1}
+
+이 대 $\Phi_B(t)$ 를 **자기선속 (flux of magnetic field)** 이라고 부른다.
+
+이제 공간상의 닫힌 곡선 $\Gamma$ 를 경계로 갖는 평면 $S$ 를 생각하자. @eq-ED_maxwell_eq_3 를 적분하면,
+
+$$
+\boxed{\oint_\Gamma \bf{E}(t,\,\bf{r})\bf{\cdot}d\bf{l} = -\int_S\dfrac{\partial \bf{B}(t,\,\bf{r})}{\partial t}\bf{\cdot}\,d\bf{a} = - \dfrac{d\Phi_B(t)}{dt}. }.
+$$ {#eq-ED_maxwell_eq_3_1}
+
+@eq-ED_maxwell_eq_4 에 대해서는 @eq-ED_definition_of_electric_current 로 기술된 전류를 이용하여 다음과 같이 쓸 수 있다.
+
+$$
+\boxed{\oint \bf{B}(t,\,\bf{r})\bf{\cdot}d\bf{l} = \mu_0 I(t) + \dfrac{1}{c^2} \dfrac{d\Phi_B(t)}{dt}}.
+$${#eq-ED_maxwell_eq_4_1}
+
+
+### 전하 보존 법칙 {#sec-ED_charge_conservartion_law}
+
+전하 보존 법칙은 미분형태로 다음과 같이 쓸 수 있다.
+
+$$
+\boxed{\dfrac{\partial \rho}{\partial t} + \nabla \bf{\cdot j} = 0.}
+$$ {#eq-ED_charge_conservation_law}
+
+이것을 적분하면
+
+$$
+\dfrac{dQ_\text{in}}{dt} = - \int_S \bf{j\cdot}d\bf{a}
+$$
+
+이며 어떤 부피 $V$ 안의 총 전하의 시간에 대한 변화량은 $S$ 의 표면 $\mathcal{S}=\partial V$ 을 빠져나가는 전류의 선속과 같다는 것을 알 수 있다.
+
+</br>
+
+## 전자기장의 에너지, 운동량, 각운동량
+
+### 에너지 밀도와 포인팅 벡터 {#sec-ED_energy_density_and_poynting_vector}
+
+다음이 성립한다는 것을 보일 수 있다(@exr-ED_1).
+
+$$
+\nabla \bf{\cdot}(\bf{E}\times \bf{B}) = \bf{B}\bf\cdot(\nabla \times \bf{E}) - \bf{E}\bf{\cdot}(\nabla \times \bf{B}).
+$$ {#eq-ED_energy_density_and_poynting_vector_1}
+
+멕스웰 방정식을 이용하면
+
+$$
+\begin{aligned}
+\nabla \bf{\cdot}(\bf{E}\times \bf{B}) &= -\bf{B}\bf{\cdot}\left(\dfrac{\partial \bf{B}}{\partial t}\right) - \bf{E}\bf\cdot\left(\epsilon_0\mu_0 \dfrac{\partial \bf{E}}{\partial t} + \mu_0 \bf{j}\right) \\[0.5em]
+&= -\dfrac{1}{2}\dfrac{\partial B^2}{\partial t} - \epsilon_0\mu_0 \dfrac{1}{2}\dfrac{\partial E^2}{\partial t}- \mu_0 \bf{E\cdot j}.
+\end{aligned}
+$${#eq-ED_energy_density_and_poynting_vector_2}
+
+
+::: {.callout-note icon="false"}
+
+#### **포인팅 벡터**
+
+아래와 같이 정의되는 $\bf{S}$ 를 **포인팅 벡터 (Poynting vector)** 라고 한다.
+
+$$
+\boxed{\bf{S} = \dfrac{\bf{E}\times \bf{B}}{\mu_0}.}
+$$ {#eq-ED_defintion_of_poynting_vector}
+
+:::
+
+포인팅 벡터를 이용하면 @eq-ED_energy_density_and_poynting_vector_2 를 다음과 같이 정리 할 수 있다.
+
+$$
+\dfrac{\partial}{\partial t}\left[\dfrac{\epsilon_0 E^2 + \mu_0^{-1}B^2}{2}\right] = -\nabla \bf{\cdot S} - \bf{E\cdot j}.
+$${#eq-ED_energy_density_and_poynting_vector_3}
+
+이 식을 닫힌 곡면 $\mathcal{S}$ 의 내부 부피 $\mathcal{V}$ 에서 적분하면
+
+$$
+\dfrac{d}{dt}\int_V \left[\dfrac{\epsilon_0 E^2 + \mu_0^{-1}B^2}{2}\right]\,d\mathcal{V} + \int_V \bf{E\cdot j}\,d\mathcal{V} = -\int_S \bf{S\cdot}\,d\bf{a}.
+$${#eq-ED_energy_density_and_poynting_vector_4}
+
+전하 보존 법칙과 비교해 보면 위 식은 일종의 보존법칙처럼 보인다. 우선 $\bf{j}$ 가 포함된 적분을 비 상대론적인 상황에서 살펴보자. 유한개의 전하가 부피 $V$ 에 있을 때 $\bf{j}= \sum_a q_a\bf{v}_a\delta (\bf{r}-\bf{r}_a(t))$ 이며
+
+$$
+\int_V \bf{E}(t,\bf{r})\bf{\cdot j}(t,\,\bf{r})\,d\mathcal{V} = \sum_a q_a  \bf{v}_a \bf{\cdot E}(t,\,\bf{r})
+$$
+
+로런츠 힘 $m_a d\bf{v}_a/dt = q\bf{E}(t,\,\bf{r})- q_a\bf{v}_a \times \bf{B}(t,\,\bf{r})$ 을 생각하면 
+
+$$
+\dfrac{d}{dt}\left(\dfrac{1}{2}m_a v_a^2\right) = q\bf{v}_a \bf{\cdot E}(t,\,\bf{r})
+$${#eq-ED_energy_density_and_poynting_vector_5}
+
+이므로 $\int_V \bf{E\cdot j}d\mathcal{V}$ 는 전하의 운동에너지의 시간에 대한 변화량이다. 이로부터 @eq-ED_energy_density_and_poynting_vector_4 를 에너지 보존으로 해석 할 수 있다. 왼쪽변의 첫번째 항은 전자기장에 의한 에너지의 시간에 대한 변화이며, 오른쪽 변은 표면 $S$ 를 빠져나가는 시간당 에너지이다. 그렇다면 부피 $V$ 내의 전자기장의 에너지 $\mathcal{E}_\text{em}$ 과 전하의 운동 에너지 $\mathcal{E}_\text{kin}$ 을 다음과 같이 정할 수 있다.
+
+$$
+\mathcal{E}_\text{em} =\int_V \left[\dfrac{\epsilon_0 E^2 + \mu_0^{-1}B^2}{2}\right]\,d\mathcal{V}.
+$$ {#eq-ED_energy_due_to_electromagnetic_field}
+
+$$
+\dfrac{d\mathcal{E}_\text{kin}}{dt} = \int_V (\bf{E\cdot j})\,d\mathcal{V}.
+$${#eq-ED_kinetic_energy_due_to_electromagnetic_field}
+
+그렇다면 @eq-ED_energy_density_and_poynting_vector_4 는 다음과 같이 쓸 수 있다.
+
+$$
+\dfrac{d\mathcal{E}_\text{em}}{dt} + \dfrac{d\mathcal{E}_\text{kin}}{dt} = -\int_S \bf{S\cdot }d\bf{a}.
+$${#eq-ED_gloval_energy_conservation_in_electromagnetic_field}
+
+
+::: {.callout-note icon="false"}
+
+#### 전자기장에 의한 에너지 밀도
+
+$$
+u := \dfrac{\epsilon_0 E^2}{2} + \dfrac{B^2}{2\mu_0}
+$$
+
+를 전자기장에 의한 에너지 밀도라고 한다.
+
+:::
+
+이제 @eq-ED_energy_density_and_poynting_vector_2 를 다음과 같이 간단히 쓸 수 있다.
+
+$$
+\boxed{\dfrac{\partial u}{\partial t} + \nabla \bf{\cdot S} = - \bf{E\cdot j}.}
+$$ {#eq-ED_energy_conservation_of_electromagnetic_fields}
+
+
+#### **상대론적인 경우**
+
+상대론적인 경우를 생각해보자. 하전 입자의 운동량은 
+$$
+\bf{p}_a = \dfrac{m\bf{v}_a}{\sqrt{1-v_a^2/c^2}}
+$$
+
+이며 이 입자의 에너지는
+
+$$
+\mathcal{E}_a = c\sqrt{m_a^2c^2+p_a^2} = \dfrac{mc^2}{\sqrt{1-v_a^2/c^2}}
+$$
+
+이다. 이로부터
+
+$$
+\begin{aligned}
+q_a\bf{v}_a \bf{\cdot E}(t,\,\bf{r}_a(t)) &= \bf{v}_a \bf{\cdot}\dfrac{d\bf{p}_a}{dt} = \dfrac{c\bf{p}_a}{\sqrt{m_a^2c^2+p_a^2}}\bf{\cdot}\dfrac{d\bf{p}_a}{dt} \\[0.3em]
+&= \dfrac{c}{2\sqrt{m_a^2c^2+p_a^2}}\dfrac{d\left(p_a^2\right)}{dt} = \dfrac{d\mathcal{E}_a}{dt}
+\end{aligned}
+$$
+
+이제 부피 $V$ 안의 하전입자의 상대론적 총 에너지를 $\mathcal{E}_\text{rel} = \sum_a \mathcal{E}_a$ 라고 하자. 그렇다면,
+
+$$
+\dfrac{d}{dt}(\mathcal{E}_\text{em}+ \mathcal{E}_\text{rel}) = - \int_{\partial V} \bf{S\cdot}d\bf{a}.
+$${#eq-ED_gloval_energy_conservation_in_electromagnetic_field_in_relativity}
+
+
+### 운동량과 운동량 플럭스 {#sec-ED_momentum_and_momentum_flux}
+
+다음의 양을 생각하자. 
+
+$$
+\bf{g}(t,\,\bf{r}) : =\dfrac{\bf{S}(t,\,\bf{r})}{c^2}= \epsilon_0 \bf{E}(t,\,\bf{r})\times \bf{B}(t,\,\bf{r}) 
+$$
+
+$\bf{g}$ 의 시간에 대한 편미분을 구하면
+
+$$
+\begin{aligned}
+\dfrac{\partial g_i}{\partial t} &= \epsilon_0 \varepsilon_{ijk}\left(\dfrac{\partial E_j}{\partial t}B_k + E_j \dfrac{\partial B_k}{\partial t}\right) \\[0.3em]
+&= \epsilon_0 \varepsilon_{ijk} \left[\left(c^2 (\nabla \times \bf{B})_j - \dfrac{j_j}{\epsilon_0}\right)B_k - E_j(\nabla \times \bf{E})_k \right] \\[0.3em]
+&= -\epsilon_0\varepsilon_{ijk}\varepsilon_{klm}(E_j\partial_l E_m) + \epsilon_0 c^2 \varepsilon_{ijk}\varepsilon_{jlm}B_k\partial_l B_m - (\bf{j}\times \bf{B})_i \\[0.3em]
+&=  \epsilon_0 (E_j \partial_j E_i - E_j\partial_i E_j) + \epsilon_0 c^2 (B_k\partial_k B_i -B_k\partial_i B_k )- (\bf{j}\times \bf{B})_i \\[0.3em]
+\end{aligned}
+$$
+
+임의의 벡터장 $\bf{X}$ 에 대해
+
+$$
+X_j(\partial_jX_i - \partial_i X_j) = - \partial_j \left(\dfrac{1}{2}X^2\delta_{ij}- X_iX_j\right) - X_i \nabla \bf{\cdot X}
+$$ {#eq-ED_momentum_and_momentum_flux_1}
+
+임을 보일 수 있다(@exr-ED_2). $E_i (\nabla \bf{\cdot E})= \dfrac{\rho}{\epsilon_0 }E_i$ 이고 $\nabla \bf{\cdot B}=0$ 이므로
+
+$$
+\dfrac{\partial g_i}{\partial t} = -\dfrac{\partial}{\partial x_j}\left[\epsilon_0\left(\dfrac{1}{2}E^2\delta_{ij} - E_iE_j\right) + \dfrac{1}{\mu_0}\left(\dfrac{1}{2}B^2\delta_{ij} - B_iB_j\right)\right] - (\rho \bf{E}+\bf{j}\times \bf{B})_i
+$${#eq-ED_momentum_and_momentum_flux_2}
+
+이다.
+
+::: {.callout-note icon="false"}
+
+#### **멕스웰 스트레스 텐셔**
+
+**멕스웰 스트레스 텐서 (Maxwell stress tensor)** $\bf{T}$ 는 다음과 같이 정의된다$^1$.[$1$ @Landau1975classical 의 정의와 부호가 같지만, @Jackson1999Classical, @Grifitths2013Introduction, @Zangwill2013Modern 의 경우 이 정의에 $-$ 부호를 붙인것으로 정의한다.]{.aside}
+
+$$
+T_{ij} = \epsilon_0\left(\dfrac{1}{2}E^2\delta_{ij} - E_iE_j\right) + \dfrac{1}{\mu_0}\left(\dfrac{1}{2}B^2\delta_{ij} - B_iB_j\right)
+$$ {#eq-ED_definitino_of_maxwell_stress_tensor}
+
+:::
+
+멕스웰 스트레스 텐서를 이용하면 @eq-ED_momentum_and_momentum_flux_2 를 다음과 같이 쓸 수 있다.
+
+$$
+\dfrac{\partial g_i}{\partial t} = - \dfrac{\partial }{\partial x_j}T_{ij} - (\rho \bf{E}+ \bf{j}\times \bf{B}).
+$${#eq-ED_momentum_and_momentum_flux_3}
+
+
+</br> 
+
+## 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-ED_1}
+
+@eq-ED_energy_density_and_poynting_vector_1 이 성립함을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$$
+\begin{aligned}
+\nabla \bf{\cdot}(\bf{E}\times \bf{B}) &= \varepsilon_{ijk}\partial_i (E_jB_k) = \varepsilon_{ijk}B_k(\partial_iE_j) + \varepsilon_{ijk}E_j (\epsilon_{ijk}\partial_i B_k) \\[0.3em]
+&= \bf{B}\bf{\cdot}(\nabla \times \bf{E}) - \bf{E}\bf{\cdot}(\nabla \times \bf{B})
+\end{aligned}
+$$
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-ED_2}
+
+@eq-ED_momentum_and_momentum_flux_1 이 성립함을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$$
+\begin{aligned}
+\partial_j \left(\dfrac{1}{2}X^2\delta_{ij} - X_iX_j\right) &= \delta_{ij}X_{k}\partial_j X_k -X_j \partial_j X_i - X_i \partial_j X_j \\[0.3em]
+&= X_j \partial_i X_j - X_j \partial_j X_i - X_i (\nabla \bf{\cdot X})
+\end{aligned}
+$$
 :::

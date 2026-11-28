@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -26,7 +26,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,14 +59,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/Electrodynamics/00_index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-deb0270857c9bdf5e055ff61468a997e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-7a627ccb779a4a431ef462281a400409.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -123,17 +143,17 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
-  <nav class="quarto-secondary-nav">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electrodynamics/00_index.html">전기자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electrodynamics/01_introduction.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">들어가며</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electrodynamics/00_index.html">전기자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electrodynamics/01_introduction.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">들어가며</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -144,7 +164,7 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electrodynamics/00_index.html">전기자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electrodynamics/01_introduction.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">들어가며</span></a></li></ol></nav>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/Electrodynamics/00_index.html">전기자기학</a></li><li class="breadcrumb-item"><a href="../../src/Electrodynamics/01_introduction.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">들어가며</span></a></li></ol></nav>
       <h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">들어가며</span></h1>
                       </div>
   </div>
@@ -160,7 +180,7 @@ window.Quarto = {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">고전물리학</a> 
@@ -182,12 +202,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/ClassicalMechanics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">고전역학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-1-label">고전역학</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션: 고전역학">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ClassicalMechanics/01_basic_principles.html" class="sidebar-item-text sidebar-link">
@@ -253,12 +273,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Mechanics_and_Symmetry/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">고전역학과 대칭</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-2-label">고전역학과 대칭</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션: 고전역학과 대칭">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Mechanics_and_Symmetry/01_experimental_facts.html" class="sidebar-item-text sidebar-link">
@@ -276,12 +296,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Electrodynamics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">전기자기학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-3-label">전기자기학</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션: 전기자기학">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Electrodynamics/01_introduction.html" class="sidebar-item-text sidebar-link active">
@@ -329,12 +349,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/Relativity/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">상대론</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-4-label">상대론</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true" aria-label="토글 섹션: 상대론">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/Relativity/01_introduction_to_special_relativity.html" class="sidebar-item-text sidebar-link">
@@ -352,12 +372,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/ThermalPhysics/00_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">열역학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-5-label">열역학</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true" aria-label="토글 섹션: 열역학">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/ThermalPhysics/01_thermodynamic_systems.html" class="sidebar-item-text sidebar-link">
@@ -393,12 +413,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../src/topics/Topics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">별도의 주제들</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-6-label">별도의 주제들</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="true" aria-label="토글 섹션: 별도의 주제들">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/topics/mathematical.html" class="sidebar-item-text sidebar-link">
@@ -419,25 +439,31 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
     <h2 id="toc-title">목차</h2>
    
   <ul>
   <li><a href="#전하와-전류" id="toc-전하와-전류" class="nav-link active" data-scroll-target="#전하와-전류"><span class="header-section-number">13.1</span> 전하와 전류</a>
   <ul class="collapse">
   <li><a href="#sec-ED_charge_and_current" id="toc-sec-ED_charge_and_current" class="nav-link" data-scroll-target="#sec-ED_charge_and_current"><span class="header-section-number">13.1.1</span> 전하와 전류</a></li>
-  <li><a href="#sec-ED_charge_conservartion_law" id="toc-sec-ED_charge_conservartion_law" class="nav-link" data-scroll-target="#sec-ED_charge_conservartion_law"><span class="header-section-number">13.1.2</span> 전하 보존 법칙</a></li>
   </ul></li>
   <li><a href="#힘과-장" id="toc-힘과-장" class="nav-link" data-scroll-target="#힘과-장"><span class="header-section-number">13.2</span> 힘과 장</a>
   <ul class="collapse">
   <li><a href="#sec-ED_force_and_field" id="toc-sec-ED_force_and_field" class="nav-link" data-scroll-target="#sec-ED_force_and_field"><span class="header-section-number">13.2.1</span> 전기장, 자기장과 로런츠 힘</a></li>
   <li><a href="#sec-ED_maxwell_equation" id="toc-sec-ED_maxwell_equation" class="nav-link" data-scroll-target="#sec-ED_maxwell_equation"><span class="header-section-number">13.2.2</span> 맥스웰 방정식</a></li>
+  <li><a href="#sec-ED_charge_conservartion_law" id="toc-sec-ED_charge_conservartion_law" class="nav-link" data-scroll-target="#sec-ED_charge_conservartion_law"><span class="header-section-number">13.2.3</span> 전하 보존 법칙</a></li>
   </ul></li>
+  <li><a href="#전자기장의-에너지-운동량-각운동량" id="toc-전자기장의-에너지-운동량-각운동량" class="nav-link" data-scroll-target="#전자기장의-에너지-운동량-각운동량"><span class="header-section-number">13.3</span> 전자기장의 에너지, 운동량, 각운동량</a>
+  <ul class="collapse">
+  <li><a href="#sec-ED_energy_density_and_poynting_vector" id="toc-sec-ED_energy_density_and_poynting_vector" class="nav-link" data-scroll-target="#sec-ED_energy_density_and_poynting_vector"><span class="header-section-number">13.3.1</span> 에너지 밀도와 포인팅 벡터</a></li>
+  <li><a href="#sec-ED_momentum_and_momentum_flux" id="toc-sec-ED_momentum_and_momentum_flux" class="nav-link" data-scroll-target="#sec-ED_momentum_and_momentum_flux"><span class="header-section-number">13.3.2</span> 운동량과 운동량 플럭스</a></li>
+  </ul></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content" tabindex="-1">
 
 
 
@@ -445,6 +471,7 @@ window.Quarto = {
 
 <div class="hidden">
 <p>% %</p>
+<p>% </p>
 <p>% </p>
 <p><span class="math display">
 \DeclarePairedDelimiters{\set}{\{}{\}}
@@ -459,25 +486,18 @@ window.Quarto = {
 <p><span class="math display">
 e = 1.60217657 \times 10^{−19} \text{ C}
 </span></p>
-<p>이다. 점입자가 아닌 전하 분포를 사용할 경우는 전하 밀도, 즉 단위 부피당 전하량를 사용하며 <span class="math inline">\rho(\boldsymbol{x},\,t)</span> 라고 표기한다. 공간 <span class="math inline">V</span> 를 점유하는 총 전하량 <span class="math inline">Q=\int_V \rho (\boldsymbol{x},\,t) d^3\boldsymbol{x}</span> 이다. 때때로 점전하를 표현할 경우 디랙 델타 함수를 사용하여 <span class="math inline">\rho = q \delta(\boldsymbol{x}-\boldsymbol{r}(t))</span> 와 같이 쓴다.</p>
-<p>많은 경우 전하는 움직이며 이것을 수학적으로 표현해야 한다. 특정 위치 <span class="math inline">\boldsymbol{x}</span>, 시간 <span class="math inline">t</span> 에서의 전하 밀도가 <span class="math inline">\rho</span> 이고 이 전하가 <span class="math inline">\boldsymbol{v}</span> 의 속도로 움직일 때 <strong>전류 밀도 (current density)</strong> <span class="math inline">\boldsymbol{J}</span> 는 아래와 같이 정의된다.</p>
+<p>이다. 점입자가 아닌 전하 분포를 사용할 경우는 전하 밀도, 즉 단위 부피당 전하량를 사용하며 <span class="math inline">\rho(\boldsymbol{r},\,t)</span> 라고 표기한다. 공간상의 부피 <span class="math inline">V</span> 에 포함된 총 전하량 <span class="math inline">Q=\int_V \rho (\boldsymbol{r},\,t) d\mathcal{V}</span> 이다. 때때로 점전하를 표현할 경우 디랙 델타 함수를 사용하여 <span class="math inline">\rho(t,\,\boldsymbol{r}) = q \delta(\boldsymbol{r}-\boldsymbol{r}_0(t))</span> 와 같이 쓴다.</p>
+<p>많은 경우 전하는 움직이며 이것을 수학적으로 표현해야 한다. 특정 위치 <span class="math inline">\boldsymbol{x}</span>, 시간 <span class="math inline">t</span> 에서의 전하 밀도가 <span class="math inline">\rho</span> 이고 이 전하가 <span class="math inline">\boldsymbol{v}</span> 의 속도로 움직일 때 <strong>전류 밀도 (current density)</strong> <span class="math inline">\boldsymbol{j}</span> 는 아래와 같이 정의된다.</p>
 <p><span id="eq-ED_definition_of_current_density"><span class="math display">
-\boldsymbol{J} := \rho \boldsymbol{v}.
+\boldsymbol{j} := \rho \boldsymbol{v}.
 \tag{13.1}</span></span></p>
-<p>전하의 경우와 마찬가지로 점전하가 속도 <span class="math inline">\boldsymbol{v}</span> 로 움직일 경우 전류밀도는 <span class="math inline">\boldsymbol{J} = \rho\,\delta(\boldsymbol{x}-\boldsymbol{r}(t))\boldsymbol{v}</span> 이다.</p>
+<p>전하의 경우와 마찬가지로 점전하가 속도 <span class="math inline">\boldsymbol{v}</span> 로 움직일 경우 전류밀도는 <span class="math inline">\boldsymbol{j} = \rho\,\delta(\boldsymbol{r}-\boldsymbol{r}_0(t))\boldsymbol{v}</span> 이다.</p>
 <p>많은 경우 특정 표면 <span class="math inline">S</span> 에 대해 이 표면을 통과하는 전하의 흐름이 중요하다. 이 값을 <strong>전류 (electric current)</strong> 라고 하며 관례적으로 <span class="math inline">I</span> 로 표기하고 아래와 같이 정의된다.</p>
 <p><span id="eq-ED_definition_of_electric_current"><span class="math display">
-I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
+I := \int_S \boldsymbol{j \cdot} d\boldsymbol{a}.
 \tag{13.2}</span></span></p>
-<p><span class="math inline">q</span> 의 전하를 가진 입자가 <span class="math inline">S</span> 의 표면을 단위면적당 <span class="math inline">n</span> 개가 <span class="math inline">\boldsymbol{v}</span> 의 속도로 통과한다고 하자. 그렇다면 <span class="math inline">\boldsymbol{J}=nq\boldsymbol{v}</span> 이고 <span class="math inline">I = nqvS</span> 이다.</p>
+<p><span class="math inline">q</span> 의 전하를 가진 입자가 <span class="math inline">S</span> 의 표면을 단위면적당 <span class="math inline">n</span> 개가 <span class="math inline">\boldsymbol{v}</span> 의 속도로 통과한다고 하자. 그렇다면 <span class="math inline">\boldsymbol{j}=nq\boldsymbol{v}</span> 이고 <span class="math inline">I = nqvS</span> 이다.</p>
 <p><br></p>
-</section>
-<section id="sec-ED_charge_conservartion_law" class="level3" data-number="13.1.2">
-<h3 data-number="13.1.2" class="anchored" data-anchor-id="sec-ED_charge_conservartion_law"><span class="header-section-number">13.1.2</span> 전하 보존 법칙</h3>
-<p><span id="eq-ED_charge_conservation_law"><span class="math display">
-\dfrac{\partial \rho}{\partial t} + \nabla \boldsymbol{\cdot J} = 0.
-\tag{13.3}</span></span></p>
-<p></p>
 </section>
 </section>
 <section id="힘과-장" class="level2" data-number="13.2">
@@ -494,21 +514,23 @@ I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>전기장 <span class="math inline">\boldsymbol{E}(\boldsymbol{x},\,t)</span> 와 자기장 <span class="math inline">\boldsymbol{B}(\boldsymbol{x},\,t)</span> 에 대해 <span class="math inline">\boldsymbol{r}(t)</span> 에 위치한 전하 <span class="math inline">q</span> 는 아래의 힘을 받으미 이 힘을 <strong>로런츠 힘(Lorentz force)</strong> 라고 한다.</p>
+<p>전기장 <span class="math inline">\boldsymbol{E}(t,\,\boldsymbol{r})</span> 와 자기장 <span class="math inline">\boldsymbol{B}(t,\,\boldsymbol{r})</span> 에 대해 <span class="math inline">\boldsymbol{r}(t)</span> 에 위치하고 속도 <span class="math inline">\boldsymbol{v}</span> 로 움직이는 전하 <span class="math inline">q</span> 는 아래의 힘을 받으며 이 힘을 <strong>로런츠 힘(Lorentz force)</strong> 라고 한다.</p>
 <p><span id="eq-ED_lorentz_force"><span class="math display">
-\boldsymbol{F}=q(\boldsymbol{E} + \dot{\boldsymbol{r}}\times \boldsymbol{B}).
-\tag{13.4}</span></span></p>
+\boldsymbol{F}=q(\boldsymbol{E} + \boldsymbol{v}\times \boldsymbol{B}).
+\tag{13.3}</span></span></p>
 </div>
 </div>
-<p>이 로런츠 힘을 전하 분포 <span class="math inline">\rho</span> 와 전류 밀도 <span class="math inline">\boldsymbol{J}</span> 에 대해 아래와 같이 쓸 수 있다.</p>
+<p>이 로런츠 힘을 전하 분포 <span class="math inline">\rho</span> 와 전류 밀도 <span class="math inline">\boldsymbol{j}</span> 에 대해 아래와 같이 쓸 수 있다.</p>
 <p><span id="eq-ED_force_density"><span class="math display">
-\boldsymbol{f} = \rho \boldsymbol{E} + \boldsymbol{J}\times \boldsymbol{B}.
-\tag{13.5}</span></span></p>
-<p>여기서 <span class="math inline">\boldsymbol{f}</span> 는 <span class="math inline">\boldsymbol{x}</span> 에 위치한 작은 부피의 전하 <span class="math inline">\rho</span> 가 <span class="math inline">\rho(\boldsymbol{x},\,t)</span> 와 <span class="math inline">\boldsymbol{J}(\boldsymbol{x},\,t)</span> 에 의해 받는 단위 부피당 힘이다.</p>
+\boldsymbol{f} = \rho \boldsymbol{E} + \boldsymbol{j}\times \boldsymbol{B}.
+\tag{13.4}</span></span></p>
+<p>여기서 <span class="math inline">\boldsymbol{f}</span> 는 <span class="math inline">\boldsymbol{r}</span> 에 위치한 작은 부피의 전하 <span class="math inline">\rho</span> 가 <span class="math inline">\rho(t,\,\boldsymbol{r})</span> 와 <span class="math inline">\boldsymbol{j}(t,\,\boldsymbol{r})</span> 에 의해 받는 단위 부피당 힘이다.</p>
 <p><br></p>
 </section>
 <section id="sec-ED_maxwell_equation" class="level3" data-number="13.2.2">
 <h3 data-number="13.2.2" class="anchored" data-anchor-id="sec-ED_maxwell_equation"><span class="header-section-number">13.2.2</span> 맥스웰 방정식</h3>
+<section id="멕스웰-방정식" class="level4">
+<h4 class="anchored" data-anchor-id="멕스웰-방정식"><strong>멕스웰 방정식</strong></h4>
 <p>로런츠 힘은 주어진 전기장과 자기장에 대해 전하 및 전하의 흐름에 의해 생성되는 힘을 표현한다. 전기장과 자기장은 어떻게 생성될지를 말하는 식이 멕스웰 방정식이다. 멕스웰 방정식은 아래의 네 식이다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -522,16 +544,16 @@ I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
 <div class="callout-body-container callout-body">
 <p><span id="eq-ED_maxwell_eq_1"><span class="math display">
 \nabla \boldsymbol{\cdot E} = \dfrac{\rho}{\epsilon_0},
-\tag{13.6}</span></span></p>
+\tag{13.5}</span></span></p>
 <p><span id="eq-ED_maxwell_eq_2"><span class="math display">
 \nabla \boldsymbol{\cdot B} = 0,
-\tag{13.7}</span></span></p>
+\tag{13.6}</span></span></p>
 <p><span id="eq-ED_maxwell_eq_3"><span class="math display">
 \nabla \times \boldsymbol{E} + \dfrac{\partial \boldsymbol{B}}{\partial t} = 0,
-\tag{13.8}</span></span></p>
+\tag{13.7}</span></span></p>
 <p><span id="eq-ED_maxwell_eq_4"><span class="math display">
-\nabla \times B - \mu_0\epsilon_0 \dfrac{\partial \boldsymbol{E}}{\partial t} = \mu_0 \boldsymbol{J}.
-\tag{13.9}</span></span></p>
+\nabla \times \boldsymbol{B}  -\epsilon_0\mu_0 \dfrac{\partial \boldsymbol{E}}{\partial t} = \mu_0 \boldsymbol{j} .
+\tag{13.8}</span></span></p>
 <p>여기서 <span class="math inline">\epsilon_0</span> 는 진공 유전율로</p>
 <p><span class="math display">
 \epsilon_0 \approx 8.85 \times 10^{-12} \;\text{m}^{-3}\,\text{Kg}^{-1}\,\text{s}^2\,\text{C}^2
@@ -540,12 +562,241 @@ I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
 <p><span class="math display">
 \mu_0 :=4\pi \times 10^{-7}\; \text{m}\,\text{Kg}\,\text{C}^{-2} \approx 1.25 \times 10^{-6} \; \text{m}\,\text{Kg}\,\text{C}^{-2}
 </span></p>
-<p>이다.</p>
+<p>이다. 이 때 광속 <span class="math inline">c</span> 는 <span class="math inline">\epsilon_0,\, \mu_0</span> 와 다음의 관계가 있다.</p>
+<p><span id="eq-ED_speed_of_light"><span class="math display">
+c^2 = \dfrac{1}{\epsilon_0 \mu_0}.
+\tag{13.9}</span></span></p>
 </div>
 </div>
-
-
 </section>
+<section id="멕스웰-방정식의-적분" class="level4">
+<h4 class="anchored" data-anchor-id="멕스웰-방정식의-적분"><strong>멕스웰 방정식의 적분</strong></h4>
+<p>부피 <span class="math inline">V</span> 의 표면 <span class="math inline">S</span> 가 매끄러운 닫힌 곡면일 때 <a href="#eq-ED_maxwell_eq_1" class="quarto-xref">식&nbsp;<span>13.5</span></a> 의 적분은 다음과 같다.</p>
+<p><span id="eq-ED_maxwell_eq_1_1"><span class="math display">
+\boxed{\Phi_E(t) := \oint_S \boldsymbol{E}(t,\,\boldsymbol{r})\boldsymbol{\cdot }d\boldsymbol{a} = \dfrac{Q_\text{in}(t)}{\epsilon_0}.}
+\tag{13.10}</span></span></p>
+<p>여기서 <span class="math inline">Q_\text{in} = \int_V\rho(t,\,\boldsymbol{r})\,d\mathcal{V}</span> 은 <span class="math inline">\mathcal{V}</span> 안에 포함된 총 전하이고 <span class="math inline">\Phi_E(t)</span> 는 <strong>전기선속 (flux of electric field)</strong> 이라고 불린다.</p>
+<p><a href="#eq-ED_maxwell_eq_2" class="quarto-xref">식&nbsp;<span>13.6</span></a> 에 대해 똑같이 하면</p>
+<p><span id="eq-ED_maxwell_eq_2_1"><span class="math display">
+\boxed{\Phi_B(t) := \oint_S \boldsymbol{B}(t,\,\boldsymbol{r})\boldsymbol{\cdot }d\boldsymbol{a} = 0.}
+\tag{13.11}</span></span></p>
+<p>이 대 <span class="math inline">\Phi_B(t)</span> 를 <strong>자기선속 (flux of magnetic field)</strong> 이라고 부른다.</p>
+<p>이제 공간상의 닫힌 곡선 <span class="math inline">\Gamma</span> 를 경계로 갖는 평면 <span class="math inline">S</span> 를 생각하자. <a href="#eq-ED_maxwell_eq_3" class="quarto-xref">식&nbsp;<span>13.7</span></a> 를 적분하면,</p>
+<p><span id="eq-ED_maxwell_eq_3_1"><span class="math display">
+\boxed{\oint_\Gamma \boldsymbol{E}(t,\,\boldsymbol{r})\boldsymbol{\cdot}d\boldsymbol{l} = -\int_S\dfrac{\partial \boldsymbol{B}(t,\,\boldsymbol{r})}{\partial t}\boldsymbol{\cdot}\,d\boldsymbol{a} = - \dfrac{d\Phi_B(t)}{dt}. }.
+\tag{13.12}</span></span></p>
+<p><a href="#eq-ED_maxwell_eq_4" class="quarto-xref">식&nbsp;<span>13.8</span></a> 에 대해서는 <a href="#eq-ED_definition_of_electric_current" class="quarto-xref">식&nbsp;<span>13.2</span></a> 로 기술된 전류를 이용하여 다음과 같이 쓸 수 있다.</p>
+<p><span id="eq-ED_maxwell_eq_4_1"><span class="math display">
+\boxed{\oint \boldsymbol{B}(t,\,\boldsymbol{r})\boldsymbol{\cdot}d\boldsymbol{l} = \mu_0 I(t) + \dfrac{1}{c^2} \dfrac{d\Phi_B(t)}{dt}}.
+\tag{13.13}</span></span></p>
+</section>
+</section>
+<section id="sec-ED_charge_conservartion_law" class="level3" data-number="13.2.3">
+<h3 data-number="13.2.3" class="anchored" data-anchor-id="sec-ED_charge_conservartion_law"><span class="header-section-number">13.2.3</span> 전하 보존 법칙</h3>
+<p>전하 보존 법칙은 미분형태로 다음과 같이 쓸 수 있다.</p>
+<p><span id="eq-ED_charge_conservation_law"><span class="math display">
+\boxed{\dfrac{\partial \rho}{\partial t} + \nabla \boldsymbol{\cdot j} = 0.}
+\tag{13.14}</span></span></p>
+<p>이것을 적분하면</p>
+<p><span class="math display">
+\dfrac{dQ_\text{in}}{dt} = - \int_S \boldsymbol{j\cdot}d\boldsymbol{a}
+</span></p>
+<p>이며 어떤 부피 <span class="math inline">V</span> 안의 총 전하의 시간에 대한 변화량은 <span class="math inline">S</span> 의 표면 <span class="math inline">\mathcal{S}=\partial V</span> 을 빠져나가는 전류의 선속과 같다는 것을 알 수 있다.</p>
+<p><br></p>
+</section>
+</section>
+<section id="전자기장의-에너지-운동량-각운동량" class="level2 page-columns page-full" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="전자기장의-에너지-운동량-각운동량"><span class="header-section-number">13.3</span> 전자기장의 에너지, 운동량, 각운동량</h2>
+<section id="sec-ED_energy_density_and_poynting_vector" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="sec-ED_energy_density_and_poynting_vector"><span class="header-section-number">13.3.1</span> 에너지 밀도와 포인팅 벡터</h3>
+<p>다음이 성립한다는 것을 보일 수 있다(<a href="#exr-ED_1" class="quarto-xref">연습문제&nbsp;<span>13.1</span></a>).</p>
+<p><span id="eq-ED_energy_density_and_poynting_vector_1"><span class="math display">
+\nabla \boldsymbol{\cdot}(\boldsymbol{E}\times \boldsymbol{B}) = \boldsymbol{B}\boldsymbol{\cdot}(\nabla \times \boldsymbol{E}) - \boldsymbol{E}\boldsymbol{\cdot}(\nabla \times \boldsymbol{B}).
+\tag{13.15}</span></span></p>
+<p>멕스웰 방정식을 이용하면</p>
+<p><span id="eq-ED_energy_density_and_poynting_vector_2"><span class="math display">
+\begin{aligned}
+\nabla \boldsymbol{\cdot}(\boldsymbol{E}\times \boldsymbol{B}) &amp;= -\boldsymbol{B}\boldsymbol{\cdot}\left(\dfrac{\partial \boldsymbol{B}}{\partial t}\right) - \boldsymbol{E}\boldsymbol{\cdot}\left(\epsilon_0\mu_0 \dfrac{\partial \boldsymbol{E}}{\partial t} + \mu_0 \boldsymbol{j}\right) \\[0.5em]
+&amp;= -\dfrac{1}{2}\dfrac{\partial B^2}{\partial t} - \epsilon_0\mu_0 \dfrac{1}{2}\dfrac{\partial E^2}{\partial t}- \mu_0 \boldsymbol{E\cdot j}.
+\end{aligned}
+\tag{13.16}</span></span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>포인팅 벡터</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>아래와 같이 정의되는 <span class="math inline">\boldsymbol{S}</span> 를 <strong>포인팅 벡터 (Poynting vector)</strong> 라고 한다.</p>
+<p><span id="eq-ED_defintion_of_poynting_vector"><span class="math display">
+\boxed{\boldsymbol{S} = \dfrac{\boldsymbol{E}\times \boldsymbol{B}}{\mu_0}.}
+\tag{13.17}</span></span></p>
+</div>
+</div>
+<p>포인팅 벡터를 이용하면 <a href="#eq-ED_energy_density_and_poynting_vector_2" class="quarto-xref">식&nbsp;<span>13.16</span></a> 를 다음과 같이 정리 할 수 있다.</p>
+<p><span id="eq-ED_energy_density_and_poynting_vector_3"><span class="math display">
+\dfrac{\partial}{\partial t}\left[\dfrac{\epsilon_0 E^2 + \mu_0^{-1}B^2}{2}\right] = -\nabla \boldsymbol{\cdot S} - \boldsymbol{E\cdot j}.
+\tag{13.18}</span></span></p>
+<p>이 식을 닫힌 곡면 <span class="math inline">\mathcal{S}</span> 의 내부 부피 <span class="math inline">\mathcal{V}</span> 에서 적분하면</p>
+<p><span id="eq-ED_energy_density_and_poynting_vector_4"><span class="math display">
+\dfrac{d}{dt}\int_V \left[\dfrac{\epsilon_0 E^2 + \mu_0^{-1}B^2}{2}\right]\,d\mathcal{V} + \int_V \boldsymbol{E\cdot j}\,d\mathcal{V} = -\int_S \boldsymbol{S\cdot}\,d\boldsymbol{a}.
+\tag{13.19}</span></span></p>
+<p>전하 보존 법칙과 비교해 보면 위 식은 일종의 보존법칙처럼 보인다. 우선 <span class="math inline">\boldsymbol{j}</span> 가 포함된 적분을 비 상대론적인 상황에서 살펴보자. 유한개의 전하가 부피 <span class="math inline">V</span> 에 있을 때 <span class="math inline">\boldsymbol{j}= \sum_a q_a\boldsymbol{v}_a\delta (\boldsymbol{r}-\boldsymbol{r}_a(t))</span> 이며</p>
+<p><span class="math display">
+\int_V \boldsymbol{E}(t,\boldsymbol{r})\boldsymbol{\cdot j}(t,\,\boldsymbol{r})\,d\mathcal{V} = \sum_a q_a  \boldsymbol{v}_a \boldsymbol{\cdot E}(t,\,\boldsymbol{r})
+</span></p>
+<p>로런츠 힘 <span class="math inline">m_a d\boldsymbol{v}_a/dt = q\boldsymbol{E}(t,\,\boldsymbol{r})- q_a\boldsymbol{v}_a \times \boldsymbol{B}(t,\,\boldsymbol{r})</span> 을 생각하면</p>
+<p><span id="eq-ED_energy_density_and_poynting_vector_5"><span class="math display">
+\dfrac{d}{dt}\left(\dfrac{1}{2}m_a v_a^2\right) = q\boldsymbol{v}_a \boldsymbol{\cdot E}(t,\,\boldsymbol{r})
+\tag{13.20}</span></span></p>
+<p>이므로 <span class="math inline">\int_V \boldsymbol{E\cdot j}d\mathcal{V}</span> 는 전하의 운동에너지의 시간에 대한 변화량이다. 이로부터 <a href="#eq-ED_energy_density_and_poynting_vector_4" class="quarto-xref">식&nbsp;<span>13.19</span></a> 를 에너지 보존으로 해석 할 수 있다. 왼쪽변의 첫번째 항은 전자기장에 의한 에너지의 시간에 대한 변화이며, 오른쪽 변은 표면 <span class="math inline">S</span> 를 빠져나가는 시간당 에너지이다. 그렇다면 부피 <span class="math inline">V</span> 내의 전자기장의 에너지 <span class="math inline">\mathcal{E}_\text{em}</span> 과 전하의 운동 에너지 <span class="math inline">\mathcal{E}_\text{kin}</span> 을 다음과 같이 정할 수 있다.</p>
+<p><span id="eq-ED_energy_due_to_electromagnetic_field"><span class="math display">
+\mathcal{E}_\text{em} =\int_V \left[\dfrac{\epsilon_0 E^2 + \mu_0^{-1}B^2}{2}\right]\,d\mathcal{V}.
+\tag{13.21}</span></span></p>
+<p><span id="eq-ED_kinetic_energy_due_to_electromagnetic_field"><span class="math display">
+\dfrac{d\mathcal{E}_\text{kin}}{dt} = \int_V (\boldsymbol{E\cdot j})\,d\mathcal{V}.
+\tag{13.22}</span></span></p>
+<p>그렇다면 <a href="#eq-ED_energy_density_and_poynting_vector_4" class="quarto-xref">식&nbsp;<span>13.19</span></a> 는 다음과 같이 쓸 수 있다.</p>
+<p><span id="eq-ED_gloval_energy_conservation_in_electromagnetic_field"><span class="math display">
+\dfrac{d\mathcal{E}_\text{em}}{dt} + \dfrac{d\mathcal{E}_\text{kin}}{dt} = -\int_S \boldsymbol{S\cdot }d\boldsymbol{a}.
+\tag{13.23}</span></span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>전자기장에 의한 에너지 밀도
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">
+u := \dfrac{\epsilon_0 E^2}{2} + \dfrac{B^2}{2\mu_0}
+</span></p>
+<p>를 전자기장에 의한 에너지 밀도라고 한다.</p>
+</div>
+</div>
+<p>이제 <a href="#eq-ED_energy_density_and_poynting_vector_2" class="quarto-xref">식&nbsp;<span>13.16</span></a> 를 다음과 같이 간단히 쓸 수 있다.</p>
+<p><span id="eq-ED_energy_conservation_of_electromagnetic_fields"><span class="math display">
+\boxed{\dfrac{\partial u}{\partial t} + \nabla \boldsymbol{\cdot S} = - \boldsymbol{E\cdot j}.}
+\tag{13.24}</span></span></p>
+<section id="상대론적인-경우" class="level4">
+<h4 class="anchored" data-anchor-id="상대론적인-경우"><strong>상대론적인 경우</strong></h4>
+<p>상대론적인 경우를 생각해보자. 하전 입자의 운동량은 <span class="math display">
+\boldsymbol{p}_a = \dfrac{m\boldsymbol{v}_a}{\sqrt{1-v_a^2/c^2}}
+</span></p>
+<p>이며 이 입자의 에너지는</p>
+<p><span class="math display">
+\mathcal{E}_a = c\sqrt{m_a^2c^2+p_a^2} = \dfrac{mc^2}{\sqrt{1-v_a^2/c^2}}
+</span></p>
+<p>이다. 이로부터</p>
+<p><span class="math display">
+\begin{aligned}
+q_a\boldsymbol{v}_a \boldsymbol{\cdot E}(t,\,\boldsymbol{r}_a(t)) &amp;= \boldsymbol{v}_a \boldsymbol{\cdot}\dfrac{d\boldsymbol{p}_a}{dt} = \dfrac{c\boldsymbol{p}_a}{\sqrt{m_a^2c^2+p_a^2}}\boldsymbol{\cdot}\dfrac{d\boldsymbol{p}_a}{dt} \\[0.3em]
+&amp;= \dfrac{c}{2\sqrt{m_a^2c^2+p_a^2}}\dfrac{d\left(p_a^2\right)}{dt} = \dfrac{d\mathcal{E}_a}{dt}
+\end{aligned}
+</span></p>
+<p>이제 부피 <span class="math inline">V</span> 안의 하전입자의 상대론적 총 에너지를 <span class="math inline">\mathcal{E}_\text{rel} = \sum_a \mathcal{E}_a</span> 라고 하자. 그렇다면,</p>
+<p><span id="eq-ED_gloval_energy_conservation_in_electromagnetic_field_in_relativity"><span class="math display">
+\dfrac{d}{dt}(\mathcal{E}_\text{em}+ \mathcal{E}_\text{rel}) = - \int_{\partial V} \boldsymbol{S\cdot}d\boldsymbol{a}.
+\tag{13.25}</span></span></p>
+</section>
+</section>
+<section id="sec-ED_momentum_and_momentum_flux" class="level3 page-columns page-full" data-number="13.3.2">
+<h3 data-number="13.3.2" class="anchored" data-anchor-id="sec-ED_momentum_and_momentum_flux"><span class="header-section-number">13.3.2</span> 운동량과 운동량 플럭스</h3>
+<p>다음의 양을 생각하자.</p>
+<p><span class="math display">
+\boldsymbol{g}(t,\,\boldsymbol{r}) : =\dfrac{\boldsymbol{S}(t,\,\boldsymbol{r})}{c^2}= \epsilon_0 \boldsymbol{E}(t,\,\boldsymbol{r})\times \boldsymbol{B}(t,\,\boldsymbol{r})
+</span></p>
+<p><span class="math inline">\boldsymbol{g}</span> 의 시간에 대한 편미분을 구하면</p>
+<p><span class="math display">
+\begin{aligned}
+\dfrac{\partial g_i}{\partial t} &amp;= \epsilon_0 \varepsilon_{ijk}\left(\dfrac{\partial E_j}{\partial t}B_k + E_j \dfrac{\partial B_k}{\partial t}\right) \\[0.3em]
+&amp;= \epsilon_0 \varepsilon_{ijk} \left[\left(c^2 (\nabla \times \boldsymbol{B})_j - \dfrac{j_j}{\epsilon_0}\right)B_k - E_j(\nabla \times \boldsymbol{E})_k \right] \\[0.3em]
+&amp;= -\epsilon_0\varepsilon_{ijk}\varepsilon_{klm}(E_j\partial_l E_m) + \epsilon_0 c^2 \varepsilon_{ijk}\varepsilon_{jlm}B_k\partial_l B_m - (\boldsymbol{j}\times \boldsymbol{B})_i \\[0.3em]
+&amp;=  \epsilon_0 (E_j \partial_j E_i - E_j\partial_i E_j) + \epsilon_0 c^2 (B_k\partial_k B_i -B_k\partial_i B_k )- (\boldsymbol{j}\times \boldsymbol{B})_i \\[0.3em]
+\end{aligned}
+</span></p>
+<p>임의의 벡터장 <span class="math inline">\boldsymbol{X}</span> 에 대해</p>
+<p><span id="eq-ED_momentum_and_momentum_flux_1"><span class="math display">
+X_j(\partial_jX_i - \partial_i X_j) = - \partial_j \left(\dfrac{1}{2}X^2\delta_{ij}- X_iX_j\right) - X_i \nabla \boldsymbol{\cdot X}
+\tag{13.26}</span></span></p>
+<p>임을 보일 수 있다(<a href="#exr-ED_2" class="quarto-xref">연습문제&nbsp;<span>13.2</span></a>). <span class="math inline">E_i (\nabla \boldsymbol{\cdot E})= \dfrac{\rho}{\epsilon_0 }E_i</span> 이고 <span class="math inline">\nabla \boldsymbol{\cdot B}=0</span> 이므로</p>
+<p><span id="eq-ED_momentum_and_momentum_flux_2"><span class="math display">
+\dfrac{\partial g_i}{\partial t} = -\dfrac{\partial}{\partial x_j}\left[\epsilon_0\left(\dfrac{1}{2}E^2\delta_{ij} - E_iE_j\right) + \dfrac{1}{\mu_0}\left(\dfrac{1}{2}B^2\delta_{ij} - B_iB_j\right)\right] - (\rho \boldsymbol{E}+\boldsymbol{j}\times \boldsymbol{B})_i
+\tag{13.27}</span></span></p>
+<p>이다.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>멕스웰 스트레스 텐셔</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>멕스웰 스트레스 텐서 (Maxwell stress tensor)</strong> <span class="math inline">\boldsymbol{T}</span> 는 다음과 같이 정의된다<span class="math inline">^1</span>.</p>
+<p><span id="eq-ED_definitino_of_maxwell_stress_tensor"><span class="math display">
+T_{ij} = \epsilon_0\left(\dfrac{1}{2}E^2\delta_{ij} - E_iE_j\right) + \dfrac{1}{\mu_0}\left(\dfrac{1}{2}B^2\delta_{ij} - B_iB_j\right)
+\tag{13.28}</span></span></p>
+</div>
+</div>
+<div class="no-row-height column-margin column-container"><span class="margin-aside callout-margin-content"><span class="math inline">1</span> <span class="citation" data-cites="Landau1975classical">Landau et al. (<a href="../../references.html#ref-Landau1975classical" role="doc-biblioref">1975</a>)</span> 의 정의와 부호가 같지만, <span class="citation" data-cites="Jackson1999Classical">Jackson (<a href="../../references.html#ref-Jackson1999Classical" role="doc-biblioref">1999</a>)</span>, <span class="citation" data-cites="Grifitths2013Introduction">Griffiths (<a href="../../references.html#ref-Grifitths2013Introduction" role="doc-biblioref">2013</a>)</span>, <span class="citation" data-cites="Zangwill2013Modern">Zangwill (<a href="../../references.html#ref-Zangwill2013Modern" role="doc-biblioref">2013</a>)</span> 의 경우 이 정의에 <span class="math inline">-</span> 부호를 붙인것으로 정의한다.</span></div><p>멕스웰 스트레스 텐서를 이용하면 <a href="#eq-ED_momentum_and_momentum_flux_2" class="quarto-xref">식&nbsp;<span>13.27</span></a> 를 다음과 같이 쓸 수 있다.</p>
+<p><span id="eq-ED_momentum_and_momentum_flux_3"><span class="math display">
+\dfrac{\partial g_i}{\partial t} = - \dfrac{\partial }{\partial x_j}T_{ij} - (\rho \boldsymbol{E}+ \boldsymbol{j}\times \boldsymbol{B}).
+\tag{13.29}</span></span></p>
+<p><br></p>
+</section>
+</section>
+<section id="연습문제" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-ED_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 13.1</strong></span> <a href="#eq-ED_energy_density_and_poynting_vector_1" class="quarto-xref">식&nbsp;<span>13.15</span></a> 이 성립함을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">
+\begin{aligned}
+\nabla \boldsymbol{\cdot}(\boldsymbol{E}\times \boldsymbol{B}) &amp;= \varepsilon_{ijk}\partial_i (E_jB_k) = \varepsilon_{ijk}B_k(\partial_iE_j) + \varepsilon_{ijk}E_j (\epsilon_{ijk}\partial_i B_k) \\[0.3em]
+&amp;= \boldsymbol{B}\boldsymbol{\cdot}(\nabla \times \boldsymbol{E}) - \boldsymbol{E}\boldsymbol{\cdot}(\nabla \times \boldsymbol{B})
+\end{aligned}
+</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-ED_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 13.2</strong></span> <a href="#eq-ED_momentum_and_momentum_flux_1" class="quarto-xref">식&nbsp;<span>13.26</span></a> 이 성립함을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">
+\begin{aligned}
+\partial_j \left(\dfrac{1}{2}X^2\delta_{ij} - X_iX_j\right) &amp;= \delta_{ij}X_{k}\partial_j X_k -X_j \partial_j X_i - X_i \partial_j X_j \\[0.3em]
+&amp;= X_j \partial_i X_j - X_j \partial_j X_i - X_i (\nabla \boldsymbol{\cdot X})
+\end{aligned}
+</span></p>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Grifitths2013Introduction" class="csl-entry" role="listitem">
+Griffiths, David J. 2013. <em>Introduction to Electrodynamics</em>. 4th ed. Pearson.
+</div>
+<div id="ref-Jackson1999Classical" class="csl-entry" role="listitem">
+Jackson, John David. 1999. <em>Classical Electrodynamics</em>. 3rd ed. Wiley. <a href="http://cdsweb.cern.ch/record/490457">http://cdsweb.cern.ch/record/490457</a>.
+</div>
+<div id="ref-Landau1975classical" class="csl-entry" role="listitem">
+Landau, L. D., Л. Д. Ландау, Е. М. Лифшиц, and E. M. Lifshit︠s︡. 1975. <em>The Classical Theory of Fields: Volume 2</em>. Course of Theoretical Physics. Elsevier Science. <a href="https://books.google.co.kr/books?id=X18PF4oKyrUC">https://books.google.co.kr/books?id=X18PF4oKyrUC</a>.
+</div>
+<div id="ref-Zangwill2013Modern" class="csl-entry" role="listitem">
+Zangwill, Andrew. 2013. <em><span class="nocase">Modern electrodynamics</span></em>. Cambridge Univ. Press. <a href="https://cds.cern.ch/record/1507229">https://cds.cern.ch/record/1507229</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -627,7 +878,8 @@ I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -636,8 +888,69 @@ I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -651,6 +964,7 @@ I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -813,44 +1127,54 @@ I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -949,7 +1273,10 @@ I := \int_S \boldsymbol{J \cdot} d\boldsymbol{S}.
     }
   });
   </script>
-<nav class="page-navigation">
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
   <div class="nav-page nav-page-previous">
       <a href="../../src/Electrodynamics/00_index.html" class="pagination-link" aria-label="전기자기학">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">전기자기학</span>
